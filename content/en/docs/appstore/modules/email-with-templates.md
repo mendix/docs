@@ -62,7 +62,7 @@ For security reasons, it is highly recommended for the **Server configuration** 
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
 
-Click the green **+** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+Select the checkbox **Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
 
 #### 3.1.1 Registering Your App on the Azure Portal
 

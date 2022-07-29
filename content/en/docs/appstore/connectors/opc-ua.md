@@ -45,6 +45,10 @@ Only one of the options can be in use at a time. Which option to use is determin
    
    Reading has been tested for limited data types. During reading and subscribing, all return values are casted to String through a simple `toString()` method. This implementation works well for Boolean and the Int values, but has not been tested for all data types. 
 
+1. Endpoints Security Mode 
+
+   Both HTTP and TCP connections are supported. For both connection types only 'Security mode' `None` is supported. Security mode `Sign` or `Sign&Encrypt` are not supported. 
+
 1. High-availability architecture (no horizontal scaling support)
 
    At this point, this connector replies completely on storing configuration in the Server memory and only supports running on a single container instance. If you use scaling and run multiple parallel instances of the application, the module may generate exceptions and loose messages. 

@@ -9,25 +9,42 @@ tags: ["microflow", "logic", "list"]
 
 ## 1 Introduction
 
-In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide/xpath-contains/) in the *Studio Pro Guide*. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide/loop/). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
+Enrich your microflow by using a list. A list consists of entities of the same type, filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of fulfilled orders from the database. You can then further process this data, for example, by calculating the total value of those orders.
 
-## 2 Preparing the Data Structure, GUI and Example Data
+This how-to will teach you how to do the following:
 
-To see the results of this how-to it is necessary that you setup a test app with test data.
+* Retrieve a filtered list of objects from the database
+* Iterate over a list of objects
+* Calculate the total list value by using a variable and a loop
+* Calculate the total list value by using an aggregate function
 
-Before you continue, make sure that you know how to create the following:
+## 2 Prerequisites
 
-* Domain models – if you need more information, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
-* Overview and detail pages – if you need more information, see [How to 
-Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
-*  Menu items – if you need more information, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-1.  Create the following domain model:
+1.  Create a [domain model](/howto/data-models/create-a-basic-data-layer/) with the following entities:
+    * *Customer*
+        | Attribute name | Attribute type |
+        | --- | --- |
+        | *CustomerID* | String |
+        | *Name*| String |
+        | *Address* | String |
+        | *ZipCode* | String |
+        | *City* | String |
+    * *Order*
+       | Attribute name | Attribute type |
+       | --- | --- |
+       | *Number* | Integer |
+       | *Date* | Date and time |
+       | *TotalPrice* | Decimal |
+       | *OrderStatus* | Enumeration |
+
+    One Customer can be associated with multiple Orders, so set the association between the entities accordingly.
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
-2.  Create **overview** and **detail** pages to manage objects of type **Customer** and **Order**.
-3.  Create **menu items** to access the **Order** and the **Customer** overview pages.
+2.  Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage Customer and Order objects.
+3.  Create [menu items](/howto/general/setting-up-the-navigation-structure/) to access Customer and Order overview pages.
 4.  Add the following customer data to your app:
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581374.png" >}}
@@ -39,6 +56,8 @@ Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-firs
 ## 3 Retrieving a Filtered List of Objects from the Database
 
 In the previous section you have set up a basic data structure and created some sample data. In this section you will retrieve all the 'Processing' orders. To achieve this you will add a microflow button to the 'Orders' overview. In this microflow you will add a 'Retrieve from database' 'Action activity' with an XPath constraint. The XPath constraint will filter the retrieved list to only the 'Invoiced' orders.
+
+Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide/xpath-contains/) in the *Studio Pro Guide*.
 
 1.  Create a new microflow by right-clicking the module and selecting **Add** > **Microflow**.
 2.  Name the Microflow _IVK_SetOrderToComplete_.
@@ -75,18 +94,20 @@ In the previous section you have set up a basic data structure and created some 
 	{{% /alert %}}
 
 13.  Add the following XPath expression in the XPath constraint field: `[OrderStatus = 'Processing']`. This expression will filter the list to only orders with the status **Processing**.
-14. Your properties screen should look like this:
+    Your properties screen should look like this:
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581088.png" >}}
 
 	{{% alert color="info" %}}With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
+	{{% /alert %}}
+    {{% alert color="info" %}}In the previous sections you filtered the list of orders from database on attributes of the order entity itself. In this section you will constrain on attributes over the associated customer object. For example, to filter the orders based on the city where the customer is located, apply the following constraint: *Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'*.
 	{{% /alert %}}
 
 You should see a microflow like this:
 
 {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581087.png" >}}
 
-## 4 Iterate Over a List of Objects
+## 4 Iterating Over a List of Objects
 
 In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the change object activity to change the status of the order object.
 
@@ -134,7 +155,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581113.png" >}}
 
-## 5 Calculating a Total List Value Using a Variable and a Loop
+## 5 Calculating the Total List Value by Using a Variable and a Loop
 
 In the previous section you iterated over a filtered list of objects using a 'Loop'. In this section you will use a loop to calculate the total sum of all your orders. To calculate this sum you will create a variable, which will be changed for every iteration in the loop.  
 
@@ -185,7 +206,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" >}}
 
-## 6 Calculate a Total List Value Using an Aggregate Function
+## 6 Calculating the Total List Value by Using an Aggregate Function
 
 In the previous section you iterated over a list to add the value of single object to a total price variable. In this section you will use the 'aggregate list' function to calculate the total price instead of using a loop. The aggregate list can be used to calculate aggregated values such as the maximum, minimum, sum, average and total amount of objects over a list of objects.
 
@@ -217,26 +238,7 @@ In the previous section you iterated over a list to add the value of single obje
   
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" >}}
 
-## 7 Filter List of Orders on the City of the Associated Customers
-
-In the previous sections you filtered the list of orders from database on attributes of the order entity itself. In this section you will constrain on attributes over the associated customer object. In the example of this section you will set the order status of all customers in Rotterdam to the status 'Complete'.
-
-1.  Open the microflow **IVK_SetOrderToComplete**.
-2.  Open the **OrderList** retrieve activity.
-3.  Add an **XPath constraint** over the association to customer, constraining on the city (Rotterdam) of this customer.
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581111.png" >}}
-
-4.  Click **OK** and **re-deploy** your application.
-5.  Open the application in the browser.
-6.  Click the **Set Processing to Complete** button. All the orders from customers in Rotterdam are set to **Complete**.
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581110.png" >}}
-
-## 8 Read More
+## 7 Read More
 
 *   [Defining access rules using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
-*   [Extending Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
-*   [Working With Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-*   [Creating a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/)
 *   [Optimizing Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)

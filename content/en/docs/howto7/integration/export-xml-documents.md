@@ -44,12 +44,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto7/integration/18448731/18581813.xsd).
 
-1.  Right-click your module in the **Project Explorer** and select **Add other** > **XML schema**.
-2.  Enter *CustomersXSD* for the **Name** and click **OK**:
+1. Right-click your module in the **Project Explorer** and select **Add other** > **XML schema**.
+2. Enter *CustomersXSD* for the **Name** and click **OK**:
 
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581696.png" >}}
 
-3.  In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
+3. In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
 
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581812.png" >}}
 
@@ -60,7 +60,6 @@ Whether you plan to import documents or export documents, working with XML means
 The XML schema describes what the contents of an XML document should be. We need to create domain-to-XML mapping to define how the data in our application is transformed into a XML document.
 
 1. Right-click your module in the **Project Explorer** and select **Add other** > **Export mapping**.
-
 2. Enter *ExportCustomersMapping* for the **Name**:
 
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581849.png" >}}
@@ -95,8 +94,8 @@ The XML schema describes what the contents of an XML document should be. We need
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581806.png" >}}
 
 8. In the mapping editor, verify the following:<br />
-    a. **Method** is set to **By association**<br />
-    b. **Association to parent** is set to **XMLDocument_Customer**<br />
+    1. **Method** is set to **By association**<br />
+    2. **Association to parent** is set to **XMLDocument_Customer**<br />
 9. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
 
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581807.png" >}}

@@ -14,11 +14,11 @@ A Mendix application is by default stored on the local hard drive of the compute
 
 The quickest way to open the project directory is in the Mendix Modeler via the menu bar:
 
-1.  Click **Project** and select **Show Project Directory in Explorer**:
+1. Click **Project** and select **Show Project Directory in Explorer**:
 
     {{< figure src="/attachments/howto7/general/show-project-directory/18581613.png" >}}
-        
-2.  The following window will appear with the project directory shown in it:
+
+2. The following window will appear with the project directory shown in it:
 
     {{< figure src="/attachments/howto7/general/show-project-directory/18581612.png" >}}
 

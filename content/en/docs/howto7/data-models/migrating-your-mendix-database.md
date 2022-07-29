@@ -12,12 +12,12 @@ This document explains how to migrate the data in an existing Mendix database to
 
 **After completing this how-to you will know:**
 
-*   How to migrate a non-PostgreSQL database to a PostgreSQL database
-*   How to export a PostgreSQL database
-*   How to upload an exported PostgreSQL database to the Mendix cloud
-*   How to export a Mendix cloud database
-*   How to import into an on-premise PostgreSQL database
-*   How to migrate a PostgreSQL database to a non-PostgreSQL database
+* How to migrate a non-PostgreSQL database to a PostgreSQL database
+* How to export a PostgreSQL database
+* How to upload an exported PostgreSQL database to the Mendix cloud
+* How to export a Mendix cloud database
+* How to import into an on-premise PostgreSQL database
+* How to migrate a PostgreSQL database to a non-PostgreSQL database
 
 ## 2 Overview
 
@@ -27,11 +27,11 @@ To do this, start your app on the database you would like to copy the data to. T
 
 The most commonly used custom settings for database migration are:
 
-*   SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
-*   SourceDatabaseHost
-*   SourceDatabaseName
-*   SourceDatabaseUserName
-*   SourceDatabasePassword
+* SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
+* SourceDatabaseHost
+* SourceDatabaseName
+* SourceDatabaseUserName
+* SourceDatabasePassword
 
 See [Custom Settings](/refguide7/custom-settings/) for more information on the full list of available settings. These settings can be configured as follows:
 

@@ -5,6 +5,7 @@ category: "App Services"
 weight: 1
 description: "This document describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction

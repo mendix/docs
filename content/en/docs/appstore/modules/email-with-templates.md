@@ -30,12 +30,6 @@ The typical usage scenario is sending emails with a template system and using to
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 * [Encryption](/appstore/modules/encryption/)
 
-#### 1.2.2 Java Libraries
-
-* *commons-codec-1.14.jar*
-* *commons-email-1.4.0.jar*
-* *javax.mail-1.6.0.jar*
-
 ## 2 Configuration
 
 To configure this module, follow these steps:
@@ -66,13 +60,9 @@ For security reasons, it is highly recommended for the **Server configuration** 
 
 ### 3.1 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
 
-{{% alert color="warning" %}}
-This feature is supported for Studio Pro [7.23)](/releasenotes/studio-pro/7.23/).
-{{% /alert %}}
-
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
 
-Click the green **+** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+Select the check box for **Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
 
 #### 3.1.1 Registering Your App on the Azure Portal
 

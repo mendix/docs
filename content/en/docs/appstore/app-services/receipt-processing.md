@@ -4,6 +4,7 @@ url: /appstore/app-services/receipt-processing/
 category: "App Services"
 description: "This document describes the configuration and usage of the Receipt Processing app service, which can automate the processing of receipts in bulk, without additional document training."
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction

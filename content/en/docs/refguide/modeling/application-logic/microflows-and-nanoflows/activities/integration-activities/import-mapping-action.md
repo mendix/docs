@@ -10,7 +10,6 @@ weight: 30
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-
 ## 1 Introduction
 
 The **Import with mapping** activity allows you to import the data stored in an XML or JSON document into [domain model](/refguide/domain-model/) entities.
@@ -85,14 +84,12 @@ Indicates whether the resulting objects should be committed to the database, and
 ### 3.9 Validate Against Schema
 
 {{% alert color="info" %}}
-
 Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](/refguide/xml-schemas/) or a [consumed web service](/refguide/consumed-web-service/).
-
 {{% /alert %}}
 
 Determines whether the import action should validate the incoming XML against the [XML schema](/refguide/xml-schemas/).
 
-Setting this to _yes_ can impact performance!
+Setting this to *yes* can impact performance!
 
 Default: *No*
 

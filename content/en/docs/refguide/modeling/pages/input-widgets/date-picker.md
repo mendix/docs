@@ -119,5 +119,5 @@ Placeholder text will not be displayed if a native date picker is available (tha
 
 ## 3 Read More
 
-*   [Data View](/refguide/data-view/)
-*   [Attributes](/refguide/attributes/)
+* [Data View](/refguide/data-view/)
+* [Attributes](/refguide/attributes/)

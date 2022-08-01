@@ -26,7 +26,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Read the [Language Menu](/refguide/translatable-texts/) guide to understand the basics of the Mendix Language menu
 * Set up the required [languages](/refguide/language-settings/) in Studio Pro—this tutorial has been configured with three languages as below:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/language-settings.png" alt="language settings"  width= "450" >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/language-settings.png" alt="language settings"  width= "450" >}}
 
 ## 3 Setting up the Language Change Mechanism {#set-up}
 
@@ -45,25 +45,25 @@ You can either add a new module to your existing app, or create a new Studio Pro
 
 1. Add a new module *ChangeLanguage* to your app.
 1. Add a new microflow *ACT_Language_ChangeUserLangRuntime* to your **ChangeLanguage** module and configure it as such:
-	1. Add a parameter called *LanguageCode* of data type `String`.
-	1. Retrieve the language that was selected by the user on the app:
-		1. This can be done by using a **Retrieve** object activity.
-		1. Select the source as `Database` and entity `System.Language`.
-		1. As you need only one language, select range as `First` and pass the XPath constraint as `[Code=$LanguageCode]`.
-		1. Name this retrieved object *SelectedLanguage*.
-		1. Your microflow should look like this:
+    1. Add a parameter called *LanguageCode* of data type `String`.
+    1. Retrieve the language that was selected by the user on the app:
+        1. This can be done by using a **Retrieve** object activity.
+        1. Select the source as `Database` and entity `System.Language`.
+        1. As you need only one language, select range as `First` and pass the XPath constraint as `[Code=$LanguageCode]`.
+        1. Name this retrieved object *SelectedLanguage*.
+        1. Your microflow should look like this:
 
-			{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-retrieve-object.png"  alt="microflow retrieve object" width= "450" >}}
+            {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-retrieve-object.png"  alt="microflow retrieve object" width= "450" >}}
 
-	1. To set the selected language, you need to change the language for the current user: 
-		1. Call a **Change object** activity.
-		1. Select the **Input** as `currentUser (System.User)`. 
-		1. In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** set to `No`. 
-		1. For **Member**, select `System.User_Language`.
-		1. For the value of that member, set it as the object retrieved earlier: `$SelectedLanguage`.
-		1. Your microflow should look like this:
-	
-			{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-language-change.png"  alt="microflow language change"  width= "500" >}}
+    1. To set the selected language, you need to change the language for the current user: 
+        1. Call a **Change object** activity.
+        1. Select the **Input** as `currentUser (System.User)`. 
+        1. In the **Action** section, **Commit** should be set to `Yes` and **Refresh to client** set to `No`. 
+        1. For **Member**, select `System.User_Language`.
+        1. For the value of that member, set it as the object retrieved earlier: `$SelectedLanguage`.
+        1. Your microflow should look like this:
+
+            {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-language-change.png"  alt="microflow language change"  width= "500" >}}
 
 Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow which you will configure in the following section.
 
@@ -78,7 +78,7 @@ Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and config
 1. To load the new language, you must refresh the app. This can be done by calling a nanoflow action **Reload**.
 1. Your nanoflow should look like this:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" >}}
 
 ### 3.3 Adding the Native Page
 
@@ -86,20 +86,20 @@ Add a new native page **Language_Overview** to your **ChangeLanguage** module, t
 
 1. Add a title called *Select language*, as the selected language in Studio Pro is **English**. You can use a **Text** widget, but anything with a string value is fine.
 1. Then underneath the title, add a native **List View** by simply dragging from the toolbox to list all the available languages on the app. Configure it this way:
-	1. In the **Data source** tab, **Type** should be `Database`, **Entity** should be `System.Language`.
-	1. In the **General** tab, **On click** should be configured to call a nanoflow **ACT_Language_ChangeUserLangDevice**.
-	1. Click on the **OK** button.
-		* You should get a dialog box asking **Do you want to automatically fill the contents of the list view?** Select `Yes`.
-	1. **List View** should be populated with two fields: `{Code}` and `{Description}`. Delete the `{Code}` field.
+    1. In the **Data source** tab, **Type** should be `Database`, **Entity** should be `System.Language`.
+    1. In the **General** tab, **On click** should be configured to call a nanoflow **ACT_Language_ChangeUserLangDevice**.
+    1. Click on the **OK** button.
+        * You should get a dialog box asking **Do you want to automatically fill the contents of the list view?** Select `Yes`.
+    1. **List View** should be populated with two fields: `{Code}` and `{Description}`. Delete the `{Code}` field.
 1. Ensure the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` with the `{1}` variable and be used as well.
 1. Change to the second language in Studio Pro by going to menu **Language** > **Current Language** > `<second_language>`.
 1. Add a translation of the title in a second language if not available.
 1. Ensure again that the caption of the `{Description}` field in **ListView** is not empty. It should be mapped to the attribute `System.Language.Description` and be used as well.
 1. Repeat the above steps to add a translation for the third language as well.
 1. Set **Language_Overview** as the default home page of the **Native mobile** navigation profile:
-	1. Open **Navigation** in the App Explorer.
-	1. Click the **Native mobile** tab.
-	1. Set **Language_Overview** as the default home page.
+    1. Open **Navigation** in the App Explorer.
+    1. Click the **Native mobile** tab.
+    1. Set **Language_Overview** as the default home page.
 
 ## 4 Testing Language Switching {#testing}
 
@@ -110,14 +110,14 @@ To test your native app, locally deploy and view the app on the **Make It Native
 1. Follow the steps in [Downloading and Installing the Make It Native App](/refguide/mobile/getting-started-with-mobile/#download-min) to view your app in Mendix's Make It Native testing app. 
 1. Once the app is running, you should be able to see the native **Language_Overview** page:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-en.png"  alt="language overview english" width= "250" >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-en.png"  alt="language overview english" width= "250" >}}
 
 1. To change the language, do the following:
-	1. Tap **Dutch, Netherlands**.
-	1. The app should be reloaded automatically.
-	1. You should be able to see the title in the **Dutch** language:
+    1. Tap **Dutch, Netherlands**.
+    1. The app should be reloaded automatically.
+    1. You should be able to see the title in the **Dutch** language:
 
-		{{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-nl.png"  alt="language overview dutch" width= "250" >}}
+        {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-nl.png"  alt="language overview dutch" width= "250" >}}
 
 Congratulations, you just implemented internationalization in your native app! Your users will appreciate the power of multiple languages at their fingertips. For more information about languages and Mendix, see the Read More section below.
 

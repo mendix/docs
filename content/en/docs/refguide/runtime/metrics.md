@@ -59,18 +59,18 @@ The following settings can be used, depending on the type of metrics being gener
 
 | Setting | DataType | Manda-tory | Type | Description | Default Value | Examples |
 | --- | --- | --- | --- | --- | --- | --- |
-| `db` | _String_ | No | influx | The db to send metrics to | mydb | customDb, metricDb |
-| `password` | _String_ | Yes | influx | Authenticate requests with this password | - | - |
-| `uri` | _String_ | No | influx | The URI for the back end | http://localhost:8086 (for Influx) | - |
-| `userName` | _String_ | Yes | influx | Authenticate requests with this user | - | - |
-| `protocol` | _String_ | No | influx | Protocol of the statsd connection | UDP | TCP, UDP |
-| `domain` | _String_ | No | jmx | Jmx domain to publish the metrics to | metrics | "Mendix", "Employee" |
-| `enabled` | _Boolean_ | No | influx / statsd | Enables / Disables the meter | true | true, false |
-| `flavor` | _StatsdFlavor_ | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
-| `host` | _String_ | No | statsd | The host name of the StatsD agent | localhost | - |
-| `port` | _Int_ | No | statsd | The port of the StatsD agent | 8125 | - |
-| `step` | _Duration_ | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` | |
-| `filters` | _Json_ | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
+| `db` | *String* | No | influx | The db to send metrics to | mydb | customDb, metricDb |
+| `password` | *String* | Yes | influx | Authenticate requests with this password | - | - |
+| `uri` | *String* | No | influx | The URI for the back end | http://localhost:8086 (for Influx) | - |
+| `userName` | *String* | Yes | influx | Authenticate requests with this user | - | - |
+| `protocol` | *String* | No | influx | Protocol of the statsd connection | UDP | TCP, UDP |
+| `domain` | *String* | No | jmx | Jmx domain to publish the metrics to | metrics | "Mendix", "Employee" |
+| `enabled` | *Boolean* | No | influx / statsd | Enables / Disables the meter | true | true, false |
+| `flavor` | *StatsdFlavor* | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
+| `host` | *String* | No | statsd | The host name of the StatsD agent | localhost | - |
+| `port` | *Int* | No | statsd | The port of the StatsD agent | 8125 | - |
+| `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` | |
+| `filters` | *Json* | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
 
 #### 2.1.1 Prometheus{#prometheus}
 
@@ -274,9 +274,7 @@ The following should be taken into account when configuring the metrics registri
 {{% /alert %}}
 
 1. Filters also affect internal metrics used by Mendix. For example, metrics emitted by Mendix which start with `mx.`.
-
 2. If you have two metrics with the same name but one has additional tags, these are considered as different metrics. For example, metrics `app.counter1` with tag `"version" -> "1"` and `app.counter1` with no tag are different.
-
 3. Filters are executed on a first come, first served basis. In other words, the first matching filter gets the priority. For example, take the filters defined below:
 
     ```json

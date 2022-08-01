@@ -10,7 +10,7 @@ A constraint can be added to any Xpath query to filter the data retrieved. It sh
 
 For example, this query retrieves all customers whose name is equal to Jansen:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen']
 ```
 
@@ -26,25 +26,25 @@ In Studio Pro, you do not write complete queries, only the constraints. The enti
 
 This query retrieves all customers whose name is equal to Jansen and who live in Rotterdam:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
 It is also possible to combine constraints with an `and` or `or` [operator](/refguide/xpath-operators/). This query retrieves all customers whose names equal to Jansen *and* who live in Rotterdam:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen' and Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
 This query retrieves all customers whose name is Jansen or who live in Rotterdam.
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen' or Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
 With parentheses, constraints can be grouped to define priorities. This query retrieves all customers who are not only named "Jansen" or "Smit," but also live in Rotterdam:
 
-```java
+```java {linenos=false}
 //Sales.Customer[( Name = 'Jansen' or Name = 'Smit' ) and Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
@@ -52,27 +52,26 @@ In some cases, it might also be useful define sub-constraints to restrict the da
 
 This query retrieves all users that have the role Administrator:
 
-```java
+```java {linenos=false}
 //Sales.User[id = '[%UserRole_Administrator%]']]
 ```
 
 This query retrieves all customers who live in Rotterdam or Losdun:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'Rotterdam' or City = 'Losdun']]
 ```
 
 This query retrieves all customers who live in New Amsterdam, Guyana (as opposed to those that live in, for example, New Amsterdam, Indiana):
 
-```java
+```java {linenos=false}
 //Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Adress_Country/Sales.Country/Name = 'Guyana']
 ```
 
 Avoid the use of the same path more than once in a single constraint. For example, the example on Rotterdam and Losdun could also be established like this:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Sales.Customer_Address/Sales.Address/City = 'Rotterdam' or Sales.Customer_Address/Sales.Address/City = 'Losdun']
 ```
 
 However, this query is executed inefficiently and will thus significantly slow down the query process.
-

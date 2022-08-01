@@ -71,8 +71,9 @@ Return codes are described in the table below:
 Those values are logically OR combined to indicate when there are a mix of errors, warnings, deprecations.
 
 For example:
-- 3 if errors and warnings found
-- 7 if errors, warnings, and deprecations found
+
+* 3 if errors and warnings found
+* 7 if errors, warnings, and deprecations found
 
 ### 3.2 mx convert Command
 

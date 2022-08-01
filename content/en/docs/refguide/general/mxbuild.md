@@ -92,7 +92,6 @@ When MxBuild exits, one of the following codes will be returned:
 | 2 | There is something wrong with the command-line options. |
 | 3 | Deployment of the Mendix app failed. |
 
-
 If the exit code is larger than 0, MxBuild will show you the message describing the error.
 
 ## 4 App Errors {#app-errors}

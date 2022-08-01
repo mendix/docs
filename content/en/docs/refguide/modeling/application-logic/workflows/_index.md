@@ -79,7 +79,6 @@ The selected workflow is opened.
 To add a workflow to your app, do the following:
 
 1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
-
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
@@ -96,9 +95,7 @@ To delete a workflow, do the following:
 The selected workflow is deleted. 
 
 {{% alert color="info" %}}
-
 The **WorkflowInstance** entity that was generated when the workflow was created remains in the domain model, you have to delete it manually.
-
 {{% /alert %}}
 
 ### 3.4 Adding Elements to a Workflow 
@@ -144,15 +141,10 @@ To trigger a workflow via a microflow, you can add a **Call workflow** activity 
 Do the following:
 
 1. Open a microflow that will trigger a workflow.
-
 2. Make sure the microflow has a necessary parameter with the workflow context.
-
 3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
-
 4. Double-click the activity to open its properties.
-
 5. Set **Workflow** to to the workflow you would like to trigger.
-
 6. Set **Context object** to the workflow context:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" >}}

@@ -39,7 +39,7 @@ Structure  widgets provide structure to your page's content.
 
 * [Snippet Call](/refguide/snippet-call/) – allows you to use a snippet on another snippet, a page, or a layout
 
-  {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call-design-mode-example.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call-design-mode-example.png" >}}
 
 ## 2 Performing Basic Functions
 

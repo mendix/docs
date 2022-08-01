@@ -8,9 +8,7 @@ tags: ["studio pro", "continue event", "event", "loop"]
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-
 Continue events can only be used inside [loops](/refguide/loop/).
-
 {{% /alert %}}
 
 A continue event is used to stop the current iteration and start the iteration of the next object inside a loop. 

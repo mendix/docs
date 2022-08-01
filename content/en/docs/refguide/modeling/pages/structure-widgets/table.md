@@ -45,8 +45,8 @@ A cell has the following properties:
 
 * **Cell type** – indicates the type of the cell, the following options are possible:
 
-  * **Normal** – ordinary cell containing data
-  * **Header** – a table header cell
+    * **Normal** – ordinary cell containing data
+    * **Header** – a table header cell
 
 ### 2.3 Performing Actions on Rows
 
@@ -148,5 +148,3 @@ For example, you can you can have three columns of which the first is 200 pixels
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)
-
-

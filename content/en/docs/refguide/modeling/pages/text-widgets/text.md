@@ -48,18 +48,15 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
 
 * Double-click the **Caption** setting in properties
-
-*  Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:
+* Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" >}} 
 
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter 
-
 * **Attribute (path)** – an attribute a value of which will be displayed 
-
-*  **Format** – a format in which an attribute value will be displayed
+* **Format** – a format in which an attribute value will be displayed
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png" alt="Parameter Settings" >}}
 
@@ -68,16 +65,13 @@ Parameters have the following settings:
 To use parameters, do the following:
 
 1. Place the **Text** widget in a context of an entity, as in, inside a [data widget](/refguide/data-widgets/).
-
 2. Double-click the **Caption** setting in the text widget properties.
-
-3.  In the **Edit Caption** dialog box > **Parameters** section click **New**:
+3. In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png" alt="Adding New Parameter" >}}
 
 4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
-
-5.  In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of your customer and a number of unread messages, you need to use indexes {1} for the *FullName* attribute, and {2} for the *NrOfUnread* attribute:  
+5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of your customer and a number of unread messages, you need to use indexes {1} for the *FullName* attribute, and {2} for the *NrOfUnread* attribute:  
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example" >}}
 
@@ -86,12 +80,9 @@ To use parameters, do the following:
 In addition to adding new parameters, you can perform the following actions on parameters:
 
 * **Delete** – to delete a parameter click Delete or press <kbd>Delete</kbd> on your keyboard
-
 * **Edit** – double-click a parameter to edit it or click Edit
-
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
-
-*  **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
+* **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions" >}}
 

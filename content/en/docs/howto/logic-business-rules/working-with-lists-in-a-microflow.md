@@ -39,19 +39,29 @@ Before starting this how-to, make sure you have completed the following prerequi
        | *TotalPrice* | Decimal |
        | *OrderStatus* | Enumeration |
 
-    One Customer can be associated with multiple Orders, so set the association between the entities accordingly.
+    One Customer entity can be associated with many Orders, so set the association between the entities accordingly.
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
 2.  Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage Customer and Order objects.
 3.  Create [menu items](/howto/general/setting-up-the-navigation-structure/) to access Customer and Order overview pages.
 4.  Add the following customer data to your app:
-
-    {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581374.png" >}}
+    | Name | Address | Zip code | City |
+    | --- | --- | --- | --- |
+    | Olav | Gedempte Zalmhaven 34 | 3050 TE | Rotterdam |
+    | Tim | Kornoeljestraat 14 | 2514 RT | Den Haag |
+    | Peter | Meloenstraat 123 | 2565 PE | Den Haag |
+    | Harry | Emmerreklaan 25 | 1458 PE | Utrecht |
 
 5.  Add the following order data to your app:
-
-    {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581373.png" >}}
+    | Number | Customer | Date | Total price | Order status |
+    | --- | --- | --- | --- | --- |
+    | 1 | Harry | 1/28/2022 | 345.00 | Open |
+    | 2 | Olav | 12/30/2021 | 1234.60 | Processing |
+    | 3 | Peter | 1/5/2022 | 23.60 | Open |
+    | 4 | Tim | 1/4/2022 | 586.90 | Complete |
+    | 5 | Olav | 1/21/2022 | 25.60 | Open |
+    | 6 | Peter | 1/16/2022 | 154.00 | Complete |
 
 ## 3 Retrieving a Filtered List of Objects from the Database
 

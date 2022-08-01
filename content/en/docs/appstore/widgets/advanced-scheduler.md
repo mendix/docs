@@ -131,9 +131,7 @@ For more information, see [Common Section](https://docs.mendix.com/refguide/comm
 
 #### 2.2.7 Appearance Tab
 
-
-
-
+{{% todo %}}Can the properties in the **Appearance** tab have any influence on the widget??{{% /todo %}}
 
 ### 2.3 Configuring the Header Dropzone
 

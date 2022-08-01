@@ -1,8 +1,8 @@
 ---
 title: "Contribute to a Mendix GitHub Repository"
-url: /howto/collaboration-requirements-management/contribute-to-a-github-repository/
-category: "Collaboration"
-weight: 20
+url: /developerportal/community-tools/contribute-to-a-github-repository/
+category: "Community Tools"
+weight: 10
 tags: ["GitHub", "contribute", "community"]
 ---
 
@@ -46,6 +46,3 @@ To submit changes, follow these guidelines:
 ## 5 Read More
 
 * [Stories](/developerportal/collaborate/stories/)
-* [Set Up a GitHub Repo to Publish a Marketplace Item](/howto/collaboration-requirements-management/set-up-repo/)
-* [Version Control](/refguide/version-control/)
-* [Share the Development Database](/howto/data-models/sharing-the-development-database/)

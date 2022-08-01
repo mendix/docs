@@ -2,7 +2,7 @@
 title: "Set Up the Navigation Structure"
 url: /howto/general/setting-up-the-navigation-structure/
 category: "General Info"
-weight: 3
+weight: 15
 tags: ["studio pro", "navigation", "menu", "how to"]
 ---
 ## 1 Introduction

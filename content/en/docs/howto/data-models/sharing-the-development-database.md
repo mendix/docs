@@ -1,9 +1,11 @@
 ---
 title: "Share the Development Database"
 url: /howto/data-models/sharing-the-development-database/
-category: "Collaboration"
+category: "Data Models"
 weight: 9
 tags: ["studio pro", "database"]
+aliases:
+  - /howto/collaboration-requirements-management/sharing-the-development-database/
 ---
 
 ## 1 Introduction

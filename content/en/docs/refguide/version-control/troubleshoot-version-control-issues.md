@@ -175,9 +175,7 @@ To resolve a conflict on the `svn:ignore` property, follow these steps:
 
 	{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/combinedignorelist.png" >}}
 
-	{{% alert color="info" %}}
-	This includes both the lines from the main line and from the branch. The order is not important.
-	{{% /alert %}}
+	{{% alert color="info" %}}This includes both the lines from the main line and from the branch. The order is not important.{{% /alert %}}
 
 9. Click **OK** and then **OK** again to confirm the change.
 

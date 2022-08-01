@@ -3,7 +3,7 @@ title: "Implement Mendix Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /howto/general/dev-best-practices/
 category: "General Info"
-weight: 7
+weight: 30
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 #Academy are SMEs for verification, they discuss and link to this doc in training
 ---
@@ -30,7 +30,7 @@ The language that will be used to develop the application should be determined u
 
 There are some reasons why certain parts of an application may use another language. The main reason to make an exception would be within the domain model of an integration module. For example, when the source data model is in another language already.
 
-For more information, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/).
+For more information, see [How to Translate Your App Content](/howto/general/translate-your-app-content/).
 
 ### 2.2 App Name
 

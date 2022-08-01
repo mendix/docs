@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "platform support"]
 
 ## 1 Introduction
 
-The [Advanced Scheduler]() enables you to load events and visualize them.
+The [Advanced Scheduler]() enables you to load resources and events and visualize them.
 
 {{% todo %}}Add the link to the widget page.{{% /todo %}}
 
@@ -21,111 +21,109 @@ The [Advanced Scheduler]() enables you to load events and visualize them.
 
 #### 2.2.1 Views Tab
 
-* **Scheduler Start Date** – the start date of the scheduler 
+* **Scheduler Start Date** – This is the start date of the scheduler.
+* **Scheduler End Date** – This is the end date of the scheduler{{% todo %}}Will this field be removed before the release?{{% /todo %}}  
+* **On changed time window** – You can set an action that is triggered if the time window is changed.
+* **Views** – You can manage the available views on the list.
+  * **New** – You can add a new view with the following items:
+    * **ID of the view** – This is the ID used to define a view.
+  
+    * **Name of the view** – This is the name of the view.
+  
+    * **Default or Custom view** – You can select whether you use one of the following default views or a custom view :
+      * **Day** – This is a default view
+      
+      * **Week** – This is a default view
+      
+      * **Month** – This is a default view
+      
+      * **Year** – This is a default view
+      
+      * **Custom** – This is a default view
+        * **Unit of time** – This is the unit of time used for the view
+      
+        * **Visible timeline** – You can define how many units of time are visible in the time window
+      
+        * **On prev/next button skip** – You can define how many units of time are skipped when you click the previous button (**<**) or the next button (**>**).
+      
 
-* **Scheduler End Date** – the end date of the scheduler 
+  * **Delete** – You can delete the selected view.
 
-* **On changed time window** – sets an action that is triggered if the time window is changed
+  * **Edit** – You can edit the selected view.
 
-* **Views** – shows a list of views that are available
-  * **New **– opens the **Edit Views Item** window where you can add a new view with the following items:
-
-    * **ID of the view** – the ID used to define a view
-
-    * **Name of the view** – the name of the view
-
-    * **Default or Custom view** – selects whether to use one of the following default views or a custom view 
-
-      * **Day**, **Week**, **Month**, **Year** – default views
-
-      * **Custom** – custom view
-
-        * **Unit of time** – the unit of time use for the timeline of the custom view
-
-        * **Visible timeline** – defines how many units of time are visible in the time window
-
-        * **On prev/next button skip** – defines how many units of time are skipped when you click the previous button (<**)** or the next button (**>**)
-
-  * **Delete** – deletes the selected view
-
-  * **Edit** – opens the **Edit Views Item** window where you can edit the selected view
-
-  * **Move up** – moves up the selected view
-
-  * **Move down** – moves down the selected view
-
-* **Selected View** – {{% todo %}}What is this  exactly?{{% /todo %}}
-
+  * **Move up** – You can move up the selected view.
+  
+  * **Move down** – You can move down the selected view.
+* **Selected View** – This is an attribute of an entity in your Domain Model, which is used to change the view in Mendix. {{% todo %}}What is this  exactly?{{% /todo %}}
 * **Fixed Timeline**
   * **Yes** – If selected, you cannot change the timeline.
   * **No** – If selected, you can scroll to a date within two years before and after the current date.
 
 #### 2.2.2 Resources Tab
 
-This tab contains the following items:
-
-* **Resources Datasource** – the datasource for the resources that are shown in the scheduler
-* **Resource ID** – the ID of a resource
-* **Resource title** – the title of the resource 
-* **Resource Classname** – the classname of the resource, which can be used to do proper styling of an resource
+* **Resources Datasource** – This is the datasource for the resources that are shown on the left side of the scheduler.
+* **Resource ID** – This is the ID of the resource.
+* **Resource title** – This is the title of the resource. {{% todo %}}Will this field be removed before the release?{{% /todo %}}
+* **Resource Classname** – This is the classname of the resource, which can be used for the styling of the resource.
   * If left empty, the value is set to *resource-type-default*.
-
-* **Resource height** – the height of the resource
-* **On Click** – sets an action that is triggered when the resource is clicked
+* **Resource height** – This is the height of the resource.
+* **On Click** – You can set an action that is triggered when the resource is clicked.{{% todo %}}Will this field be removed before the release?{{% /todo %}}
 
 #### 2.2.3 Events Tab
 
-*  **List of Data sources** – shows a list of data sources of events
-    *  **New** – opens the **Edit List of Data Sources** Item window where you can add a new event with the following settings:
-        * **Overrall** tab
-          * **Data source** – the data source of the event
-          * **Event ID** – the ID of the event
-          * **Resource ID** – the ID of the corresponding resource**Before e**
-          * **vent travel time** – {{% todo %}}What is this  exactly?{{% /todo %}}
-          * **Start event** – the start date of an event
-          * **End event** – the end date of an event
-          * **After event travel time** - {{% todo %}}What is this  exactly?{{% /todo %}}
-          * **Movable** – selects a Boolean attribute to indicate whether the event can be moved around along the timeline
-          * **Resizeable** – selects a Boolean attribute to indicate whether the length of the event can be resized
-          * **Delete** – deletes the select data source
-          * **Edit** – open the **Edit List of Data Sources** Item window where you can edit the selected data source
-          * **Move up** – moves up the selected data source
-          * **Move down** – moves down the selected data source
+*  **List of Data sources** – You can manage the data sources of events on the list.
+    *  **New** – You can add a new event with the following items:
+        * **General** tab
+          * **Data source** – This is the data source of the event.
+          * **Event ID** – This is the ID of the event.
+          * **Resource ID** – This is the ID of the corresponding resource.
+          * **Before event travel time** – You can add some travel time before the event.
+          * **Start event** – The is the start date of an event.
+          * **End event** – This is the end date of an event.
+          * **After event travel time** – You can add some travel time after the event.
+          * **Movable** – You can select a Boolean attribute to indicate whether the event can be moved around along the timeline.
+          * **Resizeable** – You can select a Boolean attribute to indicate whether the length of the event can be resized.
         * **UI** tab
-          * **Event Title** – the title of the event
-          * **Tooltip content** – the content of the tooltip of the event
-          * **Classname** – the classname of the event, which can be used to do proper styling of an event
+          * **Event Title** – This is the title of the event.
+          * **Tooltip content** – This is the content of the tooltip of the event.
+          * **Classname** – This is the classname of the event, which can be used for the styling of an event.
             * If left empty, the value is set to *event-type-default*.
         * **User interaction** tab
-          * **On click action** – sets an action that is triggered when the event is clicked
-          * **On change action** – sets an action that is triggered when the event is moved around along the timeline or its length is resized
+          * **On click action** – You can set an action that is triggered when the event is clicked.
+          * **On change action** – You can set an action that is triggered when the event is moved to a different time slot or when its length is resized.
+    *  **Delete** – Yo can delete the select data source.
+    *  **Edit** – You can edit the selected data source.
+    *  **Move up** – You can move up the selected data source.
+    *  **Move down** – You van move down the selected data source.
 * **Create new events**
-  * **Yes**
-  * **No**
-*  **On create event action**
-*  **Microflow**
-*  **Microlow settings**
-*  **Last Moved Event Id**
-*  **New Resource ID**
-*  **New Start Event**
-* **New End Event**
+  * **Yes** – If selected, you can create a new event by drag and drop or double-clicking a time slot. {{% todo %}}Check if this is correct. How does this drag and drop work exactly?{{% /todo %}}
+  * **No** – If selected, you cannot create a new event by drag and drop or double-clicking a time slot.
+*  **On create event action** – You can set an action that is triggered when a new event is created.
+*  **Last Moved Event Id** – {{% todo %}}What is this exactly?{{% /todo %}}
+*  **New Resource ID** – {{% todo %}}What is this exactly?{{% /todo %}}
+*  **New Start Event** – {{% todo %}}What is this exactly?{{% /todo %}}
+* **New End Event** – {{% todo %}}What is this exactly?{{% /todo %}}
 
 #### 2.2.4 Rosters Tab
 
-* **Datasource** – sets the data source for the roster
-* **Resource ID** – sets the resource ID for the roster
-* **Start date time** – the start date of the roster
-* **End date time** – the end date of the roster
-* **Name of the roster** – the name that is displayed in the roster
-* **ClassName** – the classname of the roster, which can be used to do proper styling of a roster {{% todo %}}different from the explanation on the UI. Double check with the dev.{{% /todo %}}
+{{% alert color="info" %}}The roster has the light yellow background in the scheduler.{{% /alert %}}
+
+{{< figure src="/attachments/appstore/widgets/advanced-scheduler/roster.png" >}}
+
+* **Datasource** – This is the data source for the roster.
+* **Resource ID** – This is the resource ID for the roster.
+* **Start date time** – This is the start date of the roster.
+* **End date time** – This is the end date of the roster.
+* **Name of the roster** – This is name that is displayed in the roster.
+* **ClassName** – the classname of the roster, which can be used for the styling of a roster {{% todo %}}On the UI, it says "proper styling of an event" – is this correct?{{% /todo %}}
   * If left empty, the value is set to *event-type-default*.
 
 #### 2.2.5 UI Tab
 
-* **Today button**  – changes the text shown on the **Today** button, for example, to the translation of "today" in a different language
-* **Hide navigation** – selects whether to hide the navigation or not
-  * **Yes** – If selected, the navigation is hidden.
-  * **No** – If selected, the navigation is visible.
+* **Today button**  – You can change the text shown on the **Today** button, for example, to the translation of "today" in a different language.
+* **Hide navigation**
+  * **Yes** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is hidden. You can create your own Mendix buttons.
+  * **No** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is visible.
 
 #### 2.2.6 Common Tab
 
@@ -133,11 +131,15 @@ For more information, see [Common Section](https://docs.mendix.com/refguide/comm
 
 #### 2.2.7 Appearance Tab
 
+
+
+
+
 ### 2.3 Configuring the Header Dropzone
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/header-dropzone.png" >}}
 
-In this area, you can define what is shown above the scheduler.
+In this area, you can define your own header, which is shown above the scheduler.
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/header.png" >}}
 
@@ -145,7 +147,7 @@ In this area, you can define what is shown above the scheduler.
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/resource-area.png" >}}
 
-In this area, you define what is shown as **Resources** in the scheduler.
+In this area, you can define what is shown as **Resources** in the scheduler.
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/resources.png" >}}
 

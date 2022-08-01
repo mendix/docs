@@ -1,6 +1,7 @@
 ---
 title: "Troubleshooting Version Control and Team Server Issues"
 url: /refguide/troubleshoot-version-control-issues/
+linktitle: "Troubleshoot Version Control & Team Server Issues"
 category: "Collaboration"
 weight: 18
 description: "This document presents a list of problems and fixes for version control issues."

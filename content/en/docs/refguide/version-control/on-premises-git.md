@@ -2,7 +2,7 @@
 title: "Working with Git On-Premises Version Control Server"
 linktitle: "Git On-Premises Version Control Server"
 url: /refguide/on-premises-git/
-weight: 20
+weight: 60
 tags: ["on-premises", "git", "version control"]
 aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/

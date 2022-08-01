@@ -81,7 +81,7 @@ The service feed, available in XML and JSON, contains a list of the published en
 
 The $metadata XML file contains the service's contract in OData's [CSDL](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) format.
 
-#### 3.2.3 OpenApi
+#### 3.2.3 OpenAPI
 
 The OpenAPI JSON file contains the service's REST contract in [OpenAPI](https://www.openapis.org/) format.
 

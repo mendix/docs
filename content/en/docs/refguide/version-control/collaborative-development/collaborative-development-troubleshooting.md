@@ -24,7 +24,7 @@ You can do one of the following:
 
 1. **Merge** (recommended)–  Studio Pro will try to merge the unsynchronized changes from Studio automatically. Your local changes (if any) will be combined with the Studio changes. The changes from Studio are stored in an automatically created branch to ensure that there no changes lost in the process. The branch is visible in the branch line manager. This process can result in one of the following: <br/>
 
-    1.  If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Studio changes. You need to review the merged changes and commit them to get Studio and Studio Pro in sync again. And afterwards you can delete the automatically-created branch.<br/>
+    1. If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Studio changes. You need to review the merged changes and commit them to get Studio and Studio Pro in sync again. And afterwards you can delete the automatically-created branch.<br/>
 
     1. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
 

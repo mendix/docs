@@ -71,7 +71,7 @@ You can select how you want to represent associations. For more information, see
 
 ### 3.2 Export
 
-In this section you can save the different representations of the service to file.
+In this section, you can save the different representations of the service to file.
 
 #### 3.2.1 Service feed
 
@@ -83,7 +83,7 @@ The $metadata XML file contains the service's contract in OData's [CSDL](https:/
 
 #### 3.2.3 OpenApi
 
-The OpenApi JSON file contains the service's REST contract in [OpenApi](https://www.openapis.org/) format.
+The OpenAPI JSON file contains the service's REST contract in [OpenAPI](https://www.openapis.org/) format.
 
 ### 3.3 Security {#security}
 
@@ -91,9 +91,9 @@ You can configure security for the OData service when [App Security](/refguide/a
 
 #### 3.3.1 Requires Authentication {#authentication}
 
-Select whether clients need to authenticate or not. Choose _No_ to allow access to the resources without restrictions. Choose _Yes_ to be able to select which authentication methods to support.
+Select whether clients need to authenticate or not. Select **No** to allow access to the resources without restrictions. Select **Yes** to be able to select which authentication methods to support.
 
-Even when you choose _Yes_, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](/refguide/anonymous-users/).
+Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
 #### 3.3.2 Authentication Methods
 

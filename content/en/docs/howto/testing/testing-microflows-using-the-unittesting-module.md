@@ -45,7 +45,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 	* [Object Handling](/appstore/modules/object-handling/)
 	For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 3. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
-4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow, as in the following figure:
+4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow.
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580370.png" alt="Selecting the After startup microflow" >}}
 
@@ -54,7 +54,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 7. In the App Explorer, under the **App {App name}** node, click **Navigation**.
 8. In the **Menu** section, click **New item**.
 9. In the **Caption** field, enter *UnitTestOverview*.
-10. In the **On click** field, select **Call a microflow**, and then select the **UnitTestOverview** microflow, as in the following figure:
+10. In the **On click** field, select **Call a microflow**, and then select the **UnitTestOverview** microflow.
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580363.png" alt="Selecting the UnitTestOverview microflow" >}}
 
@@ -63,7 +63,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 13. Go to `http://localhost:8080/index.html`.
 14. In the navigation pane, click **UnitTestOverview**.
 
-	The app shows the **UnitTesting** page, as in the following figure:
+	The app shows the **UnitTesting** page, as in the following image:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580341.png" alt="A view of the UnitTesting page and default tests" >}}
 
@@ -76,7 +76,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 
 16. Validate that the Unit Testing module is correctly set up by running the **UnitTesting.Test_ValidUnitTest** test. 
 
-	The color of the test case changes to red if the test fails, and to green if it passes, as in the following figure:
+	The color of the test case changes to red if the test fails, and to green if it passes.
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580358.png" alt="An example of a passed test case" >}}
 
@@ -94,18 +94,18 @@ To create a sample microflow for testing, follow these steps:
 
 1.  Create a new [enumeration](howto/data-models/create-a-basic-data-layer#add-enumeration) with the following parameters:
 	* **Name** – *Level*
-	* **Enumeration values** – *Junior*, *Medior*, and *Senior*, as in the following figure:
+	* **Enumeration values** – *Junior*, *Medior*, and *Senior*.
   
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580356.png" alt="Enumeration with three values" >}}
 
 2.  Open the domain model of **MyFirstModule**.
 3.  Create a new [entity](howto/data-models/create-a-basic-data-layer#create-entity) with the following parameters:
 	* **Name** – *Employee*
-	* **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type), as in the following figure:
+	* **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580355.png" alt="A view of the Employee entity used by the sample microflow" >}}
 
-4.  Create a microflow called **Promote** that changes the Level parameter for the Employee entity based on the enumeration, as in the following figure:
+4.  Create a microflow called **Promote** that changes the Level parameter for the Employee entity based on the enumeration.
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/promote.jpg" alt="A view of the sample Promote microflow" >}}
 

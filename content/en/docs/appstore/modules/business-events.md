@@ -9,11 +9,11 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 ## 1 Introduction
 
-The [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module lets your Mendix apps be event-driven. With Mendix Business Events, applications can signal when something important happens, and apps can independently subscribe to these events if they want to be informed. Mendix Business Events are like a mailing list to share event notifications between apps.
+The [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module lets your Mendix apps be event-driven. With business events, applications can signal when something important happens, and apps can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-The key difference between Mendix Business Events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, the Mendix Event Broker.
+The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, the Mendix Event Broker.
 
-Currently, Mendix Business Events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
+Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
 
 ### 1.1 Typical Use Cases
 
@@ -32,7 +32,7 @@ You must purchase a license to the [Mendix Event Broker](#event-broker) to run a
 To use the Mendix Business Events module, you will need the following:
 
 * Mendix 9.14 or higher
-* At least two Mendix apps: one that publishes the Business Events and makes them available, and one that subscribes to the Business Events (you can have as many publishing and consuming apps as you require)
+* At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
 
 To use Mendix Business Events on production environments, you will need the pre-requisites listed above in addition to the following:
 * A subscription to the Mendix Event Broker (link to licensing/contact page)
@@ -96,7 +96,7 @@ This section explains how to publish and consume business events in Mendix apps 
 
 ### 3.1 Publishing Business Events
 
-The following sections describe how to publish entities as Business Events.
+The following sections describe how to publish entities as business events.
 
 #### 3.1.1 Modelling Business Events
 
@@ -115,7 +115,7 @@ The text with the blue background above the entity tells you that it is a specia
 
 #### 3.1.2 Creating a Published Business Event Service {#create-be}
 
-A Published Business Event Service is the contract defining various events, like a REST API spec.
+A **Published Business Event Service** is the contract defining various events, like a REST API spec.
 
 1.  Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**:
 {{< figure src="/attachments/appstore/modules/business-events/add-published-event-service.png" >}}
@@ -129,13 +129,13 @@ A Published Business Event Service is the contract defining various events, like
 4.  Select the entity that you would like to publish to add it to the Service:
 {{< figure src="/attachments/appstore/modules/business-events/select-entity-add-service.png" >}}
 
-The Business Event with Attributes will now appear in the Service:
+The business event with attributes will now appear in the Service:
 {{< figure src="/attachments/appstore/modules/business-events/event-with-attributes-in-service.png" >}}
 
-Once you have all of your entities linked into the Published Business Event Service, you can export it to be shared as an Async API contract in YAML format.
+Once you have all of your entities linked into the **Published Business Event Service**, you can export it to be shared as an Async API contract in YAML format.
 
 {{% alert color="info" %}}
-When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event part of the service. (This works similarly to how tables are created in a database for Persistent Entities.) If you reuse a module with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event/channel independently. 
+When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event part of the service. (This works similarly to how tables are created in a database for persistable entities.) If you reuse a module with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event or channel independently. 
 {{% /alert %}}
 
 
@@ -143,8 +143,8 @@ When deploying an app with one or more **Published Business Event** services, ch
 
 The next stage is to add an activity for publishing into the microflow(s) that will publish. The following has to be done for every microflow:
 
-1.  Open the microflow in which the Business Event will be published.
-2.  Create an object of the Business Event you want to publish.
+1.  Open the microflow in which the business events will be published.
+2.  Create an object of the business events you want to publish.
 3.  In the **Toolbox**, search for the **Publish business event** action and drag it and place it in your microflow.
 {{< figure src="/attachments/appstore/modules/business-events/search-and-drag-pub-entity.png" >}}
 
@@ -166,7 +166,7 @@ Consumption is a continuous process that the module will start and will be resta
 
 #### 3.2.1 Create a Consumed Business Event Service
 
-In order to start consuming a Business Event Contract, you first need to create a Consumed Business Event Service.
+In order to start consuming a business event contract, you first need to create a **Consumed Business Event Service**.
 
 1.  Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**:
 {{< figure src="/attachments/appstore/modules/business-events/add-consumed-business-event-service.png" >}}
@@ -177,7 +177,7 @@ In order to start consuming a Business Event Contract, you first need to create 
 3.  To populate the service you are prompted to **Import Service Contract (AsyncAPI)**. Import the file, which was created in the [Create a Published Business Event Service](#create-be) step.
 {{< figure src="/attachments/appstore/modules/business-events/import-async-api-contract.png" >}}
 
-This will make subscriptions to Mendix Business Events available for you to start mapping to entities within your consuming application:
+This will make subscriptions to business events available for you to start mapping to entities within your consuming application:
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-1.png" >}}
 
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
@@ -202,13 +202,13 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
  
 * **ConsumedBusinessEvent**: This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the module, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
 
-* **DeadLetterQueue**: This persistant entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for Business Event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
+* **DeadLetterQueue**: This persistant entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
 
-* **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business Event is triggered.  Should the Microflow fail, the entity will be removed as part of the same transaction.
+* **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  Should the Microflow fail, the entity will be removed as part of the same transaction.
 
 ### 3.3.1 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
-Every time a Business Event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
+Every time a business event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
 
 {{< figure src="/attachments/appstore/modules/business-events/dead-letter-queue.png" >}}
 
@@ -227,7 +227,7 @@ To deploy to production, you must have a subscription to the Mendix Event Broker
 
 Additionally, a Technical Contact must enable the Event Broker Service in the [Environment Details](/developerportal/deploy/environments-details/) section of every app involved. See the [Services](/developerportal/deploy/environments/#services) section of *Environments* for more information.
 
-Mendix Business Events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
+Business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
 
 ## 5 Limitations {#limitations}
 
@@ -265,21 +265,21 @@ You can configure the app running in Studio Pro to use the postgres database cre
 
    No, that is currently not supported. 
 
-3. Can I send related or associated objects as a single Business Event?
+3. Can I send related or associated objects as a single business event?
 
    No, only a flat object. For complex data structures, provide an API where the consuming app can retrieve the complex structure upon retrieval of a Business Event. Alternatively, you can use a string attribute in the Business Event to store JSON or XML using mappings.
 
-4.  I want to replicate data between my Mendix apps. Should I use Business Events?
+4.  I want to replicate data between my Mendix apps. Should I use business events?
 
-    Business Events can help you replicate data more efficiently by ensuring you do not have to poll continuously. Instead, the consuming app only polls for new data if it receives a Business Event indicating that something has changed.  To share data, it is still preferable to use OData or RESTful APIs, as this is not the current purpose of Business Events.
+    Business events can help you replicate data more efficiently by ensuring you do not have to poll continuously. Instead, the consuming app only polls for new data if it receives a business event indicating that something has changed.  To share data, it is still preferable to use OData or RESTful APIs, as this is not the current purpose of business events.
 
-5.  Are Business Events guaranteed to be delivered only once?
+5.  Are business events guaranteed to be delivered only once?
 
-    The **Outbox** will publish each Business Event only once.  This does not prevent business logic from sending duplicate messages to the [Outbox](#be-entities). 
+    The **Outbox** will publish each business event only once.  This does not prevent business logic from sending duplicate messages to the [Outbox](#be-entities). 
 
-6.  Are Business Events guaranteed to be delivered in the original sequence?
+6.  Are business events guaranteed to be delivered in the original sequence?
 
-    Events will be delivered in the sequence they are produced. The Mendix Business Events module, however, persists the event to the **Entity** table in this order. Once the entity is persisted it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of Mendix Business Events.
+    Events will be delivered in the sequence they are produced. The Mendix Business Events module, however, persists the event to the **Entity** table in this order. Once the entity is persisted it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of the Mendix Business Event module.
 
 7.  How do I detect and correct failed processing of received events?
 
@@ -295,15 +295,14 @@ You can configure the app running in Studio Pro to use the postgres database cre
 
 10. How do I know the event was successfully published?
 
-    Messages are first queued within the **Outbox** for successful delivery as a Business Event.  Monitoring the **Outbox** entity will allow the developer to determine if there are unpublished Business Event Entities. See the [Business Event Entities](#be-entities) for more information on the **Outbox**.
+    Messages are first queued within the **Outbox** for successful delivery as a business event.  Monitoring the **Outbox** entity will allow the developer to determine if there are unpublished business event entities. See the [Business Event Entities](#be-entities) for more information on the **Outbox**.
  
 11. How do I know events are consumed successfully?
 
-    The flow of events are controlled by the persistence of the event to the Consumed Business Event Entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure.   They only cause for such failure would be database-related and unlikely to occur.
+    The flow of events are controlled by the persistence of the event to the **Consumed Business Event** entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure.   They only cause for such failure would be database-related and unlikely to occur.
 
     On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
 
 ## 7 Known Issues
 
 * In Studio Pro [9.14](//releasenotes/studio-pro/9.14/), having a log activity in your after-startup microflow results in an error when trying to build the app. You can work around this by removing the log activity in the after-startup microflow. This was fixed for Studio Pro [9.15](/releasenotes/studio-pro/9.15/) and above.
-

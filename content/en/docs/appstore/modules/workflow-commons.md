@@ -43,8 +43,6 @@ Download and install the following modules:
 
 ## 3 Configuration
 
-{{% alert color="info" %}}The dashboards and metrics in Workflow Commons version 2.1.0 and above depend on the configuration of state change microflows. When using Studio Pro, make sure to follow the steps in the **Readme** snippet included in the module.{{% /alert %}}
-
 1. Add the following pages to your navigation:
     1. TaskInbox
     2. WorkflowAdminCenter

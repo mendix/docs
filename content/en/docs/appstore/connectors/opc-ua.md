@@ -45,19 +45,19 @@ Only one of the options can be in use at a time. Which option to use is determin
    
    Reading has been tested for limited data types. During reading and subscribing, all return values are casted to String through a simple `toString()` method. This implementation works well for Boolean and the Int values, but has not been tested for all data types. 
 
-1. Endpoints Security Mode 
+2. Endpoints Security Mode 
 
-   Both HTTP and TCP connections are supported. For both connection types only 'Security mode' `None` is supported. Security mode `Sign` or `Sign&Encrypt` are not supported. 
+   Both HTTP and TCP connections are supported. For both connection types, only Security mode **None** is supported. Security mode **Sign** or **Sign&Encrypt** are not supported. 
 
-1. High-availability architecture (no horizontal scaling support)
+3. High-availability architecture (no horizontal scaling support)
 
    At this point, this connector replies completely on storing configuration in the Server memory and only supports running on a single container instance. If you use scaling and run multiple parallel instances of the application, the module may generate exceptions and loose messages. 
 
-1. Complex events on nodes
+4. Complex events on nodes
 
    Subscriptions are only possible on value changes of nodes. At this time, events or aggregates are not implemented yet. The connector supports all data types. Any OPC UA type is received and passed as a String to the evaluating microflow.
 
-1. Advanced settings on monitored items
+5. Advanced settings on monitored items
 
    OPC UA offers fine-grained control over how values are shared with this Client. At this time all monitored items are set up with identical default parameters, and these can not yet be influenced. The default parameters come from the Apache Milo library. 
 

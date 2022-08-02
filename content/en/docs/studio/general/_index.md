@@ -36,9 +36,9 @@ You can edit an app in Mendix Studio by opening it in the [Developer Portal](htt
 You can also open your app in Studio via Studio Pro. Do the following:
 
 1. In Studio Pro, open the app in that you want to view in Studio.
-2.  Click the globe icon in the top right corner (only available if Studio is enabled).
+2. Click the globe icon in the top right corner (only available if Studio is enabled).
 
-	{{< figure src="/attachments/studio/general/globe-icon.png" alt="Globe Icon" >}}
+    {{< figure src="/attachments/studio/general/globe-icon.png" alt="Globe Icon" >}}
 
 The app opens in Studio.
 
@@ -54,7 +54,6 @@ You may also see a top bar suggesting an upgrade to the next Mendix version. For
 When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. 
-
 {{% /alert %}}
 
 ## 4 Switching App Modes
@@ -151,4 +150,3 @@ Mind the following characteristics when using cut/copy/paste:
 
 * [Studio Ranges & Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
 * [Translating Your App to Multiple Languages](/studio/language-support/) – describes how to translate you app to multiple languages
-

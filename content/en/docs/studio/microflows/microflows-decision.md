@@ -18,7 +18,7 @@ A decision is an element based on a condition; it follows one and only one of th
 There are two ways to configure a condition for the decision:
 
 * [With **Variables/ Attributes**](#variables-attributes-tab) ( for example, you can use it to create different flows for an attribute of the enumeration type)
-*  [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
+* [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
    {{< figure src="/attachments/studio/microflows/microflows-decision/configure-condition-dialog.png" >}}
 
@@ -32,9 +32,7 @@ The following elements can be used as a decision condition in the **Variable/Att
 * Attribute of enumeration type
 
 {{% alert color="info" %}}
-
 The parameters and entities which you would like to use in configuring the condition of the decision should be present in the microflow, either as input parameter or as a result of an activity. 
-
 {{% /alert %}}
 
 ### 2.2 Configuring the Condition with an Expression {#expression-tab}
@@ -64,4 +62,3 @@ The caption describes what happens in this element.
 * [Microflows](/studio/microflows/)
 * [Microflow Expressions](/studio/expressions/)
 * [Configure a  Decision](/studio-how-to/microflows-how-to-configure-decision/) 
-

@@ -15,15 +15,11 @@ tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "fi
 There are the following image and file widgets in Mendix Studio:
 
 * **Static Image** – allows you to show a static (non-changing) image in your app
+* **Dynamic Image** – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
+* **Image Uploader** – allows end-users to upload an image
+* **File Manager** – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
 
-*  **Dynamic Image** – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
-
-*  **Image Uploader** – allows end-users to upload an image
-
-*   **File Manager** – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
-  
-	{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/images-and-files.png" >}}
-    
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/images-and-files.png" >}}
 
 ## 2 Static and Dynamic Image Properties
 
@@ -111,9 +107,7 @@ This property only appears if **Show Label** is enabled. Specify the name that w
 Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: 
 
 * **Editable** – The value displayed by the widget is editable.
-
 * **Read-Only** – The value is in read-only mode.
-
 * **Conditional** – The widget is editable only if specified conditions are met based on an attribute value or based on an expression.
 
     {{% alert color="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
@@ -142,9 +136,7 @@ This property allows you to create an expression and is shown only when the expr
 ### 3.3 Controls Section
 
 {{% alert color="info" %}}
-
 The **Controls** section is available for **File Manager** only. 
-
 {{% /alert %}}
 
 The **Show Buttons For** option specifies whether end-users are able to upload and/or download files and has the following options:

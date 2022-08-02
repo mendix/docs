@@ -9,9 +9,9 @@ tags: ["test", "testing", "microflow", "unit testing"]
 
 ## 1 Introduction
 
-Verify that your [microflow](/refguide/microflows/) works as expected by creating unit tests with the Unit Testing module. 
+Verify that your [microflow](/refguide/microflows/) works as expected by creating unit tests with the [Unit Testing](/appstore/modules/unit-testing/) module. 
 
-The Unit Testing module provides a user-friendly interface to manage and run unit tests. The module supports unit tests that are created using microflows, as well as unit tests that are created using JUnit.
+The Unit Testing module provides a user-friendly interface to manage and run unit tests that are created by using microflows, as well as unit tests that are by created using JUnit.
 
 This how-to will teach you how to do the following:
 
@@ -39,27 +39,29 @@ Before starting this how-to, make sure you have completed the following prerequi
 To set up the unit testing module and run the example tests, follow these steps:
 
 1. Create a [new app](/refguide/new-app/).
-2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module.
-3. Download and install the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module.
-4. Download and install the [Object Handling](/appstore/modules/object-handling/) module.
-5. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
-6. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow, as in the following figure:
+2. [Download and install](/appstore/general/app-store-content) the following modules:
+	* [Unit Testing](/appstore/modules/unit-testing/)
+	* [Community Commons Function Library](/appstore/modules/community-commons-function-library/)
+	* [Object Handling](/appstore/modules/object-handling/)
+	For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
+3. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
+4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580370.png" alt="Selecting the After startup microflow" >}}
 
-8. Click **Unit Testing > _USE ME > Microflows > Startup**, and then click **Select**.
-9. Click **OK**.
-10. In the App Explorer, under the **App {App name}** node, click **Navigation**.
-11. In the **Menu** section, click **New item**.
-12. In the **Caption** field, enter *UnitTestOverview*.
-13. In the **On click** field, select **Call a microflow**, and then select the **UnitTestOverview** microflow, as in the following figure:
+5. Click **Unit Testing** > **_USE ME** > **Microflows** > **Startup**, and then click **Select**.
+6. Click **OK**.
+7. In the App Explorer, under the **App {App name}** node, click **Navigation**.
+8. In the **Menu** section, click **New item**.
+9. In the **Caption** field, enter *UnitTestOverview*.
+10. In the **On click** field, select **Call a microflow**, and then select the **UnitTestOverview** microflow, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580363.png" alt="Selecting the UnitTestOverview microflow" >}}
 
-14. Click **OK**.
-15. Run the app locally.
-16. Go to [http://localhost:8080/index.html](http://localhost:8080/index.html).
-17. In the navigation pane, click **UnitTestOverview**.
+11. Click **OK**.
+12. Run the app locally.
+13. Go to `http://localhost:8080/index.html`.
+14. In the navigation pane, click **UnitTestOverview**.
 
 	The app shows the **UnitTesting** page, as in the following figure:
 
@@ -67,37 +69,37 @@ To set up the unit testing module and run the example tests, follow these steps:
 
 	You can use this page to execute unit tests, or to reset the test status back to not executed. Use the left-side navigation pane to select a module that contains unit tests. In this scenario, **UnitTesting** is the only module that contains unit tests. 
 
-18. Ensure that the **Rollback microflow tests after execution** check box is selected.
+15. Ensure that the **Rollback microflow tests after execution** check box is selected.
 
 	{{% alert color="warning" %}}If the check box is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the check box unless it is required by your specific use case.
 	{{% /alert %}} 
 
-19. Validate that the Unit Testing module is correctly set up by running the **UnitTesting.Test_ValidUnitTest** test. 
+16. Validate that the Unit Testing module is correctly set up by running the **UnitTesting.Test_ValidUnitTest** test. 
 
 	The color of the test case changes to red if the test fails, and to green if it passes, as in the following figure:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580358.png" alt="An example of a passed test case" >}}
 
-20. To view detailed test results, in the **UnitTesting.Test_ValidUnitTest** row, click **Details**.
+17. To view detailed test results, in the **UnitTesting.Test_ValidUnitTest** row, click **Details**.
 
 ## 4 Unit-testing a Microflow
 
 In this section, you will learn how to create and run a microflow unit test.
 
-### 4.1 Creating a Sample Microflow for Testing {#HowtoCreateSampleMicroflow}
+### 4.1 Creating a Sample Microflow for Testing {#sample-microflow}
 
-Optionally, create a sample microflow that you can then test with unit testing. In a real-life scenario, the steps below may be different, depending on the microflow that you want to create.
+For the purpose of this how-to, create a sample microflow that you can then test with unit testing. In a real-life scenario, the steps below may be different, depending on the microflow that you want to create.
 
 To create a sample microflow for testing, follow these steps:
 
-1.  [Create a new enumeration](/studio/domain-models-enumeration/#create-new-enumeration) with the following parameters:
+1.  Create a new [enumeration](howto/data-models/create-a-basic-data-layer#add-enumeration) with the following parameters:
 	* **Name** – *Level*
 	* **Enumeration values** – *Junior*, *Medior*, and *Senior*, as in the following figure:
   
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580356.png" alt="Enumeration with three values" >}}
 
 2.  Open the domain model of **MyFirstModule**.
-3.  [Create a new entity](/studio/domain-models/#adding-new-entities) with the following parameters:
+3.  Create a new [entity](howto/data-models/create-a-basic-data-layer#create-entity) with the following parameters:
 	* **Name** – *Employee*
 	* **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type), as in the following figure:
 
@@ -109,7 +111,7 @@ To create a sample microflow for testing, follow these steps:
 
 ### 4.2 Creating a Unit Test Microflow
 
-This section describes how to create a microflow test for the sample microflow described in the [Creating a Sample Microflow for Testing](#HowtoCreateSampleMicroflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. If you need to adapt the microflow test to your requirements, bear in mind the following considerations:
+This section describes how to create a microflow test for the sample microflow described in the [Creating a Sample Microflow for Testing](#sample-microflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. If you need to adapt the microflow test to your requirements, bear in mind the following considerations:
 
 * The test microflow name must start with *Test*, for example *Test_RegisterTrainee*.
 * The microflow should have no input arguments.
@@ -123,7 +125,7 @@ To create a sample test microflow, follow these steps:
 
 1. In the left-side navigation pane, right-click on **MyFirstModule**, and then click **Add folder**. 
 2. In the **Name** field, enter *UnitTests*.
-3. Right-click on the **UnitTests** folder, and then click **Add microflow**.
+3. Right-click the **UnitTests** folder, and then click **Add microflow**.
 4. In the **Name** field, enter *Test_PromoteEmployeeToJunior*.
 5. In the **Test_PromoteEmployeeToJunior** microflow, add **Employee** as an input parameter.
 6. Add a new **Create object** activity for the **Employee** entity. 
@@ -139,7 +141,7 @@ To create a sample test microflow, follow these steps:
 
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580352.png" alt="A microflow call activity with Employee as the parameter" >}}
 
-10. Promote the employee to the right level by an activity with the following parameters:
+10. Promote the employee to the right level by using an activity with the following parameters:
 	* **Type** – **Microflow call**
 	* **Microflow** – **UnitTesting.AssertTrue1**
 	* **Parameter** – **ValueToAssert**

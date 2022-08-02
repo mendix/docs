@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download and install [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 * Create a new app or have an existing app available
 
-## 3 Creating Entities & Attributes
+## 3 Creating Entities & Attributes {#create-entity}
 
 To create entities and their attributes, follow these steps:
 
@@ -61,7 +61,7 @@ To create entities and their attributes, follow these steps:
 
 	{{< figure src="/attachments/howto/data-models/create-a-basic-data-layer/18582184.png" >}}
 
-## 4 Adding Enumerations
+## 4 Adding Enumerations {#add-enumeration}
 
 An enumeration is a predefined list of values that can be used as an attribute type. This allows users of the app to select any of the predefined values for this attribute. A good example of an enumeration is order status. Let's add an enumeration and extend the **Order** entity with an enumeration value-based attribute.
 

@@ -15,14 +15,12 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 
 ## 2 Configuration
 
-### 2.1 Domain Model
+### 2.1 Configuring the Scheduler Widget
 
-### 2.2 Configuring the Scheduler Widget
-
-#### 2.2.1 Views Tab
+#### 2.1.1 Views Tab
 
 * **Scheduler Start Date** – This is the start date of the scheduler.
-* **Scheduler End Date** – This is the end date of the scheduler{{% todo %}}Will this field be removed before the release?{{% /todo %}}  
+* **Scheduler End Date** – This is the end date of the scheduler.{{% todo %}}Will this field be removed before the release?{{% /todo %}}  
 * **On changed time window** – You can set an action that is triggered if the time window is changed.
 * **Views** – You can manage the available views on the list.
   * **New** – You can add a new view with the following items:
@@ -30,36 +28,34 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
   
     * **Name of the view** – This is the name of the view.
   
-    * **Default or Custom view** – You can select whether you use one of the following default views or a custom view :
-      * **Day** – This is a default view
+    * **Default or Custom view** – You can select whether you use one of the following default views or a custom view:
+      * **Day** – If selected, you use this default view.
       
-      * **Week** – This is a default view
+      * **Week**– If selected, you use this default view.
       
-      * **Month** – This is a default view
+      * **Month** – If selected, you use this default view.
       
-      * **Year** – This is a default view
+      * **Year** – If selected, you use this default view.
       
-      * **Custom** – This is a default view
-        * **Unit of time** – This is the unit of time used for the view
+      * **Custom** – If selected, you use a custom view.
+        * **Unit of time** – You can define the unit of time used in the custom view.
+        * **Visible timeline** – You can define how many units of time are visible in the time window.
+        * **On prev/next button skip** – You can define how many units of time get skipped when you click the previous button (**<**) or the next button (**>**).
       
-        * **Visible timeline** – You can define how many units of time are visible in the time window
-      
-        * **On prev/next button skip** – You can define how many units of time are skipped when you click the previous button (**<**) or the next button (**>**).
-      
-
+    
   * **Delete** – You can delete the selected view.
 
   * **Edit** – You can edit the selected view.
 
   * **Move up** – You can move up the selected view.
-  
+
   * **Move down** – You can move down the selected view.
 * **Selected View** – This is an attribute of an entity in your Domain Model, which is used to change the view in Mendix. {{% todo %}}What is this  exactly?{{% /todo %}}
 * **Fixed Timeline**
-  * **Yes** – If selected, you cannot change the timeline.
-  * **No** – If selected, you can scroll to a date within two years before and after the current date.
+  * **Yes** – If selected, you cannot change the timeline in the time window.
+  * **No** – If selected, you can scroll to a date within two years before and after the current date in the time window.
 
-#### 2.2.2 Resources Tab
+#### 2.1.2 Resources Tab
 
 * **Resources Datasource** – This is the datasource for the resources that are shown on the left side of the scheduler.
 * **Resource ID** – This is the ID of the resource.
@@ -69,7 +65,7 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 * **Resource height** – This is the height of the resource.
 * **On Click** – You can set an action that is triggered when the resource is clicked.{{% todo %}}Will this field be removed before the release?{{% /todo %}}
 
-#### 2.2.3 Events Tab
+#### 2.1.3 Events Tab
 
 *  **List of Data sources** – You can manage the data sources of events on the list.
     *  **New** – You can add a new event with the following items:
@@ -81,7 +77,7 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
           * **Start event** – The is the start date of an event.
           * **End event** – This is the end date of an event.
           * **After event travel time** – You can add some travel time after the event.
-          * **Movable** – You can select a Boolean attribute to indicate whether the event can be moved around along the timeline.
+          * **Movable** – You can select a Boolean attribute to indicate whether the event can be dragged to a different time slot on the timeline.
           * **Resizeable** – You can select a Boolean attribute to indicate whether the length of the event can be resized.
         * **UI** tab
           * **Event Title** – This is the title of the event.
@@ -90,11 +86,11 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
             * If left empty, the value is set to *event-type-default*.
         * **User interaction** tab
           * **On click action** – You can set an action that is triggered when the event is clicked.
-          * **On change action** – You can set an action that is triggered when the event is moved to a different time slot or when its length is resized.
-    *  **Delete** – Yo can delete the select data source.
-    *  **Edit** – You can edit the selected data source.
-    *  **Move up** – You can move up the selected data source.
-    *  **Move down** – You van move down the selected data source.
+          * **On change action** – You can set an action that is triggered when the event is moved to a different time slot on the timeline or when its length is resized.
+    *  **Delete** – Yo can delete the select event
+    *  **Edit** – You can edit the selected event.
+    *  **Move up** – You can move up the selected event.
+    *  **Move down** – You van move down the selected event.
 * **Create new events**
   * **Yes** – If selected, you can create a new event by drag and drop or double-clicking a time slot. {{% todo %}}Check if this is correct. How does this drag and drop work exactly?{{% /todo %}}
   * **No** – If selected, you cannot create a new event by drag and drop or double-clicking a time slot.
@@ -104,9 +100,9 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 *  **New Start Event** – {{% todo %}}What is this exactly?{{% /todo %}}
 * **New End Event** – {{% todo %}}What is this exactly?{{% /todo %}}
 
-#### 2.2.4 Rosters Tab
+#### 2.1.4 Rosters Tab
 
-{{% alert color="info" %}}The roster has the light yellow background in the scheduler.{{% /alert %}}
+{{% alert color="info" %}}The roster has a light yellow background in the scheduler.{{% /alert %}}
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/roster.png" >}}
 
@@ -114,26 +110,26 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 * **Resource ID** – This is the resource ID for the roster.
 * **Start date time** – This is the start date of the roster.
 * **End date time** – This is the end date of the roster.
-* **Name of the roster** – This is name that is displayed in the roster.
+* **Name of the roster** – This is name displayed in the roster.
 * **ClassName** – the classname of the roster, which can be used for the styling of a roster {{% todo %}}On the UI, it says "proper styling of an event" – is this correct?{{% /todo %}}
   * If left empty, the value is set to *event-type-default*.
 
-#### 2.2.5 UI Tab
+#### 2.1.5 UI Tab
 
 * **Today button**  – You can change the text shown on the **Today** button, for example, to the translation of "today" in a different language.
 * **Hide navigation**
   * **Yes** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is hidden. You can create your own Mendix buttons.
-  * **No** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is visible.
+  * **No** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is visible.{{% todo %}}How can you configure the options in the view selector drop-down?{{% /todo %}}
 
-#### 2.2.6 Common Tab
+#### 2.1.6 Common Tab
 
 For more information, see [Common Section](https://docs.mendix.com/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
-#### 2.2.7 Appearance Tab
+#### 2.1.7 Appearance Tab
 
 {{% todo %}}Can the properties in the **Appearance** tab have any influence on the widget??{{% /todo %}}
 
-### 2.3 Configuring the Header Dropzone
+### 2.2 Configuring the Header Dropzone
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/header-dropzone.png" >}}
 
@@ -141,7 +137,7 @@ In this area, you can define your own header, which is shown above the scheduler
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/header.png" >}}
 
-### 2.4 Configuring the Resource Area
+### 2.3 Configuring the Resource Area
 
 {{< figure src="/attachments/appstore/widgets/advanced-scheduler/resource-area.png" >}}
 

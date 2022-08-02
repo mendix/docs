@@ -70,21 +70,21 @@ A simple JSON object is contained in curly braces (between '{' and '}'). It cont
 
 Each JSON property is composed of a key ("name") and a value ("John"). If the value is between double quotes ("  "), it is considered a string, otherwise the type is derived from the value. The following JSON values are supported:
 
-*   "string". Converted into an attribute of type String.
-*   123\. Converted into an attribute of type Integer.
-*   true or false. Converted into an attribute of type Boolean.
-*   "1985-04-12T23:20:50.52Z". Converted into an attribute of type DateTime.
-*   12.50\. Converted into an attribute of type Decimal.
+* `"string"` – converted into an attribute of type String
+* `123` – converted into an attribute of type Integer
+* `true` or `false` – converted into an attribute of type Boolean
+* `"1985-04-12T23:20:50.52Z"` – converted into an attribute of type DateTime
+* `12.50` – converted into an attribute of type Decimal
 
 ### 2.2 JSON Arrays
 
 A JSON array is contained in square brackets (between `[` and `]`). It contains a comma-separated list of JSON values or JSON objects.
 
-*   a JSON array can be the root of the JSON snippet.
+* a JSON array can be the root of the JSON snippet.
 
-*   a JSON array can be contained within a JSON object
+* a JSON array can be contained within a JSON object
 
-*   a JSON array can be contained within another JSON array.
+* a JSON array can be contained within another JSON array.
 
 {{% alert color="info" %}}
 

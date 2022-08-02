@@ -5,6 +5,7 @@ url: /refguide7/export-project-package-dialog/
 ---
 
 ## 1 Introduction
+
 With this dialog box, you can export a Mendix project package (*.mpk*) from the Mendix Modeler. You can export a project package for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire application, or if you need to provide a test app when submitting a ticket.
 
 To open the **Export Project Package** dialog box, open your project in the Mendix Modeler and then go to **File > Export Project Package**.

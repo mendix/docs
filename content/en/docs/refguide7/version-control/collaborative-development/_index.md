@@ -38,7 +38,7 @@ The collaborative development process between the Desktop Modeler and the Web Mo
 
 1. Every change made in the Web Modeler is automatically saved to the Web Modeler working copy. Multiple users can view the project in the Web Modeler at the same time: one user can edit it and others are in read-only mode. 
 
-2.  When Desktop Modeler users open a project, they are notified if the Web Modeler is enabled for this development line. 
+2. When Desktop Modeler users open a project, they are notified if the Web Modeler is enabled for this development line. 
 
     {{< figure src="/attachments/refguide7/version-control/collaborative-development/collaborative-development-enabled-notification.png" alt="Collaborative Development Enabled Notification" >}}
 
@@ -46,7 +46,7 @@ The collaborative development process between the Desktop Modeler and the Web Mo
 
 4. After the Desktop Modeler user clicks **Update**, the latest changes from the Web Modeler are committed automatically to the Team Server before the Desktop Modeler receives the update from it. The latest revision from the Team Server is merged into the Desktop Modeler's local working copy. 
 
-5.  The Desktop Modeler user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Desktop Modeler working copy is updated with the latest revision from the Team Server.
+5. The Desktop Modeler user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Desktop Modeler working copy is updated with the latest revision from the Team Server.
 
     There are two possible outcomes of this merge:<br/>
 
@@ -98,8 +98,6 @@ You can see all the changes committed to the current development line via **Proj
 
 {{< figure src="/attachments/refguide7/version-control/collaborative-development/history.png" alt="History Dialog Box" >}}
 
- 
-
 ## 5 Managing Development Lines in the Desktop Modeler {#managing-branches}
 
 In the Desktop Modeler, you can enable the Web Modeler for a development line (the main line or a branch line). You can also create and delete branch lines. 
@@ -113,21 +111,21 @@ To share your model changes between the Web Modeler and the Desktop Modeler, you
 Whether the Web Modeler is enabled for a development line by default, depends on your project:
 
 * The Web Modeler is enabled for the main line by default in the following cases:
-  * For a new project created via the Developer Portal
-  * For an existing project that has the Web Modeler enabled
+    * For a new project created via the Developer Portal
+    * For an existing project that has the Web Modeler enabled
 * The Web Modeler is not enabled for any development line in the following cases:
-  * For a new project created via the Desktop Modeler
-  * For an existing project that does not have Web Modeler enabled
+    * For a new project created via the Desktop Modeler
+    * For an existing project that does not have Web Modeler enabled
 
 To enable the Web Modeler for a development line or switch it to another development line, do the following: 
 
-1.  Click **Project** > **More Versioning** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see the development line that the Web Modeler is enabled for (if any) is marked with a globe icon in the first column.<br/> 
+1. Click **Project** > **More Versioning** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see the development line that the Web Modeler is enabled for (if any) is marked with a globe icon in the first column.<br/> 
 
-	{{< figure src="/attachments/refguide7/version-control/collaborative-development/globe-icon.png" alt="Globe Icon in the Branch Line Manager" >}}<br/>
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/globe-icon.png" alt="Globe Icon in the Branch Line Manager" >}}<br/>
 
-2.  Select the line you want to enable the Web Modeler for and click **Enable for the Web Modeler**. <br/>
+2. Select the line you want to enable the Web Modeler for and click **Enable for the Web Modeler**. <br/>
 
-	{{< figure src="/attachments/refguide7/version-control/collaborative-development/enable-another-branch.png" alt="Branch Line Manager - Enabling Another Branch" >}} 
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/enable-another-branch.png" alt="Branch Line Manager - Enabling Another Branch" >}} 
 
 The development line for the Web Modeler has been selected.   
 
@@ -139,21 +137,21 @@ To create a new branch line, do the following:
 
 1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
 
-2.  In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
+2. In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
-	{{< figure src="/attachments/refguide7/version-control/collaborative-development/creating-new-branch.png" alt="Creating New Branch" >}}<br/>
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/creating-new-branch.png" alt="Creating New Branch" >}}<br/>
 
-3.  In the **Create Branch Line** dialog window, set the following: <br/>
+3. In the **Create Branch Line** dialog window, set the following: <br/>
 
-	a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see section [2 Concepts](/refguide7/version-control/#concepts) in *Version Control*. <br/> 
-	
-	b. Select revision if needed. <br/>
+    a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see section [2 Concepts](/refguide7/version-control/#concepts) in *Version Control*. <br/> 
+    
+    b. Select revision if needed. <br/>
 
-	c. Type the name of the new line. 
+    c. Type the name of the new line. 
 
-4.  After you have configured all the settings, click **OK.** 
+4. After you have configured all the settings, click **OK.** 
 
-	{{< figure src="/attachments/refguide7/version-control/collaborative-development/create-branch-dialog.png" alt="Create Branch Line Dialog" >}} 
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/create-branch-dialog.png" alt="Create Branch Line Dialog" >}} 
 
 You have created a new branch line.   
 
@@ -163,9 +161,9 @@ To delete a branch line, do the following:
 
 1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
 
-2.  In the **Branch Line Manager** dialog window, select the branch you would like to delete, click **Delete** and confirm deletion. 
+2. In the **Branch Line Manager** dialog window, select the branch you would like to delete, click **Delete** and confirm deletion. 
 
-	{{< figure src="/attachments/refguide7/version-control/collaborative-development/deleting-branch.png" alt="Deleting a Branch" >}}
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/deleting-branch.png" alt="Deleting a Branch" >}}
 
 You have deleted the branch.
 

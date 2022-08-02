@@ -43,7 +43,7 @@ The language in which the titles and labels of the document should appear.
 | Project default | Use the default language that is specified in the [Project Settings](/refguide7/project-settings/). |
 | Variable | Use the language stored in the selected variable. The variable should be of type System.Language. |
 
-_Default value:_ Current user
+*Default value:* Current user
 
 ### 3.2 Document Type
 

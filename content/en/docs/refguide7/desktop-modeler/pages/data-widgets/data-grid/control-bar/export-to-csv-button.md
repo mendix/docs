@@ -21,19 +21,19 @@ The csv export function relies on a specific data retrieval method. As such, it 
 
 The string used to separate the fractional part from the whole part in Float, Currency and Decimal values.
 
-_Default value:_ .
+*Default value:* .
 
 ### Group separator
 
 The string used to separate groups of digits in large numbers.
 
-_Default value:_ ,
+*Default value:* ,
 
 ### Delimiter
 
 The string used to delimit values in the resulting CSV file.
 
-_Default value:_ ;
+*Default value:* ;
 
 ## General properties
 

@@ -37,7 +37,7 @@ Due to technical limitations, a button with the selection type "Select all" cann
 
 {{% /alert %}}
 
-_Default value:_ Select page
+*Default value:* Select page
 
 ## Visibility Properties
 

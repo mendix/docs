@@ -21,7 +21,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 {{% /alert %}}{{% alert color="info" %}}
 
-Customers are usually retrieved by a combination of zipcode and housenumber, so _one_ index is set on the combination of the attributes.
+Customers are usually retrieved by a combination of zipcode and housenumber, so *one* index is set on the combination of the attributes.
 
 {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/indexes/917548.png" >}}
 

@@ -23,13 +23,13 @@ A text area must be placed in a data view or template grid and connected to an a
 
 This property defines whether the text area grows automatically depending on the amount of text in it.
 
-_Default value:_ No
+*Default value:* No
 
 ### Number of Lines
 
 The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. This property is only shown if Grow automatically is set to No.
 
-_Default value:_ 5
+*Default value:* 5
 
 ### Counter Message
 
@@ -55,7 +55,7 @@ This property indicates the maximum number of characters that can be typed in th
 | Unlimited | The maximum number of characters is unlimited. |
 | Custom | The maximum number of characters is set by the user. |
 
-_Default value: Attribute length_
+*Default value: Attribute length*
 
 ### Placeholder Text
 
@@ -105,5 +105,5 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data view](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

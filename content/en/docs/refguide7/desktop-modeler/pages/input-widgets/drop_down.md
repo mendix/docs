@@ -80,5 +80,5 @@ The empty option caption is available from Mendix 7.2.0.
 
 ## Read More
 
-*   [Data View](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data View](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

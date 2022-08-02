@@ -8,7 +8,7 @@ The CASE expression is a conditional expression, similar to if/else statements i
 
 The CASE expression can be used on two manners:
 
-_Simple_
+*Simple*
 
 ```
 CASE input_expression
@@ -17,7 +17,7 @@ ELSE else_result_expression
 END
 ```
 
-_Extended_
+*Extended*
 
 ```
 CASE

@@ -10,7 +10,7 @@ Returns the largest value from the specified arguments.
 
 ### Input parameters
 
-*   Two or more values that are all either of type Date and time or of a numeric type (Integer/Long, Float or Decimal).
+* Two or more values that are all either of type Date and time or of a numeric type (Integer/Long, Float or Decimal).
 
 ### Output
 
@@ -62,17 +62,18 @@ Rounds a number to a certain precision.
 
 ### Input
 
-*   a number
+* a number
     Type: Integer/Long, Float or Decimal
 
-*   a precision (optional) 
+* a precision (optional) 
     Type: Integer/Long
 
 ### Output
 
 In the **Settings**, your option for **Round numbers** can be set:
-*   For the **Half away from zero** option (also called "commercial rounding"), +2.5 becomes +3 and -1.5 becomes -2
-*   The **Half to the nearest even number** option (also called "bankers' rounding") is the default rounding mode used in  [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point") computing functions and operators; for example, +23.5 becomes +24, as does +24.5; and -22.5 becomes -22, as does -21.5
+
+* For the **Half away from zero** option (also called "commercial rounding"), +2.5 becomes +3 and -1.5 becomes -2
+* The **Half to the nearest even number** option (also called "bankers' rounding") is the default rounding mode used in  [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point") computing functions and operators; for example, +23.5 becomes +24, as does +24.5; and -22.5 becomes -22, as does -21.5
 
 The second optional parameter determines the precision of the rounding. The default value is 0. The result will be of the most precise type possible. For a precision of 0, the result will be of integer/long type, and for all other precision values, the result will be of the decimal type.
 
@@ -123,7 +124,7 @@ Rounds down to an integer (returns the largest integer which is less than or equ
 
 ### Input
 
-*   a number
+* a number
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -160,7 +161,7 @@ Rounds up to an integer (returns the smallest integer which is greater than or e
 
 ### Input
 
-*   a number
+* a number
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -197,9 +198,9 @@ Calculates the exponent of a number to a certain power.
 
 ### Input
 
-*   a number 
+* a number 
     Type: Integer/Long, Float or Decimal
-*   a power 
+* a power 
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -242,7 +243,7 @@ Calculates the absolute value of a number (ie not negative).
 
 ### Input
 
-*   a number
+* a number
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -266,6 +267,7 @@ both return:
 ```java
 5
 ```
+
 ## floatsEqual
 
 Compares the two numbers to decimal point p, which is equal to Precision.
@@ -278,11 +280,11 @@ This function is deprecated together with the Float type. Use the high-precision
 
 ### Input
 
-*   a number 
+* a number 
     Type: Integer/Long or Float
-*   another number 
+* another number 
     Type: Integer/Long or Float
-*   a precision
+* a precision
     Type: Integer/Long
 
 ### Output

@@ -66,27 +66,23 @@ This is implemented as follows:
 
 ## 2 Configuration
 
-To publish or consume business events, you must first download and import the [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module into your app.
-
-{{< figure src="/attachments/appstore/modules/business-events/click-to-import-module.png" >}}
+To publish or consume business events, download and import the [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module, then right-click on the **App Explorer** and import it into your app.
 
 ### 2.1 Configuring Local Deployments {#config-local-deployment}
 
-For testing on your development workstation, you can run the Event Broker on your machine using Docker. The required configuration can be found in the [local setup for the event broker tool](https://github.com/mendix/event-broker-tools).
+To test on your development workstation, run the Event Broker on your machine using Docker. The required configuration can be found in the [local setup for the event broker tool](https://github.com/mendix/event-broker-tools).
 
-For local deployment, you need to adjust the following settings in the **_USE_ME/Constants** folder of the module:
-{{< figure src="/attachments/appstore/modules/business-events/use-me-constants-folder.png" >}}
+For local deployment, you need to set the **ChannelName** and **ServerUrl** constants. These constants are best configured by going to **App Settings** > **Configuration**. Click **New**, and in the **Constants** tab, you can set the required values.
 
-These constants are best configured using the **App Settings** configuration. In the constants tab, you can set the required values.
+Set the constants as follows:
 
-Only the **ChannelName** and **ServerUrl** have to be specified.
 * **ChannelName**: `local`
 * **ServerUrl**: 
-* On Windows: `localhost:9092`
-* Running Docker on MacOS and StudioPro on Windows via Parallels: `10.211.55.2:9094`
-* Running Docker on Linux and StudioPro on Windows via VirtualBox/KVM: `<IP ADDRESS>:9094`
+     * On Windows: `localhost:9092`
+     * Running Docker on MacOS and StudioPro on Windows via Parallels: `10.211.55.2:9094`
+     * Running Docker on Linux and StudioPro on Windows via VirtualBox/KVM: `<IP ADDRESS>:9094`
 
-### 2.2 Changing Logging Interval (Optional)
+### 2.1 Changing Logging Interval (Optional)
 
 Optionally you can set **SummaryLogIntervalSeconds** to a different value. The default value 120, which means if events are consumed or produced, an overview of what was consumed or produced will be logged at `INFO` level every 120 seconds. When configured with 0 or a negative number, this additional logging will not take place at all.
 
@@ -102,11 +98,8 @@ The following sections describe how to publish entities as business events.
 
 Entities that are to be published as business events must inherit from the **PublishedBusinessEvent** entity that is included in the Mendix Business Events module. 
 
-1.  In your [Domain Model](/studio/domain-models/), double-click the entity you want to publish to display the entity properties: 
-{{< figure src="/attachments/appstore/modules/business-events/display-entity-properties.png" >}}
-
-2.  For **Generalization**, click **Select** and select the **PublishedBusinessEvent** entity:
-{{< figure src="/attachments/appstore/modules/business-events/select-published-business-event-entity.png" >}}
+1.  In your [Domain Model](/studio/domain-models/), double-click the entity you want to publish as a business event to display the entity properties.
+2.  In the **Generalization** field, click **Select** and select the **PublishedBusinessEvent** entity. 
 
 The base values for your entity are taken from the **PublishedBusinessEvent**, and your entity will behave like a specialized entity. For more information, see [Generalization, Specializations and Inheritance](/refguide/generalization-and-association/).
 
@@ -117,22 +110,16 @@ The text with the blue background above the entity tells you that it is a specia
 
 A **Published Business Event Service** is the contract defining various events, like a REST API spec.
 
-1.  Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**:
-{{< figure src="/attachments/appstore/modules/business-events/add-published-event-service.png" >}}
+1.  Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 
-2.  Provide the name for your service and **OK** to create it:
-{{< figure src="/attachments/appstore/modules/business-events/name-ok-create.png" >}}
+2.  Provide the name for your service and **OK** to create it.
 
 3.  Once you have the Service created, click **Add** to link your modelled **PublishedBusinessEvent** entity as an event:
 {{< figure src="/attachments/appstore/modules/business-events/link-published-entity-as-event.png" >}}
 
-4.  Select the entity that you would like to publish to add it to the Service:
-{{< figure src="/attachments/appstore/modules/business-events/select-entity-add-service.png" >}}
+4.  Select the entity that you would like to publish to add it to the service.
 
-The business event with attributes will now appear in the Service:
-{{< figure src="/attachments/appstore/modules/business-events/event-with-attributes-in-service.png" >}}
-
-Once you have all of your entities linked into the **Published Business Event Service**, you can export it to be shared as an Async API contract in YAML format.
+5.  Once you have all of your entities linked into the **Published Business Event Service**, export it to be shared as an AsyncAPI contract in YAML format.
 
 {{% alert color="info" %}}
 When deploying an app with one or more **Published Business Event** services, channels will be created in the Mendix Event Broker for every event part of the service. (This works similarly to how tables are created in a database for persistable entities.) If you reuse a module with published events in multiple apps, multiple independent channels will be created. Apps interested in receiving events will need to subscribe to every event or channel independently. 
@@ -146,11 +133,8 @@ The next stage is to add an activity for publishing into the microflow(s) that w
 1.  Open the microflow in which the business events will be published.
 2.  Create an object of the business events you want to publish.
 3.  In the **Toolbox**, search for the **Publish business event** action and drag it and place it in your microflow.
-{{< figure src="/attachments/appstore/modules/business-events/search-and-drag-pub-entity.png" >}}
 
-4.  Double-click **Publish business event** to display the **Publish Business Event** property box:
-{{< figure src="/attachments/appstore/modules/business-events/publish-business-event-property-box.png" >}}
-
+4.  Double-click **Publish business event** to display the **Publish Business Event** property box.
 5.  Enter the following information:
     * **Subject**: This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
     * **Event Data**: Select the entity that you want to publish in the service that will represent the Business event in the subscribers app. This should be an entity that you have configured to inherit from the **PublishedBusinessEvent** entity in step 1.
@@ -168,28 +152,22 @@ Consumption is a continuous process that the module will start and will be resta
 
 In order to start consuming a business event contract, you first need to create a **Consumed Business Event Service**.
 
-1.  Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**:
-{{< figure src="/attachments/appstore/modules/business-events/add-consumed-business-event-service.png" >}}
+1.  Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**.
 
-2.  Provide the name for your service and click **OK** to create it:
-{{< figure src="/attachments/appstore/modules/business-events/consumed-service-name.png" >}}
+2.  Provide the name for your service and click **OK** to create it.
 
 3.  To populate the service you are prompted to **Import Service Contract (AsyncAPI)**. Import the file, which was created in the [Create a Published Business Event Service](#create-be) step.
-{{< figure src="/attachments/appstore/modules/business-events/import-async-api-contract.png" >}}
 
 This will make subscriptions to business events available for you to start mapping to entities within your consuming application:
-{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-1.png" >}}
-
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
 
-As you click **Add** to add the Events from the Contract into your module, Mendix Studio Pro will create an entity within your domain model and an **Event Handler** microflow to manage the flow of the Event after delivery:
+As you click **Add** to add the events from the Contract into your module, Mendix Studio Pro will create an entity within your domain model and an **Event Handler** microflow to manage the flow of the Event after delivery:
 {{< figure src="/attachments/appstore/modules/business-events/create-entity-event-handler.png" >}}
 
-You will now have at your disposal the payload of the Event as an Entity and attached to it a microflow which triggers on each Event from where you can build your business logic:
-{{< figure src="/attachments/appstore/modules/business-events/payload-event-entity-1.png" >}}
-
+You will now have at your disposal the payload of the event as an entity:
 {{< figure src="/attachments/appstore/modules/business-events/payload-event-entity-2.png" >}}
 
+There is also a microflow attached to it which triggers on each Event from where you can build your business logic:
 {{< figure src="/attachments/appstore/modules/business-events/payload-event-entity-3.png" >}}
 
 #### 3.3 Business Event Entities {#be-entities}
@@ -209,8 +187,6 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 ### 3.3.1 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
 Every time a business event is consumed, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported contract, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
-
-{{< figure src="/attachments/appstore/modules/business-events/dead-letter-queue.png" >}}
 
 The most important fields in this entity to be checked when there are errors include the following:
 

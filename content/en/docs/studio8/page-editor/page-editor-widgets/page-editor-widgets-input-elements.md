@@ -30,9 +30,7 @@ You can find the description of input elements available in Studio in the table 
 | Radio Buttons | Radio buttons are used to allow users select the option from a number of preset ones. For example, users can select from several possible locations for picking an order up. |
 
 {{% alert color="info" %}}
-
 Apart from the standard input widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](/studio8/page-editor-widgets/#widgets-by-origin) section in *Widgets*.
-
 {{% /alert %}}
 
 ## 3 Properties
@@ -94,10 +92,7 @@ Editability indicates whether the end-user will be able to change the value disp
 
 * **Conditional** – the widget is editable only if specified conditions are met based on an attribute value (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below) or based on an expression. You can create a condition based on an expression in Studio Pro only (for details, see the [Editability Section](/refguide8/common-widget-properties/#editability) in *Properties Common in the Page Editor*)
 
-	{{% alert color="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
-	
-	{{%/alert %}}
-	
+    {{% alert color="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
 #### 3.3.4 Attribute-Based {#attribute-based}
 
@@ -106,15 +101,11 @@ The **Attribute-Based** property is only shown when [Conditional Editability](#e
 **Attribute-Based** conditional editability allows you to show widgets only when they match a certain value of the selected attribute. 
 
 {{% alert color="info" %}}
-
 The attribute must be of the Boolean or enumeration type.
-
 {{%/alert %}} 
 
 {{% alert color="info" %}}
-
 You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view. For more information on how to place widgets on a page, see [Adding Elements on a Page](/studio8/page-editor/#adding-elements) section in *Pages*. 
-
 {{%/alert %}}
 
 #### 3.3.5 Attribute Values {#attribute-values}
@@ -151,7 +142,6 @@ The **Format** section is specific for the **Date Picker** widget only.
 In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
 
 {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-input-elements/Validation-type-required.png"   width="350"  >}}
-
 
 The **Input Validation** section properties are described in the table below:
 

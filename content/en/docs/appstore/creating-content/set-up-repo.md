@@ -1,7 +1,7 @@
 ---
 title: "Set Up a GitHub Repo to Publish a Marketplace Item"
 linktitle: "Publish from GitHub to Marketplace"
-url:/appstore/creating-content/set-up-repo/
+url: /appstore/creating-content/set-up-repo/
 category: "Creating Content"
 weight: 10
 tags: ["studio pro", "GitHub", "repository", "repo"]

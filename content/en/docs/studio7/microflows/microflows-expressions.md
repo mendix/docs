@@ -14,12 +14,12 @@ This document describes microflow expressions in Mendix Studio. Expressions can 
 
 The **Expression** tab is available for the following activities in a microflow:
 
-*  [End Event](/refguide7/end-event/)
-*  [Decision](/studio7/microflows-decision/)
-*  [Create Object](/refguide7/create-object/)
-*  [Change Object](/refguide7/change-object/)
-*  [Create Variable](/refguide7/create-variable/) 
-*  [Change Variable](/refguide7/change-variable/)
+* [End Event](/refguide7/end-event/)
+* [Decision](/studio7/microflows-decision/)
+* [Create Object](/refguide7/create-object/)
+* [Change Object](/refguide7/change-object/)
+* [Create Variable](/refguide7/create-variable/) 
+* [Change Variable](/refguide7/change-variable/)
 
 {{< figure src="/attachments/studio7/microflows/microflows-expressions/expression-tab.png" >}}
 
@@ -52,12 +52,10 @@ To write an expression using suggestions, do the following:
 
 1. Browse through the list of suggestions and select the element for your expression with a mouse or a keyboard.
 2. Select an element from the list.
-4. Click **Add** when the expression is completed.
+3. Click **Add** when the expression is completed.
 
 {{% alert color="info" %}}
-
 To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
-
 {{% /alert %}}
 
 ### 2.2 Writing an Expression Manually

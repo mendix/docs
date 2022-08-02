@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 This how-to describes the following use case: 
 
-In [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow ](/studio7/microflows-how-to-configure-decision-p1/) you have configured the decision to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So you have four flows after the decision: 
+In [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow](/studio7/microflows-how-to-configure-decision-p1/) you have configured the decision to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So you have four flows after the decision: 
 
 * Showing a page for bronze  grade customers
 * Showing a page for silver grade customers
@@ -50,17 +50,15 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
 3. To merge the flow labelled **Gold** with the **Bronze** one, do the following:<br/>
 
-    a. Delete the **End** event of the flow labelled **Gold**.<br/>
+    1. Delete the **End** event of the flow labelled **Gold**.<br/>
+    1. Hover over the **Show Page** activity.<br/>
 
-    b. Hover over the **Show Page** activity.<br/>
+        {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/hover-over.png" >}}<br/>
 
-    {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/hover-over.png" >}}<br/>
+    1. Click one of the dots that will turn into an arrow.<br/>
+    1. Drag the arrow to the merge. Now the **Show Page activity** is connected to the merge.
 
-    c. Click one of the dots that will turn into an arrow.<br/>
-
-    d. Drag the arrow to the merge. Now the **Show Page activity** is connected to the merge.
-
-    {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/connecting-activity-and-merge.png" >}}<br/>
+        {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/connecting-activity-and-merge.png" >}}<br/>
 
 4. Repeat step 3 for the flow labelled **Silver**. 
 
@@ -72,46 +70,43 @@ As a result, you have three flows merged into one.
 
 Now you will add logic to the microflow. You have merged three flows into one to set customer's status to active irrespectively of their grades. Setting the status of the customers to active can be used, for example, to identify who of the customers are using their account, and who are not.
 
- Do the following:
+Do the following:
 
-1.  First of all, you need to add a new attribute to **Customer** entity in the domain model to indicate if customer is active or not. Click the domain model icon in the left menu bar to open the domain model and do the following:<br/>
+1. First of all, you need to add a new attribute to **Customer** entity in the domain model to indicate if customer is active or not. Click the domain model icon in the left menu bar to open the domain model and do the following:<br/>
 
-    a. Click the **Customer** entity > **New attribute**.<br/>
+    1. Click the **Customer** entity > **New attribute**.<br/>
+    1. In the **Create New Attribute** dialog window, set **Name** to *Active* and **Type** to *Boolean*.<br/> 
 
-    b. In the **Create New Attribute** dialog window, set **Name** to *Active* and **Type** to *Boolean*.<br/> 
+        {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/new-attribute-active.png" >}}<br/>
 
-    {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/new-attribute-active.png" >}}<br/>
-
-    c. Click **Create**.
+    1. Click **Create**.
 
 2. Now you will configure a new activity in the microflow. Open the microflow named *Show_grade_specific_page*.
-3.  In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag and drop it after the merge in the microflow.
+3. In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag and drop it after the merge in the microflow.
 
-     {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-object-added.png" >}}
+    {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-object-added.png" >}}
 
-4.  In the **Properties** tab for the **Change Object** activity, do the following:<br/>
+4. In the **Properties** tab for the **Change Object** activity, do the following:<br/>
 
-    a. Set **Variable** to **Customer** because you are going to edit **Customer**.<br/>
+    1. Set **Variable** to **Customer** because you are going to edit **Customer**.<br/>
+    1. Click **Add New Value**.<br/>
 
-    b. Click **Add New Value**.<br/>
+        {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-object-add-new-value.png" >}}<br/>
 
-    {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-object-add-new-value.png" >}}<br/>
+    1. In the **Change value** dialog window, select the attribute named **Active**, then click the **Expression** tab, and type *true*. This means that after the order form is opened for a specific customer, the customer's status is set to active (active=true), no matter what grade this customer has.<br/> 
 
-    c. In the **Change value** dialog window, select the attribute named **Active**, then click the **Expression** tab, and type *true*. This means that after the order form is opened for a specific customer, the customer's status is set to active (active=true), no matter what grade this customer has.<br/> 
+        {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-value-expression-editor.png" >}}<br/>
 
-    {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-value-expression-editor.png" >}}<br/>
+    1. Click **Add** to finish setting the value for the **Active** attribute.<br/>
+    1. In the **Properties** tab > the **Behavior** section do the following: leave the **Commit** option set to **Yes**, (this means the object will not be changed further and your changes will be saved (committed) to the database).  <br/>
 
-    d. Click **Add** to finish setting the value for the **Active** attribute.<br/>
-
-    e. In the **Properties** tab > the **Behavior** section do the following: leave the **Commit** option set to **Yes**, (this means the object will not be changed further and your changes will be saved (committed) to the database).  <br/>
-
-    {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-object-properties.png" >}}
+        {{< figure src="/attachments/studio7/microflows/microflows-how-to-merge-and-change-object/change-object-properties.png" >}}
 
 Congratulations! Now you have the microflow that works the following way:
 
 1. Analyzes if the customer has a grade, and does one of the following:<br/>
-   a. If the customer has a grade, it opens the order form for the corresponding customer grade.<br/>
-   b. If the customer does not have a grade, the error message pops up.<br/>
+    1. If the customer has a grade, it opens the order form for the corresponding customer grade.<br/>
+    1. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
 
 Now you can preview or publish your app. For more information, see [Previewing & Publishing Your App](/studio7/publishing-app/).

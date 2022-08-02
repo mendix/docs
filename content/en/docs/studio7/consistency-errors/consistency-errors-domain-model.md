@@ -29,15 +29,15 @@ The most common errors you can come across when configuring a domain model are d
 
  Consistency errors connected with delete behavior can occur in the following cases:
 
-*  Delete behavior of an entity the association starts from is set to *Delete {name of entity} object(s) as well* and the delete behavior of an entity the association points to is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
+* Delete behavior of an entity the association starts from is set to *Delete {name of entity} object(s) as well* and the delete behavior of an entity the association points to is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
 
     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-domain-model/delete-behavior-error-example1.png" alt="Delete Behavior Error Example One" >}}
 
-*  Delete behavior of the entity the association starts from is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)* and the delete behavior of the entity the association points to is set to *Delete {name of entity} object(s) as well*
+* Delete behavior of the entity the association starts from is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)* and the delete behavior of the entity the association points to is set to *Delete {name of entity} object(s) as well*
 
     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-domain-model/delete-behavior-error-example2.png" alt="Delete Behavior Error Example Two" >}}
 
-*  Delete behavior of both entities in association is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
+* Delete behavior of both entities in association is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
 
     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-domain-model/delete-behavior-error-example3.png" alt="Delete Behavior Error Example Three" >}}
 

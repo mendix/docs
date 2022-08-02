@@ -85,7 +85,7 @@ For the `"dynamic"` type, `entity` is available. It represents the entity where 
 
 This property appears as follows:
 
-```
+```typescript
 type WidgetsProperty = {
     widgetCount: number;
     renderer: React.ComponentType<{caption?: string}>;
@@ -109,14 +109,14 @@ replacing the placeholders with the names of the attributes.
 
 For example, you could see these placeholders:
 
-```
+```text
 Name: {1}
 Description: {2}
 ```
 
 Using parameters `EventName` and `EventDescription` instead of the placeholders would look like this:
 
-```
+```text
 Name: {EventName}
 Description: {EventDescription}
 ```

@@ -89,7 +89,7 @@ For security, Personal Access Tokens should not be included into your source cod
 
 To use the Personal Access Token with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
 
-```
+```http
 GET /v1/register HTTP/1.1
 Host: catalog.mendix.com
 Authorization: mxtoken <your token>
@@ -97,7 +97,7 @@ Authorization: mxtoken <your token>
 
 If the Personal Access Token is not valid, the response will be an HTTP 403 Access Denied. 
 
-```
+```http
 403 Access Denied
 Content-Type: application/json
 

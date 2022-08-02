@@ -255,7 +255,7 @@ Titles, axes and series can contain complex mathematical expressions.
 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/math-formula.png" alt="Math formula" >}}
 
-```
+```latex {linenos=false}
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
 ```
 

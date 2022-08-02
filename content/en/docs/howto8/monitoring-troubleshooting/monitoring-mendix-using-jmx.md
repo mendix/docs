@@ -28,7 +28,7 @@ None.
 
 To enable JMX on your Mendix Runtime, you can use the following Java options in the *m2ee.yaml* for your Mendix Runtime:
 
-```
+```yaml
 javaopts: [
 
 "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx128M", "-Xms128M",
@@ -83,7 +83,7 @@ public long getNamedUserCount();
 
 This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
 
-```
+```java
 package jmx.actions;
 
 import com.mendix.core.Core;

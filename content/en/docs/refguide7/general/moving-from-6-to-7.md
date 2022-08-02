@@ -273,7 +273,7 @@ These are mainly used to refer to the name of system entities or their attribute
 
 For example, `SystemModuleConstants.FILE_DOCUMENT_NAME` can be replaced by the `FileDocument` proxy:
 
-```
+```text
 import com.mendix.systemwideinterfaces.SystemModuleConstants;
 
 private final String FILE_DOCUMENT_NAME = SystemModuleConstants.FILE_DOCUMENT_NAME;
@@ -281,7 +281,7 @@ private final String FILE_DOCUMENT_NAME = SystemModuleConstants.FILE_DOCUMENT_NA
 
 should be replaced by:
 
-```
+```text
 import system.proxies.FileDocument.MemberNames;
 
 private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();

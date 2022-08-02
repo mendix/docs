@@ -73,7 +73,7 @@ Log levels can be configured through the runtime admin port before the actual lo
 
 This is a Python script that sets `ConnectionBus` and `ActionManager` to the Trace and Debug levels:
 
-```
+```py
 import requests, base64, json, sys
 
 payload = {
@@ -87,7 +87,7 @@ payload = {
 
 You can run this script as follows:
 
-```
+```powershell
 C:\temp\LogDemoApp\python
 λ python setlogs.py 87a32a3e-c6db-4bc8-9fa3-7cd5b108eaec 8090
 {"feedback":{},"result":0}

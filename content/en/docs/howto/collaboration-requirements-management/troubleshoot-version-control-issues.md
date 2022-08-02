@@ -104,7 +104,7 @@ In this example, we will focus on merging a branch into the main line. On the ma
 
 [//]: # "modeler-merge-marker has not yet been renamed for Studio Pro"
 
-```
+```text
 modeler-merge-marker
 .mendix-cache
 ResolveIgnoreConflict.mpr.lock
@@ -115,7 +115,7 @@ node_modules
 
 On the branch, the list looks like this:
 
-```
+```text
 modeler-merge-marker
 .mendix-cache
 ResolveIgnoreConflict.mpr.lock

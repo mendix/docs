@@ -9,7 +9,7 @@ The CAST function converts an expression to a specific data type.
 
 The syntax is as follows:
 
-```
+```sql {linenos=false}
 CAST ( expression AS data_type )
 ```
 

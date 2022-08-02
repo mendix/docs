@@ -105,7 +105,7 @@ In this example, a list of **Specializations** cannot be retrieved when using a 
 
 However, there is a workaround for this limitation: The list of Specializations can be retrieved with a Java action using the Java API. This Java action needs two parameters: the **Specialization** and a Boolean **Reverse** via this code snippet:
 
-```
+```java
 public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<IMendixObject>>
 {
 	private IMendixObject __B;

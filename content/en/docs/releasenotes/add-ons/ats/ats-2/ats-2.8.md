@@ -53,4 +53,4 @@ The built-in function *Assert not null* behavior has been changed. Up to and inc
 
 ### Limitations
 
-* Regarding _Nanoflows_, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.
+* Regarding *Nanoflows*, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.

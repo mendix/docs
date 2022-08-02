@@ -105,8 +105,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### New Features
 
 * We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service/)):
-	* Automatic provisioning of the app service on subscription.
-	* The [Service Management Dashboard](/appstore/general/app-store-overview/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+    * Automatic provisioning of the app service on subscription.
+    * The [Service Management Dashboard](/appstore/general/app-store-overview/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4th, 2021
 
@@ -120,8 +120,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### Improvements
 
 * We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts/#lts) and [medium-term support (MTS)](/releasenotes/studio-pro/lts-mts/#mts).
-	{{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!
-	{{% /alert %}}
+
+    {{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!{{% /alert %}}
 
 #### Fixes
 
@@ -130,7 +130,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### Known Issues
 
 * There is an issue with users having trouble downloading Windows Service.
-	* Fixed on [May 4th, 2021](#windows-service).
+    * Fixed on [May 4th, 2021](#windows-service).
 
 ### March 23rd, 2021
 

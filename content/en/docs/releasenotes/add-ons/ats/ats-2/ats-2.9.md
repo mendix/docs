@@ -122,7 +122,7 @@ Mendix applications based on Mendix version 7.16 can now be tested and recorded 
 ### Fixes
 
 * We fixed the issue where it was not possible to export documentation for test cases/suites with a description longer than 200 characters
-* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a _Timeout exception while waiting the application to be idle_ 
+* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a *Timeout exception while waiting the application to be idle* 
 
 ### Limitations
 

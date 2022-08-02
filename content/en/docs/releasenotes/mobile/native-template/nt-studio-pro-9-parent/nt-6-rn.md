@@ -4,6 +4,7 @@ url: /releasenotes/mobile/nt-6-rn/
 weight: 10
 description: "Native Template 6 release notes."
 ---
+
 ## 6.2.23
 
 **Release date: July 18th, 2022**
@@ -98,7 +99,7 @@ description: "Native Template 6 release notes."
 ### Fixes
 
 * We identified and fixed a bug introduced with Native Template v6.2.9 and Mendix Clients built with Mendix Studio Pro 9.8.0 and above which support the new mobile encryption features. The iOS apps would wrongly clear the keychain values on each restart forcing app users to re-authenticate on each app restart. iOS apps now correctly persist the user session after each restart for clients built with Mendix Studio Pro 9.8.0 and above. (Ticket 138881)
- * Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.
+* Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.
 
 ## 6.2.10
 
@@ -116,9 +117,9 @@ description: "Native Template 6 release notes."
 
 * We added support for the new native mobile encryption features introduced with Mendix Studio Pro v9.8.
 * We added support for authentication token encryption for iOS and Android.
-  * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
+    * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
 * We added support for all cookies on Android.
-  * All new app-specific cookies on Android from Native Template v6.2.9 and above will be automatically encrypted independently of the Studio Pro 9 minor version.
+    * All new app-specific cookies on Android from Native Template v6.2.9 and above will be automatically encrypted independently of the Studio Pro 9 minor version.
 
 ### Fixes
 

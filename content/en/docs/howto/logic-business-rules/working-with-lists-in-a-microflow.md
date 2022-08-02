@@ -65,19 +65,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Retrieving a Filtered List of Objects from the Database
 
-In the previous section you have set up a basic data structure and created some sample data. In this section you will retrieve all the 'Processing' orders. To achieve this you will add a microflow button to the 'Orders' overview. In this microflow you will add a 'Retrieve from database' 'Action activity' with an XPath constraint. The XPath constraint will filter the retrieved list to only the 'Invoiced' orders.
+Use a microflow with a **Retrieve from database** activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the Processing status.
 
-Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide/xpath-contains/) in the *Studio Pro Guide*.
-
-1.  Create a new microflow by right-clicking the module and selecting **Add** > **Microflow**.
-2.  Name the Microflow _IVK_SetOrderToComplete_.
-
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581093.png" >}}
-
-3.  Save the new menu item by clicking **OK**. You should see an empty Microflow like this:
-
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/8946316.png" >}}
-
+1.  Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
+2.  In the **Add Microflow** dialog box, enter *Microflow _IVK_SetOrderToComplete_*, and then click **OK**.
 4.  Add an **Action** button to the toolbar of the orders overview:
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581118.png" >}}

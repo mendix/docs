@@ -85,7 +85,9 @@ Here you can select which members of the entity can be passed and/or are optiona
 The order of XML elements in the WSDL does not by definition reflect the order of attributes in entities in the domain model. The order of members in the dialog is the same as the order of elements in the WSDL (and can be different from the order of attributes in entities). This gives a better overview of the WSDL contract that is exposed from Mendix. The structure you see in the members dialog reflects the structure in the WSDL.
 
 New attributes from entities will appear as new elements *below* members that are already in the WSDL. This will prevent breaking the WSDL contract, because if you insert new XML elements inside a XML *Sequence* container, existing web service consumers that strictly validate against the WSDL may break.
+{{% /alert %}}
 
+{{% alert color="info" %}}
 If you expose the Password (hashed string) attribute of a System.User entity (or a specialization thereof), a warning appears that there is a risk that someone does a brute-force attack to obtain the original plain-text password. The risk is considerably less when you use a strong hashing algorithm (preferably 'BCrypt'). The hashing algorithm can be set in the app settings.
 {{% /alert %}}
 

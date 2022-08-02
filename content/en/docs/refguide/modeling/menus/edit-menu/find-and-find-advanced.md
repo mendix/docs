@@ -20,7 +20,7 @@ You can find various elements in your app via the **Find** option. For example, 
 2. In the **Find** dialog box, leave **Match case** and **Match the whole word** unselected. This way you will search for all instances of the word "Employee" including such instances as "employee", Employees", or "Department_Employee":
 3. In the **Look in** section unselect items in your app where you do not want to search in:  
 
-   {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/look-in.jpg" alt="Look in Section" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/look-in.jpg" alt="Look in Section" >}}
 
 You can see search results in the **Find Results** pane:
 
@@ -52,7 +52,7 @@ To find the unused items, do the following:
 1. In the top-bar of Studio Pro, click **Edit** > **Find Advanced** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
 2. In the **Find Advanced** dialog box, select **Unused items** in the **Search for** option:
 
-   {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png" >}}
 
 3. Click **Find**. 
 
@@ -62,7 +62,9 @@ Note that deleting any unused items might result in more unused items. For examp
 
 {{% alert color="info" %}}
 Modules downloaded from the Marketplace might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model, so it is advised that you do not remove any unused items from an Marketplace module.'
+{{% /alert %}}
 
+{{% alert color="info" %}}
 Any objects which are excluded from the app will not show up in the unused items list.
 {{% /alert %}}
 

@@ -88,7 +88,7 @@ You can upload a PKCS12 file by following these steps:
 Changes made to certificate settings will only become effective after restarting the app.
 {{% /alert %}}
 
-In the section **Pin Client Certificate to Web Services** you can specify host names (e.g. *hello-there.com*) or web service document names (e.g. *MyFirstModule.ConsumedWebService*), indicating that this certificate should be used when contacting that host or calling that web service.
+In the section **Pin Client Certificate to Web Services**, you can specify host names (for example, *hello-there.com*) or web service document names (for example, *MyFirstModule.ConsumedWebService*), indicating that this certificate should be used when contacting that host or calling that web service.
 
 ## 4 Outgoing – Certificate Authorities
 

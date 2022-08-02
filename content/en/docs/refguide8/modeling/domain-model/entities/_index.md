@@ -172,11 +172,11 @@ You can also edit an entity by opening the entity properties dialog box.
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
-*   [Attributes](/refguide8/attributes/)
-*   [Associations](/refguide8/associations/)
-*   [Validation Rules](/refguide8/validation-rules/)
-*   [Event Handlers](/refguide8/event-handlers/)
-*   [Indexes](/refguide8/indexes/)
-*   [Access Rules](/refguide8/access-rules/)
+* [Attributes](/refguide8/attributes/)
+* [Associations](/refguide8/associations/)
+* [Validation Rules](/refguide8/validation-rules/)
+* [Event Handlers](/refguide8/event-handlers/)
+* [Indexes](/refguide8/indexes/)
+* [Access Rules](/refguide8/access-rules/)
 
 See the detailed pages for each of these tabs for more information.

@@ -17,10 +17,8 @@ To create a new app from a Mendix project package (*.mpk*) file, you need to imp
 To import a project package, do the following:
 
 1. Select the **File** menu in the top bar > **Import Project Package** 
-
 2. Browse to the *.mpk* file you would like to import.
-
-3.  Select the relevant options in the **Import Project Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
+3. Select the relevant options in the **Import Project Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
     {{< figure src="/attachments/refguide8/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png" alt="Import Project Package Dialog Window" >}}
 
@@ -47,9 +45,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 ### 2.2 Private Server {#private-server}
 
 {{% alert color="info" %}}
-
 The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Advanced** > **Enable private version control**. 
-
 {{% /alert %}}
 
 In the **App repository address** field, enter the address of the repository you want to upload your app to.

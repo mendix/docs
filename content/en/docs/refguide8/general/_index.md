@@ -15,9 +15,9 @@ If you have been using Desktop Modeler version 7, we advise reading [Moving from
 
 * [System Requirements](/refguide8/system-requirements/) – details the system requirements for the various parts of the Mendix Platform, such as the following:
 
-	* [Mendix Studio Pro](/refguide8/system-requirements/#sp)
-	* [Team Server](/refguide8/system-requirements/#ts)
-	* [Browsers](/refguide8/system-requirements/#browsers)
+    * [Mendix Studio Pro](/refguide8/system-requirements/#sp)
+    * [Team Server](/refguide8/system-requirements/#ts)
+    * [Browsers](/refguide8/system-requirements/#browsers)
 
 * [Moving from Desktop Modeler Version 7 to Studio Pro Version 8](/refguide8/moving-from-7-to-8/) – presents important information on converting your app to use in Studio Pro 8
 * [MxBuild](/refguide8/mxbuild/) – presents information for building a Mendix deployment package from an app

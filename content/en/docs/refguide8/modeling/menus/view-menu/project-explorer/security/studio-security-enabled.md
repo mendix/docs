@@ -28,9 +28,7 @@ When security is enabled, a number of checks and changes are done at several lev
 6. Studio does checks and changes (if necessary) at the [Project Security](/refguide8/project-security/) level (for more information on this process, see the [Project Security Level Set Up](#project-security-level) section).
 
 {{% alert color="info" %}}
-
 If security has already been set to **Prototype/demo** or **Production** in Studio Pro, these settings may be incompatible (too advanced) with Studio roles and permissions settings. In this case, you will not be able to edit roles and permissions in Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio8/settings-security/) in the *Studio Guide*. 
-
 {{% /alert %}}
 
 ## 3 Modules Set Up {#module-set-up}
@@ -55,22 +53,21 @@ The Mendix SSO module also adds user management to your app. With user managemen
 
 After the **After startup** microflow is set up, Studio checks if the *Administrator* role, the *User* role, and *demo users* exist and creates them when necessary:
 
-1.  Studio checks if the Administrator role and the User role exist at the **Project** level. If they do not exist, they will be created.
+1. Studio checks if the Administrator role and the User role exist at the **Project** level. If they do not exist, they will be created.
 
-	{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/studio-security-enabled/project-security-user-roles.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/studio-security-enabled/project-security-user-roles.png" >}}
 
-2.  After that, Studio checks if the Administrator and the User roles exist in each module of your project and if they are linked to the corresponding project roles. 
+2. After that, Studio checks if the Administrator and the User roles exist in each module of your project and if they are linked to the corresponding project roles. 
 
-	{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/studio-security-enabled/module-roles.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/studio-security-enabled/module-roles.png" >}}
 
     Possible outcomes of this check are the following:<br/>
-    a. If the model has two or more module roles in one module that are connected to the Administrator project role or the User project role, then it will be Studio incompatible. Studio will not change anything in these roles, but roles and permissions will not be editable in Studio.<br/>
-    b. If the model has one module role connected to the Administrator project role or the User project role, Studio checks if the name of the module role is identical to the project role. If the names are different, Studio disconnects this module role from the project role, creates a new one with the name identical to the project role name, and links it to the project role.<br/>
-    c. If the model has no module roles connected to the Administrator project role or the User project role, Studio creates these roles. <br/>
-    d. If the module role exists, its name is identical to the project role, but it is not linked to this project role, Studio creates a new module role, names it *Administrator_1* or *User_1*, and links it to the corresponding project role.<br/>
-  
-    {{% alert color="info" %}}Studio links the Administrator role from the System module to the Administrator role on the project level. *Every other project role* created from Studio, including the original User project role, will be linked to the User module role for the System module.
-    {{% /alert %}}
+    1. If the model has two or more module roles in one module that are connected to the Administrator project role or the User project role, then it will be Studio incompatible. Studio will not change anything in these roles, but roles and permissions will not be editable in Studio.<br/>
+    1. If the model has one module role connected to the Administrator project role or the User project role, Studio checks if the name of the module role is identical to the project role. If the names are different, Studio disconnects this module role from the project role, creates a new one with the name identical to the project role name, and links it to the project role.<br/>
+    1. If the model has no module roles connected to the Administrator project role or the User project role, Studio creates these roles. <br/>
+    1. If the module role exists, its name is identical to the project role, but it is not linked to this project role, Studio creates a new module role, names it *Administrator_1* or *User_1*, and links it to the corresponding project role.<br/>
+
+    {{% alert color="info" %}}Studio links the Administrator role from the System module to the Administrator role on the project level. *Every other project role* created from Studio, including the original User project role, will be linked to the User module role for the System module.{{% /alert %}}
 
 3. Studio links the Administrator role at the project level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other Mendix Marketplace modules will remain unchanged. 
 
@@ -79,38 +76,33 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
 4. Studio checks if demo users named *demo_administrator* and *demo_user* exist, and if not, Studio creates them.
 
 {{% alert color="warning" %}}
-
 If Administrator and User roles already exist and are [compatible with Studio](#studio-compatible), they will get access to all microflows, nanoflows, pages, and entities (including entities' attributes and associations).
 
 All newly created roles get access to all pages, microflows, nanoflows, and entities (including their attributes and associations) that are in Studio, except for Marketplace pages, microflows, and entities (with their attributes and associations).
 
 Also, all new pages, microflows, and entities (with their attributes and associations) that are created in Studio will be accessible for all existing app roles by default.
-
 {{% /alert %}}
 
 ## 5 Entity Access Set Up {#entity-access}
 
 When you enable security, Studio creates access rules for all entities (and their attributes and associations) that do not have them. The following access rules settings are applied:
 
-*   A description is added to **Documentation** of an **Access Rule** stating that it has been generated by Studio
+* A description is added to **Documentation** of an **Access Rule** stating that it has been generated by Studio
 
-	{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/studio-security-enabled/start-up-microflow.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/studio-security-enabled/start-up-microflow.png" >}}
 
-*  All roles in the current module, except anonymous roles, get *create* and *delete* rights for entities. The following rules are created for attributes and associations of these entities:
+* All roles in the current module, except anonymous roles, get *create* and *delete* rights for entities. The following rules are created for attributes and associations of these entities:
 
-  *  All roles in the current module, except anonymous roles, have *read* and *write* access for attributes
+* All roles in the current module, except anonymous roles, have *read* and *write* access for attributes
 
-     {{% alert color="info" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
-     {{% /alert %}}
-  
+    {{% alert color="info" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only.{{% /alert %}}
+
 * All roles in the current module, except anonymous roles, have *read* and *write* access for associations if the entity is the association owner 
 
 {{% alert color="info" %}}
-
 The rules described above are created if you create an entity in Studio.
 
 If you copy-paste an entity, the access rules of the original entity are copied as much as possible. However, if you have a generalization on an entity and you copy it to another project, the generalization is removed.
-
 {{% /alert %}}
 
 ## 6 File Set Up {#file-set-up}
@@ -128,14 +120,13 @@ This procedure enables single sign-on and allows existing users to automatically
 On the **Project** level, Studio does the following:
 
 1. The **Project Security** is set to **Production**. 
-
-2.  Studio checks if the **After startup** microflow exists in **Project** > **Settings** > **Runtime**. 
+2. Studio checks if the **After startup** microflow exists in **Project** > **Settings** > **Runtime**. 
 
     {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/studio-security-enabled/start-up-microflow.png" >}}
 
     There are two possible outcomes of this check:<br/>
-    a. If the model does not contain any **After startup** microflow, the *MendixSSO.MendixSSO_AfterStartup* microflow is used.<br/>
-    b. If the model contains the **After startup** microflow, Studio creates *CallBothStartupMicroflows* microflow in the same place as the existing one. *CallBothStartupMicroflows* will call the *MendixSSO.MendixSSO_AfterStartup* microflow first, then it will call the microflow that already existed in the project.
+    1. If the model does not contain any **After startup** microflow, the *MendixSSO.MendixSSO_AfterStartup* microflow is used.<br/>
+    1. If the model contains the **After startup** microflow, Studio creates *CallBothStartupMicroflows* microflow in the same place as the existing one. *CallBothStartupMicroflows* will call the *MendixSSO.MendixSSO_AfterStartup* microflow first, then it will call the microflow that already existed in the project.
 
 ## 8  Studio Compatibility {#studio-compatible}
 

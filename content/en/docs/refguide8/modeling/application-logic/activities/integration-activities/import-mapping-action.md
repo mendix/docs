@@ -88,14 +88,12 @@ Indicates whether the resulting objects should be committed to the database, and
 ### 3.9 Validate Against Schema
 
 {{% alert color="info" %}}
-
 Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](/refguide8/xml-schemas/) or a [consumed web service](/refguide8/consumed-web-service/).
-
 {{% /alert %}}
 
 Determines whether the import action should validate the incoming XML against the [XML schema](/refguide8/xml-schemas/).
 
-Setting this to _yes_ can impact performance!
+Setting this to *yes* can impact performance!
 
 Default: *No*
 

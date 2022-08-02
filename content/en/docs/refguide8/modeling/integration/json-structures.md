@@ -50,13 +50,11 @@ Shows a tree structure with a schema that is parsed from the JSON snippet. The f
 * **Custom name** – this column is editable. Often the name JSON objects or arrays can not be inferred from the snippet. For reference, you can modify the name of the JSON element. This name is important when you use Mapping documents based on the JSON schema. You will see this name in mapping elements, and it is used when you want to use "Map Automatically" to generate domain model entities and associations.
 
 {{% alert color="info" %}}
-
 When you modify the JSON snippet, you need to refresh the structure by clicking the 'Refresh' button. If you have not done so, an error will appear:
 
 {{< figure src="/attachments/refguide8/modeling/integration/json-structures/19399140.png" >}}
 
 You cannot press "OK" without updating the structure.
-
 {{% /alert %}}
 
 ### 1.4 Documentation
@@ -73,24 +71,20 @@ A simple JSON object is contained in curly braces (between '{' and '}'). It cont
 
 Each JSON property is composed of a key ("name") and a value ("John"). If the value is between double quotes ("  "), it is considered a string, otherwise the type is derived from the value. The following JSON values are supported:
 
-*   "string". Converted into an attribute of type String.
-*   123\. Converted into an attribute of type Integer.
-*   true or false. Converted into an attribute of type Boolean.
-*   "1985-04-12T23:20:50.52Z". Converted into an attribute of type **Date and time**.
-*   12.50\. Converted into an attribute of type Decimal.
+* `"string"` – converted into an attribute of type String
+* `123` –  converted into an attribute of type Integer
+* `true` or `false` – converted into an attribute of type Boolean
+* `"1985-04-12T23:20:50.52Z"` – converted into an attribute of type **Date and time**
+* `12.50` – converted into an attribute of type Decimal
 
 ### 2.2 JSON Arrays
 
 A JSON array is contained in square brackets (between `[` and `]`). It contains a comma-separated list of JSON values or JSON objects.
 
-*   a JSON array can be the root of the JSON snippet.
-
-*   a JSON array can be contained within a JSON object
-
-*   a JSON array can be contained within another JSON array.
+* a JSON array can be the root of the JSON snippet.
+* a JSON array can be contained within a JSON object
+* a JSON array can be contained within another JSON array.
 
 {{% alert color="info" %}}
-
 The first item of the array will be used to determine the type of the items in the array. Mixed arrays are unsupported. A mixed array is an array with entries of different data types (for example, string and integer). In the tree structure, a error will appear that you cannot use mixed arrays in your mappings.
-
 {{% /alert %}}

@@ -35,9 +35,9 @@ To use this widget, follow these steps:
 
 1. Place the widget on a page or layout.
 2. Add the following on the **Display** tab: <br />
-    a. **Text when pulling down** <br />
-    b. **Release to refresh text** <br />
-    c. **Text when refreshing**
+    1. **Text when pulling down** <br />
+    1. **Release to refresh text** <br />
+    1. **Text when refreshing**
 3. In the client, pull down the page until the **Release to refresh text** appears in order to refresh the page.
 
 {{< figure src="/attachments/appstore/widgets/pull-to-refresh/demo.gif" >}}

@@ -50,9 +50,8 @@ The collaborative development process between the Desktop Modeler and the Web Mo
 
     There are two possible outcomes of this merge:<br/>
 
-    a.   There are no conflicts, the Desktop Modeler user changes are committed to the Team  Server. Afterwards the Web Modeler gets the latest revision from the Team Server and is unlocked; the Desktop Modeler user changes are visible to Web Modeler users. Other Desktop Modeler users will get the changes once they do an update. <br/>
-
-    b. There are conflicts, the Desktop Modeler commit process is stopped. The Web Modeler is unlocked without getting changes from the Desktop Modeler user. The Desktop Modeler user needs to resolve the merge conflicts first to before being able to do a commit again.
+    1. There are no conflicts, the Desktop Modeler user changes are committed to the Team  Server. Afterwards the Web Modeler gets the latest revision from the Team Server and is unlocked; the Desktop Modeler user changes are visible to Web Modeler users. Other Desktop Modeler users will get the changes once they do an update. <br/>
+    1. There are conflicts, the Desktop Modeler commit process is stopped. The Web Modeler is unlocked without getting changes from the Desktop Modeler user. The Desktop Modeler user needs to resolve the merge conflicts first to before being able to do a commit again.
 
 {{% alert color="info" %}}
 
@@ -143,11 +142,11 @@ To create a new branch line, do the following:
 
 3. In the **Create Branch Line** dialog window, set the following: <br/>
 
-    a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see section [2 Concepts](/refguide7/version-control/#concepts) in *Version Control*. <br/> 
-    
-    b. Select revision if needed. <br/>
+    1. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see section [2 Concepts](/refguide7/version-control/#concepts) in *Version Control*. <br/> 
 
-    c. Type the name of the new line. 
+    1. Select revision if needed. <br/>
+
+    1. Type the name of the new line. 
 
 4. After you have configured all the settings, click **OK.** 
 

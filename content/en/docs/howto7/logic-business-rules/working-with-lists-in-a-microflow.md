@@ -67,8 +67,8 @@ In the previous section you have set up a basic data structure and created some 
 10. Double-click the retrieve activity to open its properties.
 11. Select **From database** for the **Source** option.
 12. Set the following properties:<br>
-    a. For **Entity**, select **Order**_<br>
-    b. For **Name**, enter **OrderList**<br>
+    1. For **Entity**, select **Order**_<br>
+    1. For **Name**, enter **OrderList**<br>
 
     {{% alert color="info" %}}With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.{{% /alert %}}
 

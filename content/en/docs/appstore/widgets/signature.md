@@ -34,11 +34,11 @@ To use this widget, follow these steps:
 3. Optionally, on the **Canvas** properties tab, add the **Has signature** attribute to the entity in to toggle to clear the canvas.
 4. On the **Pen** tab, customize the signature by selecting a pen **Type** and the **Color** (which is an HTML color code).
 5. On the **Grid** tab, configure the following: <br />
-    a. **Show background grid** – when set to yes, a grid is shown in the background of the writable area <br />
-    b. **Cell width** – the width of the grid cell in pixels <br />
-    c. **Cell height** – the height of the grid cell in pixels <br />
-    d. **Line color** – the HTML color code of the grid lines <br />
-    e. **Line width** – the width of the grid line border in pixels
+    1. **Show background grid** – when set to yes, a grid is shown in the background of the writable area <br />
+    1. **Cell width** – the width of the grid cell in pixels <br />
+    1. **Cell height** – the height of the grid cell in pixels <br />
+    1. **Line color** – the HTML color code of the grid lines <br />
+    1. **Line width** – the width of the grid line border in pixels
 6. On the **Appearance** tab in the **Common** section, custom CSS **Style** properties can be set for responsive design when the width and height are a percentage – for example:
     `min-width: 200px;`
     `max-width: 600px;`

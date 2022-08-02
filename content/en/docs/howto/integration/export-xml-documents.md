@@ -65,9 +65,9 @@ The XML schema describes what the contents of an XML document should be. We need
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581849.png" >}}
 
 3. Click **OK**, and the **Select schema elements for export mapping** dialog box will automatically open. Now do the following:<br />
-    a. For **Schema source**, select **XML schema**.<br />
-    b. For the schema, select the previously added **CustomersXSD**.<br />
-    c. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
+    1. For **Schema source**, select **XML schema**.<br />
+    1. For the schema, select the previously added **CustomersXSD**.<br />
+    1. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581811.png" >}}
 

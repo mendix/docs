@@ -180,10 +180,10 @@ To add items to a drop-down buttons, do the following:
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/adding-new-item.png" alt="Adding New Item" >}}
 
 3. In the **Edit Drop-down Button** Item dialog box, do the following:
-   1. Specify the caption for the item.
-   2. Select an image (icon) to be displayed for this item.
-   3. Select an on-click event to be performed when the end-user clicks this item.
-   4. Click **OK**.
+    1. Specify the caption for the item.
+    2. Select an image (icon) to be displayed for this item.
+    3. Select an on-click event to be performed when the end-user clicks this item.
+    4. Click **OK**.
 4. In the **Edit Items** dialog box, click **OK** to save your changes and add new item. 
 
 ### 2.7 Visibility Section {#visibility}

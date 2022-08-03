@@ -62,7 +62,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-    ```bash
+    ```bash {linenos=false}
     sudo docker-compose up -d
     ```
 
@@ -71,12 +71,12 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 4. After the process has started, you can check the status with the following commands:
 
     ```bash
-   sudo docker-compose ps
+    sudo docker-compose ps
          Name                 Command           State           Ports         
-   ---------------------------------------------------------------------
-   docker_chrome_1    /opt/bin/entry_point.sh   Up                            
-   docker_firefox_1   /opt/bin/entry_point.sh   Up                            
-   docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
+    ---------------------------------------------------------------------
+    docker_chrome_1    /opt/bin/entry_point.sh   Up                            
+    docker_firefox_1   /opt/bin/entry_point.sh   Up                            
+    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
     ```
 
 5. Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.

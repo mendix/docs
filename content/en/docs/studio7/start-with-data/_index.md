@@ -21,8 +21,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 4. Make sure that the spreadsheet meets the following requirements:<br/>
 
     1. The size of your file does not exceed 1MB. <br/>
-    b. The number of worksheets does not exceed 50.<br/>
-
+    1. The number of worksheets does not exceed 50.<br/>
     1. The number of columns per worksheet does not exceed 100.<br/>
     1. A column name does not exceed 100 characters.<br/>
 
@@ -33,7 +32,6 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
         {{% alert color="info" %}}If a column name consists of several lines, Mendix Studio will process the only first one. If your column does not have a name, but has values in it, it will be named "_EMPTY".{{% /alert %}}
 
     1. Each cell of the worksheet (a row or a column) should contain a single value or be empty.
-
     1. If you want to create links (associations) between two columns, make sure the conditions mentioned above for creating these links are met. <br/>
 
 ## 3 Converting Your Data

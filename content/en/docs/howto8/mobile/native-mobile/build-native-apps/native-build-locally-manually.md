@@ -145,7 +145,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-home.png" alt="Android Studio"   width="350"  >}}
 
-   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
+    Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 

@@ -78,15 +78,15 @@ Alternatively, to create the Docker image of your Mendix app using the IEAP CLI,
   
 1. Use the following command to connect to the Docker daemon:
 
-   ```shell {linenos=false}
-   ie-app-publisher-linux de c -u http://127.0.0.1:2375
-   ```
+    ```shell {linenos=false}
+    ie-app-publisher-linux de c -u http://127.0.0.1:2375
+    ```
 
 2. Use the following command to create a Docker image of your Mendix app, `mymendixapp`:
 
-   ```shell {linenos=false}
-   ie-app-publisher-linux im c -n mendixedge:latest -f /root/mymendixapp.mda
-   ```
+    ```shell {linenos=false}
+    ie-app-publisher-linux im c -n mendixedge:latest -f /root/mymendixapp.mda
+    ```
 
 Once the Docker image is built, the next step is to create the Mendix Edge App.
 

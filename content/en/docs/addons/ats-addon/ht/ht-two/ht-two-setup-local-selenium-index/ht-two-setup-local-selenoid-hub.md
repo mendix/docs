@@ -81,10 +81,10 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 5. Open a console and give the following commands to pull the images first:
 
     ```bash
-   sudo docker pull selenoid/chrome:65.0
-   sudo docker pull selenoid/firefox:58.0
-   sudo docker pull selenoid/video-recorder
-   sudo docker pull aerokube/selenoid
+    sudo docker pull selenoid/chrome:65.0
+    sudo docker pull selenoid/firefox:58.0
+    sudo docker pull selenoid/video-recorder
+    sudo docker pull aerokube/selenoid
     ```
 
 6. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:

@@ -411,8 +411,8 @@ There are two dashboards available at the moment. If necessary you can install b
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import.png" >}}
 4. Select **Prometheus** from the *Prometheus data source* dropdown, and **Loki** from the *Loki data source* dropdown.
-   If necessary, rename the dashboard and change its uid.
-   Press **Import** to import the dashboard into Grafana.
+    If necessary, rename the dashboard and change its uid.
+    Press **Import** to import the dashboard into Grafana.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import-settings.png" >}}
 

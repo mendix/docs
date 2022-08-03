@@ -246,10 +246,10 @@ Below are the steps to build a simple example web app based on a blank app templ
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
-   1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
-   2. For **Data Source**, select **Nanoflow** as the **Type**.
-   3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
-   4. Click **OK** to save the settings.
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data Source**, select **Nanoflow** as the **Type**.
+    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
+    4. Click **OK** to save the settings.
 
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
 6. Change the settings of the **Microphone** widget as follows:
@@ -259,9 +259,9 @@ Below are the steps to build a simple example web app based on a blank app templ
     4. For **Action**, select **Save changes**, so the changed value of **NewTranscript** will be available across the app.
 7. Inside the **Data view**, add a **Text area** widget.
 8. Change the settings of the **Text area** widget as follows:
-   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
-   3. Click **OK** to save the settings. 
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
+    3. Click **OK** to save the settings. 
 9. Make sure that you have [configured the license token](#configure-license-token).
 10. Run your app locally. Click the microphone icon, talk to it, and the text area will show you the real-time transcript as you speak.
 

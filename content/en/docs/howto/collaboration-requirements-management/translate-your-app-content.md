@@ -100,7 +100,7 @@ Now that your current language is Russian, you can translate some of the texts i
     The untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
 
     {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/untranslated-texts.png" alt="untranslated-texts" >}}
-    
+
 2. Enter your translation for the two text items on the page.
 
     {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/home-page-russian.png" alt="Home page with translated text" >}}
@@ -153,22 +153,22 @@ To deal with this situation, follow the steps below:
 
 4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button we added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
 
-   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" >}}
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" >}}
 
-   In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
+    In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
 
 5. If you made any translations, click **Translate** to save them.
 6. **Close** the dialog box.
 7. In our app, the text *Order* is used as the command to order a product, and also used to refer to the Order entity. However, in Russia the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
 8. Edit the text on the button to reflect the verb *to order*. In Russian this is *заказать*.
 
-   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" >}}
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" >}}
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
-   Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
+    Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
 
-   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " >}}
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " >}}
 
 10. In the row where **Order** has no translation, enter *Заказ*. This is the Russian translation for *an order*.
 
@@ -208,7 +208,7 @@ To copy our Russian translations into a Belarusian dictionary, you can do the fo
 1. Go to **Language**  > **Language Settings**. The **App Settings** dialog box opens.
 2. Click **Add** to add **Belarusian, Belarus** as an app language.
 
-   {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/language-settings-belarusian.png" alt="Belarusian added to the app" >}}
+    {{< figure src="/attachments/howto/collaboration-requirements-management/translate-your-app-content/language-settings-belarusian.png" alt="Belarusian added to the app" >}}
 
 3. Click **OK** to save the changes and close the **App Settings** dialog box.
 4. Go to **Language** > **Language Operations**. The **Language Operations** dialog box opens.

@@ -105,7 +105,7 @@ The above only applies to pages *within* your Mendix application (meaning, pages
 
 ## 5 Read More
 
-* [How to Translate Your App Content](/howto/general/translate-your-app-content/) – a worked example of adding a translation 
+* [Translating Your App Content](/refguide/translate-your-app-content/) – a worked example of adding a translation 
 * [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages/)
 * [Change language by clicking a link](https://forum.mendixcloud.com/link/questions/91821) – explanations and ideas on the Mendix forum for refreshing the page when the language is changed
 * [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676) – a discussion on the Mendix forum about switching languages for anonymous end-users

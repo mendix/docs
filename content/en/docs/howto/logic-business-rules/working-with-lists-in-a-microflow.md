@@ -69,81 +69,64 @@ Use a microflow with a **Retrieve from database** activity to retrieve a list of
 
 1.  Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
 2.  In the **Add Microflow** dialog box, enter *Microflow _IVK_SetOrderToComplete_*, and then click **OK**.
-4.  Add an **Action** button to the toolbar of the orders overview:
+4.  On the **Order** overview page, add an **Action** button to the toolbar.
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581118.png" >}}
 
-5.  Double-click the action button and in its properties, enter *Set Processing to Complete* for the **Caption**.
-6.  For **On click**, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
+5.  Double-click the action button and change the **Caption** to *Set Processing to Complete*.
+6.  In the **On click** list, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581054.png" >}}
 
 7.  Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
 8.  Open the **Toolbox** and search for the **Retrieve** action.
-
-9.  Drag a **Retrieve** action from the toolbox to the line between the green start and red end event. This inserts a retrieve action activity.
+9.  Drag a **Retrieve** action from the **Toolbox** to the line between the start and end events.
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581091.png" >}}
 
-10. Double-click the retrieve activity to open its properties.
-11. Select **From database** for the **Source** option.
-12. Set the following properties:<br>
-    a. For **Entity**, select **Order**_<br>
-    b. For **List**, enter **OrderList**<br>
-
-	{{% alert color="info" %}}With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
-	{{% /alert %}}
-
-13.  Add the following XPath expression in the XPath constraint field: `[OrderStatus = 'Processing']`. This expression will filter the list to only orders with the status **Processing**.
-    Your properties screen should look like this:
+10. Double-click the **Retrieve** action activity to open its properties.
+11. Set the following properties:
+    * **Source** – ***From database**
+    * **Entity** – **Order**
+    * **List** – **OrderList**
+12.  To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: *[OrderStatus = 'Processing']*.
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581088.png" >}}
 
-	{{% alert color="info" %}}With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
+    {{% alert color="info" %}}Apart from filtering the list of orders on by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: *Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'*.
 	{{% /alert %}}
-    {{% alert color="info" %}}In the previous sections you filtered the list of orders from database on attributes of the order entity itself. In this section you will constrain on attributes over the associated customer object. For example, to filter the orders based on the city where the customer is located, apply the following constraint: *Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'*.
-	{{% /alert %}}
-
-You should see a microflow like this:
-
-{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581087.png" >}}
 
 ## 4 Iterating Over a List of Objects
 
-In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the change object activity to change the status of the order object.
+After retrieving a list of orders with the status Processing, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to Complete.
 
 1.  Open the **IVK_SetOrderToComplete** microflow created in the previous section.
   
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581087.png" >}}
 
-2.  Drag a **Loop** action from the **Toolbox** to the line behind the **OrderProcessingList** action activity.
+2.  Drag a **Loop** action from the **Toolbox** and place it between the **OrderProcessingList** action activity, and the end event of the microflow.
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581086.png" >}}
 
-	{{% alert color="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop/).
-	{{% /alert %}}
-
-3.  Double click the loop activity and select the **OrderList** to iterate over.
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581085.png" >}}
-
-4.  Drag a **Change object** activity inside the loop:
+3. Double-click the **Loop** activity.
+4. In the **Iterate over** list, select **OrderList**, and then click **OK**.
+5. Drag a **Change object** activity into the loop.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581084.png" >}}
 
-5.  Double click the **change activity** to open its properties.
-6.  Select the **IteratorOrder** at the **Object** drop-down menu and click the **New** button. This will open the **Edit Change Item** editor.
-7. Set the following properties:<br>
-    a. For **Member** select **OrderStatus**.<br>
-    b. For **Value** enter `MyFirstModule.OrderStatus.Complete`.<br>
+6.  Double-click the **Change object** activity.
+7.  In the **Object** list, select **IteratorOrder**, and then click **New**.
+8. In the **Edit Change Item** editor, set the following properties:
+    a. For **Member** select **OrderStatus**.
+    b. For **Value** enter `MyFirstModule.OrderStatus.Complete`.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581080.png" >}}
 
-8. Click **OK**. Your properties screen should look like this:
+9. Click **OK**. Your properties screen should look like this:
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581078.png" >}}
 
-9. Set **Commit** and **Refresh in Client** to **Yes** to commit your changes to the database and refresh your list in the client so your changes will be visible, then click **OK**. Your microflow should look like this:
+10. Set **Commit** and **Refresh in Client** to **Yes** to commit your changes to the database and refresh your list in the client so your changes will be visible, then click **OK**. Your microflow should look like this:
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581076.png" >}}
     

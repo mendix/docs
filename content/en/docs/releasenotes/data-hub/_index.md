@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### Aug 4th, 2022
+
+#### Improvements
+
+* Catalog page is upgraded to incorporate with the newly added OData restrictions. It now supports Capabilities tab, tooltip for attributes that have restrictions and tooltips for the CRUD indicator.
+
+#### Fixes
+
+* We fixed an error that prevents the Capabilities filter to be reset when going to the homepage.
+
 ### July 28th, 2022
 
 #### Improvements

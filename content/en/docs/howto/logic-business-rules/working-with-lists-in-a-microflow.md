@@ -91,10 +91,8 @@ Use a microflow with a **Retrieve from database** activity to retrieve a list of
     * **List** – enter *OrderList*
 12.  To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: *[OrderStatus = 'Processing']*.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581088.png" alt="A sample XPath constraint" >}}
-
-    {{% alert color="info" %}}Apart from filtering the list of orders on by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: *Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'*.
-	{{% /alert %}}
+ {{% alert color="info" %}}Apart from filtering the list of orders on by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: *Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'*.
+{{% /alert %}}
 
 ## 4 Iterating Over a List of Objects
 
@@ -166,14 +164,12 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 11.  Double-click the **Change variable** activity and configure the following settings:
     * **Variable** – select **CalculatedTotalPrice**
     * **Value** – enter *$CalculatedTotalPrice + $IteratorOrder/TotalPrice*
-	That is, as the loop iterates over the list, it adds the price of every order to the *CalculatedTotalPrice* variable.
+	
+    That is, as the loop iterates over the list, it adds the price of every order to the *CalculatedTotalPrice* variable.
 12.  Drag a **Show Message** action from the toolbox and place it after the **Loop** activity.
 13.  Double-click the **Show message** activity and configure the following settings:
     * **Template** – enter *Total calculated price: {1}*
     * **Parameters** – enter *toString($CalculatedTotalPrice)*
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581064.png" alt="Configuring the show message activity" >}}
-
 14. Click **OK**, and then save the microflow.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581063.png" alt="A microflow configured to calculate total list value with a loop" >}}

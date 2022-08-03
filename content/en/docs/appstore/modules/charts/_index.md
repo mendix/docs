@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "charts", "platform support", "ar
 
 ## 1 Introduction
 
-The [Chart Widgets module](https://marketplace.mendix.com/link/component/120527) hosts a collection of updated and improved chart widgets. Beside widget improvements, this module introduces a shared settings file that allows you to define common properties for all your charts in your app.
+The [Chart Widgets module](https://marketplace.mendix.com/link/component/105695) hosts a collection of updated and improved chart widgets. Beside widget improvements, this module introduces a shared settings file that allows you to define common properties for all your charts in your app.
 
 For information on migrating an older version of the [Charts widget](https://marketplace.mendix.com/link/component/105695) to the newer chart widgets module, see the [Migrating to the Chart Widgets Module](#migrate-to-module) section below.
 

@@ -292,13 +292,11 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 
 You can filter search results by environment type. The **Production** environment filter is active by default.
 
-To change the environment type filter, click **Filter**:
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/dh-filter-box.png" alt="filter box" >}}
+To change the environment type filter, click **Filter**.
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
 
-You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Data Hub Catalog](/data-hub/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities, as well as any OData restrictions. See the [Viewing OData Capabilities in Data Hub Catalog](/data-hub/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
 
 #### 3.4.3 Search Results {#search-results}
 

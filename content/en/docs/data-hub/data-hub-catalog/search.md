@@ -298,7 +298,7 @@ In the **Filters** dialog box, check the **Environment Type** that you want to i
 
 You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Data Hub Catalog](/data-hub/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
 
-You will also see any OData restrictions that apply, including **Count** and **Pagination**.
+You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
 #### 3.4.3 Search Results {#search-results}
 

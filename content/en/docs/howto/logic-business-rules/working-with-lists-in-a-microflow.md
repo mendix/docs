@@ -168,8 +168,9 @@ To calculate the total sum of all your orders via a loop, create a variable whic
     That is, as the loop iterates over the list, it adds the price of every order to the *CalculatedTotalPrice* variable.
 12.  Drag a **Show Message** action from the toolbox and place it after the **Loop** activity.
 13.  Double-click the **Show message** activity and configure the following settings:
-    * **Template** – enter *Total calculated price: {1}*
-    * **Parameters** – enter *toString($CalculatedTotalPrice)*
+    * **Source** – select **From database**
+    * **Entity** – select **Order**
+    * **List** – enter *OrderList*
 14. Click **OK**, and then save the microflow.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581063.png" alt="A microflow configured to calculate total list value with a loop" >}}

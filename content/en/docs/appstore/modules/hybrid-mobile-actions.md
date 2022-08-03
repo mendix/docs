@@ -41,13 +41,13 @@ The actions above are dependent on Cordova plugins. Most dependencies are alread
 
 Next, add the following snippet to the custom Cordova configuration:
 
-```sh
+```text
 <plugin name="cordova-plugin-android-fingerprint-auth" source="npm" spec="1.5.0" /> <plugin name="cordova-plugin-touch-id" source="npm" spec="3.4.0" /> <plugin name="cordova-clipboard" source="npm" spec="1.3.0" /> <plugin name="cordova-plugin-media" source="npm" spec="5.0.2" />
 ```
 
 Note that the standard *config.xml* template already includes `cordova-plugin-contacts`, but due to a permission structure change for Android 9 that causes a crash on saving, it has to be replaced by the following snippet:
 
-```sh
+```text
 <plugin name="cordova-plugin-contacts" spec="https://github.com/mendixlabs/cordova-plugin-contacts.git#3.0.2" />
 ```
 

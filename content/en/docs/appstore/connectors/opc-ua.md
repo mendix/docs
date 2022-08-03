@@ -376,7 +376,7 @@ The purpose of this tab is to show the subscriptions with their current publishi
 
 When getting a `ClosedChannelException` like the partial stacktrace below, you will need to include the certificates of your OPC UA Server in the runtime configuration. This requires you to upload your Server certificate in the Mendix Runtime Settings. 
 
-```sh {linenos=false}
+```text {linenos=false}
     com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException
         at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
 
@@ -396,7 +396,7 @@ This can be caused by one of the following reasons:
 * The Server is expecting a username, but you do not have one configured in your Server configuration
 * You have configured to authenticate with a username and a password, but the Server does not have that enabled. You should then use **NONE** or **CERTIFICATE** as **AuthenticationType**.
 
-```sh {linenos=false}
+```text {linenos=false}
     com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.lang.Exception: no UserTokenPolicy with UserTokenType.UserName found
         at com.mendix.basis.actionmanagement.ActionManager.executeSync(ActionManager.scala:84)
 

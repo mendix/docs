@@ -42,7 +42,7 @@ To extract the validation steps to a sub-microflow, follow these steps:
 
 3.  In the **Add microflow** dialog box, enter a name for the sub-microflow.
 
-	{{% alert color="info" %}} As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Implement Mendix Best Practices for Development](/howto/general/dev-best-practices).
+	{{% alert color="info" %}} As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Implement Mendix Best Practices for Development](/howto/general/dev-best-practices/).
 	{{% /alert %}}
 
 4. Click **OK**.   

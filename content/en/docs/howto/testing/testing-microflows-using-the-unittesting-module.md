@@ -92,14 +92,14 @@ For the purpose of this how-to, create a sample microflow that you can then test
 
 To create a sample microflow for testing, follow these steps:
 
-1.  Create a new [enumeration](howto/data-models/create-a-basic-data-layer#add-enumeration) with the following parameters:
+1.  Create a new [enumeration](/howto/data-models/create-a-basic-data-layer/#add-enumeration) with the following parameters:
 	* **Name** – *Level*
 	* **Enumeration values** – *Junior*, *Medior*, and *Senior*.
   
 	{{< figure src="/attachments/howto/testing/testing-microflows-using-the-unittesting-module/18580356.png" alt="Enumeration with three values" >}}
 
 2.  Open the domain model of **MyFirstModule**.
-3.  Create a new [entity](howto/data-models/create-a-basic-data-layer#create-entity) with the following parameters:
+3.  Create a new [entity](/howto/data-models/create-a-basic-data-layer/#create-entity) with the following parameters:
 	* **Name** – *Employee*
 	* **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
 

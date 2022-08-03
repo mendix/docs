@@ -24,7 +24,7 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 ## 2 Installation
 
 1. Import the Unit Testing module into your app.
-    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
+    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 2. Download the latest Object Handling module into your app.
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.

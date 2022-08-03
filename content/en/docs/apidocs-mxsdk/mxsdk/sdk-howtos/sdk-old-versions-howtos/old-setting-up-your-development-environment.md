@@ -46,7 +46,7 @@ To set up your development tools, follow these steps:
 3. Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+) (you can check the version you are using via **Help** > **About**).
 4. Install TypeScript 3.6.2 (or higher) with [`npm`](https://www.npmjs.com/), Node.js's package manager:
 
-    ```bash
+    ```bash {linenos=false}
     $ npm install -g typescript
     ```
 
@@ -71,12 +71,11 @@ To set up a working directory for your script, follow these steps:
     $ npm init --yes
     ```
 
-    {{% alert color="info" %}}Visual Studio Code works with directories instead of project files.
-    {{% /alert %}}
+    {{% alert color="info" %}}Visual Studio Code works with directories instead of project files.{{% /alert %}}
 
 2. Start Visual Studio Code and open the directory you just created. You can open a new instance of VSC from the command line with the directory you want to open as the first argument. For example, if your current working directory in your terminal is the directory in which all your project files live, use the following command to open VSC:
 
-    ```bash
+    ```bash {linenos=false}
     $ code .
     ```
 
@@ -95,7 +94,7 @@ To set up a working directory for your script, follow these steps:
 
 4. Save your changes and then execute the following to install the dependencies:
 
-    ```bash
+    ```bash {linenos=false}
     $ npm install
     ```
 

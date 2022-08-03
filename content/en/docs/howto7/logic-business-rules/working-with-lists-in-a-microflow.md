@@ -199,7 +199,7 @@ In the previous section you iterated over a list to add the value of single obje
     1. For **Variable** select **OrderList**.
     2. For **Function** select **Sum** (see the [documentation](/refguide7/aggregate-list/) for the description of the other functions).
     3. For **Attribute** select **TotalPrice**.
-    4.  For **Variable** enter a descriptive name like *SumTotalPrice*.
+    4. For **Variable** enter a descriptive name like *SumTotalPrice*.
 
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581059.png" >}}
 

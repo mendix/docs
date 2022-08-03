@@ -302,7 +302,6 @@ While the Mendix input elements come with labels, you will need to add one to Te
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/edittextboxtwo.png" alt="edit text box two" >}}
 
 2. In *TextBox.tsx* remove the usages of `{this.props.style}` and `{this.props.class}`, because labeled widgets do not have them and the styling is applied to the surrounding FormGroup.
-
 3. Preview the label in the page editor:
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/editdataviewone.png" alt="edit data view one" >}}

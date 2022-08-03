@@ -421,30 +421,30 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
 2. From the **Toolbox**, add a **Data view** widget to your page.
 3. Set the **CreateDominantLanguageDetector** nanoflow as the data source of the **Data View** widget as follows:
-   1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
-   2. For **Data source**, select **Nanoflow**.
-   3. **Select** the **CreateDominantLanguageDetector** nanoflow for **Nanoflow**.
-   4. Click **OK** to save the settings.
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Nanoflow**.
+    3. **Select** the **CreateDominantLanguageDetector** nanoflow for **Nanoflow**.
+    4. Click **OK** to save the settings.
 4. Inside the **Data view**, add a **Text area** widget.
 5. Change the settings of the **Text area** widget as follows:
-   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, select the **InputText** attribute from **Data view**.
-   3. For **Label caption**, enter *Text*.
-   4. Click **OK** to save the settings. 
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. For **Data source**, select the **InputText** attribute from **Data view**.
+    3. For **Label caption**, enter *Text*.
+    4. Click **OK** to save the settings. 
 6. Inside the **Data view**, add a **Button** widget below the **Text area** widget.
 7. Change the settings of the **Button** widget as follows:
-   1. Double-click the **Button** widget to open the **Action Button** dialog box.
-   2. For **Caption**, enter *Detect Dominant Language*.
-   3. In the **Event** section, set **On click** to **Call a nanoflow**.
-   4. For **Nanoflow**, select the **DetectDominantLanguage** nanoflow from the **TextAnalytics** > **USE_ME** folder.
-   5. Click **OK** to save the settings. 
+    1. Double-click the **Button** widget to open the **Action Button** dialog box.
+    2. For **Caption**, enter *Detect Dominant Language*.
+    3. In the **Event** section, set **On click** to **Call a nanoflow**.
+    4. For **Nanoflow**, select the **DetectDominantLanguage** nanoflow from the **TextAnalytics** > **USE_ME** folder.
+    5. Click **OK** to save the settings. 
 8. Inside the **Data view**, add a **Template grid** widget below the **Button** widget.
 9. Change the settings of the **Template grid** widget as follows:
-   1. Double-click the **Template grid** widget to open the **Edit Template Grid** dialog box.
-   2. Go to the **Data source** tab.
-   3. Set **Type** to **Association**.
-   4. Set **Entity (path)** to **TextAnalytics.DominantLanguageDetector_DominantLanguages/TextAnalytics.DominantLanguage**.
-   5. Click **OK** to save the settings. 
+    1. Double-click the **Template grid** widget to open the **Edit Template Grid** dialog box.
+    2. Go to the **Data source** tab.
+    3. Set **Type** to **Association**.
+    4. Set **Entity (path)** to **TextAnalytics.DominantLanguageDetector_DominantLanguages/TextAnalytics.DominantLanguage**.
+    5. Click **OK** to save the settings. 
 10. Inside the **Template grid** widget, add a **Text box** widget.
 11. Change the settings of the **Text box** widget as follows:
     1. Double-click the **Text area** widget to open the **Edit Text box** dialog box.
@@ -490,7 +490,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     10. In the text box, enter *$detector/TextAnalytics.Detector_SupportedLanguages/TextAnalytics.Language*.
     11. Click **OK** to save the settings. 
 
-         {{< figure src="/attachments/appstore/app-services/text-analytics/getdetectorsupportedlanguages-microflow.png" alt="getdetectorsupportedlanguages-microflow" >}}
+        {{< figure src="/attachments/appstore/app-services/text-analytics/getdetectorsupportedlanguages-microflow.png" alt="getdetectorsupportedlanguages-microflow" >}}
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSentimentDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -535,7 +535,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
 15. Make sure you have [configured the license token](#configure-license-token).
 16. Run your app locally. You can perform sentiment detection directly in the browser:
 
-     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-sentiment-detection.png" alt="runlocally-sentiment-detection" >}}
+    {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-sentiment-detection.png" alt="runlocally-sentiment-detection" >}}
 
 ### 4.3 Performing Key Phrase Detection in Your Browser
 
@@ -607,7 +607,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
 
     4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
-       {{< figure src="/attachments/appstore/app-services/text-analytics/createentitydetector-nanoflow.png" alt="createentitydetector-nanoflow" >}}
+        {{< figure src="/attachments/appstore/app-services/text-analytics/createentitydetector-nanoflow.png" alt="createentitydetector-nanoflow" >}}
 
 2. Add a **Data view** widget to your page.
 3. Set the **CreateEntityDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -623,7 +623,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
     4. Set the **Microflow** as **GetTranslatorSupportedLanguages**.
     5. Go to the **General** tab.
     6. Set **Data source** to **TextAnalytics.Detector_InputLanguage/TextAnalytics.Language/TextAnalytics.Language.Name**.
-   7. Click **OK** to save the settings.
+    7. Click **OK** to save the settings.
 6. Inside the **Data view** widget, add a **Text area** widget below the **Reference selector** widget.
 7. Change the settings of the **Text area** widget as follows:
     1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
@@ -649,7 +649,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
 12. Make sure you have [configured the license token](#configure-license-token).
 13. Run your app locally. You can perform entity detection directly in the browser:
 
-     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-entities-detection.png" alt="runlocally-entities-detection" >}}
+    {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-entities-detection.png" alt="runlocally-entities-detection" >}}
 
 ### 4.5 Performing PII Entity Detection in Your Browser
 
@@ -661,7 +661,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     3. Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createpiientitydetector-microflow.png" alt="call-createpiientitydetector-microflow" >}}
-      
+
     4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
        {{< figure src="/attachments/appstore/app-services/text-analytics/createpiientitydetector-nanoflow.png" alt="createpiientitydetector-nanoflow" >}}
@@ -706,7 +706,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 12. Make sure you have [configured the license token](#configure-license-token).
 13. Run your app locally. You can perform PII entity detection directly in the browser:
 
-     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-pii-entities-detection.png" alt="runlocally-pii-entities-detection" >}}
+    {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-pii-entities-detection.png" alt="runlocally-pii-entities-detection" >}}
 
 ### 4.6 Performing Syntax Detection in Your Browser
 
@@ -737,7 +737,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
     4. Set the **Microflow** as **GetTranslatorSupportedLanguages**.
     5. Go to the **General** tab.
     6. Set **Data source** to **TextAnalytics.Detector_InputLanguage/TextAnalytics.Language/TextAnalytics.Language.Name**.
-   7. Click **OK** to save the settings.  
+    7. Click **OK** to save the settings.  
 6. Inside the **Data view** widget,  add a **Text area** widget below the **Reference selector** widget.
 7. Change the settings of the **Text area** widget as follows:
     1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
@@ -763,7 +763,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 12. Make sure you have [configured the license token](#configure-license-token).
 13. Run your app locally. You can perform syntax detection directly in the browser:
 
-     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-syntax-detection.png" alt="runlocally-syntax-detection" >}}
+    {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-syntax-detection.png" alt="runlocally-syntax-detection" >}}
 
 ### 4.7 Checking Statistics on the Usage Dashboard {#check-usage}
 

@@ -24,7 +24,7 @@ These are the development prerequisites:
 
 Install the dependency *.jar* files:
 
-```bash
+```bash {linenos=false}
 $ gradle prepareDeps
 ```
 
@@ -35,25 +35,25 @@ Note that all app `test/userlib` content is cleared, including the *.jar* files 
 
 Check that the versions are up to date for the *.jar* dependencies:
 
-```bash
+```bash {linenos=false}
 $ gradle dependencyUpdate
 ```
 
 Check the security for the *.jar* dependencies:
 
-```bash
+```bash {linenos=false}
 $ gradle dependencyCheckAnalyze
 ```
 
 Before release, update the *build.gradle*, the target version of the module, and the Push Notification Connector version:
 
-``` groofy
+``` groovy
 PNC_VERSION = '4.0.6'
 MXBUILD_VERSION = '7.23.8.58888'
 ```
 
 Export the module for the Marketplace, including the dependent *userlib* content (the module will be exported to *dist/{version}/module/PushNotifications.mpk*):
 
-```bash
+```bash {linenos=false}
 $ gradle extractModule
 ```

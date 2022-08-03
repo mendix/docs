@@ -149,12 +149,12 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
     {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/18581073.png" >}}
 
 4. Double click the **Create … variable** to open its properties and configure it as follows:</br>
-    1.  For **Data type** select **Decimal**.</br>
-    1.  In the value editor, enter `0`.</br>
-    1.  For **Variable** enter *CalculatedTotalPrice*.</br>
+    1. For **Data type** select **Decimal**.</br>
+    1. In the value editor, enter `0`.</br>
+    1. For **Variable** enter *CalculatedTotalPrice*.</br>
 
     {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/variable.png" >}}
-    
+
 5. Add a **Change variable** activity inside the loop.
 
     {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/18581069.png" >}}

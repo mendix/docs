@@ -294,7 +294,7 @@ In this example, you want to assert that a specific validation message appears. 
 The solution in this situation is to use the following search term: "Assert Validation". ATS checks all the actions and returns those that match these words. There is an action called [Assert Validation Message](/addons/ats-addon/rg-one-assert-validation-message/), which uses the `mx-name` of a widget to assert the validation message that appears in the widget.
 
 {{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-finding-the-action-you-need/assert-validation-message-action-search.png" >}}
-    
+
 #### 6.2.2 Example 2
 
 In this example, you want to assert that the right page has opened. You cannot use the Assert Value, because there is no `mx-name` that you can use.
@@ -315,11 +315,11 @@ The solution in this situation is to use the following search term: "Assert not 
 
 ### 6.3 Summary
 
-When you want to assert a value from a widget always use the _Assert Value_ action if possible.
+When you want to assert a value from a widget always use the *Assert Value* action if possible.
 
 If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix Marketplace](https://marketplace.mendix.com/), Mendix Studio Pro. You can also find the name using the ATS Helper.
 
- In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/addons/ats-addon/ht-one-create-custom-actions/).
+In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/addons/ats-addon/ht-one-create-custom-actions/).
 
 ## 7 Generating Values/Information {#GeneratingValuesInformation}
 

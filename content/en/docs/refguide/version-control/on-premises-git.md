@@ -16,23 +16,19 @@ This functionality is in Beta. For more information on Beta products, see [Beta 
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).	
 
-While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/refguide/on-premises-git/). This how-to describes how to work with Git version control system.	
+While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.	
 
 {{% alert color="info" %}}	
-This how-to will not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.	
+This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.	
 {{% /alert %}}
 
 {{% alert color="warning" %}}	
 You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.	
 {{% /alert %}}	
 
-This how-to will teach you how to do the following:	
-
-* Configure your Mendix apps to work with Git (on-premises) version control system	
-
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Make sure you have completed the following prerequisites:
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
 * You have an unversioned Mendix app. For more information, see the [Creating an App](#create-app) section.

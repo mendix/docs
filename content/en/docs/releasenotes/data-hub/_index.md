@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* We upgraded the Catalog page to include the newly added OData restrictions. It now features a **Capabilities** tab, a tooltip for attributes that have restrictions, and tooltips for the CRUD indicator.
+* We upgraded the Catalog page to include the **Count** and **Pagination** OData restrictions. It now features a **Capabilities** tab, a tooltip for attributes that have restrictions, and tooltips for the CRUD indicator. 
 
 #### Fixes
 

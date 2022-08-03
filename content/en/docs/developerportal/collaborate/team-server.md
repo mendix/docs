@@ -15,9 +15,9 @@ aliases:
 
 ## 1 Introduction
 
-Team Server is where all the committed versions of Mendix apps are stored. Mendix Studio Pro and Studio are integrated with Team Server, and actions like creating a new app (including a versioned model repository), updating an app, committing changes, and merging model versions are all available from Mendix Studio Pro as single-click actions.
+Team Server is where all the committed versions of Mendix apps are stored. Mendix Studio Pro and Studio are integrated with the Team Server, and actions like creating a new app (including a versioned model repository), updating an app, committing changes, and merging model versions are all available from Mendix Studio Pro as single-click actions.
 
-When you commit your app model changes to the Team Server in Studio Pro, you can select user stories that you have been working on. Team Server automatically creates links between user stories and the model changes, allowing you to navigate from commits to the associated requirements. The Mendix Platform also creates links between feedback, forms, changesets, and user stories.
+When you commit your app model changes to the Team Server in Studio Pro, you can select user stories that you have been working on. Team Server automatically creates links between user stories and the model changes, allowing you to navigate from commits to the associated requirements. The Mendix platform also creates links between feedback, forms, changesets, and user stories.
 
 On the **Team Server** screen of the Developer Portal, you can see a URL to access you app, revision history, and revision details.
 

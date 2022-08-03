@@ -41,7 +41,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     One Customer entity can be associated with many Orders, so set the association between the entities accordingly.
 
-    {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" alt="Customer and Order entities with one-to-many association" >}}
 
 2.  Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage Customer and Order objects.
 3.  Create [menu items](/howto/general/setting-up-the-navigation-structure/) to access Customer and Order overview pages.
@@ -69,29 +69,29 @@ Use a microflow with a **Retrieve from database** activity to retrieve a list of
 
 1.  Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
 2.  In the **Add Microflow** dialog box, enter *Microflow _IVK_SetOrderToComplete_*, and then click **OK**.
-4.  On the **Order** overview page, add an **Action** button to the toolbar.
+4.  On the **Orders** overview page, add an **Action** button to the toolbar.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581118.png" >}}
+	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581118.png" alt="Adding the Action button" >}}
 
 5.  Double-click the action button and change the **Caption** to *Set Processing to Complete*.
 6.  In the **On click** list, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581054.png" >}}
+	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581054.png" alt="Selecting the caption and microflow" >}}
 
 7.  Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
 8.  Open the **Toolbox** and search for the **Retrieve** action.
 9.  Drag a **Retrieve** action from the **Toolbox** to the line between the start and end events.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581091.png" >}}
+	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581091.png" alt="A view of the microflow with the Retrieve activity" >}}
 
 10. Double-click the **Retrieve** action activity to open its properties.
 11. Set the following properties:
-    * **Source** – ***From database**
-    * **Entity** – **Order**
-    * **List** – **OrderList**
+    * **Source** – select **From database**
+    * **Entity** – select **Order**
+    * **List** – enter *OrderList*
 12.  To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: *[OrderStatus = 'Processing']*.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581088.png" >}}
+	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581088.png" alt="A sample XPath constraint" >}}
 
     {{% alert color="info" %}}Apart from filtering the list of orders on by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: *Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'*.
 	{{% /alert %}}
@@ -100,127 +100,117 @@ Use a microflow with a **Retrieve from database** activity to retrieve a list of
 
 After retrieving a list of orders with the status Processing, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to Complete.
 
-1.  Open the **IVK_SetOrderToComplete** microflow created in the previous section.
-  
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581087.png" >}}
-
+1.  Open the **IVK_SetOrderToComplete** microflow that you created in the previous section.
 2.  Drag a **Loop** action from the **Toolbox** and place it between the **OrderProcessingList** action activity, and the end event of the microflow.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581086.png" >}}
+	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581086.png" alt="Microflow with a Retrieve activity followed by a Loop activity" >}}
 
 3. Double-click the **Loop** activity.
 4. In the **Iterate over** list, select **OrderList**, and then click **OK**.
-5. Drag a **Change object** activity into the loop.
+5. Drag a **Change object** activity into the **Loop** activity.
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581084.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581084.png" alt="A Change object activity placed inside a Loop activity" >}}
 
 6.  Double-click the **Change object** activity.
 7.  In the **Object** list, select **IteratorOrder**, and then click **New**.
-8. In the **Edit Change Item** editor, set the following properties:
-    a. For **Member** select **OrderStatus**.
-    b. For **Value** enter `MyFirstModule.OrderStatus.Complete`.
+8. In the **Edit Change Item** dialog box, configure the following settings:
+    * **Member** – select **OrderStatus**
+    * **Value** – enter *MyFirstModule.OrderStatus.Complete*
+9. Click **OK**, and then click **OK** again.
+10. Drag a **Commit** action from the **Toolbox** and place it after the **Loop** activity.
+11. Double-click the **Commit** activity.
+12. In the **Commit Object(s)** dialog box, configure the following settings:
+    * **Object or List** – select **OrderList**
+    * **Refresh in Client** – set to **Yes**. This settings refreshes your list in the client so that your changes are visible.
+13. Click **OK**, and then save the microflow.
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581080.png" >}}
+	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/working-with-lists-optimization.jpg" alt="A microflow configured to iterate over a list" >}}
 
-9. Click **OK**. Your properties screen should look like this:
+11. Redeploy your application.
+12. On the **Orders** overview page, click **Set Processing to Complete**.
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581078.png" >}}
-
-10. Set **Commit** and **Refresh in Client** to **Yes** to commit your changes to the database and refresh your list in the client so your changes will be visible, then click **OK**. Your microflow should look like this:
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581076.png" >}}
-    
-	Or, to optimize the number of commits, you can perform the commit outside of the loop. This way, there will be a single commit to the database instead of one per order:
-
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/working-with-lists-optimization.jpg" >}}
-
-11. **Re-deploy** your application.
-12. Click the **Set Processing to Complete** button. The orders with status 'Processing' will now be changed to 'Complete'.
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581113.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581113.png" alt="Setting the order status to Complete" >}}
 
 ## 5 Calculating the Total List Value by Using a Variable and a Loop
 
-In the previous section you iterated over a filtered list of objects using a 'Loop'. In this section you will use a loop to calculate the total sum of all your orders. To calculate this sum you will create a variable, which will be changed for every iteration in the loop.  
+To calculate the total sum of all your orders via a loop, create a variable which will be modified by every iteration of the loop.  
 
-1.  Add a new microflow button to your order data grid with the following details:</br>
-    a. **Caption** of the button:  Calculate Total Order Price
-    b. **Name** of the microflow: IVK_CalculateTotalPriceOrders
-2.  In the new microflow, add a **Retrieve** activity for **Orders** and a loop for this list to the microflow.
+1.  On the **Orders** overview page, add a new **Call microflow** button with the following settings:
+    * **Caption** – enter *Calculate Total Order Price*
+    * **Name** – enter *IVK_CalculateTotalPriceOrders*
+2.  In the *IVK_CalculateTotalPriceOrders* microflow, add a **Retrieve** action from the **Toolbox** to the line between the start and end events.
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581106.png" >}}
+3. Double-click the **Retrieve** action activity to open its properties.
+4. Set the following properties:
+    * **Source** – select **From database**
+    * **Entity** – select **Order**
+    * **List** – enter *OrderList*
+5. Drag a **Loop** action from the **Toolbox** and place it between the **Retrieve** action activity, and the end event of the microflow.
+6. Double-click the **Loop** activity.
+7. In the **Iterate over** list, select **OrderList**, and then click **OK**.
 
-3.  Drag a **Create variable** before Retrieve0 OrdersList.
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581106.png" alt="Configuring the Loop activity to iterate over a list" >}}
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581073.png" >}}
+8.  Drag a **Create variable** action from the **Toolbox** and place it before the **Retrieve** action activity.
 
-4.  Double click the **Create … variable** to open its properties and configure it as follows:</br>
-    a.  For **Data type** select **Decimal**.</br>
-    b.  In the value editor, enter `0`.</br>
-    c.  For **Variable** enter *CalculatedTotalPrice*.</br>
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581073.png" alt="A microflow with a Create variable activity" >}}
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/variable.png" >}}
+9.  Double-click the **Create variable** activity and configure the following settings:
+    * **Data type** – select **Decimal**
+    * **Value** – enter *0*
+    * **Variable** – enter *CalculatedTotalPrice*.
+
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/variable.png" alt="Configuring the Create variable activity" >}}
     
-5.  Add a **Change variable** activity inside the loop.
+10.  Drag a **Change variable** activity into the **Loop** activity.
+11.  Double-click the **Change variable** activity and configure the following settings:
+    * **Variable** – select **CalculatedTotalPrice**
+    * **Value** – enter *$CalculatedTotalPrice + $IteratorOrder/TotalPrice*
+	That is, as the loop iterates over the list, it adds the price of every order to the *CalculatedTotalPrice* variable.
+12.  Drag a **Show Message** action from the toolbox and place it after the **Loop** activity.
+13.  Double-click the **Show message** activity and configure the following settings:
+    * **Template** – enter *Total calculated price: {1}*
+    * **Parameters** – enter *toString($CalculatedTotalPrice)*
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581069.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581064.png" alt="Configuring the show message activity" >}}
 
-6.  Double click the **Change variable** activity to open its **Properties** and set the following properties:<br>
-    a. For **Variable** select **CalculatedTotalPrice**.<br>
-    b. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.<br>
+14. Click **OK**, and then save the microflow.
 
-	{{% alert color="info" %}}By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
-	{{% /alert %}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581063.png" alt="A microflow configured to calculate total list value with a loop" >}}
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581067.png" >}}
+15.  Redeploy your application.
+16. On the **Orders** overview page, click **Calculate total order price**.
 
-7.  Drag a **Show Message** action from the toolbox to the end of the microflow.
-8.  Double-click the **message** activity to open its properties and set the following properties:<br>
-    a.  For **Template** enter *Total calculated price: {1}*.<br>
-    b.  For **Parameters** add `toString($CalculatedTotalPrice)`.<br>
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581064.png" >}}
-
-9. Click **OK**. You should see a Microflow like this:
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581063.png" >}}
-
-10.  **Re-deploy** your application.
-11. Click the **Calculate total order price** button and you will see the price of all the orders added up.
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" >}}
 
 ## 6 Calculating the Total List Value by Using an Aggregate Function
 
-In the previous section you iterated over a list to add the value of single object to a total price variable. In this section you will use the 'aggregate list' function to calculate the total price instead of using a loop. The aggregate list can be used to calculate aggregated values such as the maximum, minimum, sum, average and total amount of objects over a list of objects.
+Instead of a loop, you can also calculate the total price by using the [aggregate list](/refguide/aggregate-list/) function. Use the aggregate list to calculate values such as the maximum, minimum, sum, average, and total number of objects over a list of objects.
 
-1.  Open the **IVK_CalculateTotalPriceOrders** microflow and remove the loop and the **CalculatedTotalPrice** variable.
+1.  In the **IVK_CalculateTotalPriceOrders** microflow, remove the loop and the **CalculatedTotalPrice** variable.
 2.  Add an **Aggregate list** activity after the **OrderList**.
 
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581061.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581061.png" alt="Adding an Aggregate list activity" >}}
 
-3.  Double click the aggregate list activity to open its properties and set the following properties:</br>
-    a. For **List** select **OrderList**.</br>
-    b. For **Function** select **Sum** (see the [documentation](/refguide/aggregate-list/) for the description of the other functions).</br>
-    c. For **Attribute** select **TotalPrice**.</br>
-    d. For **Variable** enter a descriptive name like _SumTotalPrice_.<br>
-
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581059.png" >}}
-
+3.  Double-click the **Aggregate list** activity, and then set the following properties:
+    * **List** – select **OrderList**
+    * **Function** – select **Sum**
+    * **Attribute** – select **TotalPrice**
+    * **Variable** – enter a descriptive name, for example, *SumTotalPrice*
 4.  Click **OK**.
-5.  Double click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
+5.  Double-click the **Show message** activity.
+6. In the **Parameters** section, delete the *$CalculatedTotalPrice* variable, and then add the *$SumTotalPrice* variable.
   
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581055.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581055.png" alt="Configuring the Show message activity" >}}
 
-6.  Click **OK**. Your microflow should look like this:
+6.  Click **OK**, and then save the microflow.
   
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581058.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581058.png" alt="A microflow configured to calculate the total list value with aggregates" >}}
 
-7.  Re-deploy your application.
-
-8.  Click the **Calculate total order price** button and you will see the same price of all the orders added up.
+7.  Redeploy your application.
+8.  On the **Orders** overview page, click **Calculate total order price**.
   
-    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" >}}
 
 ## 7 Read More
 

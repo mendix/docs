@@ -148,7 +148,7 @@ Now you will set up the final piece of your nanoflow's logic.
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/notif-action-actionguid.png" alt="app settings"   width="500"  >}}
 
-7. Select **Use return value** > **no**:
+1. Select **Use return value** > **no**:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/return-no.png" alt="app settings" >}}
 

@@ -126,19 +126,19 @@ You can use PhoneGap Build to build the native application and tell it to intial
 1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options.html#enable) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**.
 
-      {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-2.png" alt="android-2" >}}
+    {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-2.png" alt="android-2" >}}
 
 3. Open the **Chrome** browser.
 4. Open the **Chrome Developer Tools (F12)**.
 5. Click the options icon (vertical ellipsis) and select **More tools** > **Remote devices**.
 
-   {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-3.png" alt="android-3" >}}
+    {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-3.png" alt="android-3" >}}
 
-4. Select your device from the list.
+6. Select your device from the list.
 
-   {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-4.png" alt="android-4" >}}
+    {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-4.png" alt="android-4" >}}
 
-5. Inspect the tab from your mobile device to preview the view from your device on-screen and to gain access to the Chrome web inspector and the rest of the Developer Tools.
+7. Inspect the tab from your mobile device to preview the view from your device on-screen and to gain access to the Chrome web inspector and the rest of the Developer Tools.
 
 You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 

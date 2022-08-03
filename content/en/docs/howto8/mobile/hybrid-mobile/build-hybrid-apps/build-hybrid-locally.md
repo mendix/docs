@@ -60,9 +60,10 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
-   * Starts a release build that will create binaries for a physical device
-    * Uses the code sign identity "iPhone Developer" for signing \* Looks up the provisioning files and certificates using the provided Apple Developer's team id
-    1.1 Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
+    * Starts a release build that will create binaries for a physical device
+    * Uses the code sign identity "iPhone Developer" for signing 
+    * Looks up the provisioning files and certificates using the provided Apple Developer's team id
+    * Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
 1. When the build succeeds the generated *IPA* file can be found in */build/platforms/ios/build*. That folder should have the following file structure(if you did a build for an emulator an *.app* file will be available):
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" >}}

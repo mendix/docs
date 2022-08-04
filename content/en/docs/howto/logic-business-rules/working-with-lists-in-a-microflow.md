@@ -164,6 +164,7 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 11. Double-click the **Change variable** activity and configure the following settings:
     * **Variable** – select **CalculatedTotalPrice**
     * **Value** – enter *$CalculatedTotalPrice + $IteratorOrder/TotalPrice*
+        
         That is, as the loop iterates over the list, it adds the price of every order to the *CalculatedTotalPrice* variable.
 12. Drag a **Show Message** action from the toolbox and place it after the **Loop** activity.
 13. Double-click the **Show message** activity and configure the following settings:

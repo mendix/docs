@@ -77,7 +77,7 @@ To register your app, follow Microsoft's [Tutorial: Register an app with Azure A
 
 While registering, set the redirect URI to `https://(yourapp_domain)/callback/azure`.
 
-### 4.2 Enable Permissions in the Azure Portal
+#### 4.2 Enable Permissions in the Azure Portal
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 

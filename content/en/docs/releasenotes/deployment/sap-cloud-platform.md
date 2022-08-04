@@ -21,10 +21,6 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * You can now add custom Mendix Runtime variables under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
 
-#### Fixes
-
-* We made some security fixes.
-
 ### June 20th, 2022
 
 #### Improvements

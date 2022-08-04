@@ -133,10 +133,10 @@ After retrieving a list of orders with the status Processing, use a [loop](/refg
 
 To calculate the total sum of all your orders via a loop, create a variable which will be modified by every iteration of the loop.  
 
-1.  On the **Orders** overview page, add a new **Call microflow** button with the following settings:
+1. On the **Orders** overview page, add a new **Call microflow** button with the following settings:
     * **Caption** – enter *Calculate Total Order Price*
     * **Name** – enter *IVK_CalculateTotalPriceOrders*
-2.  In the *IVK_CalculateTotalPriceOrders* microflow, add a **Retrieve** action from the **Toolbox** to the line between the start and end events.
+2. In the *IVK_CalculateTotalPriceOrders* microflow, add a **Retrieve** action from the **Toolbox** to the line between the start and end events.
 
 3. Double-click the **Retrieve** action activity to open its properties.
 4. Set the following properties:
@@ -149,23 +149,31 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581106.png" alt="Configuring the Loop activity to iterate over a list" >}}
 
-8.  Drag a **Create variable** action from the **Toolbox** and place it before the **Retrieve** action activity.
+8. Drag a **Create variable** action from the **Toolbox** and place it before the **Retrieve** action activity.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581073.png" alt="A microflow with a Create variable activity" >}}
 
-9.  Double-click the **Create variable** activity and configure the following settings:
+9. Double-click the **Create variable** activity and configure the following settings:
     * **Data type** – select **Decimal**
     * **Value** – enter *0*
     * **Variable** – enter *CalculatedTotalPrice*
 
         {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/variable.png" alt="Configuring the Create variable activity" >}}
     
-10.  Drag a **Change variable** activity into the **Loop** activity.
+10. Drag a **Change variable** activity into the **Loop** activity.
+11. Double-click the **Change variable** activity and configure the following settings:
+    * **Variable** – select **CalculatedTotalPrice**
+    * **Value** – enter *$CalculatedTotalPrice + $IteratorOrder/TotalPrice*
+        That is, as the loop iterates over the list, it adds the price of every order to the *CalculatedTotalPrice* variable.
+12. Drag a **Show Message** action from the toolbox and place it after the **Loop** activity.
+13. Double-click the **Show message** activity and configure the following settings:
+    * **Template** – enter *Total calculated price: {1}*
+    * **Parameters** – enter *toString($CalculatedTotalPrice)*
 14. Click **OK**, and then save the microflow.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581063.png" alt="A microflow configured to calculate total list value with a loop" >}}
 
-15.  Redeploy your application.
+15. Redeploy your application.
 16. On the **Orders** overview page, click **Calculate total order price**.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" >}}

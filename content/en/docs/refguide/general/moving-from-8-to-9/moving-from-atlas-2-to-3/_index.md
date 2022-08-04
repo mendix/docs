@@ -37,7 +37,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
     {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas2-themefolder.png" alt="Atlas2 folder" >}}
 
-1. Download the Atlas 3 [theme.zip](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix app folder. The folder structure should look similar to the example below. **Mendix app root**, then **theme**, then **web** and **native**:
+1. Download the Atlas 3 [theme.zip](https://github.com/mendix/widgets-resources/releases/download/atlas-ui-theme-dist/theme.zip) and extract it into the root of your Mendix app folder. The folder structure should look similar to the example below. **Mendix app root**, then **theme**, then **web** and **native**:
 
     {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-themefolder.png" alt="Atlas 3 folder" >}}
 

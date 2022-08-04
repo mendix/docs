@@ -82,7 +82,7 @@ If you follow the wizard and if it fails to detect the email settings automatica
 
 In Studio Pro, you can use the `GetAutoConfig` Java action to get the all supported email configurations for the provided username. It will return results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records and get the desired configuration and create the `Email_Connector.EmailAccount`.
 
-### 3.2 Other Account Settings {#other-account-settings}
+### 3.2 Account Settings {#other-account-settings}
 
 You can set up the following additional account settings:
 
@@ -99,6 +99,8 @@ This is only supported for IMAP protocols, and some servers may not support it a
     * When this setting is not selected, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**
     * When this setting is selected, checked then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration
 * **Timeout** – the connection timeout for send email/receive emails operations. This can be set in the **Email Account** object.
+
+Click **Show Error Logs** to view the error logs for when emails are processed.
 
 ## 4 Usage
 
@@ -144,13 +146,13 @@ When the module is running, you can create templates to use for a specific email
 
 In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** use this snippet to configure this functionality.
 
-#### 4.3.1 Sending an email with a template
+#### 4.3.1 Sending an Email with a Template
 
 When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action.
 
 The input parameters are the following:
 
-* **Data Object** – entity object from which you want to extract the placeholder tokens
+* **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email account** – email account consisting of outgoing email configuration
 * **Email template** – email template from which email message object is created and sent
 * **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
@@ -228,6 +230,20 @@ When modelling your app in Studio Pro, use the [Create Object](/refguide/create-
 
 If you do not encrypt the password, all functions will still work as expected.
 
+### 4.7 Queuing Emails
+
+Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending. On the third attempt, any messages that are still failing will move from the **Queued** folder to the **Failed** folder.
+
+### 4.8 Attachments
+
+To add attachments to the email message, do the following:
+
+1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable to the places where the **FileDocument** entity is required. 
+
+    If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity. 
+
+2. Set the **Attachment_EmailMessage** association.
+
 ## 5 Key Microflows
 
 * **Sample_ASU_SubscribeForEmailNotification** - an after startup microflow which will subscribe to email notification based on account settings
@@ -239,3 +255,4 @@ If you do not encrypt the password, all functions will still work as expected.
 
 * If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
 * If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
+* If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.

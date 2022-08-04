@@ -30,12 +30,6 @@ The typical usage scenario is sending emails with a template system and using to
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 * [Encryption](/appstore/modules/encryption/)
 
-#### 1.2.2 Java Libraries
-
-* *commons-codec-1.14.jar*
-* *commons-email-1.4.0.jar*
-* *javax.mail-1.6.0.jar*
-
 ## 2 Configuration
 
 To configure this module, follow these steps:
@@ -62,6 +56,34 @@ For security reasons, it is highly recommended for the **Server configuration** 
 
     {{< figure src="/attachments/appstore/modules/email-with-templates/module-setup-step1.png" >}}
 
-## 3 Read More
+## 3 Usage 
 
-* [Sending Email](/developerportal/deploy/sending-email/)
+### 3.1 Configuring Microsoft Azure Active Directory (AD) OAuth 2.0 {#configure-azure-ad}
+
+You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
+
+Select the check box for **Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+
+#### 3.1.1 Registering Your App on the Azure Portal
+
+To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+
+While registering, set the redirect URI to `https://(yourapp_domain)/callback/azure`.
+
+### 3.1.2 Enable Permissions in the Azure Portal
+
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+{{< figure src="/attachments/appstore/modules/email-with-templates/permissions-sending-email.png" >}}
+
+#### 3.1.3 Client ID, Tenant ID, and Client Secret 
+
+The **Email with Templates** module requires a **Client ID**, **Tenant ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
+
+#### 3.1.4 Configure After-Startup Microflow
+
+To configure the After-Startup microflow in Studio Pro, do the following:
+
+1. In the **App Explorer**, go to **Settings** and open **App Settings**.
+2. Go to the **Runtime** tab.
+3. In **After-Startup**, select the **ASU_RegisterHandlers** microflow.

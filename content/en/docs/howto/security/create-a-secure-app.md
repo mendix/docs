@@ -215,6 +215,8 @@ To create access roles for the User module role, follow these steps:
     * **Allow deleting existing objects**: false
     * **Default rights for new members**: **Read**
 
+    {{% alert color="warning" %}}Be careful when setting default rights. If a new attribute or association is added, it will automatically have the designated access, which may not be what you want. See the [Access Rights](/refguide/access-rules/#access-rights) section of *Access Rules* for more details.{{% /alert %}}
+
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581535.png" >}}
 
 4. Adjust the rule for the **Order** and set up the rule configuration:

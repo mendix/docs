@@ -191,7 +191,7 @@ For more information on managing node permissions, see [Node Permissions](/devel
 
 Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
 
-The technical contact can only see services which have been licensed for their company. If you want to license a service, you will have to raise a request with [Mendix Support](https://support.mendix.com). If the technical contact cannot enable the service, this means that it has previously been licensed but the license has expired.
+The technical contact can only see services which have been licensed for their company. If the technical contact cannot enable the service, this means that it has previously been licensed but the license has expired.
 
 Team members who have permission to *Deploy, Publish, and Monitor* can see which services are enabled or disabled.
 

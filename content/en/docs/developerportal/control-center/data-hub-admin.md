@@ -72,9 +72,7 @@ Once the external user receives the invitation, they log into the Data Hub Catal
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
 
-{{% alert color="info" %}}
-It is currently not possible for Data Hub Admins to revoke rights for external users. If you need to revoke the permissions of an external user, please create a ticket with [Mendix Support](https://support.mendix.com).
-{{% /alert %}}
+Company administrators can also **Remove** rights of users who no longer need access.
 
 ## 5 Settings {#settings}
 

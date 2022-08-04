@@ -5,6 +5,7 @@ category: "App Services"
 weight: 1
 description: "This document describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
@@ -22,7 +23,7 @@ Here is an overview of what the 3DViewer contains:
 | [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
 | [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
 | [Java action](#java-action) | VisServerAction |
-| [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+| [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Preference |
 
 In most cases, you will only need what is contained in the **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
@@ -49,6 +50,7 @@ This app service enables doing the following:
 * Create 2D markup on model 
 * Take snapshot of a model 
 * Perform 3D measurement on distance, angle, area, radius, and length
+* Set filter options for PMI and save as personal preferences
 
 ### 1.3 Limitations {#limitations}
 
@@ -278,6 +280,16 @@ Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#vi
 
 No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts . For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 
+##### 4.6.2.7 Preference {#preference}
+
+This widget enables setting and saving your personal preferences.
+
+{{% alert color="info" %}}Only options for PMI filter are supported currently.{{% /alert %}}
+
+Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
+
+With this widget, you can select different PMI entity types, model view, and design group. The selected items will not be loaded. For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
+
 #### 4.6.3 Toolbar Widgets
 
 These widgets do not require additional configuration. Simply place them within a [Container3D](#container3d) widget with the accompanying [Viewer](#viewer) widget.
@@ -496,9 +508,9 @@ When a model is loaded in the viewer, the [Section View](#section-view) widget e
 * Clipping away parts
 * Positioning a plane
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode" >}}
-
 The sections below present operations within the Section View widget.
+
+{{< figure src="/attachments/appstore/app-services/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode" >}}
 
 #### 5.6.1 Action
 
@@ -559,6 +571,14 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
 4. Find **3D Viewer** in the list.
 5. Click **Usage Dashboard** to show the usage details.
+
+### 5.9 Setting Preferences {#set-preferences}
+
+You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
+
+{{< figure src="/attachments/appstore/app-services/3d-viewer/preferences-general.png" alt="preferences-general" >}}
+
+On the **PMI** tab, you can set filter options for PMI and click **Ok** to save the changes. The items that you selected will not be loaded.
 
 ## 6 Read More
 

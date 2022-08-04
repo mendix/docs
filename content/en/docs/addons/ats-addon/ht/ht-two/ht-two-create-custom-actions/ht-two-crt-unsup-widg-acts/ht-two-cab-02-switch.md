@@ -1,13 +1,13 @@
 ---
 title: "CAB.02 - Switch"
 url: /addons/ats-addon/ht-two-cab-02-switch/
-description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix switch widget."
+description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix Switch widget."
 tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction
 
-This how-to explains how to create an unsupported widget action for the Mendix switch widget. In a standard situation, the first step is to check if ATS supports the widget.
+This how-to explains how to create an unsupported widget action for the Mendix Switch widget. In a standard situation, the first step is to check if ATS supports the widget.
 
 The how-to assumes that you must build your own action. 
 

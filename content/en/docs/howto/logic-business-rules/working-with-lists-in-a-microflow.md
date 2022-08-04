@@ -9,7 +9,7 @@ tags: ["microflow", "logic", "list"]
 
 ## 1 Introduction
 
-Enrich your microflow by using a list. A list consists of entities of the same type, filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of fulfilled orders from the database. You can then further process this data, for example, by calculating the total value of those orders.
+Enrich your microflow by using a list. A list consists of objects of the same type, filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of fulfilled orders from the database. You can then further process this data, for example, by calculating the total value of those orders.
 
 This how-to will teach you how to do the following:
 

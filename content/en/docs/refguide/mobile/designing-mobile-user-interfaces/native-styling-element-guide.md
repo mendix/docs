@@ -1776,7 +1776,38 @@ The widget consists of the following elements:
 
 The default class to style all column chart widgets is named `com_mendix_widget_native_columnchart_ColumnChart`.
 
-## 12 Read More
+### 11.33 Gallery
+
+The Gallery widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for tablet, and mobile devices.
+
+The widget’s style properties are as follows:
+
+```xml
+<container/>
+<dynamicItemClasses>
+	<dynamic_item_class_name>
+		<listItem/>
+	</dynamic_item_class_name>
+</dynamicItemClasses>
+<listItem/>
+<listStyle/>
+<pagination/>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `dynamicItemClasses` > `dynamic_item_class_name` | object | The dynamic item classes property allows you to specify one or more styling objects like the class property, but based on an expression. This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the Class property. |
+| `dynamicItemClasses` > `dynamic_item_class_name` > `listItem` | Same properties as `listItem` | |
+| `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `pagination` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `paginationText` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+
+## 13 Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)

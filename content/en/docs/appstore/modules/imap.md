@@ -71,27 +71,23 @@ You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0
 
 Click the **Add Account** button to add a new account, and select the option **Configure using Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
 
-### 4.1 Additional Requirements
-
-You will need to import the [Encryption](/appstore/modules/encryption/) module to use the **IMAP/POP3 Incoming Email** module in your app in Studio Pro 7 and 8.
-
-#### 4.2 Registering Your App on the Azure Portal
+#### 4.1 Registering Your App on the Azure Portal
 
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
 While registering, set the redirect URI to `https://(yourapp_domain)/callback/azure`.
 
-### 4.3 Enable Permissions in the Azure Portal
+### 4.2 Enable Permissions in the Azure Portal
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
 
-#### 4.4 Client ID, Tenant ID, and Client Secret 
+#### 4.3 Client ID, Tenant ID, and Client Secret 
 
 The **IMAP/POP3 Incoming Email** module requires a **Client ID**, **Tenant ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
 
-#### 4.5 Configure After-Startup Microflow
+#### 4.4 Configure After-Startup Microflow
 
 To configure the After-Startup microflow in Studio Pro, do the following:
 

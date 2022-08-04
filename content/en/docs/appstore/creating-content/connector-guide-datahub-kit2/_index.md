@@ -16,37 +16,30 @@ These tools enable you to build Mendix connectors for any service or data source
 
 The benefit of having connector services or integration apps is that you can centralize and unify access to back-end systems for all you Mendix apps. This way, you ensure all your Mendix apps use back-end systems in a consistent and secure way.
 
-external entities out of the box
+Because your connector will only be moving data from the back-end services to the client apps, it usually doesn’t need to store this data. To support this, starting from Studio Pro [9.12](/releasenotes/studiopro/9.12/), you can also expose [non-persistable entities](refguide/entities/#non-persistable-entity/) as a [published OData resource](refguide/published-odata-resource/).
 
-
-![](https://paper-attachments.dropbox.com/s_801B92A6AAA420B6CF96788F31219D800A2ABE823FBFC0A30E6D190FE707345C_1647935674154_image.png)
-
-
-
-![](https://paper-attachments.dropbox.com/s_801B92A6AAA420B6CF96788F31219D800A2ABE823FBFC0A30E6D190FE707345C_1647935697482_image.png)
-
-
-As your connector will only be moving data from the back-end services to the client apps, it usually doesn’t need to store this data. To support this, starting from Studio Pro 9.12, you can also expose Non-Persistable Entities (NPEs) as a Published OData Resource.
-
-### 1.1 Contents of this Guide
-
-In this guide, you will learn about the following new features:
+In this guide, you will learn about the following:
 
 * Ways this might help you
 * Using a microflow to return values of published OData services
 * Selecting a key when exposing entities as OData resources
 * Exposing Non-Persistable Entities (NPEs) as published OData resource using microflow as a data source
 
+### 1.1 Prerequisites
+
+* Check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
+* Install Studio Pro [9.17](/releasenotes/studiopro/9.17/)
+
 ## 2 Data Sources for a Published OData Resource
 
-In Studio Pro, entities can be exposed as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service. Connector Kit 2 lets you use a microflow that determines the result of the incoming request. This allows Mendix apps to do the following: 
+In Studio Pro, entities can be exposed as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service. Studio Pro lets you use a microflow that determines the result of the incoming request. This allows Mendix apps to do the following: 
 
-- integrate with systems that do not support OData
-- publish the results as an OData service, so the data can easily be consumed by Mendix apps and other OData consumers.
+* Integrate with systems that do not support OData
+* Publish the results as an OData service, so the data can easily be consumed by Mendix apps and other OData consumers.
 
 There are two ways to handle an incoming GET request for an OData resource:
 
-1. Read from database. This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
+1. **Read from database**  This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. Call a microflow. This action will call a microflow defined in the *Readable* section. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. Refer to section 3.1 for more information.
 
 The result list of objects from both actions will then be transformed to an OData payload. In the case of failure, a Status code 500 will be returned.
@@ -55,7 +48,9 @@ The result list of objects from both actions will then be transformed to an ODat
 
 ### 2.1 Handle a GET Request with a Microflow
 
-**Note: This feature is** **only available for** **p****ublished OData service****s** **that use OData version 4.**
+{{% alert color="info" %}}
+This feature is only available for published OData services that use OData v4.
+{{% /alert %}}
 
 Inside a published OData service, you can expose entities as published resources. When you **Edit** ****a resource, you can select a microflow for *Readable* that is executed when a consumer sends a GET request to the service endpoint. 
 
@@ -82,7 +77,7 @@ The first parameter that is accepted is an `HttpRequest` of entity type `System.
 
 When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* **will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned.
 
-For more information on how an OData v4 requests work, see https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html
+For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
 ### 2.1.2 Microflow Parameter ODataResponse
 
@@ -164,10 +159,10 @@ Postman/Visual studio code/linqpad
 
 Illustrate to pro developers how they might start using this 
 
-## 5.1 How to - 3rd party service connector (e.g., Twitter connector)
+## 5.1 3rd-Party Service Connector
 
 
-## 5.2 How to - Updatable Operational Data Store
+## 5.2 Updatable Operational Data Stores
 
 Operational data stores are often used to unify and cache external data used by multiple apps. 
 Reasons:

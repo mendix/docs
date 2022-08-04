@@ -156,7 +156,7 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 9.  Double-click the **Create variable** activity and configure the following settings:
     * **Data type** – select **Decimal**
     * **Value** – enter *0*
-    * **Variable** – enter *CalculatedTotalPrice*.
+    * **Variable** – enter *CalculatedTotalPrice*
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/variable.png" alt="Configuring the Create variable activity" >}}
     

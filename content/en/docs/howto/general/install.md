@@ -2,7 +2,7 @@
 title: "Install Mendix Studio Pro"
 url: /howto/general/install/
 category: "General Info"
-weight: 1
+weight: 5
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
@@ -89,6 +89,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 	* The `Java Development Kit 11 (x64)` *msi* (for example `OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi`) to one of the following - depending on the Mendix Studio Pro version:
         * `adoptiumjdk_11_x64.msi` – for versions 9.14.0 and above
         * `adoptopenjdk_11_x64.msi` – for versions 9.13.x and below
+
  	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable (for example `vcredist_x64.exe`) to `vcredist2010_x64.exe`
  	* The `Visual C++ Redistributable for Visual Studio 2019 (x64)` (for example `VC_redist.x64.exe`) executable to `vcredist2019_x64.exe`
  	* The `latest` executable to `mendix_native_mobile_builder.exe`

@@ -116,7 +116,7 @@ END;
 
 * [How to Activate a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/)
 * [How to Set Up the Database User](/developerportal/deploy/setting-up-the-database-user/)
-* [How to Share the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database/)
+* [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)
 * [How to Restore a SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
 * [How to Troubleshoot](/developerportal/deploy/troubleshooting-iis/)
 * [How to Troubleshoot an SQL Server](/developerportal/deploy/troubleshooting-sql-server/)

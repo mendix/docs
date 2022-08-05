@@ -1,10 +1,13 @@
 ---
-title: "Solve Known Version Control Issues"
-url: /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
+title: "Troubleshooting Version Control and Team Server Issues"
+url: /refguide/troubleshoot-version-control-issues/
+linktitle: "Troubleshoot Version Control & Team Server Issues"
 category: "Collaboration"
-weight: 7
+weight: 18
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]
+aliases:
+    - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +26,7 @@ Below is a list of known errors and the steps to fix them.
 
 ### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
-{{< figure src="/attachments/howto/collaboration-requirements-management/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" >}}
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" >}}
 
 This error means that Studio Pro has problems reaching the version control server because of a proxy server.
 
@@ -33,7 +36,7 @@ Follow these steps:
 2. Go to the **Advanced** tab. 
 3.  In the **Proxy server** section, change the **Proxy server** settings. Fill in the correct **User name** and **Password**.
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/troubleshoot-version-control-issues/proxysettings.png" alt="Proxy settings" >}}
+    {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/proxysettings.png" alt="Proxy settings" >}}
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
@@ -143,7 +146,7 @@ The first five lines are the same, and after that the lines in your list can be 
 
 Merging the branch to the main line will result in the following information message: 
 
-{{< figure src="/attachments/howto/collaboration-requirements-management/troubleshoot-version-control-issues/mergesuccessfuldialog.png" >}}
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/mergesuccessfuldialog.png" >}}
 
 {{% alert color="info" %}}
 A conflict is reported on the app *folder*. This usually means that there is a conflict on the `svn:ignore` property.
@@ -159,7 +162,7 @@ To resolve a conflict on the `svn:ignore` property, follow these steps:
 
 3.  Right-click the background of the app folder and choose **TortoiseSVN** > **Edit Conflicts**. The following pop-up window will be shown (resize the window to display all the information):
 
-	{{< figure src="/attachments/howto/collaboration-requirements-management/troubleshoot-version-control-issues/editconflictsdialog.png" >}}
+	{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/editconflictsdialog.png" >}}
 
 4. Copy all the lines starting with `modeler-merge-marker` to the clipboard. 
 
@@ -171,11 +174,9 @@ To resolve a conflict on the `svn:ignore` property, follow these steps:
 
 8.  Remove the special lines that start with `<<<<<<<`, `=======`, and `>>>>>>>`. For this example, we end up with the following combined ignore list:
 
-	{{< figure src="/attachments/howto/collaboration-requirements-management/troubleshoot-version-control-issues/combinedignorelist.png" >}}
+	{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/combinedignorelist.png" >}}
 
-	{{% alert color="info" %}}
-	This includes both the lines from the main line and from the branch. The order is not important.
-	{{% /alert %}}
+	{{% alert color="info" %}}This includes both the lines from the main line and from the branch. The order is not important.{{% /alert %}}
 
 9. Click **OK** and then **OK** again to confirm the change.
 
@@ -194,10 +195,36 @@ If you get this error, try the following options:
 	* If they do have access, remove them from the app and add them back – this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network. This protocol is [required](/refguide/system-requirements/) by Studio Pro for [version control](/refguide/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall.
 
-## 3 Other Problems
+## 3 Troubleshooting Team Server App Network Settings
+
+Mendix Studio Pro needs to connect to the Team Server, where all your apps are stored. This document describes which permissions and settings are required to connect to the Team Server.
+
+Being unable to download the Team Server app can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
+
+Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS (TCP) protocol to communicate with that server. To access the Team Server from Studio Pro, the network at your location needs the following settings:
+
+* The HTTPS port (TCP 443) needs to be open
+* The HTTP port (TCP 80) needs to be open
+* WebDAV (verbs within the HTTP protocol) needs to be enabled on any proxy server
+
+Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
+
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/networkaccessmendixplatform.jpg" alt="Domains home.mendix.com, cloud.mendix.com, and teamserver.sprintr.com need to be accessible on port 443 from your network" >}}
+
+You can look up the IP address of `https://teamserver.sprintr.com/`.
+
+{{% alert color="warning" %}}
+Mendix reserves the right to change the IP address at any time and without notification to the customer. This could happen if Mendix moves to a different infrastructure, for example.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Contact your network administrator and give them this information to allow them to configure your network (for example, firewall, and proxy settings) correctly.
+{{% /alert %}}
+
+## 4 Other Problems
 
 If the solutions here do not work for your version control problems, please submit a request to [Mendix Support](https://support.mendix.com/).
 
-## 4 Read More
+## 5 Read More
 
 * [Submit Support Requests](/developerportal/support/submit-support-request/)

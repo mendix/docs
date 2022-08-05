@@ -16,8 +16,6 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 * ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
 * You can use the ATS recorder even if you have different pages for desktop and mobile. 
 
-For more details, refer to [Mobile](/addons/ats-addon/rg-two-mobile/) in the *ATS Reference Guide*.
-
 _Please note that this feature is still in beta._
 
 ### Option

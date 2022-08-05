@@ -1,6 +1,6 @@
 ---
 title: "Advanced Scheduler"
-url: /appstore/widgets/advanced-scheduler/
+url: /appstore/app-services/advanced-scheduler/
 category: "Widgets"
 description: "Describes the configuration and usage of the Advanced Scheduler widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "platform support"]
@@ -104,7 +104,7 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 
 {{% alert color="info" %}}The roster has a light yellow background in the scheduler.{{% /alert %}}
 
-{{< figure src="/attachments/appstore/widgets/advanced-scheduler/roster.png" >}}
+{{< figure src="/attachments/appstore/app-services/advanced-scheduler/roster.png" >}}
 
 * **Datasource** – This is the data source for the roster.
 * **Resource ID** – This is the resource ID for the roster.
@@ -131,19 +131,19 @@ For more information, see [Common Section](https://docs.mendix.com/refguide/comm
 
 ### 2.2 Configuring the Header Dropzone
 
-{{< figure src="/attachments/appstore/widgets/advanced-scheduler/header-dropzone.png" >}}
+{{< figure src="/attachments/appstore/app-services/advanced-scheduler/header-dropzone.png" >}}
 
 In this area, you can define your own header, which is shown above the scheduler.
 
-{{< figure src="/attachments/appstore/widgets/advanced-scheduler/header.png" >}}
+{{< figure src="/attachments/appstore/app-services/advanced-scheduler/header.png" >}}
 
 ### 2.3 Configuring the Resource Area
 
-{{< figure src="/attachments/appstore/widgets/advanced-scheduler/resource-area.png" >}}
+{{< figure src="/attachments/appstore/app-services/advanced-scheduler/resource-area.png" >}}
 
 In this area, you can define what is shown as **Resources** in the scheduler.
 
-{{< figure src="/attachments/appstore/widgets/advanced-scheduler/resources.png" >}}
+{{< figure src="/attachments/appstore/app-services/advanced-scheduler/resources.png" >}}
 
 ## 3 Example Implementation
 

@@ -14,7 +14,7 @@ This internationalization guide explains how to give your end-user an easy way t
 
 This guide shows one of the ways to change the language on a *native* app. You can also apply this guide's mechanism to *all offline PWA profiles*. Please note that this guide's mechanism does not change the localization of an application because it depends on the settings of the device.
 
-While this guide gives your end-user the ability to switch their app's language, translation is a different issue. Translating native apps and PWAs actually works the same as it does for web apps. To learn more about app translation, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/).
+While this guide gives your end-user the ability to switch their app's language, translation is a different issue. Translating native apps and PWAs actually works the same as it does for web apps. To learn more about app translation, see [Translating Your App Content](/refguide/translate-your-app-content/).
 
 ## 2 Prerequisites
 

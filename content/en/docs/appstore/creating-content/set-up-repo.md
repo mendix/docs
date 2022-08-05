@@ -1,10 +1,12 @@
 ---
 title: "Set Up a GitHub Repo to Publish a Marketplace Item"
 linktitle: "Publish from GitHub to Marketplace"
-url: /howto/collaboration-requirements-management/set-up-repo/
-category: "Collaboration"
-weight: 30
+url: /appstore/creating-content/set-up-repo/
+category: "Creating Content"
+weight: 10
 tags: ["studio pro", "GitHub", "repository", "repo"]
+aliases:
+  - /howto/collaboration-requirements-management/set-up-repo/
 ---
 
 ## 1 Introduction
@@ -26,20 +28,14 @@ The description should say what the item does. This description can also be used
 
 Add a *.gitignore* file to make sure you keep your repo clean.
 
-## 4 Marketplace Widget Boilerplate
-
-When making a new widget, use the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate) from GitHub. This has everything you need to start developing a Mendix widget.
-
-## 5 Releases
+## 4 Releases
 
 If you want to make a new release for the Mendix Marketplace, start with a new tag on the appropriate commit on the master or release branch. From these tags, you can create a [new release in GitHub](https://help.github.com/articles/creating-releases). In this release, set your release notes (which you can then use for the Marketplace release as well) and provide an official name. If you add the *.mpk* file as a binary file to the release tag, the Mendix Marketplace will automatically sync the *.mpk* to your new draft:
 
-{{< figure src="/attachments/howto/collaboration-requirements-management/set-up-repo/18580533.png" >}}
+{{< figure src="/attachments/appstore/creating-content/set-up-repo/github-releases.png" >}}
 
 You should link this to the upcoming Mendix Marketplace release by mentioning that release number in the description.
 
-## 6 Read More
+## 5 Read More
 
-* [Contributing to a GitHub repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository/)
-* [Version Control](/refguide/version-control/)
-* [Sharing the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database/)
+* [How to Build Pluggable Web Widgets](/howto/extensibility/pluggable-widgets/)

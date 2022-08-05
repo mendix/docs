@@ -1,9 +1,11 @@
 ---
 title: "Share the Development Database"
-url: /howto/collaboration-requirements-management/sharing-the-development-database/
-category: "Collaboration"
-weight: 40
-tags: ["studio pro"]
+url: /howto/data-models/sharing-the-development-database/
+category: "Data Models"
+weight: 9
+tags: ["studio pro", "database"]
+aliases:
+  - /howto/collaboration-requirements-management/sharing-the-development-database/
 ---
 
 ## 1 Introduction
@@ -38,7 +40,7 @@ One application can make use of many different databases. Take the following ste
 1. Double-click **Settings** in the **App Explorer** to open the **App Settings** dialog box.
 2. On the **Configurations** tab, select the preferred database configuration in the grid, and click **Make active**.
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580427.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580427.png" >}}
 
 3. Click **OK** to confirm your choice. 
 
@@ -48,15 +50,15 @@ To start the built-in database viewer, follow these steps:
 
 1. Run the application locally (if this is the first time, Studio Pro will ask you to create the new database, click **Yes** when this occurs):
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580426.png"   width="150"  >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580426.png"   width="150"  >}}
 
 2. When the application is running, in the **Console** pane, select **Advanced** > **Start built-in database viewer** to open the built-in database viewer:
 
-   {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580425.png" >}} 
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580425.png" >}} 
 
     The **Database Manager** dialog box will be displayed (depending on the data model of the application):
 
-   {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580424.png" >}}
+   {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580424.png" >}}
 
 On the left pane, all tables from all modules in the running application are shown. On the upper-right pane, it is possible to enter SQL queries and on the lower-right pane, the results from the entered SQL query will be shown.
 
@@ -74,15 +76,15 @@ To execute queries from the explorer (the left pane) in the **Database Manager**
 
 1. Right-click a table and select the preferred action:
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580423.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580423.png" >}}
 
 2. To select all customers from the table CUSTOMER, choose the first option. It will automatically fill the SQL command in the upper-right pane:
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580422.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580422.png" >}}
 
 3. Click **Execute SQL** to execute this query:
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580421.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580421.png" >}}
 
 On the lower-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
@@ -92,7 +94,7 @@ The built-in database can easily be shared with other members of the team. It is
 
 1. Select **Version Control** > **Add Snapshot of Data**:
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580420.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580420.png" >}}
 
 2. Click **Yes** to commit.
 
@@ -106,11 +108,11 @@ To import a data snapshot into the model, the app has to be updated since the la
 
 1. To update the application, click **Update** on the **Changes** tab.
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580419.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580419.png" >}}
 
 2. To implement the data snapshot, extract the database from a ZIP file to the **deployment** directory.
 
-    {{< figure src="/attachments/howto/collaboration-requirements-management/sharing-the-development-database/18580417.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580417.png" >}}
 
 3. Copy the **data** directory to the **data** directory in the **deployment** directory.
 
@@ -121,6 +123,4 @@ Make sure the names of the databases are not the same or make a copy of your own
 ## 9 Read More
 
 * [Stories](/developerportal/collaborate/stories/)
-* [Contributing to a GitHub repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository/)
-* [Set Up a GitHub Repo to Publish a Marketplace Item](/howto/collaboration-requirements-management/set-up-repo/)
 * [Version Control](/refguide/version-control/)

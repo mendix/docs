@@ -1,34 +1,31 @@
 ---
-title: "Work with SVN On-Premises Version Control Server"
+title: "Working with SVN On-Premises Version Control Server"
 linktitle: "SVN On-Premises Version Control Server"
-url: /howto/collaboration-requirements-management/on-premises-svn-howto/
-weight: 10
+url: /refguide/on-premises-svn/
+weight: 50
 tags: ["on-premises", "svn", "version control"]
+aliases:
+    - /howto/collaboration-requirements-management/on-premises-svn-howto/
 ---
 
 ## 1 Introduction
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see [Version Control](/refguide/version-control/).
 
-While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/howto/collaboration-requirements-management/on-premises-git-howto/). This how-to describes how to work with SVN version control system.
+While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/refguide/on-premises-git/). This document describes how to work with SVN version control system.
 
 {{% alert color="info" %}}
-This how-to will not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.
+This document does not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
-
-* Configure your Mendix apps to work with SVN (on-premises) version control system
-
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Make sure you have completed the following prerequisites:
 
-* Have knowledge of Subversion
 * Have access to an SVN server and possess credentials (username and password) that give you access to that SVN server
 * Know the location of the SVN server – usually this is an address similar to an internet URL (for example, `https://svn.example.com:9876/repos/myapp`)
 
@@ -36,15 +33,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Subversion uses repositories for storing all the data of your version-controlled app. Each Subversion server can contain many different repositories.
 
-For the purposes of this how-to, there are two important points to know about repositories.
+Mendix requires you to store each Mendix application in a separate repository. It is not possible to place multiple Mendix apps into a single repository.
 
-First, Mendix requires you to store each Mendix application in a separate repository. It is not possible to place multiple Mendix apps into a single repository.
-
-Second, when uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
+When uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
 
 Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
 
-In the following sections of this how-to, it is assumed that you have a repository available for your application.
+In the following sections of this document, it is assumed that you have a repository available for your application.
 
 ## 4 SVN Versions
 

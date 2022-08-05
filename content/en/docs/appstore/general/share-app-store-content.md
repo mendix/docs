@@ -54,7 +54,7 @@ When considering intellectual property (IP) in the Mendix Marketplace, follow th
 * If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
 
 For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
-    
+  
 ### 3.3 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
@@ -193,7 +193,7 @@ On the **Package** page, select your content source.
 If you are using **Solutions**, you will not see the option to select your content source. If you are using **Solutions Template**, selecting a content source is optional.
 {{% /alert %}}
 
-* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
+* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import (for more information on the best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
     * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
     * When you are finished, click **OK**
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file

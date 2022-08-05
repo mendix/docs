@@ -2,7 +2,7 @@
 title: "Contribute to a Mendix GitHub Repository"
 url: /developerportal/community-tools/contribute-to-a-github-repository/
 category: "Community Tools"
-weight: 10
+weight: 15
 tags: ["GitHub", "contribute", "community"]
 ---
 

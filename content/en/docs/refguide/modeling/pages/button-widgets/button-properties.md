@@ -159,6 +159,7 @@ The **Items** section is only shown for drop-down buttons.
 When an end-user clicks a drop-down button, a pop-up window with a list of items opens. Each item performs an event when an end-user clicks this item. Different items can perform different events. For more information on events that can be assigned, see [On Click Event & Events Section](/refguide/on-click-event/).
 
 {{% alert color="info" %}}
+
 * Items with the **Create object** event are only shown when you have sufficient permissions on. For more information, see [Security](/refguide/security/). 
 * Items with the **Sign out** event are not shown for anonymous users. For more information on different security levels and anonymous users, see [App Security](/refguide/app-security/) and [Anonymous Users](/refguide/anonymous-users/). 
 {{% /alert %}}

@@ -14,9 +14,11 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 
 * The format of test cases and the functions that are used to test on desktop devices work the same way on mobile devices.
 * ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
-* You can use the ATS recorder even if you have different pages for desktop and mobile. 
+* You can use the ATS recorder even if you have different pages for desktop and mobile.
 
-_Please note that this beta feature is discontinued_
+{{% alert color="warning" %}}
+This beta feature has been discontinued.
+{{% /alert %}}
 
 ### Option
 

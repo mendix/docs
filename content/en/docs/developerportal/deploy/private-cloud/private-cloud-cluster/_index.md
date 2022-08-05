@@ -795,14 +795,14 @@ In order for the Mendix Operator to trust such certificates, you need to add the
 1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
     1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
 
-        ```
+        ```text
         # Private CA 1
         -----BEGIN CERTIFICATE-----
         [...]
         -----END CERTIFICATE-----
         # Private CA 2
         -----BEGIN CERTIFICATE-----
-       [...]
+        [...]
         -----END CERTIFICATE-----
         ```
 

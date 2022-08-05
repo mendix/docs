@@ -91,7 +91,7 @@ To extend the logic with a custom message that will be shown when end-users clic
 
 Congratulations! You have created a microflow and customized the **Save** button: 
 
-   {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/microflow.png" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/microflow.png" >}}
 
 ## 6 Read More
 

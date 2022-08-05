@@ -134,7 +134,7 @@ To create a new environment, perform the following steps:
 
 3. Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:
 
-    ```code {linenos=false}
+    ```text {linenos=false}
     {appname}-{environment name}.{domain}
     ```
 

@@ -136,7 +136,7 @@ If the generic action does not work check if there is a specific one.
 
 ### 4.2 Specific Action
 
- ATS also has a few specific actions for setting an input widget. To find these use the search term, "Set" in combination with the widget name.
+ATS also has a few specific actions for setting an input widget. To find these use the search term, "Set" in combination with the widget name.
 
 1. Example, you want to set the value of a checkbox widget, but you want to set it to a specific state. You cannot use the *Set Value* action because it does not work. The solution is to use the following search term, "Set Checkbox". ATS checks all the actions and returns those that match these words. You see there is an action called [*Set Checkbox Value*](/addons/ats-addon/rg-one-set-checkbox-value/). The *Set Checkbox Value* action uses the `mx-name` of the widget and the Boolean value you set to check or uncheck the checkbox.
 

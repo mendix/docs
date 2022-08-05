@@ -41,7 +41,7 @@ entity1Interface.load((entity1) => {
 ```
 
 {{% alert color="info" %}}
- You can also load units or elements using the convenience method `loadAsPromise`, which is available in the Mendix Platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
+You can also load units or elements using the convenience method `loadAsPromise`, which is available in the Mendix Platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 {{% /alert %}}
 
 Continue with [How to Generate Code from the Model](/apidocs-mxsdk/mxsdk/generating-code-from-the-model/).

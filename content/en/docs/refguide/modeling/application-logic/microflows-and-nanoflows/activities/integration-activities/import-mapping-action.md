@@ -63,7 +63,7 @@ If the selected mapping requires a parameter, you can choose it here.
 
 ### 3.7 Range
 
- If the mapping returns a list, you can select a range to determine how many objects are mapped and returned.
+If the mapping returns a list, you can select a range to determine how many objects are mapped and returned.
 
 | Range | Meaning |
 | --- | --- |

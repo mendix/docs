@@ -69,7 +69,7 @@ You have three flows merged into one.
 
 Now you will add logic to the microflow. You have merged three flows into one to set customer's status to active irrespectively of their grades. Setting the status of the customers to active can be used, for example, to identify who of the customers are using their account, and who are not.
 
- Do the following:
+Do the following:
 
 1. First of all, you need to add a new attribute to **Customer** entity in the domain model to indicate if the customer is active or not. Click the domain model icon in the left menu bar to open the domain model and do the following:
 

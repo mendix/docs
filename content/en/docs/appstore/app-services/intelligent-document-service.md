@@ -26,9 +26,7 @@ To train a model, first you need to upload sample documents. Then you need to ma
 How well a model is trained depends on the input you provide for the training. The quality of the training input relies on three factors:
 
 * the number of the sample documents that you provide as input – the more sample documents you provide as input, the better the training results are
-
 * the similarity in the structures of the sample documents – when all the sample documents have the same or similar document structure, you can get best training results
-
 * the accuracy of the marks on the locations of the important fields in the sample documents – you should mark the locations of the important fields accurately in the sample documents to achieve optimal training results, for example:
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/invoice-marks.png" alt="" >}}
@@ -113,7 +111,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 You should use at least three to five sample images to train your model to reach the higher accuracy of data extraction. The more sample images that you use to train your model, the higher accuracy of data extraction you can achieve. However, all sample images that are used for one training must have a similar structure. 
 
- If a table in the documents for extraction can have different numbers of rows, then make sure that the table in each sample image also have different number of rows.
+If a table in the documents for extraction can have different numbers of rows, then make sure that the table in each sample image also have different number of rows.
 
 You should use the marker tool properly – this is key to extracting data in higher quality. The areas you mark determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.
 
@@ -170,7 +168,6 @@ Then you can proceed to mark the [text fields](#mark-text-fields) and/or [tables
 After you [upload sample images](#update-sample-images) in the document model training application, you can mark the text fields in the sample images as follows:
 
 1. Click **Add Marker**. The **Mark Document** dialog box opens.
-
 2. In the **Choose fields to mark** pane, select the text field from which data needs to be extracted.
 
     {{% alert color="warning" %}}The areas you mark in this step determine where the document model will extract the data. Make sure that you mark the complete field area. Only in this way, will the document model read the complete field area and accurately extract a long value.{{% /alert %}}
@@ -178,9 +175,7 @@ After you [upload sample images](#update-sample-images) in the document model tr
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/mark-document-dialog-box.png" alt="Mark Document page" >}}
 
 3. On the right side, enter a **Marker Name** that is used for the text field that you selected. 
-
 4. Select **Text** from drop-down list.
-
 5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
 
     {{% alert color="info" %}}To delete a marker from the **Markers** list, select the marker and click **Delete**.{{% /alert %}}
@@ -192,19 +187,14 @@ If you still need to [mark tables in sample images](#mark-tables), you can proce
 After you [upload sample images](#update-sample-images) in the document model training application, you can mark the tables in a sample image as follows:
 
 1. Click **Add Marker**. The **Mark Document** dialog box opens.
-
 2. In the **Choose fields to mark** pane, select the table from which data needs to be extracted.
-
 3. On the right side, enter a **Marker Name** that is used for the table that you selected. 
-
 4. Select **Table** from the **Mark Type** drop-down list.
-
 5. Click **Generate Marker ID** to add the marker to the list of **Markers**.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-table-type-marker.png">}}
 
 6. Click **Done**. Then you can mark every column and row of your interest one by one in the table.
-
 7. Mark the columns in the table as follows:
 
     1. In the **Choose fields to mark** pane, select the column from which data needs to be extracted.
@@ -212,31 +202,23 @@ After you [upload sample images](#update-sample-images) in the document model tr
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-column-marker-for-table.png" >}}
 
     2. On the right side, enter a **Marker Name** that is used for the column that you selected. 
-
     3. Select **Column** from the **Selection Type** drop-down list.
-
     4. Select **Text** from the **Marker Type** drop-down list.
-
     5. Click **Add Selection**.
-
     6. Repeat steps above to mark other columns in the table.
 
 8. Mark the rows in the table as follows:
 
     1. In the **Choose fields to mark** pane, select the row from which data needs to be extracted.
 
-       {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" >}}
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-row-marker-for-table.png" >}}
 
     2. On the right side, enter a **Marker Name** that is used for the row that you selected. 
-
     3. Select **Row** from the **Selection Type** drop-down list.
-
     4. Click **Add Selection**.
-
     5. Repeat steps above to mark other rows in the table.
 
 9. After you finish marking all the columns and rows, click **Table Component**.
-
 10. Check the column and row markers in the **Table Component** list. Make sure all the markers for the table are added.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/markers-of-table-component.png" >}}
@@ -252,7 +234,6 @@ If you still need to [mark text fields in sample images](#mark-text-fields), you
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/add-marker-and-ids-image-status-marked.png" >}}
 
 2. Repeat the steps above until you mark all the sample images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-
 3. Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/new-model-status-popup.png" >}}
@@ -276,7 +257,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         The **Generate JSON Structure** dialog box opens.
 
     5. Drag one of the sample images which you used to train the document model or a single-page PDF document into the box where it says **Drag and drop your files here**. You can also click **Browse** and select the file.
-    
+
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
 
     6. Click **Download** to get the JSON structure.

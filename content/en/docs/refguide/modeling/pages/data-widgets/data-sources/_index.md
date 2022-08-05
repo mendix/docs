@@ -34,7 +34,7 @@ A data grid, template grid, and list view are list widgets. Also some [pluggable
 * [Nanoflow](/refguide/nanoflow-source/) – objects retrieved are determined by the result of calling the selected nanoflow. The nanoflow can take objects in the context as a parameter and needs to return a list of objects. Nanoflow data source is only available for data views and list views. 
 * [Association](/refguide/association-source/) – the objects are retrieved from memory by following an association from the object in the context. So, this data source is only available when a widget is nested in another data container. 
 
- The data source also determines which features of the widget are enabled. For example, only widgets with a database or XPath data source can contain a [search bar](/refguide/search-bar/).
+The data source also determines which features of the widget are enabled. For example, only widgets with a database or XPath data source can contain a [search bar](/refguide/search-bar/).
 
 {{% alert color="info" %}}
 Database and nanoflow data sources are the only data sources supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](/refguide/button-properties/) widget for creating a new object.

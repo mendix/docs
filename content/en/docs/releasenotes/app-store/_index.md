@@ -251,16 +251,16 @@ We added the flexibility to label your App Store content with a [custom version 
 
 We renamed all the SAP-related connectors and app templates in the App Store to be consistent. The changes are:
 
- Type | Old Name | New Name |
- ----- | ----- | -----|
- Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Business Technology Platform |
- Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
- Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
- Connector | SAP OData Connector | OData Connector for SAP solutions |
- Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
- App Template | Fiori Blank | Blank App for SAP Fiori themed apps |
- App Template | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
- App Template | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
+| Type | Old Name | New Name |
+| ----- | ----- | -----|
+| Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Business Technology Platform |
+| Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
+| Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
+| Connector | SAP OData Connector | OData Connector for SAP solutions |
+| Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
+| App Template | Fiori Blank | Blank App for SAP Fiori themed apps |
+| App Template | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
+| App Template | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
 
 ### August 26th, 2019
 

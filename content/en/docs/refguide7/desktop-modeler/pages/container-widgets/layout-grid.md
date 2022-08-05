@@ -13,7 +13,7 @@ The layout grid is a widget that gives structure to your pages. A layout grid co
 
 The layout grid is exported as nested div elements. In addition to the classes you specify in the various Class properties, a number of classes are added automatically.
 
-```
+```html
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6"> ... </div>

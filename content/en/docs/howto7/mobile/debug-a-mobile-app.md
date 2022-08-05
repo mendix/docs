@@ -401,7 +401,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 6. Select your device from the list.
 
-   {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-4.png" alt="android-4" >}}
+    {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/android-4.png" alt="android-4" >}}
 
 7. Inspect the tab from your mobile device to preview the view from your device on-screen and to gain access to the Chrome web inspector and the rest of the Developer Tools.
 

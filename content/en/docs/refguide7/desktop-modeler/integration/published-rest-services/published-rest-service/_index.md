@@ -119,7 +119,8 @@ If authentication is required, you can select which authentication methods you w
     * Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
     * To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-    ```var xmlHttp = new XMLHttpRequest();
+    ```text
+    var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
     xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
     xmlHttp.send(null);

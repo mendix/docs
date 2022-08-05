@@ -111,9 +111,9 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
     10. Click **Download** to get the JSON structure.
 
-     {{% alert color="info" %}}As this action actually exacts data from the input sample receipt to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
+    {{% alert color="info" %}}As this action actually exacts data from the input sample receipt to generate the JSON structure, the usage is counted against the allocated quota for your provisioned instance.{{% /alert %}}
 
-     {{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
+    {{% alert color="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead, it generates a `not applicable` string.{{% /alert %}}
 
 2. To add the JSON structure to your app, perform the following steps:
     1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.

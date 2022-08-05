@@ -1111,7 +1111,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 **Example Output**
 
-```
+```text
 {
     "Environment": "38471410-861f-47e5-8efc-2f4b16f04005",
     "Date": 1536451200000,

@@ -69,7 +69,6 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
     {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-icon.png" >}}
 
 2. Enter *MindSphere* in the search box, and press <kbd>Enter</kbd>.
-
 3. Select **MindSphere Starter Application** in the search results.
 
     {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-search.png" >}}
@@ -268,7 +267,6 @@ To deploy your deployment package, do the following:
     Your service should be listed, and the last operation should be ‘create succeeded’.
 
 5. Ensure you are in the same folder as the package you wish to deploy.
-
 6. Create a `manifest.yml` file with at least the following content:
 
     ```yml
@@ -388,61 +386,47 @@ The deployment registered via the **Auto Registration** process is *always mappe
 To create a new app manually in the MindSphere launchpad, do the following:
 
 1. Go to the **Developer Cockpit > Dashboard**.
-
 2. Click **Create new application**.
-
 3. Set the **Type** to *Standard*.
-
 4. Set the **Infrastructure** to *MindSphere Cloud Foundry*.
-
 5. Fill in the **Display Name** of your app, as you want it shown in the Launchpad.
-
 6. Fill in the **Internal Name** of your app. This must be identical to the value of *CockpitApplicationName* which you set in the SSO module of your app.
-
 7. Fill in a **Version** for your app.
-
 8. Fill in a **Description** of your app, if required.
-
 9. Click **Edit icon** to upload an **App Icon** for your app.
-
 10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
-
 11. Click the **+** next to the component to add **Endpoints**.
-
 12. Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
-
 13. Fill in the **Cloud Foundry Direct URL**. This can be found using the cloud foundry command `cf app {app_name}`.
-
 14. Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
-      If your app is running on MindSphere on **AWS** use Region `eu1`:
+    If your app is running on MindSphere on **AWS** use Region `eu1`:
 
-      ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
-      img-src * data:;
-      connect-src 'self' 'unsafe-inline'  *;
-      ```
+    ```text
+    default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+    img-src * data:;
+    connect-src 'self' 'unsafe-inline'  *;
+    ```
 
-      If your app is running on MindSphere on **Azure** use Region `eu2`:
+    If your app is running on MindSphere on **Azure** use Region `eu2`:
 
-      ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io fonts.gstatic.com;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
-      img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
-      connect-src 'self' 'unsafe-inline' *;
-      ```
+    ```text
+    default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io fonts.gstatic.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+    img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
+    connect-src 'self' 'unsafe-inline' *;
+    ```
 
-      {{% alert color="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+    {{% alert color="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
-      {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image14.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image14.png" >}}
 
 15. Click **Save** to save these details.
-
 16. Click **Register** to register your app with the MindSphere launchpad.
 
     {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}

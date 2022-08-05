@@ -47,7 +47,7 @@ Only one of the options can be in use at a time. Which option to use is determin
 
 2. Endpoints Security Mode 
 
-   Both HTTP and TCP connections are supported. For both connection types, only Security mode **None** is supported. Security mode **Sign** or **Sign&Encrypt** are not supported. 
+    Both HTTP and TCP connections are supported. For both connection types, only Security mode **None** is supported. Security mode **Sign** or **Sign&Encrypt** are not supported. 
 
 3. High-availability architecture (no horizontal scaling support)
 

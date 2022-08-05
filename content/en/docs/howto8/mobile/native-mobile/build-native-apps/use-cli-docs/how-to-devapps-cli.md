@@ -22,13 +22,13 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 1. Open a command line interface (CLI) such as Command Prompt.
 2. Navigate to the directory of your Native Builder:
 
-    ```
+    ```powershell {linenos=false}
     cd {path to Native Builder executable file}
     ```
 
 3. Run the following command to build your project's custom developer app:
 
-    ```
+    ```powershell {linenos=false}
     native-builder.exe build dev-app --project-name {your project's name}
     ```
 
@@ -102,7 +102,7 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
-    ```
+    ```shell {linenos=false}
     npm i && cd ios && pod install
     ```
 

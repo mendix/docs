@@ -28,7 +28,7 @@ For more information on the functions of these activities, see [Microflows](/stu
 
 ## 2 Setting the Initial Value for Create Object and Changing the Value for Change Object
 
- To set the initial value or change the value of an object, do the following:
+To set the initial value or change the value of an object, do the following:
 
 1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see section [4 Adding New Event or Activity](/studio7/microflows/#adding-activity-to-microflow) in *Microflows*.
 2. Click the activity to view its properties.

@@ -23,8 +23,8 @@ On the **Environments** page, there are four tabs:
     * TLS Client Certificate Verification
 * **Permissions**
     * [Node Permissions](/developerportal/deploy/node-permissions/)
-    
-   {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/environment-tab.png" >}}       
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/environment-tab.png" >}}       
 
 ## 2 Deploy
 

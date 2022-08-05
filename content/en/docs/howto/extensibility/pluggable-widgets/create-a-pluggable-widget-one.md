@@ -38,8 +38,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     $ npm install -g @mendix/generator-widget
     ```
 
-* Install an integrated development environment (IDE) of your choice (Mendix
-  recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
+* Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
 ## 3 Creating a TextBox Input Widget
@@ -133,7 +132,7 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
     * The property `pluginWidget=true` will make the widget work with the new widget API
     * The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
     * The property of the [type attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) only allows the selection of string attributes from the domain model
-  
+
 3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `npm start`.
 
     This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.

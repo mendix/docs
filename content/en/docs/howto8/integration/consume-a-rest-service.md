@@ -116,15 +116,15 @@ To call the REST service in a microflow, follow these steps:
 14. On the **Edit Change Item** dialog box, for **Member**, select **RESTconsume.Input_Summary (RESTconsume.Summary)**.
 15. Under **Value**, enter `$Summary`.
 
-     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/set-association.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/set-association.png" >}}
 
 16. Click **OK**.
 
-     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/change-object.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/change-object.png" >}}
 
 17. Click **OK**. You have created microflow that takes the title of an article as input and associates it with its summary.
 
-     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/microflow.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/microflow.png" >}}
 
 You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that yoyu can see the REST call in action.
 

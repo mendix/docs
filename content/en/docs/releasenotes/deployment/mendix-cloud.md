@@ -262,9 +262,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Improvements
 
-* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is
-  used to run your Mendix application will be automatically updated to the
-  latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
+* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is used to run your Mendix application will be automatically updated to the latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
 
 ### May 27th, 2021
 

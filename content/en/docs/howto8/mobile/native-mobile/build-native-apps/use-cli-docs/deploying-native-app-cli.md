@@ -400,7 +400,7 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
     1. Change this code:<br />
 
-        ```
+        ```text
             <key>UISupportedInterfaceOrientations</key>
         <array>
             <string>UIInterfaceOrientationPortrait</string>
@@ -409,7 +409,7 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
         to the following:<br />
 
-        ```
+        ```text
             <key>UISupportedInterfaceOrientations</key>
         <array>
             <string>UIInterfaceOrientationPortrait</string>

@@ -161,8 +161,7 @@ The **Material** tab contains properties for configuring appearance:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/material-tab.png" alt="Material"   width="400"  >}}
 
-* **Material type** - can be either **Texture**, **Color** or **Video**. **Material type** determains what will be put
-  onto the cube, an image, a color or a looping video.
+* **Material type** - can be either **Texture**, **Color** or **Video**. **Material type** determains what will be put onto the cube, an image, a color or a looping video.
 
 * **Texture** – an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores  any **Color** value – if you want to make your cube one solid color, make sure the Texture is set to **none**):
 
@@ -178,13 +177,14 @@ The **Material** tab contains properties for configuring appearance:
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/opacity.jpg" alt="Opacity"   width="400"  >}}
 
 * **Lighting type** – the way light from the scene will fall on your object. 
-    **Phong**, **Blinn**, and **Lambert**  are standard configurations of adding light and shadows to your objects. They are also have relatively slight  processor power requirements.         **Constant** means no light is added – just pure colors are shown. 
-    **PBR** – (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its  lighting, the intricacies of which are beyond this guide. Change between the various **Lighting type** options to  see them in action:
+    * **Phong**, **Blinn**, and **Lambert** are standard configurations of adding light and shadows to your objects. They are also have relatively slight  processor power requirements.
+    * **Constant** means no light is added – just pure colors are shown. 
+    * **PBR** – (Physically Based Rendering) is the most advanced. PBR takes the entire scene into account when creating its  lighting, the intricacies of which are beyond this guide. Change between the various **Lighting type** options to see them in action:
 
     Here is a cube with **Lighting type** > **Phong**:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/phong.jpg" alt="Cube with lighting type Phong"   width="400"  >}}
-   
+
     Here is a cube with **Lighting type** > **Constant**:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/constant.jpg" alt="Cube with lighting type Constant"   width="400"  >}}

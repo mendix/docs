@@ -322,7 +322,7 @@ Let us retrieve a MendixObject using the getPrimaryKeyValue() method in Mendix 6
 
 A similar approach to get a MendixObject in Mendix 7.x would be as follows:
 
- `List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
+`List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
 `IDataRow dataRow = dataRows.get(0);`<br>
 `IMendixIdentifier mendixIdentifier = dataRow.getValue(context, 0);`<br>
 `IMendixObject mendixObj = Core.retrieveId(context, mendixIdentifier);`<br>

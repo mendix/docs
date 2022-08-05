@@ -232,7 +232,7 @@ We added OTA support based on App Center CodePush. Look for it under the Capabil
 * Android keystore validation should be non-blocking if the tool cannot verify the validity of the key. The build will 
 still fail if the keystore values are invalid.
 * We now include dependencies associated with certain capabilities (Local notifications, Push notifications, Google Maps and Firebase Crashlytics) if they are not expressly required by the Mendix Studio Pro project.
-  
+
 #### Fixes
 
 * We fixed an issue with android certificates not being verified correctly.
@@ -244,9 +244,8 @@ still fail if the keystore values are invalid.
 
 #### Improvements 
 
-* Android keystore validation is now non-blocking if the tool cannot verify the validity of the key. The build will 
-  still fail if the keystore values are invalid.
-  
+* Android keystore validation is now non-blocking if the tool cannot verify the validity of the key. The build will still fail if the keystore values are invalid.
+
 #### Fixes
 
 * We fixed an issue with Android certificates not being verified correctly.

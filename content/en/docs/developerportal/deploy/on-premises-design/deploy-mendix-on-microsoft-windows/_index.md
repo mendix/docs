@@ -369,13 +369,13 @@ To make sure the correct application root URL is used within your web services, 
     2. Click **Accessories**, and then click **Command Prompt**.
     3. Execute the following command from the command prompt:
 
-        ```batchfile {linenos=false}
+        ```batch {linenos=false}
         cd %windir%\system32\inetsrv
         ```
 
     4. Enter:
 
-        ```batchfile {linenos=false}
+        ```batch {linenos=false}
         appcmd.exe set config -section:system.webServer/proxy /preserveHostHeader:"True" /commit:apphost
         ```
 

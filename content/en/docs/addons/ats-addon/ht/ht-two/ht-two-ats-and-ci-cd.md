@@ -9,7 +9,7 @@ tags: ["ATS", "testing", "CI/CD"]
 
 This how-to explains the basics of a CI/CD pipeline, how ATS fits in and an example is shown on how-to implement ATS into your CI/CD pipeline in Jenkins.
 
- This how-to will teach you how to do the following:
+This how-to will teach you how to do the following:
 
 * Understand the basics of a CI/CD pipeline
 * Prepare your test case in ATS for CI/CD

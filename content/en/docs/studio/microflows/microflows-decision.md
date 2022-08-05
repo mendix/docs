@@ -20,7 +20,7 @@ There are two ways to configure a condition for the decision:
 * [With **Variables/ Attributes**](#variables-attributes-tab) ( for example, you can use it to create different flows for an attribute of the enumeration type)
 * [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
-   {{< figure src="/attachments/studio/microflows/microflows-decision/configure-condition-dialog.png" >}}
+    {{< figure src="/attachments/studio/microflows/microflows-decision/configure-condition-dialog.png" >}}
 
 ### 2.1 Configuring the Condition with Variables or Attributes {#variables-attributes-tab}
 

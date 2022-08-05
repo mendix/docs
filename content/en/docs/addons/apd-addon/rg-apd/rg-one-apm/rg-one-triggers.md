@@ -19,7 +19,7 @@ Measurement triggers are used to check measurements for a specific value. If the
 
 The trigger definition tab contains the **Description** and **Enabled** attributes as well as specific settings for the different trigger types.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Definition.png" >}}   
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Definition.png" >}}   
 
 #### 3.1.1 Shared Fields
 
@@ -46,7 +46,7 @@ The trigger definition tab contains the **Description** and **Enabled** attribut
 
 Trigger actions define what happens when the trigger fires.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Actions.png" >}} 
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Actions.png" >}} 
 
 These are possible trigger actions:
 

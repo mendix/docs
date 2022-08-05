@@ -25,16 +25,16 @@ Pattern |Name | Meaning
 
 You can use any CSS Selector defined in CSS3 and supported by your browser. The following table shows some of the commonly used CSS3 selectors in ATS.
 
- Pattern |Name | Meaning
------|---------|--------
- .myClass |Class Selector | Selects every element with class **myClass**
- #myID | ID Selector |Selects every element with ID **myID**
- E[foo="bar"] |Attribute Selector | Selects every element E  whose "**foo**" attribute value is equal to "**bar**"
- :nth-child(n) |Nth-child pseudo-class | Selects the **n-th** child of its parent
- :first-child |First-Child pseudo-class | Selects the **first** child of its parent
- :last-child |Last-Child pseudo-class | Selects the **last** child of its parent
- :checked |Checked pseudo-class | Selects a user interface element which is **checked**
- E > F |Child Combinator | Selects an **F element child** of an E element
+| Pattern | Name | Meaning |
+| -----|---------|-------- |
+| .myClass | Class Selector | Selects every element with class **myClass** |
+| #myID | ID Selector | Selects every element with ID **myID** |
+| E[foo="bar"] | Attribute Selector | Selects every element E  whose "**foo**" attribute value is equal to "**bar**" |
+| :nth-child(n) | Nth-child pseudo-class | Selects the **n-th** child of its parent |
+| :first-child | First-Child pseudo-class | Selects the **first** child of its parent |
+| :last-child | Last-Child pseudo-class | Selects the **last** child of its parent |
+| :checked | Checked pseudo-class | Selects a user interface element which is **checked** |
+| E > F | Child Combinator | Selects an **F element child** of an E element |
 
 For more informations visit the official [W3C CSS3 selectors reference](http://www.w3.org/TR/css3-selectors/).
 

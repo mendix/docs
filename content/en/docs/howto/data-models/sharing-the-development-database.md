@@ -58,7 +58,7 @@ To start the built-in database viewer, follow these steps:
 
     The **Database Manager** dialog box will be displayed (depending on the data model of the application):
 
-   {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580424.png" >}}
+    {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580424.png" >}}
 
 On the left pane, all tables from all modules in the running application are shown. On the upper-right pane, it is possible to enter SQL queries and on the lower-right pane, the results from the entered SQL query will be shown.
 
@@ -67,7 +67,6 @@ On the left pane, all tables from all modules in the running application are sho
 You can execute queries in two ways:
 
 * Directly from the command line on the upper-right pane using SQL script
-
 * Via the database explorer on the left pane
 
 To execute queries from the database explorer, follow these steps:
@@ -97,7 +96,6 @@ The built-in database can easily be shared with other members of the team. It is
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580420.png" >}}
 
 2. Click **Yes** to commit.
-
 3. In the **Commit** dialog box, add an informational message and click **OK**.
 
 The data is now committed to the Team Server and can be used by other team members.

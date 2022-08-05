@@ -130,7 +130,7 @@ Specific properties of the input elements are described in the table below:
 
 The **Format** section is specific for the **Date Picker** widget only. 
 
- The **Format** section properties are described in the table below:
+The **Format** section properties are described in the table below:
 
 | Property       | Description                                                  |
 | -------------- | ------------------------------------------------------------ |

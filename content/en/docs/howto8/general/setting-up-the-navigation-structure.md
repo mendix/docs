@@ -36,7 +36,7 @@ Do the following:
 
     1. Click **Add navigation profile**, select the profile type depending on the type of the interface you are working on:
 
-       {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/add-navigation-profile.jpg" >}}
+        {{< figure src="/attachments/howto8/general/setting-up-the-navigation-structure/add-navigation-profile.jpg" >}}
 
     2. Click **OK**.
 

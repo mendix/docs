@@ -124,7 +124,7 @@ When the system gives security errors while starting the service, make sure that
 
 Sometimes the Event Viewer shows a message like this:
 
-```code {linenos=false}
+```text {linenos=false}
 EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mendixservice, P5 1.0.3810.25652, P6 4c0cf0d8, P7 2, P8 6, P9 system.typeinitialization, P10 NIL.
 ```
 

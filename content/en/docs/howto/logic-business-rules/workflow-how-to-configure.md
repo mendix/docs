@@ -359,7 +359,7 @@ To test your workflow, you need to switch between different user roles. Follow t
 
     1. Start the onboarding process: select the HR demo user that has **EmployeesToOnboard** as the home page, add a new employee, and then click **Start Onboarding**:
 
-       {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/demo_hr.png" alt="EmployeeToOnboard Example" >}}
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/demo_hr.png" alt="EmployeeToOnboard Example" >}}
 
     2. Test the process: switch users, view inbox for each user, complete tasks, see how new inbox items are created for the user roles you configured at the next task in the process. 
     3. Open the Workflow Admin Center.

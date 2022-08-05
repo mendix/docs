@@ -21,7 +21,6 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 ## 2 Purchasing and Launching the Service
 
 1. Open Qianfan Yufu identity management services.
-
 2. Use the following URL to purchase and launch the service:
 
     [https://cloud.tencent.com/product/cig](https://cloud.tencent.com/product/cig)
@@ -269,7 +268,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 10. In the constant “Prefix”, assign the first half of the permission name (including the underscore) from in section 3.5.1. For example, for the permission shown below, **Prefix** should be set to `TestApp_`:
 
-   {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png" >}}
 
 ### 4.4 Configure the Login Page
 

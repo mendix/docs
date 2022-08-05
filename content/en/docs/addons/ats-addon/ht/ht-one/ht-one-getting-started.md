@@ -37,7 +37,7 @@ To create a new project, follow these steps:
 
 1. Click **Add project/Create new project**, which opens the *Create new project/library* page:
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-project.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-project.png" >}}
 
 2. Enter the following information about your project:
 
@@ -52,7 +52,7 @@ To create a new project, follow these steps:
 
 3. Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/project-dashboard-empty.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/project-dashboard-empty.png" >}}
 
 ## 4 Configuring Your Project
 
@@ -78,7 +78,7 @@ To add a new Selenium hub, follow these steps:
 
 1. Click **New** in the top bar, which opens the **Selenium hub** dialog box:
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/selenium-hub-dialog.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/selenium-hub-dialog.png" >}}
 
 2. Set the following parameters:
 
@@ -100,7 +100,7 @@ To add a new application, follow these steps:
 
 1. Click **New** in the top bar, which opens the **Application** dialog box.
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/application-dialog.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/application-dialog.png" >}}
 
 2. Set the following parameters:
 
@@ -138,7 +138,7 @@ To create a test case, follow these steps:
 2. Select **Test Case** in the drop-down menu and enter a name for your test case. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test case. In case others may need to know what your test case does, use a template to make sure all aspects of the case are described clearly.
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-case.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-case.png" >}}
 
 4. Click **Create**.
 5. When the **Test Case** page opens, you are now in the actual test case. In the top left corner of the page, you can see the name and description of your test case. The **Test Case** page also displays the following buttons:
@@ -217,7 +217,7 @@ To create a test suite, follow these steps:
 2. Enter a name for your test suite. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
 3. Enter a clear description for your test suite. Others may need to know what your test suite does. It might be handy to use a template to make sure all aspects of the suite are present.
 
-      {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-suite.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-getting-started/create-new-test-suite.png" >}}
 
 4. Click **Create**. 
 5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:

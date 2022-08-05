@@ -285,7 +285,7 @@ Use XCode to manually add fonts to an iOS app:
 1. Drag and drop the renamed fonts to the **Resources/Fonts** folder in App Explorer. 
 1. Select both targets from the dialog box that shows up:
 
-     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="XCode option dialog for adding files"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="XCode option dialog for adding files"   width="400"  >}}
 
 1. Your folder structure should look like this:
 

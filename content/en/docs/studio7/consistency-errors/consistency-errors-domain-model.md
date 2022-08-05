@@ -27,7 +27,7 @@ The most common errors you can come across when configuring a domain model are d
 
 ### 2.1 Delete Behavior Consistency Errors and Ways to Fix Them{#delete-behavior}
 
- Consistency errors connected with delete behavior can occur in the following cases:
+Consistency errors connected with delete behavior can occur in the following cases:
 
 * Delete behavior of an entity the association starts from is set to *Delete {name of entity} object(s) as well* and the delete behavior of an entity the association points to is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
 

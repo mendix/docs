@@ -151,7 +151,7 @@ The **Appearance** settings are used to set the size of the chart on the page.
     * **Pixels**: is an absolute height
     * **Percentage of parent**: sets the height in relation to a container in which the widget is placed
 
-  {{% alert color="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
+    {{% alert color="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
 
 * **Height**: The height in pixels or percentage based on the setting of **Height unit**
 

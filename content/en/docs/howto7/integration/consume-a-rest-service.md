@@ -71,7 +71,7 @@ To add an input entity to the domain model, follow these steps:
 7. Click **OK**.
 8. Drag an association from **Input** to **Summary**.
 
-  {{< figure src="/attachments/howto7/integration/consume-a-rest-service/domain-model.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/domain-model.png" >}}
 
 ## 5 Calling the REST Service in a Microflow
 

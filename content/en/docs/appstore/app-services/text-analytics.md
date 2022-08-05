@@ -665,7 +665,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 
     4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
-       {{< figure src="/attachments/appstore/app-services/text-analytics/createpiientitydetector-nanoflow.png" alt="createpiientitydetector-nanoflow" >}}
+        {{< figure src="/attachments/appstore/app-services/text-analytics/createpiientitydetector-nanoflow.png" alt="createpiientitydetector-nanoflow" >}}
 
 2. Add a **Data view** widget to your page.
 3. Set the **CreatePiiEntityDetector** nanoflow as the data source of the **Data view** widget as follows:

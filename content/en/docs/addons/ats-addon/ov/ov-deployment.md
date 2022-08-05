@@ -276,13 +276,13 @@ Before you start, make sure that your server has internet access to download the
 
 5. Start up the Selenium grid with this command:
 
-    ```sh
+    ```shell
     docker-compose up -d
     ```
 
 6. You now have a grid running on `http://myserver:4444/wd/hub`. Attached to this grid are two nodes: one for Chrome and one for Firefox. You can easiliy scale by starting new nodes with a simple command. This example will start up a second node for both Firefox and Chrome:
 
-    ```sh
+    ```shell
     docker-compose scale firefoxnode=2 chromenode=2
     ```
 

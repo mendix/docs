@@ -77,7 +77,7 @@ To generate a keystore for Android, follow these steps:
 
 4. Type in the following command line prompt while still pointing to the *keystore.exe*: 
 
-    ```
+    ```text {linenos=false}
     "{{keytool -genkey -v -keystore file.keystore -alias YOUR_ALIAS_NAME -storepass YOUR_ALIAS_PWD -keypass YOUR_ALIAS_PWD -keyalg RSA -validity 36500}}"
     ```
 

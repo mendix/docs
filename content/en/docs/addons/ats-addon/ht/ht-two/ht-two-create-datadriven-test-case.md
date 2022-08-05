@@ -79,7 +79,7 @@ The result will look comparable to the image below:
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-datadriven-test-case/all-fields-new-expense-data-set.png" >}}
 
- Next, you create a record for the dataset fields.
+Next, you create a record for the dataset fields.
 
 ### 3.2 Creating Records
 
@@ -252,7 +252,7 @@ The following steps explain how to read and understand the results of a data-dri
     You can use the breadcrumbs to return to the overview **Result Log**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-datadriven-test-case/result-log-breadcrumb.png" >}}
-    
+
 ## 9 Conclusion
 
 You now know how to do the following:

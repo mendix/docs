@@ -125,7 +125,7 @@ To disable Studio, do the following:
 1. Select the branch that is enabled for Studio.
 2. Click the **Disable for Mendix Studio** button:
 
-   {{< figure src="/attachments/refguide8/version-control/collaborative-development/disable-for-studio.png" alt="Disable for Mendix Studio" >}}
+    {{< figure src="/attachments/refguide8/version-control/collaborative-development/disable-for-studio.png" alt="Disable for Mendix Studio" >}}
 
 Studio is disabled for your project.
 

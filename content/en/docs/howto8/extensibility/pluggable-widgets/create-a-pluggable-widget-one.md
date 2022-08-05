@@ -27,8 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
     * For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
-    * For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
-      these [official tools](https://nodejs.org/en/download/package-manager/#macos)
+    * For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
 * Install [Yeoman](https://yeoman.io/) with the following command:
 
     ```shell {linenos=false}
@@ -76,7 +75,7 @@ The Pluggable Widget Generator is the quickest way to start developing a widget.
 
 Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *CustomWidgets*, and start the generator using:
 
-```ps
+```powershell
 mkdir CustomWidgets
 cd CustomWidgets
 yo @mendix/widget TextBox

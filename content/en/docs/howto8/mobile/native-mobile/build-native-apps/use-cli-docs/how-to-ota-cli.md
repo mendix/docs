@@ -86,7 +86,7 @@ To release a new version OTA, follow these steps:
 4. Open a command line interface (CLI) such as Command Prompt.
 5. Navigate to the directory of your Native Builder:
 
-    ```ps {linenos=false}
+    ```powershell {linenos=false}
     cd {path to Native Builder executable file}`
     ```
 

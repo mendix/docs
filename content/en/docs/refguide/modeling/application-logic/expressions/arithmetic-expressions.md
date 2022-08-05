@@ -69,7 +69,7 @@ Find the example of usages below:
     3 div 5
     ```
 
-     the output is:
+    the output is:
 
     ```java {linenos=false}
     0.6

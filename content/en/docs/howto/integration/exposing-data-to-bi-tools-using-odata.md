@@ -75,9 +75,9 @@ To visualize data from your app in Tableau, follow these steps:
 2. Return to Studio Pro, and double-click the published OData service. Copy the link the **Location** field to the clipboard.
 3. On the **Server Connection** dialog box, enter the copied OData service **Location** link for the **Server**  address:
 
-     {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582020.png" >}}
+    {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582020.png" >}}
 
-     Include authentication credentials if you set them up.
+    Include authentication credentials if you set them up.
 
 4. Click **Sign In** to save the server connection. You should now see the data source details.
 5. Click the name of the server connection and change it to a name related to your entity (in this case, **SmartTasks**) for readability.

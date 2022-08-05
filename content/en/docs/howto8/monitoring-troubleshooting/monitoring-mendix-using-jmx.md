@@ -56,7 +56,7 @@ The simplest way to expose management information is by writing an MBean interfa
 
 This is an example of an interface that contains getters for some generic Mendix information, *MxStatsMBean.java*:
 
-```
+```java
 
 package jmx.actions;
 

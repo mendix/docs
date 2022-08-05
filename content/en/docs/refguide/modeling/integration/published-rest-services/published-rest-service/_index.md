@@ -82,12 +82,12 @@ If authentication is required, you can select which authentication methods you w
 * [Offline-first](/refguide/offline-first/) apps cannot use active session authentication, because they do not have sessions that stay active while the app is running
 * To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-  ```javascript
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
-  xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
-  xmlHttp.send(null);
-  ```
+    ```javascript
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
+    xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+    xmlHttp.send(null);
+    ```
 
 * Select **Custom** to authenticate using a microflow. This microflow is called every time a user want to access a resource.
 

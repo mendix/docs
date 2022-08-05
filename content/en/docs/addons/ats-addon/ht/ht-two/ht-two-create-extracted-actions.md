@@ -71,7 +71,7 @@ To use this custom action in other test cases follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-extracted-actions/add-extracted-action.png" >}}
 
- You have now added your extracted action to another test case. So, if the password changes you only have to change it within the action and not within each test case. 
+You have now added your extracted action to another test case. So, if the password changes you only have to change it within the action and not within each test case. 
 
 ### 3.2 Create an extracted action by creating a new action 
 

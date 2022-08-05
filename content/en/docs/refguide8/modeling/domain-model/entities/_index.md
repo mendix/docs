@@ -31,7 +31,7 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 
 {{% alert color="info" %}}
 You can also use data sources from other applications in your project  through the [Data Hub](/refguide8/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model:
- {{< figure src="/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png" alt="Virtual Entity Example" >}} 
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png" alt="Virtual Entity Example" >}} 
 
 For further information see [External Entities](/refguide8/external-entities/).
 {{% /alert %}}

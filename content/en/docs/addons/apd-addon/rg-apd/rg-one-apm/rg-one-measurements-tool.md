@@ -13,7 +13,7 @@ Measurements are created via the **Collect in Measurements Tool** button in the 
 
 The charts tab shows graphs of collected data in the measurements tool.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Charts.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Charts.png" >}}
 
 Double-clicking the measurement will open a read-only view of the measurement configuration.
 
@@ -21,7 +21,7 @@ Double-clicking the measurement will open a read-only view of the measurement co
 
 Measurements can be configured on the **Measurement configuration** tab. If the measurement is running, you can only view the measurement configuration. 
 
-  {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Tab.png" >}}                     
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Tab.png" >}}                     
 
 Measurements can be started and stopped here. In the dialog behind the play-button, you can start or stop all measurements at once.
 
@@ -29,7 +29,7 @@ Measurements can be started and stopped here. In the dialog behind the play-butt
 
 Double-clicking or selecting and clicking the **Edit** button shows the measurement configuration dialog.  Here, the selected measurement can be configured:
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Edit.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Edit.png" >}}
 
 The **Measurement configuration** tab allows you to do the following:
 
@@ -53,7 +53,7 @@ The **Measurement configuration** tab allows you to do the following:
 
 Here you can define triggers on high memory usage for example.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Triggers.png" >}}                 
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Triggers.png" >}}                 
 
 See the description of [Triggers](/addons/apd-addon/rg-one-triggers/) for how to configure triggers.
 

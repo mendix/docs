@@ -1118,7 +1118,7 @@ First change the widget property configuration:
 
     3. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
 
-     ```xml
+    ```xml
     <?xml version="1.0" encoding="utf-8" ?>
     <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
         xmlns="http://www.mendix.com/widget/1.0/"

@@ -244,7 +244,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ### 4.1 Performing Text Translation in Your Browser
 
- When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation:
+When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation:
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateTranslator*.

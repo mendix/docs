@@ -7,7 +7,7 @@ weight: 20
 ---
 
 {{% alert color="warning" %}}
- This activity can only be used in **Microflows**.
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction

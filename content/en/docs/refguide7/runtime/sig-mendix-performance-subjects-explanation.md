@@ -54,11 +54,11 @@ This basic scenario can be modeled in Mendix using the following two pages:
 
 * An overview page displaying a table of data for a specific entity, like this:
 
-  {{< figure src="/attachments/refguide7/runtime/sig-mendix-performance-subjects-explanation/19399028.png" >}}
+    {{< figure src="/attachments/refguide7/runtime/sig-mendix-performance-subjects-explanation/19399028.png" >}}
 
 * A details page where a specific object of an entity can be edited, like this:
 
-  {{< figure src="/attachments/refguide7/runtime/sig-mendix-performance-subjects-explanation/19399029.png" >}}
+    {{< figure src="/attachments/refguide7/runtime/sig-mendix-performance-subjects-explanation/19399029.png" >}}
 
     * This page can be reached from the first page using the New and Edit buttons
 

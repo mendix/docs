@@ -18,7 +18,7 @@ To export the package, open the **File** menu > **Export App Package** and selec
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" >}}
 
- For more information on what options you can select, see the sections below. 
+For more information on what options you can select, see the sections below. 
 
 ## 2 Package Type
 

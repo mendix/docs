@@ -266,13 +266,13 @@ You can do this in one of two ways:
 
 #### 3.3.1 Processing the CR in the CLI
 
- To submit the CR via a CLI you will need a file containing the YML you created in [Editing the CR](#edit-cr), above.
+To submit the CR via a CLI you will need a file containing the YML you created in [Editing the CR](#edit-cr), above.
 
 ##### 3.3.1.1 Kubectl in the CLI
 
 To build and deploy your app using AWS-EKS or other Kubernetes platform execute the following command:
 
-```shell
+```shell {linenos=false}
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 

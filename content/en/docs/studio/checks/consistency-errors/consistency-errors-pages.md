@@ -99,7 +99,7 @@ If you want to create a new customer and fill in the customer's details on the *
 1. Open the **Customers** page.
 2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
-     {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
+    {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
 
 3. Set **Customer** as **Entity**.
 4. Change the button's caption from **Details** to **Add**, as this button will now create a new customer, and not show details of an existing customer.

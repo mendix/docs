@@ -247,7 +247,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     11. Click **OK** to save the settings.
     12. Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
 
-         {{< figure src="/attachments/appstore/app-services/text-to-speech/getsupportedvoices-microflow.png" alt="getsupportedvoices-microflow" >}}
+        {{< figure src="/attachments/appstore/app-services/text-to-speech/getsupportedvoices-microflow.png" alt="getsupportedvoices-microflow" >}}
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
@@ -276,7 +276,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     2. On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
     3. Set **Controls** to **true**.
 
-         {{< figure src="/attachments/appstore/app-services/text-to-speech/audioplayer-datasource.png" alt="audioplayer-datasource" >}}
+        {{< figure src="/attachments/appstore/app-services/text-to-speech/audioplayer-datasource.png" alt="audioplayer-datasource" >}}
 
     4. Click **OK** to save the settings.
 11. Inside the **Data view** widget, add a **Button** widget below the **Audio player** widget .

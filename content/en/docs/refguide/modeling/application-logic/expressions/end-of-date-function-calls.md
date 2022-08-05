@@ -51,6 +51,12 @@ The output is:
 
 The `endOfWeek` function calculates the end of the week compared to the initial date.
 
+{{% alert type="info" %}}
+
+The week begins on Sunday and ends on Saturday.
+
+{{% /alert %}}
+
 ### 3.1 Input Parameters
 
 The input parameters are described in the table below:

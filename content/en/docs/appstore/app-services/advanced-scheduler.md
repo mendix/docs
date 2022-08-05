@@ -13,11 +13,23 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 
 {{% todo %}}Add the link to the widget page.{{% /todo %}}
 
-## 2 Configuration
+## 2 Installation
 
-### 2.1 Configuring the Scheduler Widget
+### 2.1 Obtaining a License Key
 
-#### 2.1.1 Views Tab
+#### 2.1.1 Starting a Trial
+
+#### 2.1.1 Starting a Subscription
+
+### 2.2 Installing the Component in Your App
+
+## 3 Configuration
+
+### 3.1 Configuring the License Key
+
+### 3.2 Configuring the Scheduler Widget
+
+#### 3.2.1 Views Tab
 
 * **Scheduler Start Date** – This is the start date of the scheduler.
 * **Scheduler End Date** – This is the end date of the scheduler.{{% todo %}}Will this field be removed before the release?{{% /todo %}}  
@@ -55,7 +67,7 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
   * **Yes** – If selected, you cannot change the timeline in the time window.
   * **No** – If selected, you can scroll to a date within two years before and after the current date in the time window.
 
-#### 2.1.2 Resources Tab
+#### 3.2.2 Resources Tab
 
 * **Resources Datasource** – This is the datasource for the resources that are shown on the left side of the scheduler.
 * **Resource ID** – This is the ID of the resource.
@@ -65,7 +77,7 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 * **Resource height** – This is the height of the resource.
 * **On Click** – You can set an action that is triggered when the resource is clicked.{{% todo %}}Will this field be removed before the release?{{% /todo %}}
 
-#### 2.1.3 Events Tab
+#### 3.2.3 Events Tab
 
 *  **List of Data sources** – You can manage the data sources of events on the list.
     *  **New** – You can add a new event with the following items:
@@ -100,7 +112,7 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 *  **New Start Event** – {{% todo %}}What is this exactly?{{% /todo %}}
 * **New End Event** – {{% todo %}}What is this exactly?{{% /todo %}}
 
-#### 2.1.4 Rosters Tab
+#### 3.2.4 Rosters Tab
 
 {{% alert color="info" %}}The roster has a light yellow background in the scheduler.{{% /alert %}}
 
@@ -114,22 +126,22 @@ The [Advanced Scheduler]() enables you to load resources and events and visualiz
 * **ClassName** – the classname of the roster, which can be used for the styling of a roster {{% todo %}}On the UI, it says "proper styling of an event" – is this correct?{{% /todo %}}
   * If left empty, the value is set to *event-type-default*.
 
-#### 2.1.5 UI Tab
+#### 3.2.5 UI Tab
 
 * **Today button**  – You can change the text shown on the **Today** button, for example, to the translation of "today" in a different language.
 * **Hide navigation**
   * **Yes** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is hidden. You can create your own Mendix buttons.
   * **No** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is visible.{{% todo %}}How can you configure the options in the view selector drop-down?{{% /todo %}}
 
-#### 2.1.6 Common Tab
+#### 3.2.6 Common Tab
 
 For more information, see [Common Section](https://docs.mendix.com/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
-#### 2.1.7 Appearance Tab
+#### 3.2.7 Appearance Tab
 
 {{% todo %}}Can the properties in the **Appearance** tab have any influence on the widget??{{% /todo %}}
 
-### 2.2 Configuring the Header Dropzone
+### 3.3 Configuring the Header Dropzone
 
 {{< figure src="/attachments/appstore/app-services/advanced-scheduler/header-dropzone.png" >}}
 
@@ -137,7 +149,7 @@ In this area, you can define your own header, which is shown above the scheduler
 
 {{< figure src="/attachments/appstore/app-services/advanced-scheduler/header.png" >}}
 
-### 2.3 Configuring the Resource Area
+### 3.4 Configuring the Resource Area
 
 {{< figure src="/attachments/appstore/app-services/advanced-scheduler/resource-area.png" >}}
 
@@ -145,7 +157,7 @@ In this area, you can define what is shown as **Resources** in the scheduler.
 
 {{< figure src="/attachments/appstore/app-services/advanced-scheduler/resources.png" >}}
 
-## 3 Example Implementation
+## 4 Example Implementation
 
 For an example about how to implement the widget, see the example implementation.  {{% todo %}}Add the link and check the name of the example implementation.{{% /todo %}}
 

@@ -144,9 +144,9 @@ You use these API keys to authenticate requests to the [Stories API](/apidocs-mx
 Click **Revoke** to delete an app API key.
 
 
-## 6 Stories {#stories}
+## 6 Project Management {#project-management}
 
-On the **Stories** tab, you can select a planning tool for the app. By default [Stories](/developerportal/collaborate/stories/) is the selected tool. If you like, you can switch to [Epics](/developerportal/collaborate/epics/). Once you select a tool, everyone in your team can use the same tool for this app.
+On the **Project Management** tab, you can select a planning tool for the app. By default [Stories](/developerportal/collaborate/stories/) is the selected tool. If you like, you can switch to [Epics](/developerportal/collaborate/epics/). Once you select a tool, everyone in your team can use the same tool for this app.
 
 {{% alert color="info" %}}It is not yet possible to migrate the data from Stories into Epics, so we recommend you to use Epics for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.{{% /alert %}}
 

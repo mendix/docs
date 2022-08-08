@@ -20,17 +20,17 @@ Check the documentation on how to [create/maintain test data](/addons/ats-addon/
 
 ### Other Fixes
 
-*   Click Widget action now doesn’t try to click invisible widgets
-*   Recorder now also records when there is no mxname class on the lowest element
-*   Recorder now never returns the _NO_UNIQUE_PATH_ message if there is any possible unique combination of mxnames to identify the widget
-*   The actions _Get Value_, _Assert Value_ and _Find Widget_ (with _Value_ parameter set) now also recognize all text widgets
-*   Improved layout and usability on import dialog and overview page
-*   Several theme fixes
+* Click Widget action now doesn’t try to click invisible widgets
+* Recorder now also records when there is no mxname class on the lowest element
+* Recorder now never returns the *NO_UNIQUE_PATH* message if there is any possible unique combination of mxnames to identify the widget
+* The actions *Get Value*, *Assert Value* and *Find Widget* (with *Value* parameter set) now also recognize all text widgets
+* Improved layout and usability on import dialog and overview page
+* Several theme fixes
 
 ### Deprecations
 
-*   The _Click Item/Row_ action has been deprecated in favor of the generic _Click Widget_ action. To click a certain listview/templategrid/datagrid item/row you simply use the index classes (index-0 for the first, index-1 for the second item/row etc.).
+* The *Click Item/Row* action has been deprecated in favor of the generic *Click Widget* action. To click a certain listview/templategrid/datagrid item/row you simply use the index classes (index-0 for the first, index-1 for the second item/row etc.).
 
 ### Notes
 
-*   The data-driven testing feature lead to a change in the file format for exported repository items (test cases/suites, actions, folders, enumerations). As a consequence exports from 1.6 cannot be imported on older releases.
+* The data-driven testing feature lead to a change in the file format for exported repository items (test cases/suites, actions, folders, enumerations). As a consequence exports from 1.6 cannot be imported on older releases.

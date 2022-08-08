@@ -27,6 +27,7 @@ When a job or a test suite has not passed it is now possible to do another run o
 ### Changes in Calculation
 
 In order to make it easier to read and understand the results of a test run we are making some changes. Here are the main points: 
+
 * The result **Skipped** has been renamed to **Not executed**.
 * Test cases that fail durin the initialization will have the result **Not executed** instead of **Failed**.
 * **Canceled** is no longer a result but a flag that can be set additionally to the result.

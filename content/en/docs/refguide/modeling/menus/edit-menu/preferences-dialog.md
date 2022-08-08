@@ -66,7 +66,6 @@ The **Logic Bot** tab contains the following settings:
 
 The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
 
-
 ## 4 Model Tab
 
 ### 4.1 When Prompted by a Widget to Automatically Fill Its Contents, Select 'Yes' by Default

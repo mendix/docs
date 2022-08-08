@@ -53,7 +53,7 @@ The maximum size that can approximately be stored in an attribute of type binary
 | --- | --- | --- | --- |
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
 
-_Default value:_ String
+*Default value:* String
 
 In a web shop, you want to store the id, profile photo, level (for service quality), user name, password, activity, total of minutes spent online, year of subscription, date of birth, total amount of expenses and the standard amount of discount for a customer.
 
@@ -71,11 +71,11 @@ A customer can be active or inactive, which is stored in an attribute named 'Act
 
 ### Localize (Only for the Date and Time Attribute Type)
 
-This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
+This property indicates whether the date and time should be localized. By default localization is enabled. If you are *not* interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
 
 In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
 
-_Default value_: Yes
+*Default value*: Yes
 
 ### Enumeration (Only for the Enumeration Attribute Type)
 
@@ -85,13 +85,13 @@ The enumeration property indicates which enumeration defines the possible values
 
 This property specifies whether the length of a String is limited to a maximum or unlimited. In the case of a limited length, the 'Max length' property specifies the maximum (see below).
 
-_Default value:_ Limited
+*Default value:* Limited
 
 ### Max Length (Only for the String Attribute Type)
 
 The 'Max length' property specifies the number of characters that can be stored in the attribute.
 
-_Default value:_ 200
+*Default value:* 200
 
 ## Value
 

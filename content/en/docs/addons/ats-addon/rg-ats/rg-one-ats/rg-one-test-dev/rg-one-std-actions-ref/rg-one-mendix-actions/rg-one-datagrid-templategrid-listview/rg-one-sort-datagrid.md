@@ -21,4 +21,3 @@ Name | Datatype |Required| Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid
 Column Name | String |yes| The name of the column for sorting
-

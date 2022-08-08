@@ -56,7 +56,6 @@ A trial gives everyone in your company one-month access to the app service. The 
 7. Click **Translation** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
-
 #### 2.1.2 Starting a Subscription
 
 1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the marketplace.
@@ -133,81 +132,81 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 
 | Language | Language Code |
 | ---- | -----------|
-| Afrikaans	|af |
-| Albanian	|sq |
-| Amharic	|am |
-| Arabic	|ar |
-| Armenian	|hy |
-| Azerbaijani	|az |
-| Bengali	|bn |
-| Bosnian	|bs |
-| Bulgarian	|bg |
-| Catalan	|ca |
-| Chinese (Simplified)	|zh |
-| Chinese (Traditional)	|zh-TW |
-| Croatian	|hr |
-| Czech	|cs |
-| Danish	|da |
-| Dari	|fa-AF |
-| Dutch	|nl |
-| English	|en |
-| Estonian	|et |
-| Farsi (Persian)	|fa |
-| Filipino, Tagalog	|tl |
-| Finnish	|fi |
-| French	|fr |
-| French (Canada)	|fr-CA |
-| Georgian	|ka |
-| German	|de |
-| Greek	|el |
-| Gujarati	|gu |
-| Haitian Creole	|ht |
-| Hausa	|ha |
-| Hebrew	|he |
-| Hindi	|hi |
-| Hungarian	|hu |
-| Icelandic	|is |
-| Indonesian	|id |
-| Irish	|ga |
-| Italian	|it |
-| Japanese	|ja |
-| Kannada	|kn |
-| Kazakh	|kk |
-| Korean	|ko |
-| Latvian	|lv |
-| Lithuanian	|lt |
-| Macedonian	|mk |
-| Malay	|ms |
-| Malayalam	|ml |
-| Maltese	|mt |
-| Marathi	|mr |
-| Mongolian	|mn |
-| Norwegian	|no |
-| Pashto	|ps |
-| Polish	|pl |
-| Portuguese	|pt |
-| Portuguese (Portugal)	|pt-PT |
-| Punjabi	|pa |
-| Romanian	|ro |
-| Russian	|ru |
-| Serbian	|sr |
-| Sinhala	|si |
-| Slovak	|sk |
-| Slovenian	|sl |
-| Somali	|so |
-| Spanish	|es |
-| Spanish (Mexico)	|es-MX |
-| Swahili	|sw |
-| Swedish	|sv |
-| Tamil	|ta |
-| Telugu	|te |
-| Thai	|th |
-| Turkish	|tr |
-| Ukrainian	|uk |
-| Urdu	|ur |
-| Uzbek	|uz |
-| Vietnamese	|vi |
-| Welsh	|cy |
+| Afrikaans |af |
+| Albanian |sq |
+| Amharic |am |
+| Arabic |ar |
+| Armenian |hy |
+| Azerbaijani |az |
+| Bengali |bn |
+| Bosnian |bs |
+| Bulgarian |bg |
+| Catalan |ca |
+| Chinese (Simplified) |zh |
+| Chinese (Traditional) |zh-TW |
+| Croatian |hr |
+| Czech |cs |
+| Danish |da |
+| Dari |fa-AF |
+| Dutch |nl |
+| English |en |
+| Estonian |et |
+| Farsi (Persian) |fa |
+| Filipino, Tagalog |tl |
+| Finnish |fi |
+| French |fr |
+| French (Canada) |fr-CA |
+| Georgian |ka |
+| German |de |
+| Greek |el |
+| Gujarati |gu |
+| Haitian Creole |ht |
+| Hausa |ha |
+| Hebrew |he |
+| Hindi |hi |
+| Hungarian |hu |
+| Icelandic |is |
+| Indonesian |id |
+| Irish |ga |
+| Italian |it |
+| Japanese |ja |
+| Kannada |kn |
+| Kazakh |kk |
+| Korean |ko |
+| Latvian |lv |
+| Lithuanian |lt |
+| Macedonian |mk |
+| Malay |ms |
+| Malayalam |ml |
+| Maltese |mt |
+| Marathi |mr |
+| Mongolian |mn |
+| Norwegian |no |
+| Pashto |ps |
+| Polish |pl |
+| Portuguese |pt |
+| Portuguese (Portugal) |pt-PT |
+| Punjabi |pa |
+| Romanian |ro |
+| Russian |ru |
+| Serbian |sr |
+| Sinhala |si |
+| Slovak |sk |
+| Slovenian |sl |
+| Somali |so |
+| Spanish |es |
+| Spanish (Mexico) |es-MX |
+| Swahili |sw |
+| Swedish |sv |
+| Tamil |ta |
+| Telugu |te |
+| Thai |th |
+| Turkish |tr |
+| Ukrainian |uk |
+| Urdu |ur |
+| Uzbek |uz |
+| Vietnamese |vi |
+| Welsh |cy |
 
 ### 3.6 Configuring the License Token {#configure-license-token}
 
@@ -219,7 +218,7 @@ If you deploy your app locally or as a Mendix Free App, configure the license to
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
 4. Fill in the **Value** with the license token that you obtained.
-5.  Click **OK** to save the settings.
+5. Click **OK** to save the settings.
 
     {{< figure src="/attachments/appstore/app-services/translation/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
 
@@ -245,22 +244,22 @@ If you deploy your app in your own environment, you need to configure the licens
 
 ### 4.1 Performing Text Translation in Your Browser
 
- When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation:
+When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation:
 
-1.  Create a nanoflow as follows:
+1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateTranslator*.
     2. Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
-    3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
+    3. Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
 
         {{< figure src="/attachments/appstore/app-services/translation/call-createtranslator-microflow.png" alt="call-createtranslator-microflow" >}}
 
         In this example,  **inputLanguageCode** is set to *'en'* and **outputLanguageCode** is set to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see  [CreateTranslator microflow](#create-translator).
 
-    4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
+    4. Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 
         {{< figure src="/attachments/appstore/app-services/translation/createtranslator-nanoflow.png" alt="createtranslator-nanoflow" >}}
-    
-2.  Create a microflow as follows:
+
+2. Create a microflow as follows:
     1. Name the microflow *GetTranslatorSupportedLanguages*. 
     2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu.
     3. Double-click the parameter to open the **Parameter** dialog box.
@@ -271,37 +270,37 @@ If you deploy your app in your own environment, you need to configure the licens
     8. Set **Type** to **List**.
     9. For **Entity**, select **Language** entity from **Translation** module 
     10. In the text box, enter *$translator/Translation.Translator_SupportedLanguages/Translation.Language*.
-    11.  Click **OK** to save the settings.  
+    11. Click **OK** to save the settings.  
 
-         {{< figure src="/attachments/appstore/app-services/translation/gettranslatorsupportedlanguages-microflow.png" alt="gettranslatorsupportedlanguages-microflow" >}}
+        {{< figure src="/attachments/appstore/app-services/translation/gettranslatorsupportedlanguages-microflow.png" alt="gettranslatorsupportedlanguages-microflow" >}}
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateTranslator** nanoflow as the data source of the **Data view** widget as follows:
-   1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
-   2. For **Data source**, select **Nanoflow**.
-   3. **Select** the **CreateTranslator** nanoflow for **Nanoflow**.
-   4. Click **OK** to save the settings. 
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Nanoflow**.
+    3. **Select** the **CreateTranslator** nanoflow for **Nanoflow**.
+    4. Click **OK** to save the settings. 
 5. Inside the **Data view** widget, add a **Group box** widget.
 6. Change the settings of the **Group box** widget as follows:
-   1. Double-click the **Group box** widget to open the **Edit Group Box** dialog box.
-   2. For **Caption**, enter *Input*.
-   3. Click **OK** to save the settings.
+    1. Double-click the **Group box** widget to open the **Edit Group Box** dialog box.
+    2. For **Caption**, enter *Input*.
+    3. Click **OK** to save the settings.
 7. Inside the **Group box** widget, add a **Reference selector** widget.
 8. Change the settings of the **Reference selector** widget as follows:
-   1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
-   2. Go to the **Selectable objects** tab.
-   3. Set **Source** to **Microflow**.
-   4. Set the **Microflow** as **GetTranslatorSupportedLanguages**.
-   5. Go to the **General** tab.
-   6. Set **Data source** to **Translation.Translator_InputLanguage/Translation.Language/Translation.Language.Name**.
-   7. For **Label caption**, enter *Language*.
-   8. Click **OK** to save the settings.
+    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
+    2. Go to the **Selectable objects** tab.
+    3. Set **Source** to **Microflow**.
+    4. Set the **Microflow** as **GetTranslatorSupportedLanguages**.
+    5. Go to the **General** tab.
+    6. Set **Data source** to **Translation.Translator_InputLanguage/Translation.Language/Translation.Language.Name**.
+    7. For **Label caption**, enter *Language*.
+    8. Click **OK** to save the settings.
 9. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget.
 10. Change the settings of the **Text area** widget as follows:
-   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, **Select** the **InputText** attribute from **Data view**.
-   3. For **Label caption**, enter *Text*.
-   4. Click **OK** to save the settings. 
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. For **Data source**, **Select** the **InputText** attribute from **Data view**.
+    3. For **Label caption**, enter *Text*.
+    4. Click **OK** to save the settings. 
 11. Inside the **Data view** widget, add a second **Group box** widget.
 12. Change the settings of the **Group box** widget as follows:
     1. Double-click the **Group box** widget to open the **Edit Group Box** dialog box.
@@ -318,13 +317,13 @@ If you deploy your app in your own environment, you need to configure the licens
     7. For **Label caption**, enter *Language*.
     8. Click **OK** to save the settings.
 15. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget.
-16.  Change the settings of the **Text area** widget as follows:
-     1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-     2. For **Data source**, Select the **OutputText** attribute from **Data view**.
-     3. For **Label caption**, enter *Text*.
-     4.  Click **OK** to save the settings. 
+16. Change the settings of the **Text area** widget as follows:
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. For **Data source**, Select the **OutputText** attribute from **Data view**.
+    3. For **Label caption**, enter *Text*.
+    4. Click **OK** to save the settings. 
 
-         {{< figure src="/attachments/appstore/app-services/translation/data-view.png" alt="data-view" >}}
+        {{< figure src="/attachments/appstore/app-services/translation/data-view.png" alt="data-view" >}}
 
 17. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 18. Change the settings of the **Button** widget as follows:
@@ -334,9 +333,9 @@ If you deploy your app in your own environment, you need to configure the licens
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
 19. Make sure you have [configured the license token](#configure-license-token).
-20.  Run your app locally. You can perform text translation directly in the browser:
+20. Run your app locally. You can perform text translation directly in the browser:
 
-     {{< figure src="/attachments/appstore/app-services/translation/runlocally-translation.png" alt="runlocally-translation" >}}
+    {{< figure src="/attachments/appstore/app-services/translation/runlocally-translation.png" alt="runlocally-translation" >}}
 
 ### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
 
@@ -345,8 +344,8 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Translation** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

@@ -187,6 +187,7 @@ This option is only available in native pages.
 {{% /alert %}}
 
 <a name="label-properties"></a>
+
 ### 2.9 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}

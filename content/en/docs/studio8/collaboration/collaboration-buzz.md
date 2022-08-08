@@ -24,19 +24,15 @@ To *tag a person* by their name, use *@*.
 To *edit* a comment, do the following:
 
 1. Open a page, microflow, the domain model, or the navigation document the comment refers to.
-
 2. Open the **Buzz** tab and click the comment.
-
-3.  Click the edit icon and change the comment.
+3. Click the edit icon and change the comment.
 
     {{< figure src="/attachments/studio8/collaboration/collaboration-buzz/edit-comment.png" >}}
 
 4. Click **Save**. 
 
 {{% alert color="info" %}}
-
 You cannot delete comments in Studio, this is only possible in the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) in the Developer Portal.  
-
 {{% /alert %}}
 
 ## 2 Viewing App Buzz
@@ -56,12 +52,11 @@ In a thread in Studio Buzz, you and your team may conclude that the subject disc
 To create a feedback item, do the following:
 
 1. Click the posted comment. For more information on how to leave a comment, see the [Leaving and Editing Comments](#comment) section.
+2. Click the ellipsis icon and select **Create Feedback Item**:
 
-2.  Click the ellipsis icon and select **Create Feedback Item**:
+    {{< figure src="/attachments/studio8/collaboration/collaboration-buzz/creating-feedback-item.png" alt="Creating Feedback Item"   width="350"  >}}
 
-	{{< figure src="/attachments/studio8/collaboration/collaboration-buzz/creating-feedback-item.png" alt="Creating Feedback Item"   width="350"  >}}
-	
-3.  In the **Create feedback item** dialog box, fill in the type of feedback, its title, and additional information if necessary.
+3. In the **Create feedback item** dialog box, fill in the type of feedback, its title, and additional information if necessary.
 
     {{< figure src="/attachments/studio8/collaboration/collaboration-buzz/feedback-item-info.png" alt="Create Feedback Item Dialog Box"   width="450"  >}}
 

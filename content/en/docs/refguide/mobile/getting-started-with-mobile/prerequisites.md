@@ -54,7 +54,6 @@ For Make it Native 9 apps, please download them in their app stores. If you woul
 | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-android-8.8.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/qr-ios-8.8.png" alt="iOS QR Code" >}} |
 |   [Link](https://www.dropbox.com/s/z0255q1gcxpvlwl/MiN%208.8.apk?dl=0)    |        [Link](https://testflight.apple.com/join/ra3QR6iG)         |
 
-
 ## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
 
 Mendix strives to make building and running native mobile apps as simple as possible. But because some complexity is inherent in making apps, problems can come up. If you are having issues while building or running native mobile apps, please consult the sections below to see if your issue has already been solved.
@@ -75,13 +74,13 @@ If you are using Windows, make sure your WiFi network is set to **Private**. Win
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 
-*  **Unable to load script**:
+* **Unable to load script**:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/unabletoloadscript.png" alt="unable to load script"   width="250"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/unabletoloadscript.png" alt="unable to load script"   width="250"  >}}
 
-*  **Cannot detect your runtime**:
+* **Cannot detect your runtime**:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  >}}
 
 These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. We recommend you consult your firewall administrator.
 
@@ -89,12 +88,12 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Make sure that your computer and the mobile device are connected to the same network.
 1. Make sure that incoming connections are allowed by doing the following:<br />
-    a. Open **Firewall & Network Protection** settings in Windows.<br />
-    b. Go to **Advanced Settings**.<br />
-    c. Select the **Inbound Rules** and scroll to the **Node.js** entries.<br />
-    d. For each Node.js entry, note their values in the **Program** column. They should all have a green check mark in front of them.<br /> 
-    e. If the **Program** column shows a Mendix installation directory, then there should be a green icon in front of the entry. If this is not the case, double-click the entry and select **Allow the connection**:
-    
+    1. Open **Firewall & Network Protection** settings in Windows.<br />
+    1. Go to **Advanced Settings**.<br />
+    1. Select the **Inbound Rules** and scroll to the **Node.js** entries.<br />
+    1. For each Node.js entry, note their values in the **Program** column. They should all have a green check mark in front of them.<br /> 
+    1. If the **Program** column shows a Mendix installation directory, then there should be a green icon in front of the entry. If this is not the case, double-click the entry and select **Allow the connection**:
+
     {{< figure src="/attachments/howto/mobile/native-mobile/get-started/common-issues/inboundrules.png" alt="inbound rules"   width="350"  >}}
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.

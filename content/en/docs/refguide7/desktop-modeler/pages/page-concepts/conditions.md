@@ -20,17 +20,17 @@ The following elements support conditional editability:
 There are four kinds of conditions:
 
 * The value of an attribute of the enclosing data container
-  * The attribute must be of type Boolean or enumeration
-  * For each value, you specify whether the element is visible/editable
-  * Upon entering the page and changing the condition attribute, the conditions will be applied
+    * The attribute must be of type Boolean or enumeration
+    * For each value, you specify whether the element is visible/editable
+    * Upon entering the page and changing the condition attribute, the conditions will be applied
 * A condition based on an [expression](/refguide7/expressions/)
- * The expression must evaluate to a value of the Boolean type
-  * The element is visible/editable when the expression evaluates to `true`
+* The expression must evaluate to a value of the Boolean type
+* The element is visible/editable when the expression evaluates to `true`
 * Module roles
- * For each module you specify whether the element is visible or not.
+* For each module you specify whether the element is visible or not.
 * Ignoring security
- * Buttons are automatically hidden if security prevents the user from executing the action
- * You can ignore this and show the button anyway. This is useful for application with anonymous users. Clicking a button for which you do not have the rights will then trigger a sign in page.
+* Buttons are automatically hidden if security prevents the user from executing the action
+* You can ignore this and show the button anyway. This is useful for application with anonymous users. Clicking a button for which you do not have the rights will then trigger a sign in page.
 
 Module role conditions can only be used for the visibility of table rows and tab pages. They cannot be used to make an input widget read-only or to hide buttons. To make an input widget conditionally editable based on roles, use security to give roles read and write access to attributes. For example, by not giving a role write access to an attribute, the corresponding input widget will automatically turn read-only (as in, not editable). To hide a button based on roles, configure the security of the underlying page or action (for example, by not giving a role create access, **New** buttons will be hidden).
 
@@ -93,4 +93,3 @@ In this table, you can see what rights you need to have for the action to be acc
 | Create button | Create objects and open the page. |
 | Edit button | Open the page. |
 | Delete button | Delete objects. |
-

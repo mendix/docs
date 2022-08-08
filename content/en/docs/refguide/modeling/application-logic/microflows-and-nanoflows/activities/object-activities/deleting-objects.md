@@ -77,8 +77,8 @@ When using the activity in a nanoflow accessible from an offline profile, please
 * Setting a different delete behavior option triggers a consistency error
 * Before and after delete events will be triggered only upon synchronization of the deleted object
 * Before and after delete events will not be triggered for an object that does not exist in the runtime database
-*  When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
-	* Deleting such an object removes it from the device and does not require synchronization, therefore the before and after events of the corresponding entity will not be triggered
+* When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
+    * Deleting such an object removes it from the device and does not require synchronization, therefore the before and after events of the corresponding entity will not be triggered
 
 For more information on associations' delete behavior, see the [Delete Behavior](/refguide/association-properties/#delete-behavior) section of *Association Properties*.
 
@@ -101,15 +101,15 @@ Clicking a **Delete** button or triggering a delete activity will initiate the d
 In detail, this is what happens during deletions:
 
 * Events:
-	* All before and after events are executed, and if any before-delete event returns false, an exception can be thrown
-	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
-	* Changes made prior to the rollback will be kept
+    * All before and after events are executed, and if any before-delete event returns false, an exception can be thrown
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
+    * Changes made prior to the rollback will be kept
 * Database:
-	* If an object has the **Instantiated** state, there will be no database communication required
-	* For any other status, a delete query is executed in the database
+    * If an object has the **Instantiated** state, there will be no database communication required
+    * For any other status, a delete query is executed in the database
 * Result:
-	* The object will be removed from memory and (if applicable) from the database
-	* All delete behavior for the associations is validated, and any associated objects are removed as well
+    * The object will be removed from memory and (if applicable) from the database
+    * All delete behavior for the associations is validated, and any associated objects are removed as well
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/18582171.png" >}}
 

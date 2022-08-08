@@ -100,7 +100,6 @@ These operations take a list and filter it based on an expression. Inside the ex
 | Find by expression | Finds the first object that matches the given expression. | Object |
 | Filter by expression | Finds all the objects that match the given expression. | List |
 
-
 ### 3.2 List Name, Object Name, or Variable Name
 
 This is the name of the resulting List, Object, or Boolean variable. The result can be used by all activities that follow this activity.

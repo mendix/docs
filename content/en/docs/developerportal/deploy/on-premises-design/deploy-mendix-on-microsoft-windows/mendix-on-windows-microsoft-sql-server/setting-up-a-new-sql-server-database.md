@@ -46,11 +46,12 @@ You only need to follow these steps if the database user used by the Mendix Runt
 
 The database schema needs to be configured so that the **Read Committed Snapshot** and **Snapshot Isolation** features are enabled. This can be achieved by executing the following commands on the database:
 
-```
+```sql
 ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
 
 ALTER DATABASE [MySchema] SET ALLOW_SNAPSHOT_ISOLATION ON;
 ```
+
 {{% alert color="info" %}}
 You need to replace `MySchema` with the name of your schema.
 {{% /alert %}}
@@ -70,13 +71,13 @@ For Mendix version 7, you only need to perform these steps if the following are 
 
 For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved with the following command, which requires a `sysadmin` or administrator role. Remember to set the file path to the correct location of your Mendix installation:
 
-```
+```sql
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
 ```
 
 The permission above requires CLR to be enabled on the SQL Server instance. CLR can be enabled using this query:
 
-```
+```sql
 EXEC sp_configure 'clr enabled' , '1';
 RECONFIGURE;
 ```
@@ -89,7 +90,7 @@ If you are not working in the same timezone as UTC, you need to enable CLR and t
 
 You can create the timezone handling function using the following command:
 
-```
+```sql
 CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];
 ```
 
@@ -99,7 +100,7 @@ CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone 
 This is normally executed automatically by the Mendix Runtime so long as the database user used by Mendix has permission to create procedures.
 {{% /alert %}}
 
-```
+```sql
 CREATE PROCEDURE [dbo].[usp_nextsequencevalue]
 @SeqName nvarchar(128)
 AS

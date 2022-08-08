@@ -135,7 +135,7 @@ To enable Mendix SSO in your app, follow these steps:
 
     {{% alert color="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
 
-3.  Add your own administration pages to monitor usage, if required.
+3. Add your own administration pages to monitor usage, if required.
 
     {{% alert color="info" %}}If you are using Mendix SSO version 2, you can use the *default* user administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
 
@@ -245,7 +245,7 @@ You need to tell the Mendix SSO Module to use your new entity, instead of the de
 
 3. Change the **End event** of the microflow to return an object of the correct type.
 
-4.  Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your custom user entity instead of MendixSSOUser
+4. Change the Parameter of the **MendixSSO_UpdateUser** microflow in the module to be your custom user entity instead of MendixSSOUser
 
 5. Change the **Change object** action to set the correct members of the object.
 

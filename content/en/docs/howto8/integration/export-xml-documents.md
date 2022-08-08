@@ -44,12 +44,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto8/integration/18448731/18581813.xsd).
 
-1.  Right-click your module in the **Project Explorer** and select **Add other** > **XML schema**.
-2.  Enter *CustomersXSD* for the **Name** and click **OK**:
+1. Right-click your module in the **Project Explorer** and select **Add other** > **XML schema**.
+2. Enter *CustomersXSD* for the **Name** and click **OK**:
 
     {{< figure src="/attachments/howto8/integration/export-xml-documents/18581696.png" >}}
 
-3.  In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
+3. In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
 
     {{< figure src="/attachments/howto8/integration/export-xml-documents/18581812.png" >}}
 
@@ -66,9 +66,9 @@ The XML schema describes what the contents of an XML document should be. We need
     {{< figure src="/attachments/howto8/integration/export-xml-documents/18581849.png" >}}
 
 3. Click **OK**, and the **Select schema elements for export mapping** dialog box will automatically open. Now do the following:<br />
-    a. For **Schema source**, select **XML schema**.<br />
-    b. For the schema, select the previously added **CustomersXSD**.<br />
-    c. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
+    1. For **Schema source**, select **XML schema**.<br />
+    2. For the schema, select the previously added **CustomersXSD**.<br />
+    3. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
 
     {{< figure src="/attachments/howto8/integration/export-xml-documents/18581811.png" >}}
 
@@ -95,8 +95,8 @@ The XML schema describes what the contents of an XML document should be. We need
     {{< figure src="/attachments/howto8/integration/export-xml-documents/18581806.png" >}}
 
 8. In the mapping editor, verify the following:<br />
-    a. **Method** is set to **By association**<br />
-    b. **Association to parent** is set to **XMLDocument_Customer**<br />
+    1. **Method** is set to **By association**<br />
+    2. **Association to parent** is set to **XMLDocument_Customer**<br />
 9. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
 
     {{< figure src="/attachments/howto8/integration/export-xml-documents/18581807.png" >}}

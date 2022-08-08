@@ -36,7 +36,7 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Integration](/refguide/integration/)
 * [Security](/refguide/security/)
 
-##  2 Read More
+## 2 Read More
 
 * [Page Editor Consistency Errors](/refguide/consistency-errors-pages/)
 * [Navigation Consistency Errors](/refguide/consistency-errors-navigation/)

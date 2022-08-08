@@ -42,8 +42,8 @@ You can then access the following parts of the Mendix Platform:
 * [Studio](/studio/)
 * **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
 * **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
-	* Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
-	* For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)
+    * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
+    * For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)
 * [Control Center](/developerportal/control-center/)
 * [Marketplace](/appstore/)
 * [Data Hub](/data-hub/)
@@ -121,4 +121,3 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 ## 6 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:
-

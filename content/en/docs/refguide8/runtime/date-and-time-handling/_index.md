@@ -13,9 +13,9 @@ The Mendix Server operations use the time zone of the user instead of the server
 
 There are three time zones that come into play in a Mendix application:
 
-1.  User/client: The time zone where the client is running is used for presenting dates and times to the end-user. The time zone is now (optionally) stored with each user to properly deal with daylight saving time. If the time zone is not set daylight saving time (DST) is not applied.
-2.  Coordinated Universal Time (UTC): The platform stores all dates in the UTC time zone. This is a time standard that is often used in servers to provide an unambiguous date format. It does not change with a change of the seasons (DST). Every time a date or time is presented to the user it is localized to the time zone of the client unless specified differently.
-3.  Server: The time zone that the server is running in is only used for scheduling the time at which scheduled events run. When defining a scheduled event you can choose whether you want to use server time or UTC time. For everything else, the server time is irrelevant.
+1. User/client: The time zone where the client is running is used for presenting dates and times to the end-user. The time zone is now (optionally) stored with each user to properly deal with daylight saving time. If the time zone is not set daylight saving time (DST) is not applied.
+2. Coordinated Universal Time (UTC): The platform stores all dates in the UTC time zone. This is a time standard that is often used in servers to provide an unambiguous date format. It does not change with a change of the seasons (DST). Every time a date or time is presented to the user it is localized to the time zone of the client unless specified differently.
+3. Server: The time zone that the server is running in is only used for scheduling the time at which scheduled events run. When defining a scheduled event you can choose whether you want to use server time or UTC time. For everything else, the server time is irrelevant.
 
 For brevity we will call these time zones user time, UTC and server time.
 
@@ -47,15 +47,13 @@ If you do nothing in a multiple time zone project the situation for server opera
 
 There are several things you can do in a multiple time zone project:
 
-*   Nothing. If you do nothing server operations will use the user's current UTC offset and this is a reasonable approximation of actually setting the time zone. Only DST will not be handled properly.
-*   Allow the users to set their own time zone. Add the time zone reference selector to the page with which users can manage their own account, by default MyAccount in Administration. When doing this, take note that a timezone will only effectively be updated after a user logged out and back in.
-*   The administrator sets the time zone. Add the time zone reference selector to the page with which the administrator manages accounts, by default Account_NewEdit in Administration. If the application does not have too many users this is a viable solution.
-*   Automatically set the time zone by using a microflow. If your application is used in few time zones and you can automatically determine which users should which time zone you can write an after startup microflow to set the time zones. For example, if the application is used in the United States and in the Netherlands and all users in the United States have their language set to American English and all users in the Netherlands have their language set to Dutch a microflow can loop through all users and set the time zone based on the language code of the user.
+* Nothing. If you do nothing server operations will use the user's current UTC offset and this is a reasonable approximation of actually setting the time zone. Only DST will not be handled properly.
+* Allow the users to set their own time zone. Add the time zone reference selector to the page with which users can manage their own account, by default MyAccount in Administration. When doing this, take note that a timezone will only effectively be updated after a user logged out and back in.
+* The administrator sets the time zone. Add the time zone reference selector to the page with which the administrator manages accounts, by default Account_NewEdit in Administration. If the application does not have too many users this is a viable solution.
+* Automatically set the time zone by using a microflow. If your application is used in few time zones and you can automatically determine which users should which time zone you can write an after startup microflow to set the time zones. For example, if the application is used in the United States and in the Netherlands and all users in the United States have their language set to American English and all users in the Netherlands have their language set to Dutch a microflow can loop through all users and set the time zone based on the language code of the user.
 
 {{% alert color="warning" %}}
-
 Do NOT use the default time zone setting in Studio Pro for multiple time zone projects because that will set the default time zone for all users!
-
 {{% /alert %}}
 
 ## 5 Anonymous users

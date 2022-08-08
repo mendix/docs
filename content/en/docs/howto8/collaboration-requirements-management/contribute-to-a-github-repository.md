@@ -31,7 +31,7 @@ To make changes to an existing repository, follow these guidelines:
 
 * Create a new branch from where you want to base your work on your fork (this is usually the repository's master branch)
 * To quickly create a branch based on master, use `git checkout -b fix/master/my_contribution master`
-	* Avoiding working directly on the master branch is advised
+    * Avoiding working directly on the master branch is advised
 * Make commits of logical units
 * Check for unnecessary whitespace with `git diff --check` before committing.
 * Make sure you have added the necessary tests for your changes
@@ -45,7 +45,7 @@ To submit changes, follow these guidelines:
 * Submit a pull request to the appropriate repository in the Mendix organization (for more information, see [About Pull Requests](https://help.github.com/articles/using-pull-requests/))
 * Mention the ID's for any issues that are fixed by the changes (for more information, see [Closing Issues Using Keywords](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
 * After feedback has been given, Mendix expects a response within two weeks
-	* After two weeks, we may close the pull request if it isn't showing any activity
+    * After two weeks, we may close the pull request if it isn't showing any activity
 
 ## 5 Read More
 

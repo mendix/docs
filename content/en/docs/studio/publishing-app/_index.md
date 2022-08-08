@@ -35,9 +35,7 @@ You cannot preview your app if it has [consistency errors](/studio/consistency-e
 If your app has security enabled, in the preview mode you will be able to check how your app looks like for different user roles. For more information on how to test different user roles, see the [Testing Your Roles](/studio/settings-security/#testing-your-roles) section in *Security, Roles & Permissions*. 
 
 {{% alert color="info" %}}
-
-The app preview is your personal preview of the app. Hence, only users logged into Studio can preview the app, and the preview app will no longer be running when you exit Studio.  
-
+The app preview is your personal preview of the app. Hence, only users logged into Studio can preview the app, and the preview app will no longer be running when you exit Studio.
 {{% /alert %}}
 
 ## 3 Publishing Your App {#publishing-your-app}
@@ -47,7 +45,7 @@ Published app is the real app that you and your end-users will access and use. W
 To publish your application, follow these steps:
 
 1. Click **Publish** in the top menu bar of Studio. 
-2.  In the **Publish your app** pop-up message, click the **Publish** button to push the latest changes from Studio to the published app or to publish the app for the first time. 
+2. In the **Publish your app** pop-up message, click the **Publish** button to push the latest changes from Studio to the published app or to publish the app for the first time. 
 
     {{< figure src="/attachments/studio/publishing-app/publish-button.jpg" alt="Publishing and Updating Your App" >}}
 
@@ -84,14 +82,12 @@ Your published app is opened in the browser.
 
 To view your app on a mobile device, follow these steps:
 
-1.  Click **Publish** button in the upper-right corner.
-
+1. Click **Publish** button in the upper-right corner.
 2. In the **Publish your app** pop-up message, click **View current app**:
 
     {{< figure src="/attachments/studio/publishing-app/view-current-app.jpg" alt="View Current App" >}}
 
 3. Scan the QR code to view your app on your mobile device.
-
 
 Your app is opened on your mobile device.
 

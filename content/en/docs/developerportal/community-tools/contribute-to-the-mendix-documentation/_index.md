@@ -90,22 +90,22 @@ Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-writing-guidelines/)
 * Make sure the document files comply with these naming conventions:
-	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
-	* Document file names should always be lower-case with a hyphen (`-`) between each word
-	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+    * Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
+    * Document file names should always be lower-case with a hyphen (`-`) between each word
+    * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * Make sure the image files comply with these naming conventions:
-	* Image file names should always be lower-case with a hyphen (`-`) between each word
-	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
-	* Make sure the image files have names that make sense so it is easy to find them
-	* Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located (this sub-folder should have the same name as the document file name you are working on)
-	* The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
+    * Image file names should always be lower-case with a hyphen (`-`) between each word
+    * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+    * Make sure the image files have names that make sense so it is easy to find them
+    * Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located (this sub-folder should have the same name as the document file name you are working on)
+    * The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
 
 ### 5.3 Submitting Your Work
 
 When you are ready to submit your work, follow these guidelines:
 
-*  Commit new Markdown files via Sourcetree or via the **Create new file** button in the [Mendix GitHub repo](https://github.com/mendix/docs) (where you can copy-paste your text)
-*  Commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo (where you can drag and drop your image files)
+* Commit new Markdown files via Sourcetree or via the **Create new file** button in the [Mendix GitHub repo](https://github.com/mendix/docs) (where you can copy-paste your text)
+* Commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo (where you can drag and drop your image files)
 
 Finally, create a pull request that specifies the Mendix **development** branch as the base (for more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/)).
 

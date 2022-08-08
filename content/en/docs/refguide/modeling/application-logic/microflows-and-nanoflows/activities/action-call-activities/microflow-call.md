@@ -56,8 +56,8 @@ The type of the parameter that is read-only. For more information on possible ty
 
 The **Edit parameter value** button allows you to edit the argument value. For each parameter of the microflow, you need to supply an argument of the same type. The values of the arguments are expressed using [expressions](/refguide/expressions/). There is a difference in the way argument values are passed to a sub-microflow:
 
-  * Lists and objects are passed as references (meaning, if the list/object is changed in a sub-microflow, the original list/object is altered)
-  * Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
+* Lists and objects are passed as references (meaning, if the list/object is changed in a sub-microflow, the original list/object is altered)
+* Primitive types (strings, numbers, etc.) are passed as values (meaning, they are immutable, and not changeable via sub-microflows)
 
 {{% alert color="warning" %}}
 When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*.
@@ -92,7 +92,6 @@ The name of the variable, list, or object returned by the activity.
 ## 4 Microflow Calls in Offline-First Apps
 
 It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*
-
 
 ## 5 Common Section {#common}
 

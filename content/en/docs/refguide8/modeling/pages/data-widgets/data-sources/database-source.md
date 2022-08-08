@@ -24,9 +24,7 @@ The **Entity (path)** property specifies the target of the database query. If yo
 {{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png" alt="Data Source Example"   width="400"  >}}
 
 {{% alert color="info" %}}
-
 This differs from the [association data source](/refguide8/association-source/) when objects are retrieved from the memory, not database.
-
 {{% /alert %}}
 
 ### 2.2 Show Search Bar {#show-search-bar}
@@ -59,9 +57,7 @@ Each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
 Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in constraints, but you can switch to an [XPath data source](/refguide8/xpath-source/) and create an XPath constraint.
 
 {{% alert color="warning" %}}
-
 Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](/refguide8/access-rules/) for entities should be used as they can be applied to an individual user role and they apply system-wide.
-
 {{% /alert %}}
 
 ## 3 Read More

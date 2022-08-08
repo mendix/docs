@@ -58,9 +58,7 @@ The **Expand** section > **Add Row** allows you to add a row above or below the 
 To add a row, select a row in the layout grid and click one of the buttons in **Add Row**. A row identical to the selected one will be inserted.
 
 {{% alert color="info" %}}
-
 **Row** and **Column** also have the **Expand** section with the same properties.  
-
 {{% /alert %}}
 
 #### 2.1.2 General Section {#general-section}
@@ -136,13 +134,13 @@ You can place a widget or a group of widgets inside each tab and configure infor
 
 In the **General** section, you can configure the following properties:
 
-*  **Tabs** – use radio buttons to switch from one tab to another; click the tab and drag it to change the order of tabs; click the **Edit** icon to open the tab properties and configure it (for more information, see section [5.3 Tab Properties](#tab-properties))
+* **Tabs** – use radio buttons to switch from one tab to another; click the tab and drag it to change the order of tabs; click the **Edit** icon to open the tab properties and configure it (for more information, see section [5.3 Tab Properties](#tab-properties))
 
-	{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-tabs-property.png"   width="300"  >}}
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-tabs-property.png"   width="300"  >}}
 
-*  **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section [5.3 Tab Properties](#tab-properties))
+* **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section [5.3 Tab Properties](#tab-properties))
 
-	{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-structure/add-new-tab.png"   width="300"  >}}
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-structure/add-new-tab.png"   width="300"  >}}
 
 ### 6.2 Tab Container Design Properties
 
@@ -153,10 +151,9 @@ For information on the **Design** section and its properties, see [Design Sectio
 Each tab has the following properties: 
 
 * **Caption** – defines the name of the tab; you can also edit the caption by double-clicking it in the page 
+* **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
 
-*  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
-
-	{{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-properties.png"   width="300"  >}}
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-properties.png"   width="300"  >}}
 
 ## 7 Read More
 

@@ -25,5 +25,3 @@ Mendix Studio Pro allows you to create, view, and edit your Mendix applications.
 For more introductory information, see [Studio Pro Overview](/refguide/studio-pro-overview/).
 
 ## 2 Documents in This Category
-
-

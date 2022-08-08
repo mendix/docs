@@ -61,9 +61,9 @@ To send your runtime information to AppDynamics, you need to set it up using env
     4. APPDYNAMICS_CONTROLLER_HOST_NAME
 
         The hostname or the IP address of the AppDynamics Controller without the *scheme* (protocol). This is the same host that you use to access the AppDynamics browser-based user interface. Example values are `192.168.1.22` or `myhost` or `myhost.example.com`.
-        
+
         For an on-premises Controller, use the value for Application Server Host Name that was configured when the Controller was installed.
-        
+
         For the AppDynamics SaaS Controller service, see the welcome email from AppDynamics.
 
     5. APPDYNAMICS_AGENT_APPLICATION_NAME
@@ -94,11 +94,11 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         *Default: Environment ID of the app*
 
-For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring)(https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring#OverviewofApplicationMonitoring-Nodes) in the AppDynamics documentation.
+    For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring)(https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring#OverviewofApplicationMonitoring-Nodes) in the AppDynamics documentation.
 
-5.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+5. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-	{{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to AppDynamics.{{% /alert %}}
+    {{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to AppDynamics.{{% /alert %}}
 
 ## 4 Additional Information{#additional-info}
 

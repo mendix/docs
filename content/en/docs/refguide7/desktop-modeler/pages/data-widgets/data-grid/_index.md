@@ -35,13 +35,13 @@ Even if the control bar buttons are invisible, there can still be a default butt
 
 {{% /alert %}}
 
-_Default value:_ True
+*Default value:* True
 
 #### Show Paging Buttons
 
 This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid.
 
-_Default value:_ True
+*Default value:* True
 
 {{% snippet file="/static/_includes/refguide7/Column+Width+Properties.md" %}}
 
@@ -49,13 +49,13 @@ _Default value:_ True
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
-_Default value:_ 20
+*Default value:* 20
 
 #### Show Empty Rows
 
 If you choose to show empty rows there will always be the grid will always show the same number of rows (see 'Number of rows') even if there are less objects to show on the page.
 
-_Default value:_ False
+*Default value:* False
 
 #### Selection Mode
 
@@ -69,13 +69,13 @@ The selection mode determines whether and how the user can select items in the g
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. This was the default multi-selection behavior prior to version 3.1.0. |
 
-_Default value:_ Single selection
+*Default value:* Single selection
 
 #### Select First
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
-_Default value:_ False
+*Default value:* False
 
 #### Default Button Trigger{#dbt}
 
@@ -86,13 +86,13 @@ The default button can be triggered by a single or a double click a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click | A double click triggers the default button. |
 
-_Default value:_ Double click
+*Default value:* Double click
 
 #### Refresh Time (in Seconds)
 
 If the refresh time is non-zero, the data grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
-_Default value:_ 0
+*Default value:* 0
 
 #### Tooltip Page
 
@@ -110,10 +110,10 @@ The data grid supports the following types of data sources: [Database Source](/r
 
 See the corresponding data source for its properties:
 
-*   [Database source](/refguide7/database-source/)
-*   [XPath source](/refguide7/xpath-source/)
-*   [Microflow source](/refguide7/microflow-source/)
-*   [Association source](/refguide7/association-source/)
+* [Database source](/refguide7/database-source/)
+* [XPath source](/refguide7/xpath-source/)
+* [Microflow source](/refguide7/microflow-source/)
+* [Association source](/refguide7/association-source/)
 
 ### Visibility Properties
 
@@ -135,15 +135,15 @@ The class property allows you to specify a cascading style sheet (CSS) class for
 
 Note that the styling is applied in the following order:
 
-1.  Default styling defined by the theme the project uses.
-2.  The 'Class' property of the widget.
-3.  The 'Style' property of the widget.
+1. Default styling defined by the theme the project uses.
+2. The 'Class' property of the widget.
+3. The 'Style' property of the widget.
 
 {{% /alert %}}
 
 #### Style Property
 
-The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
+The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class.
 
 {{% alert color="info" %}}
 
@@ -173,13 +173,13 @@ A column connected to an attribute of type enumeration can show its contexts as 
 
 The precision of a value is defined the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 
-_Default value:_ 2
+*Default value:* 2
 
 ##### Group Digits (Only for Numeric Attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
 
-_Default value:_ False
+*Default value:* False
 
 ##### Date Format (Only for Attributes of Type DateTime)
 
@@ -187,7 +187,7 @@ The date format determines whether the date part, the time part or both are show
 
 Possible values: 'Date', 'Time', 'Date and time' and 'Custom'.
 
-_Default value:_ Date
+*Default value:* Date
 
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules in this table,
 
@@ -263,7 +263,7 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the data grid.
 
-_Default value:_ False
+*Default value:* False
 
 ### Control Bar
 

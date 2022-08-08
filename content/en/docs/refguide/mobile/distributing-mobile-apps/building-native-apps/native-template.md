@@ -63,7 +63,7 @@ App-specific information is defined in a top level **config** file. The best way
 **<details><summary>To see the supported properties as of config version 2, click here.</summary>**
 These are the supported properties as of config version 2:
 
-```
+```text
 interface NativeTemplateConfig {
     configVersion: 2;
     appName: string;
@@ -115,12 +115,13 @@ export interface Orientation {
     landscape: boolean;
 }
 ```
+
 </details>
 
 **<details><summary>To see an example of a configured app, click here.</summary>**
 This is an example of a configured app:
 
-```
+```text
 {
     "configVersion": 2,
     "appIdentifier": "com.mendix.mobile",
@@ -189,14 +190,14 @@ This is an example of a configured app:
 }
 
 ```
-</details>
 
+</details>
 
 ### 5.2 Assets
 
 The Mobile Toolkit supports configuring splash screens and the icons for your app. Assets are expected to be saved relative to the root of the Native Template in a folder named **assets**.
 
-```
+```text
 - assets
     - icons
     - splashScreens
@@ -210,7 +211,7 @@ The actual asset files defined under filename are expected to be available next 
 
 The version is required and used for backwards compatibility purposes. Below you see the config using **version 1**:
 
-```
+```json
 interface IOSIconsConfig {
     "images": Array<{
             "size": string",
@@ -227,7 +228,7 @@ interface IOSIconsConfig {
 
 This is an example of all the keys required to successfully configure an app: 
 
-```
+```json
 {
     "images": [
         {
@@ -360,6 +361,7 @@ This is an example of all the keys required to successfully configure an app:
     "version": 1
 }
 ```
+
 </details>
 
 #### 5.2.2 Android Icons
@@ -370,7 +372,7 @@ The actual asset files defined under filename are expected to be available next 
 
 The version is required and used for backwards compatibility purposes. For now the config is on version 1:
 
-```
+```json
 interface AndroidIconsConfig {
     "images": Array<{
             "directory": "mipmap-mdpi" | "mipmap-hdpi" | "mipmap-xhdpi" | "mipmap-xxhdpi"
@@ -385,7 +387,7 @@ interface AndroidIconsConfig {
 
 This is an example of all the keys required to successfully configure an app: 
 
-```
+```json
 {
     "images": [
         {
@@ -442,6 +444,7 @@ This is an example of all the keys required to successfully configure an app:
     "version": 1
 }
 ```
+
 </details>
 
 #### 5.2.3 iOS Splash Screens
@@ -452,7 +455,7 @@ The actual asset files defined under filename are expected to be available next 
 
 The version is required and used for backwards compatibility purposes. For now the config is on version 1:
 
-```
+```json
 interface AndroidSplashScreensConfig {
       "images": Array<{
               "size": "640x960" | "375x667" | "414x736",
@@ -467,7 +470,7 @@ interface AndroidSplashScreensConfig {
 
 Here is an example of the file with all required splash screens defined: 
 
-```
+```json
 {
     "images": [
         {
@@ -504,7 +507,7 @@ The actual asset files defined under filename are expected to be available next 
 
 The version is required and used for backwards compatibility purposes. For now the config is on version 1:
 
-```
+```json
 interface AndroidSplashScreensConfig{
   "images": Array<{
           "filename": "splash.png";
@@ -517,7 +520,7 @@ interface AndroidSplashScreensConfig{
 
 Here is an example of the file with all required splash screens defined: 
 
-```
+```json
 {
     "images": [
         {
@@ -569,7 +572,7 @@ To run the toolkit using the run script defined in *package.json*, run `npm run 
 
 Having the configuration file relative to the root directory is not required for the toolkit, but is done for convenience. To specify a different configuration file path the toolkit can be executed using the following command:
 
-```
+```text {linenos=false}
 native-mobile-toolkit configure --config-path='./<name of the configuration>.json' --verbose
 ```
 
@@ -587,9 +590,9 @@ To do so:
 
 1. Locate the required Studio Pro installation.
 1. Find the path to the executable **mxbuild.exe** and note it down. 
-1.  Open a command line and run this command: 
-   
-    ```
+1. Open a command line and run this command: 
+
+    ```text {linenos=false}
     <path-to-mxbuild.exe> --java-home=DIRECTORY -java-exe-path=FILENAME --target=deploy --native-packager <path-to-the-app-mpr>
     ```
 
@@ -600,7 +603,7 @@ This command does the following:
 
 The bundle folder structure will look something like this: 
 
-```
+```text
 - android
     - res
         - drawable-mdpi

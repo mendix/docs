@@ -31,6 +31,7 @@ There is more information on how this is done in the Cloud Foundry buildpack in 
 In versions of Mendix below 9.13.0, durations, intervals, and timeouts have to be specified as a number. This can be somewhat confusing because
 different units are used for different settings. Also, specifying long durations in milliseconds can be a bit cumbersome.
 In Mendix 9.13.0 and above it is possible to specify durations in more user-friendly formats:
+
 * **ISO 8601 Periods**, such as `P7D`, `PT1H30M`, or `PT1S` (See https://en.wikipedia.org/wiki/ISO_8601#Durations for more information)
 * **HOCON durations**, such as `7 days`, `90m`, or `1 second` (See https://github.com/lightbend/config/blob/main/HOCON.md#duration-format for more information)
 

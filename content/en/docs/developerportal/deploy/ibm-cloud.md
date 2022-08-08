@@ -409,7 +409,6 @@ Mendix needs access to a relational database back end and can run using differen
 
 When you create your environment on IBM Cloud, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
 
-
 ## 9 Issues
 
 ### 9.1 Environment is not Created

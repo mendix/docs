@@ -289,7 +289,7 @@ Previously, non-editable input controls of input widgets with **Read-only style*
 
 Read-only controls with **Read-only style** set to **Text** are now rendered as the following:
 
-```html
+```html {linenos=false}
 <div class="form-control-static">value</div>
 ```
 
@@ -305,19 +305,19 @@ A few examples of various input controls are listed below.
 
 Text box:
 
-```html
+```html {linenos=false}
 <input class="form-control" type="text" id="123_abc" />
 ```
 
 Text area:
 
-```html
+```html {linenos=false}
 <textarea class="form-control mx-textarea-input mx-textarea mx-textarea-input-noresize"></textarea>
 ```
 
 Check box:
 
-```html
+```html {linenos=false}
 <input type="checkbox" value="" />
 ```
 
@@ -380,9 +380,9 @@ Because the calendar pop-up window is no longer implemented using the Dojo frame
 * All classes starting with `dijit` have been removed
 * The outermost `<div>` element now has the class `mx-calendar`
 * The `<td>` elements, which represent the days in the calendar view, get the following classes:
-	* `mx-calendar-day-month-current`, `mx-calendar-day-month-previous` or `mx-calendar-day-month-next`: depending on whether the day falls in the current, previous, or next month
-	* `mx-calendar-day-selected`: if the day is currently selected in the date picker for which the calendar was opened
-	* `mx-calendar-day-active`:  if the day currently has the focus
+    * `mx-calendar-day-month-current`, `mx-calendar-day-month-previous` or `mx-calendar-day-month-next`: depending on whether the day falls in the current, previous, or next month
+    * `mx-calendar-day-selected`: if the day is currently selected in the date picker for which the calendar was opened
+    * `mx-calendar-day-active`:  if the day currently has the focus
 * The `<span>` elements inside the `<td>` and `<th>` elements have been removed
 
 The month header now has the following structure:

@@ -78,17 +78,15 @@ You would like to set the following fields as required for employees:
 To set a field as required, do the following:
 
 1. Open the **Employee Details** page.
-
 2. Select the **Name** field and open its properties.
-
 3. In the **Input Validation** section, set the **Validation Type** property to **Required**:
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-type-required.png"   width="250"  >}}
-    
+
 4. When an employee attempts to leave this fields empty, an error message will be displayed under the field. Specify this message in the **Message** property:
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-set-validation-and-editability/validation-message.png"   width="250"  >}}
-    
+
 5. Repeat steps 2-4 for **Address**, **Email**, and **Phone** fields to set them as required too. 
 
 Good job! Now when an employee attempts to leave **Name**, **Address**, **Email**, or **Phone** fields empty and tries to save changes, an error message will be displayed under the field saying "This field is required":

@@ -20,9 +20,9 @@ After completing this how-to, you will be able to generate apps with the followi
 
 To be able to create such a domain model, there are several questions that you need an answer to:
 
-1.  Which parts of the app do you want to change?
-2.  Which SDK classes do you need to use?
-3.  How do you use those SDK classes?
+1. Which parts of the app do you want to change?
+2. Which SDK classes do you need to use?
+3. How do you use those SDK classes?
 
 The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [Studio Pro Guide](/refguide/), [References](/apidocs-mxsdk/mxsdk/sdk-refguide/), and the [Model SDK API](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html) documentation.
 
@@ -68,21 +68,21 @@ invoice.location = { x: 400, y: 100 };
 
 *Studio Pro Guide*
 
-*   [Domain Model](/refguide/domain-model/)
-*   [Entities](/refguide/entities/)
+* [Domain Model](/refguide/domain-model/)
+* [Entities](/refguide/entities/)
 
 Metamodel reference guide
 
-*   [Domain Model](/apidocs-mxsdk/mxsdk/domain-model-metamodel/)
+* [Domain Model](/apidocs-mxsdk/mxsdk/domain-model-metamodel/)
 
 Model SDK API docs
 
-*   [domainmodels.Entity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html)
-*   [Entity.name](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)
+* [domainmodels.Entity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html)
+* [Entity.name](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)
 
-*   [Entity.documentation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation)
+* [Entity.documentation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation)
 
-*   [Entity.location](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)
+* [Entity.location](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)
 
 ## 3 Creating an Association
 
@@ -126,16 +126,16 @@ invoices.parentConnection = { "x": 0, "y": 30 };
 
 *Studio Pro Guide*
 
-*   [Associations](/refguide/associations/)
+* [Associations](/refguide/associations/)
 
 Metamodel reference guide
 
 Model SDK API docs
 
-*   [Association](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
-*   [AssociationBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.associationbase.html)
-*   [Association.parent](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#parent)
-*   [Association.child](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#child)
+* [Association](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
+* [AssociationBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.associationbase.html)
+* [Association.parent](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#parent)
+* [Association.child](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#child)
 
 ## 4 Configuring a Generalization
 
@@ -174,15 +174,15 @@ generalization.generalization = systemUser;
 
 *Studio Pro Guide*
 
-*   [Entities](/refguide/entities/)
+* [Entities](/refguide/entities/)
 
 Metamodel reference guide
 
 Model SDK API docs
 
-*   [Generalization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)
-*   Property  [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
-*   [NoGeneralization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
+* [Generalization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)
+* Property  [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
+* [NoGeneralization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
 
 ## 5 Conclusion
 

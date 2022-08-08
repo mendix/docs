@@ -33,24 +33,24 @@ This defines the prop `key` in the client component props which are supplied to 
 This defines a property's type. A `type` must be one of the following: 
 
 * Static Types
-	* [string](#string)
-	* [boolean](#boolean)
-	* [integer](#integer)
-	* [decimal](#decimal)
-	* [enumeration](#enumeration)
+    * [string](#string)
+    * [boolean](#boolean)
+    * [integer](#integer)
+    * [decimal](#decimal)
+    * [enumeration](#enumeration)
 * Component Types
-	* [icon](#icon)
-	* [image](#image)
-	* [widgets](#widgets)
+    * [icon](#icon)
+    * [image](#image)
+    * [widgets](#widgets)
 * Dynamic Types
-	* [expression](#expression)
-	* [textTemplate](#texttemplate)
-	* [action](#action)
-	* [attribute](#attribute)
-	* [association](#association)
-	* [object](#object)
-	* [file](#file)
-	* [datasource](#datasource)
+    * [expression](#expression)
+    * [textTemplate](#texttemplate)
+    * [action](#action)
+    * [attribute](#attribute)
+    * [association](#association)
+    * [object](#object)
+    * [file](#file)
+    * [datasource](#datasource)
 
 ### 1.2 XML Elements
 
@@ -75,7 +75,6 @@ The string property type is represented as a simple text input in Studio Pro. It
 | `defaultValue` | No       | String         | Default value for the property                              |
 | `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
-
 
 #### 2.1.2 Studio Pro UI
 
@@ -111,11 +110,11 @@ Properties of type Boolean are represented as a toggle in Studio Pro. They are p
 
 #### 2.2.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
-| -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`         | Yes      | String         | Must be `boolean`                                                                                                                                                    |
-| `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | Yes      | Boolean        | Default value for the property, `true` or `false`                                                                                                                    |
+| Attribute | Required | Attribute Type | Description |
+| - | - | - | - |
+| `type` | Yes | String | Must be `boolean` |
+| `key` | Yes | String | See [key](#key) |
+| `defaultValue` | Yes | Boolean | Default value for the property, `true` or `false` |
 
 #### 2.2.2 Studio Pro UI
 
@@ -241,6 +240,7 @@ Properties of type icon allows a user to configure an icon similar to one used b
 | `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
 | `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 3.1.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -271,6 +271,7 @@ GIF images are not supported in native mobile apps on Android devices.
 | `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
 | `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 3.2.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -398,7 +399,6 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `multiline`  | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise                                                                                                   |
 | `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
-
 
 #### 4.2.2 XML Elements
 

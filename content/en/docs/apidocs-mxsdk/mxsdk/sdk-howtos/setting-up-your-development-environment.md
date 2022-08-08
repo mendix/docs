@@ -28,9 +28,9 @@ $ tsc --init --target es2020
 
 To set up your development tools, follow these steps:
 
-1.  Install the latest LTS version of [Node.js](https://nodejs.org/). If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
+1. Install the latest LTS version of [Node.js](https://nodejs.org/). If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
 
-2.  Open a terminal (on Windows, [Command Prompt](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)) and run the following command:
+2. Open a terminal (on Windows, [Command Prompt](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)) and run the following command:
 
     ```bash
     $ node --version
@@ -41,14 +41,14 @@ To set up your development tools, follow these steps:
 
     In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
-3.  Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
-4.  Install TypeScript 4.4.3 or higher with [`npm`](https://www.npmjs.com/) (or [`yarn`](https://yarnpkg.com/)), Node.js's package manager:
+3. Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
+4. Install TypeScript 4.4.3 or higher with [`npm`](https://www.npmjs.com/) (or [`yarn`](https://yarnpkg.com/)), Node.js's package manager:
 
-    ```bash
+    ```bash {linenos=false}
     $ npm install -g typescript
     ```
 
-5.  Use the following command to check the TypeScript compiler version on your PATH:
+5. Use the following command to check the TypeScript compiler version on your PATH:
 
     ```bash
     $ tsc --version
@@ -61,7 +61,7 @@ To set up your development tools, follow these steps:
 
 To set up a working directory for your script, follow these steps:
 
-1.  Create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json) with default contents. Through this file you control your `npm` package. 
+1. Create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json) with default contents. Through this file you control your `npm` package. 
 
     ```bash
     $ mkdir my-app-generator
@@ -71,13 +71,13 @@ To set up a working directory for your script, follow these steps:
 
     Visual Studio Code, other than Visual Studio, works with directories instead of project files.
 
-2.  Start **Visual Studio Code** and open the directory you just created. You can open a new instance of Code from the command line with the directory you want to open as first argument. For example, if your current working directory in your terminal is the directory in which all your project files live, use the following command to open Code:
+2. Start **Visual Studio Code** and open the directory you just created. You can open a new instance of Code from the command line with the directory you want to open as first argument. For example, if your current working directory in your terminal is the directory in which all your project files live, use the following command to open Code:
 
-    ```bash
+    ```bash {linenos=false}
     $ code .
     ```
 
-3.  Add `mendixmodelsdk`, and `mendixplatformsdk` as dependencies. 
+3. Add `mendixmodelsdk`, and `mendixplatformsdk` as dependencies. 
     Dependencies are stored in the `node_modules` directory (which will be automatically created by `npm` if necessary). Open the *package.json* you just created. Add a [`dependencies` block](https://docs.npmjs.com/files/package.json#dependencies) that looks like this:
 
     ```json
@@ -89,14 +89,15 @@ To set up a working directory for your script, follow these steps:
 
     When a new major version of the Mendix SDK is released (as in, 1.0.0 to 2.0.0) and you run `npm update` in your project folder, the `^` in front of the version number makes sure that the installed version of the SDK will not be upgraded automatically. Only minor and patch releases (as in, 1.1.1) of the SDK will be automatically upgraded; otherwise, your script could inadvertently be broken. You may, of course, edit the dependency by hand yourself.
 
-4.  Save your changes and then execute the following to install the dependencies:
+4. Save your changes and then execute the following to install the dependencies:
 
-    ```bash
+    ```bash {linenos=false}
     $ npm install
     ```
+
     If you are using version control, make sure to ignore the `node_modules` directory, otherwise you end up committing dependencies.
 
-5.  In Code, create a [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
+5. In Code, create a [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
 
     ```json
     {

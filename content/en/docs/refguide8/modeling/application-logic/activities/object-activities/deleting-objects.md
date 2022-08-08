@@ -77,11 +77,11 @@ For more information, see the [Microflows](/refguide8/offline-first/#microflows)
 Clicking a Delete button or triggering a delete activity will initiate the delete events. In addition, when an object is removed through the configured delete behavior, it will execute all before and after events.
 
 * Events: all before and after events are executed, and if any before-delete event returns false, an exception can be thrown
-	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
-	* Changes made prior to the rollback will be kept
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
+    * Changes made prior to the rollback will be kept
 * Database: if an object has the state **Instantiated**, there will be no database communication required
-	* For any other status, a delete query is executed in the database
+    * For any other status, a delete query is executed in the database
 * Result: the object will be removed from memory and if applicable from the database
-	* All delete behavior for the associations is validated, and any associated objects are removed as well
+    * All delete behavior for the associations is validated, and any associated objects are removed as well
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/deleting-objects/18582171.png" >}}

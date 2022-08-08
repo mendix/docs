@@ -41,13 +41,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 toLowerCase('thisISmyString')
 ```
 
 The output is the following:
 
-```java
+```java {linenos=false}
 'thisismystring'
 ```
 
@@ -75,13 +75,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 toUpperCase('thisISmyString')
 ```
 
 The output is the following:
 
-```java
+```java {linenos=false}
 'THISISMYSTRING'
 ```
 
@@ -137,6 +137,7 @@ The output is described in the table below:
 
 {{% alert color="warning" %}}
 The function will output an error for the following:
+
 * When the start position of the substring is after the last character in the string
 * When the desired length of the result is longer than the substring
 {{% /alert %}}
@@ -145,25 +146,25 @@ The function will output an error for the following:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 substring('thisismystring', 6)
 ```
 
 The output is the following:
 
-```java
+```java {linenos=false}
 'mystring'
 ```
 
 Another example of an input is:
 
-```java
+```java {linenos=false}
 substring('funwithmendixapps', 7,6)
 ```
 
 The output is the following:
 
-```java
+```java {linenos=false}
 'mendix'
 ```
 
@@ -193,37 +194,37 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 find('thisismystring', 'my')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 6
 ```
 
 Substring that doesn't occur in the original string:
 
-```java
+```java {linenos=false}
 find('thisismystring', 'yourstring')
 ```
 
 returns:
 
-```java
+```java {linenos=false}
 -1
 ```
 
 Another example of an input is:
 
-```java
+```java {linenos=false}
 find('thisismystring', 'i', 5)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 11
 ```
 
@@ -253,37 +254,37 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 findLast('thisismystring', 't')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 9
 ```
 
 Another example of an input where a substring does not occur in the original string:
 
-```java
+```java {linenos=false}
 findLast('thisismystring', 'yourstring')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 -1
 ```
 
 An example of an input with the third parameter:
 
-```java
+```java {linenos=false}
 findLast('thisismystring', 'i', 5)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 4
 ```
 
@@ -295,19 +296,19 @@ Determines whether the original string (first parameter) contains a substring (s
 
 For example, this expression: 
 
-```java
+```java {linenos=false}
 contains('stringtosearchin', 'stringtosearchfor')
 ```
 
 is equivalent to the following expression:
 
-```java
+```java {linenos=false}
 find('stringtosearchin', 'stringtosearchfor') != -1
 ```
 
 The example below shows searching for an empty variable or empty string, where `$param = ''`:
 
-```java
+```java {linenos=false}
 contains('stringtosearchin', $param)
 ```
 
@@ -338,13 +339,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 contains('thisismystring', 'my')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 true
 ```
 
@@ -373,13 +374,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 startsWith('thisismystring', 'this')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 true
 ```
 
@@ -408,13 +409,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 endsWith('thisismystring', 'ring')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 true
 ```
 
@@ -442,13 +443,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 trim(' this is my string     ')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'this is my string'
 ```
 
@@ -490,13 +491,13 @@ The output is described in the table below:
 
 This input below tests to see whether the string contains only numbers:
 
-```java
+```java {linenos=false}
 isMatch('234hello6432', '^([0-9]+)$')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 False
 ```
 
@@ -550,25 +551,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 replaceAll('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'this is a string with NUMBERNUMBER some numbers NUMBERNUMBERNUMBER thrown in'
 ```
 
 Another example of an input of the following:
 
-```java
+```java {linenos=false}
 replaceAll('this is a string with no numbers thrown in', '([0-9])', 'NUMBER')
 ```
 
 And the output is that there are no matches for the input:
 
-```java
+```java {linenos=false}
 'this is a string with no numbers thrown in'
 ```
 
@@ -611,13 +612,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 replaceFirst('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
@@ -652,25 +653,25 @@ The output is described in the table below:
 
 An example of an input to combine two strings can be the following:
 
-```java
+```java {linenos=false}
 'foo' + 'bar'
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'foobar'
 ```
 
 An example of an input to combine a string and a number can be the following:
 
-```java
+```java {linenos=false}
 4.73 + ' kilometers'
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 '4.73 kilometers'
 ```
 
@@ -680,7 +681,7 @@ Converts a string to be used in a URL. This function is useful when you want to 
 
 For example:
 
-```java
+```java {linenos=false}
 'http://google.com/search?q=' + urlEncode($myQuery)
 ```
 
@@ -704,13 +705,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 urlEncode('Hello, world!')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'Hello%2C+world%21'
 ```
 
@@ -738,12 +739,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 urlDecode('Hello%2C+world%21')
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 'Hello, world!'
 ```

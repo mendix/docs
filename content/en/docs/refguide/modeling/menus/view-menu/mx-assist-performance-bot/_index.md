@@ -81,9 +81,7 @@ The first level of assistance is **detection** that includes inspecting the app 
 To inspect your app model, click **Inspect now** in the **MxAssist Performance Bot** pane. 
 
 {{% alert color="info" %}}
-
 The **Inspect now** option will be disabled if there are consistency errors in the app. In this case, you need to resolve the consistency errors first. 
-
 {{% /alert %}}
 
 The bot will detect performance anti-patterns and list them in the pane under the associated anti-pattern type. To learn more about each anti-pattern type, click the anti-pattern code link. Click the plus icon next to the anti-pattern type to see the detected cases of this type:
@@ -98,10 +96,10 @@ The second level of assistance is **recommendation** – giving you an overview 
 
 There are two ways to view the recommendations:
 
-1.  Right-click an anti-pattern message on the pane and select **View MxAssist Performance Recommendation** in the drop-down menu. 
+1. Right-click an anti-pattern message on the pane and select **View MxAssist Performance Recommendation** in the drop-down menu. 
 2. Click an indicator in the visual editor to view the detected issue:
 
-   {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/indicator-in-editor.jpg" alt="Indicator in the Editor" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/indicator-in-editor.jpg" alt="Indicator in the Editor" >}}
 
 The recommendation contains the description of the identified issue, potential impact from it, the way to fix it, and a link to a more detailed guidance on fixing the issue: 
 

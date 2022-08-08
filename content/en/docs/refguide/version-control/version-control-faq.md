@@ -7,6 +7,7 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 ---
 
 ## 1 Introduction
+
 [Mendix Team Server](/developerportal/collaborate/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio and Mendix Studio Pro integrate into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
 
 ## 2 What Version Control System Is Team Server Built On?
@@ -58,18 +59,15 @@ You can run `git gc` in the command line to mitigate this. `git gc` runs a numbe
 
 We already do these housekeeping operations automatically on the Team Server, so you can also check out a fresh copy as an alternative . We are working to improve this in Studio Pro in an upcoming versions.
 
-
 ## 8 Can I Keep Using the Subversion Version of the Team Server?
 
 Yes, as we are introducing Team Server Git, we will maintain support for Team Server SVN. As we improve our offering for Team Server Git, we will introduce options to migrate your apps to Team Server Git from Team Server SVN.
 Mendix  is focusing on improving Team Server Git support and migrating customers to Team Server Git.
 
-
 ## 9 Can I Migrate from Team Server SVN to Git?
 
 Currently, there is no out-of-the-box migration service available that keeps historical data. This service is planned later in 2022.
 However, you can migrate manually by creating a new app based on Team Server Git, exporting the Team Server SVN app, and copying that to the new app repository. This does **not** preserve your app history.
-
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server?
 
@@ -83,7 +81,6 @@ If you have Git-based apps, you can also connect to a local repository.
 {{% alert color="info" %}}
 Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.
 {{% /alert %}}
-
 
 ## 11 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 
@@ -100,11 +97,10 @@ However, in this case the following products and capabilities are not available:
 For Git, connecting to a third-party Git version control repository is in Beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide/on-premises-git/#preparing-your-repo).
 {{% /alert %}}
 
-
 ## 12 Will Mendix 9 Support Pull Requests and Peer Reviews? 
 
 Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
 Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
+
 * code for Java & JavaScript actions
 * HTML/CSS for theming
-

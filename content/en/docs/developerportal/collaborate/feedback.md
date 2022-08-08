@@ -47,7 +47,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 
 * **Add feedback** will add a new feedback item to the **Open** tab of the app
 * **Export to Excel** will export the listed feedback items to an *.xls* file
-	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
+    * For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
 * **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**
 
 ## 4 Feedback Details {#feedback-details}
@@ -106,7 +106,7 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 5. Select the label(s) (if available ) to be added to the story under **Assign labels**.
 6. Click **Submit** to submit the story.
 
-	{{< figure src="/attachments/developerportal/collaborate/feedback/accept-feedback.png"   width="350"  >}}
+    {{< figure src="/attachments/developerportal/collaborate/feedback/accept-feedback.png"   width="350"  >}}
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 

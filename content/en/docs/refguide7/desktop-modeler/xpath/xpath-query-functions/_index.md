@@ -13,4 +13,3 @@ The following XPath query aggregate functions are available:
 * [sum](/refguide7/xpath-sum/)
 
 These functions must contain full queries as their arguments. However, the `avg`, `max`, `min`, and `sum` functions must specify a column in the query to aggregate.
-

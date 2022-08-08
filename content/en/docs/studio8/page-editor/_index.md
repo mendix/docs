@@ -15,9 +15,7 @@ To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in 
 {{< figure src="/attachments/studio8/page-editor/pages-icon.png"   width="300"  >}}
 
 {{% alert color="warning" %}}
-
 Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](/howto8/front-end/atlas-ui/).
-
 {{% /alert %}}
 
 Every page is *based on* a layout and a template:
@@ -45,8 +43,7 @@ After opening Studio, it automatically opens the home page of the app.
 To open a page in Studio, do the following:
 
 1. Click the **Pages** icon in the left menu bar. 
-
-2.  In the displayed list of app pages, select the one you want to open and click it.
+2. In the displayed list of app pages, select the one you want to open and click it.
 
     {{< figure src="/attachments/studio8/page-editor/opening-a-page.png"   width="400"  >}}
 
@@ -57,16 +54,15 @@ The selected page is opened.
 To create a new page in Studio, do the following:
 
 1. Click the **Pages** icon.
-
-2.  Click **New** in the top right corner of the displayed side panel.
+2. Click **New** in the top right corner of the displayed side panel.
 
     {{< figure src="/attachments/studio8/page-editor/new-page.png"   width="400"  >}}
 
-3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
+3. In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.
 
-	{{< figure src="/attachments/studio8/page-editor/create-new-page-dialog.png" >}}
+    {{< figure src="/attachments/studio8/page-editor/create-new-page-dialog.png" >}}
 
-5. Click **Create**.
+4. Click **Create**.
 
 A new page is created.
 
@@ -75,7 +71,6 @@ A new page is created.
 To duplicate an existing page, do the following:
 
 1. Click the **Pages** icon in the left menu bar.
-
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
     {{< figure src="/attachments/studio8/page-editor/duplicate-page.png" alt="Duplicate Page"   width="400"  >}}
@@ -87,8 +82,7 @@ The page is duplicated.
 To copy and paste a page, do the following:
 
 1. Click the **Pages** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
     {{< figure src="/attachments/studio8/page-editor/copy-page.png" alt="Copying a Page"   width="400"  >}}
 
@@ -104,13 +98,13 @@ To delete a page in Studio, do one of the following:
     1. Open the **Properties** tab.
     2. Click **Delete** at the bottom of the **Properties** tab.
 
-    {{< figure src="/attachments/studio8/page-editor/page-delete.png" >}}
+        {{< figure src="/attachments/studio8/page-editor/page-delete.png" >}}
 
 2. Click the **Pages** icon in the left menu bar and do the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
 
-		{{< figure src="/attachments/studio8/page-editor/delete-page.png" alt="Delete Page"   width="400"  >}}
+        {{< figure src="/attachments/studio8/page-editor/delete-page.png" alt="Delete Page"   width="400"  >}}
 
 The selected page is deleted.
 
@@ -151,7 +145,7 @@ The breadcrumb serves two functions:
 
 * Shows a bottom-up layering of a selected item on a page. For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page:
 
-	{{< figure src="/attachments/studio8/page-editor/breadcrumb.png" >}}
+    {{< figure src="/attachments/studio8/page-editor/breadcrumb.png" >}}
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
@@ -200,9 +194,7 @@ If you want to read documentation on a particular building block and to know mor
 {{< figure src="/attachments/studio8/page-editor/info-icon-building-blocks.png" >}}
 
 {{% alert color="info" %}}
-
 Building blocks categories may differ because Atlas UI can be customized using Studio Pro.
-
 {{% /alert %}}
 
 ## 6 Properties Tab {#page-editor-properties}

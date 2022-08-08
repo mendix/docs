@@ -86,7 +86,7 @@ The UI Resources module can be easily downloaded through the Mendix Marketplace 
 
 To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
-1.  Open the Mendix Marketplace in the Desktop Modeler and then select **UI Resources** in the left sidebar **Categories** menu:
+1. Open the Mendix Marketplace in the Desktop Modeler and then select **UI Resources** in the left sidebar **Categories** menu:
 
     {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_modeler.png" >}}
 

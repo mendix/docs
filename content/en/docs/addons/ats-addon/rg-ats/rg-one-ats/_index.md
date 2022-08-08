@@ -13,4 +13,3 @@ These are the main documents in this section:
 * [Test Run](/addons/ats-addon/rg-one-test-run/)
 * [Configuration](/addons/ats-addon/rg-one-configuration/)
 * [Administration](/addons/ats-addon/rg-one-administration/)
-

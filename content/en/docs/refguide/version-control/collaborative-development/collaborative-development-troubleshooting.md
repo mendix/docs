@@ -23,13 +23,13 @@ Normally, the Studio working copy is synchronized with Studio Pro when the Studi
 
 You can do one of the following:
 
-1.  **Merge** (recommended)–  Studio Pro will try to merge the unsynchronized changes from Studio automatically. Your local changes (if any) will be combined with the Studio changes. The changes from Studio are stored in an automatically created branch to ensure that there no changes lost in the process. The branch is visible in the branch line manager. This process can result in one of the following: <br/>
+1. **Merge** (recommended)–  Studio Pro will try to merge the unsynchronized changes from Studio automatically. Your local changes (if any) will be combined with the Studio changes. The changes from Studio are stored in an automatically created branch to ensure that there no changes lost in the process. The branch is visible in the branch line manager. This process can result in one of the following: <br/>
 
-	a.  If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Studio changes. You need to review the merged changes and commit them to get Studio and Studio Pro in sync again. And afterwards you can delete the automatically-created branch.<br/>
+    1. If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Studio changes. You need to review the merged changes and commit them to get Studio and Studio Pro in sync again. And afterwards you can delete the automatically-created branch.<br/>
 
-	b. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
+    1. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
 
-	{{< figure src="/attachments/refguide/version-control/collaborative-development/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
+    {{< figure src="/attachments/refguide/version-control/collaborative-development/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
 
 2. **Resolve Later** –  the changes can be merged later. In the meantime, changes from Studio and the Team Server development line will not be kept in sync. In this case, the dialog will appear again when committing/updating/merging changes. 
 
@@ -41,15 +41,14 @@ When a Studio enabled branch with a commit outside Studio Pro is being merged wi
 
 You can choose one of the following:
 
-1.  **Cancel Merge** (recommended) – you can cancel the process and try to synchronize with Studio first. Do the following:<br/>
-	a.  Open the Studio enabled development line.<br/>
-	b.  The warning described in the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section will be displayed.<br/>
+1. **Cancel Merge** (recommended) – you can cancel the process and try to synchronize with Studio first. Do the following:<br/>
+    1. Open the Studio enabled development line.<br/>
+    1. The warning described in the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section will be displayed.<br/>
 
-	{{< figure src="/attachments/refguide/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
+        {{< figure src="/attachments/refguide/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
 
-	c. Click **Merge** to synchronize the changes with Studio.<br/>
-
-	d. Open the previous branch and do the merge again. 
+    1. Click **Merge** to synchronize the changes with Studio.<br/>
+    1. Open the previous branch and do the merge again. 
 
 2. **Merge Anyway** – the merge will continue without changes from Studio. In this case only the changes from Studio Pro will be included. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section.
 
@@ -66,7 +65,6 @@ If there are network or service issues, Studio Pro will not be able to contact t
 You can do one of the following:
 
 1. **Cancel** (recommended) – the operation will be cancelled, you can try again later, when the network problems are solved.
-
 2. **Proceed** – the update process will continue, but the changes from Studio will not be retrieved. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section.
 
 ## 6 Another Operation Is in Progress

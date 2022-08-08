@@ -23,9 +23,9 @@ To convert your Mendix app to an Industrial Edge App, the following are required
 * A **deployment package (.mda)** of your Mendix app
 * The Industrial Edge App Publisher UI/CLI installed on your development PC
 
-   You need the following versions of the Industrial Edge App Publisher:
-   * IEAP UI: minimum V1.2.8  
-   * IEAP CLI: minimum V1.3.3
+    You need the following versions of the Industrial Edge App Publisher:
+    * IEAP UI: minimum V1.2.8
+    * IEAP CLI: minimum V1.3.3
 * [Docker](https://docs.docker.com/get-docker/) with [tcp Socket enabled](https://docs.docker.com/engine/reference/commandline/dockerd/) for Docker daemon
 * An Industrial Edge Management (IEM) to deploy your app 
 
@@ -56,7 +56,7 @@ To create your docker image using the IEAP UI, do the following:
 
 1. Select the workspace (an empty folder) which will be used by the Industrial Edge App Publisher to store the app related data.
 
-   {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/App_Publisher_Workspace.png" alt="Select Workspace" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/App_Publisher_Workspace.png" alt="Select Workspace" >}}
 
 2. Connect to the Docker daemon.
 
@@ -68,8 +68,8 @@ To create your docker image using the IEAP UI, do the following:
     3. Click **Browse** and select the **deployment package(.mda)** of your Mendix app.
     4. Click **Create**.
 
-      {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/select_mda_file.png" alt="Create docker image of Mendix app" >}}
-      
+        {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/select_mda_file.png" alt="Create docker image of Mendix app" >}}
+
 Once the Docker image is built, the next step is to create the Mendix Edge App.
 
 #### 3.2.2 Industrial Edge App Publisher CLI{#ieapcli}
@@ -77,13 +77,16 @@ Once the Docker image is built, the next step is to create the Mendix Edge App.
 Alternatively, to create the Docker image of your Mendix app using the IEAP CLI, enter the following commands into the CLI:
   
 1. Use the following command to connect to the Docker daemon:
-   ```shell
-   ie-app-publisher-linux de c -u http://127.0.0.1:2375
-   ```
+
+    ```shell {linenos=false}
+    ie-app-publisher-linux de c -u http://127.0.0.1:2375
+    ```
+
 2. Use the following command to create a Docker image of your Mendix app, `mymendixapp`:
-   ```shell
-   ie-app-publisher-linux im c -n mendixedge:latest -f /root/mymendixapp.mda
-   ```
+
+    ```shell {linenos=false}
+    ie-app-publisher-linux im c -n mendixedge:latest -f /root/mymendixapp.mda
+    ```
 
 Once the Docker image is built, the next step is to create the Mendix Edge App.
 
@@ -100,9 +103,9 @@ You can skip this step if you just want to create a standalone app which does no
 1. Log into your IEM.
 2. Create a project and the related Mendix app inside the project.
 
-   You can find the procedure and additional information on how to create a project and an app inside of it in the **Applications > My Projects** section of the [Industrial Edge Management - Operation](https://support.industry.siemens.com/cs/us/en/view/109799510) manual.
+    You can find the procedure and additional information on how to create a project and an app inside of it in the **Applications > My Projects** section of the [Industrial Edge Management - Operation](https://support.industry.siemens.com/cs/us/en/view/109799510) manual.
 
-   {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/IEM_Created_app.png" alt="Create docker image of Mendix app" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/IEM_Created_app.png" alt="Create docker image of Mendix app" >}}
 
 Once you have created the Mendix app on IEM side, you must create a version of your Mendix app in the Industrial Edge App Publisher.
 
@@ -126,11 +129,12 @@ Perform the following steps to create a version of your app on Industrial Edge u
 4. Click **Add New Version**.
 5. Enter all the required Docker Compose configurations and information for your Mendix app in the wizard. 
 6. In the wizard, select the Docker image which you have created above.
-   {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/Select_Mendix_Image.png" alt="Create docker image of Mendix app" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-app-on-industrial-edge/Select_Mendix_Image.png" alt="Create docker image of Mendix app" >}}
 7. Click **Save** and then **Review**.
 
-   The docker-compose.yml file for your Mendix app will resemble this example:
-   ```yaml
+    The docker-compose.yml file for your Mendix app will resemble this example:
+
+    ```yaml
     version: '2.3'
         services:
             mendixapp:
@@ -155,12 +159,12 @@ Perform the following steps to create a version of your app on Industrial Edge u
                 ports:
                    - '60000:8080'
                 
-   ```
+    ```
 
 8. Click **Validate & Create**.
 
-   This will create the version metadata in the workspace you selected earlier.
-   
+    This will create the version metadata in the workspace you selected earlier.
+
 9. Click **Start Upload** to upload the created app version. 
 
 #### 4.2.2 Industrial Edge App Publisher CLI
@@ -168,23 +172,30 @@ Perform the following steps to create a version of your app on Industrial Edge u
 To create the app version by using the IEAP CLI, use the following commands.
 
 1. Create an empty folder, and run the following command inside that folder to initialize a workspace:
-   ```shell
-   ie-app-publisher-linux ws i
-   ```
+
+    ```shell {linenos=false}
+    ie-app-publisher-linux ws i
+    ```
+
 2. Connect the Industrial Edge App Publisher to an Industrial Edge Management using the appropriate credentials:
-   ```shell
-   ie-app-publisher-linux em li -u "https://int.portal.t.edge.siemens.cloud" -e user@siemens.com -p P@ssword123
-   ```
+
+    ```shell {linenos=false}
+    ie-app-publisher-linux em li -u "https://int.portal.t.edge.siemens.cloud" -e user@siemens.com -p P@ssword123
+    ```
+
 3. List the project including its apps and fetch the `applicationId` which will be needed for creating an app version:
-   ```shell
-   ie-app-publisher-linux em pr l -k "projectId, name"
-   ie-app-publisher-linux em pr la -p "758aa412254545465" -k "applicationId, title"
-   ```
+
+    ```shell {linenos=false}
+    ie-app-publisher-linux em pr l -k "projectId, name"
+    ie-app-publisher-linux em pr la -p "758aa412254545465" -k "applicationId, title"
+    ```
+
 4. Create a version of your Mendix app using the `applicationId` you have just retrieved:
-   ```shell
-   ie-app-publisher-linux em app cuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' -y './docker-compose.yml' -c 'change logs' -n -n {"mendixapp":[{"name":"mendix","protocol":"HTTPS","port":"8080","headers":"","rewriteTarget":"/"}]}  -s 'mendix' -t 'FromBoxReverseProxy' -u '8080' -r '' 
-   ie-app-publisher-linux em app uuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' 
-   ```
+
+    ```shell
+    ie-app-publisher-linux em app cuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' -y './docker-compose.yml' -c 'change logs' -n -n {"mendixapp":[{"name":"mendix","protocol":"HTTPS","port":"8080","headers":"","rewriteTarget":"/"}]}  -s 'mendix' -t 'FromBoxReverseProxy' -u '8080' -r '' 
+    ie-app-publisher-linux em app uuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' 
+    ```
 
 ## 5 Install Your Mendix App on an Edge Device 
 

@@ -38,4 +38,4 @@ You should link this to the upcoming Mendix Marketplace release by mentioning th
 
 ## 5 Read More
 
-*   [How to Build Pluggable Web Widgets](/howto/extensibility/pluggable-widgets/)
+* [How to Build Pluggable Web Widgets](/howto/extensibility/pluggable-widgets/)

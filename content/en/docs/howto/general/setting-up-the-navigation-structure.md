@@ -21,35 +21,28 @@ Before starting this how-to make sure you have completed the following prerequis
 This section will explain how to set the default home page. 
 
 {{% alert color="info" %}}
-
 Note that the **Default home page** setting is overridden by a **Role-based home page** if you configure it. For more information, see the [Setting a Role-Based Home Page](#role-based-home-page).
-
 {{% /alert %}}
 
 Do the following:
 
-1.  Open **App** > **Navigation**.
-
+1. Open **App** > **Navigation**.
 2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
 
     1. Click **Add navigation profile**, select the profile type depending on the type of the interface you are working on:
 
-       {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/add-navigation-profile.jpg" >}}
+        {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/add-navigation-profile.jpg" >}}
 
     2. Click **OK**.
 
 3. In **Home pages** > **Default home page**, click **Select**.
-
 4. Select the page you want to use as the default home page. 
-
 5. Click **Select**.
 
 {{% alert color="info" %}}
-
 For online profiles you can set a microflow as a default home page. Make sure a *Show Page* activity is called from the startup microflow for each possible execution flow, or else the user will see nothing during execution paths where the activity is missing.
 
 For the native mobile profile you can set a nanoflow as a home page, either as a default or as a role-based. For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) section below.
-
 {{% /alert %}}
 
 Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
@@ -60,20 +53,20 @@ In many cases you would like users with different roles to see different home pa
 
 Follow the steps below:
 
-1.  Open the **Navigation** editor.
-2.  Open the profile type depending on the interface type you are working on. 
-3.  In **Home pages** > **Role-based home pages**, click **Edit**.
-4.  In the **Role-based home pages** dialog box, click **New**.
-5.  Select a user role to create a new setting, for example, select the **Administrator** role:
+1. Open the **Navigation** editor.
+2. Open the profile type depending on the interface type you are working on. 
+3. In **Home pages** > **Role-based home pages**, click **Edit**.
+4. In the **Role-based home pages** dialog box, click **New**.
+5. Select a user role to create a new setting, for example, select the **Administrator** role:
 
     {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/select-user-role.png" >}}
 
-6.  Click **Select**.
-7.  After you have selected the user role, click the **Select target** button.
+6. Click **Select**.
+7. After you have selected the user role, click the **Select target** button.
 
     {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/select-target.png" >}}
 
-8.  Select the home page for selected user role, for example, the **Account_Overview** page:
+8. Select the home page for selected user role, for example, the **Account_Overview** page:
 
     {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/select-page.png" >}}
 
@@ -99,15 +92,15 @@ To make the best nanoflow home pages, keep the following information in mind:
 
 You can create menu items for your navigation. Do the following:
 
-1.  Open the **Navigation** editor.
-2.  Open the profile type depending on the interface type you are working on. 
-3.  In the **Menu** section, click **New item** to create a top level menu item. 
-5.  Enter a **Caption** for your menu item. In the example below, the menu item is named *Customer Overview* after a page this menu item will open.
-6.  Select a page or microflow as a target:
+1. Open the **Navigation** editor.
+2. Open the profile type depending on the interface type you are working on. 
+3. In the **Menu** section, click **New item** to create a top level menu item. 
+4. Enter a **Caption** for your menu item. In the example below, the menu item is named *Customer Overview* after a page this menu item will open.
+5. Select a page or microflow as a target:
 
     {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/new-menu-item.png" >}}
 
-7.  Click **OK** to save the menu item.
+6. Click **OK** to save the menu item.
 
 In the overview of menu items you can see the name of the menu item, the target page/microflow, and the user role are the necessary settings to be configured for the menu item. The user roles are derived from the [page and microflow access settings](/refguide/module-security/). 
 
@@ -118,17 +111,15 @@ You can restructure the menu by dragging and dropping menu items.
 Now that you have created a menu structure, it is time to start using it on pages. Do the following:
 
 1. Open a page.
-
-2.  Click **Add widget** and select **Menu bar**:
+2. Click **Add widget** and select **Menu bar**:
 
     {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/select-menu-bar.png" >}}
 
-3.  Select a place on the page to add the widget.
+3. Select a place on the page to add the widget.
 
     {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/add-widget.png" >}}
 
 4. Open the **Properties** pane.
-
 5. In **General** > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
     {{< figure src="/attachments/howto/general/setting-up-the-navigation-structure/menu-bar-properties.png" >}}

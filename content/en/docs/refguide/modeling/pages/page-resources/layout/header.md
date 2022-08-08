@@ -8,7 +8,6 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-
 A **header** combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. A header can only be used in a [layout](/refguide/layout/).
 
 Headers consist of three distinct elements: a page title and a left and right [drop-zone](/refguide/page/#add-elements). The page title is indicated by the text `[Page title]`. The drop-zones cannot be seen by default, but they can be selected and also become visible when they have elements dropped into them.

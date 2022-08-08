@@ -24,8 +24,8 @@ A data grid contains the following components:
 1. [Search bar](/refguide/search-bar/) – allows end-users to search for objects in the data grid
 2. [Control bar](/refguide/control-bar/) – allows you to control the objects displayed in the data grid by means of buttons
 3. [Sort bar](/refguide/sort-bar/) – allows end-users to sort items in the data grid 
-4.  [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
-	{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
+4. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
+    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
 
 ## 3 Properties
 

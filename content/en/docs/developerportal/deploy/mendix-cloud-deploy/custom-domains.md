@@ -94,15 +94,15 @@ If you do not have an SSL/TLS certificate you can order one from a certificate a
 
 To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow these steps:
 
-1.  Click **New**.
+1. Click **New**.
 
-2.  Click **Create a Certificate Request**.
+2. Click **Create a Certificate Request**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" >}}
 
-2.  Fill in the required fields.
+3. Fill in the required fields.
 
-4.  Click **Generate**.
+4. Click **Generate**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168225.png" >}}
 
@@ -226,7 +226,6 @@ To configure a custom domain for your application environment, follow these step
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168229.png" >}}
     
-
 {{% alert color="info" %}}
 
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.

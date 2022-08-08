@@ -33,7 +33,7 @@ The log level defines the severity of the log message. In the modeler console do
 | Error | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917894.png" >}} | Used to log error messages. These messages appear in red. |
 | Critical | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917895.png" >}} | Used to log critical errors. These messages appear in  white on red  . |
 
-_Default value:_ Info
+*Default value:* Info
 
 ### 2.2 Log Node Name
 

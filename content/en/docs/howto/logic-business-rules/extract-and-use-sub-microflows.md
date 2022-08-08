@@ -40,13 +40,11 @@ To extract the validation steps to a sub-microflow, follow these steps:
 
     {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581018.png" alt="Selecting the Extract submicroflow menu option" >}}
 
-3.  In the **Add microflow** dialog box, enter a name for the sub-microflow.
+3. In the **Add microflow** dialog box, enter a name for the sub-microflow.
 
-	{{% alert color="info" %}} As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Implement Mendix Best Practices for Development](/howto/general/dev-best-practices/).
-	{{% /alert %}}
+    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Implement Mendix Best Practices for Development](/howto/general/dev-best-practices/).{{% /alert %}}
 
-4. Click **OK**.   
-
+4. Click **OK**.
 5. Open the sub-microflow by right-clicking the sub-microflow action and selecting **Go to microflow**.
 
     {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581016.png" alt="Multiple actions replaced with a microflow action" >}}

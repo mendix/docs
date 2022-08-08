@@ -51,7 +51,6 @@ The **Language** menu allows you to manage additional languages and translations
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-menu.png" alt="Language Menu" >}}
 
-
 ### 3.1 Menu Items Overview
 
 The **Language** menu items are described in the table below:
@@ -95,9 +94,7 @@ There are two options to ensure that the language is changed:
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" >}}
 
-    {{% alert color="warning" %}}
-When reloading the page, the language change must be made for the `$currentUser` object of entity type `User`. It will not change the language immediately if you use an association to a specialization of the `User` entity, such as `Administration.Account`.
-{{% /alert %}}
+    {{% alert color="warning" %}}When reloading the page, the language change must be made for the `$currentUser` object of entity type `User`. It will not change the language immediately if you use an association to a specialization of the `User` entity, such as `Administration.Account`.{{% /alert %}}
 
 {{% alert color="info" %}}
 The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your app. The labels on those pages will not change for different users, they will always be the same.

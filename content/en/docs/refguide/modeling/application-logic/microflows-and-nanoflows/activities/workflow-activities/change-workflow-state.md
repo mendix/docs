@@ -53,9 +53,7 @@ You can select the following operations that represent the new state of the work
 * **Retry workflow** – This operation allows you to retry the failed workflow. **Retry workflow** differs from **Restart workflow** – **Restart workflow** starts the same workflow from the beginning, while **Retry workflow** retries the failed activity to see whether the workflow can get back into the in-progress state.
 
 {{% alert color="info" %}}
-
 The workflow instance state changes are reflected in the **System.Workflow.State** attribute.
-
 {{% /alert %}}
 
 ### 3.2 Workflow Object

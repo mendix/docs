@@ -128,6 +128,8 @@ To configure what types of notifications you receive, click the settings icon an
 
 {{< figure src="/attachments/developerportal/notification-settings-icon.png" >}}
 
+{{% alert color="info" %}}If you no longer would like to receive notifications when new feedback is submitted for a specific app, go to the [Team](/developerportal/collaborate/team/) page for this app, and then change your role to a role that does not have the permission **Can edit 'Stories, Documents and Feedback'**.{{% /alert %}}
+
 ## 7 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:

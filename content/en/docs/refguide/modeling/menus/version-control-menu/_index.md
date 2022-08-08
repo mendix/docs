@@ -62,11 +62,7 @@ The **Reverse Merge Changes** option allows locally rolling back changes that we
 
 The **Revert All Changes** option allows rolling back all local changes, both in the app and in files on disk, that have been introduced since the last commit.
 
-## 12 Add Snapshot of Data
-
-The **Add Snapshot of Data** option creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes.
-
-## 13 Optimize Storage Repository
+## 12 Optimize Storage Repository
 
 {{% alert color="info" %}}
 
@@ -84,7 +80,11 @@ The operation might some time. While optimization is in progress, most of versio
 
 {{% /alert %}}
 
-## 13 Read More
+## 13 Add Snapshot of Data
+
+The **Add Snapshot of Data** option creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes.
+
+## 14 Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/)
 * [Version Control](/refguide/version-control/)

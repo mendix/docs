@@ -46,13 +46,11 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 1. To download and install Mendix Advanced Scheduler app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
 2. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-## 3 Configuration
+## 3 Configuration 
 
-### 3.1 Configuring the License Key
+### 3.1 Configuring the Mendix Scheduler Widget
 
-### 3.2 Configuring the Mendix Scheduler Widget
-
-#### 3.2.1 Views Tab
+#### 3.1.1 Views Tab
 
 * **Scheduler Start Date** – This is the start date of the scheduler.
 * **Scheduler End Date** – This is the end date of the scheduler.
@@ -90,7 +88,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
   * **Yes** – If selected, you cannot change the timeline in the time window.
   * **No** – If selected, you can scroll along the timeline.
 
-#### 3.2.2 Resources Tab
+#### 3.1.2 Resources Tab
 
 * **Resources Datasource** – This is the datasource for the resources that are shown on the left side of the scheduler.
 * **Resource ID** – This is the ID of the resource.
@@ -98,7 +96,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
   * If left empty, the value is set to *resource-type-default*.
 * **On Click** – You can set an action that is triggered when the resource is clicked.{{% todo %}}Will this field be removed before the release?{{% /todo %}}
 
-#### 3.2.3 Events Tab
+#### 3.1.3 Events Tab
 
 *  **List of Data sources** – You can manage the data sources of events on the list.
     *  **New** – You can add a new data source with the following items:
@@ -133,7 +131,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 *  **New Start Event** – The new start time of the dragged event
 * **New End Event** – The new end time of the dragged event
 
-#### 3.2.4 Rosters Tab
+#### 3.1.4 Rosters Tab
 
 {{% alert color="info" %}}The roster has a light yellow background in the scheduler.{{% /alert %}}
 
@@ -147,22 +145,22 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 * **ClassName** – the classname of the roster, which can be used for the styling of a roster.
   * If left empty, the value is set to *event-type-default*.
 
-#### 3.2.5 UI Tab
+#### 3.1.5 UI Tab
 
 * **Today button**  – You can change the text shown on the **Today** button, for example, to the translation of "today" in a different language.
 * **Hide navigation**
   * **Yes** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is hidden. You can create your own Mendix buttons.
   * **No** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is visible.{{% todo %}}How can you configure the options in the view selector drop-down?{{% /todo %}}
 
-#### 3.2.6 Common Tab
+#### 3.1.6 Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
-#### 3.2.7 Appearance Tab
+#### 3.1.7 Appearance Tab
 
 The properties in the Appearance tab have no influence on the widget. This tab can be ignored.
 
-### 3.3 Configuring the Header Dropzone
+### 3.2 Configuring the Header Dropzone
 
 {{< figure src="/attachments/appstore/app-services/mendix-advanced-scheduler/header-dropzone.png" >}}
 
@@ -170,7 +168,7 @@ You can define your own header in this area. The header will be shown above the 
 
 {{< figure src="/attachments/appstore/app-services/mendix-advanced-scheduler/header.png" >}}
 
-### 3.4 Configuring the Resource Area
+### 3.3 Configuring the Resource Area
 
 {{< figure src="/attachments/appstore/app-services/mendix-advanced-scheduler/resource-area.png" >}}
 
@@ -178,7 +176,7 @@ You can define what is shown as **Resources** in the scheduler in this area.
 
 {{< figure src="/attachments/appstore/app-services/mendix-advanced-scheduler/resources.png" >}}
 
-### 3.5 Configuring the License Key {#configure-license-key}
+### 3.4 Configuring the License Key {#configure-license-key}
 
 You can deploy the Mendix Advanced Scheduler locally or in a Mendix Free App for free. However, to deploy the Mendix Advanced Scheduler in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key), and then configure it.
 

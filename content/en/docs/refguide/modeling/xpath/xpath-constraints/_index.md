@@ -53,7 +53,7 @@ In some cases, it might also be useful define sub-constraints to restrict the da
 This query retrieves all users that have the role Administrator:
 
 ```java {linenos=false}
-//Sales.User[id = '[%UserRole_Administrator%]']]
+//Sales.User[id = '[%UserRole_Administrator%]']
 ```
 
 This query retrieves all customers who live in Rotterdam or Losdun:

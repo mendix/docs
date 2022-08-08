@@ -118,7 +118,7 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/)
 
-## 6 Notifications
+## 6 Notifications {#notifications}
 
 Clicking the notifications icon shows all the notifications that you have received.
 

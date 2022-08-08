@@ -18,9 +18,9 @@ You can currently use Epics as well as [Stories](/developerportal/collaborate/st
 
 ### 1.1 Getting Your Team Access to an App Project in Epics
 
-Only a Scrum Master can give the team access to an app project in Epics. To do so, the Scrum Master should open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), then go to the [General Settings](/developerportal/collaborate/general-settings/) page, then go to the [Stories](/developerportal/collaborate/general-settings/#stories) tab, and click **Set up**, as shown in the screenshot below. This gives everyone in the team access to this app project in Epics.
+Only a Scrum Master can give the team access to an app project in Epics. To do so, the Scrum Master should open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), then go to the [General Settings](/developerportal/collaborate/general-settings/) page, then go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab, and click **Switch to Epics**, as shown in the screenshot below. This gives everyone in the team access to this app project in Epics.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/stories.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/project-management.png" >}}
 
 To give the team access to another app project in Epics, the Scrum Master needs to repeat this procedure.
 

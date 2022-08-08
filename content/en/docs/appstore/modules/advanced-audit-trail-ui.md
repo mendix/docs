@@ -9,17 +9,19 @@ tags: ["marketplace", "marketplace component", "Advanced Audit Trail", "UI"]
 
 ## 1 Introduction
 
-The Advanced Audit Trail UI module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
+The [Advanced Audit Trail UI]((https://marketplace.mendix.com/link/component/120943) ) module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
 
 ### 1.1 Dependencies
 
-You should use this module with the [Advanced Audit Trail Core](/appstore/app-services/advanced-audit-trail/) module.
+You should use this module with [Advanced Audit Trail](/appstore/app-services/advanced-audit-trail/) .
 
 ## 2 Installation
 
-Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **Advanced Audit Trail Core** and **Advanced Audit Trail UI** modules into your project.
+To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. 
 
-{{% alert color="info" %}}If you update the **Advanced Audit Trail Core** module, make sure that you update the **Advanced Audit Trail UI** module to the same version.{{% /alert %}}
+Then follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your project.
+
+{{% alert color="info" %}}If you update the Advanced Audit Trail Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 
 ## 3 Configuration
 

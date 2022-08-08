@@ -9,7 +9,9 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-Advanced Audit Trail allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
+{{% alert color="info" %}}This doc explains you how to use the Advanced Audit Trail app service together with its core module. {{% /alert %}}
+
+[Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index audit data. You can find an integration diagram below:
 
@@ -57,9 +59,11 @@ Advanced Audit Trail is a premium Mendix product that is subject to a purchase a
 
 ### 2.2 Installing the Components in Your app
 
-Followed the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the **Advanced Audit Trail Core** and **AdvancedAuditTrailUI** modules into your project.
+To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. 
 
-{{% alert color="info" %}}If you update the **Advanced Audit Trail Core** module, make sure that you update the **AdvancedAuditTrailUI** module to the same version.{{% /alert %}}
+Then follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your project.
+
+{{% alert color="info" %}}If you update the Advanced Audit Trail Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 
 ## 3 Configuration
 

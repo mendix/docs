@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "Advanced Audit Trail", "UI"]
 
 ## 1 Introduction
 
-The [Advanced Audit Trail UI]((https://marketplace.mendix.com/link/component/120943) ) module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
+The [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120943) module contains pre-configured snippets, pages, and layout, which help you create search queries and display query results from your Elasticsearch environment inside your own Mendix application. An extensive search interface allows you to create a search query flexibly: inside a time frame (start date time, end date time), by object (code, GUID, entity), by object action (creation, deletion), by user (username, user role), and by snapshot context (additional info, transaction ID, execution ID, stack trace). Additionally, various pre-configured pages display the results of a single object query or a multi-object query.
 
 ### 1.1 Dependencies
 

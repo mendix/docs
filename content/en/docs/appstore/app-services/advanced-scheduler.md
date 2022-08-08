@@ -13,7 +13,7 @@ The [Mendix Advanced Scheduler](#needsurl) enables you to load resources and eve
 
 ## 2 Installation
 
-### 2.1 Obtaining a License Token
+### 2.1 Obtaining a License Key {#obtain-license-key}
 
 Mendix Advanced Scheduler is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
 
@@ -50,7 +50,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 
 ### 3.1 Configuring the License Key
 
-### 3.2 Configuring the Scheduler Widget
+### 3.2 Configuring the Mendix Scheduler Widget
 
 #### 3.2.1 Views Tab
 
@@ -85,7 +85,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
   * **Move up** – You can move up the selected view.
 
   * **Move down** – You can move down the selected view.
-* **Selected View** – This is an attribute of an entity in your Domain Model, which is used to change the view in Mendix. You can build logic around this in your application or implement your own switching mechanism in your own custom header.
+* **Selected View** – This is an attribute of an entity in your Domain Model, which is used to change the view in Mendix. You can build logic around this in your app or implement your own switching mechanism in your own custom header.
 * **Fixed Timeline**
   * **Yes** – If selected, you cannot change the timeline in the time window.
   * **No** – If selected, you can scroll along the timeline.
@@ -107,13 +107,13 @@ A trial gives everyone in your company one-month access to the app service. {{% 
           * **Event ID** – This is the ID of the event.
           * **Resource ID** – This is the ID of the corresponding resource.
           * **Before event travel time** – You can add some travel time before the event.
-          * **Start event** – The is the start date of an event.
+          * **Start event** – This is the start date of an event.
           * **End event** – This is the end date of an event.
           * **After event travel time** – You can add some travel time after the event.
           * **Movable** – You can select a Boolean attribute to indicate whether the event can be dragged to a different time slot on the timeline.
           * **Resizeable** – You can select a Boolean attribute to indicate whether the length of the event can be resized.
         * **UI** tab
-          * **Event content** – This is the title of the event. HTML is supported.
+          * **Event content** – This is the title of the event. It supports HTML.
           * **Tooltip content** – This is the content of the tooltip of the event.
           * **Classname** – This is the classname of the event, which can be used for the styling of an event.
             * If left empty, the value is set to *event-type-default*.
@@ -177,6 +177,14 @@ You can define your own header in this area. The header will be shown above the 
 You can define what is shown as **Resources** in the scheduler in this area.
 
 {{< figure src="/attachments/appstore/app-services/mendix-advanced-scheduler/resources.png" >}}
+
+### 3.5 Configuring the License Key {#configure-license-key}
+
+You can deploy the Mendix Advanced Scheduler locally or in a Mendix Free App for free. However, to deploy the Mendix Advanced Scheduler in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key), and then configure it.
+
+Before you deploy your app, configure the app **Constants** in the deployment package in the [Developer Portal](https://docs.mendix.com/developerportal/deploy/environments-details/).
+
+If you have already deployed your app, change the existing **Licensekey** constant value on the **Model Options** tab and restart the app.
 
 ## 4 Example Implementation
 

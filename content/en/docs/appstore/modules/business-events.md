@@ -31,7 +31,7 @@ You must purchase a license to the [Mendix Event Broker](#event-broker) to run a
 
 To use the Mendix Business Events module, you will need the following:
 
-* Mendix 9.14 or higher
+* Studio Pro [9.18](/releasenotes/studiopro/9.18) or higher
 * At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
 
 To use Mendix Business Events on production environments, you will need the pre-requisites listed above in addition to the following:

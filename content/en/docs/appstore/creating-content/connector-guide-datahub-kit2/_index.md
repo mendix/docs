@@ -2,15 +2,13 @@
 title: "Wrap Services, APIs, or Databases with OData"
 url: /appstore/creating-content/connector-guide-build-kit2/
 category: "Creating Content"
-weight: 4
+weight: 8
 tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how to"]
 ---
 
 ## 1 Introduction
 
-[Build Connectors](/appstore/creating-content/connector-guide-build/) outlines the basic steps of building Mendix connectors, focusing on Java actions. New functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on the existing capabilities of building connectors in Studio Pro.
-
-This guide dives into these new functionalities that allow you wrap any service, API, or database with an OData service. 
+[Build Connectors](/appstore/creating-content/connector-guide-build/) outlines the basic steps of building Mendix connectors, focusing on Java actions. Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on these existing capabilities of building connectors in Studio Pro. This guide dives into these new functionalities, that allow you wrap any service, API, or database with an OData service. 
 
 ### 1.1 Some More Background
 
@@ -18,14 +16,17 @@ These features described in this document enable you to build Mendix connectors 
 
 The benefit of having connector services or integration apps is that you can centralize and unify access to back-end systems for all you Mendix apps. This way, you ensure all your Mendix apps use back-end systems in a consistent and secure way.
 
-In this guide, you will learn about the following functionalities:
+In this guide, you will learn about the following:
+
 * Using a microflow to return values of published OData services
 * Exposing Non-Persistable Entities (NPEs) as published OData resource using microflow as a data source
 * Selecting a key when exposing entities as OData resources
   
 ### 1.2 Use Cases
 
-* Third-party connector
+There are few
+
+* Third-party service connector
 * Creating the OData endpoint with a Microservice datasource
 * Updatable operational data stores
 
@@ -42,7 +43,7 @@ Because your connector will only be moving data from the back-end services to th
 
 ## 3 Data Sources for a Published OData Resource
 
-In Studio Pro, entities can be exposed as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service. You can use a microflow that determines the result of the incoming request. This allows Mendix apps to do the following: 
+In Studio Pro, you can expose entities as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service. You can use a microflow that determines the result of the incoming request. This allows Mendix apps to do the following: 
 
 * Integrate with systems that do not support OData
 * Publish the results as an OData service, so the data can easily be consumed by Mendix apps and other OData consumers.
@@ -124,6 +125,8 @@ Note: In 9.13 and earlier, the inline count value will be retrieved from the cou
 ### 3.2 Payload Chunking
 
 ## 4 Key Selection 
+
+
 
 {{% alert color="info" %}}
 This feature is available for published OData services that use OData v3 and v4.

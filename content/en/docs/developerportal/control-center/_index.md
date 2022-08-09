@@ -167,11 +167,13 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ## 8 Marketplace Content
 
-The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and private Marketplace components for Studio users.
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and private Marketplace components for Studio users from your company.
 
 {{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
 
-The list shows all the Marketplace components for which you have the curation options. The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio (which is approved by a Studio Amin) and all the private Marketplace components of your company. A Company Admin can configure whether any of these component is visible to the Studio Users from your company.
+
+The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
 
 The list has the following columns:
 
@@ -183,9 +185,7 @@ The list has the following columns:
 
 * **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
 
-*  **Studio Visibility** – You can toggle the button to configure whether the component is visible to Studio users.
-
-    {{% alert color="info" %}}Only Studio Admins can approve public Marketplace content for Studio. However, Company Admins can hide approved public Marketplace content to Studio users. For private Marketplace content, Company Admins can both approve content for Studio and hide approved components to Studio users. By default new private Marketplace components are always hidden for Studio.{{% /alert %}}
+* **Studio Visibility** – You can toggle the button to configure whether the component is visible to the Studio users from your company.
 
 ## 9 Onboarding {#onboarding}
 

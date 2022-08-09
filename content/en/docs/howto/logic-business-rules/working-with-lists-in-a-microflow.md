@@ -9,16 +9,16 @@ tags: ["microflow", "logic", "list"]
 
 ## 1 Introduction
 
-Enrich your microflow by using a list. A list consists of objects of the same type, filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of fulfilled orders from the database. You can then further process this data, for example, by calculating the total value of those orders.
+In this how-to, you will learn how to enrich the data management capabilities of your microflow by using a list. A list consists of objects of the same type, filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of fulfilled orders from the database. You can then further process this data, for example, by calculating the total value of those orders.
 
 This how-to will teach you how to do the following:
 
 * Retrieve a filtered list of objects from the database
-* Iterate over a list of objects
-* Calculate the total list value by using a variable and a loop
-* Calculate the total list value by using an aggregate function
+* Update multiple objects by iterating over a list
+* Calculate the total list value
 
-## 2 Prerequisites
+
+## 2 Preparing the Data Structure, GUI and Example Data
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -88,12 +88,12 @@ Use a microflow with a [Retrieve](refguide/retrieve/) activity to retrieve a lis
     * **Source** – select **From database**
     * **Entity** – select **Order**
     * **List** – enter *OrderList*
-11.  To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: *[OrderStatus = 'Processing']*.
+11.  To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: `[OrderStatus = 'Processing']`.
 
- {{% alert color="info" %}}Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: *Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'*.
+ {{% alert color="info" %}}Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
 {{% /alert %}}
 
-## 4 Iterating Over a List of Objects
+## 4 Updating Multiple Objects by Iterating over a List
 
 After retrieving a list of orders with the status Processing, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to Complete.
 
@@ -118,7 +118,7 @@ After retrieving a list of orders with the status Processing, use a [loop](/refg
 11. Double-click the **Commit** activity.
 12. In the **Commit Object(s)** dialog box, configure the following settings:
     * **Object or List** – select **OrderList**
-    * **Refresh in Client** – set to **Yes**. This settings refreshes your list in the client so that your changes are visible.
+    * **Refresh in Client** – set to **Yes**; this settings refreshes your list in the client so that your changes are visible
 13. Click **OK**, and then save the microflow.
 
 	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/working-with-lists-optimization.jpg" alt="A microflow configured to iterate over a list" >}}
@@ -161,9 +161,9 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 9. Drag a **Change variable** activity into the **Loop** activity.
 10. Double-click the **Change variable** activity and configure the following settings:
     * **Variable** – select **CalculatedTotalPrice**
-    * **Value** – enter *$CalculatedTotalPrice + $IteratorOrder/TotalPrice*
+    * **Value** – enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`
         
-        With the above settings, as the loop iterates over the list, it adds the price of every order to the *CalculatedTotalPrice* variable.
+        With the above settings, as the loop iterates over the list, it adds the price of every order to the CalculatedTotalPrice variable.
 11. Drag a **Show Message** action from the **Toolbox** and place it after the **Loop** activity.
 12. Double-click the **Show message** activity and configure the following settings:
     * **Template** – enter *Total calculated price: {1}*

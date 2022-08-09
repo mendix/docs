@@ -154,3 +154,13 @@ You can use a validation message to report a validation error if you are perform
 {{% alert type="info" %}}
 The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
 {{% /alert %}}
+
+## 9 Query Options
+
+Select the options that you would like to include in each OData capability.
+
+* **Countable**
+* **Sortable**
+* **Filterable**
+* **Toppable**
+* **Skippable**

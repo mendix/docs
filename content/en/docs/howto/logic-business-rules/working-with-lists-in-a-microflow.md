@@ -19,7 +19,7 @@ This how-to will teach you how to do the following:
 
 ## 2 Preparing the Data Structure, GUI and Example Data
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+To see the results of this how-to, set up a test app and populate it with test data.
 
 1.  Create a [domain model](/howto/data-models/create-a-basic-data-layer/) with the following entities:
     * *Customer*
@@ -64,7 +64,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Retrieving a Filtered List of Objects from the Database
 
-Use a microflow with a [Retrieve](refguide/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the Processing status.
+Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the Processing status.
 
 1.  Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
 2.  In the **Add Microflow** dialog box, in the **Name** field, enter *Microflow _IVK_SetOrderToComplete_*, and then click **OK**.
@@ -91,6 +91,7 @@ Use a microflow with a [Retrieve](refguide/retrieve/) activity to retrieve a lis
 
  {{% alert color="info" %}}Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
 {{% /alert %}}
+
 ## 4 Updating Multiple Objects by Iterating over a List
 
 After retrieving a list of orders with the status Processing, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to Complete.

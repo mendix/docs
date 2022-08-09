@@ -165,13 +165,13 @@ You can set a **Cover image** to be the background header of your company page. 
 
 {{< figure src="/attachments/developerportal/control-center/brand.jpg" >}}
 
-## 8 Marketplace Content
+## 8 Marketplace Content {#marketplace-content}
 
 The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and private Marketplace components for Studio users from your company.
 
 {{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
 
-The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio (which is approved by a Studio Amin) and all the private Marketplace components of your company. A Company Admin can configure whether any of these component is visible to the Studio Users from your company.
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. A Company Admin can configure whether any of these component is visible to the Studio Users from your company.
 
 The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
 

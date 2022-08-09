@@ -1,15 +1,16 @@
 ---
-title: "External Entities in Private Cloud"
-url: /refguide/external-entities/
+title: "External Entities without the Data Hub Catalog"
+url: /refguide/external-entities-pc-local/
 weight: 20
 tags: ["domain model", "entity", "entities", "attribute", "external entities", "private cloud", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
 
-Publishing and consuming [External Entities](/refguide/external-entities/) on the Mendix Cloud is made easy with the Data Hub Catalog.
+Publishing and consuming [External Entities](/refguide/external-entities/) on the Mendix Cloud is made easy with the [Data Hub Catalog](/data-hub/data-hub-catalog/). Users on private clouds or who want to deploy locally, fear not! You  cannot make use of the Catalog, but you can still publish and consume external entities. 
 
-Customers who are on private clouds or who want to deploy locally cannot make use of the Catalog, but they can still publish and consume external entities.
+This guide
+
 
 ## 2 Manually Add a Service to the Data Hub Pane
 

@@ -53,4 +53,4 @@ When inside a [nanoflow](/refguide7/nanoflows/), the object is refreshed across 
 
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No

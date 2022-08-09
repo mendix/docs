@@ -38,11 +38,11 @@ To import a web service using the wizard, follow these steps:
     {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581787.png" >}}
 
 3. On the **Import Web Service** dialog box, select **Create new imported web service** and click **Next**.
-4.  For **WSDL source** in the **Web service Description** section of the **New Web Service Operation** dialog box, specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide a **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
+4. For **WSDL source** in the **Web service Description** section of the **New Web Service Operation** dialog box, specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide a **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
 
     {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581785.png" >}}
 
-5.  Click **Next** to fetch the services and operations in the WSDL.
+5. Click **Next** to fetch the services and operations in the WSDL.
 6. In the **Select Ports** pop-up window select a web service port and click **OK**. Studio Pro now imports the operations.
 
     {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/port.png" >}}
@@ -59,11 +59,12 @@ To import a web service using the wizard, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581782.png" >}}
 
-9. Click **Finish** to create the web service.
+10. Click **Finish** to create the web service.
 
 ### 2.1 The Outcome
 
 When finished the wizard will add the following to your model based on the options selected:
+
 * The imported service
 * An XML to domain mapping
 * A microflow in which the web service operation is called
@@ -79,16 +80,16 @@ To import a web service directly, follow these steps:
 
 1. Right-click a module and select **Add Other** > **Consumed web service**.
 2. Specify a name for the new consumed web service and click **OK**.
-3.  In the **Consumed Web Service** box, specify the **WSDL Source** to be used for this consumed web service. You can specify a **URL** or load a **File** from your computer.
+3. In the **Consumed Web Service** box, specify the **WSDL Source** to be used for this consumed web service. You can specify a **URL** or load a **File** from your computer.
 
     {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/enter-wsdl-url.png" >}}
 
-3. Click **Import** to fetch the services and operations in the WSDL. If prompted, in the **WSDL Source** dialog box, select the ports you want to use and click **OK**.
+4. Click **Import** to fetch the services and operations in the WSDL. If prompted, in the **WSDL Source** dialog box, select the ports you want to use and click **OK**.
 
-4. In the **Consumed Web Services** box, review the **Services** and **Operations** available to the imported web service. If you click on any of the **Operations**, information about the operation will be displayed in the right pane. You can select individual web service operations from the list otherwise the whole service and operation will be imported:
+5. In the **Consumed Web Services** box, review the **Services** and **Operations** available to the imported web service. If you click on any of the **Operations**, information about the operation will be displayed in the right pane. You can select individual web service operations from the list otherwise the whole service and operation will be imported:
 
     {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581779.png" >}}
-4. Click **OK**. The web service will be added to the model.  
+6. Click **OK**. The web service will be added to the model.  
 
 ## 4 Configuring the Web Service Call
 
@@ -110,7 +111,7 @@ To configure the web service call, follow these steps:
     * **Simple expressions for each request parameter** — if the imported web service requires only primitive arguments:
 
         {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581791.png" >}}
-    
+
     * **Export mappings for each request parameter** or **Export mapping for the entire request**  — if the domain model entities need to be mapped to XML elements
     * **Custom request template** — for the definition of a custom XML body with parameters:
 
@@ -128,9 +129,9 @@ To configure the web service call, follow these steps:
     * If the return is a primitive, you can store it in a variable by selecting **Store in variable** — **Yes**  and provide the **Type** and **Variable**:
 
         {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581789.png" >}}
-        
+
     * If you want to ignore the return, select **Ignore**
-8.  Your imported web service is now ready to be used in your application.
+8. Your imported web service is now ready to be used in your application.
 
 ## 5 Read More
 

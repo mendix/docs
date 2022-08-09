@@ -47,7 +47,6 @@ These are some examples of what you can find on the dashboard:
 
 On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an overview of the active and deactivated apps that belong to your company.
 
-
 When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
@@ -77,11 +76,11 @@ Deleting and deactivating apps is currently not supported for licensed apps or a
 The app details page has the following tabs:
 
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
-*  **Members** – This tab presents the internal members and external members of the app.
+* **Members** – This tab presents the internal members and external members of the app.
 
     * You can directly deactivate an internal member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
-      * As a Mendix Admin, you can also add yourself to a team via this page.
+        * As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all the Mendix Cloud environments.
     * You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed; however, the project members can still access the associated project and app repository in the Developer Portal.
 * **App Roles** – This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
@@ -221,4 +220,3 @@ An organization's Data Hub requires governance of the data-sharing policy down t
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
 ## 13 Documents in This Category
-

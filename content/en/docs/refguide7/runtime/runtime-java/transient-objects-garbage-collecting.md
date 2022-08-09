@@ -10,9 +10,9 @@ tags: ["persistable", "non-persistable", "transient", "objects", "garbage", "col
 
 This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory. In order to understand the behavior of transient objects there are a few facts that you need to be aware off:
 
-*   A transient object (also known as a non-persistable object) is an object that is considered temporary and only exists in memory
-*   Changed persistable objects that are not committed only exist in memory and behave similar to transient objects
-*   The Mendix Platform will remove objects automatically when they are no longer "used" (the definition of "used" will be explained later)
+* A transient object (also known as a non-persistable object) is an object that is considered temporary and only exists in memory
+* Changed persistable objects that are not committed only exist in memory and behave similar to transient objects
+* The Mendix Platform will remove objects automatically when they are no longer "used" (the definition of "used" will be explained later)
 
 ## 2 Behavior in Mendix 7
 
@@ -39,7 +39,8 @@ As state is managed by the client, it becomes harder to get an overview of all t
 ### 4.1 Observing State Growth by Session
 
 By enabling `TRACE` level logging on the `RequestStatistics` log node, Mendix Runtime will log a message for every request that contains information about state. This information is logged in the form of a JSON structure, allowing it to be used in tooling to create graphs over time. See this example of a log statement (formatted for readability in this case):
-```
+
+```text
 TRACE: Request-State statistics: {
   session: "fd0771fe-8c12-49cf-8667-921058b116a3",
   action: "execute-action",
@@ -50,17 +51,19 @@ TRACE: Request-State statistics: {
   }
 }
 ```
+
 In the details section you find the number of instances per entity type available in the state of a request.
 
 ### 4.2 Detecting Requests with Large State
 
 By default the Mendix Runtime will log a `WARNING` on the `RequestStatistics` log node in case the request state exceeds the configured threshold. See this example of a log statement:
 
-```
+```text
 WARNING: Request state size of 551 objects exceeds the threshold of 500 objects. Request details: type `execute-action` in session `fd0771fe-8c12-49cf-8667-921058b116a3`. State consists of:
  * MyModule.MyEntity: 421 objects
  * AnotherModule.SomeEntity: 130 objects
 ```
+
 This threshold can be configured with the custom setting `com.mendix.webui.StateSizeWarningThreshold` (the value is a number that reflects the total number of objects in the request state).
 
 #### 4.2.1 Choosing a Correct Threshold Level
@@ -83,4 +86,4 @@ For every request to the Mendix Runtime—be it from the client or via web servi
 
 ## 6 Read More
 
-*   [Java Memory Usage](/refguide7/java-memory-usage/)
+* [Java Memory Usage](/refguide7/java-memory-usage/)

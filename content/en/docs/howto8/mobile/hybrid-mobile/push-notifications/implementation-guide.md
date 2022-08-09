@@ -35,10 +35,10 @@ The Push Notifications Connector assumes that the mobile app and the back-end pa
 
 The PushNotifications module has the following dependencies:
 
- * [Encryption](/appstore/modules/encryption/)
- * [Community Commons Function Library](/appstore/modules/community-commons-function-library/)
- * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/)
- * [Native Mobile Resources](/appstore/modules/native-mobile-resources/)
+* [Encryption](/appstore/modules/encryption/)
+* [Community Commons Function Library](/appstore/modules/community-commons-function-library/)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/)
+* [Native Mobile Resources](/appstore/modules/native-mobile-resources/)
 
 To include these dependencies, download them from the Marketplace in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 
@@ -94,6 +94,7 @@ Do not add the administration pages to the navigation layout of offline devices.
 ## 7 Setting Up the Project Security for Your Module
 
 On the **User roles** tab of the **Project Security** dialog box, include the following:
+
 * The **PushNotifications.Administrator** role as part of the main **Administrator** role
 * The **PushNotifications.User** role as part of the main **User** role
 * The **PushNotifications.Anonymous** role role as part of the main **Anonymous** role (if your application allows anonymous users)

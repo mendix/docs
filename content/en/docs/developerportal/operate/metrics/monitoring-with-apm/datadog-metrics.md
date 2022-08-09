@@ -45,11 +45,11 @@ If you are new to Datadog, you will need to get an account first.
 To find your existing API key, or to request a new one for your app, do the following:
 
 1. Login to your Datadog account.
-2.  Go to the **Integrations > API** screen.
+2. Go to the **Integrations > API** screen.
 
     {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-integrations-api.png" alt="Datadog site: navigation to Integration, API" >}}
 
-3.  Copy an existing **API Key** or create a new one.
+3. Copy an existing **API Key** or create a new one.
 
     {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-api=keys.png" alt="Datadog site: API Keys page" >}}
 
@@ -63,23 +63,23 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 2. Click **Details** to select the environment you wish to monitor with Datadog. 
 3. Open the **Runtime** tab.
 4. Add a **Custom Environment Variable**.
-5.  Select **DD_API_KEY** from the *Name* drop-down.
+5. Select **DD_API_KEY** from the *Name* drop-down.
 
-	{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Dropdown containing custom environment variable names" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Dropdown containing custom environment variable names" >}}
 
 6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
 7. Add a second **Custom Environment Variable**:
 
-	* **Name**: *DD_LOG_LEVEL*
-	* **Value**: *INFO*
+    * **Name**: *DD_LOG_LEVEL*
+    * **Value**: *INFO*
 
-	This will ensure that some messages are sent from the Mendix Datadog agent to Datadog – for example, that the agent has started. You can change the log level later once you have confirmed that Datadog is receiving them. See [Log Levels](#log-levels), below for more information on valid values for this custom environment variable.
+    This will ensure that some messages are sent from the Mendix Datadog agent to Datadog – for example, that the agent has started. You can change the log level later once you have confirmed that Datadog is receiving them. See [Log Levels](#log-levels), below for more information on valid values for this custom environment variable.
 
 8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
 
-9.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+9. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-	{{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
+    {{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
 
 ## 3 Tagging Metrics for Datadog
 
@@ -181,7 +181,7 @@ Email addresses are automatically redacted before log entries are sent to Datado
 
 Datadog sends gauge database metrics to Datadog as a default. Rate and Count metrics are not compatible with the Datadog PostgreSQL integration. You can enable these additional metrics by setting **DATADOG_DATABASE_RATE_COUNT_METRICS** to *true*.
 
-If these additional metrics are enabled, the rate and counter metrics will be sent to Datadog. The metrics will be suffixed by _rate and _count, respectively, to prevent collisions with the official Datadog metrics. You can change the metric types in the Datadog console to reflect this — see [Modify a metric’s type within Datadog](https://docs.datadoghq.com/developers/metrics/type_modifiers/?tab=count#modify-a-metrics-type-within-datadog) in the Datadog documentation for more information. We also set a helpful `interval` tag (10s) which can be used here. The correct type and unit for submitted metrics can be found in the GitHub repo for [Datadog core integrations](https://github.com/DataDog/integrations-core/blob/master/postgres/metadata.csv).
+If these additional metrics are enabled, the rate and counter metrics will be sent to Datadog. The metrics will be suffixed by _rate and_count, respectively, to prevent collisions with the official Datadog metrics. You can change the metric types in the Datadog console to reflect this — see [Modify a metric’s type within Datadog](https://docs.datadoghq.com/developers/metrics/type_modifiers/?tab=count#modify-a-metrics-type-within-datadog) in the Datadog documentation for more information. We also set a helpful `interval` tag (10s) which can be used here. The correct type and unit for submitted metrics can be found in the GitHub repo for [Datadog core integrations](https://github.com/DataDog/integrations-core/blob/master/postgres/metadata.csv).
 
 *Default value: false*
 

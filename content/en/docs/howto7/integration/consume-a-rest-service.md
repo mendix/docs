@@ -22,16 +22,16 @@ The Wikipedia REST service allows you to retrieve the summary of a page. This se
 We will start by providing the Modeler as an example of what the REST service returns:
 
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
-   * This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format
+    * This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format
 
     {{< figure src="/attachments/howto7/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" >}}
 
 2. Copy the whole JSON snippet.
-3.  Now you need to add a new JSON structure to your app. A [JSON structure](/refguide7/json-structures/) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
-    a. Right-click the module in the **Project Explorer**.<br>
-    b. Select **Add** > **Mapping** > **JSON structure**.<br>
-    c. Paste the JSON snippet.<br>
-4.  Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
+3. Now you need to add a new JSON structure to your app. A [JSON structure](/refguide7/json-structures/) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
+    1. Right-click the module in the **Project Explorer**.<br>
+    2. Select **Add** > **Mapping** > **JSON structure**.<br>
+    3. Paste the JSON snippet.<br>
+4. Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
 
     {{< figure src="/attachments/howto7/integration/consume-a-rest-service/json-structure.png" >}}
 
@@ -71,7 +71,7 @@ To add an input entity to the domain model, follow these steps:
 7. Click **OK**.
 8. Drag an association from **Input** to **Summary**.
 
-  {{< figure src="/attachments/howto7/integration/consume-a-rest-service/domain-model.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/domain-model.png" >}}
 
 ## 5 Calling the REST Service in a Microflow
 

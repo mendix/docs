@@ -36,10 +36,10 @@ Converts a decimal value to a string value according to a specified format.
 * Format for the result based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html))
     * Type: string
 * Locale in which the results should be formated (optional)
-   * For the supported values, see [forLanguageTag](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-)
-   * When omitted, the user configured locale is used
-   * Supported from Mendix 7.3
-   * Type: string
+    * For the supported values, see [forLanguageTag](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-)
+    * When omitted, the user configured locale is used
+    * Supported from Mendix 7.3
+    * Type: string
 
 ### Output
 

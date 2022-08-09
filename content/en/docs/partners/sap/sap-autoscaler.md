@@ -158,4 +158,3 @@ The new rule, and any existing rules will be shown in the configurator as shown 
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
-

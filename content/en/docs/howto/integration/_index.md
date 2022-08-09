@@ -15,4 +15,3 @@ Do you want to connect your app to the internet? Learn how to do this by followi
 We want to create a large network of Mendix apps, so let's start integrating!
 
 ## 2 Documents in This Category
-

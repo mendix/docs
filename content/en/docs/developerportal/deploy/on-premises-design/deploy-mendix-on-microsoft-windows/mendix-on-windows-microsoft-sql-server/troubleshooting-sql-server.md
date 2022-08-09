@@ -17,7 +17,7 @@ This document covers various errors you might encounter when using SQL Server, a
 
 ### 2.1 Read Committed Snapshot
 
-```
+```text
 Error while executing queries
 ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
@@ -27,7 +27,7 @@ In order to set **Read Committed Snapshot** or to create an assembly, the user w
 
 ### 2.2 Create Function
 
-```
+```text
 Error while executing query
 CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];
 ```
@@ -40,7 +40,7 @@ In general if the user has the the `db_owner` role for the database he will have
 
 #### 2.3.1 Time Out
 
-```
+```text
 Opening JDBC connection to yourServerAddress\YourInstanceName:0 failed with SQLState: 08S01 Error code: 0 Message: The connection to the host localhost, named instance sqlexpress2008 failed.
 Error: "java.net.SocketTimeoutException: Receive timed out". Verify the server and instance names and check that no firewall is blocking UDP traffic to port 1434\.  For SQL Server 2005 or later, verify that the SQL Server Browser Service is running on the host. Retrying...(1/4)
 ```
@@ -49,7 +49,7 @@ If the server address and instance name are correct, then validate if the servic
 
 #### 2.3.2 Login Failed
 
-```
+```text
 Opening JDBC connection to localhost\sqlexpress2008:0 failed with SQLState: S0001 Error code: 18470
 Message: Login failed for user 'YourDatabaseUser'. Reason: The account is disabled. ClientConnectionId:5d971a3f-ab50-4594-b17b-88b90effcaab Retrying...(1/4)
 ```
@@ -58,8 +58,8 @@ Validate the ‘Status’ of the User. One of the login properties of the user i
 
 ## 3 Read More
 
-*   [Setting Up the Database User](/developerportal/deploy/setting-up-the-database-user/)
-*   [Restoring a SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
-*   [Mendix SQL Maintenance Plans](/developerportal/deploy/mendix-sql-maintenance-plans/)
-*   [Setting Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
-*   [Setting Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
+* [Setting Up the Database User](/developerportal/deploy/setting-up-the-database-user/)
+* [Restoring a SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
+* [Mendix SQL Maintenance Plans](/developerportal/deploy/mendix-sql-maintenance-plans/)
+* [Setting Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
+* [Setting Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)

@@ -31,8 +31,8 @@ You can use the [Database Replication](https://marketplace.mendix.com/link/compo
 
 * [Mx Model Reflection](/appstore/modules/model-reflection/) module – this module is required in order to configure the mapping between the Excel columns and the domain model
 * The *replication.jar* file (supplied in the *.mpk* file)
-	* Make sure you remove any older versions of *replication.jar* before installing this module (if you update, you do not need to remove the library anymore)
-	* If you have an old *replication.jar file* and are using the [Excel Importer](/appstore/modules/excel-importer/), update this module as well, since you need Excel Importer 3.0 or higher when using this module
+    * Make sure you remove any older versions of *replication.jar* before installing this module (if you update, you do not need to remove the library anymore)
+    * If you have an old *replication.jar file* and are using the [Excel Importer](/appstore/modules/excel-importer/), update this module as well, since you need Excel Importer 3.0 or higher when using this module
 
 ## 2 Configuration
 
@@ -56,7 +56,7 @@ This is the host name and port number of the server on which your database is ru
 
 #### 2.1.3 Name & Instance Name
 
-This is the name and instance name of the database schema to connect to. The **Instance name** is optional.
+This is the name and instance name of the database to connect to. The **Instance name** is optional.
 
 #### 2.1.4 Username & Password
 

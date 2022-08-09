@@ -17,7 +17,6 @@ This how-to will teach you how to do the following:
 * Update multiple objects by iterating over a list
 * Calculate the total list value
 
-
 ## 2 Preparing the Data Structure, GUI and Example Data
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -92,7 +91,6 @@ Use a microflow with a [Retrieve](refguide/retrieve/) activity to retrieve a lis
 
  {{% alert color="info" %}}Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
 {{% /alert %}}
-
 ## 4 Updating Multiple Objects by Iterating over a List
 
 After retrieving a list of orders with the status Processing, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to Complete.

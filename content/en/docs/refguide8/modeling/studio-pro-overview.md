@@ -71,9 +71,7 @@ A working area is a current document tab that you work in. The working area and 
 The documents you view and edit are shown in tabs. 
 
 {{% alert color="info" %}}
-
 This section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](/refguide8/view-menu/#layout-of-panes) section in *View Menu*.
-
 {{% /alert %}}
 
 You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. The video below shows examples of how to interact with a tab:
@@ -177,5 +175,3 @@ The following shortcut keys control the currently selected language:
 
 * [Project Explorer](/refguide8/project-explorer/)
 * [Menus](/refguide8/menus/)
-
-  

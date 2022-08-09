@@ -39,4 +39,4 @@ Let us say you have a grid showing bicycles. In the domain model the bicycle has
 
 The sort order specifies the order in which the items in the drop-down search field are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the drop-down search field sorts on the displayed attribute.
 
-_Default value:_ No sort order
+*Default value:* No sort order

@@ -15,9 +15,7 @@ To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in 
 {{< figure src="/attachments/studio/page-editor/pages-icon.png" >}}
 
 {{% alert color="warning" %}}
-
 Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](/howto/front-end/atlas-ui/).
-
 {{% /alert %}}
 
 Every page is *based on* a layout and a template:
@@ -58,8 +56,7 @@ After opening Studio, it automatically opens the home page of the app.
 To open a page in Studio, do the following:
 
 1. Click the **Pages** icon in the left menu bar. 
-
-2.  In the displayed list of app pages, select the one you want to open and click it.
+2. In the displayed list of app pages, select the one you want to open and click it.
 
 The selected page is opened. 
 
@@ -68,18 +65,17 @@ The selected page is opened.
 To create a new page in Studio, do the following:
 
 1. Click the **Pages** icon.
-
-2.  Select the module you would like to add a new page to and click the plus icon next to this module.
+2. Select the module you would like to add a new page to and click the plus icon next to this module.
 
     {{< figure src="/attachments/studio/page-editor/new-page.png" >}}
-    
+
     For more information on what modules are, see [Domain Model](/studio/domain-models/).
 
-3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
+3. In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
 
-	{{< figure src="/attachments/studio/page-editor/create-new-page-dialog.png" >}}
+    {{< figure src="/attachments/studio/page-editor/create-new-page-dialog.png" >}}
 
-5. Click **Create**.
+4. Click **Create**.
 
 A new page is created.
 
@@ -88,7 +84,6 @@ A new page is created.
 To duplicate an existing page, do the following:
 
 1. Click the **Pages** icon in the left menu bar.
-
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
     {{< figure src="/attachments/studio/page-editor/duplicate-page.png" alt="Duplicate Page" >}}
@@ -100,8 +95,7 @@ The page is duplicated.
 To copy and paste a page, do the following:
 
 1. Click the **Pages** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
     {{< figure src="/attachments/studio/page-editor/copy-page.png" alt="Copying a Page" >}}
 
@@ -122,7 +116,7 @@ To delete a page in Studio, do one of the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
 
-		{{< figure src="/attachments/studio/page-editor/delete-page.png" alt="Delete Page" >}}
+        {{< figure src="/attachments/studio/page-editor/delete-page.png" alt="Delete Page" >}}
 
 The selected page is deleted.
 
@@ -163,7 +157,6 @@ You can create an entity from a page when configuring a data source for a widget
 
 The new entity has been created in your app.
 
-
 ### 2.10 Creating an Association from a Page {#create-association}
 
 You can create an [association](/studio/domain-models-association-properties/) from a page when configuring a data source for a widget that requires it. 
@@ -171,13 +164,11 @@ You can create an [association](/studio/domain-models-association-properties/) f
 For example, you have a [data view](/studio/page-editor-data-view-list-view/) with the **Customers** entity. *Inside* the data view, you add a [list view](/studio/page-editor-data-view-list-view/) to show *reports* associated only with the customer who is currently shown in the data view. This means that you will show reports through an association. You can create the association from the page without having to open the domain model. Do the following:
 
 1. Open the list view properties and click the **Entity** property.
-
 2. In the **Select Entity** dialog box > **Entities Connected to Customer** section, click the plus icon:
 
     {{< figure src="/attachments/studio/page-editor/creating-association.png" alt="Select Entity dialog box"   width="400"  >}}
 
 3. Select **Report** as the entity to connect the **Customer** entity with.
-
 4. Click **Select**.
 
 The association with the correct [multiplicity](/studio/domain-models-association-properties/#multiplicity) has been added to your app. 
@@ -194,7 +185,7 @@ The breadcrumb serves two functions:
 
 * Shows a bottom-up layering of a selected item on a page. For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page:
 
-	{{< figure src="/attachments/studio/page-editor/breadcrumb.png" >}}
+    {{< figure src="/attachments/studio/page-editor/breadcrumb.png" >}}
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
@@ -243,9 +234,7 @@ If you want to read documentation on a particular building block and to know mor
 {{< figure src="/attachments/studio/page-editor/info-icon-building-blocks.png"   width="300"  >}}
 
 {{% alert color="info" %}}
-
 Building blocks categories may differ because Atlas UI can be customized using Studio Pro.
-
 {{% /alert %}}
 
 ## 6 Properties Tab {#page-editor-properties}

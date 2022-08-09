@@ -55,7 +55,7 @@ This URL points to the root of your application as it should be accessible by en
 
 Here you fill in the HTTP port through which a browser accesses the server on which your application is running. Multiple concurrently running servers on the same computer should use different HTTP port numbers.
 
-_Default value_: 8080
+*Default value*: 8080
 
 ### Runtime port security
 
@@ -65,7 +65,7 @@ This attribute determines whether the runtime HTTP port will be open to other ma
 
 This port number is used to communicate with the server. Multiple concurrently running servers on the same computer should use different server admin port numbers.
 
-_Default value_: 8090
+*Default value*: 8090
 
 ### Admin port security
 
@@ -80,7 +80,7 @@ Here you can specify the maximum Java heap memory size.
 | Default | Use the default heap memory size of the installed Java virtual machine. |
 | Custom | Use the value of the 'Maximum size (in MB)' setting. |
 
-_Default value_: Default
+*Default value*: Default
 
 ### Maximum size (in MB)
 

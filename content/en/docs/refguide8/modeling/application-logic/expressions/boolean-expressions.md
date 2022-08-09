@@ -23,7 +23,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     (6 > 4) and (3 < 5)
     ```
 
@@ -31,7 +31,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     ('hello' = 'hallo') and (3 < 5)
     ```
 
@@ -49,7 +49,7 @@ The examples below illustrate which value the expression returns:
 
     If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     ($product/price < $product/recommendedPrice : 2) or ($product/price     > 0)
     ```
 
@@ -57,7 +57,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input: 
 
-    ```java
+    ```java {linenos=false}
     ('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
     ```
 
@@ -81,20 +81,16 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     not('hello' = 'hallo')
     ```
 
     The expression will return `true` .
 
-
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     not(true)
     ```
 
     The expression will return `false` .
-
-
-

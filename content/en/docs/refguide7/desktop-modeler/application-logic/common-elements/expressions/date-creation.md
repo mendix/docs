@@ -20,7 +20,7 @@ These functions take between 1 and 6 input parameters and return a string. These
 5. Minutes
     * Type: integer, between 0 and 59
 6. Seconds
-     * Type: integer, between 0 and 59
+    * Type: integer, between 0 and 59
 
 One parameter:
 

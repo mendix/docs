@@ -43,13 +43,13 @@ With this property you can influence if and when a search bar is shown.
 | With button (initially closed) | The user can open and close the search bar using the search button; the search bar is initially closed. |
 | Always | The search bar is always visible and cannot be close, nor is there a search button. |
 
-_Default value:_ With button (initially closed)
+*Default value:* With button (initially closed)
 
 ### Wait for search
 
 If set to true, the grid will remain empty of contents until a search has been performed. This can be useful if the target entity contains an extremely large set of objects but most mutations only require a subset of the data. Waiting for search will ensure that no database query is performed until the desired subset is specified, thus skipping the initial loading period associated with major data retrievals.
 
-_Default value:_ false
+*Default value:* false
 
 ### Constraints
 

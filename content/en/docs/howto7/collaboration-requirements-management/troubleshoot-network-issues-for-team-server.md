@@ -14,8 +14,8 @@ The Mendix Modeler needs to connect to Team Server, which is where all your proj
 
 This how-to will teach you how to do the following:
 
-*   How to troubleshoot network issues when downloading projects from and uploading projects to Team Server
-*   Which permissions and settings are required to connect to Team Server
+* How to troubleshoot network issues when downloading projects from and uploading projects to Team Server
+* Which permissions and settings are required to connect to Team Server
 
 ## 2 Troubleshooting Downloading a Team Server Project
 
@@ -25,9 +25,9 @@ Being unable to download the Team Server project would indicate that the securit
 
 Team Server is implemented using Subversion and the Mendix Modeler uses the HTTPS (TCP) protocol to communicate with that server. To access Team Server from within the Modeler the network at your location needs the following settings:
 
-*   The HTTPS port (TCP 443) needs to be open
-*   The HTTP port (TCP 80) needs to be open
-*   WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any)
+* The HTTPS port (TCP 443) needs to be open
+* The HTTP port (TCP 80) needs to be open
+* WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any)
 
 You can look up the IP address of `https://teamserver.sprintr.com/`, however, Mendix reserves the right to, at any time and without notification to the customer, change the IP address. This could happen if we move to a different infrastructure for example.
 

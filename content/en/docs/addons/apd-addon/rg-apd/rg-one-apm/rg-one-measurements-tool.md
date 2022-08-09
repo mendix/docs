@@ -13,7 +13,7 @@ Measurements are created via the **Collect in Measurements Tool** button in the 
 
 The charts tab shows graphs of collected data in the measurements tool.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Charts.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Charts.png" >}}
 
 Double-clicking the measurement will open a read-only view of the measurement configuration.
 
@@ -21,7 +21,7 @@ Double-clicking the measurement will open a read-only view of the measurement co
 
 Measurements can be configured on the **Measurement configuration** tab. If the measurement is running, you can only view the measurement configuration. 
 
-  {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Tab.png" >}}                     
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Tab.png" >}}                     
 
 Measurements can be started and stopped here. In the dialog behind the play-button, you can start or stop all measurements at once.
 
@@ -29,31 +29,31 @@ Measurements can be started and stopped here. In the dialog behind the play-butt
 
 Double-clicking or selecting and clicking the **Edit** button shows the measurement configuration dialog.  Here, the selected measurement can be configured:
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Edit.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Configuration_Edit.png" >}}
 
 The **Measurement configuration** tab allows you to do the following:
 
-*   Change the **Name**
-*   Choose when to **Run**
-     - At regular intervals
-     - Once after startup
-     - Disabled
-*   **Calculate with expression**
-     - If yes, the **Expression** field appears (see below for the expression details)
-     - If yes, the **Parameter** field appears (this parameter can be used in the expression)
-*   Set the **Frequency (s)** that the measurement is executed in seconds
-*   **Store in database** stores the measurement in the database
- * You can only measure for triggers; for charts you need the database to be stored in the database
-*   The **Remove data after (days)** configures the automatic cleanup (purge) of the data
- * Measurements will automatically be removed after a certain amount of days
-*   For a query measurement, the **Expose query results to JMX** makes the query results visible in other Java management consoles – this is only useful for query measurements, since JVM Browser measurements are already available  there
-*   If a query has multiple results, you can configure using the first column a part of the name via **Use first result column in name**
+* Change the **Name**
+* Choose when to **Run**
+    * At regular intervals
+    * Once after startup
+    * Disabled
+* **Calculate with expression**
+    * If yes, the **Expression** field appears (see below for the expression details)
+    * If yes, the **Parameter** field appears (this parameter can be used in the expression)
+* Set the **Frequency (s)** that the measurement is executed in seconds
+* **Store in database** stores the measurement in the database
+* You can only measure for triggers; for charts you need the database to be stored in the database
+* The **Remove data after (days)** configures the automatic cleanup (purge) of the data
+* Measurements will automatically be removed after a certain amount of days
+* For a query measurement, the **Expose query results to JMX** makes the query results visible in other Java management consoles – this is only useful for query measurements, since JVM Browser measurements are already available  there
+* If a query has multiple results, you can configure using the first column a part of the name via **Use first result column in name**
 
 ### 3.2 Triggers Tab
 
 Here you can define triggers on high memory usage for example.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Triggers.png" >}}                 
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-measurements-tool/Measurement_Triggers.png" >}}                 
 
 See the description of [Triggers](/addons/apd-addon/rg-one-triggers/) for how to configure triggers.
 

@@ -34,7 +34,6 @@ The **Report widgets** category contains the following widgets:
 
     {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/generate-report-button-example.png" alt="Example generate report button" >}}
 
-
 ## 2 Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}

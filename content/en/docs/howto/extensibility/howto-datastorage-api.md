@@ -74,8 +74,8 @@ You can drag the Java action created above from the toolbox onto a microflow. In
 
 The following example illustrates how you can use the OQL APIs for reporting purposes. OQL is the general-purpose Mendix query language, very much resembling SQL. The biggest differences between OQL and SQL are:
 
-*	OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use, as you do not have to know the technical data model as stored in the database
-*	OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix
+* OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use, as you do not have to know the technical data model as stored in the database
+* OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix
 
 The following non-persistable entity shows what data you are interested in for your report:
 
@@ -112,8 +112,7 @@ The Java action illustrated below does the following:
 * Retrieves all data using the Mendix API `Core.retrieveOQLDataTable()`
 * Loops through all the rows, creates a new object of the type specified by ResultEntity.
 
-    {{% alert color="info" %}}Setting a Java action parameter of type **Entity of type parameter...** (*ResultEntity* in the example above) creates a Java string in the action which contains the name of the entity type. This string can be passed to Core.instantiate to create a new object.
-    {{% /alert %}}
+    {{% alert color="info" %}}Setting a Java action parameter of type **Entity of type parameter...** (*ResultEntity* in the example above) creates a Java string in the action which contains the name of the entity type. This string can be passed to Core.instantiate to create a new object.{{% /alert %}}
 
 * Loops through all columns of a record and copies the column value to an attribute with the same name. If an attribute with a column name does not exist, a message is printed, and the loop continues
 * The Mendix object created is added to the list to be returned
@@ -154,16 +153,16 @@ The definition of the Java action resembles the OQL action, but instead of an OQ
 
 The Java implementation below implements the following steps:
 
-*	Use *Core.dataStorage().executeWithConnection()* to execute some Java statements that receive a JDBC connection from the internal connection pool. This API is constructed to enable the Mendix Platform to guarantee that connections are returned to the pool after usage.
+* Use *Core.dataStorage().executeWithConnection()* to execute some Java statements that receive a JDBC connection from the internal connection pool. This API is constructed to enable the Mendix Platform to guarantee that connections are returned to the pool after usage.
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image026.png" >}}
 
-*	With the JDBC connection you can now implement your Java as you would with a regular JDBC connection. 
-*	A prepared statement is created, executed and the resulting records are made available through a `ResultSet`.
+* With the JDBC connection you can now implement your Java as you would with a regular JDBC connection. 
+* A prepared statement is created, executed and the resulting records are made available through a `ResultSet`.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image027.png" >}}
+    {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image027.png" >}}
 
-*	Next you loop through all the records in the `ResultSet` and create a Mendix object as specified by the user via ResultEntity.
+* Next you loop through all the records in the `ResultSet` and create a Mendix object as specified by the user via ResultEntity.
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image028.png" >}}
 
@@ -195,9 +194,9 @@ This example has a page where a user can enter a start and end date. The microfl
 
 In Postgres you can query a list of the dates of all Mondays between these dates using the following Postgres specific query:
 
-*	Using a common table expression (CTE), you create a set of all first dates of every month in the range
-*	Using another CTE you determine the dates of the Mondays for these months
-*	Finally, you select these dates if they still fall in range specified
+* Using a common table expression (CTE), you create a set of all first dates of every month in the range
+* Using another CTE you determine the dates of the Mondays for these months
+* Finally, you select these dates if they still fall in range specified
 
 For example:
 
@@ -211,16 +210,16 @@ You create a Java action with parameters for the start date and the end date. Yo
 
 ### 6.2 Creating the Java Code
 
-1.	Specify the required SQL statement in the Java method. JDBC queries expect the parameters to be specified by question marks (?) in the SQL statement.
+1. Specify the required SQL statement in the Java method. JDBC queries expect the parameters to be specified by question marks (?) in the SQL statement.
 
     {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image034.png" >}}
 
-2.	Next, use the Mendix API to execute some statements using the JDBC connection. Here you create a prepared statement, define the JDBC parameter values, and execute the SQL query.
+2. Next, use the Mendix API to execute some statements using the JDBC connection. Here you create a prepared statement, define the JDBC parameter values, and execute the SQL query.
 
     {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image035.png" >}}
 
-3.	Using the `FirstMondayDate` Java proxy, instantiate a new Mendix object and set the date attribute. 
-4.	Finally, return the created list of dates.
+3. Using the `FirstMondayDate` Java proxy, instantiate a new Mendix object and set the date attribute. 
+4. Finally, return the created list of dates.
 
     {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image036.png" >}}
 

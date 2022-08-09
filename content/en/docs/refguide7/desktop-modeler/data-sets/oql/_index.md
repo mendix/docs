@@ -10,11 +10,11 @@ Furthermore OQL can use the predefined relations (associations) to easily join o
 
 Examples of OQL queries are:
 
-*   `SELECT Name FROM Sales.Customer`
+* `SELECT Name FROM Sales.Customer`
     Retrieve the names of all customers.
-*   `SELECT FirstName FROM Sales.Customer WHERE Name = 'Jansen'`
+* `SELECT FirstName FROM Sales.Customer WHERE Name = 'Jansen'`
     Retrieve the first name of all customers with name 'Jansen'.
-*   `SELECT AVG(TotalPrice) FROM Sales.Order WHERE IsPayed = 1`
+* `SELECT AVG(TotalPrice) FROM Sales.Order WHERE IsPayed = 1`
     Retrieve the average of the total prices of all paid orders.
 
 An OQL query consists of a several components. Click on a component for more specific information.

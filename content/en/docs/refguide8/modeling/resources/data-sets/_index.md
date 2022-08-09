@@ -26,7 +26,7 @@ Fields for datasets are described below.
 ## 3 Source
 
 * **OQL query** – The [OQL query](/refguide8/oql/) which defines the dataset.
-*  **Java action** – The interface of the Java action which returns a dataset. The columns and [data types](/refguide8/data-types/) of the columns need to be specified in Studio Pro. Based on this specification Studio Pro will create a template for this action.
+* **Java action** – The interface of the Java action which returns a dataset. The columns and [data types](/refguide8/data-types/) of the columns need to be specified in Studio Pro. Based on this specification Studio Pro will create a template for this action.
 
 The following shows an example OQL query that calculates the aggregated total order amount for all orders of a customer for a specific group of customers:
 
@@ -43,9 +43,7 @@ SELECT CustomerObj/Name As Name, SUM(OrderObj/TotalAmount) As TotalAmount
 A dataset can have multiple parameters. Parameters are used to filter / manipulate datasets. Security on datasets is configured based on the parameters. In a Java action, the parameters are used in the generated template.
 
 {{% alert color="info" %}}
-
 In OQL, parameters can be called using a **$** symbol, for example: **$Month**.
-
 {{% /alert %}}
 
 A parameter has the following configurable properties:

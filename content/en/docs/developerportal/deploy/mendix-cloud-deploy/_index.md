@@ -17,7 +17,7 @@ aliases:
 
 ## 1 Introduction
 
-The Mendix Cloud is a public cloud service for Mendix applications; this is the default deployment option for Mendix applications. You can deploy either a limited **Free App** or an app running on a licensed cloud node.
+The Mendix Cloud is a public cloud service for Mendix applications; this is the default deployment option for Mendix applications. You can deploy either a limited Free App or an app running on a licensed cloud node.
 
 Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). This works in exactly the same way as the Mendix Cloud, but runs on your own virtual private cloud and will only host your company's apps.
 
@@ -32,7 +32,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Number of Users** | Unlimited users.¹ | Depends on your pricing plan.² |
 | **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
 | **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.² |
-| **App vCPU**s | 0.5 | Depends on your pricing plan.² |
+| **App vCPUs** | 0.5 | Depends on your pricing plan.² |
 | **Scheduled Events** | Are not run. | Are run and can be configured from the Developer Portal. |
 | **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
@@ -40,9 +40,9 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Access Restriction Profiles** | Not available. | Can be configured from the Developer Portal. |
 | **Client Certificates** | Not available. | Can be configured from the Developer Portal. |
 | **Starting and stopping your app manually** | Not available. | Available in the Developer Portal. |
-| **Constants** | Defined in Studio Pro | Configurable through environment variables in the Developer Portal. |
-| **Runtime Settings** | Not available | Configurable through runtime and settings in the Developer Portal. |
-| **Scalability** | Only one instance and a fixed amount (1Gb) of memory. | Configurable in the Developer Portal. |
+| **Constants** | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
+| **Runtime Settings** | Not available. | Configurable through runtime and settings in the Developer Portal. |
+| **Scalability** | Only one instance and a fixed amount (1GB) of memory. | Configurable in the Developer Portal. |
 | **Metrics, Alerts, and Log Levels** | Not available. | Available. |
 | **Historic Archived Logs** | Not available, only live logs are available. | Available. |
 | **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |

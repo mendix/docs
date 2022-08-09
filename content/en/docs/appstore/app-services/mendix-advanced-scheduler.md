@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "platform support"]
 
 ## 1 Introduction
 
-The [Mendix Advanced Scheduler](#needsurl) enables you to load resources and events and visualize them.
+The [Mendix Advanced Scheduler](#needsurl) enables you to load resources and events and visualize them. It offers you options to use a fixed timeline or a dynamic timeline for to view schedules. With a fixed timeline, you can navigate through time using buttons, and a dynamic timeline enables you to scroll through time.
 
 ## 2 Installation
 
@@ -53,9 +53,15 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 #### 3.1.1 Views Tab
 
 * **Scheduler Start Date** – This is the start date of the scheduler.
+
 * **Scheduler End Date** – This is the end date of the scheduler.
+
 * **On changed time window** – You can set an action that is triggered if the time window is changed.
-* **Views** – You can manage the available views on the list.
+
+* **Views** – You can manage the available views on the list. All the views on this list will be shown in the view selector.
+  
+  {{< figure src="/attachments/appstore/app-services/mendix-advanced-scheduler/view-selector.png" >}}
+  
   * **New** – You can add a new view with the following items:
     * **ID of the view** – This is the ID used to define a view.
   
@@ -77,13 +83,15 @@ A trial gives everyone in your company one-month access to the app service. {{% 
       
     
   * **Delete** – You can delete the selected view.
-
+  
   * **Edit** – You can edit the selected view.
-
+  
   * **Move up** – You can move up the selected view.
-
+  
   * **Move down** – You can move down the selected view.
+  
 * **Selected View** – This is an attribute of an entity in your Domain Model, which is used to change the view in Mendix. You can build logic around this in your app or implement your own switching mechanism in your own custom header.
+
 * **Fixed Timeline**
   * **Yes** – If selected, you cannot change the timeline in the time window.
   * **No** – If selected, you can scroll along the timeline.
@@ -94,7 +102,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 * **Resource ID** – This is the ID of the resource.
 * **Resource Classname** – This is the classname of the resource, which can be used for the styling of the resource.
   * If left empty, the value is set to *resource-type-default*.
-* **On Click** – You can set an action that is triggered when the resource is clicked.{{% todo %}}Will this field be removed before the release?{{% /todo %}}
+* **On Click** – You can set an action that is triggered when the resource is clicked.
 
 #### 3.1.3 Events Tab
 
@@ -123,7 +131,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
     *  **Move up** – You can move up the selected data source.
     *  **Move down** – You van move down the selected data source.
 * **Create new events**
-  * **Yes** – If selected, you can create a new event by drag and drop or double-clicking a time slot. {{% todo %}}How does this drag and drop work exactly?{{% /todo %}}
+  * **Yes** – If selected, you can create a new event by selecting an empty area in the timeline and then dragging the borders to define the start and end time or by double-clicking a time slot. 
   * **No** – If selected, you cannot create a new event by drag and drop or double-clicking a time slot.
 *  **On create event action** – You can set an action that is triggered when a new event is created.
 *  **Last Moved Event Id** – The ID that references the event that has been last moved
@@ -150,7 +158,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 * **Today button**  – You can change the text shown on the **Today** button, for example, to the translation of "today" in a different language.
 * **Hide navigation**
   * **Yes** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is hidden. You can create your own Mendix buttons.
-  * **No** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is visible.{{% todo %}}How can you configure the options in the view selector drop-down?{{% /todo %}}
+  * **No** – If selected, the navigation, including the previous button (**<**), the next button (**>**), the **Today** button, and the view selector, is visible.
 
 #### 3.1.6 Common Tab
 

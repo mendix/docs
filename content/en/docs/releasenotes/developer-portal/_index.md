@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### August 9th, 2022
+
+#### New Features
+
+* We released [Notifications](/developerportal/#notifications) for Public Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+
 ### July 21st, 2022
 
 #### Improvements

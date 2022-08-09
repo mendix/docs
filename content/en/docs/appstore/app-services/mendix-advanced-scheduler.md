@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "platform support"]
 
 ## 1 Introduction
 
-The [Mendix Advanced Scheduler](#needsurl) enables you to load resources and events and visualize them. It offers you options to use a fixed timeline or a dynamic timeline for to view schedules. With a fixed timeline, you can navigate through time using buttons, and a dynamic timeline enables you to scroll through time.
+The [Mendix Advanced Scheduler](#needsurl) enables you to load resources and events and visualize them. It offers you options to use a fixed timeline or a dynamic timeline for to view schedules. With a fixed timeline, you can navigate through time using buttons, and a dynamic timeline enables you to scroll through the time.
 
 ## 2 Installation
 
@@ -98,9 +98,9 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 
 #### 3.1.2 Resources Tab
 
-* **Resources Datasource** – This is the datasource for the resources that are shown on the left side of the scheduler.
+* **Resources Datasource** – This is the data source for the resources that are shown on the left side of the scheduler.
 * **Resource ID** – This is the ID of the resource.
-* **Resource Classname** – This is the classname of the resource, which can be used for the styling of the resource.
+* **Resource Classname** – This is the class name of the resource, which can be used for the styling of the resource.
   * If left empty, the value is set to *resource-type-default*.
 * **On Click** – You can set an action that is triggered when the resource is clicked.
 
@@ -121,7 +121,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
         * **UI** tab
           * **Event content** – This is the title of the event. It supports HTML.
           * **Tooltip content** – This is the content of the tooltip of the event.
-          * **Classname** – This is the classname of the event, which can be used for the styling of an event.
+          * **Classname** – This is the class name of the event, which can be used for the styling of an event.
             * If left empty, the value is set to *event-type-default*.
         * **User interaction** tab
           * **On click action** – You can set an action that is triggered when the event is clicked.
@@ -150,7 +150,7 @@ A trial gives everyone in your company one-month access to the app service. {{% 
 * **Start date time** – This is the start date of the roster.
 * **End date time** – This is the end date of the roster.
 * **Name of the roster** – This is name displayed in the roster.
-* **ClassName** – the classname of the roster, which can be used for the styling of a roster.
+* **ClassName** – This is the class name of the roster, which can be used for the styling of a roster.
   * If left empty, the value is set to *event-type-default*.
 
 #### 3.1.5 UI Tab

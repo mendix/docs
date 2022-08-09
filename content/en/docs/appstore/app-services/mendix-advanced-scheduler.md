@@ -13,38 +13,17 @@ The [Mendix Advanced Scheduler](#needsurl) enables you to load resources and eve
 
 ## 2 Installation
 
-### 2.1 Obtaining a License Key {#obtain-license-key}
+### 2.1 Starting a Subscription {#obtain-license-key}
 
-Mendix Advanced Scheduler is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
+{{% todo %}}Check if this works.{{% /todo %}}
 
-#### 2.1.1 Starting a Trial
-
-A trial gives everyone in your company one-month access to the app service. {{% todo %}}The trial has any usage limitation? {{% /todo %}}To start a trial, perform the following steps:
-
-1. Go to the [Mendix Advanced Scheduler](#needsurl) page in the marketplace.
-2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-3. Select the check box to agree to the **Terms & Conditions**.
-4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Mendix Advanced Scheduler** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license key](/appstore/app-services/mendix-advanced-scheduler/#configure-license-key) in your app.
-
-#### 2.1.2 Starting a Subscription
-
-1. Go to the [Mendix Advanced Scheduler](#needsurl) page in the marketplace.
-2. Click **Subscribe** to start a subscription.
-3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Mendix Advanced Scheduler** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license key. Save the license key somewhere safe. Later you will need to [configure the license key](/appstore/app-services/mendix-advanced-scheduler/#configure-license-key) in your app.
+Mendix Advanced Scheduler is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Mendix Advanced Scheduler locally or in a Mendix Free App for free. However, to deploy Mendix Advanced Scheduler on the cloud, you need to start a subscription to get a license token and [configure](#) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
 
 ### 2.2 Installing the Component in Your App
 
-1. To download and install Mendix Advanced Scheduler app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
-2. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+To download and install Mendix Advanced Scheduler app service in your app, click the **Contact Us** button on the [Mendix Advanced Scheduler](#needsurl) Marketplace page. 
+
+Then follow the instructions in the [Importing Content from the App Explorer](http://localhost:1313/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the component into your app.
 
 ## 3 Configuration 
 

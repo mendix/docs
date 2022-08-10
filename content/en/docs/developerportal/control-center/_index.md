@@ -171,7 +171,7 @@ The **Marketplace Content** page offers a dashboard where you can manage the vis
 
 {{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
 
-The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. A Company Admin can configure whether any of these components is visible to the Studio users from your company.
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible to the Studio users from your company.
 
 The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
 

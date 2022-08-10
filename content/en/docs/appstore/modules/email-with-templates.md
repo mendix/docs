@@ -64,16 +64,16 @@ You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0
 
 Select the check box for **Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
 
-#### 3.1.1 OAuth Path Constants
+#### 3.1.1 Using OAuth Path Constants
 
-Constant **OAuthCallbackPath** is used to configure redirect URI to acquire authorization code from OAuth provider.
-Constant **OAuthSignInPath** is used to start OAuth flow.
+* The **OAuthCallbackPath** constant is used to configure a redirect URI to acquire an authorization code from an OAuth provider.
+* The **OAuthSignInPath** constant is used to start an OAuth flow.
 
 #### 3.1.2 Registering Your App on the Azure Portal
 
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-While registering, set the redirect URI to `https://(yourapp_domain)/(Value_of_OAuthCallbackPath_Constant)/azure`. For example, if domain name is www.example.com and Constant **OAuthCallbackPath** value is "callback_et/" then redirect URI will be `https://www.example.com/callback_et/azure`
+While registering, set the redirect URI to `https://(yourapp_domain)/(Value_of_OAuthCallbackPath_Constant)/azure`. For example, if the domain name is www.example.com and the value of the  Constant **OAuthCallbackPath** value is "callback_et/" then redirect URI will be `https://www.example.com/callback_et/azure`
 
 #### 3.1.3 Enable Permissions in the Azure Portal
 

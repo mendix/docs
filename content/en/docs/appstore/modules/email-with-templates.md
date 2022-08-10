@@ -69,8 +69,6 @@ Select the check box for **Microsoft Azure AD**. If the account is already regis
 Constant **OAuthCallbackPath** is used to configure redirect URI to acquire authorization code from OAuth provider.
 Constant **OAuthSignInPath** is used to start OAuth flow.
 
-Above constant's value should end with a '/' and should not contain multiple '/'.
-
 #### 3.1.2 Registering Your App on the Azure Portal
 
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).

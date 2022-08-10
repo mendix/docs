@@ -56,7 +56,7 @@ There are two ways to handle an incoming GET request for an OData resource:
 1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow defined in the *Readable* section. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See [Handle a GET Request with a Microflow](#handle-get-request).
 
-The result list of objects from both actions will then be transformed to an OData payload. If it fails, a [status code](/refguide/published-odata-services/) of `500` will be returned.
+The result list of objects from both actions will then be transformed to an OData payload. If it fails, a [status code](/refguide/published-odata-services/#status-codes) of `500` will be returned.
 
 ### 3.1 Handle a GET Request with a Microflow {handle-get-request}
 

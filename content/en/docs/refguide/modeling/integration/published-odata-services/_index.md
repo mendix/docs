@@ -183,7 +183,7 @@ Some on-premises servers, in particular those using Microsoft IIS, will strip th
 
 To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#preserve-header) in the *Microsoft Windows* deployment documentation.
 
-## 7 Runtime Status Codes
+## 7 Runtime Status Codes {#status-codes}
 
 The Mendix runtime returns status codes for OData payloads. The possible status codes are the following:
 

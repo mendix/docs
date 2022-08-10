@@ -167,7 +167,7 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ## 8 Marketplace Content {#marketplace-content}
 
-The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and private Marketplace components for Studio users from your company.
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) for Studio users from your company.
 
 {{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
 

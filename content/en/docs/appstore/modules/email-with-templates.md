@@ -66,8 +66,8 @@ Select the check box for **Microsoft Azure AD**. If the account is already regis
 
 #### 3.1.1 OAuth Path Constants
 
-Constant **OAuthCallbackPath** is used to configure redirect URI to aquire authorization code from OAuth provider. The constant value should ends with a '/' and should not contain multiple '/'.
-Constant **OAuthSignInPath** is used to start OAuth flow. The constant value should ends with a '/' and should not contain multiple '/'.
+Constant **OAuthCallbackPath** is used to configure redirect URI to acquire authorization code from OAuth provider. The constant value should end with a '/' and should not contain multiple '/'.
+Constant **OAuthSignInPath** is used to start OAuth flow. The constant value should end with a '/' and should not contain multiple '/'.
 
 #### 3.1.2 Registering Your App on the Azure Portal
 

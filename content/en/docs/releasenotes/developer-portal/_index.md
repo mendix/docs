@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We have introduced the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center, where Mendix Admins can manage and control the visibility of Marketplace Content in Studio.
+* We have introduced the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
 
 ### August 9th, 2022
 

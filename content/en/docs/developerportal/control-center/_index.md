@@ -167,11 +167,11 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ## 8 Marketplace Content {#marketplace-content}
 
-The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) for Studio users from your company.
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users.
 
 {{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
 
-The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible to the Studio users from your company.
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users.
 
 The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
 
@@ -185,7 +185,7 @@ The list has the following columns:
 
 * **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
 
-* **Studio Visibility** – You can toggle the button to configure whether the component is visible to the Studio users from your company.
+* **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio to your company's users.
 
 ## 9 Onboarding {#onboarding}
 

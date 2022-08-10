@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### August 11th, 2022
+
+#### Improvements
+
+* We simplified the process of [inviting other users](https://docs.mendix.com/developerportal/collaborate/team/#inviting) to your projects. More specifically, you are not required to add a personal message to the invitation anymore and the whole process can be completed on a single page.
+* We added an banner about [Epics](/developerportal/collaborate/epics/) on the [Stories](https://docs.mendix.com/developerportal/collaborate/stories/) page. This banner provides more information about our new tool for agile planning and makes it easier for Scrum Masters to enable Epics for their projects.
+
 ### August 9th, 2022
 
 #### New Features

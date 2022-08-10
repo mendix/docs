@@ -22,6 +22,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### New Features
 
 * We have introduced the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
+* We simplified the process of [inviting other users](/developerportal/collaborate/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
+* We added a banner about [Epics](/developerportal/collaborate/epics/) on the [Stories](/developerportal/collaborate/stories/) page. This banner provides more information about our new tool for agile planning and makes it easier for Scrum Masters to enable Epics for their projects.  
 
 ### August 9th, 2022
 

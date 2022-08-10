@@ -8,7 +8,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how 
 
 ## 1 Introduction
 
-Our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide outlines the basic steps of building Mendix connectors. Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on these existing capabilities of building connectors in Studio Pro, moving away from building microflow actions with Java. This document dives into these new functionalities, which allow you wrap any service, API, or database with an OData service. 
+Our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide outlines the basic steps of building Mendix connectors. Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on these existing capabilities of building connectors in Studio Pro, moving beyond building microflow actions with Java. This document dives into these new functionalities, which allow you wrap any service, API, or database with an OData service. 
 
 ### 1.1 Overview
 
@@ -18,8 +18,8 @@ The benefit of having connector services or integration apps is that you can cen
 
 In this guide, you will learn about the following:
 
-* Using a microflow to return values of published OData services
 * Exposing Non-Persistable Entities (NPEs) as published OData resources using a microflow as a data source
+* Using a microflow to return values of published OData services
 * Selecting a key when exposing entities as OData resources
   
 ### 1.2 Use Cases
@@ -40,7 +40,9 @@ Before you read this guide, do the following:
 
 ## 2 Non-Persistable Entities as Published OData Resources
 
-Because your connector will only be moving data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can also expose [non-persistable entities](refguide/entities/#non-persistable-entity/) as a [published OData resource](refguide/published-odata-resource/).
+Because your connector will only be moving data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](refguide/entities/#non-persistable-entity/) as a [published OData resource](refguide/published-odata-resource/).
+
+Right-click on the non-persistable entity you want to expose and select **Expose as OData resource**.
 
 ## 3 Data Sources for a Published OData Resource
 
@@ -52,11 +54,11 @@ In Studio Pro, you can expose entities as OData resources by adding them to a pu
 There are two ways to handle an incoming GET request for an OData resource:
 
 1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
-2. **Call a microflow** – This action will call a microflow defined in the *Readable* section. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. Refer to section 3.1 for more information.
+2. **Call a microflow** – This action will call a microflow defined in the *Readable* section. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See [Handle a GET Request with a Microflow](#handle-get-request).
 
-The result list of objects from both actions will then be transformed to an OData payload. If it fails, a [status code](/refguide/published-odata-service/) of `500` will be returned.
+The result list of objects from both actions will then be transformed to an OData payload. If it fails, a [status code](/refguide/published-odata-services/) of `500` will be returned.
 
-### 3.1 Handle a GET Request with a Microflow
+### 3.1 Handle a GET Request with a Microflow {handle-get-request}
 
 {{% alert color="info" %}}
 This feature is only available for published OData services that use OData v4.

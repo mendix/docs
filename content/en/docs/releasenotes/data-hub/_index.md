@@ -21,7 +21,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Fixes
 
-* We fixed a bug where notifications about deletion were mistakenly sent when updating a service.(Ticket 162865 and 162868)
+* We fixed a bug where notifications about deletion were mistakenly sent when updating a service. (Ticket 162865 and 162868)
 * We fixed an issue where some Company Admins would get an error when trying to change the default discoverability setting.
 * We removed an undocumented field that was returned by the Search API.
 * We fixed an issue where under certain conditions, published and consumed services were not registered automatically in the Catalog.

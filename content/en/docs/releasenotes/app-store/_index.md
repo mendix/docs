@@ -11,6 +11,14 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### August 11th, 2022
+
+#### New Features
+
+* We have introduced Content curation for Marketplace Content in Studio where Company admin will be able to do the curation using Control Center. To access the feature Company admin will use Marketplace Content section in Control Center.  With this new feature, Company admins can:
+   * Limit available content in Studio.
+   * Approve & hide private Marketplace content for Studio.
+
 ### March 24th, 2022
 
 #### Improvements

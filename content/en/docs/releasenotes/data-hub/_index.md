@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Improvements
 
-* We made some improvements to the **Register a New Data Source** form, including improved processing of large contracts and improved responsiveness on pages with a large amount ofa applications and owners.
+* We made some improvements to the **Register a New Data Source** form, including improved processing of large contracts and improved responsiveness on pages with a large amount of applications and owners.
 
 ### Fixes
 

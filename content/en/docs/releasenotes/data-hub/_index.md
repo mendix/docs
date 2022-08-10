@@ -15,15 +15,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Improvements
 
-* We made some improvements to the registration form.
-   * Improved processing of large contracts.
-   * Improved repsonsiveness of the page when there are a large amount of applications and owners.
+* We made some improvements to the **Register a New Data Source** form, including improved processing of large contracts and improved responsiveness on pages with a large amount ofa applications and owners.
 
 ### Fixes
 
-* We fixed a bug where notifications about deletion were mistakenly sent when updating a service. (Ticket 162865 and 162868)
-* We fixed an issue where some Company Admins would get an error when trying to change the default discoverability setting.
-* We removed an undocumented field that was returned by the Search API.
+* We fixed a bug where notifications about deletion were mistakenly sent when updating a service. 
+* We fixed an issue where some **Company Admins** would get an error when trying to change the default discoverability setting.
+* We removed an undocumented field that was returned by the [Search API](/apidocs-mxsdk/apidocs/data-hub-apis/#search).
 * We fixed an issue where under certain conditions, published and consumed services were not registered automatically in the Catalog.
 
 ### August 4th, 2022

@@ -40,7 +40,7 @@ Before you read this guide, do the following:
 
 ## 2 Non-Persistable Entities as Published OData Resources
 
-Because your connector will only be moving data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](refguide/entities/#non-persistable-entity/) as a [published OData resource](refguide/published-odata-resource/).
+Because your connector will only be moving data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](refguide/entities/#non-persistable-entity) as a [published OData resource](refguide/published-odata-resource/).
 
 Right-click on the non-persistable entity you want to expose and select **Expose as OData resource**.
 
@@ -58,15 +58,13 @@ There are two ways to handle an incoming GET request for an OData resource:
 
 The result list of objects from both actions will then be transformed to an OData payload. If it fails, a [status code](/refguide/published-odata-services/#status-codes) of `500` will be returned.
 
-### 3.1 Handle a GET Request with a Microflow {handle-get-request}
+### 3.1 Handle a GET Request with a Microflow {#handle-get-request}
 
 {{% alert color="info" %}}
 This feature is only available for published OData services that use OData v4.
 {{% /alert %}}
 
 Inside a published OData service, you can expose entities as published resources. When you **Edit** a resource, you can select a microflow for *Readable* that is executed when a consumer sends a GET request to the service endpoint. 
-
-![Call a microflow action in Readable](https://paper-attachments.dropbox.com/s_FB45FE254EEA2DEF2D8396A12FCEC13A9827E02BEC6849F697CC4AD99F9DC122_1652102593434_image.png)
 
 Include the following tasks inside the microflow:
 
@@ -76,6 +74,7 @@ Include the following tasks inside the microflow:
 * Retrieve the required count. NOTE: Count can be requested in multiple ways.
 * Store the count value in the `ODataResponse` object.
 * Return a list of objects that matches the exposed entity.
+* 
 ![Example of call a microflow implementation](https://paper-attachments.dropbox.com/s_FB45FE254EEA2DEF2D8396A12FCEC13A9827E02BEC6849F697CC4AD99F9DC122_1652103360177_image.png)
 
 

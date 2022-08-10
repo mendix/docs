@@ -66,8 +66,10 @@ Select the check box for **Microsoft Azure AD**. If the account is already regis
 
 #### 3.1.1 OAuth Path Constants
 
-Constant **OAuthCallbackPath** is used to configure redirect URI to acquire authorization code from OAuth provider. The constant value should end with a '/' and should not contain multiple '/'.
-Constant **OAuthSignInPath** is used to start OAuth flow. The constant value should end with a '/' and should not contain multiple '/'.
+Constant **OAuthCallbackPath** is used to configure redirect URI to acquire authorization code from OAuth provider.
+Constant **OAuthSignInPath** is used to start OAuth flow.
+
+Above constant's value should end with a '/' and should not contain multiple '/'.
 
 #### 3.1.2 Registering Your App on the Azure Portal
 
@@ -75,7 +77,7 @@ To register your app, follow Microsoft's [Tutorial: Register an app with Azure A
 
 While registering, set the redirect URI to `https://(yourapp_domain)/(Value_of_OAuthCallbackPath_Constant)/azure`. For example, if domain name is www.example.com and Constant **OAuthCallbackPath** value is "callback_et/" then redirect URI will be `https://www.example.com/callback_et/azure`
 
-### 3.1.3 Enable Permissions in the Azure Portal
+#### 3.1.3 Enable Permissions in the Azure Portal
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 

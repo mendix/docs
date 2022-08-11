@@ -189,13 +189,21 @@ For more information on managing node permissions, see [Node Permissions](/devel
 
 ## 6 Services {#services}
 
-Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
+Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in this app.
 
-The technical contact can only see services which have been licensed for their company. If the technical contact cannot enable the service, this means that it has previously been licensed but the license has expired.
+### 6.1 Available Services
+
+The custom services that are currently available on the app level, or the **Environments** page, are as follows:
+
+* **Data Broker service** – required to use [Mendix Business Events](/appstore/modules/mendix-business-events/) on production apps
+
+### 6.2 Enabling Custom Services
+
+The Technical Contact can only see services which have been licensed for their company. If the Technical Contact cannot enable the service, this means that it has previously been licensed but the license has expired.
 
 Team members who have permission to *Deploy, Publish, and Monitor* can see which services are enabled or disabled.
 
-Once a service has been enabled for an app, team members can selectively enable it for each [environment](/developerportal/deploy/environments-details/#services).
+Once a service has been enabled for an app, Technical Contacts can selectively enable it for each [environment](/developerportal/deploy/environments-details/#services).
 
 ## 7 Read More 
 

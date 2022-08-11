@@ -539,4 +539,16 @@ For example, you may wish to use tags when logging with *Datadog*. You can find 
 
 ## 9 Services Tab{#services}
 
-You can enable and disable custom services for individual environments of your app. The service you want to enable must have been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).
+Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
+
+### 9.1 Available Services
+
+The custom services that are currently available for each environment are as follows:
+
+* **Data Broker service** – required to use [Mendix Business Events](/appstore/modules/mendix-business-events/) on production apps
+
+
+### 9.2 Enabling Custom Services
+
+Technical Contacts need enable and disable custom services for individual environments of each app. The service must first been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).
+

@@ -33,7 +33,7 @@ Mendix is compatible with the above Docker hosts as long as there are compatible
 To start the container, you must provide the container with the password in order to create an administrative account for your Mendix application's `ADMIN_PASSWORD`
 and `DATABASE_ENDPOINT`, as you can see in this example:
 
-```
+```shell
 docker run -it \
   -e ADMIN_PASSWORD=Password1! \
   -e DATABASE_ENDPOINT=postgres://username:password@host:port/mendix \
@@ -42,7 +42,7 @@ docker run -it \
 
 This is an example for Microsoft SQL Server:
 
-```
+```powershell
 docker run -it \
   -e ADMIN_PASSWORD=Password1! \
   -e DATABASE_ENDPOINT=sqlserver://username:password@host:port/mendix \

@@ -52,25 +52,25 @@ Even if the control bar is invisible there can still be a default button that is
 
 {{% /alert %}}
 
-_Default value:_ True
+*Default value:* True
 
 ### Show paging buttons
 
 This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
-_Default value:_ True
+*Default value:* True
 
 ### Number of rows
 
 With this property you can change the number of rows of templates that will be shown on one page.
 
-_Default value:_ 3
+*Default value:* 3
 
 ### Number of columns
 
 With this property you can change the number of templates that will be shown next to each other in one row.
 
-_Default value:_ 2
+*Default value:* 2
 
 ### Style template
 
@@ -88,13 +88,13 @@ The selection mode determines whether and how the user can select items in the g
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. |
 
-_Default value:_ Single selection
+*Default value:* Single selection
 
 ### Select first
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
-_Default value:_ False
+*Default value:* False
 
 ### Default button trigger
 
@@ -105,13 +105,13 @@ The default button can be triggered by a single or a double click a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click | A double click triggers the default button. |
 
-_Default value:_ Double click
+*Default value:* Double click
 
 ### Refresh time (in seconds)
 
 If the refresh time is non-zero, the template grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
-_Default value:_ 0
+*Default value:* 0
 
 ## Data source properties
 
@@ -125,10 +125,10 @@ The template grid supports the following types of data sources: Database Source,
 
 See the corresponding data source for its properties:
 
-*   [Database source](/refguide7/database-source/)
-*   [XPath source](/refguide7/xpath-source/)
-*   [Microflow source](/refguide7/microflow-source/)
-*   [Association source](/refguide7/association-source/)
+* [Database source](/refguide7/database-source/)
+* [XPath source](/refguide7/xpath-source/)
+* [Microflow source](/refguide7/microflow-source/)
+* [Association source](/refguide7/association-source/)
 
 ## Visibility properties
 

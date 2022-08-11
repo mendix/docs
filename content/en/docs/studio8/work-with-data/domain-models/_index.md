@@ -65,21 +65,17 @@ Entities have the following properties:
 * **General** properties define the name of the entity and its [persistability](/refguide8/persistability/):
 
     * **Name** – defines the name of the entity
-
     * **Persistable** – defines whether objects of the entity are stored in the database (for more information on persistability, see [Persistability](/refguide8/persistability/) in the *Studio Pro Guide*)
 
-    {{< figure src="/attachments/studio8/work-with-data/domain-models/entity-general-properties.png" alt="General Properties of an Entity" >}}
+        {{< figure src="/attachments/studio8/work-with-data/domain-models/entity-general-properties.png" alt="General Properties of an Entity" >}}
 
 * **Stored Information** properties define whether the information about the entity is stored in the database. If the information is stored, it can be retrieved afterwards and can be used in [page filters](/studio8/data-filters/). For example, you can add a filter and show only objects that were created by the current user. 
 
     You can toggle the following properties: 
 
     * **Store 'Created by'** – when enabled, the user who created the entity is stored in the database
-
     * **Store 'Creation Date'** – when enabled, the date and time when the entity was created is stored in the database
-
     * **Store 'Last Changed by'**– when enabled, the user who was the last to make changes to the entity is stored in the database
-
     * **Store 'Last Changed Date'** – when enabled, the date and time when the entity was last changed is stored in the database
 
         {{< figure src="/attachments/studio8/work-with-data/domain-models/entity-stored-info.png" alt="Stored Information Properties of an Entity" >}}
@@ -107,10 +103,8 @@ You can add new entities in the **Toolbox**.
 To add an entity, do the following:
 
 1. Open the **Toolbox** tab of the domain model.
-
 2. Choose the entity type you would like to add, and drag and drop it the working area.
-
-3.  Fill out the name for the entity and click **Create**:
+3. Fill out the name for the entity and click **Create**:
 
     {{< figure src="/attachments/studio8/work-with-data/domain-models/create-new-entity-dialog.png" >}}
 
@@ -127,15 +121,12 @@ For example, you have an entity named *Laptop* and you want to be able to show u
 To create a new image/file entity with an association automatically, follow the process described below:
 
 1. Select an entity of the *Entity* type that will have a connection to the new image or file entity. 
-
 2. Click **New attribute** button.
-
-3.  In the **Create New Attribute** dialog box, click **Add image or file** in the lower-right corner:
+3. In the **Create New Attribute** dialog box, click **Add image or file** in the lower-right corner:
 
     {{< figure src="/attachments/studio8/work-with-data/domain-models/add-image-or-file.png" alt="Add Image or File" >}}
 
 4. In the **Image and Files** dialog box, select the type or entity (image or file).
-
 5. In the **Create New Image/File Entity** dialog box, specify the name of the special entity and click **Create**. 
 
 The new image or file entity is created with default *Name* and *Size* attributes and the association to the entity that you selected in the first step:
@@ -145,11 +136,11 @@ The new image or file entity is created with default *Name* and *Size* attribute
 
 To add attributes in the domain mode, do the following: 
 
-1.  Select a block with entity you want to add an attribute to. The **New attribute** option appears:
+1. Select a block with entity you want to add an attribute to. The **New attribute** option appears:
 
     {{< figure src="/attachments/studio8/work-with-data/domain-models/adding-attribute.png"   width="250"  >}}
 
-2.  Click **New attribute** and specify its **Name** and **Type**:
+2. Click **New attribute** and specify its **Name** and **Type**:
 
     {{< figure src="/attachments/studio8/work-with-data/domain-models/create-new-attribute-dialog.png" >}}
 
@@ -168,25 +159,23 @@ There are several ways to add an association in the domain model. You can do one
     {{< figure src="/attachments/studio8/work-with-data/domain-models/adding-association-dot-icon.png" >}}
 
     1. To create an association with an existing entity, drag the dot to the second entity. 
-
-    2.  To create an association with a new entity, drag the dot icon and hold it for a couple of seconds until it turns into a plus icon. By dropping the plus icon, you can create a new entity with an association from the first entity:
+    2. To create an association with a new entity, drag the dot icon and hold it for a couple of seconds until it turns into a plus icon. By dropping the plus icon, you can create a new entity with an association from the first entity:
 
         {{< figure src="/attachments/studio8/work-with-data/domain-models/plus-icon.png" >}}
 
-4. Select a block with an entity you want to add an association to do the following:
+1. Select a block with an entity you want to add an association to do the following:
 
-    1.  Click the arrow icon:
-    
+    1. Click the arrow icon:
+
         {{< figure src="/attachments/studio8/work-with-data/domain-models/adding-association.png"   width="250"  >}}
 
-    2.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
+    2. Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
 
         {{< figure src="/attachments/studio8/work-with-data/domain-models/new-association.png" >}}
 
         A module name is indicated next to the entity name in brackets. 
-    
-        {{% alert color="info" %}} If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](/studio8/domain-models-association-properties/#cross-module-associations) section in *Associations*. The entities of the current module are listed first.     
-        {{% /alert %}}
+
+        {{% alert color="info" %}} If you select the entity from another module, you will create a cross-module association. For more information, see the [Cross-Module Associations](/studio8/domain-models-association-properties/#cross-module-associations) section in *Associations*. The entities of the current module are listed first.{% /alert %}}
 
 ## 6 Specifying Properties
 
@@ -199,7 +188,6 @@ At the bottom of the tab you can see the **Delete** button.
 You can manage the following properties of an entity:
 
 * The **Name** of the entity
-
 * [Persistability](/refguide8/persistability/) of the entity
 
     {{< figure src="/attachments/studio8/work-with-data/domain-models/entity-properties.png" >}}
@@ -219,26 +207,21 @@ To change the attribute properties, click the attribute in the domain model. The
 
 {{< figure src="/attachments/studio8/work-with-data/domain-models/selecting-attribute.png" >}}
 
-
 {{% alert color="info" %}}
-
 Fields that are displayed in **Properties** may vary depending on the type of the attribute.
-
 {{% /alert %}}
 
 {{% alert color="info" %}}
-
 Properties of *Name* and *Size* attributes of image and file entities are read-only, as in, you cannot edit them. 
-
 {{% /alert %}}
 
 ### 6.3 Specifying Association Properties
 
 You can manage the following properties of an association:
 
-*   The **Name** of the association
-*   **Multiplicity** of the association
-*   The delete behavior of the objects
+* The **Name** of the association
+* **Multiplicity** of the association
+* The delete behavior of the objects
 
 For more information, see [Associations](/studio8/domain-models-association-properties/). 
 
@@ -253,14 +236,10 @@ If the association type is one-to-many or many-to-many, you can swap direction o
 To delete an entity, attribute, or association, do the following:
 
 1. Select the entity, attribute or association you want to delete.
-
-2.  Press **Delete** or click the **Delete** button at the bottom of the **Properties** tab.
+2. Press **Delete** or click the **Delete** button at the bottom of the **Properties** tab.
 
     {{< figure src="/attachments/studio8/work-with-data/domain-models/deletion.png"   width="300"  >}}
 
 {{% alert color="info" %}}
-
 You cannot delete *Name* and *Size* attributes of image and file entities. 
-
 {{% /alert %}}
-

@@ -23,18 +23,18 @@ There are 9 total AR Widgets. Some are structure widgets, while others are visua
 
 Structure  widgets:
 
-1.  **Container (AR)**
-2.  **Image Tracker (AR)**
-3.  **Plane Selector (AR)**
-4.  **Node (AR)**
+1. **Container (AR)**
+1. **Image Tracker (AR)**
+1. **Plane Selector (AR)**
+1. **Node (AR)**
 
 Visual widgets:
 
-5.  **3D Object (AR)**
-6.  **Text (AR)**
-7.  **Cube (AR)**
-8.  **Sphere (AR)**
-9.  **Square (AR)**
+1. **3D Object (AR)**
+1. **Text (AR)**
+1. **Cube (AR)**
+1. **Sphere (AR)**
+1. **Square (AR)**
 
 ## 3 Structure Widgets 
 

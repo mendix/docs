@@ -169,7 +169,6 @@ The themes available are:
 * **belize**
 * **belizeDeep**
 
-
 ## 7 Demo Apps
 
 The [SAP Fiori 3 Demo app](https://marketplace.mendix.com/link/component/116787) Marketplace module contains a number of different skeleton apps which you can review or copy to use as the basis for your own apps.

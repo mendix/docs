@@ -51,7 +51,6 @@ The **Language** menu allows you to manage additional languages and translations
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-menu.png" alt="Language Menu" >}}
 
-
 ### 3.1 Menu Items Overview
 
 The **Language** menu items are described in the table below:
@@ -95,9 +94,7 @@ There are two options to ensure that the language is changed:
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" >}}
 
-    {{% alert color="warning" %}}
-When reloading the page, the language change must be made for the `$currentUser` object of entity type `User`. It will not change the language immediately if you use an association to a specialization of the `User` entity, such as `Administration.Account`.
-{{% /alert %}}
+    {{% alert color="warning" %}}When reloading the page, the language change must be made for the `$currentUser` object of entity type `User`. It will not change the language immediately if you use an association to a specialization of the `User` entity, such as `Administration.Account`.{{% /alert %}}
 
 {{% alert color="info" %}}
 The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your app. The labels on those pages will not change for different users, they will always be the same.
@@ -105,7 +102,7 @@ The above only applies to pages *within* your Mendix application (meaning, pages
 
 ## 5 Read More
 
-* [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/) – a worked example of adding a translation 
+* [Translating Your App Content](/refguide/translate-your-app-content/) – a worked example of adding a translation 
 * [How To Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages/)
 * [Change language by clicking a link](https://forum.mendixcloud.com/link/questions/91821) – explanations and ideas on the Mendix forum for refreshing the page when the language is changed
 * [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676) – a discussion on the Mendix forum about switching languages for anonymous end-users

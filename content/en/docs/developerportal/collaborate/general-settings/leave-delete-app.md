@@ -39,18 +39,17 @@ If you want to leave and delete your app, follow these steps:
 
 3. At the bottom of the **General** tab, click one of the following buttons:
 
-   * Click **Leave App** to leave the app.
+    * Click **Leave App** to leave the app.
 
-     If you leave an app that still has team members, you will leave the app directly after clicking **Leave App**. The app will still exist in the company, and it will be available for other team members. If you want to return to the team, other team members can invite you to the app again.
+    If you leave an app that still has team members, you will leave the app directly after clicking **Leave App**. The app will still exist in the company, and it will be available for other team members. If you want to return to the team, other team members can invite you to the app again.
 
-     If you are the only member of the team, you will get a final confirmation message. The pop-up window states the app will be **permanently deleted**, when you leave as the last member. Confirm leaving and deleting the app by clicking **Leave and Delete App**. This change cannot be reverted and will be fully deleted from your company.
+    If you are the only member of the team, you will get a final confirmation message. The pop-up window states the app will be **permanently deleted**, when you leave as the last member. Confirm leaving and deleting the app by clicking **Leave and Delete App**. This change cannot be reverted and will be fully deleted from your company.
 
-   * Click **Deactivate App** to deactivate the app
+    * Click **Deactivate App** to deactivate the app
 
-   * Click **Delete App** to delete the app
+    * Click **Delete App** to delete the app
 
-     {{% alert color="warning" %}}Only Free Apps can be deleted. App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/collaborate/team-server/) and all data in the Free App node.{{% /alert %}}
-
+    {{% alert color="warning" %}}Only Free Apps can be deleted. App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/collaborate/team-server/) and all data in the Free App node.{{% /alert %}}
 
 ## 4 Alternative Method
 

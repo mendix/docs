@@ -18,4 +18,3 @@ This is especially useful in case you want to include JSON example payload in yo
 {{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/gfm-syntax/snippet.png" >}}
 
 For more information, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-Markdown).
-

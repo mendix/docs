@@ -78,9 +78,7 @@ For a Windows machine building an Android app, do the following:
 
 1. Run `npm i`  to install the required dependencies.
 
-    {{% alert color="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
-    {{% /alert %}}
+    {{% alert color="info" %}}When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the app. To apply the changes when building locally check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.{{% /alert %}}
 
 1. Instances of the Native Template v5.1.9 and above include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your app.
 
@@ -107,13 +105,14 @@ Now that you have a copy of the Native Template checked out and ready, you can b
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide/mxbuild/). MxBuild can be found relatively to the location of the Studio Pro executable (for example C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe).
+For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide/mxbuild/). MxBuild can be found relatively to the location of the Studio Pro executable (for example *C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe*).
 
 1. Run the following command:
 
-    ```
+    ```text {linenos=false}
     mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check path-to-your-app-mpr-file
     ```
+
 The bundles will be generated relatively to the `app-directory\deployment\native\bundle`
 
 1. Run MXBuild against your app to generate the required bundle and assets.
@@ -147,12 +146,12 @@ In the sections below you can see the basic steps to get an app up and running o
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-home.png" alt="Android Studio"   width="350"  >}}
 
-   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
+    Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
-   
+
 1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}

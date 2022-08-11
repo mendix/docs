@@ -28,8 +28,8 @@ Synchronization is automatically triggered during the following scenarios:
 
 * The initial startup of your mobile app
 * The first startup of your mobile app after your Mendix app is redeployed when the following conditions are matched:
- * There is a network connection
- * You are using a new Mendix version or the domain model used in the offline-first app has changed
+* There is a network connection
+* You are using a new Mendix version or the domain model used in the offline-first app has changed
 * After the app user logs in or out
 
 Synchronization can also be configured via different places in your Mendix app, for example:
@@ -69,8 +69,8 @@ The upload phase executes the following operations:
 2. <a name="steptwo"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
 3. <a name="stepthree"></a>All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. This step is performed in a single network request.
 4. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before the device database is updated.
-   This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
-   Before- and after-commit event handlers for new objects will also be executed.
+    This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
+    Before- and after-commit event handlers for new objects will also be executed.
 
 #### 2.2.2 Download Phase {#download}
 
@@ -161,7 +161,7 @@ To prevent dangling reference errors during full synchronization, make sure both
 
 When some of the synchronized objects have dangling references, the server will synchronize all other objects except the ones with dangling references. For the objects with dangling references, the server will create a synchronization error and store it in the `System.SynchronizationError` entity. In such a situation you will see an error message like this:
 
-```
+```text {linenos=false}
 Synchronizing an object of type City with GUID {123} has failed due to a modelling error. The object has a reference to other objects (City_Country) that have not been synchronized to the runtime yet. This breaks referential integrity of the object because it references a non-existing object in the runtime database. Please make sure that you synchronize the referenced object together with the City or before synchronizing the City.
 ```
 

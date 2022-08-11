@@ -24,9 +24,7 @@ Projects and action libraries can be created by users and administrators. A user
 Determines whether you create a project or an action library. 
 
 {{% alert color="info" %}}
-
 The type cannot be changed after creation.
-
 {{% /alert %}}
 
 **Name**
@@ -43,7 +41,7 @@ The API key that you created in your Developer Portal project for ATS.
 
 **Project Users**
 
-The users that have access to your project and their role within. '---' means no access. The difference between the _Test Designer_ and _Project Administrator_ role is that the latter can change all settings on the setup screen.
+The users that have access to your project and their role within. '---' means no access. The difference between the *Test Designer* and *Project Administrator* role is that the latter can change all settings on the setup screen.
 
 **Included Action Libraries**
 

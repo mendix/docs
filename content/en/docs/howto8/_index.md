@@ -22,5 +22,3 @@ Browse the *Studio Pro 8 How-tos* to find step-by-step guides that will teach yo
 ## 2 How-to Categories
 
 The *Studio Pro 8 How-tos* are divided into the following categories:
-
-

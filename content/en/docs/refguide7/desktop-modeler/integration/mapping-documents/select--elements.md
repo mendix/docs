@@ -14,9 +14,9 @@ For both [import](/refguide7/import-mappings/)and [export mappings](/refguide7/e
 
 Perform the following steps in the **Select schema elements** window:
 
-1.  Depending on whether you want to make a mapping for an [XML schema](/refguide7/xml-schemas/), a [Consumed web service](/refguide7/consumed-web-services/) or a [JSON structure](/refguide7/json-structures/) documents you need to select an **XML schema**, **Web service operation** or **JSON structure** as the source.
-2.  If source is XML schema then select the root element of the mapping. This is done by selecting the **Start at** element for the XML schema or the **request part** for the web service operation. **Start at** lists the root elements in an XML schema. You can select one root element to base your mapping on. If source is Web service operation, **Request part** lists the header and body element of the request part of an operation. If an operation has multiple parameters, these are listed in the Request part as well. **Request part** is only applicable to export mappings.
-3.  Finally, select specific elements in the tree explorer below. Typically you do not need to map an entire source, since they can be quite large.
+1. Depending on whether you want to make a mapping for an [XML schema](/refguide7/xml-schemas/), a [Consumed web service](/refguide7/consumed-web-services/) or a [JSON structure](/refguide7/json-structures/) documents you need to select an **XML schema**, **Web service operation** or **JSON structure** as the source.
+2. If source is XML schema then select the root element of the mapping. This is done by selecting the **Start at** element for the XML schema or the **request part** for the web service operation. **Start at** lists the root elements in an XML schema. You can select one root element to base your mapping on. If source is Web service operation, **Request part** lists the header and body element of the request part of an operation. If an operation has multiple parameters, these are listed in the Request part as well. **Request part** is only applicable to export mappings.
+3. Finally, select specific elements in the tree explorer below. Typically you do not need to map an entire source, since they can be quite large.
 
 {{% alert color="success" %}}
 
@@ -30,17 +30,17 @@ Schema contents can change by importing a changed XML schema, WSDL or by changin
 
 Keep in mind the following rules and restrictions for element selection:
 
-*   Unsupported elements cannot be checked.
-*   A value cannot be checked without a parent element.
-*   The top level element cannot be unchecked (export mapping only).
-*   An attribute cannot be checked without checking its parent element (export mapping only).
-*   An element with minimum occurrence 1 cannot be unchecked (export mapping only).
-*   If a choice or inheritance element is checked, at least one of its children needs to be checked.
+* Unsupported elements cannot be checked.
+* A value cannot be checked without a parent element.
+* The top level element cannot be unchecked (export mapping only).
+* An attribute cannot be checked without checking its parent element (export mapping only).
+* An element with minimum occurrence 1 cannot be unchecked (export mapping only).
+* If a choice or inheritance element is checked, at least one of its children needs to be checked.
 
 For ease of use, some elements will automatically be checked or unchecked:
 
-*   If you check elements with mandatory children the required children will be automatically checked. 
-*   Similarly, when unchecking an element in the export mapping the children of the element will be unchecked. 
+* If you check elements with mandatory children the required children will be automatically checked. 
+* Similarly, when unchecking an element in the export mapping the children of the element will be unchecked. 
 
 When working on an import mapping you are allowed to skip elements in the hierarchy but still select the children. You can do this when you're not interested in the information stored in the intermediary elements.
 

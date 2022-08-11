@@ -48,7 +48,7 @@ You can get this sort of error in two circumstances:
 
     If the files are missing, you should re-install the server distribution (*tar.gz* file) and confirm that the files are now in the right place.
 
-2.  The Mendix service cannot access the files
+2. The Mendix service cannot access the files
 
     If the files are there, ensure that the user running the Mendix service has read and execute access to the `mxclientsystem` folder.
 
@@ -73,27 +73,27 @@ Validate your security settings. The user that runs the IIS service must be able
 You can see the login page in the browser, but when triggering an action you get a 404 or "server not found message".
 
 * Did you have to enable or install additional plugins?
-	
-	If so, make sure to restart the entire IIS service. You can configure the newly installed settings, but they won't have any effect until you restart the full IIS service.
-	
+
+    If so, make sure to restart the entire IIS service. You can configure the newly installed settings, but they won't have any effect until you restart the full IIS service.
+
 * Did you add new configuration settings, like the rewrite rule?
-	
-	Of course you did, but did you also restart the website? After adding new configuration options like the rewrite URL you need to restart the website. You can do this by right clicking on your newly created site and you should see a restart option.
+
+    Of course you did, but did you also restart the website? After adding new configuration options like the rewrite URL you need to restart the website. You can do this by right clicking on your newly created site and you should see a restart option.
 
 ### 3.3 Incorrect Response When Using Invalid Credentials
 
 You can sign in, but when entering an invalid password the login page shows 'server not found' instead of invalid login.
 
 Some IIS installations hide the content of any response that isn't HTTP status code 200-OK. If you enter invalid credentials during a Mendix login, Mendix returns a status code in the 400-range to indicate unauthorized access. This response also contains a JSON string with the response we want to show to the user.
-	
+    
 Mendix cannot work if IIS is hiding detailed error messages. You need to turn on 'Detailed Error Messages'. The instructions on how to change this setting for your website can be found on the Microsoft website here: [IIS7 : HOW TO enable the detailed error messages for the website while browsed from for the client browsers](https://blogs.msdn.microsoft.com/rakkimk/2007/05/25/iis7-how-to-enable-the-detailed-error-messages-for-the-website-while-browsed-from-for-the-client-browsers/)
 
 ### 3.4 Reviewing the Mendix App Log
 
 First assess whether you are hitting the Mendix application. If IIS forwards anything to the running Mendix app you can see that in the log. The log nodes 'Connector' and 'Jetty' can be most helpful. The Connector log node is able to print information about any incoming request. If you enable Trace logging you can see if the request comes in to the right request handler.
-	
+
 If the 'Connector' doesn't print anything you can also enable trace logging on 'Jetty'. The 'Jetty' log node will print a message for every connection that is established with Mendix. If Jetty doesn't print a trace message the IIS rewrite rules are definitely not setup correctly. 
-	
+
 If you do have information in the 'Connector' log node you can see where the requests are being forwarded to. This should help you understand where the rewrite rules are directing traffic and how to change it.
 
 ### 3.5 Reviewing the IIS Log
@@ -104,16 +104,16 @@ If you conclude that no messages are arriving at Mendix, you can enable IIS trac
 
 Open the application and inspect the requests with your browser's developers tools. If the application isn't working you will see requests that are not successfully executed. Examine these requests to see if there is a pattern.
 
-1.  All the /xas/ requests fail with an error.
+1. All the /xas/ requests fail with an error.
 
     The rewrite is probably incorrectly configured. Open the /xas/ folder in the browser. You may then be presented with a more detailed explanation about the cause of your problem.
-  
-2.  Some JavaScript files cannot be opened.
+
+2. Some JavaScript files cannot be opened.
 
     Try opening the files directly from your browser. If there is an issue in your IIS configuration you will get more information when opening that URL.
-    
+
     If you still receive the error, it is most likely a security problem. The user under which your website is executed does not have sufficient privileges to access the required files.
-    
+
 ## 4 Troubleshooting Mendix Service Console Errors{#msc-errors}
 
 ### 4.1 Security Errors While Starting Service
@@ -124,7 +124,7 @@ When the system gives security errors while starting the service, make sure that
 
 Sometimes the Event Viewer shows a message like this:
 
-```
+```text {linenos=false}
 EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mendixservice, P5 1.0.3810.25652, P6 4c0cf0d8, P7 2, P8 6, P9 system.typeinitialization, P10 NIL.
 ```
 
@@ -132,11 +132,11 @@ Make sure that the user account used to run the service has enough rights to the
 
 ## 5 Read More
 
-*   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-*   [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
-*   [Testing web services using SoapUI](/howto/testing/testing-web-services-using-soapui/)
-*   [Monitoring Mendix using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
-*   [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-*   [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-*   [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-*   [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
+* [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
+* [Testing web services using SoapUI](/howto/testing/testing-web-services-using-soapui/)
+* [Monitoring Mendix using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
+* [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
+* [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)

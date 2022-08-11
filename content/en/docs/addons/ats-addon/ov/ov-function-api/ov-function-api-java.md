@@ -88,7 +88,6 @@ public void firstTest() {
 
 Alternatively, values can be asserted using `junit.Assert`:
 
-
 ```java
 @Test
 public void firstTest() throws Exception {

@@ -35,4 +35,4 @@ As of 7.19.0, deletions are always reflected in the client. [Data sources](/refg
 
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No

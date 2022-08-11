@@ -24,15 +24,16 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 ## 2 Installation
 
 1. Import the Unit Testing module into your app.
+    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 2. Download the latest Object Handling module into your app.
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 5. The following steps are optional:
-	* For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
-	* For running remote unit tests via API:
-		* Add the **Startup** flow to your app model's startup sequence
-		* Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
-		* When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path
+    * For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
+    * For running remote unit tests via API:
+        * Add the **Startup** flow to your app model's startup sequence
+        * Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
+        * When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path
 
 ## 3 Usage
 

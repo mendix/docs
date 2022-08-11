@@ -30,7 +30,7 @@ You can create a new app on [Mendix Team Server](/developerportal/collaborate/te
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server project and repository in the **App name** field
 
-	{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" >}}
 
 ### 2.2 Existing Mendix Team Server
 
@@ -41,7 +41,7 @@ You can only upload to an existing repository if the repository is currently emp
 * Select **Existing Mendix Team Server**
 * Select the **Team Server App** from the list
 
-	{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" >}}
 
 ### 2.3 Private Server
 

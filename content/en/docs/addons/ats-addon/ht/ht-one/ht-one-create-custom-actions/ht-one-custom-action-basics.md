@@ -32,19 +32,19 @@ The following sections describe how to create a custom action. There are two opt
 ### 3.1 Option 1 – Using the Add Item Button in the Repository
 
 1. Open your project in ATS and go to the **Repository**.
-2.  Click **Add Item** in the **All Objects** tab:
-  
+2. Click **Add Item** in the **All Objects** tab:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/repository-add-item.png" >}}
 
     This opens the **Create new** dialog box:
-    
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/create-new-action-dialog.png" >}}
 
 3. Select **Action** in the drop-down menu.
 4. Enter a name in the **Name** field (for example, *Set Drop-Down*). It is advisable to use a name that describes what the action does.
 5. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*). It is advisable to give each action a detailed description of what it does.
-6.  Click **Create**:
-  
+6. Click **Create**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/create-new-action-dialog-complete.png" >}}
 
 You have now created a custom action from the repository.
@@ -53,22 +53,22 @@ You have now created a custom action from the repository.
 
 To use the **Extract Action** button, follow these steps:
 
-1.  Open your project in ATS and go to the **Repository**.
-2.  Select a test case or action and open it.
-3.  Select the test steps you want to combine in a custom action by holding <kbd>Ctrl</kbd> while clicking the test steps.
-4.  Click **Extract Action**:
-  
+1. Open your project in ATS and go to the **Repository**.
+2. Select a test case or action and open it.
+3. Select the test steps you want to combine in a custom action by holding <kbd>Ctrl</kbd> while clicking the test steps.
+4. Click **Extract Action**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/test-case-extract-action.png" >}}
 
     This will open the **Action - Set Details** open.
-5.  Enter a name in the **Name** field (for example, *Set Drop-Down*).
-6.  Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*).
-7.  Click **Close**:
-  
+5. Enter a name in the **Name** field (for example, *Set Drop-Down*).
+6. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*).
+7. Click **Close**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/test-case-action-set-details.png" >}}
 
-8.  Select the newly created action and click **Open**:
-  
+8. Select the newly created action and click **Open**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/test-case-open-new-action.png" >}}
 
 Both ways open the **Edit Action** page. The page works the same as the **Test Case** page. You can add test steps by clicking **Add** or **Record**.
@@ -81,9 +81,9 @@ You now know how to create a custom action.
 
 To add parameters to your custom action, follow these steps:
 
-1.  Go to the **Edit Action** page of your action.
-2.  Click the **Settings** tab:
-  
+1. Go to the **Edit Action** page of your action.
+2. Click the **Settings** tab:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/edit-action-page-settings.png" >}}
 
 3. Follow the steps in the sections below for adding input and output parameters.
@@ -92,65 +92,64 @@ To add parameters to your custom action, follow these steps:
 
 To add input parameters, follow these steps:
 
-1.  Click **New**:
-  
+1. Click **New**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/edit-action-page-settings-new.png" >}}
 
     This will open the **Edit Input Parameter** dialog box.
 
-2.  Enter a name in the **Name** field (for example, *Widget Name*).
+2. Enter a name in the **Name** field (for example, *Widget Name*).
 
-	{{% alert color="info" %}}Use the ATS naming convention
-	{{% /alert %}}
+    {{% alert color="info" %}}Use the ATS naming convention
+    {{% /alert %}}
 
-3.  Enter a description in the **Description** field (for example, *Enter the name of the widget*).
+3. Enter a description in the **Description** field (for example, *Enter the name of the widget*).
 
-	{{% alert color="info" %}}You must make sure everybody understands what information they must enter.
-	{{% /alert %}}
+    {{% alert color="info" %}}You must make sure everybody understands what information they must enter.
+    {{% /alert %}}
   
-4.  Select a data type from the **Datatype** drop-down menu (for example, **String**).
-5.  Select a **Show as Password** option. This makes the parameter field unreadable. The default setting is **No**.
-6.  Select a **Required/Optional** option. For example, the **Widget Name** parameter is always required, otherwise the action does not work.
-7.  Leave the **Type** field set to **Default**.
-8.  Click **Save**:
-  
+4. Select a data type from the **Datatype** drop-down menu (for example, **String**).
+5. Select a **Show as Password** option. This makes the parameter field unreadable. The default setting is **No**.
+6. Select a **Required/Optional** option. For example, the **Widget Name** parameter is always required, otherwise the action does not work.
+7. Leave the **Type** field set to **Default**.
+8. Click **Save**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/new-action-edit-input-parameter.png" >}}
 
 You have now created an input parameter. You can add as many input parameters as you need, but remember to keep the action simple.
 
 ### 4.2 Adding an Output Parameter
 
-1.  Click **Set**:
-  
+1. Click **Set**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/edit-action-page-settings-set.png" >}}
 
     This opens the different **Output Parameter** fields.
 
-2.  Enter a name in the **Name** field (for example, *Element*).
+2. Enter a name in the **Name** field (for example, *Element*).
 
-	{{% alert color="info" %}}The user must know what the action returns, so be clear in the name that you enter.
-	{{% /alert %}}
-  
-3.  Enter a description in the **Description** field. Use this field to give a more detailed description of what is returned.
-4.  Select a data type from the **Datatype** drop-down menu (for example, *Web Element*).
-5.  Select a **Required/Optional** option. Only use **Optional** if the action still works whebn nothing is returned.
-  
+    {{% alert color="info" %}}The user must know what the action returns, so be clear in the name that you enter.
+    {{% /alert %}}
+
+3. Enter a description in the **Description** field. Use this field to give a more detailed description of what is returned.
+4. Select a data type from the **Datatype** drop-down menu (for example, *Web Element*).
+5. Select a **Required/Optional** option. Only use **Optional** if the action still works whebn nothing is returned.
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/new-action-output-parameter-complete.png" >}}
 
-6.  The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
-7.  Add the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action and the [Set Return Value](/addons/ats-addon/rg-one-set-return-value/) action.
+6. The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
+7. Add the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action and the [Set Return Value](/addons/ats-addon/rg-one-set-return-value/) action.
 
-  
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/output-parameter-actions.png" >}}
 
-8.  For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now connect the outcome of test step 1 to the **Set Return Value** action.
-  
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/set-return-value-parameter.png" >}}
+8. For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now connect the outcome of test step 1 to the **Set Return Value** action.
 
-	ATS now returns the outcome of test step 1.
-  
-	{{% alert color="info" %}}Make sure the datatype of the **Output Parameter** corresponds with datatype of the connected outcome.
-	{{% /alert %}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/set-return-value-parameter.png" >}}
+
+    ATS now returns the outcome of test step 1.
+
+    {{% alert color="info" %}}Make sure the datatype of the **Output Parameter** corresponds with datatype of the connected outcome.
+    {{% /alert %}}
 
 You now know how to add parameters to your custom action.
 
@@ -158,15 +157,14 @@ You now know how to add parameters to your custom action.
 
 To connect the input parameter, follow these steps:
 
-1.  Select the test step to which you want to connect an input parameter.
-2.  Open the **Edit Input Value** dialog box:
-  
+1. Select the test step to which you want to connect an input parameter.
+2. Open the **Edit Input Value** dialog box:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/edit-value-input-dialog.png" >}}
 
-3.  Click **Action Input Parameter** and select the input parameter you want to connect.
-4.  Click **Save**
-  
+3. Click **Action Input Parameter** and select the input parameter you want to connect.
+4. Click **Save**
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-basics/action-input-parameter-edit.png" >}}
 
 You have now connected your input parameter.
-

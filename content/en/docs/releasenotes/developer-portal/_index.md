@@ -17,6 +17,20 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### August 11th, 2022
+
+#### New Features
+
+* We have introduced the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center, where Mendix Admins can manage the visibility of Marketplace Content in Studio.
+* We simplified the process of [inviting other users](/developerportal/collaborate/team/#inviting) to your projects. Now you do not need to add a personal message to the invitation anymore and the whole process can be completed on a single page.
+* We added a banner about [Epics](/developerportal/collaborate/epics/), our new tool for agile planning, on the [Stories](/developerportal/collaborate/stories/) page. This banner provides more information about Epics and makes it easier for Scrum Masters to enable it for their projects.  
+
+### August 9th, 2022
+
+#### New Features
+
+* We released [Notifications](/developerportal/#notifications) for Public Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+
 ### July 21st, 2022
 
 #### Improvements
@@ -41,7 +55,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-*  We released [Epics](/developerportal/collaborate/epics/), our brand new tool for agile planning, for Public Beta usage. Epics has many features. For example, you can:
+* We released [Epics](/developerportal/collaborate/epics/), our brand new tool for agile planning, for Public Beta usage. Epics has many features. For example, you can:
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
@@ -53,7 +67,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * Archive single stories or whole swimlanes
     * Easily search through your completed stories and get an overview of completed sprints in the archive
 
-You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#stories). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30th, 2022
 
@@ -117,10 +131,10 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 #### Improvements
 
 * We introduced a new layout of the [Mendix Forum](/developerportal/community-tools/mendix-forum/) that features the following changes:
-	* The main navigation has been moved to the left sidebar
-	* There is a dedicated for page for your bookmarks
-	* Breadcrumb navigation
-	* Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
+    * The main navigation has been moved to the left sidebar
+    * There is a dedicated for page for your bookmarks
+    * Breadcrumb navigation
+    * Dedicated pages for Forum content you have interacted with (asked, answered, and commented for questions, and submitted and commented for ideas)
 
 ### March 24th, 2022
 
@@ -203,19 +217,19 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 #### Update of *.mendixcloud.com SSL/TLS certificate
 
 * We have renewed the SSL/TLS certificate for `\*.mendixcloud.com`. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In that case, there is nothing you have to do. If you run services that connect to a `\*.mendixcloud.com` endpoint and use a static or outdated trust store, we advise you to update their certificates. The new SSL/TLS certificate can be downloaded [here](/attachments/releasenotes/developer-portal/mendixcloud.com-2021-10-29.crt.txt). This can be done from today, you do not have to wait for the old certificate to expire.
-	* Current certificate details:
-		* Subject: `*.mendixcloud.com`
-		* Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
-		* Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT
-		* SHA-256 Fingerprint: `AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3`
-		* SHA-1 Fingerprint: `5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F`
-	* New certificate details:
-		* Subject: `*.mendixcloud.com`
-		* Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
-		* Validity: Oct 29 00:00:00 2021 GMT - Oct 29 23:59:59 2022 GMT
-		* SHA-256 Fingerprint: `BF:AE:01:9F:93:5A:D9:92:35:B5:BA:9F:E4:AE:56:99:21:17:44:51:56:17:A2:11:A1:FE:3B:42:9C:B4:B6:70`
-        		* SHA-1 Fingerprint: `0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11`
-	
+    * Current certificate details:
+        * Subject: `*.mendixcloud.com`
+        * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
+        * Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT
+        * SHA-256 Fingerprint: `AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3`
+        * SHA-1 Fingerprint: `5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F`
+    * New certificate details:
+        * Subject: `*.mendixcloud.com`
+        * Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+        * Validity: Oct 29 00:00:00 2021 GMT - Oct 29 23:59:59 2022 GMT
+        * SHA-256 Fingerprint: `BF:AE:01:9F:93:5A:D9:92:35:B5:BA:9F:E4:AE:56:99:21:17:44:51:56:17:A2:11:A1:FE:3B:42:9C:B4:B6:70`
+                * SHA-1 Fingerprint: `0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11`
+
 ### October 21st, 2021
 
 #### Improvements
@@ -381,18 +395,18 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 #### Improvements
 
 * We have released our new [platform navigation](/developerportal/) solution with these main features:
-	* The **Switch to** menu on the left side of the top bar provides access to different parts of the Mendix Platform.
-	* The top bar contains sub-navigation items (for example, **Company Buzz**).
-	* Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.
-	* Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.
+    * The **Switch to** menu on the left side of the top bar provides access to different parts of the Mendix Platform.
+    * The top bar contains sub-navigation items (for example, **Company Buzz**).
+    * Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.
+    * Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.
 * We improved the search experience and added a full page of search results that can be accessed by clicking **View Search Results Page** at the bottom of the search drop-down menu or by pressing <kbd>Enter</kbd> after typing a search query
 * We changed the [My Apps](/developerportal/#my-apps) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
 * You asked and we listened: We added new label colors for labels in [Stories](/developerportal/collaborate/stories/). There are now 15 different colors to choose from, specifically selected with accessibility in mind.
 * We made some big changes to the look and feel of our Developer Portal:
-	* We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
-	* We updated the look of various navigation items (**Feedback**, **Planning**, **Team Server**, **General**) to our new design.
-	* We removed the grey background with white card content in all pages.
-	* We replaced the breadcrumbs in the top left corner of the project navigation with the app name and icon.
+    * We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
+    * We updated the look of various navigation items (**Feedback**, **Planning**, **Team Server**, **General**) to our new design.
+    * We removed the grey background with white card content in all pages.
+    * We replaced the breadcrumbs in the top left corner of the project navigation with the app name and icon.
 
 #### Fixes
 
@@ -449,8 +463,8 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 #### Improvements
 
 * We have updated the [App Projects](/developerportal/control-center/#apps) tab of Control Center, where you can now do the following:
-	* Open the [Team](/developerportal/collaborate/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
-	* Deactivate or delete an app or a team member
+    * Open the [Team](/developerportal/collaborate/team/#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
+    * Deactivate or delete an app or a team member
 
 ### February 9th, 2021
 
@@ -807,7 +821,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 
 * The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/community-tools/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
-	{{< figure src="/attachments/releasenotes/developer-portal/shop.png"   width="300"  >}}
+    {{< figure src="/attachments/releasenotes/developer-portal/shop.png"   width="300"  >}}
 
 ### November 1st, 2018
 
@@ -834,9 +848,9 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 
 * The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/community-tools/mendix-profile/).
 * Several UX updates were made to Developer Portal pages:
-  * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
-  * The **App** > **General** page has been redesigned.
-  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/community-tools/mendix-profile/#connections) of your Mendix Profile.
+    * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
+    * The **App** > **General** page has been redesigned.
+    * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/community-tools/mendix-profile/#connections) of your Mendix Profile.
 
 ### October 1st, 2018
 

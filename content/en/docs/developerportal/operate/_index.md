@@ -57,4 +57,3 @@ For details of managing your backups in the Mendix Cloud, see [Backups](/develop
 If your app is deployed to SAP BTP or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to manage your app's backups.
 
 ## 3 Documents in This Category
-

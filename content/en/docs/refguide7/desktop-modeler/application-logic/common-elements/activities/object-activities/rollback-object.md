@@ -43,4 +43,4 @@ When inside a [nanoflow](/refguide7/nanoflows/), the Rollback object action relo
 
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No

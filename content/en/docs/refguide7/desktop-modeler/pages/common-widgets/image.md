@@ -35,19 +35,19 @@ See [Images](/refguide7/images/).
 
 {{% snippet file="/static/_includes/refguide7/Image+Width+Unit.md" %}}
 
-_Default value_: Auto
+*Default value*: Auto
 
 {{% snippet file="/static/_includes/refguide7/Image+Width.md" %}}
 
-_Default value_: not applicable
+*Default value*: not applicable
 
 {{% snippet file="/static/_includes/refguide7/Image+Height+Unit.md" %}}
 
-_Default value_: Auto
+*Default value*: Auto
 
 {{% snippet file="/static/_includes/refguide7/Image+Height.md" %}}
 
-_Default value_: not applicable
+*Default value*: not applicable
 
 {{% snippet file="/static/_includes/refguide7/Image+Responsive.md" %}}
 

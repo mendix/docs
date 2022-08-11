@@ -10,8 +10,8 @@ App services have been deprecated in version 7.23.4 and are marked for removal. 
 
 App services are a way of connecting Mendix applications to each other. An app service can be imported and its content can be used. As for now, app services provide the following content: 
 
-*   Microflow actions
-*   Domain model entities
+* Microflow actions
+* Domain model entities
 
 In the project explorer, an app service can be selected in the 'Add' context menu on a module. See [Select app service](/refguide7/select-app-service/) for more information.
 

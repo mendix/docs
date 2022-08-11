@@ -8,7 +8,7 @@ Each expression can have an alias, which will be the name of the column in the r
 
 The syntax is as following:
 
-```
+```sql
 SELECT [ DISTINCT ]
     {
             *
@@ -25,11 +25,11 @@ SELECT [ DISTINCT ]
 
 {{% alert color="info" %}}
 
-```
+```sql {linenos=false}
 SELECT Sales.Customer.* FROM Sales.Customer
 ```
 
-```
+```sql {linenos=false}
 SELECT Person.* FROM Sales.Customer AS Person
 ```
 
@@ -41,7 +41,7 @@ Is either a constant, a function or any combination of attribute names, constant
 
 {{% alert color="info" %}}
 
-```
+```sql {linenos=false}
 SELECT Name AS CustomerName, LastName AS CustomerLastName, Birthday, Category FROM Sales.Customer
 ```
 
@@ -53,11 +53,11 @@ See [this page](/refguide7/oql-expressions/) for more information.
 
 {{% alert color="info" %}}
 
-```
+```sql {linenos=false}
 SELECT Sales.Customer.Name AS CustomerName FROM Sales.Customer
 ```
 
-```
+```sql {linenos=false}
 SELECT Sales.Customer.Name AS 'Customer Name' FROM Sales.Customer
 ```
 

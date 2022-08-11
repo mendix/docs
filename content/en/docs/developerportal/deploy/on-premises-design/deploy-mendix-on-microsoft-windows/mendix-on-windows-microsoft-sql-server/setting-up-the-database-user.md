@@ -50,12 +50,12 @@ Allow the user to connect to the database. If the user is Denied the privilege t
 
 ## 5 Read More
 
-*   [Restoring an SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
-*   [Troubleshooting SQL Server](/developerportal/deploy/troubleshooting-sql-server/)
-*   [Mendix SQL Maintenance Plans](/developerportal/deploy/mendix-sql-maintenance-plans/)
-*   [Setting Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
-*   [Setting Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
-*   [Security Checklist for Your On-Premises Installation](/developerportal/deploy/security-checklist-for-your-on-premises-installation/)
-*   [Mendix on Windows - Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/)
-*   [Deploying Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-*   [Unix-Like Deployment](/developerportal/deploy/unix-like/)
+* [Restoring an SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
+* [Troubleshooting SQL Server](/developerportal/deploy/troubleshooting-sql-server/)
+* [Mendix SQL Maintenance Plans](/developerportal/deploy/mendix-sql-maintenance-plans/)
+* [Setting Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
+* [Setting Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
+* [Security Checklist for Your On-Premises Installation](/developerportal/deploy/security-checklist-for-your-on-premises-installation/)
+* [Mendix on Windows - Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/)
+* [Deploying Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
+* [Unix-Like Deployment](/developerportal/deploy/unix-like/)

@@ -21,12 +21,11 @@ You can create a new project in Mendix Studio Pro.
 To create a new project, follow the steps below:
 
 1. Do one of the following:
-   1. Open the **File** menu in the top bar > **New Project**.
-   2. Click **New App** on the Studio Pro landing page.
-   
-2. In **My Apps** tab, select a starting point – an app template. 
+    1. Open the **File** menu in the top bar > **New Project**.
+    2. Click **New App** on the Studio Pro landing page.
 
-3.  Click **Use this app**.
+2. In **My Apps** tab, select a starting point – an app template. 
+3. Click **Use this app**.
 4. In the **App Settings** dialog, select the settings for your project and click **Create app**. For more information on app settings, see the [App Settings](#app-settings) section. 
 
 The new project is created and opened. 

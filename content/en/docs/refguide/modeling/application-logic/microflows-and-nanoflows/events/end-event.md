@@ -35,13 +35,10 @@ You can choose to return nothing, or to return, for example, a list, enumeration
 The return value can be entered as an [expression](/refguide/expressions/).
 
 {{% alert color="info" %}}
-
 If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
-
 {{% /alert %}}
 
 ## 3 Read More
 
 * [Start Event](/refguide/start-event/)
-
 * [Microflow Call](/refguide/microflow-call/)

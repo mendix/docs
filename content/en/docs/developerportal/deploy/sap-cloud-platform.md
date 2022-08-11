@@ -126,43 +126,43 @@ To create a new environment, perform the following steps:
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-environment.png" >}}
 
-2.  Select the region where you want your app to be deployed.
+2. Select the region where you want your app to be deployed.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-env-0.png" >}}
 
     If no session is active for that region, or the current session does not have access to that region, you will be asked for your SAP credentials for that region.
 
-3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:
+3. Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:
 
-    ```
+    ```text {linenos=false}
     {appname}-{environment name}.{domain}
     ```
-  
+
     This is an example URL:
 
-    ```http
+    ```http {linenos=false}
     https://myapp-development.cfapps.eu10.ondemand.com
     ```
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/07-sap-env-1.png" >}}
 
-4.  Click **Next**.
+4. Click **Next**.
 
-5.  Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
+5. Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/08-sap-env-2.png" >}}
 
-6.  Set the size of the memory that the app needs in order to run. This can also be changed later.
+6. Set the size of the memory that the app needs in order to run. This can also be changed later.
 
-7.  Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
+7. Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
 
-8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization. See [Databases in SAP BTP](#databases), below, for for important information on selecting the correct database for your app.
+8. Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization. See [Databases in SAP BTP](#databases), below, for for important information on selecting the correct database for your app.
 
     If you choose **Custom database** you will need to enter a name for the database and the plan.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-database.png" >}}
 
-9.  Select **File Store Enabled** if your application makes use of FileDocument or Image objects. Other sorts of object do not need File Store to be enabled.
+9. Select **File Store Enabled** if your application makes use of FileDocument or Image objects. Other sorts of object do not need File Store to be enabled.
 
 10. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 2-4 hours and have a limitation of six concurrent users.
 
@@ -209,19 +209,19 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
 2. Click **Create package from Team Server** to start the wizard.
 
-3.  Select the branch on the Team server which you want to use.
+3. Select the branch on the Team server which you want to use.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/03-sap-select-branch.png" >}}
 
-4.  Select the revision of the branch you want to build.
+4. Select the revision of the branch you want to build.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/04-sap-select-revision.png" >}}
 
-5.  Add a version number and Tag description as required. The revision number will be added to the version number automatically.
+5. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/05-sap-define-tag.png" >}}
 
-6.  Click **Build this revision** to build the package.
+6. Click **Build this revision** to build the package.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/06-sap-build-revision.png" >}}
 
@@ -251,22 +251,21 @@ There is a limit of 200MB on the size of the MDA file you can upload to the Deve
 SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
 {{% /alert %}}
 
-
 ### 5.1 Deploy to an Environment
 
-1.  A green tick indicates that the build has finished. Click **Deploy** to deploy the package to SAP BTP.
+1. A green tick indicates that the build has finished. Click **Deploy** to deploy the package to SAP BTP.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-revision-built.png" >}}
 
-2.  Change the deployment environment if required.
+2. Change the deployment environment if required.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-transport.png" >}}
 
-3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
+3. The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%"  >}}
 
-4.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+4. Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
 ### 5.2 Configure the Application{#ConfigureTheApplication}
 
@@ -319,15 +318,15 @@ If you want to remove a service instance from your environment, you can do it is
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-environments.png" >}}
 
-2.  Change the deployment environment if required by clicking **Change environment**.
+2. Change the deployment environment if required by clicking **Change environment**.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-from-to.png" >}}
 
-3.  The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
+3. The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%"  >}}
 
-4.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+4. Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
 When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described above in the [Configure the Application](#ConfigureTheApplication) section.
 
@@ -611,7 +610,6 @@ This database service should not be unbound from your environment: see [Services
 ##### 8.1.1.1 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
 
 To get help to create the configuration file, click the **Configurator** button.
-
 
 On the new page which is displayed you can set the required values for your **SAP Hyperscaler PostgreSQL** database. Tooltips describe the values which you need to provide. 
 

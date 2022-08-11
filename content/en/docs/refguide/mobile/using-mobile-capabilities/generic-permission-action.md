@@ -102,7 +102,7 @@ The permissions that you can't find using the Native builder UI, can be added ma
 {{% /alert %}}
 
 ## 5 Update native app permissions
-###5.1 iOS {#update-ios-native-permissions}
+### 5.1 iOS {#update-ios-native-permissions}
 Update `ios/podfile` file with the needed permissions:
 
 ```
@@ -154,7 +154,7 @@ Update `/ios/{app name}/{app name}.entitlements` as follows:
 ```
 {{% /alert %}}
 
-###5.2 Android {#update-android-native-permissions}
+### 5.2 Android {#update-android-native-permissions}
 Update `android/app/src/main/AndroidManifest.xml` file with the needed permissions:
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"

@@ -36,7 +36,9 @@ To use the Mendix Business Events module, you will need the following:
 
 To use Mendix Business Events on production environments, you will need the pre-requisites listed above in addition to the following:
 * A subscription to the Mendix Event Broker (link to licensing/contact page)
-* A Technical Contact must enable the Event Broker Service in the [Services](/developerportal/deploy/mendix-cloud-deploy/environments/#service) tab of the [Environment Details](/developerportal/deploy/mendix-cloud-deploy/environments-details/#services) page of every app involved (still being discussed; details coming soon)
+* A Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
+     1. On the App level, under Environments > [Services](/developerportal/deploy/mendix-cloud-deploy/environments/#service)
+     2. For all environments, on the [Environment Details](/developerportal/deploy/mendix-cloud-deploy/environments-details/#services) page
 
 ### 1.3 Licensing the Mendix Event Broker {#event-broker}
 

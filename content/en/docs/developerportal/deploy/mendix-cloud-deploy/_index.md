@@ -68,7 +68,7 @@ You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud.
 
 #### 1.1.1 Free Apps Archival{#free-apps-archival}
 
-If a Free App has been in Sleep Mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the Technical Contact will be informed two weeks beforehand. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
+If a Free App has been in Sleep Mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/team/app-roles/#technical-contact) will be informed two weeks beforehand. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
 
 There are two ways to avoid Free Apps Archival:
 
@@ -93,11 +93,15 @@ In some circumstances, you might find that the two or three standard environment
 
 Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
 
-If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
+If you need to use a different database, consider deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
 
 ### 1.5 URLs and Ports
 
-When your app is running on the Mendix Cloud it will automatically be given its own URL. For licensed apps this is of the form `(appname){-environment}.mendixcloud.com`. The environment name will be added to the subdomain name for `test`, `acceptance`, and flexible environments. The production URL uses just the app name as the subdomain. Free apps have a URL of the form `{appname}.mxapps.io`.
+Apps that run on the Mendix Cloud are automatically given their own URLs. The format of the URL depends on the license and environment type, and can be one of the following:
+
+* `{appname}.mendixcloud.com` - licensed apps; production environments
+* `{appname-environment}.mendixcloud.com` - licensed apps; test, acceptance, and flexible environments
+* `{appname}.mxapps.io` - Free Apps
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
@@ -134,23 +138,20 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 The Mendix Cloud has a limit of 1GB on the size of a deployment package.
 {{% /alert %}}
 
-### 3.1 Deploying via the Studio Pro
+### 3.1 Deploying via Studio Pro
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
-3. Click **App** in the top menu bar and select **Deploy to Licensed Cloud Node**:
+3. Click **App** in the top menu bar and select **Deploy to Licensed Cloud Node**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" >}}
 
-4. Click **Deploy**:
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/select-revision.png" >}}
-
+4. In the **Deploy to Mendix Cloud** dialog box, click **Deploy**.
 5. The deployment is now in progress. To see the uploaded package, click **Show online**:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" >}}
 
-### 3.2 Creating a Package from Team Server in the Developer Portal{#package-from-team-server}
+### 3.2 Creating a Package from the Team Server in the Developer Portal{#package-from-team-server}
 
 An app can also be deployed without using Studio Pro. To do this, follow these steps:
 
@@ -162,11 +163,11 @@ An app can also be deployed without using Studio Pro. To do this, follow these s
 6. Select the preferred branch and revision and click **Next**.
 7. Give the build a version number and click **Build this revision**.
 
-The package will now be deployed to the cloud.
+The package is deployed to the cloud.
 
 ## 4 Deploy the App to an Environment {#deploy-the-app-to-an-environment}
 
-The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet! To deploy a deployment package to a node environment, follow these steps:
+The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment, follow these steps:
 
 1. Open the [Developer Portal](http://sprintr.home.mendix.com).
 2. Open your app.
@@ -187,11 +188,11 @@ The app is now deployed and the administrative account can be configured.
 
 ## 5 Deploying a Free App to the Mendix Cloud
 
-With a Free App, it's only possible to deploy your app to the Mendix cloud using Studio or Studio Pro. There are three methods to do that.
+With a Free App, it's only possible to deploy your app to the Mendix Cloud using Studio or Studio Pro. There are three methods to do that.
 
 ### 5.1 From Studio Pro – Method 1
 
-Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to an environment by clicking **Run > Run** at the top of Studio Pro. This will automatically deploy your app to a Free App environment.
+Once you have built your app, you will want to share it with others in the Free App. You can deploy your Free App to an environment by clicking **Run** > **Run** at the top of Studio Pro. This will automatically deploy your app to a Free App environment.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" >}}
 

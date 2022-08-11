@@ -167,11 +167,11 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ## 8 Marketplace Content {#marketplace-content}
 
-The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users.
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
 
 {{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
 
-The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether widgets appear in the **Toolbox** in Studio).
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).
 
 The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
 

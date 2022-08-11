@@ -49,13 +49,7 @@ The output is:
 
 ## 3 endOfWeek
 
-The `endOfWeek` function calculates the end of the week compared to the initial date.
-
-{{% alert type="info" %}}
-
-The week begins on Sunday and ends on Saturday.
-
-{{% /alert %}}
+The `endOfWeek` function calculates the end of the week compared to the initial date. The beginning and the end of the week are based on the user's locale.
 
 ### 3.1 Input Parameters
 

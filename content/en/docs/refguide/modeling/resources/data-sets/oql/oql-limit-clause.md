@@ -12,7 +12,7 @@ With the `LIMIT` clause a portion of the result of a query can be returned.
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 [ LIMIT number ] [ OFFSET number ]
 ```
 

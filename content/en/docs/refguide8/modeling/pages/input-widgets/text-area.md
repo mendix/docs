@@ -146,5 +146,5 @@ The autocomplete property specifies if a text area should have autocomplete enab
 
 ## 3 Read More
 
-*   [Data view](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data view](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

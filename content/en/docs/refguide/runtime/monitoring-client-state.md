@@ -23,7 +23,7 @@ For each entity type, the IDs of the object instances that are in the state are 
 * The suffix `(changed)` after the object ID – whether the object has uncommitted changes (the object has been committed before)
 * The property `changes` – the changes that are present in the object
 * The property `subscribedWidgets` – the widgets that are using the object
-	* The widget name is in the form of `Module.PageName.widgetName` (for example, `MyFirstModule.Entity_NewEdit.dataView1`), which allows you to quickly find the referenced widget in Studio Pro
+    * The widget name is in the form of `Module.PageName.widgetName` (for example, `MyFirstModule.Entity_NewEdit.dataView1`), which allows you to quickly find the referenced widget in Studio Pro
 * The property `referencedBy` – the objects that reference this object
 
 Both the `subscribedWidgets` and `referencedby` properties explain why the object is still in the state. If they are both empty, the text "Going to be garbage collected" is displayed.

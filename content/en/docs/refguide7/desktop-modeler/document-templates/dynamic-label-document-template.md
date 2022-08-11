@@ -31,19 +31,19 @@ If you set the property 'Render XHTML' to true, the attribute connected to this 
 
 The contents MUST be valid XHTML to render without errors.
 
-_Default value:_ False
+*Default value:* False
 
 ### Decimal Precision (Only for Decimal Attributes)
 
 The precision of a value is defined by the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point) that will be rendered in the widget.
 
-_Default value:_ 2
+*Default value:* 2
 
 ### Group Digits (Only for Numeric Attributes)
 
 For ease of reading, numbers with many digits in front of the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
 
-_Default value:_ False
+*Default value:* False
 
 ### Date Format (Only for Attributes of the DateTime Type)
 
@@ -51,7 +51,7 @@ The date format determines whether the date part, the time part or both are show
 
 Possible values: 'Date', 'Time', 'Date and time' and in 2.5.3 'Custom'.
 
-_Default value:_ Date
+*Default value:* Date
 
 ### Custom Date Format (Only for Attributes of the DateTime Type)
 

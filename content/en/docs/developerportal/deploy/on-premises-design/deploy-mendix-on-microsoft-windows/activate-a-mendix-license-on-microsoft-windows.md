@@ -1,5 +1,6 @@
 ---
-title: "MS Windows: Activate a Mendix License on Microsoft Windows"
+title: "Activate a Mendix License on Microsoft Windows"
+linktitle: "MS Windows: Activate Mendix License"
 url: /developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/
 weight: 10
 tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
@@ -36,7 +37,7 @@ In this section, you will retrieve the server ID from your Mendix server, which 
 2. Select your app in the overview on the left side of the console.
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398813.png" >}}
 3. The app needs to be running in order for you to be able to activate the license. If the app is not running, click **Start service** to start the app.
-4.  Click **Advanced** and select the **Show or add license...** option.
+4. Click **Advanced** and select the **Show or add license...** option.
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398814.png" >}} 
 5. Next to **Server ID**, click **Copy to clipboard**.
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398815.png" >}} 
@@ -59,16 +60,16 @@ In this section, you will enter the license key into the Mendix server, thus com
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398814.png" >}} 
 2. Paste your license key into the **License key** text box.
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398816.png" >}} 
-3.  Click **Activate license**.
+3. Click **Activate license**.
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/deploy-mendix-on-microsoft-windows/activate-a-mendix-license-on-microsoft-windows/19398817.png" >}} 
-4.  Congratulations! Your license has been activated.
+4. Congratulations! Your license has been activated.
 
 ## 6 Read More
 
-*   [Setting up the Database User](/developerportal/deploy/setting-up-the-database-user/)
-*   [Troubleshooting](/developerportal/deploy/troubleshooting-iis/)
-*   [Restoring a SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
-*   [Troubleshooting SQL Server](/developerportal/deploy/troubleshooting-sql-server/)
-*   [Mendix SQL Maintenance Plans](/developerportal/deploy/mendix-sql-maintenance-plans/)
-*   [Setting Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
-*   [Setting Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
+* [Setting up the Database User](/developerportal/deploy/setting-up-the-database-user/)
+* [Troubleshooting](/developerportal/deploy/troubleshooting-iis/)
+* [Restoring a SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
+* [Troubleshooting SQL Server](/developerportal/deploy/troubleshooting-sql-server/)
+* [Mendix SQL Maintenance Plans](/developerportal/deploy/mendix-sql-maintenance-plans/)
+* [Setting Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
+* [Setting Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)

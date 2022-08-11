@@ -36,11 +36,9 @@ The following tables list all standard actions for Mendix. There's one table per
 | Get Dialog Message Text | ConfirmationDialog, DialogMessage | Get the text from message and confirmation dialogs |
 
 {{% alert color="info" %}}
+A *Window* is rendered when a page is opened as a popup.
 
-A _Window_ is rendered when a page is opened as a popup.
-
-A _ConfirmationDialog_ is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in _DialogMessage_ widgets.
-
+A *ConfirmationDialog* is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in *DialogMessage* widgets.
 {{% /alert %}}
 
 ## 4 FileManager

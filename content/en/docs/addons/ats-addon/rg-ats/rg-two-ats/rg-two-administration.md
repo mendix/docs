@@ -15,8 +15,8 @@ A tenant administrator is a user role which is used in on-premises instances of 
 
 As a tenant administrator in ATS, you have access to the following additional functionality:
 
-*   Managing apps system-wide
-*   Creating new user accounts
+* Managing apps system-wide
+* Creating new user accounts
 
 When you are logged in as a tenant administrator, you can access the tenant administration page from your profile menu:
 
@@ -71,4 +71,3 @@ You can enter/edit the name and the Mendix app ID. The name is used in the **My 
 {{% alert color="info" %}}
 When creating a new app, you will be assigned as an administrator for this app. All other users will have no access to the app. Go to the newly created app's **App settings** to manage access to it.
 {{% /alert %}}
-

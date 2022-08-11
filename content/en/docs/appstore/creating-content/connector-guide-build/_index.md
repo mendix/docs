@@ -41,7 +41,7 @@ They can also be used to package a Java library provided by the other system to 
 
 #### 2.1.1 Connecting Mendix Apps to Mendix Apps  
 
-This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:<br/>  
+This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:
 
 | Category | Solution |
 | --- | --- |
@@ -50,7 +50,7 @@ This chart shows the available solutions for when you want to connect Mendix app
 
 #### 2.1.2 Connecting Mendix Apps to Third-Party Systems  
 
-This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:<br/>
+This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:
 
 | Category | Solution |
 | --- | --- |
@@ -84,13 +84,13 @@ When creating a new Mendix connector, it is advised to have an app in which you 
 
 To start setting up your app, open Studio Pro and do the following:
 
-1.  Create a [New App](/refguide/new-project/) for your connector.
-2.  Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
-    
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/add-module.png" >}}
+1. Create a [New App](/refguide/new-app/) for your connector.
+2. Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
 
-3.  Give your module a name fitting for the type of connector you are building.
-4.  Create the basic folder structure at root level. 
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/add-module.png" >}}
+
+3. Give your module a name fitting for the type of connector you are building.
+4. Create the basic folder structure at root level. 
 
 For more information, see the [App Setup](/appstore/creating-content/connector-guide-best-practices/#app-setup) section of *Best Practices for Building Connectors*.
 

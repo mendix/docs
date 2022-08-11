@@ -64,7 +64,7 @@ A widget package file is just a ZIP archive containing the following things:
     * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view, as well as in Studio (the ideal image size is 256x192 pixels, but other sizes will be resized to fit)
     * *{widgetName}.tile.dark.png* sets the dark-mode equivalent to *{widgetName}.tile.png*
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
-	* Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
+    * Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
 
 Naming your widget package file after the `widgetName` is best practice. Also, a widget package can include multiple widgets by putting several of the above items in the same widget package. However, creating such packages is *not recommended*. 
 
@@ -129,6 +129,7 @@ After widget attributes, you will see a description of a widget that will be pre
 ```xml
 	<name>My Progress Card</name>
 ```
+
 In Mendix Studio Pro, the widget described above would look like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" >}}
@@ -298,4 +299,3 @@ Here is how a caption and description look in Studio Pro:
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
 * [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/)
 * Pluggable Widget API information for [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
-

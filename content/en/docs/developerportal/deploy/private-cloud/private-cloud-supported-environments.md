@@ -147,8 +147,6 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
 
-
-
 ## 4 Databases
 
 The following databases are supported, and provide the features listed.

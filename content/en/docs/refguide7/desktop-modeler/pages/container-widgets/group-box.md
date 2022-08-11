@@ -28,19 +28,19 @@ An empty group box.
 
 Toggle whether a header is shown above the group box.
 
-_Default value:_ True
+*Default value:* True
 
 ### Caption
 
 The text of the header. This property is only applicable if the header is visible.
 
-_Default value:_ Group box
+*Default value:* Group box
 
 ### Collapsible
 
 This property specifies whether the group box can be collapsed by clicking the header and if so, whether it starts collapsed or expanded. This property is only applicable if the header is visible.
 
-_Default value:_ Yes (start expanded)
+*Default value:* Yes (start expanded)
 
 ## Visibility properties
 

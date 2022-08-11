@@ -79,9 +79,9 @@ So, for a one-to-many association the *many* end owns the association to ensure 
 
 An association is recorded in the object which owns it. If both objects own the association, then the association is recorded with both objects. You can see examples of where the associations are recorded in the [Association Examples](/refguide8/associations/#examples) section of *Associations*.
 
-Where the association is recorded has an important impact on the user of reference and reference set selectors in your app. The selector can only be inside a data view containing the _owning_ object. This is because it is only when you commit the owning object that the association is recorded.
+Where the association is recorded has an important impact on the user of reference and reference set selectors in your app. The selector can only be inside a data view containing the *owning* object. This is because it is only when you commit the owning object that the association is recorded.
 
-For example, imagine you have a many-to-many association, **Customer_Group**, between **Customer** and **Group** owned by the Customer entity. You can put an input reference set selector to select Groups from within a Customer data view. However you _cannot_ put an input reference set selector to select Customers from within a Group data view.
+For example, imagine you have a many-to-many association, **Customer_Group**, between **Customer** and **Group** owned by the Customer entity. You can put an input reference set selector to select Groups from within a Customer data view. However you *cannot* put an input reference set selector to select Customers from within a Group data view.
 
 {{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-member-properties/input-reference-set-selector.png" alt="Selecting Group objects through an input reference set selector in a Customer data view" >}}
 

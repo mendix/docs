@@ -1,5 +1,6 @@
 ---
 title: "Scaffold a Widget with the Yeoman Widget Generator"
+linktitle: "Scaffold Widget with Yeoman"
 url: /howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/
 category: "Widget Development"
 tags: ["widget", "develop widget", "scaffold", "yeoman"]
@@ -121,4 +122,3 @@ The solution is to go to the `WidgetName` element and replace it with your own w
 3. Remove `WidgetName`.
 
 Repeat these steps for all five of the errors.
-

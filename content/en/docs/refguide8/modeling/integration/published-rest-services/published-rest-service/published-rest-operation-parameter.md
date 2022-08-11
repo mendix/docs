@@ -80,6 +80,3 @@ This is used in the service's [OpenAPI (Swagger) documentation page](/refguide8/
 {{% alert color="info" %}}
 The public documentation feature was introduced in version 8.3.0.
 {{% /alert %}}
-
-
-

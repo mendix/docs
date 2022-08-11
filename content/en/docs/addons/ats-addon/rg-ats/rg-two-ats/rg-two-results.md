@@ -11,34 +11,33 @@ Under **Results**, you find all the running and executed tests from your app. Th
 
 The first column shows the status of a test. If the test is done, a warning and/or a canceled flag can be shown. The following list explains all the different icons:
 
-*  Queued – the test is waiting for a free running slot on the Selenium hub:
+* Queued – the test is waiting for a free running slot on the Selenium hub:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/queued.png" >}}
 
-*  Running – the test is currently running:
+* Running – the test is currently running:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/running.gif" >}}
-    
-*  Warning – the test is passed but may require your attention.
+
+* Warning – the test is passed but may require your attention.
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/warning-flag.png" >}}
-    
-*  Canceled – the test was canceled before it could be completed.
+
+* Canceled – the test was canceled before it could be completed.
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-results/canceled-flag.PNG" >}}
-    
 
 The second column shows the type of the test. The following list explains all the different icons:
 
-*  Test case:
+* Test case:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-case-icon.png" alt="Test Case" >}}
 
-*  Test suite:
+* Test suite:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/test-suite-icon.png" alt="Test Suite" >}} 
 
-*  Data-driven instance:
+* Data-driven instance:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-app/ddt-icon.png" alt="Datadriven Test Case" >}}
 

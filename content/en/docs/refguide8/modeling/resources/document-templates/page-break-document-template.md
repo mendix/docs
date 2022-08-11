@@ -23,10 +23,8 @@ When inserting a page break, the current page will be cut off after the break an
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918135.png" >}}
 
 A page break.
-
 {{% /alert %}}
 
 ## 2 Common Properties
 
 {{% snippet file="/static/_includes/refguide8/name-property.md" %}}
-

@@ -10,7 +10,7 @@ It is possible to use a sequence of names as a path.
 
 ## 2 Supported Widgets
 
- + All widgets
+* All widgets
 
 ## 3 Usage
 

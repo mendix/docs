@@ -1,5 +1,6 @@
 ---
 title: "Install the ATS Helper and the ATS Recorder"
+linktitle: "Install ATS Helper & Recorder"
 url: /addons/ats-addon/ht-one-install-ats-helper-recorder/
 weight: 2
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
@@ -16,24 +17,24 @@ ATS provides two different tools to help build test scripts: the ATS Helper and 
 * Install the [ATS Recorder](/addons/ats-addon/rg-one-recorder/)
 
 ## 2 Prerequisites
+
 Before starting this how-to, make sure you have the following prerequisites in place:
 
-*  ATS
-*  Mendix app
-
-	{{% alert color="info" %}}Both the ATS Helper and the ATS Recorder only work on a Mendix app.
-	{{% /alert %}}
-
-*  Google Chrome Browser
-
-	{{% alert color="info" %}}Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
-	{{% /alert %}}
+* ATS
+* Mendix app
+{{% alert color="info" %}}
+Both the ATS Helper and the ATS Recorder only work on a Mendix app.
+{{% /alert %}}
+* Google Chrome Browser
+{{% alert color="info" %}}
+Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/).
+{{% /alert %}}
 
 ## 3 Installing the ATS Helper
 
 To install the ATS Helper, follow these steps:
 
-1.  Open ATS and click the information icon in the upper-right corner of the screen:
+1. Open ATS and click the information icon in the upper-right corner of the screen:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-install-ats-helper-recorder/information-icon.png" >}}
 
@@ -41,7 +42,7 @@ To install the ATS Helper, follow these steps:
    
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-install-ats-helper-recorder/ats-information-screen.png" >}}
 
-2.	Drag the ATS Helper to your bookmark bar to link it there:
+2. Drag the ATS Helper to your bookmark bar to link it there:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-install-ats-helper-recorder/drag-drop-ats-helper.png" >}}
 
@@ -59,7 +60,7 @@ See [How to Create a Test Case](/addons/ats-addon/ht-one-create-a-test-case/) fo
 
 To install the ATS Recorder, follow these steps:
 
-1.	Open ATS and click the information icon in the upper-right corner of the screen:
+1. Open ATS and click the information icon in the upper-right corner of the screen:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-install-ats-helper-recorder/information-icon.png" >}}
     
@@ -67,8 +68,8 @@ To install the ATS Recorder, follow these steps:
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-install-ats-helper-recorder/ats-information-screen.png" >}}
 
-2.	Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
-3.  Click **ADD TO CHROME** to add the ATS Recorder extension:
+2. Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
+3. Click **ADD TO CHROME** to add the ATS Recorder extension:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-install-ats-helper-recorder/add-ats-recorder.png" >}}
 

@@ -19,11 +19,9 @@ To open the **Theme Customizer**, click the paintbrush icon in the left menu bar
 On the left, the Theme Customizer contains settings that you can change to customize different elements of your app. The changes you make are previewed on the right side. There are two preview modes:
 
 * [Widget View](#widget-view) – previews the style on individual widgets
+* [Page View](#page-view) – previews the style on a page
 
-*  [Page View](#page-view) – previews the style on a page
-
-    {{% alert color="info" %}} The **Page View** feature is in Beta. This means there might be changes to this feature. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).
-    {{% /alert %}}
+    {{% alert color="info" %}} The **Page View** feature is in Beta. This means there might be changes to this feature. For more information on Beta features, see [Beta Releases](/releasenotes/beta-features/).{{% /alert %}}
 
 You can switch between the modes by clicking the corresponding button in the top-bar:
 
@@ -79,15 +77,12 @@ In the **Page View**, you can select any page from your app to preview changes o
 To upload a logo, do the following: 
 
 1. Open the **Theme Customizer**.
-
-2.  In the **Upload Logo** section, click **Select File**.  
+2. In the **Upload Logo** section, click **Select File**.  
 
     {{< figure src="/attachments/studio/theme-customizer/upload-logo.png" alt="Uploading Your Logo" >}}
 
 3. In the dialog box, select the picture you want to use as the logo.
-
-4.  The selected picture is uploaded and shown in the preview. 
-
+4. The selected picture is uploaded and shown in the preview. 
 5. Click **Save** to save changes.
 
 The logo of your app has changed.
@@ -100,15 +95,14 @@ To change the color, do the following:
 
 1. In **Brand Colors**, **UI Customization** or **Typography** sections, select a setting you would like to change.
 
-2.  Click this setting and pick a color by doing one of the following:
+2. Click this setting and pick a color by doing one of the following:
 
     1. Select a color in the palette.
     2. Filling in the code of the color.
     3. Selecting the color from **Brand Colors** and **Logo Colors** (**Logo Colors** are only available when you [upload a logo](#uploading-logo)).<br/>
-	{{< figure src="/attachments/studio/theme-customizer/adjusting-color.png" alt="Brand Colors and Logo Colors"   width="200"  >}}
+    {{< figure src="/attachments/studio/theme-customizer/adjusting-color.png" alt="Brand Colors and Logo Colors"   width="200"  >}}
 
 3. See the result in the preview.
-
 4. Click **Save** to save your changes. 
 
 The color has been applied to your app.

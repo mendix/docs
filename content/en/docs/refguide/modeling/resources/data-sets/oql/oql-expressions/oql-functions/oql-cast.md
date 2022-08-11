@@ -12,7 +12,7 @@ The `CAST` function converts an expression to a specific data type.
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 CAST ( expression AS data_type )
 ```
 
@@ -52,7 +52,7 @@ The table below describes which `CAST` conversions are supported:
 ## 4 Examples
 
 A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a more readable `STRING` type: 
-	
-```sql
+
+```sql {linenos=false}
 CAST ( your_datetime_variable AS string )
 ```

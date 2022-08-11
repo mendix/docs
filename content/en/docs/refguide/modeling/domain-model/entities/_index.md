@@ -88,11 +88,9 @@ The name has to be unique only within a module domain model. You can have two en
 #### 3.3.2 Export Level 
 
 {{% alert color="info" %}}
-
 **Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
 
 This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
-
 {{% /alert %}}
 
 **Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution.
@@ -184,11 +182,11 @@ You can also edit an entity by opening the entity properties dialog box.
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
-*   [Attributes](/refguide/attributes/)
-*   [Associations](/refguide/associations/)
-*   [Validation Rules](/refguide/validation-rules/)
-*   [Event Handlers](/refguide/event-handlers/)
-*   [Indexes](/refguide/indexes/)
-*   [Access Rules](/refguide/access-rules/)
+* [Attributes](/refguide/attributes/)
+* [Associations](/refguide/associations/)
+* [Validation Rules](/refguide/validation-rules/)
+* [Event Handlers](/refguide/event-handlers/)
+* [Indexes](/refguide/indexes/)
+* [Access Rules](/refguide/access-rules/)
 
 See the detailed pages for each of these tabs for more information.

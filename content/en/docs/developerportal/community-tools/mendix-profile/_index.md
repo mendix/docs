@@ -183,6 +183,7 @@ When you earn enough points, you gain a level:
 | 8   | 18500 |
 | 9   | 25000 |
 | 10  | 32500 |
+| 11  | 50000 |
 
 ## 8 Portfolio
 
@@ -199,8 +200,6 @@ If you cannot finish your portfolio entry or do not want to publish yet, click *
 ## 9 Activity
 
 On the **Activity** tab, you can see a list of the last 20 public events for your badges, Marketplace, and Forum activity.
-
-The sidebar menu will take you to [My Activity Overview](#my-activity-overview) in your profile settings, where you can find more details about your other platform activity.
 
 ## 10 Settings {#settings}
 
@@ -260,39 +259,14 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-### 10.6 My Activity Overview {#my-activity-overview}
+### 10.6 Pending App Invites {#pending-app-invites}
 
-#### 10.6.1 Latest Messages
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/pending-app-invites.png" >}}
 
-In this section, you can see all the notifications of the [Buzz](/developerportal/collaborate/buzz/) instances you participate in (for example, when a colleague has created an app or added a new story).
-
-#### 10.6.2 Documents
-
-This section presents all the documents you have shared within different apps. 
-
-#### 10.6.3 Feedback {#feedback}
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/feedback.png"   width="500"  >}}
-
-In this section, you can view feedback submitted on the following:
-
-* Apps of which you are a [team](/developerportal/collaborate/team/) member
-* Your company’s apps of which you are not a team member
-
-When you click **Details** for a feedback item on an app of which you are a team member, you can manage that feedback. For more information, see [Feedback](/developerportal/collaborate/feedback/).
-
-#### 10.6.4 Team Server
-
-Changes made through Studio Pro are stored in the Mendix [Team Server](/developerportal/collaborate/team-server/). This section provides an overview of the revisions you have committed for all your apps.
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/team-server.png"   width="500"  >}}
-
-#### 10.6.5 Pending Invites
-
-In this section, you can view the invitations you have sent and received. There are two types of invitations:
+In this section, you can view the app invitations you have sent and received. There are two types of invitations:
 
 * Project invitation – an invitation to join a [team](/developerportal/collaborate/team/) to work on an app
-* App invitation – an invitation to join an app as an an [App User](/developerportal/collaborate/general-settings/#managing-app-users)
+* App invitation – an invitation to join an app as an [App User](/developerportal/collaborate/general-settings/#managing-app-users)
 
 ### 10.7 Advanced
 

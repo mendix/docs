@@ -29,9 +29,9 @@ Configuring the label on the progress bar can be done on the **Progress Label** 
 
 * Whether to show a label or not
 * The type of the label:
-	* **Text**: a custom text
-	* **Percentage**: the **Current value** converted onto the configured range as a percentage. 
-	* **Custom**: a custom widget
+    * **Text**: a custom text
+    * **Percentage**: the **Current value** converted onto the configured range as a percentage. 
+    * **Custom**: a custom widget
 
 ### 2.2 Styling
 
@@ -40,7 +40,7 @@ Under the **Appearance** tab, the following styling properties can be adjusted f
 * Striped  bar: whether the bar should be striped or plain
 * Bar color based on brand styling
 * Size (small, medium, and large)
-	* Note that when the size is configured to small no label will be shown due to limited space, and text labels will be included as a tooltip that shows on hover
+    * Note that when the size is configured to small no label will be shown due to limited space, and text labels will be included as a tooltip that shows on hover
 
 ## 3 Widgets Below Version 2.0.0
 

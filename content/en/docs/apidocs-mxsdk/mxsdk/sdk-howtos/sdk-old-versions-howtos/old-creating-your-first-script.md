@@ -1,5 +1,6 @@
 ---
 title: "Create Your First Script (Old Versions)"
+linktitle: "Create Your First Script"
 url: /apidocs-mxsdk/mxsdk/old-creating-your-first-script/
 weight: 2
 ---
@@ -12,8 +13,8 @@ In [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/old-setting
 
 After setting up all the prerequisites, follow these steps to write your first script that will use the Mendix Platform SDK:
 
-1.  In VS Code, create a file named *script.ts* in the same directory as your other files. The script below creates a new app, adds a new entity to the domain model, and commits the changes to the Team Server.
-2.  Copy the following code to the  *script.ts* file:
+1. In VS Code, create a file named *script.ts* in the same directory as your other files. The script below creates a new app, adds a new entity to the domain model, and commits the changes to the Team Server.
+2. Copy the following code to the  *script.ts* file:
 
     ```ts
     import { MendixSdkClient, OnlineWorkingCopy } from 'mendixplatformsdk';
@@ -49,7 +50,7 @@ After setting up all the prerequisites, follow these steps to write your first s
     main();
     ```
 
-3.  Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/developerportal/community-tools/mendix-profile/#api-key), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
+3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/developerportal/community-tools/mendix-profile/#api-key), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
 
 ## 3 Code Explanation
 
@@ -104,9 +105,9 @@ For more information, see [Async Await](https://basarat.gitbook.io/typescript/fu
 
 ## 4 Compiling & Running the Script
 
-1.  Compile the script with the TypeScript compiler into JavaScript using the following command:
+1. Compile the script with the TypeScript compiler into JavaScript using the following command:
 
-    ```bash
+    ```bash {linenos=false}
     $ tsc
     ```
 
@@ -114,11 +115,11 @@ For more information, see [Async Await](https://basarat.gitbook.io/typescript/fu
 
     The TypeScript compiler will execute in a single run to compile all the files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
 
-    ```bash
+    ```bash {linenos=false}
     $ tsc --watch
     ```
 
-2.  Run the script with `node` to see the results:
+2. Run the script with `node` to see the results:
 
     ```text
     $ node script.js
@@ -141,7 +142,6 @@ The steps for app (project) creation (line 3) and committing to the Team Server 
 
 ## 5 Opening the App in Studio Pro
 
-1.  In the [My Apps](/developerportal/#my-apps) page of the Developer Portal, verify the app you just created is visible at the top of the list.
-2.  Open the new app, and on the right side, click **Edit**.
-3.  If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.
-
+1. In the [My Apps](/developerportal/#my-apps) page of the Developer Portal, verify the app you just created is visible at the top of the list.
+2. Open the new app, and on the right side, click **Edit**.
+3. If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.

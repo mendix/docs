@@ -37,13 +37,13 @@ It has three regions: top, left, and center. The top region contains the brand l
 
 The navigation menu of Atlas Default is a toggled menu. Options for this toggled menu are to **shrink content (initially open)** or to **shrink content (initially closed)**:
 
-*  **Shrink content (initially open)** — the navigation menu will initially start open at its maximum width, displaying both the menu item's description and icon. When toggled it will move to its minimum width and display just the menu item's icon. The page's content (center region) also starts shrunk to make space for the open menu:
+* **Shrink content (initially open)** — the navigation menu will initially start open at its maximum width, displaying both the menu item's description and icon. When toggled it will move to its minimum width and display just the menu item's icon. The page's content (center region) also starts shrunk to make space for the open menu:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.1_shrinkingcontentopenoption.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.1_shrinkingcontentopenoption.gif"   width="350"  >}}
 
-*  **Shrink content (initially closed)** — the navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not not start shrunk, but will shrink when sidebar is toggled:
+* **Shrink content (initially closed)** — the navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not not start shrunk, but will shrink when sidebar is toggled:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.1_shrinkingcontentclosedoption.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.1_shrinkingcontentclosedoption.gif"   width="350"  >}}
 
 ### 2.2 Atlas TopBar
 
@@ -58,13 +58,13 @@ It has three regions: top, left, and center. The top region though contains both
 
 The options for the sidebar (unlike the Atlas Default) are only applicable at phone screen size. You then have two options for how the sidebar is toggled: **slide over content** and **push content aside**: 
 
-*  **Slide over content** — the sidebar will move to overlay on top of the content, hiding a portion (depends on the width of the sidebar) of the content:
+* **Slide over content** — the sidebar will move to overlay on top of the content, hiding a portion (depends on the width of the sidebar) of the content:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_slidingovercontent.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_slidingovercontent.gif"   width="350"  >}}
 
-*  **Push content aside** — the sidebar will push the content off-screen: 
+* **Push content aside** — the sidebar will push the content off-screen: 
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  >}}
 
 ### 2.3 Comparing the Two Layouts
 
@@ -96,163 +96,163 @@ Top navigation items are more visible because they are always above the fold and
 
 To configure the toggled sidebar to shrinking content (initially open), follow these steps:
 
-1.  Open the page properties of the **Home_Web** page:
+1. Open the page properties of the **Home_Web** page:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_pageproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_pageproperties.png"   width="350"  >}}
 
-2.  In the **General** tab, select **Atlas_Default** as the layout:
+2. In the **General** tab, select **Atlas_Default** as the layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_layoutselection.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_layoutselection.png"   width="350"  >}}
 
-3.  Then in the breadcrumb, navigate to the **Atlas_Default** navigation layout:
+3. Then in the breadcrumb, navigate to the **Atlas_Default** navigation layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_breadcrumb.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_breadcrumb.png"   width="350"  >}}
 
-4.  Open the region properties of the left sidebar:
+4. Open the region properties of the left sidebar:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_regionproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_regionproperties.png"   width="350"  >}}
 
-5.  In the **General** tab, select **Shrinking content (initially open)** as the toggle mode:
+5. In the **General** tab, select **Shrinking content (initially open)** as the toggle mode:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_shrinkcontentopen.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.1_shrinkcontentopen.png"   width="350"  >}}
 
 ### 3.2 Toggling the Sidebar for Shrinking Content (Initially Open)
 
 To toggle the sidebar for **Shrinking content (initially open)**, follow these steps:
 
-1.  Click **Run Locally** to run your app.
-2.  In your browser, click the toggle button:
+1. Click **Run Locally** to run your app.
+2. In your browser, click the toggle button:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.2_toggleshrinkingcontentopenoption.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.2_toggleshrinkingcontentopenoption.gif"   width="350"  >}}
 
 ### 3.3 Set the Toggled Sidebar to Shrinking Content (Initially Closed)
 
 To configure the toggled sidebar to **Shrinking content (initially closed)**, follow these steps:
 
-1.  Open the page properties of the **Home_Web** page:
+1. Open the page properties of the **Home_Web** page:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_pageproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_pageproperties.png"   width="350"  >}}
 
-2.  In the **General** tab, select **Atlas_Default** as the layout:
+2. In the **General** tab, select **Atlas_Default** as the layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_layoutselection.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_layoutselection.png"   width="350"  >}}
 
-3.  Then in the breadcrumb, navigate to the **Atlas_Default** navigation layout:
+3. Then in the breadcrumb, navigate to the **Atlas_Default** navigation layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_breadcrumb.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_breadcrumb.png"   width="350"  >}}
 
-4.  Open the region properties of the left sidebar:
+4. Open the region properties of the left sidebar:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_regionproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_regionproperties.png"   width="350"  >}}
 
-5.  In the tab **General**, select **Shrinking content (initially closed)** as the toggle mode:
+5. In the tab **General**, select **Shrinking content (initially closed)** as the toggle mode:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_shrinkcontentclosed.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.3_shrinkcontentclosed.png"   width="350"  >}}
 
 ### 3.4 Toggling the Sidebar for Shrinking Content (Initially Closed)
 
-1.  Click **Run Locally** to run your app.
-2.  In your browser, click the toggle button:
+1. Click **Run Locally** to run your app.
+2. In your browser, click the toggle button:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.4_toggleshrinkingcontentclosedoption.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.4_toggleshrinkingcontentclosedoption.gif"   width="350"  >}}
 
 ### 3.5 Set the Toggled Sidebar to Pushing Content Aside
 
 To configure the toggled sidebar to **Push content aside**, follow these steps:
 
-1.  Open the page properties of the Home_Web page:
+1. Open the page properties of the Home_Web page:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_pageproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_pageproperties.png"   width="350"  >}}
 
-2.  In the **General** tab, select **Atlas_Topbar** as the layout:
+2. In the **General** tab, select **Atlas_Topbar** as the layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_layoutselection.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_layoutselection.png"   width="350"  >}}
 
-3.  In the breadcrumb, navigate to the **Atlas_Topbar** navigation layout:
+3. In the breadcrumb, navigate to the **Atlas_Topbar** navigation layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_breadcrumb.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_breadcrumb.png"   width="350"  >}}
 
-4.  Open the region properties of the left sidebar:
+4. Open the region properties of the left sidebar:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_regionproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_regionproperties.png"   width="350"  >}}
 
-5.  In the **General** tab, select **Push content aside** as the toggle mode:
+5. In the **General** tab, select **Push content aside** as the toggle mode:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_pushcontentaside.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_pushcontentaside.png"   width="350"  >}}
 
 6. Optionally, you can change the **Width to Percentage** and enter *80* as the **Width value**:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_changewidth.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_changewidth.png"   width="350"  >}}
 
 ### 3.6 Toggling the Sidebar for Pushing Content Aside
 
 To toggle the sidebar for Pushing content aside, follow these steps:
 
-1.  Click **Run Locally** to run your app.
-2.  In your browser, right-click your web page and click **Inspect**:
+1. Click **Run Locally** to run your app.
+2. In your browser, right-click your web page and click **Inspect**:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.6_inspector.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.6_inspector.png"   width="350"  >}}
 
-3.  Click the toggle device toolbar:
+3. Click the toggle device toolbar:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.6_toggledevicetoolbar.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.6_toggledevicetoolbar.png"   width="350"  >}}
 
-4.  Change the emulated device to an **iPhoneX** or an equivalent mobile device: 
+4. Change the emulated device to an **iPhoneX** or an equivalent mobile device: 
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.6_selectdevicesize.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.6_selectdevicesize.png"   width="350"  >}}
 
-5.  In your emulated device's browser window, click the toggle button:
+5. In your emulated device's browser window, click the toggle button:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  >}}
 
 ### 3.7 Set the Toggled Sidebar to Slide Over Content
 
 To configure the toggled sidebar to **Slide over content**, follow these steps:
 
-1.  Open the page properties of the **Home_Web** page:
+1. Open the page properties of the **Home_Web** page:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_pageproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_pageproperties.png"   width="350"  >}}
 
-2.  In the **General** tab, select **Atlas_Topbar** as the layout:
+2. In the **General** tab, select **Atlas_Topbar** as the layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_layoutselection.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_layoutselection.png"   width="350"  >}}
 
-3.  In the breadcrumb, navigate to the **Atlas_Topbar** navigation layout:
+3. In the breadcrumb, navigate to the **Atlas_Topbar** navigation layout:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_breadcrumb.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.5_breadcrumb.png"   width="350"  >}}
 
-4.  Open the region properties of the left sidebar:
+4. Open the region properties of the left sidebar:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_regionproperties.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_regionproperties.png"   width="350"  >}}
 
-5.  In the **General** tab, select **Slide over content** as the toggle mode:
+5. In the **General** tab, select **Slide over content** as the toggle mode:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_slideovercontent.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_slideovercontent.png"   width="350"  >}}
 
-6.  Optionally, change the **Width** to **Percentage** and enter *80* as the **Width value**: 
+6. Optionally, change the **Width** to **Percentage** and enter *80* as the **Width value**: 
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_changewidth.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.7_changewidth.png"   width="350"  >}}
 
 ### 3.8 Toggling the Sidebar for Slide Over Content
 
 To toggle the sidebar for **Slide over content**, follow these steps:
 
-1.  Click **Run Locally** to run your app.
-2.  In your browser, right-click your web page and click **Inspect**:
+1. Click **Run Locally** to run your app.
+2. In your browser, right-click your web page and click **Inspect**:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.8_inspector.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.8_inspector.png"   width="350"  >}}
 
-3.  Click the toggle device toolbar:
+3. Click the toggle device toolbar:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.8_toggledevicetoolbar.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.8_toggledevicetoolbar.png"   width="350"  >}}
 
-4.  Change the emulated device to an **iPhoneX** or an equivalent mobile device:
+4. Change the emulated device to an **iPhoneX** or an equivalent mobile device:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.8_selectdevicesize.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/3.8_selectdevicesize.png"   width="350"  >}}
 
-5.  In your emulated device's browser window, click the toggle button:
+5. In your emulated device's browser window, click the toggle button:
 
-	{{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_slidingovercontent.gif"   width="350"  >}}
+    {{< figure src="/attachments/howto8/front-end/use-navigation-layouts/2.2_slidingovercontent.gif"   width="350"  >}}
 
 ## 4 Read More
 

@@ -30,10 +30,10 @@ To configure this module, follow these steps:
 
 1. Load the module into your app.
 2. Connect the **Location** entity to the entity that needs to be displayed on a Google Map:
-	* Option 1: Use a reference and have the widget load the attributes over it
-	* Option 2: Inherit/generalize from **Location** (for more information, see [Generalization vs One-to-One Associations](/refguide/generalization-and-association/))
+    * Option 1: Use a reference and have the widget load the attributes over it
+    * Option 2: Inherit/generalize from **Location** (for more information, see [Generalization vs One-to-One Associations](/refguide/generalization-and-association/))
 3. Set the [Google Maps widget](/appstore/widgets/google-maps/) to show your objects as needed.
+
 ## 3 Read More
 
 * [Google Maps widget](/appstore/widgets/google-maps/)
-

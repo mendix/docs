@@ -22,7 +22,7 @@ An image uploader must be placed in a data view connected to entity System.Image
 
 With this property you can specify the maximum file size (in megabytes) of images that can be uploaded.
 
-_Default value:_ 5
+*Default value:* 5
 
 ### Allowed extensions
 
@@ -64,6 +64,6 @@ This property determines the height of the generated thumbnail in pixels. Howeve
 
 ## Related articles
 
-*   [Data view](/refguide7/data-view/)
-*   [Entities](/refguide7/entities/)
-*   [Associations](/refguide7/associations/)
+* [Data view](/refguide7/data-view/)
+* [Entities](/refguide7/entities/)
+* [Associations](/refguide7/associations/)

@@ -65,18 +65,18 @@ The header for a component presents the following details:
 * <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * **Download** – click this to download the component
-	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
-	* The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
+    * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
+    * The best practice is to download a component from the Marketplace functionality built into Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*))
 * The **Premium** label is applied to components like [app services](#types) that require a subscription; some premium services (like [Email Service](/appstore/app-services/email-service/)) also offer a free trial based on a predefined quota/limit
-	* These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
-	* If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
-	* If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
-	* These components also have a [Pricing](#tabs) tab
+    * These components have a **Subscribe** button to configure your subscription (by selecting a specific plan and setting a **Technical Owner**) and a **Try for Free** button to start your free trial
+    * If your company has an active subscription, click **Buy More** to buy more instances on the same or different plan.
+    * If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
+    * These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
-* The latest **Version** number of the component
-* The Studio Pro version that the component **Requires** to work
-* The type of [license](/appstore/general/share-app-store-content/#license) for the component
+    * The latest **Version** number of the component
+    * The Studio Pro version that the component **Requires** to work
+    * The type of [license](/appstore/general/share-app-store-content/#license) for the component
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
@@ -90,13 +90,13 @@ A **GitHub** link will take you to the GitHub source files of the component.
 
 The details page for a component presents the following item information tabs:
 
-*  **Overview** – contains the following sections:
-	* **Description** – a description of the component
-	* **Screenshots** – screenshots of the component
-	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which will open a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
-*  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
-	* [Platform-supported](/appstore/general/app-store-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
-	* Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
+* **Overview** – contains the following sections:
+    * **Description** – a description of the component
+    * **Screenshots** – screenshots of the component
+    * **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which will open a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
+* **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
+    * [Platform-supported](/appstore/general/app-store-content-support/#category) components are documented in the various categories of this *Marketplace Guide*
+    * Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
 * **Pricing**  – lists the pricing options (only for paid components)
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*): 
 
@@ -124,13 +124,13 @@ In this page, you can see the Marketplace content for which you have created at 
 
 * **View item** – click this to go to the [component details page](#details) 
 * **Create a new draft** – click this to create a new draft version of the component
-	* Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
-	* For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *How to Share Marketplace Content*
+    * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
+    * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *How to Share Marketplace Content*
 * **Edit a version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
 * **Unpublish a version** – click this to remove one version or all versions of the component
-	* If the component is [protected content](#group-content) from a [user group](#user-groups), a [group member](#members) can unpublish any version
-	* If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
-	* Select **Unpublish all my versions** to remove all your versions of the component
+    * If the component is [protected content](#group-content) from a [user group](#user-groups), a [group member](#members) can unpublish any version
+    * If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
+    * Select **Unpublish all my versions** to remove all your versions of the component
 
 You may see the **Company only** label on a component, which means it is your company's private Marketplace content (for details on how this is configured, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#private-app-store) section of *How to Share Marketplace Content*). This content can be shared with [guests](#guests).
 
@@ -185,6 +185,10 @@ On this page, you can see all the content your company has published. Click the 
 {{< figure src="/attachments/appstore/general/app-store-overview/company-content.png" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
+
+{{% alert color="info" %}}
+As a Mendix Admin in Control Center, you can also curate the Marketplace content you want to make available to your company's users in Mendix Studio. For more information, see the [Marketplace Content](/developerportal/control-center/#marketplace-content) section of *Control Center*.
+{{% /alert %}}
 
 ### 4.7 Company Subscriptions {#company-subscriptions}
 

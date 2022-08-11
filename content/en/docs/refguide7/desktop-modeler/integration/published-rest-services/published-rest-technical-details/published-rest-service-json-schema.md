@@ -35,7 +35,7 @@ The OpenApi schema contains definitions for body parameters and return types. If
 }
 ```
 
-By default, the definition name is the name of the message definition that the mapping is based on. You can choose your own definition name by setting the _Public name_ of a mapping.
+By default, the definition name is the name of the message definition that the mapping is based on. You can choose your own definition name by setting the *Public name* of a mapping.
 
 ### 2.2 Attribute
 

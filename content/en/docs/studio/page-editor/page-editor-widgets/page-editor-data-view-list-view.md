@@ -27,15 +27,10 @@ A data view and list view belong to the **Data Container** category of widgets. 
 Data view consists of the following properties:
 
 * [Data Source](#data-source-data-view)
-
 * [General](#general-section-data-view)
-
 * [Conditional Visibility](#visibility-data-view)
-
 * [Design](#design-section-data-view)
 
-    
-    
     {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-data-view-list-view/data-view-properties.png"   width="250"  >}}
 
 ### 2.1 Data Source Section {#data-source-data-view} 
@@ -44,9 +39,11 @@ The data source determines which object will be shown in the data view. For gene
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows](/studio/microflows/).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](/refguide/context-source/) in the *Studio Pro Guide*. |
+| Context              | A data source determining that when the page is opened, it expects the selected object to be passed to it. Data views with this data source get the object from the context. You select an entity for this data source and data from this entity will be shown in the data view. <br />If your data view is placed inside another data container, for example, inside a list view, you can also select an entity that has associations with the entity of this list view. <br />For more technical information on the context source, see [Context Source](/refguide/context-source/) in the *Studio Pro Guide*. |
 | Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide/microflow-source/) in the *Studio Pro Guide*. |
 | List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide/listen-to-grid-source/) in the *Studio Pro Guide*. |
+
+When selecting an entity for the **Context** data source, you can choose to **Generate contents of data view**. This means that the data view will be automatically filled with input widgets that correlate with each attribute of the entity. For example, if you select the *Customer* entity that has *FullName* and *Address* attributes of string types, the data view will get two [text box widgets](/studio/page-editor-widgets-input-elements/) labelled *FullName* and *Address*.
 
 ### 2.2 General Section {#general-section-data-view}
 
@@ -57,7 +54,6 @@ The **General** section properties of are described in the table below:
 | Form Orientation                   | Determines the position of the [input element labels](/studio/page-editor-widgets-input-elements/#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input elements</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
 | Read-Only *(disabled by default)*  | When enabled, all [input elements](/studio/page-editor-widgets-input-elements/) (for example, a text area, a check box) in the data view will be in read-only mode. |
 | Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. |
-
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
 
@@ -92,7 +88,7 @@ The data source determines which objects will be shown in the list view. For gen
 
 ### 3.2 Events Section
 
- You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
+You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
 
 For more information on the **Events** section and on click actions, see [Events Section](/studio/page-editor-widgets-events-section/). 
 
@@ -102,7 +98,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 * **Page Size** – the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
-	{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-data-view-list-view/load-more-list-view.png"   width="400"  >}}
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-data-view-list-view/load-more-list-view.png"   width="400"  >}}
 
 * **Read-Only** (enabled by default) – when enabled, all [input elements](/studio/page-editor-widgets-input-elements/) (for example, a text area, a check box) in the list view will be in read-only mode
 

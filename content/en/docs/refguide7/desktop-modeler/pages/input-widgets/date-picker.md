@@ -86,5 +86,5 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 9 Read More
 
-*   [Data View](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data View](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

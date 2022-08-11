@@ -42,7 +42,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
     {{% alert color="info" %}}Searching for BAPIs is provided as a microflow rather than a separate app so that you can set up the JCo destination securely. You should not give access to this microflow to any end-users of an app you build using the Mendix BAPI Connector.{{% /alert %}}
 
 4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/bapi).
-5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/). A module with the same name as the BAPI is added to the project.
+5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/). A module with the same name as the BAPI is added to the app.
 
     {{< figure src="/attachments/partners/sap/sap-bapi-connector/bapi-material-getall.png" >}}
 
@@ -121,7 +121,7 @@ This is part of the `SAPBAPIConnector` module and contains the entities which ar
 
 * **BAPIRequest** – This is a generic entity which represents a BAPI request. Any entity that represents a specific BAPI request is a specialization of the `BAPIRequest` entity. Objects of this entity contain the request attributes required for a BAPI Call. Request attributes represent Import and Table parameters.
 * **BAPIResponse** – This is a generic entity which represents a BAPI response. Any entity that represents a specific BAPI response is a specialization of the `BAPIResponse` entity. Objects of this entity contain the response from a BAPI Call. Response attributes contain Export and Table parameters.
-*  **BAPIComplexType** – Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and part of BAPI Import or Export parameters is a specialization of this entity.
+* **BAPIComplexType** – Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and part of BAPI Import or Export parameters is a specialization of this entity.
 * **BAPITable** – Any entity in a Mendix BAPI module which is associated with the `BAPIRequest` and `BAPIResponse` entity and is a BAPI Table parameter is a specialization of this entity.
 * **BAPIMetadata** – This holds all the attributes which represent the metadata of an SAP BAPI. It is used to generate a metadata.json file which is used in the Model Creator for SAP Integrations to create a domain model for a Mendix BAPI module.
 * **Destination** – This entity holds the JCo Destination name and properties.

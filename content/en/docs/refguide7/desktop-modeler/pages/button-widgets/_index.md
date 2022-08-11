@@ -10,6 +10,6 @@ aliases:
 
 Button widgets perform an action when clicked. They can be rendered as a button or as a hyperlink. The following list contains the button widgets that are included with Mendix:
 
-*   [Action Button](/refguide7/action-button/)
-*   [Drop Down Button](/refguide7/drop-down-button/)
-*   [Create Button](/refguide7/new-button/)
+* [Action Button](/refguide7/action-button/)
+* [Drop Down Button](/refguide7/drop-down-button/)
+* [Create Button](/refguide7/new-button/)

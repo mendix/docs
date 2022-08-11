@@ -5,6 +5,7 @@ category: "App Services"
 weight: 1
 description: "This document describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
@@ -22,7 +23,7 @@ Here is an overview of what the 3DViewer contains:
 | [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
 | [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
 | [Java action](#java-action) | VisServerAction |
-| [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+| [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Preference |
 
 In most cases, you will only need what is contained in the **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
@@ -49,21 +50,22 @@ This app service enables doing the following:
 * Create 2D markup on model 
 * Take snapshot of a model 
 * Perform 3D measurement on distance, angle, area, radius, and length
+* Set filter options for PMI and save as personal preferences
 
 ### 1.3 Limitations {#limitations}
 
 The 3D Viewer app service includes a few 3D widgets. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
 
-*  The **Container3D** widget acts as a context-sharing container for other 3D widgets, so 3D widgets can talk to each other and perform corresponding actions via this context. Therefore, every other 3D widget (except the **Uploader** widget) needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets will not work as expected. In that case, you will be notified and see errors when you switch to Design mode. 
+* The **Container3D** widget acts as a context-sharing container for other 3D widgets, so 3D widgets can talk to each other and perform corresponding actions via this context. Therefore, every other 3D widget (except the **Uploader** widget) needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets will not work as expected. In that case, you will be notified and see errors when you switch to Design mode. 
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg" alt="widgetoutsidecontainer3d-structuremode" >}}
-	
-*  One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg" alt="widgetoutsidecontainer3d-structuremode" >}}
+
+* One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
 * The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
 * Currently, only JT models with version 9 and above are supported.
-*  Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
+* Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" >}}
 
 ### 1.4 Prerequisites
 
@@ -96,9 +98,9 @@ If you app does not have an after-startup microflow set,  follow these steps:
 
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
 2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide/app-settings/#after-startup).
+3. Set this microflow as the **After startup** step via **App Settings** > **Runtime** > [After startup](/refguide/app-settings/#after-startup).
 
-If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
+If your app already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
 ## 4 Configuration
 
@@ -203,20 +205,20 @@ Place this widget inside a [Container3D](#container3d) widget.
 For this widget to visualize a model correctly, set the following properties:
 
 * On the **Data Source** tab, configure the correct **Model ID** and **Model source type** properties:
-	* Example valid **Model ID** values – the value of the ModelId attribute of a ModelDocument object, or the value of a Model ID attribute set by the Uploader widget property
-	* Valid **Model Source Type** values – **Mendix** or **Teamcenter**; you can also use the **Viewer3D/USER_ME/ModelSourceType** constant
+    * Example valid **Model ID** values – the value of the ModelId attribute of a ModelDocument object, or the value of a Model ID attribute set by the Uploader widget property
+    * Valid **Model Source Type** values – **Mendix** or **Teamcenter**; you can also use the **Viewer3D/USER_ME/ModelSourceType** constant
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
-	* **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
-	* **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
-	* **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
-	* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
+    * **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
+    * **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
+    * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
+    * **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
-	* **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
-	* **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
-	* **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
-	* **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain information about if the product structure is loaded; you can also add custom actions triggered by this change
+    * **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
+    * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
+    * **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
+    * **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain information about if the product structure is loaded; you can also add custom actions triggered by this change
 
 3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. For information on how to use the 3D Viewer APIs and other details, see [Use the 3D Viewer API](/appstore/app-services/3d-viewer-api/).
 
@@ -278,6 +280,16 @@ Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#vi
 
 No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts . For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 
+##### 4.6.2.7 Preference {#preference}
+
+This widget enables setting and saving your personal preferences.
+
+{{% alert color="info" %}}Only options for PMI filter are supported currently.{{% /alert %}}
+
+Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
+
+With this widget, you can select different PMI entity types, model view, and design group. The selected items will not be loaded. For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
+
 #### 4.6.3 Toolbar Widgets
 
 These widgets do not require additional configuration. Simply place them within a [Container3D](#container3d) widget with the accompanying [Viewer](#viewer) widget.
@@ -330,18 +342,18 @@ Follow these steps to configure this visualization:
 4. Create an entity and call it *UploadedModel* in your app module's domain model.
 5. Wrap the Uploader and Viewer widgets inside a new data view widget.
 6. Create a nanoflow, call it *CreatedUploadedModel*, and set this as the data source of the data view.
-7.  Create two attributes for the UploadedModel entity. Set them to receive the value returned from the Uploader's **Data source** and **UploadModelId**:
+7. Create two attributes for the UploadedModel entity. Set them to receive the value returned from the Uploader's **Data source** and **UploadModelId**:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/uploader-uploadedmodelinfo.jpg" alt="uploader-uploadedmodelinfo" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/uploader-uploadedmodelinfo.jpg" alt="uploader-uploadedmodelinfo" >}}
 
-8.  On the **Data Source** tab, set the data source attributes of the Viewer widget by setting **Model ID** to **UploadedModelID** and **Model source type** to **Mendix**:
+8. On the **Data Source** tab, set the data source attributes of the Viewer widget by setting **Model ID** to **UploadedModelID** and **Model source type** to **Mendix**:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-datasourceuploaded.jpg" alt="viewer-datasourceuploaded" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-datasourceuploaded.jpg" alt="viewer-datasourceuploaded" >}}
 
-9.  On the **General** tab, set **Automatically load parts** to **Yes**, which enables loading the model automatically upon successful upload.
+9. On the **General** tab, set **Automatically load parts** to **Yes**, which enables loading the model automatically upon successful upload.
 10. Run your app locally. You can now upload a JT file and view it directly in the browser:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/runlocally-uploadandview.jpg" alt="runlocally-uploadandview" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/runlocally-uploadandview.jpg" alt="runlocally-uploadandview" >}}
 
 ### 5.2 Displaying Model Loading Progress with Progress Bar Widget {#displaying-model-loading}
 
@@ -356,14 +368,14 @@ Follow these steps to display the model loading progress:
 1. Create an entity called *PageObject*, add a decimal attribute called *LoadingProgress* with a default value of `= 0` (as the [Progress Bar](/appstore/widgets/progress-bar/) widget expects a decimal value).
 2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
 3. Wrap the [Container3D](#container3d) widget with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
-4.  Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
+4. Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-progresspercentage.jpg" alt="viewer-progresspercentage" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-progresspercentage.jpg" alt="viewer-progresspercentage" >}}
 
-5.  Add the Progress Bar widget to the page and set **PageObject.LoadingProgress** as the **Progress Attribute** on the **Values** tab.
+5. Add the Progress Bar widget to the page and set **PageObject.LoadingProgress** as the **Progress Attribute** on the **Values** tab.
 6. Run your app locally. You can see the real-time model loading progress:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/runlocally-loadingprogress.jpg" alt="runlocally-loadingprogress" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/runlocally-loadingprogress.jpg" alt="runlocally-loadingprogress" >}}
 
 ### 5.3 Utilizing More 3D Functionality
 
@@ -385,9 +397,9 @@ The Mendix native [list view](/refguide/list-view/) can be used to display the m
 2. Add a [pop-up page](/refguide/page-properties/#pop-up) to display the model list via a button click or another event of your choice.
 3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data source**.
 4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data source**.
-5.  Fill in the list item with the information you are interested in:
+5. Fill in the list item with the information you are interested in:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/openmodelpopup-listview.jpg" alt="openmodelpopUp-listview" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/openmodelpopup-listview.jpg" alt="openmodelpopUp-listview" >}}
 
 #### 5.4.2 Opening a Model from the Model List
 
@@ -395,21 +407,21 @@ Once you have the model list, you may want to click to select a model from the l
 
 Follow these steps for configuration:
 
-1.  Define the **On click** action for the list view to pass the selected model to the Viewer widget that is present in another page (so the selected model can be loaded into the viewer). An example approach is to create an entity that is associated with the **ModelDocument** entity defined in the **Viewer3D** module's domain model. Make the object a shared object between the page the Viewer is in and the model list page. In this example, you are creating a **PageObject** with this home page: 
+1. Define the **On click** action for the list view to pass the selected model to the Viewer widget that is present in another page (so the selected model can be loaded into the viewer). An example approach is to create an entity that is associated with the **ModelDocument** entity defined in the **Viewer3D** module's domain model. Make the object a shared object between the page the Viewer is in and the model list page. In this example, you are creating a **PageObject** with this home page: 
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/homepage-pageobject.jpg" alt="homepage-pageobject" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/homepage-pageobject.jpg" alt="homepage-pageobject" >}}
 
-	This is the model pop-up page:
+    This is the model pop-up page:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/openmodelpopup-pageobject.jpg" alt="openmodelpopUp-pageobject" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/openmodelpopup-pageobject.jpg" alt="openmodelpopUp-pageobject" >}}
 
-2.  Set the **On click** action of the model list item, then change the **ModelDocument** object with which the **PageObject** is associated to return the value so that home page can be refreshed on a PageObject change:
+2. Set the **On click** action of the model list item, then change the **ModelDocument** object with which the **PageObject** is associated to return the value so that home page can be refreshed on a PageObject change:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/openselectedmodel-nanoflow.jpg" alt="openselectedmodel-nanoflow" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/openselectedmodel-nanoflow.jpg" alt="openselectedmodel-nanoflow" >}}
 
 3. Run your app locally. You will get a simple model list where you can select which model to open and visualize it with the home-page viewer:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/openmodellistpopup-demo.jpg" alt="openmodellistpopup-demo" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/openmodellistpopup-demo.jpg" alt="openmodellistpopup-demo" >}}
 
 #### 5.4.3 Deleting a Model
 
@@ -418,10 +430,10 @@ There might be some models that you do not want in the database, so you can dele
 Follow these steps to delete a model from the database:
 
 1. Use the **Viewer3D/USE_ME/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
-2.  DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](/refguide/button-widgets/).
-3.  Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **DeleteModelFromMendix** microflow and commit the **ModelDocument**:
+2. DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](/refguide/button-widgets/).
+3. Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **DeleteModelFromMendix** microflow and commit the **ModelDocument**:
 
-	{{< figure src="/attachments/appstore/app-services/3d-viewer/deletemodel-nanoflow.jpg" alt="deletemodel-nanoflow" >}}
+    {{< figure src="/attachments/appstore/app-services/3d-viewer/deletemodel-nanoflow.jpg" alt="deletemodel-nanoflow" >}}
 
 4. Set the **On click** event of the **Delete** button to the **DeleteModel** nanoflow.
 5. Run your app locally. You should be able to delete a model by clicking **Delete**.
@@ -439,7 +451,7 @@ There are four main types of events that can be picked up on the Viewer widget, 
 By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/)).
 
 **Selection** takes a String attribute. You can define an attribute and bind that attribute to Selection property. In a running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
-	
+
 {{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onselectionchange-result.jpg" alt="viewer-onselectionchange-result" >}}
 
 Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilizing `GET`APIs exposed by the Viewer (for example, get `Boundingbox` by `PSID`, set the material by `PSID`in a JavaScript action, include this in a nanoflow, and set the **Action** to call this nanoflow).
@@ -496,9 +508,9 @@ When a model is loaded in the viewer, the [Section View](#section-view) widget e
 * Clipping away parts
 * Positioning a plane
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode" >}}
-
 The sections below present operations within the Section View widget.
+
+{{< figure src="/attachments/appstore/app-services/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode" >}}
 
 #### 5.6.1 Action
 
@@ -557,8 +569,16 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace**.
 3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
-3. Find **3D Viewer** in the list.
-4. Click **Usage Dashboard** to show the usage details.
+4. Find **3D Viewer** in the list.
+5. Click **Usage Dashboard** to show the usage details.
+
+### 5.9 Setting Preferences {#set-preferences}
+
+You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
+
+{{< figure src="/attachments/appstore/app-services/3d-viewer/preferences-general.png" alt="preferences-general" >}}
+
+On the **PMI** tab, you can set filter options for PMI and click **Ok** to save the changes. The items that you selected will not be loaded.
 
 ## 6 Read More
 

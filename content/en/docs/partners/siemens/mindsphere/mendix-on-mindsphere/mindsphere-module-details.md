@@ -69,7 +69,7 @@ The microflows *DS_MindSphereAccessToken* and *DS_GetAccessTokenForScheduledEven
 
 #### 2.2.1 RegisterSingleSignOn
 
-This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *App Explorer* dock.
+This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the **App** > **Settings** dialog, accessed through the *App Explorer* dock.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image4.png" alt="App settings dialog" >}}
 
@@ -176,10 +176,10 @@ The **Siemens_MindSphere_Web_Content** module is an *Atlas UI Resource* based on
 * An updated *index.html* file
 * A new *mindspherelogin.html* file
 * New Error pages:
-  * permission-denied (*error_page/403.html*)
-  * maximum number of sessions exceeded (*error_page/LicenseException.html*)
-  * public key url (*error_page/PublicKeyUrl.html*)
-  * role mapping (*error_page/RoleMapping.html*)
+    * permission-denied (*error_page/403.html*)
+    * maximum number of sessions exceeded (*error_page/LicenseException.html*)
+    * public key url (*error_page/PublicKeyUrl.html*)
+    * role mapping (*error_page/RoleMapping.html*)
 
 ### 4.1 MindSphere Icons
 
@@ -197,11 +197,11 @@ The changes are required to support:
 * XSRF – MindSphere needs to receive an XSRF token to work with your app
 * SSO login – the login process needs to be adjusted to support Single Sign-on
 
-The modified `index.html` file can be found in the /themesource/siemens_mindsphere_web_content/public folder of your project app.
+The modified `index.html` file can be found in the /themesource/siemens_mindsphere_web_content/public folder of your app.
 
 ### 4.3 mindspherelogin.html
 
-The Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /themesource/siemens_mindsphere_web_content/public folder of your project app.
+The Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /themesource/siemens_mindsphere_web_content/public folder of your app.
 
 ### 4.4 Error pages
 
@@ -313,11 +313,14 @@ In index.html, in the header before the line `{{themecss}}`, the following scrip
 To allow SSO, the usual login.html needs to be replaced with a different file (mindspherelogin.html).
 
 Delete the following lines:
+
 ```javascript
 if (\!document.cookie || \!document.cookie.match(/(^|;)originURI=/gi))
 document.cookie = "originURI=/login.html";
 ```
+
 and directly after the script of the X-XRSR put the following script
+
 ```javascript
 <script>
 	// MindSphere specific part-2: Use the MindSphereLogin.html to prevent the Gateway taking over login.html and perform SSO

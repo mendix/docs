@@ -31,14 +31,15 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 
 | Region | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
 | --- | --- | --- | --- |  --- |
-| Dublin | Frankfurt | 23:00 | 00:00 |  3 hours | 
+| Dublin | Frankfurt | 23:00 | 00:00 |  3 hours |
 | Frankfurt | Dublin | 00:00 | 01:00 | 3 hours |
 | London | Frankfurt | 23:00 | 23:00 | 2 hours |
 | Oregon | Ohio | 07:00 | 00:00 | 1 hour |
 | Singapore | Sydney | 17:00 | 01:00 | 1 hour |
 | Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
 | N. Virginia | N. California | 05:00 | 00:00 | 4 hours |
-| Canada | Oregon | 05:00 | 00:00 | 1 hours |
+| Canada | Oregon | 05:00 | 00:00 | 1 hour |
+| Mumbai | Singapore | 19:30 | 01:00 | 1 hour |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 
@@ -139,7 +140,7 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 
 ## 4 Known issues
 
-**Mendix Cloud v4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for _all_ backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
+**Mendix Cloud v4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for *all* backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
 
 ## 5 Read More
 

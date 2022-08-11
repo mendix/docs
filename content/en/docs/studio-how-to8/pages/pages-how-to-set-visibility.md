@@ -1,5 +1,6 @@
 ---
 title: "Show Fields Only When Certain Conditions Are Met"
+linktitle: "Show Fields on Conditions"
 url: /studio-how-to8/pages-how-to-set-visibility/
 category: "Pages"
 description: "Describes how to set conditional visibility in Mendix Studio."
@@ -81,7 +82,7 @@ Good job! If you [preview your app](/studio8/publishing-app/), you will see that
 
 ## 4 Showing an Element to Certain User Roles Only
 
- You have a list of products with the **Edit** button. You have three user roles in your app: **Administrators**, **Sales_Managers**, and **Customers**, and you would like to show this button only to Administrators and Sales managers only, hiding it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](/studio-how-to8/security-how-to-configure-roles/).
+You have a list of products with the **Edit** button. You have three user roles in your app: **Administrators**, **Sales_Managers**, and **Customers**, and you would like to show this button only to Administrators and Sales managers only, hiding it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](/studio-how-to8/security-how-to-configure-roles/).
 
 To show an element only to a certain user role, do the following:
 

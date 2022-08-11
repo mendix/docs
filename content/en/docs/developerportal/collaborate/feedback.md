@@ -20,6 +20,8 @@ This feedback comes from different sources:
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
 * Submitted in Mendix Studio (for more information, see [Buzz](/studio/collaboration-buzz/)) in the *Studio Guide*
 
+{{% alert color="info" %}}When new feedback is submitted for your app, you will also get a notification. You can check the notification by clicking the [Notifications](/developerportal/#notifications) icon. If you no longer would like to receive feedback notifications for a specific app, go to the [Team](/developerportal/collaborate/team/) page for this app, and then change your role to a role that does not have the permission **Can edit 'Stories, Documents and Feedback'**.{{% /alert %}}
+
 ## 2 Feedback Fundamentals
 
 ### 2.1 Types of Feedback {#types}
@@ -47,7 +49,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 
 * **Add feedback** will add a new feedback item to the **Open** tab of the app
 * **Export to Excel** will export the listed feedback items to an *.xls* file
-	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
+    * For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
 * **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**
 
 ## 4 Feedback Details {#feedback-details}
@@ -106,7 +108,7 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 5. Select the label(s) (if available ) to be added to the story under **Assign labels**.
 6. Click **Submit** to submit the story.
 
-	{{< figure src="/attachments/developerportal/collaborate/feedback/accept-feedback.png"   width="350"  >}}
+    {{< figure src="/attachments/developerportal/collaborate/feedback/accept-feedback.png"   width="350"  >}}
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 

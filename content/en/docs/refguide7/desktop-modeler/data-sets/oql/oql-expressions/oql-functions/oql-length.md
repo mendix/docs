@@ -8,7 +8,7 @@ The LENGTH function returns the length of a String value.
 
 The syntax is as follows:
 
-```
+```sql {linenos=false}
 LENGTH ( expression )
 ```
 

@@ -14,8 +14,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Before using APD 3, create a database backup and have a backup deployment ready
 * If APM 2 was installed, do the following: 
-	* Write down the current values for the constant **APMAgent2.APMAPIKey** (and, if set, **APMAgent2.APMAdvancedSettings**),
-	* Use the values for **APDAgent.APIKey** and, if applicable, **APDAgent.AdvancedSettings**
+    * Write down the current values for the constant **APMAgent2.APMAPIKey** (and, if set, **APMAgent2.APMAdvancedSettings**),
+    * Use the values for **APDAgent.APIKey** and, if applicable, **APDAgent.AdvancedSettings**
 * Remove APM 1 and/or APM 2 if they are installed (for details, see [Uninstall Steps APM 1](/addons/apd-addon/ig-one-uninstall-steps/))
 
 ## 3 Installation

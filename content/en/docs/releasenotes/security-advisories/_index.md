@@ -45,5 +45,5 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 ## 3 More Information
 
 * [Siemens ProductCERT and Siemens CERT](https://new.siemens.com/global/en/products/services/cert.html)
-	* [Search](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) for relevant security advisories  with the keyword "Mendix"
+    * [Search](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) for relevant security advisories  with the keyword "Mendix"
 * Mendix-specific security advisories can be read using an [Atom feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.atom) and an [RSS feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.rss)

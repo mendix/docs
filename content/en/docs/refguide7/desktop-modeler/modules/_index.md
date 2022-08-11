@@ -23,7 +23,6 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Microflows](/refguide7/microflows/) | [Activities](/refguide7/activities/), [Sequence Flow](/refguide7/sequence-flow/) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](/refguide7/enumerations/) |   | An enumeration is a set of predefined values, for example: in a webshop, an enumeration called MemberType could have the values Gold and Silver. |
 
-
 ## 3 Page Resources
 
 | Document type | Description |

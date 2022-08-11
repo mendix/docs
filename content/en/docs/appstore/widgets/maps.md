@@ -78,7 +78,7 @@ Under the **Controls** properties tab, you can adjust the following settings rel
 
 * **Drag** – when enabled, the map will move along when dragging the map
 * **Scroll to zoom** – when enabled, the end-user can change the zoom level of the map by mouse-scrolling on a desktop machine or using pinch gestures on mobile
-	* Note that when using the Google Maps provider, this setting requires the **Drag** setting to be enabled in order to work
+    * Note that when using the Google Maps provider, this setting requires the **Drag** setting to be enabled in order to work
 * **Zoom** – when enabled, additional control buttons are shown on the map
 * **Attribution** – when enabled, attributions (credits) are shown at the bottom of the map 
 
@@ -86,8 +86,8 @@ If you are using the Google Maps provider, these additional controls are availab
 
 * **Street view** – when enabled, there is a button available in the lower-right corner of the map to view the map in Google's Street View mode
 * **Map type** – when enabled, there are control buttons in the upper-left corner of the map to change the type of the map
-	* The available options are **Map**, with or without a **Terrain** layer, and **Satellite**, with or without a **Labels** layer
-	* By default, this is set to **Map** without the **Terrain** layer
+    * The available options are **Map**, with or without a **Terrain** layer, and **Satellite**, with or without a **Labels** layer
+    * By default, this is set to **Map** without the **Terrain** layer
 * **Full screen** – when enabled, there is a button available in the upper-right corner of the map to view the map in full screen
 
 ### 3.6 Dimensions
@@ -95,16 +95,16 @@ If you are using the Google Maps provider, these additional controls are availab
 Under the **Dimensions** properties tab, you can adjust the following settings that are related to dimensional aspects:
 
 * **Width unit** and **Width** – the width of the widget in relation to the rest of the elements on the page
-	* The available **Width unit** options are **Percentage** and **Pixels**
-	* The **Width** can be set as an appropriate CSS value
-	* These two properties need to be used together to work
+    * The available **Width unit** options are **Percentage** and **Pixels**
+    * The **Width** can be set as an appropriate CSS value
+    * These two properties need to be used together to work
 * **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
-	* The available **Height unit** options **Percentage of width**, **Pixels**, and **Percentage of parent**
-	* The **Height** can be set as an appropriate CSS value
-	* These two properties need to be used together to work
+    * The available **Height unit** options **Percentage of width**, **Pixels**, and **Percentage of parent**
+    * The **Height** can be set as an appropriate CSS value
+    * These two properties need to be used together to work
 * **Zoom level** – the starting zoom level of the map
-	* The available options are: **Automatic**, **World**, **Continent**, **City**, **Street**, and **Buildings**
-	* Note that when using this setting with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible
+    * The available options are: **Automatic**, **World**, **Continent**, **City**, **Street**, and **Buildings**
+    * Note that when using this setting with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible
 
 ## 4 Strict CSP Compatibility
 
@@ -125,8 +125,8 @@ Features:
 * Show a list of coordinates on the map
 * Support for multiple data sources
 * Support actions when a marker is clicked:
-	* Open a page
-	* Call a microflow or nanoflow
+    * Open a page
+    * Call a microflow or nanoflow
 * Customize the display of the marker – if the marker cannot be found from the custom markers, the widget uses the specified custom markers; otherwise, it uses the widget-bundled marker
 
 Limitations:
@@ -146,11 +146,11 @@ To add a basic map to your application, follow these steps:
 2. On the **Data source** tab of the **Edit Locations Item** dialog box, select **Context** for **Data source**.
 3. Set the **Locations entity**, **Latitude attribute**, and **Longitude attribute**.
 4. On the **Markers** tab of the **Edit Locations Item** dialog box, you can configure a marker icon:
-	* **Default** – displays the widget-bundled marker
-	* **Static** – upload a static **Image** (for best results, use a PNG file at 32px width and 32px height where the bottom pin is at the center of the image)
-	* **System image** – add a **System image path** that is a reference to the locations enity (the entity selected should inherit from **System.Image**, because an error will be displayed otherwise); upload an image into the database to view the system image marker at runtime
-	* **Marker list** – add an enumeration containing the name and caption of the markers to your app and assign that enumeration to the locations entity; then, on the **Marker image list** tab back on the **Edit Maps** dialog box, click **New** for **Images** to specify the enumeration key **Value** and the **Image**
+    * **Default** – displays the widget-bundled marker
+    * **Static** – upload a static **Image** (for best results, use a PNG file at 32px width and 32px height where the bottom pin is at the center of the image)
+    * **System image** – add a **System image path** that is a reference to the locations enity (the entity selected should inherit from **System.Image**, because an error will be displayed otherwise); upload an image into the database to view the system image marker at runtime
+    * **Marker list** – add an enumeration containing the name and caption of the markers to your app and assign that enumeration to the locations entity; then, on the **Marker image list** tab back on the **Edit Maps** dialog box, click **New** for **Images** to specify the enumeration key **Value** and the **Image**
 5. Back on the **Map properties** tab, select a **Map provider**.
 6. Fill in the **Access token** field according to the following scenarios;
-	* For **Mapbox** and **Google Maps**, add an access token
-	* For **HERE maps**, add an app ID and app code
+    * For **Mapbox** and **Google Maps**, add an access token
+    * For **HERE maps**, add an app ID and app code

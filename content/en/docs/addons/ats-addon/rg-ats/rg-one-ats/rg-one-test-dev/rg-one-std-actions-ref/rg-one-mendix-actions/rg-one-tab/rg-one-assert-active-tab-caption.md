@@ -9,7 +9,7 @@ Asserts a given value for the caption of the active tab page.
 
 ## 2 Supported widgets
 
- + TabContainer
+* TabContainer
 
 ## 3 Usage
 

@@ -37,13 +37,13 @@ As an alternative to providing a contextObjectGuid, you can pass the entity that
 
 You can specify actions to be performed once the recipient clicks a notification. To do so, you should specify the available actions in the widget by following these steps:
 
-1.  Locate the **Online_Snippet** or **Offline_Snippet** document and open it.
+1. Locate the **Online_Snippet** or **Offline_Snippet** document and open it.
 
-	{{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_snippets.png" >}}
+    {{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_snippets.png" >}}
 
 2. Double-click the widget to open the properties.
 
-	{{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_widget_settings.png" >}}
+    {{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_widget_settings.png" >}}
 
 Use the **New** button to add new actions. Each action requires a name, an action type (Open Page or Call Microflow), and optionally an entity (the type of the context object). Depending on the action type, you should configure the page to be opened or the microflow to be called.
 

@@ -24,10 +24,9 @@ This means the following:
 
 * Existing apps built in Studio will remain in their current Mendix version and can be upgraded in Studio to the latest release of Mendix version 7.23
 
-    {{% alert color="info" %}}If your app was created in Studio Pro, using a Mendix 8 Beta version, it will be upgraded to the release version of Mendix 8 automatically.
-    {{% /alert %}}
+    {{% alert color="info" %}}If your app was created in Studio Pro, using a Mendix 8 Beta version, it will be upgraded to the release version of Mendix 8 automatically.{{% /alert %}}
 
-*  Any apps you create in Studio from now on will have Mendix version 8 from the start
+* Any apps you create in Studio from now on will have Mendix version 8 from the start
 
 Developers wanting to upgrade their existing Mendix version 7 Studio apps to Mendix version 8 can only do so in Studio Pro by following the instructions in [Converting Your App](#converting), below.
 

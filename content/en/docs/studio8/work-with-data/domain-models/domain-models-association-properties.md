@@ -14,9 +14,9 @@ In Mendix Studio, associations have the following properties:
 
 * [Name](#name)
 * [Multiplicity](#multiplicity)
-*  [Delete behavior](#delete-behavior)
+* [Delete behavior](#delete-behavior)
 
-   {{< figure src="/attachments/studio8/work-with-data/domain-models/domain-models-association-properties/association-properties.png"   width="300"  >}}
+    {{< figure src="/attachments/studio8/work-with-data/domain-models/domain-models-association-properties/association-properties.png"   width="300"  >}}
 
 In relation to the module the associations can be of two types:
 
@@ -59,26 +59,23 @@ Delete behavior defines what should happen to the associated object when an obje
 
 For examples of delete behavior configuring, see section [7 Delete Behavior](/howto8/data-models/create-a-basic-data-layer/#delete-behavior) in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-tos*.
 
-
 ## 5 Cross-Module Associations {#cross-module-associations}
 
 Cross-module association makes an association between entities of different modules.
 
 {{% alert color="info" %}}
-
 You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and Marketplace modules) and make cross-module associations in Studio. 
-
 {{% /alert %}}
 
 In Studio, cross-module association is indicated with the following:
 
-*  An icon next to the entity that has such association: 
+* An icon next to the entity that has such association: 
 
-   {{< figure src="/attachments/studio8/work-with-data/domain-models/domain-models-association-properties/association-icon.png" >}}
+    {{< figure src="/attachments/studio8/work-with-data/domain-models/domain-models-association-properties/association-icon.png" >}}
 
-*  A pop-up window, which displays when you click the icon:
+* A pop-up window, which displays when you click the icon:
 
-   {{< figure src="/attachments/studio8/work-with-data/domain-models/domain-models-association-properties/association-pop-up.png" >}}
+    {{< figure src="/attachments/studio8/work-with-data/domain-models/domain-models-association-properties/association-pop-up.png" >}}
 
 Cross module associations have the following properties:
 

@@ -25,4 +25,3 @@ A page break.
 ## 2 Common Properties
 
 {{% snippet file="/static/_includes/refguide/name-property.md" %}}
-

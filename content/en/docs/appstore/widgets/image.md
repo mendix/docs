@@ -14,13 +14,13 @@ The [Image](https://marketplace.mendix.com/link/component/118579) widget display
 ### 1.1 Features
 
 * Supports different data sources
-	* Set a static image or icon
-	* Retrieve an image from a static URL
-	* Retrieve an image from the URL attribute of a context object
-	* Retrieve an image from **System.Images**
+    * Set a static image or icon
+    * Retrieve an image from a static URL
+    * Retrieve an image from the URL attribute of a context object
+    * Retrieve an image from **System.Images**
 * Supports the following actions
-	* Enlarge and pinch zoom
-	* Any Mendix action, like opening a page, calling a microflow, calling a nanoflow, or more
+    * Enlarge and pinch zoom
+    * Any Mendix action, like opening a page, calling a microflow, calling a nanoflow, or more
 
 ## 2 Configuration
 
@@ -33,17 +33,17 @@ The following sections will describe the different available widget properties a
 The **Data source** section (required) is used to configure the data for the widget. It has the following properties:
 
 * **Image type** – determines the data source for this widget
-	*  Default: **Image**	
-	*  When set to **Image**, a static or dynamic image can be retrieved
-	*  When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object
-	*  When set to **Icon**, a static icon or image from **System.Images** can be retrieved
+    * Default: **Image**
+    * When set to **Image**, a static or dynamic image can be retrieved
+    * When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object
+    * When set to **Icon**, a static icon or image from **System.Images** can be retrieved
 * **Image source** and **Default image** – configurable when **Image type** is set to **Image**
-	* The **Image source** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
-	* The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image
+    * The **Image source** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
+    * The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image
 * **Image URL** – a text template to configure the image for this widget through a URL
-	* Configurable when **Image type** is set to **Image URL**
-	* Can be used statically or dynamically through the attribute of a context object
-	* Must be a URL prefaced with *https://*
+    * Configurable when **Image type** is set to **Image URL**
+    * Can be used statically or dynamically through the attribute of a context object
+    * Must be a URL prefaced with *https://*
 * **Icon** – used to retrieve a static icon or image for the widget
     * Configurable when **Image type** is set to **Icon**
 * **Background image** – used to render an image as a background
@@ -53,11 +53,11 @@ The **Data source** section (required) is used to configure the data for the wid
 The **Events** sections allows you to configure what happens when the user interacts with the image. It includes the following properties:
 
 * **On click type** – determines the type of On click for this widget
-	* Default: **Action**
-	* When set to **Action**, the **On click** property can be used to configure a Mendix action
-	* When set to **Enlarge**, the image will enlarge into a lightbox when a user clicks on the image
+    * Default: **Action**
+    * When set to **Action**, the **On click** property can be used to configure a Mendix action
+    * When set to **Enlarge**, the image will enlarge into a lightbox when a user clicks on the image
 * **On click** – an action property to configure a Mendix action for when a user clicks on the image
-	* Configurable when **On click type** is set to **Action** 
+    * Configurable when **On click type** is set to **Action** 
 
 #### 2.1.3 Accessibility Section
 
@@ -70,16 +70,16 @@ The **Accessibility** sections allows you to configure accessibility features fo
 The **Dimensions** tab allows you to configure settings that are related to the dimensional aspects of the widget. It includes the following properties:
 
 * **Width unit** and **Width** – the width of the widget in relation to the rest of the elements on the page
-	* The available **Width unit** options are **Auto**, **Percentage**, and **Pixels**
-	* The **Width** can be set as an appropriate CSS value when **Width unit** is not set to **Auto**
-	* These two properties need to be used together to work
+    * The available **Width unit** options are **Auto**, **Percentage**, and **Pixels**
+    * The **Width** can be set as an appropriate CSS value when **Width unit** is not set to **Auto**
+    * These two properties need to be used together to work
 * **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
-	* The available **Height unit** options **Auto** and **Pixels** (**Auto** will keep the aspect ratio of the image)
-	* The **Height** can be set as an appropriate CSS value when **Height unit** is not set to **Auto**
-	* These two properties need to be used together to work
+    * The available **Height unit** options **Auto** and **Pixels** (**Auto** will keep the aspect ratio of the image)
+    * The **Height** can be set as an appropriate CSS value when **Height unit** is not set to **Auto**
+    * These two properties need to be used together to work
 * **Show** – determines how the image will be shown
-	* Default: **Full image**
-	* When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present
+    * Default: **Full image**
+    * When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present
 * **Responsive** – when set to **Yes**, the image will scale with its parent container
     * Default: **Yes**
     * The image will never get larger than its original size, but it can become smaller

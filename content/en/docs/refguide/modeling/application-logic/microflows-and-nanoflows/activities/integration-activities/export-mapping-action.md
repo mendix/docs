@@ -10,7 +10,6 @@ weight: 40
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-
 ## 1 Introduction
 
 The **Export with mapping** activity allows you to export the data stored in [domain model](/refguide/domain-model/) entities into an XML document, JSON document, or string variable.
@@ -55,9 +54,7 @@ If the [export mapping](/refguide/export-mappings/) is based on a message defini
 ### 3.5 Validate Against Schema
 
 {{% alert color="info" %}}
-
 Validation against schema is only applicable if an export mapping is selected that maps to XML.
-
 {{% /alert %}}
 
 This determines whether the export action should validate the outgoing XML against the schema (XSD).

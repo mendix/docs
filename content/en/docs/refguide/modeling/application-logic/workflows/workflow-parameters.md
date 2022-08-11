@@ -24,6 +24,3 @@ The entity used by the workflow parameter.
 ### 2.2 Name
 
 **Name** is the name of the parameter and cannot be changed. 
-
-
-

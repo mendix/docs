@@ -55,6 +55,7 @@ The following entries are required in the **General** tab:
 #### 3.1.2 HTTP Headers Tab
 
 The following HTTP Headers do the following:
+
 * authenticate the app to perform the action via the Connectivity service
 * authenticate the user to access the endpoint defined by the destination
 * request that data is returned in JSON format
@@ -89,6 +90,7 @@ The following entries are required in the **Operation** tab:
 #### 3.2.2 HTTP Headers Tab
 
 The same HTTP Headers are required as for a REST call. They do the following:
+
 * authenticate the app to perform the action via the Connectivity service
 * authenticate the user to access the endpoint defined by the destination
 * request that data is returned in JSON format
@@ -100,7 +102,6 @@ The same HTTP Headers are required as for a REST call. They do the following:
 |Accept|'application/json'|
 
 {{< figure src="/attachments/partners/sap/sap-destination-with-rest/web-service-http-headers.png" alt="SOAP web services HTTP headers tab" >}}
-
 
 ## 4 Read More
 

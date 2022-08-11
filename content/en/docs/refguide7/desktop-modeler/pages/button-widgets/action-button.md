@@ -25,7 +25,7 @@ An action button can perform various actions such as calling a microflow or nano
 
 Disables the action button until the action is completed or failed.
 
-_Default value_ : false.
+*Default value* : false.
 
 ## Common properties
 

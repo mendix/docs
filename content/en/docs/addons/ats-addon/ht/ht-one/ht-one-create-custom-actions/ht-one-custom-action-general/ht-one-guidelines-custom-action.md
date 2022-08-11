@@ -23,7 +23,7 @@ Always try to use a Mendix action first. This table explains why you should use 
 | Reason | Description |
 | :--- | :--- |
 | Automatic context | A Mendix action will automatically adjust to the Mendix Platform, ensuring that it will work correctly. |
-| Visibility checks | A Mendix action only searches for elements that are _visible_. |
+| Visibility checks | A Mendix action only searches for elements that are *visible*. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
 | Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](/addons/ats-addon/rg-one-mendix-wait/) action.<br> |
@@ -47,9 +47,7 @@ This is a visual component:
 {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-guidelines-custom-action/visual-component-widget.png" >}}
 
 {{% alert color="info" %}}
-
 This guideline focuses on how to find certain widgets.
-
 {{% /alert %}}
 
 ## 4 The User Approach
@@ -76,9 +74,7 @@ This is the `mx-name` in the debugger:
 {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-guidelines-custom-action/mx-name-in-debugger.png" >}}
 
 {{% alert color="info" %}}
-
 This guideline focuses on unsupported widget actions.
-
 {{% /alert %}}
 
 ## 6 Background Processes
@@ -92,9 +88,7 @@ This is the Mendix Wait action:
 For more information, please see [Mendix wait](/addons/ats-addon/rg-one-mendix-wait/).
 
 {{% alert color="info" %}}
-
 This guideline does not apply to the Search Context action, since it does not trigger any events.
-
 {{% /alert %}}
 
 ## 7 Action Parameters
@@ -126,9 +120,7 @@ These are the three most used action parameters:
 Last but not least, give a description to the action parameters especially, when it requires specific information. You can also give a generic example of what the user should enter, making it more user-friendly.
 
 {{% alert color="info" %}}
-
 Follow the naming conventions. Only deviate when there is no standard name.
-
 {{% /alert %}}
 
 ## 8 Describing the Steps and Defining the Output
@@ -156,7 +148,7 @@ These are the different data types in ATS:
 | Boolean | A truth value. | true, false |
 | Date/Time | A point in time consisting of a date and a time component accurate up to the millisecond. | Tuesday 13 June 2017, 16:17:44 |
 | Web Element | Represents a DOM element. | (*See the image below this table.*)|
-| Undefined | Lets the user choose the data type. | Choose _String_ for "Helloworld!" |
+| Undefined | Lets the user choose the data type. | Choose *String* for "Helloworld!" |
 | Enumeration | One of the values of the given enumeration. | Red, Green, Blue; Todo, Running, Done |
 | Float | **The Float type is deprecated and should not be used.** | N/A |
 | Currency | **The Currency type is deprecated and should not be used** | N/A |

@@ -44,4 +44,3 @@ For instructions, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso
 ## 3 Read More
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/)
-

@@ -8,18 +8,18 @@ The CASE expression is a conditional expression, similar to if/else statements i
 
 The CASE expression can be used on two manners:
 
-_Simple_
+*Simple*
 
-```
+```sql
 CASE input_expression
 WHEN when_expression THEN result_expression [ ...n ]
 ELSE else_result_expression
 END
 ```
 
-_Extended_
+*Extended*
 
-```
+```sql
 CASE
 WHEN boolean_expression THEN result_expression [ ...n ] 
 ELSE else_result_expression

@@ -19,9 +19,9 @@ The domain model defines the products that you want the save and how you want to
 To create the domain model, follow these steps:
 
 1. In the domain model, create a persistable entity called **Product** with two attributes: **Name** (String) and **Stock** (Integer).
-2.  Create a non-persistable entity called **PublishedProduct** with the same attributes.
+2. Create a non-persistable entity called **PublishedProduct** with the same attributes.
 
-	{{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/domain-model.png" >}}
+    {{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/domain-model.png" >}}
 
 ## 4 Creating Pages
 
@@ -30,17 +30,17 @@ To create pages that allows users to create, edit, and delete products, follow t
 1. Add a new page called **EditUser**.
 2. Add a data view.
 3. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
-4.  On the dialog box that appears, click **OK**.
+4. On the dialog box that appears, click **OK**.
 
-	{{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/edit-product-page.png" >}}
+    {{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/edit-product-page.png" >}}
 
 5. Open the **Homepage** and add a data grid.
 6. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
 7. On the dialog box that appears, click **OK**.
 8. From the **Project Explorer**, drag the **EditUser** page onto the **New** button.
-9.  From the **Project Explorer**, drag the **EditUser** page onto the **Edit [default]** button.
+9. From the **Project Explorer**, drag the **EditUser** page onto the **Edit [default]** button.
 
-	{{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/homepage.png" >}}
+    {{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/homepage.png" >}}
 
 ## 5 Creating a Microflow
 
@@ -71,7 +71,7 @@ To create this microflow, follow these steps:
 21. For **Entity**, select **PublishedProduct**.
 22. For **Return value**, enter *$PublishedProductList*, then click **OK**.
 
-	{{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/microflow.png" >}} 
+    {{< figure src="/attachments/howto7/integration/publish-data-to-other-mendix-apps-using-an-app-service/microflow.png" >}} 
 
 ## 6 Creating an App Service
 
@@ -96,8 +96,8 @@ Before you publish our app, you need to make sure it is protected with a usernam
 3. Click **Edit module security**.
 4. Go to the **Page access** tab and check all the check boxes.
 5. Go to the **Microflow access** tab and check all the check boxes, then click **OK**.
-9. Go to the **Administrator** tab.
-10. Type a password, and then click **OK**.
+6. Go to the **Administrator** tab.
+7. Type a password, and then click **OK**.
 
 ## 8 Publishing the App Service
 

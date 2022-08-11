@@ -33,10 +33,9 @@ To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the *
 In the **Mendix Assist** tab, section **Logic Bot**, you can set the following: 
 
 * **Enable MxAssist Logic Bot** – switches MxAssist Logic Bot on and off
-
 * **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
 
-  {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/mx-assist-studio-pro/mx-assist-system-variables.png" alt="Suggestions for System Variables" >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/mx-assist-studio-pro/mx-assist-system-variables.png" alt="Suggestions for System Variables" >}}
 
 For more information on preferences, see [Preferences](/refguide8/preferences-dialog/).
 
@@ -53,7 +52,6 @@ To use MxAssist Logic Bot, do the following:
     {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/mx-assist-studio-pro/mx-assist-recommendations.png" alt="Logic Bot Recommendations"   width="350"  >}}
 
 2. Click one of the recommended activities to insert it into a microflow.
-
 3. In the **Properties** dialog box, configure the selected activity/event.
 
 The activity/event is added to your microflow.

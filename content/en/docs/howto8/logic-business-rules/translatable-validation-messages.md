@@ -51,4 +51,3 @@ The GetI18NText microflow validates and acquires the text like this. This is don
 The text is replaced by this microflow, the input is the translated text, the variable (parameter) text you want to add to the text, and the token number to indicate the position (as in, {1}, {2}, {3})
 
 {{< figure src="/attachments/howto8/logic-business-rules/translatable-validation-messages/model4.jpg" >}}
-

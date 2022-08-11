@@ -12,4 +12,3 @@ tags: ["studio pro"]
 This category includes how-to's on creating data layers and setting up data validation.
 
 ## 2 Documents in This Category
-

@@ -47,4 +47,3 @@ The **Action** section of the properties pane shows the action associated with t
 
 * [Show Page](/refguide/show-page/)
 * [Activities](/refguide/activities/)
-

@@ -100,5 +100,5 @@ Default: *Horizontal*
 
 ## 3 Read More
 
-*   [Data view](/refguide/data-view/)
-*   [Attributes](/refguide/attributes/)
+* [Data view](/refguide/data-view/)
+* [Attributes](/refguide/attributes/)

@@ -35,29 +35,26 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create the workflow for the travel approval request via the wizard, do the following:
 
-1.  Click the workflow icon in the left menu bar and click a plus icon next to the module you would like to add a workflow to:
+1. Click the workflow icon in the left menu bar and click a plus icon next to the module you would like to add a workflow to:
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/new-workflow.jpg" alt="Creating a Workflow" >}}
 
-5. In the **Create Workflow** dialog box, set the **Title** to **Travel Approval** and click the **Start Wizard** button:
+1. In the **Create Workflow** dialog box, set the **Title** to **Travel Approval** and click the **Start Wizard** button:
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/start-wizard.png" alt="Creating a Workflow with the Wizard" >}}
 
-6. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. An employee will fill in their name, date, destination, cost, and a travel document (an attached file). Do the following:
+1. In the **Create Request Form**, you can define input fields that will be used by a person submitting the request. An employee will fill in their name, date, destination, cost, and a travel document (an attached file). Do the following:
 
     1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
-
     2. Click the plus icon to add more fields. 
-
     3. Follow steps 4a and 4b to add the *Date* of type Date and Time, *Destination* of type String, *Cost* of type Decimal. 
-
     4. Follow step 4a to add the *Document* of type File (this type cannot be marked as **Required**).
 
         {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/request-form-fields.png" alt="Filled-In Fields for the Request Form" >}}
 
     5. Click the **Create** button.
 
-10. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
+1. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
 
 Congratulations! The app with the workflow is set up and fully functional. 
 
@@ -71,11 +68,9 @@ For example, users who have tasks assigned to them (Approvers) will see their ta
 
 The Administrator role has access to the Workflow Dashboard and the Workflow Management and can monitor all workflows, can view the progress of workflows, and change the workflow settings.
 
-
 To test your workflow, you need to switch between different user roles. Follow the steps below:
 
 1. Click the **Preview** button. (For more information on how to preview your app, see [Previewing & Publishing Your App](/studio/publishing-app/).)
-
 2. Click the user icon on the right and select a user role:
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/user-roles.png" alt="Demo User Role"  width="350" >}}
@@ -85,7 +80,7 @@ To test your workflow, you need to switch between different user roles. Follow t
         {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/submit-request.png" alt="Submit Travel Request" >}}
     2. Switch to the demo_approver role, make sure a new task is in the inbox, assign the task to you, open the task, and approve the request.
     3. Switch to the demo_administrator and open the Admin Center from the navigation bar. Then open the Workflow Dashboard to see information about all workflow instances.
-    
+
     Great job! You have previewed your app locally and tested your workflow from the perspective of different users. You can share the app with other users to try it out in real life or extend functionality in your app. 
 
 ## 5 Read More

@@ -108,4 +108,3 @@ With the Data Hub Premium license, apps are not limited. Apps can retrieve and e
 Licensed users of Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) can use a Data Hub license to work with external entities. To learn more about working with Data Hub external entities on a private cloud or for local deployments, see [External Entities: Private Cloud or Local Deployments](/refguide/external-entities-pc-local/).
 
 ## 5 Guide Categories
-

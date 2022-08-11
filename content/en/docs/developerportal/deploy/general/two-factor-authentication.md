@@ -25,8 +25,6 @@ Actions which require 2FA are indicated by a padlock symbol.
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" >}}
 
-
-
 ## 3 How It Works
 
 There are two methods of performing 2FA. You can either ask Mendix to send an SMS containing an authentication code, or you can enable Google Authenticator.

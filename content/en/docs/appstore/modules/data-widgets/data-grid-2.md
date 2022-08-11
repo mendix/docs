@@ -303,7 +303,6 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-
 ### 7.3 Number Filter
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/number-filter.png" alt="Example of default number filter" >}}

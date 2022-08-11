@@ -26,9 +26,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
 * Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
- * Use v1.0.0 with Mendix 8.0
- * Use v2.0.0 with Mendix 8.1.0 and above
- * Use v3.0.0 with Mendix 8.3.0 and above
+* Use v1.0.0 with Mendix 8.0
+* Use v2.0.0 with Mendix 8.1.0 and above
+* Use v3.0.0 with Mendix 8.3.0 and above
 * A [GitHub](https://github.com/) account.
 * An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
 
@@ -100,7 +100,7 @@ Now you will run your first `prepare` command:
 
     This warning is part of App Center's security policy. 
 
-2. Visit App Center's [dashboard](https://appcenter.ms/) to see your applications created by the Native Builder:
+4. Visit App Center's [dashboard](https://appcenter.ms/) to see your applications created by the Native Builder:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appcenter-apps.png" alt="App Center Applications" >}}
 
@@ -130,7 +130,7 @@ To initiate your first build in the Native Builder, you will execute a command i
 
 This is an example build command using the the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
 
-```bash
+```bash {linenos=false}
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
@@ -140,7 +140,7 @@ Now it is time for you to make your own first build:
 2. Make sure you are in still in your Native Builder directory.
 3. Write this command, with your own information replacing the example text:
 
-    ```
+    ```text {linenos=false}
     native-builder.exe build --project-name {ExampleName} --build-number {1} --app-version {0.1.0}
     ```
 
@@ -214,7 +214,7 @@ The next steps differ depending on the type of app you want to configure.
 
 Finally, either start a build for this branch manually or run the `build` command again with the same build number as before:
 
-```bash
+```bash {linenos=false}
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
@@ -276,10 +276,9 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Note which folder you transfer the APK into.
 2. Open your phone’s file manager, navigate to the folder containing your APK, then tap the APK file to open it.
 3. Tap the **Install** button. 
-    
-    {{% alert color="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.
-    {{% /alert %}}
-    
+
+    {{% alert color="info" %}}On Android, you might see a dialog box warning you against installing because this is not a Play Store app. Tap **INSTALL ANYWAY**.{{% /alert %}}
+
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-app-launch.gif" alt="android app launch"   width="300"  >}}
@@ -307,7 +306,6 @@ You can skip this section if you completed [Signing a Build](#signing-a-build). 
 In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple App Store, an Apple developer account and a development team is required. If one is available, do the following:
 
 1. Using an Xcode version below 11, double-click the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
-
 2. Click the *Distribute App* button to start the local signing flow.:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-1.png" alt="Xcode Application loader"   width="400"  >}}
@@ -366,11 +364,11 @@ There are two ways to enable tablet mode:
 By default, building for tablets is disabled in XCode. Do the following to enable tablet settings:
 
 1. Select the following options in your XCode workspace:<br />
-    a. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
-    b. **Portrait**.<br />
-    c. **Landscape Left**.<br />
-    d. **Landscape Right.**<br />
-    e. **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
+    1. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
+    1. **Portrait**.<br />
+    1. **Landscape Left**.<br />
+    1. **Landscape Right.**<br />
+    1. **Requires full screen**: Mendix requires this because full-screen orientations are easier on Mendix developers than smaller side-by-side forms.
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/tablet-workspace.png" alt="select tablet options"   width="300"  >}}
 
@@ -393,32 +391,32 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 1. Using the **Find file** functionality again, find and open *info.plist*.
 1. Click the edit icon, then change the code like so: 
 
-    a. Before the final `</dict>` line, add this key:<br />
+    1. Before the final `</dict>` line, add this key:<br />
 
-    ```
-    <key>UIRequiresFullScreen</key>
-    <true/>
-    ```
+        ```text
+        <key>UIRequiresFullScreen</key>
+        <true/>
+        ```
 
-    b. Change this code:<br />
+    1. Change this code:<br />
 
-    ```
-        <key>UISupportedInterfaceOrientations</key>
-    <array>
-        <string>UIInterfaceOrientationPortrait</string>
-    </array>
-    ```
+        ```text
+            <key>UISupportedInterfaceOrientations</key>
+        <array>
+            <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        ```
 
-    to the following:<br />
+        to the following:<br />
 
-    ```
-        <key>UISupportedInterfaceOrientations</key>
-    <array>
-        <string>UIInterfaceOrientationPortrait</string>
-        <string>UIInterfaceOrientationLandscapeLeft</string>
-        <string>UIInterfaceOrientationLandscapeRight</string>
-    </array>
-    ```
+        ```text
+            <key>UISupportedInterfaceOrientations</key>
+        <array>
+            <string>UIInterfaceOrientationPortrait</string>
+            <string>UIInterfaceOrientationLandscapeLeft</string>
+            <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        ```
 
 1. Commit these changes.
 

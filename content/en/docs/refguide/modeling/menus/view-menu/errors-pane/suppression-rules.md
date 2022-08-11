@@ -77,7 +77,7 @@ After modifying suppression rules, click **OK** to close the **Manage Suppressio
 
 To suppress Marketplace warnings, do the following:
 
-1.  Click the **Suppression rules** button in the **Errors** pane.
+1. Click the **Suppression rules** button in the **Errors** pane.
 2. In the **Manage Suppression Rules** dialog box, check the **Suppress warnings from Marketplace modules** option.
 3. Click **OK** to apply the new setting.
 
@@ -91,10 +91,10 @@ To manually add a new rule, follow the steps below:
 
 1. Click the **Suppression rules** button in the **Errors** pane.
 2. In the **Manage Suppression Rules** dialog box, select the **New** button.
-3.  In the **Add Suppression Rule** dialog box, set the necessary options to add the rule (for more information on settings, see the [Rule Setting](#rule-settings) section.  
+3. In the **Add Suppression Rule** dialog box, set the necessary options to add the rule (for more information on settings, see the [Rule Setting](#rule-settings) section.  
 
-	{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/new-warning-window.png" alt="Rules window - add suppression" >}}
-   
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/new-warning-window.png" alt="Rules window - add suppression" >}}
+
 4. Confirm your choice by clicking **OK**.
 5. Click **OK** in the **Manage Suppression Rules** dialog box to save your changes.
 
@@ -105,10 +105,10 @@ The suppression rule is created.
 To edit an existing rule, follow the steps below:
 
 1. Click the **Suppression rules** button in the **Errors** pane.
-2.  In the **Manage Suppression Rules** dialog box, select the **Edit** button.
-3.  In the **Edit Suppression Rule** dialog box, edit options to change the rule (for more information on settings, see the [Suppression Rule Settings](#rule-settings) section. 
+2. In the **Manage Suppression Rules** dialog box, select the **Edit** button.
+3. In the **Edit Suppression Rule** dialog box, edit options to change the rule (for more information on settings, see the [Suppression Rule Settings](#rule-settings) section. 
 
-	{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/rule-settings-window.png" alt="Rule settings window" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/rule-settings-window.png" alt="Rule settings window" >}}
 
 4. Confirm your choice by clicking **OK**.
 5. Click **OK** in the **Manage Suppression Rules** dialog box to save your changes.
@@ -120,7 +120,7 @@ The suppression rule is edited.
 To delete the existing rule, follow the steps below:
 
 1. Click the **Suppression rules** button in the **Errors** pane.
-2.   In the **Manage Suppression Rules** dialog box, click the **Delete** button.
+2. In the **Manage Suppression Rules** dialog box, click the **Delete** button.
 
 The suppression rule is deleted.
 
@@ -129,12 +129,12 @@ The suppression rule is deleted.
 To import suppression rules, do the following:
 
 1. Click the **Suppression rules** button in the **Errors** pane.
-2.  In the **Manage Suppression Rules** dialog box, select the **Import** button.
+2. In the **Manage Suppression Rules** dialog box, select the **Import** button.
 3. Browse to the folder where you would like to import (the file extension that you are importing must be *.suppressions.json*).
 4. Click **Open** to select the file.
-5.  In a confirmation pop-up window, click **OK** to dismiss it:
+5. In a confirmation pop-up window, click **OK** to dismiss it:
 
-	{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/confirmation-dialog-after-rules-imported.png" alt="Import rules confirmation" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/confirmation-dialog-after-rules-imported.png" alt="Import rules confirmation" >}}
 
 6. Click **OK** in the **Manage Suppression Rules** dialog box. 
 
@@ -145,11 +145,11 @@ The list of warnings is updated.
 To export your suppression rules, do the following:
 
 1. Click the **Suppression rules** button in the **Errors** pane.
-2.  In the **Manage Suppression Rules** dialog box, select the **Export** button.
+2. In the **Manage Suppression Rules** dialog box, select the **Export** button.
 3. Browse to the folder where you wish to export the rules (by default the file name is `<your app name>.suppressions.json`). 
 
 4. Click the **Save** button to save the exported rules.
-5.  In a confirmation pop-up window, click **OK** to dismiss it:
+5. In a confirmation pop-up window, click **OK** to dismiss it:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/suppression-rules/confirmation-dialog-after-rules-exported.png" alt="Export rules confirmation" >}}
 

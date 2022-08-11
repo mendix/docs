@@ -20,6 +20,7 @@ This query returns the lowest total price found in any object:
 ```java
 min(//Sales.Order/TotalPrice)
 ```
+
 This query returns the lowest total price of an order placed by a customer named "Jansen":
 
 ```java

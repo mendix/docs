@@ -54,9 +54,7 @@ ATS provides you with suggestions for the parameter value.
 For primitive parameter types like Text or Number, you set the input value by typing the desired value in the input box.
 
 {{% alert color="info" %}}
-
 Parameters of the Number type only allow digits as inputs.
-
 {{% /alert %}}
 
 Another way of setting the parameter value is to use the **Edit Input Value** dialog box. To open the dialog box, click this icon:
@@ -72,4 +70,3 @@ When you check the precondition box, you select an action that counts as a preco
 According to the result of the precondition action, ATS skips or executes the test step. In other words, if the precondition action fails, ATS does not execute the test step. If the precondition action passes, ATS executes the test step.
 
 The result of a precondition action will not affect the end result of a test case. It is only used to determine if ATS must execute a test step.
-

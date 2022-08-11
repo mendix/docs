@@ -7,9 +7,7 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 ---
 
 {{% alert color="warning" %}}
-
 Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
-
 {{% /alert %}}
 
 ## 1 Introduction
@@ -55,9 +53,7 @@ When the module is set as the solution module, it gets the letter S as an icon.
 ## 3 Module Version
 
 {{% alert color="info" %}}
-
 This setting is available for only add-on and solution module types.
-
 {{% /alert %}}
 
 A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
@@ -70,4 +66,3 @@ We recommend setting a new version every time changes are made to the module.
 * [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
-

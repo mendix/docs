@@ -52,11 +52,11 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580020.png" >}}
 
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
-    
+
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/breakpoints.png" >}}
 
     In the **Breakpoints** pane, you can enable, disable, and delete breakpoints. You can also configure a breakpoint condition and open the microflow/nanoflow that contains that breakpoint:
-    
+
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580017.png" >}}
 
 ## 5 Debugging
@@ -69,14 +69,14 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580010.png" >}}
 
-4.  Open the **Debugger** pane from the **View** menu:
+4. Open the **Debugger** pane from the **View** menu:
 
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580009.png" >}}
 
     The debugger can be used to go through the microflow/nanoflow step by step:
 
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580008.png" >}}
-    
+
 5. You have the following options on this pane:
     * Click **Step into** or **Step over** to move to the next step in the microflow/nanoflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a microflow/nanoflow call activity or a loop)
         * **Step into** means that the debugger steps into the sub microflow/nanoflow or loop
@@ -85,7 +85,7 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
     * Click **Continue** to instruct the debugger to continue until it reaches another breakpoint
 
 To debug a microflow from a nanoflow you need to add a separate breakpoint to the microflow. Stepping into the microflow won't work in this situation.
-    
+
 For details on available shortcut keys, see the [Debugger Shortcut Keys](/refguide/studio-pro-overview/#debugger-shortcuts) section of *Studio Pro Overview*.
 
 ## 6 Variables Viewer
@@ -106,9 +106,9 @@ To use breakpoint conditions, follow these steps:
 
 1. Right-click the activity or decision in the microflow/nanoflow with a breakpoint and select **Edit breakpoint condition**:
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/18580018.png" >}}
-2.  Use the expression below to make sure this breakpoint only interrupts the microflow/nanoflow if you are executing it yourself (replace `YourUserName` with your own user name):
+2. Use the expression below to make sure this breakpoint only interrupts the microflow/nanoflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
-    ```java
+    ```java {linenos=false}
     $currentUser/name = 'YourUserName'
     ```
 

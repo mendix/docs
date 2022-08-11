@@ -165,7 +165,29 @@ You can set a **Cover image** to be the background header of your company page. 
 
 {{< figure src="/attachments/developerportal/control-center/brand.jpg" >}}
 
-## 8 Onboarding {#onboarding}
+## 8 Marketplace Content {#marketplace-content}
+
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users.
+
+{{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
+
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users.
+
+The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
+
+The list has the following columns:
+
+* **Product Name** – This shows the component name. Clicking the name opens the Marketplace page of this component.
+
+* **Content Type** – This shows the type of the component.
+
+  {{% alert color="info" %}}Currently, you can only configure the visibility of widgets. Therefore, you can only find widgets in this list.{{% /alert %}}
+
+* **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
+
+* **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio to your company's users.
+
+## 9 Onboarding {#onboarding}
 
 On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
 
@@ -179,7 +201,7 @@ On the **Onboarding Email** tab, you can customize the onboarding email that use
 
 {{< figure src="/attachments/developerportal/control-center/onboarding-email.png" >}}
 
-## 9 Security {#security}
+## 10 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
@@ -189,7 +211,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 {{< figure src="/attachments/developerportal/control-center/security.jpg" >}}
 
-## 10 Cloud {#cloud}
+## 11 Cloud {#cloud}
 
 {{% alert color="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
@@ -213,7 +235,7 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Data Hub {#data-hub}
+## 12 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 

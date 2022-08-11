@@ -7,7 +7,7 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-Publishing and consuming [External Entities](/refguide/external-entities/) on the Mendix Cloud is made easy with the [Data Hub Catalog](/data-hub/data-hub-catalog/). Licensed Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) users, or users who want to deploy locally, fear not! You can still publish and consume external entities. 
+Publishing and consuming [External Entities](/refguide/external-entities/) on the Mendix Cloud is made easy with the [Data Hub Catalog](/data-hub/data-hub-catalog/). Licensed Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) users, or users who want to deploy locally, fear not! You can still publish and consume external entities.
 
 This guide
 

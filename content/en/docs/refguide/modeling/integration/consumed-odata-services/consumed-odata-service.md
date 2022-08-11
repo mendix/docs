@@ -193,7 +193,7 @@ There is a major service update indicated by the change in the version number fr
 Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in an update of the service, this will also be seen as a breaking change.
 {{% /alert %}}
 
-### 4.3 Update or Switch
+### 4.3 Update or Switch {#update-switch}
 
 When a change in the contract at a consumed endpoint is detected (possibly due to a minor change), or if the same named service is deployed with a major version number but to a different endpoint, the following options are available in the **Consumed OData Service** screen.
 

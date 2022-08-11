@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Catalog"
 url: /data-hub/data-hub-catalog/
-description: "Introduces the processes and properties of Mendix Data Hub."
+description: "Introduces the processes and properties of Data Hub Catalog."
 weight: 30
 no_list: false 
 description_list: true 
@@ -13,6 +13,10 @@ tags: ["data hub", "data hub catalog"]
 The Data Hub Catalog is the core of Mendix Data Hub for finding the shared registered assets that are made available through OData services published in an organization. It enables a single data source to be consistently used in several apps, ensuring that they will all be using the latest set of data maintained in the source. These registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily.
 
 The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](/data-hub/data-hub-landscape/), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependencies between apps and services.
+
+{{% alert color="info" %}}
+Regardless of [license](/data-hub/#data-hub-licences), the Data Hub Catalog is only available for people deploying to a development environment. For information about using Data Hub for local deployment, see [Data Hub without Mendix Cloud](/data-hub/non-mendix-cloud/) {{% /alert %}}
+
 
 ## 2 Data Hub Home {#data-hub-home}
 

@@ -30,7 +30,7 @@ Try building an app by following [How to Share Data Between Apps](/data-hub/shar
 
 Mendix Data Hub has components to enable the flexible sharing of datasets:
 
-1. Published apps and other software expose datasets in OData services. The data is maintained in the respective source apps.
+1. Published apps and other software expose datasets in OData services, as [external entities](/refguide/external-entities/). The data is maintained in the respective source apps.
 2. In Studio Pro, exposed OData services (or entity sets as they are named in Studio Pro) are automatically registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) when your app is deployed. OData services from other applications can also be manually registered in the Data Hub Catalog.
 3. Search in the Data Hub Catalog or **Data Hub** pane in Studio Pro to find shared data assets to use.
 4. Drag and drop to consume datasets in Studio Pro.  
@@ -42,16 +42,16 @@ Shared datasets can be curated to ensure that resources can be found by the righ
 
 This section describes the general Data Hub user as well as the assigned [Mendix Admin](#admin) and [Data Hub Curator](#curator) roles.
 
-### 3.1 Data Hub Users
+### 3.1 Catalog Users
 
 The typical Mendix user is able to use the Data Hub Catalog to search and consume registered OData services. Users can also register new services, and as owners, curate them.
 
-Data Hub users can do the following: 
+Data Hub Catalog users can do the following: 
 
 * Publish services and register them in the Data Hub Catalog from Studio Pro
 * Register published OData V4 Services for non-Mendix apps manually
 * Update the metadata such as descriptions, tags, contact information, and discoverability of their own registered services
-* See all the discoverable services and datasets registered in their organization’s Data Hub Catalog and connect to the data by using the published entities as external entities in their apps in the Mendix Studios
+* See all the discoverable services and datasets registered in their organization’s Data Hub Catalog, and connect to the data by using the published entities as external entities in their apps in Studio Pro
 
 ### 3.2 Mendix Admin {#admin}
 
@@ -103,7 +103,7 @@ It is up to the application to communicate to its end-users that the daily limit
 
 With the Data Hub Premium license, apps are not limited. Apps can retrieve and edit an unlimited number of objects when deploying to the Mendix Cloud.
 
-### 4.3 Data Hub for Private Cloud {#dh-pc}
+### 4.3 Data Hub for Private Cloud or On-Premises {#dh-pc}
 
 Licensed users of Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) can use a Data Hub license to work with external entities. To learn more about working with Data Hub external entities on a private cloud or for local deployments, see [External Entities: Private Cloud or Local Deployments](/refguide/external-entities-pc-local/).
 

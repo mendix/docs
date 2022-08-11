@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 
 ## I Introduction
 
-{{% alert color="info" %}}This doc explains you how to use the Advanced Audit Trail app service together with its core module. {{% /alert %}}
+{{% alert color="info" %}}Advanced Audit Trail is an app service (although it is categorized as a solution in the Marketplace). This doc describes how to use the app service together with its core module. {{% /alert %}}
 
 [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
@@ -49,7 +49,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 ### 1.5 Dependencies
 
-* You need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application
+* You need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application.
 
 ## 2 Installation
 
@@ -59,9 +59,7 @@ Advanced Audit Trail is a premium Mendix product that is subject to a purchase a
 
 ### 2.2 Installing the Components in Your app
 
-To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. 
-
-Then follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your app.
+To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. Then follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your app.
 
 {{% alert color="info" %}}If you update the Advanced Audit Trail Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 
@@ -110,7 +108,7 @@ Then follow the instructions in the [Importing Content from the App Explorer](/a
         
     * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
     
-    * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the kafka environment for sending the data into the long-term storage.
+    * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
     
     * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
 ### 3.3 Configuring Scheduled Events {#scheduled-events}
@@ -125,12 +123,12 @@ Then follow the instructions in the [Importing Content from the App Explorer](/a
 
 * Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features in here are subject to change.
 * Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data.
-* Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app
-* Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects
+* Check the default values of the **NPE Settings** object in the domain model, since they will be used for configuring the app.
+* Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects.
 
 ### 3.5 Adding Additional Information to a Snapshot (Optional)
 
-It is possible to submit additional information for a snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
+It is possible to submit additional information for a snapshot (e.g., in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature, the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
 
 ### 3.6 Implementing Custom User Logging (Optional)
 
@@ -147,7 +145,7 @@ Use the formatter microflows to change how externally stored values will be disp
 | Microflow | Formater | Description |
 | --------- | -------- |---|
 | **GetAttributes_ConvertDate** | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
-| **GetAttributes_ConvertDecimal** | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period – ".") to separate an integer from its partial fractional part|
+| **GetAttributes_ConvertDecimal** | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period – ".") to separate an integer from its partial fractional part.|
 | **GetAttributes_ConvertMxIdentifier** | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
 
 ### 3.9 Getting Microflow Stack Trace (Optional)

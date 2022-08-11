@@ -28,17 +28,7 @@ Mendix adheres to strict security standards and considers you the sole owner of 
 
 ## 5 What Are the Differences between Team Server SVN and Team Server Git?
 
-Team Server Git has full feature parity with Team Server SVN, meaning both are integrated with Studio and Studio Pro, support cloud deployments, provide access to our various APIs, and support products like [AQM](/addons/aqm-addon/). 
-
-As both technologies have fundamental differences, there are differences in the developer workflow. 
-
-In SVN, it is possible to retrieve changes and apply them directly on uncommitted changes. 
-
-In Git, conflict resolution can only be done on committed changes. This means you have to commit locally before being able to retrieve/pull changes from other developers. The advantage is that you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
-
-In SVN, commits are done to a central server which enforces the commit order. These commits are represented with a number that is generally sequentially increasing (e.g. 1, 2, 3, 4, 5). 
-
-In Git, committing is first done locally. Commits are then sent to other repositories in such a way that they are uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as these can be generated in a distributed setting and still be the same on different clients with identical changes. 
+For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences).
 
 ## 6 What Are the Advantages of Team Server Git over Team Server SVN?
 

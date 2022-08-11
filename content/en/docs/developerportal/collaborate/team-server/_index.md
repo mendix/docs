@@ -21,7 +21,49 @@ When you commit your app model changes to the Team Server in Studio Pro, you can
 
 On the **Team Server** screen of the Developer Portal, you can see a URL to access you app, revision history, and revision details.
 
-## 2 Team Server URL
+## 2 Versioning with Git
+
+You can migrate your app from SVN to Git with this setting. 
+
+### 2.1 Apps Eligible for Migration
+
+To be able to migrate your app to Git, your app needs to meet the following criteria:
+
+* Mendix version 9.12 or above
+* Current version-controller is in Team Server SVN
+* Maximum of 100 revisions across all branches (we plan to increase this maximum the coming months)
+
+{{% alert type="info" %}}
+
+Only a user with the Scrum master role can migrate an app.
+
+{{% /alert %}}
+
+### 2.2 How Does Migration Work?
+
+During migration all app history, including revisions for all branches, are be copied from SVN to Git. 
+
+Access to SVN is disabled as soon as migration starts, to prevent developers still making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
+
+To inform your team members about the process, several emails will be sent out automatically :
+
+* (Optional) Migration scheduled
+* Migration started
+* Migration completed or Migration
+
+Emails give brief information about the stage and emphasize that changes made during migration will be lost, since they cannot be committed to SVN anymore.
+
+{{% alert type="warning" %}}
+
+Inform your team members that they should commit their changes before migration has started not to lose their uncommitted changes.
+
+{{% /alert %}}
+
+### 2.3 Steps After Migration
+
+After migration is completed all developers need to re-download the app from Team Server and remove existing local copies, since developers can no longer interact with SVN. 
+
+## 3 Team Server URL
 
 The **Team Server URL** can be used to directly access your app content. On SVN you can see all the files and branches of your app. The URL can have the following form:
 

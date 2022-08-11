@@ -74,11 +74,38 @@ Curators are assigned by the a [Mendix Admin](#admin) and can enrich the metadat
 
 There are two types of licenses for Mendix Data Hub: Data Hub Free and Data Hub Premium.
 
-All Mendix users have access to the Data Hub Free edition. With this, you can retrieve or edit 1000 objects per application per day for each runtime instance when deployed. When that limit is exceeded, you get an error when your applications tries to retrieve more data. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
-
-With the Data Hub Premium license, apps are not limited. They can retrieve and edit an unlimited number of objects.
-
 Contact your [Mendix Admin](/developerportal/control-center/#company) to find out what type of Data Hub license your organization has.
+
+### 4.1 Data Hub Free Edition {#dh-free}
+
+All Mendix users have access to the Data Hub Free edition. With this, you can retrieve or edit 1000 objects per application per day for each runtime instance when deployed. 
+
+#### 4.1.1 Limitations {#dh-free-limitations}
+
+If users with a Data Hub Free license retrieve or edit more than 1000 objects per application per day for each runtime instance when deployed, you will get a [limitation error](#limitation-errors) when your applications tries to retrieve more data. The number of consumed objects per day is reset at midnight in the time zone of the Mendix Runtime scheduler (which can be defined in the [Scheduled Event Time Zone](/refguide/app-settings/#scheduled) of the **App Settings**).
+
+{{% alert color="info" %}}
+Apps running in development environments do not have this limitation.
+{{% /alert %}}
+
+#### 4.1.2 Limitation Errors {#limitation-errors}
+
+Once the limit of a 1000 objects has been reached, two different statements are logged.
+
+* On the `info` level, the following statement is logged when the limit is reached: `"Exceeded the daily limit. Retrieved $delta objects, which would increase the counter to $newCount (of max $max per day)."`
+* On the `error` level, the following statement is logged when the limit is reached: `"The limit of $max objects has been reached."`
+
+{{% alert color="warning" %}}
+It is up to the application to communicate to its end-users that the daily limit has been reached. If this is not done, the end-user gets a message that an error occurred.
+{{% /alert %}}
+
+### 4.2 Data Hub Premium Edition {#dh-premium}
+
+With the Data Hub Premium license, apps are not limited. Apps can retrieve and edit an unlimited number of objects when deploying to the Mendix Cloud.
+
+### 4.3 Data Hub for Private Cloud {#dh-pc}
+
+Licensed users of Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) can use a Data Hub license to work with external entities. To learn more about working with Data Hub external entities on a private cloud or for local deployments, see [External Entities: Private Cloud or Local Deployments](/refguide/external-entities-pc-local/).
 
 ## 5 Guide Categories
 

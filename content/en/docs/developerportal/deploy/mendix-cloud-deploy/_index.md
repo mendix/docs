@@ -134,7 +134,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 The Mendix Cloud has a limit of 1GB on the size of a deployment package.
 {{% /alert %}}
 
-### 3.1 Deploying via the Studio Pro
+### 3.1 Deploying via Studio Pro
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.

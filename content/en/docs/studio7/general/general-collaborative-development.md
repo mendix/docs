@@ -41,7 +41,7 @@ As all Studio changes are auto-saved, the collaborative development is indicated
     There are two possible outcomes of this process:<br/>
 
     1. In Studio Pro, there are no conflicts in the app, and changes from Studio Pro will be applied to Studio. (Conflicts are changes that contradict each other and cannot be merged automatically. For example, one user has changed a caption of a button, while another user has deleted this button).
-    1. There are app conflicts which should be solved in Studio Pro before the Studio Pro user can commit again. Your screen is unlocked without any changes to your app.  
+    1. There are app conflicts which should be solved in Studio Pro before Studio Pro user can commit again. Your screen is unlocked without any changes to your app.  
 
 3. **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information on managing branches, see section [5 Managing Development Lines](/refguide7/collaborative-development/#managing-branches) in the *Collaborative Development* in *Version Control*. 
     During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 

@@ -69,7 +69,7 @@ The string property type is represented as a simple text input in Studio Pro. It
 | `type`         | Yes      | String         | Must be `string`                                             |
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | No       | String         | Default value for the property                              |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 
 #### 2.1.2 Studio Pro UI
@@ -83,7 +83,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/string.png" >}}
 
@@ -96,7 +96,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/string-multiline.png" >}}
 
@@ -123,7 +123,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/boolean.png" >}}
 
@@ -150,7 +150,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/integer.png" >}}
 
@@ -177,7 +177,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/decimal.png" alt="decimal" >}}
 
@@ -219,7 +219,7 @@ When the property is defined as follows:
 	</property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/enumeration.png" >}}
 
@@ -252,7 +252,7 @@ When the component is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the component appears like this:
+Then Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/icon.png" >}}
 
@@ -291,7 +291,7 @@ When the component is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the component appears like this:
+Then Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/image.png" >}}
 
@@ -331,7 +331,7 @@ When the component is defined without the `dataSource` attribute as follows:
 </property>
 ```
 
-then the Studio Pro UI for the component appears like this:
+then Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/widgets.png" alt="studio pro ui" >}}
 
@@ -346,7 +346,7 @@ When the component is defined with the `dataSource` attribute, assuming `myDataS
 </property>
 ```
 
-then the Studio Pro UI for the component appears like this:
+then Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/widgets_with_ds.png" alt="studio pro ui" >}}
 
@@ -398,7 +398,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/expression.png" >}}
 
@@ -420,7 +420,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.14.
 | ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`       | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
 | `key`        | Yes      | String         | See [key](#key) |
-| `multiline`  | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise                                                                                                   |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise                                                                                                   |
 | `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 
@@ -444,7 +444,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/text.png" >}}
 
@@ -479,7 +479,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/action.png" >}}
 
@@ -544,7 +544,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/xml-element.png" >}}
 
@@ -588,7 +588,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/object.png" >}}
 
@@ -615,7 +615,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/file.png" >}}
 
@@ -651,7 +651,7 @@ When the property is defined as follows:
 </property>
 ```
 
-Then the Studio Pro UI for the property appears like this:
+Then Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/datasource.png" >}}
 

@@ -32,6 +32,8 @@ During design time, when you are [modeling](/refguide/modeling/) your app, you a
 
 If you will be deploying locally, to a Private Cloud, or On-Premises, you can add a [published OData resource](/refguide/published-odata-resource) using the metadata contract.
 
+For general resources on using Data Hub during app modeling, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/data-hub/write-data).
+
 ### 2.1 Manually Registering Contracts to the Data Hub Catalog
 
 If you deploy to a Private Cloud or On-Premises setup, you can manually register applications, environments, services, or data sources to the Data Hub Catalog. Registering the data source contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 

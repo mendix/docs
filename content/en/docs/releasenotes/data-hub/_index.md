@@ -230,7 +230,6 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
     * Improved parsing and more detailed error messaging
     * Improved validation (after parsing succeeded) and more detailed error messaging
 
-:)
 
 ### January 14th, 2022
 

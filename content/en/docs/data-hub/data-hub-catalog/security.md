@@ -11,7 +11,7 @@ tags: ["data hub", "data hub catalog", "security", "entity security", "dataset s
 
 In Data Hub, the [Access Level](#access-level) indicates whether you can access a registered data source.
 
-Security for a Mendix app can be defined at the app-level, module-level, and entity-level. Further authentication methods can also be specified to control access to the data associated with published datasets.
+Security for a Mendix app can be defined at the app-level, module-level, and entity-level. You can also specify further authentication methods to control access to the data associated with published datasets.
 
 This security level determines which end-users of the apps will have access to the data represented by the exposed dataset. For further information, see the [Security](/refguide/published-odata-services/#security) section in *Published OData Services*.
 

@@ -26,7 +26,7 @@ But what happens in the following situations?
 
 In these cases, you can still publish and consume external entities. This guide will explain how by taking a step back and distinguishing between design time and runtime for Data Hub.
 
-## 2 Using Data Hub in Design Time {#dh-design-time}
+## 2 Data Hub in Design Time: Creating and Registering OData Services {#dh-design-time}
 
 During design time, you are finding, registering, or importing data source metadata into Studio Pro. This metadata is in the form of contracts, and are registered automatically in the Data Hub Catalog if your application is hosted on the Mendix Cloud.
 
@@ -39,12 +39,12 @@ If you deploy to a Private Cloud or On-Premises setup, you can manually register
 To manually register an OData contract metadata file to the Data Hub Catalog, follow these basic steps:
 
 1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Developer Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed OData services.
-2. Use the [Transform](/data-hub/data-hub-catalog/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson))
+2. Use the [Transform](/data-hub/data-hub-catalog/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson)).
 3. Use the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) to register the data source.
 
 For detailed steps, see the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.
 
-### 2.2 Importing Contracts Directly into the Studio Pro and the Data Hub Pane (Bypassing the Data Hub Catalog)
+### 2.2 Importing Contracts Directly into Studio Pro (Bypassing the Data Hub Catalog)
 
 If you are deploying locally, or just do not want to register the data sources in the Catalog, you can import the metadata contracts or service URLs directly into Studio Pro to consume a published OData service.
 
@@ -52,10 +52,10 @@ If you are deploying locally, or just do not want to register the data sources i
 
 To import a metadata contract file of a published OData service, do the following:
 
-1.  Export the contract from the publishing app and download it to your computer. 
+1.  Export the contract from the publishing app and download it to your computer. </br>
     Go to **Settings** tab of the **Published OData Service** document, and click **Export** next to the **Metadata** field. Save the `$metadata.xml` file.
 
-2.  Import the contract into the consuming app. 
+2.  Import the contract into the consuming app. </br>
     Right-click the **App Explorer** where you would like to add the service, then click **Add other** > **Consumed OData Service**. Select the `$metadata.xml` file you exported.
 
 The service will now appear in the Data Hub pane.
@@ -64,9 +64,9 @@ The service will now appear in the Data Hub pane.
 
 To import a published OData service URL, do the following:
 
-1.  Copy the OData service URL. 
-    To find the published OData service URLs from Mendix apps, go to the **Settings** tab of the **Published OData Service** document, copy the entire link in the **Metadata** field.
-2.  Add a **Consumed OData service**.
+1.  Copy the OData service URL. </br>
+    To find the published OData service URL from Mendix apps, go to the **Settings** tab of the **Published OData Service** document, and copy the entire link in the **Metadata** field.
+2.  Add a **Consumed OData service** to your consuming app.</br>
     Right-click the **App Explorer were you would like to add the service, then click **Add other** > **Consumed OData Service**.
 3.  In the **Add Consumed OData Service** dialog box, make sure **From URL** is selected, and paste the copied URL into the field.
 
@@ -78,9 +78,11 @@ To update the metadata of a manually registered contract, follow the same steps 
 
 See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) section of *Consumed OData Service*  to see how this works for automatically registered contracts.
 
-## 3 Using Data Hub in Runtime {#dh-runtime}
+## 3 Data Hub in Runtime {#dh-runtime}
 
-During runtime, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using Data Hub in design time](#dh-design-time).
+During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. 
+
+Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using Data Hub in design time](#dh-design-time).
 
 ### 3.1 Licensing 
 

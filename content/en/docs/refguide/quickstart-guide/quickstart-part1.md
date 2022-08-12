@@ -160,7 +160,7 @@ Now that you have created your domain model, it is time to create your photo alb
 Now it is time to build your photo album app:
 
 1. Open the **Home_Web** page from the App Explorer. 
-1. Drag and drop a **Template Grid** from the **Toolbox** onto the page. 
+1. Drag a **Template Grid** from the **Toolbox** onto the page. 
 1. In Mendix, in order to display data from the domain model on a page element it needs to be within a context. Double-click the template grid to open its properties, then go to the **Data source** tab:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/template-datasource.png" width="450px" alt="Open data properties">}}

@@ -14,13 +14,13 @@ The [Calendar](https://marketplace.mendix.com/link/component/107954/) widget can
 ### 1.1 Features
 
 * Add and edit calendar events
-* Drag and drop calendar events
+* Drag calendar events
 * Change calendar event colors
 * Retrieve events based on selected date ranges
 
 ## 2 Basic Configuration
 
-Drag and drop the widget inside a data view which provides a calendar entity (containing calendar config attributes) as context. Next, use the configuration properties described in the following sections.
+Drag the widget inside a data view which provides a calendar entity (containing calendar config attributes) as context. Next, use the configuration properties described in the following sections.
 
 ### 2.1 Data Source Tab
 

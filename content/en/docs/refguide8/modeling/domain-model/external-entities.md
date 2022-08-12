@@ -34,7 +34,7 @@ To add an external entity to your project, do the following:
 
     {{% alert color="info" %}}In the Data Hub Catalog, an OData service may be registered several times with different versions or deployed to different environments all exposing the entity that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your project.{{% /alert %}}
 
-3. Drag and drop the entity in the domain model. The entity and its attributes are then added to your app:
+3. Drag the entity in the domain model. The entity and its attributes are then added to your app:
 
     {{< figure src="/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png" alt="Virtual Entity Example" >}}
 

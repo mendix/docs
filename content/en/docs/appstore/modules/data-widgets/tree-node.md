@@ -42,7 +42,7 @@ Out of the box, the Tree Node widget is fully accessible through keyboard contro
 
 ## 3 Configuration
 
-Drag and drop the Tree Node widget onto the page and use the configuration properties described in the following sections.
+Drag the Tree Node widget onto the page and use the configuration properties described in the following sections.
 
 ### 3.1 General Tab {#general}
 

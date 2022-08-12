@@ -150,7 +150,7 @@ Now that you have created a test case, the next step is to configure your test c
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
 1. Click the **I-icon** in the top right corner of the screen, which opens, the **ATS Information** dialog box.
-2. Drag and drop the **ATS Helper** link to your bookmark bar.
+2. Drag the **ATS Helper** link to your bookmark bar.
 3. To use the recorder function, you need to have the Google Chrome browser installed on your system and install the ATS Recorder Chrome plugin. The ATS Recorder only works in Chrome.
 4. Install the ATS Recorder extension in your Chrome browser.
 

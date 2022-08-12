@@ -27,7 +27,7 @@ To add an external entity to your app model, follow these steps:
 
     {{% alert color="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
-1. Drag and drop the entity in the Domain Model. 
+1. Drag the entity in the Domain Model. 
 1. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
 
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service

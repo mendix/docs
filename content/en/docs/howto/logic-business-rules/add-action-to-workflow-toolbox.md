@@ -80,7 +80,7 @@ Now that you have exposed the microflow as the custom workflow action, you can u
 
     {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/workflow-toolbox.png" alt="Workflow Toolbox" >}}
 
-3. Drag and drop the action to the workflow.
+3. Drag the action to the workflow.
 
 Congratulations! You have turned the microflow into the custom workflow action and can easily use it in the workflow editor.
 

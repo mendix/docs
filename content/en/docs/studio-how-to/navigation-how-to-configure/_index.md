@@ -128,7 +128,7 @@ First, you need to create the menu item that will encompass three menu sub-items
 
     5. Repeat steps 1-4 to create a menu sub-item to open the **Personal_Info** page and name this sub-item *Personal Info*.  
     6. Repeat steps 1-4 to create a menu sub-item to open the **Documents** page and name this sub-item *Documents*. 
-    7. The order of sub-items looks the following way now: **Documents**, **Personal Info**, **Job Details**. Drag and drop them to rearrange the order in the following way: **Job Details**, **Personal Info**, **Documents**.  
+    7. The order of sub-items looks the following way now: **Documents**, **Personal Info**, **Job Details**. Drag them to rearrange the order in the following way: **Job Details**, **Personal Info**, **Documents**.  
 
 You have configured the sub-menu items for the **Employee Details** menu item.
 

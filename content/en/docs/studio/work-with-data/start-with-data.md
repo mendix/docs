@@ -51,7 +51,7 @@ Download this Excel spreadsheet example to check how data is normalized there: [
 
 ## 4 Starting an App From a Spreadsheet {#importing-spreadsheet}
 
-When you create your app, a page where you can upload your spreadsheet is opened. Drag and drop your spreadsheet on the page or browse your files and choose the one you would like to import.
+When you create your app, a page where you can upload your spreadsheet is opened. Drag your spreadsheet on the page or browse your files and choose the one you would like to import.
 
 {{< figure src="/attachments/studio/work-with-data/start-with-data/drag-and-drop.png"   width="300"  >}}
 

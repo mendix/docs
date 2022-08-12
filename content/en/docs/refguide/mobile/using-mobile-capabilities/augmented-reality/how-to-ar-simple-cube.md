@@ -44,9 +44,9 @@ You will begin by embedding the following widgets into your Mendix app:
 
 Embed the widgets in this order:
 
-1. Drag and drop **Container (AR)** onto a native mobile page.
-1. Drag and drop **ImageTracker (AR)** into **Container (AR)**.
-1. Drag and drop **Cube (AR)** into **ImageTracker (AR)**:
+1. Drag **Container (AR)** onto a native mobile page.
+1. Drag **ImageTracker (AR)** into **Container (AR)**.
+1. Drag **Cube (AR)** into **ImageTracker (AR)**:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/nested-widgets.png" alt="Nested widgets"   width="400"  >}}
 

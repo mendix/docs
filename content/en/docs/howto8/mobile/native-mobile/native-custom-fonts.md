@@ -99,7 +99,7 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It 
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts.png" alt="Custom fonts screen"   width="350"  >}}
 
-1. Drag and drop the font files you would like to apply. For example, Times New Roman is being used here. When the process is complete you should see the font family uploaded in the list:
+1. Drag the font files you would like to apply. For example, Times New Roman is being used here. When the process is complete you should see the font family uploaded in the list:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts2.png" alt="Custom fonts screen filled"   width="350"  >}}
 
@@ -169,7 +169,7 @@ Use XCode to manually add fonts to an iOS app:
     * TimesNewRomanPS-BoldMT, for bold
 
 1. Open XCode and select the workspace at **ios\NativeTemplate.xcworkspace**.
-1. Drag and drop the renamed fonts to the **Resources/Fonts** folder in Project Explorer. 
+1. Drag the renamed fonts to the **Resources/Fonts** folder in Project Explorer. 
 1. Select both targets from the dialog box that shows up:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="XCode option dialog for adding files"   width="350"  >}}

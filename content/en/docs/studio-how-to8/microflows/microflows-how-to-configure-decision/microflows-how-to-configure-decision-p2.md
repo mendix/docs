@@ -34,7 +34,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png" >}}
 
-3. Drag and drop **Data View** to the page.
+3. Drag **Data View** to the page.
 4. In the **Properties** tab for the **DATA VIEW**, do the following:<br/> 
     1. Set **Data Source** to **Context.**<br/>
     1. Set **Entity** to **Customer**.
@@ -89,7 +89,7 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png" >}}
 
-6. Drag and drop **Data View** to the page.
+6. Drag **Data View** to the page.
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view-select-data-view-source.png" >}}
 

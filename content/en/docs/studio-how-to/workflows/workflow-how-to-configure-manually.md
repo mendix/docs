@@ -99,7 +99,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 2. Add a button that will initiate the workflow to the list view. Follow the steps below:
 
     1. Open the **Toolbox** and search for the **Call Workflow** button.
-    2. Drag and drop the button inside the list view:
+    2. Drag the button inside the list view:
 
         {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/start-onboarding-button.png" alt="Start Onboarding Button" >}}
 

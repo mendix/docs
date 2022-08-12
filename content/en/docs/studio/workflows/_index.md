@@ -125,7 +125,7 @@ To start the workflow, you can add a widget with a specific on-click action on a
 Do the following:
 
 1. Open a page from where you would like to trigger a workflow.
-2. Drag and drop a widget that has on-click action in its properties (for example, a button) inside the data container with the workflow entity. 
+2. Drag a widget that has on-click action in its properties (for example, a button) inside the data container with the workflow entity. 
 3. Open button's properties > **Events** section. 
 4. Set **On Click Action** to **More**.
 5. Set **Action** to **Call Workflow**. 

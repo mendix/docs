@@ -76,7 +76,7 @@ Follow the steps below:
 
 1. Open the **Employee Profile** page where IT administrators create and edit information on employees and assets assigned to them. 
 2. Open the **Toolbox** and search for the **Create Object** button.
-3. Drag and drop the button above **Save** and **Cancel** buttons:
+3. Drag the button above **Save** and **Cancel** buttons:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-object-button.png" alt="Create Object Button"   width="450"  >}}
 

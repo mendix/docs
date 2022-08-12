@@ -151,7 +151,7 @@ You should use the marker tool properly – this is key to extracting data in hi
     {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
-6. Drag sample images in JPG, JPEG, BMP, or PNG format into the box where it says **Drag and drop your image files here**. You can also click **Browse** and select the files.
+6. Drag sample images in JPG, JPEG, BMP, or PNG format into the box where it says **Drag your image files here**. You can also click **Browse** and select the files.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/import-file-page.png" alt="Import File page" >}}
 
@@ -256,7 +256,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
         The **Generate JSON Structure** dialog box opens.
 
-    5. Drag one of the sample images which you used to train the document model or a single-page PDF document into the box where it says **Drag and drop your files here**. You can also click **Browse** and select the file.
+    5. Drag one of the sample images which you used to train the document model or a single-page PDF document into the box where it says **Drag your files here**. You can also click **Browse** and select the file.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
 

@@ -191,7 +191,7 @@ The page access is restricted to the HR user role:
 To add a button that will initiate the workflow, do the following:
 
 1. Open the **Toolbox** and search for a **Call workflow** button.
-2. Drag and drop the button inside the list view in an empty column.
+2. Drag the button inside the list view in an empty column.
 3. Open properties and click the ellipsis icon in the **Workflow** property.
 4. In the **Select Workflow** dialog box, select **Employee_Onboarding** workflow and click **OK**.
 5. Set **Caption** of the button to **Start Onboarding**.

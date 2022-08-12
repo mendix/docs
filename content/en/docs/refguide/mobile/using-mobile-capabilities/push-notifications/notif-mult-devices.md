@@ -41,7 +41,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/retrieveDevices.png" alt="retrieveDevices"    width="400"  >}}
 
-3. Drag and drop the **PrepareMessageData** microflow from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
+3. Drag the **PrepareMessageData** microflow from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
     1. Title: *myTitle*.<br />
     1. Body: *myBody*.<br />
     1. TimeToLive: *0*.<br />
@@ -53,7 +53,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
     **ContextObjectGuid** is set to empty since you will pass the object itself to the **SendMessageToDevices** Java action where it will be retrieved automatically. 
 
-4. Drag and drop the **SendMessageToDevices** Java action from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
+4. Drag the **SendMessageToDevices** Java action from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
     1. **Message data param**: **$MessageToBeSent**.<br />
     1. **Device param**: **$Devices**.<br />
     1. **Context object**: **$Product**:

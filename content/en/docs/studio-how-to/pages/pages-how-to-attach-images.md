@@ -75,7 +75,7 @@ Follow the steps below:
 
 1. Open the **New Report** page where employees submit a new report. 
 2. Open the **Toolbox** and search for **Create Object** button.
-3. Drag and drop the button above **Save** and **Cancel** buttons:
+3. Drag the button above **Save** and **Cancel** buttons:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/new-button.png"   width="450"  >}}
 

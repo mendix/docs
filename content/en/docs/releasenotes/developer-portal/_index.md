@@ -60,7 +60,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
     * Set sprint goals and see all the basic sprint information on the board – if you are using Scrum
-    * Drag and drop stories on our brand new project board
+    * Drag stories on our brand new project board
     * Format stories in any way you want – for example, adding headers, links, and code blocks, linking specific stories, and using @ to mention people (notifications for this coming soon!)
     * Clone stories
     * Create and track the progress of epics

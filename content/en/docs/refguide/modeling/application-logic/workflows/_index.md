@@ -127,7 +127,7 @@ Do the following:
 
 1. Open a page from where you would like to trigger a workflow.
 2. Make sure you have a data container with the workflow context on your page. 
-3. Drag and drop a widget that has on-click event in its properties (for example, a button) inside the data container with the workflow context. 
+3. Drag a widget that has on-click event in its properties (for example, a button) inside the data container with the workflow context. 
 4. Open button's properties > **Events** section. 
 5. Set **On-click** property to **Call workflow**. 
 6. Set **Workflow** to the workflow you would like to trigger.

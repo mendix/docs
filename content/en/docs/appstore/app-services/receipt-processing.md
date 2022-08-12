@@ -105,7 +105,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/receipt-processing/rp-download-json-structure.png" alt="" >}}
 
         The **Generate JSON Structure** dialog box opens.
-    9. Drag a sample receipt into the box where it says **Drag and drop your documents here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
+    9. Drag a sample receipt into the box where it says **Drag your documents here**. You can also click **Browser** and select the file. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
 
         {{< figure src="/attachments/appstore/app-services/receipt-processing/sample-extraction-dialog-box.png" alt="Sample Extraction dialog box" >}}
 

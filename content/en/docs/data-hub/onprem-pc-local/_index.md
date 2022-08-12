@@ -32,7 +32,7 @@ During design time, when you are [modeling](/refguide/modeling/) your app, you a
 
 If you will be deploying locally, to a Private Cloud, or On-Premises, you can add a [published OData resource](/refguide/published-odata-resource) using the metadata contract.
 
-For general resources on using Data Hub during app modeling, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/data-hub/write-data).
+For general resources on using Data Hub when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/data-hub/write-data).
 
 ### 2.1 Manually Registering Contracts to the Data Hub Catalog
 

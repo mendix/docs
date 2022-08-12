@@ -155,17 +155,43 @@ Standard triggers provide HTTP services to trigger (run) pipelines like create-a
 
 There are also two options to build a Mendix app using either a generic or a GitLab webhook trigger.
 
-{{% alert color="info" %}}
-After installing the generic trigger or the GitLab webhook trigger you will have a service with a name like `el-mx-pipeline-listener-someUniqueName`. Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc). This will provide the URL which you can use to activate the trigger. In the rest of this document, we will use `http://pipeline.trigger.yourdomain.com/` to refer to this trigger.
-{{% /alert %}}
-
 ### 7.1 Persistent Volume Claims (PVCs)
 
 By default, pipelines comes with a *5GB PVC* with an **empty *storageClassName***. You can create your own PVC by following [these instructions](https://tekton.dev/docs/getting-started/#persistent-volumes) in the Tekton documentation.
 
 To use your own PVC add `--set pvcName=$your-pvc-name` to each command during installation of the triggers.
 
-### 7.2 Generic Trigger{#generic-trigger}
+### 7.2 Authentication
+
+You can specify a secret token and Trigger will validate received payloads.
+To enable validation you need to specify the next parameter`--set accessToken=SomeLongSecureToken42` (replace `SomeLongSecureToken42` with yours secret) during installation of the triggers.
+Then all your HTTP requests to Tekton triggers should have a similar header `X-GitLab-Token: SomeLongSecureToken42`. It's easy to use with GitLab but also works outside with any HTTP client (like curl).
+
+#### 7.2.1 GitLab configuration
+
+To set GitLab Token in Gitlab you need to specify it in `Secret Token` field on webhook creation stage:
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+
+#### 7.2.2 Other HTTP clients
+
+With HTTP clients you simply need to add `X-GitLab-Token` to your header.
+Example for `curl` client:
+```
+curl -X POST \\
+  http://pipeline.trigger.yourdomain.com/ \\
+  -H 'X-GitLab-Token: SomeLongSecureToken42' \\
+  -H 'Content-Type: application/json' \\
+  -H 'Event: create-app' \\
+  -d '{
+    "namespace":"your-kubernetes-namespace",
+    "env-internal-name":"mx-environment-internal-name",
+    "dtap-mode":"D",
+    "storage-plan-name":"file-plan-name",
+    "database-plan-name":"db-plan-name"
+}'
+```
+
+### 7.3 Generic Trigger{#generic-trigger}
 
 A **Generic trigger** is a trigger that can be used as HTTP/curl request. All Mendix-related parameters will be specified in HTTP request body. 
 
@@ -185,7 +211,9 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
 | `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section) |
 
-### 7.3 GitLab Webhook Trigger{#gitlab-webhook}
+You can use one Generic Trigger with several environments. To use it with several environments you just need to pass correct parameters to HTTP requests. 
+
+### 7.4 GitLab Webhook Trigger{#gitlab-webhook}
 
 The **GitLab webhook trigger** triggers the build-pipeline pipeline in combination with GitLab. All Mendix environment related parameters are specified during trigger installation as you create one trigger per environment.
 
@@ -215,7 +243,37 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `gitlabwebhook. scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
 | `gitlabwebhook.constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
 
-## 8 Authentication
+To use several environments with GitLab triggers, you need to create the new trigger for every environment and provide correct parameters during installation of the trigger.
+
+### 7.5 Exposing Trigger
+
+After installing the generic trigger or the GitLab webhook trigger you will have a service with a name like `el-mx-pipeline-listener-someUniqueName`. 
+Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
+
+Here is example of ingress object:
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: triggers-ingress
+spec:
+  rules:
+    - host: pipeline.trigger.yourdomain.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: el-mx-pipeline-listener-someUniqueName
+                port:
+                  number: 8080
+```
+Make sure that ingress controller already installed. You can use [NGINX Controller](https://kubernetes.github.io/ingress-nginx/) for this purpose.
+
+In this example and in the rest of this document, we will use `pipeline.trigger.yourdomain.com` domain to refer to this trigger.
+
+## 8 Authentication to external services
 
 This needs to be configured before you trigger any pipelines.
 
@@ -253,6 +311,7 @@ curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
   -H 'Event: create-app' \
+  -H 'X-GitLab-Token: SomeLongSecureToken42' \
   -d '{
     "namespace":"your-kubernetes-namespace",
     "env-internal-name":"mx-environment-internal-name",
@@ -284,6 +343,7 @@ The example here uses a [Generic Trigger](#generic-trigger).
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
+  -H 'X-GitLab-Token: SomeLongSecureToken42' \
   -H 'Event: build' \
   -d '{
    "repo": {
@@ -315,7 +375,7 @@ Within GitLab, set up a webhook. Use the trigger URL of the trigger you installe
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
 
 {{% alert color="info" %}}
-We do not currently support the **Secret token**; this can be left blank.
+To fill in **Secret token** take a look on Authorization section.
 {{% /alert %}}
 
 ### 9.3 Configure App Pipeline
@@ -327,6 +387,7 @@ curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
   -H 'Event: configure-app' \
+  -H 'X-GitLab-Token: SomeLongSecureToken42' \
   -d '{
     "namespace":"your-kubernetes-namespace",
     "env-internal-name":"mx-environment-internal-name",
@@ -365,6 +426,7 @@ curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
   -H 'Event: delete-app' \
+  -H 'X-GitLab-Token: SomeLongSecureToken42' \
   -d '{
     "namespace":"your-kubernetes-namespace",
     "env-internal-name":"mx-environment-internal-name"
@@ -378,7 +440,125 @@ curl -X POST \
 
 ## 10 Troubleshooting{#troubleshooting}
 
-### 10.1 `Context Deadline Exceeded` when Installing for Kubernetes
+### 10.1 Check Tekton Components
+
+To verify that all components is running correctly you need to use the next command:
+```
+kubectl get po -n tekton-pipelines
+```
+As result, you should see the similar list of `Running` pods:
+```
+NAME                                                 READY   STATUS    RESTARTS   AGE
+tekton-pipelines-controller-78d8d6d4b-rbd6g          1/1     Running   0          20d
+tekton-pipelines-webhook-64fd67d65-bhn55             1/1     Running   0          20d
+tekton-triggers-controller-6c7c9cfd47-vw92r          1/1     Running   0          20d
+tekton-triggers-core-interceptors-5b6f7b6c56-7m7fm   1/1     Running   0          20d
+tekton-triggers-webhook-7f5c9477cc-fb624             1/1     Running   0          20d
+```
+
+Also, you need to check listener of Tekton Trigger ($YOUR_NAMESPACE is namespace from 7.* step):
+```
+kubectl get po -n $YOUR_NAMESPACE
+```
+The output should include similar `Running` pod:
+```
+NAME                                             READY   STATUS      RESTARTS   AGE
+el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b  1/1     Running     11         17d
+```
+
+### 10.2 Debug Triggering
+
+In some cases, you can send an HTTP request to trigger a pipeline, but the pipeline didn't triggered.
+The first place that you need to look at in that case is logs of listener.
+To view the logs you need to identify the name of the listener pods. To do that you can use the next command `kubectl get po -n $YOUR_NAMESPACE` and listener would have similar to this `el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b` name.
+Then use similar command: `kubectl logs el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b -n $YOUR_NAMESPACE`.
+
+Take into the account that logs like these are fine because of the implementation details:
+```
+{"level":"info","ts":"2022-08-10T09:46:54.300Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'configure-app') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-configure-app-trigger-generic"}
+{"level":"info","ts":"2022-08-10T09:46:54.300Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'build') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-build-trigger-generic"}
+{"level":"info","ts":"2022-08-10T09:46:54.305Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'create-app') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-create-app-trigger-generic"}
+{"level":"info","ts":"2022-08-10T09:46:54.305Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'delete-app') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-delete-app-trigger-generic"}
+```
+
+### 10.3 List all pipeline runs
+
+To view the list of pipeline runs use the next command (`$YOUR_NAMESPACE` is namespace from 7.* step):
+`kubectl get pipelineruns -n $YOUR_NAMESPACE`.
+The output of this command looks like this:
+```
+NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
+mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
+mx-pipeline-build-run-gitlab-2bjc7         True        Succeeded   22d         22d
+```
+
+### 10.4 View pipeline logs
+
+Logs regarding pipeline execution can be found in the pods.
+
+Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is namespace from 7.* step):
+1. Get list of pipelines:
+```
+kubectl get pipelineruns -n $YOUR_NAMESPACE
+```
+In output, there is one failed pipelinerun with the name `mx-pipeline-app-create-run-generic-zzt8h`:
+```
+NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
+mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
+mx-pipeline-build-run-gitlab-2bjc7         True        Succeeded   22d         22d
+```
+
+2. Get pods for the failed pipeline runs:
+```
+kubectl get po -n $YOUR_NAMESPACE | grep mx-pipeline-app-create-run-generic-zzt8h
+```
+In output there is `Failed` pod:
+```
+mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2   0/1     Error       0          8d
+```
+
+3. Get the logs for the failed pod:
+```
+kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $YOUR_NAMESPACE
+```
+
+In output there are such logs:
+```
+Error: mendixapps.privatecloud.mendix.com "mxapp" already exists
+Usage:
+  mxpc-pipeline-tools-cli app-cr-create [-n namespace] [--dry-run] -d database-name -s storage-name -m dtap-mode env-internal-name [flags]
+
+Flags:
+  -d, --database-name string        Database plan name
+      --dry-run                     Prints manifest to stdout
+  -m, --dtap-mode string            Mode for running the Mendix application.
+                                    Available options:
+                                      P - production
+                                      D - Development
+                                    Always set this to P in production environments. (default "D")
+  -h, --help                        help for app-cr-create
+      --mx-runtime-version string   Version of mendix runtime, which will be used during the building of oci-image based on .mda file (default "9.6.6.34474")
+  -n, --namespace string            Cluster namespace
+  -u, --source-url string           Source URL. .mda file url or oci-image url
+  -s, --storage-name string         Storage plan name
+
+2022/08/01 16:28:35 err: mendixapps.privatecloud.mendix.com "mxapp" already exists
+```
+This means that pipeline couldn't create environment with the name "mxapp" because it's already exists.
+
+As alternative, it's possible to use [Tekton Dashboard](https://github.com/tektoncd/dashboard) or [Tekton CLI](https://tekton.dev/docs/cli/) to view the logs.  
+
+### 10.5 Cleanup pods
+Pipeline runs can produce a lot of pods. To cleanup the pods you can delete `pipelineruns` Custom Resource objects.
+
+Example of deletion all pipeline runs except latest 5:
+```
+NUM_TO_KEEP=5
+TO_DELETE="$(kubectl get pipelinerun -o jsonpath='{range .items[?(@.status.completionTime)]}{.status.completionTime}{" "}{.metadata.name}{"\n"}{end}' | sort | head -n -${NUM_TO_KEEP} | awk '{ print $2}')"
+kubectl delete pipelinerun ${TO_DELETE}
+```
+
+### 10.6 `Context Deadline Exceeded` when Installing for Kubernetes
 
 When installing Tekton and the Pipelines for Kubernetes, you can face an issue such as:
 

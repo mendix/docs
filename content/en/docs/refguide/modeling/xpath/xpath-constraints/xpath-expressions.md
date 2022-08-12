@@ -38,6 +38,27 @@ This query retrieves all customers who have at least one unpaid order:
 //Sales.Customer[Sales.Customer_Order/Sales.Order/HasPayed = false()]
 ```
 
+This query retrieves all customers with an order that has a status different from `Delivered`.
+Note that it does not return customers without any order.
+
+```java {linenos=false}
+//Sales.Customer[Sales.Customer_Order/Sales.Order/Status != 'Delivered']
+```
+
+This query retrieves all customers with an order that has a status that is empty.
+Note that again it does not return customers without any order.
+
+```java {linenos=false}
+//Sales.Customer[Sales.Customer_Order/Sales.Order/Status = empty]
+```
+
+This query retrieves all customers that do not have an order that has a status equal to `Delivered`.
+Note that unlike the previous queries it also returns customers without any order.
+
+```java {linenos=false}
+//Sales.Customer[not(Sales.Customer_Order/Sales.Order/Status = 'Delivered')]
+```
+
 This query retrieves all the customers who have the same name as the city they live in:
 
 ```java {linenos=false}

@@ -171,7 +171,7 @@ A category can by provided through `studioCategory` and `studioProCategory` tags
    <studioCategory>Maps</studioCategory>
 ```
 
-In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatiacally in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
+In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatically in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
 
 {{% alert color="info" %}}
 The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.

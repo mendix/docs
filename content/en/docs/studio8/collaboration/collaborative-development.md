@@ -34,7 +34,7 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 
     {{< figure src="/attachments/studio8/collaboration/collaborative-development/committing-changes.png" alt="Committing Changes Dialog Box"   width="350"  >}}
 
-2. **Syncing Changes** – your screen gets locked for a few moments each time Studio Pro users commit. <br/>
+2. **Syncing Changes** – your screen gets locked for a few moments each time the Studio Pro users commit. <br/>
 
     {{< figure src="/attachments/studio8/collaboration/collaborative-development/synching-changes.png" alt="Synching Changes Dialog Box"   width="350"  >}}
 

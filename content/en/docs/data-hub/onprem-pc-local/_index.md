@@ -24,11 +24,11 @@ But what happens in the following situations?
 * You are developing on a local machine for testing, without deploying to a development environment (deploying locally)
 * You are deploying to a [Private Cloud](developerportal/deploy/private-cloud/) or [On-Premises](developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
 
-In these cases, you can still publish and consume external entities. This guide will explain how by taking a step back and distinguishing between design time and runtime for Data Hub.
+In these cases, you can still publish and consume external entities. This guide will explain how by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server) for Data Hub.
 
-## 2 Data Hub in Design Time: Creating and Registering OData Services {#dh-design-time}
+## 2 Data Hub in Design Time{#dh-design-time}
 
-During design time, you are finding, registering, or importing data source metadata into Studio Pro. This metadata is in the form of contracts, and are registered automatically in the Data Hub Catalog if your application is hosted on the Mendix Cloud.
+During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source metadata into Studio Pro. This metadata is in the form of contracts, and are registered automatically in the Data Hub Catalog if your application is hosted on the Mendix Cloud.
 
 If you will be deploying locally, to a Private Cloud, or On-Premises, you can add a [published OData resource](/refguide/published-odata-resource) using the metadata contract.
 

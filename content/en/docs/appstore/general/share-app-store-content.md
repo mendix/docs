@@ -54,7 +54,7 @@ When considering intellectual property (IP) in the Mendix Marketplace, follow th
 * If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
 
 For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
-  
+
 ### 3.3 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
@@ -91,6 +91,45 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 ### 3.5 For Selling Content
 
 For details on preparing and selling your component, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/).
+
+
+# NEW SECTIONS
+
+## PUT ABOVE IN Marketplace Content Development Guidelines
+
+### 3.3 Security Best Practices
+
+With Mendix, you can develop apps, widgets, connectors, and modules in a low-code methodology, so traditional code-based static application security testing (SAST) scanners will not offer much help for detecting security issues. They also cannot point out security misconfigurations (if any) on low-code components.
+
+Mendix recommends using  use a tool that can look into the best practices outlined in [How to Implement Best Practices for App Security](/howto/security/best-practices-security/) and that can point out any security misconfigurations and bad practices. 
+
+Some options that provide insights for your low-code applications include [Omnext Software Analysis Suite](https://marketplace.mendix.com/link/component/120746), [Application Code Reviewer](https://marketplace.mendix.com/link/component/114669), [Mendix Application Quality Monitor](/addons/aqm-addon/), and [Bizzomate Mendix Dev Tools](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof). These products can be used to inspect and correct your module, widget, or connector. Mendix recommends considering these options before you submit your content to be approved for the Marketplace.
+
+## PUT BELOW IN CORRECT SECTION BASED ON UI
+
+### Virus / Malware Scan (ALREADY DOCUMENTED IN [Package](#package) AS OPTIONAL - SWITCH TO REQUIRED, OR REVIEW AND ADD INFO BELOW?)
+
+It is required by the maker/supplier/uploader to complete a full virus and malware scan using VirusTotal [https://www.virustotal.com/gui/home/upload] and provide a “clean” report before providing the MPK to Marketplace onboarding team. VirusTotal scans the file for traces of Virus, and Malware against 70+ virus engines and provides a report. This ensures that the file getting uploaded to marketplace is free from any viruses and malware. 
+
+### Integrity Check
+
+You are required to generate and provide an SHA-2-compatible hash (for SHA-256 or above) of the *.mpk* file you are uploading for submission. Mendix can then verify the integrity of the file being sent and that files are not corrupted or tampered with. It is important to ensure that the correct artifact is submitted without any tampering.
+
+To generate a hash, you can essentially use any inbuilt utility in your operating system. For more information, see [How to Get the Hash (MD5, SHA1, SHA256, SHA512) of a File on Windows Without Installing Anything](https://www.howtohaven.com/system/how-to-hash-file-on-windows.shtml)  (for Windows) or [How to Hash Files in Linux?](https://www.techengineer.one/how-to-hash-files-in-linux/) (for Linux). 
+
+### Vulnerability Check
+
+To ensure that the uploaded *.mpk* file is free from any critical or high vulnerabilities, you are required to scan all the third-party libraries and dependencies distributed with the artifact. Normally, these dependencies are present in the **userlib** or **widgets** folder inside the *.mpk* package file.
+
+You must ensure that the CVSS 3.0 score of your scan is less than 7.0 to pass, as per the National Institute of Standards and Technology's [National Vulnerability Database](https://nvd.nist.gov/vuln-metrics/cvss) (NIST NVD) specification. 
+
+You should provide a report supporting the above scan that indicates libraries are free of vulnerabilities during your submission. Mendix recommends the Snyk Open Source solution to scan the 3rd party dependencies.
+This applies to all the versions getting uploaded on the marketplace.
+
+
+
+### 3 MORE
+
 
 ## 4 Adding New Marketplace Content {#adding}
 

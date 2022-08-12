@@ -1,10 +1,10 @@
 ---
-title: "Migrating to Git: SVN and Git Process Differences"
-linktitle: "SVN and Git Process Differences"
-url: /refguide/svn-git-differences
+title: "Migrating to SVN to Git: Steps After Migration and Process Differences"
+linktitle: "Migrating to SVN to Git"
+url: /refguide/svn-git-differences/
 category: "Version Control"
 weight: 45
-tags: ["git", "svn", "subversion", "byo-git", "byo-svn" ]
+tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 ---
 
 ## 1 Introduction

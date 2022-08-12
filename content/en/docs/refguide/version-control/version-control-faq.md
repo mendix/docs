@@ -30,7 +30,7 @@ Mendix adheres to strict security standards and considers you the sole owner of 
 
 For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences).
 
-## 6 What Are the Advantages of Team Server Git over Team Server SVN?
+## 6 What Are the Advantages of Team Server Git over Team Server SVN? {#git-advantages}
 
 Team Server Git has the following advantages over Team Server SVN:
 
@@ -56,8 +56,7 @@ Mendix  is focusing on improving Team Server Git support and migrating customers
 
 ## 9 Can I Migrate from Team Server SVN to Git?
 
-Currently, there is no out-of-the-box migration service available that keeps historical data. This service is planned later in 2022.
-However, you can migrate manually by creating a new app based on Team Server Git, exporting the Team Server SVN app, and copying that to the new app repository. This does **not** preserve your app history.
+Scrum masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server?
 

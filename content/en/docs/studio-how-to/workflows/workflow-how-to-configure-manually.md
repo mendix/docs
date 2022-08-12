@@ -136,7 +136,7 @@ Good job! Now you have a page where the HR specialist can start the workflow.
 The manager of a new employee will get a task to specify devices for the new hire. The manager also needs to indicate whether the new hire is working from home (WFH) or not. For this functionality you need to add activities to the workflow. Follow the steps below: 
 
 1. Open the **Employee_Onboarding** workflow.
-2. In the **Toolbox** tab, find the **User Task** activity, and drag and drop it to the workflow editor.
+2. In the **Toolbox** tab, find the **User Task** activity, and drag it to the workflow editor.
 3. Open the user task properties. 
 4. Set the **Caption** property to **Manager: Specify Employee Details** to easily see who this task should be assigned to:
 
@@ -187,7 +187,7 @@ Depending on whether the new hire is working from the office or home, there are 
 
 Do the following:
 
-1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Employee Details** user task. 
+1. Open the workflow editor > **Toolbox** and drag the **Decision** activity after the **Manager: Specify Employee Details** user task. 
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/decision.png" alt="Adding a Decision" >}}
 
@@ -205,7 +205,7 @@ Do the following:
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/decision-outcomes.png" alt="Decision Outcomes" >}}
 
-4. Now you need to configure what happens in both scenarios: when the new hire works from home (true) and when the new hire works from the office (false). Open the **Toolbox**, drag and drop a **User Task** activity to the **false** path, and do the following:
+4. Now you need to configure what happens in both scenarios: when the new hire works from home (true) and when the new hire works from the office (false). Open the **Toolbox**, drag a **User Task** activity to the **false** path, and do the following:
 
     1. Set its caption to **Facilities: Prepare Desk**.
     2. As only the Facilities department should prepare a desk for the new employee, you need to make sure that the user task is assigned to users with the Facilities role only. Refer to steps 11a-11c of the [Specifying Details of the New Hire](#specify-details) section to assign the user task to the Facilities role.
@@ -220,7 +220,7 @@ Do the following:
 
 5. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
 
-6. Open the **Toolbox**, drag and drop a **User Task** activity to the **true** path, and do the following:
+6. Open the **Toolbox**, drag a **User Task** activity to the **true** path, and do the following:
 
     1. Set its caption to **Facilities: Ship Devices**.
     2. As only the Facilities department should prepare a desk for the new employee, you need to make sure that the user task is assigned to users with the Facilities role only. Refer to steps 11a-11c of the [Specifying Details of the New Hire](#specify-details) section to do so.

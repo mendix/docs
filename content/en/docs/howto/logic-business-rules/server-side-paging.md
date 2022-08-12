@@ -77,7 +77,7 @@ Now you can start calling the REST service from your microflow data source. To c
 
 In previous section you created a microflow which return a list of characters. Next you will use this microflow as a data source for a data grid:
 
-1. From the **Toolbox**, drag and drop a **Data grid** onto a page.
+1. From the **Toolbox**, drag a **Data grid** onto a page.
 2. Double-click the blue header of the newly-placed data grid.
 3. Click the **Data source** tab:
 

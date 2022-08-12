@@ -105,7 +105,7 @@ Follow these guidelines and conventions when writing:
 When you are ready to submit your work, follow these guidelines:
 
 * Commit new Markdown files via Sourcetree or via the **Create new file** button in the [Mendix GitHub repo](https://github.com/mendix/docs) (where you can copy-paste your text)
-* Commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo (where you can drag and drop your image files)
+* Commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo (where you can drag your image files)
 
 Finally, create a pull request that specifies the Mendix **development** branch as the base (for more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/)).
 

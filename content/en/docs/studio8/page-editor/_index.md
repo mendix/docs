@@ -113,7 +113,7 @@ The selected page is deleted.
 To add elements on a page, do the following:
 
 1. In **Toolbox**, open the [Widgets](#widgets) tab or the [Building Blocks](#building-blocks) tab.
-2. Select an element you would like to add, drag and drop this element on a page. 
+2. Select an element you would like to add, drag this element on a page. 
 
 ### 2.7 Viewing Elements On a Page
 

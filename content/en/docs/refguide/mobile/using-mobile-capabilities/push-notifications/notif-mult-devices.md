@@ -60,7 +60,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendMessagesJava.png" alt="sendMessagesJava"    width="400"  >}}
 
-5. Go to **Product_NewEdit** and drag and drop **ACT_SendProductToAllDevices** inside of that page's data view:
+5. Go to **Product_NewEdit** and drag **ACT_SendProductToAllDevices** inside of that page's data view:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"    width="400"  >}}
 

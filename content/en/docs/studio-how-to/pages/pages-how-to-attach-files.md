@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 First of all, to be able to attach and/or download files you need to add a special type of entity to your domain model: a [file entity](/studio/domain-models/#entity-types). Do the following:
 
 1. Open your domain model and open the **Toolbox** tab.
-2. Select the **File Entity** and drag and drop it to your domain model.
+2. Select the **File Entity** and drag it to your domain model.
 3. In the **Create New File Entity** dialog box, set **Name** to *Document* and click **Create**.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-file-entity.png" alt="Create File Entity"   width="450"  >}}
@@ -66,7 +66,7 @@ Good job! You have created the file entity and an association from it to the **E
 
 ## 4 Adding a File Manager
 
-A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag and drop the file manager to your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
+A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag the file manager to your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/employee-profile-form.png" alt="Employee Profile Page"   width="600"  >}}
 
@@ -110,7 +110,7 @@ Follow the steps below:
             {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/attach-file-page.png" alt="Attach Files Page"   width="500"  >}}
 
         5. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
-        6. Open the **Toolbox**, search for a **File Uploader**, drag and drop it inside the data view. 
+        6. Open the **Toolbox**, search for a **File Uploader**, drag it inside the data view. 
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 
@@ -121,7 +121,7 @@ You have created a pop-up page that will allow IT administrators to attach files
 After your end-users attach the files, it would be nice to display files in a list and give users an opportunity to download attached files if needed. To do so, you need to add a list:
 
 1. Open the **Employee_Profile** page.
-2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach File** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). A list view with widgets inside it is added to your page:
+2. In the **Building Blocks**, search for **List 4** and drag it under the **Attach File** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). A list view with widgets inside it is added to your page:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/list-4.png" alt="List 4"   width="550"  >}}
 
@@ -145,7 +145,7 @@ After your end-users attach the files, it would be nice to display files in a li
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/select-attribute.png" alt="Select Attribute"   width="400"  >}}
 
 7. Delete the **Details** button in the list view.
-8. Open the **Toolbox** and search for a **File Downloader**, drag and drop it to the column where the **Details** button was placed. 
+8. Open the **Toolbox** and search for a **File Downloader**, drag it to the column where the **Details** button was placed. 
 9. Open the **File Downloader** (**File Manager**) properties > **Label** property and delete the *File* text from it.
 
 Great job! Now you have the list that shows attached files and your users can download files from this list:

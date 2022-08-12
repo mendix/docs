@@ -50,7 +50,7 @@ You are able to browse all your folders, actions, test cases, and test suites vi
 
 #### Test Case Editing
 
-Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so we use the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag and drop!
+Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so we use the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag!
 
 #### Results and Logs
 

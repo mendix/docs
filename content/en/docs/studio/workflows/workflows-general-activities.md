@@ -18,7 +18,7 @@ An annotation is an element that can be used to put comments to a flow. For exam
 
 {{< figure src="/attachments/studio/workflows/workflows-general-activities/annotation.jpg" alt="Annotation Example"  width="400" >}}
 
-You can add annotations to the workflow or to individual activities. To add the annotation to the workflow, drag and drop the annotation in the editor's working area. To add the annotation to the activity, drag and drop it inside the activity. 
+You can add annotations to the workflow or to individual activities. To add the annotation to the workflow, drag the annotation in the editor's working area. To add the annotation to the activity, drag it inside the activity. 
 
 ## 3 Decision {#decision}
 

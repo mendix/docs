@@ -9,7 +9,7 @@ tags: ["translation", "service", "app store", "marketplace", "component", "platf
 
 ## 1 Introduction
 
-The [Translation](https://marketplace.mendix.com/link/component/118411) app service enables you to build web applications to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
+The [Translation](https://marketplace.mendix.com/link/component/118411) app service enables you to build web applications to work with state-of-the-art multi-language text translation. All you need to do is drag items and configure them.
 
 Here is an overview of what the Translation contains:
 

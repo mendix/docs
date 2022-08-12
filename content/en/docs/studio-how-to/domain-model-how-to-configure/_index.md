@@ -63,7 +63,7 @@ To add the product to your domain model, follow the steps below:
 1. Create the **Product** entity. Do the following:
 
     1. Open your [domain model](/studio/domain-models/).
-    2. Open **Toolbox**, drag and drop **Entity** in your domain model:
+    2. Open **Toolbox**, drag **Entity** in your domain model:
 
         {{< figure src="/attachments/studio-how-to/domain-model-how-to-configure/adding-entity.png" alt="Adding a New Entity"   width="350"  >}}
 
@@ -91,7 +91,7 @@ To add the product to your domain model, follow the steps below:
 
 3. Each product has an *image*, but you did not create it as an attribute. You need to create a special type of entity that allows you to store images – an image entity, and set its name to *Product_Image*. Follow the steps below:
 
-    1. Open **Toolbox**, drag and drop the **Image Entity** in your domain model:
+    1. Open **Toolbox**, drag the **Image Entity** in your domain model:
 
         {{< figure src="/attachments/studio-how-to/domain-model-how-to-configure/adding-image-entity.png" alt="Image Entity"   width="300"  >}}
 
@@ -146,7 +146,7 @@ Do the following:
 
 5. Create the **Order_Confirmation** entity. As an order confirmation is a file is sent to customers, you need to create a special type of entity that allows you to store files – the **File** entity. Do the following:
 
-    1. Open **Toolbox**, drag and drop the **File Entity** in your domain model:
+    1. Open **Toolbox**, drag the **File Entity** in your domain model:
 
         {{< figure src="/attachments/studio-how-to/domain-model-how-to-configure/adding-file-entity.png" alt="Image Entity"   width="350"  >}}
 

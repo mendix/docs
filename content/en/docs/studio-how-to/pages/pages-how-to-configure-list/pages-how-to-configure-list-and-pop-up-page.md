@@ -42,14 +42,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 You would like to add an opportunity contact list to an existing blank page. Do the following:
 
 1. Open the page and navigate to the **Toolbox** > **Widgets**.
-2. Search for **List view** and drag and drop it on the desired location on the page.
+2. Search for **List view** and drag it on the desired location on the page.
 3. Now you need to connect data to the list. Open list view properties and select the **Entity** property:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/entity-property.jpg" >}}
 
 4. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity.
 5. To configure the list to display the name of each opportunity contact, open the **Toolbox** > **Widgets**.
-6. Search for **Text** and drag and drop it inside the list view:
+6. Search for **Text** and drag it inside the list view:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/text-inside-list-view.jpg" >}}
 
@@ -71,7 +71,7 @@ Now you need to create a page that shows list item details. When Sales Represent
 Follow the steps below:
 
 1. Open the **Toolbox** > **Widgets**.
-2. Search for the **Open Page** button and drag and drop it inside the list view.
+2. Search for the **Open Page** button and drag it inside the list view.
 3. Open the button's properties and do the following:
     1. Change the **Render Mode** property to **Link**.
     2. Set the **Icon** property to **Menu right**.
@@ -105,7 +105,7 @@ You can add a button that will open the  **OpportunityContact_NewEdit**  pop-up 
 Do the following:
 
 1. Open the **Toolbox** > **Widgets**.
-2. Search for the **Create Object** button and drag and drop it above the list view.
+2. Search for the **Create Object** button and drag it above the list view.
 3. Open the button's properties. The **Create Object** property is enabled by default for this button. Click the **Entity** property.
 4. In the **Select Entity** dialog box, select the **OpportunityContact** entity and click **Select**.
 5. Click the **Page** property.

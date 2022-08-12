@@ -28,7 +28,7 @@ To view widgets in Mendix Studio, do the following:
 
 Quick configuration of properties is available for most of non-custom widgets. This means that their properties can be configured in a pop-up window when adding these widgets on a page. 
 
-Once you drag and drop a widget, a small pop-up window appears next to it. You can set the properties that are necessary for the widget to function without resulting in [consistency errors](/studio8/consistency-errors/) as well as other frequently used properties to help you configure the widget quickly. However, you can configure all properties from the **Properties** tab at all times. 
+Once you drag a widget, a small pop-up window appears next to it. You can set the properties that are necessary for the widget to function without resulting in [consistency errors](/studio8/consistency-errors/) as well as other frequently used properties to help you configure the widget quickly. However, you can configure all properties from the **Properties** tab at all times. 
 
 For example, quickly configuring the data source of a data grid helps you avoid consistency errors when previewing or publishing your app, and you can configure the rest of the properties later.
 
@@ -91,7 +91,7 @@ To add an Marketplace widget, do the following:
 
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/app-store-download.png" >}}
 
-The widget is now added to your app, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](/studio8/settings/).
+The widget is now added to your app, you can simply drag it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](/studio8/settings/).
 
 {{% alert color="info" %}}
 Some similar widgets are packaged together: downloading one of these widgets will cause a number of other widgets to be downloaded as well. For example, downloading a line chart will give you all chart widgets.

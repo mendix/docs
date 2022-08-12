@@ -52,7 +52,7 @@ Follow the instructions below to set up your first local notification:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/name-nano.png" alt="app settings"   width="400"  >}}
 
-9. In **ACT_CreateAndSendNotification**, drag and drop three **Create variable** activities onto your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
+9. In **ACT_CreateAndSendNotification**, drag three **Create variable** activities onto your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/create-string-variables.png" alt="app settings"   width="500"  >}}
 
@@ -128,7 +128,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 
 Now you will set up the final piece of your nanoflow's logic. 
 
-1. Delete the end event in the upper-right corner of your nanoflow, drag and drop a **Merge** in its place, and rebuild your connections:
+1. Delete the end event in the upper-right corner of your nanoflow, drag a **Merge** in its place, and rebuild your connections:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/merge.png" alt="app settings"   width="400"  >}}
 

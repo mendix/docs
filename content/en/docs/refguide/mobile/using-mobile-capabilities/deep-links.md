@@ -125,7 +125,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 
 Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so that it can pass URL data:
 
-1. In **DL_ShowUrlDetails** drag and drop a parameter into your nanoflow's white space.
+1. In **DL_ShowUrlDetails** drag a parameter into your nanoflow's white space.
 1. Double-click the parameter, give it the name *URL* (which is case sensitive) and the type **String**.
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 

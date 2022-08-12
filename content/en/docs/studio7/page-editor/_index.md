@@ -143,7 +143,7 @@ Building blocks of Studio are divided into the following categories:
 | Notifications  | Contain building blocks used for different notifications.    |
 | Alignments     | Use these building blocks to align elements.                 |
 
-To insert a building block, drag and drop the selected building block on the page.
+To insert a building block, drag the selected building block on the page.
 
 If you want to read documentation on a particular building block and to know more about how and when to use it, click the small icon in the top right corner of the building block.
 

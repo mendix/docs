@@ -41,7 +41,7 @@ To initialize the connector, do the following:
     {{< figure src="/attachments/partners/sap/sap-logger/logger_project_runtime_nostartup.png" alt="Runtime no After Startup" >}}
     {{% /alert %}}
 
-4. In the **App Explorer**, drag and drop the **RegisterSubscriber** action from the **SapApplicationLogs** > **USE_ME** folder at the end of the *After startup* microflow:
+4. In the **App Explorer**, drag the **RegisterSubscriber** action from the **SapApplicationLogs** > **USE_ME** folder at the end of the *After startup* microflow:
 
     {{< figure src="/attachments/partners/sap/sap-logger/logger_drag_component.png" alt="Drag logging subscriber into After startup microflow" >}}
 

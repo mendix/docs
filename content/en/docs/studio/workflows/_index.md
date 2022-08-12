@@ -110,7 +110,7 @@ The selected workflow is deleted.
 To add an element to a workflow, do the following:
 
 1. Open the **Toolbox** tab.
-2. Select an element you would like to add and drag and drop this element in the workflow path.
+2. Select an element you would like to add and drag this element in the workflow path.
 
 The selected element is added.
 
@@ -141,7 +141,7 @@ Do the following:
 
 1. Open a microflow that will trigger a workflow.
 2. Make sure the microflow has a necessary parameter with the **Workflow Context** entity. 
-3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
+3. In the **Toolbox**, find **Call workflow** activity and drag it to the microflow.
 4. Open the activity properties.
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Workflow Object** to the workflow context.
@@ -167,7 +167,7 @@ For more information, see [Workflow Context Parameter](/studio/workflow-paramete
 
 ## 5 Toolbox Elements
 
-The **Toolbox** tab contains elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following sections are used:
+The **Toolbox** tab contains elements that you can drag on a path. Below is a categorized overview of all elements. The following sections are used:
 
 * [General](#general)
 * [User actions](#user-actions)

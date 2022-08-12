@@ -9,7 +9,7 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Speech to Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
+The [Speech to Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag items and configure them.
 
 Here is an overview of what Speech To Text contains:
 

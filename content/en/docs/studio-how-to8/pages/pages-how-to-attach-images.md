@@ -44,7 +44,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 First of all, to be able to attach and upload images you need to add a special type of entity to your domain model: an image entity. Do the following:
 
 1. Open your domain model and open the **Toolbox** tab.
-2. Select the **Image Entity** and drag and drop it to your domain model.
+2. Select the **Image Entity** and drag it to your domain model.
 3. In the **Create New Image Entity** dialog box, set **Name** to *Receipt* and click **Create**.
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-attach-images/create-new-image-entity.png"   width="400"  >}}
@@ -65,7 +65,7 @@ Good job! You have created the image entity and an association from it to the **
 
 ## 4 Adding an Image Uploader
 
-An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
+An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
 
 {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-attach-images/form-example.png"   width="600"  >}}
 
@@ -107,7 +107,7 @@ Follow the steps below:
 
     As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
 
-14. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view. 
+14. Open the **Toolbox**, search for an **Image Uploader**, drag it inside the data view. 
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
 
@@ -118,7 +118,7 @@ You have created a pop-up page that will allow employees to attach images to the
 After users attach the images, it would be nice to display their attachments and give them an opportunity to delete the ones they do not need. To do so, you need to add a list with dynamic images:
 
 1. Open the **New Report** page.
-2. In the **Building Blocks**, search for **List 4** and drag and drop it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
+2. In the **Building Blocks**, search for **List 4** and drag it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-attach-images/list-4.png"   width="550"  >}}
 

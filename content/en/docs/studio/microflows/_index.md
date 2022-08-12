@@ -150,7 +150,7 @@ The activity is excluded from the flow. You can re-enable the activity back in t
 
 ## 4 Toolbox Elements {#microflows-toolbox}
 
-The **Toolbox** tab contains elements that you can drag and drop on to a microflow. Below is a categorized overview of all elements. The following sections are used:
+The **Toolbox** tab contains elements that you can drag on to a microflow. Below is a categorized overview of all elements. The following sections are used:
 
 * [General](#microflow-general-section)
 * [Object Activities](#microflow-object-activities)

@@ -158,7 +158,7 @@ The microflow parameter expects an argument *Customer*, and since this argument 
 
 To fix it, do the following:
 
-1. Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
+1. Open the *Customers* page and drag a data container on it. For example, you can drag a list view.
 2. Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}

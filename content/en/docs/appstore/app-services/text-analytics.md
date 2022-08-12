@@ -11,7 +11,7 @@ tags: ["text analytics", "service", "app store", "marketplace", "component", "pl
 
 The [Text Analytics](https://marketplace.mendix.com/link/component/118412) app service takes written text as input, and then do text analytics for your web applications. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. 
 
-With this app service, you do not have to build a text analytics application from scratch. All you need to do is drag and drop items and configure them.
+With this app service, you do not have to build a text analytics application from scratch. All you need to do is drag items and configure them.
 
 Here is an overview of what the Text Analytics contains:
 

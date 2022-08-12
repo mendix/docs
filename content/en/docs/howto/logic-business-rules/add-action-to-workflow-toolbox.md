@@ -44,7 +44,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
 1. Create a new microflow that calls **ACT_SAP_INVENTORY_LAPTOP_CHECK**. Name the new microflow **WFS_MY_SYSTEM_TASK**.
 2. Make sure that the input parameters of the **WFS_MY_SYSTEM_TASK** microflow are mapped to the workflow definition. For the **Employee_Onboarding** workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
-3. In **Toolbox**, select **Microflow call** and drag and drop it to the flow:
+3. In **Toolbox**, select **Microflow call** and drag it to the flow:
 
     {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/microflow-call.png" alt="Microflow call action" >}}
 

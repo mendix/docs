@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
 
 1. Open your home page and navigate to the **Toolbox** > **Widgets**.
-2. Search for **Open Page** button and drag and drop it to the page.
+2. Search for **Open Page** button and drag it to the page.
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/open-page-button.png" alt="Open Page"   width="250"  >}}
 
@@ -112,7 +112,7 @@ To displayed all the details that a contact has, do the following:
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/data-view-buttons.png" >}}
 
 2. Double-click the *User Details* text widget (which is displayed as a data view heading) and rename it to *Opportunity Contact Details*. 
-3. Open the **Toolbox** and search for **Radio Buttons**, drag and drop it *inside* the data view above the **Name** text box.
+3. Open the **Toolbox** and search for **Radio Buttons**, drag it *inside* the data view above the **Name** text box.
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/radio-buttons.png" >}}
 
@@ -127,13 +127,13 @@ To displayed all the details that a contact has, do the following:
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/attributes-replaced.png" >}}
 
-9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box:
+9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag it inside the data view below the **Name** text box:
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/job-title-text-box.png" >}}
 
 10. Open text box properties and click **Data Source** > **Attribute**. 
 11. In the **Select Attribute** dialog box, choose **JobTitle** and click **Select**.
-12. To add the information on the opportunity contact's status, open the **Toolbox**, search for for **Radio Buttons**, drag and drop it inside the data view below the **Estimated Value** text box.
+12. To add the information on the opportunity contact's status, open the **Toolbox**, search for for **Radio Buttons**, drag it inside the data view below the **Estimated Value** text box.
 13. Open the radio buttons properties and click **Data Source** > **Attribute**.
 14. In the **Select Attribute** dialog box, choose **Status** and click **Select**.
 

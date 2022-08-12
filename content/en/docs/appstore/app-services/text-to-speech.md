@@ -9,7 +9,7 @@ tags: ["text to speech", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Text to Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-speech app from the scratch. All you need to do is drag and drop items and configure them.
+The [Text to Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-speech app from the scratch. All you need to do is drag items and configure them.
 
 Here is an overview of what the Text To Speech contains:
 

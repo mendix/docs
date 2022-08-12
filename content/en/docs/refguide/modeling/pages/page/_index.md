@@ -72,7 +72,7 @@ In **Structure mode**, there are several ways to add an element on a page:
 1. Through the **Toolbox**:
 
     1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
-    2. Select an element you would like to add and drag and drop this element on your page.
+    2. Select an element you would like to add and drag this element on your page.
 
 2. Through the menu at the top of the page:
 
@@ -97,7 +97,7 @@ In **Structure mode**, there are several ways to add an element on a page:
 In **Design mode**, you can add elements though the Toolbox. Do the following:
 
 1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
-2. Select an element you would like to add and drag and drop this element on your page.
+2. Select an element you would like to add and drag this element on your page.
 
 ### 2.5 Viewing Element Properties {#view-properties}
 

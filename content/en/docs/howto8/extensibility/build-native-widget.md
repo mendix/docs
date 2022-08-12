@@ -616,7 +616,7 @@ It would be nice to hide the content area of the group box completely when there
     }
     ```
 
-4. To see your changes, drag and drop a new **Group box** widget onto your home page. Run your project and check to see that your new group box with no content shows no empty white box:
+4. To see your changes, drag a new **Group box** widget onto your home page. Run your project and check to see that your new group box with no content shows no empty white box:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/6-button-inside.png" alt="new group box" >}}
 

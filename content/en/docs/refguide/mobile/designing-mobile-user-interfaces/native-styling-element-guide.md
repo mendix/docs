@@ -1778,7 +1778,7 @@ The default class to style all column chart widgets is named `com_mendix_widget_
 
 ### 11.33 Gallery
 
-The Gallery widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for tablet, and mobile devices.
+The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
 
 The widget’s style properties are as follows:
 

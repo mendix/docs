@@ -39,6 +39,7 @@ Mendix uses the following static IP addresses. If you need further information, 
 | Mendix Cloud V4 Asia Pacific | Singapore (ap-southeast-1) | `52.77.0.52` <br /> `122.248.194.24` <br /> `54.179.212.86` |
 | Mendix Cloud V4 Asia Pacific | Sydney (ap-southeast-2) | `13.54.220.143` <br /> `13.54.176.58` <br /> `13.238.3.124` |
 | Mendix Cloud V4 Asia Pacific | Tokyo (ap-northeast-1) |  `52.198.238.110` <br /> `13.113.58.15` <br /> `52.193.228.1` |
+| Mendix Cloud V4 Asia Pacific | Mumbai (ap-south-1) |  `65.1.183.103` <br /> `43.205.31.32` <br /> `43.204.254.95` |
 | Mendix Cloud V4 Canada | Canada (ca-central-1) | `3.97.111.124` <br /> `3.98.194.54` <br /> `35.182.171.81` |
 | Mendix Cloud V4 EU  | Frankfurt (eu-central-1) | `52.58.42.15` <br /> `35.157.102.14` <br /> `35.156.112.28` |
 | Mendix Cloud V4 IE | Ireland (eu-west-1) | `52.18.10.62` <br /> `52.208.39.99` <br /> `99.80.177.69` |

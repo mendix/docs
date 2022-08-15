@@ -136,72 +136,49 @@ The next step in setting up security is to configure the entity access otherwise
 
 1. Open the domain model.
 2. Double-click the **EmployeeOnboarding** entity to open its properties.
-<<<<<<< HEAD
-
 3. In the **Properties** dialog box, open the **Access rules** tab and click **New** to create a rule for the HR role:
-=======
-3. In the **Properties** dialog box, open the **Access rules** tab and click **New**:
->>>>>>> development
 
     {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/entity-properties.png" alt="Entity Properties" >}} 
 
 4. In the **New Access rule** dialog box, do the following:
 
-<<<<<<< HEAD
     1. In the **Rule applies to the following modules** section, select the **HR** role.
-
-    2. In the **Create and delete rights** section, select **Allow creating new objects**. This allows HR to start the workflow. 
-
+    2. In the **Create and delete rights** section, select **Allow creating new objects**. This allows HR to start the workflow.     
     3. In the **Member read and write rights** section, click **Set all to Read**. As the HR needs only to start the workflow, but not to change any employee information, **Read** rights are sufficient for all attributes of the entity. 
-=======
-    1. In the **Create and delete rights** section, select **Allow creating new objects** and **Allow deleting existing objects**. 
-    2. In the **Rule applies to the following modules** section, select all roles.
-    3. In the **Member read and write rights** section, click **Set all to Read, Write**.
->>>>>>> development
 
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-hr.png" alt="Access Rules for the HR role" >}}
 
-<<<<<<< HEAD
     4. Click **OK** to save settings.
 
 5. In the **Access rules** tab, click **New** again to create rule for the Manager role.
-=======
-5. Click **OK** to save the settings.
-6. Click **OK** in the **Properties** dialog box.
->>>>>>> development
 
      1. In the **Rule applies to the following modules** section, select the **Manager** role.
-
+       
     2. In the **Member read and write rights** section, click the drop-down list for the **FullName** attribute and select **Read**. 
     
     3. As the Manager should be able to select where the new employee is working from and devices that they need, set the **WFH**, **PhoneModel**, and **LaptopModel** to **Read,Write**.
     
     4. Set the **FirstDay** attribute to **Read**.
 
-<<<<<<< HEAD
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" >}}
 
-    4. Click **OK** to save settings.
+    5. Click **OK** to save settings.
 
-7. In the **Access rules** tab, click **New** again to create rule for Facilities and User roles.
-
-    1. In the **Rule applies to the following modules** section, select  **Facilities** and **User** roles.
-
+6. In the **Access rules** tab, click **New** again to create rule for Facilities and User roles.
+    1. In the **Rule applies to the following modules** section, select **Facilities** and **User** roles.
     2. In the **Member read and write rights** section, click **Set all to Read**.
     
-        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-facilities-and-user.png" alt="Access Rules for the Manager Role" >}}
+        {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-facilities-and-user.png" alt="Access Rules for the Facilities and User Role" >}}
         
     3. Click **OK** to save settings.
 
-
-8. Click **OK** in the **Properties** dialog box.
+7. Click **OK** in the **Properties** dialog box.
 
 You have set up the entity access. 
-=======
+
 {{% alert color="info" %}}
 In some cases you may want to restrict access to the entity or to some of its attributes by configuring the access rules more specifically.
 {{% /alert %}}
->>>>>>> development
 
 ## 4 Creating a Workflow
 

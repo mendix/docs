@@ -27,7 +27,7 @@ When you start the portfolio management tool, click a portfolio to get an overvi
 The **Portfolio Overview** page gives you an overview of all the projects in this portfolio. You can search for a project in the search bar. Clicking a project name shows the details of that project.
 
 {{% alert type="info" %}}
-When you view the project details, you can only **Post Note**. You cannot change any other info. To change other info, you need [edit the project](#edit-project).
+When you view the project details, you can only **Post Note**. You cannot change any other info. To change other info, you need [edit the project](#edit-archive-delete-project).
 {{% /alert %}}
 
 ### 2.1 Different Views

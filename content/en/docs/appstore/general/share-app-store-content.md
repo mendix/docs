@@ -97,27 +97,33 @@ For details on preparing and selling your component, see [How to Prepare Your Co
 
 ## PUT ABOVE IN Marketplace Content Development Guidelines
 
-### 3.3 Security Best Practices
+### 3.3 Security Best Practices {#sec-bp}
 
 With Mendix, you can develop apps, widgets, connectors, and modules in a low-code methodology, so traditional code-based static application security testing (SAST) scanners will not offer much help for detecting security issues. They also cannot point out security misconfigurations (if any) on low-code components.
 
-Mendix recommends using  use a tool that can look into the best practices outlined in [How to Implement Best Practices for App Security](/howto/security/best-practices-security/) and that can point out any security misconfigurations and bad practices. 
+Mendix recommends using  use a tool that reflects the best practices outlined in [How to Implement Best Practices for App Security](/howto/security/best-practices-security/) and that can point out any security misconfigurations and bad practices. 
 
-Some options that provide insights for your low-code applications include [Omnext Software Analysis Suite](https://marketplace.mendix.com/link/component/120746), [Application Code Reviewer](https://marketplace.mendix.com/link/component/114669), [Mendix Application Quality Monitor](/addons/aqm-addon/), and [Bizzomate Mendix Dev Tools](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof). These products can be used to inspect and correct your module, widget, or connector. Mendix recommends considering these options before you submit your content to be approved for the Marketplace.
+Some tool options that provide insights for your low-code applications include [Omnext Software Analysis Suite](https://marketplace.mendix.com/link/component/120746), [Application Code Reviewer](https://marketplace.mendix.com/link/component/114669), [Mendix Application Quality Monitor](/addons/aqm-addon/), and [Bizzomate Mendix Dev Tools](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof). These products can be used to inspect and correct your component. Mendix recommends considering these options before you submit your content to be approved for the Marketplace.
 
 ## PUT BELOW IN CORRECT SECTION BASED ON UI
 
-### Virus / Malware Scan (ALREADY DOCUMENTED IN [Package](#package) AS OPTIONAL - SWITCH TO REQUIRED, OR REVIEW AND ADD INFO BELOW?)
+### Virus / Malware Scan 
 
-It is required by the maker/supplier/uploader to complete a full virus and malware scan using VirusTotal [https://www.virustotal.com/gui/home/upload] and provide a “clean” report before providing the MPK to Marketplace onboarding team. VirusTotal scans the file for traces of Virus, and Malware against 70+ virus engines and provides a report. This ensures that the file getting uploaded to marketplace is free from any viruses and malware. 
+[**TO DO: ALREADY DOCUMENTED IN [Package](#package) AS OPTIONAL - SWITCH TO REQUIRED, OR REVIEW AND ADD INFO BELOW?)**]
+
+It is required by the maker/supplier/uploader to complete a full virus and malware scan using [VirusTotal](https://www.virustotal.com/gui/home/upload) and provide a “clean” report before providing the MPK to Marketplace onboarding team. VirusTotal scans the file for traces of Virus, and Malware against 70+ virus engines and provides a report. This ensures that the file getting uploaded to marketplace is free from any viruses and malware. 
 
 ### Integrity Check
+
+[**TO DO: Where can the user upload this hash in the submission flow?**]
 
 You are required to generate and provide an SHA-2-compatible hash (for SHA-256 or above) of the *.mpk* file you are uploading for submission. Mendix can then verify the integrity of the file being sent and that files are not corrupted or tampered with. It is important to ensure that the correct artifact is submitted without any tampering.
 
 To generate a hash, you can essentially use any inbuilt utility in your operating system. For more information, see [How to Get the Hash (MD5, SHA1, SHA256, SHA512) of a File on Windows Without Installing Anything](https://www.howtohaven.com/system/how-to-hash-file-on-windows.shtml)  (for Windows) or [How to Hash Files in Linux?](https://www.techengineer.one/how-to-hash-files-in-linux/) (for Linux). 
 
 ### Vulnerability Check
+
+[**TO DO: Where can the user upload this report in the submission flow?**]
 
 To ensure that the uploaded *.mpk* file is free from any critical or high vulnerabilities, you are required to scan all the third-party libraries and dependencies distributed with the artifact. Normally, these dependencies are present in the **userlib** or **widgets** folder inside the *.mpk* package file.
 
@@ -126,9 +132,32 @@ You must ensure that the CVSS 3.0 score of your scan is less than 7.0 to pass, a
 You should provide a report supporting the above scan that indicates libraries are free of vulnerabilities during your submission. Mendix recommends the Snyk Open Source solution to scan the 3rd party dependencies.
 This applies to all the versions getting uploaded on the marketplace.
 
+### SAST Scan for OWASP Top 10 Vulnerabilities for MPK
 
+[**TO DO: Where can the user upload this scan report in the submission flow?**]
 
-### 3 MORE
+You should also use a tool to scan for [Open Web Application Security Project® (OWASP) top 10 vulnerabilities](https://owasp.org/www-project-top-ten/) in your component's code. You can accomplish this by using tools such as 
+[Omnext Software Analysis Suite](https://marketplace.mendix.com/link/component/120746), [Application Code Reviewer](https://marketplace.mendix.com/link/component/114669), or [Mendix Application Quality Monitor](/addons/aqm-addon/). You can also make use of other tools that do an [SaST](#sec-bp) analysis on low-code. 
+
+Depending on how your component will be used, this scan is either a recommendation or a requirement. If your component will be used in large enterprises, can access customer personally identifiable information or sensitive data, or can provide access to a critical system, then it is required to perform this scan.
+
+### Restrictive License Check
+
+[**TO DO: Do we need to remove GNU GPL v3 from this list: https://docs.mendix.com/appstore/general/share-app-store-content/#license
+ ? And otherwise, should this content just serve as an intro to this section?**]
+ 
+[**TO DO: We also have this PR open, is it related?: https://github.com/mendix/docs/pull/4586/files]
+
+If your component has an open-source license such as MIT or Apache, check that the third-party libraries being used are compatible with the license (for example, Apache v2.0 cannot be used with GNU GPL v2). 
+
+In addition, if you are using an open-source license, make sure you have the code hosted on a public repository. 
+
+Your component should not have any restrictive or copyleft licenses (for example, GNU GPL v2/v3) that limits the ability of the component end-user to sell commercially without disclosing source code or placing restrictions on usage. If you feel you must submit with a GNU GPL v2/v3 or any other copyleft license, please consult the legal team. Be aware that not all Mendix code can be open-sourced legally, so usage of these problematic licenses is strongly discouraged.
+
+[**TO DO: EMAIL ADDRESS FOR "LEGAL TEAM"?**]
+
+Mendix will check for license issues when the component is submitted and get back to you if we find any issues.
+
 
 
 ## 4 Adding New Marketplace Content {#adding}

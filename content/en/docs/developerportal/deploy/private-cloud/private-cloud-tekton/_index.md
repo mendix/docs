@@ -252,7 +252,7 @@ After installing the generic trigger or the GitLab webhook trigger, you will hav
 Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
 
 Here is an example of ingress object:
-```toml
+```toml {linenos=false}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -272,7 +272,7 @@ spec:
 ```
 Make sure that an ingress controller already installed. You can use an [NGINX Controller](https://kubernetes.github.io/ingress-nginx/) for this purpose.
 
-In this example and in the rest of this document, we will use `pipeline.trigger.yourdomain.com` to refer to this trigger.
+In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
 
 ## 8 Authentication to external services
 
@@ -472,6 +472,7 @@ el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b  1/1     Running     11         
 In some cases, you can send an HTTP request to trigger a pipeline, but the pipeline isn't triggered.
 
 To investigate this, the first place that you need to look is the logs of the listener.
+
 To view the logs you need to identify the name of the listener pods. Use the command `kubectl get po -n $YOUR_NAMESPACE` to do this. The listener has a name similar to `el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b`.
 
 Then use the command: `kubectl logs $LISTENER_POD -n $YOUR_NAMESPACE`, using the pod name in place of $LISTENER_POD.
@@ -502,53 +503,53 @@ Logs regarding pipeline execution can be found in the pods.
 Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is the namespace from the [Installing Triggers](#installing-triggers) step):
 1. Get a list of pipelines:
     ```
-kubectl get pipelineruns -n $YOUR_NAMESPACE
+    kubectl get pipelineruns -n $YOUR_NAMESPACE
     ```
     In the output, there is one failed pipelinerun with the name `mx-pipeline-app-create-run-generic-zzt8h`:
     ```
-NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
-mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
-mx-pipeline-build-run-gitlab-2bjc7         True        Succeeded   22d         22d
+    NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
+    mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
+    mx-pipeline-build-run-gitlab-2bjc7         True        Succeeded   22d         22d
     ```
 
 2. Get the pods for the failed pipeline runs:
     ```
-kubectl get po -n $YOUR_NAMESPACE | grep mx-pipeline-app-create-run-generic-zzt8h
+    kubectl get po -n $YOUR_NAMESPACE | grep mx-pipeline-app-create-run-generic-zzt8h
     ```
     In the output there is a `Failed` pod:
     ```
-mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2   0/1     Error       0          8d
+    mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2   0/1     Error       0          8d
     ```
 
 3. Get the logs for the failed pod:
     ```
-kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $YOUR_NAMESPACE
+    kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $YOUR_NAMESPACE
     ```
 
     In the output there are logs which indicate the error:
     ```
-Error: mendixapps.privatecloud.mendix.com "mxapp" already exists
-Usage:
-  mxpc-pipeline-tools-cli app-cr-create [-n namespace] [--dry-run] -d database-name -s storage-name -m dtap-mode env-internal-name [flags]
+    Error: mendixapps.privatecloud.mendix.com "mxapp" already exists
+    Usage:
+      mxpc-pipeline-tools-cli app-cr-create [-n namespace] [--dry-run] -d database-name -s storage-name -m dtap-mode env-internal-name [flags]
 
-Flags:
-  -d, --database-name string        Database plan name
-      --dry-run                     Prints manifest to stdout
-  -m, --dtap-mode string            Mode for running the Mendix application.
-                                    Available options:
-                                      P - production
-                                      D - Development
-                                    Always set this to P in production environments. (default "D")
-  -h, --help                        help for app-cr-create
-      --mx-runtime-version string   Version of mendix runtime, which will be used during the building of oci-image based on .mda file (default "9.6.6.34474")
-  -n, --namespace string            Cluster namespace
-  -u, --source-url string           Source URL. .mda file url or oci-image url
-  -s, --storage-name string         Storage plan name
+    Flags:
+      -d, --database-name string        Database plan name
+          --dry-run                     Prints manifest to stdout
+      -m, --dtap-mode string            Mode for running the Mendix application.
+                                        Available options:
+                                          P - production
+                                          D - Development
+                                        Always set this to P in production environments. (default "D")
+      -h, --help                        help for app-cr-create
+          --mx-runtime-version string   Version of mendix runtime, which will be used during the building of oci-image based on .mda file (default "9.6.6.34474")
+      -n, --namespace string            Cluster namespace
+      -u, --source-url string           Source URL. .mda file url or oci-image url
+      -s, --storage-name string         Storage plan name
 
-2022/08/01 16:28:35 err: mendixapps.privatecloud.mendix.com "mxapp" already exists
+    2022/08/01 16:28:35 err: mendixapps.privatecloud.mendix.com "mxapp" already exists
     ```
 
-    This means that pipeline couldn't create environment with the name "mxapp" because it's already exists.
+    This means that pipeline couldn't create environment with the name "mxapp" because it already exists.
 
 As alternative, it's possible to use [Tekton Dashboard](https://github.com/tektoncd/dashboard) or [Tekton CLI](https://tekton.dev/docs/cli/) to view the logs.  
 
@@ -557,7 +558,7 @@ As alternative, it's possible to use [Tekton Dashboard](https://github.com/tekto
 Pipeline runs can produce a lot of pods. To clean up the pods you can delete `pipelineruns` Custom Resource objects.
 
 For example, to delete all pipeline runs except latest 5 use the following commands:
-```
+```bash {linenos=false}
 NUM_TO_KEEP=5
 TO_DELETE="$(kubectl get pipelinerun -o jsonpath='{range .items[?(@.status.completionTime)]}{.status.completionTime}{" "}{.metadata.name}{"\n"}{end}' | sort | head -n -${NUM_TO_KEEP} | awk '{ print $2}')"
 kubectl delete pipelinerun ${TO_DELETE}

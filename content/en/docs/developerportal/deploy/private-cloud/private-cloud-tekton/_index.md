@@ -116,7 +116,7 @@ If Tekton is already installed in your namespace, you can skip to [Pipeline Inst
 
 To install Tekton with Tekton Triggers you need to apply 3 yaml manifests:
 
-```bash
+```bash {linenos=false}
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.26.0/release.yaml
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/release.yaml
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml
@@ -138,7 +138,7 @@ The namespace can be the same namespace where the  Mendix Operator runs, or you 
 
 The installation command is:
 
-```bash
+```bash {linenos=false}
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
@@ -252,7 +252,7 @@ After installing the generic trigger or the GitLab webhook trigger, you will hav
 Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
 
 Here is an example of ingress object:
-```toml {linenos=false}
+```yaml {linenos=false}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -294,7 +294,7 @@ If you have a private registry with authentication, you need to follow [these in
 
 For OpenShift you need to provide an SSL certificate file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
 
-```bash
+```bash {linenos=false}
 oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}'
 oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]'
 ```
@@ -307,7 +307,7 @@ This section documents the HTTP requests which will trigger the various Mendix p
 
 The create-app-pipeline creates a basic MendixApp CR. After running this pipeline, we are ready to run the build-pipeline.
 
-```bash
+```bash {linenos=false}
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -340,7 +340,7 @@ This can only be run after create-app-pipeline.
 
 The example here uses a [Generic Trigger](#generic-trigger).
 
-```bash
+```bash {linenos=false}
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -383,7 +383,7 @@ To fill in the **Secret token** see the [Authentication](#authentication) sectio
 
 The configure-app-pipeline updates an existing Mendix App.
 
-```bash
+```bash {linenos=false}
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -422,7 +422,7 @@ curl -X POST \
 
 The delete-app-pipeline deletes the Mendix App CR, which triggers the deletion of the environment.
 
-```bash
+```bash {linenos=false}
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -444,7 +444,7 @@ curl -X POST \
 ### 10.1 Checking Tekton Components
 
 To verify that all components are running correctly, use the following command:
-```
+```bash {linenos=false}
 kubectl get po -n tekton-pipelines
 ```
 You should see a list of `Running` pods similar to that below:
@@ -458,7 +458,7 @@ tekton-triggers-webhook-7f5c9477cc-fb624             1/1     Running   0        
 ```
 
 Also, you need to check the listener of the Tekton Trigger (`$YOUR_NAMESPACE` is the namespace from the [Installing Triggers](#installing-triggers) step):
-```
+```bash {linenos=false}
 kubectl get po -n $YOUR_NAMESPACE
 ```
 The output should include a `Running` pod similar to the one below:
@@ -502,7 +502,7 @@ Logs regarding pipeline execution can be found in the pods.
 
 Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is the namespace from the [Installing Triggers](#installing-triggers) step):
 1. Get a list of pipelines:
-    ```
+    ```bash {linenos=false}
     kubectl get pipelineruns -n $YOUR_NAMESPACE
     ```
     In the output, there is one failed pipelinerun with the name `mx-pipeline-app-create-run-generic-zzt8h`:
@@ -513,7 +513,7 @@ Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is the namespa
     ```
 
 2. Get the pods for the failed pipeline runs:
-    ```
+    ```bash {linenos=false}
     kubectl get po -n $YOUR_NAMESPACE | grep mx-pipeline-app-create-run-generic-zzt8h
     ```
     In the output there is a `Failed` pod:
@@ -522,7 +522,7 @@ Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is the namespa
     ```
 
 3. Get the logs for the failed pod:
-    ```
+    ```bash {linenos=false}
     kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $YOUR_NAMESPACE
     ```
 

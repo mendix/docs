@@ -43,7 +43,11 @@ The Validation Assist is activated in the page elements where data validation mi
 
 To access the Validation Assist, right-click a button or an input widget and select **Generate validation microflow.** 
 
-The **Generate Validation Microflow** dialog box is where you can configure all validations. It consists of two sections:
+The **Generate Validation Microflow** dialog box is where you can configure all validations:
+
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
+
+The dialog box consists of two sections:
 
 * **Microflow Properties,** where the general properties of the validation microflow are configured. Properties contain the following:
 
@@ -65,9 +69,9 @@ The **Generate Validation Microflow** dialog box is where you can configure all 
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 
-For example, you have an app for a hairdresser salon, where customers can view information on types of treatments, their prices, can have their profile, and schedule appointments. You have a validation microflow there that checks the selected date and time: that date is in the future, that it is within the working hours (from 8 a.m. till 5 p.m.), and it is a weekday. 
+For example, you have an app for a hairdresser salon, where customers can view information on types of treatments, their prices, they have a customer profile, and can schedule appointments. Your app has a validation microflow that checks the selected date and time: that date is in the future, that it is within the working hours (from 8 a.m. till 5 p.m.), and it is a weekday. 
 
-You have a form where customers can schedule a hairdresser’s appointment. They need to fill in their name, select the type of a treatment (haircut, haircoloring, etc.) and pick the date and time. You would like the **Save** button to show an error message when any of the following conditions are not met:
+Your app also has a form where customers can schedule a hairdresser’s appointment. They need to fill in their name, select the type of a treatment (haircut, haircoloring, etc.) and pick the date and time. You would like the **Save** button to show an error message when any of the following conditions are *not* met:
 
 * One or several fields in the form are not filled in
 * The selected date and time is in the future, it is within the working hours (from 8 a.m. till 5 p.m.), and it is a weekday
@@ -77,7 +81,9 @@ To configure the **Save** button for the use case above, do the following:
 
 1. Open the page with the form called *Appointment_NewEdit* and right-click the **Save** button in it.
 
-2. In the drop-down list, select **Generate validation microflow**.
+2. In the drop-down list, select **Generate validation microflow**:
+
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
 
 3. In the **Generate Validation Microflow** dialog box, you can see that **Microflow** properties, such as microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in:
 
@@ -85,19 +91,23 @@ To configure the **Save** button for the use case above, do the following:
 
 4. In your app, you already have a validation microflow that checks the selected date and time, you can call it in the current validation. Do the following:
 
-    1. Click **New** in the **Generate Validation Microflow** dialog box
+    1. Click **New** in the **Generate Validation Microflow** dialog box.
+
     2. In the **Add Validation** dialog box, set **Type** to **Call a validation microflow**.
-    3. Select the existing validation microflow for **Microflow** and click **OK**.
+
+    3. Select the existing validation microflow for **Microflow** and click **OK**. 
+
+       The microflow is added to validations. 
 
 5.  You also would like to add one more validation that checks that the name of the customer is valid (the name has only alphabetical symbols). To add a validation, do the following:
 
     1. Click **New** in the **Generate Validation Microflow** dialog box. 
-2. In the **Add Validation** dialog box, make sure that **Type** is set to **Based on expression**.
-    3. For **Member**, select an attribute for customer name.
+    2. In the **Add Validation** dialog box, make sure that **Type** is set to **Based on expression**.
+    3. For **Member**, select the **Customer_Name** attribute.
     4. In the **Expression** field, fill in `$Appointment/Customer_Name 
     5. Click **OK** to save changes.
-
-5. You would like to save validations for the **Customer_Name** attribute (that the name is not empty and is alphabetical) as a sub-microflow to use it on a different page.  Do the following:
+    
+6. You would like to save validations for the **Customer_Name** attribute (that the name is not empty and that it is alphabetical) as a sub-microflow to use them as a separate validation on a different page.  Do the following:
 
     1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**:
 
@@ -107,7 +117,7 @@ To configure the **Save** button for the use case above, do the following:
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
 
-        The microflow will be saved separately and will contain with selected validations.
+        The microflow is saved separately containing selected validations.
 
 7. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
 
@@ -115,62 +125,11 @@ To configure the **Save** button for the use case above, do the following:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/validation-microflow.png" alt="Validation Microflow" >}}
 
-9. In the Studio Pro topbar, click the **Play** button to run your app locally and test validations.
+The created microflow is used for the **Save** button to validate all conditions. The sub-microflow can be used on a different page to validate the customer name. 
+You can now  click the **Play** button in the Studio Pro top bar to run your app locally and test validations.
 
 ## 4 Read More 
 
 * [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
 * [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
-* [Validation Rules](/refguide/validation-rules/)      
-
-      
-
-      
-
-      
-
-    You also would like to add one more validation that checks that date and time is picked in the future. To add a validation, do the following:
-
-    1. Click **New** in the **Generate Validation Microflow** dialog box. 
-    2. In the **Add Validation** dialog box, make sure that **Type** is set to **Based on expression**.
-    3. For **Member**, select an attribute for date and time.
-    4. In the **Expression** field, fill in 
-    5. Click **OK** to save changes.
-
-10. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
-
-11. In the **Page Assist** dialog box, click **Open the microflow** to view the configured microflow:
-
-12. In the Studio Pro topbar, click the **Play** button to run your app locally and test validations.
-
-You can use one of the validations generated by the Validation Assist in several places, you need to extract a validation as a sub-microflow. 
-
-For example, you have the appointment validation described above and would like to use the check whether the treatment type is not empty in another page: a pop-up page where users can change the type of their upcoming appointments called *Change_TreatmentType*.  Do the following:
-
-1. Open the page *Appointment_NewEdit* that already has the validation. 
-2. Right-click the **Save** button and select **Generate validation microflow**.
-3. In the **Generate Validation Microflow** dialog box, select the validation that checks that treatment type is selected (not empty): 
-
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
-
-4. Click **Extract submicroflow**.
-5. In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
-
-     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
-
-6. Open the *Change_TreatmentType* page where users can select another type of treatment. 
-7. In the **Toolbox**, select **Call microflow** **button** and drag it to the form. 
-8. In the **Select Microflow** dialog box, select *VAL_Treatment_Type* and click **Select**.
-
-     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/select-microflow.png" alt="Select Microflow" >}}
-
-9. In the button properties, click the **Caption** property and change caption to **Save Changes**.
-10. Delete the old **Save** button if there was one on the page.
-
-Now when users click **Save Changes**, the validation checks that they did not leave the treatment type empty. 
-
-## 4 Read More 
-
-* [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
-* [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
-* [Validation Rules](/refguide/validation-rules/)
+* [Validation Rules](/refguide/validation-rules/)     

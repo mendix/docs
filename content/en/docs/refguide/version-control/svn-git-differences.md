@@ -1,6 +1,6 @@
 ---
-title: "Migrating to SVN to Git: Steps After Migration and Process Differences"
-linktitle: "Migrating to SVN to Git"
+title: "Migrating from SVN to Git: Steps After Migration and Process Differences"
+linktitle: "Migrating from SVN to Git"
 url: /refguide/svn-git-differences/
 category: "Version Control"
 weight: 45

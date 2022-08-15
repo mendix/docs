@@ -55,7 +55,7 @@ In the list view, projects are categorized in a list.
 ### 2.3 Creating a New Project
 
 {{% alert type="info" %}}
-Only [Portfolio Manager](#access-management) can create a new project.
+Only [Portfolio Managers](#access-management) can create a new project.
 {{% /alert %}}
 
 1. Go to **Projects Overview**.
@@ -66,7 +66,7 @@ Only [Portfolio Manager](#access-management) can create a new project.
 
 4. Select the **Stage**, **Department**, **Country** the project.
 
-   {{% alert type="info" %}}Portfolio Managers can customize the lists of **Stage**, **Department**, and **Country** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+   {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Stage**, **Department**, **Country** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
 
 5. Set the **Owner** to a user who owns this portfolio.
 
@@ -80,7 +80,7 @@ Only [Portfolio Manager](#access-management) can create a new project.
 
     1.  Select the **Use Case** of the project.
 
-        {{% alert type="info" %}}Portfolio Managers can customize the **Use Case** list on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+        {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Use Case** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
 
     2. Select the **App Size** from the operational point of view.
     3. Enter the **Numbers of Users** who you expect will use the app.
@@ -88,9 +88,9 @@ Only [Portfolio Manager](#access-management) can create a new project.
 
 8.  Click **Estimated Monetary Value** to show all the fields in this section. In this section, you can solidify your business case and drive internal adoption. It can also helps you map the realized value upon completion.
 
-    1. Select the **Typo of Value**, which is the type of the value that is created by the project.
+    1. Select the **Type of Value**, which is the type of the value that is created by the project.
 
-       {{% alert type="info" %}}Portfolio Managers can customize the **Value Type** list on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+       {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Type of Value** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
     
     2. For **Frequency**, select whether the value is **Once-off** or **Recurring**.
     
@@ -156,7 +156,7 @@ The table below shows the permissions of Portfolio Managers and Users:
 
 ### 4.1 Adding New Users
 
-{{% alert color="info" %}}Only [Portfolio Manager](#access-management) can add new users.{{% /alert %}}
+{{% alert color="info" %}}Only [Portfolio Managers](#access-management) can add new users.{{% /alert %}}
 
 1. Go to **Access Management**.
 2. In the upper-right corner, click **Add New Users**.
@@ -203,7 +203,7 @@ The **Portfolio Settings** page is only available for Portfolio Managers. On thi
 
 * **Main Details - Currency**
 
-* **Main Details - Countries**.
+* **Main Details - Countries**
 
 To delete or edit an existing item, hover over the row to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
 
@@ -213,4 +213,4 @@ To add an item, click one of these buttons: **Add Stage**, **Add Use Case**, **A
 
 ## 6 Read More
 
-{{% todo %}}[Add the learning path]{{% /todo %}}
+{{% todo %}}Add the learning path{{% /todo %}}

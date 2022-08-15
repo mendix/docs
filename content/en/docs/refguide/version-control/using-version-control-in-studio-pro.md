@@ -297,13 +297,13 @@ The second method should be used if the first method is not possible for some re
 3. Commit your changes using Studio Pro. 
 4. Reopen the main line app in Studio Pro only after overwriting the files.
 
-#### 7.2.5 Merging using git in the command line
+#### 7.2.5 Merging Using Git in the Command Line
 
-In order for merging MPRs using git in a command line to work, it is necessary to attach mx.exe’s merge feature to git as a driver.
+For merging MPRs using Git in the command line to work, it is necessary to attach mx.exe merge feature to Git as a driver.
 
-When doing a "git merge" operation on 2 branches in a command line, git will attempt to merge the binaries of the MPRs, which will not work. For that, we need to apply Studio Pro's merge algorithm and that’s where mx.exe as a driver comes into play.
+When doing a `git merge` operation on two branches in the command line, Git attempts to merge the binaries of MPRs, which does not work. You need to apply Studio Pro merge algorithm and that is where mx.exe as a driver is needed.
 
-Navigate to the .gitconfig file in C:/Users/[USER_NAME] and add the following lines:
+Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
 ```
 [core]
@@ -313,17 +313,17 @@ Navigate to the .gitconfig file in C:/Users/[USER_NAME] and add the following li
   driver = [MX.EXE_PATH] merge %O %A %B
 ```
 
-Where [MX.EXE_PATH] should be substituted the path mx.exe, with only forward slashes and pointing to a drive like /C/ instead of C:/
+Where [MX.EXE_PATH] should substitute the mx.exe path with only forward slashes and pointing to a drive with */C/* instead of *C:/*.
 
-Additionally, create a .gitattributes file in the same folder, with the following contents:
+Additionally, create a .gitattributes file in the same folder with the following contents:
 
 ```
 *.mpr merge=custom
 ```
 
-Save the files and now whenever 'git merge' is run and it involves MPR files, the 'mx.exe merge' feature will kick in and run Studio Pro’s merge algorithm before git can finish with its merge.
+Save the files and now whenever `git merge` is run and it involves MPR files, the `mx.exe merge` feature will run Studio Pro merge algorithm before Git finishes the merge.
 
-Note: the changes to .gitconfig can also be made locally, per project:
+Changes to `.gitconfig` can also be made locally per app:
 
 ```
 git config merge.custom.name "custom merge driver for specific files"

@@ -173,4 +173,4 @@ If you have already deployed your app, change the existing **Licensekey** consta
 
 ## 4 Example Implementation
 
-For an example about how to implement the widget, see the example implementation.  {{% todo %}}Add the link and check the name of the example implementation.{{% /todo %}}
+For an example about how to implement the widget, see the example implementation. {{% todo %}}Add the link and check the name of the example implementation.{{% /todo %}}

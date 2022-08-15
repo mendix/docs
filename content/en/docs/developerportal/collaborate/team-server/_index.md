@@ -23,49 +23,7 @@ On the **Team Server** screen of the Developer Portal, you can see a URL to acce
 
 ## 2 Versioning with Git
 
-Scrum masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in *Studio Pro 9 Guide*. 
-
-### 2.1 Apps Eligible for Migration
-
-To be able to migrate your app to Git, your app needs to meet the following criteria:
-
-* Mendix version 9.12 or above
-* Current version-controller is in Team Server SVN
-* Maximum of 100 revisions across all branches (we plan to increase this maximum the coming months)
-
-{{% alert type="info" %}}
-
-Only a user with the Scrum master role can migrate an app.
-
-{{% /alert %}}
-
-### 2.2 Why Move to Git?
-
-For more information on advantages of Git, see the [What Are the Advantages of Team Server Git over Team Server SVN?](/refguide/version-control-faq/#git-advantages) section in *Version Control FAQ*.
-
-### 2.3 How Does Migration Work?
-
-During migration all app history, including revisions for all branches, are copied from SVN to Git. 
-
-Access to SVN is disabled as soon as migration starts, to prevent developers still making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
-
-To inform your team members about the process, several emails will be sent out automatically :
-
-* (Optional) Migration scheduled
-* Migration started
-* Migration completed or Migration failed
-
-These emails give brief information about the stage and emphasize that changes made during migration will be lost, since they cannot be committed to SVN anymore.
-
-{{% alert type="warning" %}}
-
-Inform your team members that they should commit their changes before migration has started not to lose their uncommitted changes.
-
-{{% /alert %}}
-
-### 2.4 Steps After Migration
-
-After migration is completed all developers need to re-download the app from Team Server and remove existing local copies, since developers can no longer interact with SVN. For more information, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences/).
+In the **Versioning with Git** section, Scrum masters can migrate apps from SVN version control system to Git. For more information, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). 
 
 ## 3 Team Server URL
 

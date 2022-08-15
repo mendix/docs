@@ -17,9 +17,9 @@ There are no changes in the process for Studio users.
 
 {{% /alert %}}
 
-## 2 Re-downloading App after Migration
+## 2 Checking App Out after Migration
 
-After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to re-download the app from Team Server again. Do the following:
+After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server again. Do the following:
 
 1. Open Studio Pro, select the app that was migrated to Git (it has the Git icon), and click **Open** in Studio Pro to download the Git-version of your app. Once this is completed you can make changes and store them in version control.
 

@@ -143,7 +143,7 @@ The next step in setting up security is to configure the entity access otherwise
 4. In the **New Access rule** dialog box, do the following:
 
     1. In the **Rule applies to the following modules** section, select the **HR** role.
-    2. In the **Create and delete rights** section, select **Allow creating new objects**. This allows HR to start the workflow.     
+    2. In the **Create and delete rights** section, select **Allow creating new objects**. This allows HR to create a new **EmployeeOnboarding** object when a workflow is started.     
     3. In the **Member read and write rights** section, click **Set all to Read**. As the HR needs only to start the workflow, but not to change any employee information, **Read** rights are sufficient for all attributes of the entity. 
 
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-hr.png" alt="Access Rules for the HR role" >}}

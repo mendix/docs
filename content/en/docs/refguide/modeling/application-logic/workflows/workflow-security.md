@@ -25,7 +25,7 @@ For more information on the entity access, see the [Entity Access vs. Page Acces
 
 ## 3 Configuring Page Access {#page-access}
 
-For each user task you set a dedicated page where users can view their **Task inbox** and interact with tasks. These pages are also added to the menu bar, which is optimized so that only pages that the user has access to are visible. 
+For each user task you set a dedicated page where users can view their **Task inbox** and interact with tasks. These task pages are called from the **Task inbox**, which should be added to the menu bar. You need to set the proper access to the task inbox pages and all the task pages.
 
 The combination of entity access and page access makes sure that only dedicated users can open a user task page and view its data. 
 
@@ -33,7 +33,21 @@ For more information on the page access, see the [Page Access](/refguide/module-
 
 ### 4 Configuring User Assignment {#user-assignment}
 
-In the workflow properties, you specify what user is assigned to the task by writing an XPath expression. You can set filters there and specify that only a certain user role can be assigned to the user task, for example, only users from an IT department.
+The **System.WorkflowUserTask** entity is used in the inbox and task pages and has two similar XPath constraints for User and Administrator roles. To view these constraints, open the **System** module > domain model > **System.WorkflowUserTask** entity properties > **Access rules** tab > **XPath constraint** tab):
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-security/system-workflow-user-task.png" alt="XPath for the Workflow User Task Entity in the System Module"  width="650">}}
+
+Below is an XPath example for the user role:
+
+`[State = 'InProgress' and (System.WorkflowUserTask_TargetUsers = '[%CurrentUser%]' or System.WorkflowUserTask_Assignee= '[%CurrentUser%]') and System.WorkflowUserTask_Workflow/System.Workflow[State != 'Incompatible' and State != 'Failed']].`
+
+This means that the currently logged in user can see WorkflowUserTask data only if all of the following conditions are met:
+
+* They are the assigned user or a targeted user 
+* The state of the task is *In Progress* 
+* The state is not *Failed* and not *Incompatible*
+
+In the user task properties, you specify what user is targeted for the task (i.e. what user will see the task in the inbox) by writing an XPath expression or a microflow. You can set filters there and specify that only a certain user role can receive a task in their inbox, for example, only users from an IT department. However, the conditions for the **System.WorkflowUserTask** entity mentioned above should be met for the user to see the task. 
 
 For more information on user assignment, see the [User Assignment](/refguide/user-task/#user-assignment) section in *User Task*.
 
@@ -47,13 +61,8 @@ If the user does not see the user task, check the following:
 
 3. Make sure that the XPath specified for the **User assignment** property does not restrict the user role in viewing the task. Open workflow > user task properties > **Assign task using** property to check it.
 
-4. Conditions specified in the XPath constraint of the **System.WorkflowUserTask** entity are met (you can view them in the **System** module > domain model > **System.WorkflowUserTask** entity properties > **Access rules** tab > **XPath constraint** tab). The following conditions are specified: 
+4. Conditions specified in the XPath constraint of the **System.WorkflowUserTask** entity are met. For more information, see the [Configuring User Assignment](#user-assignment) section above.
 
-    1. The workflow is progress and the current user is the targeted user.
-
-    2. The current user is assigned, the workflow is in progress, and workflow state is *not* incompatible or failed.
-
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-security/system-workflow-user-task.png" alt="XPath for the Workflow User Task Entity in the System Module"  width="650">}}
 
 
 

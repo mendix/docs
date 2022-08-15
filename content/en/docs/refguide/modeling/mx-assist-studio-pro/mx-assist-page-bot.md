@@ -65,24 +65,83 @@ The **Generate Validation Microflow** dialog box is where you can configure all 
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 
-For example, you have a form for users to create a hairdresser’s appointment. They need to select the type of a treatment (haircut, haircoloring, etc.) and pick the date and time. These fields are obligatory and the **Save** button should show an error message if any of them are empty. 
+For example, you have an app for a hairdresser salon, where customers can view information on types of treatments, their prices, can have their profile, and schedule appointments. You have a validation microflow there that checks the selected date and time: that date is in the future, that it is within the working hours (from 8 a.m. till 5 p.m.), and it is a weekday. 
+
+You have a form where customers can schedule a hairdresser’s appointment. They need to fill in their name, select the type of a treatment (haircut, haircoloring, etc.) and pick the date and time. You would like the **Save** button to show an error message when any of the following conditions are not met:
+
+* One or several fields in the form are not filled in
+* The selected date and time is in the future, it is within the working hours (from 8 a.m. till 5 p.m.), and it is a weekday
+* The name of the customer is valid (the name has only alphabetical symbols)
 
 To configure the **Save** button for the use case above, do the following:
 
-1. Open the page with the form called *Appointment_NewEdit* and righ-click the **Save** button in it.
+1. Open the page with the form called *Appointment_NewEdit* and right-click the **Save** button in it.
+
 2. In the drop-down list, select **Generate validation microflow**.
-3. In the **Generate Validation Microflow** dialog box, you can see that **Microflow** properties, such as microflow name, and validations were configured for you. Two expressions were added to validations: to check if treatment is empty and to check if the date and time is selected. is empty. 
+
+3. In the **Generate Validation Microflow** dialog box, you can see that **Microflow** properties, such as microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in:
+
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
+
+4. In your app, you already have a validation microflow that checks the selected date and time, you can call it in the current validation. Do the following:
+
+    1. Click **New** in the **Generate Validation Microflow** dialog box
+    2. In the **Add Validation** dialog box, set **Type** to **Call a validation microflow**.
+    3. Select the existing validation microflow for **Microflow** and click **OK**.
+
+5.  You also would like to add one more validation that checks that the name of the customer is valid (the name has only alphabetical symbols). To add a validation, do the following:
+
+    1. Click **New** in the **Generate Validation Microflow** dialog box. 
+2. In the **Add Validation** dialog box, make sure that **Type** is set to **Based on expression**.
+    3. For **Member**, select an attribute for customer name.
+    4. In the **Expression** field, fill in `$Appointment/Customer_Name 
+    5. Click **OK** to save changes.
+
+5. You would like to save validations for the **Customer_Name** attribute (that the name is not empty and is alphabetical) as a sub-microflow to use it on a different page.  Do the following:
+
+    1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**:
+
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/extract-sub-microflow.png" alt="Extract Sub-Microflow" >}}
+
+    2.  In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
+
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
+
+        The microflow will be saved separately and will contain with selected validations.
+
+7. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
+
+8. In the **Page Assist** dialog box, click **Open the microflow** to view the configured microflow:
+
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/validation-microflow.png" alt="Validation Microflow" >}}
+
+9. In the Studio Pro topbar, click the **Play** button to run your app locally and test validations.
+
+## 4 Read More 
+
+* [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/)
+* [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
+* [Validation Rules](/refguide/validation-rules/)      
+
+      
+
+      
+
+      
+
     You also would like to add one more validation that checks that date and time is picked in the future. To add a validation, do the following:
+
     1. Click **New** in the **Generate Validation Microflow** dialog box. 
     2. In the **Add Validation** dialog box, make sure that **Type** is set to **Based on expression**.
     3. For **Member**, select an attribute for date and time.
     4. In the **Expression** field, fill in 
     5. Click **OK** to save changes.
 
-4. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
-5. In the **Page Assist** dialog box, click **Open the microflow** to view the configured microflow:
+10. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
 
-6. In the Studio Pro topbar, click the **Play** button to run your app locally and test validations.
+11. In the **Page Assist** dialog box, click **Open the microflow** to view the configured microflow:
+
+12. In the Studio Pro topbar, click the **Play** button to run your app locally and test validations.
 
 You can use one of the validations generated by the Validation Assist in several places, you need to extract a validation as a sub-microflow. 
 
@@ -92,7 +151,7 @@ For example, you have the appointment validation described above and would like 
 2. Right-click the **Save** button and select **Generate validation microflow**.
 3. In the **Generate Validation Microflow** dialog box, select the validation that checks that treatment type is selected (not empty): 
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow List" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-page-bot/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
 
 4. Click **Extract submicroflow**.
 5. In the **Extract Validation Sub Microflow,** click **Extract Microflow**.

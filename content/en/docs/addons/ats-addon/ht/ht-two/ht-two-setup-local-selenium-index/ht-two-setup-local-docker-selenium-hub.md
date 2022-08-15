@@ -22,7 +22,7 @@ The following components are needed:
 * Your machine should allow connections from ATS on port 4444
 * Since version 2.6, ATS uses the Selenium 3.8.1 API. That's why we recommend using this version of Selenium for the docker images as well
 
-## 3 Installing Your Hub & Nodes with Docker-Compose
+## 3 Installing Your Hub and Nodes with Docker-Compose
 
 The following steps describe how to install your hub and nodes with Docker-Compose:
 

@@ -1,7 +1,6 @@
 ---
 title: "Get Selected Option Text"
 url: /addons/ats-addon/rg-one-get-selected-option-text/
-parent: "rg-one-get"
 ---
 
 ## 1 Description

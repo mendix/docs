@@ -19,12 +19,13 @@ To start a new app with version control do the following:
 1. In the **Open App** dialog box, click **Create New App**, or select **File** > **New App**. 
 2. Select the starting point – an app template.
 3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-4. Change the **App directory**, or leave the default suggested by Studio Pro.
-5. Click **Create app**.
+4. Choose **Repository type**  – SVN or Git. 
+5. Change the **App directory**, or leave the default suggested by Studio Pro.
+6. Click **Create app**.
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-03-02_11-11-18.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/app-settings.png" >}}
 
 ## 3 Joining an App
 
@@ -34,7 +35,7 @@ Once you are a team member, providing you have been given a role with sufficient
 
 1. Choose **Open App** in Studio Pro.
 2. Choose your app from the list of the **Open App** dialog box.
-4. Click **Open in Studio Pro**.
+3. Click **Open in Studio Pro**.
 
 The app will be downloaded from the Team Server and opened in Studio Pro.
 
@@ -56,12 +57,12 @@ The **App Explorer** shows an icon in front of items (documents, folders, and mo
 
 | Icon | Meaning |
 | --- | --- |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688173.png" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688172.png" >}} | You modified this item (as in, document, folder or module). |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688175.png" >}} | You added this item. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688174.png" >}} | You moved this item to another position in the app tree. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688164.png" >}} | You deleted this item. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688165.png" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/no-changes.png" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-modified.png" >}} | You modified this item (as in, document, folder or module). |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-added.png" >}} | You added this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-moved.png" >}} | You moved this item to another position in the app tree. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-deleted.png" >}} | You deleted this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-conflicting.png" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
 
 {{% alert color="info" %}}
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
@@ -96,7 +97,7 @@ Committing results in a new revision in the repository. You can add the followin
 * A textual message. This should be a summary of the changes you made
 * A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_13-50-03.png" >}}
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
 
 Studio Pro also attaches some information automatically:
 
@@ -112,9 +113,7 @@ Committing is only allowed if your working copy is up to date with the repositor
 ### 4.3 Pushing
 
 {{% alert color="info" %}}
-
 Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
-
 {{% /alert %}}
 
 Pushing is sending your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
@@ -149,7 +148,7 @@ The revisions are shown in reverse chronological order (newest is at top of list
 
 Select a revision to see additional details such as related Developer Portal stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_14-06-46.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" >}}
 
 ## 5 Reverting Changes
 
@@ -180,8 +179,8 @@ For more information on resolving document conflicts see [New Merge Algorithm wi
 
 App conflicts are conflicts are conflicts at the level of the app. There are two cause for app conflicts:
 
-1.  One person deletes a document and the other makes a change inside that document.
-2.  Both people move a document but to different places in the app tree.
+1. One person deletes a document and the other makes a change inside that document.
+2. Both people move a document but to different places in the app tree.
 
 The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** pane.
 
@@ -197,7 +196,7 @@ You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting 
 
 A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line (called 'trunk' in subversion). All development then happens inside that one line.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/688156.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" >}}
 
 It is often convenient to have more than one development line. For example, one development line for fixing bugs in the currently deployed version of your app and another line where you develop new functionality. If you then find a bug in the deployed version you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. See [Version Control](/refguide/version-control/) for more information about branches.
 
@@ -228,22 +227,17 @@ Another reason for creating a branch is to develop a big new feature without int
 
 Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-50-39.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" >}}
 
 Now work on the branch until the feature is done and commit the completed work.
 
 When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
 
 1. Open the main line.
-
 2. Choose **Version Control > Merge changes here**.
-
 3. Select **Merge feature branch** option.
-
 4. Click **Merge**.
-
 5. Resolve any conflicts and errors.
-
 6. Commit the new feature to the main line.
 
 You can delete the branch after merging it back, if you want.
@@ -329,13 +323,13 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 If you are using the Mendix Cloud you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-21_17-05-05.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" >}}
 
 #### 8.3.2 Creating a Deployment Package from a Specific Version
 
 If you are using a different hosting environment, you create a deployment package using the menu item **App** > **Create Deployment Package**.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/2018-02-28_13-44-04.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-deployment-package.png" >}}
 
 ## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 
@@ -375,7 +369,6 @@ If you are using SVN and want to delete a whole directory, you have to use the d
 
 When using Git, a folder is no longer be tracked if all the files in the folder are removed.
 
-
 ### 9.5 Branching & Deploying
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
@@ -394,7 +387,7 @@ To revert this version upgrade of the app model, follow these steps, using eithe
 4. Right-click the directory and select **Tortoise(Git/SVN)** > **Show log**. 
 5. Find the latest revision that was in the desired Studio Pro version.
 6. When using TortoiseGit, select all revisions up to but excluding the desired revision. Right-click and select **Revert changes by these commits**, then confirm and click **Yes**. 
-    When using TortoiseSVN, right-click that the desired revision, select **Revert to this version**, confirm, and click **OK**.
+7. When using TortoiseSVN, right-click that the desired revision, select **Revert to this version**, confirm, and click **OK**.
 8. Back in Windows Explorer, right-click the folder again, select **TortoiseSVN** > **Commit**, enter your commit message, and click **OK**.
 9. Start the desired Studio Pro version and download the app from Team Server.
 10. Check that everything is okay in your app.
@@ -403,4 +396,3 @@ To revert this version upgrade of the app model, follow these steps, using eithe
 ## 10 Read More
 
 * [Advanced Branching and Merging Strategies](https://www.mendix.com/blog/advanced-branching-merging-strategies-part-1-2/)
-

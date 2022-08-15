@@ -1,7 +1,7 @@
 ---
 title: "Implement SSO on a Hybrid App with Mendix & SAML"
+linktitle: "SSO on Hybrid App with SAML"
 url: /howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/
-parent: "hybrid-mobile"
 weight: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
 tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
@@ -130,31 +130,31 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1.  Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
-2.  Click **Publish for Mobile App Stores**:
+1. Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
+2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" >}}
-    
-3.  Select **Do it yourself** and then click **Download Customizable Package**:
+
+3. Select **Do it yourself** and then click **Download Customizable Package**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step2.png" >}}
 
     This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (for example, APK for Android and IPA for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
 
-4.  Unzip the hybrid app package.
-5.  Edit the *Entry.js* file (under `src\www\scripts`). The file should look like this:
+4. Unzip the hybrid app package.
+5. Edit the *Entry.js* file (under `src\www\scripts`). The file should look like this:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/entry.js.png" >}}
 
-6.  Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
-    ​     
+6. Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
+
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/entry.js-with-fix.png" >}}
 
-7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
-    a. Install the latest stable version of [Node.js](https://nodejs.org/en/download/). <br>
-    b. In the hybrid app root folder, execute **npm install**. <br>
-    c. In the hybrid app root folder execute **npm run package**.<br>
-8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
+7. Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
+    1. Install the latest stable version of [Node.js](https://nodejs.org/en/download/). <br>
+    1. In the hybrid app root folder, execute **npm install**. <br>
+    1. In the hybrid app root folder execute **npm run package**.<br>
+8. Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/build.phonegap.com.png" >}}
 

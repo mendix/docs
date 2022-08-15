@@ -146,4 +146,3 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [Stories](/developerportal/collaborate/stories/)
 * [Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath/)
 * [Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
-

@@ -1,7 +1,6 @@
 ---
 title: "User Roles"
 url: /refguide8/user-roles/
-parent: "project-security"
 weight: 10
 tags: ["studio pro", "user role", "project security", "security"]
 aliases:
@@ -34,8 +33,8 @@ Double-click the user role to open its properties.
 
 The user role has the following properties:
 
-*  [General properties](#general)
-*  [User management properties](#user-management)
+* [General properties](#general)
+* [User management properties](#user-management)
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/user-roles/user-role-properties.png" >}}
 

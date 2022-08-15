@@ -1,7 +1,6 @@
 ---
 title: "Get Current DateTime String"
 url: /addons/ats-addon/rg-one-get-current-datetime-string/
-parent: "rg-one-ats-core-actions"
 ---
 
 ## 1 Description

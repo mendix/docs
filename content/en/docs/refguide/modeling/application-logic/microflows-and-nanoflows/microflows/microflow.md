@@ -1,7 +1,6 @@
 ---
 title: "Microflow Properties"
 url: /refguide/microflow/
-parent: "microflows"
 tags: ["microflow", "entity access"]
 ---
 
@@ -118,7 +117,7 @@ By setting the property **Mark as used** to **Yes**, you explicitly specify that
 
 Default: *No*
 
-## 3 Expose as Microflow Action
+## 3 Expose as Microflow Action {#expose-as-microflow}
 
 This property is accessible by right-clicking in the microflow and selecting **Properties**.
 

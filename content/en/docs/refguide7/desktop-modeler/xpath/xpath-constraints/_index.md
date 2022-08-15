@@ -1,7 +1,6 @@
 ---
 title: "XPath Constraints"
 url: /refguide7/xpath-constraints/
-parent: "xpath"
 ---
 
 ## 1 Overview

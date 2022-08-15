@@ -1,7 +1,6 @@
 ---
 title: "App Security"
 url: /refguide/app-security/
-parent: "security"
 weight: 10
 tags: ["studio pro", "security", "app security"]
 aliases:

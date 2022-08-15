@@ -1,7 +1,6 @@
 ---
 title: "Workflows"
 url: /refguide/workflows/
-parent: "application-logic"
 weight: 20
 tags: ["workflow", "workflows", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -34,6 +33,7 @@ The elements of this category are described in the table below:
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/start-event.png" alt="Start Event" >}}    | Start event                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/refguide/on-click-event/#call-workflow) on-click event on pages or by the [Workflow call](/refguide/workflow-call/) action in microflows. <br />Click the start event to open [workflow properties](/refguide/workflow-properties/). |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/annotation.png" alt="Annotation" >}} | Annotation | An annotation is an element that can be used to put comments to a flow. For example, you can add a comment for your team that one of the user tasks needs to be changed later. <br />You can add annotations to the workflow or to individual activities. To add the annotation to the workflow, drag and drop the annotation in the editor's working area. To add the annotation to the activity, drag and drop it inside the activity. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/decision.png" alt="Decision" >}}             | [Decision](/refguide/decision-in-workflows/) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/parallel-split.png" alt="Parallel Split" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/jump.png" alt="Jump Activity" >}}            | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
@@ -79,7 +79,6 @@ The selected workflow is opened.
 To add a workflow to your app, do the following:
 
 1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
-
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
@@ -96,9 +95,7 @@ To delete a workflow, do the following:
 The selected workflow is deleted. 
 
 {{% alert color="info" %}}
-
 The **WorkflowInstance** entity that was generated when the workflow was created remains in the domain model, you have to delete it manually.
-
 {{% /alert %}}
 
 ### 3.4 Adding Elements to a Workflow 
@@ -144,15 +141,10 @@ To trigger a workflow via a microflow, you can add a **Call workflow** activity 
 Do the following:
 
 1. Open a microflow that will trigger a workflow.
-
 2. Make sure the microflow has a necessary parameter with the workflow context.
-
 3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
-
 4. Double-click the activity to open its properties.
-
 5. Set **Workflow** to to the workflow you would like to trigger.
-
 6. Set **Context object** to the workflow context:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" >}}

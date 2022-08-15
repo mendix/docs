@@ -10,12 +10,10 @@ weight: 60
 The Mendix Stories API allows you to retrieve, create, and update the sprints, stories, and tasks in your Mendix projects.
 
 {{% alert color="info" %}}
-
 Each call also requires the parameters `username` and `password`. These are the public credentials you will find below; actual authentication of requests is done through API keys.
 
 * `username`: PlatformAPIUser
 * `password`: PlatformAPIPassword
-
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -23,7 +21,6 @@ You can create and manage your [API keys](/developerportal/collaborate/general-s
 {{% /alert %}}
 
 To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](/attachments/apidocs-mxsdk/apidocs/stories-api/19398865.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/).
-
 
 ## 2 Published Microflows
 

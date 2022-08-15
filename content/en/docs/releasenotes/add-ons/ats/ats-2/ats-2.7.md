@@ -1,7 +1,6 @@
 ---
 title: "2.7"
 url: /releasenotes/add-ons/ats-2.7/
-parent: "ats-2"
 weight: 93
 ---
 
@@ -15,11 +14,11 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 
 * The format of test cases and the functions that are used to test on desktop devices work the same way on mobile devices.
 * ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
-* You can use the ATS recorder even if you have different pages for desktop and mobile. 
+* You can use the ATS recorder even if you have different pages for desktop and mobile.
 
-For more details, refer to [Mobile](/addons/ats-addon/rg-two-mobile/) in the *ATS Reference Guide*.
-
-_Please note that this feature is still in beta._
+{{% alert color="warning" %}}
+This beta feature has been discontinued.
+{{% /alert %}}
 
 ### Option
 
@@ -28,6 +27,7 @@ When a job or a test suite has not passed it is now possible to do another run o
 ### Changes in Calculation
 
 In order to make it easier to read and understand the results of a test run we are making some changes. Here are the main points: 
+
 * The result **Skipped** has been renamed to **Not executed**.
 * Test cases that fail durin the initialization will have the result **Not executed** instead of **Failed**.
 * **Canceled** is no longer a result but a flag that can be set additionally to the result.

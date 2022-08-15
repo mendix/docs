@@ -1,7 +1,6 @@
 ---
 title: "Random Number"
 url: /addons/ats-addon/rg-one-random-number/
-parent: "rg-one-ats-core-actions"
 ---
 
 ## 1 Description

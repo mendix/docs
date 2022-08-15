@@ -1,7 +1,6 @@
 ---
 title: "Create Deployment Package"
 url: /refguide/create-deployment-package-dialog/
-parent: "app-menu"
 tags: ["studio pro", "project menu", "deployment package"]
 ---
 
@@ -18,7 +17,7 @@ Most deployment targets have a limit on the uncompressed size of deployment pack
 | --- | --- |
 | Mendix Cloud | 1GB |
 | SAP BTP | 1.5GB |
-| Mendix for Private Cloud | 200MB |
+| Mendix for Private Cloud | 512MB |
 
 This is the uncompressed size of the deployment package (.mda file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and look at the file properties or **Info**.
 

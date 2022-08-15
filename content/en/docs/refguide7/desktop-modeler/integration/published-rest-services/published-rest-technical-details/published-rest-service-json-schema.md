@@ -1,7 +1,6 @@
 ---
 title: "JSON Schema for Published REST Operation"
 url: /refguide7/published-rest-service-json-schema/
-parent: "published-rest-technical-details"
 weight: 20
 description: "Describes the JSON schemas for operation request bodies and operation results"
 tags: ["published REST", "JSON", "Schema", "operation", "request body", "result", "message definition"]
@@ -36,7 +35,7 @@ The OpenApi schema contains definitions for body parameters and return types. If
 }
 ```
 
-By default, the definition name is the name of the message definition that the mapping is based on. You can choose your own definition name by setting the _Public name_ of a mapping.
+By default, the definition name is the name of the message definition that the mapping is based on. You can choose your own definition name by setting the *Public name* of a mapping.
 
 ### 2.2 Attribute
 

@@ -1,7 +1,6 @@
 ---
 title: "Toggle Checkbox Set Selector Value"
 url: /addons/ats-addon/rg-one-toggle-checkbox-set-selector-value/
-parent: "rg-one-checkbox-set-selector"
 ---
 
 ## 1 Description

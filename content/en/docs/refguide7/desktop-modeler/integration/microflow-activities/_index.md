@@ -1,7 +1,6 @@
 ---
 title: "Microflow Activities"
 url: /refguide7/microflow-activities/
-parent: "integration"
 ---
 ## Integration Activitities
 

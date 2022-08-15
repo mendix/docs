@@ -1,7 +1,6 @@
 ---
 title: "Published App Service"
 url: /refguide7/published-app-service/
-parent: "published-app-services"
 ---
 
 {{% alert color="info" %}}
@@ -52,8 +51,8 @@ Provide the actual actions of which the app service is composed. Each of these a
 
 The following authentication methods are available:
 
-*   No authentication.
-*   Username and password: the provided action is only executed if the username/password combination matched a registered web service user.
+* No authentication.
+* Username and password: the provided action is only executed if the username/password combination matched a registered web service user.
 
 ### Target Namespace
 

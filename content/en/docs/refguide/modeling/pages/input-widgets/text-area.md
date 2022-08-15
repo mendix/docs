@@ -1,7 +1,6 @@
 ---
 title: "Text Area"
 url: /refguide/text-area/
-parent: "input-widgets"
 weight: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -60,10 +59,6 @@ The on change property specifies an action that will be executed when leaving th
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
 #### 2.5.2 On Change Behavior
-
-{{% alert type="info" %}}
-Will be available in Studio Pro 9.14.
-{{% /alert %}}
 
 The on change behavior property lets users select how **on change** is handled in Studio Pro via the following options: 
 
@@ -161,6 +156,14 @@ The autocomplete property specifies if a text area should have autocomplete enab
 {{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
 {{% alert color="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
+#### 2.8.5 AutoFocus {#autofocus}
+
+If `true`, the text area will be rendered focused with the device keyboard opened.
+
+{{% alert color="info" %}}
+This option is only available in native pages.
+{{% /alert %}}
+
 ### 2.7 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
@@ -175,5 +178,5 @@ The autocomplete property specifies if a text area should have autocomplete enab
 
 ## 3 Read More
 
-*   [Data view](/refguide/data-view/)
-*   [Attributes](/refguide/attributes/)
+* [Data view](/refguide/data-view/)
+* [Attributes](/refguide/attributes/)

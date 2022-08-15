@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for Native Mobile App UI"
+linktitle: "Native Mobile App UI Best Practices"
 url: /howto8/mobile/ui-best-practices/
-parent: "native-mobile"
 weight: 35
 description: "This document will teach you how to build a native mobile app's UI."
 tags: ["ux", "native", "mobile", "ui"]
@@ -131,7 +131,6 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 * Put the styling for building blocks and page templates in *theme/styles/native/ui_resources/{YOUR_APP_OR_MODULE_NAME}* and include it in *theme/styles/native/main.js*
 * Create separate folders in the app folder for the generic company styling and app specific styling (this enables re-use and consistency between apps)
 * Always think about reuse; that common class you just created may be useful in other apps as well. Consider adding them to your company theme
-
 
 ## 5 Read More
 

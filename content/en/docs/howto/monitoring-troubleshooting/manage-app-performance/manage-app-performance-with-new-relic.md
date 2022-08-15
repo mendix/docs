@@ -1,7 +1,6 @@
 ---
 title: "Manage App Performance with New Relic"
 url: /howto/monitoring-troubleshooting/manage-app-performance-with-new-relic/
-parent: "manage-app-performance"
 weight: 2
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
@@ -46,7 +45,7 @@ The following steps are only relevant for on-premises deployments (if you are de
 
 3. Download the Java agent archive and save your license key:
 
-     {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" >}}
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" >}}
 
 4. Add your license key to the *newrelic.yml* file from the downloaded archive as described here: [https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files).
 
@@ -71,10 +70,9 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 ### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
 1. Open your Mendix application, and click **Settings** in the **App Explorer**.
-
 2. Open a configuration:
 
-     {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
 
 3. In the **Extra JVM parameters** field on the **Server** tab, add: `-javaagent:<path-to-javaagent>javaagent.jar`:
 

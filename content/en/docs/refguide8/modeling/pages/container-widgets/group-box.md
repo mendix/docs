@@ -1,7 +1,6 @@
 ---
 title: "Group Box"
 url: /refguide8/group-box/
-parent: "container-widgets"
 weight: 30
 tags: ["studio pro", "group box", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -73,5 +72,3 @@ Possible values of this property are the following:
 * [Page](/refguide8/page/)
 * [Container Widgets](/refguide8/container-widgets/)
 * [Properties Common in the Page Editor](/refguide8/common-widget-properties/)
-
-

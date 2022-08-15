@@ -1,7 +1,6 @@
 ---
 title: "Create Custom Action Basics"
 url: /addons/ats-addon/ht-two-custom-action-basics/
-parent: "ht-two-create-custom-actions"
 ---
 
 ## 1 Introduction
@@ -34,18 +33,18 @@ The following sections describe how to create a custom action. There are two opt
 
 1. Open your app in ATS and go to **Test Cases**.
 2. Click the **Actions** drop-down menu in the **Repository** tab.
-3.  Select **New Action**:
-    
+3. Select **New Action**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/repository-add-action.png" >}}
 
     This opens the **Create new** dialog box:
-    
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/create-new-action-dialog.png" >}}
 
 4. Enter a name in the **Name** field (for example, *Set Drop-Down*). It is advisable to use a name that describes what the action does.
 5. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*). It is advisable to give each action a detailed description of what it does.
-6.  Click **Create**:
-    
+6. Click **Create**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/create-new-action-dialog-complete.png" >}}
 
 You have now created a custom action from the repository.
@@ -57,19 +56,19 @@ To use the **Extract Action** button, follow these steps:
 1. Open your app in ATS and go to **Test Cases**.
 2. Select a test case or action and open it.
 3. Select the test steps you want to combine in a custom action by clicking the check box in front of the step.
-4.  Click **Extract Action**:
-    
+4. Click **Extract Action**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/test-case-extract-action.png" >}}
 
     This opens the **Action - Set Details** dialog box.
 5. Enter a name in the **Name** field (for example, *Set Drop-Down*).
 6. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*).
-7.  Click **Close**:
-    
+7. Click **Close**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/test-case-action-set-details.png" >}}
 
-8.  Select the newly created action and click **Open**:
-    
+8. Select the newly created action and click **Open**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/test-case-open-new-action.png" >}}
 
 Both ways open the **Action Details** page. This page works the same as the **Test Case Details** page. You add test steps by clicking **Setup step manually** or by clicking **Record step**.
@@ -81,8 +80,8 @@ Both ways open the **Action Details** page. This page works the same as the **Te
 To add parameters to your custom action, follow these steps:
 
 1. Go to the **Action Details** page of your action.
-2.  Click the **Settings** tab:
-    
+2. Click the **Settings** tab:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/action-details-page-settings.png" >}}
 
 3. Follow the steps in the sections below for adding input and output parameters.
@@ -91,19 +90,19 @@ To add parameters to your custom action, follow these steps:
 
 To add input parameters, follow these steps:
 
-1.  Click **New**:
-    
+1. Click **New**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/action-details-page-settings-new.png" >}}
 
     This will open the **Edit Input Parameter** dialog box.
 
-2.  Enter a name in the **Name** field (for example, *Widget Name*). Use the ATS naming convention.
-3.  Enter a description in the **Description** field (for example, *Enter the name of the widget*). Note that you should make sure everybody understands what information they must enter.  
-4.  Select a data type from the **Datatype** drop-down menu (for example, **Text**).
-5.  Select a **Show as Password** option. This makes the parameter field unreadable. The default setting is **No**.
-6.  Select a **Required/Optional** option. For example, the **Widget Name** parameter is always required, otherwise the action does not work.
-7.  Click **Save**:
-    
+2. Enter a name in the **Name** field (for example, *Widget Name*). Use the ATS naming convention.
+3. Enter a description in the **Description** field (for example, *Enter the name of the widget*). Note that you should make sure everybody understands what information they must enter.  
+4. Select a data type from the **Datatype** drop-down menu (for example, **Text**).
+5. Select a **Show as Password** option. This makes the parameter field unreadable. The default setting is **No**.
+6. Select a **Required/Optional** option. For example, the **Widget Name** parameter is always required, otherwise the action does not work.
+7. Click **Save**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/new-action-edit-input-parameter.png" >}}
 
 You can add as many input parameters as you need, but remember to keep the action simple.
@@ -112,8 +111,8 @@ You can add as many input parameters as you need, but remember to keep the actio
 
 To add an output parameter, follow these steps:
 
-1.  Click **Set**:
-    
+1. Click **Set**:
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/action-details-page-settings-set.png" >}}
 
     This opens the different **Output Parameter** fields.
@@ -121,29 +120,29 @@ To add an output parameter, follow these steps:
 2. Enter a name in the **Name** field (for example, *Element*). The user must know what the action returns, so be clear in the name that you enter.  
 3. Enter a description in the **Description** field. Use this field to give a more detailed description of what is returned.
 4. Select a data type from the **Datatype** drop-down menu (for example, *Page Element*).
-5.  Select a **Required/Optional** option. Only use **Optional** if the action still works when nothing is returned.
-    
+5. Select a **Required/Optional** option. Only use **Optional** if the action still works when nothing is returned.
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/new-action-output-parameter-complete.png" >}}
 
 6. The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
-7.  Add the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action and the [Set Return Value](/addons/ats-addon/rg-one-set-return-value/) action.
-    
+7. Add the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action and the [Set Return Value](/addons/ats-addon/rg-one-set-return-value/) action.
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/output-parameter-actions.png" >}}
 
-8.  For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now, connect the outcome of test step 1 to the **Set Return Value** action.
-    
+8. For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now, connect the outcome of test step 1 to the **Set Return Value** action.
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/set-return-value-parameter.png" >}}
 
     Make sure the data type of the **Output Parameter** corresponds with data type of the connected outcome.
-    
+
     ATS will the outcome of test step 1.
 
 ## 5 Connecting the Input Parameters
 
 To connect the input parameter, follow these steps:
 
-1.  Select the test step to which you want to connect an input parameter.
-2.  Open the parameter drop-down menu.
-3.  Select the input parameter you want to connect.
-    
+1. Select the test step to which you want to connect an input parameter.
+2. Open the parameter drop-down menu.
+3. Select the input parameter you want to connect.
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-basics/action-connect-input-parameter.png" >}}

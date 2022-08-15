@@ -1,7 +1,6 @@
 ---
 title: "Assert Active Tab Caption"
 url: /addons/ats-addon/rg-one-assert-active-tab-caption/
-parent: "rg-one-tab"
 ---
 
 ## 1 Description
@@ -10,7 +9,7 @@ Asserts a given value for the caption of the active tab page.
 
 ## 2 Supported widgets
 
- + TabContainer
+* TabContainer
 
 ## 3 Usage
 

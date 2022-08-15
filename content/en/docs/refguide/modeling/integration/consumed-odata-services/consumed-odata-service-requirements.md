@@ -1,7 +1,6 @@
 ---
 title: "Consumed OData Service Requirements"
 url: /refguide/consumed-odata-service-requirements/
-parent: "consumed-odata-services"
 weight: 20
 description: "Requirements on OData services consumed in Mendix."
 tags: ["studio pro"]

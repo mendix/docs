@@ -2,13 +2,12 @@
 title: "Install Mendix Studio Pro"
 url: /howto/general/install/
 category: "General Info"
-weight: 1
+weight: 5
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
-toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
-[{{< figure src="/attachments/howto/general/install/download.png" >}}](https://marketplace.mendix.com/link/studiopro/)
+{{< figure src="/attachments/howto/general/install/download.png" link="https://marketplace.mendix.com/link/studiopro/" >}}
 
 ## 1 Introduction
 
@@ -29,35 +28,34 @@ Before starting this how-to, make sure you have completed the following prerequi
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2.  Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
-
+2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
 
 ## 4 Installing Mendix Studio Pro {#install}
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
-1.  Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
+1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
 
-	{{< figure src="/attachments/howto/general/install/setup-wizard.png"   width="400"  >}}
+    {{< figure src="/attachments/howto/general/install/setup-wizard.png"   width="400"  >}}
 
-2.  Select **I accept the terms in the License Agreement** and click **Next**:
+2. Select **I accept the terms in the License Agreement** and click **Next**:
 
-	{{< figure src="/attachments/howto/general/install/terms-of-use.png"   width="400"  >}}
+    {{< figure src="/attachments/howto/general/install/terms-of-use.png"   width="400"  >}}
 
-3.  Select the folder in which you want to install Studio Pro and click **Next**:
+3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-	{{< figure src="/attachments/howto/general/install/select-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/howto/general/install/select-folder.png"   width="400"  >}}
 
-4.  Enter the start menu shortcuts folder you want to use and click **Next**:
+4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-	{{< figure src="/attachments/howto/general/install/shortcut-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/howto/general/install/shortcut-folder.png"   width="400"  >}}
 
-5.  Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
-6.  Click **Install** to install Studio Pro on your computer:
+5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
+6. Click **Install** to install Studio Pro on your computer:
 
-	{{< figure src="/attachments/howto/general/install/ready-to-install.png"   width="400"  >}}
+    {{< figure src="/attachments/howto/general/install/ready-to-install.png"   width="400"  >}}
 
-7.  If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
+7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## 5 Troubleshooting {#troubleshooting}
 
@@ -65,7 +63,7 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – we recommend using version 6.0.6 or above
 * [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
 * [Microsoft Visual C++ 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
@@ -86,12 +84,14 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 3. Create a folder with the name **Dependencies** in the same location where the Mendix Studio Pro installer was placed.
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
-	* The `Microsoft .NET Desktop Runtime 6.0` executable to `windowsdesktop-runtime-6.0.3-win-x64.exe`
-	* The `Java Development Kit 11 (x64)` *msi* to `adoptopenjdk_11_x64.msi`
+    * The `Microsoft .NET Desktop Runtime 6.0.x` executable (`dotnet.exe`) to `windowsdesktop-runtime-6.0.3-win-x64.exe` 
+    * The `Java Development Kit 11 (x64)` *msi* (for example `OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi`) to one of the following - depending on the Mendix Studio Pro version:
+        * `adoptiumjdk_11_x64.msi` – for versions 9.14.0 and above
+        * `adoptopenjdk_11_x64.msi` – for versions 9.13.x and below
 
- 	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable to `vcredist2010_x64.exe`
- 	* The `Visual C++ Redistributable for Visual Studio 2019 (x64)` executable to `vcredist2019_x64.exe`
- 	* The `latest` executable to `mendix_native_mobile_builder.exe`
+    * The `Visual C++ 2010 SP1 Redistributable (x64)` executable (for example `vcredist_x64.exe`) to `vcredist2010_x64.exe`
+    * The `Visual C++ Redistributable for Visual Studio 2019 (x64)` (for example `VC_redist.x64.exe`) executable to `vcredist2019_x64.exe`
+    * The `latest` executable to `mendix_native_mobile_builder.exe`
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
 If during installation the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs, try the following:

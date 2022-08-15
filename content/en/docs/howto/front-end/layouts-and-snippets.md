@@ -89,22 +89,20 @@ Be careful with how you design these layouts. For example, in the mobile apps, y
 
 These are some layout examples:
 
-*  Basic layout for responsive/desktop pages:
+* Basic layout for responsive/desktop pages:
 
-	{{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-desktop.png" >}}
+    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-desktop.png" >}}
 
 * Basic layout for mobile pages:
 
-	{{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-mobile.png" >}}
+    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/basic-mobile.png" >}}
 
 * Master layout with added menu:
 
-	{{< figure src="/attachments/howto/front-end/layouts-and-snippets/master.png" >}}
+    {{< figure src="/attachments/howto/front-end/layouts-and-snippets/master.png" >}}
 
 {{% alert color="info" %}}
-
 By adjusting the canvas width, you can emulate the end-user's view of the page in Studio Pro. For example, the desktop layout has a canvas width of 800, and the default phone layouts have a width of 500. The property canvas width only applies to the view in Studio Pro, and the actual width of the page depends on the opened browser or the optional pop-up window size.
-
 {{% /alert %}}
 
 After defining the structure of the layout with the layout container(s), the region's content must be defined. This can either be done per page, with page-specific elements (for example, by adding data containers in the empty areas), or within the layout in order to define the elements that will be used on each page with this layout. It is common that this will be the general app navigation or specific navigation for a specific function. All the widgets can be used, except data and input elements, since they need a source. 
@@ -159,7 +157,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 * **Tablet web**
 * **Tablet web offline**
 * **Phone web**
-* **Phone web**
+* **Phone web offline**
 * **Native mobile (tablet & phone)**
 
 {{< figure src="/attachments/howto/front-end/layouts-and-snippets/device-profiles.png" >}}

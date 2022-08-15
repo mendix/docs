@@ -1,7 +1,6 @@
 ---
 title: "Create a Test Case"
 url: /addons/ats-addon/ht-one-create-a-test-case/
-parent: "ht-one"
 weight: 3
 description: "Describes how to create a test case and add test steps."
 tags: ["ATS", "testing"]
@@ -23,8 +22,8 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
-*  Complete [How to Get Started](/addons/ats-addon/ht-one-getting-started/)
-*  Complete [How to Install the ATS Helper and ATS Recorder](/addons/ats-addon/ht-one-install-ats-helper-recorder/)
+* Complete [How to Get Started](/addons/ats-addon/ht-one-getting-started/)
+* Complete [How to Install the ATS Helper and ATS Recorder](/addons/ats-addon/ht-one-install-ats-helper-recorder/)
 
 ## 3 Creating a Test Case<a name="3"></a>
 
@@ -106,63 +105,63 @@ The following steps describe how to add test steps manually to your test case. Y
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/click-widget-new-expense.png" >}}
 
-18. Double-click the **Widget Name** input parameter and add the widget name displayed in the ATS Helper:
+17. Double-click the **Widget Name** input parameter and add the widget name displayed in the ATS Helper:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-input-parameter.png" >}}
 
-19. After clicking **New Expense** in the Company Expenses app, a dialog box opens called **New Expense**:
+18. After clicking **New Expense** in the Company Expenses app, a dialog box opens called **New Expense**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-dialog.png" >}}
 
-20. A user visually confirms that the dialog box appears. ATS has an action that finds and asserts a dialog box, which is the [Find/Assert Dialog](/addons/ats-addon/rg-one-findassert-dialog/) action. Inside your test case, click **Add** again and add the **Find/Assert Dialog** action.
+19. A user visually confirms that the dialog box appears. ATS has an action that finds and asserts a dialog box, which is the [Find/Assert Dialog](/addons/ats-addon/rg-one-findassert-dialog/) action. Inside your test case, click **Add** again and add the **Find/Assert Dialog** action.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-dialog-action.png" >}}
 
-21. Double-click the **Dialog Title** input parameter and add the title of the dialog box:
+20. Double-click the **Dialog Title** input parameter and add the title of the dialog box:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-dialog-action-input-parameters.png" >}}
 
-22. To complete an expense, you must enter an **Amount**, **Type**, and **Description**, and then **Save & Submit** the expense:
+21. To complete an expense, you must enter an **Amount**, **Type**, and **Description**, and then **Save & Submit** the expense:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-dialog-fields.png" >}}
 
-23. The **Amount** field is a text box widget, the **Type** field is a reference selector widget, and the **Description** field is a text area widget. ATS can interact with all these widgets using the [Set Value](/addons/ats-addon/rg-one-set-value/) action. Inside your test case, click **Add** and add the **Set Value** action. Then, select the test step with the **Set Value** action, click **Copy**, and click **Paste** two times. Now you have a test step for each field.
+22. The **Amount** field is a text box widget, the **Type** field is a reference selector widget, and the **Description** field is a text area widget. ATS can interact with all these widgets using the [Set Value](/addons/ats-addon/rg-one-set-value/) action. Inside your test case, click **Add** and add the **Set Value** action. Then, select the test step with the **Set Value** action, click **Copy**, and click **Paste** two times. Now you have a test step for each field.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/three-set-value-actions.png" >}}
 
-24. Use the ATS Helper on the **Amount** field in the Company Expenses app. Select test step 5 in your test case, fill in a test step description, enter the **Widget Name**, and enter the **Value**.
+23. Use the ATS Helper on the **Amount** field in the Company Expenses app. Select test step 5 in your test case, fill in a test step description, enter the **Widget Name**, and enter the **Value**.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/set-value-amount-field.png" >}}
 
-25. Use the ATS Helper on the **Type** field in the Company Expenses app. Select test step 6 in your test case, fill in a test step description, enter the **Widget Name**, and enter the **Value**.
+24. Use the ATS Helper on the **Type** field in the Company Expenses app. Select test step 6 in your test case, fill in a test step description, enter the **Widget Name**, and enter the **Value**.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/set-value-type-field.png" >}}
 
-26. Use the ATS Helper on the **Description** field in the Company Expenses app. Select test step 7 in your test case, fill in a test step description, enter the **Widget Name**, and enter the **Value**.
+25. Use the ATS Helper on the **Description** field in the Company Expenses app. Select test step 7 in your test case, fill in a test step description, enter the **Widget Name**, and enter the **Value**.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/set-value-description-field.png" >}}
 
-27. To submit the new expense, you must click the **Save & Submit** button:
+26. To submit the new expense, you must click the **Save & Submit** button:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/new-expense-save-submit.png" >}}
 
-28. Inside your test case, click **Add**, add the **Click Widget** action, fill in a test step description, and enter the **Widget Name**:
+27. Inside your test case, click **Add**, add the **Click Widget** action, fill in a test step description, and enter the **Widget Name**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/click-widget-save-submit-parameter.png" >}}
 
-29. You must confirm that the expense is successfully submitted. In the Company Expenses app, a submitted expense appears in the [Find/Assert DataGrid Row](/addons/ats-addon/rg-one-findassert-datagrid-row/) action. Inside your test case, click **Add** and add the **Find/Assert Datagrid Row** action.
+28. You must confirm that the expense is successfully submitted. In the Company Expenses app, a submitted expense appears in the [Find/Assert DataGrid Row](/addons/ats-addon/rg-one-findassert-datagrid-row/) action. Inside your test case, click **Add** and add the **Find/Assert Datagrid Row** action.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/add-findassert-datagrid-row-new-expense.png" >}}
 
-30. Now use the ATS Helper to find the **Widget Name** of the data grid in the Company Expenses app:
+29. Now use the ATS Helper to find the **Widget Name** of the data grid in the Company Expenses app:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/widget-name-datagrid-new-expense.png" >}}
 
-31. Also use the ATS Helper to find the **Column Name** of the **Description** column:
+30. Also use the ATS Helper to find the **Column Name** of the **Description** column:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/column-name-datagrid-new-expense.png" >}}
 
-32. Now double-click the parameters and add the correct information:
+31. Now double-click the parameters and add the correct information:
 
     * The **Widget Name** parameter and add the widget name
     * The **Column 1 Name** parameter and enter the column name
@@ -170,26 +169,26 @@ The following steps describe how to add test steps manually to your test case. Y
   
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/findassert-datagrid-row-new-expense-parameters.png" >}}
 
-33. The last step of your test case is to end your user session by logging out. ATS has two ways for logging out of your application:
+32. The last step of your test case is to end your user session by logging out. ATS has two ways for logging out of your application:
 
     * ATS clicks the **Logout** button
     * ATS uses the [Logout](/addons/ats-addon/rg-one-logout/) action 
     The **Logout** action is a hard logout, meaning that no matter where ATS is inside your application, it always logs out. Inside your test case, click **Add** and add the **Logout** action.
-   
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/add-logout-new-expense.png" >}}
 
     You have added all the test steps for your test case:
-  
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/all-test-steps-new-expense.png" >}}
-  
-34. The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
+
+33. The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
 
     * **Setup** for all the steps that you must perform to get to the test situation
     * **Regular** for all the steps that are part of your test situation
     * **Teardown** for all steps that are necessary to clean up
-  
+
     Test step 1 and test step 2 must have the **Call Type:** **Setup**. Test step 3-9 must have the **Call Type:** **Regular**. Test step 10 must have the **Call Type:** **Teardown**.
-  
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/call-type-new-expense.png" >}}
 
     You have now manually created your test case.
@@ -246,13 +245,13 @@ To add test steps using the ATS Recorder, follow these steps:
 
 15. For the logout, you can choose to keep the recorded click the **Sign Out** button or replace it with the **Logout** action.
 16. The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
-  
+
     * **Setup** for all the steps that you must perform to get to the test situation
     * **Regular** for all the steps that are part of your test situation
     * **Teardown** for all steps that are necessary to clean up
-  
+
     Test step 1 and test step 2 must have the **Call Type:** **Setup**. Test step 3-9 must have the **Call Type:** **Regular**. Test step 10 must have the **Call Type:** **Teardown**.
-  
+
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-case/call-type-new-expense-recorder.png" >}}
 
 You have now created your test case using the ATS Recorder. 

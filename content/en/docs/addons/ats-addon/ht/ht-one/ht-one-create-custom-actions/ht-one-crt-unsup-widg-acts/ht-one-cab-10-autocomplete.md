@@ -1,7 +1,6 @@
 ---
 title: "CAB.10 - AutoComplete"
 url: /addons/ats-addon/ht-one-cab-10-autocomplete/
-parent: "ht-one-crt-unsup-widg-acts"
 description: "This how-to explains step by step how to create an Unsupported Widget action for the AutoComplete widget."
 tags: ["ATS", "testing"]
 ---
@@ -53,7 +52,7 @@ In the previous step, you wrote down the user approach for the reference selecto
 
 To create the action structure, follow these steps:
 
-1.  Check the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing to the widget. The parent element of the AutoComplete widget looks like this in the debugger:
+1. Check the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing to the widget. The parent element of the AutoComplete widget looks like this in the debugger:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocompletewidget-parentelement-debugger.png" >}}
 
@@ -61,11 +60,11 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocompletewidget-parentelement-outlined.png" >}}
 
-2.  In a standard situation, you use the [Find Widget Child Node](/addons/ats-addon/rg-one-find-widget-child-node/) action while creating an unsupported widget action. In this case, you see that the drop-down menu is not a child element of the AutoComplete widget. To find it, click the inspector icon in the upper-left corner of the debugger: 
+2. In a standard situation, you use the [Find Widget Child Node](/addons/ats-addon/rg-one-find-widget-child-node/) action while creating an unsupported widget action. In this case, you see that the drop-down menu is not a child element of the AutoComplete widget. To find it, click the inspector icon in the upper-left corner of the debugger: 
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/debugger-inspector.png" >}}
 
-3.  Click the search field in ATS while using the inspector to see it in the debugger.
+3. Click the search field in ATS while using the inspector to see it in the debugger.
 
     This is hovering above the input element:
 
@@ -75,30 +74,30 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/debugger-inspector-inspected-input.png" >}}
 
-4.  In the input element, you see that the `autocomplete` option is set to off. The widget can also autocomplete the entered text. You will cover this scenario later.
-5.  Use the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action to find the AutoComplete widget. Then, add the Find/Assert Widget action to your custom action, and give it a proper test step description and output description:
+4. In the input element, you see that the `autocomplete` option is set to off. The widget can also autocomplete the entered text. You will cover this scenario later.
+5. Use the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action to find the AutoComplete widget. Then, add the Find/Assert Widget action to your custom action, and give it a proper test step description and output description:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocompletewidget-findassertwidget-action.png" >}}
 
     You will create and connect the input parameters later.
 
-6.  Click the AutoComplete widget to open the drop-down menu. Add the [Click/Doubleclick](/addons/ats-addon/rg-one-clickdoubleclick/) action, describe the test step, and connect the output of test step 1:
+6. Click the AutoComplete widget to open the drop-down menu. Add the [Click/Doubleclick](/addons/ats-addon/rg-one-clickdoubleclick/) action, describe the test step, and connect the output of test step 1:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocompletewidget-clickdoubleclick-action.png" >}}
 
-7.  Check if the parent element of the drop-down menu has an `mx-name`. If you check the debugger, you can see that there is no `mx-name`:
+7. Check if the parent element of the drop-down menu has an `mx-name`. If you check the debugger, you can see that there is no `mx-name`:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocompletewidget-dropdowncontainer-parentelement-debugger.png" >}}
 
     If the parent element doesn’t have an `mx-name`, then use the [Find Element by Sizzle](/addons/ats-addon/rg-one-find-element-by-sizzle/) action. This action uses jQuery to find an element on the page. You use the same selectors as in the Find Widget Child Node action. 
 
-8.  You must be sure that ATS picks the right `input` element. Use a generic class name to find the parent. Next, find the child that contains the input element and return the input element:
+8. You must be sure that ATS picks the right `input` element. Use a generic class name to find the parent. Next, find the child that contains the input element and return the input element:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/selector-autocompletewidget-dropdown.png" >}}
 
     Before you create the action, you must know if ATS finds the input element within the drop-down container. You will use the debugger to simulate what ATS does.
 
-9.  You use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.select2-container .select2-search input’ )`:
+9. You use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.select2-container .select2-search input’ )`:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/selector-autocompletewidget-dropdown-console.png" >}}
 
@@ -178,15 +177,15 @@ Keep the [guidelines for creating a custom action](/addons/ats-addon/ht-one-guid
 
 To add the action parameters, follow these steps:
 
-1.  Configure the **Widget Name** input parameter like this:
+1. Configure the **Widget Name** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocomplete-widgetname-inputparameter.png" >}}
 
-2.  Configure the **Value** input parameter like this:
+2. Configure the **Value** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocomplete-value-inputparameter.png" >}}
 
-3.  Configure the **Search Context** input parameter like this:
+3. Configure the **Search Context** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-crt-unsup-widg-acts/ht-one-cab-10-autocomplete/autocomplete-searchcontext-inputparameter.png" >}}
 
@@ -210,10 +209,10 @@ There is no need to add extra logic to this action. Its only involves selecting 
 
 Now check for the following:
 
-*  Use of the ATS naming convention for parameters
-*  A clear description of test steps, input parameters, output parameters, and action returns
-*  Interpunction usage in pieces of code (if used)
-*  Use of data types on the different parameters to avoid errors
+* Use of the ATS naming convention for parameters
+* A clear description of test steps, input parameters, output parameters, and action returns
+* Interpunction usage in pieces of code (if used)
+* Use of data types on the different parameters to avoid errors
 
 After checking these items, you can run the test case that uses this action.
 

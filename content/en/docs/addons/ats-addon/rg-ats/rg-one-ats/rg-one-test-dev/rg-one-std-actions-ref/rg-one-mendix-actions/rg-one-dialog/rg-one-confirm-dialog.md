@@ -1,7 +1,6 @@
 ---
 title: "Confirm Dialog"
 url: /addons/ats-addon/rg-one-confirm-dialog/
-parent: "rg-one-dialog"
 ---
 
 ## 1 Description

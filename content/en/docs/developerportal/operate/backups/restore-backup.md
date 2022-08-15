@@ -1,7 +1,6 @@
 ---
 title: "Restore a Backup"
 url: /developerportal/operate/restore-backup/
-parent: "backups"
 weight: 30
 description: "How to restore a backup."
 tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
@@ -24,6 +23,14 @@ You cannot transfer data from one app to another by restoring a backup from one 
 If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication/) module.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+If the database in your plan is not large enough to contain all the restored data, the restore operation will fail. This will leave the database only partially restored. You will need to upgrade your plan to increase the database size or restore a smaller database to ensure that the database is complete.
+
+Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25GB used during the restoration process.
+
+Please contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
+{{% /alert %}}
+
 ## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
 
 Mendix Cloud makes nightly backups, and you can also manually request that a backup is made. If you want to restore one of these backups to the node from which it was backed-up just follow the steps below.
@@ -31,7 +38,6 @@ Mendix Cloud makes nightly backups, and you can also manually request that a bac
 If you want to restore a backup to a different cloud node, or have your backup stored locally, then see [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup), below.
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
-
 2. Select the environment to which the backup should be restored (for example *Acceptance*).
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" >}}
@@ -45,15 +51,11 @@ If you want to restore a backup to a different cloud node, or have your backup s
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/restore-backup.png" >}}
 
 {{% alert color="info" %}}
-
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
-
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-
 You can choose to restore only the database by selecting **DB only restore**. Doing a DB only restore will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
-
 {{% /alert %}}
 
 ## 3 Restoring a Backup for a Different Licensed Cloud Node{#restore-local-backup}
@@ -67,7 +69,6 @@ The app previously deployed to the node does not, however, need to have had the 
 {{% /alert %}}
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
-
 2. Select the environment to which the backup should be restored (for example *Acceptance*).
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" >}}
@@ -79,9 +80,7 @@ The app previously deployed to the node does not, however, need to have had the 
     In the deprecated **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The existing deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
 
 4. In Mendix Cloud **v3** you will need to confirm this by clicking **Yes**, because this action will immediately stop your app.
-
 5. Upload the *.db* or *.gz* backup file.
-
 6. In Mendix Cloud **v4** you will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 4 Restoring a Backup for a Free App
@@ -89,7 +88,6 @@ The app previously deployed to the node does not, however, need to have had the 
 For a Free App, you can only restore available backups which are made from the app and held in the cloud. It is not possible to upload a backup which was created or stored elsewhere.
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
-
 2. Select the backup you want to restore and click **Restore Backup**.
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/free-backup-options.png" alt="The buttons giving the backup options: Download, Restore, and Details" >}}
@@ -114,7 +112,7 @@ Here is an example:
 
 contains the following files:
 
-```
+```shell
 .metadata
 db/db.backup
 tree/0d/3e/0d3e301f-5551-46f8-ad44-8de2be084c95
@@ -125,6 +123,7 @@ tree/37/8c/378c70d9-605b-4cb4-a223-26e718cec733
 tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
+
 ### .metadata file
 
 This contains json describing the backup. For example:
@@ -139,7 +138,7 @@ This contains json describing the backup. For example:
 }
 ```
 
-### db folder
+### db folder{#db-folder}
 
 This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
@@ -153,7 +152,7 @@ The dump must be created with `pg_dump` version 1.14 or below, which is currentl
 
 This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource. They are also stored in the following tree structure where each file is stored in a second level location:
 
-```
+```shell
 /tree
    |---/[xx]
           |---/[yy]
@@ -168,7 +167,7 @@ The directory [yy] is the third and fourth characters of the uuid.
 
 So, for example, the first file in the example file above (0d3e301f-5551-46f8-ad44-8de2be084c95) is stored in the following structure:
 
-```
+```shell
 /tree
    /0d
       /3e

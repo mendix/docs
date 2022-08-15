@@ -1,7 +1,6 @@
 ---
 title: "Find"
 url: /addons/ats-addon/rg-one-find/
-parent: "rg-one-selenium-actions"
 ---
 
 This section contains these documents:

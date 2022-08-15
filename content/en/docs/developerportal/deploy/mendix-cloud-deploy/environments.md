@@ -1,7 +1,6 @@
 ---
 title: "Environments"
 url: /developerportal/deploy/environments/
-parent: "mendix-cloud-deploy"
 weight: 5
 description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
@@ -24,8 +23,8 @@ On the **Environments** page, there are four tabs:
     * TLS Client Certificate Verification
 * **Permissions**
     * [Node Permissions](/developerportal/deploy/node-permissions/)
-    
-   {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/environment-tab.png" >}}       
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/environment-tab.png" >}}       
 
 ## 2 Deploy
 
@@ -37,11 +36,11 @@ In the **Deploy** tab, you can find the information below about your environment
 
 In the **Deployment Package Repository** section, there is an overview of the following:
 
-*   Deployment package
-*   Version of the deployment package
-*   Creation date of the deployment package
-*   Uploaded by
-*   Expire date of the deployment package
+* Deployment package
+* Version of the deployment package
+* Creation date of the deployment package
+* Uploaded by
+* Expire date of the deployment package
 
 **Actions**
 
@@ -92,9 +91,9 @@ In this section, you have the an overview of all the available environments with
 
 There are three types of environment statuses:
 
-*   Green – there are no alerts
-*   Orange – there is at least one warning alert, but no critical alerts
-*   Red – there is at least one critical alert
+* Green – there are no alerts
+* Orange – there is at least one warning alert, but no critical alerts
+* Red – there is at least one critical alert
 
 {{% alert color="info" %}}
 The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
@@ -188,7 +187,17 @@ Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-
 
 For more information on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 6 Read More 
+## 6 Services {#services}
+
+Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in environments of this app.
+
+The technical contact can only see services which have been licensed for their company. If the technical contact cannot enable the service, this means that it has previously been licensed but the license has expired.
+
+Team members who have permission to *Deploy, Publish, and Monitor* can see which services are enabled or disabled.
+
+Once a service has been enabled for an app, team members can selectively enable it for each [environment](/developerportal/deploy/environments-details/#services).
+
+## 7 Read More 
 
 * [Deploy and Manage](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)

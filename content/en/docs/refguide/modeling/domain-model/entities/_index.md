@@ -1,7 +1,6 @@
 ---
 title: "Entities"
 url: /refguide/entities/
-parent: "domain-model"
 weight: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -89,11 +88,9 @@ The name has to be unique only within a module domain model. You can have two en
 #### 3.3.2 Export Level 
 
 {{% alert color="info" %}}
-
 **Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
 
 This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
-
 {{% /alert %}}
 
 **Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution.
@@ -152,7 +149,7 @@ This property defines whether the entity contains the system attribute 'changedD
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
 {{% alert color="info" %}}
-The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+The 'changedDate' property is updated when a value is set.  [In Mendix version 9.5.0 and above, setting an attribute to the value it already had and committing the entity updates the 'changedDate'](/releasenotes/studio-pro/9.5/#breaking-changes). In Mendix versions below 9.5.0 the behavior is the same as for Mendix version 8 and the 'changedDate' property is only updated when the value is different.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -185,11 +182,11 @@ You can also edit an entity by opening the entity properties dialog box.
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
-*   [Attributes](/refguide/attributes/)
-*   [Associations](/refguide/associations/)
-*   [Validation Rules](/refguide/validation-rules/)
-*   [Event Handlers](/refguide/event-handlers/)
-*   [Indexes](/refguide/indexes/)
-*   [Access Rules](/refguide/access-rules/)
+* [Attributes](/refguide/attributes/)
+* [Associations](/refguide/associations/)
+* [Validation Rules](/refguide/validation-rules/)
+* [Event Handlers](/refguide/event-handlers/)
+* [Indexes](/refguide/indexes/)
+* [Access Rules](/refguide/access-rules/)
 
 See the detailed pages for each of these tabs for more information.

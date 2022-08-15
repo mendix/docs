@@ -1,7 +1,6 @@
 ---
 title: "Page Template"
 url: /refguide8/page-templates/
-parent: "page-resources"
 weight: 20
 tags: ["studio pro", "page template", "page resource"]
 aliases:

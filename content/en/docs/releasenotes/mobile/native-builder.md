@@ -3,18 +3,17 @@ title: "Native Builder"
 url: /releasenotes/mobile/native-builder/
 category: "Mobile"
 weight: 11
-toc-level: 1
 description: "Native Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 {{% alert color="warning" %}}
-The Native Builder, a CLI tool, has been deprecated in favor of the Mendix Native Mobile Builder — a UI tool that integrates with Studio Pro. For Mendix Studio Pro 8.15 please use the Native Mobile Builder UI tool instead of the CLI tool. Read more on how to deploy your app [here](/howto/mobile/deploying-native-app/) using the Native Mobile Builder.
+The Native Builder, a CLI tool, has been deprecated in favor of the Mendix Native Mobile Builder — a UI tool that integrates with Studio Pro. For Mendix Studio Pro 8.15 please use the Native Mobile Builder UI tool instead of the CLI tool. Read more on how to deploy your app [here](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/) using the Native Mobile Builder.
 {{% /alert %}}
 
 The [Native Builder](/refguide8/native-builder/) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
 
-We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app/).
+We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Deploy Your First Mendix Native Mobile App](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/).
 
 {{% alert color="warning" %}}
 Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accomodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
@@ -47,7 +46,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ### Improvements
 
-* Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/).
+* Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 * We have updated image functionality. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
 * We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide8/native-builder/).
 
@@ -79,16 +78,16 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 ### Improvements
 
 * This release marks a re-architecture of the Native Builder. Its foremost improvements are the following:
-	* The Native Builder now has a more structured command API.
-	* The Native Builder now provides an upgrade path for your projects.
-	* The Native Builder now supplies better error messages.
+    * The Native Builder now has a more structured command API.
+    * The Native Builder now provides an upgrade path for your projects.
+    * The Native Builder now supplies better error messages.
 
 #### Command API Improvements
 
 * We reworked the command API for the Native Builder. We introduced two new commands: `prepare` and `build`. These commands separate the preparation configuration from your actual build. Specifically, preparation requires several pieces of app information during configuration, while the build process requires only a build number and a version number. To further simplify app building, we also introduced a new argument: `--project-name`. This argument allows for an explicit separation between a Mendix project and the app's name. When preparing a project with `prepare`, all configuration is cached locally. That means that building the command can look as simple as this: 
-	* `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
+    * `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
 * Updating any of your configuration is still possible by calling this: 
-	* `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
+    * `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
 * In addition, two new arguments have been added to the `build` command: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in  the case of a successful MxBuild but a failed later step.
 
 #### Upgrade Path Improvements
@@ -119,9 +118,9 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
-	* Fixed in [3.0.0](#nalm-215).
+    * Fixed in [3.0.0](#nalm-215).
 * Using more than one space in an app's name is not supported.
-	* Fixed in [3.0.0](#nalm-217).
+    * Fixed in [3.0.0](#nalm-217).
 
 ## 1.0.0
 
@@ -135,9 +134,9 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
-	* Fixed in [3.0.0](#nalm-215).
+    * Fixed in [3.0.0](#nalm-215).
 * Using more than one consecutive space in an app's name is not supported.
-	* Fixed in [3.0.0](#nalm-217).
+    * Fixed in [3.0.0](#nalm-217).
 
 ## 0.1.0
 

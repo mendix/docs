@@ -1,7 +1,7 @@
 ---
 title: "Create a Custom Developer App with the Native Builder CLI"
+linktitle: "Custom Developer App with Native Builder CLI"
 url: /howto8/mobile/how-to-devapps-cli/
-parent: "use-cli-docs"
 weight: 30
 description: A tutorial for creating custom developer apps.
 tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
@@ -22,19 +22,19 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 1. Open a command line interface (CLI) such as Command Prompt.
 2. Navigate to the directory of your Native Builder:
 
-    ```
+    ```powershell {linenos=false}
     cd {path to Native Builder executable file}
     ```
 
 3. Run the following command to build your project's custom developer app:
 
-    ```
+    ```powershell {linenos=false}
     native-builder.exe build dev-app --project-name {your project's name}
     ```
 
     This command does the following: <br />
-    a. Creates a branch named `developer` based on the commited changes to your `master` <br />
-    b. Starts a build using the developer app flavors for your project
+    1. Creates a branch named `developer` based on the commited changes to your `master` <br />
+    1. Starts a build using the developer app flavors for your project
 4. Wait until the Native Builder completes your builds.
 
 As with a release build, when the Native Builder is done building you should have two archives for each build: an iOS and an Android build. These archives can be found under the build output path `{build output path}` with **Dev** prepended to their name. The default `{build output path}` is the `./builds` folder relative to your `native-builder.exe` location.
@@ -102,7 +102,7 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
-    ```
+    ```shell {linenos=false}
     npm i && cd ios && pod install
     ```
 

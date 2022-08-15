@@ -1,7 +1,6 @@
 ---
 title: "Numeric Formatting"
 url: /refguide/numeric-formatting/
-parent: "consumed-web-services"
 tags: ["studio pro"]
 ---
 
@@ -16,7 +15,7 @@ How numbers in XML should be represented can be specified in an XSD (or WSDL) by
 Mendix currently supports `totalDigits` and `fractionDigits` for numeric elements:
 
 * `totalDigits` -  defines the maximum number of digits in the number (excluding the dot and minus sign)
-*  `fractionDigits` - defines the maximum number of digits after the decimal dot
+* `fractionDigits` - defines the maximum number of digits after the decimal dot
 
 This means that if a number is encountered that does not match the required output format,  it will be rounded it so it does match. If it is not possible to represent the number correctly by formatting the number, then it will simply be put in the XML as is. For example, an XSD specifies a maximum amount of digits of 3, but the number is 1000.
 
@@ -34,4 +33,3 @@ Mendix does not enforce compliance to these restrictions unless **Validate again
 | 99.99 | 2 | Undefined | 99.99 | Not possible to format correctly, so left untouched |
 | 999.99 | 2 | 1 | 999.99 | Not possible to format correctly, so left untouched |
 | 1.19E-17 | Undefined | Undefined | 0.0000000000000000119 |   |
-

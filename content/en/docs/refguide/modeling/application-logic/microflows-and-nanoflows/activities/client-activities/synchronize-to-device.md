@@ -1,7 +1,6 @@
 ---
 title: "Synchronize to Device"
 url: /refguide/synchronize-to-device/
-parent: "client-activities"
 tags: ["studio pro", "synchronize to device", "client activities"]
 weight: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -60,7 +59,7 @@ they will not be synchronized to a device. If the offline database already conta
 
 When adding **Synchronize to device** to a microflow consider the following:
 
-* This action should be used in combination with the [Nothing (preserve data)](/refguide/offline-first/#customizable-synchronization) option to make sure your data is not cleared during a synchronize action.
+* This action should be used in combination with the [Nothing (preserve data)](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/#customizable-synchronization) option to make sure your data is not cleared during a synchronize action.
 * **Synchronize to device** action works in an append mode, it does not replace all data in the database.
 Any existing data is kept and only objects that are sent to the client are affected.
 * Synchronizing the same object or list multiple times will synchronize it only once. The latest committed state will be synchronized.

@@ -1,7 +1,6 @@
 ---
 title: "Data Sources"
 url: /refguide7/data-sources/
-parent: "page-concepts"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,9 +13,9 @@ Most simple input widgets derive their content from their context. A text box wi
 
 The data view supports the following data sources:
 
-*   [Context](/refguide7/entity-path-source/): in the case of an entity, the data view gets its object from the microflow or page that is opening the page. The context needs to supply this object when opening the page. If the data view is nested inside another data widget, you can specify an entity path that starts in the context object and follows one or more associations.
-*   [Microflow](/refguide7/microflow-source/): the data view object is determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a single object.
-*   [Listen to widget](/refguide7/listen-to-grid-source/): the data view object depends on the selection in a list widget. Each time the selection changes, the data view will show that selected object.
+* [Context](/refguide7/entity-path-source/): in the case of an entity, the data view gets its object from the microflow or page that is opening the page. The context needs to supply this object when opening the page. If the data view is nested inside another data widget, you can specify an entity path that starts in the context object and follows one or more associations.
+* [Microflow](/refguide7/microflow-source/): the data view object is determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a single object.
+* [Listen to widget](/refguide7/listen-to-grid-source/): the data view object depends on the selection in a list widget. Each time the selection changes, the data view will show that selected object.
 
 {{% alert color="info" %}}
 
@@ -28,10 +27,10 @@ The microflow source is not supported in offline applications because it implies
 
 List widgets support the data sources listed below. The data source also determines which features of the widget are enabled. For instance, only widgets with a database or XPath data source may contain a search bar, as the search bar relies on a database call to function.
 
-*   [Database](/refguide7/database-source/): the objects in the list are retrieved from the database. Constraints can be used to limit which objects are shown. 
-*   [XPath](/refguide7/xpath-source/): the objects in the list are retrieved from the database and XPath can be used to constrain which objects are shown.
-*   [Microflow](/refguide7/microflow-source/): the objects in the list are determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a list of objects.
-*   [Association](/refguide7/association-source/): the objects are retrieved by following an association from the object in the context. As such this data source is only available when the when a widget is nested in an existing context, such as a data view. 
+* [Database](/refguide7/database-source/): the objects in the list are retrieved from the database. Constraints can be used to limit which objects are shown. 
+* [XPath](/refguide7/xpath-source/): the objects in the list are retrieved from the database and XPath can be used to constrain which objects are shown.
+* [Microflow](/refguide7/microflow-source/): the objects in the list are determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a list of objects.
+* [Association](/refguide7/association-source/): the objects are retrieved by following an association from the object in the context. As such this data source is only available when the when a widget is nested in an existing context, such as a data view. 
 
 {{% alert color="info" %}}
 

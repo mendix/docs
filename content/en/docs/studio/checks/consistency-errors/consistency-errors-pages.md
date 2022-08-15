@@ -1,7 +1,6 @@
 ---
 title: "Page Consistency Errors"
 url: /studio/consistency-errors-pages/
-parent: "consistency-errors"
 weight: 10
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
@@ -16,9 +15,7 @@ In this document, we explain how to solve the most common consistency errors tha
 An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
 {{% alert color="info" %}}
-
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
-
 {{% /alert %}}
 
 Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
@@ -50,7 +47,6 @@ The table below describes the most common errors you can come across when config
 | CE0488     | No entity configured for the data source of this data view. Select an entity or change the data source. | **Context** is selected as a data source for a data view, but the **Entity** property is not specified. | Do one of the following: <ul><li>Open the data view's properties> **Data Source** and select an entity in the **Entity** field</li><li>Change the type of the data source</li></ul> |
 |            | No microflow configured for the data source of this data view. Select a microflow or change the data source. | A data source is set to **Microflow**, but no specific microflow is selected. | Do one of the following: <ul><li>Open the data view's properties> **Data Source** and select an entity in the **Microflow** field</li><li>Change the type of the data source</li></ul> |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | The **List widget** option is configured as a data source for a data view, but you have not specified the list you would like the data view to listen to. | Do one of the following: <ul><li>Create a list view on the same page, configure it, and select it as the list widget for the data view</li><li>Change the type of the data source</li></ul> |
-
 
 ## 4 Context Not Available Consistency Errors
 
@@ -90,11 +86,9 @@ As the **Details** button to the **Customers** page is outside a data container 
 If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customers** page, we can fix this error the following way:
 
 1. Open the **Customers** page.
-
-2.  Drag the **Details** button inside the list view.
+2. Drag the **Details** button inside the list view.
 
     {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/list-view-content.png" alt="List View Example"   width="350"  >}}
-
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -103,13 +97,11 @@ Now the button gets the object of type *Customer* from the list view on the **Cu
 If you want to create a new customer and fill in the customer's details on the **Customers Details** page, you can do the following:
 
 1. Open the **Customers** page.
-
 2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
-     {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
+    {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
 
 3. Set **Customer** as **Entity**.
-
 4. Change the button's caption from **Details** to **Add**, as this button will now create a new customer, and not show details of an existing customer.
 
 Now when a user clicks this button, the **Customer Details** page will open, and the new *Customer* object will be created. 
@@ -146,7 +138,7 @@ Some of the most common errors of this type are described in the table below:
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0552     | Microflow {Name of the microflow} does not return an object. | The data source of a widget (for example, a data view) is set to **Microflow**, but the microflow does not return any object. | Open the microflow and configure a return value for it. Do the following: <ol><li>Select the end event.</li><li>In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type** and set the **Entity** option if needed (whether this option is displayed depends on the selected data type).</li><li> Configure the **Value**.</li></ol> |
 | CE0551     | Microflow {Name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Select the end event.</li><li> In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type**  to *List*.</li><li>Set the **Entity** option.</li><li>Configure the **Value**.</li></ol> |
-| CE5012     | Return type of selected {Name of the microflow} should be {return type}. | There can be different causes for this error: <ol><li>You have selected a microflow as a list view data source, but this microflow returns a single object, while the list view can accept only a list.</li><li>You have selected a microflow as a data view context, but this microflow returns a list while the data view can accept only a single object. </li><li>For causes when it occurs in a user task of a workflow, see [Workflows Consistency Errors ](/studio/consistency-errors-workflows/).</li></ol> | Fixing the error is different depending on its cause (see the column to the left). <ol><li>For the list view, set the return value of the microflow to the list.</li><li>For the data view, set the return value of the microflow to the single object.</li><li>For ways to fix the error when it occurs on in a user task of a workflow, see [Workflows Consistency Errors ](/studio/consistency-errors-workflows/). </li></ol> |
+| CE5012     | Return type of selected {Name of the microflow} should be {return type}. | There can be different causes for this error: <ol><li>You have selected a microflow as a list view data source, but this microflow returns a single object, while the list view can accept only a list.</li><li>You have selected a microflow as a data view context, but this microflow returns a list while the data view can accept only a single object. </li><li>For causes when it occurs in a user task of a workflow, see [Workflows Consistency Errors](/studio/consistency-errors-workflows/).</li></ol> | Fixing the error is different depending on its cause (see the column to the left). <ol><li>For the list view, set the return value of the microflow to the list.</li><li>For the data view, set the return value of the microflow to the single object.</li><li>For ways to fix the error when it occurs on in a user task of a workflow, see [Workflows Consistency Errors](/studio/consistency-errors-workflows/). </li></ol> |
 | CE1573     | Selected microflow has a parameter {Name of the parameter} but there is no available data for it on the page. Place {Name of the widget} inside a data container with {Name of the entity} as the data source. | You selected a microflow as an on-click action of a widget (for example, of a button) and the microflow contains a parameter, but no data (for example, objects) is available for the widget to pass to the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the **Entity** property of the microflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
 | CE1574     | Selected microflow has a parameter {Name of the parameter} but there is no data on the page (surrounding {Name of the widget}) that can be used. Available data is {list of data available}. | You selected a microflow as the data source of a widget, but data (for example, an object) available for this widget does not match the parameter(s) of the microflow. | Make sure that object available for the widget matches the **Entity** property of the microflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
 | CE1843     | A button with {Name of the workflow-related on-click action} on-click action should be placed inside a data container with {Name of the entity} as its context. | There can be the following reasons for this error depending on the on-click action you are using: <ol><li>A widget with the **Call Workflow** action is not placed inside a data container with the workflow context entity.</li><li>A widget with the **Show Task Page** action is not placed inside a data container with the **UserTaskInstance** entity.</li><li>A widget with the **Show Workflow Page** action is not placed inside a data container with the **WorkflowInstance** entity.</li><li>A widget with the **Complete Task** action is not placed inside a data container with the **UserTaskInstance** entity.</li></ol>For more information on on-click actions, see [Events Section](/studio/page-editor-widgets-events-section/). | Place the widget inside the data container with the specified entity. |
@@ -157,7 +149,7 @@ When you set a microflow as an on-click action for a widget, and this microflow 
 
 For example, on a page named *Customers* you have a button that calls a microflow (that is an **On Click Action** of the button is set to *Microflow*):
 
- {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/button-on-click-action.png" >}}
+{{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/button-on-click-action.png" >}}
 
 However, the microflow contains a parameter *Customer*:
 
@@ -167,9 +159,8 @@ The microflow parameter expects an object *Customer*, and since this object is n
 
 To fix it, do the following:
 
-1.  Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
-
-2.  Set the data source of the list view to *Database* and set **Entity** to *Customer*.
+1. Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
+2. Set the data source of the list view to *Database* and set **Entity** to *Customer*.
 
     {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-pages/list-view-data-source.png" >}}
 
@@ -232,7 +223,7 @@ The most common consistency errors appear when you do not configure the on click
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 
-##  9 Read More
+## 9 Read More
 
 * [Pages](/studio/page-editor/)
 * [Navigation Consistency Errors](/studio/consistency-errors-navigation/)

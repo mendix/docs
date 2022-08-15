@@ -1,7 +1,6 @@
 ---
 title: "Message Definitions"
 url: /refguide/message-definitions/
-parent: "integration"
 weight: 50
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -20,9 +19,7 @@ Message Definitions is a type of document you can add to modules in your app.
 To add a message definitions document do the following:
 
 1. Right-click your module or a folder within a module.
-
 2. Choose **Add other > Message definitions**.
-
 3. Give your message definitions a name and click **OK**.
 
 ## 3 Managing Message Definitions
@@ -44,11 +41,8 @@ The **Generate mapping(s)…** button allows you to generate import and/or expor
 To generate mappings, do the following:
 
 1. Select the message definition you want to use.
-
 2. Click **Generate mapping(s)…**.
-
 3. Ensure that the required mapping(s) is selected.
-
 4. Click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}

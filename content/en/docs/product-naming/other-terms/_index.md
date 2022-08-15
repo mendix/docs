@@ -107,7 +107,7 @@ Capitalize in all instances.
 
 ### Custom Developer App
 
-For a definition of this term, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/).
+For a definition of this term, see [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 
 {{% alert color="info" %}}
 Do not capitalize.
@@ -202,6 +202,8 @@ Capitalize in all instances.
 {{% /alert %}}
 
 ### Mendix Assist {#mendix-assist}
+
+Use *Mendix Assist* when referring to the whole feature and *MxAssist* as a part of bot names: [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) and [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/).
 
 {{% alert color="info" %}}
 This replaces "Mx Assistant" and "Mx Assist" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](/product-naming/terminology-history/)).<br />

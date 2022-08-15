@@ -1,7 +1,6 @@
 ---
 title: "Workflow Activities"
 url: /refguide/workflow-activities/
-parent: "activities"
 weight: 90
 tags: ["studio pro", "microflow", "workflow", "workflow activities"]
 ---
@@ -22,4 +21,3 @@ The following are the workflow activities you can use in your microflow:
 ## 2 Read More
 
 * [Activities](/refguide/activities/)
-

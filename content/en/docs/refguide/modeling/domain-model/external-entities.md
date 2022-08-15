@@ -1,7 +1,6 @@
 ---
 title: "External Entities"
 url: /refguide/external-entities/
-parent: "domain-model"
 weight: 15
 tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -26,16 +25,15 @@ To add an external entity to your app model, follow these steps:
 
 1. In the the Domain Model of you app model search in the **Data Hub** pane for the entity or data source that you want to use in your app. 
 
-    {{% alert color="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered mulitple times with different version numbers or deployed to different environments, all exposing the entity (dataset)) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert color="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
-3. Drag and drop the entity in the Domain Model. 
-
-4. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
+1. Drag and drop the entity in the Domain Model. 
+1. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
 
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service
     * the **OData Location** that specifies the location constants for the service
 
-	    {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
+        {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
@@ -96,20 +94,23 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
 
 * **General Tab**
-	* **Name** – a local name for the attribute can be specified.
-	* **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
-	* **Summary** – a read-only summary displaying the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
-	* **Type** – read-only vlues for the **Type** and **Length** and **Max. Length** of the attribute as defined in the originating app
+    * **Name** – a local name for the attribute can be specified.
+    * **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
+    * **Summary** – a read-only summary displaying the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
+    * **Type** – read-only vlues for the **Type** and **Length** and **Max. Length** of the attribute as defined in the originating app
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
 ### 2.3 Associations {#associations}
 
 This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide/association-member-properties/).
 
+If the entity contains [one-way navigable associations](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
+
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
 
 The following apply for all associations with the external entity:
 
+**Navigability icon** – an icon indicating whether an association is [one-way navigable](/refguide/association-properties/#one-way-navigable)
 **Name** – name of the association as displayed in the current app
 **Type** – read-only for associations between two external entities
 **Owner** – read-only for associations between two external entities
@@ -140,6 +141,10 @@ When you **Edit** an association that is included for two entities exposed in th
 * **Multiplicity** – read-only multiplicity values from the originating app
 * **Documentation** – go to this tab to add a local description for the external entity association
 
+If the association is [one-way navigable](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box.
+
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" >}}
+
 ### 2.3.2 Connecting Two External Entities
 
 If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, you can add a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
@@ -153,8 +158,8 @@ You can add any local information about the external entity in this tab.
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The datasets associated with the entities are maintained in the originating apps.
 
 External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
- 
- * The **Commit** activity does not work. Use **Send External Object** instead.
- * On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
+
+* The **Commit** activity does not work. Use **Send External Object** instead.
+* On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
 
 For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/) in the *Data Hub Guide*.

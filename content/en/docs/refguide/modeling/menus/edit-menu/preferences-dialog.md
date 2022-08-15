@@ -1,7 +1,6 @@
 ---
 title: "Preferences"
 url: /refguide/preferences-dialog/
-parent: "edit-menu"
 weight: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
@@ -66,7 +65,6 @@ The **Logic Bot** tab contains the following settings:
 #### 3.2 Performance Bot
 
 The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
-
 
 ## 4 Model Tab
 
@@ -133,19 +131,7 @@ With this option, you can enable the new merge algorithm that is used when you u
 
 Default: *enabled*
 
-### 7.4 Team Server Git {#git}
-
-With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
-
-{{% alert color="warning" %}}
-This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). 
-{{% /alert %}}
-
-After applying this setting, you need to restart Studio Pro.
-
-Default: *disabled*
-
 ## 8 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
-* [How to Work with an On-Premises Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto/)
+* [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)

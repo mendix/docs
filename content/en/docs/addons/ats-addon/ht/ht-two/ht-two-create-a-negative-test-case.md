@@ -1,7 +1,6 @@
 ---
 title: "Create a Negative Test Case"
 url: /addons/ats-addon/ht-two-create-a-negative-test-case/
-parent: "ht-two"
 description: "Describes the steps for performing negative tests with ATS."
 tags: ["ATS", "testing"]
 ---
@@ -49,26 +48,26 @@ This is the final test case:
 {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/negative-test-case.png" >}}
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
-2.  Go to the **Repository** tab:
+2. Go to the **Repository** tab:
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/go-to-repository.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/go-to-repository.png" >}}
 
 3. Select the test case to add the negative test step.
-4.  Add the **Assert not true** action where you want to place the negative test step:
+4. Add the **Assert not true** action where you want to place the negative test step:
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/Assert_not_true_step_added.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/Assert_not_true_step_added.png" >}}
 
-5.  Set the **Assert Value** parameter of the Assert not true action to **True**:
+5. Set the **Assert Value** parameter of the Assert not true action to **True**:
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/set-to-true.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/set-to-true.png" >}}
 
-6.  Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](/addons/ats-addon/rg-one-findassert-menu-item/) action:
+6. Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](/addons/ats-addon/rg-one-findassert-menu-item/) action:
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png" >}}
 
-7.  Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
+7. Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/negative-test-step-finished-2.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/negative-test-step-finished-2.png" >}}
 
 These are the inner-workings:
 
@@ -79,13 +78,13 @@ Resulting in a test case fail if the menu item is found and a test case pass if 
 
 You can use this method for a lot of different things. 
 
-_The finished test case_
+*The finished test case*
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-a-negative-test-case/the-finished-test-case.png" >}}
 
- {{% alert color="info" %}}
+{{% alert color="info" %}}
 You can also add the **Assert not false** action with the **Assert value** set to false, instead of the **Assert not true** action, to create a negative test case.
-  {{% /alert %}}
+{{% /alert %}}
 
 ## 4 Next Up
 

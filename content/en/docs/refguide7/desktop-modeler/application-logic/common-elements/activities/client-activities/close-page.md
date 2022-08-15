@@ -1,7 +1,6 @@
 ---
 title: "Close Page"
 url: /refguide7/close-page/
-parent: "client-activities"
 aliases:
     - /refguide7/Close+Form.html
     - /refguide7/close-form.html

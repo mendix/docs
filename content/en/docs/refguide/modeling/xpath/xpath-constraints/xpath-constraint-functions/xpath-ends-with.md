@@ -1,7 +1,6 @@
 ---
 title: "XPath Ends-With"
 url: /refguide/xpath-ends-with/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 
@@ -13,9 +12,8 @@ The `ends-with()` function checks whether a string attribute ends with a specifi
 
 This query returns all customers whose name ends with the sub-string `sen`:
 
-```java
+```java {linenos=false}
 //Sales.Customer[ends-with(Name, 'sen')]
 ```
 
 Customers with the name "Jansen" or "Isaacsen" will be returned, for example, because both names end with "sen."
-

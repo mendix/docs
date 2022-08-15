@@ -1,7 +1,6 @@
 ---
 title: "Text"
 url: /studio/page-editor-widgets-text/
-parent: "page-editor-widgets"
 description: "Describes typography widgets in Mendix Studio."
 weight: 40
 tags: ["studio", "page editor", "typography", "text widgets", "widgets"]
@@ -34,13 +33,10 @@ To edit **Content**, double-click the widget on the page.
 #### 2.1.1 Translations
 
 {{% alert color="info" %}}
-
 Only available if multiple languages are set up in your app in Mendix Studio Pro. 
-
 {{% /alert %}}
 
 This option allows you to add translations of the button caption to other languages. For more information on how to add translations, see [App Languages](/studio/settings-languages/).
-
 
 ### 2.2 Render Mode {#render-mode}
 
@@ -67,12 +63,8 @@ The **Title** that you see in the page properties and in widget is one and the s
 
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-text/page-title-interrelation.png" >}}
 
-
-
 {{% alert color="info" %}}
-
 You can put several **Title** widgets on your page, but they will all display the same text and cannot be edited individually.
-
 {{% /alert %}}
 
 ## 4 Conditional Visibility Section

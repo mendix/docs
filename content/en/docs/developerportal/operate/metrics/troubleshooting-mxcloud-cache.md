@@ -1,7 +1,6 @@
 ---
 title: "Cache Metrics (Runtime Version 6)"
 url: /developerportal/operate/troubleshooting-mxcloud-cache/
-parent: "metrics"
 weight: 90
 description: "How to troubleshoot the cache in your node."
 tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]

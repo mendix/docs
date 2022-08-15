@@ -1,7 +1,6 @@
 ---
 title: "Header"
 url: /refguide8/header/
-parent: "layout"
 weight: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,7 +11,6 @@ tags: ["studio pro"]
 {{% /alert %}}
 
 ## 1 Introduction
-
 
 A **header** combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. A header can only be used in a [layout](/refguide8/layout/).
 
@@ -29,7 +27,6 @@ The page title placeholder is replaced by the page title setting of the page bei
 For example, the image below shows an edit page derived from a layout with a header. The page title is automatically set to that of the page and the drop-zones have been used to add a save and cancel button, replacing the need to add a control bar to the data view.
 
 {{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/header/header-page.png"   width="350"  >}}
-
 
 ## 2 Properties
 

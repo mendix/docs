@@ -1,7 +1,6 @@
 ---
 title: "XPath Query Functions"
 url: /refguide/xpath-query-functions/
-parent: "xpath"
 tags: ["studio pro"]
 ---
 

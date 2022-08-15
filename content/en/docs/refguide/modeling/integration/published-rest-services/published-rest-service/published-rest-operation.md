@@ -1,7 +1,6 @@
 ---
 title: "Published REST Operation"
 url: /refguide/published-rest-operation/
-parent: "published-rest-service"
 weight: 10
 description: "Options to configure a published REST operation."
 tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
@@ -55,15 +54,15 @@ The **Example Location** gives an example of a URL on which the operation can be
 
 An operation can have the following parameters:
 
- * [Query parameters](/refguide/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2` 
-   {{% alert color="info" %}}
-   When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.
-   {{% /alert %}}
+* [Query parameters](/refguide/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2`
+
+    {{% alert color="info" %}}When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.{{% /alert %}}
+
 * [Path parameters](/refguide/published-rest-path-parameters/), which form part of the path of the URL
 * A body parameter (optional), which is in the body of the request to the operation 
-   {{% alert color="info" %}}
-   The **GET**, **HEAD**, and **DELETE** operations do not have a body parameter.
-   {{% /alert %}}
+
+    {{% alert color="info" %}}The **GET**, **HEAD**, and **DELETE** operations do not have a body parameter.{{% /alert %}}
+
 * Header parameters, which come from the HTTP headers of the request
 * A form parameter (optional), which is a part of the body of a multipart form request
 
@@ -78,16 +77,17 @@ To set the status code, reason phrase, and headers, add an [HttpResponse](/refgu
 The result of the microflow is the result of the operation and can include the following:
 
 1. **Return a** ***list*** **or an** ***object***– you must specify an export mapping to convert it to XML or JSON.
-2. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value. 
-   {{% alert color="info" %}}
-   If a non-empty value from the microflow is returned, the *Content* attribute of the *HttpResponse* object is ignored. 
-   If an empty value from the microflow is returned, then the *Content* of the *HttpResponse* is taken as the result.
-   {{% /alert %}}
-3.  **Return a file document** – when you want to return data that is a file (such as a PDF or image), then the microflow returns a file document.
+2. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value.
+
+    {{% alert color="info" %}}
+    If a non-empty value from the microflow is returned, the *Content* attribute of the *HttpResponse* object is ignored.
+
+    If an empty value from the microflow is returned, then the *Content* of the *HttpResponse* is taken as the result.
+    {{% /alert %}}
+
+3. **Return a file document** – when you want to return data that is a file (such as a PDF or image), then the microflow returns a file document.
 4. **Return a** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
-   {{% alert color="info" %}}
-   One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.
-   {{% /alert %}}
+    {{% alert color="info" %}}One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.{{% /alert %}}
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 
@@ -118,12 +118,15 @@ Valid requests must contain a *Content-Type* header. See [Recognized media types
 The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) based on [JSON Schema](/refguide/published-rest-service-json-schema/)
 
 #### 2.1.7 Response
+
 This defines the response of the operation. You can specify the type of the microflow result and the export mapping applied to it (if any).
 
 ##### 2.1.7.1 Type
+
 This shows the result type of the microflow.
 
 ##### 2.1.7.2 Export Mapping
+
 When the microflow returns an object or a list of objects, you must specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
 
 If you select an export mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the output depends on whether the microflow has a parameter of type *System.HttpResponse* and adds a *Content-Type* header to it. The possible scenarios are given below:
@@ -132,13 +135,13 @@ If you select an export mapping that supports both XML and JSON (for example, a 
 
     <a name="table1">**Recognized media types**</a>
 
-	| Media Type                   | Recognized As |
-	| ---                          | --- |
-	| *application/xml*            | XML |
-	| *text/xml*                   | XML |
-	| anything ending with *+xml*  | XML |
-	| *application/json*           | JSON |
-	| anything ending with *+json* | JSON |
+    | Media Type                   | Recognized As |
+    | ---                          | --- |
+    | *application/xml*            | XML |
+    | *text/xml*                   | XML |
+    | anything ending with *+xml*  | XML |
+    | *application/json*           | JSON |
+    | anything ending with *+json* | JSON |
 
 * When the microflow sets the *Content-Type* header to something else, then the operation returns JSON.
 
@@ -153,8 +156,9 @@ The export mapping is also used to generate object schemas for operation respons
 In the **Public Documentation** tab you can specify the documentation that will be used in the service's [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation).
 
 #### 2.2.1 Summary {#summary}
+
 Provide a short description of what the operation does.
 
 #### 2.2.2 Description {#description}
-Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](/refguide/gfm-syntax/) syntax to style the text.
 
+Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](/refguide/gfm-syntax/) syntax to style the text.

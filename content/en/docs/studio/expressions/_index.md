@@ -29,14 +29,12 @@ Expressions can be used in the following properties on a page:
 
 Expressions can be used for the following activities in a microflow: 
 
-*  Change Object
-*  Change Variable
-*  Create Object
-*  Create Variable
-*  [Decision](/studio/microflows-decision/)
-*  End Event
-
-For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/).
+* Change Object
+* Change Variable
+* Create Object
+* Create Variable
+* [Decision](/studio/microflows-decision/)
+* End Event
 
 ## 2 Writing an Expression
 
@@ -46,7 +44,7 @@ Attributes and associations of objects are accessed using a slash (for example, 
 
 You can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
-```
+```text
 $CurrentPrice/Price - (($CurrentPrice/Price div 100) * $OrderLine/Discount)
 ```
 
@@ -66,7 +64,6 @@ You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl
 If there is an errors in the expression, the place where the error is, is highlighted red and an error message is shown when you hover over it.  In some cases there are quick fixes available to quickly solve the issue.
 
 {{< figure src="/attachments/studio/expressions/expression-error.png" >}}
-
 
 ### 2.3  Expression Examples
 
@@ -176,9 +173,22 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`addDays`](/refguide/add-date-function-calls/) – adds days to a date
 * [`addWeeks`](/refguide/add-date-function-calls/) – adds weeks to a date
 * [`addMonths`](/refguide/add-date-function-calls/) – adds months to a date
+* [`addQuarters`](/refguide/add-date-function-calls/) – adds quarters to a date
 * [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
 
-### 3.11 Parse & Format Decimal Function Calls
+### 3.11 Subtract Date Function Calls
+
+* [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
+* [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
+* [`subtractMinutes`](/refguide/subtract-date-function-calls/) – subtracts minutes from a date
+* [`subtractHours`](/refguide/subtract-date-function-calls/) – subtracts hours from a date
+* [`subtractDays`](/refguide/subtract-date-function-calls/) – subtracts days from a date
+* [`subtractWeeks`](/refguide/subtract-date-function-calls/) – subtracts weeks from a date
+* [`subtractMonths`](/refguide/subtract-date-function-calls/)  – subtracts months from a date
+* [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
+* [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
+
+### 3.12 Parse & Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 
@@ -186,5 +196,4 @@ The list of expressions that are used in Studio the most is represented below. F
 
 * [Microflows](/studio/microflows/)
 * [Workflows](/studio/workflows/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/)
 * [Expressions](/refguide/expressions/)

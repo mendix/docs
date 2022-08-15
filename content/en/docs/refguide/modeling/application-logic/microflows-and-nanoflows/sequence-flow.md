@@ -1,7 +1,6 @@
 ---
 title: "Sequence Flow"
 url: /refguide/sequence-flow/
-parent: "microflows-and-nanoflows"
 weight: 30
 tags: ["studio pro", "sequence flow", "microflow"]
 ---

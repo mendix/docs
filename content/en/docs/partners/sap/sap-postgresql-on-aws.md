@@ -1,5 +1,6 @@
 ---
 title: "PostgreSQL on Amazon (AWS) for SAP Business Technology Platform"
+linktitle: "PostgreSQL on AWS for SAP BTP"
 url: /partners/sap/sap-postgresql-on-aws/
 category: "SAP"
 weight: 48

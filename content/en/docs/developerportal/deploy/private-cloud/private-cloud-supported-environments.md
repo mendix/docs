@@ -1,7 +1,6 @@
 ---
 title: "Supported Providers"
 url: /developerportal/deploy/private-cloud-supported-environments/
-parent: "private-cloud"
 description: "Describes which providers are supported by Mendix for Private Cloud"
 weight: 50
 tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry", "Database"]
@@ -147,8 +146,6 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 [Google Cloud Platform](https://cloud.google.com/) provides [artifact registry](https://cloud.google.com/artifact-registry) and [container-registry](https://cloud.google.com/container-registry).
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
-
-
 
 ## 4 Databases
 
@@ -405,7 +402,7 @@ Mendix for Private Cloud can create Services that are compatible with:
 * [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
 * AWS Classic Load Balancer
 
-### 6.4 Service mesh support
+### 6.4 Service Mesh Support
 
 Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
 

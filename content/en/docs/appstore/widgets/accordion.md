@@ -31,42 +31,42 @@ The **Groups** section (required) is used to configure the groups that are part 
 The **General** tab in the **Edit Groups Item** dialog box has the following properties:
 
 * **Header** – determines if the header content consists of text or widgets
-	* Default: **Text**
+    * Default: **Text**
 * **Text** – the text value to be displayed in the header
-	* Configurable when the header content consists of **Text**
+    * Configurable when the header content consists of **Text**
 * **Render mode** – the text's heading level
-	* Default: **Heading 3**
-	* Configurable when the header content consists of **Text**
+    * Default: **Heading 3**
+    * Configurable when the header content consists of **Text**
 * **Custom header content** – the widgets to be displayed in the header
-	* Configurable when the header content consists of widgets
+    * Configurable when the header content consists of widgets
 * **Visible** – a Boolean expression indicating whether the group should be visible
-	* Default: **true**
+    * Default: **true**
 * **Dynamic class** (required) – a string expression to apply dynamic classes (separated by a space) to the group
 
 The **State** tab in the **Edit Groups Item** dialog box is only visible when [Advanced options](#advanced) is set to **Yes**, and it has the following properties:
 
 * **Start as** – determines whether the header content starts expanded or collapsed (optionally, through the help of an expression with the **Dynamic** option)
-	* Default: **Collapsed**
+    * Default: **Collapsed**
 * **Start as collapsed** – a Boolean expression indicating whether the group should be expanded or collapsed
-	* Default: **true**
-	* Configurable when **Starts as** is set to **Dynamic**
+    * Default: **true**
+    * Configurable when **Starts as** is set to **Dynamic**
 * **Collapsed** – a Boolean attribute indicating whether the group should be expanded or collapsed 
-	* Note that the **Start as** properties override the attribute value for the initial state
+    * Note that the **Start as** properties override the attribute value for the initial state
 * **On change** – executes an action when the **Collapsed** attribute value changes
-	* Note that the **Start as** properties can prevent execution of this action when the initial state changes
+    * Note that the **Start as** properties can prevent execution of this action when the initial state changes
 
 #### 2.1.2 Behavior Section
 
 Configure the following properties in this section:
 
 * **Collapsible** – determines whether the content of groups is collapsible
-	* Enabled by default
+    * Enabled by default
 * **Expanded groups** – determines whether one or more groups can be expanded at once
-	* Default: **Single**
-	* When set to **Single**, multiple expanded groups are suppressed
+    * Default: **Single**
+    * When set to **Single**, multiple expanded groups are suppressed
 * **Animate** – determines whether the collapsing and expanding of content is animated
-	* Default: **Yes**
-	* Only visible when [Advanced options](#advanced) is set to **Yes**
+    * Default: **Yes**
+    * Only visible when [Advanced options](#advanced) is set to **Yes**
 
 ### 2.2 Advanced Tab {#advanced}
 
@@ -79,38 +79,38 @@ The **Enable advanced options** toggle (default: **No**) determines whether adva
 When set to **Yes**, the following tabs and properties become visible:
 
 * [General](#general) tab 
-	* **Groups** section:
-		* **General** tab
-			* **Render mode**
-		* **State** tab 
-			* **Start as**
-			* **Start as collapsed**
-			* **Collapsed**
-			* **On change**
-	* **Behavior** section
-		* **Animate**
+    * **Groups** section:
+        * **General** tab
+            * **Render mode**
+        * **State** tab 
+            * **Start as**
+            * **Start as collapsed**
+            * **Collapsed**
+            * **On change**
+    * **Behavior** section
+        * **Animate**
 * [Visualization](#visualization) tab
-	* **Show icon**
-	* **Icon** 
-	* **Animate icon**
-	* **Expand icon**
-	* **Collapse icon**
+    * **Show icon**
+    * **Icon** 
+    * **Animate icon**
+    * **Expand icon**
+    * **Collapse icon**
 
 ### 2.3 Visualization Tab {#visualization}
 
 The **Visualization** tab is only visible when [Advanced options](#advanced) is set to **Yes**, and it and has the following properties:
 
 * **Show icon** – determines whether to show the icon on the left or right side of the header content or not at all
-	* **Right** by default
+    * **Right** by default
 * **Icon** – the icon displayed and animated in the header
-	* Configurable when **Animate icon** is set to **Yes** 
+    * Configurable when **Animate icon** is set to **Yes** 
 * **Animate icon** – determines whether the icon is animated when the content is collapsing and expanding
-	* Default: **Yes**
-	* When set to **No**, the **Expand icon** and **Collapse icon** properties become visible
+    * Default: **Yes**
+    * When set to **No**, the **Expand icon** and **Collapse icon** properties become visible
 * **Expand icon** – the icon displayed in the header to indicate that the content can be expanded
-	* Configurable when **Animate icon** is set to **No**
+    * Configurable when **Animate icon** is set to **No**
 * **Collapse icon** – the icon displayed in the header to indicate that the content can be collapsed
-	* Configurable when **Animate icon** is set to **No**
+    * Configurable when **Animate icon** is set to **No**
 
 ## 3 Styling
 
@@ -119,12 +119,12 @@ The accordion widget is shipped with default styles and works out of the box wit
 These are the design properties shipped with Atlas UI for this widget:
 
 * **Borders** – changes the border appearance 
-	* **All**, **Horizontal**, **None**
-	* By default, only horizontal borders between groups are applied
+    * **All**, **Horizontal**, **None**
+    * By default, only horizontal borders between groups are applied
 * **Compact** – make groups in the accordion more compact
-	* **Yes**, **No** (default)
+    * **Yes**, **No** (default)
 * **Striped** – add alternating background colors to groups in the accordion
-	* **Yes**, **No** (default)
+    * **Yes**, **No** (default)
 
 The following brand styles (and their associated class names) are shipped with Atlas UI as helper classes:
 

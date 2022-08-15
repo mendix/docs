@@ -1,7 +1,6 @@
 ---
 title: "Published App Service"
 url: /refguide8/published-app-service/
-parent: "published-app-services"
 tags: ["studio pro"]
 ---
 
@@ -59,8 +58,8 @@ Provide the actual actions of which the app service is composed. Each of these a
 
 The following authentication methods are available:
 
-*   No authentication.
-*   Username and password: the provided action is only executed if the username/password combination matched a registered web service user.
+* No authentication.
+* Username and password: the provided action is only executed if the username/password combination matched a registered web service user.
 
 ### 3.2 Target Namespace
 
@@ -71,9 +70,7 @@ The 'Target namespace' is a technical term, that provides an XML namespace.
 The button 'Export Mendix Service Definition' creates an MSD-file with the definition of the App service. It can be imported by a consumer of your service. You can test your app service on the local machine by importing this MSD file in another app, and running the provider and consumer apps simultaneously.
 
 {{% alert color="warning" %}}
-
 This MSD file contains a default location: the Application Root URL of the default configuration in the project settings. For example: [http://localhost:8080/](http://localhost:8080/). This endpoint address is overwritten if you deploy your app in the cloud, and will be set to the cloud location where your app is running.
-
 {{% /alert %}}
 
 ## 4 Documentation

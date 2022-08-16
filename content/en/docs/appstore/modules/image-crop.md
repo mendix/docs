@@ -61,8 +61,8 @@ If you want to use your own entity or alter the implementation, you can choose t
 These are the **Cropper** widget properties:
 
 * **Max width** and **Max height** – the maximum width and height to which cropping the view port will stretch; use *0* for no maximum width or no maximum height
-	* If both **Max width** and **Max height** are set to *0*, the cropping view port will be set to the true natural image size
-	* When dealing with large images, setting at least **Max width** or **Max height** is recommended
+    * If both **Max width** and **Max height** are set to *0*, the cropping view port will be set to the true natural image size
+    * When dealing with large images, setting at least **Max width** or **Max height** is recommended
 * **Start height** – the initial height of the cropping window
 * **Start width** – the initial width of the cropping window
 * **Aspect ratio** – the aspect ratio that will be applied on the cropping window.
@@ -71,8 +71,8 @@ These are the **Cropper** widget properties:
 
 * **cropImgObj** – the object that has the neccessary attributes to be resized
 * **newWidth** and **newHeight** – make sure these match the **Aspect ratio** used in the [Cropper Widget](#cropper) to make sure the image does not get transformed inconsistently
-	* If either **newWidth** or **newHeight** are set to *0*, the image will be scaled based on the entered value while keeping the aspect ratio
-	* If both **Max width** and **Max height** are set to *0*, the width and height set by the end-user with the widget will be used
+    * If either **newWidth** or **newHeight** are set to *0*, the image will be scaled based on the entered value while keeping the aspect ratio
+    * If both **Max width** and **Max height** are set to *0*, the width and height set by the end-user with the widget will be used
 * **thumbnailWidth** and **thumbnailHeight** – this is the size of the thumbnail, which is editable so that you can keep this in or near the same aspect ratio as the new image; the default implementation uses the tumbnail size as configured in **Configuration/ThumbnailSize** unless the image is smaller than the thumbnail
 
 ## 5 Developing This Marketplace Component

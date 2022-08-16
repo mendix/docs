@@ -32,6 +32,7 @@ If an anonymous user needs to have access to certain master data tables or needs
 ## 5 Security Review
 
 When going over an application and reviewing an anonymous user, there are three things that most often trigger a red flag (indicating the application is not secure):
+
 * An anonymous user role that reuses the module roles from the regular application user
 * An anonymous module role that has write access but no instance access XPath constraint
 * An anonymous module role that has full read access on an entity

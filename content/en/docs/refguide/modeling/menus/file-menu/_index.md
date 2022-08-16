@@ -12,7 +12,6 @@ The **File** menu allows you to manage documents and apps, for example, to creat
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/file-menu.png" alt="File Menu" >}}
 
-
 ## 2 Menu Items Overview {#overview}
 
 The **File** menu items are described in the table below:

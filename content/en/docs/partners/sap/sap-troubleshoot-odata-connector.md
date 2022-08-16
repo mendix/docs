@@ -94,6 +94,7 @@ To set log level for an application deployed to SAP BTP, go to â€˜Model Optionsâ
 To perform Java debugging, you must do the following:
 
 1. Set the following environment properties.
+
     ```yml
     DEVELOPMENT_MODE= true
     JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]

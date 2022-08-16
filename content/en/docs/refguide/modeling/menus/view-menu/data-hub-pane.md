@@ -51,6 +51,7 @@ You can drag the entity from the search results into your domain model and it wi
 {{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate/#discoverability).{{% /alert %}}
 
 ### 3.1 Wildcard Search
+
 You can perform a wildcard search by entering `*` in the search field.
 
 {{% alert color="info" %}}
@@ -58,6 +59,7 @@ The search strings must be a minimum of three alphanumeric characters. Punctuati
 {{% /alert %}}
 
 ### 3.2 Filtering Environments {#filter}
+
 By default, the search is performed on assets in the **Production** environment. To include all other environments such as test, acceptance, and also the Mendix free app environment, **Sandbox** in the search, click the **Filter** icon and check **Show development environments**:
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/filter-icon.png" alt="Filter Icon"   width="300"  >}}
@@ -75,24 +77,20 @@ The information that is displayed in the **Data Hub** pane either when you enter
 The search results and **User in your App** section show the following information at a service level:
 
 * **Service name**
-
-*  **Application icon** for the service (for example, Mendix, SAP, Siemens Teamcenter, or custom icons)
-
+* **Application icon** for the service (for example, Mendix, SAP, Siemens Teamcenter, or custom icons)
 * **Service version**
+* **Environment name** for non-production environments
 
-*  **Environment name** for non-production environments
-
-	{{% alert color="info" %}}Only the names of non-production environments are displayed. Services in the **Production** do not show an environment name. {{% /alert %}}
+    {{% alert color="info" %}}Only the names of non-production environments are displayed. Services in the **Production** do not show an environment name. {{% /alert %}}
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
     * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide/consumed-odata-service/) document
-    
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
-  
-* **Gray shield icon** shows if the service or entity is validated in the Catalog
 
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
+
+* **Gray shield icon** shows if the service or entity is validated in the Catalog
 * **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Data Hub Pane update" >}}

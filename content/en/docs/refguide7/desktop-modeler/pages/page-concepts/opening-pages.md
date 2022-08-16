@@ -42,4 +42,4 @@ This property indicates where the page is shown.
 | Pop-up | The page is shown as a non-blocking pop-up overlaying the page you were looking at. Non-blocking means that you can still use the underlying page . |
 | Blocking pop-up | The page is shown as a blocking pop-up. Blocking means that you cannot use the underlying page until you close the pop-up. |
 
-_Default value:_ Pop-up
+*Default value:* Pop-up

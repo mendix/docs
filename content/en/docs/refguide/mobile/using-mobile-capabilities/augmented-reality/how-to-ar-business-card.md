@@ -55,7 +55,7 @@ Next you will add a virtual image of your business card to overlap the physical 
 1. Select **Material type** > **Texture**.
 1. Select the image of your business card for the **Texture**. This should be the same image as you selected for your **Image Tracker (AR)**. When finished your dialog box will look like this:
 
-   {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/square-material-dialogue.png" alt="Square dialog"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/square-material-dialogue.png" alt="Square dialog"   width="400"  >}}
 
 1. Go back to the **General** tab and fill out the size of your business card. The important sizes are X for the width of your business card and Y for the height.
 1. Set **Rotation > X** to *-90* to ensure the virtual image is rotated correctly.

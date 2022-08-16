@@ -39,6 +39,6 @@ Click the **Custom Actions** tab to open the page:
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-custom-action-general/ht-two-custom-action-expense-app/company-expenses-custom-action-page.png" >}}
 
-All the how-to's for Unsupported Widget actions and Search Context actions are based on widgets that are available on this page. Each how-to has a title that corresponds with a widget on this page. For example, **CAB.02 - Switch** is based on the switch widget on this page. This allows you to follow the how-to directly in the app to get a better understanding of what to do, how, and why.
+All the how-to's for Unsupported Widget actions and Search Context actions are based on widgets that are available on this page. Each how-to has a title that corresponds with a widget on this page. For example, **CAB.02 - Switch** is based on the Switch widget on this page. This allows you to follow the how-to directly in the app to get a better understanding of what to do, how, and why.
 
 Feel free to try and solve an issue yourself, but don't forget to verify you did it in the correct manner!

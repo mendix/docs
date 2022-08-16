@@ -77,7 +77,6 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task/task-description-example.jpg" alt="Task Description Example" >}} 
 
-
 ##### 2.2.3.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:

@@ -21,10 +21,10 @@ Consult this flow chart to answer questions like:
 * How does basic authentication for REST services work?
 * How does anonymous authentication for REST services work?
 * What happens when a REST operation microflow returns an empty HTTPResponse?
-* Why does my REST service return _400 Bad Request_?
-* Why does my REST service return _401 Not Authorized_?
-* Why does my REST service return _404 Not Found_?
-* Why does my REST service return _405 Method Not Allowed_?
+* Why does my REST service return *400 Bad Request*?
+* Why does my REST service return *401 Not Authorized*?
+* Why does my REST service return *404 Not Found*?
+* Why does my REST service return *405 Method Not Allowed*?
 
 The example request is `GET /rest/petstore/pet/12`.
 

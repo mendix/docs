@@ -127,21 +127,21 @@ switch(scheduledEvent.getIntervalType())
 ```
 
 {{% alert color="warning" %}}
-
 If it is absolutely critical to run a scheduled event on a specific day of the month, you should schedule the event to run daily and then check whether this is the right day of the month to run it. 
 
 In your microflow you should start with a decision using an expression such as:
 
-```java
+```java {linenos=false}
 parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
 // This will run the scheduled event on the 15th of the month
 ```
 
 To run it on the last day of the month, you can use this suggestion from [Herbert Vujik](https://forum.mendixcloud.com/link/questions/6934):
 
-```java
+```java {linenos=false}
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 
 ```
+
 {{% /alert %}}
 
 ### 5.3 Specifying the Time

@@ -87,5 +87,5 @@ The render mode property determines whether the widget renders as a switch or a 
 
 ## 3 Read More
 
-*   [Data view](/refguide/data-view/)
-*   [Attributes](/refguide/attributes/)
+* [Data view](/refguide/data-view/)
+* [Attributes](/refguide/attributes/)

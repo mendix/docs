@@ -54,7 +54,7 @@ When considering intellectual property (IP) in the Mendix Marketplace, follow th
 * If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
 
 For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
-    
+  
 ### 3.3 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
@@ -75,9 +75,9 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
-*  If you add any **userlib** .*jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
+* If you add any **userlib** .*jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
 
-	{{< figure src="/attachments/appstore/general/share-app-store-content/userlibBlankFiles_boxed.jpg"   width="400"  >}}
+    {{< figure src="/attachments/appstore/general/share-app-store-content/userlibBlankFiles_boxed.jpg"   width="400"  >}}
 
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments/))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
@@ -113,24 +113,21 @@ On the **General** page,  you need to provide some details about your component.
 Follow these steps to describe your content:
 
 1. Enter a **Name** for your component.
-2.  Enter a **Description** of your component.
+2. Enter a **Description** of your component.
 
-	{{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.
-	{{% /alert %}}
+    {{% alert color="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.{{% /alert %}}
 
 3. The **Category** you selected earlier will be listed here. You can change this if necessary by clicking **Back** to go back to previous page..
-	
-	{{% alert color="warning" %}}You can only set the category in the initial version of your content. You cannot change this setting after the inital version is published.
-	{{% /alert %}}
+
+    {{% alert color="warning" %}}You can only set the category in the initial version of your content. You cannot change this setting after the inital version is published.{{% /alert %}}
 
 4. Depending on the category you selected, you may be asked to select a **Sub-category** for your component.
-5.  Select the location where you want to publish your component:
+5. Select the location where you want to publish your component:
 
-	* <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a user group can also be made available to [user group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
-	
-	{{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
-	{{% /alert %}}
+    * <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+    * <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a user group can also be made available to [user group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
+
+    {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
 
 6. Select the **Studio Pro Version** on which you built the content.
 
@@ -181,12 +178,12 @@ To finish up configuring this page, follow these steps:
 
 1. Click **Upload an Image** to upload an icon for the component.
 
-	{{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
+    {{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
 
 2. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
-	* **Save Draft** to save the details you have entered so far to the [Drafts](/appstore/general/app-store-overview/#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the upper right of the page)
-	* **Save & Continue** to go to the next page of the upload flow
+    * **Save Draft** to save the details you have entered so far to the [Drafts](/appstore/general/app-store-overview/#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the upper right of the page)
+    * **Save & Continue** to go to the next page of the upload flow
 
 ### 4.3 Package {#package}
 
@@ -196,11 +193,11 @@ On the **Package** page, select your content source.
 If you are using **Solutions**, you will not see the option to select your content source. If you are using **Solutions Template**, selecting a content source is optional.
 {{% /alert %}}
 
-* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
-	* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
-	* When you are finished, click **OK**
+* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import (for more information on the best practices when creating a Marketplace item in GitHub, see [How to Set Up a GitHub Repo to Publish a Marketplace Item](/appstore/creating-content/set-up-repo/))
+    * To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
+    * When you are finished, click **OK**
 * If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
-	* When you are finished, click **Save**
+    * When you are finished, click **Save**
 
 If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. 
 
@@ -225,16 +222,16 @@ On the **Enable** page, you can enter details on requirements and configuration 
 Follow the template for the recommended content:
 
 * You must fill out the following sections in order to submit your component:
-	* An extended **Description** of the component
-	* The **Typical usage scenario** for the component
-	* The **Features and limitations** of the component
+    * An extended **Description** of the component
+    * The **Typical usage scenario** for the component
+    * The **Features and limitations** of the component
 * These sections are optional:
-	* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
-	* The **Installation** steps and details
-	* The **Configuration** steps and details
-	* Any **Compatibility** steps and details
-	* Any **Known bugs**
-	* Any **Frequently asked questions**
+    * Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
+    * The **Installation** steps and details
+    * The **Configuration** steps and details
+    * Any **Compatibility** steps and details
+    * Any **Known bugs**
+    * Any **Frequently asked questions**
 
 The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
@@ -243,7 +240,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 {{< figure src="/attachments/appstore/general/share-app-store-content/enable.jpg"   width="600"  >}}
 
 You can optionally add a **Video** and **Demo**.
-	
+
 ### 4.5 Capabilities {#capabilities}
 
 On the **Capabilities** page, you can provide the following details about a solutions template:
@@ -293,24 +290,23 @@ Mendix expects the following updates for all Platform-supported, Community-suppo
 
 To update content that has already been published, follow these steps:
 
-1.  Find the component by clicking **My Marketplace** and selecting one of the following:
-	* **My Content**
-	* **Company Content**
-	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](/appstore/general/app-store-overview/#user-groups) as specific user group [content](/appstore/general/app-store-overview/#group-content), you can only update the component if you are a member of that group)
-	
-2.  Click **Manage** next to the component you want to update.
+1. Find the component by clicking **My Marketplace** and selecting one of the following:
+    * **My Content**
+    * **Company Content**
+    * **User Groups** (note that if an existing Marketplace component is assigned to a [user group](/appstore/general/app-store-overview/#user-groups) as specific user group [content](/appstore/general/app-store-overview/#group-content), you can only update the component if you are a member of that group)
 
-	{{% alert color="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.
-	{{% /alert %}}
+2. Click **Manage** next to the component you want to update.
+
+    {{% alert color="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.{{% /alert %}}
 
 3. You can edit all component details, as described in the [Adding New Marketplace Content](#adding) section above.
-4.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
+4. In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
 
-	* **Major update** – a large change (which will save the component from version 5.0 to version 6.0, for example)
-	* **Minor update** – a medium-sized change (which will save the component from version 6.0.0 to version 6.1.0, for example)
-	* **Patch** – a small change (which will save the component from 6.1.0 to 6.1.1, for example)
+    * **Major update** – a large change (which will save the component from version 5.0 to version 6.0, for example)
+    * **Minor update** – a medium-sized change (which will save the component from version 6.0.0 to version 6.1.0, for example)
+    * **Patch** – a small change (which will save the component from 6.1.0 to 6.1.1, for example)
 
-5.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+5. On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
 ## 6 Reviewing Outdated Components
 

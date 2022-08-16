@@ -69,11 +69,11 @@ This explanation might not have given you an explicit answer to the question on 
 
 There are a few situations where a clear answer can be given:
 
-_Never use inheritance for entities with:_
+*Never use inheritance for entities with:*
 
-*   _A high number of transactions on the different sub entities (As a high we consider multiple changes or creates per second)_
-*   _Only a handful common attributes. If you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either_
+* *A high number of transactions on the different sub entities (As a high we consider multiple changes or creates per second)*
+* *Only a handful common attributes. If you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either*
 
-_Never use one-to-one association for entities:_
+*Never use one-to-one association for entities:*
 
-*   _That always require the information from the associated objects, and users intensively search and sort on the associated attributes._
+* *That always require the information from the associated objects, and users intensively search and sort on the associated attributes.*

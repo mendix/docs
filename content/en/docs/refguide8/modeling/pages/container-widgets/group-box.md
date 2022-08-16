@@ -72,5 +72,3 @@ Possible values of this property are the following:
 * [Page](/refguide8/page/)
 * [Container Widgets](/refguide8/container-widgets/)
 * [Properties Common in the Page Editor](/refguide8/common-widget-properties/)
-
-

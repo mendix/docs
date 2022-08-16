@@ -32,6 +32,7 @@ For an example of how to set up this Selenium solution, see: [How to Set Up a Lo
 ### 2.3 Characteristics of the Selenium Solution
 
 Characteristics of the Selenium solution are the following:
+
 * Live-view possible only on the machine where Selenium is installed
 * No (out-of-the-box) video recording
 

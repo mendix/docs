@@ -77,7 +77,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 1. Open the **Customers** page.
 
-2.  Drag the **Details** button inside the list view.
+2. Drag the **Details** button inside the list view.
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
 
@@ -93,7 +93,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 3. Set **Customer** as **Entity**.
 
-4.  Set **Customer Details** as **Page**.
+4. Set **Customer Details** as **Page**.
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-button-create-object.png" alt="On Click Event Example" >}}
 
@@ -149,7 +149,7 @@ To fix this error, do one the following:
 
 1. Open your domain model and double-click the association that you are using for the reference selector.
 
-2.  In **Properties of Association** dialog window, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
+2. In **Properties of Association** dialog window, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
 
@@ -171,7 +171,7 @@ To fix the error, do one of the following:
 
 1. Open your domain model and double-click the association that you are using for the reference set selector or the input reference set selector and do the following: <br/>
 
-2.  In **Properties of Association** dialog window, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
+2. In **Properties of Association** dialog window, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
 
@@ -203,7 +203,7 @@ To change the ownership, do the following:
 
 2. Double-click one of the entities which association you use in the reference set selector or the input reference set selector to open the properties.
 
-3.  In the entity properties > the **Associations** tab, change the **Owner** to **Default** or **Both** depending on your use-case.
+3. In the entity properties > the **Associations** tab, change the **Owner** to **Default** or **Both** depending on your use-case.
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-selecting-the-owner.png" alt="Owner Property" >}}
 
@@ -219,6 +219,7 @@ File widgets should be placed in a data container, otherwise you will get consis
 | An [image uploader](/refguide7/image-uploader/) must be placed in a data view or snippet that is connected to entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image or its specialization as entity for this snippet. |
 | Move this widget into a data container, for example a data view or list view. | You have added an [image viewer](/refguide7/image-viewer/) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
 | Select an entity for the data source of this [image viewer](/refguide7/image-viewer/). | You have added an image viewer to a page, it is placed inside a data view or a list view, but an entity for the image viewer is not specified. | Open image viewer's properties > the **Data source** section and select an entity in the **Entity (path)** field. |
+
 ## 7 Image Widget Consistency Errors
 
 When you add an image widget to a page, but do not select an image itself, you will get a consistency error "No image selected". 
@@ -235,6 +236,6 @@ To fix the consistency errors, finish configuring the on click event (for exampl
 
 {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-on-click-event.png" alt="On Click Event Example" >}}
 
-##  9 Read More
+## 9 Read More
 
 * [Pages](/refguide7/pages/) 

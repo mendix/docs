@@ -42,11 +42,9 @@ The permissions are set independently for each environment. You can choose the e
 Only team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
 
 {{% alert color="info" %}}
-
 Only team members with a *user role* which includes permission to *Deploy, Publish, and Monitor* the app will be listed in the Node Permissions tab. For completeness, you will also see deactivated users who have been given these permissions, even though they no longer have access to your project. 
 
 You can change permissions for team members in [Team](/developerportal/collaborate/team/).
-
 {{% /alert %}}
 
 ### 3.3 Accessing Node Permissions
@@ -54,10 +52,9 @@ You can change permissions for team members in [Team](/developerportal/collabora
 To access the node permissions, do the following:
 
 1. Click **Environments** for your app.
-
 2. Open the **Permissions** tab.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permissions.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permissions.png" >}}
 
 3. Select the environment for which you want to change permissions from the drop-down.
 

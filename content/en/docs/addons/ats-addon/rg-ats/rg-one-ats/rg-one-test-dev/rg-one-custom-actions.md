@@ -97,12 +97,10 @@ Description | The description of the output parameter.
 Datatype | The datatype of the output parameter.
 Required/Optional | Sets if the parameter is required to be set.
 
-After an output parameter has been set, this parameter needs to be returned manually by using the _Set Return Value_ action.
+After an output parameter has been set, this parameter needs to be returned manually by using the *Set Return Value* action.
 
 {{% alert color="info" %}}
-
 To return a value from an action, you need use the **Set Return Value in a test step**.
-
 {{% /alert %}}
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-custom-actions/21168189.png" alt="Set return Value action to return output parameter" >}}

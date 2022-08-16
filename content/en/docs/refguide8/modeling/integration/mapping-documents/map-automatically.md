@@ -21,9 +21,9 @@ In the above picture, no entities are connected to the schema elements, and the 
 
 The following actions will be applied:
 
-*   Entities are created for each schema object element. The name is set to the complex type name in the schema.
-*   For XML extension types and choice options, the entity generalization is set to the entity corresponding to the XML base type, or choice container.
-*   Entity attributes are generated for schema primitive types and attributes.
+* Entities are created for each schema object element. The name is set to the complex type name in the schema.
+* For XML extension types and choice options, the entity generalization is set to the entity corresponding to the XML base type, or choice container.
+* Entity attributes are generated for schema primitive types and attributes.
 
 A dialog is shown with the changes that have been applied to the domain model and mapping document. (press "Details" to expand the dialog).
 

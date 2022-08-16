@@ -132,7 +132,6 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 * Create separate folders in the app folder for the generic company styling and app specific styling (this enables re-use and consistency between apps)
 * Always think about reuse; that common class you just created may be useful in other apps as well. Consider adding them to your company theme
 
-
 ## 5 Read More
 
 * [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide/)

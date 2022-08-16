@@ -30,8 +30,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The following steps explain how to schedule test cases:
 
-1.	Open your project in ATS and go to the **Schedules** tab in **Test Run**.
-2.  Click **Schedule test case** to schedule a test case:
+1. Open your project in ATS and go to the **Schedules** tab in **Test Run**.
+2. Click **Schedule test case** to schedule a test case:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/Schedules-tab-TC.png" >}}
 
@@ -40,32 +40,32 @@ The following steps explain how to schedule test cases:
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/select-testcase-dialog.png" >}}
 
 3. Click the test case you want to schedule. To search for the test case, you can use the **Search** button.
-4.	Click **Select**. Selecting a test case opens the **New Schedule** dialog box:
+4. Click **Select**. Selecting a test case opens the **New Schedule** dialog box:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/new-schedule-dialog.png" >}}
 
-5.	Set the desired **Schedule Test Settings**: 
+5. Set the desired **Schedule Test Settings**: 
 
     * **Active** - Activate/Deactivate the event
     * **After** - Set time when event is first executed
     * **Repeat** – Repeat/Not repeat the event
     * **Every** - Set interval to repeat the event
 
-6.  Set the desired **General Settings**: 
+6. Set the desired **General Settings**: 
 
     * **Environment** - Set application on which to run the test
     * **Selenium Hub** - Set Selenium hub on which to execute the test
     * **Browser** - Set browser in which to run the test
 
-7.  Set the desired **Platform Settings**: 
+7. Set the desired **Platform Settings**: 
 
-	* **Platform** - Set platform on which to run the test
-	* **Resolution** - Set resolution with which the test is run
+    * **Platform** - Set platform on which to run the test
+    * **Resolution** - Set resolution with which the test is run
 
-	{{% alert color="info" %}}Note: Platform Settings are not visible for all Selenium hubs.
-	{{% /alert %}}
+    {{% alert color="info" %}}Note: Platform Settings are not visible for all Selenium hubs.
+    {{% /alert %}}
 
-6.	Click **Save**:
+8. Click **Save**:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" >}}
 
@@ -76,8 +76,8 @@ Clicking **Save** adds the test case to the list of scheduled items. Click the *
 
 The following steps explain how to schedule test suites:
 
-1.	Open your project in ATS and go to the **Schedules** tab in **Test Run**.
-2.	Click **Schedule test suite** to schedule a test suite:
+1. Open your project in ATS and go to the **Schedules** tab in **Test Run**.
+2. Click **Schedule test suite** to schedule a test suite:
   
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/Schedules-tab-TS.png" >}}
 
@@ -86,35 +86,35 @@ The following steps explain how to schedule test suites:
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/select-testsuite-dialog.png" >}}
 
 3. Click the test suite you want to schedule. To search for the test suite, you can use the **Search** button.
-4.	Click **Select**. Selecting a test suite opens the **New Schedule** dialog box:
+4. Click **Select**. Selecting a test suite opens the **New Schedule** dialog box:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/new-schedule-dialog.png" >}}
 
-5.	Set the desired **Schedule Test Settings**:
+5. Set the desired **Schedule Test Settings**:
 
     * **Active** - Activate/Deactivate the event
-	* **After** - Set time when event is first executed
-	* **Repeat** – Repeat/Not repeat the event
-	* **Every** - Set interval to repeat the event
+    * **After** - Set time when event is first executed
+    * **Repeat** – Repeat/Not repeat the event
+    * **Every** - Set interval to repeat the event
 
-6.  Set the desired **General Settings**: 
+6. Set the desired **General Settings**: 
 
     * **Environment** - Set application on which to run the test
-	* **Selenium Hub** - Set Selenium hub on which to execute the test
-	* **Browser** - Set browser in which to run the test
+    * **Selenium Hub** - Set Selenium hub on which to execute the test
+    * **Browser** - Set browser in which to run the test
 
-7.  Set the desired **Platform Settings**: 
+7. Set the desired **Platform Settings**: 
 
-	* **Platform** - Set platform on which to run the test
-	* **Resolution** - Set resolution with which the test is run
+    * **Platform** - Set platform on which to run the test
+    * **Resolution** - Set resolution with which the test is run
 
-	{{% alert color="info" %}}
-	Note: Platform Settings are not visible for all Selenium hubs.
-	{{% /alert %}}
+    {{% alert color="info" %}}
+    Note: Platform Settings are not visible for all Selenium hubs.
+    {{% /alert %}}
 
-6.	Click **Save**:
+8. Click **Save**:
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" >}}
 
 Clicking **Save** adds the test suite to the list of scheduled items. Click the **Edit icon** to change the settings (1). Click the **Delete icon** to delete the scheduled test case(2):
 {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-schedule-testcase-testsuite/scheduled-testsuite-g.png" >}}

@@ -29,6 +29,3 @@ The properties of anonymous users are described in the table below:
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)
 * [Password Policy](/refguide/password-policy/)
-
-
-

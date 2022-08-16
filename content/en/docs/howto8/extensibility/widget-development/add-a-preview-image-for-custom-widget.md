@@ -31,4 +31,3 @@ After packaging your custom widget, the image provided will be rendered in Studi
 {{< figure src="/attachments/howto8/extensibility/widget-development/add-a-preview-image-for-custom-widget/02_Preview.png" >}}
 
 Please note that older versions of Studio Pro ignore this image and render a grey rectangle as usual.
-

@@ -35,13 +35,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 max(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java
+```java {linenos=false}
 6.7
 ```
 
@@ -69,13 +69,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 min(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java
+```java {linenos=false}
 1
 ```
 
@@ -95,8 +95,9 @@ The input parameters are described in the table below:
 ### 4.2 Output
 
 In the [App Settings](/refguide/app-settings/), your option for **Round numbers** can be set which determines how half numbers (0.5) are treated:
-*   For the **Half away from zero** option (also called "commercial rounding"), +2.5 becomes +3 and -1.5 becomes -2
-*   The **Half to the nearest even number** option (also called "bankers' rounding") is the default rounding mode used in [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point") computing functions and operators; for example, +23.5 becomes +24, as does +24.5; and -22.5 becomes -22, as does -21.5
+
+* For the **Half away from zero** option (also called "commercial rounding"), +2.5 becomes +3 and -1.5 becomes -2
+* The **Half to the nearest even number** option (also called "bankers' rounding") is the default rounding mode used in [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point") computing functions and operators; for example, +23.5 becomes +24, as does +24.5; and -22.5 becomes -22, as does -21.5
 
 The second optional parameter determines the precision of the rounding. The default value is 0. The result will be of the most precise type possible. For a precision of 0, the result will be of integer/long type, and for all other precision values, the result will be of the decimal type.
 
@@ -104,25 +105,25 @@ The second optional parameter determines the precision of the rounding. The defa
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 round(3.5)
 ```
 
 The output is of type Integer/Long:
 
-```java
+```java {linenos=false}
 4
 ```
 
 Another example of an input is:
 
-```java
+```java {linenos=false}
 round(88.725,2)
 ```
 
 The output is a decimal:
 
-```java
+```java {linenos=false}
 88.72
 ```
 
@@ -142,13 +143,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 random()
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 0.3
 ```
 
@@ -176,25 +177,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 floor(3.9)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 3
 ```
 
 Another example of an input is:
 
-```java
+```java {linenos=false}
 floor(-1.2)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 -2
 ```
 
@@ -222,25 +223,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 ceil(3.2)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 4
 ```
 
 Another example of an input is:
 
-```java
+```java {linenos=false}
 ceil(-1.9)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 -1
 ```
 
@@ -269,25 +270,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 pow(2, 3)
 ```
 
 The output is of type Integer/Long:
 
-```java
+```java {linenos=false}
 8
 ```
 
 Another example of an input is:
 
-```java
+```java {linenos=false}
 pow(2.5, 3)
 ```
 
 The output is of type Decimal:
 
-```java
+```java {linenos=false}
 15.625
 ```
 
@@ -298,7 +299,6 @@ Calculation of 'pow' with a decimal power might be less accurate, as the standar
 To get the square root of a decimal, use 0.5 as the second parameter:
 
 * `pow(16, 0.5)` results in `4`
-
 
 Or, use a division for a specific root:
 
@@ -330,18 +330,18 @@ The output is described in the table below:
 
 If you type in the negative value as an input:
 
-```java
+```java {linenos=false}
 abs(-5)
 ```
 
 Or, if you type in the positive value: 
 
-```java
+```java {linenos=false}
 abs(5)
 ```
 
 The output in both cases is:
 
-```java
+```java {linenos=false}
 5
 ```

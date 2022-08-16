@@ -23,4 +23,4 @@ Indicates the type of the cell. Two types are supported:
 | Normal | Normal cell containing data (<td>). |
 | Header | Header cell containing captions (<th>). |
 
-_Default value:_ Normal
+*Default value:* Normal

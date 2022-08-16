@@ -36,7 +36,6 @@ You can perform the following basic function when working in the page editor:
 To open a page in Studio Pro, do the following:
 
 1. In the [Project Explorer](/refguide8/project-explorer/), open a module where this page is located. 
-
 2. Navigate to the page's location inside the module. A page can be listed as an individual element or be included in the **Pages** folder:
 
     {{< figure src="/attachments/refguide8/modeling/pages/page/project-explorer-pages.png" >}}
@@ -49,11 +48,11 @@ The selected page is opened.
 
 To create a new page, do the following:
 
-1.  In the [Project Explorer](/refguide8/project-explorer/), right-click the module or a folder you want to create a page in and select **Add page**:
+1. In the [Project Explorer](/refguide8/project-explorer/), right-click the module or a folder you want to create a page in and select **Add page**:
 
     {{< figure src="/attachments/refguide8/modeling/pages/page/add-page.png"   width="350"  >}}
 
-2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
+2. In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
     {{< figure src="/attachments/refguide8/modeling/pages/page/create-page.png" >}}
 
@@ -76,35 +75,33 @@ The way you can add an element on a page depends on a mode you are editing your 
 
 In **Structure mode**, there are several ways to add an element on a page:
 
-1.  Through the **Toolbox**:
+1. Through the **Toolbox**:
 
     1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.
-    
+
         {{< figure src="/attachments/refguide8/modeling/pages/page/toolbox.png" >}}
-      
+
     2. Select an element you would like to add and drag and drop this element on your page.
-   
+
 2. Through the menu at the top of the page:
 
     1. Do one of the following:
 
-        i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
-
-        ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
+        1. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
+        1. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
 
         {{< figure src="/attachments/refguide8/modeling/pages/page/top-menu.png" >}}
-        
+
     2. Click a drop-zone on a page to position an element.
 
 3. By right-clicking a drop-zone:<br/>
 
-    a. Right-click a drop-zone you want to insert an element in.<br/>
+    1. Right-click a drop-zone you want to insert an element in.<br/>
+    1. Select between adding a widget or a building block.<br/>
 
-    b. Select between adding a widget or a building block.<br/>
+        {{< figure src="/attachments/refguide8/modeling/pages/page/adding-widget-in-drop-zone.png"   width="400"  >}}<br/>
 
-    {{< figure src="/attachments/refguide8/modeling/pages/page/adding-widget-in-drop-zone.png"   width="400"  >}}<br/>
-
-    c. Select an element you would like to add and confirm your choice by clicking **Select**.
+    1. Select an element you would like to add and confirm your choice by clicking **Select**.
 
 In **Design mode**, you can add elements though the Toolbox. Do the following:
 
@@ -127,11 +124,9 @@ To cut/copy/paste you can use the following shortcuts:
 * <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>
 
 {{% alert color="info" %}}
-
 You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
 
 You cannot cut/copy/paste from Studio Pro to Studio.
-
 {{% /alert %}}
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
@@ -161,13 +156,13 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 * Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
 
-	{{< figure src="/attachments/refguide8/modeling/pages/page/structure-mode-info.png" alt="Frequently-used widgets" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/page/structure-mode-info.png" alt="Frequently-used widgets" >}}
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
 * Right-click a drop-zone allows you to insert a widget into it
 * There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
 
-	{{< figure src="/attachments/refguide8/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets" >}}
 
 * Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button.
 
@@ -186,13 +181,12 @@ It has the following features which are not available in **Structure mode**:
 * The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in Design mode
 * The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button:
 
-	{{< figure src="/attachments/refguide8/modeling/pages/page/design-factor.png" alt="Show styles button" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/page/design-factor.png" alt="Show styles button" >}}
 
 * The widgets have design properties and CSS classes and styles applied to them so you can see what they will look like
 * Toggle showing conditionally-visible widgets in the top bar:
 
-	{{< figure src="/attachments/refguide8/modeling/pages/page/conditional-visibility.jpg" alt="Show conditional visibility" >}}
-
+    {{< figure src="/attachments/refguide8/modeling/pages/page/conditional-visibility.jpg" alt="Show conditional visibility" >}}
 
 ## 4 Read More
 

@@ -50,12 +50,12 @@ Whether you plan to import or export documents, working with XML means that your
 
 To add an XML schema (XSD), follow these steps:
 
-1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu.
-2.  Enter **CustomersXSD** as the **Name** and click **OK**:
+1. Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu.
+2. Enter **CustomersXSD** as the **Name** and click **OK**:
 
     {{< figure src="/attachments/howto8/integration/export-xml-documents/18581696.png" >}}
 
-3.  In the **XML Schema** editor, click **Select** and select the XSD file that you downloaded earlier:
+3. In the **XML Schema** editor, click **Select** and select the XSD file that you downloaded earlier:
 
     {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581657.png" >}}
 
@@ -68,35 +68,35 @@ The XML schema describes what the possible contents of an XML file are, but we n
 To create the XML-to-domain mapping, follow these steps:
 
 1. Right-click a module in the **Project Explorer** and select **Add Other** > **Import mapping**.
-2.  Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
+2. Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
 
-	{{< figure src="/attachments/howto8/integration/importing-xml-documents/18581689.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581689.png" >}}
 
-3.  On the **Select schema elements** dialog box, make sure **XML schema** is selected as the **Schema source**, and select **CustomerXSD** as the schema. Then, click **Expand all** to see the tree with elements.
-4.  Select the following elements: **Customer**, **ID**, **CompanyName**, **Address**, **City**, and **PostalCode**:
+3. On the **Select schema elements** dialog box, make sure **XML schema** is selected as the **Schema source**, and select **CustomerXSD** as the schema. Then, click **Expand all** to see the tree with elements.
+4. Select the following elements: **Customer**, **ID**, **CompanyName**, **Address**, **City**, and **PostalCode**:
 
-	{{< figure src="/attachments/howto8/integration/importing-xml-documents/18581656.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581656.png" >}}
 
-5.  Click **OK**. The first part of the import mapping should look like this:
+5. Click **OK**. The first part of the import mapping should look like this:
 
-	{{< figure src="/attachments/howto8/integration/importing-xml-documents/18581655.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581655.png" >}}
 
-6. Open the connector (from the lower-right side of the Studio Pro or from the **View** menu).
-7.  Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
+6. Open the connector (from the lower-right side of Studio Pro or from the **View** menu).
+7. Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
 
-	{{< figure src="/attachments/howto8/integration/importing-xml-documents/18581681.png" >}}  
+    {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581681.png" >}}  
 
-	The **Map entity** editor for this element will open automatically:
+    The **Map entity** editor for this element will open automatically:
 
-	{{< figure src="/attachments/howto8/integration/importing-xml-documents/18581654.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581654.png" >}}
 
-8.  In the **Map entity** editor, do the following:
-	* Select **Find an object (by key)** for the **Method** (to be able to search for an object, you need to define one or more keys in the value-to-attribute mappings)
-	* Select **Create** for **If no object was found**
-	* Select attributes for all five value-to-attribute mappings
-	* Set **CustomerID** as the **Key**
+8. In the **Map entity** editor, do the following:
+    * Select **Find an object (by key)** for the **Method** (to be able to search for an object, you need to define one or more keys in the value-to-attribute mappings)
+    * Select **Create** for **If no object was found**
+    * Select attributes for all five value-to-attribute mappings
+    * Set **CustomerID** as the **Key**
 
-	{{< figure src="/attachments/howto8/integration/importing-xml-documents/18581653.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581653.png" >}}
 
 9. Click **OK** to save the mapping.
 
@@ -115,9 +115,9 @@ To create the import logic, follow these steps:
     {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581647.png" >}}
 
 3. Double-click the new button to open the **Edit Action Button** editor and do the following:<br />
-    a. Change the caption to *Import XML Document*<br />
-    b. For the **On click** event, select **Call a microflow**, then click **Select** for the microflow, create a new microflow, and name it **XMLDocument_Import**.<br />
-    c. Click **OK** to save the properties.<br />
+    1. Change the caption to *Import XML Document*<br />
+    1. For the **On click** event, select **Call a microflow**, then click **Select** for the microflow, create a new microflow, and name it **XMLDocument_Import**.<br />
+    1. Click **OK** to save the properties.<br />
 
     {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581646.png" >}}
 
@@ -127,9 +127,9 @@ To create the import logic, follow these steps:
 
 5. Open the **Toolbox** and drag an **Import with mapping** activity to the line between the start and end event. This inserts a new import XML activity.
 6. Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
-    a. Select the input parameter **XMLDocument** as the **Variable**.<br />
-    b. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.<br />
-    c. Click **OK** to save the properties.<br />
+    1. Select the input parameter **XMLDocument** as the **Variable**.<br />
+    1. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.<br />
+    1. Click **OK** to save the properties.<br />
 
     {{< figure src="/attachments/howto8/integration/importing-xml-documents/18581668.png" >}}
 
@@ -153,4 +153,3 @@ To import the XML file, follow these steps:
 * [How to Handle Selenium Support](/howto8/integration/selenium-support/)
 * [How to Consume a REST Service](/howto8/integration/consume-a-rest-service/)
 * [How to Expose Data to BI Tools Using OData](/howto8/integration/exposing-data-to-bi-tools-using-odata/) 
-

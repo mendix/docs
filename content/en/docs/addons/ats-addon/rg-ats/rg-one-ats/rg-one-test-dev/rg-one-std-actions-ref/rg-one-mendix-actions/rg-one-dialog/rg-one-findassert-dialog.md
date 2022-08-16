@@ -9,9 +9,9 @@ Finds/Asserts a Dialog by title or type.
 
 ## 2 Supported Widgets
 
- + Window
- + DialogMessage
- + ConfirmationDialog
+* Window
+* DialogMessage
+* ConfirmationDialog
 
 ## 3 Usage
 

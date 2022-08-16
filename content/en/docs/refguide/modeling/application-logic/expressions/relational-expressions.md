@@ -40,15 +40,16 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 4<3
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 False
 ```
+
 ## 3 Greater Than ( > )
 
 This expression determines whether the first value is greater than the second value.
@@ -82,15 +83,16 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 4>3
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 True
 ```
+
 ## 4 Less Than or Equal To ( <= )
 
 This expression determines whether the first value is less than or equal to the second value.
@@ -126,25 +128,25 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     6<=3
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     False
     ```
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     3<=3
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     True
     ```
 
@@ -181,13 +183,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 4>=3
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 True
 ```
 
@@ -227,25 +229,25 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     "mystring" = "myotherstring"
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     False
     ```
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     dateTime(2007) = dateTime(2007)
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     True
     ```
 
@@ -285,12 +287,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 "mystring" != "mystring"
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 False
 ```

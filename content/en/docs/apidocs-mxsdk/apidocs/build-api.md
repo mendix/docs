@@ -36,7 +36,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.1.2.1 Parameter
 
-*   _AppId_ (String) : Subdomain name of an app.
+* *AppId* (String) : Subdomain name of an app.
 
 ##### 2.1.2.2 Example
 
@@ -52,16 +52,16 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 List of objects with the following key-value pairs:
 
-*   _PackageId_ (String) : Unique identification of the package.
-*   _Name_ (String) : Name of the package.
-*   _Description_ (String) : Description of the package.
-*   _Version_ (String) : Package version. This is also the name of the tag on the project team server.
-*   _Creator_ (String) : Uploader or creator of this package.
-*   _CreationDate_ (Date) : Date that the package became available in the portal. This can be the
+* *PackageId* (String) : Unique identification of the package.
+* *Name* (String) : Name of the package.
+* *Description* (String) : Description of the package.
+* *Version* (String) : Package version. This is also the name of the tag on the project team server.
+* *Creator* (String) : Uploader or creator of this package.
+* *CreationDate* (Date) : Date that the package became available in the portal. This can be the
     upload date or the date that a build was created in the portal.
-*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'.
+* *Status* (String) : Status of the package. A package is ready to use if the status is 'Succeeded'.
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
-*   _Size_ (Long) : Size of the package in bytes.
+* *Size* (Long) : Size of the package in bytes.
 
 ##### 2.1.3.1 Error Codes
 
@@ -108,8 +108,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 
 ##### 2.2.2.1 Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _PackageId_ (String) : Id of the deployment package.
+* *AppId* (String) : Subdomain name of an app.
+* *PackageId* (String) : Id of the deployment package.
 
 ##### 2.2.2.2 Example
 
@@ -125,20 +125,20 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 An object with the following key-value pairs:
 
-*   _PackageId_ (String) : Unique identification of the package
-*   _Name_ (String) : Name of the package
-*   _Description_ (String) : Description of the package
-*   _Version_ (String) : Package version. This is also the name of the tag on the project team server
-*   _Creator_ (String) : Uploader or creator of this package
-*   _CreationDate_ (Date) : Date that the package became available in the portal. This can be the
+* *PackageId* (String) : Unique identification of the package
+* *Name* (String) : Name of the package
+* *Description* (String) : Description of the package
+* *Version* (String) : Package version. This is also the name of the tag on the project team server
+* *Creator* (String) : Uploader or creator of this package
+* *CreationDate* (Date) : Date that the package became available in the portal. This can be the
     upload date or the date that a build was created in the portal
-*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values:
-     * Succeeded
-     * Queued
-     * Building
-     * Uploading
-     * Failed
-*   _Size_ (Long) : Size of the package in bytes
+* *Status* (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values:
+    * Succeeded
+    * Queued
+    * Building
+    * Uploading
+    * Failed
+* *Size* (Long) : Size of the package in bytes
 
 ##### 2.2.3.1 Error Codes
 
@@ -177,8 +177,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 
 ##### 2.3.2.1 Parameters
 
-*   _AppId_ (String) : Subdomain name of an app
-*   _PackageId_ (String) : Id of the deployment package
+* *AppId* (String) : Subdomain name of an app
+* *PackageId* (String) : Id of the deployment package
 
 ```http
 DELETE /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
@@ -210,8 +210,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download
 
 Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _PackageId_ (String) : Id of the deployment package.
+* *AppId* (String) : Subdomain name of an app.
+* *PackageId* (String) : Id of the deployment package.
 
 ```http
 GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download HTTP/1.1
@@ -244,16 +244,16 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.5.1.1 Parameter
 
-*   _AppId_ (String) : Subdomain name of an app.
+* *AppId* (String) : Subdomain name of an app.
 
 ##### 2.5.1.2 Payload
 
 An object with the following key-value pairs:
 
-*   _Branch_ (String) : Name of the branch. This is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
-*   _Revision_ (Long) : Number of the revision to build a package from.
-*   _Version_ (String) : Package version. This will also be the name of the tag on the project team server.
-*   _Description_ (String) : Description of the package.
+* *Branch* (String) : Name of the branch. This is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
+* *Revision* (Long) : Number of the revision to build a package from.
+* *Version* (String) : Package version. This will also be the name of the tag on the project team server.
+* *Description* (String) : Description of the package.
 
 ##### 2.5.1.3 Example
 
@@ -282,7 +282,7 @@ You can find out the status of your build by looking at the `status` from a [Ret
 
 An object with the following key-value pair:
 
-*   _PackageId_ (String) : Unique identification of the package. This string can be used to get the build status of the package later.
+* *PackageId* (String) : Unique identification of the package. This string can be used to get the build status of the package later.
 
 Error codes
 

@@ -24,7 +24,7 @@ To configure the ATS settings, you need to enter the **Project ID**, **API key**
 
 {{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/executing.png" >}}
 
-```
+```text
 WebUI.openBrowser('')
 
 //go to the URL and wait for the Mendix application to load
@@ -41,7 +41,7 @@ Assert using ATS:
 
 {{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/assert1.png" >}}
 
-```
+```text
 WebUI.openBrowser('')
 
 //go to the URL and wait for the Mendix application to load
@@ -61,7 +61,7 @@ Aternatively, assert values using [Cucumber](https://cucumber.io/):
 
 {{< figure src="/attachments/addons/ats-addon/ov/ov-function-api/ov-function-api-katalon/assert2.png" >}}
 
-```
+```text
 WebUI.openBrowser('')
         
 // go to the URL and wait for the mendix application to load

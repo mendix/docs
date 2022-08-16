@@ -187,8 +187,8 @@ Resolving a conflict will make the conflict go away but the document may, of cou
 
 Project conflicts are conflicts are conflicts at the level of the project. There are two cause for project conflicts:
 
-1.  One person deletes a document and the other makes a change inside that document.
-2.  Both people move a document but to different places in the project tree.
+1. One person deletes a document and the other makes a change inside that document.
+2. Both people move a document but to different places in the project tree.
 
 The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** dock.
 

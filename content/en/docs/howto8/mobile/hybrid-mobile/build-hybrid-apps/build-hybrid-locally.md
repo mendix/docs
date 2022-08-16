@@ -31,9 +31,9 @@ To prepare your app for building, follow these instructions:
 
 1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/localbuild** if it is in your Downloads folder.
 1. Run `npm i && npm run package && npm run platform:ios`. This combination of commands does the following:
-   * Installs all required dependencies.
-   * Packages the Cordova app for deployment.
-   * Adds the iOS platform to Cordova.
+    * Installs all required dependencies.
+    * Packages the Cordova app for deployment.
+    * Adds the iOS platform to Cordova.
 
 #### 2.1.1 Customizing a DTAP Endpoint    
 
@@ -41,8 +41,8 @@ Optionally, you can set various environments in the **config/environments.json**
 
 To target a specific DTAP endpoint with your app, you can specify it as a parameter to `npm run package` or `npm run package:x86`. Such code could, for example, look like this:
 
-```
-$ npm run package -- --env.target=test  # target the test endpoint for ARM architecture
+```shell {linenos=false}
+npm run package -- --env.target=test  # target the test endpoint for ARM architecture
 ```
 
 Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env.target` parameter is provided, the hybrid app endpoint will default to the production environment. 
@@ -60,12 +60,13 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
-   * Starts a release build that will create binaries for a physical device
-   * Uses the code sign identity "iPhone Developer" for signing \* Looks up the provisioning files and certificates using the provided Apple Developer's team id
-   1.1 Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
-1. When the build succeeds the generated _IPA_ file can be found in _/build/platforms/ios/build_. That folder should have the following file structure(if you did a build for an emulator an _.app_ file will be available):
+    * Starts a release build that will create binaries for a physical device
+    * Uses the code sign identity "iPhone Developer" for signing 
+    * Looks up the provisioning files and certificates using the provided Apple Developer's team id
+    * Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
+1. When the build succeeds the generated *IPA* file can be found in */build/platforms/ios/build*. That folder should have the following file structure(if you did a build for an emulator an *.app* file will be available):
 
-   {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" >}}
 
 1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documenation.
 
@@ -73,38 +74,38 @@ This process is shorter than using XCode but might require more work to understa
 
 Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
 
-1.  Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
+1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/xc-workspace.png" alt="Opening XCWorkspace"   width="400"  >}}
 
-1.  Select the root element from the tree view in the left-side panel:
+1. Select the root element from the tree view in the left-side panel:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/root-element.png" alt="Selecting the root element"   width="400"  >}}
 
-1.  The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **App** and select the tab **Signing & Certificates**:
+1. The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **App** and select the tab **Signing & Certificates**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-wrong.png" alt="Signing screen with errors"   width="400"  >}}
 
-1.  Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
+1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  >}}
 
-1.  Enable **Automatically manage signing** again.
-1.  Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
-1.  When configured correctly all errors should be gone.
-1.  Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
+1. Enable **Automatically manage signing** again.
+1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
+1. When configured correctly all errors should be gone.
+1. Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/target-device.png" alt="Signing screen correctly configured"   width="400"  >}}
 
-1.  Select **Product** and then **Archive** from the menu bar:
+1. Select **Product** and then **Archive** from the menu bar:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/archiving.png" alt="Archiving"   width="400"  >}}
 
-1.  After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
+1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/organizer.png" alt="Organizer"   width="400"  >}}
 
-1.  You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
+1. You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/distribute-options.png" alt="Distribute Options"   width="400"  >}}
 
@@ -124,9 +125,9 @@ To prepare your app for building, follow these instructions:
 
 1. Open a terminal window and change directory into the unzipped package folder, for example **cd /Downloads/localbuild** if it is in your **Downloads** folder.
 1. Run `npm i && npm run package && npm run platform:android`. This combination of commands does the following:
-   * Installs all required dependencies
-   * Packages the Cordova app for deployment
-   * Adds the Android platform to Cordova
+    * Installs all required dependencies
+    * Packages the Cordova app for deployment
+    * Adds the Android platform to Cordova
 
 ### 3.2 Set Up Environmental Variables
 
@@ -146,23 +147,23 @@ There are two possible ways to build your apps: the Cordova CLI or Android Studi
 
 The command to build your app locally for release is `npm run build -- android --release`.
 
-1.  Run the following command:
-   
-    a. **On Mac OSX, as a single command run:**<br />
+1. Run the following command:
 
-    ```
-    PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
-    ```
+    1. **On Mac OSX, as a single command run:**<br />
 
-    b. **On Windows, in a command line as separate commands run:**<br />
+        ```shell
+        PATH="\$PATH:/Users/<username>/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/gradle-5.1.1/bin" JAVA_HOME=`/usr/libexec/java_home -v 1.8\` npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+        ```
 
-    ```
-    set PATH=%PATH%;C:\path-to-gradle-distribution
-      
-    set JAVA_HOME=C:\path-to-jdk-1.8-directory
-      
-    npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
-    ```
+    1. **On Windows, in a command line as separate commands run:**<br />
+
+        ```shell
+        set PATH=%PATH%;C:\path-to-gradle-distribution
+
+        set JAVA_HOME=C:\path-to-jdk-1.8-directory
+
+        npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
+        ```
 
     This command adds the gradle binary to the path, switches the JAVA *JDK* to be 1.8, and runs the build release command to generate a signed *APK*.
 

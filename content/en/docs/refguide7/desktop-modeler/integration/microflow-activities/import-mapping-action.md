@@ -8,7 +8,6 @@ url: /refguide7/import-mapping-action/
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
-
 ## 1 Introduction
 
 With the Import Mapping action, you can import the data stored in an XML or JSON document into [domain model](/refguide7/domain-model/) entities.
@@ -101,7 +100,7 @@ Validation properties are only applicable if an import mapping is selected that 
 
 Determines whether the import action should validate the incoming XML against the [XML schema](/refguide7/xml-schemas/).
 
-Setting this to _yes_ can greatly decrease performance!
+Setting this to *yes* can greatly decrease performance!
 
 *Default value:* No
 

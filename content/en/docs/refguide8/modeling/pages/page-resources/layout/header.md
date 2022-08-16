@@ -12,7 +12,6 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-
 A **header** combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. A header can only be used in a [layout](/refguide8/layout/).
 
 Headers consist of three distinct elements: a page title and a left and right [drop-zone](/refguide8/page/#add-elements). The page title is indicated by the text `[Page title]`. The drop-zones cannot be seen by default, but they can be selected and also become visible when they have elements dropped into them.
@@ -28,7 +27,6 @@ The page title placeholder is replaced by the page title setting of the page bei
 For example, the image below shows an edit page derived from a layout with a header. The page title is automatically set to that of the page and the drop-zones have been used to add a save and cancel button, replacing the need to add a control bar to the data view.
 
 {{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/header/header-page.png"   width="350"  >}}
-
 
 ## 2 Properties
 

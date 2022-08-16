@@ -35,7 +35,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 * We updated the [DotNetZip](https://archive.codeplex.com/?p=DotNetZip) library from version 1.11.0 to 1.13.3.
 * We replaced an old version of the [Active Directory Common Dialogs .NET](https://archive.codeplex.com/?p=adui) library with [Tulpep.ActiveDirectoryObjectPicker](https://www.nuget.org/packages/Tulpep.ActiveDirectoryObjectPicker/) 2.3.133.
 * Known issue: If an Oracle Java 8 installation is available, this version will be selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK).
-   * Fixed in [4.6.1](#46ki).
+    * Fixed in [4.6.1](#46ki).
 
 ## 4.5
 
@@ -201,7 +201,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Now the old log lines will not be removed anymore when an application has been stopped and started again. The new log session will be marked by a new gray log line.
 * Now only up to 1000 log lines will be shown. Any more log lines will be removed, starting with the oldest.
 * Now an app will not be stopped automatically anymore if the Mendix Service Console has been closed and the app was started but not as Windows service. When the Mendix Service Console is started again and the app is clicked, it will reconnect to the running app.
-*  Ticket 12002: Now 'lost' running Mendix services can be connected and stopped by the console. This case occurs when the Windows service has been stopped unexpectedly but the Java process of the app still runs.
+* Ticket 12002: Now 'lost' running Mendix services can be connected and stopped by the console. This case occurs when the Windows service has been stopped unexpectedly but the Java process of the app still runs.
 * Now the symbolic link to the runtime's mxclientsystem folder will always be created and updated when an app is added or updated. The checkbox has been removed.
 * Changed the position of the buttons and their texts to open the app configuration forms.
 * Moved settings for project, log and backup path, custom Mendix settings, environment and Jetty settings to a new Advanced Settings form, reachable via Configuration, Advanced...
@@ -318,7 +318,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Removed setting for Administrator user password.
 * Now a strong password will be used for communication between console/service and Mendix server. Password can be seen and changed via settings file key ServerPassword.
 * A readable error message will be shown when the console cannot be connected to a running Mendix service.
- * Now default service name and display name will be empty when there is already a service with that name.
+* Now default service name and display name will be empty when there is already a service with that name.
 * Default service and display name changed to 'Mendix'.
 * When service and display name are empty, now an error message will be shown while installing the service.
 * The maximum length of the service name has been set to 80, according to the Windows limit of service names.

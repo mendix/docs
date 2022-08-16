@@ -18,9 +18,7 @@ If the app does not pass the check, you see the **Checks** button goes red with 
 {{< figure src="/attachments/studio/checks/checks-button.png" >}}
 
 {{% alert color="info" %}}
-
 **Preview** and **Publish** become available only when the app is fully consistent and all checks have been solved.
-
 {{% /alert %}}
 
 ## 2 Viewing Checks and Interacting with the Checks Panel {#viewing-checks}
@@ -32,16 +30,13 @@ If your app has consistency errors, the **Checks** button will have the red bord
 
     {{< figure src="/attachments/studio/checks/checks-panel.png" >}}
 
-4. To view the exact place and element that the error refers to in the corresponding editor, click the row in the **Checks** panel (you can click any place of the row, the whole row is responsive), and the element that failed a check will be displayed and highlighted.
-
-5. To close the panel, either click the close button in the upper-right corner of the panel, click **Checks** in the upper-right corner of Studio, or press <kbd>C</kbd> . 
+1. To view the exact place and element that the error refers to in the corresponding editor, click the row in the **Checks** panel (you can click any place of the row, the whole row is responsive), and the element that failed a check will be displayed and highlighted.
+1. To close the panel, either click the close button in the upper-right corner of the panel, click **Checks** in the upper-right corner of Studio, or press <kbd>C</kbd> . 
 
 To sort the errors, click the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
 
 {{% alert color="info" %}}
-
 If there are no consistency errors, the **Checks** panel will be empty and **Preview** and **Publish** buttons will be clickable. 
-
 {{% /alert %}}
 
 ## 3 Checks Panel Overview {#checks-panel-overview}

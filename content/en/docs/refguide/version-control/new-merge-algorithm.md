@@ -59,7 +59,7 @@ Your page is now laid out as shown below:
 When you merge changes, the new algorithm shows you the following conflicts:
 
 1. The text that both sides changed. 
-2.  A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
+2. A **list order conflict**. Both of you added widgets to the bottom layout grid. The merge algorithm cannot guess the right order for the two new widgets and it reports the list order conflict. This is a reminder for you (the developer who is doing the merge) to look at the final layout and confirm the order. 
 
     {{< figure src="/attachments/refguide/version-control/new-merge-algorithm/new-merge-algorithm-conflicts.png" alt="New algorithm conflicts" >}}
 

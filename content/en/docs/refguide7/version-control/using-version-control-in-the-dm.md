@@ -106,10 +106,10 @@ Committing results in a new revision in the repository. You can add the followin
 
 The Modeler also attaches some information automatically:
 
-*   The person who committed (the *author*)
-*   The date and time of the commit
-*   The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
-*   The version of the Modeler that was used to commit
+* The person who committed (the *author*)
+* The date and time of the commit
+* The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
+* The version of the Modeler that was used to commit
 
 If you also changed Java source code, added widgets or made other changes that affect files other than the project file you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
 
@@ -188,8 +188,8 @@ Resolving a conflict will make the conflict go away but the document may, of cou
 
 Project conflicts are conflicts are conflicts at the level of the project. There are two cause for project conflicts:
 
-1.  One person deletes a document and the other makes a change inside that document.
-2.  Both people move a document but to different places in the project tree.
+1. One person deletes a document and the other makes a change inside that document.
+2. Both people move a document but to different places in the project tree.
 
 The involved document is marked as conflicted and you can see the reason in the details column of the *Changes* dock.
 

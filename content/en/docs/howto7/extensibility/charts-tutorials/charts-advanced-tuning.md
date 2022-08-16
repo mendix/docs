@@ -53,6 +53,7 @@ To create a custom layout, follow these steps:
       }
     }
     ```
+
 10. Change the font settings till the chart shows the required font. Copy the font settings.
 
     {{% alert color="warning" %}}Please note that changes made in the editor will not persist unless they are stored in the advanced settings of the widget or in the theme.{{% /alert %}}

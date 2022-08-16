@@ -99,8 +99,8 @@ This explanation might not have given you an explicit answer to the question of 
 There are, however, a few situations where a clear answer can be given:
 
 * Use one-to-one associations for entities with:
-  * a high number of transactions on the different sub entities (we consider multiple changes or creates per second as being high)
-  * only a handful common attributes — if you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either
+    * a high number of transactions on the different sub entities (we consider multiple changes or creates per second as being high)
+    * only a handful common attributes — if you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either
 
 * Use inheritance for entities:
-  * that always require the information from the associated objects, and users intensively search and sort on the associated attributes
+    * that always require the information from the associated objects, and users intensively search and sort on the associated attributes

@@ -93,18 +93,23 @@ Catering to multiple persona we are providing two activities, Send Email and Sen
 
 #### 4.1.1 Send Email Basic
 
+You can use the Email Service in a microflow to send plain text messages.
+
+To configure the **Send Email Basic** activity, double-click the activity and specify the following settings in the **Send Email Basic** dialog box with expression syntax:
+
+{{< figure src="/attachments/appstore/app-services/email-service/Send_Email_Basic.png" >}}
+
 * **Required Fields**
-    * **From** – Defines the sender's email
-    * **To**  – Defines the recipients of the email
+    * **From** – Defines the sender's name and email(for example: 'name<email.com>').
+    * **To**  – Defines the recipient's name and email id's saperated by comma(for example: 'name1<email1.com>, name2<email2.com>'). 
     * **Subject**  – Defines the subject of the email
 * **Optional Fields**
 
     {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
 
-    * **Cc** – Defines the recipients on the CC list of the email
-    * **Bcc** – Defines the recipients on the BCC list of the email
-    * **Content type** – Defines whether the email is a **Text** or **HTML** message
-    * **Body** – Defines the body of the email
+    * **Cc** – Defines the recipient's name and email id's saperated by comma(for example: 'name1<email1.com>, name2<email2.com>').
+    * **Bcc** – Defines the recipient's name and email id's saperated by comma(for example: 'name1<email1.com>, name2<email2.com>').
+    * **Body** – Defines the body of the email in text format only.
 
 
 #### 4.1.2 Send Email
@@ -146,7 +151,7 @@ To configure the **Send email** activity, double-click the activity and specify 
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
 
-#### 4.1.1 Generating HTML Body Content {#generate-html-body}
+#### 4.1.2.1 Generating HTML Body Content {#generate-html-body}
 
 The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables.
 

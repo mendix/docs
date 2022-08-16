@@ -138,7 +138,7 @@ Now you can download the Configuration Tool by doing the following:
 
     {{% alert color="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-    {{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed. Both the arm and amd versions for mxpc-cli tool are available to download.{{% /alert %}}
+    {{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the configuration tool that is compatible with the Mendix Operator you have installed. Both the ARM and AMD versions of the mxpc-cli tool are available to download.{{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png" >}}
 
@@ -216,7 +216,7 @@ The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 {{% alert color="info" %}}
 If you have selected the **Connected Mode** which installs the **Mendix Gateway Agent** component, please take note of the following:
 
-* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall. Only an outbound connection from the cluster to the Portal needs to be set up, by whitelisting the URL: https://interactor-bridge.private-cloud.api.mendix.com as mentioned above
+* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall. Only an outbound connection from the cluster to the Portal needs to be set up, by whitelisting the URL `https://interactor-bridge.private-cloud.api.mendix.com` as mentioned above.
 
 * All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
 {{% /alert %}}
@@ -633,9 +633,13 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.8.0 or later.
 {{% /alert %}}
 
-**S3 (existing bucket and account)** will connect to an existing S3 bucket with the provided IAM user access key and secret keys. All apps (environments) will use the same S3 bucket and an IAM user account. You will need to provide all the information relating to your Amazon S3 storage such as plan name, endpoint, access key, and secret key. In order to keep data from different apps separate, Mendix for Private Cloud will generate a unique bucket prefix for each environment.
+**S3 (existing bucket and account)** will connect to an existing S3 bucket with the provided IAM user access key and secret keys. All apps (environments) will use the same S3 bucket and an IAM user account. You will need to provide all the information relating to your Amazon S3 storage such as plan name, endpoint, access key, and secret key.
+
+To keep data from different apps separate, Mendix for Private Cloud will generate a unique bucket prefix for each environment.
 This prefix is specified in the `<environment name>-file` secret.
-If the customer would like a new environment to reuse/inherit data from an existing environment, they can edit the `<environment name>-file` secret and specify the old (existing) prefix in the `com.mendix.storage.s3.BucketName` key. The associated IAM user account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
+If you would like a new environment to reuse/inherit data from an existing environment, you can edit the `<environment name>-file` secret and specify the old (existing) prefix in the `com.mendix.storage.s3.BucketName` key.
+
+The associated IAM user account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
 
 ```json
 {
@@ -769,8 +773,8 @@ Make sure that you update the values for PROJECT_ID, K8S_NAMESPACE, GSA_NAME and
 
 {{% alert color="info" %}}
 The workload identity is only enabled when using the google-gcr option in the CLI.
-Other options (e.g. generic registry) will not enable pod annotations required for the GCR authentication plugin to work correctly.
-Only the google-gcr option is validated and supported when using the Google Container Registry in Google Cloud Platform.
+Other options (e.g. generic registry) will not enable the pod annotations required for the GCR authentication plugin to work correctly.
+Only the google-gcr option is validated and supported when using the Google Container Registry on Google Cloud Platform.
 {{% /alert %}}
 
 
@@ -846,7 +850,7 @@ These custom CAs will be trusted by:
 * The Mendix Operator when communicating with the database and file storage
 * The Mendix Operator when pushing app images to the container registry
 * Mendix apps when communicating with the database, file storage and external web services
-* Mendix Agent when connecting to Mendix Cloud portal
+* The Mendix Agent when connecting to Mendix Developer portal
 
 {{% alert color="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for Minio. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
@@ -856,8 +860,8 @@ To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-{% alert color="info" %}}
-Mendix Gateway Agent will now trust CAs specified through Custom TLS Trust from Operator version 2.6.0 and above
+{{% alert color="info" %}}
+The Mendix Gateway Agent will trust CAs specified through Custom TLS Trust if you are using Mendix Operator version 2.6.0 or above.
 {{% /alert %}}
 
 #### 4.3.5 Review and Apply{#review-apply}
@@ -897,7 +901,7 @@ When using a connected cluster, its status will be shown as **Connected** in the
 ## 5 Advanced Operator Configuration
 
 {{% alert color="warning" %}}
-Before updating the Operator with the advanced configurations, make sure to go through [Technical Guide for Operator] documentation explaining how Operator works in Private cloud.
+Before updating the Operator with the advanced configurations, make sure to go through the [Introduction to Operators](/developerportal/deploy/private-cloud-technical-appendix-01/) which explains how Operators work in Mendix for Private Cloud.
 {{% /alert %}}
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
@@ -1635,7 +1639,7 @@ You can also **Edit** or **Delete** an existing annotation by selecting it and c
 The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
-You can also configure the runtime metrics for the environment in the Runtime section. For more details, you can refer [Customize Runtime Metrics](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) section.
+You can also configure the runtime metrics for the environment in the Runtime section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
 
 
 #### 6.2.2 Members

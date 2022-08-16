@@ -154,7 +154,21 @@ The list of expressions that are used in Studio the most is represented below. F
 
 * [`dateTime`](/refguide/date-creation/) – creating a date value using the server's calendar
 
-### 3.9 Between Date Function Calls
+### 3.9 Begin-of Date Function Calls
+
+* [`BeginOfDay`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the day compared to the initial date
+* [`BeginOfWeek`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the week compared to the initial date
+* [`BeginOfMonth`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
+* [`BeginOfYear`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
+
+## 3.10 End-of Date Function Calls
+
+* [`EndOfDay`](/refguide/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
+* [`EndOfWeek`](/refguide/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
+* [`EndOfMonth`](/refguide/end-of-date-function-calls/) – calculates the end of the month compared to the initial date
+* [`EndOfYear`](/refguide/end-of-date-function-calls/) – calculates the end of the year compared to the initial date
+
+### 3.11 Between Date Function Calls
 
 * [`millisecondsBetween`](/refguide/between-date-function-calls/) – the milliseconds between two dates
 * [`secondsBetween`](/refguide/between-date-function-calls/) – the seconds between two dates
@@ -165,7 +179,7 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`calendarMonthsBetween`](/refguide/between-date-function-calls/) - the months between two dates
 * [`calendarYearsBetween`](/refguide/between-date-function-calls/) - the years between two dates
 
-### 3.10 Add Date Function Calls
+### 3.12 Add Date Function Calls
 
 * [`addMilliseconds`](/refguide/add-date-function-calls/) – adds milliseconds to a date
 * [`addSeconds`](/refguide/add-date-function-calls/) – adds seconds to a date
@@ -177,7 +191,7 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`addQuarters`](/refguide/add-date-function-calls/) – adds quarters to a date
 * [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
 
-### 3.11 Subtract Date Function Calls
+### 3.13 Subtract Date Function Calls
 
 * [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
 * [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
@@ -189,7 +203,7 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
 * [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
 
-### 3.12 Parse & Format Decimal Function Calls
+### 3.14 Parse & Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 

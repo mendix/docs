@@ -213,13 +213,23 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Data Hub {#data-hub}
+## 11 Subscriptions {#subscriptions}
+
+{{% todo %}}1. Check if the order of the sections reflect the final product. 2. Check whether the final name of the menu item is Subscriptions. 3. Add a screenshot of the final page.{{% /todo %}}
+
+Before the licenses are renewed for your company, Mendix checks if your payment method is still valid. If it is expired, you will receive an email that asks you to update your payment method on this page for your company.
+
+The page shows the details of the existing billing accounts. These billing accounts are on a company level. If your company has multiple billing accounts, you can select an account from the drop-down list.
+
+You can find **Payment Method** at the bottom of the page. Depending on your payment method, you see either an invoice or the credit card data. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
+
+## 12 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 12 Marketplace Content {#marketplace-content}
+## 13 Marketplace Content {#marketplace-content}
 
 The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
 
@@ -241,4 +251,4 @@ The list has the following columns:
 
 * **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
 
-## 13 Documents in This Category
+## 14 Documents in This Category

@@ -29,28 +29,24 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
-| **Number of Users** | Unlimited users.¹ | Depends on your pricing plan.² |
-| **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
-| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.² |
-| **App vCPUs** | 0.5 | Depends on your pricing plan.² |
-| **Scheduled Events** | Are not run. | Are run and can be configured from the Developer Portal. |
-| **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
-| **Custom Domains** | Not available. | Can be configured from the Developer Portal. |
-| **Access Restriction Profiles** | Not available. | Can be configured from the Developer Portal. |
-| **Client Certificates** | Not available. | Can be configured from the Developer Portal. |
-| **Starting and stopping your app manually** | Not available. | Available in the Developer Portal. |
-| **Constants** | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
-| **Runtime Settings** | Not available. | Configurable through runtime and settings in the Developer Portal. |
-| **Scalability** | Only one instance and a fixed amount (1GB) of memory. | Configurable in the Developer Portal. |
-| **Metrics, Alerts, and Log Levels** | Not available. | Available. |
-| **Historic Archived Logs** | Not available, only live logs are available. | Available. |
-| **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
-| **Support** | No Support. | Depending on license option. |
-
-¹ Unlicensed apps running on a different cloud platform (for example SAP BTP) have similar restrictions to Free Apps. They have additional restrictions, including only allowing six concurrent users.
-
-² The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+| Number of users | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example SAP BTP. | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
+| Sleep Mode | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
+| Disk storage | 0.5GB Database and 1GB Files. | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
+| App vCPUs | 0.5 | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
+| Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
+| Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
+| Deployment | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
+| Custom domains | Not available. | Can be configured from the Developer Portal. |
+| Access restriction profiles | Not available. | Can be configured from the Developer Portal. |
+| Client certificates | Not available. | Can be configured from the Developer Portal. |
+| Starting and stopping your app manually | Not available. | Available in the Developer Portal. |
+| Constants | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
+| Runtime settings | Not available. | Configurable through runtime and settings in the Developer Portal. |
+| Scalability | Only one instance and a fixed amount (1GB) of memory. | Configurable in the Developer Portal. |
+| Metrics, alerts, and log levels | Not available. | Available. |
+| Historic archived logs | Not available, only live logs are available. | Available. |
+| Backups | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
+| Support | No support. | Depending on license option. |
 
 {{% alert color="info" %}}
 Free Apps are part of our Free Edition.
@@ -99,9 +95,9 @@ If you need to use a different database, consider deploying your app to a differ
 
 Apps that run on the Mendix Cloud are automatically given their own URLs. The format of the URL depends on the license and environment type, and can be one of the following:
 
-* `{appname}.mendixcloud.com` - licensed apps; production environments
-* `{appname-environment}.mendixcloud.com` - licensed apps; test, acceptance, and flexible environments
-* `{appname}.mxapps.io` - Free Apps
+* `{name of your app}.mendixcloud.com` - licensed apps; production environments
+* `{name of your app}-{environment type}.mendixcloud.com` - licensed apps; test, acceptance, and flexible environments
+* `{name of your app}.mxapps.io` - Free Apps
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 

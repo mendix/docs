@@ -60,7 +60,7 @@ For detailed steps, see the [Registering a Service without the Mendix Cloud](/da
 
 ### 2.3 Manually Registering Contracts to the Data Hub Catalog without Team Server
 
-To manually register congrats to the Data Hub Catalog without the Mendix Team Server, do the following:
+To manually register contracts to the Data Hub Catalog without the Mendix Team Server, do the following:
 
 1. Export the contract from the publishing app and download it to your computer. </br> Go to **Settings** tab of the **Published OData Service** document, and click **Export** next to the **Metadata** field. Save the `$metadata.xml` file.
 2. Register the contract into the Data Hub Catalog manually. </br> See the [Registering a Service without the Mendix Cloud](/data-hub/data-hub-catalog/register-data/#without-mendix-cloud) section of *Register OData Resources in the Data Hub Catalog*.

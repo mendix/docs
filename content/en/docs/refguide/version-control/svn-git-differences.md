@@ -9,7 +9,7 @@ tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 
 ## 1 Introduction
 
-After your team's Scrum Master migrated your app from SVN to Git, there are certain steps you need to take to proceed working on this app. There are also process differences between SVN and Git that are useful to know. 
+Your team's Scrum Master can migrate your app from SVN to Git version control system. After migration is completed, there are [certain steps]({#after-migration}) you need to take to proceed working on this app. There are also process differences between SVN and Git that are useful to note when you start working in Git. 
 
 {{% alert type="info" %}}
 
@@ -17,13 +17,13 @@ There are no changes in the process for Studio users.
 
 {{% /alert %}}
 
-## 2 Checking App Out after Migration
+## 2 Checking App Out after Migration {#after-migration}
 
-After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server again. Do the following:
+After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
 
-1. Open Studio Pro, select the app that was migrated to Git (it has the Git icon), and click **Open** in Studio Pro to download the Git-version of your app. Once this is completed you can make changes and store them in version control.
+1. Open Studio Pro, select the app that was migrated to Git (you can identify it by a Git icon), and click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control system.
 
-2. Remove previous local copies of the app to prevent working on the wrong app by accident.
+2. Remove previous local copies of the app to avoid working on the wrong app version.
 
 ## 3 Differences in Collaboration: Committing, Pushing, and Updating (Pulling) 
 
@@ -31,7 +31,7 @@ SVN is a centralized version control system, whereas Git is a distributed system
 
 In SVN, it is possible to retrieve changes and apply them directly on uncommitted changes. In Git, however, conflict resolution can only be done on committed changes. This means you have to commit locally before being able to retrieve changes from other developers. The advantage is that you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
 
-When making a commit, in SVN it directly goes to the centralized server, while Git only creates a local commit and to submit your local commit(s) to the centralized server you need to *push* your changes (pushing changes is checked by default in the **Commit** dialog box).
+When making a commit, in SVN it directly goes to the centralized server, while Git only creates a local commit and to submit your local commit(s) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box).
 
 | Action      | SVN                                                          | Git                                                          |
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |

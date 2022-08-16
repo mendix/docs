@@ -16,27 +16,27 @@ Git is a more modern version control system that has several advantages over SVN
 
 To be able to migrate your app to Git, your app needs to meet the following criteria:
 
-* Mendix version 9.12 or above
+* Mendix version of the app is 9.12 or above
 * Current version-controller is in Team Server SVN
-* Maximum of 100 revisions across all branches (we plan to increase this maximum the coming months)
+* App has maximum 100 revisions across all branches (we plan to increase this maximum the coming months)
 
 {{% alert type="info" %}}
 
-Only a user with the Scrum master role can migrate an app.
+Only a user with the Scrum master role can migrate an app. For more information, see [App Roles](/developerportal/collaborate/app-roles/). 
 
 {{% /alert %}}
 
 ## 3 How Migration Works
 
-During migration all app history, including revisions for all branches, are copied from SVN to Git. 
+During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 
-Access to SVN is disabled as soon as migration starts, to prevent developers still making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
+Access to SVN is disabled as soon as migration starts to prevent developers from making changes to SVN that will not be copied. If migration fails for any reason, it is rolled back and access to SVN is restored.
 
-To inform your team members about the process, several emails will be sent out automatically :
+To inform your team members about the process, several emails are sent out automatically :
 
 * (Optional) Migration scheduled
 * Migration started
-* Migration completed or Migration failed
+* Migration completed or migration failed
 
 These emails give brief information about the stage and emphasize that changes made during migration will be lost, since they cannot be committed to SVN anymore.
 

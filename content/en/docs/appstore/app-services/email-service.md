@@ -89,6 +89,26 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ### 4.1 Sending Messages to Recipients 
 
+Catering to multiple persona we are providing two activities, Send Email and Send Email Basic.
+
+#### 4.1.1 Send Email Basic
+
+* **Required Fields**
+    * **From** – Defines the sender's email
+    * **To**  – Defines the recipients of the email
+    * **Subject**  – Defines the subject of the email
+* **Optional Fields**
+
+    {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
+
+    * **Cc** – Defines the recipients on the CC list of the email
+    * **Bcc** – Defines the recipients on the BCC list of the email
+    * **Content type** – Defines whether the email is a **Text** or **HTML** message
+    * **Body** – Defines the body of the email
+
+
+#### 4.1.2 Send Email
+
 You can use the Email Service in a microflow to send HTML or plain text messages. The Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
 {{< figure src="/attachments/appstore/app-services/email-service/inbuilt-domain-entities.png" >}}

@@ -10,12 +10,10 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-The Data Hub Catalog is the core of Mendix Data Hub for finding the shared registered assets that are made available through OData services published in an organization. It enables a single data source to be consistently used in several apps, ensuring that they will all be using the latest set of data maintained in the source. These registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily.
-
-The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](/data-hub/data-hub-landscape/), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependencies between apps and services.
+The Data Hub Catalog is a development tool provided in the Mendix Cloud. OData REST services provided by Mendix Apps running in the Mendix Cloud will automatically be registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/data-hub/data-hub-catalog/curate/) registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily. The [Data Hub Landscape](/data-hub/data-hub-landscape/), part of the Catalog, is a graphical representation of the relationship between apps and services.
 
 {{% alert color="info" %}}
-Regardless of [license](/data-hub/#data-hub-licences), the Data Hub Catalog is only available for people deploying to a development environment. For information about using Data Hub for local deployment, see [Data Hub without Mendix Cloud](/data-hub/non-mendix-cloud/) {{% /alert %}}
+If you deploy your Mendix apps in an alternative environment, e.g., on-prem or private cloud, you can use the Data Hub Catalog APIs to register your apps and services in the Data Hub Catalog, to enable to same visibility of your deployed APIs. For information about using Data Hub for local deployment, see Data Hub without Mendix Cloud {{% /alert %}}
 
 
 ## 2 Data Hub Home {#data-hub-home}

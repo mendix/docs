@@ -30,7 +30,7 @@ Try building an app by following [How to Share Data Between Apps](/data-hub/shar
 
 Mendix Data Hub has components to enable the flexible sharing of datasets:
 
-1. Published apps and other software expose datasets in OData services, as [external entities](/refguide/external-entities/). The data is maintained in the respective source apps.
+1. Apps and other software expose datasets in REST OData services. These are used with [external entities](/refguide/external-entities/). The data is store in the respective source apps.
 2. In Studio Pro, exposed OData services (or entity sets as they are named in Studio Pro) are automatically registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) when your app is deployed. OData services from other applications can also be manually registered in the Data Hub Catalog.
 3. Search in the Data Hub Catalog or **Data Hub** pane in Studio Pro to find shared data assets to use.
 4. Drag and drop to consume datasets in Studio Pro.  
@@ -78,7 +78,8 @@ Contact your [Mendix Admin](/developerportal/control-center/#company) to find ou
 
 ### 4.1 Data Hub Free Edition {#dh-free}
 
-All Mendix users have access to the Data Hub Free edition. With this, you can retrieve or edit 1000 objects per application per day for each runtime instance when deployed. 
+All Mendix users have access to the Data Hub Free edition. With this, you can discover datasets provided by apps in your organization through OData REST services. You can retrieve or edit up to a 1000 objects per application per day for each runtime instance when deployed.
+
 
 #### 4.1.1 Limitations {#dh-free-limitations}
 
@@ -101,7 +102,7 @@ It is up to the application to communicate to its end-users that the daily limit
 
 ### 4.2 Data Hub Premium Edition {#dh-premium}
 
-With the Data Hub Premium license, apps are not limited. Apps can retrieve and edit an unlimited number of objects when deploying to the Mendix Cloud.
+With the Data Hub Premium license, apps are not limited. Apps can retrieve and edit an unlimited number of objects using [external entities](/refguide/external-entities/).
 
 ### 4.3 Data Hub for Private Cloud or On-Premises {#dh-pc}
 

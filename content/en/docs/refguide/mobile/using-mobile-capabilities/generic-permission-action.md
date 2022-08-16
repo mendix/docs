@@ -27,13 +27,13 @@ Generic permission action can be used inside nanoflows in an existing app or mak
 When using this action you need to choose the permission name you need. It should be one the available permissions in `NanoflowCommons.Enum_Permissions` enumeration.
 
 {{% alert color="info" %}}
-Keep in mind that the permission names are different for each platform, so for example if you need to request permission to access reading contacts, you will need to call the actions two times: one for iOS permission which is `CONTACTS_IOS` and another for the Android permission which is `READ_CONTACTS_ANDROID`.
+Keep in mind that the permission names are different for each platform. For example, if you need to request permission to access reading contacts you will need to call the actions twice: one for iOS permission (`CONTACTS_IOS`) and one for Android permission (`READ_CONTACTS_ANDROID`).
 {{% /alert %}}
 
 ### 3.2 Action Return Type
 
-This action returns the status of the permission after the action and it is of type `NanoflowCommons.Enum_PermissionStatus`.
-These statuses are:
+This action returns the status of the permission after the action and it is of type `NanoflowCommons.Enum_PermissionStatus`. The statuses are as follows:
+
 |Permission status|Notes|
 |-----------------|-----|
 |`NanoflowCommons.Enum_PermissionStatus.granted`|The permission is granted after requesting it from the user or it was already granted previously|
@@ -43,34 +43,37 @@ These statuses are:
 |`NanoflowCommons.Enum_PermissionStatus.limited`|The permission is granted but with limitations|
 
 {{% alert color="info" %}}
-When the permission is already blocked, and you try to request it, a popup will appear to the user asking him to open the settings and grant the permission, and you will get a `blocked` status.
+When the permission is already blocked, if you try to request it a pop-up window will ask the user to open their settings to grant the permission. Furthermore, you will recieve a `blocked` status.
 {{% /alert %}}
 
 {{% alert color="info" %}}
 These permissions statuses match the statuses that are received from the action, so you should not override them.
 {{% /alert %}}
 
-### 3.3 Usage example
+### 3.3 Usage Example
 
-This an example for requesting contact access permission for Android and iOS devices.
+This an example for requesting contact access permission for Android and iOS devices:
 
-- You can get the running platform (Android or iOS) through using `Get device info` action from Native mobile section in the Toolbox.
-- Then you can branch your logic based on the current platform.
-- Then for Android branch, you can use Generic permission action with a permission name of e.g `READ_CONTACTS_ANDROID`.
-- For iOS branch, you can also use a generic permission action with a permission name of e.g. `CONTACTS_IOS`.
+1. You can get the running platform (Android or iOS) through using `Get device info` action from Native mobile section in the Toolbox.
+1. Then you can branch your logic based on the current platform.
+1. Then for Android branch, you can use Generic permission action with a permission name of e.g `READ_CONTACTS_ANDROID`.
+1. For iOS branch, you can also use a generic permission action with a permission name of e.g. `CONTACTS_IOS`:
 
   {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/fullExample" alt="use generic permission screenshoot"   width="400"  >}}
+  
   {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/decision" alt="use generic permission screenshoot"   width="400"  >}}
+  
   {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/android" alt="use generic permission screenshoot"   width="400"  >}}
+  
   {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/ios" alt="use generic permission screenshoot"   width="400"  >}}
 
 ## 4 Building
 
 ### 4.1 Development
 
-#### 4.1.1 iOS
+#### 4.1.1 IOS
 
-The following permissions can be tested using iOS Make it native app:
+The following permissions can be tested using the iOS Make It Native app:
 
 * CAMERA
 * FACE_ID
@@ -170,7 +173,7 @@ Update the *android/app/src/main/AndroidManifest.xml* file with the needed permi
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.myawesomeapp">
 
-  <!-- 🚨 Keep only the permissions used in your app 🚨 -->
+  <!-- Keep only the permissions used in your app -->
 
   <uses-permission android:name="android.permission.ACCEPT_HANDOVER" />
   <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />

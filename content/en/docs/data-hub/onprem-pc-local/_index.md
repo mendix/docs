@@ -1,7 +1,7 @@
 ---
 title: "Data Hub without Mendix Cloud"
 description: "This guide explains how to use Mendix Data Hub and external entities for local deployments, or for private cloud or on-premises solutions."
-url: /data-hub/non-mendix-cloud/
+url: /data-hub/data-hub-without-mendix-cloud/
 weight: 20
 tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,23 +14,25 @@ This guide explains how to use Data Hub for users who do not deploy to the Mendi
 
 The [Mendix Data Hub](/data-hub/) includes two main features:
 
-* [External entities](/refguide/external-entities) in Mendix Studio Pro version [8.14](/releasenotes/studio-pro/8.14/#data-hub) and above, purple entity containers in the Domain Model that represent the links to [published OData Services](/refguide/published-odata-services/)
+* [External entities](/refguide/external-entities) in Mendix Studio Pro version [8.14](/releasenotes/studio-pro/8.14/#data-hub) and above, purple entities in the Domain Model that represent data provided through [published OData Services](/refguide/published-odata-services/)
 * The [Data Hub Catalog](hub.mendix.com), documented in our [Data Hub Catalog](/data-hub/data-hub/catalog/) guide, a metadata hub for managing shared registered assets made available through OData services
 
-Publishing [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
+Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
+
+
 
 But what happens in the following situations?
 
-* You are developing on a local machine for testing, without deploying to a development environment (deploying locally)
+* You are developing both the service and the client on a local machine, without deploying to a cloud environment (deploying locally)
 * You are deploying to a [Private Cloud](developerportal/deploy/private-cloud/) or [On-Premises](developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
 
-In these cases, you can still publish and consume external entities. This guide will explain how by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server) for Data Hub.
+In these cases, you can still publish and consume external entities. This guide will explain how to work with the Data Hub Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server) for Data Hub.
 
 ## 2 Data Hub in Design Time{#dh-design-time}
 
-During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source metadata into Studio Pro. This metadata is in the form of contracts, and are registered automatically in the Data Hub Catalog if your application is hosted on the Mendix Cloud.
+During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source metadata into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Data Hub Catalog if your application is hosted on the Mendix Cloud.
 
-If you will be deploying locally, to a Private Cloud, or On-Premises, you can add a [published OData resource](/refguide/published-odata-resource) using the metadata contract.
+If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData resource](/refguide/published-odata-resource) it provides using the metadata contract.
 
 For general resources on using Data Hub when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/data-hub/write-data/).
 
@@ -69,7 +71,7 @@ To import a published OData service URL, do the following:
 1.  Copy the OData service URL. </br>
     To find the published OData service URL from Mendix apps, go to the **Settings** tab of the **Published OData Service** document, and copy the entire link in the **Metadata** field.
 2.  Add a **Consumed OData service** to your consuming app.</br>
-    Right-click the **App Explorer were you would like to add the service, then click **Add other** > **Consumed OData Service**.
+    Right-click the **App Explorer** in the module where you would like to add the service, then click **Add other** > **Consumed OData Service**.
 3.  In the **Add Consumed OData Service** dialog box, make sure **From URL** is selected, and paste the copied URL into the field.
 
 The service will now appear in the Data Hub pane.
@@ -82,10 +84,11 @@ See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) sect
 
 ## 3 Data Hub in Runtime {#dh-runtime}
 
-During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. 
+During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using Data Hub in design time](#dh-design-time).
 
-Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using Data Hub in design time](#dh-design-time).
+{{% alert color="info" %}}
+The [Data Hub Catalog](/data-hub/data-hub-catalog/) is not involved during runtime. {{% /alert %}}
 
 ### 3.1 Licensing 
 
-A [Data Hub License](/data-hub/#data-hub-licences) is necessary for using Mendix Data Hub during runtime. A [Data Hub Free Edition](/data-hub/#dh-free) licenses limits use to 1000 Odata objects per day for each runtime instance. For further details on limitations during runtime, see the [Limitations](/data-hub/#dh-free-limitations) section of the *Data Hub Guide*.
+A [Data Hub License](/data-hub/#data-hub-licences) is necessary for using Mendix Data Hub during runtime. A [Data Hub Free Edition](/data-hub/#dh-free) licenses limits use to 1000 OData objects per day for each runtime instance. For further details on limitations during runtime, see the [Limitations](/data-hub/#dh-free-limitations) section of the *Data Hub Guide*.

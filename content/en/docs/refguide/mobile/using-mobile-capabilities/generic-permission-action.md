@@ -13,16 +13,16 @@ Advanced features in mobile apps often require permission from users. Developers
 
 ## 2 Prerequisites
 
-* Complete the [Prerequisites](/howto/mobile/deploying-native-app/#prerequisites) section of *How to Deploy Your First Mendix Native Mobile App*.
+* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
 * Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow commons module.
 * Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date
 * Make sure you are using [Make It Native 9 app](releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
-## 3 Using generic permission action
+## 3 Using a Generic Permission Action
 
 Generic permission action can be used inside nanoflows in an existing app or make a new app from scratch. You can find it in the toolbox for a nanoflow in the Nanoflow commons section.
 
-### 3.1 Permission name
+### 3.1 Permission Name
 
 When using this action you need to choose the permission name you need. It should be one the available permissions in `NanoflowCommons.Enum_Permissions` enumeration.
 
@@ -30,7 +30,7 @@ When using this action you need to choose the permission name you need. It shoul
 Keep in mind that the permission names are different for each platform, so for example if you need to request permission to access reading contacts, you will need to call the actions two times: one for iOS permission which is `CONTACTS_IOS` and another for the Android permission which is `READ_CONTACTS_ANDROID`.
 {{% /alert %}}
 
-### 3.2 Action return type
+### 3.2 Action Return Type
 
 This action returns the status of the permission after the action and it is of type `NanoflowCommons.Enum_PermissionStatus`.
 These statuses are:
@@ -47,7 +47,7 @@ When the permission is already blocked, and you try to request it, a popup will 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-These permissions statuses match the statuses that are received from the action, so you shouldn't override them.
+These permissions statuses match the statuses that are received from the action, so you should not override them.
 {{% /alert %}}
 
 ### 3.3 Usage example
@@ -67,43 +67,52 @@ This an example for requesting contact access permission for Android and iOS dev
 ## 4 Building
 
 ### 4.1 Development
+
 #### 4.1.1 iOS
+
 The following permissions can be tested using iOS Make it native app:
-- CAMERA
-- FACE_ID
-- LOCATION_WHEN_IN_USE
-- MICROPHONE
-- PHOTO_LIBRARY
+
+* CAMERA
+* FACE_ID
+* LOCATION_WHEN_IN_USE
+* MICROPHONE
+* PHOTO_LIBRARY
 
 To test the remaining permissions you can build [native app](https://docs.mendix.com/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-ios-native-permissions) with the required permissions.
 
-#### 4.1.2 ANDROID
-The following permissions can be tested using Android Make it native app:
-- ACCESS_FINE_LOCATION
-- BLUETOOTH_CONNECT
-- BLUETOOTH_SCAN
-- CALL_PHONE
-- RECORD_AUDIO
-- CAMERA
-- READ_EXTERNAL_STORAGE
-- WRITE_EXTERNAL_STORAGE
+#### 4.1.2 Android
+
+The following permissions can be tested using the Android Make It Native app:
+
+* ACCESS_FINE_LOCATION
+* BLUETOOTH_CONNECT
+* BLUETOOTH_SCAN
+* CALL_PHONE
+* RECORD_AUDIO
+* CAMERA
+* READ_EXTERNAL_STORAGE
+* WRITE_EXTERNAL_STORAGE
 
 To test the remaining permissions you can build [native app](https://docs.mendix.com/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
 
 ### 4.2 Deployment
+
 During deployment you must specify the permissions that your application has used to be able to request them from the user on production.
 To do that you can navigate to App permissions while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/deployment-android" alt="deploy app with generic permission screenshoot"   width="400"  >}}
+
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/deployment-ios" alt="deploy app with generic permission screenshoot"   width="400"  >}}
 
 {{% alert color="info" %}}
-The permissions that you can't find using the Native builder UI, can be added manually referencing the following section.
+The permissions that you cannot find using the Native builder UI, can be added manually referencing the following section.
 {{% /alert %}}
 
-## 5 Update native app permissions
+## 5 Update Native App Permissions
+
 ### 5.1 iOS {#update-ios-native-permissions}
-Update `ios/podfile` file with the needed permissions:
+
+Update your *ios/podfile* file with the needed permissions:
 
 ```
 target 'YourAwesomeProject' do
@@ -133,29 +142,30 @@ target 'YourAwesomeProject' do
   pod 'Permission-StoreKit', :path => "#{permissions_path}/StoreKit"
 end
 ```
-{{% alert color="info" %}}
-For Siri permission you will need to enable siri capability in your app.
-This can be done using `Xcode -> Signing & Capabilities -> + -> Siri`
-<br>
-Or
-<br>
-Update `/ios/{app name}/{app name}.entitlements` as follows:
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-  	<!-- … -->
-	<key>com.apple.developer.siri</key>
-	<true/>
-</dict>
-</plist>
 
-```
-{{% /alert %}}
+
+To allow a Siri permission you will need to enable Siri capability in your app. This can be done one of two ways:
+
+* The first way is by navigating to **Xcode** > **Signing & Capabilities** > **+** > **Siri** and then enabling the capability
+* The second way is by updating the */ios/{app name}/{app name}.entitlements* file as follows:
+
+	```
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+	<plist version="1.0">
+	<dict>
+		<!-- … -->
+		<key>com.apple.developer.siri</key>
+		<true/>
+	</dict>
+	</plist>
+
+	```
 
 ### 5.2 Android {#update-android-native-permissions}
-Update `android/app/src/main/AndroidManifest.xml` file with the needed permissions:
+
+Update the *android/app/src/main/AndroidManifest.xml* file with the needed permissions:
+
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.myawesomeapp">

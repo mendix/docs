@@ -299,9 +299,9 @@ The second method should be used if the first method is not possible for some re
 
 #### 7.2.5 Merging Using Git in the Command Line
 
-For merging MPRs using Git in the command line to work, it is necessary to attach mx.exe merge feature to Git as a driver.
+For merging MPRs using Git in the command line to work, it is necessary to attach mx.exe merge to Git as a driver.
 
-When doing a `git merge` operation on two branches in the command line, Git attempts to merge the binaries of MPRs, which does not work. You need to apply Studio Pro merge algorithm and that is where mx.exe as a driver is needed.
+When doing a **git merge** operation on two branches in the command line, Git attempts to merge the binaries of MPRs, which does not work. You need to apply Studio Pro merge algorithm and that is where mx.exe as a driver is needed.
 
 Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
@@ -313,17 +313,17 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
   driver = [MX.EXE_PATH] merge %O %A %B
 ```
 
-Where [MX.EXE_PATH] should substitute the mx.exe path with only forward slashes and pointing to a drive with */C/* instead of *C:/*.
+Where *[MX.EXE_PATH]* should be replaced by the mx.exe path with only forward slashes pointing to a drive with */C/* instead of *C:/*.
 
-Additionally, create a .gitattributes file in the same folder with the following contents:
+Additionally, create a *.gitattributes* file in the same folder with the following contents:
 
 ```
 *.mpr merge=custom
 ```
 
-Save the files and now whenever `git merge` is run and it involves MPR files, the `mx.exe merge` feature will run Studio Pro merge algorithm before Git finishes the merge.
+Save the files and now whenever **git merge** is run and it involves MPR files, the mx.exe merge will run Studio Pro merge algorithm before Git finishes the merge.
 
-Changes to `.gitconfig` can also be made locally per app:
+You can also change the *.gitconfig* file locally per app using the following:
 
 ```
 git config merge.custom.name "custom merge driver for specific files"

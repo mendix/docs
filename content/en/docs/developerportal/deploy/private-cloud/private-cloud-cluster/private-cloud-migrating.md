@@ -71,7 +71,7 @@ Perform the following steps.
 
 6. Click **Import components**.
 
-    The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and Linx.
+    The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and Linux.
 
 ## 6 Create and Configure Mendix for Private Cloud Cluster and Namespace
 

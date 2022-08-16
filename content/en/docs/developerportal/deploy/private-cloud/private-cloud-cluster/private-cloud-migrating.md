@@ -79,7 +79,7 @@ Perform the following steps.
 
 6. Click **Import components**.
 
-    The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix.
+    The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and Linx.
 
 ## 6 Create and Configure Mendix for Private Cloud Cluster and Namespace
 
@@ -101,11 +101,15 @@ With the `--registry` flag set, follow the instructions in the [Base Installatio
 
 With the `--registry` flag set, follow the instructions in the [Configure Namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace) section of *Creating a Private Cloud Cluster*.
 
-When you get to the stage [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply), the YAML file which you create will contain the location of your own registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and U*ix). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
+When you get to the stage [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply), the YAML file which you create will contain the location of your own registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and Linux). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
 
 Click **Apply Configuration** to apply the configuration to your namespace, as normal.
 
 ### 6.3 Upgrade Cluster{#upgrade-cluster}
+
+{{% alert color="info" %}}
+Make sure that you are in the right kubernetes context before upgrading the namespace.
+{{% /alert %}}
 
 If you have already installed and configured a namespace, but would like to upgrade it to the current Mendix for Private Cloud version, 
 follow the instructions in the [Upgrade cluster](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster) section of *Upgrading Private Cloud*.

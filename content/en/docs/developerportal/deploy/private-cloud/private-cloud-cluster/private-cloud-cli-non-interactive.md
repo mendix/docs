@@ -83,5 +83,5 @@ registry:
 To [upgrade the versions of Mendix components in your namespace](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster), use the following command:
 
 ```shell
-./mxpc-cli upgrade-namespace --clusterType <cluster-type>
+./mxpc-cli upgrade-namespace --clusterType <cluster-type> --namespace <namespace>
 ```

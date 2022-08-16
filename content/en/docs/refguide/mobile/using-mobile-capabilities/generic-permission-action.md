@@ -3,13 +3,13 @@ title: "Use Generic Permission Javascript Action"
 url: /refguide/mobile/using-mobile-capabilities/generic-permission-action/
 parent: "implementation"
 weight: 20
-description: "This tutorial will teach you to use request generic permission action for native mobile apps."
+description: "This guide will teach you to use request generic permission actions for native mobile apps."
 tags: ["permissions", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction
 
-When you are developing a mobile application with advanced features, you will most likely need to get permission from the user. Developers need to respect their user’s privacy by seeking permission to capture and store photos, audio, and video, etc… This generic action allows developers to ask for specific permission before accessing/actioning a mobile capability such as the camera or location.
+Advanced features in mobile apps often require permission from users. Developers need to respect users' privacy, so it is common practice for an app to request the user's permission before storing media and data. To get permission, you can build a generic JavaScript action. This generic action will allow your app to ask for specific permission before accessing a mobile capability, such as the device camera or location.
 
 ## 2 Prerequisites
 

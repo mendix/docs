@@ -183,6 +183,7 @@ When you earn enough points, you gain a level:
 | 8   | 18500 |
 | 9   | 25000 |
 | 10  | 32500 |
+| 11  | 50000 |
 
 ## 8 Portfolio
 

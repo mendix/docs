@@ -131,8 +131,8 @@ Trim the date to months, rounding off all days to zero.
 
 ### 6.1 Input Parameters
 
-*   date that should be trimmed
-*   Type: DateTime
+* date that should be trimmed
+* Type: DateTime
 
 ### 6.2 Output
 

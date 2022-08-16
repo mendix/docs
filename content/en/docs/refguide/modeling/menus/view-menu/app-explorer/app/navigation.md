@@ -71,7 +71,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 | --- | --- |
 | Android.*Mobile&#124;iPhone&#124;iPod&#124;BlackBerry | Phone |
 | Android&#124;iPad | Tablet |
-| _(other)_ | Responsive |
+| *(other)* | Responsive |
 
 To configure the regular expressions used to match phone or tablet users, see [Runtime Customization](/refguide/custom-settings/).
 

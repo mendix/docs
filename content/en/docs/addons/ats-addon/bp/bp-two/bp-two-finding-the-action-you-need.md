@@ -84,7 +84,7 @@ If you cannot find a widget because it has no unique name or because it is not s
 
 In ATS, there are many actions for clicking a widget, from generically clicking a widget to clicking a specific data grid row. The first part of this section explains the generic action for clicking a widget, and the second part explains the actions that conduct a more specific click. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can click something is "Click."
 
- ### 3.1 Generic Action
+### 3.1 Generic Action
 
 When you want to click a widget, the main choice is always the [Click Widget](/addons/ats-addon/rg-one-click-widget/) action. It clicks the widget you need using the `mx-name` of the widget.
 
@@ -294,7 +294,7 @@ In this example, you want to assert that a specific validation message appears. 
 The solution in this situation is to use the following search term: "Assert Validation". ATS checks all the actions and returns those that match these words. There is an action called [Assert Validation Message](/addons/ats-addon/rg-one-assert-validation-message/), which uses the `mx-name` of a widget to assert the validation message that appears in the widget.
 
 {{< figure src="/attachments/addons/ats-addon/bp/bp-two/bp-two-finding-the-action-you-need/assert-validation-message-action-search.png" >}}
-    
+
 #### 6.2.2 Example 2
 
 In this example, you want to assert that the right page has opened. You cannot use the Assert Value, because there is no `mx-name` that you can use.
@@ -315,11 +315,11 @@ The solution in this situation is to use the following search term: "Assert not 
 
 ### 6.3 Summary
 
-When you want to assert a value from a widget always use the _Assert Value_ action if possible.
+When you want to assert a value from a widget always use the *Assert Value* action if possible.
 
 If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix Marketplace](https://marketplace.mendix.com/), Mendix Studio Pro. You can also find the name using the ATS Helper.
 
- In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/addons/ats-addon/ht-one-create-custom-actions/).
+In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/addons/ats-addon/ht-one-create-custom-actions/).
 
 ## 7 Generating Values/Information {#GeneratingValuesInformation}
 
@@ -372,7 +372,7 @@ For generating values or information, you should follow the first two parts of t
 It all comes down to following these steps to achieve the right result
 
 1. Use the ATS Recorder. If the ATS Recorder does not work, go to step 2 below.
-2.  If the ATS Recorder does not work, that does not also mean that ATS cannot interact with the widget. Select the action that goes with the task you want to perform:
+2. If the ATS Recorder does not work, that does not also mean that ATS cannot interact with the widget. Select the action that goes with the task you want to perform:
 
      Task                             | Action |
     ----------------------------------|:------:|
@@ -384,7 +384,7 @@ It all comes down to following these steps to achieve the right result
      Generating values/information    | See [6 Generating Values/Information](#GeneratingValuesInformation) for more information |
 
     If these do not work because you do not have an `mx-name` or they don't cover the task, go to step 3 below.
-3.  If your task is not covered by the generic action, use the following search terms depending on your task:
+3. If your task is not covered by the generic action, use the following search terms depending on your task:
 
      Task                             | Search Term |
     ----------------------------------|:------:|

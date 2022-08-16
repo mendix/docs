@@ -100,10 +100,10 @@ The **layout type**, determines the purpose of the layout and how a page using t
 
 Layouts can contain the following widgets:
 
-*   [Layout grid](/refguide8/layout-grid/)
-*   [Scroll container](/refguide8/scroll-container/)
-*   [Placeholder](/refguide8/placeholder/)
-*   [Header](/refguide8/header/)
-*   [Sidebar toggle](/refguide8/sidebar-toggle-button/)
+* [Layout grid](/refguide8/layout-grid/)
+* [Scroll container](/refguide8/scroll-container/)
+* [Placeholder](/refguide8/placeholder/)
+* [Header](/refguide8/header/)
+* [Sidebar toggle](/refguide8/sidebar-toggle-button/)
 
 Placeholder, header, and sidebar toggle are unique to layouts, whilst Layout grids and scroll containers can also be used on pages.

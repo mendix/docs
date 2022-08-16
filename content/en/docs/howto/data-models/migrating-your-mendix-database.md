@@ -2,7 +2,7 @@
 title: "Migrate Your Mendix Database"
 url: /howto/data-models/migrating-your-mendix-database/
 category: "Data Models"
-weight: 7
+weight: 10
 tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
 
@@ -33,21 +33,21 @@ To do this, start your app on the database you would like to copy the data to. T
 
 The most commonly used custom settings for database migration are:
 
-*   SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
-*   SourceDatabaseHost
-*   SourceDatabaseName
-*   SourceDatabaseUserName
-*   SourceDatabasePassword
+* SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
+* SourceDatabaseHost
+* SourceDatabaseName
+* SourceDatabaseUserName
+* SourceDatabasePassword
 
 For more information on the full list of available settings, see [Runtime Customization](/refguide/custom-settings/).
 
 These settings can be configured as follows:
 
-*  Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
+* Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398970.png" >}} 
 
-*  Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
+* Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398971.png" >}} 
 
@@ -72,11 +72,8 @@ You can configure Studio Pro to use a PostgreSQL database instead of the inbuilt
 To do this, perform the following steps:
 
 1. Open your **App** > **Settings**.
-
 2. Click **New** to add a new configuration from the **Configurations** tab.
-
 3. Give your configuration a new **Name**.
-
 4. On the **Database** tab, set the following values:
     * **Type** – **PostgreSQL**
     * **Database name** – *default*
@@ -87,6 +84,7 @@ To do this, perform the following steps:
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
 
     Your new configuration will be set as the active configuration.
+
 5. Ensure that PostgreSQL is running locally on the correct port.
 6. Run your app locally. Provided your PostgreSQL database is empty, your app will configure the database to support the domain model of your app.
 

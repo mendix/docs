@@ -59,9 +59,9 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
 
         *Default: `true`*
 
-5.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+5. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-	{{% alert color="warning" %}}Your app must be **redeployed** the first time you set up the Splunk Cloud Platform integration as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Splunk Cloud Platform.{{% /alert %}}
+    {{% alert color="warning" %}}Your app must be **redeployed** the first time you set up the Splunk Cloud Platform integration as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Splunk Cloud Platform.{{% /alert %}}
 
 ## 4 Additional Information{#additional-info}
 

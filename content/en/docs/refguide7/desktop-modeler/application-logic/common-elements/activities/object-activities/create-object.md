@@ -35,7 +35,7 @@ Nanoflows do not support committing changes without events. Committing while run
 
 {{% /alert %}}
 
-_Default value:_ No
+*Default value:* No
 
 ### 2.3 Refresh in Client
 
@@ -47,7 +47,7 @@ When inside a [nanoflow](/refguide7/nanoflows/), the Create object action reload
 
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No
 
 ### 2.3 Initialize Members
 

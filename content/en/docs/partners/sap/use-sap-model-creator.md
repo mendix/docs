@@ -72,29 +72,23 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-2-api.png" >}}
 
-    {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.
-    {{% /alert %}}
+    {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.{{% /alert %}}
 
 2. Click the package you want. It will be highlighted.
-
 3. Click **Next** to see the APIs within the package.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-3-api.png" >}}
 
-    {{% alert color="info" %}}This will be shown even if only one API exists.
-    {{% /alert %}}
+    {{% alert color="info" %}}This will be shown even if only one API exists.{{% /alert %}}
 
 4. Click the API you want. It will be highlighted.
-
 5. Click **Next** to see the schemas within the API.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-4-api.png" >}}
 
-    {{% alert color="info" %}}This will be shown even if only one schema exists.
-    {{% /alert %}}
+    {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 6. Click the schema you want. It will be highlighted.
-
 7. Click **Next** to proceed to the confirmation screen.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-5-api.png" >}}
@@ -131,20 +125,16 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-2-catalog.png" >}}
 
-    {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.
-    {{% /alert %}}
+    {{% alert color="info" %}}You can return to any stage in this process by clicking on the relevant step number.{{% /alert %}}
 
 3. Click the API you want. It will be highlighted.
-
 4. Click **Next** to see the schemas within the API.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-3-catalog.png" >}}
 
-    {{% alert color="info" %}}This will be shown even if only one schema exists.
-    {{% /alert %}}
+    {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 5. Click the schema you want. It will be highlighted.
-
 6. Click **Next** to proceed to the confirmation screen.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/model-creator-wizard-4-catalog.png" >}}
@@ -167,7 +157,7 @@ You may want to generate the data model by hand using the `$metadata` file direc
 
 One way to do this is by getting the OData metadata XML file. This file can be download from the OData service URL directly using the `$metadata` suffix. The browser will display the XML and you can use the right mouse button in most browsers to choose to download the XML file. Save the file locally. It is recommended that you save it in the **resources** folder of your Mendix app so that you can find it easily.
 
-1.  Download the XML metadata file to your local drive.
+1. Download the XML metadata file to your local drive.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/download-xml.png" >}}
 
@@ -180,22 +170,18 @@ One way to do this is by getting the OData metadata XML file. This file can be d
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload_metadata.png" >}}
 
 4. Drag the file you want into the Model Creator, or click **Upload** and upload the XML file you want to use.
-
 5. Click **Next** to see the schemas within the metadata.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload-metadata-schemas.png" >}}
 
-    {{% alert color="info" %}}This will be shown even if only one schema exists.
-    {{% /alert %}}
+    {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 6. Click the schema you want. It will be highlighted.
-
 7. Click **Next** to proceed to the confirmation screen.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload-metadata-confirmation.png" >}}
 
 8. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
-
 9. Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/download_metadata.png" >}}
@@ -226,18 +212,15 @@ This method does not work where the destination needs authentication. You cannot
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/upload-metadata-schemas.png" >}}
 
-    {{% alert color="info" %}}This will be shown even if only one schema exists.
-    {{% /alert %}}
+    {{% alert color="info" %}}This will be shown even if only one schema exists.{{% /alert %}}
 
 4. Click the schema you want. It will be highlighted.
-
 5. Click **Continue** to proceed to the confirmation screen.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/metadata-url-confirmation.png" >}}
 
 6. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
-
-7.  Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
+7. Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/download-metadata-url.png" >}}
 
@@ -292,7 +275,6 @@ Use [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com
 Now you have a Mendix module ready to import into your app.
 
 1. Open the app which you created as a prerequisite.
-
 2. Right-click your app in the **App Explorer** and select **Import module package...**.
 
     {{< figure src="/attachments/partners/sap/use-sap-model-creator/import_module_package.png" >}}

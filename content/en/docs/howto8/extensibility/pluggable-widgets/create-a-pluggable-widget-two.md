@@ -50,7 +50,7 @@ To add these restrictions, follow the instructions below:
     ```
 
 2. Run `npm run build` to update the widget. When viewing in Studio Pro, the `Editability` property can been seen here:
-    
+
     {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png" alt="Editability studio pro"   width="500"  >}}
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
@@ -113,10 +113,10 @@ To add these restrictions, follow the instructions below:
     ```
 
     After altering this code, do the following to see your changes:<br/>
-        a. Run `npm run build` to update the widget.<br/>
-        b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-        c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
-        d. Click **View** to see your changes.
+    1. Run `npm run build` to update the widget.<br/>
+    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
+    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+    4. Click **View** to see your changes.
 
     Explaining the code:
 
@@ -145,11 +145,11 @@ This section will teach you to add validation to your TextBox widget. Using micr
     {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-two/addingvalidation.png" alt="validation feedback client activity"   width="500"  >}}
 
     To define your validation feedback activity:<br />
-    a. Double-click the **Validation feedback** activity.<br />
-    b. Set **Variable** to **Entity (MyFirstModule Entity)**.<br />
-    c. Set **Member** to **Attribute**, and type *Validation feedback from a microflow* into **Template**.<br />
-    d. Click **OK**.<br />
-    e. Click **File** > **Save All** from the Mendix Studio Pro drop-down menu.
+    1. Double-click the **Validation feedback** activity.<br />
+    2. Set **Variable** to **Entity (MyFirstModule Entity)**.<br />
+    3. Set **Member** to **Attribute**, and type *Validation feedback from a microflow* into **Template**.<br />
+    4. Click **OK**.<br />
+    5. Click **File** > **Save All** from the Mendix Studio Pro drop-down menu.
 
 3. To render the message, create a new component *components/Alert.tsx*:
 
@@ -204,10 +204,10 @@ This section will teach you to add validation to your TextBox widget. Using micr
     ```
 
     After altering this code, do the following to see your changes:<br/>
-        a. Run `npm run build` to update the widget.<br/>
-        b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-        c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
-        d. Click **View** to see your changes.
+    1. Run `npm run build` to update the widget.<br/>
+    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
+    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+    4. Click **View** to see your changes.
 
     Explaining the code:
 
@@ -221,7 +221,6 @@ This section will teach you to add validation to your TextBox widget. Using micr
 ### 3.3 Customizing Validation
 
 Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required [text template](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#texttemplate) message which will show when the input is empty.
-
 
 1. In *TextBox.xml*, add the `requiredMessage` property inside the `propertyGroup` of `Data source`:
 
@@ -257,10 +256,10 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
     ```
 
     After altering this code, do the following to see your changes:<br/>
-        a. Run `npm run build` to update the widget.<br/>
-        b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-        c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
-        d. Click **View** to see your changes.
+    1. Run `npm run build` to update the widget.<br/>
+    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
+    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+    4. Click **View** to see your changes.
 
     Explaining the code:
 
@@ -298,10 +297,10 @@ Until now the components did not keep any state. Each keystroke passed through t
     ```
 
     After altering this code, do the following to see your changes:<br/>
-        a. Run `npm run build` to update the widget.<br/>
-        b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-        c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
-        d. Click **View** to see your changes.
+    1. Run `npm run build` to update the widget.<br/>
+    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
+    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+    4. Click **View** to see your changes.
 
     Adding this code will allow you to select various actions:
 
@@ -417,7 +416,6 @@ Until now the components did not keep any state. Each keystroke passed through t
     * The `onBlur` function will set the new value in the attribute through the container component — the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
     * The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected with the XML configuration
 
-
 ### 3.5 Adding Accessibility
 
 To make the input widget more accessible for people using screen readers, you will need to provide hints about the input. 
@@ -508,10 +506,10 @@ To make the input widget more accessible for people using screen readers, you wi
     ```
 
     After altering this code, do the following to see your changes:<br/>
-        a. Run `npm run build` to update the widget.<br/>
-        b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
-        c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
-        d. Click **View** to see your changes.
+    1. Run `npm run build` to update the widget.<br/>
+    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
+    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+    4. Click **View** to see your changes.
 
     Explaining the code:
 
@@ -552,7 +550,7 @@ Explaining the code:
 
 ### 3.7 Grouping and System Properties
 
-All pluggable widgets will automatically benefit from the `Visibility` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#visibility) of a widget. Within *widget.xml*, property groups can be used to move a property to a specific tab or place properties in a group. For more detailed information on property groups, see the (Property Groups)[/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups] section of the *Pluggable Widgets API Documentation*.
+All pluggable widgets will automatically benefit from the `Visibility` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#visibility) of a widget. Within *widget.xml*, property groups can be used to move a property to a specific tab or place properties in a group. For more detailed information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of the *Pluggable Widgets API Documentation*.
 
 To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to make the properties look like the core text box properties (which you can see after double-clicking the widget):
 

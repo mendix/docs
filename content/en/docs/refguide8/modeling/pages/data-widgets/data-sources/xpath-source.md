@@ -65,4 +65,3 @@ XPath constraints are applied equally to all users and only apply to the data di
 
 * [Data Widgets](/refguide8/data-widgets/)
 * [Data Grid](/refguide8/data-grid/)
-

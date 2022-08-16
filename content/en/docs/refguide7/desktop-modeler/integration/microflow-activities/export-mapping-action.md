@@ -8,7 +8,6 @@ url: /refguide7/export-mapping-action/
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
-
 ## 1 Introduction
 
 {{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/export-mapping-action/19399019.png" >}}

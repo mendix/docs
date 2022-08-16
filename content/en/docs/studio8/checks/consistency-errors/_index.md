@@ -21,7 +21,7 @@ Consistency errors can occur in the following editors of Mendix Studio:
 * Navigation document (For information on consistency error in the navigation, see [Navigation Consistency Errors](/studio8/consistency-errors-navigation/))
 * Microflows (For information on consistency error in the microflow editor, see [Microflow Consistency Errors](/studio8/consistency-errors-microflows/))
 
-##  2 Read More
+## 2 Read More
 
 * [Page Consistency Errors](/studio8/consistency-errors-pages/) 
 * [Navigation Consistency Errors](/studio8/consistency-errors-navigation/) 

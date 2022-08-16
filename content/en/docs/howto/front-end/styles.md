@@ -158,4 +158,3 @@ Many of these classes are part of Bootstrap. For more information about classes 
 ## 11 Read More
 
 * [Mendix Atlas UI](https://www.mendix.com/atlas/)
-

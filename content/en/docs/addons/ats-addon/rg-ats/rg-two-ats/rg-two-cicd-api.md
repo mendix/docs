@@ -57,7 +57,7 @@ Starts a new job based on a CI/CD template and returns the UUID of the job which
 
 #### 3.1.1 URL
 
-```
+```text {linenos=false}
 https://ats100.mendixcloud.com/ws/RunJob
 ```
 
@@ -125,7 +125,7 @@ The following table shows the data contained in the response of the Run Job serv
 
 #### 3.2.1 URL
 
-```
+```text {linenos=false}
 https://ats100.mendixcloud.com/ws/GetJobStatus
 ```
 
@@ -323,7 +323,7 @@ Reruns all the failed or not-executed test cases for a finished job. Returns the
 
 #### 3.3.1 URL
 
-```
+```text {linenos=false}
 https://ats100.mendixcloud.com/ws/RerunNotPassed
 ```
 

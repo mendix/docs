@@ -18,7 +18,6 @@ Operating System       | Chrome   | Firefox  | Internet Explorer
 **macOS Sierra**       | &#10003; | &#10003; | N/A
 **OS X El Capitan**    | &#10003; | &#10003; | N/A
 
-
 ## 3 Saucelabs
 
 Operating System       | Chrome   | Firefox  | Internet Explorer

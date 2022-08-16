@@ -39,7 +39,7 @@ CLEVR customized versions of Marketplace widgets:
 Delete permissions APMAgent.Admin from project security / user roles tab to a selected administrator role. On Edit of the last dialog Mendix will remove the permissions for you.
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-uninstall-steps/Delete_Permissions.png" >}}
 
-**_Note._** _If you added the Debug role, remove it now._
+***Note.*** *If you added the Debug role, remove it now.*
 
 ## 6 Delete from Navigation
 
@@ -63,13 +63,13 @@ For a Mendix Cloud slot you send an email to Mendix support requesting to undo t
 
 Remove the APMAgent libraries in the project folder 'userlib':
 
-*   apm
-*   com.mendix.ojdbc6.jar
-*   com.mendix.postgresql.jdbc4.jar
-*   com.mendix.sqljdbc4.jar
-*   org.hsqldb.hsqldb.jar
-*   org.mariadb.jdbc.jar
-*   log4j
+* apm
+* com.mendix.ojdbc6.jar
+* com.mendix.postgresql.jdbc4.jar
+* com.mendix.sqljdbc4.jar
+* org.hsqldb.hsqldb.jar
+* org.mariadb.jdbc.jar
+* log4j
 
 ## 10 Start the Modeler or the Runtime
 

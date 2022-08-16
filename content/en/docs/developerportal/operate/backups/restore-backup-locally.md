@@ -29,8 +29,7 @@ This how-to will teach you how to do the following:
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/postgres-password.png" >}}
 
-    {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data. 
-    {{% /alert %}}
+    {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data.{{% /alert %}}
 
 * When restoring a database hosted in Mendix Cloud v4, or downloading a full backup, you will need a utility such as [7zip](http://www.7-zip.org/) on your local machine which can extract files from *.gz* and *.tar* archives.
 
@@ -65,7 +64,7 @@ If you have downloaded a full backup, this will also have been archived as a *.t
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-options.png" >}}
 
 10. Click **Restore**.
-11.	Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.
+11. Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.
 
 ## 4 Linking the Database to the App in Mendix Studio Pro
 

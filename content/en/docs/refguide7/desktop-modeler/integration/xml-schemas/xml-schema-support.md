@@ -19,8 +19,6 @@ Mendix derives the input/output formats for XML import/export and for calling SO
 | anyAttribute | No |
 | list | No |
 
-
-
 There are two kinds of XML mappings in Mendix: import mapping, which translates XML data to Mendix objects, and export mapping, which does the opposite. Import mappings are used when importing XML files using the 'Import XML' activity in microflows, and for processing the response of a web service call. Export mappings are used for exporting XML files in microflows and for generating the XML for the request of a web service call.
 
 In the mapping editor for import mappings, you can check elements that can occur in the XML according to the XSD and then define a mapping to Mendix objects for those elements. It does not matter much how often or in which order elements occur; whenever an element occurs, the corresponding mapping for that element is applied.

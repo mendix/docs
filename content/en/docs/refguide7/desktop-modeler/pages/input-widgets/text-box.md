@@ -27,7 +27,7 @@ A text box must be placed in a data view or template grid and connected to an at
 | False | Normal text box |
 | True | Typed characters are not shown to the end user. Instead an asterisk is shown for every typed character. |
 
-_Default value:_ False
+*Default value:* False
 
 ### Input Mask (Only in Web Forms)
 
@@ -43,7 +43,7 @@ This property indicates the maximum number of characters that can be typed in th
 | Unlimited | The maximum number of characters is unlimited. |
 | Custom | The maximum number of characters is set by the user. |
 
-_Default value: Attribute length_
+*Default value: Attribute length*
 
 ### Placeholder Text
 
@@ -93,5 +93,5 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data view](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

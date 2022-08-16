@@ -39,30 +39,30 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 1. Add a *Product* data parameter to your microflow.
 2. Retrieve the *PushNotifications.Device* entity list from a database:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/retrieveDevices.png" alt="retrieveDevices"    width="400"  >}}
-    
-3. Drag and drop the **PrepareMessageData** microflow from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
-	a. Title: *myTitle*.<br />
-	b. Body: *myBody*.<br />
-	c. TimeToLive: *0*.<br />
-	d. Badge: *0*.<br />
-	e. ActionName: *sendProduct*.<br />
-	f. ContextObjectGuid: *empty*:
-	
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/prepareMessageData.png" alt="prepareMessageData"    width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/retrieveDevices.png" alt="retrieveDevices"    width="400"  >}}
 
-	**ContextObjectGuid** is set to empty since you will pass the object itself to the **SendMessageToDevices** Java action where it will be retrieved automatically. 
+3. Drag and drop the **PrepareMessageData** microflow from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
+    1. Title: *myTitle*.<br />
+    1. Body: *myBody*.<br />
+    1. TimeToLive: *0*.<br />
+    1. Badge: *0*.<br />
+    1. ActionName: *sendProduct*.<br />
+    1. ContextObjectGuid: *empty*:
+
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/prepareMessageData.png" alt="prepareMessageData"    width="400"  >}}
+
+    **ContextObjectGuid** is set to empty since you will pass the object itself to the **SendMessageToDevices** Java action where it will be retrieved automatically. 
 
 4. Drag and drop the **SendMessageToDevices** Java action from *PushNotifications/_USE ME/API* onto **ACT_SendProductToAllDevices** and configure the following:<br />
-	a. **Message data param**: **$MessageToBeSent**.<br />
-	b. **Device param**: **$Devices**.<br />
-	c. **Context object**: **$Product**:
-	
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendMessagesJava.png" alt="sendMessagesJava"    width="400"  >}}
-  
+    1. **Message data param**: **$MessageToBeSent**.<br />
+    1. **Device param**: **$Devices**.<br />
+    1. **Context object**: **$Product**:
+
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendMessagesJava.png" alt="sendMessagesJava"    width="400"  >}}
+
 5. Go to **Product_NewEdit** and drag and drop **ACT_SendProductToAllDevices** inside of that page's data view:
 
-	{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"    width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"    width="400"  >}}
 
 ### 3.2 Testing the Implementation
 
@@ -98,4 +98,3 @@ To send a push notification to all users, use the **SendMessageToUsers** Java ac
 ## 5 Troubleshooting Notification Issues
 
 If you run into issues, see the [Troubleshoot Notification Issues](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.
-

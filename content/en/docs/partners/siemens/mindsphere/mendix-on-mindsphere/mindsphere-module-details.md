@@ -176,10 +176,10 @@ The **Siemens_MindSphere_Web_Content** module is an *Atlas UI Resource* based on
 * An updated *index.html* file
 * A new *mindspherelogin.html* file
 * New Error pages:
-  * permission-denied (*error_page/403.html*)
-  * maximum number of sessions exceeded (*error_page/LicenseException.html*)
-  * public key url (*error_page/PublicKeyUrl.html*)
-  * role mapping (*error_page/RoleMapping.html*)
+    * permission-denied (*error_page/403.html*)
+    * maximum number of sessions exceeded (*error_page/LicenseException.html*)
+    * public key url (*error_page/PublicKeyUrl.html*)
+    * role mapping (*error_page/RoleMapping.html*)
 
 ### 4.1 MindSphere Icons
 
@@ -313,11 +313,14 @@ In index.html, in the header before the line `{{themecss}}`, the following scrip
 To allow SSO, the usual login.html needs to be replaced with a different file (mindspherelogin.html).
 
 Delete the following lines:
+
 ```javascript
 if (\!document.cookie || \!document.cookie.match(/(^|;)originURI=/gi))
 document.cookie = "originURI=/login.html";
 ```
+
 and directly after the script of the X-XRSR put the following script
+
 ```javascript
 <script>
 	// MindSphere specific part-2: Use the MindSphereLogin.html to prevent the Gateway taking over login.html and perform SSO

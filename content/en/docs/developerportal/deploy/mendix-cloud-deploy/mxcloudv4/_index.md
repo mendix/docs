@@ -34,24 +34,25 @@ For other considerations, refer to [Migrate to Mendix Cloud v4](/developerportal
 
 The primary hosting locations are as follows:
 
-*   Mendix Cloud Asia Pacific: AWS Singapore
-*   Mendix Cloud Asia Pacific: AWS Sydney
-*   Mendix Cloud Asia Pacific: AWS Tokyo
-*   Mendix Cloud Canada: AWS Canada
-*   Mendix Cloud EU: AWS Dublin
-*   Mendix Cloud EU: AWS Frankfurt
-*   Mendix Cloud UK: AWS London
-*   Mendix Cloud US: AWS North Virginia
-*   Mendix Cloud US: AWS Oregon
+* Mendix Cloud Asia Pacific: AWS Mumbai
+* Mendix Cloud Asia Pacific: AWS Singapore
+* Mendix Cloud Asia Pacific: AWS Sydney
+* Mendix Cloud Asia Pacific: AWS Tokyo
+* Mendix Cloud Canada: AWS Canada
+* Mendix Cloud EU: AWS Dublin
+* Mendix Cloud EU: AWS Frankfurt
+* Mendix Cloud UK: AWS London
+* Mendix Cloud US: AWS North Virginia
+* Mendix Cloud US: AWS Oregon
 
 Backups will always be stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable, i.e. once it has been written to our storage location, it can no longer be modified or overwritten.
 
 Data will always be stored in the same political region for the following regions:
 
-*   Data in the EU, including backups, will stay within the EU
+* Data in the EU, including backups, will stay within the EU
     * Data in the EU is not currently backed up in the UK
     * Data in the UK is backed up in the EU
-*   Data in the US, including backups, will stay within the US
+* Data in the US, including backups, will stay within the US
 
 Data in Japan is currently backed up in Japan.
 

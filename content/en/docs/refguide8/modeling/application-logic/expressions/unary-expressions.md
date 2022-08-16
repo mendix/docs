@@ -23,7 +23,7 @@ There is no unary plus.
 
 The example below represents the negative value of '8'.
 
-```java
+```java {linenos=false}
 -8
 ```
 
@@ -31,13 +31,12 @@ When used with a variable that already has a negative value the result is positi
 
 For example, if $myVariable has the integer value "-7": 
 
-```java
+```java {linenos=false}
 -$myVariable
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 7
 ```
-

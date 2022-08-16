@@ -122,4 +122,3 @@ The solution is to go to the `WidgetName` element and replace it with your own w
 3. Remove `WidgetName`.
 
 Repeat these steps for all five of the errors.
-

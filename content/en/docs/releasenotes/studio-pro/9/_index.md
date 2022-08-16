@@ -10,5 +10,3 @@ simple_list: true
 ---
 
 These are the release notes for Mendix Studio Pro version 9:
-
-

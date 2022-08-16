@@ -78,16 +78,16 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 ### Improvements
 
 * This release marks a re-architecture of the Native Builder. Its foremost improvements are the following:
-	* The Native Builder now has a more structured command API.
-	* The Native Builder now provides an upgrade path for your projects.
-	* The Native Builder now supplies better error messages.
+    * The Native Builder now has a more structured command API.
+    * The Native Builder now provides an upgrade path for your projects.
+    * The Native Builder now supplies better error messages.
 
 #### Command API Improvements
 
 * We reworked the command API for the Native Builder. We introduced two new commands: `prepare` and `build`. These commands separate the preparation configuration from your actual build. Specifically, preparation requires several pieces of app information during configuration, while the build process requires only a build number and a version number. To further simplify app building, we also introduced a new argument: `--project-name`. This argument allows for an explicit separation between a Mendix project and the app's name. When preparing a project with `prepare`, all configuration is cached locally. That means that building the command can look as simple as this: 
-	* `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
+    * `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
 * Updating any of your configuration is still possible by calling this: 
-	* `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
+    * `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
 * In addition, two new arguments have been added to the `build` command: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in  the case of a successful MxBuild but a failed later step.
 
 #### Upgrade Path Improvements
@@ -118,9 +118,9 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
-	* Fixed in [3.0.0](#nalm-215).
+    * Fixed in [3.0.0](#nalm-215).
 * Using more than one space in an app's name is not supported.
-	* Fixed in [3.0.0](#nalm-217).
+    * Fixed in [3.0.0](#nalm-217).
 
 ## 1.0.0
 
@@ -134,9 +134,9 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 ### Known Issues
 
 * In case MxBuild fails during the Native Builder process, no clear error message is given and the process continues. This will lead to the previous bundle being used, which means the latest Mendix project model changes are not applied. To mitigate this, delete the **deployment/native/bundle** folder in your Mendix project folder to ensure the previous bundle is not there anymore.
-	* Fixed in [3.0.0](#nalm-215).
+    * Fixed in [3.0.0](#nalm-215).
 * Using more than one consecutive space in an app's name is not supported.
-	* Fixed in [3.0.0](#nalm-217).
+    * Fixed in [3.0.0](#nalm-217).
 
 ## 0.1.0
 

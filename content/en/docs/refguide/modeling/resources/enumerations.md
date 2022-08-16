@@ -20,20 +20,17 @@ An enumeration consists of one or more [enumeration values](/refguide/enumeratio
 
 To create a new enumeration, do the following: 
 
-1.  In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to add enumeration to and in the list of actions, select **Add other** > **Enumeration**.
-
+1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to add enumeration to and in the list of actions, select **Add other** > **Enumeration**.
 2. In the **Add Enumeration** dialog box, fill out the name of the enumeration.
+3. In the **Enumeration** dialog box, click **New** to create enumeration values:
 
-3.  In the **Enumeration** dialog box, click **New** to create enumeration values:
+    1. Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
-    a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
+        {{< figure src="/attachments/refguide/modeling/resources/enumerations/add-enum-value.png" >}}
 
-    {{< figure src="/attachments/refguide/modeling/resources/enumerations/add-enum-value.png" >}}
-
-    b.  Click **OK** to save the enumeration value.
+    1. Click **OK** to save the enumeration value.
 
 4. Repeat step 3 for every enumeration value that you want to create.
-
 5. Click **OK** to save the enumeration. 
 
 You have added a new enumeration to your app. You can use the same enumeration for different attributes of the enumeration type in your app. 
@@ -43,16 +40,16 @@ You have added a new enumeration to your app. You can use the same enumeration f
 An enumeration has the following properties:
 
 * **Name** – The name of the enumeration.
+* **Export level** – allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 
 
-* **Export level** – allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution.  
-    {{% alert color="info" %}}This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
-    {{% /alert %}}
+    {{% alert color="info" %}}This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*.{{% /alert %}}
+
     **Export level** has the following values:   
 
     * **Hidden** *(default)* – The document/element content is hidden from a consumer. 
     * **Usable** – Consumers can use the enumeration in their apps. 
 
-*  **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
+* **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 
     {{< figure src="/attachments/refguide/modeling/resources/enumerations/enumeration-properties.png" >}}
 
@@ -143,6 +140,7 @@ The name of an enumeration value must be a technical name, starting with a lette
 * `void`
 * `volatile`
 * `while`
+
 </details>
 
 {{% alert color="warning" %}}
@@ -159,4 +157,3 @@ To use the image in a data grid, set the enumeration format of the column to *Im
 
 * [Attributes](/refguide/attributes/)
 * [Entities](/refguide/entities/)
-

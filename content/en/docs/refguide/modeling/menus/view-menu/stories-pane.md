@@ -19,7 +19,7 @@ The **Stories** pane consists of the top bar with various buttons and a table:
 The table contains following columns:
 
 * **Story** – shows a list of stories   
-  * *Tasks* are displayed as a sub-list of the corresponding story
+    * *Tasks* are displayed as a sub-list of the corresponding story
 * **Status** – shows the status of a story or a task 
 
 ## 2 Interacting with the Stories Pane
@@ -53,11 +53,8 @@ A *plus icon* next to a story means it has tasks assigned to it. To view details
 When you view the details of a story or task, the **Story Details** pop-up window is opened with the following information:
 
 * **Title** – the title of the story/task
-
 * **Status** – the current status of the story/task
-
 * **Story points** – the story points assigned to the story/task 
-
 * **Description** – the description of the story/task
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" >}}
@@ -80,15 +77,14 @@ For more information on how to create a story on the basis of a feedback item an
 
 You can change the status of a story or a task.
 
-To change the status of a *story*, click its status in the **Status** column. The status will change in the following succession:  *To do* > *Running* > *Done* > *To do*. 
+To change the status of a *story*, click its status in the **Status** column. The status will change in the following succession: *To do* > *Running* > *Done* > *To do*. 
 
 To change the status of a task, tick or clear the check box in the **Status** column:
 
 * Clear the check box to set the done task in *To do*
-
 * Tick the check box to set the task to *Done*
 
-##  3 Read More
+## 3 Read More
 
 * [Stories](/developerportal/collaborate/stories/)
 * [Feedback Management](/developerportal/collaborate/feedback/)

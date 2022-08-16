@@ -217,4 +217,3 @@ These are the basic UX best practices outlined in this document:
 ## 11 Read More
 
 * [Common UX Mistakes Made by Business Developers](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379)
-

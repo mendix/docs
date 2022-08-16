@@ -23,8 +23,8 @@ A recent CPU (minimal dual core, minimal 2 GHz), 4 GB of memory, and 20 GB of fr
 
  &#xfeff; | Standalone Server | Grid Hub | Grid Node 
 -----|----|--------------|--------------
-Minimal	| Recent CPU, 1GHz 2GB RAM	| Recent CPU, 1GHz 2GB RAM	| Recent CPU, 1GHz 2GB RAM
-In addition per browser instance ¹	| 1 Core, 1GHz 500MB RAM | 200MHz 200MB RAM | 1 Core, 1GHz 500MB RAM
+Minimal    | Recent CPU, 1GHz 2GB RAM    | Recent CPU, 1GHz 2GB RAM    | Recent CPU, 1GHz 2GB RAM
+In addition per browser instance ¹    | 1 Core, 1GHz 500MB RAM | 200MHz 200MB RAM | 1 Core, 1GHz 500MB RAM
 
 ¹ This highly depends on a browser and on an application that is tested. The defined resources refer to medium-sized applications.
 
@@ -54,13 +54,13 @@ Only the selenium server version that is delivered as part of the ATS installati
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---
-2.9	| 3.141.59 |	[Download here](http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
+2.9 | 3.141.59 | [Download here](http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
 
 ### 3.6 Chrome Driver
 
 Only the Chrome driver version that is delivered as part of the ATS installation is supported.
 
-ATS Version	| Supported Chrome driver version | Download 
+ATS Version | Supported Chrome driver version | Download 
 ---|---|---
 2.9 | 75 | [Download here](https://chromedriver.storage.googleapis.com/index.html?path=75.0.3770.140/)
 
@@ -68,7 +68,7 @@ ATS Version	| Supported Chrome driver version | Download
 
 Only the Gecko driver version that is delivered as part of the ATS installation is supported.
 
-ATS Version	| Supported Gecko driver version | Download 
+ATS Version | Supported Gecko driver version | Download 
 ---|---|---
 2.9 | 0.24.0 | [Download here](https://github.com/mozilla/geckodriver/releases/tag/v0.24.0)
 
@@ -76,7 +76,7 @@ ATS Version	| Supported Gecko driver version | Download
 
 Only the Internet Explorer driver version that is delivered as part of the ATS installation is supported.
 
-ATS Version	| Supported Gecko driver version | Download 
+ATS Version | Supported Gecko driver version | Download 
 ---|---|---
 2.9 | 2.53.1 | [Download here](http://selenium-release.storage.googleapis.com/index.html?path=2.53/)
 

@@ -15,16 +15,16 @@ By default, the best options are already selected for the most common situations
 * **Enabled** – You can configure if browser agent guest users, browser agents, or runtimes are allowed to connect to this environment. This is a security setting.
 * **Statistics collection** – Statistics are available **Per microflow** and **Per microflow action**. For **Per microflow action**, statistics will be generated for actions in a microflow (**Per microflow** does not do this).
 * **Trap message collection** – This can be set to **All messages** and **Without database nodes**. Changing this to **Without database nodes** will stop the sending of logs from database nodes to APM. These nodes include:
-  * DataStorage_QueryPlan
-  * DataStorage_QueryHandling
-  * ConnectionBus_Update
-  * ConnectionBus_Security
-  * ConnectionBus_Retrieve
-  * ConnectionBus_Mapping
-  * ConnectionBus_Queries
-  * ConnectionBus_Synchronize
-  * ConnectionBus_Validation
-  * QueryParser
+    * DataStorage_QueryPlan
+    * DataStorage_QueryHandling
+    * ConnectionBus_Update
+    * ConnectionBus_Security
+    * ConnectionBus_Retrieve
+    * ConnectionBus_Mapping
+    * ConnectionBus_Queries
+    * ConnectionBus_Synchronize
+    * ConnectionBus_Validation
+    * QueryParser
 * **Generate API key**
 * **Delete this environment** – Clicking this button will delete the environment from the APM manager.
 

@@ -9,7 +9,7 @@ The following operators can be used in OQL expressions:
 
 | Operator | Description | Example |
 | --- | --- | --- |
-| `+ ` | Addition | `6 + 4` returns 10. |
+| `+` | Addition | `6 + 4` returns 10. |
 | `-` | Subtraction | `6 - 4` returns 2. |
 | `*` | Multiplication | `6 * 4` returns 24. |
 | `:` | Division | `8 : 4` returns 2. |

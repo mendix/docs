@@ -180,6 +180,7 @@ The placeholder text is shown when no text has been entered yet, or when a displ
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
 <a name="label-properties"></a>
+
 ### 2.9 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}

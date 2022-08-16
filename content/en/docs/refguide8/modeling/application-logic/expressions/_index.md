@@ -26,7 +26,7 @@ Starting from Studio Pro [8.10.0](/releasenotes/studio-pro/8.10/#8100), attribut
 
 You can combine functions in an expression. In this case, you can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
-```
+```text {linenos=false}
 $CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
 ```
 
@@ -36,7 +36,7 @@ Arithmetic functions (subtraction, dividing, and multiplying) are being combined
 
 For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
-```
+```text {linenos=false}
 if $package/weight < 1.00 then 0.00 else 5.00`
 ```
 

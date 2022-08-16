@@ -3,12 +3,12 @@ title: "Data Hub without Mendix Cloud"
 description: "This guide explains how to use Mendix Data Hub and external entities for local deployments, or for private cloud or on-premises solutions."
 url: /data-hub/data-hub-without-mendix-cloud/
 weight: 20
-tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "Data Hub private cloud"]
+tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "Data Hub private cloud", Data Hub Tencent"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
 
-This guide explains how to use Data Hub for users who do not deploy to the Mendix Cloud. This includes users who are deploying locally, or users who deploy to a Private Cloud or On-Premises solution.
+This guide explains how to use Data Hub for users who do not deploy to the Mendix Cloud. This includes users who are deploying locally, or users who deploy to a Private Cloud, the Tencent Cloud, or On-Premises solution.
 
 ## 1.1 Background
 
@@ -19,6 +19,8 @@ The [Mendix Data Hub](/data-hub/) includes two main features:
 
 Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
+For an overview of how Data Hub components work together, check out the blog post [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/).
+
 ## 1.2 Use Cases without the Mendix Cloud
 
 When deploying to the Mendix Cloud, check out the [Data Hub Guide](/data-hub/) documentation, and the Studio Pro guide to [external entities](/refguide/external-entities/).
@@ -26,7 +28,7 @@ When deploying to the Mendix Cloud, check out the [Data Hub Guide](/data-hub/) d
 But what happens in the following situations?
 
 * You are developing both the service and the client on a local machine, without deploying to a cloud environment (deploying locally)
-* You are deploying to a [Private Cloud](/developerportal/deploy/private-cloud/) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
+* You are deploying to a [Private Cloud](/developerportal/deploy/private-cloud/) (including the [Tencent Cloud](/developerportal/deploy/tencent-deploy/)) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
 
 In these cases, you can still publish and consume external entities. This guide will explain how to work with the Data Hub Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server) for Data Hub.
 
@@ -109,3 +111,9 @@ Publishing and consuming services need to have network access to each other, but
 ### 3.1 Licensing 
 
 A [Data Hub License](/data-hub/#data-hub-licences) is necessary for using Mendix Data Hub during runtime. A [Data Hub Free Edition](/data-hub/#dh-free) licenses limits use to 1000 OData objects per day for each runtime instance. For further details on limitations during runtime, see the [Limitations](/data-hub/#dh-free-limitations) section of the *Data Hub Guide*.
+
+## Read More
+
+* [Data Hub Guide](/data-hub/)
+* [Data Hub Catalog](/data-hub/data-hub-catalog/)
+* [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/) in the

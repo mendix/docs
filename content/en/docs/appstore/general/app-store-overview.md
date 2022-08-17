@@ -186,6 +186,10 @@ On this page, you can see all the content your company has published. Click the 
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
+{{% alert color="info" %}}
+As a Mendix Admin in Control Center, you can also curate the Marketplace content you want to make available to your company's users in Mendix Studio. For more information, see the [Marketplace Content](/developerportal/control-center/#marketplace-content) section of *Control Center*.
+{{% /alert %}}
+
 ### 4.7 Company Subscriptions {#company-subscriptions}
 
 You can see all the Marketplace app services your company has subscribed to on this page:

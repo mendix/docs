@@ -31,7 +31,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | --- | --- | --- |
 | Number of users | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example SAP BTP. | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
 | Sleep Mode | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
-| Disk storage | 0.5 GB Database and 1GB Files. | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
+| Disk storage | 0.5 GB Database and 1 GB Files. | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
 | App vCPUs | 0.5 | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
 | Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
 | Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
@@ -42,7 +42,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | Starting and stopping your app manually | Not available. | Available in the Developer Portal. |
 | Constants | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
 | Runtime settings | Not available. | Configurable through runtime and settings in the Developer Portal. |
-| Scalability | Only one instance and a fixed amount (1GB) of memory. | Configurable in the Developer Portal. |
+| Scalability | Only one instance and a fixed amount (1 GB) of memory. | Configurable in the Developer Portal. |
 | Metrics, alerts, and log levels | Not available. | Available. |
 | Historic archived logs | Not available, only live logs are available. | Available. |
 | Backups | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |

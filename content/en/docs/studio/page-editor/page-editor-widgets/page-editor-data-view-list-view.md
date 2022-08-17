@@ -53,7 +53,7 @@ The **General** section properties of are described in the table below:
 | ---------------------------------- | ------------------------------------------------------------ |
 | Form Orientation                   | Determines the position of the [input element labels](/studio/page-editor-widgets-input-elements/#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input elements</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
 | Read-Only *(disabled by default)*  | When enabled, all [input elements](/studio/page-editor-widgets-input-elements/) (for example, a text area, a check box) in the data view will be in read-only mode. |
-| Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. |
+| Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. When enabled, it automatically adds **Save** and **Cancel** buttons to the data view. |
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
 

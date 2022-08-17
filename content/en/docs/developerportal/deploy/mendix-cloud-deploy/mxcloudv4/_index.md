@@ -34,6 +34,7 @@ For other considerations, refer to [Migrate to Mendix Cloud v4](/developerportal
 
 The primary hosting locations are as follows:
 
+* Mendix Cloud Asia Pacific: AWS Mumbai
 * Mendix Cloud Asia Pacific: AWS Singapore
 * Mendix Cloud Asia Pacific: AWS Sydney
 * Mendix Cloud Asia Pacific: AWS Tokyo

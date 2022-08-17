@@ -214,7 +214,23 @@ Lists in alerts:
 
 ### 2.2 TODOs and Comments
 
-[//]: # Comments do NOT work. Use todo shortcode instead: \{\{% todo %\}\}[ToDo comment text, only visible in development]\{\{% /todo %\}\}
+Two ways to add comments:
+
+1. With empty Markdown relative link
+
+    ```text
+    [//]: # "my comment here"
+
+    OR
+
+    [//]: # (my other comment here)
+    ```
+
+1. Use todo shortcode, which will output the comment into the Travis log:
+
+    ```text
+    {{%/* todo */%}}[ToDo comment text, only visible in development]{{%/* /todo */%}}
+    ```
 
 ### 2.3 Details
 

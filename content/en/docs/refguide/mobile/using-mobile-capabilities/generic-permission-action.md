@@ -20,11 +20,11 @@ Advanced features in mobile apps often require permission from users. Apps need 
 
 ## 3 Using a Generic Permission Action
 
-A generic permission action can be used inside nanoflows in an existing app or in a new app. You can find it in the toolbox for a nanoflow in the Native mobile section.
+A generic permission action can be used inside nanoflows in an existing app or in a new app. With a nanoflow open, you can find it in the Toolbox under the **Native Mobile** section.
 
 ### 3.1 Permission Name
 
-When using this action you need to choose the permission name you need. It should be one the available permissions in `NanoflowCommons.Enum_Permissions` enumeration.
+When using the generic permission action you must choose the permission name you need. It should be one of the available permissions in `NanoflowCommons.Enum_Permissions` enumeration.
 
 {{% alert color="info" %}}
 Keep in mind that the permission names are different for each platform. For example, if you need to request permission to access reading contacts you will need to call the actions twice: one for iOS permission (`CONTACTS_IOS`) and one for Android permission (`READ_CONTACTS_ANDROID`).
@@ -32,21 +32,21 @@ Keep in mind that the permission names are different for each platform. For exam
 
 ### 3.2 Action Return Type
 
-This action returns the status of the permission after the action and it is of type `NanoflowCommons.Enum_PermissionStatus`. The statuses are as follows:
+This action returns the status of the permission after the action, and it is of type `NanoflowCommons.Enum_PermissionStatus`. The statuses are as follows:
 
 |Permission status|Notes|
 |-----------------|-----|
-|`NanoflowCommons.Enum_PermissionStatus.granted`|The permission is granted after requesting it from the user or it was already granted previously|
-|`NanoflowCommons.Enum_PermissionStatus.unavailable`|This feature is not available on this device|
-|`NanoflowCommons.Enum_PermissionStatus.denied`|The permission is denied but still requestable|
-|`NanoflowCommons.Enum_PermissionStatus.blocked`|The permission is blocked which means that the user has to open the app settings himself and grant the permission from there|
-|`NanoflowCommons.Enum_PermissionStatus.limited`|The permission is granted but with limitations|
+|`NanoflowCommons.Enum_PermissionStatus.granted`| The permission is granted after requesting it from the user, or it was already granted previously. |
+|`NanoflowCommons.Enum_PermissionStatus.unavailable`| This feature is not available on this device. |
+|`NanoflowCommons.Enum_PermissionStatus.denied`| The permission is denied but can still be requested. |
+|`NanoflowCommons.Enum_PermissionStatus.blocked`| The permission is blocked. The user must open the app settings themselves and grant permission from there. |
+|`NanoflowCommons.Enum_PermissionStatus.limited`| The permission is granted but with limitations. |
 
 {{% alert color="info" %}}
-When the permission is already blocked, if you try to request it a pop-up window will ask the user to open their settings to grant the permission. Furthermore, you will recieve a `blocked` status.
+When the permission is blocked, if a user requests it a pop-up window will ask them to open their settings to grant the permission. Furthermore, the Mendix developer will receive a **blocked** status.
 {{% /alert %}}
 
-{{% alert color="info" %}}
+{{% alert color="alert" %}}
 These permissions statuses match the statuses that are received from the action, so you should not override them.
 {{% /alert %}}
 
@@ -54,18 +54,18 @@ These permissions statuses match the statuses that are received from the action,
 
 This an example for requesting contact access permission for Android and iOS devices:
 
-1. You can get the running platform (Android or iOS) through using `Get device info` action from Native mobile section in the Toolbox.
-1. Then you can branch your logic based on the current platform.
-1. Then for Android branch, you can use Generic permission action with a permission name of e.g `READ_CONTACTS_ANDROID`.
-1. For iOS branch, you can also use a generic permission action with a permission name of e.g. `CONTACTS_IOS`:
+1. Determine the user's running platform (Android or iOS) by using the **Get device info** action (in the Toolbox's **Native mobile** section).
+1. Branch your logic based on the current platform:
+    1. For the Android branch, use a **Generic permission** action with a permission name like {READ_CONTACTS_ANDROID}.
+    1. For the iOS branch, use a **Generic permission** action with a permission name like {CONTACTS_IOS}:
 
-  {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/fullExample" alt="use generic permission screenshoot"   width="400"  >}}
-  
-  {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/decision" alt="use generic permission screenshoot"   width="400"  >}}
-  
-  {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/android" alt="use generic permission screenshoot"   width="400"  >}}
-  
-  {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/ios" alt="use generic permission screenshoot"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/fullExample" alt="use generic permission"   width="400"  >}}
+    
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/decision" alt="decision"   width="400"  >}}
+    
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/android" alt="android permission"   width="400"  >}}
+    
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/ios" alt="ios permission"   width="400"  >}}
 
 ## 4 Building
 
@@ -81,7 +81,7 @@ The following permissions can be tested using the iOS Make It Native app:
 * MICROPHONE
 * PHOTO_LIBRARY
 
-To test the remaining permissions you can build [native app](https://docs.mendix.com/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-ios-native-permissions) with the required permissions.
+To test the remaining permissions you can build [native app](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-ios-native-permissions) with the required permissions.
 
 #### 4.1.2 Android
 
@@ -96,22 +96,21 @@ The following permissions can be tested using the Android Make It Native app:
 * READ_EXTERNAL_STORAGE
 * WRITE_EXTERNAL_STORAGE
 
-To test the remaining permissions you can build [native app](https://docs.mendix.com/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
+To test the remaining permissions you can build a [native app](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
 
 ### 4.2 Deployment
 
-During deployment you must specify the permissions that your application has used to be able to request them from the user on production.
-To do that you can navigate to App permissions while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
+During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/deployment-android" alt="deploy app with generic permission screenshoot"   width="400"  >}}
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/generic-permission-action/deployment-ios" alt="deploy app with generic permission screenshoot"   width="400"  >}}
 
 {{% alert color="info" %}}
-The permissions that you cannot find using the Native builder UI, can be added manually referencing the following section.
+The permissions that you cannot find using the Native builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
 {{% /alert %}}
 
-## 5 Update Native App Permissions
+## 5 Update Native App Permissions {#update-native-permissions}
 
 ### 5.1 iOS {#update-ios-native-permissions}
 

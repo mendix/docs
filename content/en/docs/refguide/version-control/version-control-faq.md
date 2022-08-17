@@ -3,7 +3,7 @@ title: "Version Control FAQ"
 url: /refguide/version-control-faq/
 category: "Version Control"
 weight: 15
-tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
+tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn"]
 ---
 
 ## 1 Introduction

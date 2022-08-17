@@ -315,7 +315,14 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
 Where *[MX.EXE_PATH]* should be replaced by the mx.exe path with only forward slashes pointing to a drive using */C/* instead of *C:/*.
 
-Additionally, create a *.gitattributes* file in the same folder with the following contents:
+You can also configure the git driver locally per repository using the following commands:
+
+```
+git config merge.custom.name "custom merge driver for specific files"
+git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
+```
+
+After setting up the driver either locally or globally, create a *.gitattributes* file in the same folder with the following contents:
 
 ```
 *.mpr merge=custom

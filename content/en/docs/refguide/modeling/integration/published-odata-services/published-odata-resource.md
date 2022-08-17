@@ -143,7 +143,7 @@ In the publishing app, you can use a validation message action to report a valid
 This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/). The *Insertable* capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
-### 9.2 Readable
+### 9.2 Readable {#readable}
 
 A published OData resource is always readable.
 
@@ -154,7 +154,7 @@ There are two options to handle an incoming GET request for an OData resource:
 
 You can also set the [query options](#query-options) for each request.
 
-### 9.3 Updatable
+### 9.3 Updatable {#updatable}
 
 Select the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
 

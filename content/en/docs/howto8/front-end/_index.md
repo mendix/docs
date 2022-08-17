@@ -22,4 +22,3 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Implement Styles](/howto8/front-end/styles/) – explains how to use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 * [Create Custom Error Pages](/howto8/front-end/custom-error-page/) – explains how to create a professional looking error page that will appear when your app is down
 * [Style Google Maps](/howto8/front-end/style-google-maps/) – shows how you can enhance your app's map overviews with improved styling
-

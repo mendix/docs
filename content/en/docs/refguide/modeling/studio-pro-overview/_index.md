@@ -67,9 +67,7 @@ A working area is a current document tab that you work in. The working area and 
 The documents you view and edit are shown in tabs. 
 
 {{% alert color="info" %}}
-
 This section describes documents in the working area, not panes that you can open and position around the working area. For more information on behavior of panes, see the [Layout of Panes](/refguide/view-menu/#layout-of-panes) section in *View Menu*.
-
 {{% /alert %}}
 
 You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. 
@@ -162,7 +160,6 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected entity, attribute, or association in a dialog box. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-
 ### 7.3 Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
@@ -239,5 +236,3 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 * [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)
-
- 

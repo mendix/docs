@@ -15,7 +15,6 @@ The **Design** section in **Properties** allows you to change spacing and alignm
 
 The **Design** section has the following properties common to all widgets:
 
-
 | Property                                                 | Description                                                  | Possible Values                                              |
 | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Spacing Top/ Spacing Bottom/ Spacing Left/ Spacing Right | Adds margin above/ below/ left/ right of the widget          | Possible values for **Spacing Top**/ **Spacing Bottom**/ **Spacing Left**/ **Spacing Right** are the following:<ul><li>None – no extra spacing is applied</li><li>Small – applies small spacing</li><li>Medium –  applies medium spacing</li><li>Large – applies large spacing</li><li>Layout – applies the same spacing as the current layout  (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
@@ -43,6 +42,7 @@ Specific properties for **List View** are described in the table below:
 | Style       | Changes the appearance of lines in the list view.            | Possible values for **Style** are the following:<ul><li>None</li><li>Striped</li><li>Bordered</li><li>Lined</li><li>No Styling</li></ul> |
 | Hover Style | Highlights a row when hovering over it. Only useful if the row is clickable. | Enabled/Disabled                                             |
 | Row Size    | Changes the size of the row.                                 | Possible values for **Row Size** are the following:<ul><li>None</li><li>Small</li><li>Large</li></ul> |
+
 ### 3.2 Container Specific Properties {#container-design-properties}
 
 Specific properties for the **Container** widget are described in the table below:
@@ -74,7 +74,6 @@ Specific properties for the **Text** widget are described in the table below:
 | Alignment    | Aligns the text                      | Possible values for **Alignment** are the following:<ul><li>None</li><li>Left</li><li>Center</li><li>Right</li></ul> |
 | Transform    | Changes letter case of the text      | Possible values for **Transform** are the following:<ul><li>None</li><li>Lowercase</li><li>Uppercase</li><li>Capitalize</li></ul> |
 | Wrap Options | Wrap a long text into multiple lines | Possible values for **Wrap Options** are the following:<ul><li>None – text is not wrapped</li><li>Wrap</li><li>No Wrap</li></ul> |
-
 
 ## 4 Read More
 

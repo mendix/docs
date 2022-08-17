@@ -24,13 +24,13 @@ To import data in ATS, do the following:
 1. Click **Import** to open the data import form.
 2. On the data import form, click **New Import** to open the import data dialog box.
 
-{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168204.png" alt="ATS Import Page" >}}
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168204.png" alt="ATS Import Page" >}}
 
 3. In the data import dialog box, select the *.xml* file containing your import and press **Upload**.
 
-{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168205.png" alt="Data Import Dialog" >}}
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-data-management/21168205.png" alt="Data Import Dialog" >}}
 
-The system will check the import for data inconsistencies and show error details in a list if any. 
+    The system will check the import for data inconsistencies and show error details in a list if any. 
 
 4. Click the **Import** button in the bottom of the screen to complete the import.
 
@@ -40,15 +40,15 @@ Data is imported in ATS.
 
 There are different scenarios on how to export data from ATS:
 
-*   Exporting single action
-*   Exporting multiple actions
-*   Exporting test cases
-*   Exporting test suites
-*   Exporting folders containing:
-    *   Actions
-    *   Actions and test cases
-    *   Actions, test cases and testsuites
-    *   Folders, actions, test cases and test suites
+* Exporting single action
+* Exporting multiple actions
+* Exporting test cases
+* Exporting test suites
+* Exporting folders containing:
+    * Actions
+    * Actions and test cases
+    * Actions, test cases and testsuites
+    * Folders, actions, test cases and test suites
 
 In order to start an export, you can do the following:
 
@@ -89,21 +89,17 @@ Line in the data table containing an integer or string value of the data
 When creating/editing a dataset you can select the **Create/Update fields from file** option to provide a template Excel file to create or update fields and records of your dataset. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
 
 {{% alert color="info" %}}
-
 When updating an existing dataset all existing fields and data records will be removed
-
 {{% /alert %}}
 
 You can also only import data records into you dataset by clicking the **Import from Excel** button. The first row of your Excel sheet must contain the field names of the dataset into which you want to import the records.
 
 {{% alert color="info" %}}
-
 When importing data records all existing records in the dataset will be removed
+{{% /alert %}}
 
-{{% /alert %}}{{% alert color="info" %}}
-
+{{% alert color="info" %}}
 When importing data from from Excel, ATS will try to convert data that doesn't match the expected data type. In case a conversion is not possible (for example, from a string to an integer) the resulting value will be empty. Always check your data after import to be sure all data was completely imported.
-
 {{% /alert %}}
 
 You can simply export a dataset by clicking the **Export to Excel** button.

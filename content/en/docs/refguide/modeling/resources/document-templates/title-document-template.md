@@ -27,4 +27,3 @@ For details, see [Style](/refguide/style/).
 ## 3 Common Properties
 
 {{% snippet file="/static/_includes/refguide/name-property.md" %}}
-

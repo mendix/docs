@@ -59,7 +59,6 @@ We support the following comparison operators:
 | ge | greater than or equal to | `/Employees?$filter=Age ge 15` |
 | le | less than or equal to | `/Employees?$filter=Age le 15` |
 
-
 ### 4.3 Arithmetic Operators
 
 | Operator | Meaning | Example                              | Returns |

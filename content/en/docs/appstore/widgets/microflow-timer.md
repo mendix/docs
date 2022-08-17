@@ -34,18 +34,18 @@ To configure this widget, follow these steps:
 1. In Studio Pro, place the **Microflow Timer** widget inside a [Data View](/refguide/data-view/) or [Template Grid](/refguide/template-grid/) widget.
 2. Make sure that you have set an entity as the **Data source** for the **Data View** or **Template Grid** widget. An object of this entity will be sent as an argument to the microflow or nanoflow evoked by the Microflow Timer.
 3. Double-click the Microflow Timer widget to open the **Edit Microflow Timer** dialog box.
-4.  Configure the widget using the properties described below:
+4. Configure the widget using the properties described below:
 
-    *  **Interval (in ms)** – defines how often the microflow or nanoflow is called
+    * **Interval (in ms)** – defines how often the microflow or nanoflow is called
         * The inteval is in milliseconds, so the default of 30000 equals 30 seconds
         * Unless **Execute once** is set to **Yes**, the microflow is invoked immediately after loading the page for the first time
-   	
+
     * **Execute once** – if set to **Yes**, the microflow will be invoked only once
         * The **Interval (in ms)** above defines after how many seconds it will be invoked
-   	
+
     * **Start at once** – if set to **Yes** (and **Execute once** is also set to **Yes**), the microflow or nanoflow will be invoked the first time if the widget has loaded
         * If set to **No**, the microflow or nanoflow will be invoked the first time after the **Interval (in ms)** has passed
-   	
+
     * **Microflow** – this is the microflow to be executed
         * If the microflow returns false, it will not be executed any longer until the context changes
 

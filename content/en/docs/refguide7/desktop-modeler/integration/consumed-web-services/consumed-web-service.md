@@ -33,10 +33,10 @@ A WSDL file can contain multiple services. A service can contain multiple ports.
 
 This part contains the services to be found in the WSDL.
 
-*   Name is the name of the service.
-*   Port is selected port in multiple-port service.
-*   Location is where the service is located.
-*   Location constant can be used to add additional locations for a service, for example: the URL of the soap service may change when moving from a development to a production environment. See also [Constants](/refguide7/constants/).
+* Name is the name of the service.
+* Port is selected port in multiple-port service.
+* Location is where the service is located.
+* Location constant can be used to add additional locations for a service, for example: the URL of the soap service may change when moving from a development to a production environment. See also [Constants](/refguide7/constants/).
 
 If there is a multiple-port service defined in the WSDL, a dialog will pop up that allows the user to select which one of the ports to use_._
 
@@ -46,7 +46,7 @@ This part contains all the operations found in the WSDL. You can expand the list
 
 ### Advanced Settings
 
-*   Send binary data as attachment (MTOM) - enable or disable MTOM: the _Message Transmission Optimization Mechanism_, a method of efficiently sending binary data to and from Web services. Read more about it at [w3.org](https://www.w3.org/TR/soap12-mtom/). Please note that message optimization will only be applied when you use one or more export mappings to create the request body in the Call web service action.
+* Send binary data as attachment (MTOM) - enable or disable MTOM: the *Message Transmission Optimization Mechanism*, a method of efficiently sending binary data to and from Web services. Read more about it at [w3.org](https://www.w3.org/TR/soap12-mtom/). Please note that message optimization will only be applied when you use one or more export mappings to create the request body in the Call web service action.
 
 ## Documentation
 

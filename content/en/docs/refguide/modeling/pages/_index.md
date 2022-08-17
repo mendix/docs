@@ -56,7 +56,7 @@ Widgets are grouped into the following categories:
 * [Reports](/refguide/report-widgets/) aggregate data and show it in the form of a table or a chart
 * [Authentication](/refguide/authentication-widgets/) allow you to add the user verification process such as password and login id text boxes.
 * Add-ons can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript
-  * [Charts](/refguide/chart-widgets/) are add-on widgets that graphically represent data using various chart types
+    * [Charts](/refguide/chart-widgets/) are add-on widgets that graphically represent data using various chart types
 
 ## 4 Read More
 

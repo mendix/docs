@@ -13,9 +13,9 @@ Result is of type Boolean.
 
 The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
-*   String
-*   Numeric (Integer/Long, Decimal, Float)
-*   DateTime
+* String
+* Numeric (Integer/Long, Decimal, Float)
+* DateTime
 
 ```java
 4<3
@@ -26,6 +26,7 @@ returns:
 ```java
 False
 ```
+
 ## Greater than ( > )
 
 Determines whether the first value is greater than the second value.
@@ -35,9 +36,9 @@ Result is of type Boolean.
 
 The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
-*   String
-*   Numeric (Integer/Long, Decimal, Float)
-*   DateTime
+* String
+* Numeric (Integer/Long, Decimal, Float)
+* DateTime
 
 ```java
 4>3
@@ -48,6 +49,7 @@ returns:
 ```java
 True
 ```
+
 ## Less than or equal to ( <= )
 
 Determines whether the first value is less than or equal to the second value.
@@ -57,9 +59,9 @@ Result is of type Boolean.
 
 The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
-*   String
-*   Numeric (Integer/Long, Decimal, Float)
-*   DateTime
+* String
+* Numeric (Integer/Long, Decimal, Float)
+* DateTime
 
 ```java
 6<=3
@@ -92,9 +94,9 @@ Result is of type Boolean.
 
 The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
-*   String
-*   Numeric (Integer/Long, Decimal, Float)
-*   DateTime
+* String
+* Numeric (Integer/Long, Decimal, Float)
+* DateTime
 
 ```java
 4>=3
@@ -115,10 +117,10 @@ Result is of type Boolean.
 
 The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
-*   String
-*   Numeric (Integer/Long, Decimal, Float)
-*   DateTime
-*   Domain Entity. Equality is checked based on the ID of the object.
+* String
+* Numeric (Integer/Long, Decimal, Float)
+* DateTime
+* Domain Entity. Equality is checked based on the ID of the object.
 
 ```java
 "mystring" = "myotherstring"
@@ -151,10 +153,10 @@ Result is of type Boolean.
 
 The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
-*   String
-*   Numeric (Integer/Long, Decimal, Float)
-*   DateTime
-*   Object. Equality is checked based on the ID of the object.
+* String
+* Numeric (Integer/Long, Decimal, Float)
+* DateTime
+* Object. Equality is checked based on the ID of the object.
 
 ```java
 "mystring" != "mystring"

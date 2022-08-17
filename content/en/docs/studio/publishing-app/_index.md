@@ -49,7 +49,7 @@ For Studio China Edition, before you can publish your app, first you need to [cr
 To publish your application, follow these steps:
 
 1. Click **Publish** in the top menu bar of Studio. 
-2.  In the **Publish your app** pop-up message, click the **Publish** button to push the latest changes from Studio to the published app or to publish the app for the first time. 
+2. In the **Publish your app** pop-up message, click the **Publish** button to push the latest changes from Studio to the published app or to publish the app for the first time. 
 
     {{< figure src="/attachments/studio/publishing-app/publish-button.jpg" alt="Publishing and Updating Your App" >}}
 
@@ -86,14 +86,12 @@ Your published app is opened in the browser.
 
 To view your app on a mobile device, follow these steps:
 
-1.  Click **Publish** button in the upper-right corner.
-
+1. Click **Publish** button in the upper-right corner.
 2. In the **Publish your app** pop-up message, click **View current app**:
 
     {{< figure src="/attachments/studio/publishing-app/view-current-app.jpg" alt="View Current App" >}}
 
 3. Scan the QR code to view your app on your mobile device.
-
 
 Your app is opened on your mobile device.
 

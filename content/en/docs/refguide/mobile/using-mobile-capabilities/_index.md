@@ -8,12 +8,13 @@ aliases:
     - /howto/mobile/implementation/
 ---
 
-# 1 Introduction
+## 1 Introduction
 
-Guides in this section will help you implement key features of Native Apps and/or Progressive Web Apps.
+Guides in this section will help you implement key features of native apps and/or progressive web apps (PWAs).
 
 * [Offline-First Data](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 * [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): native apps can define a custom URL scheme (for instance, `my-app://`) that allows other apps to access pages and functionalities of the app
+* [Internationalize Mobile Apps](/refguide/mobile/using-mobile-capabilities/): this guide allows your end-user to change the interface language on their mobile device within a Mendix mobile app
 * [Location & Maps](/refguide/mobile/using-mobile-capabilities/location-&-maps/): native apps can access the user location and display native maps inside the application
 * [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): native apps can present a notification to the user that is triggered by the runtime even if the app is not running
 * [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-&-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running

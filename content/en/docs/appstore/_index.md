@@ -8,7 +8,7 @@ description_list: true
 cascade:
     - space: "Marketplace Guide"
     - mendix_version: ""
-tags: ["marketplace",  "component", "platform support"]
+tags: ["marketplace",  "component", "app service", "widget", "connector", "module", "platform support"]
 ---
 
 ## 1 Introduction
@@ -24,4 +24,3 @@ It also contains guidelines on [creating Marketplace content](/appstore/creating
 For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the Mendix Marketplace. For more information, see the [Marketplace release notes](/releasenotes/app-store/).
 
 ## 2 Guide Categories
-

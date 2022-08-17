@@ -25,7 +25,6 @@ The scroll container example below divides the layout in three parts: a header c
 
 {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" >}}
 
-
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
 
 ## 2 Properties

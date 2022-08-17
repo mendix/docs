@@ -21,10 +21,10 @@ Once your app is registered in MindSphere, there are a number of things you need
 
 * [MindSphere Development Considerations](/partners/siemens/mindsphere-development-considerations/) – covers things which you should address when developing for MindSphere, including the following:
 
-  * [Cloud Foundry environment variables](/partners/siemens/mindsphere-development-considerations/#cfenvvars)
-  * [Local testing](/partners/siemens/mindsphere-development-considerations/#localtesting)
-  * [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy)
-  * [Validation<br style="margin-bottom: 10px;">](/partners/siemens/mindsphere-development-considerations/#validation)
+    * [Cloud Foundry environment variables](/partners/siemens/mindsphere-development-considerations/#cfenvvars)
+    * [Local testing](/partners/siemens/mindsphere-development-considerations/#localtesting)
+    * [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy)
+    * [Validation<br style="margin-bottom: 10px;">](/partners/siemens/mindsphere-development-considerations/#validation)
 
 * [MindSphere Module Details](/partners/siemens/mindsphere-module-details/) – describes more technical details about the MindSphere modules that you need to include in your Mendix app to enable it to run on MindSphere
 

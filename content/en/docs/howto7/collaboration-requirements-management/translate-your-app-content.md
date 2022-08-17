@@ -21,11 +21,11 @@ This how-to will teach you how to do the following:
 
 The app language is the main language of the app when it is run. There must be a default app language, and **English, United States** is the app language set automatically by default. You can add as many languages as you like by following these steps:
 
-1.  In the **Project Explorer**, open the app **Settings** and go to the **Languages** tab.
+1. In the **Project Explorer**, open the app **Settings** and go to the **Languages** tab.
 
     {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/01_project_settings.png" >}}
 
-2.  Click **Add**, select the desired language, and click **OK**.
+2. Click **Add**, select the desired language, and click **OK**.
 
     {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/02_dutch.png" >}}
 
@@ -80,7 +80,7 @@ To search for phrases that look similar and replace them as a batch, follow thes
 
 1. Go to **Language** > **Batch Replace**.
 2. In the **Source text contains** field of the **Batch replace** dialog window, enter the word you want to search for.
-3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
+3. The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
 
     {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/08_batch_replace_2.png" >}}
 
@@ -104,7 +104,7 @@ To enable batch translation, follow these steps:
 1. Go to **Language > Batch Translate**.
 2. Select the **Source language** and **Destination language**.
 3. In the **Source text contains** field of the **Batch translate** dialog box, enter the word you want to search for.
-4.  The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
+4. The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
 
     {{< figure src="/attachments/howto7/collaboration-requirements-management/translate-your-app-content/11_filter_module.png" >}}
 

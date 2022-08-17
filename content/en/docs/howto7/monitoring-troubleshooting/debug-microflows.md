@@ -94,9 +94,9 @@ To use breakpoint conditions, follow these steps:
 
 1. Right-click the activity or split in the microflow with a breakpoint and select **Edit breakpoint condition**:
     {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580018.png" >}}
-2.  Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
+2. Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
-    ```java
+    ```java {linenos=false}
     $currentUser/name = 'YourUserName'
     ```
 

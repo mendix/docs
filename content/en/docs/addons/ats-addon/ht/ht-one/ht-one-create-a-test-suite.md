@@ -28,8 +28,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create a test suite, follow these steps:
 
-1.  Open your project in ATS and go to the **Repository**.
-2.  Click **Add Test** inside the **Tests** tab:
+1. Open your project in ATS and go to the **Repository**.
+2. Click **Add Test** inside the **Tests** tab:
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/repository-add-test.png" >}}
 
@@ -41,10 +41,10 @@ To create a test suite, follow these steps:
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/repository-create-new.png" >}}
 
-3.  Select **Test Suite** in the drop-down menu.
-4.  Enter a name in the **Name** field. It is advisable to use a predefined naming structure.
-5.  Enter a description in the **Description** field. It is advisable to give each test suite a description of what it does.
-6.  Click **Create**.
+3. Select **Test Suite** in the drop-down menu.
+4. Enter a name in the **Name** field. It is advisable to use a predefined naming structure.
+5. Enter a description in the **Description** field. It is advisable to give each test suite a description of what it does.
+6. Click **Create**.
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/repository-create-new-test-suite.png" >}}
 
@@ -58,11 +58,11 @@ The **Test Suite** page looks like the **Test Case** page, but with fewer option
 
 To add a test case or another test suite to a test suite, follow these steps:
 
-1.  Click **Add** on the **Test Suite** page.
+1. Click **Add** on the **Test Suite** page.
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/repository-test-suite-page-add.png" >}}
 
-2.  The **Select Test** pop-up dialog opens:
+2. The **Select Test** pop-up dialog opens:
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/repository-select-test.png" >}}
 
@@ -70,10 +70,10 @@ You can add an existing test case or test suite to the test suite, or you can cr
   
 To add an existing test case or test suite, follow these steps:
 
-1.  Enter a description of the test step in the **Describe Test Step** field.
-2.  Use the **Search Test** field to search for the test case or test suite you want to add to your test suite.
-3.  Select the test from the **Select a Test** data grid. 
-4.  Click **Save**:
+1. Enter a description of the test step in the **Describe Test Step** field.
+2. Use the **Search Test** field to search for the test case or test suite you want to add to your test suite.
+3. Select the test from the **Select a Test** data grid. 
+4. Click **Save**:
     
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-a-test-suite/test-suite-page-select-test.png" >}}
 

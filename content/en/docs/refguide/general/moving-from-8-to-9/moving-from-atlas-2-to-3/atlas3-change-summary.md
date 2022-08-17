@@ -71,25 +71,25 @@ Here is a list of key changes pertaining to the web environment:
 * Layout and spacing now relies on an 8 pixel system, creating more uniformity in design
 * Display type **flex** has been used instead of **float** where possible
 * Many design properties have been introduced, and existing ones have recieved added options:
-  * **Inner** spacing options allowing users to configure **padding** for widgets. This applies to all widgets
-    * Previous spacing options are now renamed to **Outer** to be more explicit and apply to **margin** for widgets
-  * Structure  widgets get a new **gradient** option for background color
-  * Structure  widgets get a **shade** design property with options to apply shades to background colors
-  * List View widgets get a **style** option to add horizontal borders at the top and bottom of each list item
-  * Static and dynamic images each get a new design property to assist with fitting images (for example fill, contain, cover, or scale-down)
-  * Tab container widgets get new design properties to style and space tabs
-  * Text widgets get a new **color** option to color text white
-  * Table widgets get new design properties for styling and layout
+    * **Inner** spacing options allowing users to configure **padding** for widgets. This applies to all widgets
+        * Previous spacing options are now renamed to **Outer** to be more explicit and apply to **margin** for widgets
+    * Structure  widgets get a new **gradient** option for background color
+    * Structure  widgets get a **shade** design property with options to apply shades to background colors
+    * List View widgets get a **style** option to add horizontal borders at the top and bottom of each list item
+    * Static and dynamic images each get a new design property to assist with fitting images (for example fill, contain, cover, or scale-down)
+    * Tab container widgets get new design properties to style and space tabs
+    * Text widgets get a new **color** option to color text white
+    * Table widgets get new design properties for styling and layout
 * Helper classes have been added (in *core/base/_spacing.scss*) to assist with the following:
-  * Spacing
-  * Shadows
-  * Widget height
-  * Widget width
-  * Widget borders
+    * Spacing
+    * Shadows
+    * Widget height
+    * Widget width
+    * Widget borders
 * Some design properties have been removed:
-  * Info and Inverse brand styles for all widgets
+    * Info and Inverse brand styles for all widgets
 * Some design properties have been deprecated:
-  * List View widgets’ **styleless** option
+    * List View widgets’ **styleless** option
 * Design properties such as **Style**, **Color**, and **Background color** that had a **Brand Default** option are now called **Brand Secondary**
 
 ## 3 UI Content

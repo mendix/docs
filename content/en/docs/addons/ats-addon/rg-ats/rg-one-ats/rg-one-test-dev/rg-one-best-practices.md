@@ -24,14 +24,14 @@ Always use descriptive names for your actions and parameters, for example, "Set 
 
 Some parameter names used by the ATS core library:
 
- * Widget Name
- * Username
- * Password
- * Caption
- * Column Name
- * Column Value
- * Index
- * Page Title
- * Row/Item
- * Value
- * Element
+* Widget Name
+* Username
+* Password
+* Caption
+* Column Name
+* Column Value
+* Index
+* Page Title
+* Row/Item
+* Value
+* Element

@@ -1,6 +1,9 @@
 ---
 title: "Mendix Platform SDK"
 url: /apidocs-mxsdk/mxsdk/
+no_list: false
+description_list: true
+tags: ["sdk", "platform sdk", "model sdk"]
 ---
 
 ## 1 Introduction & FAQ
@@ -41,3 +44,5 @@ For more information, check the [Mendix Model SDK Release Notes](/releasenotes/s
 ## 7 Need Help?
 
 If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/). 
+
+## 8 Documents in This Category

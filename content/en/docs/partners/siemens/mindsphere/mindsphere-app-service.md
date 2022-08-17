@@ -79,13 +79,11 @@ There are two ways to use the Mendix App Service.
 To access your IoT data using the OData technology provided by the Mendix Data Hub, you first have to publish your asset information to Mendix Data Hub. To do this, you create a **contract** within the MindSphere **Asset Manager**. Do the following to manage your contracts:
 
 1. Go to the **Asset Manager** in the MindSphere Launchpad.
-
 1. On the home page you find a card showing the numbers of already existing contracts.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_card.png" alt="asset-manager" >}}
 
 1. Click **View contracts**.
-
 1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_first.png" alt="asset-manager" >}}
@@ -99,32 +97,29 @@ To access your IoT data using the OData technology provided by the Mendix Data H
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step1.png" alt="asset-manager" >}}
 
 1. Confirm your selection by clicking **Next**.
-
 1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step2.png" alt="asset-manager" >}}
 
 1. Confirm your meta information by clicking **Next**.
-
 1. In the last step you can specify the following:
     * Save your contract (always enabled).
     * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
-    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix project; it is therefore preselected
+    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix app; it is therefore preselected
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step3.png" alt="asset-manager" >}}
 
 1. Click the **Submit** button to finalize the creation of your contract.
 
 {{% alert color="info" %}}
-   In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api/#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api/#company-account).
+In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api/#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api/#company-account).
 
-   Published contracts are only visible in Mendix DataHub for users that belong to the same company.
+Published contracts are only visible in Mendix DataHub for users that belong to the same company.
 
-   In MindSphere you can invite users with different email domains to your MindSphere tenant. In this case, only the users with the same email domain as the person who published the first contract to Mendix DataHub will see the contracts there.
+In MindSphere you can invite users with different email domains to your MindSphere tenant. In this case, only the users with the same email domain as the person who published the first contract to Mendix DataHub will see the contracts there.
 
-   Ensure that only users who have an email account within your company domain create contracts on Mendix DataHub.
-
-   {{% /alert %}}
+Ensure that only users who have an email account within your company domain create contracts on Mendix DataHub.
+{{% /alert %}}
 
 Now your assets will appear in the Data Hub Pane of Studio Pro, and you can continue with [Creating Binding Keys](#binding-keys).
 
@@ -133,13 +128,9 @@ Now your assets will appear in the Data Hub Pane of Studio Pro, and you can cont
 To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an clientID and a clientSecret. You need to create these in the Mendix Marketplace once the MindSphere tenant has been provisioned. This can be done as follows:
 
 1. Open the **Service Management Dashboard** of the [Mendix Marketplace](https://marketplace.mendix.com/) using the link provided in your confirmation email.
-
 2. Choose the **Product** *MindSphere IoT*.
-
 3. Click **Create Binding Keys**.
-
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
-
 5. Click **Create Keys**.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/create-keys.png" alt="Binding" >}}
@@ -218,7 +209,7 @@ However, authentication will only be successful if the correct credentials are p
 
 ### 6.1 Authenticating During Development
 
-When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your project settings.
+When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your app settings.
 
 For security, the values of these constants should not be included when you deploy the app.
 

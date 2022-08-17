@@ -255,7 +255,7 @@ Titles, axes and series can contain complex mathematical expressions.
 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/math-formula.png" alt="Math formula" >}}
 
-```
+```latex {linenos=false}
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
 ```
 
@@ -385,6 +385,7 @@ Sets the range based on the plotted values, adjusting to fit them.
   }
 }
 ```
+
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/normal.gif" alt="Range mode" >}}
 
 **nonnegative:**
@@ -435,6 +436,7 @@ When **fill** for the series is set to something other than *none*, the Y-axis r
   "fill": "tonexty"
 }
 ```
+
 {{% /alert %}}
 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-advanced-cheat-sheet/rangemode-note.gif" alt="Range mode" >}}

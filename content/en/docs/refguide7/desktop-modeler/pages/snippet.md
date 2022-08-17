@@ -25,13 +25,13 @@ The name of the snippet. You can change the name via the project explorer.
 
 The canvas width property defines the width in pixels of the snippet in the snippet editor. It is purely used for editing purposes; this property has no effect on the actual application.
 
-_Default value:_ 800
+*Default value:* 800
 
 ### Canvas height
 
 The canvas height property defines the preferred minimum height in pixels of the snippet in the snippet editor. It is purely used for editing purposes; this property has no effect on the actual application.
 
-_Default value:_ 600
+*Default value:* 600
 
 ## General Properties
 

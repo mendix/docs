@@ -1,13 +1,11 @@
 ---
 title: "Build Microflow Actions Using the Mendix Connector Kit"
+linktitle: "Microflow Actions Using Connector Kit"
 url: /howto7/extensibility/howto-connector-kit/
 category: "Extensibility"
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
 weight: 4
 tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
-output:
-  word_document: default
-  html_document: default
 #To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
@@ -23,7 +21,7 @@ A Mendix application consists of a small number of microflows that use Mendix mi
 
 This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
 
- {{< figure src="/attachments/howto7/extensibility/howto-connector-kit/slack-rekogition-bot-toolkit.png" alt="Slack Rekognition bot toolbox" >}}
+{{< figure src="/attachments/howto7/extensibility/howto-connector-kit/slack-rekogition-bot-toolkit.png" alt="Slack Rekognition bot toolbox" >}}
 
 For the basics of building toolbox actions, see the [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) blog post. 
 
@@ -54,13 +52,13 @@ To create a generic action using type parameters, follow these steps:
 
 3. The action needs the following parameters:
     * **Entity** – this is used to specify the entity of the objects to join
-      * The entity selected by the user will be stored in the type parameter *EntityToJoin*
+        * The entity selected by the user will be stored in the type parameter *EntityToJoin*
 
-      {{< figure src="/attachments/howto7/extensibility/howto-connector-kit/join_objects_type_par_def.png" alt="Type parameter use definition" >}}
+        {{< figure src="/attachments/howto7/extensibility/howto-connector-kit/join_objects_type_par_def.png" alt="Type parameter use definition" >}}
 
     * **Object1** – the first object to be added to the new list
 
-      * This needs to be an object of the `EntityToJoin` entity
+        * This needs to be an object of the `EntityToJoin` entity
     * **Object2** – the second object to be added to the new list
     * **Return type** – the result of the action will be a list of `EntityToJoin` objects
 
@@ -139,7 +137,7 @@ The action is defined as follows:
 * **ResultEntity** – the type of object that will be the result of the import
 * **Return type** – an object of the type specified with `ResultEntity`
 
- {{< figure src="/attachments/howto7/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping java action parameters" >}}
+{{< figure src="/attachments/howto7/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping java action parameters" >}}
 
 Implement the action in Java as follows:
 

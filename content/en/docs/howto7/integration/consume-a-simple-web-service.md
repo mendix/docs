@@ -35,7 +35,7 @@ To import a WSDL, follow these steps:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582085.png" >}}
 
-4.  This will bring up the **Select Ports** dialog box asking you to select a web service port:
+4. This will bring up the **Select Ports** dialog box asking you to select a web service port:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582065.png" >}}
 
@@ -49,19 +49,19 @@ To import a WSDL, follow these steps:
 
 To create logic to call the web service, follow these steps:
 
-1.  Right-click your module in the **Project Explorer** and select **Add** > **Microflow** from the menu:
+1. Right-click your module in the **Project Explorer** and select **Add** > **Microflow** from the menu:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/create-microflow.png" >}}
 
-2.  Enter a name for the new microflow (for example, *ConvertCelsiusToFahrenheit*).
+2. Enter a name for the new microflow (for example, *ConvertCelsiusToFahrenheit*).
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582083.png" >}}
 
-3.  Click **OK**. You will now see an empty microflow:
+3. Click **OK**. You will now see an empty microflow:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582081.png" >}}
 
-4.  Open the **Toolbox** (from the lower-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
+4. Open the **Toolbox** (from the lower-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/8946802.png" >}}
 
@@ -70,12 +70,12 @@ To create logic to call the web service, follow these steps:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582080.png" >}}
 
-7.  Click **OK.** The microflow will look like this:
+7. Click **OK.** The microflow will look like this:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582079.png" >}}
 
 8. Drag a **Call web service** activity from the toolbox to the line between the start and end event. This inserts a new activity.
-9.  In the **Call Web Service** properties editor, click **Select** and select the **CelsiusToFahrenheit** for the **Operation** of your consumed web service:
+9. In the **Call Web Service** properties editor, click **Select** and select the **CelsiusToFahrenheit** for the **Operation** of your consumed web service:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582076.png" >}}
 
@@ -100,16 +100,16 @@ To create logic to call the web service, follow these steps:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582071.png" >}}
 
-19. Create a new parameter and enter `$TemperatureInFahrenheit` for the expression (this is the return value of the web service operation), then click **OK**:
+18. Create a new parameter and enter `$TemperatureInFahrenheit` for the expression (this is the return value of the web service operation), then click **OK**:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582072.png" >}}
 
-20. Click **OK** again to save the **Show message activity** properties. The microflow will look like this:
+19. Click **OK** again to save the **Show message activity** properties. The microflow will look like this:
 
     {{< figure src="/attachments/howto7/integration/consume-a-simple-web-service/18582070.png" >}}
 
-21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/).
-22. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
+20. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/).
+21. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
 ## 4 Read More
 

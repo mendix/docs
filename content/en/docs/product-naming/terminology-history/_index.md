@@ -90,7 +90,7 @@ Do not use.
 ## Mx Assistant, Mx Assist
 
 {{% alert color="info" %}}
-Use [Mendix Assist](/product-naming/other-terms/#mendix-assist).
+Use [Mendix Assist](/product-naming/other-terms/#mendix-assist) for the whole feature and MxAssist as a part of bot names: MxAssist Logic Bot and MxAssist Performance Bot.
 {{% /alert %}}
 
 ## Mendix App Platform, App Platform

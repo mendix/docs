@@ -96,7 +96,7 @@ You will need to resolve the conflict before you can commit your app to the Team
 
 In this example, we will focus on merging a branch into the main line. On the main line the list of ignored files is this:
 
-```
+```text
 modeler-merge-marker
 .mendix-cache
 ResolveIgnoreConflict.mpr.lock
@@ -107,7 +107,7 @@ node_modules
 
 On the branch the list is like this:
 
-```
+```text
 modeler-merge-marker
 .mendix-cache
 ResolveIgnoreConflict.mpr.lock

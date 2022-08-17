@@ -1,5 +1,6 @@
 ---
 title: "Solving Issues with Navigation Profile Conversion to 7.4"
+linktitle: "Converting to 7.4 - Navigation Profile Issues"
 url: /refguide7/navigation-conversion-to-74/
 description: "Describes requirements and possible fixes for navigation profile conversion from Mendix versions 7.2 and 7.3 to Mendix 7.4."
 ---
@@ -21,17 +22,17 @@ In Mendix versions 7.2 and 7.3, miltiple profiles with different names and same 
 In order to convert your project from Mendix versions 7.2 and 7.3 to 7.4, make sure these requirements are fulfilled:
 
 * The  list of profiles must contain the following:
-	* A maximum of one profile of the **browser tablet** type
-	* A maximum of one profile of the **browser phone** type
-	* A maximum of two profiles of the **hybrid mobile app online** type
-	* A maximum of two profiles of the **hybrid mobile app offline** type
+    * A maximum of one profile of the **browser tablet** type
+    * A maximum of one profile of the **browser phone** type
+    * A maximum of two profiles of the **hybrid mobile app online** type
+    * A maximum of two profiles of the **hybrid mobile app offline** type
 
 * If you have two profiles of the **hybrid mobile app online** type, then make sure that one of them has the word "tablet" in its name and the second one has the word "phone" in its name
-	* They will then be converted to the correct types in 7.4
-	* Please note that it is not possible to have two hybrid online profiles for tablet or phone
+    * They will then be converted to the correct types in 7.4
+    * Please note that it is not possible to have two hybrid online profiles for tablet or phone
 
 * If you have two profiles of the **hybrid mobile app offline** type, then make sure that one of them has the word "tablet" in its name and the second one has the word "phone" in its name
-	* They will then be converted to the correct types in 7.4
-	* Please note that it is not possible to have two hybrid offline profiles for tablet or phone
+    * They will then be converted to the correct types in 7.4
+    * Please note that it is not possible to have two hybrid offline profiles for tablet or phone
 
 After opening your project in Mendix 7.4, make sure that your hybrid profiles are converted correctly.

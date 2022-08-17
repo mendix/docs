@@ -115,7 +115,7 @@ A customer can be active or inactive, which is stored in an attribute named **Ac
 This property is shown if **Type** is set to **Date and time**.
 {{% /alert %}}
 
-This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
+This property indicates whether the date and time should be localized. By default localization is enabled. If you are *not* interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
 
 In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
 
@@ -187,7 +187,7 @@ The **Default value** property defines the value of this attribute when an objec
 | AutoNumber | 1 | Starting value of this attribute. If there are already objects of this entity, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
 | Binary | N/A |   |
 | Boolean | False |   |
-| Date and time | (empty) | The default value can either be a UTC date with the format `year-month-day` (suffixed optionally by ` hour:minute`, or ` hours:minute:second`), or `[%CurrentDateTime%]` (which sets the value of this attribute to the date and time when the object is created). |
+| Date and time | (empty) | The default value can either be a UTC date with the format `year-month-day` (suffixed optionally by `hour:minute`, or `hours:minute:second`), or `[%CurrentDateTime%]` (which sets the value of this attribute to the date and time when the object is created). |
 | Decimal | 0 |   |
 | Enumeration | (empty) |   |
 | Hashed string | (empty) |   |

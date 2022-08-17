@@ -86,5 +86,5 @@ This differs from the [On change](#on-change) property in that the event will al
 
 ## 3 Read More
 
-*   [Data view](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data view](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

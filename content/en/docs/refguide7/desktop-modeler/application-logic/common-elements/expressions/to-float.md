@@ -18,7 +18,7 @@ Converts the specified Decimal value to a value of type Float.
 
 ### Input parameters
 
-*   A Decimal value that should be converted to a Float value.
+* A Decimal value that should be converted to a Float value.
 
 ```java
 toFloat(parseDecimal('123.456'))

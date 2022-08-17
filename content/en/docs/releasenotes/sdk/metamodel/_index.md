@@ -15,4 +15,3 @@ The release notes include all minor versions and patches.
 {{% /alert %}}
 
 For more information, see the [Model SDK](/releasenotes/sdk/model-sdk/) release notes.
-

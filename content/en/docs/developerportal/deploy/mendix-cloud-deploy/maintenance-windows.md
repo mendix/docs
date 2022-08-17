@@ -33,7 +33,7 @@ Where infrastructure maintenance is needed, it is not always possible to do this
 
 To view maintenance windows, you need to have monitor or backup access to your Mendix app. To configure them, you need to have transport rights to it. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 3 Configuring Maintenance for Your Application
+## 3 Configuring Maintenance for Your Application {#configuring}
 
 {{% alert color="warning" %}}
 Maintenance windows and planned maintenance are defined in UTC time format. When selecting a time period, remember to convert to UTC from your local time.

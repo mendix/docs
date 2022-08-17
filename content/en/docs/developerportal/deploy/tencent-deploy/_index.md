@@ -231,7 +231,7 @@ The **安装** tab allows you to download the Configuration Tool by specifying t
 
 The **附加信息** tab displays information about the namespace, such as software versions (for example, the Operator version).
 
-## 4 Deploying an App for the First Time
+The **计划** tab shows you the database and storage plans which are currently configured for your namespace. Here you can activate and deactivate individual plans.
 
 ### 4.1 Creating a Deployment Package {#create-deployment-package}
 

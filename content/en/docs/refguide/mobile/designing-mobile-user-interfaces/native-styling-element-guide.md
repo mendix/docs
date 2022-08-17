@@ -171,19 +171,19 @@ The widget’s style properties are divided over several objects: `LayoutGrid`, 
 
 The main `LayoutGrid`:
 
-```xml
+```xml {linenos=false}
 <container></container>
 ```
 
 The `row`, `noGuttersRow`:
 
-```xml
+```xml {linenos=false}
 <container></container>
 ```
 
 The `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, `noGutters`:
 
-```xml
+```xml {linenos=false}
 <container></container>
 ```
 
@@ -305,7 +305,7 @@ The widget’s style properties are structured as follows:
 | `container` | This has all ViewStyle properties.   |   |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
 | `input` | This has all TextStyle properties. |  |
-| `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types:<br><br>* `characters`: capitalizes all characters<br>* `words`: capitalizes the first letter of each word<br>* `sentences`: capitalizes the first letter of each sentence (default)<br>* `none`: capitalizes nothing |
+| `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types: <ul><li>`characters`: capitalizes all characters </li><li>`words`: capitalizes the first letter of each word </li><li>`sentences`: capitalizes the first letter of each sentence (default) </li><li>`none`: capitalizes nothing </li></ul>|
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
@@ -933,7 +933,7 @@ The safe area view widget prevents content from being rendered in unwanted areas
 
 The widget’s style properties are as follows:
 
-```xml
+```xml {linenos=false}
 <container>content</container>
 ```
 
@@ -1175,11 +1175,11 @@ The bottom sheet widget creates a set of options while blocking interaction with
 
 * Modal bottom sheet:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  >}}
 
 * Expanding bottom sheet:
 
-	{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
 
 The widget’s style properties are as follows:
 
@@ -1264,7 +1264,6 @@ A main object has four objects.
 | dangerStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `danger` style selected.                                  |
 | customStyle |  This has all TextStyle properties.                 | Styles all basic menu items which have the `custom` style selected.                                  |
 
-
 #### 24.3 CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
@@ -1311,7 +1310,7 @@ The widget’s style properties are as follows:
 
 Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
 
-```
+```css
 export myCarouselStyle = {
     container: ViewStyle  //
     cardLayout: ...LayoutStyle,
@@ -1601,7 +1600,7 @@ The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_w
 
 ### 11.30 Switch
 
-A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a switch widget looks by default:
+A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a Switch widget looks by default:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
 
@@ -1655,21 +1654,40 @@ The default class to style all check box inputs is named `com_mendix_widget_nati
 
 ### 11.31 Background Gradient
 
-The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction..
+The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
 
 The widget’s style properties are as follows:
 
 ```xml
-<container>
-	content
-</container>
+<angle/>
+<colorList>
+	[
+		<gradient_color_object/>
+	]
+</colorList>
+<container/>
+<opacity/>
 ```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |        |
+| `angle` | | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
+| `colorList` | [gradient_color_object](#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `opacity` | | Takes a value from `0` to `100`. The lower the value, the more transparent. |
 
 The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
+
+#### 11.31.1 Background Gradient Types
+
+##### 11.31.1.1 gradient_color_object {#gradient-color-object}
+
+An object `{ color: string, offset: number }` that represents the color and the offset.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| color | `string` | Colors can be passed in different formats. Valid color value formats are `#d0d0d0`, `rgb(115,155,155)`, or `rgba(195,226,226,0.5)` |
+| offset | `number` | A color-stop's value, followed by one or more optional stop positions (should be between `0.0` and `1.0`) |
 
 ### 11.32 Column Chart
 

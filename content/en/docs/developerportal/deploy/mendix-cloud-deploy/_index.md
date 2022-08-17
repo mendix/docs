@@ -77,9 +77,13 @@ There are two ways to avoid Free Apps Archival:
 
 ### 1.2 Licensed App
 
-A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required, or you can decide to use [Flexible Environments](#flexible-environments). Your licensed app is linked to a node and can be deployed to any of these environments.
+A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required, or you can decide to use [Flexible Environments](#flexible-environments). Your licensed app is linked to a node and can be deployed to any of these environments. You can specify different [resource packs](#resource-pack) for each of these environments, but we recommend that you make your production and acceptance environments the same size.
 
-By default, apps are deployed to the Mendix Cloud **v4**. Features which are covered in the default documentation are for **v4**. Some customers with special requirements may use Mendix Cloud **v3**, and will have to refer to the **v3** documentation where the features differ from **v4**.
+{{% alert color="info" %}}
+Each environment can only run a single version of an app. Additionally, all the environments of a node should be used to run versions of the app which is linked to the node.
+{{% /alert %}}
+
+By default, apps are deployed to the Mendix Cloud **v4**. Features which are covered in the default documentation are for **v4**. Some customers may still be running on the deprecated Mendix Cloud **v3**. Until they upgrade, they will have to refer to the **v3** documentation where the features differ from **v4**.
 
 ### 1.3 Flexible Environments{#flexible-environments}
 
@@ -130,7 +134,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 The Mendix Cloud has a limit of 1GB on the size of a deployment package.
 {{% /alert %}}
 
-### 3.1 Deploying via the Studio Pro
+### 3.1 Deploying via Studio Pro
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
@@ -244,7 +248,7 @@ The *Standard* resource packs can be used with both standard and premium plans, 
 | XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
 | XXXL21 | 64GB | 16 | 32GB | 8 | 320GB | 640GB |
 
- The cloud resource packs below are still being used but are not available to new customers.
+The cloud resource packs below are still being used but are not available to new customers.
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |

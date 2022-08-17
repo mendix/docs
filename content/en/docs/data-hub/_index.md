@@ -81,4 +81,3 @@ With the Data Hub Premium license, apps are not limited. They can retrieve and e
 Contact your [Mendix Admin](/developerportal/control-center/#company) to find out what type of Data Hub license your organization has.
 
 ## 5 Guide Categories
-

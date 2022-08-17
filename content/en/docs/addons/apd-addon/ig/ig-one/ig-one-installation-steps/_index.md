@@ -98,11 +98,11 @@ After startup for the first time, a small wizard is started:
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-installation-steps/Welcome_Dialog.png" >}}
 
-*   If you have received a license request code for this app, you can enter this code in the license request code field.   
-*   Use the **Mail license request** button to send a mail with the license request.
-*   If a mail client does not open, is not configured, or fails otherwise, use the **Manual license request** button .This opens a dialog box so that you can copy-paste the text for the email to be sent to [apmtool@clevr.com](mailto:apmtool@clevr.com).
-*   Upon receiving the license, copy-paste the license in the **License key** field.
-*   Select **Production** or **Non-Production**.
-*   Select **Save**.
+* If you have received a license request code for this app, you can enter this code in the license request code field.   
+* Use the **Mail license request** button to send a mail with the license request.
+* If a mail client does not open, is not configured, or fails otherwise, use the **Manual license request** button .This opens a dialog box so that you can copy-paste the text for the email to be sent to [apmtool@clevr.com](mailto:apmtool@clevr.com).
+* Upon receiving the license, copy-paste the license in the **License key** field.
+* Select **Production** or **Non-Production**.
+* Select **Save**.
 
 Now the tools that are configured for after startup have been started, and the tool is ready to be used.

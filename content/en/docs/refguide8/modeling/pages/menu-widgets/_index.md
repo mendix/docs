@@ -26,7 +26,6 @@ Menu widgets display menu items configured in the [Navigation](/refguide8/naviga
 
     {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/simple-menu-bar-example.png" alt="Simple Menu Bar Example" >}}
 
-
 ## 2 Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}

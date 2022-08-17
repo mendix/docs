@@ -28,9 +28,9 @@ IBM DB2 does not support read-isolated data retrieval operations that are non-bl
 
 When an entity to publish has been selected, press the **Select...** button to open a dialog that allows you to select individual attributes to expose.
 
-The _System_._ID_ attribute is used as a key in OData services and is therefore not allowed to be unchecked.
+The *System*.*ID* attribute is used as a key in OData services and is therefore not allowed to be unchecked.
 
-Attributes of published entities are nillable by default, meaning that if their value is **empty** then they will be encoded as explicit nulls in the OData content. If you deselect the _nillable_ column, the attribute cannot be **empty** (otherwise a runtime error would occur).
+Attributes of published entities are nillable by default, meaning that if their value is **empty** then they will be encoded as explicit nulls in the OData content. If you deselect the *nillable* column, the attribute cannot be **empty** (otherwise a runtime error would occur).
 
 Attributes of type binary are not allowed to be exported through OData services, other than the Contents field of System.FileDocument.
 
@@ -48,18 +48,18 @@ These features make it easier to refactor your domain model without affecting ex
 
 Use the **Entity set name** field to change the last part of the URL of the resource.
 
-_Default value:_ Entity name + s
+*Default value:* Entity name + s
 
 ## 5 Use Paging
 
 If you enable this option, you can set a maximum number of objects per response, with a link included to the next set of objects. A client like Tableau can use this to show progress and will automatically keep following the links until all data is retrieved. Memory usage of clients can be improved if you use paging with a reasonable page size.
 
-**Note that enabling this does mean that retrieved data can be inconsistent**, because you're no longer retrieving data within a single transaction. For example, you are sorting on an Age attribute in an entity called Customer and retrieving customers with 1000 objects per page. Now a customer gets deleted in between two calls, it means that the customer with Age 23 at position 1001 now moves to position 1000, meaning that this object that you _would_ have gotten on the next page now moves to the first page and is not retrieved anymore. The other way around with data inserts in between calls can cause you to see duplicates. So only use this option when this kind of inconsistency is acceptable.
+**Note that enabling this does mean that retrieved data can be inconsistent**, because you're no longer retrieving data within a single transaction. For example, you are sorting on an Age attribute in an entity called Customer and retrieving customers with 1000 objects per page. Now a customer gets deleted in between two calls, it means that the customer with Age 23 at position 1001 now moves to position 1000, meaning that this object that you *would* have gotten on the next page now moves to the first page and is not retrieved anymore. The other way around with data inserts in between calls can cause you to see duplicates. So only use this option when this kind of inconsistency is acceptable.
 
-_Default value:_ No
+*Default value:* No
 
 ## 6 Page Size
 
 When Use paging is set to Yes, you can set the amount of objects per page here.
 
-_Default value:_ 10000
+*Default value:* 10000

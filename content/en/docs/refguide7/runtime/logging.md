@@ -42,6 +42,6 @@ This section will provide some details on specific log nodes.
 
 Has only 1 relevant level, debug.
 
-_debug_
+*debug*
 
 Setting this log level to debug will show you all the JSON requests and responses from client to server. This may degrade performance as this output is normally done streaming. This can also be used to gain insight in what users are doing in a production environment. When using it here, make sure you have enough disk space available for your log files though.

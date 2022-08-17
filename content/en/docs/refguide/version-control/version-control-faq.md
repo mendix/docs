@@ -28,7 +28,7 @@ Mendix adheres to strict security standards and considers you the sole owner of 
 
 ## 5 What Are the Differences between Team Server SVN and Team Server Git?
 
-For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences).
+For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences/).
 
 ## 6 What Are the Advantages of Team Server Git over Team Server SVN? {#git-advantages}
 

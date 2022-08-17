@@ -127,6 +127,13 @@ This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasen
 
 A published OData resource is always readable.
 
+There are two options to handle an incoming GET request for an OData resource:
+
+1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
+2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See the [Handle a GET Request with a Microflow](/appstore/creating-content/connector-guide-odata/#handle-get-request) in *Wrap Services, APIs, or Databases with OData*.
+
+You can also set the [query options](#query-options) for each request.
+
 ### 8.3 Updatable
 
 Select the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
@@ -155,7 +162,7 @@ You can use a validation message to report a validation error if you are perform
 The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
 {{% /alert %}}
 
-## 9 Query Options
+## 9 Query Options {#query-options}
 
 Select the options that you would like to include in each OData capability.
 
@@ -164,3 +171,4 @@ Select the options that you would like to include in each OData capability.
 * **Filterable**
 * **Toppable**
 * **Skippable**
+

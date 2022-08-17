@@ -11,6 +11,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### August 18th, 2022
+
+### Improvements
+
+* Company administrators can now assign an owner to the applications owned by external participants when removing them from company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+
+### Fixes
+
+* We fixed a bug where an empty V3 contract resulted in an error, it shall now be parsed successfully and yield no entities because it is empty.
+* We fixed a bug where notifications were not sent when notification title is more than 100 characters, we have limited the characters to less than 100.
+
 ### August 11th, 2022
 
 ### Improvements

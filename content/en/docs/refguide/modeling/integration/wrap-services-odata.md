@@ -155,7 +155,28 @@ The examples in this section will show you how you can apply the functionalities
 
 ## 6.1 Third-Party Service Connector {#3rd-party}
 
+Build something - Twitter API v2, interactive documentation, easy to plug into a twitter API. https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-me
 
+Build a Twitter client client, for Twitter. Type in someone's twitter handle, then hit show. Then retrieve the latest 10 tweets, latest 5 followers, and profile info
+* domain model, used DH. took a contract that he created, deployed locally, add NPE to fill in the data.
+* Microflow, flow user page: retrieves list of users from "Database" (from the NPE). XPATH; translated to an OData request that is sent to the connector
+  * On the page itself, data view: user coming in, tweets, follow by association (no REST requests); give me all tweets and followers connected to user
+
+Build connector:
+* Use Twitter API to find out the structure.
+* Can create a mapping that generates entities in domain model (users, tweets, requests)
+
+Published 3 NPEs as Published OData source.
+* user has these fields, also use a custom key as a string (twitter ID)
+* expose users the tweets and followers; 
+* specify query and count microflow, like above
+* manually take URI, parse it, and create microflow to read data from URI
+* peel out user ID from query; call REST to twitter API for followers; plug user ID results into API; 
+* extra HTTP headers to  bearer token that's accepted by API; API response goes into import mapping
+* Wires everything together
+* Query for followers; query for users (more difficult; needs to handle both requests, up to developer)
+
+Decoded OData request: 
 
 ## 6.2 Updatable Operational Data Stores {#operational-data-stores}
 
@@ -181,4 +202,7 @@ The Connector kit will enable you to provide a writable unfied operational data 
 * Step 2 - sync service data
 * Step 3 - provide OData APIs
 * Step 4 - provide write back logic
+
+## 7 Limitations
+
 

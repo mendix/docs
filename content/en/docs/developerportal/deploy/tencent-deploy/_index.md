@@ -233,6 +233,8 @@ The **附加信息** tab displays information about the namespace, such as softw
 
 The **计划** tab shows you the database and storage plans which are currently configured for your namespace. Here you can activate and deactivate individual plans.
 
+## 4 Deploying an App for the First Time
+
 ### 4.1 Creating a Deployment Package {#create-deployment-package}
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.

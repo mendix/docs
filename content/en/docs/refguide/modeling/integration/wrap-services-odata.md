@@ -1,8 +1,9 @@
 ---
 title: "Wrap Services, APIs, or Databases with OData"
-url: /appstore/creating-content/connector-guide-odata/
+url: /refguide/wrap-services-odata/
+linktitle: "Wrap Services with OData"
 category: "Creating Content"
-weight: 8
+weight: 80
 tags: ["connectors", "data hub", "studio pro", "build", "connector guide"]
 ---
 
@@ -12,7 +13,7 @@ Our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide 
 
 ### 1.1 Overview
 
-OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide [filtering], [sorting], and [pagination] on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/), and also ensures API clients have the ability to optimize payload size and minimize roundtrips to ensure the best possible usage performance.
+OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide [filtering], [sorting], and [pagination] on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures API clients have the ability to optimize payload size and minimize roundtrips for the best possible usage performance.
 
 Starting with Studio Pro [9.17](/releasenotes/studiopro/9.17/), you can now publish Non-Persistent Entities (NPE) as OData resources, and use microflows to define how your resources should be retrieved and stored.  These functionalities enable you to build Mendix connectors for any service or data source you may have that are compatible with the [Data Hub Catalog](/data-hub/data-hub-catalog/) and [external entities](/refguide/external-entities/). Using these connectors, you can connect to any data available with the same ease and productivity as external entities. Organizations will also be able to provide the same discoverability and curation for these data sources in the Data Hub Catalog.
 
@@ -35,7 +36,7 @@ You can use the features. They include the following, and elaborated on in the [
 
 Before you read this guide, do the following:
 
-* Understand how [published](/refguide/published-odata-services/) and [consumed](/refguide/consumed-odata-services/) OData services work
+* Understand how [published](/refguide/published-odata-services/) and [consumed](/refguide/consumed-odata-services/) OData services work in Studio Pro
 * Check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
 * Read [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/)
 * Read the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
@@ -49,7 +50,7 @@ Right-click on the non-persistable entity you want to expose and select **Expose
 
 ## 3 Data Sources for Published OData Resources {#odata-data-sources}
 
-In Studio Pro, you can expose entities as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service by using a microflow that determines the result of the incoming request. This allows Mendix apps to do the following: 
+In Studio Pro, you can expose entities as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service by using a microflow that determines the result of the incoming request. In other words, you can definte how your resources should be retrieved and stored. This allows Mendix apps to do the following: 
 
 * Integrate with systems that do not support OData
 * Publish the results as an OData service, so the data can easily be consumed by Mendix apps and other OData consumers
@@ -59,7 +60,7 @@ When a consuming app wants to read your published OData service, it is sending a
 1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow defined in the *Readable* section. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See [Handle a GET Request with a Microflow](#handle-get-request).
 
-The result list of objects from both actions will then be transformed to an OData payload. If it fails, a [status code](/refguide/published-odata-services/#status-codes) of `500` will be returned.
+The result list of objects from either will then be transformed into an OData payload. If it fails, a [status code](/refguide/published-odata-services/#status-codes) of `500` will be returned.
 
 ### 3.1 Handle a GET Request with a Microflow {#handle-get-request}
 
@@ -78,41 +79,36 @@ Include the following tasks inside the microflow:
 5. Store the count value in the `ODataResponse` object.
 6. Return a list of objects that matches the exposed entity.
 
-{{< figure src="/attachments/appstore/creating-content/wrap-services-odata/call-microflow-implementation.png" alt="Example of an implementation of calling a microflow to handle an incoming GET request." >}}
+{{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/call-microflow-implementation.png" alt="Example of an implementation of calling a microflow to handle an incoming GET request." >}}
 
 {{% alert color="info" %}}
 When you use a microflow to provide data, security is applied to the result of the microflow.{{% /alert %}}
 
 ### 3.1.1 Microflow Parameters
 
-1. **HttpRequest** – The first parameter that is accepted is an `HttpRequest` of entity type `System.HttpRequest`.  This parameter is optional.
+1. **HttpRequest** – The first parameter that is accepted is an `HttpRequest` of entity type `System.HttpRequest`.  This parameter is optional.</br>
      When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* **will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
-2. **ODataResponse** – The second parameter that is accepted is an `ODataResponse` of entity type `System.``ODataResponse`. This parameter is optional.
+2. **ODataResponse** – The second parameter that is accepted is an `ODataResponse` of entity type `System.``ODataResponse`. This parameter is optional.</br>
      The `ODataResponse` has an attribute `Count` where the count value can be stored. 
      In OData, there are 2 different count types:
-         1. Count as a request - It is used when the consumer is only interested in the number of objects and not the object themselves.
-Consider the following request
+         1. Count as a request - It is used when the consumer is only interested in the number of objects and not the object themselves.</br>
+         Consider the following request: `persons/$count?$filter=name eq 'John'`.</br>
+         
+         This would return the number of persons that have name `John`. 
 
-    persons/$count?$filter=name eq 'John'
+If the `ODataResponse` is present as a microflow parameter, then it will return the `Count` attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.</br>
+         2. Inline count in the request - It is used when the consumer is interested in the total number of objects while retrieving part of the objects.</br>
 
-This would return the number of persons that have name `John`. 
+         Consider the following request: `/persons?$count=true&$skip=5&top=5`</br>
 
-If the `ODataResponse` is present as a microflow parameter, then it will return the `Count` attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.
-         2. Inline count in the request - It is used when the consumer is interested in the total number of objects while retrieving part of the objects.
-Consider the following request
-
-    /persons?$count=true&$skip=5&top=5
-
-This would return an OData payload with maximum 5 objects but the count information can be more than 5. The count information will be included in the payload. This information is useful when paging through all the objects.
+         This would return an OData payload with maximum 5 objects but the count information can be more than 5. The count information will be included in the payload. This information is useful when paging through all the objects.
 
 If the `ODataResponse` is present as a microflow parameter, then it will return the `Count` attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined.
 
-Note: In 9.13 and earlier, the inline count value will be retrieved from the count microflow.** From 9.14 onward, the count value can be stored in the `ODataResponse` object.
+{{% alert color="info" %}}
+In Studio Pro 9.16 and earlier, the inline count value will be retrieved from the count microflow. From 9.17 onward, the count value can be stored in the `ODataResponse` object.
 
-
-
-### 3.2 Payload Chunking
 
 ## 4 Key Selection {#select-key}
 
@@ -179,12 +175,8 @@ You can implement a low-code operational data store using Mendix:
 
 The Connector kit will enable you to provide a writable unfied operational data store model: when a front-end app makes changes to a resource provided in the ODS, you can use microflow logic to directly write the data back to the backend services.
 
-**Step 1 - implement model**
-**Step 2 - sync service data**
-**Step 3 - provide OData APIs**
-**Step 4 - provide write back logic**
+* Step 1 - implement model
+* Step 2 - sync service data
+* Step 3 - provide OData APIs
+* Step 4 - provide write back logic
 
-
-This month’s release includes some big OData REST improvements. As you may be aware, 
-
-Connector Kit 2.0

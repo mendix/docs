@@ -64,7 +64,10 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 The prerequisites are the following:
 
 * [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – we recommend using version 6.0.6 or above
-* [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
+* Java JDK
+
+    * For Mendix Studio Pro version 9.14.0 and above – [Adoptium Temurin Java SE](https://adoptium.net/temurin/releases?version=11)
+    * For Mendix Studio Pro versions below 9.14.0 – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
 * [Microsoft Visual C++ 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://artifacts.rnd.mendix.com/native-builders/latest.exe)

@@ -1,5 +1,5 @@
 ---
-title: "Use Generic Permission Javascript Action"
+title: "Build a Generic Permission JavaScript Action"
 url: /refguide/mobile/using-mobile-capabilities/generic-permission-action/
 parent: "implementation"
 weight: 20
@@ -9,18 +9,18 @@ tags: ["permissions", "JavaScript", "native", "mobile"]
 
 ## 1 Introduction
 
-Advanced features in mobile apps often require permission from users. Developers need to respect users' privacy, so it is common practice for an app to request the user's permission before storing media and data. To get permission, you can build a generic JavaScript action. This generic action will allow your app to ask for specific permission before accessing a mobile capability, such as the device camera or location.
+Advanced features in mobile apps often require permission from users. Apps need to respect the user's privacy, so it is common practice for an app to request the user's permission before storing media and data. To get permission, you can build a generic JavaScript action. This generic action will allow your app to ask for specific permissions before accessing a mobile capability, such as the device camera or location.
 
 ## 2 Prerequisites
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
-* Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow commons module.
-* Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date
+* Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
+* Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date.
 * Make sure you are using [Make It Native 9 app](releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
 ## 3 Using a Generic Permission Action
 
-Generic permission action can be used inside nanoflows in an existing app or make a new app from scratch. You can find it in the toolbox for a nanoflow in the Nanoflow commons section.
+A generic permission action can be used inside nanoflows in an existing app or in a new app. You can find it in the toolbox for a nanoflow in the Nanoflow Commons section.
 
 ### 3.1 Permission Name
 
@@ -117,7 +117,7 @@ The permissions that you cannot find using the Native builder UI, can be added m
 
 Update your *ios/podfile* file with the needed permissions:
 
-```
+```xml
 target 'YourAwesomeProject' do
 
   # …

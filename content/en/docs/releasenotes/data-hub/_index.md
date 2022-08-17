@@ -15,12 +15,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Improvements
 
-* Company administrators can now assign an owner to the applications owned by external participants when removing them from company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+* Company administrators can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing them from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
 ### Fixes
 
-* We fixed a bug where an empty V3 contract resulted in an error, it shall now be parsed successfully and yield no entities because it is empty.
-* We fixed a bug where notifications were not sent when notification title is more than 100 characters, we have limited the characters to less than 100.
+* We fixed a bug where an empty V3 contract resulted in an error. The contract will now be parsed successfully and yield no entities because it is empty.
+* We fixed a bug where notifications were not sent when the notification title was more than 100 characters. The maximum number of characters in notification titles is now 100.
 
 ### August 11th, 2022
 
@@ -39,7 +39,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* We upgraded the Catalog page to include the **Count** and **Pagination** OData restrictions. It now features a **Capabilities** tab, a tooltip for attributes that have restrictions, and tooltips for the CRUD indicator. 
+* We upgraded the Catalog page to include **Count** and **Pagination** OData restrictions. It now features a **Capabilities** tab, a tooltip for attributes that have restrictions, and tooltips for the CRUD indicator. 
 
 #### Fixes
 

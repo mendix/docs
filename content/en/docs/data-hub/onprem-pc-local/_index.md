@@ -19,7 +19,7 @@ The [Mendix Data Hub](/data-hub/) includes two main features:
 
 Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
-For an overview of how Data Hub components work together, check out the blog post [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/).
+For an overview of how Data Hub components work together, and general information about using Data Hub without the Mendix Cloud, check out the blog post [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/).
 
 ## 1.2 Use Cases without the Mendix Cloud
 
@@ -116,4 +116,4 @@ A [Data Hub License](/data-hub/#data-hub-licences) is necessary for using Mendix
 
 * [Data Hub Guide](/data-hub/)
 * [Data Hub Catalog](/data-hub/data-hub-catalog/)
-* [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/) in the
+* [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/) in the Evaluation Guide

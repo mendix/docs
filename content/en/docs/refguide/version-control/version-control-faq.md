@@ -58,7 +58,7 @@ Mendix  is focusing on improving Team Server Git support and migrating customers
 
 Scrum masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
 
-## 10 Can I Use Third-Party Tools to Connect to the Team Server?
+## 10 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 
 Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TurtoiseSVN, TurtoiseGit, or GitHub Desktop by using the following repository URLs:
 

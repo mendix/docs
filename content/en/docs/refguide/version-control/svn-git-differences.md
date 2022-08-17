@@ -9,7 +9,7 @@ tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 
 ## 1 Introduction
 
-Your team's Scrum Master can migrate your app from SVN to Git version control system. After migration is completed, there are [certain steps]({#after-migration}) you need to take to proceed working on this app. There are also process differences between SVN and Git that are useful to note when you start working in Git. 
+Your team's Scrum Master can migrate your app from SVN to Git version control system. After migration is completed, there are [certain steps](#after-migration) you need to take to proceed working on this app. There are also process differences between SVN and Git that are useful to note when you start working in Git. 
 
 {{% alert type="info" %}}
 
@@ -47,4 +47,8 @@ In Git, committing is done locally at first. Then commits are sent to other repo
 
 ## 5 Interacting with Version Control outside Studio Pro
 
-It is possible to [set up a third-party tool to connect to the Team Server](https://docs.mendix.com/refguide/version-control-faq/#10-can-i-use-third-party-tools-to-connect-to-the-team-server) for both SVN and Git. However, migrating to Git requires a different tool: instead of TortoiseSVN you can use tools like TortoiseGit or GitHub Desktop.
+It is possible to [set up a third-party tool to connect to the Team Server](/refguide/version-control-faq/#third-party-tools) for both SVN and Git. However, migrating to Git requires a different tool: instead of TortoiseSVN you can use tools like TortoiseGit or GitHub Desktop.
+
+## 6 Read More
+
+* [Migrate to Git](/developerportal/collaborate/migrate-to-git/)

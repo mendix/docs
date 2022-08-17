@@ -201,16 +201,19 @@ It is possible to set filtering conditions for items of a datasource. `setFilter
 
 `setFilter` accepts only a specially created object of type `FilterCondition` that describes desired filtering behavior. It is possible to create a filter conditions object using functions provided in `mendix` module under `mendix/filters/builders` path. Those functions we call filter builders. Also `undefined` could be passed to `setFilter` to clear filtering conditions.
 
-Some examples of builder functions are `equals`, `greaterThan`, `lessThanOrEqual` for filtering on `DateTime` or `Decimal` attributes. Functions like `startsWith`, `contains` are useful for filtering on `String` attributes.
+Some examples of builder functions are `equals`, `greaterThan`, `lessThanOrEqual` for filtering on `DateTime` or `Decimal` attributes. Functions like `startsWith`, `contains` are useful for filtering on `String` attributes. Filtering based on associations is also possible. For example, you can use `equals` with references and `contains` with reference sets.
 
-The following code samples show how to use filter builders and apply filtering to a data source property with three linked attributes:
+The following code samples show how to use filter builders and apply filtering to a data source property with three linked attributes and two linked associations:
 
 ```ts
 interface MyListWidgetsProps {
     myDataSource: ListValue;
+    mySelectableObjects: ListValue;
     myAttributeString: ListAttributeValue<string>;
     myAttributeBoolean: ListAttributeValue<boolean>;
     myAttributeNumber: ListAttributeValue<BigJS>;
+    myAssociationReference: ListReferenceValue;
+    myAssociationReferenceSet: ListReferenceSetValue;
 }
 ```
 
@@ -236,7 +239,7 @@ if (this.props.myAttributeString.filterable) {
 }
 ```
 
-First step the code takes is checking for the possibility to use filtering on `myAttributeString` property by checking `filterable` flag. Then `filterCond` filter condition is constructed which specifies that attribute represented by `myAttributeString` should start with character `"B"`. `setFilter` call applies the filter, and on the next re-render the component gets only items where the value of an attribute represented by property `myAttributeString` is starting with `"B"`.
+First step the code takes is checking for the possibility to use filtering on `myAttributeString` property by checking the `filterable` flag. Then `filterCond` filter condition is constructed which specifies that attribute represented by `myAttributeString` should start with character `"B"`. `setFilter` call applies the filter, and on the next re-render the component gets only items where the value of an attribute represented by property `myAttributeString` is starting with `"B"`.
 
 Similarly, to apply a condition where the value on an attribute represented by `myAttributeBoolean` property is set to true:
 
@@ -252,6 +255,38 @@ if (this.props.myAttributeBoolean.filterable) {
 }
 ```
 
+And, to apply a condition to match only objects that are associated with another object:
+
+```ts
+import { association, literal, notEquals, empty } from "mendix/filters/builders";
+
+// in the widget code
+if (this.props.myAssociationReference.filterable) {
+    const filterCond = notEquals(association(this.props.myAssociationReference.id), empty());
+    this.props.myDataSource.setFilter(filterCond);
+} else {
+    console.log("Association is not filterable");
+}
+```
+
+Similarly, to apply a condition to match only the objects that are associated with at least the first two objects from the selectable objects data source:
+
+```ts
+import { association, literal, notEquals, contains } from "mendix/filters/builders";
+
+// in the widget code
+if (this.props.myAssociationReferenceSet.filterable) {
+    // assuming those two objects are available
+    const objectItem1 = this.props.mySelectableObjects.items[0];
+    const objectItem2 = this.props.mySelectableObjects.items[1];
+    
+    const filterCond = contains(association(this.props.myAssociationReferenceSet.id), literal([objectItem1, objectItem2]));
+    this.props.myDataSource.setFilter(filterCond);
+} else {
+    console.log("Association is not filterable");
+}
+```
+
 The following code sample shows how to remove current filtering condition:
 
 ```ts
@@ -260,10 +295,10 @@ this.props.myDataSource.setFilter(undefined);
 
 #### 2.4.2 Advanced Filtering {#advanced-filtering}
 
-In some use cases it is necessary to apply more complex filtering conditions. For example if a use case requires fetching only items where `myAttributeString` starts with `"B"` and `myAttributeBoolean` is set to `true`, or items where `myAttributeNumber` is greater than `10`. In order to construct such condition special filter builders `and` and `or` have to be used. The following code sample shows how to use them. Note that check for `filterable` flags omitted for simplicity. Real widgets should always take `filterable` flag into account.
+In some use cases it is necessary to apply more complex filtering conditions. For example if a use case requires fetching only items where `myAttributeString` starts with `"B"` and `myAttributeBoolean` is set to `true`, or items where `myAttributeNumber` is greater than `10` and `myAssociationReference` is associated with another object while `myAssociationReferenceSet` is not associated with any other objects. In order to construct such a condition, special filter builders `and` and `or` have to be used. The following code sample shows how to use them. Note that checks for the `filterable` flag have been omitted for simplicity. Real widgets should always take the `filterable` flag into account.
 
 ```ts
-import { attribute, literal, startsWith, equals, greaterThan, and, or } from "mendix/filters/builders";
+import { attribute, association, literal, startsWith, equals, notEquals, greaterThan, and, or } from "mendix/filters/builders";
 
 // in the widget code
 if (/* check that all properties are filterable */) {
@@ -272,7 +307,11 @@ if (/* check that all properties are filterable */) {
             startsWith(attribute(this.props.myAttributeString.id), literal("B")),
             equals(attribute(this.props.myAttributeBoolean.id), literal(true))
         ),
-        greaterThan(attribute(his.props.myAttributeNumber.id), literal(10))
+        and(
+            greaterThan(attribute(this.props.myAttributeNumber.id), literal(10)),
+            notEquals(association(this.props.myAssociationReference.id), empty()),
+            equals(association(this.props.myAssociationReferenceSet.id), empty())
+        )
     );
     this.props.myDataSource.setFilter(filterCond);
 } else {
@@ -389,7 +428,7 @@ export interface ListAttributeValue<T extends AttributeValue> {
 }
 ```
 
-#### 3.2.1 Obtaining Attribute Value
+#### 3.2.1 Obtaining Attribute Value {#obtaining-attribute-value}
 
 {{% alert color="warning" %}}
 Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always **readonly**.
@@ -428,9 +467,9 @@ Fields `sortable` and `filterable` specify if the attribute could be used for so
 
 #### 3.2.3 Attribute Type
 
-[Attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property determines which attribute types could be configured for that property. For example a property may allow attributes of type `String` and `Integer` in order to present progress. While this is convenient for users it may require some additional work for a developer by processing different data types.
+[Attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property defines which attribute types could be configured for that property. For example, an attribute property may be configured to allow attributes of type `String` and `Integer` in order to present progress. While this is convenient for users it may require some additional work for a developer by processing different data types.
 
-It is possible to determine type of attribute by checking `type` field on a property. The following code sample shows how to check the attribute type on the property named `myAttributeOnDatasource`:
+It is possible to determine the type of attribute by checking the `type` field on an attribute property. The following code sample shows how to check the attribute type on the property named `myAttributeOnDatasource`:
 
 ```ts
 if (this.props.myAttributeOnDatasource.type === "String") {
@@ -448,7 +487,72 @@ if (this.props.myAttributeOnDatasource.type === "String") {
 
 Optional `universe` field represents an array of possible values of an attribute. See `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) for more information.
 
-### 3.3 ListWidgetValue {#listwidgetvalue}
+### 3.3 ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
+
+`ListReferenceValue` and `ListReferenceSetValue` are both used to represent an [association property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) that is linked to a data source.
+This allows the client component to access associated values of individual items from a `ListValue`. `ListReferenceValue` and `ListReferenceSetValue` are both objects and their definitions are as follows:
+
+```ts
+export type ListReferenceValue = ListAssociationValue<ObjectItem> & { type: "Reference" };
+
+export type ListReferenceSetValue = ListAssociationValue<ObjectItem[]> & { type: "ReferenceSet" };
+
+export interface ListAssociationValue<T extends ObjectItem | ObjectItem[]> {
+  get: (item: ObjectItem) => DynamicValue<T>;
+
+  id: ListAssociationId;
+  filterable: boolean;
+}
+```
+
+#### 3.3.1 Obtaining Association Value
+
+In order to work with an object or objects that are associated with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. If the association property has been configured to allow both types of associations, the type of the property is defined as `ListReferenceValue | ListReferenceSetValue` and a check on its `type` should be done to narrow down the type. See [Association Type](#association-type) section for more information.
+
+Let's take a look at some example. Assuming widget properties are configured as follows with `myAssociationOnDatasource` property allowing association of type `Reference`:
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    mySelectableObjects: ListValue;
+    myAssociationOnDatasource: ListReferenceValue;
+    myAttributeOnSelectableObjects: ListAttributeValue;
+}
+```
+
+The following code sample shows how to get a `DynamicValue<ObjectItem>` that represents a read-only value of an associated object of the first element from the `myDataSource`.
+
+```ts
+const associationValue = this.props.myAssociationOnDatasource.get(this.props.myDataSource.items[0]);
+```
+
+This will return an `ObjectItem` representing the associated object, since in this example, the widget is configured to allow only singular associations.
+If you want to access the individual attribute values of this associated object, you can use an attribute property linked to the selectable objects data source and pass the associated object to it. Refer to [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value) for details on how to do this.
+
+Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) for more information about usage of `DynamicValue`.
+
+#### 3.3.2 Association ID and Filterable Flags {#listassociationvalue-id-filterable}
+
+`id` field of type `ListAssociationId` represents the unique randomly generated string identifier of an association. That identifier could be used when applying filtering on a linked data source property to identify which association should be used for filtering. Check [Filtering](#listvalue-filtering) sections for more information.
+
+`filterable` field specifies if the association could be used for filtering. This flag has to be checked before a widget applies filtering on a data source property. An attempt to filter on a non-filterable association would lead to an error during the execution time.
+
+#### 3.3.3 Association Type {#association-type}
+
+[Association](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) property determines which association types could be configured for that property. For example, an association property may be configured to allow associations of type `Reference` and not `ReferenceSet`.
+
+It is possible to determine the type of association by checking the `type` field on an association property. This is useful if the property has been configured to allow both references and reference sets. The following code sample shows how to check the association type on the property named `myAssociationOnDatasource`:
+
+```ts
+if (this.props.myAssociationOnDatasource.type === "Reference") {
+  console.log("Reference association");
+} else {
+  // TypeScript will narrow it down to "ReferenceSet" when the type is not equal to "Reference"
+  console.log("ReferenceSet association");
+}
+```
+
+### 3.4 ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets) that is linked to a data source. 
 This allows the client component to render child widgets with items from a `ListValue`.
@@ -483,7 +587,7 @@ The `get` method was introduced in Mendix Studio Pro v9.0.
 You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
-### 3.4 ListExpressionValue {#listexpressionvalue}
+### 3.5 ListExpressionValue {#listexpressionvalue}
 
 `ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression) or [text template property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
 

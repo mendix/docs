@@ -305,7 +305,7 @@ When doing a **git merge** operation on two branches in the command line, Git at
 
 Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
-```
+```text {linenos=false}
 [core]
   attributesfile = ~/.gitattributes
 [merge "custom"]
@@ -317,25 +317,19 @@ Where *[MX.EXE_PATH]* should be replaced by the mx.exe path with only forward sl
 
 You can also configure the git driver locally per repository using the following commands:
 
-```
+```text {linenos=false}
 git config merge.custom.name "custom merge driver for specific files"
 git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
 ```
 
 After setting up the driver either locally or globally, create a *.gitattributes* file in the same folder with the following contents:
 
-```
+```text {linenos=false}
 *.mpr merge=custom
 ```
 
 Save the files and now when **git merge** is run and it involves *.mpr* files, the mx.exe merge will run Studio Pro merge algorithm before Git finishes the merge.
 
-You can also change the *.gitconfig* file locally per app using the following:
-
-```
-git config merge.custom.name "custom merge driver for specific files"
-git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
-```
 
 ## 8 Versioning an App Deployed to the Cloud {#versioning-app}
 

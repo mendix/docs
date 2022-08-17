@@ -15,12 +15,12 @@ Advanced features in mobile apps often require permission from users. Apps need 
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
 * Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
-* Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date.
+* Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
 * Make sure you are using [Make It Native 9 app](releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
 ## 3 Using a Generic Permission Action
 
-A generic permission action can be used inside nanoflows in an existing app or in a new app. You can find it in the toolbox for a nanoflow in the Nanoflow Commons section.
+A generic permission action can be used inside nanoflows in an existing app or in a new app. You can find it in the toolbox for a nanoflow in the Native mobile section.
 
 ### 3.1 Permission Name
 

@@ -3,7 +3,7 @@ title: "Wrap Services, APIs, or Databases with OData"
 url: /refguide/wrap-services-odata/
 linktitle: "Wrap Services with OData"
 weight: 80
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide"]
+tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "connector kit 2", "published odata services"]
 ---
 
 ## 1 Introduction
@@ -155,7 +155,7 @@ The examples in this section will show you how you can apply the functionalities
 
 ## 6.1 Third-Party Service Connector {#3rd-party}
 
-Build something - Twitter API v2, interactive documentation, easy to plug into a twitter API. https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-me
+Twitter API v2, interactive documentation, easy to plug into a twitter API. https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-me
 
 Build a Twitter client client, for Twitter. Type in someone's twitter handle, then hit show. Then retrieve the latest 10 tweets, latest 5 followers, and profile info
 * domain model, used DH. took a contract that he created, deployed locally, add NPE to fill in the data.

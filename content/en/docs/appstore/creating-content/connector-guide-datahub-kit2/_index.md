@@ -44,7 +44,7 @@ Before you read this guide, do the following:
 
 ## 2 Non-Persistable Entities as Published OData Resources
 
-Because connectors will only move data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](refguide/entities/#non-persistable-entity) as a [published OData resource](refguide/published-odata-resource/).
+Because connectors that wrap services as OData will only move data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](refguide/entities/#non-persistable-entity) as a [published OData resource](refguide/published-odata-resource/).
 
 Right-click on the non-persistable entity you want to expose and select **Expose as OData resource**.
 
@@ -55,7 +55,7 @@ In Studio Pro, you can expose entities as OData resources by adding them to a pu
 * Integrate with systems that do not support OData
 * Publish the results as an OData service, so the data can easily be consumed by Mendix apps and other OData consumers
 
-There are two ways to handle an incoming GET request for an OData resource:
+When a consuming app wants to read your published OData service, it is sending a `GET` request. There are two ways to handle an incoming GET request for an OData resource:
 
 1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow defined in the *Readable* section. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See [Handle a GET Request with a Microflow](#handle-get-request).
@@ -78,34 +78,22 @@ Include the following tasks inside the microflow:
 * Retrieve the required count. NOTE: Count can be requested in multiple ways.
 * Store the count value in the `ODataResponse` object.
 * Return a list of objects that matches the exposed entity.
-* 
-![Example of call a microflow implementation](https://paper-attachments.dropbox.com/s_FB45FE254EEA2DEF2D8396A12FCEC13A9827E02BEC6849F697CC4AD99F9DC122_1652103360177_image.png)
 
 
-**NOTE: When you use a microflow to provide data, then security is applied to the result of the microflow.**
+{{< figure src="/attachments/appstore/creating-content/wrap-services-odata/call-microflow-implementation.png" alt="Example of an implementation of calling a microflow to handle an incoming GET request." >}}
 
+{{% alert color="info" %}}
+When you use a microflow to provide data, then security is applied to the result of the microflow.{{% /alert %}}
 
-### 3.1.1 Microflow Parameter HttpRequest
+### 3.1.1 Microflow Parameters
 
-The first parameter that is accepted is an `HttpRequest` of entity type `System.HttpRequest`. This parameter is optional.
+1. **HttpRequest** – The first parameter that is accepted is an `HttpRequest` of entity type `System.HttpRequest`.  This parameter is optional.
+     When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* **will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
-When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* **will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned.
-
-For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
-
-### 3.1.2 Microflow Parameter ODataResponse
-
-The second parameter that is accepted is an `ODataResponse` of entity type `System.``ODataResponse`. This parameter is optional.
-
-The `ODataResponse` has an attribute `Count` where the count value can be stored. 
-In OData, there are 2 different count types:
-
-1. Count as a request
-2. Inline count in the request
-
-#### 3.1.2.1 Count as a request
-
-It is used when the consumer is only interested in the number of objects and not the object themselves.
+2. **ODataResponse** – The second parameter that is accepted is an `ODataResponse` of entity type `System.``ODataResponse`. This parameter is optional.
+     The `ODataResponse` has an attribute `Count` where the count value can be stored. 
+     In OData, there are 2 different count types:
+         1. Count as a request - It is used when the consumer is only interested in the number of objects and not the object themselves.
 Consider the following request
 
     persons/$count?$filter=name eq 'John'
@@ -113,10 +101,7 @@ Consider the following request
 This would return the number of persons that have name `John`. 
 
 If the `ODataResponse` is present as a microflow parameter, then it will return the `Count` attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.
-
-#### 3.1.2.2 Inline count in the request
-
-It is used when the consumer is interested in the total number of objects while retrieving part of the objects.
+         2. Inline count in the request - It is used when the consumer is interested in the total number of objects while retrieving part of the objects.
 Consider the following request
 
     /persons?$count=true&$skip=5&top=5
@@ -128,43 +113,41 @@ If the `ODataResponse` is present as a microflow parameter, then it will return 
 Note: In 9.13 and earlier, the inline count value will be retrieved from the count microflow.** From 9.14 onward, the count value can be stored in the `ODataResponse` object.
 
 
+
 ### 3.2 Payload Chunking
 
-## 4 Key Selection 
-
-Every entity in Mendix has an **ID** that is used internally to store the object in the database. However, **ID** does not meet the “Stable over time” requirement since it is prone to change in some scenarios, e.g. data migration.
+## 4 Key Selection {#select-key}
 
 {{% alert color="info" %}}
 This feature is available for published OData services that use OData v3 and v4.
 {{% /alert %}}
 
-You can select which attribute to use as a key when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable overtime, since it can change in certain scenarios (such as data migration).
 
-* Integer
-* Long
-* String
-* AutoNumber 
+Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
+
+* **Integer**
+* **Long**
+* **String**
+* **AutoNumber** 
 
 To select a good attribute as key, select an attribute with the following constraints: 
 
-* Unique – every entity should have a unique value, so any key points to exactly one entity.
-* Required – if the attribute value is empty, you cannot find an entity with it anymore.
-* Stable over time – the attribute value used for the key should not change for an entity, so you can find it again later.
+* Unique – Every entity should have a unique value, so any one key points to exactly one entity.
+* Required – If the attribute value is empty, you cannot find an entity with it anymore.
+* Stable over time – The attribute value used for the key should not change for an entity, so you can find it again later.
 
-Starting in Studio Pro [9.13](/releasenotes/studiopro/9.13/), a unique and required attribute is automatically selected when such an attribute is available when exposing an entity as a Published OData Resource for the first time. These constraints can be set using [validation rules](/refguide/validation-rules/). If there is no attribute that has a unique constraint or a required constraint, then it will select the first possible attribute.
+A unique and required attribute is automatically selected when such an attribute is available when exposing an entity as a Published OData Resource for the first time. These constraints can be set using [validation rules](/refguide/validation-rules/). If there is no attribute that has a unique constraint or a required constraint, then it will select the first possible attribute.
 
-### 4.1 Object ID as a Key
+### 4.1 Selecting an Attribute as a Key {#select-key}
 
-In Studio Pro 9.12 and earlier, object ID is the default key selection for persistent entity. For other type of entity, it is not allowed to use object ID as a key.
+To select a different attribute as a key, do the following:
 
-Starting from Studio Pro 9.13, it is no longer recommended to use object ID as a key.
+1. Open the **Published OData Resource**. 
+2. In the **Key** section, click on the **Edit…** button located next to the **Key** property.
+3. In the **Key Selection ** dialog box that opens, move the desired key attribute to the right side and move the old key attribute to the left side. 
 
-### 4.2 Selecting an Attribute as a Key
-
-You can select a different key by editing the Published OData Resource. In the edit dialog, click on the **Edit…** button located next to the **Key** property.
-This opens up a key selection dialog where you can move the desired key attribute to the right side and move the old key attribute to the left side. Currently, only a single attribute is allowed to be set as a key. The selected key attribute must have `Can be empty` unchecked. 
-
-![](https://paper-attachments.dropbox.com/s_5AA99B0290E741E72F4A7B26A89B27E62467CF006394C67C197AFD664593091F_1646997638129_image.png)
+Currently, only a single attribute is allowed to be set as a key. The selected key attribute must have `Can be empty` unchecked. 
 
 ## 5. Usage {#usage}
 

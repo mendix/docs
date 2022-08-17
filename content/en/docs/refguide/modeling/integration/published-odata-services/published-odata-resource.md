@@ -40,7 +40,7 @@ When you have selected an entity in the list to the left, its published attribut
 
 {{% alert color="info" %}}
 
-The **System.ID** attribute is used as a key in OData services and must always be checked.
+In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the **System.ID** attribute is used as a key in OData services and must always be checked. 
 
 {{% /alert %}}
 
@@ -51,6 +51,10 @@ Attributes of published entities are **Nillable** by default. This means that if
 Attributes of type **Binary** cannot be exported through OData services except for the **Contents** field of the **System.FileDocument** attribute.
 
 {{% /alert %}}
+
+### 3.1 Selecting an Attribute as Key
+
+In Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, you can select which attributes you would like to use as a key. To learn more about selecting attributes as keys, see the [Selecting an Attribute as a Key](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
 
 ## 4 Mapping from Internal Names to Exposed Names
 
@@ -94,7 +98,18 @@ When **Use paging** is set to **Yes**, the number of objects per page can be set
 
 Default: *10000*
 
-## 8 Capabilities {#capabilities}
+## 8 Key {#key}
+
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable overtime, since it can change in certain scenarios (such as data migration). Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
+
+* **Integer**
+* **Long**
+* **String**
+* **AutoNumber** 
+
+To learn more about selecting a key, see the [Key Selection](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
+
+## 9 Capabilities {#capabilities}
 
 The **Capabilities** section gives an overview of what operations the resource supports.
 
@@ -102,7 +117,7 @@ The **Capabilities** section gives an overview of what operations the resource s
 This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/).
 {{% /alert %}}
 
-### 8.1 Insertable
+### 9.1 Insertable
 
 Select the check box for **Insertable** to indicate that clients can insert new objects.
 
@@ -123,7 +138,7 @@ In the publishing app, you can use a validation message action to report a valid
 This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11/). The *Insertable* capability was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
-### 8.2 Readable
+### 9.2 Readable
 
 A published OData resource is always readable.
 
@@ -134,7 +149,7 @@ There are two options to handle an incoming GET request for an OData resource:
 
 You can also set the [query options](#query-options) for each request.
 
-### 8.3 Updatable
+### 9.3 Updatable
 
 Select the check box for **Updatable** to indicate that clients can update the values of attributes and associations.
 
@@ -150,7 +165,7 @@ You can also choose the **Call a microflow** action to use your own logic. Speci
 
 In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
 
-### 8.4 Deletable {#deletable}
+### 9.4 Deletable {#deletable}
 
 Select the check box for **Deletable** to indicate that clients can delete the values of attributes and associations.
 
@@ -162,7 +177,7 @@ You can use a validation message to report a validation error if you are perform
 The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/studio-pro/9.13/).
 {{% /alert %}}
 
-## 9 Query Options {#query-options}
+## 10 Query Options {#query-options}
 
 Select the options that you would like to include in each OData capability.
 

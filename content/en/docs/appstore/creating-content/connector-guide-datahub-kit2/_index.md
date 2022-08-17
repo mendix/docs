@@ -22,15 +22,13 @@ In this guide, you will learn about the following:
 
 * Exposing Non-Persistable Entities (NPEs) as published OData resources 
 * Using a microflow to define how resources should be retrieved and stored, and to return values of published OData services
-* Selecting a key (other than the Mendix ID) when exposing entities as OData resources
-* OData APIs now also come with OpenAPI contracts out of the box, so you can use and test them easily in any tool that supports OpenAPI, e.g., Postman.
+* Selecting a key (other than the object ID) when exposing entities as OData resources
   
 ### 1.2 Use Cases
 
-There are several examples for which these tools will be useful. They are the following, and elaborated on in the [Usage](#usage) section:
+You can use the features. They include the following, and elaborated on in the [Usage](#usage) section:
 
 * [Third-party service connector](#3rd-party)
-* [OData endpoint with a microservice data source](#microservice)
 * [Updatable operational data stores](#operational-data-stores)
 
 ### 1.3 Prerequisites
@@ -40,11 +38,12 @@ Before you read this guide, do the following:
 * Understand how [published](/refguide/published-odata-services/) and [consumed](/refguide/consumed-odata-services/) OData services work
 * Check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
 * Read [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/)
+* Read the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
 * Install Studio Pro [9.17](/releasenotes/studiopro/9.17/)
 
 ## 2 Non-Persistable Entities as Published OData Resources
 
-Because connectors that wrap services as OData will only move data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](refguide/entities/#non-persistable-entity) as a [published OData resource](refguide/published-odata-resource/).
+Because connectors that wrap services as OData will only move data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](/refguide/entities/#non-persistable-entity) as [published OData resources](/refguide/published-odata-resource/).
 
 Right-click on the non-persistable entity you want to expose and select **Expose as OData resource**.
 
@@ -55,7 +54,7 @@ In Studio Pro, you can expose entities as OData resources by adding them to a pu
 * Integrate with systems that do not support OData
 * Publish the results as an OData service, so the data can easily be consumed by Mendix apps and other OData consumers
 
-When a consuming app wants to read your published OData service, it is sending a `GET` request. There are two ways to handle an incoming GET request for an OData resource:
+When a consuming app wants to read your published OData service, it is sending a `GET` request. There are two ways to handle an incoming `GET` request for an OData resource:
 
 1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow defined in the *Readable* section. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. See [Handle a GET Request with a Microflow](#handle-get-request).
@@ -72,18 +71,17 @@ Inside a published OData service, you can expose entities as published resources
 
 Include the following tasks inside the microflow:
 
-* Parse the incoming OData query.
-* Decide what data needs to be collected.
-* Retrieve the required data from another system.
-* Retrieve the required count. NOTE: Count can be requested in multiple ways.
-* Store the count value in the `ODataResponse` object.
-* Return a list of objects that matches the exposed entity.
-
+1. Parse the incoming OData query.
+2. Decide what data needs to be collected.
+3. Retrieve the required data from another system.
+4. Retrieve the required count (this can be done in several ways).
+5. Store the count value in the `ODataResponse` object.
+6. Return a list of objects that matches the exposed entity.
 
 {{< figure src="/attachments/appstore/creating-content/wrap-services-odata/call-microflow-implementation.png" alt="Example of an implementation of calling a microflow to handle an incoming GET request." >}}
 
 {{% alert color="info" %}}
-When you use a microflow to provide data, then security is applied to the result of the microflow.{{% /alert %}}
+When you use a microflow to provide data, security is applied to the result of the microflow.{{% /alert %}}
 
 ### 3.1.1 Microflow Parameters
 
@@ -149,15 +147,17 @@ To select a different attribute as a key, do the following:
 
 Currently, only a single attribute is allowed to be set as a key. The selected key attribute must have `Can be empty` unchecked. 
 
-## 5. Usage {#usage}
+## 5 Testing
+
+## 6 Usage {#usage}
 
 Illustrate to pro developers how they might start using this 
 
-## 5.1 Third-Party Service Connector {#3rd-party}
+## 6.1 Third-Party Service Connector {#3rd-party}
 
-## 5.2 Data Endpoint with a Microservice Data Source {#microservice}
 
-## 5.3 Updatable Operational Data Stores {#operational-data-stores}
+
+## 6.2 Updatable Operational Data Stores {#operational-data-stores}
 
 Another common use case where custom OData APIs will help you is when you have a Mendix app that functions as an Operation Data Store or Data Layer for other Mendix apps.
 
@@ -188,19 +188,3 @@ The Connector kit will enable you to provide a writable unfied operational data 
 This month’s release includes some big OData REST improvements. As you may be aware, 
 
 Connector Kit 2.0
-
-
-
-This brings a whole new level of simplicity and productivity to your developers that build apps on top of these APIs. Once exposed as OData APIs, your developers can then discover your APIs in the Data Hub Catalog, and use them in their apps by simply dragging and dropping them into their apps.
-
-
-![](https://paper-attachments.dropbox.com/s_507F13D5E7935BCFAF770017849C3AE023B5BCED7E6494050B113DA00250486E_1660636374859_image.png)
-
-
-Always in  sync Operational Data Store
-
-Our first goal with this functionality is to enable you to create OData compatible APIs for any data you want to connect to. 
-OpenAPI for Odata REST
-
-OData services now also provide OpenAPI contracts.  This is provided in addition to the regular OData $metadata contracts. OpenAPI contracts ensure you test can your Odata REST APIs easily with tools like Postman.
-

@@ -56,6 +56,11 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 In Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, you can select which attributes you would like to use as a key. To learn more about selecting attributes as keys, see the [Selecting an Attribute as a Key](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
 
+### 3.1 Attribute Capabilities
+
+* **Filterable** – allows the attribute to be filtered
+* **Sortable** – allows the attribute to be sorted
+
 ## 4 Mapping from Internal Names to Exposed Names
 
 Use **Exposed entity name** in the **Edit published resource** window to customize the name of the resource that is exposed to the outside world. The default is the name of the exposed entity in the domain model. The **Exposed entity name** must start with a letter followed by letters or digits with a maximum length of 480 characters. 
@@ -181,9 +186,7 @@ The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/s
 
 Select the options that you would like to include in each OData capability.
 
-* **Countable**
-* **Sortable**
-* **Filterable**
-* **Toppable**
-* **Skippable**
+* **Countable** – required for getting the total number of records
+* **Top-supported** – required for [pagination](/refguide/odata-query-options/#paging)
+* **Skip-supported** – required for [pagination](/refguide/odata-query-options/#paging)
 

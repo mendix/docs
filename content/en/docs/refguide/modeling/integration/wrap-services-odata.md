@@ -45,7 +45,7 @@ Before you read this guide, do the following:
 * Check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
 * Install Studio Pro [9.17](/releasenotes/studiopro/9.17/)
 
-## 2 Non-Persistable Entities as Published OData Resources
+## 2 Non-Persistable Entities as Published OData Resources {#npe-published-odata}
 
 Because connectors that wrap services as OData will only move data from the back-end services to the client apps, it usually does not need to store this data. To support this, you can expose [non-persistable entities](/refguide/entities/#non-persistable-entity) as [published OData resources](/refguide/published-odata-resource/).
 

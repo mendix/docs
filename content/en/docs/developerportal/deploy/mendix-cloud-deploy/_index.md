@@ -59,7 +59,8 @@ If you are an existing customer, you should deploy into your licensed cloud node
 #### 1.1.1 Sleep Mode
 
 As noted in the table above, a Free App goes into Sleep Mode after an hour or so of inactivity. If you access it while it is inactive, the app displays the following message: 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" >}}
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" >}}
 
 If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
 
@@ -147,12 +148,12 @@ To deploy your app directly from Studio Pro, follow these steps:
 2. Open the licensed app.
 3. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" >}}
 
 4. In the **Deploy to Mendix Cloud** dialog box, click **Deploy**.
 5. The deployment is now in progress. To see the uploaded package, click **Show online**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" alt="A pop-up with the Show online option visible" >}}
 
 ##### 2.2.2 Creating a Package from the Team Server in the Developer Portal{#package-from-team-server}
 
@@ -179,7 +180,7 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 5. Click the environment to which you want to deploy the package.
 6. Click **Transport**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" >}}
 
 7. If asked to do so, clean the environment.
 8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
@@ -198,15 +199,15 @@ With a Free App, you can deploy your app to the Mendix Cloud from Studio or Stud
 
 In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" >}}
 
 Alternatively, in the top bar of Studio Pro, click **Run** or **Publish**, as shown in the following image:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
 
 #### 2.4.2 From Studio
 
-Click the **Publish** button in Studio. For more information,                                                       see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
+Click the **Publish** button in Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
 
 ## 3 Status of Deployment
 

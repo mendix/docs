@@ -8,19 +8,17 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "conn
 
 ## 1 Introduction
 
-Our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide outlines the basic steps of building connectors that enable developers to connect to certain back-end systems. 
+Our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide outlines the basic steps of building connectors that enable developers to connect to back-end systems and publish them in the [Mendix Marketplace](/appstore/). 
 
-Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on these existing capabilities of building connectors in Studio Pro. 
-
-This document dives into these new functionalities, which allow you to wrap any service, API, or database with OData, and build connectors that are compatible with the [Mendix Data Hub](/data-hub/); more specifically, the [Data Hub Catalog](/data-hub/data-hub-catalog/) and [external entities](/refguide/external-entities/).
+Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on these existing capabilities of building connectors in Studio Pro. This document dives into these new functionalities, which allow you to wrap any service, API, or database with OData, and build connectors that are compatible with the [Mendix Data Hub](/data-hub/); more specifically, the [Data Hub Catalog](/data-hub/data-hub-catalog/) and [external entities](/refguide/external-entities/).
 
 ### 1.1 Why Wrap with OData?
 
-OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide [filtering], [sorting], and [pagination] on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients have the ability to optimize payload size and minimize roundtrips for the best possible usage performance.
+OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide [filtering], [sorting], and [pagination] on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance.
 
 ### 1.2 Tools for Wrapping with OData
 
-Starting with Studio Pro [9.17](/releasenotes/studiopro/9.17/), you can now publish Non-Persistent Entities (NPE) as OData resources, and use microflows to define how your resources should be retrieved and stored.  These functionalities enable you to build Mendix connectors for any service or data source you may have that are compatible  Using these connectors, you can connect to any data available with the same ease and productivity as external entities. Organizations will also be able to provide the same discoverability and curation for these data sources in the Data Hub Catalog.
+In Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above, you can publish Non-Persistent Entities (NPE) as OData resources, and use microflows to define how your resources should be retrieved and stored.  These functionalities enable you to build Mendix connectors for any service or data source you may have that are compatible  Using these connectors, you can connect to any data available with the same ease and productivity as external entities. Organizations will also be able to provide the same discoverability and curation for these data sources in the Data Hub Catalog.
 
 The benefit of having connector services or integration apps is that you can centralize and unify access to back-end systems for all you Mendix apps. This way, you ensure all your Mendix apps use back-end systems in a consistent and secure way.
 

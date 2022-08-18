@@ -23,7 +23,7 @@ Try building an app by following [How to Share Data Between Apps](/data-hub/shar
 
 Mendix Data Hub has components to enable the flexible sharing of datasets:
 
-1. Apps and other software expose datasets in REST OData services. These are used with [external entities](/refguide/external-entities/). The data is store in the respective source apps.
+1. Apps and other software expose datasets in REST OData services. These are used with [external entities](/refguide/external-entities/). The data is stored in the respective source apps.
 2. In Studio Pro, exposed OData services (or entity sets as they are named in Studio Pro) are automatically registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) when your app is deployed. OData services from other applications can also be manually registered in the Data Hub Catalog.
 3. Search in the Data Hub Catalog or **Data Hub** pane in Studio Pro to find shared data assets to use.
 4. Drag and drop to consume datasets in Studio Pro.  

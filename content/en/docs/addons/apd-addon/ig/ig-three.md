@@ -6,7 +6,6 @@ weight: 1
 
 ## 1 Introduction
 
-This is the installation guide for CLEVR APD 3, the successor to [APM 2](/addons/apd-addon/ig-two/).
 
 ## 2 Prerequisites
 

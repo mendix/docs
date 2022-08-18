@@ -147,18 +147,20 @@ During the synchronization, changed and new objects are committed. An object's s
 
 #### 2.6.3 Broken or Missing File Contents
 
-The client downloads the contents of files objects during synchronization. Errors may occur while downloading a file, such as:
+The client downloads the contents of file objects during synchronization. Errors may occur while downloading a file, such as:
 
 * Missing file content on the server
 * Generic error on the server while processing the file download request
 * Connection-related issues (no connection, connection reset, and others)
 
-In these cases, synchronization fails. When it fails due to a connection error, the client can retry. The root cause must be fixed if it fails for other reasons, such as broken file content.
+In these cases, synchronization fails. When it fails due to a connection error the client can retry. If it fails for other reasons, such as broken file content, the root cause must be fixed.
 
 {{% alert color="info" %}}
-In Mendix Studio Pro v9.17 and above, the client handles file download errors gracefully. When a connection error occurs while downloading a file, the synchronization fails. The nanoflow or end-user can retry later when the connection is stable.
+In Mendix Studio Pro v9.17 and above, the client handles file download errors gracefully. Specifically, this means two things. 
 
-The client will skip the file object and continue synchronization for any other error. The file object will not be available in the local database until the root cause is fixed, ensuring that the local database and file system is consistent. The client will also log the following trace log:
+Firstly, when a connection error occurs while downloading a file, the synchronization fails. The nanoflow or end-user can retry later when the connection is stable.
+
+Secondly, the client will skip the file object and continue synchronization for any other error. The file object will not be available in the local database until the error's root cause is fixed, ensuring that the local database and file system is consistent. The client will also log the following trace log:
 
 "Could not download the file content for the object with guid {OBJECT-GUID} due to an error. This may be due to broken file content on the server. Synchronization will continue and ignore this object."
 {{% /alert %}}

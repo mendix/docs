@@ -13,8 +13,8 @@ Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace
 
 ### 1.1 Features
 
-* Extract data from images of invoices in bulk and map data to an entity
-* Support the invoices from the United States and European Union regions
+* Extract data from PDF invoices and images of invoices in bulk and map data to an entity
+* Support the invoices from the United States, Canada, Japan, Spain, Australia & New Zealand and European Union regions
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ### 1.2 Limitations
@@ -26,7 +26,7 @@ Currently supported file formats:
 
 ### 1.3 Prerequisites
 
-* This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18/#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
+* This app service works best with Studio Pro 8 versions starting with [8.18.18](/releasenotes/studio-pro/8.18/#81818) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0/).
 
 * For optimal recognition results, make sure that documents with small fonts have high resolutions:
     * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller.
@@ -78,7 +78,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ## 4 Usage
 
-To use the Invoice Processing app service, first you need to create a model, then create an [import mapping](#mapping-file) using a sample invoice. The import mapping defines how to map extracted data from images to an entity. After you create this, include the [Invoice Processing activity](#extraction-activity) into a microflow. This microflow should be set up to accept the list of documents (invoice images and PDFs), your trained model, and the import mapping. The microflow should extract data from the invoice files in bulk and then map the data to an entity using the import mapping that you created.
+To use the Invoice Processing app service, first you need to create a model, then create an [import mapping](#mapping-file) using a sample invoice. The import mapping defines how to map extracted data from Invoice images or PDFs to an entity. After you create this, include the [Invoice Processing activity](#extraction-activity) into a microflow. This microflow should be set up to accept the list of documents (invoice images and PDFs), your trained model, and the import mapping. The microflow should extract data from the invoice files in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -110,11 +110,11 @@ To use the Invoice Processing app service, first you need to create a model, the
 
 4. Enter a unique **Model Name**, select a **Region**, and then **Country**. You may select multiple countries for a given **Region**.
 
-    {{% alert color="info" %}}Currently, these regions and countries are supported: **USA** (**USA**), **Canada** (**Canada**), **Europe** (**Netherlands**, **Germany**, **Great Britain**).{{% /alert %}}
+    {{% alert color="info" %}}Currently, these regions and countries are supported: **USA** (**USA**), **Canada** (**Canada**), **Europe** (**Netherlands**, **Germany**, **Great Britain**, **France**, **Poland**, **Austria**, **Belgium**, **Italy**, **Ireland**, **Hungary**, **Switzerland**, **Czech Republic**), **Australia and New Zealand** (**Australia**, **New Zealand**), **Japan** (**Japan**), **Spain** (**Spain**).{{% /alert %}}
 
 5. Click **Create Model**.
 
-    {{% alert color="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+    {{% alert color="info" %}} The model name should not exceed 55 characters. You can use characters (a-z, A-Z), numbers (0-9), and following special characters **_,$,(,),[,],{,},~**. {{% /alert %}}
 
     An **Information** pop-up window appears notifying the user that the model is being trained.
 
@@ -185,7 +185,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
 6. In the **Mapping** box, **Select** the Import Mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 
-{{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where extracted data is populated. You can call your own microflow to process the extracted data (e.g. on **A**fter **CO**mmit event). For example, your microflow can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.4 Checking Statistics on the Service Dashboard
 

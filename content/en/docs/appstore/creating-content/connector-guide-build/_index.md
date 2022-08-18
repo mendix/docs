@@ -13,7 +13,7 @@ Welcome to the world of Mendix connectors. Mendix connectors allow you to connec
 **This how-to will teach you the following:**
 
 * What connectors are and how they work
-* How to build a connector
+* Basic steps for building and publishing connectors
 
 {{% alert color="info" %}}
 For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).

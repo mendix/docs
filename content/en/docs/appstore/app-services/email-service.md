@@ -97,7 +97,7 @@ You can use the **Send Email Basic** activity in a microflow to send plain text 
 
 To configure the **Send Email Basic** activity, double-click the activity and specify the following settings in the **Properties** pane:
 
-{{< figure src="/attachments/appstore/app-services/email-service/send-email-basic.png" >}}
+{{< figure src="/attachments/appstore/app-services/email-service/Send_Email_Basic.png" >}}
 
 * **Required Fields**
     

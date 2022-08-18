@@ -1,26 +1,31 @@
 ---
-title: Generate Jump-To Options"
+title: Generate Jump-To Options
 url: /refguide/generate-jump-to-options/
-weight: 20
-tags: ["studio pro", "workflow", "generate jump-to options" "apply jump-to option"]
+weight: 35
+tags: ["studio pro", "workflow", "generate jump-to options"]
 ---
 
 {{% alert color="warning" %}}
+
 This activity can only be used in **Microflows**.
 
-This activity was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17).
+{{% /alert %}}
 
 ## 1 Introduction
 
-The **Generate Jump-To Options** activity allows you to generate a list of workflow activities which can be selected as a target to ad-hoc jump to. The [apply jump-to option](/refguide/apply-jump-to-option/) activity should be used to apply the selected target activity in order to let the workflow continue from the selected activity. This is useful when, for example, you have an incompatible workflow and would like to select a specific activity where the workflow should continue its execution from.
+The **Generate jump-to options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The [Apply jump-to option](/refguide/apply-jump-to-option/) activity should be used after the **Generate jump-to options** to let the workflow continue from the selected activity. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator should be able to select a specific activity where the workflow can continue.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options.jpg" >}}
 
-{{% alert color="warning" %}} The list of generated options will only contain activities of the currently executed path in the workflow, excluding activities inside a [Parallel split](/refguide/parallel-split/) activity. Additionally, when the workflow is executing a branch in a [Parallel split](/refguide/parallel-split/) activity, the generated options will only contain activities inside that branch. {{% /alert %}}
+{{% alert color="warning" %}} 
+
+The list of generated options will only contain activities of the currently executed path in the workflow, excluding activities inside a [Parallel split](/refguide/parallel-split/) activity of the workflow. When the workflow is executing a path in a [Parallel split](/refguide/parallel-split/), the generated options will only contain activities of the current parallel split path. 
+
+{{% /alert %}}
 
 ## 2 Properties
 
-An example of generate jump-to options properties is represented in the image below:
+An example of **Generate jump-to options** properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options-properties.jpg" >}}
 
@@ -41,11 +46,11 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Workflow Object
 
-A workflow object of the System.Workflow entity available from the microflow parameters.
+A workflow object of the **System.Workflow** entity available from the microflow parameters.
 
 ### 3.2 Variable Name or Object Name
 
-The name of the variable or object returned by the activity. This is an object of the System.WorkflowJumpToDetails entity which can be used by the [apply jump-to option](/refguide/apply-jump-to-option/).
+The name of the variable or the object returned by the activity. This is an object of the **System.WorkflowJumpToDetails** entity which can be used by the [Apply jump-to option](/refguide/apply-jump-to-option/) activity.
 
 ## 4 Common Section {#common}
 

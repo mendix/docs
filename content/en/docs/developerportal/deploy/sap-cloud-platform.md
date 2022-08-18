@@ -96,7 +96,7 @@ You will now be asked to provide the final details for the SAP BTP development e
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
 
-If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL Hyperscaler and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP BTP](#databases), below, for important information on selecting the correct database for your app.
+If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL, Hyperscaler Option and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP BTP](#databases), below, for important information on selecting the correct database for your app.
 
 If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
 
@@ -448,7 +448,7 @@ There are a number of services which your Mendix app requires. **If you unbind a
 
 * destination
 * xsuaa
-* database (PostgreSQL Hyperscaler or SAP HANA schema)
+* database (PostgreSQL, Hyperscaler Option or SAP HANA schema)
 * connectivity
 
 Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP BTP cockpit will *not* be reflected in the Mendix Developer Portal.
@@ -474,7 +474,7 @@ To connect a service in the section **Available Services**
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
 {{% alert color="info" %}}
-If you use the **PostgreSQL on SAP BTP** service on SAP BTP, Mendix can create a JSON file for you. See [Running Mendix on PostgreSQL on SAP BTP](#sap-hyperscaler) in this document for more information.
+If you use the **PostgreSQL, Hyperscaler Option** service on SAP BTP, Mendix can create a JSON file for you. See [Running Mendix on PostgreSQL, Hyperscaler Option](#sap-hyperscaler) in this document for more information.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -581,21 +581,21 @@ Only use unsupported environment variables if you know exactly what you are doin
 
 ## 8 Databases in SAP BTP{#databases}
 
-Mendix needs access to a relational database back end and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL Hyperscaler or SAP HANA.
+Mendix needs access to a relational database back end and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL, Hyperscaler Option or SAP HANA.
 
-### 8.1 Running Mendix on PostgreSQL on SAP BTP{#sap-hyperscaler}
+### 8.1 Running Mendix on PostgreSQL, Hyperscaler Option{#sap-hyperscaler}
 
 {{% alert color="warning" %}}
-SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that, if you need a PostgreSQL database, you will have to use PostgreSQL on SAP BTP as your database. Alternatively, you can use [SAP HANA](#sap-hana).
+SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that, if you need a PostgreSQL database, you will have to use PostgreSQL, Hyperscaler Option as your database. Alternatively, you can use [SAP HANA](#sap-hana).
 {{% /alert %}}
 
-Select the **postgresql-db** (PostgreSQL Hyperscaler) database service.
+Select the **postgresql-db** (PostgreSQL, Hyperscaler Option) database service.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-service.png" >}}
 
 You will need to upload a file which contains the configuration for this database – click **Browse…** to select your configuration file. You can use the [SAP Hyperscaler PostgreSQL Configurator](#postgresql-configurator) to help you create the configuration file and find more information in the *Parameters* section of [PostgreSQL on SAP Business Technology Platform, Hyperscaler Option](https://help.sap.com/viewer/b3fe3621fa4a4ed28d7bbe3d6d88f036/Cloud/en-US/0630e03aa45d479eaf806c564dc2447a.html) in the *SAP Help Portal*.
 
-During the creation of the environment, the selected PostgreSQL Hyperscaler service will be added to your space and, when you deploy your app, the app will be bound to it.
+During the creation of the environment, the selected PostgreSQL, Hyperscaler Option service will be added to your space and, when you deploy your app, the app will be bound to it.
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
@@ -611,15 +611,15 @@ On the new page which is displayed you can set the required values for your **SA
 There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
 {{% /alert %}}
 
-Click **Upload Configuration To Service** to automatically apply the generated configuration to the PostgreSQL Hyperscaler database service.
-Alternatively, click **Download Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL Hyperscaler database.
+Click **Upload Configuration To Service** to automatically apply the generated configuration to the PostgreSQL, Hyperscaler Option database service.
+Alternatively, click **Download Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL, Hyperscaler Option database.
 
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
 {{% alert color="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
 
-There are also some differences in the way that Mendix can be used with SAP HANA compared to a PostgreSQL Hyperscaler database – see [SAP HANA – Known Issues](/refguide/saphana/).
+There are also some differences in the way that Mendix can be used with SAP HANA compared to a PostgreSQL, Hyperscaler Option database – see [SAP HANA – Known Issues](/refguide/saphana/).
 {{% /alert %}}
 
 #### 8.2.1 SAP HANA Configuration for Full Accounts
@@ -637,7 +637,7 @@ Please bear the following in mind when using SAP HANA as your Mendix database:
 
 * Do *not* attempt to add the SAP HANA *service* to your app. It is the SAP HANA *schema* which needs to be bound to your app.
 
-* Do *not* use the *Services* tab or the *SAP BTP Marketplace* to add both a PostgreSQL Hyperscaler database and an SAP HANA schema to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
+* Do *not* use the *Services* tab or the *SAP BTP Marketplace* to add both a PostgreSQL, Hyperscaler Option database and an SAP HANA schema to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
 {{% /alert %}}
 
 If you have issues with your app running on SAP HANA, you will need to use the SAP BTP cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.

@@ -31,21 +31,15 @@ Finally, it is true that an offline-first app *can* create auto-committed object
 
 ## 3 Why are auto-committed objects not recommended in offline-first apps?
 
-Auto-committed objects live until the session expires. When the user's session expires, the Mendix runtime deletes any auto-committed created in that session. This logic works well for web applications but is not a good fit for offline-first apps because of the following reasons:
+Auto-committed objects live until the user's session expires. When the user's session expires, the Mendix Runtime deletes any auto-committed objects created in that session. This logic works well for web applications, but is not a good fit for offline-first apps for the following reasons:
 
-* Offline-first Progressive web applications use [long-lived-sessions](refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#52-sessions) with longer session timeout by default. This causes auto-committed objects to remain on the server database as long as the session is active. Other PWA users could synchronize the auto-committed to their local databases. Suppose a user changes and attempts to synchronize an auto-committed object with validation problems. In that case, the server may fail to synchronize it.
-* Native mobile apps use regular sessions that expire according to the [`SessionTimeout` runtime setting](refguide/tricky-custom-runtime-settings/#22-general-settings). A session on the server may expire as the user uses the app. The server will remove any auto-committed objects, even if the end-user still interacts with the app, which can cause unexpected behaviors. For example, suppose the user changes the auto-committed object and attempts to synchronize. In that case, the Mendix runtime won't be able to do that because the runtime database no longer has this object.
-
-{{% alert color="info" %}}
-A native session may expire on the server if the end-user uses the app while there is no network condition.
-
-When this happens, the Mendix client attempts to create a new session automatically when the device sends a request to the runtime.
-{{% /alert %}}
-
-* Auto-committed objects can be synchronized to other users' local databases and treated as regular objects, which may cause the following problems:
+* **Long-lived Sessions** – Offline-first progressive web applications use [long-lived-sessions](refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#52-sessions) with longer session timeout by default. This causes auto-committed objects to remain on the server database as long as the session is active. Other PWA users could synchronize the auto-committed to their local databases. Suppose a user changes and attempts to synchronize an auto-committed object with validation problems. In that case, the server may fail to synchronize it.
+* **Session Expiration** – Native mobile apps use regular sessions that expire according to the [`SessionTimeout` runtime setting](refguide/tricky-custom-runtime-settings/#22-general-settings). A session on the server may expire as the user uses the app. The server will remove any auto-committed objects, even if the end-user still interacts with the app, which can cause unexpected behaviors. For example, suppose the user changes the auto-committed object and attempts to synchronize. In that case, the Mendix runtime won't be able to do that because the runtime database no longer has this object.
+    * It is useful to keep in mind that a native session may expire on the server if the end-user uses the app while there is no network condition. When this happens, the Mendix client attempts to create a new session automatically when the device sends a request to the runtime.  
+* **Auto-Committed Objects as Regular Objects** – Auto-committed objects can be synchronized to other users' local databases and treated as regular objects, which may cause the following problems:
   * The Mendix runtime does not run any validations or event handler microflows while auto-committing an object. Therefore, auto-committed objects synchronized to local databases may be invalid or incomplete. This may lead to bugs in the app model (nanoflows, UI, etc.) if the app model is not resistant to invalid objects.
   * The synchronization may fail if a user changes and synchronizes an (invalid) auto-committed object.
-* The Mendix runtime may delete other associated objects while deleting the auto-committed objects at the end of a session. This can happen if the association's [delete behavior](refguide/association-properties/#delete-behavior) is set to deleting associated objects.
+* **Delete Behavior Issues** – The Mendix Runtime may delete other associated objects while deleting the auto-committed objects at the end of a session. This can happen if the association's [delete behavior](refguide/association-properties/#delete-behavior) is set to deleting associated objects.
 
 ## 4 How can an offline-first app create auto-committed objects?
 

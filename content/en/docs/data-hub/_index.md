@@ -17,7 +17,7 @@ aliases:
 
 [Mendix Data Hub](https://hub.mendix.com), available in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above, helps you integrate app development with the data available from the many applications in an organization. Data Hub enables reliable data sources to be located centrally from one point and for users to connect to them through it. 
 
-Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/), and learn more about licensing in the [Data Hub License](/#data-hub-licences) section.
+Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/), and learn more about licensing in the [Data Hub License](/data-hub/#data-hub-licences) section of the *Data Hub Guide*.
 
 ## 2 Overview of Mendix Data Hub
 
@@ -98,6 +98,6 @@ With the Data Hub Premium license, apps are not limited. Apps can retrieve and e
 
 ### 4.3 Data Hub for Private Cloud or On-Premises {#dh-pc}
 
-Licensed users of Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) can use a Data Hub license to work with external entities. To learn more about working with Data Hub external entities on a private cloud or for local deployments, see [External Entities: Private Cloud or Local Deployments](/refguide/external-entities-pc-local/).
+Licensed users of Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) can use a Data Hub license to work with external entities. To learn more about working with Data Hub external entities on a private cloud, on-premises setup, or for local deployments, see [External Entities without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
 
 ## 5 Guide Categories

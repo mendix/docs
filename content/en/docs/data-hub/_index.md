@@ -15,16 +15,9 @@ aliases:
 
 ## 1 Introduction
 
-[Mendix Data Hub](https://hub.mendix.com) helps you integrate app development with the data available from the many applications in an organization. Data Hub enables reliable data sources to be located centrally from one point and for users to connect to them through it. 
+[Mendix Data Hub](https://hub.mendix.com), available in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above, helps you integrate app development with the data available from the many applications in an organization. Data Hub enables reliable data sources to be located centrally from one point and for users to connect to them through it. 
 
-{{% alert color="info" %}}
-The Data Hub integration is available in Studio Pro version [8.14](/releasenotes/studio-pro/8.14/) and above. To use the latest functionality of Data Hub, download the latest version of [Studio Pro](https://marketplace.mendix.com/link/studiopro/). {{% /alert %}}
-
-{{% alert color="info" %}}
-For more details about which Data Hub features are included in a Mendix license, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
-{{% /alert %}}
-
-Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/).
+Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/), and learn more about licensing in the [Data Hub License](/#data-hub-licences) section.
 
 ## 2 Overview of Mendix Data Hub
 
@@ -79,7 +72,6 @@ Contact your [Mendix Admin](/developerportal/control-center/#company) to find ou
 ### 4.1 Data Hub Free Edition {#dh-free}
 
 All Mendix users have access to the Data Hub Free edition. With this, you can discover datasets provided by apps in your organization through OData REST services. You can retrieve or edit up to a 1000 objects per application per day for each runtime instance when deployed.
-
 
 #### 4.1.1 Limitations {#dh-free-limitations}
 

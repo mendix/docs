@@ -233,6 +233,10 @@ This can be used to find all BAPIs from SAP systems which are available to you. 
 The **Create_BAPIExplorer** microflow displays BAPIs grouped by SAP Object Name in alphabetical order.
 You can see all the BAPIs for an SAP object by clicking the `+` symbol next to the object. You can also search for the BAPI you need in the search box.
 
+{{% alert color="info" %}}
+A BAPI has to have the status `Released` to be shown in the list. You will not see unreleased BAPIs.
+{{% /alert %}}
+
 When you find a BAPI, you can click the info icon (🛈) to see details including documentation, import, export, and table parameters.
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/bapi-explorer-bapis.png" alt="BAPI Explorer" >}}

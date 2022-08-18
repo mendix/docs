@@ -29,24 +29,24 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
-| Number of users | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example SAP BTP. | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
-| Sleep Mode | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
-| Disk storage | 0.5 GB Database and 1 GB Files. | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
-| App vCPUs | 0.5 | Depends on your [pricing plan](#plans). For more information about the capabilities of different license options, see [Mendix Platform Pricing](http://www.mendix.com/pricing). |
-| Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
-| Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| Deployment | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
-| Custom domains | Not available. | Can be configured from the Developer Portal. |
-| Access restriction profiles | Not available. | Can be configured from the Developer Portal. |
-| Client certificates | Not available. | Can be configured from the Developer Portal. |
-| Starting and stopping your app manually | Not available. | Available in the Developer Portal. |
-| Constants | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
-| Runtime settings | Not available. | Configurable through runtime and settings in the Developer Portal. |
-| Scalability | Only one instance and a fixed amount (1 GB) of memory. | Configurable in the Developer Portal. |
-| Metrics, alerts, and log levels | Not available. | Available. |
-| Historic archived logs | Not available, only live logs are available. | Available. |
-| Backups | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
-| Support | No support. | Depending on license option. |
+| **Number of users** | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example, SAP BTP. | Depends on your [pricing plan](#plans). |
+| **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
+| **Disk storage** | 0.5 GB Database and 1 GB Files. | Depends on your [pricing plan](#plans). |
+| **App vCPUs** | 0.5 | Depends on your [pricing plan](#plans). |
+| **Scheduled events** | Are not run. | Are run and can be configured from the Developer Portal. |
+| **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
+| **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
+| **Custom domains** | Not available. | Can be configured from the Developer Portal. |
+| **Access restriction profiles** | Not available. | Can be configured from the Developer Portal. |
+| **Client certificates** | Not available. | Can be configured from the Developer Portal. |
+| **Starting and stopping your app manually** | Not available. | Available in the Developer Portal. |
+| **Constants** | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
+| **Runtime settings** | Not available. | Configurable through runtime and settings in the Developer Portal. |
+| **Scalability** | Only one instance and a fixed amount (1 GB) of memory. | Configurable in the Developer Portal. |
+| **Metrics, alerts, and log levels** | Not available. | Available. |
+| **Historic archived logs** | Not available, only live logs are available. | Available. |
+| **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
+| **Support** | No support. | Depending on license option. |
 
 {{% alert color="info" %}}
 Free Apps are part of our Free Edition.
@@ -62,13 +62,13 @@ As noted in the table above, a Free App goes into Sleep Mode after an hour or so
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" >}}
 
-If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
+If, after a couple of minutes, your app does not wake up, please contact [Mendix Support](http://support.mendix.com).
 
 You can upgrade a Free App to a licensed node with a node in the Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-#### 1.1.2 Free Apps Archival{#free-apps-archival}
+#### 1.1.2 Free Apps Archiving{#free-apps-archival}
 
-If a Free App has been in Sleep Mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/team/app-roles/#technical-contact) is informed two weeks beforehand. Upon archival, the project and model are retained, but the running app, database, and files for the Free App are deleted.
+If a Free App has been in Sleep Mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/team/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
@@ -138,7 +138,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 ### 2.2 Deploying a Licensed App to the Mendix Cloud
 
-There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is through the Developer Portal.
+There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is from the Team Server through the Developer Portal.
 
 ##### 2.2.1 Deploying via Studio Pro
 
@@ -155,7 +155,7 @@ To deploy your app directly from Studio Pro, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" alt="A pop-up with the Show online option visible" >}}
 
-##### 2.2.2 Creating a Package from the Team Server in the Developer Portal{#package-from-team-server}
+##### 2.2.2 Creating a Package from the Team Server{#package-from-team-server}
 
 You can also deploy an app without using Studio Pro. To do this, follow these steps:
 

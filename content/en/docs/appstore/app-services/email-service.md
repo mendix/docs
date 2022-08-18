@@ -101,16 +101,16 @@ To configure the **Send Email Basic** activity, double-click the activity and sp
 
 * **Required Fields**
     
-    * **From** – This defines the sender's name and email, for example: `'name<email.com>'`.
-    * **To** – This defines the recipients of the email. Each recipient should have a name and an email address. The information for each recipient is separated by a comma, for example: `'name1<email1.com>, name2<email2.com>'`.
+    * **From** – This defines the sender's name and email, for example: `'name<email.com>' or 'email.com'`.
+    * **To** – This defines the recipients of the email. Each recipient should have a name and an email address. The information for each recipient is saperated by a comma, for example: `'name1<email1.com>, name2<email2.com>'or 'email1.com','email2.com'`.
     * **Subject**  – This defines the subject of the email.
     
 * **Optional Fields**
 
     {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
 
-    * **Cc** – This defines the recipients on the CC list of the email. Each recipient should have a name and an email address. The information for each recipient is separated by a comma, for example: `'name1<email1.com>, name2<email2.com>'`.
-    * **Bcc** – This defines the recipients on the BCC list of the email. Each recipient should have a name and an email address. The information for each recipient is separated by a comma, for example: `'name1<email1.com>, name2<email2.com>'`.
+    * **Cc** – This defines the recipients of the email. Each recipient should have a name and an email address. The information for each recipient is saperated by a comma, for example: `'name1<email1.com>, name2<email2.com>'or 'email1.com','email2.com'`.
+    * **Bcc** – This defines the recipients of the email. Each recipient should have a name and an email address. The information for each recipient is saperated by a comma, for example: `'name1<email1.com>, name2<email2.com>'or 'email1.com','email2.com'`.
     * **Body** – This defines the body of the email in text format only.
 
 

@@ -29,24 +29,24 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
-| **Number of users** | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example, SAP BTP. | Depends on your [pricing plan](#plans). |
-| **Sleep mode** | Goes into sleep mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in sleep mode. | Does not have a sleep mode. |
-| **Disk storage** | 0.5 GB Database and 1 GB Files. | Depends on your [pricing plan](#plans). |
-| **App vCPUs** | 0.5 | Depends on your [pricing plan](#plans). |
-| **Scheduled events** | Are not run. | Are run and can be configured from the Developer Portal. |
-| **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
-| **Custom domains** | Not available. | Can be configured from the Developer Portal. |
-| **Access restriction profiles** | Not available. | Can be configured from the Developer Portal. |
-| **Client certificates** | Not available. | Can be configured from the Developer Portal. |
-| **Starting and stopping your app manually** | Not available. | Available in the Developer Portal. |
-| **Constants** | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
-| **Runtime settings** | Not available. | Configurable through runtime and settings in the Developer Portal. |
-| **Scalability** | Only one instance and a fixed amount (1 GB) of memory. | Configurable in the Developer Portal. |
-| **Metrics, alerts, and log levels** | Not available. | Available. |
-| **Historic archived logs** | Not available, only live logs are available. | Available. |
-| **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
-| **Support** | No support. | Depending on license option. |
+| Number of users | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example, SAP BTP. | Depends on your [pricing plan](#plans). |
+| Sleep mode | Goes into sleep mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in sleep mode. | Does not have a sleep mode. |
+| Disk storage | 0.5 GB Database and 1 GB Files. | Depends on your [pricing plan](#plans). |
+| App vCPUs | 0.5 | Depends on your [pricing plan](#plans). |
+| Scheduled events | Are not run. | Are run and can be configured from the Developer Portal. |
+| Environments | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
+| Deployment | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
+| Custom domains | Not available. | Can be configured from the Developer Portal. |
+| Access restriction profiles | Not available. | Can be configured from the Developer Portal. |
+| Client certificates | Not available. | Can be configured from the Developer Portal. |
+| Starting and stopping your app manually | Not available. | Available in the Developer Portal. |
+| Constants | Defined in Studio Pro. | Configurable through environment variables in the Developer Portal. |
+| Runtime settings | Not available. | Configurable through runtime and settings in the Developer Portal. |
+| Scalability | Only one instance and a fixed amount (1 GB) of memory. | Configurable in the Developer Portal. |
+| Metrics, alerts, and log levels | Not available. | Available. |
+| Historic archived logs | Not available, only live logs are available. | Available. |
+| Backups | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
+| Support | No support. | Depending on license option. |
 
 {{% alert color="info" %}}
 Free Apps are part of our Free Edition.
@@ -229,11 +229,10 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the Basic package are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
-The Standard resource packs can be used with both Standard and Premium plans, but Premium resource packs can only be purchased with a Premium plan.
+The Standard resource packs listed below can be used with both Standard and Premium plans.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-|Standard|||||||
 | XS21 | 1 GB | 0.25 | 1 GB | 2 | 5 GB | 10 GB |
 | S21 | 2 GB | 0.5 | 2 GB | 2 | 10 GB | 20 GB |
 | M21 | 4 GB | 1 | 4 GB | 2 | 20 GB | 40 GB |
@@ -241,7 +240,11 @@ The Standard resource packs can be used with both Standard and Premium plans, bu
 | XL21 | 16 GB | 4 | 16 GB | 4 | 80 GB | 160 GB |
 | XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
 | XXXL21 | 64 GB | 16 | 32 GB | 8 | 320 GB | 640 GB |
-|Premium|||||||
+
+The Premium resource packs listed below can only be purchased with a Premium plan.
+
+| Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
+| --- | --- | --- | --- | --- | --- | --- |
 | S21 | 2 GB | 0.5 | 2 GB | 2 | 10 GB | 20 GB |
 | M21 | 4 GB | 1 | 4 GB | 2 | 20 GB | 40 GB |
 | L21 | 8 GB | 2 | 8 GB | 2 | 40 GB | 80 GB |

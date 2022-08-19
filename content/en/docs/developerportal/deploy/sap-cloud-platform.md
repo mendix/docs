@@ -585,8 +585,8 @@ Mendix needs access to a relational database back end and can run using differen
 
 ### 8.1 Running Mendix on PostgreSQL, Hyperscaler Option{#sap-hyperscaler}
 
-{{% alert color="warning" %}}
-SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that, if you need a PostgreSQL database, you will have to use PostgreSQL, Hyperscaler Option as your database. Alternatively, you can use [SAP HANA](#sap-hana).
+{{% alert color="info" %}}
+SAP have removed some of the PostgreSQL databases available in their marketplace. If you need a PostgreSQL database, you will have to use PostgreSQL, Hyperscaler Option as your database. This requires some extra configuration which is described below. Alternatively, you can use [SAP HANA](#sap-hana).
 {{% /alert %}}
 
 Select the **postgresql-db** (PostgreSQL, Hyperscaler Option) database service.

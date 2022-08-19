@@ -17,11 +17,11 @@ aliases:
 
 ## 1 Introduction
 
-The Mendix Cloud is a public cloud service for Mendix applications; this is the default deployment option for Mendix applications. You can deploy either a limited Free App or an app running on a licensed cloud node.
+The Mendix Cloud is a public cloud service for Mendix applications; this is the default deployment option for Mendix applications. You can deploy either a limited [Free App](https://www.mendix.com/evaluation-guide/evaluation-learning/getting-started/#evaluate-before) or an app running on a licensed cloud node.
 
 Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated works in exactly the same way as the Mendix Cloud, but runs on your own virtual private cloud and only hosts your company's apps.
 
-### 1.1 Free App{#free-app}
+### 1.1 Free App {#free-app}
 
 If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on our public cloud offering. The Free App environment allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
 
@@ -30,7 +30,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
 | **Number of users** | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example, SAP BTP. | Depends on your [pricing plan](#plans). |
-| **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
+| **Sleep mode** | Goes into sleep mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in sleep mode. | Does not have a sleep mode. |
 | **Disk storage** | 0.5 GB Database and 1 GB Files. | Depends on your [pricing plan](#plans). |
 | **App vCPUs** | 0.5 | Depends on your [pricing plan](#plans). |
 | **Scheduled events** | Are not run. | Are run and can be configured from the Developer Portal. |
@@ -58,7 +58,7 @@ If you are an existing customer, you should deploy into your licensed cloud node
 
 #### 1.1.1 Sleep Mode
 
-As noted in the table above, a Free App goes into Sleep Mode after an hour or so of inactivity. If you access it while it is inactive, the app displays the following message: 
+As noted in the table above, a Free App goes into sleep mode after an hour or so of inactivity. If you access it while it is inactive, the app displays the following message: 
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" >}}
 
@@ -66,9 +66,9 @@ If, after a couple of minutes, your app does not wake up, please contact [Mendix
 
 You can upgrade a Free App to a licensed node with a node in the Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-#### 1.1.2 Free Apps Archiving{#free-apps-archival}
+#### 1.1.2 Free Apps Archiving {#free-apps-archival}
 
-If a Free App has been in Sleep Mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/team/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
+If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/team/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
@@ -85,7 +85,7 @@ Each environment can only run a single version of an app. Additionally, all the 
 
 By default, apps are deployed to the [Mendix Cloud v4](/developerportal/deploy/mxcloudv4/). Deployment documentation covers v4 features by default. If your app is still running on the deprecated Mendix Cloud v3, refer to the v3 documentation where the features differ from v4. For more information on the differences between Mendix Cloud v3 and v4, as well as migrating your app to the latest Cloud version, see [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/).
 
-### 1.3 Flexible Environments{#flexible-environments}
+### 1.3 Flexible Environments {#flexible-environments}
 
 If the standard environments that you get with a licensed app are not sufficient for your requirements, you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
@@ -124,17 +124,14 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the prerequisites described below.
 
-#### 2.1.1 Prerequisites for a Licensed App
-
-* Your app must be linked to a licensed cloud node
-* You must have deployment permissions
-* Your Google Authenticator must be enabled
-* The deployment package for your app must be no bigger than 1 GB
-
-#### 2.1.2 Prerequisites for a Free App
-
-* You must have created an app
-* The deployment package for your app must be no bigger than 1 GB
+* Prerequisites for a Licensed App
+    * Your app must be linked to a licensed cloud node
+    * You must have deployment permissions
+    * Your Google Authenticator must be enabled
+    * The deployment package for your app must be no bigger than 1 GB
+* Prerequisites for a Free App
+    * You must have created an app
+    * The deployment package for your app must be no bigger than 1 GB
 
 ### 2.2 Deploying a Licensed App to the Mendix Cloud
 
@@ -155,7 +152,7 @@ To deploy your app directly from Studio Pro, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" alt="A pop-up with the Show online option visible" >}}
 
-##### 2.2.2 Creating a Package from the Team Server{#package-from-team-server}
+##### 2.2.2 Creating a Package from the Team Serve {#package-from-team-server}
 
 You can also deploy an app without using Studio Pro. To do this, follow these steps:
 
@@ -195,25 +192,21 @@ The app is now deployed. You can configure the administrative account.
 
 With a Free App, you can deploy your app to the Mendix Cloud from Studio or Studio Pro by using one of the following methods:
 
-#### 2.4.1 From Studio Pro
+* In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
-In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" >}}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" >}}
+* Alternatively, in the top bar of Studio Pro, click **Run** or **Publish**.
 
-Alternatively, in the top bar of Studio Pro, click **Run** or **Publish**, as shown in the following image:
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
-
-#### 2.4.2 From Studio
-
-Click the **Publish** button in Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
+* In Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
 
 ## 3 Status of Deployment
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
-## 4 Mendix Pricing Plans{#plans}
+## 4 Mendix Pricing Plans {#plans}
 
 Mendix licenses are sold as part of plans. Plans consist of the following items:
 
@@ -230,9 +223,9 @@ There following plans are available for Mendix:
 * Standard
 * Premium
 
-For information, see the [Pricing](https://www.mendix.com/pricing/) page of the Mendix website.
+For more information, see [Pricing](https://www.mendix.com/pricing/).
 
-### 4.2 Cloud Resource Packs{#resource-pack}
+### 4.2 Cloud Resource Packs {#resource-pack}
 
 Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the Basic package are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
@@ -288,7 +281,7 @@ For Premium customers using a Premium resource pack, there are additional featur
 
 The High Availability option ensures that if there is a problem with the current availability zone, new copies of your app are started in the new availability zone (AZ). All FileDocument entities are replicated in this new zone, but the data still resides in a single database. This means that you may need to restore a backup of your database if it is no longer available to your app.
 
-#### 4.3.2 Fallback{#fallback}
+#### 4.3.2 Fallback {#fallback}
 
 The Fallback option ensures that the data in your database is automatically copied to a database in a second AZ. This, together with the high availability option, ensures that all your data is still available to your app if there is an issue with current availability zone and app instances have to be started in the second AZ.
 

@@ -187,13 +187,6 @@ To resolve this issue, you will need to ensure your server preserves host header
 
 The Mendix runtime returns status codes for OData payloads. The possible status codes are the following:
 
-* `200`
-* `201`
-* `204`
-* `401`
-* `402`
-* `403`
-* `404`
-* `405`
-* `422`
-* `500` 
+* `200`, `201`, `204` – [Successful responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
+* `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
+* `500` – Mendix default when something goes wrong and it has not been modelled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)

@@ -92,3 +92,22 @@ The following log nodes are used by Mendix when writing log messages:
 The native client stores log messages locally on the device. When the **Enable sending logs to runtime** checkbox is selected, the native client will attempt to send log messages in batches of **100** messages or after 1 hour from the time since these log messages occurred. 
 
 Therefore these client log nodes will not appear directly in the cloud portal logs overview before they are sent. If there is network connectivity, once the log messages have been successfully sent to the runtime these log messages will be cleared from the device.
+
+## 6 Extend Logging
+
+It is possible to add a custom log handler to react to all log messages, including errors, as they arise. This can be used to integrate with your own custom logging and error handling infrastructure, such as Google Crashlytics.
+
+The following JavaScript code demonstrates how to add and remove a custom log handler. This JavaScript code must be executed on the mobile client, for instance via a JavaScript action or a pluggable widget:
+
+```javascript
+import { addLogListener } from "mendix/logging";
+
+// Start handling logs
+const removeListener = addLogListener((logLevel, logNode, ...args) => {
+    const message = args.map(arg => arg instanceof Error ? arg.message : String(arg)).join(", ");
+    alert(`Incoming ${logLevel} log from ${logNode}: ${message}`);
+});
+
+// To remove the listener, call the returned function
+removeListener();
+```

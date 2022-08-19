@@ -58,13 +58,13 @@ This an example for requesting contact access permission for Android and iOS dev
     1. For the Android branch, use a **Generic permission** action with a permission name like {READ_CONTACTS_ANDROID}.
     1. For the iOS branch, use a **Generic permission** action with a permission name like {CONTACTS_IOS}:
 
-    {{< figure src="/attachments/refguide/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  >}}
     
-    {{< figure src="/attachments/refguide/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  >}}
     
-    {{< figure src="/attachments/refguide/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  >}}
     
-    {{< figure src="/attachments/refguide/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  >}}
 
 ## 4 Building
 
@@ -101,9 +101,9 @@ To test the remaining permissions you can build a [native app](/refguide/mobile/
 
 During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android:
 
-{{< figure src="/attachments/refguide/native-mobile/generic-permission-action/deployment-android.png" alt="deploy app with generic permission screenshoot"   width="400"  >}}
+{{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/deployment-android.png" alt="deploy app with generic permission screenshoot"   width="400"  >}}
 
-{{< figure src="/attachments/refguide/native-mobile/generic-permission-action/deployment-ios.png" alt="deploy app with generic permission screenshoot"   width="400"  >}}
+{{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/deployment-ios.png" alt="deploy app with generic permission screenshoot"   width="400"  >}}
 
 {{% alert color="info" %}}
 The permissions that you cannot find using the Native builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.

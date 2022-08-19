@@ -169,7 +169,7 @@ Build a Twitter client that allows users to input a Twitter ID and communicates 
     The microflow includes a **Retrive Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
 4.  On the TwitterPage, you can use a Data Grid, and pull data by Association to get the Tweets and followers connected to the user.
 
-### 6.2 Build the Connector {#twitter-connector}
+### 6.2 Building the Connector {#twitter-connector}
 
 Build a connector module that communicates to the Twitter API with OData. 
 
@@ -199,16 +199,11 @@ Operational data stores are often used to unify and cache external data used by 
 
 With the functionalities released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can implement a low-code operational data store using Mendix.
 
-- define a unified model using persistent entities
-- Use task queue and scheduled events to implement data synching by retrieving data via the available apis (webservices, rest services, sql).
-- expose the unified model via Odata APIs
+To do so, include the following steps:
 
-The Connector kit will enable you to provide a writable unfied operational data store model: when a front-end app makes changes to a resource provided in the ODS, you can use microflow logic to directly write the data back to the backend services.
-
-* Step 1 - implement model
-* Step 2 - sync service data
-* Step 3 - provide OData APIs
-* Step 4 - provide write back logic
+1. Define a unified model using persistent entities.
+2. Use a [task queue](/refguide/task-queue/) and scheduled events to implement data syncing by retrieving data from the available APIs (web services, REST, or SQL).
+3. Expose the unified model with OData, including write-back logic in your microflows.
 
 ## 7 Limitations
 

@@ -97,7 +97,7 @@ Therefore these client log nodes will not appear directly in the cloud portal lo
 
 It is possible to add a custom log handler to react to all log messages, including errors, as they arise. This can be used to integrate with your own custom logging and error handling infrastructure, such as Google Crashlytics.
 
-The following JavaScript Code snippet demonstrates how to add a custom log handler and remove it subsequently. This JavaScript Code must be executed on the mobile client, for instance via a JavaScript Action or a Pluggable Widget.
+The following JavaScript code demonstrates how to add and remove a custom log handler. This JavaScript code must be executed on the mobile client, for instance via a JavaScript action or a pluggable widget:
 
 ```javascript
 import { addLogListener } from "mendix/logging";

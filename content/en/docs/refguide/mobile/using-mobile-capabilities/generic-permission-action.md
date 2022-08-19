@@ -21,7 +21,7 @@ Advanced features in mobile apps often require permission from users. Apps need 
 
 A generic permission action can be used inside nanoflows in an existing app or in a new app. With a nanoflow open, you can find it in the Toolbox under the **Native Mobile** section.
 
-### 3.1 Permission Name
+### 3.1 Naming the Permission
 
 When using the generic permission action you must choose the permission name you need. It should be one of the available permissions in `NanoflowCommons.Enum_Permissions` enumeration.
 
@@ -29,7 +29,7 @@ When using the generic permission action you must choose the permission name you
 Keep in mind that the permission names are different for each platform. For example, if you need to request permission to access reading contacts you will need to call the actions twice: one for iOS permission (`CONTACTS_IOS`) and one for Android permission (`READ_CONTACTS_ANDROID`).
 {{% /alert %}}
 
-### 3.2 Action Return Type
+### 3.2 Action Return Type Statuses
 
 This action returns the status of the permission after the action, and it is of type `NanoflowCommons.Enum_PermissionStatus`. The statuses are as follows:
 
@@ -49,7 +49,7 @@ When the permission is blocked, if a user requests it a pop-up window will ask t
 These permissions statuses match the statuses that are received from the action, so you should not override them.
 {{% /alert %}}
 
-### 3.3 Usage Example
+### 3.3 Permission Usage Example
 
 This an example for requesting contact access permission for Android and iOS devices:
 
@@ -109,7 +109,7 @@ During deployment you must specify the permissions that your application has use
 The permissions that you cannot find using the Native builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
 {{% /alert %}}
 
-## 5 Update Native App Permissions {#update-native-permissions}
+## 5 Updating Native App Permissions {#update-native-permissions}
 
 ### 5.1 iOS {#update-ios-native-permissions}
 

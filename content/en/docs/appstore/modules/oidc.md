@@ -3,12 +3,10 @@ title: "OIDC SSO"
 url: /appstore/modules/oidc/
 category: "Modules"
 description: "Describes the configuration and usage of the OIDC SSO module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "oidc", "idp", "identity provider", "platform support"]
+tags: ["marketplace", "marketplace component", "OIDC", "IDP", "identity provider", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/120371
 ---
-
-{{% todo %}}Remove temporary images - held locally for GitHub review{{% /todo %}}
 
 ## 1 Introduction
 
@@ -89,18 +87,14 @@ Once the MxModelReflection has been imported into your app, you need to configur
 1. Add the page `MxObjects_Overview` from the `MxModelReflection` module to the Navigation menu
 
     {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" >}}
-    ![](temp-oidc-images/add-model-reflection.png)
 
 2. Run the app and click the newly-added navigation link to use MxModelReflection
 
     {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" >}}
-    ![](temp-oidc-images/model-reflection-button.png)
-
 
 3. Select the modules `MxModelReflection` and `OIDC`  and click **Click to refresh** for both the modules and the entities.
 
     {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" >}}
-    ![](temp-oidc-images/refresh-model.png)
 
 ### 3.2 Migrating from Community Edition to Platform Edition{#migration}
 
@@ -145,7 +139,6 @@ Ensure that you have allocated the following user roles to the OIDC module roles
 | User | OIDC.User |
 
 {{< figure src="/attachments/appstore/modules/oidc/user-roles.png" >}}
-![](temp-oidc-images/user-roles.png)
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.
@@ -159,7 +152,6 @@ In the **Anonymous** tab of the app security settings, do the following:
 2. Select *Anonymous* as the **Anonymous user role**
 
 {{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" >}}
-![](temp-oidc-images/anonymous-user.png)
 
 ### 4.3 Configuring Navigation
 
@@ -311,7 +303,6 @@ PKCE (pronounced as “pixie”) adds enhanced security to the original OAuth pr
 To enable PKCE, check the **Use PKCE** radio button when performing [OIDC Client Configuration](#client-configuration).
 
 {{< figure src="/attachments/appstore/modules/oidc/use-pkce.png" >}}
-![](temp-oidc-images/use-pkce.png)
 
 ### 7.3 Access Token Parsing{#access-token-parsing}
 
@@ -339,7 +330,6 @@ To parse of SAM access tokens you need to have done the following:
 2. Install the **MxModelReflection** module.
 3. Check **Enable Access Token Parsing** and select *Default SAM Token processing* as the **custom AccessToken processing microflow**.
     {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" >}}
-    ![](temp-oidc-images/enable-sam-parsing.png)
 4. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the [Client Configuration](#client-configuration).
 5. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 6. Save the configuration.
@@ -378,18 +368,21 @@ The OIDC SSO module uses two endpoints at your IdP to achieve the SSO. You may g
 The /authorize endpoint logs the end-user in through the browser.
 
 The **/authorize** endpoint may reply with an error-response, for example when the end-user enters a wrong password but also other situations may occur.  The `Error` level response can be retrieved from the OIDC log node.
-```
+
+```log
 handleAuthorization: Authorization code missing 
 StatusCode = 200 
 error = access_denied 
 error_description = user is not assigned to the client application. 
 ```
+
 Section 4.1.2.1 of [RFC6749](https://datatracker.ietf.org/doc/html/rfc6749) and section 3.1.2.6 of [OIDC specifications](https://openid.net/specs/openid-connect-core-1_0.html#AuthError), indicate all error codes that may be returned.
 
 ### 8.2 /token
 
 The error “Unable to get access token”  indicates that the OAuth **/token** endpoint at your IdP has returned an error response. Often this error occurs when your client_id and client_secret are not correct. The `Error` level response can be retrieved from the OIDC log node.
-```
+
+```log 
 401: Unauthorized 
     at OIDC.handleAuthorizationCode (CallRest : 'Call REST (POST)') 
     at OIDC.webCallback (SubMicroflow : 'handleAuthorizationCode') 

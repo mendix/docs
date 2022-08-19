@@ -58,13 +58,13 @@ This an example for requesting contact access permission for Android and iOS dev
     1. For the Android branch, use a **Generic permission** action with a permission name like {READ_CONTACTS_ANDROID}.
     1. For the iOS branch, use a **Generic permission** action with a permission name like {CONTACTS_IOS}:
 
-    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  >}}
-    
-    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  >}}
-    
-    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  >}}
-    
-    {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  >}}
+      {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  >}}
+      
+      {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  >}}
+      
+      {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  >}}
+      
+      {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  >}}
 
 ## 4 Building
 

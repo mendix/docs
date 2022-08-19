@@ -141,7 +141,9 @@ To select a different attribute as a key, do the following:
 2. In the **Key** section, click on the **Edit…** button located next to the **Key** property.
 3. In the **Key Selection** dialog box that opens, move the desired key attribute to the right side and move the old key attribute to the left side. 
 
-Currently, only a single attribute is allowed to be set as a key. The selected key attribute should have `Can be empty` unchecked. 
+Currently, only a single attribute is allowed to be set as a key. 
+
+For published OData services, the checkbox Can be empty appears when you edit a published attribute. When the **Can be empty** field is unchecked, but there is no **Required** validation rule, you will be prompted to add one.
 
 ## 5 Testing
 
@@ -157,9 +159,9 @@ You can use the features released in Studio Pro [9.17](/releasenotes/studio-pro/
 
 As an example, one of our awesome engineers here at Mendix wanted to try the new easy-to-use [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). 
 
-### 6.1 Building the Twitter Client
+### 6.1 Building the Client
 
-Create a client module in your app that communicates with the Twitter API.
+Build a Twitter client that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector)
 
 1.  Publish a contract that includes the information from the Twitter API, and import it into the Data Hub pane. See [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) for deploying locally with Data Hub.
 2.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data. 
@@ -167,9 +169,9 @@ Create a client module in your app that communicates with the Twitter API.
     The microflow includes a **Retrive Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
 4.  On the TwitterPage, you can use a Data Grid, and pull data by Association to get the Tweets and followers connected to the user.
 
-### 6.2 Build the Connector
+### 6.2 Build the Connector {#twitter-connector}
 
-Build a connector module that 
+Build a connector module that communicates to the Twitter API with OData. 
 
 1.  Use the Twitter API to find out the structure and create an import mapping, which creates three non-persistable entities in your domain model.
 2.  Publish all three non-persistable entities as an OData service, used as your Twitter Connector (see [Non-Persistable Entities as Published OData Resources](#npe-published-data)).
@@ -177,10 +179,11 @@ Build a connector module that
 4.  For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
 5.  When you run the Twitter client, there are decoded OData requests that come in. You can manually take the URI and parse it, and create a microflow to read data from the URI. 
 6.  Then, peel out the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers. The API response goes into the import mapping.
-7.  Create microflows for each entity you are exposing that 
-
+7.  Create microflows for each entity you are exposing to define how these resources are retrieved.
 
 The result is a running app that displays the latest tweets and followers of a user that you input. 
+
+Check out our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide for general information on building simple connectors.
 
 ## 6.2 Updatable Operational Data Stores {#operational-data-stores}
 

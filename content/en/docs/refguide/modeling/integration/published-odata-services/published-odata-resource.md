@@ -56,7 +56,13 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 In Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, you can select which attributes you would like to use as a key. To learn more about selecting attributes as keys, see the [Selecting an Attribute as a Key](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
 
-### 3.1 Attribute Capabilities
+### 3.2 Required Validation Rules for Published Attributes
+
+For published OData services, the **Can be empty** check box appears when you edit a published attribute. 
+
+When the checkbox Can be empty is unselected, and there is no **Required** validation rule set, you will be prompted to add a 'required' validation rule or use a before commit microflow to ensure that end-users do not leave it empty.
+
+### 3.3 Attribute Capabilities
 
 * **Filterable** – allows the attribute to be filtered
 * **Sortable** – allows the attribute to be sorted

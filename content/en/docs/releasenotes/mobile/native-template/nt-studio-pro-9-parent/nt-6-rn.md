@@ -11,9 +11,9 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* Update ndk version to match AppCenter
-* Update react-native-permissions library
-* Removed `mendix.templateVersion` from package.json
+* We updated the NDK version to match AppCenter.
+* We updated the react-native-permissions library.
+* We removed `mendix.templateVersion` from *package.json*.
 
 ## 6.2.24
 

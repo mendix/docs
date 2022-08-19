@@ -45,7 +45,7 @@ This action returns the status of the permission after the action, and it is of 
 When the permission is blocked, if a user requests it a pop-up window will ask them to open their settings to grant the permission. Furthermore, the Mendix developer will receive a **blocked** status.
 {{% /alert %}}
 
-{{% alert color="alert" %}}
+{{% alert color="info" %}}
 These permissions statuses match the statuses that are received from the action, so you should not override them.
 {{% /alert %}}
 
@@ -99,11 +99,7 @@ To test the remaining permissions you can build a [native app](/refguide/mobile/
 
 ### 4.2 Deployment
 
-During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android:
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/deployment-android.png" alt="deploy app with generic permission screenshoot"   width="400"  >}}
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/deployment-ios.png" alt="deploy app with generic permission screenshoot"   width="400"  >}}
+During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
 
 {{% alert color="info" %}}
 The permissions that you cannot find using the Native builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
@@ -160,7 +156,6 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 		<true/>
 	</dict>
 	</plist>
-
 	```
 
 ### 5.2 Android {#update-android-native-permissions}

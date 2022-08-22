@@ -17,6 +17,19 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### August 22nd, 2022
+
+#### New Features
+
+* Internally we have refactored the location where passwords are stored and validated. This also results in an update to the password reset flow:
+    * The UI on the profile page to update your password has been removed.
+    * All password resets are now done by visiting the login page and requesting a password reset link in your email inbox.
+* The session duration for users logged in with their BYOIDP has been shortened, to give back control to their IDP.
+
+#### Improvements
+
+* We have made some improvements on the BYOIDP functionality currently in public beta.
+
 ### August 11th, 2022
 
 #### New Features

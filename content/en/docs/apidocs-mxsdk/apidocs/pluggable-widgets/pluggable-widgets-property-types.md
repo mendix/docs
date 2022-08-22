@@ -516,7 +516,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/attribute.png" >}}
 
-### 4.5 Association{#association}
+### 4.5 Association {#association}
 
 The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
 
@@ -526,7 +526,7 @@ The client will receive an `ModifiableValue<T>` where `T` depends on the configu
 This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
 {{% /alert %}}
 
-#### 4.5.1 XML Attributes
+#### 4.5.1 XML Attributes {#xml-attributes}
 
 | Attribute           | Required | Attribute Type | Description                                                                                                        |
 |---------------------| -------- | -------------- |--------------------------------------------------------------------------------------------------------------------|

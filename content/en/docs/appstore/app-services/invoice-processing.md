@@ -13,8 +13,8 @@ Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace
 
 ### 1.1 Features
 
-* Extract data from PDF invoices and images of invoices in bulk and map data to an entity
-* Support the invoices from the United States, Canada, Japan, Spain, Australia, New Zealand, and European Union regions
+* Extract data from PDFs and images of invoices in bulk and map data to an entity
+* Support the invoices from the United States, Canada, Japan, Australia, New Zealand, Spain, and some other European countries
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ### 1.2 Limitations
@@ -123,7 +123,7 @@ To use the Invoice Processing app service, first you need to create a model, the
 
 5. Click **Create Model**.
 
-    {{% alert color="info" %}} The model name should not exceed 55 characters. You can use characters (a-z, A-Z), numbers (0-9), and following special characters `_`, `$`, `(`, `)`, `[`, `]`, `{`, `}`, and  `~`. {{% /alert %}}
+    {{% alert color="info" %}} The model name should not exceed 55 characters. You can use characters (a-z, A-Z), numbers (0-9), and following special characters `_`, `$`, `(`, `)`, `[`, `]`, `{`, `}`, and `~`. {{% /alert %}}
 
     An **Information** pop-up window appears notifying the user that the model is being trained.
 

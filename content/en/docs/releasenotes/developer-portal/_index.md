@@ -17,6 +17,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### August 22nd, 2022
+
+#### New Features
+
+* We have changed the password reset flow:
+    * You can no longer update your password from your Mendix Profile.
+    * All password resets and changes are now done via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen. This will send a password reset link to your registered email address.
+* We introduced a separate session duration of one hour for users logging into the platform using SSO with their companies BYOIDP, so session management can be better controlled by their IDP.
+
 ### August 11th, 2022
 
 #### New Features

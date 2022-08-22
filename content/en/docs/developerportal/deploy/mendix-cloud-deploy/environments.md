@@ -33,8 +33,6 @@ In the **Deploy** tab, you can view information about your environment, as well 
 
 ### 2.1 Deployment Package Repository
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" alt="The Deployment Package Repository section" >}}
-
 In the **Deployment Package Repository** section, you have an overview of all the available deployment packages with the following details:
 
 * Deployment package
@@ -42,6 +40,8 @@ In the **Deployment Package Repository** section, you have an overview of all th
 * Creation date of the deployment package
 * Uploaded by
 * Expire date of the deployment package
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" alt="The Deployment Package Repository section" >}}
 
 You can perform the following actions in this section:
 
@@ -54,8 +54,6 @@ You can perform the following actions in this section:
 * **Deploy** - transport the package from the Team Server to the selected environment
 
 ### 2.2 Environments
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section without flexible environments" >}}
 
 In the **Environments** section, you have an overview of all the available environments with the following details:
 
@@ -77,6 +75,8 @@ In the **Environments** section, you have an overview of all the available envir
 * **Plan** - if your node supports flexible environments, this indicates the plan for this environment; for more information, see [Details](/developerportal/deploy/environments-details/)
 * The **URL** of the app - for example, `https://mytestapp.mendixcloud.com`
 
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section without flexible environments" >}}
+
 You can perform the following actions in this section:
 
 * **Details** - for more information, see [Details](/developerportal/deploy/environments-details/)
@@ -92,9 +92,11 @@ You can perform the following actions in this section:
 
 ### 2.3 Activity
 
+In the **Activity** section, you can view a log of deployment activities performed on your environments. 
+
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" >}}
 
-In the **Activity** section, you can view a log of deployment activities performed on your environments. If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact), you can download a copy of the activity log by performing the following steps:
+If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact), you can download a copy of the activity log by performing the following steps:
 
 1. Click **Download to CSV**.
 2. Select the period for which you want to download log entries. For **Custom Period**, you must enter a valid period using **Start Date** and **End Date**.
@@ -119,7 +121,7 @@ When your Mendix app needs to be accessible via your own URL (for example, `http
 
 In the **Access Restriction Profiles** tab, you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification, so that any match on either the IP range or the client certificate will grant access. You can apply access restriction profiles to path-based access restrictions in specific environments of the application.
 
-For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/)
+For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
 ## 5 Permissions {#permissions}
 

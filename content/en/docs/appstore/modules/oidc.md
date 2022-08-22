@@ -170,12 +170,8 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 1. In your identity provider, provision a new OpenID client application. You will receive a ClientID and Client Secret.
 2. You will also need the OIDC configuration endpoint (for example: [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration))
 3. Register the following callback URLs:
-    * `http://<your-app-url>/oauth/v2/callback`
+    * `https://<your-app-url>/oauth/v2/callback`
     * `makeitnative://<your-app-url>/oauth/callback`
-
-{{% alert color="info" %}}
-If your IdP does not support a custom URL scheme as a callback URL, change the setting **Provider supports custom URL schemes** to `false`.
-{{% /alert %}}
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 

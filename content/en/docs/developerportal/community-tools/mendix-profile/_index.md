@@ -230,7 +230,7 @@ Here you can connect your social accounts for **Twitter** and **LinkedIn**.
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
 
-You can change your password via the **Forgot password?** link on the login screen.
+You can change your password via the [forgot password page](https://login.mendix.com/mxid3/request-password-reset) or the **Forgot password?** link on the login screen.
 
 ### 10.5 API Keys {#api-key}
 

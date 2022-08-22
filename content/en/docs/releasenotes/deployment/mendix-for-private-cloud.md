@@ -17,9 +17,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.7.0{#2.7.0}
 
-* We improved the process of converting .mda file to .tar file, which allows to reduce consumption of disk space.
-* We now allow to load mda file containing CA certificates.
-* We now set the app protocol as http in the service to help Istio understand the protocol
+* We refactored how TLS trust is configured when building container images; this will address an issue when OpenShift clusters in Connected mode need to trust custom CA certificates (for example, from a proxy)
+* When an image is built, the MDA file will now be directly converted into a .tar layer instead of extracting the file first; this will reduce temporary disk usage by about a third when an image is built.
+* The Mendix Operator will restore [ownerReferences](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/) for all managed resources if they’re not set.
+* The Mendix Operator will now specify the appProtocol in Kubernetes services to help middleware such as Istio know the which [protocol](https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/#explicit-protocol-selection) the app is using and handle traffic as HTTP instead of plan TCP.
+* We’ve added a way to allow running a Mendix environment as a [specific Kubernetes ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server) instead of the default ServiceAccount.
+* We’ve added an option to specify a custom, fixed S3 bucket prefix when using the S3 (existing bucket and account) Storage Plan.
 
 
 ### July 12th, 2022

@@ -75,12 +75,13 @@ In the **Environments** section, you have an overview of all the available envir
 * **Plan** - if your node supports flexible environments, this indicates the plan for this environment; for more information, see [Details](/developerportal/deploy/environments-details/)
 * The **URL** of the app - for example, `https://mytestapp.mendixcloud.com`
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section without flexible environments" >}}
-
 You can perform the following actions in this section:
 
 * **Details** - for more information, see [Details](/developerportal/deploy/environments-details/)
 * **Transport to** – stage an environment to acceptance or production; this action is not available for flexible environments, where instead of staging an app, you deploy it directly to the target environment
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section without flexible environments" >}}
+
 * **Setup Studios Deployment** - the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}

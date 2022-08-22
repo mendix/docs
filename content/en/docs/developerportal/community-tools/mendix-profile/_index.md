@@ -24,7 +24,7 @@ Your profile header displays a quick overview of information about you. Your Men
 
 You can change these details in the [Settings](#settings).
 
-## 3 Overview & Stats
+## 3 Overview and Stats
 
 Your profile opens to the **Overview** tab, which shows you at a quick glance how you are doing on the platform. You can see the following:
 

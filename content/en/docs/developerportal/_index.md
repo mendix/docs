@@ -87,7 +87,7 @@ The actions available depend on the app selected:
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 
-## 4 My Company's Apps & Buzz {#my-company-apps}
+## 4 My Company's Apps and Buzz {#my-company-apps}
 
 In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 

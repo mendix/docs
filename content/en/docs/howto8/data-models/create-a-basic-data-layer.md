@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download and install [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 * Create a new app or have an existing app available
 
-## 3 Creating Entities & Attributes
+## 3 Creating Entities and Attributes
 
 To create entities and their attributes, follow these steps:
 

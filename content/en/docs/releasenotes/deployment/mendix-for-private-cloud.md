@@ -13,6 +13,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### August 23, 2022
+
+#### Mendix Operator v2.7.0{#2.7.0}
+
+* We improved the process of converting .mda file to .tar file, which allows to reduce consumption of disk space.
+* We now allow to load mda file containing CA certificates.
+* We now set the app protocol as http in the service to help Istio understand the protocol
+
+
 ### July 12th, 2022
 
 #### Mendix Operator v2.6.0{#2.6.0}

@@ -43,7 +43,7 @@ Before you read this guide, do the following:
 
 * Understand how [published](/refguide/published-odata-services/) and [consumed](/refguide/consumed-odata-services/) OData services work in Studio Pro
 * Check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
-* See [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) to learn about the connector kit
+* See [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) to learn about the first edition of the Connector Kit
 * Install Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above
 
 ## 2 Non-Persistable Entities as Published OData Resources {#npe-published-odata}

@@ -30,8 +30,8 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 ## 3 Log Levels
 
 {{% alert color="warning" %}}
-
-* Please note that at the moment only `information, warning, critical, and error` log levels are supported (support for other log levels will be added in the future)
+Please note the following:
+* Currently only `information, warning, critical, and error` log levels are supported (support for other log levels will be added in the future)
 * `Crash` logs are not supported currently
 {{% /alert %}}
 
@@ -77,7 +77,7 @@ The following log nodes are used by Mendix when writing log messages:
 | Client_Auth | Logs messages related to the different authentication states and user actions.|
 | Client | The default log node when no log node is provided. |
 | Client_Database | Logs messages related to different read/write operations on the local database. |
-| Client_FileSystem | Logs messages related to different read/write operations on the local file system (for example downloading a file and storing it in the file system, moving a file, or removing a file.)|
+| Client_FileSystem | Logs messages related to different read/write operations on the local file system (for example downloading a file and storing it in the file system, moving a file, or removing a file).|
 | Client_Nanoflow | Logs messages related to nanoflows being executed.|  
 | Client_NanoflowDebugger | Logs messages related to different steps and available variables while debugging a nanoflow. |
 | Client_Navigation | Logs messages related to the navigation behavior in the app. |
@@ -93,7 +93,7 @@ The native client stores log messages locally on the device. When the **Enable s
 
 Therefore these client log nodes will not appear directly in the cloud portal logs overview before they are sent. If there is network connectivity, once the log messages have been successfully sent to the runtime these log messages will be cleared from the device.
 
-## 6 Extend Logging
+## 6 Extending Logging
 
 It is possible to add a custom log handler to react to all log messages, including errors, as they arise. This can be used to integrate with your own custom logging and error handling infrastructure, such as Google Crashlytics.
 

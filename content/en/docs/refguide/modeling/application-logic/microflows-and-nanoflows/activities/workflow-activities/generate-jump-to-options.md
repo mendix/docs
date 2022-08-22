@@ -9,17 +9,27 @@ tags: ["studio pro", "workflow", "generate jump-to options"]
 
 This activity can only be used in **Microflows**.
 
+This activity was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/#9170). 
+
 {{% /alert %}}
 
 ## 1 Introduction
 
-The **Generate jump-to options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The [Apply jump-to option](/refguide/apply-jump-to-option/) activity should be used after the **Generate jump-to options** to let the workflow continue from the selected activity. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator should be able to select a specific activity where the workflow can continue.
+The **Generate jump-to options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The [Apply jump-to option](/refguide/apply-jump-to-option/) activity should be used after the **Generate jump-to options** to let the workflow continue from the selected activity. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue. 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options.jpg" >}}
 
 {{% alert color="warning" %}} 
 
 The list of generated options will only contain activities of the currently executed path in the workflow, excluding activities inside a [Parallel split](/refguide/parallel-split/) activity of the workflow. When the workflow is executing a path in a [Parallel split](/refguide/parallel-split/), the generated options will only contain activities of the current parallel split path. 
+
+{{% /alert %}}
+
+For more information on configuring the jumping to other activities, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
+
+{{% alert color="info" %}}
+
+This functionality is different from the [Jump activity](/refguide/jump-activity/) in workflows, which you can add from the **Toolbox** when you configure the workflow. 
 
 {{% /alert %}}
 
@@ -55,3 +65,7 @@ The name of the variable or the object returned by the activity. This is an obje
 ## 4 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+
+## 5 Read More
+
+*  [Jumping to Different Activities in a Workflow](/refguide/jump-to/)

@@ -194,7 +194,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents/#import-mappings
 6. In the **Mapping** box, **Select** the Import Mapping that you created to define how extracted data should be mapped into an entity.
 7. Click **OK** to save the changes and close the dialog box.
 
-{{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where extracted data is populated. You can call your own microflow to process the extracted data (e.g. on **A**fter **CO**mmit event). For example, your microflow can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where extracted data is populated. You can call your own microflow to process the extracted data (e.g. on an after-commit event). For example, your microflow can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.4 Checking Statistics on the Service Dashboard
 

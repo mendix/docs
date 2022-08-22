@@ -16,14 +16,14 @@ Welcome to the world of Mendix connectors. Mendix connectors allow you to connec
 * Basic steps for building and publishing connectors
 
 {{% alert color="info" %}}
-For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/). To learn more about advanced ways to build connectors, see [Wrap Services, APIS, or Databases with OData](/refguide/wrap-services-data/).
 {{% /alert %}}
 
 ### 1.1 Prerequisites  
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read the blog post [Introducting the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
+* Read the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
 * Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * Read the Evaluation Guide page about [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration/)
 * Read [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/) 
@@ -145,5 +145,6 @@ Because connectors are exported as modules and then published on the Marketplace
 
 ## 4 Read More
 
-* [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
-* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
+* Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
+* Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
+* See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors

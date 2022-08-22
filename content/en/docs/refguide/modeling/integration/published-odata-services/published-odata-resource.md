@@ -62,11 +62,6 @@ For published OData services, the **Can be empty** check box appears when you ed
 
 When the checkbox Can be empty is unselected, and there is no **Required** validation rule set, you will be prompted to add a 'required' validation rule or use a before commit microflow to ensure that end-users do not leave it empty.
 
-### 3.3 Attribute Capabilities
-
-* **Filterable** – allows the attribute to be filtered
-* **Sortable** – allows the attribute to be sorted
-
 ## 4 Mapping from Internal Names to Exposed Names
 
 Use **Exposed entity name** in the **Edit published resource** window to customize the name of the resource that is exposed to the outside world. The default is the name of the exposed entity in the domain model. The **Exposed entity name** must start with a letter followed by letters or digits with a maximum length of 480 characters. 
@@ -111,14 +106,14 @@ Default: *10000*
 
 ## 8 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable overtime, since it can change in certain scenarios (such as data migration). Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a unique [key](/refguide/published-odata-resource/#key) when exposing an entity as a Published OData Resource. The attribute type can be one of the following: 
 
 * **Integer**
 * **Long**
 * **String**
 * **AutoNumber** 
 
-To learn more about selecting a key, see the [Key Selection](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
+To learn more about selecting a key, unique see the [Key Selection](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
 
 ## 9 Capabilities {#capabilities}
 
@@ -193,6 +188,3 @@ The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/s
 Select the options that you would like to include in each OData capability.
 
 * **Countable** – required for getting the total number of records
-* **Top-supported** – required for [pagination](/refguide/odata-query-options/#paging)
-* **Skip-supported** – required for [pagination](/refguide/odata-query-options/#paging)
-

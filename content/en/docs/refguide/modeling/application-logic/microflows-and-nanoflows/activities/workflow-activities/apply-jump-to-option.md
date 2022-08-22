@@ -20,6 +20,12 @@ The **Apply jump-to option** activity allows the workflow to jump to a selected 
 
 For more information on configuring the jumping to other activities, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
 
+{{% alert color="info" %}}
+
+This functionality is different from the [Jump activity](/refguide/jump-activity/) in workflows, which you can add from the **Toolbox** when you configure the workflow. 
+
+{{% /alert %}}
+
 ## 2 Properties
 
 An example of **Apply jump-to option** properties is represented in the image below:

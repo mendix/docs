@@ -27,6 +27,12 @@ The list of generated options will only contain activities of the currently exec
 
 For more information on configuring the jumping to other activities, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
 
+{{% alert color="info" %}}
+
+This functionality is different from the [Jump activity](/refguide/jump-activity/) in workflows, which you can add from the **Toolbox** when you configure the workflow. 
+
+{{% /alert %}}
+
 ## 2 Properties
 
 An example of **Generate jump-to options** properties is represented in the image below:

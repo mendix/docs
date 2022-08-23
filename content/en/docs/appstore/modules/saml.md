@@ -92,7 +92,21 @@ There are different versions of the module, depending on which version of Mendix
 
 ### 2.1 Using SSOLandingPage{#ssolandingpage}
 
-You can use SSO to automatically sign users in to your app by redirecting every user accessing the default page of the Mendix app (`index.html`) to the Mendix `/SSO/` endpoint. You do this by changing the `index.html` page by adding `<meta http-equiv="refresh" content="0;URL=/SSO/" />`. If you do this without any other changes, the app will come back to `index.html` which will be redirected again to single sign on.
+You can use SSO to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint as follows:
+
+{{% alert color="info" %}}If you do this without any other changes, the app will come back to `index.html` which will be redirected again to single sign on.{{% /alert %}}
+
+1. Change the `index.html` file:
+
+   * For Mendix version lower than 9,  the `index.html` file is the default page of the Mendix app. You can find it in the `.../theme` folder in your app directory.
+
+   * For Mendix version 9 or higher, there is no `index.html` page. You must first create an `index.html` file in the `.../theme/web`  folder in your app directory.
+
+     To create the `index.html` file, run your app in Studio Pro, and then copy the `index.html` file from the `.../deployment/web/` folder to the `.../theme/web` folder. Mendix then will use this version as the template for `index.html`.
+
+2. In the `index.html` file, change the URL within the `originURI` to `\SSO\`, for example: `document.cookie = "originURI=/SSO/" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");`. 
+
+   {{% alert color="info" %}}This cookie determines where the Mendix Client will redirect users to  when they need to sign in. If you are already signed in, you are not redirected again.{{% /alert %}}
 
 **SSOLandingPage** specifies a different landing page so the end-user does not end up on `index.html` again after a login attempt.  We recommend that you change this constant to `/index3.html` and create an `index3.html` page in your `/theme` folder and copy contents of the original `index.html` (without the added redirect) into it. The authenticated end-user will then land on `index3.html` which will then display the content of the app. If the user authentication fails, the user will be directed to the **DefaultLoginPage** instead. 
 
@@ -190,8 +204,8 @@ These settings are only available in the following versions of the module (depen
 * v3.1.8/v3.1.9 and above for Mendix version 9
 * v2.2.0 and above for Mendix version 8
 * v1.16.4 and above for Mendix version 7
-{{% /alert %}}
-    
+  {{% /alert %}}
+  
 * **Use custom logic for user provisioning** and **Use custom after sign-in logic**
 
     If you want to add your own logic to the user provisioning, enable one, or both, of these functions.The microflow you select will be executed after the user signs in.

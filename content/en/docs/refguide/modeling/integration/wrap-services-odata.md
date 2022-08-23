@@ -8,34 +8,19 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "conn
 
 ## 1 Introduction
 
-The [Build Connectors](/appstore/creating-content/connector-guide-build/) guide outlines the basic steps of building connectors that enable developers to connect to back-end systems and publish them in the [Mendix Marketplace](/appstore/).  
+Features released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on existing OData capabilities in Studio Pro. This document dives into these new features, which allow you to wrap any non-OData service, API, or database with OData. This ensures compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/). 
 
-Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/), collectively called the Connector Kit 2.0 as an additional set of tools in the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), expand on these existing capabilities of building connectors in Studio Pro. You can use these tools to integrate with systems that do not support OData, or that expose systems in a more useful way.
-
-This document dives into these new functionalities, which allow you to wrap any service, API, or database with OData, and build connectors that are compatible with the [Mendix Data Hub](/data-hub/); more specifically, the [Data Hub Catalog](/data-hub/data-hub-catalog/) and [external entities](/refguide/external-entities/).
-
-### 1.1 Why Wrap with OData?
-
-OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide [filtering], [sorting], and [pagination] on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. Additionally, published OData services are registered automatically in the  [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps.
-
-### 1.2 Tools for Wrapping with OData
-
-In Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above, you can publish both persistable and [non-persistable entities](/refguide/entities/#non-persistable-entity) as OData resources, and use microflows to define how your resources should be retrieved and stored.  These functionalities, collectively called Connector Kit 2.0, enable you to build Mendix connectors to integrate with any service or data source. Using these connectors, you can connect to any data available with the same ease and productivity as external entities. Organizations will also be able to provide the same discoverability and curation for these data sources in the Data Hub Catalog.
-
-The benefit of having connector services or integration apps is that you can centralize and unify access to back-end systems for all your apps. This way, you ensure all your Mendix apps use back-end systems in a consistent and secure way.
+You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features expands on the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), and are collectively called *Connector Kit 2.0*.
 
 In this guide, you will learn about the following:
 
 * Exposing non-persistable entities as published OData resources 
 * Using a microflow to define how resources should be retrieved and stored, and to return values of published OData services
 * Selecting a key (other than the object ID) when exposing entities as OData resources
-  
-### 1.2 Usage Examples
 
-The following examples are possible ways that you can use the functionalities described in this document, and elaborated upon in the [Usage](#usage) section.
-
-* A [third-party service connector](#3rd-party) that connects to the Twitter API
-* Building [Updatable operational data stores](#operational-data-stores), temporary databases that integrate data from multiple sources
+{{% alert color="info" %}}
+All features are supported for published OData services using OData v4. [checking if it's not stated, if all versions are supported] 
+{{% /alert %}}
 
 ### 1.2 Prerequisites
 
@@ -43,21 +28,34 @@ Before you read this guide, do the following:
 
 * Understand how [published](/refguide/published-odata-services/) and [consumed](/refguide/consumed-odata-services/) OData services work in Studio Pro
 * Check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
-* See [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) to learn about the first edition of the Connector Kit
 * Install Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above
 
-## 2 Non-Persistable Entities as Published OData Resources {#npe-published-odata}
+### 1.1 Usage Examples
+
+The following examples are possible ways that you can use the *Connector Kit 2.0* features described in this document, and elaborated upon in the [Usage](#usage) section:
+
+* A [third-party service connector](#3rd-party) that connects to the Twitter API
+* Building [Updatable operational data stores](#operational-data-stores), temporary databases that integrate data from multiple sources
+
+## 2 Why Wrap with OData?
+
+### 2.1 Best Practices and Performance
+
+OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide [filtering], [sorting], and [pagination] on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. 
+
+### 2.2 Compatibility with Data Hub
+
+Wrapping a service, API, or database in OData ensures compatibility with the [Mendix Data Hub](/data-hub/). Published OData services are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
+  
+## 3 Non-Persistable Entities as Published OData Resources {#npe-published-odata}
 
 When building a connector or integration, you might only need to move data from back-end services to the client apps. This means that the data does not need to be stored. To support this, you can expose [non-persistable entities](/refguide/entities/#non-persistable-entity) as [published OData resources](/refguide/published-odata-resource/). Previously, only persistable entities could be exposed as published OData resources.
 
 Right-click on the non-persistable entity you want to expose and select **Expose as OData resource**.
 
-## 3 Data Sources for Published OData Resources {#odata-data-sources}
+## 4 Data Sources for Published OData Resources {#odata-data-sources}
 
-In Studio Pro, you can expose entities as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service by using a microflow that determines the result of the incoming request. This is now possible for the [Readable](/refguide/published-odata-resource/#readable) capability of your service you can define how your resources should be retrieved and stored. This allows you to do the following: 
-
-* Build integrations with systems that do not support OData
-* Build integrations that expose existing systems in a way that is more useful for consumers
+In Studio Pro, you can expose entities as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service by using a microflow that determines the result of the incoming request. This is now possible for the [Readable](/refguide/published-odata-resource/#readable) capability of your service you can define how your resources should be retrieved and stored.
 
 When a consuming app wants to read your published OData service, it is sending a `GET` request. There are two ways to handle an incoming `GET` request for an OData resource:
 
@@ -66,7 +64,7 @@ When a consuming app wants to read your published OData service, it is sending a
 
 The result list of objects from either will then be transformed into an OData payload. If it fails, a [status code](/refguide/published-odata-services/#status-codes) of `500` will be returned.
 
-### 3.1 Handle a GET Request with a Microflow {#handle-get-request}
+### 4.1 Handle a GET Request with a Microflow {#handle-get-request}
 
 {{% alert color="info" %}}
 This feature is only available for published OData services that use OData v4.
@@ -88,7 +86,7 @@ Include the following tasks inside the microflow:
 {{% alert color="info" %}}
 When you use a microflow to provide data, security is applied to the result of the microflow.{{% /alert %}}
 
-### 3.1.1 Microflow Parameters
+### 4.1.1 Microflow Parameters
 
 *. **HttpRequest** – The first accepted parameter is an `HttpRequest` of entity type `System.HttpRequest`.  This parameter is optional.</br>
      When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* **will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
@@ -113,7 +111,7 @@ When you use a microflow to provide data, security is applied to the result of t
 {{% alert color="info" %}}
 In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
 
-## 4 Key Selection When Exposing Entities as OData Resources {#select-key}
+## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
 {{% alert color="info" %}}
 This feature is available for published OData services that use OData v3 and v4.
@@ -136,7 +134,7 @@ Select an attribute with the following constraints:
 
 A unique and required attribute is automatically selected when such an attribute is available when exposing an entity as a Published OData Resource for the first time. These constraints can be set using [validation rules](/refguide/validation-rules/). If there is no attribute that has a unique constraint or a required constraint, then it will select the first attribute with a supported type.
 
-### 4.1 Selecting an Attribute as a Key {#select-key}
+### 5.1 Selecting an Attribute as a Key {#select-key}
 
 To select a different attribute as a key, do the following:
 
@@ -148,23 +146,23 @@ Currently, only a single attribute is allowed to be set as a key.
 
 For published OData services, the checkbox Can be empty appears when you edit a published attribute. When the **Can be empty** field is unchecked, but there is no **Required** validation rule, you will be prompted to add one.
 
-## 5 Testing {#testing}
+## 6 Testing {#testing}
 
 You can use tools like Postman or Visual Studio Code to test your published OData services. These tools can help you call the OData service and validate its output.
 
 Another way to test published OData services is with the user interfaces of [OpenAPI](/refguide/published-odata-services/#openapi), released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/).
 
-## 6 Usage {#usage}
+## 7 Usage {#usage}
 
-The following examples are some possible ways that you can use the functionalities described in this document.
+The following examples are possible ways that you can use the *Connector Kit 2.0* features described in this document.
 
-## 6.1 Third-Party Service Connector {#3rd-party}
+### 7.1 Third-Party Service Connector {#3rd-party}
 
 You can use the features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) to build a connector that wraps a third-party service API as OData. 
 
 As an example, say you want to try the new easy-to-use [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). 
 
-### 6.1 Building the Client
+#### 7.1.1 Building the Client
 
 Build a Twitter client that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector)
 
@@ -174,7 +172,7 @@ Build a Twitter client that allows users to input a Twitter ID and communicates 
     The microflow includes a **Retrive Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
 4.  On the TwitterPage, you can use a Data Grid, and pull data by Association to get the Tweets and followers connected to the user.
 
-### 6.2 Building the Connector {#twitter-connector}
+#### 7.1.2 Building the Connector {#twitter-connector}
 
 Build a connector module that communicates to the Twitter API with OData. 
 
@@ -190,9 +188,9 @@ The result is a running app that displays the latest tweets and followers of a u
 
 Check out our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide for general information on building simple connectors.
 
-## 6.2 Updatable Operational Data Stores {#operational-data-stores}
+## 7.2 Updatable Operational Data Stores {#operational-data-stores}
 
-Another common use case where wrapped OData APIs will help you is with Mendix app that functions as an operational data store, or a Data Layer for other Mendix apps.
+Another use case where wrapped OData APIs will help you is with Mendix app that functions as an operational data store, or a Data Layer for other Mendix apps.
 
 Customers often have one Mendix app where they define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData you have a productive and easy to consume way to provide full read-write APIs to your frontend apps. To ensure data consistency, you can use the OData capability microflows to update your backend systems when a frontend app changes data through an OData API.
 
@@ -206,9 +204,6 @@ With the functionalities released in Studio Pro [9.17](/releasenotes/studio-pro/
 
 To do so, include the following steps:
 
-1. Define a unified model using persistent entities.
-2. Use a [task queue](/refguide/task-queue/) and scheduled events to implement data syncing by retrieving data from the available APIs (web services, REST, or SQL).
-3. Expose the unified model with OData, including write-back logic in your microflows.
-\\
-
-
+1.  Define a unified model using persistent entities.
+2.  Use a [task queue](/refguide/task-queue/) and scheduled events to implement data syncing by retrieving data from the available APIs (web services, REST, or SQL).
+3.  Expose the unified model with OData, including write-back logic in your microflows.

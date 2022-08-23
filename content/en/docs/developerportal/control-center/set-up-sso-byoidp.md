@@ -90,6 +90,8 @@ You can test in one of two ways:
 1. Click on the test endpoint of your configuration. It will redirect you to the login page of your IDP. Enter the credentials of a user known to your IDP. If the test succeeds the Developer Portal Buzz will open.
 2. Go to https://login.mendix.com/ and, in the username field, enter the test email domain of your configuration exactly as printed on the overview page. The password field should disappear. Click the ‘Sign in with SSO' button. This will redirect you to a login page of your IDP. Enter credentials known to your IDP. If the test succeeds the Mendix Platform home page will open.
 
+If your test fails, see the [Troubleshooting](#troubleshooting) section for advice on where to look for issues.
+
 ## 5 Activating
 
 When you are ready, you can activate the IDP configuration from the overview page. Your users will immediately benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IDP authentication.
@@ -175,3 +177,11 @@ Automation, such as CI/CD pipelines, and other functions which require access to
 When you [add or remove an email domain from your company](/developerportal/control-center/#company) in Mendix, you will need to deactivate BYOIDP and reactivate it again to apply the changes for users logging on using the changed domains.
 
 You cannot select which of your email domains are used for single sign-on. When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company.
+
+## 9 Troubleshooting{#troubleshooting}
+
+- Wrong client credentials. Without proper exchange of client_id and client_secret between the IDP and Mendix platform, Mendix cannot authenticate at the /token endpoint and delegated login will fail.
+- Wrong authentication method configured for Mendix platform as a client to the customer’s IDP. Mendix supports 2 client authentication methods: client_secret_post (client credentials in the payload) or client_secret_basic (basic authentication; credentials in http authorization header). If IdP indicates support for both methods at the well-known endpoint, Mendix will use client_secret_post. If the client configuration at the customer’s IDP for the Mendix platform sets a different client authentication method, the IDP may reject Mendix to authenticate itself as a client to the /token endpoint and delegated login will fail.
+- The customer’s Conditional Access policies in AzureAD may block Studio Pro logins, which makes use of an embedded browser.  Customers using Microsoft’s Intune for MDM/MAM will hit this limitation. Mendix has created an enhancement of Studio Pro that uses system browser to overcome this limitation. This feature is in ‘private beta’ and can be provided on request.
+- Studio Pro uses an embedded browser for login. Login via embedded browser may not work when customer’s IDP is allowing only for trusted devices and doesn’t recognise the embedded browser. Solution: contact Mendix to switch from using embedded browser to system browser; this feature is currently in private beta.
+- The IDP’s well-known endpoint doesn’t have a URL for the JWKS endpoint; without access to the JWKS-endpoint, Mendix cannot validate the signature on the recieved ID-token and the delegated authentication fails.

@@ -638,6 +638,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 If the Autogenerate Prefix option is selected, Mendix for Private Cloud will generate a unique bucket prefix for each environment to keep data from different apps separate.
 
 This prefix is specified in the `<environment name>-file` secret.
+
 If you want a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix you want to use.
 
 {{% alert color="info" %}}

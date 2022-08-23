@@ -1,5 +1,5 @@
 ---
-title: "Generate Code from the Model"
+title: "Generate Code Based on an Existing Model"
 url: /apidocs-mxsdk/mxsdk/generating-code-from-the-model/
 weight: 50
 ---

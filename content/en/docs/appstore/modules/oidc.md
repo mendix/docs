@@ -3,7 +3,7 @@ title: "OIDC SSO"
 url: /appstore/modules/oidc/
 category: "Modules"
 description: "Describes the configuration and usage of the OIDC SSO module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "OIDC", "IDP", "identity provider", "platform support"]
+tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/120371
 ---
@@ -38,25 +38,31 @@ Alternatives to using OIDC SSO for managing single sign on are:
 
 #### 1.2.1 Features
 
-* Supports SSO login with one or multiple OIDC/OAuth-compatible identity providers.
+* Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs.
 * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
-* It uses the Authorization Code Grant flow to sign the end-user in via the browser.
-* Stores an access token for each end-user that can be used to make API calls on their behalf. Includes helper microflows (DELETE, GET, PATCH, POST, and PUT) to easily call an API with a valid token (and automate the token refresh process).
-* You can make separate configurations for different OIDC IdPs, and configure user provisioning and access token parsing microflows accordingly.
+    * For example, PKCE will be used automatically if it is detected.
+* Helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
+* Support for multiple OIDC IdPs, by allowing configuration of user provisioning and access token parsing microflows per IdP.
 * Supports responsive web applications, a.k.a. browser based applications.
 * Works with the Mendix DeepLink module
-* Client authentication makes use of form-encoded body parameters (i.e. client_id and client_secret)
+
+For more complex use cases, which require more knowledge of how OAuth and OIDC work.
+
+* Uses the Authorization Code Grant flow to sign the end-user in via the browser.
+* Uses the 'nonce' parameter to defend against replay attacks.
+* Only validates ID-token signatures, not access tokens.
+* Stores an access token for each end-user that can be used to make API calls on their behalf.
+* Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
 #### 1.2.2 Limitations
 
 The OIDC SSO module does not yet support
 
-* 'Nonce' parameter, as per OIDC specs
-* Requesting claims via the 'claims' query parameter, as per OIDC specs
-* Other client authentication methods such as basic authentication (“Client_secret_basic”) or using asymmetric keys (“private_key_jwt”)
+* Requesting claims via the 'claims' query parameter, as per OIDC specs.
+* Other client authentication methods such as using asymmetric keys (“private_key_jwt”).
 * Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens.
-* Mobile apps
+* Mobile apps.
 
 ## 2 Dependencies
 
@@ -167,7 +173,7 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 
 ### 5.1 OIDC Provider Configuration
 
-1. In your identity provider, provision a new OpenID client application. You will receive a ClientID and Client Secret.
+1. In your IdP, provision a new OpenID client application. You will receive a ClientID and Client Secret.
 2. You will also need the OIDC configuration endpoint (for example: [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration))
 3. Register the following callback URLs:
     * `https://<your-app-url>/oauth/v2/callback`
@@ -178,21 +184,25 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 In this case, the OIDC client is the app you are making.
 
 1. Start your app, log in as an administrator, for example *demo_administrator*, and access the OpenID Setup page.
-2. Add a new client configuration and give it an **Alias** so you can identify it if you have more than one client configuration.
-3. Add the **Client ID**, set **Client assertion** to *Client ID and Secret*, and add the **Client Secret**.
-4. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
+1. Add a new client configuration and give it an **Alias** so you can identify it if you have more than one client configuration.
+1. Add the **Client ID**, set **Client assertion** to *Client ID and Secret*, and add the **Client Secret**.
+1. Choose the **Client authentication method** — make sure that you select a method that is supported by your IdP. You can normally check this via the `token_endpoint_auth_methods_supported` setting on the IdP’s well-known endpoint. Also ensure that the correct client authentication method is configured at the IdP when you register the client.
+
+    The options are:
+    * client_secret_basic: Your app will use the HTTP Basic Authentication scheme to authenticate itself at your IdP. (Default – for security reasons this should be your preferred choice)
+    * client_secret_post: Your app will authenticate itself by including its client_id and client_secret in the payload of token requests. (Older versions of the OIDC SSO module used this method).
+1. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
     * If you don't have an automatic configuration URL, you can fill in the other endpoints manually.
-5. Click **Save**
+1. Click **Save**
     {{% alert color="info" %}}
 Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.
     {{% /alert %}}
-6. Select your client configuration and click **Edit**.
-7. Select the scopes expected by your OIDC identity provider. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
+1. Select your client configuration and click **Edit**.
+1. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
     * If you need refresh tokens for your end-users, you also need the `offline` scope.
     * Add other scopes as needed.
-8. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your identity provider uses "thin tokens". Also included is a salesforce-specific example. You may need to make changes in order to implement provisioning logic which fits your business needs. To do so, read the section on [Custom User Provisioning](#custom-provisioning).
-9. Optionally, select **Use PKCE** if you want to use PKCE on your well-known endpoint – see [PKCE Configuration](#pkce) for more information.
-10. Optionally, check **Enable Access Token Parsing** if you want to use additional information from the OIDC identity provider. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
+1. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". Also included is a salesforce-specific example. You may need to make changes in order to implement provisioning logic which fits your business needs. To do so, read the section on [Custom User Provisioning](#custom-provisioning).
+1. Optionally, check **Enable Access Token Parsing** if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
 
 Once you have completed these steps, the SSO-configuration is ready for testing. See the section on [Testing and troubleshooting](#testing) for more information.
 
@@ -223,7 +233,7 @@ Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configur
 
 Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
 
-The OIDC SSO module supports multiple identity providers. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
+The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
 
 ## 7 Optional Features{#optional}
 
@@ -292,14 +302,6 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-### 7.2 PKCE Configuration{#pkce}
-
-PKCE (pronounced as “pixie”) adds enhanced security to the original OAuth protocol. It is generally recommended to use this feature for better protection against hackers who try to get access to your app. You need to check if your IdP supports PKCE. When it does, it will have “S256” as the value for `code_challenge_methods_supported` which you can discover by manually querying its well-known endpoint.
-
-To enable PKCE, check the **Use PKCE** radio button when performing [OIDC Client Configuration](#client-configuration).
-
-{{< figure src="/attachments/appstore/modules/oidc/use-pkce.png" >}}
-
 ### 7.3 Access Token Parsing{#access-token-parsing}
 
 With the OAuth/OIDC protocol, access tokens can be opaque or can be a JSON Web Token (JWT).
@@ -349,7 +351,7 @@ To use this module in conjunction with the DeepLink module, you'll need to set t
 
 ### 7.5 Logging Out
 
-A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the identity provider's “end session endpoint” if configured.
+A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the IdP's “end session endpoint” if configured.
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
@@ -361,9 +363,9 @@ The OIDC SSO module uses two endpoints at your IdP to achieve the SSO. You may g
 
 ### 8.1 /authorize
 
-The /authorize endpoint logs the end-user in through the browser.
+The `/authorize` endpoint logs the end-user in through the browser.
 
-The **/authorize** endpoint may reply with an error-response, for example when the end-user enters a wrong password but also other situations may occur.  The `Error` level response can be retrieved from the OIDC log node.
+The `/authorize` endpoint may reply with an error-response, for example when the end-user enters a wrong password but also other situations may occur.  The `Error` level response can be retrieved from the OIDC log node.
 
 ```log
 handleAuthorization: Authorization code missing 
@@ -376,7 +378,9 @@ Section 4.1.2.1 of [RFC6749](https://datatracker.ietf.org/doc/html/rfc6749) and 
 
 ### 8.2 /token
 
-The error “Unable to get access token”  indicates that the OAuth **/token** endpoint at your IdP has returned an error response. Often this error occurs when your client_id and client_secret are not correct. The `Error` level response can be retrieved from the OIDC log node.
+The `/token` endpoint is a back-end call to get an access token.
+
+The error “Unable to get access token” indicates that the OAuth **/token** endpoint at your IdP has returned an error response. Often this error occurs when your client_id and client_secret are not correct. The `Error` level response can be retrieved from the OIDC log node.
 
 ```log 
 401: Unauthorized 

@@ -1,5 +1,6 @@
 ---
-title: "Generate Code Based on an Existing Model"
+title: "Generate an SDK Script Based on an Existing Model"
+linktitle: "Generate SDK Script Based on Model"
 url: /apidocs-mxsdk/mxsdk/generating-code-from-the-model/
 weight: 50
 ---

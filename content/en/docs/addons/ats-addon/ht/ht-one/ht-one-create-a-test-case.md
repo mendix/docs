@@ -3,7 +3,7 @@ title: "Create a Test Case"
 url: /addons/ats-addon/ht-one-create-a-test-case/
 weight: 3
 description: "Describes how to create a test case and add test steps."
-tags: ["ATS", "testing", "test"]
+tags: ["ATS", "testing", "test", "testWindows"]
 ---
 
 ## 1 Introduction

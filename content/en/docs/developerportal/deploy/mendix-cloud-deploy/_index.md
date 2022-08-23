@@ -105,7 +105,7 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 | Licensed app | test, acceptance, flexible environments | `{name of your app}-{environment type}.mendixcloud.com` | `myappname-acceptance.mendixcloud.com` |
 | Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-You can also customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
+You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
 Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports (80 and 443) with connections to HTTP (80) being redirected to HTTPS (443).
 
@@ -131,7 +131,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
     * The deployment package for your app must be no bigger than 1 GB
 * Prerequisites for a Free App
     * You must have created an app
-    * The deployment package for your app must be no bigger than 1 GB
+    * As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package, even though you will not need to use it for the deployment itself
 
 ### 2.2 Deploying a Licensed App to the Mendix Cloud
 
@@ -152,9 +152,9 @@ To deploy your app directly from Studio Pro, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" alt="A pop-up with the Show online option visible" >}}
 
-##### 2.2.2 Creating a Package from the Team Serve {#package-from-team-server}
+##### 2.2.2 Creating a Package from the Team Server {#package-from-team-server}
 
-You can also deploy an app without using Studio Pro. To do this, follow these steps:
+You can also deploy an app from Team Server. To do this, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Apps** in the top navigation panel.
@@ -165,6 +165,10 @@ You can also deploy an app without using Studio Pro. To do this, follow these st
 7. Give the build a version number and click **Build this revision**.
 
 The package is deployed to the cloud.
+
+#### 2.2.3 Deploying via Studio
+
+To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
 
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
@@ -200,7 +204,7 @@ With a Free App, you can deploy your app to the Mendix Cloud from Studio or Stud
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
 
-* In Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
+* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
 
 ## 3 Status of Deployment
 
@@ -216,7 +220,7 @@ Mendix licenses are sold as part of plans. Plans consist of the following items:
 
 ### 4.1 Plans
 
-There following plans are available for Mendix:
+The following plans are available for Mendix:
 
 * Free
 * Basic

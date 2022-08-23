@@ -635,16 +635,17 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 
 **S3 (existing bucket and account)** will connect to an existing S3 bucket with the provided IAM user access key and secret keys. All apps (environments) will use the same S3 bucket and an IAM user account. You will need to provide all the information relating to your Amazon S3 storage such as plan name, endpoint, access key, and secret key.
 
-To keep data from different apps separate, Mendix for Private Cloud will generate a unique bucket prefix for each environment if Autogenerate Prefix option is selected.
+If the Autogenerate Prefix option is selected, Mendix for Private Cloud will generate a unique bucket prefix for each environment to keep data from different apps separate.
+
 This prefix is specified in the `<environment name>-file` secret.
-If you would like a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix which you want to use.
+If you want a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix you want to use.
 
 {{% alert color="info" %}}
-To use the Autogenerate Prefix option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 2.7.0 or later.
+To use the Autogenerate Prefix option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Make sure to follow the naming guidelines for prefix as mentioned in [documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html)
+Be sure to follow the naming guidelines for prefixes as described in the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
 {{% /alert %}}
 
 
@@ -816,7 +817,7 @@ To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guid
 {{% /alert %}}
 
 {{% alert color="info" %}}
-From Operator version 2.7.0 onwards, the build pod will trust certificates from the custom TLS trust secret.
+In Operator version 2.7.0 and above, the build pod will trust certificates from the custom TLS trust secret.
 {{% /alert %}}
 
 To use encryption and avoid [MITM attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack), communication with all external services should be done over TLS.
@@ -1454,7 +1455,7 @@ For more information about collecting metrics in Mendix for Private Cloud, see [
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
-In order to achieve this, we need to add annotation privatecloud.mendix.com/environment-account: true (any account matching an environment name but without this annotation cannot be attached to environments - for security reasons).
+To achieve this, you need to add the annotation `privatecloud.mendix.com/environment-account: true` (for security reasons, any account matching an environment name but without this annotation cannot be attached to environments).
 
 {{% alert color="info" %}}
 The service account can be customized for Private Cloud Operator version 2.7.0 and above.

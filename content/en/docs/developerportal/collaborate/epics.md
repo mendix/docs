@@ -30,7 +30,7 @@ Once you have access to an app in Epics, you can open it there. To do so, open t
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epics-check-it-out.png" >}}
 
-After you open an app in Epics, you can easily switch to other app that you have access to. To do so, click the name of the current app on the upper-left corner, and then select a different app from the drop-down list.
+After you open an app in Epics, you can easily switch to other apps that you have access to. To do so, click the name of the current app on the upper-left corner, and then select a different app from the drop-down list.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/switch-app.png" >}}
 

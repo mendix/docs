@@ -10,7 +10,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "conn
 
 The [Build Connectors](/appstore/creating-content/connector-guide-build/) guide outlines the basic steps of building connectors that enable developers to connect to back-end systems and publish them in the [Mendix Marketplace](/appstore/).  
 
-Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/), collectively called the Connector Kit 2.0 as an additional set of tools in the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), expand on these existing capabilities of building connectors in Studio Pro. 
+Functionalities released in Studio Pro [9.17](/releasenotes/studiopro/9.17/), collectively called the Connector Kit 2.0 as an additional set of tools in the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), expand on these existing capabilities of building connectors in Studio Pro. You can use these tools to integrate with systems that do not support OData, or that expose systems in a more useful way.
 
 This document dives into these new functionalities, which allow you to wrap any service, API, or database with OData, and build connectors that are compatible with the [Mendix Data Hub](/data-hub/); more specifically, the [Data Hub Catalog](/data-hub/data-hub-catalog/) and [external entities](/refguide/external-entities/).
 
@@ -148,7 +148,7 @@ Currently, only a single attribute is allowed to be set as a key.
 
 For published OData services, the checkbox Can be empty appears when you edit a published attribute. When the **Can be empty** field is unchecked, but there is no **Required** validation rule, you will be prompted to add one.
 
-## 5 Testing
+## 5 Testing {#testing}
 
 You can use tools like Postman or Visual Studio Code to test your published OData services. These tools can help you call the OData service and validate its output.
 
@@ -209,7 +209,6 @@ To do so, include the following steps:
 1. Define a unified model using persistent entities.
 2. Use a [task queue](/refguide/task-queue/) and scheduled events to implement data syncing by retrieving data from the available APIs (web services, REST, or SQL).
 3. Expose the unified model with OData, including write-back logic in your microflows.
-
-## 7 Limitations
+\\
 
 

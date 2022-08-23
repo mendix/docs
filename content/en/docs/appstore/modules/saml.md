@@ -96,7 +96,7 @@ You can use SSO to automatically sign users in to your app by redirecting every 
 
 {{% alert color="info" %}}If you do this without any other changes, the app will come back to `index.html` which will be redirected again to single sign on.{{% /alert %}}
 
-1. Change the `index.html` file:
+1. Get the `index.html` file:
 
    * For Mendix version lower than 9,  the `index.html` file is the default page of the Mendix app. You can find it in the `.../theme` folder in your app directory.
 

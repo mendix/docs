@@ -68,7 +68,7 @@ You can upgrade a Free App to a licensed node with a node in the Mendix Cloud. F
 
 #### 1.1.2 Free Apps Archiving {#free-apps-archival}
 
-If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/team/app-roles/#technical-contact/) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
+If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps which are going to be archived, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained, but the running app, database, and files for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
@@ -265,7 +265,6 @@ The legacy cloud resource packs listed below are still being used but are not av
 | L20 | 8 GB | 2 | 8 GB | 1  | 40 GB | 80 GB |
 | XL20 | 16 GB | 4 | 16 GB | 2  | 80 GB | 160 GB |
 | XXL20 | 32 GB | 8 | 32 GB | 2  | 160 GB | 320 GB |
-||||||||
 | Strato | 2 GB | 0.5 | 1 GB | 0.5  | 5 GB | 20 GB |
 | Meso | 2 GB | 0.5 | 8 GB | 2  | 20 GB | 20 GB |
 | Iono | 8 GB | 2 | 8 GB | 2  | 20 GB | 80 GB |

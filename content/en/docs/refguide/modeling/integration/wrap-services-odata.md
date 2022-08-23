@@ -177,7 +177,7 @@ Build a Twitter client that allows users to input a Twitter ID and communicates 
 Build a connector module that communicates to the Twitter API with OData. 
 
 1.  Use the Twitter API to find out the structure and create an import mapping, which creates three non-persistable entities in your domain model.
-2.  Publish all three non-persistable entities as an OData service, used as your Twitter Connector (see [Non-Persistable Entities as Published OData Resources](#npe-published-data)).
+2.  Publish all three non-persistable entities as an OData service, used as your Twitter Connector (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
 3.  Select a new [key](#select-key) to be used for each entity. For example, you can set the UserId, a `String` value, as a key for the **User** entity.
 4.  For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
 5.  When you run the Twitter client, there are decoded OData requests that come in. You can manually take the URI and parse it, and create a microflow to read data from the URI. 

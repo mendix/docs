@@ -1798,14 +1798,14 @@ The widget’s style properties are as follows:
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `dynamicItemClasses` > `dynamic_item_class_name` | object | The dynamic item classes property allows you to specify one or more styling objects like the class property, but based on an expression. This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the Class property. |
-| `dynamicItemClasses` > `dynamic_item_class_name` > `listItem` | Same properties as `listItem` | |
-| `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `pagination` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `paginationText` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `dynamicItemClasses` > `dynamic_item_class_name` > `listItem` | Applies a view style to all items belonging to a given dynamic style class. Same properties as `listItem` | |
+| `emptyPlaceholder` | Applies a view style to the empty placeholder. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `firstItem` | Applies a view style to the first item of the list. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `lastItem` | Applies a view style to the last item of the list. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `list` | Applies a view style to the list container. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `listItem` | Applies a view style to each item container in the list. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `loadMoreButtonContainer` | Applies a view style to the load more button container. All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `loadMoreButtonCaption` | Applies a text style to the load more button caption. All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 
 ## 13 Read More
 

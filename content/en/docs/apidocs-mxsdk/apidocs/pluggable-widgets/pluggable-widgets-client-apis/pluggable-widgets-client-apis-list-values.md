@@ -461,13 +461,13 @@ You can obtain an instance of `EditableValue` by using the `ListAttributeValue` 
 
 #### 3.2.2 Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
 
-`id` field of type `ListAttributeId` represents the unique randomly generated string identifier of an attribute. That identifier could be used when applying sorting and filtering on a linked data source property to identify which attribute should be used for sorting and/or filtering. Check [Sorting](#listvalue-sorting) and [Filtering](#listvalue-filtering) sections for more information.
+`id` field of type `ListAttributeId` represents the unique randomly generated string identifier of an attribute. That identifier could be used when applying sorting and filtering on a linked data source property to identify which attribute should be used for sorting and/or filtering. For more information, see the [Sorting](#listvalue-sorting) and [Filtering](#listvalue-filtering) sections.
 
-Fields `sortable` and `filterable` specify if the attribute could be used for sorting and/or filtering. Those flags have to be checked before a widget applies filtering or sorting on a data source property. An attempt to filter on a non-filterable attribute or sort on a non-sortable attribute would lead to an error during the execution time.
+Fields `sortable` and `filterable` specify if the attribute could be used for sorting and/or filtering. Those flags have to be checked before a widget applies filtering or sorting on a data source property. Any attempt to filter on a non-filterable attribute or sort on a non-sortable attribute leads to an error during the execution time.
 
 #### 3.2.3 Attribute Type
 
-[Attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property defines which attribute types could be configured for that property. For example, an attribute property may be configured to allow attributes of type `String` and `Integer` in order to present progress. While this is convenient for users it may require some additional work for a developer by processing different data types.
+The [attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property defines which attribute types can be configured for that property. For example, an attribute property may be configured to allow attributes of type `String` and `Integer` in order to present progress. While this is convenient for users, it may require additional work for developers by processing different data types.
 
 It is possible to determine the type of attribute by checking the `type` field on an attribute property. The following code sample shows how to check the attribute type on the property named `myAttributeOnDatasource`:
 
@@ -483,9 +483,9 @@ if (this.props.myAttributeOnDatasource.type === "String") {
 
 #### 3.2.4 Formatter and Universe
 
-`formatter` field represents the default formatter that is going to be used on values obtained by `get` function.
+The `formatter` field represents the default formatter that is going to be used on values obtained by `get` function.
 
-Optional `universe` field represents an array of possible values of an attribute. See `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) for more information.
+Optional `universe` field represents an array of possible values of an attribute. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value).
 
 ### 3.3 ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
 
@@ -506,9 +506,9 @@ export interface ListAssociationValue<T extends ObjectItem | ObjectItem[]> {
 
 #### 3.3.1 Obtaining Association Values
 
-In order to work with an object or objects that are associated with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. 
+In order to work with an object or objects with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. 
 
-If the association property has been configured to allow both types of associations, the type of the property is defined as `ListReferenceValue | ListReferenceSetValue` and a check on its `type` should be done to narrow down the type. See [Association Type](#association-type) section for more information.
+If the association property has been configured to allow both types of associations, the type of the property is defined as `ListReferenceValue | ListReferenceSetValue` and a check on its `type` should be done to narrow down the type. For more information, see the [Association Type](#association-type) section.
 
 Consult the following example code, which assumes widget properties are configured with the `myAssociationOnDatasource` property allowing association of type `Reference`:
 
@@ -527,19 +527,19 @@ The following code example shows how to get a `DynamicValue<ObjectItem>` that re
 const associationValue = this.props.myAssociationOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
-This will return an `ObjectItem` representing the associated object, since in this example, the widget is configured to allow only singular associations. If you want to access the individual attribute values of this associated object, you may use an attribute property linked to the selectable objects' data source and pass the associated object to it. For more information, see [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value).
+This will return an `ObjectItem` representing the associated object, because in this example the widget is configured to allow only singular associations. If you want to access the individual attribute values of this associated object, you may use an attribute property linked to the selectable objects' data source and pass the associated object to it. For more information, see [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value).
 
 Please note these code samples omit checks of `myDataSource` status and availability of items for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) for more information on the usages of `DynamicValue`.
 
 #### 3.3.2 Association ID and Filterable Flags {#listassociationvalue-id-filterable}
 
-`id` field of type `ListAssociationId` represents the unique randomly generated string identifier of an association. That identifier could be used when applying filtering on a linked data source property to identify which association should be used for filtering. Check [Filtering](#listvalue-filtering) sections for more information.
+The `id` field of type `ListAssociationId` represents the unique randomly-generated string identifier of an association. That identifier can be used when applying filtering on a linked data source property to identify which association should be used for filtering. For more information, see the [Filtering](#listvalue-filtering) section.
 
-`filterable` field specifies if the association could be used for filtering. This flag has to be checked before a widget applies filtering on a data source property. An attempt to filter on a non-filterable association would lead to an error during the execution time.
+THe `filterable` field specifies if the association can be used for filtering. This flag has to be checked before a widget applies filtering on a data source property. An attempt to filter on a non-filterable association leads to an error during the execution time.
 
 #### 3.3.3 Association Type {#association-type}
 
-[Association](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) property determines which association types could be configured for that property. For example, an association property may be configured to allow associations of type `Reference` and not `ReferenceSet`.
+The [association](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) property determines which association types could be configured for that property. For example, an association property may be configured to allow associations of type `Reference` and not `ReferenceSet`.
 
 It is possible to determine the type of association by checking the `type` field on an association property. This is useful if the property has been configured to allow both references and reference sets. The following code sample shows how to check the association type on the property named `myAssociationOnDatasource`:
 
@@ -554,8 +554,7 @@ if (this.props.myAssociationOnDatasource.type === "Reference") {
 
 ### 3.4 ListWidgetValue {#listwidgetvalue}
 
-`ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets) that is linked to a data source. 
-This allows the client component to render child widgets with items from a `ListValue`.
+`ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets) that is linked to a data source. This allows the client component to render child widgets with items from a `ListValue`.
 `ListWidgetValue` is an object and its definition is as follows:
 
 ```ts

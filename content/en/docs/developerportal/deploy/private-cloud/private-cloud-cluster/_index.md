@@ -1600,8 +1600,8 @@ You can also see an activity log containing the following information for all na
 * When a user accepts the invitation as a namespace member
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
-* When enviroment configurations are added, updated or removed
-* When Runtime Metrics configurations are added, updated, deleted
+* When enviroment configurations are added, updated, or removed
+* When Runtime Metrics configurations are added, updated, or deleted
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
 

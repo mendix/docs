@@ -144,9 +144,9 @@ On the **Project Management** tab, you can select a planning tool for the app. B
 
 {{% alert color="info" %}}It is not yet possible to migrate the data from Stories into Epics, so we recommend you to use Epics for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.{{% /alert %}}
 
-## 7 Managing Webhooks {#webhooks}
+## 7 Webhooks {#webhooks}
 
-Click the **Manage Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
+Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can manage webhooks.

@@ -483,9 +483,9 @@ if (this.props.myAttributeOnDatasource.type === "String") {
 
 #### 3.2.4 Formatter and Universe
 
-The `formatter` field represents the default formatter that is going to be used on values obtained by `get` function.
+The `formatter` field represents the default formatter used on values obtained by the `get` function.
 
-Optional `universe` field represents an array of possible values of an attribute. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value).
+The optional `universe` field represents an attribute's possible array values. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value).
 
 ### 3.3 ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
 

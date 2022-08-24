@@ -239,9 +239,9 @@ if (this.props.myAttributeString.filterable) {
 }
 ```
 
-First step the code takes is checking for the possibility to use filtering on `myAttributeString` property by checking the `filterable` flag. Then `filterCond` filter condition is constructed which specifies that attribute represented by `myAttributeString` should start with character `"B"`. `setFilter` call applies the filter, and on the next re-render the component gets only items where the value of an attribute represented by property `myAttributeString` is starting with `"B"`.
+The first step the code takes is checking for the possibility to use filtering on `myAttributeString` property by checking the `filterable` flag. Then the `filterCond` filter condition is constructed, which specifies that attribute represented by `myAttributeString` should start with character `"B"`. The `setFilter` call applies the filter, and on the next re-render the component gets only items where the value of an attribute represented by property `myAttributeString` is starting with `"B"`.
 
-Similarly, to apply a condition where the value on an attribute represented by `myAttributeBoolean` property is set to true:
+Similarly, code like this can apply a condition where the value on an attribute represented by `myAttributeBoolean` property is set to true:
 
 ```ts
 import { attribute, literal, equals } from "mendix/filters/builders";
@@ -255,7 +255,7 @@ if (this.props.myAttributeBoolean.filterable) {
 }
 ```
 
-And, to apply a condition to match only objects that are associated with another object:
+Code like this can apply a condition to match only objects that are associated with another object:
 
 ```ts
 import { association, literal, notEquals, empty } from "mendix/filters/builders";
@@ -269,7 +269,7 @@ if (this.props.myAssociationReference.filterable) {
 }
 ```
 
-Similarly, to apply a condition to match only the objects that are associated with at least the first two objects from the selectable objects data source:
+Similarly, code like this can apply a condition to match only the objects that are associated with at least the first two objects from the selectable objects data source:
 
 ```ts
 import { association, literal, notEquals, contains } from "mendix/filters/builders";
@@ -287,7 +287,7 @@ if (this.props.myAssociationReferenceSet.filterable) {
 }
 ```
 
-The following code sample shows how to remove current filtering condition:
+The following code sample shows how to remove the current filtering condition:
 
 ```ts
 this.props.myDataSource.setFilter(undefined);
@@ -489,8 +489,7 @@ Optional `universe` field represents an array of possible values of an attribute
 
 ### 3.3 ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
 
-`ListReferenceValue` and `ListReferenceSetValue` are both used to represent an [association property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) that is linked to a data source.
-This allows the client component to access associated values of individual items from a `ListValue`. `ListReferenceValue` and `ListReferenceSetValue` are both objects and their definitions are as follows:
+`ListReferenceValue` and `ListReferenceSetValue` are both used to represent an [association property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) that is linked to a data source. This allows the client component to access associated values of individual items from a `ListValue`. `ListReferenceValue` and `ListReferenceSetValue` are both objects and their definitions are as follows:
 
 ```ts
 export type ListReferenceValue = ListAssociationValue<ObjectItem> & { type: "Reference" };
@@ -505,11 +504,13 @@ export interface ListAssociationValue<T extends ObjectItem | ObjectItem[]> {
 }
 ```
 
-#### 3.3.1 Obtaining Association Value
+#### 3.3.1 Obtaining Association Values
 
-In order to work with an object or objects that are associated with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. If the association property has been configured to allow both types of associations, the type of the property is defined as `ListReferenceValue | ListReferenceSetValue` and a check on its `type` should be done to narrow down the type. See [Association Type](#association-type) section for more information.
+In order to work with an object or objects that are associated with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. 
 
-Let's take a look at some example. Assuming widget properties are configured as follows with `myAssociationOnDatasource` property allowing association of type `Reference`:
+If the association property has been configured to allow both types of associations, the type of the property is defined as `ListReferenceValue | ListReferenceSetValue` and a check on its `type` should be done to narrow down the type. See [Association Type](#association-type) section for more information.
+
+Consult the following example code, which assumes widget properties are configured with the `myAssociationOnDatasource` property allowing association of type `Reference`:
 
 ```ts
 interface MyListWidgetsProps {
@@ -520,16 +521,15 @@ interface MyListWidgetsProps {
 }
 ```
 
-The following code sample shows how to get a `DynamicValue<ObjectItem>` that represents a read-only value of an associated object of the first element from the `myDataSource`.
+The following code example shows how to get a `DynamicValue<ObjectItem>` that represents a read-only value of an associated object of the first element from the `myDataSource`:
 
 ```ts
 const associationValue = this.props.myAssociationOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
-This will return an `ObjectItem` representing the associated object, since in this example, the widget is configured to allow only singular associations.
-If you want to access the individual attribute values of this associated object, you can use an attribute property linked to the selectable objects data source and pass the associated object to it. Refer to [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value) for details on how to do this.
+This will return an `ObjectItem` representing the associated object, since in this example, the widget is configured to allow only singular associations. If you want to access the individual attribute values of this associated object, you may use an attribute property linked to the selectable objects' data source and pass the associated object to it. For more information, see [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value).
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) for more information about usage of `DynamicValue`.
+Please note these code samples omit checks of `myDataSource` status and availability of items for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) for more information on the usages of `DynamicValue`.
 
 #### 3.3.2 Association ID and Filterable Flags {#listassociationvalue-id-filterable}
 

@@ -269,7 +269,7 @@ if (this.props.myAssociationReference.filterable) {
 }
 ```
 
-Similarly, code like this can apply a condition to match only the objects that are associated with at least the first two objects from the selectable objects data source:
+Similarly, code like this can apply a condition to match only the objects that are associated with at least the first two objects from the selectable object's data source:
 
 ```ts
 import { association, literal, notEquals, contains } from "mendix/filters/builders";

@@ -2,26 +2,26 @@
 title: "Data Hub without Mendix Cloud"
 description: "This guide explains how to use Mendix Data Hub and external entities for local deployments, or for private cloud or on-premises solutions."
 url: /data-hub/data-hub-without-mendix-cloud/
-weight: 20
+weight: 80
 tags: ["entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "Data Hub private cloud", Data Hub Tencent"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
 
-This guide explains how to use Data Hub for users who do not deploy to the Mendix Cloud. This includes users who are deploying locally, or users who deploy to a Private Cloud, the Tencent Cloud, or On-Premises solution.
+This guide explains how to use Data Hub when not deploying to the Mendix Cloud. This includes users who are deploying locally, or users who deploy to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
 
 ## 1.1 Background
 
 The [Mendix Data Hub](/data-hub/) includes two main features:
 
-* [External entities](/refguide/external-entities) in Mendix Studio Pro version [8.14](/releasenotes/studio-pro/8.14/#data-hub) and above, purple entities in the Domain Model that represent data provided through [published OData Services](/refguide/published-odata-services/)
-* The [Data Hub Catalog](hub.mendix.com), documented in our [Data Hub Catalog](/data-hub/data-hub/catalog/) guide, a metadata hub for managing shared registered assets made available through OData services
+* [External entities](/refguide/external-entities/) in Mendix Studio Pro version [8.14](/releasenotes/studio-pro/8.14/#data-hub) and above, purple entities in the Domain Model that represent data provided through [published OData Services](/refguide/published-odata-services/)
+* The [Data Hub Catalog](https://hub.mendix.com), documented in our [Data Hub Catalog](/data-hub/data-hub-catalog/) guide, a metadata hub for managing shared registered assets made available through OData services
 
 Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
-For an overview of how Data Hub components work together, and general information about using Data Hub without the Mendix Cloud, check out the blog post [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/).
+For an overview of how Data Hub components work together, and general information about using Data Hub without the Mendix Cloud, check out the [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/) page in the Evaluation Guide.
 
-## 1.2 Use Cases without the Mendix Cloud
+## 1.2 Use Cases
 
 When deploying to the Mendix Cloud, check out the [Data Hub Guide](/data-hub/) documentation, and the Studio Pro guide to [external entities](/refguide/external-entities/).
 
@@ -97,7 +97,14 @@ The service will now appear in the Data Hub pane.
 
 ### 2.5 Updating a Manually Registered Contract
 
-To update the metadata of a manually registered contract, follow the same steps as an initial registration. Then, indicate during the registration that the updated source is a new version in an existing environment of an existing app.
+To update the metadata of a manually registered contract, follow the same steps as an initial registration. Then, indicate during the registration that the updated source is a new version in an existing environment of an existing app. 
+
+To update a data set in Studio Pro, do the following:
+
+1.  Open your app and the published OData service you want to update.
+2.  Under **Entities**, select **Customer**, and click **Edit**.
+3.  Select the check box for **Updateable** and click **OK**.
+4.  Click **Publish**.
 
 See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) section of *Consumed OData Service*  to see how this works for automatically registered contracts.
 

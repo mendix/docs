@@ -6,9 +6,7 @@ weight: 65
 ---
 
 {{% alert color="warning" %}}
-The Team Server API will be deprecated in the future.
-
-Please use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) instead.
+The Team Server API is deprecated. Please use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) instead.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -18,10 +18,6 @@ In this guide, you will learn about the following:
 * Using a microflow to define how resources should be retrieved and stored, and to return values of published OData services
 * Selecting a key (other than the object ID) when exposing entities as OData resources
 
-{{% alert color="info" %}}
-All features are supported for published OData services using OData v4. [checking if it's not stated, if all versions are supported] 
-{{% /alert %}}
-
 ### 1.2 Prerequisites
 
 Before you read this guide, do the following:
@@ -30,18 +26,11 @@ Before you read this guide, do the following:
 * Check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide
 * Install Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above
 
-### 1.1 Usage Examples
-
-The following examples are possible ways that you can use the *Connector Kit 2.0* features described in this document, and elaborated upon in the [Usage](#usage) section:
-
-* A [third-party service connector](#3rd-party) that connects to the Twitter API
-* Building [Updatable operational data stores](#operational-data-stores), temporary databases that integrate data from multiple sources
-
 ## 2 Why Wrap with OData?
 
 ### 2.1 Best Practices and Performance
 
-OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide [filtering], [sorting], and [pagination] on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. 
+OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide filtering, sorting, and pagination on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. 
 
 ### 2.2 Compatibility with Data Hub
 
@@ -51,7 +40,9 @@ Wrapping a service, API, or database in OData ensures compatibility with the [Me
 
 When building a connector or integration, you might only need to move data from back-end services to the client apps. This means that the data does not need to be stored. To support this, you can expose [non-persistable entities](/refguide/entities/#non-persistable-entity) as [published OData resources](/refguide/published-odata-resource/). Previously, only persistable entities could be exposed as published OData resources.
 
-Right-click on the non-persistable entity you want to expose and select **Expose as OData resource**.
+To expose a non-persistable entity, right-click on the non-persistable entity you want to expose and select **Expose as OData resource**.
+
+This is possible for all published OData service versions.
 
 ## 4 Data Sources for Published OData Resources {#odata-data-sources}
 
@@ -102,11 +93,11 @@ When you use a microflow to provide data, security is applied to the result of t
            If the `ODataResponse` is present as a microflow parameter, then it will return the `Count` attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.</br>
            1. **Inline count in the request** – Use this when the consumer is interested in the total number of objects while retrieving part of the objects.</br>
 
-           Consider the following request: `persons?$count=true&$skip=5&top=5`</br>
+           Consider the following request: `persons?$count=true&$skip=5&top=5` </br>
 
-           This would return an OData payload with maximum 5 objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects.
+           This would return an OData payload with maximum 5 objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects. </br>
 
-           If the `ODataResponse` is present as a microflow parameter, then it will return the `Count` attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined.
+           If the `ODataResponse` is present as a microflow parameter, then it will return the `Count` attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A `Count` value of `0` means no record.
 
 {{% alert color="info" %}}
 In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
@@ -152,9 +143,9 @@ You can use tools like Postman or Visual Studio Code to test your published ODat
 
 Another way to test published OData services is with the user interfaces of [OpenAPI](/refguide/published-odata-services/#openapi), released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/).
 
-## 7 Usage {#usage}
+## 7 Usage Examples {#usage}
 
-The following examples are possible ways that you can use the *Connector Kit 2.0* features described in this document.
+The following examples are possible ways that you can use OData to connect to external data sources.
 
 ### 7.1 Third-Party Service Connector {#3rd-party}
 
@@ -164,7 +155,7 @@ As an example, say you want to try the new easy-to-use [Twitter v2 REST API](htt
 
 #### 7.1.1 Building the Client
 
-Build a Twitter client that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector)
+First, build a Twitter client that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector).
 
 1.  Publish a contract that includes the information from the Twitter API, and import it into the Data Hub pane. See [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) for deploying locally with Data Hub.
 2.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data. 
@@ -174,7 +165,7 @@ Build a Twitter client that allows users to input a Twitter ID and communicates 
 
 #### 7.1.2 Building the Connector {#twitter-connector}
 
-Build a connector module that communicates to the Twitter API with OData. 
+Second, build a connector module that communicates to the Twitter API with OData. 
 
 1.  Use the Twitter API to find out the structure and create an import mapping, which creates three non-persistable entities in your domain model.
 2.  Publish all three non-persistable entities as an OData service, used as your Twitter Connector (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
@@ -184,15 +175,15 @@ Build a connector module that communicates to the Twitter API with OData.
 6.  Then, peel out the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers. The API response goes into the import mapping.
 7.  Create microflows for each entity you are exposing to define how these resources are retrieved.
 
-The result is a running app that displays the latest tweets and followers of a user that you input. 
+The result is a running app that displays the latest Tweets and followers of a user that you input. 
 
 Check out our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide for general information on building simple connectors.
 
 ## 7.2 Updatable Operational Data Stores {#operational-data-stores}
 
-Another use case where wrapped OData APIs will help you is with Mendix app that functions as an operational data store, or a Data Layer for other Mendix apps.
+Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/howto/data-models/create-a-basic-data-layer/) for other Mendix apps.
 
-Customers often have one Mendix app where they define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData you have a productive and easy to consume way to provide full read-write APIs to your frontend apps. To ensure data consistency, you can use the OData capability microflows to update your backend systems when a frontend app changes data through an OData API.
+Imagine that you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, you have a productive and easy to consume way to provide full read-write APIs to your frontend apps. To ensure data consistency, you can use the OData capability microflows to update your backend systems when a frontend app changes data through an OData API.
 
 Operational data stores are often used to unify and cache external data used by multiple apps. Reasons for this include the following:
 
@@ -200,10 +191,10 @@ Operational data stores are often used to unify and cache external data used by 
 * You want to centrally manage security on the data, instead of handling this in every frontend app
 * Simplify data model by unifying data from different services
 
-With the functionalities released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can implement a low-code operational data store using Mendix.
-
-To do so, include the following steps:
+To implement a low-code operational data store, include the following steps:
 
 1.  Define a unified model using persistent entities.
-2.  Use a [task queue](/refguide/task-queue/) and scheduled events to implement data syncing by retrieving data from the available APIs (web services, REST, or SQL).
+2.  Cache data so that when you call the OData source, it fetches any updates since it was last called and retrieves older records from a local database.
 3.  Expose the unified model with OData, including write-back logic in your microflows.
+
+Check out our [Build Connectors](/appstore/creating-content/connector-guide-build/) guide for general information on building simple connectors.

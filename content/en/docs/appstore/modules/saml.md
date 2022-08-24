@@ -94,21 +94,13 @@ There are different versions of the module, depending on which version of Mendix
 
 You can use SSO to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint as follows:
 
-{{% alert color="info" %}}If you do this without any other changes, the app will come back to `index.html` which will be redirected again to single sign on.{{% /alert %}}
+If you use Mendix version lower than 9, change the `index.html` file in the `/theme` folder by adding `<meta http-equiv="refresh" content="0;URL=/SSO/" />` to the file.
 
-1. Get the `index.html` file:
+If you use Mendix version 9 and higher, there is no `index.html` file, so you need to create one first. To do so, run your app in Studio Pro, and then copy the `index.html` file from the `/deployment/web/` folder to the `/theme/web` folder. Mendix then uses this version as the template for `index.html`. Then edit the `index.html` file by changing the URL within the `originURI` to `\SSO\`, for example: `document.cookie = "originURI=/SSO/" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");`. This cookie determines where the Mendix Client will redirect users to when they need to sign in. If you are already signed in, you are not redirected again.
 
-   * For Mendix version lower than 9,  the `index.html` file is the default page of the Mendix app. You can find it in the `.../theme` folder in your app directory.
+If you do this without any other changes, the app will come back to `index.html` which will be redirected again to single sign on.
 
-   * For Mendix version 9 or higher, there is no `index.html` page. You must first create an `index.html` file in the `.../theme/web`  folder in your app directory.
-
-     To create the `index.html` file, run your app in Studio Pro, and then copy the `index.html` file from the `.../deployment/web/` folder to the `.../theme/web` folder. Mendix then will use this version as the template for `index.html`.
-
-2. In the `index.html` file, change the URL within the `originURI` to `\SSO\`, for example: `document.cookie = "originURI=/SSO/" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");`. 
-
-   {{% alert color="info" %}}This cookie determines where the Mendix Client will redirect users to  when they need to sign in. If you are already signed in, you are not redirected again.{{% /alert %}}
-
-**SSOLandingPage** specifies a different landing page so the end-user does not end up on `index.html` again after a login attempt.  We recommend that you change this constant to `/index3.html` and create an `index3.html` page in your `/theme` folder and copy contents of the original `index.html` (without the added redirect) into it. The authenticated end-user will then land on `index3.html` which will then display the content of the app. If the user authentication fails, the user will be directed to the **DefaultLoginPage** instead. 
+**SSOLandingPage** specifies a different landing page so the end-user does not end up on `index.html` again after a login attempt. We recommend that you change this constant to `/index3.html` and create an `index3.html` page in your `/theme` folder and copy contents of the original `index.html` (without the added redirect) into it. The authenticated end-user will then land on `index3.html` which will then display the content of the app. If the user authentication fails, the user will be directed to the **DefaultLoginPage** instead. 
 
 ## 3 Configuration
 

@@ -11,6 +11,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### August 25th, 2022
+
+### Improvements
+
+* We improved the accuracy of the Catalog's search results.
+* We added the option to the API to paginate through search results with an offset.
+* We made several improvements to the Catalog UI.
+
 ### August 18th, 2022
 
 ### Improvements

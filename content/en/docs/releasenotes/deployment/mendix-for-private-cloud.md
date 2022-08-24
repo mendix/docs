@@ -13,17 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### August 25th, 2022
+
 #### Portal Improvements
 
-* We added activity log entries for Runtime Metrics Configurations
-* We fixed an issue where runtime option keeps spinning even after deployment is successful(Ticket 153960)
-* Added Save and Save and Apply functionality for all the annotations(Ingress, Service, Pod) on the cluster manager page
-* Improved error message when no deployable environments are found due to missing permissions.
-
-
-Nidhi
-  13:33
-but that will be part of release notes
+* We added activity log entries for Runtime Metrics Configurations.
+* We fixed an issue where the runtime status indicator keeps spinning even after deployment is successful. (Ticket 153960)
+* We added Save and Save and Apply functionality for all the annotations (Ingress, Service, and Pod) on the cluster manager page.
+* We improved the error message displayed when no deployable environments are found due to missing permissions.
 
 ### July 12th, 2022
 

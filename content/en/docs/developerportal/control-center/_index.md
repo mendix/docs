@@ -217,11 +217,11 @@ The **Free Environments** tab presents details on your company's free environmen
 
 {{% todo %}}1. Check if the order of the sections reflect the final product. 2. Check whether the final name of the menu item is Subscriptions. 3. Add a screenshot of the final page.{{% /todo %}}
 
-Before the licenses are renewed for your company, Mendix checks if your payment method is still valid. If it is expired, you will receive an email that asks you to update your payment method on this page for your company.
+Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
 
-The page shows the details of the existing billing accounts. These billing accounts are on a company level. If your company has multiple billing accounts, you can select an account from the drop-down list.
+The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select an account from the drop-down list.
 
-You can find **Payment Method** at the bottom of the page. Depending on your payment method, you see either an invoice or the credit card data. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
+You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
 
 ## 12 Data Hub {#data-hub}
 

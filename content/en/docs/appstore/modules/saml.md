@@ -196,8 +196,8 @@ These settings are only available in the following versions of the module (depen
 * v3.1.8/v3.1.9 and above for Mendix version 9
 * v2.2.0 and above for Mendix version 8
 * v1.16.4 and above for Mendix version 7
-  {{% /alert %}}
-  
+{{% /alert %}}
+
 * **Use custom logic for user provisioning** and **Use custom after sign-in logic**
 
     If you want to add your own logic to the user provisioning, enable one, or both, of these functions.The microflow you select will be executed after the user signs in.

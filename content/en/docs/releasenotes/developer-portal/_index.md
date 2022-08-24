@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### August 25th, 2022
+
+#### Fixes
+
+* We fixed an issue where **Company Admins** were not able to invite users to their company's Apps.
+* We fixed a pagination issue on the [Users' Management overview](https://docs.mendix.com/developerportal/collaborate/general-settings/#manage-users) of your **Access Management settings**.
+
 ### August 22nd, 2022
 
 #### New Features

@@ -168,7 +168,7 @@ It is possible to require the following modules:
 The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
 * `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability` system property, or if it is inside a read-only data view)
-* `className` (`string`): the classes from the system, which will include manually configured classes through the `class` property in Studio Pro, and the classes resulting from configured design properties
+* `class` (`string`): the classes from the system, which will include manually configured classes through the `class` property in Studio Pro, and the classes resulting from configured design properties
 * `style` (`string`): a string representation of the styles as entered in the `style` property in Studio Pro
 
 Assuming a pluggable widget with the string properties `content` and `style`, the following shows a simple preview component:
@@ -177,11 +177,11 @@ Assuming a pluggable widget with the string properties `content` and `style`, th
 type Props = {
     content: string;
     style: string;
-    className: string;
+    class: string;
 }
 
 export const preview: React.FC<Props> = (props) => (
-    <div className={`my-pw-container ${props.className}`} style={props.style}>
+    <div className={`my-pw-container ${props.class}`} style={props.style}>
         {props.content}
     </div>
 );

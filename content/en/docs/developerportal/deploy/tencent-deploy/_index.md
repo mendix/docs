@@ -628,7 +628,7 @@ If you are using a version of Operator before 1.5.0, the settings in this tab wi
 
 If you choose a custom TLS configuration, you will need to enter the following information:
 
-* Enable TLS – is TLS enabled for this environment?
+* **启用 TLS** – is TLS enabled for this environment?
 
 * **使用现有的 TLS 密钥或添加新的 tls 私钥和证书** – Use existing TLS secret or add new TLS private key and certificate?
 
@@ -651,7 +651,7 @@ Clicking **启用调试器** allows you to set the type of password to be one of
 * **自动生成** – The password is generated automatically.
 * **自定义** – The password is set manually.
 
-Click **保存** to save the new settings. Click **保存并应用** to save and apply the new settings.
+Click **保存并应用** to confirm your new configuration.
 
 ## 7 Current Limitations{#limitations}
 

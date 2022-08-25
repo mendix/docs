@@ -92,11 +92,9 @@ There are different versions of the module, depending on which version of Mendix
 
 ### 2.1 Using SSOLandingPage{#ssolandingpage}
 
-You can use SSO to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint as follows:
+You can use single sign on to automatically sign users in to your app by redirecting every user accessing `index.html` to the Mendix `/SSO/` endpoint. To do this, you need to add `<meta http-equiv="refresh" content="0;URL=/SSO/" />` to the `index.html` file. (For Mendix version 9, there is no `index.html` file, so you need to create this file first. To do so, run your app in Studio Pro, and then copy the `index.html` file from the `/deployment/web/` folder to the `/theme/web` folder. Mendix then uses this version as the template for `index.html`.)
 
-If you use Mendix version lower than 9, change the `index.html` file in the `/theme` folder by adding `<meta http-equiv="refresh" content="0;URL=/SSO/" />` to the file.
-
-If you use Mendix version 9 and higher, there is no `index.html` file, so you need to create one first. To do so, run your app in Studio Pro, and then copy the `index.html` file from the `/deployment/web/` folder to the `/theme/web` folder. Mendix then uses this version as the template for `index.html`. Then edit the `index.html` file by changing the URL within the `originURI` to `\SSO\`, for example: `document.cookie = "originURI=/SSO/" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");`. This cookie determines where the Mendix Client will redirect users to when they need to sign in. If you are already signed in, you are not redirected again.
+If you want to redirect users who have not yet signed in automatically to `/SSO/` when opening `index.html`, while still allowing users to open `login.html` directly and sign in using a local account, bypassing single sign on,  you should edit the `index.html` file by changing the URL within the `originURI` to `/SSO/`, for example: `document.cookie = "originURI=/SSO/" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "");`. This cookie determines to which location the Mendix Client will redirect users when they need to sign in. If you have already signed in, you are not redirected again.
 
 If you do this without any other changes, the app will come back to `index.html` which will be redirected again to single sign on.
 

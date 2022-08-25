@@ -147,8 +147,8 @@ In this page, you can see the Marketplace content for which you have created at 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-content.png" >}}
 
 * **View item** – click this to go to the [component details page](#details) 
-* **Create a new draft** – click this to create a new draft version of the component
-    * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, click **View draft** to see it
+* **Manage Drafts** – click this to manage draft of the component
+    * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, you will see options to manage it. click **Edit draft** to see and edit it.
     * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *How to Share Marketplace Content*
 * **Edit a version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
 * **Unpublish a version** – click this to remove one version or all versions of the component
@@ -168,7 +168,7 @@ On this page, click the name of a Marketplace component to go to its [draft page
 
 Click **Delete** to delete a draft. You can also click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](/appstore/general/share-app-store-content/#approval), which will return the content to the draft state.
 
-### 4.2 My Subscriptions {#my-subscriptions}
+### 4.3 My Subscriptions {#my-subscriptions}
 
 You can see all the Marketplace app services you have trials for on this page:
 
@@ -178,11 +178,11 @@ The table presents the **Product Names** you have trials for. Clicking a product
 
 The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
 
-### 4.3 Shared with Me {#shared-with-me}
+### 4.4 Shared with Me {#shared-with-me}
 
 This page contains private content shared with you by other companies who have marked you as a [guest](#guests).
 
-### 4.4 Saved Content {#saved-components}
+### 4.5 Saved Content {#saved-components}
 
 This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the lower-right corner of the component's tile to receive email notifications on new versions of the component:
 
@@ -196,13 +196,13 @@ Click the context menu to access various options for managing this content:
 * **Receive/Stop email notifications** – click this to start receivin email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
 
-### 4.5 My Reviews {#my-reviews}
+### 4.6 My Reviews {#my-reviews}
 
 This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/your-reviews.png" >}}
 
-### 4.6 Company Content {#company-content}
+### 4.7 Company Content {#company-content}
 
 On this page, you can see all the content your company has published. Click the context menu to access various options for managing this content:
 
@@ -214,7 +214,7 @@ The options in this menu are the same as described for the context menu for the 
 As a Mendix Admin in Control Center, you can also curate the Marketplace content you want to make available to your company's users in Mendix Studio. For more information, see the [Marketplace Content](/developerportal/control-center/#marketplace-content) section of *Control Center*.
 {{% /alert %}}
 
-### 4.7 Company Subscriptions {#company-subscriptions}
+### 4.8 Company Subscriptions {#company-subscriptions}
 
 You can see all the Marketplace app services your company has subscribed to on this page:
 
@@ -226,7 +226,7 @@ The table also presents the **Technical Owner** of the company subscription. Whe
 
 Finally, the table presents, the **Plan**, the plan's **Status**, and the **Expires On** date for the subscription. Under **Usage Details** is a link to the [usage dashboard](#usage-dashboard) for the component.
 
-#### 4.7.1 Service Management Dashboard {#service-management-dashboard}
+#### 4.8.1 Service Management Dashboard {#service-management-dashboard}
 
 This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
 
@@ -248,7 +248,7 @@ You can also select a group of binding keys and click **Manage Instance** to go 
 This additional management option is only available for specific app services where necessary.
 {{% /alert %}}
 
-##### 4.7.1.1 Creating Binding Keys {#creating-binding-keys}
+##### 4.8.1.1 Creating Binding Keys {#creating-binding-keys}
 
 To create binding keys for a specific [subscription](#company-subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
 
@@ -262,7 +262,7 @@ For more information, see the [Using the Binding Keys](#using) section below.
 
 Click **Return to the overview** to go to the main page of the dashboard. 
 
-##### 4.7.1.2 Using the Binding Keys {#using}
+##### 4.8.1.2 Using the Binding Keys {#using}
 
 When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
 
@@ -278,11 +278,11 @@ In the **Analytics** section, you can gain a visual intepretation of the plan us
 
 {{< figure src="/attachments/appstore/general/app-store-overview/usage-dashboard.jpg" >}}
 
-### 4.8 Company Reviews {#company-reviews}
+### 4.9 Company Reviews {#company-reviews}
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
-### 4.9 User Groups {#user-groups}
+### 4.10 User Groups {#user-groups}
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
@@ -298,7 +298,7 @@ This table breaks down the roles and permissions for user groups:
 | Organization member (not part of any group) | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
 | Guest | ✘ | ✘ | ✘ | ✘ | ✔ | ✘ |
 
-#### 4.9.1 Members Tab {#members}
+#### 4.10.1 Members Tab {#members}
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
 
@@ -308,7 +308,7 @@ Once a member is added, you can select their permission level: **Group Member** 
 
 To remove a member, click **Remove** next to their name.
 
-#### 4.9.2 Guests Tab {#guests}
+#### 4.10.2 Guests Tab {#guests}
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
@@ -322,7 +322,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-#### 4.9.3 Content Tab {#group-content}
+#### 4.10.3 Content Tab {#group-content}
 
 On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
@@ -338,7 +338,7 @@ Click the context menu to access various options for managing this content:
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
 
-#### 4.9.4 Settings Tab
+#### 4.10.4 Settings Tab
 
 {{% alert color="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company).

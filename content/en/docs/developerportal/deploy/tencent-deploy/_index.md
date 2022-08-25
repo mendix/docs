@@ -646,6 +646,13 @@ You will receive a warning that you have made some changes. Click **应用更改
 
 On the **调试器** tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
 
+Clicking **启用调试器** allows you to set the type of password to be one of the following:
+
+* **自动生成** – The password is generated automatically.
+* **自定义** – The password is set manually.
+
+Click **保存** to save the new settings. Click **保存并应用** to save and apply the new settings.
+
 ## 7 Current Limitations{#limitations}
 
 ### 7.1 Reserved Names for Siemens Low Code Platform Apps{#reserved-names}

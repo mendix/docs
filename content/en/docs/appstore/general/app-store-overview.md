@@ -106,6 +106,7 @@ At the top of your Marketplace page, you can choose a category to [share new Mar
 
 Click an item in the sidebar to go to the page for that content:
 
+* [My Drafts](#my-drafts)
 * [My Content](#my-content)
 * [My Subscriptions](#my-subscriptions)
 * [Shared with Me](#shared-with-me)

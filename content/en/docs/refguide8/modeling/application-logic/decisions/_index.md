@@ -1,7 +1,6 @@
 ---
 title: "Decisions"
 url: /refguide8/decisions/
-parent: "application-logic"
 weight: 50
 tags: ["studio pro", "decision", "decisions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -23,12 +22,12 @@ There are following types of decisions:
 
 * [Decision](/refguide8/decision/) – makes a choice based on a condition and follows one and only one of the outgoing sequence flows
 
-	{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/decision-example.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/decision-example.png"   width="400"  >}}
 
 * [Object Type Decision](/refguide8/object-type-decision/) – makes a choice based on the type of an object of a generalized entity
 
-	{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/object-type-decision.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/decisions/object-type-decision.png" >}}
 
 * [Merge](/refguide8/merge/) – merges incoming flows 
 
-	{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/merge.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/decisions/merge.png" >}}

@@ -20,7 +20,7 @@ Encrypt and decrypt plain texts using the [AES](https://en.wikipedia.org/wiki/Ad
 
 ### 2.1 Typical Use Cases
 
-The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrypted way in the database. 
+The typical usage scenario is when an app/module consumes a service where a user name and password are required, you can store the password in an encrypted way in the database. 
 
 ### 2.2 Limitations
 
@@ -55,7 +55,7 @@ Encrypt and decrypt the contents of FileDocument entities using the [PGP](https:
 
 ### 3.1 Typical Use Cases
 
-One of the typical usage scenarios may be a project/module that stores customer sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
+One of the typical usage scenarios may be an app/module that stores customer sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
 
 ### 3.2 Configuration
 

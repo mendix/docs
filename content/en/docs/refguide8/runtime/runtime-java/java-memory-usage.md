@@ -1,7 +1,6 @@
 ---
 title: "Java Memory Usage"
 url: /refguide8/java-memory-usage/
-parent: "runtime-java"
 weight: 2
 tags: ["runtime", "java", "memory usage", "memory", "studio pro"]
 ---
@@ -10,10 +9,10 @@ The Java memory is divided in different Memory Usage blocks. Each of these block
 
 | Memory block | Description |
 | --- | --- |
-| **_init_** | Represents the initial amount of memory (in bytes) that the Java virtual machine requests from the operating system for memory management of this segment during startup. The Java virtual machine may request additional memory from the operating system and may also release memory to the system over time. |
-| **_used_** | represents the amount of memory that is actively used (in bytes). |
-| **_committed_** | Represents the amount of memory (in bytes) that is guaranteed to be available for use by the Java virtual machine. The amount of committed memory may change over time (increase or decrease). |
-| **_max_** | Represents the maximum amount of memory (in bytes) that can be used for memory management. The maximum amount of memory may change over time if defined. The amount of used and committed memory will always be less than or equal to max if max is defined. |
+| ***init*** | Represents the initial amount of memory (in bytes) that the Java virtual machine requests from the operating system for memory management of this segment during startup. The Java virtual machine may request additional memory from the operating system and may also release memory to the system over time. |
+| ***used*** | represents the amount of memory that is actively used (in bytes). |
+| ***committed*** | Represents the amount of memory (in bytes) that is guaranteed to be available for use by the Java virtual machine. The amount of committed memory may change over time (increase or decrease). |
+| ***max*** | Represents the maximum amount of memory (in bytes) that can be used for memory management. The maximum amount of memory may change over time if defined. The amount of used and committed memory will always be less than or equal to max if max is defined. |
 
 For all Mendix applications the value for init and max start with identical values. Immediately after startup the JVM can execute the garbage collection and correct the memory usage.
 

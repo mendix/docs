@@ -1,7 +1,6 @@
 ---
 title: "Create Custom Actions"
 url: /addons/ats-addon/ht-two-create-custom-actions/
-parent: "ht-two"
 ---
 
 These are the documents for creating a custom action:

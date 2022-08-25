@@ -1,7 +1,6 @@
 ---
 title: "Monitoring"
 url: /addons/ats-addon/rg-one-monitoring/
-parent: "rg-one-ats"
 ---
 
 ## 1 Test Results
@@ -12,20 +11,20 @@ The link Monitoring/Results shows you pending and most recent tests to review th
 
 Results allows to search previous test runs by
 
-*   Result
-*   Name
-*   Browser
-*   After date
-*   Before date
-*   Executed by
+* Result
+* Name
+* Browser
+* After date
+* Before date
+* Executed by
 
-You can deep dive by each test run for further analysis by clicking on its name or _Rerun_ the test case.
+You can deep dive by each test run for further analysis by clicking on its name or *Rerun* the test case.
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-monitoring/21168218.png" alt="Result Log Page of a Test Suite" >}}
 
-The _Result Log_ provides you more details about the test case in Test Steps, Screenshots and Error log tabs.
+The *Result Log* provides you more details about the test case in Test Steps, Screenshots and Error log tabs.
 
-In tab _Test Steps_ you can deep dive by clicking the test step for each step in your test case.
+In tab *Test Steps* you can deep dive by clicking the test step for each step in your test case.
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-monitoring/21168219.png" alt="Result Log Screenshots Tab" >}}
 

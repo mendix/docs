@@ -1,7 +1,7 @@
 ---
 title: "Extend Design Properties to Customize Your Web Modeler Experience"
+linktitle: "Extend Design Properties"
 url: /howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/
-parent: "atlas-ui"
 weight: 60
 tags: ["Atlas", "UI", "UX", "user experience", "customize", "custom", "studio"]
 ---
@@ -46,14 +46,12 @@ If your app's version is 7.8.0 or lower, you can change Atlas UI framework to th
 
 The first line in the **settings.json** file enables the resources, page templates, and building blocks that are integrated with Atlas UI, the Web Modeler, and the Desktop Modeler:
 
- ```"pageTemplates" : "WebModeler"```
+```"pageTemplates" : "WebModeler"```
 
 If this line is deleted, the old Mendix UI Framework resources will be loaded in the Mendix Web Modeler and the Desktop Modeler. If you do not want to use Atlas UI, it is possible to delete this line.
 
 {{% alert color="warning" %}}
-
 You can only switch to the old Mendix UI Framework following the instructions above if your app's  version is 7.8.0 or lower.
-
 {{% /alert %}}
 
 ## 4 Read More

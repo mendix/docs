@@ -13,11 +13,11 @@ XPath queries can be written both in the Modeler, for example when you want to s
 
 Examples of XPath queries are:
 
-*   `//Sales.Customer`
+* `//Sales.Customer`
     Retrieve all customers.
-*   `//Sales.Customer[Name='Jansen']`
+* `//Sales.Customer[Name='Jansen']`
     Retrieve all customers with name 'Jansen'.
-*   `avg(//Sales.Order[IsPaid = true()]/TotalPrice)`
+* `avg(//Sales.Order[IsPaid = true()]/TotalPrice)`
     Retrieve the average of the total prices of all paid orders.
 
 {{% alert color="warning" %}}
@@ -65,15 +65,15 @@ For details, see [XPath Operators](/refguide7/xpath-operators/).
 The following XPath functions are available:
 
 * [XPath functions](/refguide7/xpath-query-functions/):
-	* [avg](/refguide7/xpath-avg/)
-	* [count](/refguide7/xpath-count/)
-	* [max](/refguide7/xpath-max/)
-	* [min](/refguide7/xpath-min/)
-	* [sum](/refguide7/xpath-sum/)
+    * [avg](/refguide7/xpath-avg/)
+    * [count](/refguide7/xpath-count/)
+    * [max](/refguide7/xpath-max/)
+    * [min](/refguide7/xpath-min/)
+    * [sum](/refguide7/xpath-sum/)
 * [Constraint functions](/refguide7/xpath-constraint-functions/):
-	* [contains](/refguide7/xpath-contains/)
-	* [starts-with](/refguide7/xpath-starts-with/)
-	* [ends-with](/refguide7/xpath-ends-with/)
-	* [not](/refguide7/xpath-not/)
-	* [true](/refguide7/xpath-true/)
-	* [false](/refguide7/xpath-false/)
+    * [contains](/refguide7/xpath-contains/)
+    * [starts-with](/refguide7/xpath-starts-with/)
+    * [ends-with](/refguide7/xpath-ends-with/)
+    * [not](/refguide7/xpath-not/)
+    * [true](/refguide7/xpath-true/)
+    * [false](/refguide7/xpath-false/)

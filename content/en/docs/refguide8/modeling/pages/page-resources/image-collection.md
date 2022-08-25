@@ -1,7 +1,6 @@
 ---
 title: "Image Collection"
 url: /refguide8/image-collection/
-parent: "page-resources"
 weight: 5
 description: "Why and how to create an image collection"
 tags: ["Studio Pro", "Images", "Image Collection"]
@@ -75,4 +74,3 @@ It is not possible to *copy* an image, you can only *move* it. If you need to ma
 ### 3.6 Export to File
 
 The **Export to file…** button saves the selected image(s) as image files. You can select the folder where the images will be saved and they will be given the same name as they have in the image collection. If a file with the same name already exists, you will be warned.
-

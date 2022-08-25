@@ -41,7 +41,6 @@ The table below describes the most common errors you can come across when config
 |            | No microflow configured for the data source of this data view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the data view's properties> the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | The list widget option is configured as the data source for the data view, but you have not selected the specific list you would like the data view to listen to. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
 
-
 ## 4 Context Not Available Consistency Errors
 
 Possible errors that you can get when a page is expecting a context that is unavailable are described in the table below. 
@@ -78,11 +77,9 @@ As the **Details** button to the **Customers** page is outside a data container 
 If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customers** page, we can fix this error the following way:
 
 1. Open the **Customers** page.
-
-2.  Drag the **Details** button inside the list view.
+2. Drag the **Details** button inside the list view.
 
     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/list-view-content.png" alt="List View Example"   width="350"  >}}
-
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -91,13 +88,11 @@ Now the button gets the object of type *Customer* from the list view on the **Cu
 If you want to create a new customer and fill in the customer's details on the **Customers Details** page, you can do the following:
 
 1. Open the **Customers** page.
-
 2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
-     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
+    {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
 
 3. Set **Customer** as **Entity**.
-
 4. Change the button's caption from **Details** to **Add**, as this button will now create a new customer, and not show details of an existing customer.
 
 Now when a user clicks this button, the **Customer Details** page will open, and the new *Customer* object will be created. 
@@ -155,7 +150,7 @@ The most common consistency errors appear when you do not configure the on click
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 
-##  8 Read More
+## 8 Read More
 
 * [Pages](/studio7/page-editor/)
 * [Navigation Consistency Errors](/studio7/consistency-errors-navigation/)

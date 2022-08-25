@@ -1,7 +1,6 @@
 ---
 title: "Task Queue"
 url: /refguide/task-queue/
-parent: "resources"
 weight: 85
 description: "Concepts and usage of the task queue"
 tags: ["task queue", "process queue", "parallel", "scheduling", "microflow"]
@@ -50,16 +49,12 @@ For microflows and Java actions which are running in a task queue, the condition
 Background execution is done in so called **Task Queues**. They can be created in Studio Pro as follows:
 
 1. Right click on a module or folder.
-
 2. Select **Add other**.
-
 3. Click **Task Queue**.
-
 4. Enter the value for **Threads** for the Task Queue.
-
 5. Select the **Scope** for the threads (since Mendix 9.13):
-    - with "Per Node" the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
-    - with "Cluster-wide" the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
+    * with "Per Node" the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
+    * with "Cluster-wide" the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
 
 Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
     
@@ -72,11 +67,12 @@ In versions of Mendix below 9.9.0, there is a limit of 40 threads per cluster no
 In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
 
 When choosing the number of threads for a task queue, use the following guidelines:
+
 * If there are only a few tasks use a single thread.
 * If the tasks perform only calculations and perform no blocking calls, use no more threads than the available number of cores.
 * Only use more threads than the available number of cores if there are a lot of tasks and they perform blocking calls.
 * Keep in mind that using more threads than the number of cores will require additional scheduling and will not necessarily improve the queued task throughput.
-    
+
 ### 2.3 Queueing Microflow Executions{#queuing}
 
 #### 2.3.1 In Studio Pro {#sp}
@@ -87,8 +83,8 @@ In Studio Pro, a [Call Microflow](/refguide/microflow-call/) activity can start 
 2. Check the box **Execute this Microflow in a Task Queue**.
 3. Set **Select Task Queue** to the task queue in which the microflow should be executed.
 4. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy:
-    - with "Fixed retry" the retries will be performed after the given delay, up to the given number of attempts.
-    - with "Exponential retry" the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
+    * with "Fixed retry" the retries will be performed after the given delay, up to the given number of attempts.
+    * with "Exponential retry" the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
 
 #### 2.3.2 Through the API
 
@@ -247,9 +243,9 @@ Interrupting task threads may cause them to fail. These tasks will be marked as 
 
 The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
 
-In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.
+In Mendix versions 9.9.0 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide/custom-settings/#general), and does not produce any log messages.
 
-When this setting is not specified, no cleanup is performed.
+If `com.mendix.core.ProcessedTasksCleanupAge` is not specified, no cleanup is performed.
 
 {{% alert color="info" %}}
 When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.

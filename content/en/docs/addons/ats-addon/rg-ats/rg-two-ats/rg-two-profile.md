@@ -1,7 +1,6 @@
 ---
 title: "Local Profile"
 url: /addons/ats-addon/rg-two-profile/
-parent: "rg-two-ats"
 description: "Describes a local profile in ATS."
 tags: ["ats", "profile", "password"]
 ---
@@ -18,9 +17,9 @@ For more details on tenant administration, see [Administration](/addons/ats-addo
 
 To open the **Edit Profile** page, do the following:
 
-1.  Click your profile photo 
+1. Click your profile photo 
 
-2.  Click **Show Profile**.
+2. Click **Show Profile**.
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-profile/profile.png" alt="Edit profile page" >}}
 
@@ -38,15 +37,12 @@ Full name is displayed in various places in the app, for example, in the test ru
 
 To change your password from the **Edit Profile** page, do the following:
 
-1.  Click **Change password**.
+1. Click **Change password**.
 
-2.  Enter your new password.
+2. Enter your new password.
 
 3. Click **Change**.
 
 {{% alert color="info" %}}
-
 To change your password, you need to log in first. If you have problems with logging in, contact your tenant administrator. For more details on tenant administration, see [Administration](/addons/ats-addon/rg-two-administration/).
-
 {{% /alert %}} 
-

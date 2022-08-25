@@ -1,7 +1,6 @@
 ---
 title: "Validation Rules"
 url: /refguide7/validation-rules/
-parent: "entities"
 weight: 40
 tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -47,7 +46,7 @@ The rule defines which condition an attribute should satisfy.
 | Regular expression | The attribute needs to match a [regular expression](/refguide7/regular-expressions/). |
 | Maximum length | The attribute may have no more than the specified number of characters. |
 
-_Default value:_ Required
+*Default value:* Required
 
 {{% alert color="warning" %}}
 

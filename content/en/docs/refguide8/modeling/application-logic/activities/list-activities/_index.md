@@ -1,7 +1,6 @@
 ---
 title: "List Activities"
 url: /refguide8/list-activities/
-parent: "activities"
 weight: 20
 tags: ["studio pro", "microflow", "list"]
 ---

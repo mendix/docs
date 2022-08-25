@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Widget"
 url: /addons/ats-addon/rg-one-findassert-widget/
-parent: "rg-one-generic"
 ---
 
 ## 1 Description
@@ -11,7 +10,7 @@ It is possible to use a sequence of names as a path.
 
 ## 2 Supported Widgets
 
- + All widgets
+* All widgets
 
 ## 3 Usage
 

@@ -4,6 +4,7 @@ url: /appstore/app-services/speech-to-text/
 category: "App Services"
 description: "This document describes the configuration and usage of the Speech to Text app service, which enables converting audio and voice into written text in your web apps."
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
@@ -120,23 +121,23 @@ The **BatchTranscription** microflow takes a **MediaDocument** object as an inpu
 The only core widget required is the **Microphone** widget. You can make the following settings for the **Microphone** widget:
 
 * **General** tab
-   * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
-   * **language**  – sets the default language using a [language code](#supported-languages) (if empty, the default language is `en-US`)
+    * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
+    * **language**  – sets the default language using a [language code](#supported-languages) (if empty, the default language is `en-US`)
 * **Events** tab
-  * **On transcript** – by binding a string attribute to the **transcript** property, which stores the real-time speech-to-text transcription result of a natural speech segment (for example a sentence), you can then set your custom **Action** that is executed when a transcript is received
-     * **transcript**  – stores the transcription result of a real-time natural language segment (for example a sentence) upon successful speech-to-text conversion
-     * **Action** – sets which action is executed when the transcript is received (if empty, no action is executed)
-  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
-     * **Error** – sets a string attribute as the error message
-     * **Action** – sets which action is executed when an error occurs
+    * **On transcript** – by binding a string attribute to the **transcript** property, which stores the real-time speech-to-text transcription result of a natural speech segment (for example a sentence), you can then set your custom **Action** that is executed when a transcript is received
+        * **transcript**  – stores the transcription result of a real-time natural language segment (for example a sentence) upon successful speech-to-text conversion
+        * **Action** – sets which action is executed when the transcript is received (if empty, no action is executed)
+    * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
+        * **Error** – sets a string attribute as the error message
+        * **Action** – sets which action is executed when an error occurs
 * **Voice to Action** tab
-   *  **Enable action** – when set to **Yes**, the following custom settings for actions are enabled:
-     * **Actions** – a list of actions to execute when a transcript matches an utterance
-         * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
-         * **Action** – the action that is executed when the received transcript matches an utterance
-         * **Feedback** – the voice feedback provided to users when an action is triggered
-   *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
-   *  **Fallback message** – the message to notify users when no action is matched
+    * **Enable action** – when set to **Yes**, the following custom settings for actions are enabled:
+    * **Actions** – a list of actions to execute when a transcript matches an utterance
+        * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
+        * **Action** – the action that is executed when the received transcript matches an utterance
+        * **Feedback** – the voice feedback provided to users when an action is triggered
+    * **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
+    * **Fallback message** – the message to notify users when no action is matched
 
 ### 3.5 Supported Languages {#supported-languages}
 
@@ -189,7 +190,7 @@ If you deploy your app locally or as a Mendix Free App, configure the license to
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
 4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
-5.  Click **OK** to save the settings.
+5. Click **OK** to save the settings.
 
     {{< figure src="/attachments/appstore/app-services/speech-to-text/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
 
@@ -228,39 +229,40 @@ You can use Speech To Text to convert voice into text and then trigger a customi
 
 Below are the steps to build a simple example web app based on a blank app template which can convert speech to text and display real-time transcription result:
 
-1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
-   * `NewTranscript` (String)
-   * `AllTranscript` (String)
-   * `Arguments` (String)
-   * `Error` (String) 
+1. In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
 
-2.  Create a nanoflow as follows:
+    * `NewTranscript` (String)
+    * `AllTranscript` (String)
+    * `Arguments` (String)
+    * `Error` (String) 
+
+2. Create a nanoflow as follows:
     1. Name the nanoflow *CreateMicrophoneObject*.
     2. Add a create object activity to the nanoflow.
     3. Double-click the create object activity to open the **Create Object** dialog box. 
     4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
-    5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
+    5. Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
 
         {{< figure src="/attachments/appstore/app-services/speech-to-text/createmicrophoneentity-nanoflow.png" alt="createmicrophoneentity-nanoflow" >}}
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
-   1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
-   2. For **Data Source**, select **Nanoflow** as the **Type**.
-   3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
-   4. Click **OK** to save the settings.
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data Source**, select **Nanoflow** as the **Type**.
+    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
+    4. Click **OK** to save the settings.
 
 5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
-6.  Change the settings of the **Microphone** widget as follows:
+6. Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
     3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the **NewTranscript** will contain the result of the real-time speech-to-text conversion of a natural language segment (for example a sentence). This value will be overwritten every time a new transcript is received.
     4. For **Action**, select **Save changes**, so the changed value of **NewTranscript** will be available across the app.
 7. Inside the **Data view**, add a **Text area** widget.
 8. Change the settings of the **Text area** widget as follows:
-   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
-   3. Click **OK** to save the settings. 
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. For **Data source**, select the **NewTranscript** attribute from **Data view**.
+    3. Click **OK** to save the settings. 
 9. Make sure that you have [configured the license token](#configure-license-token).
 10. Run your app locally. Click the microphone icon, talk to it, and the text area will show you the real-time transcript as you speak.
 
@@ -305,7 +307,7 @@ To set up speech-triggered actions, perform the following steps:
 1. Double-click the **Microphone** widget. The **Edit Microphone** widget opens.
 2. Go to the **Voice to Action** tab.
 3. For **Arguments**, select **Arguments** from **Data view**.
-4.  For each action, set up an [Utterance](#utterance), an [Action](#actions) and a [Feedback](#feedback).
+4. For each action, set up an [Utterance](#utterance), an [Action](#actions) and a [Feedback](#feedback).
 
     {{% alert color="info" %}}You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.{{% /alert %}}
 
@@ -340,9 +342,9 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-   
+    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+
 3. Find **Speech to Text** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

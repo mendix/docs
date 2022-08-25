@@ -1,7 +1,6 @@
 ---
 title: "Listen To Widget Source"
 url: /refguide7/listen-to-grid-source/
-parent: "data-sources"
 ---
 
 

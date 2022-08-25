@@ -1,7 +1,6 @@
 ---
 title: "Event Handlers"
 url: /refguide7/event-handlers/
-parent: "entities"
 weight: 50
 tags: ["domain model", "entity", "event handler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -45,8 +44,8 @@ This property defines the event that triggers execution of the microflow.
 
 This property defines the microflow that is executed for the specified event. The microflow is required to have a certain parameter and return type depending on the moment and event of the event handler:
 
-*   Microflows of all event handlers except for 'before create' get the object on which the event occurs as parameter.
-*   Microflows that are executed _before_ the event should return a Boolean value that specifies whether the event should continue (True) or be cancelled (False). When multiple microflows handle the same event, it is cancelled immediately when one of the microflows returns False. In that case, some microflows might not be executed at all. Using this feature it is for example possible to cancel committing an object when a certain condition is not met.
+* Microflows of all event handlers except for 'before create' get the object on which the event occurs as parameter.
+* Microflows that are executed *before* the event should return a Boolean value that specifies whether the event should continue (True) or be cancelled (False). When multiple microflows handle the same event, it is cancelled immediately when one of the microflows returns False. In that case, some microflows might not be executed at all. Using this feature it is for example possible to cancel committing an object when a certain condition is not met.
 
 | Moment | Event | Gets object as parameter | Returns a Boolean value |
 | --- | --- | --- | --- |
@@ -63,4 +62,4 @@ This property defines the microflow that is executed for the specified event. Th
 
 By enabling this option the event handler will raise an error when the microflow returns false. You can then use error handling to detect whether the event handler returned false. This makes 'before commit' event handlers more like native validation. If this option is disabled, a 'before commit' event handler can only stop the commit from happening but the rest of the microflow will still be executed.
 
-_Default value:_ Yes
+*Default value:* Yes

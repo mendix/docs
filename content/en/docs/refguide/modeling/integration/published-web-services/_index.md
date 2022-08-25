@@ -1,7 +1,6 @@
 ---
 title: "Published Web Services"
 url: /refguide/published-web-services/
-parent: "integration"
 weight: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -49,7 +48,7 @@ Every webservice call requires authentication. Specifically, the SOAP envelope h
 
 ```
 
-These details _must_ match an existing webservice user in the runtime. These users can be created by signing in as an Administrator and clicking on "create webservice user" in the Users datagrid in the system module. Normal (non-webservice) users cannot be used to call webservices and webservice users cannot sign in via the standard login page.
+These details *must* match an existing webservice user in the runtime. These users can be created by signing in as an Administrator and clicking on "create webservice user" in the Users datagrid in the system module. Normal (non-webservice) users cannot be used to call webservices and webservice users cannot sign in via the standard login page.
 
 Other than that, there is no difference between how normal users and web service users call microflows.
 

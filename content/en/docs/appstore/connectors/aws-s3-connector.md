@@ -205,4 +205,3 @@ This action copies an object from one bucket to another bucket.  The new object 
 **Returns**
 
 * Boolean – `true` if object was successfully copied, otherwise `false`
-

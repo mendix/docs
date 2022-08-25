@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Environments in Mendix for Private Cloud"
+linktitle: "Monitor Environments"
 url: /developerportal/deploy/private-cloud-monitor/
-parent: "private-cloud"
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
 weight: 31
 tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
@@ -69,7 +69,8 @@ to ensure that this logging/monitoring solution is compliant with your organizat
 Before installing Grafana, make sure you have [installed Helm](https://grafana.com/docs/loki/latest/installation/helm/) and can access your Kubernetes cluster.
 
 Download the latest version of the Grafana Helm chart using the following commands:
-```
+
+```shell
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 ```
@@ -142,10 +143,9 @@ kubectl --namespace={namespace} create ingress loki-grafana \
 
 You might need to adjust additional Ingress parameters, for example specify the ingress class, annotations, or TLS configuration.{{% /alert %}}
 
-
 {{% alert color="info" %}}The domain name needs to be configured so that it resolves to the Ingress Controller's IP address.
 
-You can use the same wildcard domain name as other Mendix apps - for example, if you're using _mendix.example.com_ as the Mendix for Private Cloud domain name,
+You can use the same wildcard domain name as other Mendix apps - for example, if you're using *mendix.example.com* as the Mendix for Private Cloud domain name,
 you can use `grafana.mendix.example.com` as the domain name for Grafana.{{% /alert %}}
 
 ### 2.3 Installation in OpenShift{#install-in-openshift}
@@ -161,13 +161,13 @@ To monitor Mendix app environments, you will need to install a separate copy of 
 
 Use the following command to create a new project: replace `{project}` with the project name (for example `grafana`):
 
-```shell
-oc create project {project}
+```shell {linenos=false}
+oc new-project {project}
 ```
 
 Use the following command to create a secret containing the Grafana admin password: replace `{project}` with the project name (for example `grafana`); `{username}` with the admin username (for example `admin`); and `{password}` with the admin password:
 
-```shell
+```shell {linenos=false}
 oc --namespace {project} create secret generic grafana-admin --from-literal=admin-user={username} --from-literal=admin-password={password}
 ```
 
@@ -177,7 +177,7 @@ By default, OpenShift [restricts UIDs and group IDs](https://docs.openshift.com/
 
 To get a valid UID range, run the following command to get the project annotations: (replace `{project}` with the project name, for example `grafana`):
 
-```shell
+```shell {linenos=false}
 oc describe project {project}
 ```
 
@@ -273,13 +273,13 @@ EOF
 
 Use the following command to create an OpenShift Route object to access Grafana from your web browser: replace `{project}` with the project name (for example `grafana`):
 
-```shell
+```shell {linenos=false}
 oc --namespace {project} create route edge loki-grafana --service=loki-grafana --insecure-policy=Redirect
 ```
 
 To get the Grafana web UI URL (domain), run the following command: replace `{project}` with the project name (for example `grafana`):
 
-```shell
+```shell {linenos=false}
 oc --namespace {project} get route loki-grafana -o jsonpath="{.status.ingress[*].host}"
 ```
 
@@ -288,7 +288,7 @@ oc --namespace {project} get route loki-grafana -o jsonpath="{.status.ingress[*]
 To collect Mendix app environment metrics for a specific environment, Prometheus needs to discover and scrape pods with the following annotations:
 
 * `privatecloud.mendix.com/component`: `mendix-app`
-* `privatecloud.mendix.com/app`: _Environment internal name_
+* `privatecloud.mendix.com/app`: *Environment internal name*
 
 Each Mendix app pod listens on port `8900` and provides a `/metrics` path that can be called by Prometheus to get metrics from a specific app Pod.
 
@@ -330,7 +330,7 @@ If you would like to enable Prometheus scraping only for a specific environment,
 2. Click **Details** next to the namespace where your environment is deployed.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
-    
+
 3. Click **Configure** next to the environment name where Prometheus scraping should be enabled.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" >}}
@@ -410,15 +410,15 @@ There are two dashboards available at the moment. If necessary you can install b
 3. Then click **Upload JSON file** and select the dashboard JSON you downloaded earlier.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import.png" >}}
-4. Select **Prometheus** from the _Prometheus data source_ dropdown, and **Loki** from the _Loki data source_ dropdown.
-   If necessary, rename the dashboard and change its uid.
-   Press **Import** to import the dashboard into Grafana.
+4. Select **Prometheus** from the *Prometheus data source* dropdown, and **Loki** from the *Loki data source* dropdown.
+    If necessary, rename the dashboard and change its uid.
+    Press **Import** to import the dashboard into Grafana.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import-settings.png" >}}
 
 ### 4.2 Using the Dashboard
 
-Click **Dashboards**, then **Manage** and click _Mendix app dashboard (native)_ or _Mendix app dashboard (compatibility mode)_ to open the dashboard:
+Click **Dashboards**, then **Manage** and click *Mendix app dashboard (native)* or *Mendix app dashboard (compatibility mode)* to open the dashboard:
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-open-dashboard.png" >}}
 
@@ -449,7 +449,7 @@ The Developer Portal supports placeholder (template) variables in **Metrics** an
 
 For example, if you have imported the reference dashboard JSON with default parameters, set **Metrics** and **Logs** links to the following:
 
-```
+```http {linenos=false}
 https://grafana.mendix.example.com/d/4csBnmWnk/mendix-app-dashboard?var-namespace={namespace}&var-environment_id={environment_name}
 ```
 
@@ -534,7 +534,7 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 2. Click the **Runtime** tab.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" >}}
-  
+
 3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" >}}
@@ -546,7 +546,6 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 5. Set **Mode** to **compatibility** and click **Save and Apply**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-compatibility.png" >}}
-
 
 #### 5.1.2 Enable Compatibility Metrics in Standalone Mode
 
@@ -583,7 +582,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 2. Click the **Runtime** tab.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" >}}
-  
+
 3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" >}}
@@ -595,7 +594,6 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 5. Set **Mode** to **default** and click **Save and Apply**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-default.png" >}}
-
 
 #### 5.2.2 Disable Metrics in Standalone Mode
 
@@ -642,7 +640,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 2. Click the **Runtime** tab.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" >}}
-  
+
 3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" >}}
@@ -675,20 +673,20 @@ After an environment is [switched into native metrics mode](#enable-native-metri
 2. Click **Details** next to the namespace where your environment is deployed.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
-    
+
 3. Click **Configure** next to the environment name where the native metrics mode should be used.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" >}}
 
 4. Click the **Runtime** tab.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-prometheus-annotations.png" >}}
 
 5. Set custom values for **Interval** and **MxAgent Instrumentation Config** by clicking the **Edit** button.
 
     These parameters are optional and can be left empty.
     For more information about **MxAgent** see [Configuring the Java Instrumentation Agent](#configuring-mxagent), below.
-    
+
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-metrics-native.png" >}}
 
 6. Click **Apply Changes**
@@ -814,6 +812,7 @@ The following Mendix *activities* can be passed to Prometheus:
 * `CallWebService`
 * `ImportWithMapping`
 * `ExportWithMapping`
+
 </details>
 
 **Example**

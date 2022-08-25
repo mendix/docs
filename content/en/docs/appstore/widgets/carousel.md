@@ -40,17 +40,17 @@ The following sections will describe the different available widget properties a
 ### 3.2 Display
 
 * **Pagination** – shows pagination dots
-	* Default: **Yes**
+    * Default: **Yes**
 * **Navigation controls** – shows arrows on the left and right side
-	* Default: **Yes**
+    * Default: **Yes**
 * **Autoplay** – allows images to start sliding automatically when the widget is ready
-	* Default: **Yes**
+    * Default: **Yes**
 * **Delay** – creates a time interval between one item cycling to the next
-	* Default: **1000ms**
+    * Default: **1000ms**
 * **Infinite loop** – cycles between images endlessly
-	* Default: **Yes**
+    * Default: **Yes**
 * **Animation** – adds a fade animation on each cycle
-	* Default: **Yes**
+    * Default: **Yes**
 
 ### 3.3 Events
 
@@ -61,9 +61,9 @@ The following sections will describe the different available widget properties a
 Features:
 
 * Supports different data sources:
-	* Set static images in Studio Pro
-	* Retrieve images from the database via XPath
-	* Retrieve images via a microflow
+    * Set static images in Studio Pro
+    * Retrieve images from the database via XPath
+    * Retrieve images via a microflow
 * Use images from **System.Images** or from a URL
 * Navigate to the next or previous image
 * Execute a microflow or nanoflow or open a page when an image is clicked
@@ -82,12 +82,12 @@ Database Data Source:
 
 * Specify the **Images entity** and the **XPath** constraint (if any)
 * On the **Behavior** tab, configure the **On click** behavior
-	* For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
+    * For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
 * Specifying a **URL attribute** will make the value of the URL attribute the priority
 
 Microflow Data Source:
 
 * Specify the **Images entity** and the **Microflow** from which the carousel images will be retrieved (both are required)
 * On the **Behavior** tab, configure the **On click** behavior
-	* For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
+    * For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
 * Specifying a **URL attribute** will make the value of the URL attribute the priority

@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Dialog"
 url: /addons/ats-addon/rg-one-findassert-dialog/
-parent: "rg-one-dialog"
 ---
 
 ## 1 Description
@@ -10,9 +9,9 @@ Finds/Asserts a Dialog by title or type.
 
 ## 2 Supported Widgets
 
- + Window
- + DialogMessage
- + ConfirmationDialog
+* Window
+* DialogMessage
+* ConfirmationDialog
 
 ## 3 Usage
 

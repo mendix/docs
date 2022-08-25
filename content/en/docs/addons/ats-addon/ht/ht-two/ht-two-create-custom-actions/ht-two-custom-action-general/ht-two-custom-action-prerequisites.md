@@ -1,7 +1,6 @@
 ---
 title: "Prerequisites for How-To's"
 url: /addons/ats-addon/ht-two-custom-action-prerequisites/
-parent: "ht-two-custom-action-general"
 description: "Names and explains the different prerequisites for all the how-to's in this category."
 tags: ["ATS", "testing"]
 ---

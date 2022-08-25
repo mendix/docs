@@ -1,7 +1,6 @@
 ---
 title: "Call REST Service"
 url: /refguide8/call-rest-action/
-parent: "integration-activities"
 tags: ["studio pro", "integration activity", "call rest service"]
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -116,7 +115,7 @@ When you select **Override**, you can configure the client certificate that will
 * When you deploy the app to the Mendix cloud, the identifier is set when [pinning a client certificate](/developerportal/deploy/certificates/#outgoing-client-certificates)
 * When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide8/custom-settings/#ca-certificates)
 
-When this identifier is not set (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use project settings** were selected).
+When this identifier is not set (either not pinned or not present in *ClientCertificateUsages*), the default settings will be used (as if **Use project settings** were selected).
 
 ## 5 HTTP Headers Tab {#http-headers}
 

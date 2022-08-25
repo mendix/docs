@@ -1,7 +1,6 @@
 ---
 title: "Navigation"
 url: /refguide/navigation/
-parent: "app"
 weight: 20
 description: "Describes the concept of navigation in apps and the properties of a profile."
 tags: ["studio pro", "navigation"]
@@ -72,7 +71,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 | --- | --- |
 | Android.*Mobile&#124;iPhone&#124;iPod&#124;BlackBerry | Phone |
 | Android&#124;iPad | Tablet |
-| _(other)_ | Responsive |
+| *(other)* | Responsive |
 
 To configure the regular expressions used to match phone or tablet users, see [Runtime Customization](/refguide/custom-settings/).
 
@@ -140,7 +139,7 @@ This deletes the profile. If [Menus & Navigation](/refguide/menu-widgets/) are s
 
 Only available on profiles supporting offline synchronization.
 
-This opens the **Customize offline synchronization** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](/refguide/offline-first/#customizable-synchronization).
+This opens the **Customize offline synchronization** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/#customizable-synchronization).
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/app/navigation/customize-offline-synchronization.png" >}}
 

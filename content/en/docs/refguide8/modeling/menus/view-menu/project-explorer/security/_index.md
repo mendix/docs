@@ -1,7 +1,6 @@
 ---
 title: "Security"
 url: /refguide8/security/
-parent: "project-explorer"
 tags: ["studio pro", "security"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Publish a Microflow as a REST Operation"
+linktitle: "Publish Microflow as REST Operation"
 url: /refguide8/publish-microflow-as-rest-operation/
-parent: "published-rest-services"
 weight: 30
 description: "How to publish a Microflow as a REST Operation"
 tags: ["Microflow", "REST", "operation", "resource"]

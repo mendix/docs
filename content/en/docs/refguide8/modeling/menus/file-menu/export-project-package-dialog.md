@@ -1,7 +1,6 @@
 ---
 title: "Export Project Package"
 url: /refguide8/export-project-package-dialog/
-parent: "file-menu"
 weight: 30
 tags: ["studio pro", "export app", "export project package"]
 aliases:
@@ -15,6 +14,7 @@ aliases:
 {{% /alert %}}
 
 ## 1 Introduction
+
 You can export a project package (*.mpk*) from Mendix Studio Pro for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire app, or if you need to provide a test app when submitting a ticket.
 
 Project packages can be imported again into a new app using the [Import Project Package](/refguide8/import-project-package-dialog/).
@@ -23,7 +23,7 @@ To export the package, open the **File** menu > **Export Project Package** and s
 
 {{< figure src="/attachments/refguide8/modeling/menus/file-menu/export-project-package-dialog/export-project-package.png" alt="Export Project Package Dialog Window" >}}
 
- For more information on what options you can select, see the sections below. 
+For more information on what options you can select, see the sections below. 
 
 ## 2 Destination
 
@@ -36,14 +36,12 @@ Mendix project packages can be exported to a Mendix package file (*.mpk*).  You 
 * **No data** – the package will be exported without data.
 
 * **Existing snapshot** – this option will include the existing database snapshot in the export project package
-  
-	{{% alert color="info" %}}This option is only available when a snapshot has already been created. If necessary, you can create a snapshot via **Version Control** > **Add Snapshot of Data**.
-	{{% /alert %}}
-  
+
+    {{% alert color="info" %}}This option is only available when a snapshot has already been created. If necessary, you can create a snapshot via **Version Control** > **Add Snapshot of Data**.{{% /alert %}}
+
 * **New snapshot from current database** – will create a new snapshot from the database and include it in the export
 
-	{{% alert color="info" %}}This option is available after you run the app locally at least once, because a local database will be created when running the app for the first time.
-	{{% /alert %}}
+    {{% alert color="info" %}}This option is available after you run the app locally at least once, because a local database will be created when running the app for the first time.{{% /alert %}}
 
 ## 4 Read More
 

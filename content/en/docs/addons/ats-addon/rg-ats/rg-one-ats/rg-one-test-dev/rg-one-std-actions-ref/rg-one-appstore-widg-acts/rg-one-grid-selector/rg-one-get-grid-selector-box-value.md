@@ -1,7 +1,6 @@
 ---
 title: "Get Grid Selector Box Value"
 url: /addons/ats-addon/rg-one-get-grid-selector-box-value/
-parent: "rg-one-grid-selector"
 ---
 
 ## 1 Description

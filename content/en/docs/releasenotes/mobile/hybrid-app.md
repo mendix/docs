@@ -3,7 +3,6 @@ title: "Hybrid App Base & Template"
 url: /releasenotes/mobile/hybrid-app/
 category: "Mobile"
 weight: 30
-toc-level: 1
 description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
 
@@ -11,7 +10,7 @@ If you are building your hybrid mobile app using the regular PhoneGap Build appr
 
 If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**.
 
-For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile/) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile/) section of the *Studio Pro 8 How-tos*.
+For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide8/hybrid-mobile/) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto8/mobile/hybrid-mobile/) section of the *Studio Pro 8 How-tos*.
 
 ## 2021
 
@@ -84,7 +83,6 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 * We fixed an issue with race conditions in asynchronous hooks.
 * We introduced a new **onBeforeSynchonization** hook.
 
-
 ## 2019
 
 ### Hybrid App Base 4.1.8
@@ -131,7 +129,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 * We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
 
-```
+```xml {linenostart=213}
 <resource-file src="config/google-services.json" target="app/google-services.json" />
 <resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
 ```
@@ -247,7 +245,7 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 | ----------------------------------------------------------- | -------------------- | -------------------- | ------------------------------------------------------------ |
 | `com.crosswalk.cookies`                                     | No version specified | No version specified |                                                              |
 | `com.darktalker.cordova.screenshot`                         | 0.1.6                | 0.1.6                |                                                              |
-| `com.telerik.plugins.nativepagetransitions `                | 0.6.5                | 0.6.5                |                                                              |
+| `com.telerik.plugins.nativepagetransitions`                | 0.6.5                | 0.6.5                |                                                              |
 | `cordova-build-architecture`                                | 1.0.3                | 1.0.4                |                                                              |
 | `cordova-plugin-actionsheet`                                | 2.3.3                | 2.3.3                |                                                              |
 | `cordova-plugin-android-permissions`                        | 0.10.0               | 0.11.0               |                                                              |
@@ -398,9 +396,9 @@ This is a major release, because it is not fully compatible with older versions 
 {{% /alert %}}
 
 * We added support for custom theming:
-  * You can configure the image on the error screen by adding/replacing *error.png*.
-  * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting *parameters.json*.
-  * You can adjust the HTML and CSS of the loading screen by configuring *loader.html.snippet* and *loader.css.snippet*.
+    * You can configure the image on the error screen by adding/replacing *error.png*.
+    * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting *parameters.json*.
+    * You can adjust the HTML and CSS of the loading screen by configuring *loader.html.snippet* and *loader.css.snippet*.
 * We now properly set the page title based on the `name` value in *parameters.json*.
 
 ### Hybrid App Base 1.7.4 / Hybrid App Template 1.4.0
@@ -459,13 +457,14 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 **Release date: November 16th, 2017**
 
-*  Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in *src/config.xml.mustache*:
+* Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in *src/config.xml.mustache*:
 
-  * Change:
+* Change:
 
     ```xml
     <{{{tag}}} src="{{{filename}}}" qualifier="{{{qualifier}}}"/>
     ```
+
     <br />
     to:<br />
 
@@ -509,9 +508,9 @@ For this update, we recommend that you download a fresh hybrid app package from 
 **Release date: October 11th, 2017**
 
 * This release improves support for the PIN login feature:
-  * We updated the Phonegap CLI version to 7.0.1.
-  * We improved support for switching users in combination with the PIN login feature.
-  * We fixed an issue with the remaining session data.
+    * We updated the Phonegap CLI version to 7.0.1.
+    * We improved support for switching users in combination with the PIN login feature.
+    * We fixed an issue with the remaining session data.
 
 ### Hybrid App Template 1.3.0
 

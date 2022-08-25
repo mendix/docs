@@ -1,7 +1,6 @@
 ---
 title: "Image"
 url: /refguide8/image/
-parent: "common-widgets"
 weight: 20
 tags: ["studio pro", "image", "image widget"]
 aliases:
@@ -23,9 +22,7 @@ For example, you can configure an image clicking which a page with customer deta
 {{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-example.png" alt="Image Example" >}}
 
 {{% alert color="info" %}}
-
 If you want to dynamically show different images based on data, you need to add [image viewer](/refguide8/image-viewer/) on your page.
-
 {{% /alert %}}
 
 ## 2 Properties
@@ -124,5 +121,3 @@ The image widget is converted to the image viewer and you can configure it.
 * [Page](/refguide8/page/)
 * [Common Widgets](/refguide8/common-widgets/)
 * [Properties Common in the Page Editor](/refguide8/common-widget-properties/)
-
-

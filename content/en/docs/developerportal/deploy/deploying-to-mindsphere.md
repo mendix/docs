@@ -66,21 +66,20 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 1. Click the icon in the upper right of the menu bar to open the Mendix Marketplace.
 
-	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-icon.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-icon.png" >}}
 
 2. Enter *MindSphere* in the search box, and press <kbd>Enter</kbd>.
-
 3. Select **MindSphere Starter Application** in the search results.
 
-	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-search.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-search.png" >}}
 
 4. Click **Download** to create a new app using this app as the template.
 
-	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download.png" >}}
 
 5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
 
-	{{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download-project.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/app-store-download-project.png" >}}
 
 ### 3.2 Option B: Customizing an Existing App{#existingapp}
 
@@ -88,15 +87,15 @@ If you have an existing app which was not based on the MindSphere app template, 
 
 * **Siemens MindSphere SSO** from the Mendix Marketplace here: [Siemens MindSphere SSO](https://marketplace.mendix.com/link/component/108805/)
 
-	This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details/#mssso) section of *MindSphere Module Details*.
+    This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details/#mssso) section of *MindSphere Module Details*.
 
 * **MindSphere OS Bar Connector** from the Mendix Marketplace here: [Siemens MindSphere OS Bar Connector](https://marketplace.mendix.com/link/component/108804/)
 
-	This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details/#msosbar) section of *MindSphere Module Details*.
+    This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details/#msosbar) section of *MindSphere Module Details*.
 
 * **Siemens MindSphere Web Content** from the Mendix Marketplace here: [Siemens MindSphere Web Content](https://marketplace.mendix.com/link/component/108803/)
 
-	This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens MindSphere Web Content](/partners/siemens/mindsphere-module-details/#msthemepack) section of *MindSphere Module Details*.
+    This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens MindSphere Web Content](/partners/siemens/mindsphere-module-details/#msthemepack) section of *MindSphere Module Details*.
 
 ## 4 Configuring the Modules{#configure-modules}
 
@@ -215,14 +214,14 @@ Before you continue, ensure you have fulfilled the prerequisites described in th
 
 To create a Mendix deployment package from your app, do the following:
 
-1.  Open your app in Studio Pro.
-2.  Select **App** > **Create Deployment Package**.
+1. Open your app in Studio Pro.
+2. Select **App** > **Create Deployment Package**.
 
     {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image13.png" >}}
 
-3.  Select the correct **Development line** and **Revision**.
-4.  Set the **New version** number and add a **Description** if required.
-5.  Change the path and **File name** if necessary.
+3. Select the correct **Development line** and **Revision**.
+4. Set the **New version** number and add a **Description** if required.
+5. Change the path and **File name** if necessary.
 
 Your deployment package will be created, and its location displayed in an information message.
 
@@ -240,19 +239,19 @@ To deploy your deployment package, do the following:
     * Open the URL printed by the CLI and sign in using your WebKey credentials to get a One Time Code
     * Enter the One Time Code in the CLI
 
-      {{% alert color="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
+        {{% alert color="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
 
-2.  Select your org and space using the command:
+2. Select your org and space using the command:
 
-    ```bash
+    ```bash {linenos=false}
     cf target –o {org_name} -s {space_name}
     ```
 
     {{% alert color="info" %}}If you cannot target your org or space, you probably need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/howtos/index.html) in the MindSphere documentation.{{% /alert %}}
 
-3.  Create a PostgreSQL instance using the command:
+3. Create a PostgreSQL instance using the command:
 
-    ```bash
+    ```bash {linenos=false}
     cf create-service postgresql10 {plan} {service_instance} [-c {parameters_as_JSON}] [-t {tags}]
     ```
 
@@ -262,13 +261,13 @@ To deploy your deployment package, do the following:
 
     {{% alert color="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
 
-4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
+4. Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
+
     `cf services`
     Your service should be listed, and the last operation should be ‘create succeeded’.
 
-5.  Ensure you are in the same folder as the package you wish to deploy.
-
-6.  Create a `manifest.yml` file with at least the following content:
+5. Ensure you are in the same folder as the package you wish to deploy.
+6. Create a `manifest.yml` file with at least the following content:
 
     ```yml
         applications:
@@ -285,9 +284,9 @@ To deploy your deployment package, do the following:
 
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
-7.  Push your app to MindSphere using the command:
+7. Push your app to MindSphere using the command:
 
-    ```bash
+    ```bash {linenos=false}
     cf push -p "{deployment_package_name}"
     ```
 
@@ -299,7 +298,7 @@ You should always use the latest available Cloud Foundry stack. The latest stack
 
 You can specify that your app uses a specific stack using the following command line option when you push your app:
 
-```bash
+```bash {linenos=false}
 cf push -p "{deployment_package_name}" -s {stack_name}
 ```
 
@@ -312,9 +311,10 @@ If this is the case, the stack must be updated to `cflinuxfs3` as support for Cl
 
 You can find out which stack your application is using with the following command:
 
-```bash
+```bash {linenos=false}
 cf app {app_name}
 ```
+
 {{% /alert %}}
 
 For more information about Cloud Foundry stacks on MindSphere, see [How Can I Find the Stack my App is using?](https://developer.mindsphere.io/paas/howtos/howtos-stacks.html#find-out-which-stack-an-app-uses) in *Cloud Foundry How Tos* on the *MindSphere Developer* site.
@@ -385,73 +385,60 @@ The deployment registered via the **Auto Registration** process is *always mappe
 
 To create a new app manually in the MindSphere launchpad, do the following:
 
-1.  Go to the **Developer Cockpit > Dashboard**.
-
-2.  Click **Create new application**.
-
-3.  Set the **Type** to *Standard*.
-
-4.  Set the **Infrastructure** to *MindSphere Cloud Foundry*.
-
+1. Go to the **Developer Cockpit > Dashboard**.
+2. Click **Create new application**.
+3. Set the **Type** to *Standard*.
+4. Set the **Infrastructure** to *MindSphere Cloud Foundry*.
 5. Fill in the **Display Name** of your app, as you want it shown in the Launchpad.
-
-6.  Fill in the **Internal Name** of your app. This must be identical to the value of *CockpitApplicationName* which you set in the SSO module of your app.
-
+6. Fill in the **Internal Name** of your app. This must be identical to the value of *CockpitApplicationName* which you set in the SSO module of your app.
 7. Fill in a **Version** for your app.
-
 8. Fill in a **Description** of your app, if required.
-
 9. Click **Edit icon** to upload an **App Icon** for your app.
-
 10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
-
-11.  Click the **+** next to the component to add **Endpoints**.
-
-12.  Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
-
+11. Click the **+** next to the component to add **Endpoints**.
+12. Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
 13. Fill in the **Cloud Foundry Direct URL**. This can be found using the cloud foundry command `cf app {app_name}`.
+14. Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
-14.  Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
+    If your app is running on MindSphere on **AWS** use Region `eu1`:
 
-      If your app is running on MindSphere on **AWS** use Region `eu1`:
+    ```text
+    default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+    img-src * data:;
+    connect-src 'self' 'unsafe-inline'  *;
+    ```
 
-      ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      style-src 'self' 'unsafe-inline' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
-      img-src * data:;
-      connect-src 'self' 'unsafe-inline'  *;
-      ```
-      If your app is running on MindSphere on **Azure** use Region `eu2`:
+    If your app is running on MindSphere on **Azure** use Region `eu2`:
 
-      ```code
-      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io fonts.gstatic.com;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
-      style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
-      img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
-      connect-src 'self' 'unsafe-inline' *;
-      ```
+    ```text
+    default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io fonts.gstatic.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com;
+    style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com fonts.googleapis.com;
+    img-src 'self' static.eu1.mindsphere.io feedback-static.mendix.com home.mendix.com sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net;
+    connect-src 'self' 'unsafe-inline' *;
+    ```
 
-      {{% alert color="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+    {{% alert color="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
-      {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image14.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image14.png" >}}
 
-15.  Click **Save** to save these details.
+15. Click **Save** to save these details.
+16. Click **Register** to register your app with the MindSphere launchpad.
 
-16.  Click **Register** to register your app with the MindSphere launchpad.
-
-        {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
+    {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
 
 ##### 5.3.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 
 To set up the appropriate scopes in MindSphere, do the following:
 
-1.  Go to **Developer Cockpit > Authorization Management > App Roles** from the MindSphere launchpad.
-2.  Enter the **Scope Name**.
-3.  Associate it with the MindSphere default roles **USER** and/or **ADMIN**. Or associate it with one of your self created MindSphere roles. MindSphere supports up to five application roles.
-4.  Click **Save**.
+1. Go to **Developer Cockpit > Authorization Management > App Roles** from the MindSphere launchpad.
+2. Enter the **Scope Name**.
+3. Associate it with the MindSphere default roles **USER** and/or **ADMIN**. Or associate it with one of your self created MindSphere roles. MindSphere supports up to five application roles.
+4. Click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image15.png" >}}
 
@@ -471,14 +458,14 @@ You will also need to use the **Add Core Role** option to add *Core Roles* to yo
 
 Once you have created the scopes for your app, you will need to assign them to the users who you want to have access to the app.
 
-1.  Go to **Settings > Roles** from the MindSphere launchpad.
+1. Go to **Settings > Roles** from the MindSphere launchpad.
 
     {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image16.png"   width="50%"  >}}
 
-2.  Choose the app role (scope) you want to assign from the list of **Roles**.
-3.  Click **Edit user assignment**.
-4.  Assign **Available users** to **Assigned users** using the assignment symbols (for example `>` to assign a user).
-5.  Click **Close**.
+2. Choose the app role (scope) you want to assign from the list of **Roles**.
+3. Click **Edit user assignment**.
+4. Assign **Available users** to **Assigned users** using the assignment symbols (for example `>` to assign a user).
+5. Click **Close**.
 
     {{< figure src="/attachments/developerportal/deploy/deploying-to-mindsphere/image17.png" >}}
 

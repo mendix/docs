@@ -5,7 +5,6 @@ tags: ["Beta", "Private Beta", "Public Beta", "GA", "General Availability", "fea
 weight: 55
 #notoc: true
 #layout: wide
-#toc-level: "3"
 ---
 
 ## 1 Introduction
@@ -26,8 +25,8 @@ The availability of Beta features and products is documented in the release note
 If you would like to test a Beta feature or product, consider the following:
 
 * Contact the responsible Mendix Product Manager (PM), who can assist you in your test app
-	* The PM can help you identify if your use case is a good fit for the particular Beta feature or product
-	* Your Customer Success Manager (CSM) can introduce you
+    * The PM can help you identify if your use case is a good fit for the particular Beta feature or product
+    * Your Customer Success Manager (CSM) can introduce you
 * Your CSM will also ensure the involvement of Mendix Expert Services if required in order to aid you in your test app and provide you with the required knowledge to successfully make use of the Beta feature or product
 * Feedback on the quality of the Beta feature or product will be evaluated by the PM
 * When there is a strong desire to take a Beta feature or product into production, please contact your CSM to see if special arrangements are possible
@@ -46,4 +45,4 @@ Please take note of the following limitations regarding Beta features and produc
     * Even though we aim for backwards compatibility, Mendix cannot guarantee backwards compatibility between monthly releases for Beta features and products
 * Beta features and products may change in future releases, depending on the feedback
 * Beta features and products may be incomplete
-	* Future releases may include more functionality to complete the feature or product
+    * Future releases may include more functionality to complete the feature or product

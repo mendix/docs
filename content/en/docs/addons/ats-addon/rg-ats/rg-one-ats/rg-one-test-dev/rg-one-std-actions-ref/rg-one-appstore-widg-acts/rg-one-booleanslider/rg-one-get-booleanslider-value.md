@@ -1,7 +1,6 @@
 ---
 title: "Get BooleanSlider Value"
 url: /addons/ats-addon/rg-one-get-booleanslider-value/
-parent: "rg-one-booleanslider"
 ---
 
 ## 1 Description

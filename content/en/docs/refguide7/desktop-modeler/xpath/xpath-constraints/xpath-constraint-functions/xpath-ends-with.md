@@ -1,7 +1,6 @@
 ---
 title: "XPath ends-with"
 url: /refguide7/xpath-ends-with/
-parent: "xpath-constraint-functions"
 ---
 
 ## 1 Overview
@@ -17,4 +16,3 @@ This query returns all customers whose name ends with the sub-string `sen`:
 ```
 
 Customers with the name "Jansen" or "Isaacsen" will be returned, for example, because both names end with "sen."
-

@@ -1,7 +1,6 @@
 ---
 title: "Send Keys"
 url: /addons/ats-addon/rg-one-send-keys/
-parent: "rg-one-selenium-actions"
 ---
 
 ## 1 Description

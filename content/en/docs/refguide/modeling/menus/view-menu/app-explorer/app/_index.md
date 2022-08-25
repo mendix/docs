@@ -1,7 +1,6 @@
 ---
 title: "App"
 url: /refguide/app/
-parent: "app-explorer"
 weight: 10
 tags: ["studio pro", "app"]
 aliases:

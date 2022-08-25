@@ -1,7 +1,6 @@
 ---
 title: "Tree Node"
 url: /appstore/modules/tree-node/
-parent: "data-widgets"
 description: "Describes the purpose, features, and configurations of the Tree Node widget which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -48,25 +47,24 @@ Drag and drop the Tree Node widget onto the page and use the configuration prope
 ### 3.1 General Tab {#general}
 
 * **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
-   * Required
-*  **Header type** – defines the type of the header
+    * Required
+* **Header type** – defines the type of the header
     * Default: **Text**
     * When set to **Text**, you can configure the **Header caption** property
     * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
-   
-    {{% alert color="info" %}}The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
-{{% /alert %}}
+
+    {{% alert color="info" %}}The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.{{% /alert %}}
 
 * **Header caption** – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
-   * Configurable when **Header type** is set to **Text**
+    * Configurable when **Header type** is set to **Text**
 * **Has children** – indicates if the current level of tree nodes has children tree nodes
-   * Default: **Yes**
-   * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
+    * Default: **Yes**
+    * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
 * **Start expanded** – determines whether the content of the current level of tree nodes starts expanded or collapsed
-   * Configurable when **Has children** is set to **Yes**; default: **No**
+    * Configurable when **Has children** is set to **Yes**; default: **No**
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
-   * Default: **Yes**
-   * Configurable when [**Enable advanced options**](#advanced) is set to **Yes** in Mendix Studio
+    * Default: **Yes**
+    * Configurable when [**Enable advanced options**](#advanced) is set to **Yes** in Mendix Studio
 
 ### 3.2 Advanced Tab {#advanced}
 
@@ -91,16 +89,16 @@ The **Advanced** tab is only available in Mendix Studio. In Mendix Studio Pro th
 The **Visualization** tab is only visible when the [Enable advanced options](#advanced) is set to **Yes** in Mendix Studio. It includes the following properties:
 
 * **Show icon** – defines the location of the icon relative to the header
-   * Default: **Left**
-   * When set to **Left**, the icon is placed to the left to the header
-   * When set to **Right**, the icon is placed to the right to the header
-   * When set to **No**, the header has no icon
+    * Default: **Left**
+    * When set to **Left**, the icon is placed to the left to the header
+    * When set to **Right**, the icon is placed to the right to the header
+    * When set to **No**, the header has no icon
 * **Expanded icon** – defines the custom icon used to indicate that the tree node is expanded
-   * Configurable when **Show icon** is set to either **Left** or **Right**
+    * Configurable when **Show icon** is set to either **Left** or **Right**
 * **Collapsed icon** – defines the custom icon used to indicate that the tree node is collapsed
-   * Configurable when **Show icon** is set to either **Left** or **Right**
+    * Configurable when **Show icon** is set to either **Left** or **Right**
 * **Animate icon**– defines whether the icon is animated when you expand or collapse a tree node
-   * Default: **Yes**
+    * Default: **Yes**
 
 ### 4 Styling
 
@@ -109,6 +107,6 @@ The Tree Node widget has default styles and works out of the box without Atlas U
 These are the design properties shipped with Atlas UI for this widget:
 
 * **Borders** – changes the border appearance
-   * **Horizontal**, **Both**, **None** (default)
+    * **Horizontal**, **Both**, **None** (default)
 * **Hover** – highlights an item when hovering over it
-   * **Yes**, **No** (default)
+    * **Yes**, **No** (default)

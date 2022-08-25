@@ -1,7 +1,6 @@
 ---
 title: "Chart Widgets"
 url: /refguide8/chart-widgets/
-parent: "pages"
 weight: 70
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---

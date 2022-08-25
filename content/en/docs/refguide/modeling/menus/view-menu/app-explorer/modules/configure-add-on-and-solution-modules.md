@@ -1,15 +1,13 @@
 ---
 title: "Configuring Add-on and Solution Modules for Publishing"
+linktitle: "Publish Add-on & Solution Modules"
 url: /refguide/configure-add-on-and-solution-modules/
-parent: "modules"
 weight: 20
 tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 {{% alert color="warning" %}}
-
 Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
-
 {{% /alert %}}
 
 ## 1 Introduction
@@ -21,9 +19,7 @@ The main *difference* between an add-on and a solution module is their purpose. 
 Solution modules are *always part of a solution* – any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the **solution core** of the solution. 
 
 {{% alert color="info" %}}
-
 Add-on and solution modules are not supported in Mendix Studio.
-
 {{% /alert %}}
 
 ## 2 Configuring Add-on and Solution Modules
@@ -44,14 +40,10 @@ The **Export level** has two values:
 To change the **Export level** and mark documents/elements as **Usable**, do the following:
 
 1. In the App Explorer, double-click **Settings** of the module that you would like to set as an add-on or solution module. 
-
 2. In the **Module settings** dialog box, select the type of the module and click **OK**.
-
 3. Open the document/element that you would like to mark as **Usable**.
-
-2. Navigate to its properties.
-
-3. Set the **Export level** property to **Usable**:
+4. Navigate to its properties.
+5. Set the **Export level** property to **Usable**:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
 
@@ -66,7 +58,6 @@ Below is the list of documents and elements that can be mark as **Usable**:
 * Domain Model:
 
     * Entity and attributes (including external entities)
-
     * Association
 * Microflow
 * Rules
@@ -77,7 +68,11 @@ Below is the list of documents and elements that can be mark as **Usable**:
 * Image collections
 * Custom widgets
 
-## 3 Exporting Add-on Modules and Solutions
+## 3 Exporting Add-on Modules and Solutions {#export}
+
+{{% alert color="info" %}}
+Before exporting an add-on module or a solution to customers, note that English (US) and Dutch language translations are shipped with it by default. This may be important *if your app is in another language*, not English (US) or Dutch, and *your customers decide to translate the consumed solution or add-on to other languages*. To avoid the confusion, open the **Language** menu > **Language Operations** and select the **Delete** operation for English (US) or Dutch. For more information on the **Language** menu, see [Language Menu](/refguide/translatable-texts/). For more information on how to perform a certain operation, see [Language Operations](/refguide/language-operations/). 
+{{% /alert %}}
 
 ### 3.1 Exporting Add-on Module Package
 
@@ -90,9 +85,7 @@ It is possible to add files in an add-on module package, you can select them dur
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" >}}
 
 {{% alert color="info" %}}
-
 Selection made above is not saved when exporting the module again, you need to select files for every subsequent export.
-
 {{% /alert %}}
 
 The add-on module gets an *.mxmodule* extension.
@@ -110,9 +103,7 @@ The solution package gets an *.mxsolution* extension.
 When you update an individual add-on or a solution module to another version, you can export this module and distribute the new module package to your consumers. 
 
 {{% alert color="warning" %}}
-
-If, for some reason, you switch the add-on and solution module to an app module, for example, to provide source code to customers, their module data is lost once they upload a new version of this module to their app. 
-
+If, for some reason, you switch the add-on and solution module to an app module, for example, to provide source code to customers, their module data is lost once they upload a new version of this module to their app.
 {{% /alert %}}
 
 ## Read More
@@ -121,4 +112,3 @@ If, for some reason, you switch the add-on and solution module to an app module,
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
 * [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
-

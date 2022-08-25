@@ -1,7 +1,6 @@
 ---
 title: "OQL Parameters"
 url: /refguide7/oql-parameters/
-parent: "oql-expressions"
 ---
 
 

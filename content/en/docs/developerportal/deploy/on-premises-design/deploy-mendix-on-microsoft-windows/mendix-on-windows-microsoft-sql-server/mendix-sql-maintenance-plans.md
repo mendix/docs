@@ -1,7 +1,6 @@
 ---
 title: "Maintenance Plans for SQL Server"
 url: /developerportal/deploy/mendix-sql-maintenance-plans/
-parent: "mendix-on-windows-microsoft-sql-server"
 weight: 50
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -168,4 +167,4 @@ In this section, you are going to create a new maintenance plan called **MP_SYSD
 * [How to Set Up an SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
 * [How to Configure a Security Checklist for Your On-Premises Installation](/developerportal/deploy/security-checklist-for-your-on-premises-installation/)
 * [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-* [U*ix Deployment](/developerportal/deploy/unix-like/)
+* [Unix-Like Deployment](/developerportal/deploy/unix-like/)

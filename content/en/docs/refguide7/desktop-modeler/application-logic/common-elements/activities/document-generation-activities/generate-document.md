@@ -1,7 +1,6 @@
 ---
 title: "Generate Document"
 url: /refguide7/generate-document/
-parent: "document-generation-activities"
 description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -44,7 +43,7 @@ The language in which the titles and labels of the document should appear.
 | Project default | Use the default language that is specified in the [Project Settings](/refguide7/project-settings/). |
 | Variable | Use the language stored in the selected variable. The variable should be of type System.Language. |
 
-_Default value:_ Current user
+*Default value:* Current user
 
 ### 3.2 Document Type
 

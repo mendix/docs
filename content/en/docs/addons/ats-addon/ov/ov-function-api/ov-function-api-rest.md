@@ -1,7 +1,6 @@
 ---
 title: "Function API with REST"
 url: /addons/ats-addon/ov-function-api-rest/
-parent: "ov-function-api"
 weight: 1
 ---
 

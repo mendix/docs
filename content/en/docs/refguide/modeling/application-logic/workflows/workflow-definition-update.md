@@ -1,7 +1,6 @@
 ---
 title: "Updating Your Workflow Definition"
 url: /refguide/workflow-definition-update/
-parent: "workflows"
 weight: 60
 tags: ["workflow", "workflows", "versions", "update"]
 ---
@@ -24,11 +23,11 @@ Any of the following changes are interpreted as non-conflicting:
 * Removing activities in the path that is being executed by the current workflow
 * Reordering activities in  the path that is being executed by the current workflow
 * Changing properties of activities or outcomes:
-* * Changing names, captions, and titles
-  * Changing a referenced microflow in the **Call microflow** activity, or a referenced workflow in the **Workflow call** activity
-  * Changing a referenced page in a user task
-  * Changing user assignment or user assignment option in a user task
-  * Changing due dates of a user task
+    * Changing names, captions, and titles
+    * Changing a referenced microflow in the **Call microflow** activity, or a referenced workflow in the **Workflow call** activity
+    * Changing a referenced page in a user task
+    * Changing user assignment or user assignment option in a user task
+    * Changing due dates of a user task
 * Adding outcomes in a **Decision**, **Call microflow** or **User task** activities
 * Changing the context entity, referenced microflows, referenced pages, or referenced workflows
 
@@ -45,17 +44,13 @@ The Runtime detects the following situations as being conflicting when upgrading
 * The **WorkflowDefinition** is removed
 
 {{% alert color="info" %}}
-
 Depending on the actual workflow, the above situations may functionally not lead to a problem. Of course, this requires a prior knowledge of the business domain. As a result, the Runtime may detect more conflicts than strictly required from a business perspective.
-
 {{% /alert %}}
 
 Conflicted workflow instances will be marked with state **Incompatible**. The **Reason** field will be updated with a text explaining the found conflicts. The workflow cannot be executed in this state. 
 
 {{% alert color="info" %}}
-
 The system can change an Incompatible workflow instance into the state **InProgress** and auto-upgrade it when a subsequent app deployment changes the **WorkflowDefinition** to no longer be conflicting.
-
 {{% /alert %}}
 
 ## 4 System Module Entities
@@ -66,7 +61,7 @@ The Runtime will add or change data for the following system entities on startup
 * A new **WorkflowVersion** instance is created (referencing the previous one) 
 * The **WorkflowDefinition** is changed to point to the new **WorkflowVersion** as its current version
 
- The **WorkflowVersion** instance also refers to all **WorkflowTaskDefinition** instances present in that version of the model.
+The **WorkflowVersion** instance also refers to all **WorkflowTaskDefinition** instances present in that version of the model.
 
 For more information, see the the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 

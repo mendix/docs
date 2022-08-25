@@ -2,8 +2,10 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: ""
-tags: ["Support", "SLA", "standard", "premium"]
 weight: 30
+no_list: false 
+description_list: true
+tags: ["support", "sla", "standard", "premier", "platform"]
 aliases:
     - /howtogeneral/support/index.html
 ---
@@ -189,7 +191,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 The Mendix buildpacks for [Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) and [Docker](https://github.com/mendix/docker-mendix-buildpack) are available in GitHub repositories. The documentation for the buildpacks and m2ee tools is contained within these GitHub repositories and, because they are released under an Open Source license, the code can be inspected and the functionality and options can be understood by customers who wish to use these buildpacks.
 
-If you want to run Mendix apps on a Unix-like server you will need the [m2ee tools](https://github.com/mendix/m2ee-tools), available on GitHub. Read more about installing on systems running Unix-like operating systems in [Unix Deployment](/developerportal/deploy/unix-like/).
+If you want to run Mendix apps on a Unix-like server you will need the [m2ee tools](https://github.com/mendix/m2ee-tools), available on GitHub. Read more about installing on systems running Unix-like operating systems in [Unix-Like Deployment](/developerportal/deploy/unix-like/).
 
 Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose these components. Because Mendix has no control over the context in which the buildpack or m2ee tools are run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
@@ -239,9 +241,9 @@ Mendix Support needs application logs to diagnose these components. Because Mend
 This includes the implementation and configuration of features, and the data and files in the Mendix app itself.
 These components are not accessible for Mendix Support and issues in the application are out of the scope of Mendix Support, although we will gladly assist in case of questions.
 
-## 11 Main Documents in This Category
+## 11 Documents in This Category
 
-* [Prepare Your App for Support](/developerportal/support/prepare-your-project/) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
+* [Prepare Your App for Support](/developerportal/support/prepare-your-app/) – shows you how to configure app authorization to select the affected app(s) in the Mendix Support Portal
 * [Submit a Support Request](/developerportal/support/submit-support-request/) – presents the details necessary for Mendix Support to process your request
 * [Make a New App Node Request](/developerportal/support/new-app-node-request-template/) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
 * [Support Ticket Priority](/developerportal/support/ticket-priority/) – describes how priority levels are determined for Mendix Support

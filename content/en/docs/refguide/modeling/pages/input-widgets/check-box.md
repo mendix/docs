@@ -1,7 +1,6 @@
 ---
 title: "Check Box"
 url: /refguide/check-box/
-parent: "input-widgets"
 weight: 40
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -88,5 +87,5 @@ The render mode property determines whether the widget renders as a switch or a 
 
 ## 3 Read More
 
-*   [Data view](/refguide/data-view/)
-*   [Attributes](/refguide/attributes/)
+* [Data view](/refguide/data-view/)
+* [Attributes](/refguide/attributes/)

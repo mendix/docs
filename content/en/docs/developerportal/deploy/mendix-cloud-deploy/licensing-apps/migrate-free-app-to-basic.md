@@ -2,7 +2,6 @@
 title: "Migrate a Free App to Mendix Basic"
 linktitle: "Free App to Basic Package"
 url: /developerportal/deploy/migrate-free-app-to-basic/
-parent: "licensing-apps"
 weight: 40
 description: "Moving an existing Mendix app deployed as a Free App to a Basic Package node"
 tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package"]
@@ -115,4 +114,3 @@ Make sure your app is not running before you restore a backup. You can stop your
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" >}}
 
 Now start your app and it is ready for use.
-

@@ -1,5 +1,6 @@
 ---
 title: "Implement SSO on a Hybrid App with Mendix & SAML"
+linktitle: "SSO on Hybrid App with SAML"
 url: /howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/
 category: "Mobile Development"
 weight: 30
@@ -15,7 +16,6 @@ This how-to will describe the challenges involved in implementing SSO (single si
 The implementation described in this how-to will not work when you have enabled anonymous users in your app. Disable anonymous users in your app to use this implementation.
 {{% /alert %}}
 
-
 {{% alert color="warning" %}}
 The implementation described in this how-to will not work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
 {{% /alert %}}
@@ -25,7 +25,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps/).
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -141,48 +141,47 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1.  Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
-2.  Click **Publish for Mobile App Stores**:
+1. Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
+2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" >}}
-    
-3.  Select **Do it yourself** and then click **Download Customizable Package**:
+
+3. Select **Do it yourself** and then click **Download Customizable Package**:
 
     {{< figure src="/attachments/howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step2.png" >}}
 
     This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (for example, APK for Android and IPA for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
 
-4.  Unzip the hybrid app package.
-5.  Edit the *Entry.js* file (under `src\www\scripts`). The file should look like this:
+4. Unzip the hybrid app package.
+5. Edit the *Entry.js* file (under `src\www\scripts`). The file should look like this:
 
     {{< figure src="/attachments/howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/entry.js.png" >}}
 
-6.  Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
-    ​     
+6. Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
+
     {{< figure src="/attachments/howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/entry.js-with-fix.png" >}}
 
-7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
-    a. Install the latest stable version of [Node.js](https://nodejs.org/en/download/). <br>
-    b. In the hybrid app root folder, execute **npm install**. <br>
-    c. In the hybrid app root folder execute **npm run package**.<br>
-8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
+7. Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:
+    1. Install the latest stable version of [Node.js](https://nodejs.org/en/download/). 
+    2. In the hybrid app root folder, execute **npm install**. 
+    3. In the hybrid app root folder execute **npm run package**.
+8. Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     {{< figure src="/attachments/howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/build.phonegap.com.png" >}}
-    
+
 ### 5.3 The SAML Module 
 
 {{% alert color="warning" %}}
 Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
+
+See the [Dependencies](/appstore/modules/saml/#dependencies) section of the *SAML* documentation for more information.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in the following module versions:<br />
-* v3.2.2 and above for Mendix v9 (only for apps migrated from Mendix v8)<br />
-* v2.2.2 and above for Mendix v8<br />
-* v1.16.6 and above for Mendix v7
+The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in version 1.16.6 and above for Mendix version 7.
 {{% /alert %}}
 
-If you have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide/custom-settings/#9-web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **SAML20.HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. 
+If you have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide7/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **SAML20.HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. 
 
 Be sure to take these actions based on your use case:
 

@@ -11,7 +11,7 @@ tags: ["data hub", "data hub catalog", "security", "entity security", "dataset s
 
 In Data Hub, the [Access Level](#access-level) indicates whether you can access a registered data source.
 
-Security for a Mendix app can be defined at the app-level, module-level, and entity-level. Further authentication methods can also be specified to control access to the data associated with published datasets.
+Security for a Mendix app can be defined at the app-level, module-level, and entity-level. You can also specify further authentication methods to control access to the data associated with published datasets.
 
 This security level determines which end-users of the apps will have access to the data represented by the exposed dataset. For further information, see the [Security](/refguide/published-odata-services/#security) section in *Published OData Services*.
 
@@ -23,18 +23,19 @@ For Mendix apps that publish or consume [external entities](/refguide/external-e
 
 * The security for the OData-based service is defined in the publishing app at the app, module, and entity level
 * The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
-	{{% alert color="info" %}}The security for an OData service can only be set if the [app security](/refguide/app-security/) is enabled.{{% /alert %}}
+
+    {{% alert color="info" %}}The security for an OData service can only be set if the [app security](/refguide/app-security/) is enabled.{{% /alert %}}
 
 * Classification of the data associated with the entities is defined in the service metadata and shown in the [Service Metadata](/data-hub/data-hub-catalog/search/#metadata) panel of the **Search Details** screen. 
 
 * Through the identification protocols used for establishing the user identity, the security rules for the user in the publishing app are applied
 
-	* On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso/),  but it can also be the organization's identification protocol
+    * On the Mendix Platform, this is [Mendix SSO](/developerportal/deploy/mendix-sso/),  but it can also be the organization's identification protocol
 * In the publishing app in Studio Pro, access can be defined at the entity level as follows:
 
-	* None
-	* Basic authentication on the user name and password
-	* Customized where the publisher builds their own microflow which gets the header from the request to determine the user and what the user wants to do
+    * None
+    * Basic authentication on the user name and password
+    * Customized where the publisher builds their own microflow which gets the header from the request to determine the user and what the user wants to do
 
 For further details, see the [Entity Access](/refguide/module-security/#entity-access) section of *Module Security*.
 

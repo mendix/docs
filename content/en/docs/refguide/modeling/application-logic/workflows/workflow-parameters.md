@@ -1,7 +1,6 @@
 ---
 title: "Workflow Parameters"
 url: /refguide/workflow-parameters/
-parent: "workflows"
 weight: 05
 tags: ["workflow", "workflows", "parameters", "workflow parameters"]
 ---
@@ -25,6 +24,3 @@ The entity used by the workflow parameter.
 ### 2.2 Name
 
 **Name** is the name of the parameter and cannot be changed. 
-
-
-

@@ -1,7 +1,6 @@
 ---
 title: "Assert BooleanSlider Value"
 url: /addons/ats-addon/rg-one-assert-booleanslider-value/
-parent: "rg-one-booleanslider"
 ---
 
 ## 1 Description

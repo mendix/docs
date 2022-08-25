@@ -1,7 +1,6 @@
 ---
 title: "GroupBox"
 url: /addons/ats-addon/rg-one-groupbox/
-parent: "rg-one-mendix-actions"
 ---
 
 This section contains these documents:

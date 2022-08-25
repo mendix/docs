@@ -1,7 +1,6 @@
 ---
 title: "Make It Native 9 App"
 url: /releasenotes/mobile/make-it-native-9/
-parent: make-it-native-parent
 weight: 9
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]

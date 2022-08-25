@@ -1,7 +1,6 @@
 ---
 title: "Test Case Documentation"
 url: /addons/ats-addon/rg-one-test-case-documentation/
-parent: "rg-one-test-dev"
 weight: 9
 ---
 

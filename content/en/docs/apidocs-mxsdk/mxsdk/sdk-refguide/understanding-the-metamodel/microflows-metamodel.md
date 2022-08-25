@@ -1,7 +1,6 @@
 ---
 title: "Microflows in the Mendix Metamodel"
 url: /apidocs-mxsdk/mxsdk/microflows-metamodel/
-parent: "understanding-the-metamodel"
 weight: 4
 ---
 
@@ -211,10 +210,10 @@ Studio Pro Guide | Model SDK API docs
 
 A web service operation request needs to be mapped from Mendix app concepts to the specifics of the web service operation. There are four different ways in which request handling can be configured. Each has its own specific configuration options.
 
-1.  Export Mapping - The recommended option whenever you are sending complex XML objects (non-primitives) to a third party.
-2.  Simple Parameter Mapping - Use this option when you are just sending primitive values to a third party. The argument can be any MicroflowExpression producing a value compatible with the parameter type. The ElementPath is a string representing the place in the element tree of the parameter in the XML message.
-3.  Advanced Parameter Mapping - This is a combination of the above two mappings, starting one level deeper in the XML hierarchy than a regular export mapping. Use a MicroflowExpression for a primitive value and an ExportMapping for a complex one.
-4.  Custom mapping - Specify the XML to be sent manually. Powerful yet dangerous.
+1. Export Mapping - The recommended option whenever you are sending complex XML objects (non-primitives) to a third party.
+2. Simple Parameter Mapping - Use this option when you are just sending primitive values to a third party. The argument can be any MicroflowExpression producing a value compatible with the parameter type. The ElementPath is a string representing the place in the element tree of the parameter in the XML message.
+3. Advanced Parameter Mapping - This is a combination of the above two mappings, starting one level deeper in the XML hierarchy than a regular export mapping. Use a MicroflowExpression for a primitive value and an ExportMapping for a complex one.
+4. Custom mapping - Specify the XML to be sent manually. Powerful yet dangerous.
 
 #### 2.8.1 Graphical Overview
 
@@ -346,12 +345,12 @@ XML export actions use a domain-to-XML mapping similar to web service request ma
 
 Model SDK API docs
 
-*   [ImportXmlAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.importxmlaction.html)
-*   [ResultHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
-*   [ExportXmlAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.exportxmlaction.html)
-*   [ExportMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/exportmappings.exportmapping.html)
-*   [FileDocumentExport](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.filedocumentexport.html)
-*   [VariableExport](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.variableexport.html)
+* [ImportXmlAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.importxmlaction.html)
+* [ResultHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
+* [ExportXmlAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.exportxmlaction.html)
+* [ExportMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/exportmappings.exportmapping.html)
+* [FileDocumentExport](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.filedocumentexport.html)
+* [VariableExport](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.variableexport.html)
 
 ### 2.18 Document Generation
 

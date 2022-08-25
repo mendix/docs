@@ -1,7 +1,6 @@
 ---
 title: "Version Control Menu"
 url: /refguide/version-control-menu/
-parent: "menus"
 description: "Describes the Version Control menu in Studio Pro."
 weight: 40
 tags: ["Studio Pro", "version control", "top bar"]

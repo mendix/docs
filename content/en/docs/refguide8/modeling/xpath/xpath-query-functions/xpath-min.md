@@ -1,7 +1,6 @@
 ---
 title: "XPath Min"
 url: /refguide8/xpath-min/
-parent: "xpath-query-functions"
 tags: ["studio pro"]
 ---
 
@@ -23,11 +22,12 @@ The query must specify an attribute that has a numeric type.
 
 This query returns the lowest total price found in any object:
 
-```java
+```java {linenos=false}
 min(//Sales.Order/TotalPrice)
 ```
+
 This query returns the lowest total price of an order placed by a customer named "Jansen":
 
-```java
+```java {linenos=false}
 min(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```

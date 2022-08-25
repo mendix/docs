@@ -1,16 +1,15 @@
 ---
 title: "Between Date Function Calls"
 url: /refguide7/between-date-function-calls/
-parent: "expressions"
 ---
 
 Functions for calculating the differences between two dates.
 
 ## millisecondsBetween
 
-*   First date
+* First date
     Type: DateTime
-*   Second date
+* Second date
     Type: DateTime
 
 ### Output
@@ -31,9 +30,9 @@ results in
 
 ## secondsBetween
 
-*   First date
+* First date
     Type: DateTime
-*   Second date
+* Second date
     Type: DateTime
 
 ### Output
@@ -54,9 +53,9 @@ results in
 
 ## minutesBetween
 
-*   First date
+* First date
     Type: DateTime
-*   Second date
+* Second date
     Type: DateTime
 
 ### Output
@@ -77,9 +76,9 @@ results in
 
 ## hoursBetween
 
-*   First date
+* First date
     Type: DateTime
-*   Second date
+* Second date
     Type: DateTime
 
 ### Output
@@ -100,9 +99,9 @@ results in
 
 ## daysBetween
 
-*   First date
+* First date
     Type: DateTime
-*   Second date
+* Second date
     Type: DateTime
 
 ### Output
@@ -123,9 +122,9 @@ results in
 
 ## weeksBetween
 
-*   First date
+* First date
     Type: DateTime
-*   Second date
+* Second date
     Type: DateTime
 
 ### Output

@@ -1,7 +1,6 @@
 ---
 title: "Events Section in Widgets"
 url: /studio7/page-editor-widgets-events-section/
-parent: "page-editor-widgets"
 description: "Describes the Events section in widgets properties in Mendix Studio."
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---
@@ -20,20 +19,18 @@ You can find the description of possible on click actions below:
 
 * **Nothing** – no action is taken when the user clicks a widget
 * **Page** –  the specified page is opened
-  * **Create Object** – creates a new object and passed it to the selected page (disabled by default). For more information, see section [2.1 Create Object Option](#create-object-option)
+    * **Create Object** – creates a new object and passed it to the selected page (disabled by default). For more information, see section [2.1 Create Object Option](#create-object-option)
 * **Microflow** – the selected microflow is executed 
 * **More** – contains the following type of actions:
-  * **Save Changes** – saves (commits) all changes made on the page
-  * **Cancel Changes** – rolls back all changes made on the page 
-  * **Close Page** – closes the pop-up window (for pop-up pages) or navigates to the previously visited page  
-  * **Sign Out** – the current user is signed out of the app 
-  * **Open Link** – triggers an action based on the link type (for more information, see section [2.2 Open Link Action](#open-link-action)
-  * **Delete Object** – deletes an object (for more information, see section [2.3 Delete Object Action](#delete-object-action))
+    * **Save Changes** – saves (commits) all changes made on the page
+    * **Cancel Changes** – rolls back all changes made on the page 
+    * **Close Page** – closes the pop-up window (for pop-up pages) or navigates to the previously visited page
+    * **Sign Out** – the current user is signed out of the app 
+    * **Open Link** – triggers an action based on the link type (for more information, see section [2.2 Open Link Action](#open-link-action)
+    * **Delete Object** – deletes an object (for more information, see section [2.3 Delete Object Action](#delete-object-action))
 
 {{% alert color="info" %}}
-
 The list of available on click actions may differ depending on the widget. For example, **Delete Object** on-click action is unavailable for the list view. 
-
 {{% /alert %}}
 
 ### 2.1 Create Object Option {#create-object-option}
@@ -77,7 +74,6 @@ If you place the **Delete Object** in a list view, the corresponding list view i
 For example, you have a page with a list view showing customer names. A **Delete** button is placed inside the list next to each name. Thus, if you click **Delete** in a line that says "Peter", this customer and all customer's details will be deleted. 
 
 {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-events-section/list-view-delete.png"   width="350"  >}}
-
 
 #### 2.3.2 Delete Object Action in a Data View
 

@@ -1,7 +1,6 @@
 ---
 title: "Enumerations in Expressions"
 url: /refguide8/enumerations-in-expressions/
-parent: "expressions"
 weight: 170
 tags: ["studio pro", "expression", "enumeration", "expressions"]
 ---

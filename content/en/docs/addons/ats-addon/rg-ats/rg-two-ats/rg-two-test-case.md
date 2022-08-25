@@ -1,7 +1,6 @@
 ---
 title: "Test Case"
 url: /addons/ats-addon/rg-two-test-case/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction

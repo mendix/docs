@@ -17,7 +17,7 @@ Resources can be reused in different modules of your app.
 
 To add a resource document, do the following:
 
-1.  In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
+1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
 
     {{< figure src="/attachments/refguide/modeling/resources/app-explorer-resources.png" >}}
 

@@ -1,7 +1,6 @@
 ---
 title: "Backups API V1"
 url: /apidocs-mxsdk/apidocs/backups-api-v1/
-parent: "deploy-api"
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
 weight: 20
 ---
@@ -37,8 +36,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 **Request Parameters**
 
-*   _AppId_ (String): Sub-domain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
+* *AppId* (String): Sub-domain name of an app.
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
 
 **Example Request**
 
@@ -101,9 +100,9 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of the app. This is the production subdomain, do not add the mode (for example, do not add `-accp` for acceptance – see the example below)
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)
-*   _SnapshotId_ (String): Identifier of the backup
+* *AppId* (String): Subdomain name of the app. This is the production subdomain, do not add the mode (for example, do not add `-accp` for acceptance – see the example below)
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)
+* *SnapshotId* (String): Identifier of the backup
 
 **Example Request**
 
@@ -158,10 +157,9 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
-*   _Comment_ (String): Optional comment for this snapshot.
-
+* *AppId* (String): Subdomain name of an app.
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
+* *Comment* (String): Optional comment for this snapshot.
 
 **Example Request**
 
@@ -216,9 +214,9 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
-*   _SnapshotId_ (String): ID of the snapshot to be restored.
+* *AppId* (String): Subdomain name of an app.
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
+* *SnapshotId* (String): ID of the snapshot to be restored.
 
 **Example Request**
 

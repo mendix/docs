@@ -1,7 +1,6 @@
 ---
 title: "Navigation Consistency Errors"
 url: /refguide7/consistency-errors-navigation/
-parent: "consistency-errors"
 description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
 tags: ["desktop modeler", "consistency errors", "checks", "errors", "navigation"]
 ---
@@ -33,13 +32,13 @@ To fix the error, you can create an object and pass it to the page. Do the follo
 
 1. Open the navigation for the responsive profile.
 
-2.  Open properties of the **Program** menu item, and do the following: <br/>
+2. Open properties of the **Program** menu item, and do the following: <br/>
 
-    a. Change the **On click** property from **Show a page** to **Create object**. <br/>
+    1. Change the **On click** property from **Show a page** to **Create object**. <br/>
 
-    b. Set **ProgramItem** as **Entity (path)**. <br/>
+    1. Set **ProgramItem** as **Entity (path)**. <br/>
 
-    c. Set **Program** as **On click page**. <br/>
+    1. Set **Program** as **On click page**. <br/>
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-navigation/dm-menu-item-properties.png" alt="Menu Item Properties" >}}<br/>
 
@@ -57,7 +56,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
 1. Open the responsive navigation profile.
 
-2.  In **Default home page field** click **Select**.
+2. In **Default home page field** click **Select**.
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-navigation/dm-default-home-page-field.png" alt="Default Home Page Setting" >}}
 
@@ -67,20 +66,19 @@ You can fix this error by creating a microflow that will that will create a new 
 
 5. Open the created microflow, add a **Create Object** activity to it 
 
-6.  For the **Create Object** activity, set **Entity** to **Customer**. 
+6. For the **Create Object** activity, set **Entity** to **Customer**. 
 
     {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-navigation/dm-create-object-properties.png" alt="Create Object Properties" >}}
 
 7. Add Show Page activity to the microflow and do the following in the **Show Page** pop-up dialog:<br/>
 
-    a. Set **Object to pass** to **NewCustomer**.<br/>
+    1. Set **Object to pass** to **NewCustomer**.<br/>
 
-    b. Set **Page** to **Home**.
+    1. Set **Page** to **Home**.
 
 Now the new object of type *Customer* will be created and passed to the home page.
 
 {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-navigation/dm-open-home-page-microflow.png" alt="Open Home Page Microflow" >}}
-
 
 ## 3 Read More
 

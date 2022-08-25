@@ -1,7 +1,6 @@
 ---
 title: "Range Search Field"
 url: /refguide7/range-search-field/
-parent: "search-bar"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -38,7 +37,7 @@ This attribute (path) determines the lower bound of the range.
 
 The lower bound operator determines whether the comparison with the lower bound is inclusive (>=) or not (>). It can be either 'Greater' or 'Greater or equal'.
 
-_Default value_: Greater.
+*Default value*: Greater.
 
 ### Upper Bound
 
@@ -48,4 +47,4 @@ This attribute (path) determines the upper bound of the range.
 
 The upper bound operator determines whether the comparison with the upper bound is inclusive (<=) or not (<). It can be either 'Smaller' or 'Smaller or equal'.
 
-_Default value_: Smaller
+*Default value*: Smaller

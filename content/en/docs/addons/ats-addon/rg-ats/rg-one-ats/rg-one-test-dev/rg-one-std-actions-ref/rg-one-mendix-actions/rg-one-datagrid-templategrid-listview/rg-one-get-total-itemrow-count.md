@@ -1,7 +1,6 @@
 ---
 title: "Get Total Item/Row Count"
 url: /addons/ats-addon/rg-one-get-total-itemrow-count/
-parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "GroupBox is Collapsed"
 url: /addons/ats-addon/rg-one-groupbox-is-collapsed/
-parent: "rg-one-groupbox"
 ---
 
 ## 1 Description

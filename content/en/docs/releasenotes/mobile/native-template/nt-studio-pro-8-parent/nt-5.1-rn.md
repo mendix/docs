@@ -1,7 +1,6 @@
 ---
 title: "Native Template 5.1"
 url: /releasenotes/mobile/nt-5.1-rn/
-parent: "nt-studio-pro-8-parent"
 weight: 20
 description: "Native Template 5.1 release notes."
 ---
@@ -67,7 +66,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ### Improvements
 
-* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link/).
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Breaking Change
 

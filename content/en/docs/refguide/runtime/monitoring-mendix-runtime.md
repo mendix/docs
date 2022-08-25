@@ -38,7 +38,7 @@ The next sections explain which monitoring actions are supported.
 
 ### 2.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "get_current_runtime_requests", "params":{} }
 ```
 
@@ -108,23 +108,23 @@ The next sections explain which monitoring actions are supported.
 
 This request returns the current executions of actions known by the Mendix Runtime. Actions can include microflows, Java actions, web service calls, and scheduled events. For each execution the following is reported:
 
-*   The "duration" of the execution in milliseconds
-*   The "type" of execution. Possible types are:
-  * "CLIENT"
-  * "CLIENT_ASYNC" – the asynchronous microflow call triggered from the web client
-  * "CLIENT_ASYNC_MONITORED" – the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread from CLIENT_ASYNC
-  * "CUSTOM"
-  * "WEB_SERVICE"
-  * "SCHEDULED_EVENT"
-  * "UNKNOWN"
-*   The "user" associated with the session executing the action – for a non-user session the name "System" is returned
-*   The "action_stack" for this execution – for each action in this stack detailed information is displayed, for example the current activity and name of a microflow
+* The "duration" of the execution in milliseconds
+* The "type" of execution. Possible types are:
+* "CLIENT"
+* "CLIENT_ASYNC" – the asynchronous microflow call triggered from the web client
+* "CLIENT_ASYNC_MONITORED" – the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread from CLIENT_ASYNC
+* "CUSTOM"
+* "WEB_SERVICE"
+* "SCHEDULED_EVENT"
+* "UNKNOWN"
+* The "user" associated with the session executing the action – for a non-user session the name "System" is returned
+* The "action_stack" for this execution – for each action in this stack detailed information is displayed, for example the current activity and name of a microflow
 
 ## 3 Runtime Statistics
 
 ### 3.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "runtime_statistics", "params":{} }
 ```
 
@@ -263,24 +263,22 @@ Represents the number of bytes allocated to the specified memory sections. For a
 
 The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM with some fields of the [MemoryPoolMxBean](http://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryPoolMXBean.html):
 
-*   "usage" – returns an estimate of the memory usage of this memory pool (in bytes)
-*   "is_heap" – is this memory pool part of the heap or not?
-*   "name" – the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or  garbage collection options
-*   "index" – the index in the JSON Array. This field is not strictly needed as the pools are returned in a list so you can, and should, rely on the order of the list in case you are processing them in a program
+* "usage" – returns an estimate of the memory usage of this memory pool (in bytes)
+* "is_heap" – is this memory pool part of the heap or not?
+* "name" – the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or  garbage collection options
+* "index" – the index in the JSON Array. This field is not strictly needed as the pools are returned in a list so you can, and should, rely on the order of the list in case you are processing them in a program
 
 {{% alert color="info" %}}
-
 If you are automatically processing the "memorypools" section to, for example, display in a graph, you should ideally not make any assumptions about the kind of memory pool based on its order in the list or its name as these may change depending on for example garbage collector settings or Java version.
 
 If do want to develop a strategy on interpreting these pools anyway based on Java version: you can get the Java version from the 'about' admin action.
-
 {{% /alert %}}
 
 ## 4 State Statistics {#state}
 
 ### 4.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "cache_statistics", "params":{} }
 ```
 
@@ -321,7 +319,7 @@ This information can be an aid in figuring out which objects cause a lot of memo
 
 ### 5.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "server_statistics", "params":{} }
 ```
 
@@ -354,13 +352,13 @@ This information can be an aid in figuring out which objects cause a lot of memo
 
 The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, it lists the maximum idle time of the connection before it is closed, if Jetty is running under normal circumstances.
 
-The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](https://www.eclipse.org/jetty/javadoc/9.4.11.v20180605/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
+The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 
 ## 6 Logged-In Users
 
 ### 6.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "get_logged_in_user_names", "params":{} }
 ```
 
@@ -384,7 +382,7 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 
 ### 7.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "get_all_thread_stack_traces", "params":{} }
 ```
 
@@ -446,7 +444,7 @@ Returns all the current thread stack traces by name. This is useful for low leve
 
 ### 8.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "runtime_status", "params":{} }
 ```
 
@@ -478,7 +476,7 @@ This information can be used to track what state the Mendix Runtime is in when t
 
 ### 9.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "check_health", "params":{} }
 ```
 
@@ -503,16 +501,14 @@ If a health check microflow has been configured, this request will report on the
 The health check microflow gets invoked multiple times per minute. Therefore, it is recommended to make it light-weight and run quickly. Heavy operations may have a significant impact on your application's performance.
 
 {{% alert color="warning" %}}
-
 This request can only be executed when the Mendix Runtime status is "running" (see [Runtime Status](#runtime-status) above).
-
 {{% /alert %}}
 
 ## 10 About Runtime
 
 ### 10.1 Request
 
-```json
+```json {linenos=false}
 {"action" : "about", "params":{} }
 ```
 

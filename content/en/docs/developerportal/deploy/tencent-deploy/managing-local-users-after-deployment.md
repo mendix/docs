@@ -1,7 +1,6 @@
 ---
 title: "Manage Local Users in Studio"
 url: /developerportal/deploy/managing-local-users-after-deployment/
-parent: "tencent-deploy"
 weight: 60
 description: ""
 tags: ["Tencent"]
@@ -33,11 +32,12 @@ For each app published from Mendix Studio on Tencent Cloud, a default administra
 
 In the **Administrator** tab the following properties are available:
 
-- User name
-- Password
-- User role
+* User name
+* Password
+* User role
 
 #### 2.1.1 User Name
+
 The user name is used to sign into the application as the Administrator.
 Default: *MxAdmin*
 {{% alert color="info" %}}
@@ -45,9 +45,11 @@ Since this is general knowledge, it is safer to change this to a custom user nam
 {{% /alert %}}
 
 #### 2.1.2 Password
+
 The password is used to sign into the application as the Administrator. You can change the password from the Developer Portal after publishing your app.
 
 #### 2.1.3 User Role
+
 The user role assigned to the Administrator. For more information, see [Security, Roles & Permissions](/studio8/settings-security/).
 Default: *Administrator*
 
@@ -78,7 +80,7 @@ To do this, follow the steps below:
     You will see information about your running app. Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there.
 
     There are also buttons which allow you to perform various actions on your app and environment.
-    
+
 4. Click **Change Admin Password**.
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/change-password-button.png" >}}

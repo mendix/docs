@@ -1,7 +1,6 @@
 ---
 title: "Report Widgets"
 url: /refguide8/report-widgets/
-parent: "pages"
 weight: 50
 tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -34,7 +33,6 @@ The **Report widgets** category contains the following widgets:
 * [Generate report button](/refguide8/report-button/) – generates a report when the end-user clicks the button
 
     {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/generate-report-button-example.png" alt="Example generate report button" >}}
-
 
 ## 2 Performing Basic Functions
 

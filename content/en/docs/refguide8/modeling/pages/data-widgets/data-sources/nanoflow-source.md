@@ -1,7 +1,6 @@
 ---
 title: "Nanoflow Source"
 url: /refguide8/nanoflow-source/
-parent: "data-sources"
 tags: ["studio pro", "nanoflow source", "data source"]
 weight: 50
 ---
@@ -36,17 +35,14 @@ The nanoflow for the use-case should look like this:
 This nanoflow does the following:
 
 1. It passes the *Order* of the enclosing data view as a parameter. 
-
 2. It then splits on the *OrderType* attribute and retrieves a different set of products for each enumeration value. 
-
 3. The nanoflow returns a list of products and each end event is configured to return a list. 
 
-    {{% alert color="info" %}}The *empty* path also requires a value, where `empty` is also a value.
-    {{% /alert %}}
+    {{% alert color="info" %}}The *empty* path also requires a value, where `empty` is also a value.{{% /alert %}}
 
 ## 3 Properties
 
-###  3.1 Nanoflow
+### 3.1 Nanoflow
 
 Defines the nanoflow used to populate the widget. This nanoflow will be run whenever the widget is loaded into the browser or refreshed. The nanoflow must have a return value of either an object or a list of objects, depending on the widget being used.
 

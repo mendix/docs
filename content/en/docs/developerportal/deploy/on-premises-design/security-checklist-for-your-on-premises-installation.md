@@ -1,7 +1,7 @@
 ---
 title: "Security for Your On-Premises Installation"
+linktitle: "On-Premises Installation Security"
 url: /developerportal/deploy/security-checklist-for-your-on-premises-installation/
-parent: "on-premises-design"
 description: "A checklist for implementing security when deploying Mendix on premises"
 weight: 10
 tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "file access", "admin port"]
@@ -80,4 +80,4 @@ For example, Content Security Policy (CSP) is not enabled for you. There is no d
 * [How to Set Up a New SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/)
 * [How to Set Up a SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)
 * [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-* [U*ix Deployment](/developerportal/deploy/unix-like/)
+* [Unix-Like Deployment](/developerportal/deploy/unix-like/)

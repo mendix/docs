@@ -1,7 +1,6 @@
 ---
 title: "Set InputReferenceSelector Value"
 url: /addons/ats-addon/rg-one-set-inputreferenceselector-value/
-parent: "rg-one-input-reference-selector"
 ---
 
 ## 1 Description

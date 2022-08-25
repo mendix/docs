@@ -1,7 +1,6 @@
 ---
 title: "Radio Buttons"
 url: /refguide7/radio-buttons/
-parent: "input-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,7 +21,7 @@ These radio buttons are used to indicate whether the user wants to receive the n
 
 This property defines whether the radio buttons are rendered horizontally or vertically.
 
-_Default value:_ Horizontal
+*Default value:* Horizontal
 
 ## Validation Properties
 
@@ -64,5 +63,5 @@ _Default value:_ Horizontal
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
-*   [Attributes](/refguide7/attributes/)
+* [Data view](/refguide7/data-view/)
+* [Attributes](/refguide7/attributes/)

@@ -36,25 +36,24 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Creating a Custom Error Page
 
 1. Open the local folder of your app.
-
-2.  Go to **theme**:
+2. Go to **theme**:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/theme.png" >}}
 
-3.  Go to **web**:
+3. Go to **web**:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/web.png" >}}
 
-4.  Create a new folder named *error_page*:
+4. Create a new folder named *error_page*:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/error-page.png" >}}
 
-5.  In the **error_page** folder, place your *offline.html* file:
+5. In the **error_page** folder, place your *offline.html* file:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
-    
+
     {{% alert color="info" %}}In these *.html* files, you can only refer to external resources or resources under the absolute path `/error_page/`; the `/error_page/` path is the only one that will be available when the application is stopped.{{% /alert %}}
 
 6. Commit the changes in Studio Pro.

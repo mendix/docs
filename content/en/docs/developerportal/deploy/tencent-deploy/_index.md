@@ -80,7 +80,7 @@ There are two other tabs:
 
 #### 3.2.1 Members
 
-The **集群管理员** tab will show you all the cluster managers for this cluster. **状态** indicates whether the user has accepted an invitation.
+The **集群管理员** tab will show you all the cluster managers for this cluster. **状态** indicates whether the user has accepted an invitation. Click **移除** to remove the cluster manager from the cluster.
 
 Click **邀请集群管理员** to invite another Tencent user to manage this cluster. You will need to know the other person's Tencent ID to invite them.
 

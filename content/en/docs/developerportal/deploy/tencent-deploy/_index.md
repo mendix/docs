@@ -324,7 +324,7 @@ When deploying your app for the first time, there will be no environment to depl
 
 1. Select a **数据库计划** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
-1. Select a **文件存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
+1. Select a **存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
 
 1. Click **创建环境**.
 

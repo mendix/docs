@@ -630,7 +630,7 @@ If you choose a custom TLS configuration, you will need to enter the following i
 
 * Enable TLS – is TLS enabled for this environment?
 
-* Use existing TLS secret or add new tls private key and certificate?
+* **使用现有的 TLS 密钥或添加新的 tls 私钥和证书** – Use existing TLS secret or add new TLS private key and certificate?
 
 * Existing Secret Name – if you choose an existing TLS secret then you will be asked to enter its name
 

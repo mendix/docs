@@ -632,9 +632,9 @@ If you choose a custom TLS configuration, you will need to enter the following i
 
 * **使用现有的 TLS 密钥或添加新的 tls 私钥和证书** – Use existing TLS secret or add new TLS private key and certificate?
 
-* Existing Secret Name – if you choose an existing TLS secret then you will be asked to enter its name
+* **现有的密钥名称** – if you choose an existing TLS secret then you will be asked to enter its name
 
-* TLS Private Key File and TLS Certificate File – if you choose to add a new key you will need to upload these two files
+* **TLS 私钥文件** and **TLS 证书文件** – if you choose to add a new key you will need to upload these two files
 
 Click **保存并应用** to confirm your new configuration.
 

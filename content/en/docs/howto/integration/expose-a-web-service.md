@@ -23,9 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download the latest version of [Mendix Studio Pro](https://marketplace.mendix.com/)
 
 {{% alert color="warning" %}}
-
 This how-to was written based on Studio Pro version 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
-
 {{% /alert %}}
 
 ## 3 Data Structure and GUI
@@ -74,8 +72,8 @@ To create the functionality to expose, follow these steps:
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/18581709.png" >}}
 
-	Reference this microflow:
-    
+    Reference this microflow:
+
     {{< figure src="/attachments/howto/integration/expose-a-web-service/model.jpg" >}}
 
 ## 6 Publishing a Microflow{#publish-a-microflow}

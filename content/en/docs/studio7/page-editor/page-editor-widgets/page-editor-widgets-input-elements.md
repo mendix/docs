@@ -1,7 +1,6 @@
 ---
 title: "Input Element Widgets"
 url: /studio7/page-editor-widgets-input-elements/
-parent: "page-editor-widgets"
 description: "Describes input widgets in Mendix Studio."
 weight: 20
 tags: ["studio", "page editor", "input widgets", "widgets"]

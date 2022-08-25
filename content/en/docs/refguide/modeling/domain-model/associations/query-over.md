@@ -1,7 +1,6 @@
 ---
 title: "Querying Over Self-References"
 url: /refguide/query-over/
-parent: "associations"
 weight: 20
 tags: ["query", "self-reference", "association", "domain model"]
 ---
@@ -66,13 +65,17 @@ Use the expression `[reversed ()]` to instruct Mendix to read the constraint in 
 The `[reversed()]` expression can only be applied on self-references. When an association is between two different object types, the platform will be able to determine the direction of the join automatically.
 {{% /alert %}}
 
- In our example, we want to find the folder which is the parent of $ChosenFolder. Now, the query becomes `[QueryOver.Folder_SubFolder [reversed ()]=$ChosenFolder]`. Instead of reading the association from right to left (Parent to Child), the association is read from left to right.
+In our example, we want to find the folder which is the parent of $ChosenFolder. Now, the query becomes `[QueryOver.Folder_SubFolder [reversed ()]=$ChosenFolder]`. Instead of reading the association from right to left (Parent to Child), the association is read from left to right.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-reversed.png"   width="400"  >}}
 
 If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFolder2` we have chosen the folder with **ID** `3`. The folder in the right-hand table, highlighted in orange, will be returned. The platform applies the constraint in reverse, on the left/child side of the association and returns the relevant ParentFolder.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-reversed-tables.png" >}}
+
+Here is a video created by our community member [Mike Kumpf](https://developer.mendixcloud.com/link/profile/overview/1360) explaining the use of `reversed()` in an expression.
+
+{{% youtube 5tznw5ZUQgk %}}
 
 ### 2.3 Creating More Complex Queries {#more-complex}
 
@@ -102,7 +105,7 @@ In this example, a list of **Specializations** cannot be retrieved when using a 
 
 However, there is a workaround for this limitation: The list of Specializations can be retrieved with a Java action using the Java API. This Java action needs two parameters: the **Specialization** and a Boolean **Reverse** via this code snippet:
 
-```
+```java
 public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<IMendixObject>>
 {
 	private IMendixObject __B;

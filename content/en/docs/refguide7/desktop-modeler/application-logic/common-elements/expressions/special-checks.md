@@ -1,7 +1,6 @@
 ---
 title: "Special checks"
 url: /refguide7/special-checks/
-parent: "expressions"
 ---
 
 ## Checking for an Empty Object
@@ -52,7 +51,6 @@ Assuming $object1 is an domain entity and that it has a member called 'member1',
 | $object1 has no value | N/A | true |
 
 ## Checking Whether an Object Is New<a name="new"></a>
-
 
 ### Input
 

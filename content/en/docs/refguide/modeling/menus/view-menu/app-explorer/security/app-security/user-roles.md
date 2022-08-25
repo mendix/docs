@@ -1,7 +1,6 @@
 ---
 title: "User Roles"
 url: /refguide/user-roles/
-parent: "app-security"
 weight: 10
 tags: ["studio pro", "user role", "app security", "security"]
 aliases:
@@ -30,8 +29,8 @@ Double-click the user role to open its properties.
 
 The user role has the following properties:
 
-*  [General properties](#general)
-*  [User management properties](#user-management)
+* [General properties](#general)
+* [User management properties](#user-management)
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/user-roles/user-role-properties.png" >}}
 

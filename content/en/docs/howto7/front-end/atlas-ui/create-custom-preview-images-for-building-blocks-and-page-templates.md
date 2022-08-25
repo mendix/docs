@@ -1,7 +1,7 @@
 ---
 title: "Create Custom Preview Images for Building Blocks & Page Templates"
+linktitle: "Custom Preview Images"
 url: /howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/
-parent: "atlas-ui"
 weight: 50
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
@@ -27,7 +27,7 @@ To create a building block preview image in Sketch, follow these steps:
 2. Open the Sketch file named **BB_previewimage.sketch**. This file contains two artboards. The first artboard shows an example of how custom preview images look in the Web Modeler's Toolbox. The second artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard.
-5.  In the **Export** dialog box that appears in the lower-right side of your screen, make sure the preferences are set to the following:
+5. In the **Export** dialog box that appears in the lower-right side of your screen, make sure the preferences are set to the following:
     * **Size**: 1x
     * **Format**: PNG
 
@@ -41,7 +41,7 @@ To create a building block preview image in Photoshop, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Photoshop file named **BB_previewimage.psd**.
-3.  Double-click the smart object in the **Layers** panel.
+3. Double-click the smart object in the **Layers** panel.
 
     {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_photoshop.png" >}}
 
@@ -58,7 +58,7 @@ To create a building block preview image in Illustrator, follow these steps:
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard.
 5. Click **File** > **Export for screens**, then select the **BB Image@2x** artboard.
-6.  Make sure the preferences are set to the following:
+6. Make sure the preferences are set to the following:
     * **Scale**: 1x
     * **Format**: PNG
 
@@ -82,7 +82,7 @@ To create a page template preview image in Sketch, follow these steps:
 2. Open the Sketch file named **PT_previewimage.sketch**. This file contains three artboards. The first two artboards show examples of how page template preview images look in the Web Modeler. The third artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Building Block preview** folder.
 4. When you are happy with your image, select your artboard
-5.  In the **Export** dialog box that appears in the lower-right side of your screen, make sure the preferences are set to the following:
+5. In the **Export** dialog box that appears in the lower-right side of your screen, make sure the preferences are set to the following:
     * **Size**: 1x
     * **Format**: PNG
 
@@ -96,7 +96,7 @@ To create a page template preview image in Photoshop, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas2.mendix.com/index3.html#/resources/7881299347899269).
 2. Open the Photoshop file named **PT_previewimage.psd**.
-3.  Double-click the smart object in the **Layers** panel.
+3. Double-click the smart object in the **Layers** panel.
 
     {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt_photoshop.png" >}}
 
@@ -112,7 +112,7 @@ To create a page template preview image in Illustrator, follow these steps:
 3. Hide the layer called **Template**, then insert your preview image into the **Page template preview** folder.
 4. When you are happy with your image, select your artboard
 5. Click **File** > **Export for screens**, then select the **PT@2x** artboard.
-6.  Make sure the preferences are set to the following
+6. Make sure the preferences are set to the following
     * **Scale**: 1x
     * **Format**: PNG
 

@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords & System Variables"
 url: /refguide/xpath-keywords-and-system-variables/
-parent: "xpath-constraints"
 tags: ["studio pro", "BeginOfCurrent"]
 ---
 
@@ -20,7 +19,7 @@ Either of these keywords can be used to check whether an attribute has a value (
 
 This query returns all the customers whose name is not known to the system:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = NULL]
 ```
 
@@ -101,27 +100,28 @@ These variables must be used as string values and placed between two quotes. Tim
 
 This query returns only customers who have registered since the beginning of this week:
 
-```java
+```java {linenos=false}
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
 ```
 
 This query returns only customers who have registered this week:
 
-```java
+```java {linenos=false}
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
 ```
 
 This query returns only customers who have registered in the past three years:
 
-```java
+```java {linenos=false}
 //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
 ```
 
 This query returns users with the role "Administrator":
 
-```java
+```java {linenos=false}
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
 ```
+
 {{% alert color="info" %}}
 Because system variables are written as a string (between quotes), it is not possible to use parentheses to group expressions.
 {{% /alert %}}

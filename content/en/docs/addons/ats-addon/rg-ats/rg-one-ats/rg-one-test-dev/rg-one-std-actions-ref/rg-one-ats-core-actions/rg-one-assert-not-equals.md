@@ -1,7 +1,6 @@
 ---
 title: "Assert Not equals"
 url: /addons/ats-addon/rg-one-assert-not-equals/
-parent: "rg-one-ats-core-actions"
 ---
 
 ## 1 Description

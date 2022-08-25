@@ -1,7 +1,7 @@
 ---
 title: "Part 7: Send Your First Test Push Notification"
+linktitle: "7. Test Push Notification"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/
-parent: /refguide/mobile/using-mobile-capabilities/push-notifications/
 weight: 80
 description: Tutorial for testing your push notifications.
 aliases:
@@ -24,7 +24,7 @@ To send your first test notification, do the following:
 1. Fill in any **Title**/**Body** that you want for your notification.
 1. Set the **Action name** to *Example*.
 1. Leave the remaining fields to the defaults.
-1.  Click **Send**:
+1. Click **Send**:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-send-test/push-send-message.png" alt="test entity"   width="350"  >}}
 

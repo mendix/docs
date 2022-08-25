@@ -1,7 +1,6 @@
 ---
 title: "OQL CAST"
 url: /refguide8/oql-cast/
-parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
@@ -15,18 +14,18 @@ The CAST function converts an expression to a specific data type.
 
 The syntax is as follows:
 
-```
+```sql {linenos=false}
 CAST ( expression AS data_type )
 ```
 
 * `expression` – specifies the expression to convert
 * `data_type` – specifies the data type to convert the expression to; the data type can be one of the following:
-  * BOOLEAN
-  * DATETIME
-  * DECIMAL
-  * INTEGER
-  * LONG
-  * STRING
+    * BOOLEAN
+    * DATETIME
+    * DECIMAL
+    * INTEGER
+    * LONG
+    * STRING
 
 ## 2 Supported Conversions
 

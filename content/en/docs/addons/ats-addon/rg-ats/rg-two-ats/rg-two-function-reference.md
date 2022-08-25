@@ -1,7 +1,6 @@
 ---
 title: "Function Reference"
 url: /addons/ats-addon/rg-two-function-reference/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction
@@ -118,7 +117,6 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Toggle Grid Selector Checkbox Value | Grid Selector | Inverses the check box found by a given column and row caption. |
 | Toggle Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Inverses the value of the check box found by the given entity attribute value. |
 
-
 ## 7 Mendix
 
 | Function         | Supported Widgets | Description                              |
@@ -169,7 +167,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Switch to Next Window | Switches to the next open window. An error is thrown if there is only one window. Returns the window handle (meaning, the identifier) of the new active window. |
 | Switch to Window | Switches to the window via its identifier. An error is thrown if the window is not found. |
 | Unfocus WebElement | Removes focus from a web element by calling the blur method. |
-| Wait for Condition | Repeatedly runs the condition java script snippet every Interval (in milliseconds) until one of the following is fulfilled: <br />  * The snippet returns neither null nor false <br />  * The snippet throws an unignored exception <br />  * The timeout (in milliseconds) expires |
+| Wait for Condition | Repeatedly runs the condition java script snippet every Interval (in milliseconds) until one of the following is fulfilled: <br /><ul><li>The snippet returns neither null nor false</li><li>The snippet throws an unignored exception</li><li> The timeout (in milliseconds) expires</li></ul>|
 | Wait for Condition JS | Waits until the given expression returns true. |
 
 ## 9 Mouse & Keyboard

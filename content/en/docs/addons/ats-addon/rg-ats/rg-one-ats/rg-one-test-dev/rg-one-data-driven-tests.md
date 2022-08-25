@@ -1,7 +1,6 @@
 ---
 title: "Data-Driven Tests"
 url: /addons/ats-addon/rg-one-data-driven-tests/
-parent: "rg-one-test-dev"
 weight: 8
 ---
 
@@ -11,7 +10,7 @@ Data Driven Testing in ATS allows you to run tests using tables of data directly
 
 Please see the Data Driven testing section for information on how to create datasets to use in your tests.
 
-To use your datasets in test cases you need to select a _Master dataset_ under the _Test Data_ tab inside a test case. You can only select one master dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected master dataset.
+To use your datasets in test cases you need to select a *Master dataset* under the *Test Data* tab inside a test case. You can only select one master dataset at a time per test case. Your selected dataset affects which fields you can use as parameters in your selected test case. You can only choose fields that are in the selected master dataset.
 
 ## 2 Page
 
@@ -44,9 +43,7 @@ Shows parameters that require a different data type than the datatype of the fie
 For each error the test step and parameter are listed so they can be easily identified.
 
 {{% alert color="info" %}}
-
 If you change the selected dataset the system will remember your set parameters and will match them again if you select a dataset containing the same field names.
-
 {{% /alert %}}
 
 When you have selected a master dataset you can use the the contained field as input values for your test steps.

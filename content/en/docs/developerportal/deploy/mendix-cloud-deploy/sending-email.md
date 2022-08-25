@@ -1,7 +1,6 @@
 ---
 title: "Sending Email"
 url: /developerportal/deploy/sending-email/
-parent: "mendix-cloud-deploy"
 weight: 40
 description: "How to use external email providers in Mendix, and how to configure Mendix mail on Cloud v3"
 tags: ["email", "smtp", "sending policy framework", "Cloud v3", "SPF"]
@@ -13,7 +12,7 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
+Our Mendix Cloud V3 is deprecated. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
 ## 1 Introduction
@@ -22,11 +21,11 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 
 | Service | Mendix Cloud v3 | Mendix Cloud v4 | Free App environment |
 | --- | --- | --- | --- |
-| **Amazon Simple Email Service** | &#x2713; | &#x2713;	| &#x2713; |
+| **Amazon Simple Email Service** | &#x2713; | &#x2713;    | &#x2713; |
 | **Gmail** | &#x2713; | &#x2713; | &#x2713; |
-| **MailGun** | &#x2713; | &#x2713;	| &#x2713; |
-| **SendGrid** | &#x2713; | &#x2713; | &#x2713;	|
-| **Other SMTP-compatible services** | &#x2713;	| &#x2713; | &#x2713; |
+| **MailGun** | &#x2713; | &#x2713;    | &#x2713; |
+| **SendGrid** | &#x2713; | &#x2713; | &#x2713;    |
+| **Other SMTP-compatible services** | &#x2713;    | &#x2713; | &#x2713; |
 | **Mendix Mail Servers** | &#x2713; | &#x2717; | &#x2717; |
 
 For apps deployed to Mendix Cloud v4 you must setup a third-party mail provider to send emails from your app.
@@ -43,20 +42,20 @@ The [Email with Templates](/appstore/modules/email-with-templates/) module from 
 
 To use an external provider, you will need to sign up for an account with them and use their SMTP settings which include:
 
-*   Host
-*   Port
-*   SSL/TLS
-*   Username
-*   Password
+* Host
+* Port
+* SSL/TLS
+* Username
+* Password
 
 Frequently used providers (A-Z) are:
 
-*   [Amazon Simple Email Service](https://aws.amazon.com/ses/) [[settings](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html)]
-*   [Gmail](https://mail.google.com/) [[settings](https://support.google.com/a/answer/176600?hl=en) - [common configuration problem](http://stackoverflow.com/questions/20337040/gmail-smtp-debug-error-please-log-in-via-your-web-browser)]
-*   [Mailchimp Transactional Emails](https://mailchimp.com/features/transactional-email/) [[settings](https://mailchimp.com/developer/transactional/docs/fundamentals/)]
-*   [MailGun](https://mailgun.com/) [[settings](https://documentation.mailgun.com/en/latest/quickstart-sending.html#send-with-smtp-or-api)]
-*   [SendGrid](https://sendgrid.com/) [[settings](https://sendgrid.com/docs/ui/account-and-settings/mail/)]
-
+* [Amazon Simple Email Service](https://aws.amazon.com/ses/) [[settings](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html)]
+* [Gmail](https://mail.google.com/) [[settings](https://support.google.com/a/answer/176600?hl=en) - [common configuration problem](http://stackoverflow.com/questions/20337040/gmail-smtp-debug-error-please-log-in-via-your-web-browser)]
+* [Mailchimp Transactional Emails](https://mailchimp.com/features/transactional-email/) [[settings](https://mailchimp.com/developer/transactional/docs/fundamentals/)]
+* [MailGun](https://mailgun.com/) [[settings](https://documentation.mailgun.com/en/latest/quickstart-sending.html#send-with-smtp-or-api)]
+* [SendGrid](https://sendgrid.com/) [[settings](https://sendgrid.com/docs/ui/account-and-settings/mail/)]
+* [Microsoft 365](https://www.office.com/) [[settings](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365)]
 
 Many users of *Free Apps* use the settings of their own GMail account for convenience. There are many more email providers, most of which have SMTP compatibility.
 
@@ -92,25 +91,25 @@ No authentication information is needed. You can use this same SMTP server from 
 
 When using Mendix mail servers and a sender address in a domain that has a restrictive SPF policy configured, you may encounter email delivery issues. This happens when the outgoing email servers from Mendix are not listed in the SPF record of that domain name.
 
-*   You can include the required information about Mendix mail servers that deliver outgoing mail traffic to the internet by including `include:_spf.mendix.com` into the policy rule for the SPF settings for the domain of the sender address. By using this technique, your SPF configuration will always be kept up to date automatically.
+* You can include the required information about Mendix mail servers that deliver outgoing mail traffic to the internet by including `include:_spf.mendix.com` into the policy rule for the SPF settings for the domain of the sender address. By using this technique, your SPF configuration will always be kept up to date automatically.
 
-*   Do **not** use hard coded low level infrastructure details like IP addresses of mail servers. These addresses are subject to change whenever Mendix is doing upgrades and maintenance.
+* Do **not** use hard coded low level infrastructure details like IP addresses of mail servers. These addresses are subject to change whenever Mendix is doing upgrades and maintenance.
 
 ## 4 Sender and Recipient Address Requirements
 
-*   Always use a sender address which is an *existing address on which you are able to receive mail*. If you use a non-existent address as the sender address, you will not get (bounce) error messages which might be generated when mail delivery fails half way.
+* Always use a sender address which is an *existing address on which you are able to receive mail*. If you use a non-existent address as the sender address, you will not get (bounce) error messages which might be generated when mail delivery fails half way.
 
-*   Do not invent your own non-existing domain or local part
+* Do not invent your own non-existing domain or local part
 
-*   Do not use noreply@ addresses unless that noreply@ address is a real email box from which you can read and process delivery errors.
+* Do not use noreply@ addresses unless that noreply@ address is a real email box from which you can read and process delivery errors.
 
-*   Sender or recipient addresses which contain a domain name that does not exist on the internet may be rejected by the outgoing mail server.
+* Sender or recipient addresses which contain a domain name that does not exist on the internet may be rejected by the outgoing mail server.
 
-*   Sender or recipient addresses which do not contain a domain name at all will be rejected by the outgoing mail server.
+* Sender or recipient addresses which do not contain a domain name at all will be rejected by the outgoing mail server.
 
-*   Do not invent your own email addresses for testing purposes. Domain names like 'domain.com', 'email.com', 'test.com' are actually real domain names. Likely there's someone reading the mailbox for 'test@domain.com', who will receive email you send from your test environment if you send it there.
+* Do not invent your own email addresses for testing purposes. Domain names like 'domain.com', 'email.com', 'test.com' are actually real domain names. Likely there's someone reading the mailbox for 'test@domain.com', who will receive email you send from your test environment if you send it there.
 
 ## 5 Read More
 
-*   [Trends in Mendix Cloud v3](/developerportal/operate/trends/)
-*   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy/)
+* [Trends in Mendix Cloud v3](/developerportal/operate/trends/)
+* [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy/)

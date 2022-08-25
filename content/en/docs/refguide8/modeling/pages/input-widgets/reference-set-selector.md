@@ -1,7 +1,6 @@
 ---
 title: "Reference Set Selector"
 url: /refguide8/reference-set-selector/
-parent: "input-widgets"
 weight: 80
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -39,8 +38,8 @@ For example, using the domain model above, the following reference set selector 
 
 The reference set selector looks a lot like a [data grid](/refguide8/data-grid/) and consequently shares many properties with it. The main differences are that the reference set selector lacks a search bar and that it has **Add** and **Remove** buttons instead of **New** and **Delete**. This is because they perform slightly different functions:
 
-*   The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](/refguide8/control-bar/#add-button).
-*   The **Remove** button removes the association to an object, but does not change or delete the object itself
+* The **Add** button adds an association to an existing object. You will need to specify the page which opens when you want to add a new association. For more information, see [Add Button](/refguide8/control-bar/#add-button).
+* The **Remove** button removes the association to an object, but does not change or delete the object itself
 
 {{% alert color="info" %}}
 You must explicitly commit the object in the data view containing your reference set selector to save the association changes. This can be done, for example, by having a **Save** button for the object in the data view (as shown for the *Customer* entity in the picture above).
@@ -65,7 +64,6 @@ Reference set selector properties consist of the following sections:
 There are three additional sets of properties which do not appear in the properties of the reference set selector widget.
 
 1. The control bar contains the buttons needed to search, add, and remove associations. For more information see [Control Bar](/refguide8/control-bar/).
-
 2. The rows of the reference set selector can be sorted using the properties of the sort bar. For more information on using the sort bar, see [Sort Bar](/refguide8/sort-bar/).
 
     {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/reference-set-selector/sort-bar.png" >}}
@@ -127,7 +125,7 @@ Default: *False*
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page must contain a data view on the same entity as the data grid.
 
-The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will _not_ appear. See [Grid Columns](/refguide8/columns/) for more information.
+The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will *not* appear. See [Grid Columns](/refguide8/columns/) for more information.
 
 #### 2.5.6 Show Control Bar {#show-control-bar}
 

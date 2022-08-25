@@ -1,7 +1,7 @@
 ---
 title: "Fine-Tune a Chart with Advanced Settings"
+linktitle: "Chart Advanced Tuning"
 url: /howto/front-end/charts-advanced-tuning/
-parent: "charts-tutorials"
 weight: 30
 description: "Describes the settings you can use to change chart layouts and types"
 tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]
@@ -53,6 +53,7 @@ To create a custom layout, follow these steps:
       }
     }
     ```
+
 10. Change the font settings till the chart shows the required font. Copy the font settings.
 
     {{% alert color="warning" %}}Please note that changes made in the editor will not persist unless they are stored in the advanced settings of the widget or in the theme.{{% /alert %}}
@@ -68,9 +69,7 @@ To create a custom layout, follow these steps:
 12. Change the **Mode** back to **Advanced** in Studio Pro, this will remove the Toggle Editor button from the chart.  
 
 {{% alert color="warning" %}}
-
 Please note that the advanced settings only apply to the chart in Advanced or Developer mode.
-
 {{% /alert %}}
 
 ## 4 Changing the Chart Type

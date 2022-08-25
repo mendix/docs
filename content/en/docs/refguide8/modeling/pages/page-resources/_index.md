@@ -1,7 +1,6 @@
 ---
 title: "Page Resources"
 url: /refguide8/page-resources/
-parent: "pages"
 weight: 12
 tags: ["studio pro", "page resources"]
 ---
@@ -27,7 +26,7 @@ You can add the following page resources:
 
 To add a resource document, do the following:
 
-1.  In the [Project Explorer](/refguide8/project-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
+1. In the [Project Explorer](/refguide8/project-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
 
     {{< figure src="/attachments/refguide8/modeling/pages/page-resources/project-explorer-page-resources.png" >}}
 

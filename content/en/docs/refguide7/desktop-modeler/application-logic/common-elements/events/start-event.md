@@ -1,7 +1,6 @@
 ---
 title: "Start Event"
 url: /refguide7/start-event/
-parent: "events"
 ---
 
 A start event defines the location where the flow will start from. A flow can only start from one location. Therefore, a flow can only contain one start event.

@@ -1,7 +1,6 @@
 ---
 title: "Close Page"
 url: /refguide/close-page/
-parent: "client-activities"
 weight: 10
 tags: ["studio pro", "close page", "client activity"]
 aliases:

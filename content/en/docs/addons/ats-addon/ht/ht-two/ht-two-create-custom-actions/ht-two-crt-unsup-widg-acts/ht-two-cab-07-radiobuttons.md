@@ -1,7 +1,6 @@
 ---
 title: "CAB.07 - Radio Buttons"
 url: /addons/ats-addon/ht-two-cab-07-radiobuttons/
-parent: "ht-two-crt-unsup-widg-acts"
 description: "Explains step by step how to create an Unsupported Widget action for the Mendix Radio Buttons widget."
 tags: ["ATS", "testing"]
 ---
@@ -47,7 +46,7 @@ In the previous step, you wrote down the user approach for the radio buttons wid
 
 To create the action structure, follow these steps:
 
-1.  Check the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing the widget. The parent element of the radio button looks like this in the debugger:
+1. Check the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing the widget. The parent element of the radio button looks like this in the debugger:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-parentelement-debugger.png" >}}
 
@@ -55,11 +54,11 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-parentelement-outlined.png" >}}
 
-2.  Inside the parent element, you can see different child elements. One of these child elements has the class name `radio`, and inside each radio element, you will find a `label` element that contains the `input` element (radio button):
+2. Inside the parent element, you can see different child elements. One of these child elements has the class name `radio`, and inside each radio element, you will find a `label` element that contains the `input` element (radio button):
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-childelement-label-input.png" >}}
 
-3.  The `label` element displays the text, and the `input` element is the radio button. You can see this if you select either of them in the debugger.
+3. The `label` element displays the text, and the `input` element is the radio button. You can see this if you select either of them in the debugger.
 
     This is the label element:
 
@@ -71,11 +70,11 @@ To create the action structure, follow these steps:
 
     When you create a custom action for an unsupported widget action, you must use the [*Find Widget Child Node*](/addons/ats-addon/rg-one-find-widget-child-node/) action. This action is a combination of the [*Find/Assert Widget*](/addons/ats-addon/rg-one-findassert-widget/) and [*Find Element by Sizzle*](/addons/ats-addon/rg-one-find-element-by-sizzle/) actions, combining the best of both. It is an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible. The selector for finding the input element is an input. You use this selector in the *Find Widget Child Node* action to find an input element inside the text box widget.
 
-4.  Each radio button is inside a `div` element with the class name `.radio`. Inside this element, there is a `label` element that contains a text value. Finally, there is an `input` element inside the `label` element. The selector looks like this: `.radio label:contains() input`. Using the entire path makes your selector more accurate, in case there are other radio buttons widgets being used. You use this selector in the *Find Widget Child Node* action to find the right input element inside a label element within the radio button widget.
+4. Each radio button is inside a `div` element with the class name `.radio`. Inside this element, there is a `label` element that contains a text value. Finally, there is an `input` element inside the `label` element. The selector looks like this: `.radio label:contains() input`. Using the entire path makes your selector more accurate, in case there are other radio buttons widgets being used. You use this selector in the *Find Widget Child Node* action to find the right input element inside a label element within the radio button widget.
 
     However, before you start creating the action, you must know if ATS can find the input element within the radio buttons widget. Use the debugger to simulate what ATS does. Since the *Find Widget Child Node* action uses `mx-name` to find the parent, you also must use the `mx-name` in your code.
 
-5.  Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.mx-name-radioButtons1 .radio label:contains(“ATS Option 5”) input’ )`.
+5. Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.mx-name-radioButtons1 .radio label:contains(“ATS Option 5”) input’ )`.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-childelement-input-selector-console.png" >}}
 
@@ -85,15 +84,15 @@ To create the action structure, follow these steps:
 
 6. Add the *Concatenate String* action. Leave the **String 2** input parameter empty! You connect an action input parameter here later.
 
-7.  Enter this selector: `.radio label:contains("") input`, give a proper test step description, and describe the output:
+7. Enter this selector: `.radio label:contains("") input`, give a proper test step description, and describe the output:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-concatenatestring-action.png" >}}
 
-8.  Add the *Find Widget Child Node* action to your action. Connect the output string from step 1 to the child node selector input parameter. Then, enter the test step description and output description:
+8. Add the *Find Widget Child Node* action to your action. Connect the output string from step 1 to the child node selector input parameter. Then, enter the test step description and output description:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-findwidgetchildnode-action.png" >}}
 
-9.  ATS must click the found radio button. You need to add the [*Click/Doubleclick*](/addons/ats-addon/rg-one-clickdoubleclick/) action. Connect the radio button from step 2 and give a description of the test step:
+9. ATS must click the found radio button. You need to add the [*Click/Doubleclick*](/addons/ats-addon/rg-one-clickdoubleclick/) action. Connect the radio button from step 2 and give a description of the test step:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-clickdoubleclick-action.png" >}}
 
@@ -111,25 +110,25 @@ Keep the [guidelines for creating a custom action](/addons/ats-addon/ht-two-guid
 
 To add the action parameters, follow these steps:
 
-1.  Configure the **Widget Name** input parameter like this:
+1. Configure the **Widget Name** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/widget-name-parameter.png" >}}
 
-2.  Configure the **Value** input parameter like this:
+2. Configure the **Value** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/value-parameter.png" >}}
 
-3.  Configure the **Search Context** parameter like this:
+3. Configure the **Search Context** parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/search-context-parameter.png" >}}
 
     For this custom action, you do not need an output parameter.
 
-4.  Connect the input parameters to the correct actions. Start with the **Value** input parameter. You connect this input parameter to the Concatenate String action:
+4. Connect the input parameters to the correct actions. Start with the **Value** input parameter. You connect this input parameter to the Concatenate String action:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-concatenatestring-action-parameters.png" >}}
 
-5.  The last input parameters you connect are the **Widget Name** and **Search Context** input parameters for the Find Widget Child Node action:
+5. The last input parameters you connect are the **Widget Name** and **Search Context** input parameters for the Find Widget Child Node action:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-create-custom-actions/ht-two-crt-unsup-widg-acts/ht-two-cab-07-radiobuttons/radiobuttons-findwidgetchildnode-action-parameters.png" >}}
 
@@ -139,10 +138,10 @@ There is no need to add logic to this custom action. It only involves clicking a
 
 Now check for the following:
 
-*  Use of the ATS naming convention for parameters
-*  A clear description of test steps, input parameters, output parameters, and action returns
-*  Interpunction usage in pieces of code (if used)
-*  Use of data types on the different parameters to avoid errors
+* Use of the ATS naming convention for parameters
+* A clear description of test steps, input parameters, output parameters, and action returns
+* Interpunction usage in pieces of code (if used)
+* Use of data types on the different parameters to avoid errors
 
 After checking these items, you can run the test case that uses this action.
 

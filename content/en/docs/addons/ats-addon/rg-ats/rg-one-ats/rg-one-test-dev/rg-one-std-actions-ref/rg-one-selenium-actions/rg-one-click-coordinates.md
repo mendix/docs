@@ -1,7 +1,6 @@
 ---
 title: "Click Coordinates"
 url: /addons/ats-addon/rg-one-click-coordinates/
-parent: "rg-one-selenium-actions"
 ---
 
 ## 1 Description

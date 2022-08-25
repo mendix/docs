@@ -1,7 +1,6 @@
 ---
 title: "Find Item/Row"
 url: /addons/ats-addon/rg-one-find-itemrow/
-parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## 1 Description

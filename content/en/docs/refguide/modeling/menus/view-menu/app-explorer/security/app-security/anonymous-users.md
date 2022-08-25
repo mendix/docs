@@ -1,7 +1,6 @@
 ---
 title: "Anonymous Users"
 url: /refguide/anonymous-users/
-parent: "app-security"
 weight: 40
 tags: ["studio pro", "anonymous users", "app security", "security"]
 ---
@@ -30,6 +29,3 @@ The properties of anonymous users are described in the table below:
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)
 * [Password Policy](/refguide/password-policy/)
-
-
-

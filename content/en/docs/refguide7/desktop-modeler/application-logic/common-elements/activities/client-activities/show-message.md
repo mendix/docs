@@ -1,7 +1,6 @@
 ---
 title: "Show Message"
 url: /refguide7/show-message/
-parent: "client-activities"
 aliases:
     - /refguide7/Show+Message.html
     - /refguide7/Show+Message
@@ -34,7 +33,7 @@ There are three message options:
 * Warning
 * Error 
 
-_Default value:_ Information
+*Default value:* Information
 
 ### 2.2 Template
 
@@ -59,4 +58,4 @@ Blocking defines whether the message appears with a hover on top of the existing
 | Yes | The message appears in a pop-up in the center of the screen on a blocking overlay, rendering the background inaccessible until the pop-up is closed. |
 | No | The message appears in a pop-up in the center of the screen but does not block the rest of the window, allowing the user to continue what they were doing with the pop-up open. |
 
-_Default value:_ Yes
+*Default value:* Yes

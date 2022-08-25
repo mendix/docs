@@ -1,7 +1,6 @@
 ---
 title: "Demo Users"
 url: /refguide/demo-users/
-parent: "app-security"
 weight: 30
 tags: ["studio pro", "demo users", "demo-users", "app security"]
 ---
@@ -26,9 +25,7 @@ When security is enabled, demo users are enabled by default. You can disable or 
 * **No** – demo users are disabled, you cannot add, edit, or delete demo users
 
 {{% alert color="warning" %}}
-
 After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still manually sign in using their user name and password, even after disabling the demo users feature. Also, the demo users are never automatically removed from the database.
-
 {{% /alert %}}
 
 ## 3 Demo User Properties
@@ -52,10 +49,10 @@ You can use demo user to test what your application looks like to different user
 
 1. View you app.
 2. Sign in it as the [Administrator](/refguide/administrator/).
-3.  Click a user icon in the right side of the screen. The menu bar **Select user** will be displayed: 
+3. Click a user icon in the right side of the screen. The menu bar **Select user** will be displayed: 
 
-	{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/demo-users/demo-users-example.png" >}}
-	
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/demo-users/demo-users-example.png" >}}
+
 4. Selecting a user from the list to sign in to your application with the credentials of this user, thus allowing you to test or demo your application with the selected user role.
 
 ## 5 Read More

@@ -1,7 +1,6 @@
 ---
 title: "Add Fonts to Your Native Mobile App"
 url: /howto8/mobile/native-custom-fonts/
-parent: "native-mobile"
 weight: 42
 description: "This tutorial will teach you to enrich the design of your native mobile app with custom fonts."
 tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
@@ -31,7 +30,7 @@ What does that mean for your app's CSS styles?
 
 For example, what would happen if you were to use the following snippet in your CSS styles:
 
-```
+```css
 { 
     fontWeight: 550
 }
@@ -45,7 +44,7 @@ So how can these issues be mitigated? First of all, explicitly styling text usin
 
 For example, instead of writing this: 
 
-```
+```text
 export const bold = {
     fontFamily: "Times New Roman",
     fontWeight: "bold" | "500"
@@ -54,7 +53,7 @@ export const bold = {
 
 Define a constant like this: 
 
-```
+```text
 export const timesNewRomanFontFamily = {
     regular: "TimesNewRomanPSMT",
     boldItalic: "TimesNewRomanPS-BoldItalicMT",
@@ -65,7 +64,7 @@ export const timesNewRomanFontFamily = {
 
 Then define the styles as follows: 
 
-```
+```text
 export const boldText = { 
     fontFamily: timesNewRomanFontFamily.bold,
 }
@@ -98,19 +97,19 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It 
 
 1. Navigate to **Custom Fonts**:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts.png" alt="Custom fonts screen"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts.png" alt="Custom fonts screen"   width="350"  >}}
 
 1. Drag and drop the font files you would like to apply. For example, Times New Roman is being used here. When the process is complete you should see the font family uploaded in the list:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts2.png" alt="Custom fonts screen filled"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts2.png" alt="Custom fonts screen filled"   width="350"  >}}
 
 1. Extend the list using the arrow to the right. Verify the expected fonts are available. You can continue by adding as many fonts as you prefer:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts2.png" alt="Custom fonts screen filled & extended"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts2.png" alt="Custom fonts screen filled & extended"   width="350"  >}}
 
 1. Click the snippet button to get the code snippet which you can copy to your styles:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts4.png" alt="Custom fonts screen code snippet"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts4.png" alt="Custom fonts screen code snippet"   width="350"  >}}
 
 1. Build your app to get a new binary with fonts included. 
 
@@ -120,15 +119,15 @@ To use the new fonts to style your content, follow these instructions:
 
 1. Copy the snippet from the Native Mobile Builder:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts4.png" alt="Custom fonts screen code snippet"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/advanced-fonts4.png" alt="Custom fonts screen code snippet"   width="350"  >}}
 
 1. Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](/howto8/mobile/how-to-use-native-styling/):
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-variables.png" alt="Custom variables file"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-variables.png" alt="Custom variables file"   width="350"  >}}
 
 1. The constant can now be imported and used to define the font family of any test style. Elements styled using these classes will now be styled using the font:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-style.png" alt="Custom style"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-style.png" alt="Custom style"   width="350"  >}}
 
 ## 5 Add Custom Fonts Manually {#manual}
 
@@ -141,7 +140,7 @@ To manually add custom fonts to your Android app, follow these instructions:
 1. Collect all the fonts you would like to use.
 1. Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/postscript-name.png" alt="Open Type Inspector name metadata"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/postscript-name.png" alt="Open Type Inspector name metadata"   width="350"  >}}
 
 1. Rename the fonts to match the Postscript name. The Times New Roman font used in our example has these options: 
     * TimesNewRomanPSMT, for regular
@@ -150,7 +149,7 @@ To manually add custom fonts to your Android app, follow these instructions:
 1. Copy the renamed fonts to the `android\app\src\main\assets\fonts` folder.
 1. If you plan on using the tool to build your app, commit your changes:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-android-repo.png" alt="GitHub repo after uploading cutom fonts"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-android-repo.png" alt="GitHub repo after uploading cutom fonts"   width="350"  >}}
 
 1. Build your Android app using your preferred method.
 
@@ -161,9 +160,9 @@ Congratulations, you have learned how to add fonts to an Android app.
 Use XCode to manually add fonts to an iOS app:
 
 1. Collect all the fonts you would like to use.
-1.  Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
+1. Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/postscript-name.png" alt="Open Type Inspector name metadata"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/postscript-name.png" alt="Open Type Inspector name metadata"   width="350"  >}}
 
 1. Rename the fonts to match the Postscript name. The Times New Roman font used in our example has these options: 
     * TimesNewRomanPSMT, for regular
@@ -171,30 +170,30 @@ Use XCode to manually add fonts to an iOS app:
 
 1. Open XCode and select the workspace at **ios\NativeTemplate.xcworkspace**.
 1. Drag and drop the renamed fonts to the **Resources/Fonts** folder in Project Explorer. 
-1.  Select both targets from the dialog box that shows up:
+1. Select both targets from the dialog box that shows up:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="XCode option dialog for adding files"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="XCode option dialog for adding files"   width="350"  >}}
 
-1.  Your folder structure should look like this:
+1. Your folder structure should look like this:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-project-explorer-filled.png" alt="Project explorer with fonts"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-project-explorer-filled.png" alt="Project explorer with fonts"   width="350"  >}}
 
 1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd> and searching for the file. Press <kbd>{Enter}</kbd> to open it:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-open-infoplist.png" alt="XCode Open file dialog"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-open-infoplist.png" alt="XCode Open file dialog"   width="350"  >}}
 
 1. Find the key `Fonts provided by the application`. Expand it if needed:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-plist-fonts.png" alt="Plist fonts key"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-plist-fonts.png" alt="Plist fonts key"   width="350"  >}}
 
 1. Press the **+** button next to the key to create a new, empty item in the list.
-1.  Type the font file name you wish to add as the value. In this case, we are adding the regular Times New Roman font, therefore the filename value is `TimesNewRomanPSMT.ttf`:
+1. Type the font file name you wish to add as the value. In this case, we are adding the regular Times New Roman font, therefore the filename value is `TimesNewRomanPSMT.ttf`:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-plist-fonts-filled.png" alt="Plist fonts key filled"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-plist-fonts-filled.png" alt="Plist fonts key filled"   width="350"  >}}
 
 1. If you plan on using the tool to build your app, commit your changes:
 
-     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-ios-repo.png" alt="GitHub repo after uploading cutom fonts"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-ios-repo.png" alt="GitHub repo after uploading cutom fonts"   width="350"  >}}
 
 1. Build your iOS app with your preferred method.
 

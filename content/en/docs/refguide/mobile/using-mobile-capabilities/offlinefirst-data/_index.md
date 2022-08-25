@@ -1,7 +1,6 @@
 ---
 title: "Offline-First Data"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
-parent: /refguide/mobile/using-mobile-capabilities/
 weight: 10
 aliases:
     - /refguide/offline-first/
@@ -59,4 +58,3 @@ Session management in offline-first apps uses the same system mentioned above, b
 
 * [Offline Synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) – describes how and when synchronization occurs, and how to resolve sync errors.
 * [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/) – describes how to make secure, high-performing offline-first apps.
-

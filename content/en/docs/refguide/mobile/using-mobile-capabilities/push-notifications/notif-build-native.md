@@ -1,7 +1,7 @@
 ---
 title: "Part 6: Build a Native App with Push Notifications Enabled"
+linktitle: "6. Native App with Push Notifications"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/
-parent: /refguide/mobile/using-mobile-capabilities/push-notifications/
 weight: 70
 description: Tutorial for building a native app with push notifications enabled.
 aliases:
@@ -14,13 +14,13 @@ Now that you have implemented push notifications, it is time to build and deploy
 
 ## 2 Building Your Native App {#build-native-app}
 
-1.  In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
-	a. If you are building your native app for the first time, click [here](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) for instructions.</br>
+1. In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
+    * If you are building your native app for the first time, click [here](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) for instructions.</br>
 1. After choosing the type of build (local development or distribution) go to **App capabilities**.</br>
 1. Under **Firebase configuration** switch **Push notifications** to **On**.</br>
-1.  Scroll down and upload the Firebase configurations:</br>
-    a. *google-services.json* for the Android build.</br>
-    b. *GoogleServices-Info.plist* for the iOS build.</br>
+1. Scroll down and upload the Firebase configurations:</br>
+    1. *google-services.json* for the Android build.</br>
+    1. *GoogleServices-Info.plist* for the iOS build.</br>
 
     These files contain the information and private keys necessary to enable push notifications in your iOS and Android apps. 
 

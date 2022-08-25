@@ -1,7 +1,6 @@
 ---
 title: "Import with Mapping"
 url: /refguide/import-mapping-action/
-parent: "integration-activities"
 tags: ["studio pro", "import xml", "import with mapping", "import mapping", "integration activity"]
 weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +9,6 @@ weight: 30
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
-
 
 ## 1 Introduction
 
@@ -65,7 +63,7 @@ If the selected mapping requires a parameter, you can choose it here.
 
 ### 3.7 Range
 
- If the mapping returns a list, you can select a range to determine how many objects are mapped and returned.
+If the mapping returns a list, you can select a range to determine how many objects are mapped and returned.
 
 | Range | Meaning |
 | --- | --- |
@@ -86,14 +84,12 @@ Indicates whether the resulting objects should be committed to the database, and
 ### 3.9 Validate Against Schema
 
 {{% alert color="info" %}}
-
 Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](/refguide/xml-schemas/) or a [consumed web service](/refguide/consumed-web-service/).
-
 {{% /alert %}}
 
 Determines whether the import action should validate the incoming XML against the [XML schema](/refguide/xml-schemas/).
 
-Setting this to _yes_ can impact performance!
+Setting this to *yes* can impact performance!
 
 Default: *No*
 

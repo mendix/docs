@@ -1,7 +1,6 @@
 ---
 title: "Get Selected Option Value"
 url: /addons/ats-addon/rg-one-get-selected-option-value/
-parent: "rg-one-get"
 ---
 
 ## 1 Description

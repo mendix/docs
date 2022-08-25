@@ -87,18 +87,25 @@ To view all the available deep link configurations and example URLs, add the **D
 
 ### 3.6 Configuring Constants
 
-* **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
-* **LoginLocation** – The value in this constant applies when the app is configured to not allow anonymous users, and if a user with an anonymous user session visits a deep link, they will be redirected to this location
-  * When the value is left empty, the default location `login.html` (this file should be available in the theme folder)
-  * When the login location ends with `= ` (for example, in the case of Mendix SSO: `https://login.mendix.com/oidp/login?ret=`), the original deep link location will be appended to the login location
-  * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required)
-  * When using XSUAA, set the value to `/xsauaalogin/` 
-  * When using the [SAML](/appstore/modules/saml/) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login
-    * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location  
+*  **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
+*  **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](https://docs.mendix.com/refguide/anonymous-users/#2-anonymous-users-properties).
+   
+    For the **LoginLocation** constant, it is IMPORTANT to note the following:
+    
+    * When the value is left empty, the default location is `login.html` (this file should be available in the theme folder).
+    * When the login location ends with `=` (for example, in the case of Mendix SSO: `https://login.mendix.com/oidp/login?ret=`), the original deep link location will be appended to the login location.
+    * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required).
+    * When using XSUAA, set the value to `/xsauaalogin/login?ret=`.
+    *  When using the [SAML](/appstore/modules/saml/) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.
+        * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location.
+    
+*  **SSOHandlerLocation** – This value is used when the app needs to determine whether the user has a valid session with the Identity Provider. When both the application and a deep link are configured to support anonymous users, the location value in this constant is requested before a user is directed to the destination deep link.
+    
+    * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler is not expected to provide users with a login page, but is supposed to redirect the anonymous user to the target location, while still having an anonymous user session).
+    * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location.
 
+## 4 Troubleshooting
 
-* **SSOHandlerLocation** – When both the application and a deep link are configured to support anonymous users, the location value in this constant is requested before a user is directed to the destination deep link
-  * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler does not ask users for authentication to support anonymous users)
-  * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location
+### 4.1 Endless Redirect Loop (Mendix 9 and Above) 
 
-{{% alert color="warning" %}}When using the Deep Link module together with the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded. To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
+When using the Deep Link module in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because for Mendix 9, the [default value for SameSite cookies](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) has been changed to `"Strict"` meaning that session cookies cannot be forwarded. To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).

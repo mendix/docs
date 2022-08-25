@@ -1,7 +1,6 @@
 ---
 title: "Case-Sensitive Database Behavior"
 url: /refguide/case-sensitive-database-behavior/
-parent: "data-storage"
 tags: ["studio pro", "strings", "sort", "case", "query", "constraint"]
 weight: 20
 ---

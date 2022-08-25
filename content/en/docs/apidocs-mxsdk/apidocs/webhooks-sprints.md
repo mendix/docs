@@ -14,7 +14,7 @@ Every POST payload contains the following delivery information as part of the he
 * `MxAPI-Projects-EventCategory` – the types of event subscribed to (for example, sprints)
 * `MxAPI-Projects-Delivery` – a random UUID
 * `MxAPI-Signature` –  the HMAC hex digest (asymmetric hash using the *HMAC_SHA256* hash algorithm) of the response body, which is calculated using the hash (the hashes secret provided in the webhooks setting using the *SHA-256* hash algorithm with the length as 50)
-	* For example, `(gNh407kBD1wkpHfwIrjWcTMjw4rKxIKX0s5b48FYOys=)`
+    * For example, `(gNh407kBD1wkpHfwIrjWcTMjw4rKxIKX0s5b48FYOys=)`
 * `MxAPI-Webhooks-Version` – the version of the webhooks payload (for example, 1)
 * `MxAPI-Webhooks-Version-Expiry` – the expiry date for this version (empty if it is the latest version)
 * `User-Agent` – `Mx-Platform`
@@ -41,7 +41,7 @@ The required event category subscription is **stories**.
 
 ## 5 Example
 
-  ```json
+```json
 {
     "Action": "updated",
     "Meta": {
@@ -80,4 +80,4 @@ The required event category subscription is **stories**.
         }
     }
 }
-  ```
+```

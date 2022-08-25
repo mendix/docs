@@ -1,7 +1,6 @@
 ---
 title: "Assert Grid Selector Value"
 url: /addons/ats-addon/rg-one-assert-grid-selector-value/
-parent: "rg-one-grid-selector"
 ---
 
 ## 1 Description

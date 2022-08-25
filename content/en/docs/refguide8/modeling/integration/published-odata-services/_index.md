@@ -1,7 +1,6 @@
 ---
 title: "Published OData Services"
 url: /refguide8/published-odata-services/
-parent: "integration"
 tags: ["studio pro"]
 aliases:
     - /refguide8/consumed-odata-services.html
@@ -52,16 +51,14 @@ You can configure security for the OData service when [Project Security](/refgui
 #### 3.2.1 Requires Authentication {#authentication}
 
 {{% alert color="info" %}}
-
 The **No Authentication** feature was introduced in version 8.0.0. In earlier versions, it was always **Username and password**.
 
 The **Active Session** and **Custom** authentications were also introduced in version 8.0.0.
-
 {{% /alert %}}
 
-Select whether clients need to authenticate or not. Choose _No_ to allow access to the resources without restrictions. Choose _Yes_ to be able to select which authentication methods to support.
+Select whether clients need to authenticate or not. Choose *No* to allow access to the resources without restrictions. Choose *Yes* to be able to select which authentication methods to support.
 
-Even when you choose _Yes_, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](/refguide8/anonymous-users/).
+Even when you choose *Yes*, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](/refguide8/anonymous-users/).
 
 #### 3.2.2 Authentication Methods
 
@@ -77,9 +74,9 @@ Check more than one authentication method to have the service try each of them. 
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 
-1.  Username and password are combined into a string "username:password".
-2.  The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64 (except not limited to 76 char/line).
-3.  The authorization method and a single space (meaning, "Basic " is then put before the encoded string).
+1. Username and password are combined into a string "username:password".
+2. The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64 (except not limited to 76 char/line).
+3. The authorization method and a single space (meaning, "Basic " is then put before the encoded string).
 
 This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`.
 
@@ -89,7 +86,7 @@ When you check this authentication method, the JavaScript in your app can access
 
 To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-```
+```js
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "http://mysite/odata/myservice/myresource", false);
 xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
@@ -108,9 +105,9 @@ The authentication microflow should return a User.
 
 There are three possible outcomes of the authentication microflow:
 
-  * When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
-  * When the resulting User is not empty, the operation is executed in the context of that user
-  * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
+* When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
+* When the resulting User is not empty, the operation is executed in the context of that user
+* When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
 
 #### 3.2.3 Allowed Roles
 

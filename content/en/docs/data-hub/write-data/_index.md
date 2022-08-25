@@ -27,7 +27,6 @@ Note the following terminology differences described in the table below:
 | Update   | Updatable  |
 | Delete   | Deletable  |
 
-
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -43,7 +42,7 @@ When you publish an entity in a published OData service, clients can read the da
 2. Select the **Customer** entity and click **Edit**.
 3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
 
-## 4 Viewing OData Capabilities in Data Hub Catalog
+## 4 Viewing OData Capabilities in Data Hub Catalog {#view-capabilities}
 
 The OData updatable capability pertains to the data in your app. The Data Hub Catalog provides an inventory of the metadata in your apps. In the Data Hub Catalog you can see the capabilities of entities, attributes, and associations. Changes to the data itself occur in Mendix apps themselves, not in the Data Hub Catalog.
 
@@ -51,9 +50,8 @@ To see the capabilities of a particular OData entity, do the following:
 
 1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/data-hub/share-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you are not seeing many results, try removing the **Production** filter on your search.
-3. Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported. The gray letters indicate which are not. Hover over the letters to see which operations are supported:
 
-    {{< figure src="/attachments/data-hub/write-data/crud-info.png" alt="entity capabilities" >}}
+Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.
 
 ## 5 Consuming OData Resources in Your Mendix App
 
@@ -63,9 +61,9 @@ Just like in the Catalog, you can see the **CRUD** capabilities of entities, att
 
 To consume an OData entity, do the following:
 
- 1. In the **Data Hub** pane, enter a search term in the search field. 
- 2. Select your entity from the **Data Hub** pane. By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
- 3. Drag the entity to the domain model.
+1. In the **Data Hub** pane, enter a search term in the search field. 
+2. Select your entity from the **Data Hub** pane. By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
+3. Drag the entity to the domain model.
 
 Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
 

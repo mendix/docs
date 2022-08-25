@@ -1,7 +1,6 @@
 ---
 title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
-parent: "general"
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
@@ -105,6 +104,7 @@ The two environment variables `LICENSE_ID` and `LICENSE_KEY` need to be set to t
 cf set-env <YOUR_APP> LICENSE_ID <LicenseId>
 cf set-env <YOUR_APP> LICENSE_KEY <LicenseKey>
 ```
+
 Where `<YOUR_APP>` is the name of your app.
 
 The app needs to be restarted for the environment variables to be read and the license to become effective.

@@ -232,5 +232,3 @@ As with the examples in the [Version Control Processes for a Single Branch](#vc-
 Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 6 Documents in This Category
-
-

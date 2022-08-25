@@ -1,7 +1,6 @@
 ---
 title: "Domain Model Consistency Errors"
 url: /studio8/consistency-errors-domain-model/
-parent: "consistency-errors"
 weight: 40
 description: "Describes domain model consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "errors", "domain model"]
@@ -15,9 +14,7 @@ In this document, we explain how to solve the most common consistency errors tha
 An example of a consistency error is having the same name for two entities.
 
 {{% alert color="info" %}}
-
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
-
 {{% /alert %}}
 
 Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
@@ -37,17 +34,17 @@ The most common errors you can come across when configuring a domain model are d
 
 ### 2.1 Delete Behavior Consistency Errors and Ways to Fix Them{#delete-behavior}
 
- Consistency errors connected with delete behavior can occur in the following cases:
+Consistency errors connected with delete behavior can occur in the following cases:
 
-*  Delete behavior of an entity the association starts from is set to *Delete {name of entity} object(s) as well* and the delete behavior of an entity the association points to is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
+* Delete behavior of an entity the association starts from is set to *Delete {name of entity} object(s) as well* and the delete behavior of an entity the association points to is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-domain-model/delete-behavior-error-example1.png" alt="Delete Behavior Error Example One" >}}
 
-*  Delete behavior of the entity the association starts from is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)* and the delete behavior of the entity the association points to is set to *Delete {name of entity} object(s) as well*
+* Delete behavior of the entity the association starts from is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)* and the delete behavior of the entity the association points to is set to *Delete {name of entity} object(s) as well*
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-domain-model/delete-behavior-error-example2.png" alt="Delete Behavior Error Example Two" >}}
 
-*  Delete behavior of both entities in association is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
+* Delete behavior of both entities in association is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-domain-model/delete-behavior-error-example3.png" alt="Delete Behavior Error Example Three" >}}
 

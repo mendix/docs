@@ -1,7 +1,6 @@
 ---
 title: "Arithmetic expressions"
 url: /refguide7/arithmetic-expressions/
-parent: "expressions"
 ---
 
 
@@ -13,9 +12,9 @@ Multiplies two numbers.
 
 ### Input parameters
 
-*   First number
+* First number
     Type: Integer/Long, Float or Decimal
-*   Second number
+* Second number
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -42,9 +41,9 @@ Divides two numbers. You can use either the `div` or colon ( : ) syntax, as can 
 
 ### Input parameters
 
-*   First number
+* First number
     Type: Integer/Long, Float or Decimal
-*   Second number
+* Second number
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -81,9 +80,9 @@ Calculates the remainder of the division of one number by another. In other word
 
 ### Input parameters
 
-*   First number
+* First number
     Type: Integer/Long, Float or Decimal
-*   Second number
+* Second number
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -128,9 +127,9 @@ See [String function calls](/refguide7/string-function-calls/) for more informat
 
 ### Input parameters
 
-*   First number
+* First number
     Type: Integer/Long, Float or Decimal
-*   Second number
+* Second number
     Type: Integer/Long, Float or Decimal
 
 ### Output
@@ -167,9 +166,9 @@ Subtracts the second input from the first.
 
 ### Input parameters
 
-*   First number
+* First number
     Type: Integer/Long, Float or Decimal
-*   Second number
+* Second number
     Type: Integer/Long, Float or Decimal
 
 ### Output

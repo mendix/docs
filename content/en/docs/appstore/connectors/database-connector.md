@@ -29,10 +29,10 @@ These are the prerequisites for using this connector:
 * The user name for logging into the database, relative to the database URL address
 * The password for logging into the database, relative to the database URL address
 * The JDBC driver libraries (*.jar* extension) for the databases you want to connect to must be placed inside the **userlib** directory of your Mendix application
-	* For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
-	* For more information, see the [Common JDBC Drivers](#links) section below
+    * For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
+    * For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-	* For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
+    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
 
 ## 3 Getting Started
 

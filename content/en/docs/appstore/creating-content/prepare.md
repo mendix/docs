@@ -77,10 +77,10 @@ For more information about IAM integration, contact *DIS_AppServices_Supplier_Te
 Metering consists of the following:
 
 * Usage-based metering (via the API gateway)
-	* API (payload, count)
-	* An asynchronous service 
+    * API (payload, count)
+    * An asynchronous service 
 * Active users (via Mendix Runtime)
-	* Widget
+    * Widget
 * Metering (via the content’s own solution) 
 
 ### 4.4 Documentation

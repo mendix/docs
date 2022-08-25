@@ -1,7 +1,6 @@
 ---
 title: "Aggregate List"
 url: /refguide7/aggregate-list/
-parent: "list-activities"
 ---
 
 {{% alert color="info" %}}

@@ -1,7 +1,6 @@
 ---
 title: "Standard Actions Reference"
 url: /addons/ats-addon/rg-one-std-actions-ref/
-parent: "rg-one-test-dev"
 ---
 
 These sections provide you with information on all the predefined actions in ATS:

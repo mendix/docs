@@ -35,4 +35,3 @@ For information on the current status of Mendix deployment see [Mendix Status](h
 #### IBM Cloud Portal Deployment
 
 * Deploying to IBM Cloud is available from within Mendix. If you start with an app template, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud/). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
-

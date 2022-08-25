@@ -1,7 +1,6 @@
 ---
 title: "ATS 1 Reference Guide"
 url: /addons/ats-addon/rg-one-ats/
-parent: "rg-ats"
 weight: 20
 ---
 
@@ -14,4 +13,3 @@ These are the main documents in this section:
 * [Test Run](/addons/ats-addon/rg-one-test-run/)
 * [Configuration](/addons/ats-addon/rg-one-configuration/)
 * [Administration](/addons/ats-addon/rg-one-administration/)
-

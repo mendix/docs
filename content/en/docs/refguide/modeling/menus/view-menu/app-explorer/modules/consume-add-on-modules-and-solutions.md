@@ -1,7 +1,6 @@
 ---
 title: "Consuming Add-on Modules and Solutions"
 url: /refguide/consume-add-on-modules-and-solutions/
-parent: "modules"
 weight: 30
 tags: ["studio pro", "add-on", "solution", "module", "modules"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -25,9 +24,7 @@ When consuming add-on modules and solutions, you may come across the following l
 ## 3 Importing an Add-on Module 
 
 {{% alert color="warning" %}}
-
 When consuming an add-on or a solution, Studio should be disabled for your app. 
-
 {{% /alert %}}
 
 There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/general/app-store-content/#install) section in *Use Marketplace Content in Studio Pro*.
@@ -47,9 +44,7 @@ When you import an add-on module, it shows up in the **Add-ons** folder in the A
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
 
 {{% alert color="warning" %}}
-
 Mendix Studio does not currently support add-on modules, you will not be able to open apps that use add-on modules in Studio.
-
 {{% /alert %}}
 
 ## 6 Deleting a Consumed Add-on Module 
@@ -66,4 +61,3 @@ The module is deleted from your app.
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
 * [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
-

@@ -1,7 +1,6 @@
 ---
 title: "SAP HANA"
 url: /refguide/saphana/
-parent: "data-storage"
 weight: 70
 tags: ["studio pro"]
 ---

@@ -14,4 +14,3 @@ These are the [Mendix Application Performance Diagnistics (APD)](/addons/apd-add
 {{% alert color="info" %}}
 With version 3, the product has been renamed from **Mendix Application Performance Monitor (APM)** to **Mendix Application Performance Diagnostics (APD)**.
 {{% /alert %}}
-

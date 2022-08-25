@@ -1,13 +1,12 @@
 ---
 title: "Object Types in ATS"
 url: /addons/ats-addon/rg-one-object-types-in-the-ats/
-parent: "rg-one-test-dev"
 weight: 1
 ---
 
 ## 1 Introduction
 
-In ATS, a test can consist of test cases, test suites and actions. There are also folders in the _Repository_ to order objects.
+In ATS, a test can consist of test cases, test suites and actions. There are also folders in the *Repository* to order objects.
 
 ## 2 Test Case
 
@@ -17,7 +16,7 @@ Test cases are built by utilizing a set of predefined actions, allowing to easil
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-one-ats/rg-one-test-dev/rg-one-object-types-in-the-ats/21168176.png" alt="A test case in the ATS repository" >}}
 
-To create a new test case go to the ATS _Repository_ page and click the _Add Test_ button.
+To create a new test case go to the ATS *Repository* page and click the *Add Test* button.
 
 ## 3 Actions
 
@@ -25,4 +24,4 @@ An action describes a clearly defined set of steps in a test case. Actions exist
 
 ## 4 Test Suite
 
-Test suites are basically lists that can contain other test suites as well as test cases. You can even mix test suites and test cases within the same test suite. Test suites are very handy to organize your test cases contextually and let them run in sequence. If one element of test suite fails, the test suite will continue to run the following elements. The failed test case will be marked as such in the _Reporting_. You can schedule test suites in the same way as you can schedule test cases. Please note that you need to respect the order of test suite elements, since those elements will be executed in strict sequence and thus need to fit together logically.
+Test suites are basically lists that can contain other test suites as well as test cases. You can even mix test suites and test cases within the same test suite. Test suites are very handy to organize your test cases contextually and let them run in sequence. If one element of test suite fails, the test suite will continue to run the following elements. The failed test case will be marked as such in the *Reporting*. You can schedule test suites in the same way as you can schedule test cases. Please note that you need to respect the order of test suite elements, since those elements will be executed in strict sequence and thus need to fit together logically.

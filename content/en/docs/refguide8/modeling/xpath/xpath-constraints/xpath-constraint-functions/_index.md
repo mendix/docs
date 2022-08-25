@@ -1,7 +1,6 @@
 ---
 title: "XPath Constraint Functions"
 url: /refguide8/xpath-constraint-functions/
-parent: "xpath-constraints"
 tags: ["studio pro"]
 ---
 
@@ -29,4 +28,3 @@ The following pages describe the functions that can be executed within constrain
 * [week-from-dateTime](/refguide8/xpath-week-from-datetime/)
 * [weekday-from-dateTime](/refguide8/xpath-weekday-from-datetime/)
 * [year-from-dateTime](/refguide8/xpath-year-from-datetime/)
-

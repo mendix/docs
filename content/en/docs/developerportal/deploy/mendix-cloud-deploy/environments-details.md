@@ -1,12 +1,12 @@
 ---
 title: "Environment Details"
 url: /developerportal/deploy/environments-details/
-parent: "mendix-cloud-deploy"
 weight: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -21,11 +21,11 @@ To enter the **Environment details** page, go to the [Developer Portal](http://s
 
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
-*  **Status**
-   * White – the environment is stopped or was never deployed
-   * Green – the environment is working correctly
-   * Orange – the environment has warnings
-   * Red – the environment is not working correctly
+* **Status**
+    * White – the environment is stopped or was never deployed
+    * Green – the environment is working correctly
+    * Orange – the environment has warnings
+    * Red – the environment is not working correctly
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-status.png" >}}   
 * **Running since** date – the date on which the app was started
 * **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)): see [Naming of Environments](#naming) for more information
@@ -119,8 +119,8 @@ If your app is hosted in Mendix Cloud v4, you will see a section named **Instanc
 In **Scaling**, there are two sliders that you can control:
 
 * Use the **Instances** slider to increase or decrease the amount from one to four instances by sliding the slider
-   * The instances are meant for improved resiliency and increased processing power
-   * The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among four instances if you have more than 1GB of RAM memory
+    * The instances are meant for improved resiliency and increased processing power
+    * The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among four instances if you have more than 1GB of RAM memory
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance by sliding the slider
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
@@ -250,15 +250,15 @@ For the deprecated Mendix Cloud v3, only *X-Frame-Options* was supported. For Me
 
 There are three types of value for these headers:
 
-*  Choose a value from a drop-down
+* Choose a value from a drop-down
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-dropdown.png" >}}
 
-*  Choose a value from a drop-down and specify a URL
+* Choose a value from a drop-down and specify a URL
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-url.png" >}}
 
-*  Enter the required values as a string
+* Enter the required values as a string
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-string.png" >}}
 
@@ -317,7 +317,7 @@ A Content Security Policy informs the client (browser) where your page will load
 
 Setting a full content security policy is dependent on what your app does. However, a starting point which declares the content security policy which works with a basic Mendix app is given below:
 
-```code
+```text {linenos=false}
 default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-src 'self' ; font-src 'self' https://fonts.gstatic.com data: ; img-src 'self' data: ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ; base-uri 'self' ; form-action 'self' ; object-src 'none' ; frame-ancestors 'self' ;
 ```
 
@@ -488,7 +488,7 @@ Unlike the Custom Runtime Settings, most of the variables you add are chosen fro
 
 Select **Supported** and you can choose from the following variables:
 
-* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events
+* **APPMETRICS_TARGET** – enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as [InfluxDB](https://www.influxdata.com/), while ignoring micrometer endpoints
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
 * **DD_SITE** – directs metrics to a specific Datadog region
@@ -536,3 +536,7 @@ You can set tags on your environment. These are arbitrary strings that are not i
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
 
 For example, you may wish to use tags when logging with *Datadog*. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the *Datadog* site.
+
+## 9 Services Tab{#services}
+
+You can enable and disable custom services for individual environments of your app. The service you want to enable must have been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).

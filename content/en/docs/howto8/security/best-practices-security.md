@@ -1,5 +1,6 @@
 ---
 title: "Implement Best Practices for App Security"
+linktitle: "Best Practices for App Security"
 url: /howto8/security/best-practices-security/
 category: "Security"
 weight: 20
@@ -40,12 +41,12 @@ When you are building an application, you may use [Mendix Marketplace](https://m
 
 These are the common cases and best practices:
 
-*	HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
-    *	Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
-    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
-*	Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
-    *	Use prepared statements, which will cause the database-specific connector to take care of escaping the value
-    *	Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
+    * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
+    * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
+* Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
+    * Use prepared statements, which will cause the database-specific connector to take care of escaping the value
+    * Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
 
 ## 4 Applying Access Restrictions to Unnecessary Request Handlers{#request-handlers}
 
@@ -164,7 +165,7 @@ A good source of known vulnerabilities is the [Common Vulnerabilities and Exposu
 Which users and roles are defined within an application is different per app and project. However, there are some key guidelines to keep in mind when validating the user security:
 
 * Anonymous access should be disabled if it has no function within the application
-  * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
+    * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
 * The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 

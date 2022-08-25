@@ -20,7 +20,7 @@ weight: 94
 
 * We introduced the `updatableRuntime` property.
 
-####  IndirectEntityRef (Element)
+#### IndirectEntityRef (Element)
 
 * We made this element public, which means you can use it without first loading the unit.
 * We made the `steps` property public.

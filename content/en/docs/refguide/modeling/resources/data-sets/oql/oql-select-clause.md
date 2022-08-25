@@ -1,7 +1,6 @@
 ---
 title: "OQL Select Clause"
 url: /refguide/oql-select-clause/
-parent: "oql"
 tags: ["studio pro"]
 ---
 
@@ -30,26 +29,27 @@ SELECT [ DISTINCT ]
 
 `*` (asterisk) specifies that all attributes from all entities in the `FROM` clause should be returned.
 
-### 2.3 entity_name.* and from_alias.*
+### 2.3 entity_name.*and from_alias.*
 
 `entity_name.*` and `from_alias.*` specify that all attributes of the specified entity or expression of the `FROM` clause should be returned. `entity_name` can be optionally put in double quotes. Double quotes are mandatory if the entity name is a reserved OQL word (like `Order` or `Group`).
 
-```sql
+```sql {linenos=false}
 SELECT Sales.Customer.* FROM Sales.Customer
 ```
 
-```sql
+```sql {linenos=false}
 SELECT Person.* FROM Sales.Customer AS Person
 ```
 
-```sql
+```sql {linenos=false}
 SELECT "Sales.Order".* FROM "Sales.Order"
 ```
+
 ### 2.4 expression
 
 `expression` is either a constant, a function or any combination of attribute names, constants, and functions connected by operator(s) or a subquery. When you add more expressions, place a comma between each expression.
 
-```sql
+```sql {linenos=false}
 SELECT Name AS CustomerName, LastName AS CustomerLastName, Birthday, Category FROM Sales.Customer
 ```
 
@@ -59,10 +59,10 @@ For more information, see [OQL Expressions](/refguide/oql-expressions/).
 
 `column_alias` is an alternative name to replace the column name in the result. When the name attribute is retrieved, the result column is "Name". With an alias, you can specify another result column name, like "Customer Name". An alias can contain spaces.
 
-```sql
+```sql {linenos=false}
 SELECT Sales.Customer.Name AS CustomerName FROM Sales.Customer
 ```
 
-```sql
+```sql {linenos=false}
 SELECT Sales.Customer.Name AS 'Customer Name' FROM Sales.Customer
 ```

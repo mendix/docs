@@ -1,7 +1,6 @@
 ---
 title: "Reference Selector"
 url: /refguide8/reference-selector/
-parent: "input-widgets"
 weight: 70
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -28,7 +27,7 @@ For example, the following reference allows the end-user to see, and set, the as
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/reference-selector/reference-selector.png" >}}
 
 {{% alert color="info" %}}
-If you only want to _display_ information, you can also use a [text box](/refguide8/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
+If you only want to *display* information, you can also use a [text box](/refguide8/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
 {{% /alert %}}
 
 ## 2 Properties
@@ -109,7 +108,7 @@ There is a small difference in functionality between a **Drop-down** reference s
 
 The drop-down reference selector is similar to a [drop-down](/refguide8/drop-down/) for an enumeration, except that it allows users to choose from a list of objects which can be associated with the current object, rather than a list of values from an enumeration.
 
-The reference selector displays an attribute from the objects which can be linked to the current entity via an association. The chosen attribute should be unique for each object which can be associated, otherwise the end-user will have difficulty choosing the correct one. For example, you should display a company _name_ (which will hopefully be unique) rather than the company _region_ (which will probably not be unique to a company).
+The reference selector displays an attribute from the objects which can be linked to the current entity via an association. The chosen attribute should be unique for each object which can be associated, otherwise the end-user will have difficulty choosing the correct one. For example, you should display a company *name* (which will hopefully be unique) rather than the company *region* (which will probably not be unique to a company).
 
 #### 2.7.1.2 Page {#page}
 
@@ -219,7 +218,7 @@ A reference selector can be constrained by one or more paths. This is typically 
 
 Imagine you have an ordering system where the products are sorted into categories – for example, food products and drink products. On a page where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category (*food*, for example), the product selector is constrained by this category and shows only products in the category.
 
-_Example Domain model_
+*Example Domain model*
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" >}}
 
 In the domain model the order line has many-to-one associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
@@ -274,6 +273,6 @@ In microflow settings you can specify what parameters are passed to the microflo
 
 ## 3 Read More
 
-*   [Data view](/refguide8/data-view/)
-*   [Entities](/refguide8/entities/)
-*   [Associations](/refguide8/associations/)
+* [Data view](/refguide8/data-view/)
+* [Entities](/refguide8/entities/)
+* [Associations](/refguide8/associations/)

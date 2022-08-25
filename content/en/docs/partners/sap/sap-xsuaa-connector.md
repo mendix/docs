@@ -1,5 +1,6 @@
 ---
 title: "XSUAA Connector for SAP Business Technology Platform"
+linktitle: "XSUAA Connector for SAP BTP"
 url: /partners/sap/sap-xsuaa-connector/
 category: "SAP"
 weight: 40
@@ -71,6 +72,8 @@ The configuration will be applied when your app is restarted.
 ## 4 Working
 
 When XSUAA is enabled on SAP BTP and the *XSUAA Connector for SAP Business Technology Platform* is part of the Mendix application (for details on this connector, see [How to Use the XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)), an IDP user automatically becomes a Mendix application user. They will be assigned to the roles in the Mendix application based on the scopes they have received from the XSUAA service. The scopes are defined by the mapping between the role templates and the role collections.
+
+When the IDP user is added to the Mendix application, they are given a randomly generated password to prevent the user being logged in using the local credentials. You can control the length of this randomly-generated password using the `SapAuthentication.PasswordLength` constant. This can also be set via an environment variable. `SapAuthentication.PasswordLength` should be at least 8, with a maximum value of 12.
 
 ## 5 Read More
 

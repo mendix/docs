@@ -1,5 +1,6 @@
 ---
 title: "Set Up Server-Side Paging and Sorting for a Microflow Data Source"
+linktitle: "Server-Side Paging & Sorting"
 url: /howto8/logic-business-rules/server-side-paging/
 category: "Logic & Business Rules"
 description: "This how-to will teach you how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it."
@@ -206,7 +207,7 @@ You only need to use this data in your microflow and pass the search criteria to
 
 5. Click **Parameters** > **New** to add the fourth parameter and enter the following expression:
 
-    ```
+    ```text {linenos=false}
     if $Paging/Name = empty then '' else $Paging/Name
     ```
 

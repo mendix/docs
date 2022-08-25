@@ -1,5 +1,6 @@
 ---
 title: "Communication Patterns in the Mendix Runtime"
+linktitle: "Communication Patterns"
 url: /refguide/communication-patterns/
 category: "Mendix Runtime"
 tags: ["studio pro", "Mendix Runtime", "Communications", "Runtime Server", "Mendix Client"]
@@ -11,35 +12,35 @@ This document outlines the communication patterns used by the Mendix Runtime env
 
 The goals of this document are to present information for:
 
-*   assessing the quality of the Mendix Runtime regarding efficiency of communication
-*   determining the impact of their design decisions on communication efficiency and performance
+* assessing the quality of the Mendix Runtime regarding efficiency of communication
+* determining the impact of their design decisions on communication efficiency and performance
 
 ## 2 Outline of Communication Within the Mendix Runtime
 
 The Mendix Platform consists of the following components:
 
-*   Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
-*   Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
-*   Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
-*   Mendix Studio and Studio Pro – multi-user modeling studios of the Mendix Platform
-*   Team Server – a central repository for managing application model versions
-*   Mendix Runtime – runs applications using a server part (the [Runtime Server](/refguide/runtime-server/)) and a client part ([Mendix Client](/refguide/mendix-client/))
-*   Build – a process which creates deployment packages from artifacts such as models, style sheets, and custom Java classes
-*   MxID – a user management and provisioning service that applies the OpenID standard
+* Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
+* Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
+* Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
+* Mendix Studio and Studio Pro – multi-user modeling studios of the Mendix Platform
+* Team Server – a central repository for managing application model versions
+* Mendix Runtime – runs applications using a server part (the [Runtime Server](/refguide/runtime-server/)) and a client part ([Mendix Client](/refguide/mendix-client/))
+* Build – a process which creates deployment packages from artifacts such as models, style sheets, and custom Java classes
+* MxID – a user management and provisioning service that applies the OpenID standard
 
 The focus of this document is on the Mendix Runtime, more specifically the collaboration between the following parts:
 
-*   [Mendix Client](/refguide/mendix-client/) – a React, React Native, or JavaScript client running on the device of a user
-*   [Runtime Server](/refguide/runtime-server/) – a Java/Scala runtime running on a server, responsible for executing microflow logic, business rules, and persisting objects
-*   database – where the data is persisted
+* [Mendix Client](/refguide/mendix-client/) – a React, React Native, or JavaScript client running on the device of a user
+* [Runtime Server](/refguide/runtime-server/) – a Java/Scala runtime running on a server, responsible for executing microflow logic, business rules, and persisting objects
+* database – where the data is persisted
 
 Communication between these components operates as follows:
 
-*   The Mendix Client issues two types of requests:
-    *   Static resources like pages, stylesheets, widgets, images, etc.
-    *   Application data-related communication, which includes CRUD commands on data and logic that may require data
-*   The Runtime Server communicates with different (relational) databases using SQL statements handled by a JDBC library
-    *   Application data is stored in a ER-model in an database
+* The Mendix Client issues two types of requests:
+    * Static resources like pages, stylesheets, widgets, images, etc.
+    * Application data-related communication, which includes CRUD commands on data and logic that may require data
+* The Runtime Server communicates with different (relational) databases using SQL statements handled by a JDBC library
+    * Application data is stored in a ER-model in an database
 
 ## 3 Basic CRUD Communication Pattern{#crud}
 
@@ -48,10 +49,10 @@ The core of most Mendix applications involves variations on the CRUD (create, re
 A basic scenario using an *Employee* entity can be modeled in Mendix using the following two pages:
 
 * An overview page displaying a table of data for a specific entity, like this:
-   {{< figure src="/attachments/refguide/runtime/communication-patterns/19399028.png" >}}
+    {{< figure src="/attachments/refguide/runtime/communication-patterns/19399028.png" >}}
 * A details page where a specific object of an entity can be edited, like this:
-   {{< figure src="/attachments/refguide/runtime/communication-patterns/19399029.png" >}}
-   * This details page can be reached from the first page using the New and Edit buttons
+    {{< figure src="/attachments/refguide/runtime/communication-patterns/19399029.png" >}}
+    * This details page can be reached from the first page using the New and Edit buttons
 
 The following sections outline the actions involved when processing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application. More advanced data models and pages will result in more (and more complex) queries.
 
@@ -262,8 +263,8 @@ Change and validate the changed attributes of the object in the Runtime Server:
 
 This will trigger the following actions on the database:
 
-*   Get the original object from the database
-*   Update the attribute(s) changed by the user in the Runtime Server
+* Get the original object from the database
+* Update the attribute(s) changed by the user in the Runtime Server
 
 The first step is required to determine all the data business logic and validations defined on the entity.
 
@@ -473,22 +474,22 @@ Response from the Runtime Server to the Mendix Client:
 
 As can be seen in the description of the CRUD scenario, the Mendix Platform ensures efficiency while running the application in a number of ways:
 
-*   Only data required for user actions is involved in communication and processing
-*   An efficient transport protocol is used when communicating between different processes
-	* Terse JSON format between Mendix Client and Runtime Server
-	* Native SQL protocol for database communication
-*   Data already available in the Mendix Client is reused if possible (see the edit scenario where the data fetched for the data grid is reused in the Edit/New page)
+* Only data required for user actions is involved in communication and processing
+* An efficient transport protocol is used when communicating between different processes
+    * Terse JSON format between Mendix Client and Runtime Server
+    * Native SQL protocol for database communication
+* Data already available in the Mendix Client is reused if possible (see the edit scenario where the data fetched for the data grid is reused in the Edit/New page)
 
 ### 5.1 Data Transformation
 
 Data is transported between Mendix Client and database as required. The following transformation are applied when going full circle from Mendix Client to database and back again:
 
-*   Data entered by a user in a page is stored in JavaScript objects
-*   For communication to the Runtime Server, JavaScript objects are serialized to JSON
-*   The Runtime Server transforms the JSON objects to java MxObjects
-*   MxObject properties are bound to SQL statement parameters as needed by SQL queries
-*   JDBC result set data is transformed to MxObjects
-*   MxObjects are serialized to JSON when send to the Mendix Client
+* Data entered by a user in a page is stored in JavaScript objects
+* For communication to the Runtime Server, JavaScript objects are serialized to JSON
+* The Runtime Server transforms the JSON objects to java MxObjects
+* MxObject properties are bound to SQL statement parameters as needed by SQL queries
+* JDBC result set data is transformed to MxObjects
+* MxObjects are serialized to JSON when send to the Mendix Client
 
 ### 5.2 State
 

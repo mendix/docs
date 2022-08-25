@@ -38,7 +38,7 @@ When the widget is placed on a page, it will automatically put a black canvas ov
 ### 2.2 Mask Tab
 
 * **Show barcode mask** (enabled by default) – determines whether the black canvas overlay with a focus square is shown on top of the end-user's camera feed
-  * If this property is disabled, the entire screen will be the end-user's camera feed when the barcode scanner is open
+    * If this property is disabled, the entire screen will be the end-user's camera feed when the barcode scanner is open
 
 ### 2.3 Events Tab
 

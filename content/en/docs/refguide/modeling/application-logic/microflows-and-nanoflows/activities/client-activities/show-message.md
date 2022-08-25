@@ -1,7 +1,6 @@
 ---
 title: "Show Message"
 url: /refguide/show-message/
-parent: "client-activities"
 weight: 4
 tags: ["studio pro", "show message", "client activities"]
 aliases:

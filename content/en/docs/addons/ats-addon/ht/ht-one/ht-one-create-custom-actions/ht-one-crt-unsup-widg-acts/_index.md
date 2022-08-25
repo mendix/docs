@@ -1,7 +1,6 @@
 ---
 title: "Create Unsupported Widget Actions"
 url: /addons/ats-addon/ht-one-crt-unsup-widg-acts/
-parent: "ht-one-create-custom-actions"
 ---
 
 In this sub-category, you can find all the how-to's for creating an Unsupported Widget action:

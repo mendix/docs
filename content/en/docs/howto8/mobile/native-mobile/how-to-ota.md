@@ -1,7 +1,7 @@
 ---
 title: "Release Over the Air Updates with App Center's CodePush"
+linktitle: "Over the Air Updates with CodePush"
 url: /howto8/mobile/how-to-ota/
-parent: "native-mobile"
 weight: 71
 description: A tutorial for pushing over the air updates (OTA) using App Center's CodePush.
 tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
@@ -73,18 +73,18 @@ Apps built using the Mendix Native Mobile Builder have OTA updates with App Cent
 Next you must build new binaries with this capability toggled on, and then release the apps to their respective app stores (only users with the new apps will be able to receive OTA updates). To do these things, follow these general steps:
 
 1. Click **Project** > **Build Native Mobile App**.
-1.  Navigate to **App Capabilities**: 
+1. Navigate to **App Capabilities**: 
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-capabilities.png" alt="Start Mendix Native Mobile Builder"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-capabilities.png" alt="Start Mendix Native Mobile Builder"   width="350"  >}}
 
-1.  Toggle **App Center CodePush OTA Support** on: 
+1. Toggle **App Center CodePush OTA Support** on: 
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-capabilities-ota.png" alt="OTA capability enabled"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-capabilities-ota.png" alt="OTA capability enabled"   width="350"  >}}
 
 1. Click **Save**.
-1.  Now build an application for distribution and make a note of the version number used: 
+1. Now build an application for distribution and make a note of the version number used: 
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/build-release-app-for-ota.png" alt="Build release app page"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/build-release-app-for-ota.png" alt="Build release app page"   width="350"  >}}
 
 1. To make the OTA update functionality available to your users, please release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
 
@@ -98,40 +98,40 @@ Before OTA updates, you would have to make a new release and configure it in the
 
 To release a new version OTA, follow these steps:
 
-1.  Correct the title and message as follows:
+1. Correct the title and message as follows:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/modeller-correct.png" alt="Make some changes"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/modeller-correct.png" alt="Make some changes"   width="300"  >}}
 
 1. Save your changes.
 1. Note the version and build number of the app build you want to update. This how to assumes an app version of 1.0.0 and a build number of 1.
 1. Click **Project** > **Build Native Mobile App**.
-1.  Under **Build app for distribution**, select **Deploy OTA update via CodePush**:
+1. Under **Build app for distribution**, select **Deploy OTA update via CodePush**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-menu.png" alt="Menu entry Deploy OTA update via CodePush"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-menu.png" alt="Menu entry Deploy OTA update via CodePush"   width="350"  >}}
 
-1.  Type in the target app version you wish to release the OTA update for. This version needs to match exactly with the app version used for building the app binaries in the previous step, or the one released on the app stores:
+1. Type in the target app version you wish to release the OTA update for. This version needs to match exactly with the app version used for building the app binaries in the previous step, or the one released on the app stores:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-configuration.png" alt="OTA configuration screen"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-configuration.png" alt="OTA configuration screen"   width="350"  >}}
 
 1. Click **Release an OTA update via CodePush**.
-1.  The Mendix Native Mobile Builder will compile your app and resources and release the OTA updates:
+1. The Mendix Native Mobile Builder will compile your app and resources and release the OTA updates:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-building.png" alt="OTA build step"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-building.png" alt="OTA build step"   width="350"  >}}
 
-1.  On compilation you will receive links to the CodePush OTA update administration pages for your Android and iOS apps:
+1. On compilation you will receive links to the CodePush OTA update administration pages for your Android and iOS apps:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-success.png" alt="OTA build step success"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-success.png" alt="OTA build step success"   width="350"  >}}
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-appcenter-page.png" alt="OTA App Center page"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/how-to-ota/advanced-ota-appcenter-page.png" alt="OTA App Center page"   width="350"  >}}
 1. Wait for the Native Mobile Builder to complete.
-2. Restart the app on your testing device. You should be greeted with the following message:
+1. Restart the app on your testing device. You should be greeted with the following message:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-update-prompt.png" alt="Update available prompt"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-update-prompt.png" alt="Update available prompt"   width="300"  >}}
 
-3.  Tap **Confirm** to update your app.
-4.  The app should reload and greet you with the following dialog box:
+1. Tap **Confirm** to update your app.
+1. The app should reload and greet you with the following dialog box:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  >}}
 
 ## 6 Preserving your Model's Integrity
 
@@ -170,9 +170,9 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
 1. Quit the tool completely. 
 1. Navigate to your app's directory and find the **nativemobile** folder (for example **C:\Users\user\Documents\Mendix\App\nativemobile**).
 1. Enable **Hidden items** in Explorer to be able to see the *.config* file if it is not visible. 
-1.  Open the *.config* file using Notepad and look for a key named **App Center**. If it is there it might contain some app names already like this example: 
+1. Open the *.config* file using Notepad and look for a key named **App Center**. If it is there it might contain some app names already like this example: 
 
-    ```  
+    ```text
     "appcenter": {
         "iosAppName": "App-iOS",
         "androidAppName": "App-Android"
@@ -181,7 +181,7 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
     
     Optionally, if your apps are built in an App Center organization add the organization name like this example: 
     
-    ```  
+    ```text
     "appcenter": {
         "iosAppName": "App-iOS",
         "androidAppName": "App-Android"
@@ -189,9 +189,9 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
     },
     ```
 
-1.  Also, check the **appCenterOTA** key in the **Capabilities** section and confirm it is set to `"enabled": true`: 
+1. Also, check the **appCenterOTA** key in the **Capabilities** section and confirm it is set to `"enabled": true`: 
 
-    ```  
+    ```text
     "appCenterOTA": {
         "enabled": true
     }

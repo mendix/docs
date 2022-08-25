@@ -1,7 +1,6 @@
 ---
 title: "Add date function calls"
 url: /refguide7/add-date-function-calls/
-parent: "expressions"
 ---
 
 
@@ -13,9 +12,9 @@ Add a number of milliseconds to a date.
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of milliseconds to be added
+* The amount of milliseconds to be added
     Type: Integer
 
 ### Output
@@ -44,9 +43,9 @@ Add a number of seconds to a date.
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of seconds to be added
+* The amount of seconds to be added
     Type: Integer
 
 ### Output
@@ -75,9 +74,9 @@ Add a number of minutes to a date.
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of minutes to be added
+* The amount of minutes to be added
     Type: Integer
 
 ### Output
@@ -106,9 +105,9 @@ Add a number of hours to a date.
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of hours to be added
+* The amount of hours to be added
     Type: Integer
 
 ### Output
@@ -137,9 +136,9 @@ Add a number of days to a date. `addDays` uses the server's calendar and `addDay
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of days to be added
+* The amount of days to be added
     Type: Integer
 
 ### Output
@@ -168,9 +167,9 @@ Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addW
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of weeks to be added
+* The amount of weeks to be added
     Type: Integer
 
 ### Output
@@ -199,9 +198,9 @@ Add a number of months to a date. `addMonths` uses the server's calendar and `ad
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of months to be added
+* The amount of months to be added
     Type: Integer
 
 ### Output
@@ -230,9 +229,9 @@ Add a number of years to a date. `addYears` uses the server's calendar and `addY
 
 ### Input parameters
 
-*   Initial date
+* Initial date
     Type: DateTime
-*   The amount of years to be added
+* The amount of years to be added
     Type: Integer
 
 ### Output

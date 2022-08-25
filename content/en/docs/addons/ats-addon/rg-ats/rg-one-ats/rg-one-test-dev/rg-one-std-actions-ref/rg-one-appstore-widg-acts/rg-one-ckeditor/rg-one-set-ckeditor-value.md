@@ -1,7 +1,6 @@
 ---
 title: "Set CKEditor Value"
 url: /addons/ats-addon/rg-one-set-ckeditor-value/
-parent: "rg-one-ckeditor"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "Java Security Settings"
 url: /addons/apd-addon/ig-one-java-security-settings/
-parent: "ig-one-prerequisites"
 ---
 
 ## 1 Introduction
@@ -14,16 +13,16 @@ If you run your application in a Mendix Modeler with emulated cloud security, yo
 
 Procedure to simulate cloud security plus APMAgent permissions:
 
-1.  Turn off the emulate cloud security option in project settings, active configuration, server tab
+1. Turn off the emulate cloud security option in project settings, active configuration, server tab
 
     {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-prerequisites/ig-one-java-security-settings/Java_Command_Line_Options.png" >}}
 
-2.  Copy file =<project-folder>\resources\apmtool\mx5\apm_cloud_template_mx5.policy to a **<new file>**. Change the file replacing <project-folder> with your actual project folder path.
-3.  Add the following switches to the extra JVM parameters in project settings, active configuration, server tab:
+2. Copy file =<project-folder>\resources\apmtool\mx5\apm_cloud_template_mx5.policy to a **<new file>**. Change the file replacing <project-folder> with your actual project folder path.
+3. Add the following switches to the extra JVM parameters in project settings, active configuration, server tab:
 
-	* `Djava.security.policy=="<project-folder>\resources\apmtool\mx5\apm_cloud_security_all.policy"`
-	* `Dorg.osgi.framework.security=osgi`
-	* `Dcom.mendix.policy.file="**<new file from step 2.>**"`
+    * `Djava.security.policy=="<project-folder>\resources\apmtool\mx5\apm_cloud_security_all.policy"`
+    * `Dorg.osgi.framework.security=osgi`
+    * `Dcom.mendix.policy.file="**<new file from step 2.>**"`
 
 **Note.** If there are spaces in your path you need the double quotes around the file names!
 

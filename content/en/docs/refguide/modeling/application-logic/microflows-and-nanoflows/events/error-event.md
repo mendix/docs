@@ -1,7 +1,6 @@
 ---
 title: "Error Event"
 url: /refguide/error-event/
-parent: "events"
 weight: 3
 tags: ["studio pro", "error event", "event"]
 ---
@@ -40,9 +39,9 @@ An error handler can be set on a microflow activity, decision, or loop.
 
 On an activity or decision, you have three options:
 
-*   **Rollback** (default)
-*   **Custom with rollback**
-*   **Custom without rollback**
+* **Rollback** (default)
+* **Custom with rollback**
+* **Custom without rollback**
 
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
 
@@ -54,8 +53,8 @@ The **Custom without rollback** option is only invoked when the action itself ca
 
 On a loop you get two options:
 
-*   Rollback (default)
-*   Continue
+* Rollback (default)
+* Continue
 
 The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 
@@ -98,8 +97,8 @@ When an error occurs in a nanoflow, the changes that were made to objects are no
 
 Error handlers are supported on all nanoflow elements except for gateways and loops. There are two error handler options:
 
-*  **Abort** (which is the default)
-*  **Custom without rollback**
+* **Abort** (which is the default)
+* **Custom without rollback**
 
 With the **Custom without rollback** option, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
 

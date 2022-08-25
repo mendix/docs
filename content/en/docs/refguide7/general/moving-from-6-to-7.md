@@ -273,7 +273,7 @@ These are mainly used to refer to the name of system entities or their attribute
 
 For example, `SystemModuleConstants.FILE_DOCUMENT_NAME` can be replaced by the `FileDocument` proxy:
 
-```
+```text
 import com.mendix.systemwideinterfaces.SystemModuleConstants;
 
 private final String FILE_DOCUMENT_NAME = SystemModuleConstants.FILE_DOCUMENT_NAME;
@@ -281,7 +281,7 @@ private final String FILE_DOCUMENT_NAME = SystemModuleConstants.FILE_DOCUMENT_NA
 
 should be replaced by:
 
-```
+```text
 import system.proxies.FileDocument.MemberNames;
 
 private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
@@ -322,7 +322,7 @@ Let us retrieve a MendixObject using the getPrimaryKeyValue() method in Mendix 6
 
 A similar approach to get a MendixObject in Mendix 7.x would be as follows:
 
- `List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
+`List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
 `IDataRow dataRow = dataRows.get(0);`<br>
 `IMendixIdentifier mendixIdentifier = dataRow.getValue(context, 0);`<br>
 `IMendixObject mendixObj = Core.retrieveId(context, mendixIdentifier);`<br>

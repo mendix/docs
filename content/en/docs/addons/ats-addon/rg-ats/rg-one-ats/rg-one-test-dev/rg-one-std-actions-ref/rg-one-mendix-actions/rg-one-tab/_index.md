@@ -1,7 +1,6 @@
 ---
 title: "Tab"
 url: /addons/ats-addon/rg-one-tab/
-parent: "rg-one-mendix-actions"
 ---
 
 This section contains these documents:

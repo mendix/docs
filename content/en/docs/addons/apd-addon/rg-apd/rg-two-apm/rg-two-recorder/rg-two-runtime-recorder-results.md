@@ -1,7 +1,6 @@
 ---
 title: "Runtime Recorder Results"
 url: /addons/apd-addon/rg-two-runtime-recorder-results/
-parent: "rg-two-recorder"
 ---
 
 When you open a runtime recording from the [recorded sessions overview](/addons/apd-addon/rg-two-recorder/), the details of this runtime recording will be shown. The results are sorted by duration. All the recorded actions are clickable and will show detailed information. By drilling down to an exact location, you can pinpoint where the time is spent.

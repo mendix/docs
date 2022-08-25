@@ -1,7 +1,6 @@
 ---
 title: "Offline Best Practices"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/
-parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 30
 description: "Describes how to make secure, high-performing offline-first apps."
 tags: ["offline", "offline-first"]
@@ -54,7 +53,7 @@ Microflows can be called from offline apps by using [microflow call](/refguide/m
 {{% alert color="info" %}}
 If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler(s) will run. 
 {{% /alert %}}
-	
+
 #### 4.1.2 UI Actions
 
 UI-related actions will be ignored and will not have any effect. We encourage you to model such UI-side effects in the caller nanoflow.
@@ -130,4 +129,3 @@ Attributes with the hashed string [attribute type](/refguide/attributes/#type) w
 ### 4.10 Access Rules with XPath Constraints {#access-rules}
 
 While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a `Customer` entity with `Locked` (Boolean) and `Name` (string) attributes. There is an access rule where the `Name` attribute of the customer is writable only when the `Locked` attribute is false. Changing and committing the `Locked` attribute’s value while offline will not change the read-only status of the `Name` attribute. Instead, this change will take effect after you synchronize the changed `Customer` object.
-

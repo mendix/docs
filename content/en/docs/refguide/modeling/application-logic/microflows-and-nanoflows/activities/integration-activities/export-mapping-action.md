@@ -1,7 +1,6 @@
 ---
 title: "Export With Mapping"
 url: /refguide/export-mapping-action/
-parent: "integration-activities"
 tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
 weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +9,6 @@ weight: 40
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
-
 
 ## 1 Introduction
 
@@ -56,9 +54,7 @@ If the [export mapping](/refguide/export-mappings/) is based on a message defini
 ### 3.5 Validate Against Schema
 
 {{% alert color="info" %}}
-
 Validation against schema is only applicable if an export mapping is selected that maps to XML.
-
 {{% /alert %}}
 
 This determines whether the export action should validate the outgoing XML against the schema (XSD).

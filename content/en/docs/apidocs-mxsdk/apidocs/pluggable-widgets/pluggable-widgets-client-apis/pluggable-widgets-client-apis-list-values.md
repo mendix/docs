@@ -4,13 +4,11 @@ url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/
 description: A guide to understanding the list of objects for the datasource property.
 tags: ["Pluggable", "Widget", "ListValue", "ListActionValue", "ListAttributeValue", "ListWidgetValue", "ListExpressionValue"]
 
-parent: "pluggable-widgets-client-apis"
 ---
 
 ## 1 Introduction
 
 `ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. Corresponding list item values represent properties of different types linked to a [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property.
-
 
 ## 2 ListValue {#listvalue}
 
@@ -281,6 +279,7 @@ if (/* check that all properties are filterable */) {
     console.log("Some attribute is not filterable");
 }
 ```
+
 ### 2.5 Reloading {#listvalue-reload}
 
 It is possible to reload items of a datasource. The `reload()` method triggers a new fetch from the underlying data source, preserving existing `filter`, `offset`,`limit`, `requestTotalCount`, and `sortOrder` properties. The `reload()` method accepts no arguments.
@@ -330,9 +329,8 @@ More specifically, the `status` property functions as follows:
 * When `status` is `ValueStatus.Available`, then the list value items are accessible, and the result is exposed in the `items` array.
 * When `status` is `ValueStatus.Unavailable`, then the list does not have any available data and the `items` array is `undefined`. This can be the case if the data source depends on a surrounding data view which has no data.
 * When `status` is `ValueStatus.Loading`, then the list is waiting for new data to arrive. This can be triggered by a change in data that the data source depends on (such as a parent data view) or by an entity update, which occurs if an object of that type is committed or deleted. If this is done from a microflow, a [refresh in client](/refguide/change-object/#refresh-in-client) is also required.
-	* If the list value was previously in a `ValueStatus.Available` state, then the previous `items` array is still returned. This allows a component to keep showing the previous items if it does not need to handle the `Loading` state explicitly, which prevents flickering.
-	* In other cases, the `items` is `undefined`. This happens if a page is still being loaded or if the previous state was `ValueStatus.Unavailable`.
-
+    * If the list value was previously in a `ValueStatus.Available` state, then the previous `items` array is still returned. This allows a component to keep showing the previous items if it does not need to handle the `Loading` state explicitly, which prevents flickering.
+    * In other cases, the `items` is `undefined`. This happens if a page is still being loaded or if the previous state was `ValueStatus.Unavailable`.
 
 ## 3 Linked Property Values {#linked-values}
 
@@ -485,7 +483,6 @@ The `get` method was introduced in Mendix Studio Pro v9.0.
 You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
-
 ### 3.4 ListExpressionValue {#listexpressionvalue}
 
 `ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression) or [text template property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
@@ -520,7 +517,6 @@ The `get` method was introduced in Mendix Studio Pro v9.0.
 You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
-
 ## 4 Filter Helpers{#filter-helpers}
 
 ### 4.1 Value Helpers {#filter-value-helpers}
@@ -539,6 +535,7 @@ const filterCondition = equals(attrA, literal("Bob"));
 ```
 
 Attribute types available for filtering:
+
 * `Boolean`
 * `DateTime`
 * `AutoNumber`
@@ -550,6 +547,7 @@ Attribute types available for filtering:
 * `HashString`
 
 Attribute types **not** available for filtering:
+
 * `Binary`
 * `EnumSet`
 * `ObjectReference`
@@ -558,6 +556,7 @@ Attribute types **not** available for filtering:
 #### 4.1.2 Literal
 
 The `literal` helper takes one argument. Accepted argument types are:
+
 * Boolean values for `Boolean` attribute types
 * String literals for `String`, `HashString` and `Enumeration` attribute types 
 * `BigJS` numbers for `AutoNumber`, `Integer`, `Long` and `Decimal` attribute types

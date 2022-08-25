@@ -1,7 +1,6 @@
 ---
 title: "Performance Recorder"
 url: /addons/apd-addon/rg-three-recorder/
-parent: "rg-three-apd"
 ---
 
 ## 1 Introduction
@@ -9,9 +8,9 @@ parent: "rg-three-apd"
 The APD Performance Recorder enables recording each individual action within a Mendix application. There are two recording options:
 
 * Recording the runtime records the server actions (microflows and client API)
-	* Useful for investigating a slow microflow or pinpointing a time-consuming action
+    * Useful for investigating a slow microflow or pinpointing a time-consuming action
 * Recording the browser(s) records the user's connection to the application
-	* Shows the performance from the user's perspective as well as subsequent actions that the browser performs as a result of the server responses
+    * Shows the performance from the user's perspective as well as subsequent actions that the browser performs as a result of the server responses
 
 ## 2 Recording a New Session
 

@@ -1,7 +1,6 @@
 ---
 title: "APM 1 Use Cases"
 url: /addons/apd-addon/uc-one/
-parent: "uc"
 weight: 20
 ---
 

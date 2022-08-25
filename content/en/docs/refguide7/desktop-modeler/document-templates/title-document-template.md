@@ -1,7 +1,6 @@
 ---
 title: "Title (Document Template)"
 url: /refguide7/title-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Title+(document+template).html
     - /refguide7/title-(document-template).html

@@ -1,7 +1,6 @@
 ---
 title: "Get Item/Row Index"
 url: /addons/ats-addon/rg-one-get-itemrow-index/
-parent: "rg-one-datagrid-templategrid-listview"
 ---
 
 ## 1 Description

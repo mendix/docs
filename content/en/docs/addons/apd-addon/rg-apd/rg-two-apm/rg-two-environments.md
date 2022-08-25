@@ -1,7 +1,6 @@
 ---
 title: "Environments"
 url: /addons/apd-addon/rg-two-environments/
-parent: "rg-two-apm"
 ---
 
 ## 1 Environments Overview

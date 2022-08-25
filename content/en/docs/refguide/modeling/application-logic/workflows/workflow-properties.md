@@ -1,7 +1,6 @@
 ---
 title: "Workflow Properties"
 url: /refguide/workflow-properties/
-parent: "workflows"
 weight: 10
 tags: ["workflow", "workflows", "workflow properties", "Studio Pro"]
 ---
@@ -71,9 +70,7 @@ Parameters have the following settings:
 To add a parameter to the **Workflow name** or the **Workflow description**, do the following:
 
 1. Click the ellipsis icon next to the **Workflow name** or the **Workflow description**.
-
 2. In the **Edit workflow name** dialog box > **Parameters** section, click the **New** button. 
-
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice. 
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" >}}
@@ -100,9 +97,7 @@ In addition to adding new parameters, you can perform the following actions on p
 #### 2.5.1 Workflow State Change 
 
 {{% alert color="info" %}}
-
 This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/app-settings/#workflow-state-change) section in *App Settings*.
-
 {{% /alert %}}
 
 **Workflow state change** allows you to select a microflow that is triggered when the state of the current workflow has changed, for example, when the workflow is in progress or completed. 
@@ -110,9 +105,7 @@ This setting overrides the app-wide setting in the **App Settings**. For more in
 #### 2.5.2 User Task State Change
 
 {{% alert color="info" %}}
-
 This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide/app-settings/#user-task-state-change) section in *App Settings*.
-
 {{% /alert %}}
 
 **User task state change** allows you to select a microflow that is triggered when the state of a user task in the current workflow has changed, for example, when the a user task is completed or has failed. 

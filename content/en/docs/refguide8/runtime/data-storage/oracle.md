@@ -1,7 +1,6 @@
 ---
 title: "Oracle"
 url: /refguide8/oracle/
-parent: "data-storage"
 weight: 60
 tags: ["studio pro", "database", "oracle"]
 ---
@@ -18,10 +17,10 @@ When setting-up perform the following steps:
 
 1. Create a new user and schema for Mendix with the profile "DEFAULT". 
 2. Grant the user the following privileges:
-   * CREATE SESSION
-   * CREATE SEQUENCE
-   * CREATE TABLE
-     This will ensure that the account has sufficient privileges to create the structure needed to represent the domain model and to create, query, and modify data.
+    * CREATE SESSION
+    * CREATE SEQUENCE
+    * CREATE TABLE
+    This will ensure that the account has sufficient privileges to create the structure needed to represent the domain model and to create, query, and modify data.
 3. Ensure that the user has been granted enough quotas to create the resources they need, or give them an unlimited grant (for example, `GRANT UNLIMITED TABLESPACE TO mendix` where `mendix` is the user/schema that you have created).
 
 {{% alert color="info" %}}

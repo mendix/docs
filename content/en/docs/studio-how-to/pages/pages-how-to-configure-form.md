@@ -1,5 +1,6 @@
 ---
 title: "Configure a Form and Show Items Related to It"
+linktitle: "Configure Form & Show Form Items"
 url: /studio-how-to/pages-how-to-configure-form/
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
@@ -45,16 +46,14 @@ You would like the **Details** button in this list to open a page showing the de
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor/). 
-
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models/).
-
 * Make sure your domain model is configured the following way:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/domain-model.png" alt="Domain Model"   width="200"  >}}
 
     * Make sure you have configured the **Question** attribute as the following enumeration:
 
-		{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/enumeration.png"   width="550"  >}}
+        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/enumeration.png"   width="550"  >}}
 
 * Make sure your app contains a page with inspection reports list and the **Details** button:
 
@@ -65,25 +64,20 @@ Before starting this how-to, make sure you have completed the following prerequi
 The **Details** button in the inspection report list should open a page with the inspection report details. To configure the page, do the following:
 
 1. Click the **Details** button and go its properties.
-
 2. Set **Page** as an on-click action and click the **Page** property.
 
-	{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/button-properties.png" alt="Button Properties"   width="250"  >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/button-properties.png" alt="Button Properties"   width="250"  >}}
 
-3.  In the **Select Page** dialog box, click the plus icon in the top right corner.
+3. In the **Select Page** dialog box, click the plus icon in the top right corner.
+4. In the **Create new page** dialog box, set the **Title** to **Reports_Details**, and set the **Layout** to **Atlas_Default**. 
+5. The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
 
-1.  In the **Create new page** dialog box, set the **Title** to **Reports_Details**, and set the **Layout** to **Atlas_Default**. 
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/create-new-page.png" alt="Create New Page"   width="550"  >}}
 
-2.  The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
-
-	{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/create-new-page.png" alt="Create New Page"   width="550"  >}}
-
-3. Click **Create**.
-	
+6. Click **Create**.
 7. The page with a form (a data view) is created. Open data view properties and make sure that the data source was automatically set to **Context** and **Entity** was set to **InspectionReport**:
 
-      {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-view-source.png"   width="250"  >}} 
-
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-view-source.png"   width="250"  >}} 
 
 The form on the page is configured: 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-view-configured.png"   width="600"  >}}
@@ -99,13 +93,11 @@ To display checklist details in a table, you can add a data grid. It is importan
 Follow the steps below:
 
 1. Open **Toolbox** > **Data Containers**.
-
 2. Drag and drop **Data Grid** *inside* the data view:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-grid-inside-data-view.png"   width="550"  >}}
 
 3. Go to the data grid properties and click **Entity**.  
-
 4. To show only checklist items associated with the current inspection report, choose the **Checklist** entity over association (*Checklist_InspectionReport/Checklist*) in the **Select Entity** dialog box and click **Select**:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-grid-over-association.png" >}}
@@ -115,32 +107,24 @@ Follow the steps below:
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-grid-search.png" alt="Data Grid Search" >}}
 
 6. To be able to add new checklist items to the report, select the **New** button in the data grid and open its properties.
-
 7. Set the **On Click Action** to **Page**. 
-
 8. Enable **Create Object** property. The **Entity** property is automatically set to **Checklist**:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/new-button-properties.png"   width="250"  >}}
 
 9. Click the **Page** property.
-
 10. In the **Select Page** dialog box, click the plus icon in the top right corner.
-
 11. In the **Create new page** dialog box, set the **Title** to **Checklist_Details** and the **Layout** to **PopupLayout**. 
-
 12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: 
-	
-	{{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/manage-checklist.png"   width="550"  >}}
+
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/manage-checklist.png"   width="550"  >}}
 
 13. Click **Create**.
-
 14. A pop-up page where end-users can add new checklist items is created. Now you can select the same page as an on-click action for the **Edit** button to edit the selected checklist. Click the **Edit** button in the data grid and open its properties.
-
 15. Set the **On Click Action** to **Page**.
-
 16. Set the **Page** property to **Manage_Checklist**.
 
-      {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/edit-button-properties.png"   width="250"  >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/edit-button-properties.png"   width="250"  >}}
 
 Now checklist items are displayed in the table. You can add new checklist by clicking the **New** button in the table, and edit the selected checklist by clicking the **Edit** button.
 

@@ -550,7 +550,7 @@ The **传输包** button allows you to deploy the deployment package in the curr
 
 The **伸缩应用** button allows you to scale your app by increasing the number of replicas.
 
-To apply the new value, click **Restart the App and Scale**. Because you restart your app, it will be unavailable for a short time.
+To apply the new value, click **伸缩**. Because you restart your app, it will be unavailable for a short time.
 
 ##### 6.1.3.4 Clear Admin Password
 

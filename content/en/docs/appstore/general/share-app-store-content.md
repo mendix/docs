@@ -182,7 +182,7 @@ To finish up configuring this page, follow these steps:
 
 2. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
-    * **Save Draft** to save the details you have entered so far to the [Drafts](/appstore/general/app-store-overview/#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the upper right of the page)
+    * **Save Draft** to save the details you have entered so far to the Draft (which you can access via the [My Drafts](/appstore/general/app-store-overview/#my-drafts) page link present in top panel of Mx-Dock)
     * **Save & Continue** to go to the next page of the upload flow
 
 ### 4.3 Package {#package}

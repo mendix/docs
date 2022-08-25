@@ -200,7 +200,11 @@ You can remove existing members.
 
 {{% todo %}}What is remove member?{{% /todo %}}
 
-1. On the **成员** tab of the namespace details, click **Remove** next to the member you want to remove.
+1. On the **成员** tab of the namespace details, click **编辑** next to the member you want to remove.
+2. Search for the member in the **编辑成员** dialog box by entering their email address.
+3. To remove the member, click **移除成员**.
+4. To edit the member, select or deselect the check boxes to change their privileges.
+5. Click **保存** to save the changes.
 
 If you want to change the rights for an existing member, you will have to remove them and then add them again with the updated rights.
 

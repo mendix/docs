@@ -1,22 +1,25 @@
 ---
 title: "Wrap Services, APIs, or Databases with OData"
 url: /refguide/wrap-services-odata/
-linktitle: "Wrap Services with OData"
+linktitle: "Wrap with OData"
 weight: 80
 tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "connector kit 2", "published odata services", "integration"]
 ---
 
 ## 1 Introduction
 
-Features released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/). 
+Features released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/)). 
 
-You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), so the new features are collectively called *Connector Kit 2.0*.
+You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), so the new features are collectively referred to as *Connector Kit 2.0*.
 
 In this guide, you will learn about the following:
 
 * Exposing non-persistable entities as published OData resources 
 * Using a microflow to define how resources should be retrieved and stored, and to return values of published OData services
 * Selecting a key (other than the object ID) when exposing entities as OData resources
+
+{{% alert color="info" %}}
+This document is intended for advanced Mendix developers.{{% /alert %}}
 
 ### 1.2 Prerequisites
 
@@ -111,7 +114,7 @@ When you use a microflow to provide data, any security constraints are applied t
            If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
 
 {{% alert color="info" %}}
-In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
+In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studiopro/9.17/) and above, the count value can be stored in the `ODataResponse` object.{{% /alert %}}
 
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
@@ -160,38 +163,54 @@ The following examples are possible ways to use OData to connect to external dat
 
 You can use the features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) to build a connector that wraps a third-party service API as OData. 
 
-For example, say you want to build an app that works with the [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). Start by [registering as a Twitter Developer](https://developer.twitter.com/en/portal).
+For example, say you want to build an app that works with the [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). You would like a simple app where you can enter the ID of a Twitter user and view their latest tweets and followers. 
 
-#### 7.1.1 Building the Client
+{{% alert color="warning" %}}
+This guide is meant to serve as an example to show how to use *Connector Kit 2* features, and is not an official guide to building a Twitter connector. It is intended for local deployments and has not been tested.{{% /alert %}}
 
-Build a Twitter client that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector).
+#### 7.1.1 Prerequisites
 
-1.  In your domain model, Publish a metadata XML contract that includes the data from the Twitter API, and import it into the Data Hub pane. See [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) for deploying locally with Data Hub.
-2.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data.</br> Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this: 
-    {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." >}}
-3.  Add a new page to display the data, and create a ShowUserPage microflow. </br> 
-    The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
-    {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." >}}
+To build your app, you first need to do the following:
 
-4.  On the **TwitterPage**, you can use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.
+* [Register as a Twitter Developer](https://developer.twitter.com/en/portal)
+* Download Studio Pro [9.17](/releasenotes/studio-pro/9.17/) or above
 
 #### 7.1.2 Building the Connector {#twitter-connector}
 
 Build a connector module that communicates to the Twitter API with OData. 
 
 1.  To ensure that your app will run, fill in your valid bearer token as the **Default value** in a **BearerToken** [constant](/refguide/constants/). You can get one by [registering as a Twitter Developer](https://developer.twitter.com/en/portal).
-2.  Use the Twitter API to determine the structure and create an import mapping, which creates three non-persistable entities in your domain model.
+2.  Use the Twitter API to determine the structure and create an [import mapping](/refguide/mapping-documents/#import-mappings), which creates three non-persistable entities in your domain model.
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-connector-domain-model.png" alt="Domain model for Twitter connector module." >}}
-3.  Publish all three non-persistable entities as an OData service, used as your Twitter Connector (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
+3.  Publish all three non-persistable entities as a published OData service (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
 4.  Select a new [key](#select-key) to be used for each entity. For example, you can set the **UserId**, a **String** value, as a key for the **User** entity.
 5.  For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
-6.  Run the Twitter client to receive decoded OData requests. Manually parse the URI, and create a microflow to read data from the URI. 
-7.  Extract the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers. The API response goes into the import mapping.
-8.  Create microflows for each entity you are exposing to define how these resources are retrieved.
+6.  Export the metadata file of the published OData service to be used in the client module. To do so, open the service and go to **Settings**, and click **Export** next to the **Metadata** field.
 
-The result is a simple app where you can enter the ID of a Twitter user and view their latest tweets and followers.
+Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Data Hub Catalog or the Data Hub pane. See [Data Hub without the Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with Data Hub (external entities and the Catalog) for local deployments.
 
-For general information on building simple connectors, check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.
+#### 7.1.3 Building the Client
+
+Build a Twitter client that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector).
+
+1.  Create a consumed OData service in the client module, and use the XML file you exported in the previous section.
+2.  Drag the external **Users**, **Tweets**, and **Followers** entities into your client domain model.
+3.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data.</br> Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this: 
+    {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." >}}
+4.  Add a new page to display the data, and create a ShowUserPage microflow. </br> 
+    The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
+    {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." >}}
+
+5.  On the **TwitterPage**, you can use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.
+
+#### 7.1.4 Running the Client and Extracting the Twitter IDs
+
+Run the Twitter client to receive decoded OData requests. 
+
+1.  Manually parse the URI, and create a microflow to read data from the URI. 
+2.  Extract the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers. The API response goes into the import mapping.
+
+Make sure that you have created microflows for all entities used in your connector. When you run your app, you can enter the ID of a Twitter user and view their latest tweets and followers.
 
 ## 7.2 Updatable Operational Data Stores {#operational-data-stores}
 
@@ -211,4 +230,4 @@ To implement a low-code operational data store, follow these general steps:
 2.  Cache data in a persistable entity. When you call the OData source, it will any updates since it was last called, and will retrieve older records from a local database.
 3.  Expose the unified model with OData, including write-back logic in your microflows.
 
-For general information on building simple connectors, check out the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.
+For general information on building connectors, see the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.

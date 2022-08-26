@@ -38,7 +38,7 @@ If your original project was Mendix version 7.23.2 or below and you want to work
 
 There may be changes which you should make to your app *before* you upgrade it to Mendix 8.
 
-### 3.1 Java Version, Deprecated & Removed APIs {#deprecated-apis}
+### 3.1 Java Version, Deprecated and Removed APIs {#deprecated-apis}
 
 Mendix 8 runs on Java 11, whereas Mendix 7 runs on Java 8. Make sure that your Java actions are compatible with Java 11. The official Java 8 to 11 migration guide can be found in the [Migrating From JDK 8 to Later JDK Releases](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6) section of the *Oracle JDK Migration Guide*.
 
@@ -101,7 +101,7 @@ Mendix will upgrade your app for you.
 
 Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 8.
 
-### 4.6 Review Errors, Warnings & Deprecations in Studio Pro
+### 4.6 Review Errors, Warnings, and Deprecations in Studio Pro
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
@@ -115,7 +115,7 @@ Check if there is a newer version of your Marketplace modules available in the M
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-### 4.8 Review & Test Your App
+### 4.8 Review and Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary.
 
@@ -125,7 +125,7 @@ Test the app for any unexpected results.
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## 5 Elements of Type Float & Currency {#float-currency}
+## 5 Elements of Type Float and Currency {#float-currency}
 
 The types Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. 
 

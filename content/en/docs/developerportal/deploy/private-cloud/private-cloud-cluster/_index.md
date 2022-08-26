@@ -39,7 +39,7 @@ Should you consider using a connected environment, the following URLs should be 
 | `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
 | `https://subscription-api.mendix.com` | Service to verify call-home licence |
 
-## 3 Creating a Cluster & Namespace
+## 3 Creating a Cluster and Namespace
 
 ### 3.1 Creating a Cluster{#create-cluster}
 
@@ -95,7 +95,7 @@ To add a namespace, do the following:
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 
@@ -1625,7 +1625,8 @@ You can also see an activity log containing the following information for all na
 * When a user accepts the invitation as a namespace member
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
-* When enviroment configurations are added, updated or removed
+* When enviroment configurations are added, updated, or removed
+* When Runtime Metrics configurations are added, updated, or deleted
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
 
@@ -1723,7 +1724,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 6.2.2.2 Editing & Removing Members
+##### 6.2.2.2 Editing and Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 

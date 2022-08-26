@@ -71,7 +71,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Fix
 
-* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
+* We resolved an issue where the PostgreSQL, Hyperscaler Option service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
 
 ### June 16th, 2021
 

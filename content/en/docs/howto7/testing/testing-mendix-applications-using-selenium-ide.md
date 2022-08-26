@@ -36,7 +36,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 
 {{% /alert %}}
 
-## 3 Installing & Running the Company Expenses App
+## 3 Installing and Running the Company Expenses App
 
 Follow these steps to install and run the Company Expenses app:
 

@@ -245,7 +245,7 @@ The output is:
 -1
 ```
 
-## 8 pow
+## 8 pow {#pow}
 
 Raises a number to a certain power.
 

@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### August 23, 2022
+### August 26th, 2022
 
 #### Mendix Operator v2.7.0{#2.7.0}
 
@@ -23,6 +23,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * The Mendix Operator now specifies the appProtocol in Kubernetes services to help middleware such as Istio know which [protocol](https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/#explicit-protocol-selection) the app is using and handle traffic as HTTP instead of TCP.
 * We now allow the running of a Mendix environment using a [specific Kubernetes ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server) instead of the default ServiceAccount.
 * We have added an option to specify a custom, fixed S3 bucket prefix when using the S3 (existing bucket and account) Storage Plan.
+
+### August 25th, 2022
+
+#### Portal Improvements
+
+* We added activity log entries for Runtime Metrics Configurations.
+* We fixed an issue where the runtime status indicator keeps spinning even after deployment is successful. (Ticket 153960)
+* We added Save and Save and Apply functionality for all the annotations (Ingress, Service, and Pod) on the cluster manager page.
+* We improved the error message displayed when no deployable environments are found due to missing permissions.
 
 ### July 12th, 2022
 

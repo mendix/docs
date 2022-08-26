@@ -46,7 +46,7 @@ The Data Hub Catalog collects metadata about the application and environment whe
 
 ### 4.1 Registering a Service Through the Data Hub Catalog Registration API {#registration-api}
 
-Calling the Data Hub Catalog Registration APIs allows you to register one or more exposed OData service(s). 
+Calling the Data Hub Catalog [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) allows you to register one or more exposed OData service(s). 
 
 First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a Personal Access Token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
 

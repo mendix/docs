@@ -198,12 +198,12 @@ See [To String](/refguide/to-string/) for details.
 
 See [Parse Integer](/refguide/parse-integer/) for details.
 
-## 17 Parse & Format Decimal Function Calls
+## 17 Parse and Format Decimal Function Calls
 
 * [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string
 
-## 18 Parse & Format Date Function Calls
+## 18 Parse and Format Date Function Calls
 
 * [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a string to a date value
 * [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string

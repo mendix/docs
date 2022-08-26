@@ -10,7 +10,7 @@ weight: 97
 
 ### DomainModels
 
-#### Entity, Attribute & AssociationBase (Elements)
+#### Entity, Attribute, and AssociationBase (Elements)
 
 * We introduced the `exportLevel` property.
 
@@ -30,7 +30,7 @@ weight: 97
 
 * We removed the experimental status of this model unit.
 
-#### QueueConfig & BasicQueueConfig (Elements)
+#### QueueConfig and BasicQueueConfig (Elements)
 
 * We removed the experimental status of these elements.
 

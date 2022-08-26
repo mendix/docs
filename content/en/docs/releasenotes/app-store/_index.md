@@ -273,7 +273,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
 ### August 26th, 2019
 
-#### SAP OData Connector Improvements & Fixes
+#### SAP OData Connector Improvements and Fixes
 
 * We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
 * We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
@@ -317,7 +317,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 ### February 15th, 2019
 
-#### SAP OData Connector Improvements & Fixes
+#### SAP OData Connector Improvements and Fixes
 
 * We now throw an error which you can catch in a microflow if the destination does not exist, or the app is running locally. Previously the error could not be caught.
 * We fixed some typos in the OData Connector actions.

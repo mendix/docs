@@ -163,12 +163,12 @@ See [To String](/refguide8/to-string/) for details.
 
 See [Parse Integer](/refguide8/parse-integer/) for details.
 
-## 16 Parse & Format Decimal Function Calls
+## 16 Parse and Format Decimal Function Calls
 
 * [`parseDecimal`](/refguide8/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide8/parse-and-format-decimal-function-calls/) – converts a decimal to a string
 
-## 17 Parse & Format Date Function Calls
+## 17 Parse and Format Date Function Calls
 
 * [`parseDateTime[UTC]`](/refguide8/parse-and-format-date-function-calls/) – converts a string to a date value
 * [`formatDateTime[UTC]`](/refguide8/parse-and-format-date-function-calls/) – converts a date value to a string

@@ -32,7 +32,7 @@ The statistics tool snapshots are stored also on shutdown of the Mendix applicat
 
 The query tool can be used to do an explain plan of long running queries.
 
-## 4 In Test & Acceptance
+## 4 In Test and Acceptance
 
 During the test and acceptance phase other users than the developer are testing and using the application. Now it is especially important to collect information for further analysis if they find an issue.
 

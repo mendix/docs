@@ -76,17 +76,17 @@ To set the status code, reason phrase, and headers, add an [HttpResponse](/refgu
 
 The result of the microflow is the result of the operation and can include the following:
 
-1. **Return a** ***list*** **or an** ***object***– you must specify an export mapping to convert it to XML or JSON.
-2. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value.
+1. **Return a file document** – have the microflow return a file document when you want to return a file stream (such as a PDF or image). The following HTTP response headers are especially relevant here:
+   a. Use the [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) header to specify the file's MIME type.
+   b. Use the [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) header to specify the file name and to indicate whether the file should be downloaded as an attachment.
+   c. Use additional HTTP response headers to communicate other information about the file.
 
-    {{% alert color="info" %}}
-    If a non-empty value from the microflow is returned, the *Content* attribute of the *HttpResponse* object is ignored.
+2. **Return a** ***list*** **or an** ***object*** – specify an export mapping to convert it to XML or JSON.
 
-    If an empty value from the microflow is returned, then the *Content* of the *HttpResponse* is taken as the result.
-    {{% /alert %}}
+3. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value.
+    {{% alert color="info" %}}If the microflow returns a non-empty value, the *Content* attribute of the *HttpResponse* object is ignored. If the microflow returns an empty value, then the *Content* of the *HttpResponse* is taken as the result. {{% /alert %}}
 
-3. **Return a file document** – when you want to return data that is a file (such as a PDF or image), then the microflow returns a file document.
-4. **Return a** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
+4. **Return an** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
     {{% alert color="info" %}}One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.{{% /alert %}}
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.

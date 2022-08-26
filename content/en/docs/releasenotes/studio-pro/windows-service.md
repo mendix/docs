@@ -12,7 +12,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.7
 
-**Release date: August 25th, 2022**
+**Release date: August 26th, 2022**
 
 * We fixed an exception which occurred when updating an app where files with a path exceeding 260 characters are overwritten. (Ticket 142021)
 * We now require Microsoft .NET Framework version 4.6.2 instead of 4.5.2.

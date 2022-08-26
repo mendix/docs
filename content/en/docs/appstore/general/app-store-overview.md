@@ -127,18 +127,17 @@ This page presents details on how many total drafts you have, which drafts are r
 
 These are the possible **Status** entries for each item:
 
-* **Ready to publish** and **Ready to submit for approval** – serve as reminders for publishing
+* **Ready to publish** and **Ready to submit for approval** – reminders for publishing and submission
 * **Waiting approval** – the component is being [reviewed by Mendix](/appstore/general/share-app-store-content/#approval) 
-* **error(s)** – the number of errors in the draft that need to be fixed
+* **Error(s)** – the number of errors in the draft; these need to be fixed in order for your submission to be approved
+* **Declined** – the draft was declined in the review by Mendix; you can find additional information in the email you are sent
 
-* **Declined** - Draft was declined with the certain reason during the governance check, you can find additional information on the reason in your mailbox.
+On this page, click **Actions** for a component to access the following options:
 
-On this page, click on the Actions section of a Marketplace component to :
-
-* **Edit Draft** – go to its draft page, where you can continue editing the component details.
-* **Submit draft** – if your component is ready to be submitted and has no errors, you can proceed right from the overview panel.
-* **Withdraw** – By clicking on this button you can withdraw the content from the review process after you have submitted it for approval, which will return the content to the draft state.
-* **Delete** – click this button to delete the draft.
+* **Edit Draft** – go to the component's draft page, where you can continue editing the component details
+* **Submit draft** – if your component is ready to be submitted and has no errors, you can proceed with the submission for review
+* **Withdraw** – withdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
+* **Delete** – delete the draft
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-draft-menu-options.png" >}}
 

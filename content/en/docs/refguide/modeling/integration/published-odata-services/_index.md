@@ -10,6 +10,8 @@ tags: ["studio pro","OData","publish"]
 
 In Studio Pro, entities can be exposed as [OData resources](/refguide/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
 
+A published OData service is a REST service with an OpenApi contract, which means that OpenApi compatible REST clients can easily interact with it.
+
 The standards used for OData in Mendix are:
 
 * [OData version 3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
@@ -83,7 +85,7 @@ The $metadata XML file contains the service's contract in OData's [CSDL](https:/
 
 #### 3.2.3 OpenAPI {#openapi}
 
-The OpenAPI JSON file contains the service's REST contract in [OpenAPI](https://www.openapis.org/) format.
+The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format.
 
 ### 3.3 Security {#security}
 
@@ -183,7 +185,11 @@ Default value: *No*
 
 ### 6.1 General
 
-Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`.
+Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
+
+{{% alert color="info" %}}
+The Swagger UI feature was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/).
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.

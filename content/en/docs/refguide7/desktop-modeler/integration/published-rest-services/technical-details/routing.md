@@ -30,4 +30,4 @@ Consult this flow chart to answer questions like:
 
 The example request is `GET /rest/petstore/pet/12`.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-rest-services/published-rest-technical-details/published-rest-routing/determine-operation.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-rest-services/technical-details/routing/determine-operation.png" >}}

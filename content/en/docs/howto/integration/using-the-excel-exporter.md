@@ -180,7 +180,7 @@ To configure the static data in the sheet, follow these steps:
 4. Specify the **Type** by selecting if the cell is **Static Text, Object Data, or Aggregate Function.** This example uses **Static Text** (which changes the **Name** field into **Excel Text** upon selection).
 5. Specify the **Style** that should be applied to the cell.
 
-### 6.6 Configuring Custom Cell Formatting & Styling {#styles}
+### 6.6 Configuring Custom Cell Formatting and Styling {#styles}
 
 To configure the custom formatting and styling for the cells, follow these steps:
 

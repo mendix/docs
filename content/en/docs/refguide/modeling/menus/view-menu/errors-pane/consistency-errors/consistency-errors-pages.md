@@ -250,9 +250,9 @@ You have changed the association multiplicity and fixed the error.
 Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector or input reference set selector, for example, a reference selector. 
 {{% /alert %}}
 
-## 7 Images, Videos & Files Consistency Errors
+## 7 Images, Videos and Files Consistency Errors
 
-Images, videos & files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](/refguide/image-and-file-widgets/). 
+Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](/refguide/image-and-file-widgets/). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

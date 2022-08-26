@@ -39,7 +39,7 @@ Should you consider using a connected environment, the following URLs should be 
 | `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
 | `https://subscription-api.mendix.com` | Service to verify call-home licence |
 
-## 3 Creating a Cluster & Namespace
+## 3 Creating a Cluster and Namespace
 
 ### 3.1 Creating a Cluster{#create-cluster}
 
@@ -1699,7 +1699,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 6.2.2.2 Editing & Removing Members
+##### 6.2.2.2 Editing and Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 

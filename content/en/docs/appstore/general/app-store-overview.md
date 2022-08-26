@@ -55,7 +55,7 @@ Clicking the tile of a Marketplace component will bring you to its details page 
 
 {{< figure src="/attachments/appstore/general/app-store-overview/component-details.jpg" >}}
 
-### 3.1 Header & Usage
+### 3.1 Header and Usage
 
 The header for a component presents the following details:
 

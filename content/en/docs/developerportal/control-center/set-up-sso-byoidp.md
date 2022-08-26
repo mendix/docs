@@ -71,7 +71,7 @@ Once you have configured the endpoint and the scope, you are ready to perform a 
 
 {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-3.png" alt="Customer IDP setup - step 3" >}}
 
-### 3.3 Mapping Between IDP & Mendix
+### 3.3 Mapping Between IDP and Mendix
 
 The data from your IdP may have different attribute names from the Mendix identity.
 

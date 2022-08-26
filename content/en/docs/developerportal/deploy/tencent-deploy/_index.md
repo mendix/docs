@@ -204,7 +204,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The next time the user signs in to the Mendix Developer Portal, they will be added to the namespace.
 
-##### 3.3.2.2 Editing & Removing Members
+##### 3.3.2.2 Editing and Removing Members
 
 You can remove existing members.
 

@@ -50,15 +50,15 @@ You can create new database connections from the **Databases** page. Each connec
 
 This is the type of database you want to import.
 
-#### 2.1.2 URL & Port
+#### 2.1.2 URL and Port
 
 This is the host name and port number of the server on which your database is running.
 
-#### 2.1.3 Name & Instance Name
+#### 2.1.3 Name and Instance Name
 
 This is the name and instance name of the database to connect to. The **Instance name** is optional.
 
-#### 2.1.4 Username & Password
+#### 2.1.4 Username and Password
 
 These are the credentials necessary to sign in to the database.
 
@@ -70,7 +70,7 @@ Table mappings are created from the **Mappings** page. Each mapping is associate
 
 A descriptive name for your mapping.
 
-#### 2.2.2 Database Name & Table
+#### 2.2.2 Database Name and Table
 
 This is the database and table from which you want to retrieve data. If you need other tables to create your Mendix object, you can select these later.
 
@@ -117,7 +117,7 @@ You can use a custom microflow to parse data for an attribute. Such a microflow 
 
 This field is the name of the attribute you map this column to. This field also has quicksearch functionality. Type in the box to the left of the reference selector and press “tab” to search for the value you typed.
 
-### 4.7 Reference & Object Type
+### 4.7 Reference and Object Type
 
 These fields are used to configure referenced objects. You can specify what reference should be followed and what type of object is used. Both fields have a quicksearch box.
 
@@ -184,7 +184,7 @@ This is a descriptive name for this table. You will see this name in the **Table
 
 This is the type of join to make. Most standard database join types are supported.
 
-### 6.3 Left & Right Table
+### 6.3 Left and Right Table
 
 These are the tables to join together. The left table is always the one that is already included in this table mapping. The right table can be any other table.
 
@@ -204,7 +204,7 @@ You can put a constraint on the rows that are imported from the database. Here, 
 This feature is deprecated and might be removed in a future version. We recommend configuring constraints using [import calls](#import-call) instead.
 {{% /alert %}}
 
-### 7.2 Print Statistics & Not Found Messages
+### 7.2 Print Statistics and Not Found Messages
 
 These control which kinds of messages are printed on the application console.
 
@@ -270,7 +270,7 @@ You can use the DateTime from the last successful import as a constraint. This D
 
 Each import action is executed in a single transaction, which means it is able to revert all the changes if an exception occurs. Then, configure the mapping not to create a new transaction nor a new context.
 
-## 10 Importing & Exporting a File
+## 10 Importing and Exporting a File
 
 You can import and export table mappings to an XML file using the **Table mapping** tab.
 

@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 * Filter a list using the search bar
 * Filter a list using XPath
 
-## 2 Prerequisites – Preparing the Data Structure, GUI & Example Data
+## 2 Prerequisites – Preparing the Data Structure, GUI and Example Data
 
 To see the results of this how-to, it is necessary that you set up a test project with test data.
 

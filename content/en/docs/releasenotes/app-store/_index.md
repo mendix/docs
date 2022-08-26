@@ -15,8 +15,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-* We have introduced a new entry point 'My Drafts' through which user can access drafts. You will be able to navigate to the page “My Drafts” in My Marketplace and from Self-Service onboarding flow.
-* We have introduced a new UI for drafts page. The list of actions associated to draft are extended and user will be able to access them through the new UI.
+* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/general/app-store-overview#my-drafts) section of *Marketplace Overview*.
 
 ### August 11th, 2022
 

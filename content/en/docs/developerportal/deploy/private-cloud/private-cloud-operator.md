@@ -285,7 +285,7 @@ To build and deploy your app using the OpenShift CLI, do the following:
 3. Paste the following command into your command line terminal:
 
 ```shell {linenos=false}
-oc apply -f {File containing the CR}
+oc apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
 #### 3.3.2 Process the CR in the OpenShift Console{#openshift-console}

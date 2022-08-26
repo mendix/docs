@@ -134,10 +134,10 @@ These are the possible **Status** entries for each item:
 
 On this page, click **Actions** for a component to access the following options:
 
-* **Edit Draft** – go to the component's draft page, where you can continue editing the component details
+* **Edit Draft** – click this to go to the component's draft page, where you can continue editing the component details
 * **Submit draft** – if your component is ready to be submitted and has no errors, you can proceed with the submission for review
-* **Withdraw** – withdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
-* **Delete** – delete the draft
+* **Withdraw** – click this towithdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
+* **Delete** – click this to  delete the draft
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-draft-menu-options.png" >}}
 
@@ -148,8 +148,9 @@ On this page, you can see the Marketplace content for which you have created at 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-content.png" >}}
 
 * **View item** – click this to go to the [component details page](#details) 
-* **Manage Drafts** – click this to manage draft of the component
-    * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated – if there is a draft version in progress, you will see options to manage it. click **Edit draft** to see and edit it.
+* **Manage drafts** – click this to manage draft of the component
+    * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
+    * If there is a draft version in progress, you will see options to manage it; you can click **Edit draft** to see and edit the draft
     * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *How to Share Marketplace Content*
 * **Edit a version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content/#adding) section of *How to Share Marketplace Content*)
 * **Unpublish a version** – click this to remove one version or all versions of the component

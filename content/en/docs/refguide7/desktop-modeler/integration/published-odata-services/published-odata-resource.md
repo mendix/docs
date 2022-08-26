@@ -24,7 +24,7 @@ Press the **Select...** button to open a dialog window that allows you to select
 
 IBM DB2 does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. For the details see this [IBM DB2](/refguide7/db2/) page.
 
-## 2 Selecting Exposed Attributes & Associations
+## 2 Selecting Exposed Attributes and Associations
 
 When an entity to publish has been selected, press the **Select...** button to open a dialog that allows you to select individual attributes to expose.
 

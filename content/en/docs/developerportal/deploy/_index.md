@@ -86,7 +86,7 @@ The instructions for doing this are in [Private Cloud](/developerportal/deploy/p
 
 From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](/developerportal/deploy/cloud-foundry-deploy/) and the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 
-## 9 Docker & Kubernetes
+## 9 Docker and Kubernetes
 
 Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
 

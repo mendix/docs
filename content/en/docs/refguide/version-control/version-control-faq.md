@@ -22,7 +22,7 @@ Mendix 7 and 8 only have support for Team Server SVN, and as long as these major
 
 Storage space is unlimited for apps connected to a commercial license. 1 GB of free storage is provided for your company account for apps not (yet) connected to a commercial license.
 
-## 4 What Happens with My Valuable & Confidential Data?
+## 4 What Happens with My Valuable and Confidential Data?
 
 Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for troubleshooting. Your data is backed up for one year, and the backups are retained for one year after app deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/) ticket.
 

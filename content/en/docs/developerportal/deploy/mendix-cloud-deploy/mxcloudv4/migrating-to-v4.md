@@ -35,7 +35,7 @@ You will need to take the following into account when migrating to Mendix Cloud 
 
 To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
 
-### 2.1 Other Differences Between Mendix Cloud v3 & v4
+### 2.1 Other Differences Between Mendix Cloud v3 and v4
 
 There are a few other differences between the way you develop and deploy apps in Mendix Cloud v4 and Mendix Cloud v3:
 

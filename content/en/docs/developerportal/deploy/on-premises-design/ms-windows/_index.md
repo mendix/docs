@@ -32,8 +32,8 @@ To set up an environment to run Mendix applications, you will need to install th
 
 Before starting this how-to, make sure you have the following prerequisites:
 
-* MS Windows 2008 SP2 or higher
-* .NET Framework 4.5 or higher
+* MS Windows Server 2008 SP2 or higher
+* .NET Framework 4.6.2 or higher
 * IIS 7 or higher with the following service roles enabled:
 
     * IIS Management console

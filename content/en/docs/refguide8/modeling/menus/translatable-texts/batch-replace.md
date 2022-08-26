@@ -62,7 +62,7 @@ Identical replacement and original texts will be combined into a single entry.
 
 {{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-replace/batch-replace-replaced.png" alt="Show combined entries" >}}
 
-## 3 Exporting & Importing Text
+## 3 Exporting and Importing Text
 
 If you want to translate a language outside Studio Pro, you can export the translatable texts to the Microsoft Excel (*.xlsx*) format, make changes, and then import the changes from the updated Excel file.
 

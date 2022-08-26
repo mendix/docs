@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### August 25th, 2022
+
+#### Fixes
+
+* We fixed an issue where Mendix Admins were not able to invite users to their company's apps.
+* We fixed a pagination issue on the [user management overview](/developerportal/collaborate/general-settings/#manage-users) in your **Access Management** settings.
+
 ### August 22nd, 2022
 
 #### New Features
@@ -729,7 +736,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 
 ### September 19th, 2019
 
-#### Launchpad Removal & App User Management Update
+#### Launchpad Removal and App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/#my-apps) page.
 * We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/collaborate/general-settings/#managing-app-users) section of *How to Manage General App Settings*.
@@ -793,7 +800,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 
 ### March 6th, 2019
 
-#### Feedback & Support
+#### Feedback and Support
 
 * We removed the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 

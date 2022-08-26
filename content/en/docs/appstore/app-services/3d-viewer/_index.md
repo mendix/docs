@@ -330,7 +330,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to visualize your local JT model quickly.
 
-### 5.1 Uploading & Viewing a 3D JT Model in Your Browser
+### 5.1 Uploading and Viewing a 3D JT Model in Your Browser
 
 For the [Viewer](#viewer) widget to visualize a JT model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](#uploader) widget and set to that of the Viewer widget.
 

@@ -355,13 +355,13 @@ Connecting to Git is done via a Personal Access Token (PAT). For more informatio
 
 Connecting to SVN is done with your Mendix credentials.
 
-### 9.3 Adding Files & Directories
+### 9.3 Adding Files and Directories
 
 If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.
 
 Make sure you use the **Export** feature of TortoiseSVN/TortoiseGit if you are copying a directory that is already under version control in your app.
 
-### 9.4 Deleting Files & Directories
+### 9.4 Deleting Files and Directories
 
 If you delete a file from your app, Studio Pro will automatically also delete it from the Team Server.
 
@@ -369,7 +369,7 @@ If you are using SVN and want to delete a whole directory, you have to use the d
 
 When using Git, a folder is no longer be tracked if all the files in the folder are removed.
 
-### 9.5 Branching & Deploying
+### 9.5 Branching and Deploying
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 

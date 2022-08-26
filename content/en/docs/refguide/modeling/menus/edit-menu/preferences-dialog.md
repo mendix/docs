@@ -119,13 +119,7 @@ Not all screens of Studio Pro support the dark mode yet.
 
 Default: *disabled*
 
-### 7.2 New Version of My App Screen 
-
-With this option, you can enable the new version of **My Apps** screen. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
-
-Default: *enabled*
-
-### 7.3 New Merge Algorithm with Fine-Grained Conflict Resolution
+### 7.2 New Merge Algorithm with Fine-Grained Conflict Resolution
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
 

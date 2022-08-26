@@ -182,7 +182,7 @@ To finish up configuring this page, follow these steps:
 
 2. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
-    * **Save Draft** to save the details you have entered so far to the Draft (which you can access via the [My Drafts](/appstore/general/app-store-overview/#my-drafts) page link present in top panel of Mx-Dock)
+    * **Save Draft** to save the details you have entered so far to the draft (which you can access via the [My Drafts](/appstore/general/app-store-overview/#my-drafts) link in the top bar)
     * **Save & Continue** to go to the next page of the upload flow
 
 ### 4.3 Package {#package}
@@ -295,7 +295,7 @@ To update content that has already been published, follow these steps:
     * **Company Content**
     * **User Groups** (note that if an existing Marketplace component is assigned to a [user group](/appstore/general/app-store-overview/#user-groups) as specific user group [content](/appstore/general/app-store-overview/#group-content), you can only update the component if you are a member of that group)
 
-2. Click on the menu item next to the component you want to update and select **Manage Draft**.
+2. Click the menu item next to the component you want to update and select **Manage Draft**.
 
     {{% alert color="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **View draft** on the page where you manage the component in order to see the draft.{{% /alert %}}
 

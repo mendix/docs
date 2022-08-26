@@ -119,30 +119,32 @@ Click an item in the sidebar to go to the page for that content:
 
 ### 4.1 My Drafts {#my-drafts}
 
-On **My Drafts** page, you can see and manage drafts of all the Marketplace content you have started.
-You can find the statistics on how many drafts you have in total, ready to publish, the ones which are waiting for approval and which were declined.
+On this page, you can see and manage the drafts for all the Marketplace content you have started.
+
+This page presents details on how many total drafts you have, which drafts are ready to publish or are awating approval, and which drafts have been declined.
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-draft.png" >}}
 
-Status of each entry will help you see the current information on your content draft
+These are the possible **Status** entries for each item:
 
-* **# error(s)** – how many errors or missing information you have in the draft itself
-* **Ready to publish / Ready to submit for approval** - remind you when the draft is ready to be published to the marketplace.
-* **Waiting approval** - The component is under review of the governance team
+* **Ready to publish** and **Ready to submit for approval** – serve as reminders for publishing
+* **Waiting approval** – the component is being [reviewed by Mendix](/appstore/general/share-app-store-content/#approval) 
+* **error(s)** – the number of errors in the draft that need to be fixed
+
 * **Declined** - Draft was declined with the certain reason during the governance check, you can find additional information on the reason in your mailbox.
 
 On this page, click on the Actions section of a Marketplace component to :
 
-* **Edit Draft** - go to its draft page, where you can continue editing the component details.
-* **Submit draft** - if your component is ready to be submitted and has no errors, you can proceed right from the overview panel.
-* **Withdraw** - By clicking on this button you can withdraw the content from the review process after you have submitted it for approval, which will return the content to the draft state.
-* **Delete** - click this button to delete the draft.
+* **Edit Draft** – go to its draft page, where you can continue editing the component details.
+* **Submit draft** – if your component is ready to be submitted and has no errors, you can proceed right from the overview panel.
+* **Withdraw** – By clicking on this button you can withdraw the content from the review process after you have submitted it for approval, which will return the content to the draft state.
+* **Delete** – click this button to delete the draft.
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-draft-menu-options.png" >}}
 
 ### 4.2 My Content {#my-content}
 
-In this page, you can see the Marketplace content for which you have created at least one version. Click the context menu to access various options for managing your content:
+On this page, you can see the Marketplace content for which you have created at least one version. Click the context menu to access various options for managing your content:
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-content.png" >}}
 

@@ -160,29 +160,34 @@ The following examples are possible ways to use OData to connect to external dat
 
 You can use the features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) to build a connector that wraps a third-party service API as OData. 
 
-For example, say you want to work with the [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). 
+For example, say you want to build an app that works with the [Twitter v2 REST API](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api). Start by [registering as a Twitter Developer](https://developer.twitter.com/en/portal).
 
 #### 7.1.1 Building the Client
 
 Build a Twitter client that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector).
 
-1.  Publish a contract that includes the information from the Twitter API, and import it into the Data Hub pane. See [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) for deploying locally with Data Hub.
-2.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data. Double-click the entity, and in the **Persistable** field, choose **No**.
+1.  In your domain model, Publish a metadata XML contract that includes the data from the Twitter API, and import it into the Data Hub pane. See [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) for deploying locally with Data Hub.
+2.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data.</br> Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this: 
+    {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." >}}
 3.  Add a new page to display the data, and create a ShowUserPage microflow. </br> 
-    The microflow includes a **Retrive Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
-4.  On the TwitterPage, you can use a Data Grid, and pull data by Association to get the tweets and followers connected to the user.
+    The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
+    {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." >}}
+
+4.  On the **TwitterPage**, you can use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.
 
 #### 7.1.2 Building the Connector {#twitter-connector}
 
 Build a connector module that communicates to the Twitter API with OData. 
 
-1.  Use the Twitter API to find out the structure and create an import mapping, which creates three non-persistable entities in your domain model.
-2.  Publish all three non-persistable entities as an OData service, used as your Twitter Connector (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
-3.  Select a new [key](#select-key) to be used for each entity. For example, you can set the **UserId**, a **String** value, as a key for the **User** entity.
-4.  For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
-5.  Run the Twitter client to receive decoded OData requests. You can manually take the URI and parse it, and create a microflow to read data from the URI. 
-6.  Extract the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers. The API response goes into the import mapping.
-7.  Create microflows for each entity you are exposing to define how these resources are retrieved.
+1.  To ensure that your app will run, fill in your valid bearer token as the **Default value** in a **BearerToken** [constant](/refguide/constants/). You can get one by [registering as a Twitter Developer](https://developer.twitter.com/en/portal).
+2.  Use the Twitter API to determine the structure and create an import mapping, which creates three non-persistable entities in your domain model.
+    {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-connector-domain-model.png" alt="Domain model for Twitter connector module." >}}
+3.  Publish all three non-persistable entities as an OData service, used as your Twitter Connector (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
+4.  Select a new [key](#select-key) to be used for each entity. For example, you can set the **UserId**, a **String** value, as a key for the **User** entity.
+5.  For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
+6.  Run the Twitter client to receive decoded OData requests. Manually parse the URI, and create a microflow to read data from the URI. 
+7.  Extract the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers. The API response goes into the import mapping.
+8.  Create microflows for each entity you are exposing to define how these resources are retrieved.
 
 The result is a simple app where you can enter the ID of a Twitter user and view their latest tweets and followers.
 

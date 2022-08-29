@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### August 27th, 2022
+
+#### Improvements
+
+* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/general/app-store-overview#my-drafts) section of *Marketplace Overview*.
+
 ### August 11th, 2022
 
 #### New Features

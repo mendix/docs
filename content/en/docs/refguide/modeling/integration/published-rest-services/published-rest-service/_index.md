@@ -64,7 +64,7 @@ The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documen
 
 To save a service's [OpenAPI (Swagger) documentation](/refguide/open-api/) somewhere on your machine, simply right-click the service in the **App Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
-When the app is running, this file is available under */rest-doc/rest/servicename/v1/swagger.json*.
+When the app is running, this file is available under */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service, for instance *rest/myservice/v1*.
 
 ## 3 Security
 

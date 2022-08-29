@@ -13,19 +13,30 @@ The [SAML](https://marketplace.mendix.com/link/component/1174/) module can be us
 
 By configuring the information about all identity providers in this module, you will allow the users to sign in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
 
+{{% alert color="info" %}}
+Mendix also offers an [OIDC SSO](/appstore/modules/oidc/) module if you want to authenticate your end-users using the OAuth/OpenID Connect protocol.
+{{% /alert %}}
+
 ### 1.1 Typical Use Cases
 
-With this module, you can authenticate against your Microsoft Active Directory server in a secure manner, utilizing the SAML capabilities of Active Directory Federation Services (ADFS). The SAML protocol allows for the encryption of all the information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed.
+Examples of the use of the SAML module include the following:
 
-You can also use the SAML module if you want to your Mendix App to have SSO with a Shibboleth identity Provider.
+* authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all the information transferred between the two servers, so VPN connections, LDAP, or Kerberos authentication are no longer needed
+* implementing SSO in your Mendix App through a Shibboleth identity Provider
+* identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services
+    {{% alert color="info" %}}Some of these identity schemes use optional features of SAML which are not yet supported in the SAML SSO module — see [Limitations](#limitations) for more information{{% /alert %}}
+* authenticating within a Mendix session — for example requiring end-users to re-authenticate shortly before they are allowed to do critical transaction in your app or having a second user authenticate within the context of the first user’s session in your Mendix app
 
 ### 1.2 Features
+
+#### 1.2.1 SAML Protocol Adherence
 
 The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf) profiles for your Mendix app acting as a Service Provider (SP):
 
 * Web browser SSO profile using one of the following bindings
     * HTTP redirect, 
     * HTTP POST bindings
+    * Artifact binding for SAML responses
 * Single Logout profile
 
 The Mendix SAML SSO supports usage of SAML metadata in the following way:
@@ -40,22 +51,37 @@ For encryption of SAML messages the following options are supported:
 * 1024 or 2048 bit encryption
 * SHA1 or  SHA256 algorithms
 
-Logging / audit trail
+For easy configurability, the SAML module offers the following:
 
-* The SAML module keeps a log of login attempts. These can be downloaded.
+* a SAML administration screen that allows you to configure one or multiple SAML IdP’s. IdP discovery is supported by an endpoint that returns all configured IdP’s.
+* various options as per the SAML 2.0 specification and as indicated on this page.
 
-Configurability:
+#### 1.2.2 Other Features
 
-* The solution features a SAML administration screen that allows you to configure one or multiple SAML IdP’s. IdP discovery is supported by an endpoint that returns all configured IdP’s.
-* Various options as per  SAML 2.0 specification and as indicated on this page.
+The SAML module keeps a log/audit trail of login attempts. These can be downloaded.
 
-### 1.3 Limitations
+### 1.3 Limitations{#limitations}
 
 The Mendix SAML SSO module does not support the following:
 
 * SAML1.0
 * Enhanced Client/Proxy SSO profile
-* HTTP artifact binding
+* HTTP artifact binding for SAML requests
+
+Some SAML services, such as eHerkenning and DigID in the Netherlands, use optional features of SAML which are not yet supported by the Mendix SAML SSO module. These include:
+
+* Signature included as a query string parameter in URL (for HTTP-REDIRECT)
+* Signed metadata
+* AttributeConsumingService in Metadata
+* AttributeConsumingServiceIndex in AuthnRequest
+* restriction of RelayState to 80 characters (i.e. SAML SSO may generate RelayState values that exceed 80 characters)
+* ForceAuthn
+* ProviderName
+* Scoping
+* RequestedAuthnContext in the SAML requests
+* HTTP-SOAP Logout Request
+
+If you need any of these features, contact your Mendix CSM to discuss inclusion of these features on the Mendix roadmap or customization of the SAML SSO module.
 
 ### 1.4 Dependencies{#dependencies}
 
@@ -222,7 +248,57 @@ This file contains the documented properties, and example lines show the default
 
 With these settings, you can configure the behavior of this module and improve multi-tenant behavior of your application. For plain SAML authentication, it is best to leave this file unchanged. 
 
-### 4.2 Multi-tier Delegated Authentication{#delegated-auth}
+### 4.2 In-session Authentication
+
+{{% alert color="info" %}}
+In-session authentication at the SAML IDP is only available in the following versions of the module (depending on which Mendix version you are using)
+
+* v3.3.0/v3.3.1 and above for Mendix version 9
+* v2.3.0 and above for Mendix version 8
+{{% /alert %}}
+
+In-session authentication is a process that takes place within a session that was initiated by a (primary) end-user that signed in to your app. You can do this in two ways:
+
+* require the primary end-user to re-authenticate shortly before they are allowed to do a critical transaction in your app
+* have a second end-user add their authentication (for example, for electronic signing) but leave the primary end-user associated with the overall session
+
+This flow can be initiated by using the URL `https://{app-url}/sso/login?action=verify`
+
+To enable in-session authentication, you need to use the `OpenConfiguration` microflow to configure two microflows in the SAML SSO module:
+
+* set **Custom Prepare In-Session Authentication microflow** to `CustomPrepareInSessionAuthentication`
+* set **Custom Evaluate In-Session Authentication microflow** to `CustomEvaluateInSessionAuthentication`
+
+The `CustomPrepareInSessionAuthentication` microflow sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app.
+
+{{% todo %}}More information is required here - see original Paper document{{% /todo %}}
+
+The `CustomEvaluateInSessionAuthentication` microflow implements the logic that handles the authentication details of the in-session authentication. This microflow will be customized for each app. The SAML SSO module comes with a ‘default’ EvaluateInSessionAuthentication flow that ….(bla bla).
+
+### 4.3 Requesting user attributes at the SAML IDP
+
+{{% alert color="info" %}}
+Requesting user attributes at the SAML IDP is only available in the following versions of the module (depending on which Mendix version you are using)
+
+* v3.3.0/v3.3.1 and above for Mendix version 9
+* v2.3.0 and above for Mendix version 8
+{{% /alert %}}
+
+Your app using the SAML protocol can request specific attributes from the SAML IDP, such as Date of Birth or Gender. You need to clarify with your SAML IDP what attributes can be requested. You may want to request a different set of attributes during in-session login versus regular initial login. In the request you can also indicate whether you consider the attribute as mandatory or optional for your app’s logic.
+
+You can configure these attribute requests in the **Attribute Consuming Service** tab of the `OpenConfiguration` microflow.
+
+You can set up two sets of attributes, provided at different times. Those listed under 
+
+### 4.4 Configuration of SAML binding
+
+| The possibility to use artifact binding for SAML responses at the SAML IDP is only available in the following versions of the module (depending on which Mendix version you are using)<br><br>- v3.3.0/v3.3.1 and above for Mendix version 9<br>- v2.3.0 and above for Mendix version 8 |
+
+By default, the SAML SSO module uses XXX binding for the SAML response.
+To use the artifact binding, the following configuration needs to be done: XXX, YYY, ZZZ.
+The configured binding will be included in the SP metadata, as indicated in section +SAML SSO - WIP product documentation: 6-URLs 
+
+### 4.5 Multi-tier Delegated Authentication{#delegated-auth}
 
 {{% alert color="warning" %}}
 This feature is deprecated. The complexity of the necessary configurations doesn’t correspond with Mendix's ambition to provide an easy ‘low code experience’ and Mendix cannot provide support for it.

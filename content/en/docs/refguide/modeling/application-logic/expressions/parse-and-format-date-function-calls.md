@@ -49,16 +49,16 @@ The examples below illustrate which value the expression returns:
 * If you use the following input:
 
     ```java {linenos=false}
-    parseDateTime(2022-04-30T22:00:00.000, 'yyyy-MM-dd''T''HH:mm:ss.SSS')
+    parseDateTime('2022-04-30T22:00:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')
     ```
 
     the output is:
 
     ```java {linenos=false}
-    A DateTime-object with the value date being 30 april 2022, time being 22:00:00. 
+    Apr 30 2022 22:00:00
     ```
 
-    The time will be 00:00 if it is not specified.
+    The time will be 00:00, if it is not specified.
     
 * If you use the following input:
 

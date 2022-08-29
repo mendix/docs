@@ -11,7 +11,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ## 2022
 
-### Release 1.0.122
+### Release 1.0.123
 
 **Release date: August 29th, 2022**
 

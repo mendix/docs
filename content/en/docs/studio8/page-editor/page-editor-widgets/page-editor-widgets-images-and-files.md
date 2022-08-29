@@ -8,7 +8,7 @@ tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "fi
 
 ## 1 Introduction 
 
-**Images & Files** are widgets that allow end-users to view, download, and upload images or files. For example, with an image uploader end-users will be able to upload a profile image:
+**Images and Files** are widgets that allow end-users to view, download, and upload images or files. For example, with an image uploader end-users will be able to upload a profile image:
 
 {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/image-uploader-example.png"   width="350"  >}}
 

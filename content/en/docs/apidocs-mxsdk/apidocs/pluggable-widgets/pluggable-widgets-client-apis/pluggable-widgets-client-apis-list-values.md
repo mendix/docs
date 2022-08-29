@@ -269,7 +269,7 @@ if (this.props.myAssociationReference.filterable) {
 }
 ```
 
-Similarly, code like this can apply a condition to match only the objects that are associated with at least the first two objects from the selectable object's data source:
+Similarly, code like this can apply a condition to match only the objects that are associated with at least the first two objects from the selectable objects' data source:
 
 ```ts
 import { association, literal, notEquals, contains } from "mendix/filters/builders";
@@ -485,7 +485,7 @@ if (this.props.myAttributeOnDatasource.type === "String") {
 
 The `formatter` field represents the default formatter used on values obtained by the `get` function.
 
-The optional `universe` field represents an attribute's possible array values. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value).
+The optional `universe` field represents an array of possible values for an attribute. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value).
 
 ### 3.3 ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
 
@@ -506,7 +506,7 @@ export interface ListAssociationValue<T extends ObjectItem | ObjectItem[]> {
 
 #### 3.3.1 Obtaining Association Values
 
-In order to work with an object or objects with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. 
+In order to work with an object or objects that are associated with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. 
 
 If the association property has been configured to allow both types of associations, the type of the property is defined as `ListReferenceValue | ListReferenceSetValue` and a check on its `type` should be done to narrow down the type. For more information, see the [Association Type](#association-type) section.
 

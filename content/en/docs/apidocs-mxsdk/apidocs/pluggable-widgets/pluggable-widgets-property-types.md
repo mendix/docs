@@ -518,15 +518,15 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.5 Association {#association}
 
+{{% alert color="info" %}}
+This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
+{{% /alert %}}
+
 The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
 
 If a `dataSource` attribute is not specified the client will receive a `ReferenceValue` for references (singular references), possibly a `ReferenceSetValue` for reference sets (multiple references), or a union of them (if the widget is configured to allow both). For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListReferenceValue` or `ListReferenceSetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listassociationvalue) depending on the configuration of the property. For more information, see the [Datasource](#datasource) section below.
-
-{{% alert color="info" %}}
-This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
-{{% /alert %}}
 
 {{% alert color="info" %}}
 The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
@@ -652,7 +652,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.8 Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate), and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
 
 {{% alert color="info" %}}
 The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).

@@ -158,7 +158,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 * **Tablet web offline**
 * **Phone web**
 * **Phone web offline**
-* **Native mobile (tablet & phone)**
+* **Native mobile (tablet and phone)**
 
 {{< figure src="/attachments/howto/front-end/layouts-and-snippets/device-profiles.png" >}}
 

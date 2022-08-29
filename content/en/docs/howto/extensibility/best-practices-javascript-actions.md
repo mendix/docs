@@ -255,7 +255,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 
 #### 2.2.7 Understanding Hybrid App External Dependencies
 
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base & Template* release notes.
+The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
 
 It is also possible to add new plugins during a mobile build.
 

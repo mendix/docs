@@ -269,7 +269,7 @@ if (this.props.myAssociationReference.filterable) {
 }
 ```
 
-Similarly, code like this can apply a condition to match only the objects that are associated with at least the first two objects from the selectable objects' data source:
+Similarly, code like this can apply a condition to match only the objects that are associated with at least the first two objects from the selectable objects data source:
 
 ```ts
 import { association, literal, notEquals, contains } from "mendix/filters/builders";
@@ -527,7 +527,7 @@ The following code example shows how to get a `DynamicValue<ObjectItem>` that re
 const associationValue = this.props.myAssociationOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
-This will return an `ObjectItem` representing the associated object, because in this example the widget is configured to allow only singular associations. If you want to access the individual attribute values of this associated object, you may use an attribute property linked to the selectable objects' data source and pass the associated object to it. For more information, see [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value).
+This will return an `ObjectItem` representing the associated object, because in this example the widget is configured to allow only singular associations. If you want to access the individual attribute values of this associated object, you may use an attribute property linked to the selectable objects data source and pass the associated object to it. For more information, see [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value).
 
 Please note these code samples omit checks of `myDataSource` status and availability of items for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) for more information on the usages of `DynamicValue`.
 

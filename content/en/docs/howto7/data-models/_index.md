@@ -1,6 +1,7 @@
 ---
 title: "Data Models"
 url: /howto7/data-models/
+hide_feedback: true
 weight: 30
 ---
 

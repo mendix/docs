@@ -5,6 +5,7 @@ description: "The day-to-day operation of an app from the the Developer Portal. 
 weight: 15
 no_list: false 
 description_list: true
+hide_feedback: true
 tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud", "v3", "v4"]
 ---
 

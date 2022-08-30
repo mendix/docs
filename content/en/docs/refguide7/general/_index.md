@@ -2,6 +2,7 @@
 title: "General"
 url: /refguide7/general/
 weight: 10
+hide_feedback: true
 ---
 
 ## 1 Introduction

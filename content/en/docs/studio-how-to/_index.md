@@ -3,6 +3,7 @@ title: "Studio 9 How-tos"
 url: /studio-how-to/
 tags: ["studio", "how to"]
 weight: 25
+hide_feedback: true
 cascade:
     - space: "Studio 9 How-tos"
     - mendix_version: "9"

@@ -2,6 +2,7 @@
 title: "Extensibility"
 url: /howto7/extensibility/
 description: "A selection of how-tos that explain how to use connectors and adapters from the Marketplace."
+hide_feedback: true
 weight: 80
 tags: ["widget", "marketplace", "connectors", "adapters", "charts"]
 ---

@@ -2,6 +2,7 @@
 title: "Collaboration"
 url: /howto8/collaboration-requirements-management/
 weight: 20
+hide_feedback: true
 tags: ["collaboration", "requirements", "management"]
 ---
 

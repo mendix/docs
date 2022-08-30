@@ -5,6 +5,7 @@ description: "Describes the various features used for modeling in Mendix Studio 
 weight: 20
 no_list: false
 description_list: true
+hide_feedback: true
 tags: ["Mendix", "Studio Pro", "Documents"]
 aliases:
     - /refguide/desktop-modeler.html

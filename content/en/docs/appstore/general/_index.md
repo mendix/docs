@@ -5,6 +5,7 @@ description: "Presents details on using, sharing, and getting support on Mendix 
 weight: 10
 no_list: false
 description_list: true
+hide_feedback: true
 tags: ["marketplace", "marketplace component", "marketplace content", "share"]
 aliases:
     - /community/app-store/index.html

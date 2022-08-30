@@ -2,6 +2,7 @@
 title: "Application Logic"
 url: /refguide7/application-logic/
 category: "Desktop Modeler"
+hide_feedback: true
 description: "Presents an overview of documentation on microflows and nanoflows."
 ---
 

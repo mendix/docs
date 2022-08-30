@@ -5,6 +5,7 @@ description: "Presents documentation on configuring and using the latest version
 weight: 35
 no_list: false 
 description_list: true 
+hide_feedback: true
 cascade:
     - space: "Marketplace Guide"
     - mendix_version: ""

@@ -2,6 +2,7 @@
 title: "Logic & Business Rules"
 url: /howto7/logic-business-rules/
 weight: 40
+hide_feedback: true
 ---
 
 ## 1 Introduction 

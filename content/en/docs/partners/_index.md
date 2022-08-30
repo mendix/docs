@@ -5,6 +5,7 @@ description: "Documentation for IBM, SAP, and Siemens widgets written and mainta
 weight: 45
 no_list: false
 description_list: true
+hide_feedback: true
 cascade:
     - space: "Strategic Partners Guide"
     - mendix_version: ""

@@ -6,6 +6,7 @@ description: "Step-by-step guides on various Mendix topics that will teach you h
 weight: 85
 no_list: false
 description_list: true
+hide_feedback: true
 cascade:
     - space: "Mendix 7 How-tos"
     - mendix_version: "7"

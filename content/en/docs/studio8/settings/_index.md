@@ -3,6 +3,7 @@ title: "Settings"
 url: /studio8/settings/
 description: "Describes the Settings menu in Mendix Studio."
 weight: 90
+hide_feedback: true
 tags: ["studio", "settings", "widgets"]
 ---
 

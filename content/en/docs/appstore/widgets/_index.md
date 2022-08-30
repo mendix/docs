@@ -5,6 +5,7 @@ description: "Presents details on the widgets available in the Mendix Marketplac
 weight: 60
 no_list: false
 description_list: true
+hide_feedback: true
 tags: ["marketplace", "marketplace component", "module", "platform support"]
 ---
 

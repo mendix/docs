@@ -6,6 +6,7 @@ description: "The various sections of the reference guide provide details on the
 weight: 80
 no_list: false
 description_list: true
+hide_feedback: true
 cascade:
     - space: "Mendix 7 Reference Guide"
     - mendix_version: "7"

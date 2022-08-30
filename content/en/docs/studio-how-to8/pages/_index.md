@@ -3,6 +3,7 @@ title: "Pages"
 url: /studio-how-to8/pages/
 description: "A landing page for Studio how-to's on pages."
 weight: 10
+hide_feedback: true
 tags: ["studio", "pages", "how-to"]
 ---
 

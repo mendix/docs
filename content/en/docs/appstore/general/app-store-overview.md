@@ -162,14 +162,6 @@ You may see the **Company only** label on a component, which means it is your co
 
 In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as group [group content](#group-content).
 
-At the top of the page, you can click **Open Drafts** to see drafts of all the Marketplace content you have started:
-
-{{< figure src="/attachments/appstore/general/app-store-overview/drafts.png" >}}
-
-On this page, click the name of a Marketplace component to go to its [draft page](/appstore/general/share-app-store-content/#adding), where you can continue editing the component details.
-
-Click **Delete** to delete a draft. You can also click **Withdraw** to withdraw the content from the review process after you have [submitted it for approval](/appstore/general/share-app-store-content/#approval), which will return the content to the draft state.
-
 ### 4.3 My Subscriptions {#my-subscriptions}
 
 You can see all the Marketplace app services you have trials for on this page:

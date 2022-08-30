@@ -10,7 +10,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "conn
 
 Features released in Studio Pro [9.17](/releasenotes/studiopro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide/external-entities/) and the [Data Hub Catalog](/data-hub/data-hub-catalog/)). 
 
-You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), so the new features are collectively referred to as *Connector Kit 2.0*.
+You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), and are collectively referred to as *Connector Kit 2.0*.
 
 In this guide, you will learn about the following:
 
@@ -60,7 +60,7 @@ When a consuming app reads your published OData service, it sends a GET request.
 
 The resulting list of objects from either will then be transformed into an OData payload. If it fails, you will see a [status code](/refguide/published-odata-services/#status-codes) of `500`.
 
-### 4.1 Handle a GET Request with a Microflow {#handle-get-request}
+### 4.1 Handling a GET Request with a Microflow {#handle-get-request}
 
 {{% alert color="info" %}}
 This feature is only available for published OData services that use OData v4.
@@ -185,7 +185,7 @@ Set up a connector module that communicates to the Twitter API with OData by fol
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/query-followers-microflow.png" alt="Microflow for querying followers." >}}
 6.  Export the metadata file of the published OData service to be used in the client module. To do so, open the service and go to **Settings**, and click **Export** next to the **Metadata** field.
 
-Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Data Hub Catalog or the Data Hub pane. See [Data Hub without the Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with Data Hub (external entities and the Catalog) for local deployments.
+    Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Data Hub Catalog or the Data Hub pane. See [Data Hub without the Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with Data Hub (external entities and the Catalog) for local deployments.
 
 #### 7.1.3 Building the Client
 
@@ -193,7 +193,8 @@ Set up a Twitter client module that allows users to input a Twitter ID and commu
 
 1.  Create a consumed OData service in the client module, and import the XML file you exported in the [building the connector](#twitter-connector) section.
 2.  Drag the external **Users**, **Tweets**, and **Followers** entities into your client domain model.
-3.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data, handled by a **NewTwitterInput** microflow.</br> Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this: 
+3.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data, handled by a **NewTwitterInput** microflow.</br> 
+    Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this: 
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." >}}
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/newtwitterinput-microflow.png" alt="Microflow that handles inputted usernames." >}}
 4.  Add a new page to display the data, and create a ShowUserPage microflow. </br> 
@@ -214,9 +215,7 @@ Ensure that you have created microflows for all entities used in your connector.
 
 ## 7.2 Updatable Operational Data Stores {#operational-data-stores}
 
-Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/howto/data-models/create-a-basic-data-layer/) for other Mendix apps.
-
-For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, you have a productive and easy to consume way to provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
+Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/howto/data-models/create-a-basic-data-layer/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
 
 Operational data stores are often used to unify and cache external data used by multiple apps. Reasons for this include the following:
 
@@ -230,4 +229,4 @@ To implement a low-code operational data store, follow these general steps:
 2.  Cache data in a persistable entity. When you call the OData source, it will any updates since it was last called, and will retrieve older records from a local database.
 3.  Expose the unified model with OData, including write-back logic in your microflows.
 
-For general information on building connectors, see the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.
+A detailed guide to building operational data stores is forthcoming. For general information on building connectors, see the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.

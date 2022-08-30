@@ -223,10 +223,10 @@ Operational data stores are often used to unify and cache external data used by 
 * You want to centrally manage security on the data, instead of handling this in every frontend app.
 * You want to simplify the data model by unifying data from different services.
 
-To implement a low-code operational data store, follow these general steps:
+To implement a low-code operational data store, include these steps:
 
-1.  Define a unified model using persistable entities.
-2.  Cache data in a persistable entity. When you call the OData source, it will any updates since it was last called, and will retrieve older records from a local database.
-3.  Expose the unified model with OData, including write-back logic in your microflows.
+* Define a unified model using persistable entities.
+* Cache data in a persistable entity. When you call the OData source, it will any updates since it was last called, and will retrieve older records from a local database.
+* Expose the unified model with OData, including write-back logic in your microflows.
 
-A detailed guide to building operational data stores is forthcoming. For general information on building connectors, see the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.
+For general information on building connectors, see the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.

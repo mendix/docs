@@ -555,9 +555,19 @@ However, the maximum length for the service name is 50 characters. If this limit
 
 ### 7.4 Runtime Tab{#runtime-tab}
 
-Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
+In the **Runtime** tab, you can **Add**, **Edit**, or **Delete** custom runtime settings and environment variables.
 
-#### 7.4.1 Supported Environment Variables
+{{% alert color="info" %}}
+New values will only be applied when you restart your app. The value which is currently applied is shown under **CURRENT VALUE**.
+{{% /alert %}}
+
+#### 7.4.1 Custom Runtime Settings
+
+You can add custom server settings which configure Mendix Runtime beyond the standard SAP deployment. See [Runtime Customization](/refguide/custom-settings/) for information about the settings which are available.
+
+#### 7.4.2 Custom Environment Variables
+
+##### 7.4.2.1 Supported Environment Variables
 
 You can choose to add supported variables by selecting them from a drop-down list.
 
@@ -569,7 +579,7 @@ You can choose to add supported variables by selecting them from a drop-down lis
 
 The variables beginning **DT_** set up Dynatrace. Setting these variables means that the Dynatrace OneAgent is loaded into your environment. You will then receive all J2EE-related metrics from your app. See [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/) for more information.
 
-#### 7.4.2 Unsupported Environment Variables
+##### 7.4.2.2 Unsupported Environment Variables
 
 You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 

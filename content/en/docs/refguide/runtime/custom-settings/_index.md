@@ -20,7 +20,7 @@ Each custom setting consists of a name and a value. For example, to set the hash
 
 If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
 
-If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable.
+If you are running on SAP Cloud, you can add custom settings to an environment using the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) in the Developer Portal.
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide/configuration/#custom).
 

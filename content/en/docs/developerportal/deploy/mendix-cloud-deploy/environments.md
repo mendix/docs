@@ -59,7 +59,36 @@ You can perform the following actions in this section:
 
 In the **Environments** section, you have an overview of all the available environments. The contents of this section are different based on whether your node supports flexible environments.
 
-### 2.2.1 With Flexible Environments
+#### 2.2.1 Standard Environments
+
+For standard environments, your node has the following set of environments: production, acceptance, and optionally also test.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section for standard environments" >}}
+
+The **Environments** section shows the following details:
+
+* Environment name – for example, Acceptance
+* Environment status – indicated by the color of the check mark next to the environment name:
+    * Green – there are no alerts
+    * Orange – there is at least one warning alert, but no critical alerts
+    * Red – there is at least one critical alert
+    
+    The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
+    
+* Deployment package name – for example, Main line-1.0.0.18.mda
+* Deployment package version – for example, 1.0.0.18
+* **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
+* The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
+
+You can perform the following actions in this section:
+
+* **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
+* **Transport to** – stage an environment to acceptance or production
+* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
+
+#### 2.2.2 Flexible Environments
 
 If your node supports flexible environments, you can define the number and type of environments that you have. For example, you can have multiple staging environments if your deployment process requires it.
 
@@ -93,35 +122,6 @@ You can perform the following actions in this section:
 * Reordering environments - the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can reorder the environments by dragging them in the list, for example, to group environments of the same type together:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.gif" alt="Reordering environments in a list" >}}
-
-### 2.2.2 Without Flexible Environments
-
-If your node does not support flexible environments, your node has the standard set of environments: production, acceptance, and optionally also test.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section without flexible environments" >}}
-
-Without flexible environments, the **Environments** section shows the following details:
-
-* Environment name – for example, Acceptance
-* Environment status – indicated by the color of the check mark next to the environment name:
-    * Green – there are no alerts
-    * Orange – there is at least one warning alert, but no critical alerts
-    * Red – there is at least one critical alert
-    
-    The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
-    
-* Deployment package name – for example, Main line-1.0.0.18.mda
-* Deployment package version – for example, 1.0.0.18
-* **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
-* The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
-
-You can perform the following actions in this section:
-
-* **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
-* **Transport to** – stage an environment to acceptance or production
-* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
 
 ### 2.3 Activity
 

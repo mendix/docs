@@ -107,7 +107,7 @@ The steps in ATS:
 
 The search context action:
 
-{{< figure src="/attachments/addons/ats-addon/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-searchcontext-action.png" >}}
+{{< figure src="/attachments/addons/ats-addon/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-action.png" >}}
 
 ### 4.3 Summary
 

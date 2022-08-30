@@ -17,7 +17,7 @@ The **Environments** page has the following tabs:
     * Deployment Package Repository
     * Environments 
     * Activity
-* **Custom Domain**
+* **Custom Domains**
     * Certificates
     * Linked Custom Domains
 * **Access Restriction Profiles**
@@ -26,6 +26,8 @@ The **Environments** page has the following tabs:
 * **Permissions**
     * [Node Permissions](/developerportal/deploy/node-permissions/)
 * **Services**
+    * Services
+    * Activity
     
 ## 2 Deploy
 
@@ -35,61 +37,91 @@ In the **Deploy** tab, you can view information about your environment, as well 
 
 In the **Deployment Package Repository** section, you have an overview of all the available deployment packages with the following details:
 
-* Deployment package
+* Deployment package name
 * Version of the deployment package
 * Creation date of the deployment package
 * Uploaded by
-* Expire date of the deployment package
+* Expiry date of the deployment package
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" alt="The Deployment Package Repository section" >}}
 
 You can perform the following actions in this section:
 
-* **Create a Package from Team Server** - select a branch to build the revision that it contains
-* **Upload** - upload an *.mda* package file from your local device
+* **Create a Package from Team Server** – select a branch to build the revision that it contains
+* **Upload** – upload a deployment package from your local device
 * **Details**:
-    * View the package size, description, build output, and an overview of the environments that are currently running on this package
-    * Download the package
-    * Delete the package
-* **Deploy** - transport the package from the Team Server to the selected environment
+    * View the package size, description, build output, and an overview of the environments that are currently running this package
+    * **Download** the package
+    * **Delete package**
+* **Deploy** – transport the package from Team Server to the selected environment
 
 ### 2.2 Environments
 
-In the **Environments** section, you have an overview of all the available environments with the following details:
+In the **Environments** section, you have an overview of all the available environments. The contents of this section are different based on whether your node supports flexible environments.
 
-* Environment name - for example, *Acceptance*
-* **Prod** - if your node supports flexible environments, this indicates whether the environment is a production environment; this is set when the environment is first created
+### 2.2.1 With Flexible Environments
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
+If your node supports flexible environments, you can define the number and type of environments that you have. For example, you can have multiple staging environments if your deployment process requires it.
 
-* Environment status - indicated by the color of the checkmark by the environment name:
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
+
+For flexible environments, the **Environments** section shows the following details:
+
+* Environment name – for example, Acceptance
+* **Prod** – this indicates whether the environment is a production environment; this is set when the environment is first created
+* Environment status – indicated by the color of the check mark next to the environment name:
     * Green – there are no alerts
     * Orange – there is at least one warning alert, but no critical alerts
     * Red – there is at least one critical alert
     
     The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
     
-* Deployment package name - for example, *Main line-1.0.0.18.mda*
-* Deployment package version - for example, *1.0.0.18*
-* **Runtime** - the Mendix Studio Pro version on which the app is built, for example, *9.5.0*
-* **Plan** - if your node supports flexible environments, this indicates the plan for this environment; for more information, see [Details](/developerportal/deploy/environments-details/)
-* The **URL** of the app - for example, `https://mytestapp.mendixcloud.com`
+* Deployment package name – for example, Main line-1.0.0.18.mda
+* Deployment package version – for example, 1.0.0.18
+* **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
+* **Plan** – this indicates the plan for this environment; for more information, see [Details](/developerportal/deploy/environments-details/)
+* The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
 
 You can perform the following actions in this section:
 
-* **Details** - for more information, see [Details](/developerportal/deploy/environments-details/)
-* **Transport to** – stage an environment to acceptance or production; this action is not available for flexible environments, where instead of staging an app, you deploy it directly to the target environment
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section without flexible environments" >}}
-
-* **Setup Studios Deployment** - the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
+* **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
+* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
 
-* **Search** - if your node supports flexible environments, you can use the **Search** box to find a specific environment
-* Reordering environments - if your node supports flexible environments, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can reorder the environments by dragging them in the list, for example, to group environments of the same type together:
+* **Search** – you can use the **Search** box to find a specific environment
+* Reordering environments - the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can reorder the environments by dragging them in the list, for example, to group environments of the same type together:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.gif" alt="Reordering environments in a list" >}}
+
+### 2.2.2 Without Flexible Environments
+
+If your node does not support flexible environments, your node has the standard set of environments: production, acceptance, and optionally also test.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section without flexible environments" >}}
+
+Without flexible environments, the **Environments** section shows the following details:
+
+* Environment name – for example, Acceptance
+* Environment status – indicated by the color of the check mark next to the environment name:
+    * Green – there are no alerts
+    * Orange – there is at least one warning alert, but no critical alerts
+    * Red – there is at least one critical alert
+    
+    The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
+    
+* Deployment package name – for example, Main line-1.0.0.18.mda
+* Deployment package version – for example, 1.0.0.18
+* **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
+* The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
+
+You can perform the following actions in this section:
+
+* **Details** – for more information, see [Details](/developerportal/deploy/environments-details/)
+* **Transport to** – stage an environment to acceptance or production
+* **Setup Studios Deployment** – the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio and Studio Pro; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/setup-studios-target.png" alt="The Environments section with the Setup Studios Deployment button visible" >}}
 
 ### 2.3 Activity
 
@@ -107,14 +139,12 @@ If you are the [Technical Contact](/developerportal/collaborate/app-roles/#techn
 3. Click **Download**.
 
 {{% alert color="info" %}}
-Operations carried out by the Mendix Operations Desk are not currently logged in the activity log.
-
-These are activities which are performed on a customer's behalf only with written approval through a Mendix Support ticket. 
+Operations performed on a customer's behalf through an authorized Mendix support ticket are not currently logged in the activity log.
 {{% /alert %}}
 
 ## 3 Custom Domain
 
-In the **Custom Domain** tab, you can manage your custom domain certificates on an application level, as well as see an overview of linked custom domains.
+In the **Custom Domain** tab, you can manage your custom domain certificates at the application level, as well as see an overview of linked custom domains.
 
 When your Mendix app needs to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain, so that we can make your Mendix app accessible via a secure connection. For more information, see [Custom Domains](/developerportal/deploy/custom-domains/).
 

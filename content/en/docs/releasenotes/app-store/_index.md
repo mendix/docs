@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### August 27th, 2022
+
+#### Improvements
+
+* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/general/app-store-overview/#my-drafts) section of *Marketplace Overview*.
+
 ### August 11th, 2022
 
 #### New Features
@@ -75,9 +81,9 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](https://docs.mendix.com/appstore/general/app-store-overview#types), and Studio Pro **Compatibility**. 
+* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/general/app-store-overview/#types), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
-* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview/#company-subscriptions) experience using credit card for two app services in supported regions.
+* We have listed 10+ **Premium** [app services](/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview/#company-subscriptions) experience using credit card for two app services in supported regions.
 
 ### August 12th, 2021
 
@@ -236,7 +242,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 You can now create [user groups](/appstore/general/app-store-overview/#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/general/app-store-overview/#guests) users to these groups and allow them to download selected private company content.
 
-The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/appstore/general/app-store-overview#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview/#guests).
+The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members](/appstore/general/app-store-overview/#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview/#guests).
 
 Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview/#group-content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 

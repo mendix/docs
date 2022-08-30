@@ -408,7 +408,7 @@ The following discoverability values can be set:
 
 #### 3.6.5 Validated
 
-This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below.
+This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below. See the [Validated](/data-hub/data-hub-catalog/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
 
 #### 3.6.6 Application
 
@@ -428,7 +428,7 @@ The **Curation Bar** is displayed in the asset detail screen if you are the owne
 
 * For the selected data source, you can edit [Application Details](/data-hub/data-hub-catalog/curate/#curate-application) and [Data Source Details](/data-hub/data-hub-catalog/curate/#service-details)
 
-For further details, see [Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
+For further details, see the [Discoverable and Validated](/data-hub/data-hub-catalog/curate/#discoverability) section of *Curate Registered Assets*.
 
 ### 3.8 Data Source and Dataset URIs
 

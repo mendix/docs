@@ -81,7 +81,7 @@ Click **More** to access the following options:
 * **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
 
-#### 2.4.1 Importing & Exporting to Excel {#import-export}
+#### 2.4.1 Importing and Exporting to Excel {#import-export}
 
 After you click **Import / Export**, you will be asked what you want to do:
 

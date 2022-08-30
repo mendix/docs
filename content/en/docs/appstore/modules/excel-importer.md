@@ -54,7 +54,7 @@ The Excel Importer module has many different properties. The sections below pres
 
 These properties control the global behavior of the import.
 
-#### 4.1.1 Autonumber, Name  & Description
+#### 4.1.1 Autonumber, Name  and Description
 
 These fields are intended to make it easier for you to see what the import does. There are no special restrictions or validations for these fields.
 
@@ -103,7 +103,7 @@ The following options are available:
 * **Document property – row number** –  uses the row number (this value is set in each instance that is created)
 * **Document property – sheet number** – uses the sheet number (this value is set in each instance that is created)
 
-#### 4.2.2 Number & Caption
+#### 4.2.2 Number and Caption
 
 These fields show what Excel column the mapping is for. The number corresponds to an Excel column and starts at 0. You can use the caption to describe what the column contains. This caption does not need to correspond to the header in the sheet.
 
@@ -140,7 +140,7 @@ This field is the name of the attribute to which you map the column.
 
 This field has quicksearch functionality. Type in the box to the left of the reference selector and press <kbd>Tab</kbd> to search for the value you typed.
 
-#### 4.2.8 Reference & Object Type
+#### 4.2.8 Reference and Object Type
 
 These fields are used to configure referenced objects. You can specify what reference should be followed and what type of object is used. 
 
@@ -180,7 +180,7 @@ Even if there are not any changes to the object, this property still commits the
 
 The following settings control the behavior of the mapping as a whole.
 
-#### 4.4.1 Print Statistics & Not Found Messages
+#### 4.4.1 Print Statistics and Not Found Messages
 
 These control which kinds of messages are printed on the application console.
 

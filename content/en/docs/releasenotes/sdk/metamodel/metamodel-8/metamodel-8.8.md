@@ -44,6 +44,6 @@ weight: 93
 
 * We introduced this ModelUnit.
 
-#### WorkflowActivityOutcome, WorkflowActivity, Flow, StartWorkflowActivity, EndWorkflowActivity & UserTask (Elements)
+#### WorkflowActivityOutcome, WorkflowActivity, Flow, StartWorkflowActivity, EndWorkflowActivity, and UserTask (Elements)
 
 * We introduced these elements.

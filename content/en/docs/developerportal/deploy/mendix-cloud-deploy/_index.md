@@ -168,7 +168,7 @@ The package is deployed to the cloud.
 
 #### 2.2.3 Deploying via Studio
 
-To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
+To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
 
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
@@ -204,7 +204,7 @@ With a Free App, you can deploy your app to the Mendix Cloud from Studio or Stud
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
 
-* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
+* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
 
 ## 3 Status of Deployment
 

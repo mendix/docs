@@ -28,7 +28,7 @@ weight: 92
 
 * We introduced the `numberOfPages` property.
 
-#### WorkflowCallAction, SetWorkflowActivityOutcomeAction & OpenUserTaskAction (Elements)
+#### WorkflowCallAction, SetWorkflowActivityOutcomeAction, and OpenUserTaskAction (Elements)
 
 * We introduced these elements.
 

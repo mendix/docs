@@ -125,7 +125,7 @@ When you click **Details**, you can view the following details:
 Backup Details | Cloud Version | Description
 :---|:---|:---
 **Origin of Environment** | v3 | From which environment this backup was made
-**Status** | v3 & v4 | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
+**Status** | v3 and v4 | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
 **Created by**/ <br /> **Type** | v3 <br /> v4 | The name of the person who created the backup. Automated system backups are named **Nightly**
 **ID**/ <br /> **Snapshot id** | v3 <br /> v4 | Unique identifier for the backup *snapshot*
 **Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup

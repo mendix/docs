@@ -34,7 +34,7 @@ You cannot preview your app if it has [consistency errors](/studio7/consistency-
 
 Previewing your app does not change the published app. Also, the preview environment has a separate database from the published app, that means you can create your own test data without polluting the data in the published application.
 
-If your app has security enabled, in the preview mode you will be able to check how your app looks like for different user roles. For more information on how to test different user roles, see the [Testing Your Roles](/studio7/settings-security/#testing-your-roles) section in *Security, Roles & Permissions*. 
+If your app has security enabled, in the preview mode you will be able to check how your app looks like for different user roles. For more information on how to test different user roles, see the [Testing Your Roles](/studio7/settings-security/#testing-your-roles) section in *Security, Roles and Permissions*. 
 
 {{% alert color="info" %}}
 The app preview is your personal preview of the app. Hence, only users logged into Studio can preview the app, and the preview app will no longer be running when you exit Studio.

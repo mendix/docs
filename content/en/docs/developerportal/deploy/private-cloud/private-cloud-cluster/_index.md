@@ -39,7 +39,7 @@ Should you consider using a connected environment, the following URLs should be 
 | `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
 | `https://subscription-api.mendix.com` | Service to verify call-home licence |
 
-## 3 Creating a Cluster & Namespace
+## 3 Creating a Cluster and Namespace
 
 ### 3.1 Creating a Cluster{#create-cluster}
 
@@ -635,9 +635,20 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 
 **S3 (existing bucket and account)** will connect to an existing S3 bucket with the provided IAM user access key and secret keys. All apps (environments) will use the same S3 bucket and an IAM user account. You will need to provide all the information relating to your Amazon S3 storage such as plan name, endpoint, access key, and secret key.
 
-To keep data from different apps separate, Mendix for Private Cloud will generate a unique bucket prefix for each environment.
+If the Autogenerate Prefix option is selected, Mendix for Private Cloud will generate a unique bucket prefix for each environment to keep data from different apps separate.
+
 This prefix is specified in the `<environment name>-file` secret.
-If you would like a new environment to reuse/inherit data from an existing environment, you can edit the `<environment name>-file` secret and specify the old (existing) prefix in the `com.mendix.storage.s3.BucketName` key.
+
+If you want a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix you want to use.
+
+{{% alert color="info" %}}
+To use the Autogenerate Prefix option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Be sure to follow the naming guidelines for prefixes as described in the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
+{{% /alert %}}
+
 
 The associated IAM user account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
 
@@ -804,6 +815,10 @@ For more information about how to use this field, see the [http proxy documentat
 
 {{% alert color="info" %}}
 To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.7.0 or later.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In Operator version 2.7.0 and above, the build pod will trust certificates from the custom TLS trust secret.
 {{% /alert %}}
 
 To use encryption and avoid [MITM attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack), communication with all external services should be done over TLS.
@@ -1437,7 +1452,17 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 5.6 Autoscaling
+### 5.6 Customize Service Account
+
+The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
+
+To achieve this, you need to add the annotation `privatecloud.mendix.com/environment-account: true` (for security reasons, any account matching an environment name but without this annotation cannot be attached to environments).
+
+{{% alert color="info" %}}
+The service account can be customized for Private Cloud Operator version 2.7.0 and above.
+{{% /alert %}}
+
+### 5.7 Autoscaling
 
 Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
 
@@ -1699,7 +1724,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 6.2.2.2 Editing & Removing Members
+##### 6.2.2.2 Editing and Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 

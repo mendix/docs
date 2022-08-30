@@ -200,7 +200,7 @@ While developing, you will probably rely mostly on `npm start`. However, there a
 | lint | Lints all *.js* files. |
 | lint:fix | Lints and fixes all *.ts* files. |
 
-### 8.4 CI & Remote Testing
+### 8.4 CI and Remote Testing
 
 To enable continuous integration services, copy the *node_modules/mendix-widget-build-script/dist/localSettings.js* file to your app root, and update the settings to run the update deployment from the local source. Do not forget to exclude this file in the *.gitignore* file, as it contains sensitive data.
 

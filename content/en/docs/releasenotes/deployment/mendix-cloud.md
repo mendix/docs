@@ -573,7 +573,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 ### July 2nd, 2020
 
-#### Improvements & Fixes
+#### Improvements and Fixes
 
 * We have changed the way that the *unused java heap* metric is calculated to make the data more accurate.
     * This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, & 103225).
@@ -684,7 +684,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 ### November 7th, 2019{#20201107}
 
-#### Improvements & Fixes
+#### Improvements and Fixes
 
 * We have improved the stability and performance of Mendix Cloud Deployment and Operations.
 
@@ -867,7 +867,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements{#tls}
 
-**TLS v1.0 & v1.1 Disabled for Mendix Cloud v4**
+**TLS v1.0 and v1.1 Disabled for Mendix Cloud v4**
 
 * We have implemented a change on our Mendix Cloud v4 infrastructure so that incoming connections that do not support TLS v1.2 or higher will stop working. This effectively means that TLS v1.0 and v1.1 are disabled, and Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html) again.
 

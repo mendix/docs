@@ -39,6 +39,13 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
 
+To run a Mendix App, the following ports, in case of default configuration, need to be open:
+* 8080 (Runtime port)
+* 8083 (Mobile packager)
+* 8090 (Admin port)
+
+For more information on these ports and how to modify the defaults see [App configuration](/configuration/) and [Mobile troubleshooting](/mobile/getting-started-with-mobile/prerequisites/#troubleshooting.
+
 ### 2.2 TortoiseSVN
 
 If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.

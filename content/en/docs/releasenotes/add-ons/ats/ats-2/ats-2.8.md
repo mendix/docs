@@ -1,7 +1,6 @@
 ---
 title: "2.8"
 url: /releasenotes/add-ons/ats-2.8/
-parent: "ats-2"
 weight: 92
 ---
 
@@ -21,7 +20,7 @@ Mendix applications which are based on Mendix version 7.13, 7.14 or 7.15, can no
 
 ### Mobile Testing Improvements
 
-* In addition to testing on real devices via browserstack it is now possible to test on real devices by using Saucelabs. We have preselected some devices for Saucelabs for different Android versions. Check the [ATS reference guide for more details](/addons/ats-addon/rg-two-mobile/).
+* In addition to testing on real devices via browserstack it is now possible to test on real devices by using Saucelabs. We have preselected some devices for Saucelabs for different Android versions.
 * We added support for testing on Android 8 devices.
 * When testing on mobile devices we now simulate setting drop-down values via the native dialogs for mobile, same as we do for date and time dialogs.
 
@@ -54,4 +53,4 @@ The built-in function *Assert not null* behavior has been changed. Up to and inc
 
 ### Limitations
 
-* Regarding _Nanoflows_, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.
+* Regarding *Nanoflows*, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.

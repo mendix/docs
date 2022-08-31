@@ -1,14 +1,12 @@
 ---
 title: "Header"
 url: /refguide/header/
-parent: "layout"
 weight: 20
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
-
 
 A **header** combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. A header can only be used in a [layout](/refguide/layout/).
 

@@ -1,7 +1,6 @@
 ---
 title: "Offline Synchronization"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/
-parent: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
 weight: 20
 description: "Describes how and when synchronization occurs, and how to resolve sync errors."
 tags: ["offline", "offline-first"]
@@ -15,8 +14,8 @@ Synchronization is automatically triggered during the following scenarios:
 
 * The initial startup of your mobile app
 * The first startup of your mobile app after your Mendix app is redeployed when the following conditions are matched:
-	* There is a network connection
-	* You are using a new Mendix version or the domain model used in the offline-first app has changed
+    * There is a network connection
+    * You are using a new Mendix version or the domain model used in the offline-first app has changed
 * After the app user logs in or out. Note that synchronization after log out does not synchronize the data of the logged-out user, but rather synchronizes the data for the anonymous user.
 
 ## 2 Synchronization{#synchronization}
@@ -62,15 +61,15 @@ The synchronization process consists of two phases. In the [upload phase](#uploa
 The upload phase executes the following operations:
 
 1. <a name="upload-step-one"></a>As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last sync. The detection logic differs per sync type. For **Synchronize all**, all committed objects in the local database are checked. For **Synchronize objects**, all committed objects from the list of selected objects are checked.
-2.  <a name="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
-   
-   {{% alert color="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.{{% /alert %}}
-   
+2. <a name="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
+
+    {{% alert color="warning" %}}Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.{{% /alert %}}
+
 3. <a name="upload-step-three"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
 4. <a name="upload-step-four"></a>All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
 5. <a name="upload-step-five"></a>Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before the device database is updated. 
-   This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
-   Before- and after-commit event handlers for new objects will also be executed.
+    This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
+    Before- and after-commit event handlers for new objects will also be executed.
 
 #### 2.2.2 Download Phase {#download}
 
@@ -146,7 +145,27 @@ During the synchronization, changed and new objects are committed. An object's s
 
 {{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
-#### 2.6.3 Dangling References {#dangling-references}
+#### 2.6.3 Broken or Missing File Contents
+
+The client downloads the contents of file objects during synchronization. Errors may occur while downloading a file, such as:
+
+* Missing file content on the server
+* Generic error on the server while processing the file download request
+* Connection-related issues (no connection, connection reset, and others)
+
+In these cases, synchronization fails. When it fails due to a connection error the client can retry. If it fails for other reasons, such as broken file content, the root cause must be fixed.
+
+{{% alert color="info" %}}
+In Mendix Studio Pro v9.17 and above, the client handles file download errors gracefully. Specifically, this means two things. 
+
+Firstly, when a connection error occurs while downloading a file, the synchronization fails. The nanoflow or end-user can retry later when the connection is stable.
+
+Secondly, the client will skip the file object and continue synchronization for any other error. The file object will not be available in the local database until the error's root cause is fixed, ensuring that the local database and file system is consistent. The client will also log the following trace log:
+
+"Could not download the file content for the object with guid {OBJECT-GUID} due to an error. This may be due to broken file content on the server. Synchronization will continue and ignore this object."
+{{% /alert %}}
+
+#### 2.6.4 Dangling References {#dangling-references}
 
 During synchronization the server performs referential integrity validation of the new or changed objects that are being synchronized to the server. his validation ensures that none of the synchronized objects have associations pointing to an object that exists only on the device. If an association does not satisfy this condition, it is a dangling reference.
 
@@ -160,7 +179,7 @@ To prevent dangling reference errors during full synchronization, make sure both
 
 When some of the synchronized objects have dangling references, the server will synchronize all other objects except the ones with dangling references. For the objects with dangling references, the server will create a synchronization error and store it in the `System.SynchronizationError` entity. In such a situation you will see an error message like this:
 
-```
+```text {linenos=false}
 Synchronizing an object of type City with GUID {123} has failed due to a modelling error. The object has a reference to other objects (City_Country) that have not been synchronized to the runtime yet. This breaks referential integrity of the object because it references a non-existing object in the runtime database. Please make sure that you synchronize the referenced object together with the City or before synchronizing the City.
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: "Show Fields Only When Certain Conditions Are Met"
+linktitle: "Show Fields on Conditions"
 url: /studio-how-to/pages-how-to-set-visibility/
 category: "Pages"
 description: "Describes how to set conditional visibility in Mendix Studio."
@@ -54,9 +55,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute, so the conditional visibility is *attribute-based*. 
 
 {{% alert color="info" %}}
-
 Attribute-based conditional visibility can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
-
 {{% /alert %}}
 
 To set conditional visibility for the **Billing Address** field, do the following:
@@ -66,21 +65,18 @@ To set conditional visibility for the **Billing Address** field, do the followin
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-set-visibility/customer-page.png" alt="Customer Details" >}}
 
 2. Select the **Billing Address** field and go to its properties.
-
 3. In **Conditional Visibility** section, toggle the **Visible Based on Data** property and click the **Attribute** property:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-set-visibility/visible-based-on-data.png" alt="Visible Based on Data" >}}
 
 4. Click the In the **Select Attribute** dialog box, choose the **BillingAddressSame** attribute and click **Select**.
-
 5. The **Attribute Values** property is now displayed in properties. Untick the *True* value as it does not meet the conditions you would like to set, and leave the **False** value selected.
-
 
 Good job! If you [preview your app](/studio/publishing-app/), you will see that the billing address is only shown when you untick the  **Billing address is the same as delivery address** option.
 
 ## 4 Showing an Element to Certain User Roles Only
 
- You have a list of products with the **Edit** button. You have three user roles in your app: **Administrators**, **Sales_Managers**, and **Customers**, and you would like to show this button only to Administrators and Sales managers only, hiding it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](/studio-how-to/security-how-to-configure-roles/).
+You have a list of products with the **Edit** button. You have three user roles in your app: **Administrators**, **Sales_Managers**, and **Customers**, and you would like to show this button only to Administrators and Sales managers only, hiding it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](/studio-how-to/security-how-to-configure-roles/).
 
 To show an element only to a certain user role, do the following:
 
@@ -89,7 +85,6 @@ To show an element only to a certain user role, do the following:
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-set-visibility/list-of-products.png" alt="List of Products"   width="450"  >}}
 
 2. Open its properties and in **Conditional Visibility** section toggle the **Visible Based on Role** property.
-
 3. A list of roles available in your app is displayed in the **Roles** property. Untick the **Customer** role:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-set-visibility/unselected-roles.png" alt="Unselected Roles" >}}
@@ -101,7 +96,6 @@ Well done! Now the **Edit** button will only be shown to **Administrator** and *
 To easily find which elements on your page have conditional visibility, you can highlight them. To show widgets with conditional visibility, do the following:
 
 1. Open the page.
-
 2. Click the eye icon in the upper-left corner of the page:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-set-visibility/eye-icon.png" alt="Eye Icon"   width="250"  >}}

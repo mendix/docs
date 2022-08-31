@@ -1,7 +1,6 @@
 ---
 title: "Published OData Services"
 url: /refguide/published-odata-services/
-parent: "integration"
 weight: 10
 tags: ["studio pro","OData","publish"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,6 +9,8 @@ tags: ["studio pro","OData","publish"]
 ## 1 Introduction
 
 In Studio Pro, entities can be exposed as [OData resources](/refguide/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
+
+A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it.
 
 The standards used for OData in Mendix are:
 
@@ -56,7 +57,9 @@ This list gives an overview of all published attributes and associations.
 
 ## 3 Settings
 
-### 3.1 OData Version
+### 3.1 Configuration
+
+### 3.1.1 OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
@@ -64,9 +67,25 @@ You can choose between OData 4 (recommended) and OData 3. One of the main differ
 This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/). In earlier versions, all published OData services were OData 3.
 {{% /alert %}}
 
-### 3.2 Associations
+### 3.1.2 Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
+
+### 3.2 Export
+
+In this section, you can save the different representations of the service to file.
+
+#### 3.2.1 Service feed
+
+The service feed, available in XML and JSON, contains a list of the published entities.
+
+#### 3.2.2 Metadata
+
+The $metadata XML file contains the service's contract in OData's [CSDL](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) format.
+
+#### 3.2.3 OpenAPI {#openapi}
+
+The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format.
 
 ### 3.3 Security {#security}
 
@@ -74,9 +93,9 @@ You can configure security for the OData service when [App Security](/refguide/a
 
 #### 3.3.1 Requires Authentication {#authentication}
 
-Select whether clients need to authenticate or not. Choose _No_ to allow access to the resources without restrictions. Choose _Yes_ to be able to select which authentication methods to support.
+Select whether clients need to authenticate or not. Select **No** to allow access to the resources without restrictions. Select **Yes** to be able to select which authentication methods to support.
 
-Even when you choose _Yes_, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](/refguide/anonymous-users/).
+Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
 #### 3.3.2 Authentication Methods
 
@@ -88,13 +107,13 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
 
-##### 3.3.2.1 Username & Password {#username-password}
+##### 3.3.2.1 Username and Password {#username-password}
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 
-1.  Username and password are combined into a string "username:password".
-2.  The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64 (except not limited to 76 char/line).
-3.  The authorization method and a single space (meaning, "Basic " is then put before the encoded string).
+1. Username and password are combined into a string "username:password".
+2. The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64 (except not limited to 76 char/line).
+3. The authorization method and a single space (meaning, "Basic " is then put before the encoded string).
 
 This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`.
 
@@ -104,7 +123,7 @@ When you check this authentication method, the JavaScript in your app can access
 
 To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-```
+```js
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "http://mysite/odata/myservice/myresource", false);
 xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
@@ -123,9 +142,9 @@ The authentication microflow should return a User.
 
 There are three possible outcomes of the authentication microflow:
 
-  * When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
-  * When the resulting User is not empty, the operation is executed in the context of that user
-  * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
+* When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
+* When the resulting User is not empty, the operation is executed in the context of that user
+* When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
 
 #### 3.3.3 Allowed Roles
 
@@ -166,7 +185,11 @@ Default value: *No*
 
 ### 6.1 General
 
-Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`.
+Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
+
+{{% alert color="info" %}}
+The Swagger UI feature was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/).
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
@@ -183,3 +206,11 @@ When exposing entities through OData, the entities are retrieved from the Mendix
 Some on-premises servers, in particular those using Microsoft IIS, will strip the host header from requests. This means that your OData service and documentation will be published on an unexpected URL.
 
 To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#preserve-header) in the *Microsoft Windows* deployment documentation.
+
+## 7 Runtime Status Codes {#status-codes}
+
+The Mendix runtime returns status codes for OData payloads. The possible status codes are the following:
+
+* `200`, `201`, `204` – [Successful responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
+* `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
+* `500` – Mendix default when something goes wrong and it has not been modelled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)

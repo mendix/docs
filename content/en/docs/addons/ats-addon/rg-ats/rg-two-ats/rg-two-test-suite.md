@@ -1,7 +1,6 @@
 ---
 title: "Test Suite"
 url: /addons/ats-addon/rg-two-test-suite/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction
@@ -47,7 +46,7 @@ To delete a test step in a test suite, click this icon on the right side of the 
 
 You can delete multiple test steps at once by marking them with the check box and clicking **Delete**.
 
-#### 2.3.2 Drag & Drop
+#### 2.3.2 Drag and Drop
 
 When you hover over an existing test step, the drag-and-drop handle appears. By clicking and holding it, you can move the test step to the new position.
 

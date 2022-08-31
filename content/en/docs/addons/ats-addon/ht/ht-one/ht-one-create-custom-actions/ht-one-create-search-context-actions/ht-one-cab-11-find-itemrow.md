@@ -1,7 +1,6 @@
 ---
 title: "CAB.11 - Find Item/Row by Unique Text Value"
 url: /addons/ats-addon/ht-one-cab-11-find-itemrow/
-parent: "ht-one-create-search-context-actions"
 description: "This how-to explains step by step how to create a Search Context action for finding an item/row by using a unique text value."
 tags: ["ATS", "testing"]
 ---
@@ -21,7 +20,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-*  [Custom Action General Section](/addons/ats-addon/ht-one-custom-action-general/)
+* [Custom Action General Section](/addons/ats-addon/ht-one-custom-action-general/)
 
 ## 3 Defining the User Approach
 
@@ -37,7 +36,7 @@ However, there are multiple buttons on this page that have the same `mx-name`:
 
 To define the user approach, follow these steps:
 
-1.  Use the recorder to see if there is a unique path to the button. In this case, if you click the button using the recorder, it uses `index-0` in the path:
+1. Use the recorder to see if there is a unique path to the button. In this case, if you click the button using the recorder, it uses `index-0` in the path:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-buttontoclick-recorderpath.png" >}}
 
@@ -45,11 +44,11 @@ To define the user approach, follow these steps:
 
     To avoid this, retrieve the item/row during the sessions based on a text value.
 
-3.  When you open the debugger, you see that the button is a child element of the listview item:
+2. When you open the debugger, you see that the button is a child element of the listview item:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-buttontoclick-listviewitem.png" >}}
 
-4.  Now that you found the unique element you want to retrieve, you cannot use the `mx-name` to find it. Then how do you find the element? You do this by looking for other unique elements within that list view item. There is a text box inside the list view item that has a unique value. The text box on itself has the `mx-name-textBox5` like in the other list view items. By adding the unique value to the search, you can find it. Combining the `mx-name` with the unique value ensures that the right element is found.
+3. Now that you found the unique element you want to retrieve, you cannot use the `mx-name` to find it. Then how do you find the element? You do this by looking for other unique elements within that list view item. There is a text box inside the list view item that has a unique value. The text box on itself has the `mx-name-textBox5` like in the other list view items. By adding the unique value to the search, you can find it. Combining the `mx-name` with the unique value ensures that the right element is found.
 
     This is a text box as a child element of a list view item:
 
@@ -67,51 +66,52 @@ ATS has a Mendix action called [Find Item/Row (by child element)](/addons/ats-ad
 
 To define the action structure, follow these steps:
 
-1.  Use the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action to find the text box containing a specific value. Add the Find/Assert Widget action, provide a proper test step description, and provide an output description:
+1. Use the [Find/Assert Widget](/addons/ats-addon/rg-one-findassert-widget/) action to find the text box containing a specific value. Add the Find/Assert Widget action, provide a proper test step description, and provide an output description:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-listviewitem-textbox.png" >}}
 
     You will create and connect the input parameters later.
 
-2.  Use the Find Item/Row (by child element) action to retrieve the list view item surrounding the text box from test step 1. Add the action, provide a proper test step description, provide an output description, and connect the output from test step 1:
+2. Use the Find Item/Row (by child element) action to retrieve the list view item surrounding the text box from test step 1. Add the action, provide a proper test step description, provide an output description, and connect the output from test step 1:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-listviewitem-finditemrow.png" >}}
 
-3.  The last step is that you must return the found list view as an output parameter. To use the output parameter, you must add the [Set Return Value](/addons/ats-addon/rg-one-set-return-value/) action and connect the output of test step 2. This action does not need any descriptions. The Set Return Value action gives the connected input to the output parameter as a WebElement, because the item/row is a WebElement:
+3. The last step is that you must return the found list view as an output parameter. To use the output parameter, you must add the [Set Return Value](/addons/ats-addon/rg-one-set-return-value/) action and connect the output of test step 2. This action does not need any descriptions. The Set Return Value action gives the connected input to the output parameter as a WebElement, because the item/row is a WebElement:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-listviewitem-setreturnvalue.png" >}}
 
 ## 5 Action Parameters
 
 Next, you need to add the action input and output parameters:
-    * Input parameters:
-        * Widget Name
-        * Value
-        * Search Context
-    * Output parameters:
-        * Item/Row
+
+* Input parameters:
+    * Widget Name
+    * Value
+    * Search Context
+* Output parameters:
+    * Item/Row
 
 {{% alert color="info" %}}
 Keep the [guidelines for creating a custom action](/addons/ats-addon/ht-one-guidelines-custom-action/) in mind while creating action parameters.
 {{% /alert %}}
 
-1.  Configure the **Widget Name** input parameter like this:
+1. Configure the **Widget Name** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-widgetname-inputparameter.png" >}}
 
-2.  Configure the **Value** input parameter like this:
+2. Configure the **Value** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-listviewitem-inputparameter-Value.png" >}}
 
-3.  Configure the **Search Context** input parameter like this:
+3. Configure the **Search Context** input parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-listviewitem-inputparameter-searchcontext.png" >}}
 
-4.  Configure the **Item/Row** output parameter like this:
+4. Configure the **Item/Row** output parameter like this:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-listviewitem-outputparameter-itemrow.png" >}}
 
-5.  Next, connect the input parameters to the right actions. The input parameters are connected to the Find/Assert Widget action:
+5. Next, connect the input parameters to the right actions. The input parameters are connected to the Find/Assert Widget action:
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-create-search-context-actions/ht-one-cab-11-find-itemrow/getitemrow-listviewitem-inputparameters-connected.png" >}}
 

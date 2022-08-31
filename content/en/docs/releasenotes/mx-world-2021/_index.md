@@ -5,7 +5,6 @@ tags: ["mendix world", "announcements", "features", "feature release", "products
 weight: 60
 #notoc: true
 #layout: wide
-#toc-level: "3"
 ---
 
 ## 1 Introduction
@@ -37,7 +36,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Usage-based metering and billing | Currently in Private Beta<br/>GA: TBD |
 | Supplier onboarding (including documentation) | Currently in Private Beta<br/>GA: TBD |
 
-## 4 End-User Services & Studio
+## 4 End-User Services and Studio
 
 | Feature | Expected Release |
 | --- | --- |
@@ -68,12 +67,12 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Styling editor in Studio Pro | Released for GA on [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
 | Multiple page parameters | GA: Sep 2022 |
-| Native mobile – simplified monitoring | GA: Jun 2022 |
-| Native mobile – file and image background sync | GA: Jun 2022 |
+| Native mobile – simplified monitoring | Sep 2022 |
+| Native mobile – file and image background sync | TBD |
 | Data widgets – Tree Table | GA: Sep 2022 |
 | Data widgets – Spread Sheet Grid | GA: Dec 2022 |
 
-## 7 Page Bot & Machine Learning Toolkit
+## 7 Page Bot and Machine Learning Toolkit
 
 | Feature | Expected Release |
 | --- | --- |
@@ -88,15 +87,15 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | Studio Pro modernization | Released for GA on [Sep 28th, 2021](/releasenotes/studio-pro/9.6/#studio-pro-new-design) |
 | Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12//#team-server-git) |
-| BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Jun 2022 |
+| BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Apr 2023 |
 | Studio Pro dark theme | Public Beta: Mar 2022 |
 
 ## 9 Data Hub 2.0
 
 | Feature | Expected Release |
 | --- | --- |
-| External entity create, update, and delete (AKA write) | GA: Apr 2022 |
-| Connector Kit 2.0 (OData publish with microflows and Marketplace integration) | GA:  Jun 2022 |
+| External entity create, update, and delete (AKA write) | Released for GA on [May 24th, 2022](/releasenotes/studio-pro/9.13/#new-features) |
+| Connector Kit 2.0 (OData publish with microflows and Marketplace integration) | GA:  Aug 2022 |
 | Business events and event broker | Public Beta: Jul 2022 |
 
 ## 10 Intelligent Automation
@@ -113,7 +112,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Smart app services integrated in workflows | Text to Speech |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118409) (except in China)|
 | Smart app services integrated in workflows | Text Analytics |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118412) (except in China)|
 | Smart app services integrated in workflows | Translation |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118411)  (except in China)|
-| Smart app services integrated in workflows | General Purpose OCR | GA: Jun 2022 |
+| Smart app services integrated in workflows | General Purpose OCR | GA: Jul 2022 |
 
 ## 11 Hybrid Cloud Automation
 
@@ -121,4 +120,4 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA in August 2021 |
 | Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA on [Sep 2nd, 2021](/releasenotes/developer-portal/mendix-for-private-cloud/#20210902) |
-| Mendix for Private Cloud – built-in CI/CD | GA: Jun 2022 |
+| Mendix for Private Cloud – built-in CI/CD | GA: Jul 2022 |

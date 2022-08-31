@@ -1,7 +1,6 @@
 ---
 title: "XPath seconds-from-dateTime"
 url: /refguide7/xpath-seconds-from-datetime/
-parent: "xpath-constraint-functions"
 ---
 
 ## 1 Overview

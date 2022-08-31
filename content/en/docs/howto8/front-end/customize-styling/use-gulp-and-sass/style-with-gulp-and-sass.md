@@ -1,7 +1,6 @@
 ---
 title: "Start Styling with Gulp & Sass"
 url: /howto8/front-end/style-with-gulp-and-sass/
-parent: "use-gulp-and-sass"
 weight: 2
 tags: ["gulp", "sass", "ux", "front end"]
 ---
@@ -36,9 +35,9 @@ To set up the Gulp project, follow these steps:
 1. Download *gulp.zip* from [mendix/ux-theming](https://github.com/mendix/ux-theming/releases).
 2. Unzip the folder into your project's root folder.
 3. In your terminal, go to your project root folder by typing `cd`, then drag your root file into the terminal. Please note that if you do this on Windows and you encounter errors with installing the dependencies, open your CMD or PowerShell as Administrator.
-4.  <a name="34"></a>Install the dependencies by typing `npm install`:
+4. <a name="34"></a>Install the dependencies by typing `npm install`:
 
-	{{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/style-with-gulp-and-sass/cd.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/style-with-gulp-and-sass/cd.png" >}}
 
 ## 4 Running Gulp
 
@@ -46,9 +45,9 @@ To run Gulp, follow these steps:
 
 1. You should still be in your root if you just finished the installation, so type `npm run dev` in your root.
 2. Make sure your Mendix project is running.
-3.  For a quick test to see if everything is working, open *theme/styles/sass/custom/_custom-variables.scss* and type `body{ background-color: red; }`. Your background will then be a beautiful red:
+3. For a quick test to see if everything is working, open *theme/styles/sass/custom/_custom-variables.scss* and type `body{ background-color: red; }`. Your background will then be a beautiful red:
 
-	{{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/style-with-gulp-and-sass/red.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/style-with-gulp-and-sass/red.png" >}}
 
 {{% alert color="info" %}}
 If you are using Parallels on Mac, you can access your Mendix project on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` — this is different on each setup).
@@ -56,7 +55,7 @@ If you are using Parallels on Mac, you can access your Mendix project on your Ma
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.
 
-## 5 Development & Production
+## 5 Development and Production
 
 When running `npm run dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
 

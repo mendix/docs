@@ -1,7 +1,6 @@
 ---
 title: "Old SDK Versions (Below 5.0)"
 url: /apidocs-mxsdk/mxsdk/sdk-old-versions-howtos/
-parent: "sdk-howtos"
 weight: 60
 ---
 

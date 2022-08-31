@@ -1,7 +1,6 @@
 ---
 title: "Change Object"
 url: /refguide/change-object/
-parent: "object-activities"
 weight: 20
 tags: ["studio pro"]
 ---

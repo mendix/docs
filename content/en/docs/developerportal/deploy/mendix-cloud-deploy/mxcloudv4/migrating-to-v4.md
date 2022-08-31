@@ -1,7 +1,6 @@
 ---
 title: "Migrate to Mendix Cloud v4"
 url: /developerportal/deploy/migrating-to-v4/
-parent: "mxcloudv4"
 weight: 10
 description: "How to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
@@ -17,7 +16,7 @@ Mendix Cloud version 3 has been deprecated and will be turned off shortly. This 
 
 **It will teach you how to do the following:**
 
-*   Migrate your licensed app from Mendix Cloud v3 to v4
+* Migrate your licensed app from Mendix Cloud v3 to v4
 
 ## 2 Migration considerations
 
@@ -36,7 +35,7 @@ You will need to take the following into account when migrating to Mendix Cloud 
 
 To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
 
-### 2.1 Other Differences Between Mendix Cloud v3 & v4
+### 2.1 Other Differences Between Mendix Cloud v3 and v4
 
 There are a few other differences between the way you develop and deploy apps in Mendix Cloud v4 and Mendix Cloud v3:
 
@@ -50,7 +49,7 @@ There are a few other differences between the way you develop and deploy apps in
     * Archived logs can only be downloaded, not viewed in the browser
     * The database status is not visible on the node details screen
 * Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
-    * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
+    * If you have external clients connecting *to* your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
 * In Mendix Cloud v4, the disk space available to your app in the runtime container is separate from the file storage and generally less than 3 GB. This has an impact on the possibilities for custom Java code, which is run on the runtime containers. When manipulating large files with custom Java code which creates temporary files, you can run into this disk size limitation. This means you might have to change your application logic to process multiple smaller files with Java code instead of using one large file, so that temporary files are garbage collected as you go along.
 
 ## 3 Prerequisites
@@ -155,7 +154,7 @@ The migration page lists all the ongoing migrations, including the following inf
     * if you click **Stop replication** without checking the **Interrupt** option, the replication will stop when all the data is replicated
     * if you check the **Interrupt** option, replication will stop as soon as possible when you click **Stop replication** leaving the v4 database in an incomplete and probably inconsistent state. On the Migration Status page you will see the state as *failed* when you select this option.
 * The **Activate Replication** button when the replication status is in a **Stopped** state
-*  The **Migrate** button that triggers the [final migration](#final-migration)
+* The **Migrate** button that triggers the [final migration](#final-migration)
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migration-status.png" alt="Status of the Migration" >}}
 
@@ -277,15 +276,15 @@ Before starting a manual migration, make sure you have completed the following p
 
 First, link one of the new temporary apps to the cloud v4 node.
 
-1.  In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select one of your temporary apps.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select one of your temporary apps.
 
-2.  Once you are in the app, go to the **Environments** tab in the left menu.
+2. Once you are in the app, go to the **Environments** tab in the left menu.
 
-3.  Click **select a node**.
+3. Click **select a node**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/select-a-node.png" >}}
 
-4.  Select the v4 node by clicking **Use this Node** and link it to your app.
+4. Select the v4 node by clicking **Use this Node** and link it to your app.
 
 For more information on how to do this, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#licensed-node).
 
@@ -353,11 +352,11 @@ It is not possible to explicitly unlink an app from a licensed node. The only wa
 
 1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the second blank app you created (not the one you have linked to the v4 node).
 
-2.  Once you are in the app, go to the **Environments** tab in the left menu.
+2. Once you are in the app, go to the **Environments** tab in the left menu.
 
-3.  Click **select a node**.
+3. Click **select a node**.
 
-4.  Select the v3 node containing your app by clicking **Use this Node**, and link it to your app. Your app which is currently deployed to this node will be unlinked automatically and you can now link it to the v4 node.
+4. Select the v3 node containing your app by clicking **Use this Node**, and link it to your app. Your app which is currently deployed to this node will be unlinked automatically and you can now link it to the v4 node.
 
 A more detailed example of how this works given in the [Exchanging Linked Apps Between Nodes](/developerportal/deploy/licensing-apps/#exchange-apps) section of *Licensing Mendix Cloud Apps*.
 
@@ -369,13 +368,13 @@ Follow these steps to link the app you detached from the v3 node, above, to the 
 Make sure you have downloaded the latest backup and deployment package before linking your app to the v4 node.
 {{% /alert %}}
 
-1.  In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that has been detached from the v3 node.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to **Apps** and select the app that has been detached from the v3 node.
 
-2.  Once you are in the app, go to the **Environments** tab in the left menu.
+2. Once you are in the app, go to the **Environments** tab in the left menu.
 
-3.  Click **select a node**.
+3. Click **select a node**.
 
-4.  Select the v4 node by clicking **Use this Node** and link it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
+4. Select the v4 node by clicking **Use this Node** and link it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
 
 For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
@@ -416,9 +415,9 @@ After your node is offboarded, it will no longer be accessible. Ensure that you 
 
 ## 6 Read More
 
-*   [Certificates](/developerportal/deploy/certificates/)
-*   [Custom Domains](/developerportal/deploy/custom-domains/)
-*   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy/)
-*   [How to Download a Backup](/developerportal/operate/download-backup/)
-*   [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
-*   [How to Restore a Backup](/developerportal/operate/restore-backup/)
+* [Certificates](/developerportal/deploy/certificates/)
+* [Custom Domains](/developerportal/deploy/custom-domains/)
+* [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy/)
+* [How to Download a Backup](/developerportal/operate/download-backup/)
+* [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
+* [How to Restore a Backup](/developerportal/operate/restore-backup/)

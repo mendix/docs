@@ -1,8 +1,7 @@
 ---
 title: "Content Security Policy"
 url: /refguide/mobile/using-mobile-capabilities/csp/
-parent: /refguide/mobile/using-mobile-capabilities/
-menu_order: 80
+weight: 80
 description: By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context.
 tags: ["security", "headers"]
 ---
@@ -65,7 +64,7 @@ In *theme/web/index.html* do the following:
 
 1. Remove the line with the `{{unsupportedbrowsers}}` tag
 1. Remove the `<script>` tag with the `dojoConfig` inside
-1.  At the top of the `<head`> tag, add a reference to the `unsupported-browser.js` script:
+1. At the top of the `<head`> tag, add a reference to the `unsupported-browser.js` script:
 
     ```js
     <html>
@@ -76,7 +75,8 @@ In *theme/web/index.html* do the following:
         ...
     </html>
     ```
-1.  In the `<body>` tag, add a reference to the `appSetup.js` script before `mxui.js` is loaded:
+
+1. In the `<body>` tag, add a reference to the `appSetup.js` script before `mxui.js` is loaded:
 
     ```js
     <html>

@@ -1,7 +1,6 @@
 ---
 title: "2.6"
 url: /releasenotes/add-ons/ats-2.6/
-parent: "ats-2"
 weight: 94
 ---
 
@@ -29,7 +28,7 @@ In order to add support for newer browser version, we upgraded the ATS selenium 
 
 You can now run ATS tests against Internet Explorer 11. We are happy to announce that, because Internet Explorer is still one of the most used browsers and is even more important when looking at enterprise businesses. Internet Explorer 11 is supported for Windows 7, Windows 8.1, and Windows 10.
 
-### Mendix 7.11 & 7.12
+### Mendix 7.11 and 7.12
 
 Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and recorded with ATS. We have not explicitly tested the impact of nanoflows (the newest feature added in Mendix 7.12) on ATS, but we do not expect any significant problems here.
 

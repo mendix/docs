@@ -2,7 +2,6 @@
 title: "Calculate the Total Amount of Disk Space of a v3 Cloud App Environment"
 linktitle: "V3 Disk Space Calculation"
 url: /developerportal/operate/calculate-diskspace-of-a-cloud-app-environment/
-parent: "metrics"
 weight: 80
 description: "Describes calculating disk space on a Mendix Cloud Version 3 environment."
 tags: ["Mendix Cloud", "cloud", "v3", "Disk Space"]
@@ -28,9 +27,9 @@ Each Mendix environment consists of an application server (app-node) and a datab
 All Mendix Cloud environments are running on an **'S'** container by default.
 An **'S'** container consists of:
 
-  *   10GB disk space
-  *   1 GB Mx RAM
-  *   1 GB DB RAM
+* 10GB disk space
+* 1 GB Mx RAM
+* 1 GB DB RAM
 
 The disk space is always divided evenly between the app-node and the db-node.
 

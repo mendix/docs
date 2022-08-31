@@ -1,8 +1,7 @@
 ---
 title: "Language Settings"
 url: /refguide/language-settings/
-parent: "translatable-texts"
-weight: 10
+weight: 50
 tags: ["studio pro", "translation", "languages", "translatable text", "add language", "date format", "completeness"]
 ---
 
@@ -62,7 +61,7 @@ Click **Edit…** to open a dialog box which will provide a full reference for t
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" alt="Date edit dialog" >}}
 
-## 5 List of Supported Languages
+## 5 List of Supported Languages {#supported-languages}
 
 The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu. The list below is provided to enable you to quickly evaluate if Mendix supports your desired language.
 

@@ -1,7 +1,6 @@
 ---
 title: "Prerequisites for How-tos"
 url: /addons/ats-addon/ht-one-custom-action-prerequisites/
-parent: "ht-one-custom-action-general"
 description: "Names and explains the different prerequisites for all the how-to's in this category."
 tags: ["ATS", "testing"]
 ---
@@ -24,7 +23,7 @@ You must be signed in to the Mendix Platform to see the above learning path.
 
 [Guidelines for Building a Custom Action](/addons/ats-addon/ht-one-guidelines-custom-action/) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
 
-## 4 Google Chrome & Chrome DevTools Basics
+## 4 Google Chrome and Chrome DevTools Basics
 
 The how-to's make use of the Google Chrome web browser and the Chrome DevTools. You must have a basic understanding of the Chrome DevTools to get the full experience from each how-to.
 

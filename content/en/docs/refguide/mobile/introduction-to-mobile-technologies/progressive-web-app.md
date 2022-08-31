@@ -1,7 +1,6 @@
 ---
 title: "Progressive Web App"
 url: /refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/
-parent: /refguide/mobile/introduction-to-mobile-technologies/
 weight: 20
 aliases:
     - /refguide/progressive-web-app/
@@ -23,8 +22,9 @@ As PWAs are basically web apps with additional features, Mendix offers these fea
 
 {{% alert color="warning" %}}
 PWAs have the following limitations on iOS:
-*  Push notifications are not supported for PWAs on iOS
-*  Offline data is not supported for PWAs on iOS
+
+* Push notifications are not supported for PWAs on iOS
+* Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 
 To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Guide](/refguide/offline-first/).
@@ -137,17 +137,17 @@ This table lists the most used device features and APIs, and also documents thei
 
 **Legend** — The symbols above correspond to the following definitions:
 
-*  Fully compatible:
+* Fully compatible:
 
-	{{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
-	
-*  Compatible only when using HTTPS protocol:
+    {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
 
-	{{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
-	
-*  Not compatible:
+* Compatible only when using HTTPS protocol:
 
-	{{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
+    {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
+
+* Not compatible:
+
+    {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
 
 | Feature | Chrome/Edge | Firefox | Safari |
 |---------|-----------|-------|------|

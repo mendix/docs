@@ -1,7 +1,6 @@
 ---
 title: "Published REST Request Routing"
 url: /refguide7/published-rest-routing/
-parent: "published-rest-technical-details"
 weight: 10
 description: "A flow chart which shows how an example request is processed, what security is applied, and what is returned by the service."
 tags: ["flow chart", "processing", "security", "service", "resource", "operation", "method", "authentication", "return code", "published REST"]
@@ -24,10 +23,10 @@ Consult this flow chart to answer questions like:
 * How does basic authentication for REST services work?
 * How does anonymous authentication for REST services work?
 * What happens when a REST operation microflow returns an empty HTTPResponse?
-* Why does my REST service return _400 Bad Request_?
-* Why does my REST service return _401 Not Authorized_?
-* Why does my REST service return _404 Not Found_?
-* Why does my REST service return _405 Method Not Allowed_?
+* Why does my REST service return *400 Bad Request*?
+* Why does my REST service return *401 Not Authorized*?
+* Why does my REST service return *404 Not Found*?
+* Why does my REST service return *405 Method Not Allowed*?
 
 The example request is `GET /rest/petstore/pet/12`.
 

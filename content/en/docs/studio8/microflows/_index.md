@@ -16,14 +16,14 @@ Mendix Studio has a lot of built-in logic that works out of the box (for example
 
 You need to use microflows for the following cases:
 
-*  To change/extend the standard behavior of buttons
+* To change/extend the standard behavior of buttons
 * To add custom logic to your application
 * To integrate with other systems, databases, web services, etc.
 
 Examples of using microflows can be the following:
 
-*  You check the values that an end-user has entered, and you either show the end-user an error message or another page
-*  You are creating a to-do list and you want to use custom logic when the status of an item on the list has changed
+* You check the values that an end-user has entered, and you either show the end-user an error message or another page
+* You are creating a to-do list and you want to use custom logic when the status of an item on the list has changed
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
@@ -52,11 +52,11 @@ Before you start configuring microflows, familiarize yourself with the concepts 
 To create a new microflow and to start building custom logic, do the following:
 
 1. Click the **Microflow** icon in the left menu bar. 
-2.  Click **New** on the **Microflows** side panel.
+2. Click **New** on the **Microflows** side panel.
 
     {{< figure src="/attachments/studio8/microflows/new-microflow.png" alt="Adding New Microflow"   width="300"  >}}
 
-3.  Fill in the name of the microflow in the pop-up dialog and click **Create**.
+3. Fill in the name of the microflow in the pop-up dialog and click **Create**.
 
     {{< figure src="/attachments/studio8/microflows/new-microflow-dialog.png" alt="Create New Microflow Dialog" >}}    
 
@@ -67,8 +67,7 @@ The new microflow is created, you can now add logic using events and activities.
 To duplicate a microflow, do the following:
 
 1. Click the **Microflows** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
     {{< figure src="/attachments/studio8/microflows/duplicate-microflow.png" alt="Duplication a Microflow"   width="350"  >}}
 
@@ -79,8 +78,7 @@ The microflow is duplicated.
 To copy and paste a microflow, do the following:
 
 1. Click the **Microflows** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
     {{< figure src="/attachments/studio8/microflows/copy-microflow.png" alt="Copying a Microflow"   width="350"  >}}
 
@@ -95,13 +93,12 @@ To delete a microflow in Studio, do one of the following:
 1. Open the microflow you want to delete and follow the steps below:
 
     1. Open the **Properties** tab.
-
     2. Click **Delete** at the bottom of the **Properties** tab.
 
 2. Click the **Microflows** icon in the left menu bar and do the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
-    
+
         {{< figure src="/attachments/studio8/microflows/delete-microflow.png" alt="Delete Microflow"   width="350"  >}}
 
 ## 7 Adding a New Event or Activity {#adding-activity-to-microflow}
@@ -145,8 +142,6 @@ Elements available in the **General** section are described in the table below.
 The **Object Activities** section contains activities that interact with an object or objects (for more information on what an object is, see [Domain Model](/studio8/domain-models/)): 
 
 {{< figure src="/attachments/studio8/microflows/object-activities.png" alt="Microflow Object Activities"   width="350"  >}}
-
-
 
 The **Object Activities** are described in the table below.
 

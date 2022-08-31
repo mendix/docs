@@ -1,7 +1,6 @@
 ---
 title: "Published REST Operation"
 url: /refguide7/published-rest-operation/
-parent: "published-rest-service"
 weight: 10
 description: "Options to  configure a published REST operation."
 tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
@@ -32,7 +31,7 @@ The method specifies what type of operation is performed by the microflow:
 * 'POST' – the operation creates an entry in the collection at the specified location
 * 'PATCH' – the operations updates (part of) the entry at the specified location
 * 'DELETE' – the operation deletes the entry or entries at the specified location
-* 'HEAD' - the operation retrieves information about the entry or entries at the specified location; this is identical to _GET_, except for the fact that it doesn't return a message body
+* 'HEAD' - the operation retrieves information about the entry or entries at the specified location; this is identical to *GET*, except for the fact that it doesn't return a message body
 * 'OPTIONS' - the operation returns information about the available communication options
 
 ### 2.2 Operation Path{#operation-path}
@@ -59,10 +58,10 @@ Support for **File Documents** in these microflows was introduced in version 7.1
 
 An operation has different parameters:
 
- * [Path parameters](/refguide7/published-rest-path-parameters/), which are part of the path of the URL
- * [Query parameters](/refguide7/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
- * Header parameters, which come from the HTTP headers of the request
- * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter). Only body parameters parameters can have a *List* or *Object* type.
+* [Path parameters](/refguide7/published-rest-path-parameters/), which are part of the path of the URL
+* [Query parameters](/refguide7/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
+* Header parameters, which come from the HTTP headers of the request
+* A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter). Only body parameters parameters can have a *List* or *Object* type.
 
 A microflow for an operation takes these operation parameters as input.
 
@@ -103,6 +102,7 @@ Ability to edit the parameters was introduced in version 7.17.0
 In this list, you can add, update or delete the [parameters of the operation](/refguide7/published-rest-operation-parameter/).
 
 <a name="import-mapping"></a>
+
 ### 2.6.1 Import Mapping
 
 {{% alert color="info" %}}

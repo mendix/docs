@@ -1,7 +1,6 @@
 ---
 title: "Native Builder (CLI)"
 url: /refguide8/native-builder/
-parent: "native-mobile"
 weight: 70
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter", "deprecated"]
 ---
@@ -34,9 +33,9 @@ The Native Builder uses MxBuild, GitHub, and App Center to build your applicatio
 Command-line arguments provide information to the Native Builder, such as where your Mendix project is located. Commands are configured using parameters, shown below. Some of these parameters are required or strongly recommended. The rest of them are optional, and should be used when they pertain to your app. To compose a command with parameters — which will start your Native Builder when executed — do the following:
 
 1. Open your command line program as an administrator by right-clicking its icon or *.exe* file and selecting **Run as administrator**.
-2.  Target your Native Builder's directory by typing `cd "{your Native Builder .exe location}"` and pressing <kbd>Enter</kbd>:
+2. Target your Native Builder's directory by typing `cd "{your Native Builder .exe location}"` and pressing <kbd>Enter</kbd>:
 
-	{{< figure src="/attachments/refguide8/mobile/native-mobile/native-builder/change-directory.png" alt="change directory" >}}
+    {{< figure src="/attachments/refguide8/mobile/native-mobile/native-builder/change-directory.png" alt="change directory" >}}
 
 ### 2.1 Prepare {#prepare}
 
@@ -44,7 +43,7 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 
 An example of a `prepare` command:
 
-```bash
+```bash {linenos=false}
 native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App" --mendix-version 8.5.0
 ```
 
@@ -67,7 +66,6 @@ native-builder.exe prepare --github-access-token <token> --appcenter-api-token <
 | `--firebase-android-config-path`          | Absolute path to a *google-services.json* file.          | `C:\MyApp\google-services.json`                     |
 | `--firebase-ios-config-path`          | Absolute path to a *GoogleService-Info.plist* file.          | `C:\MyApp\GoogleService-Info.plist`                 |
 
-
 ### 2.2 Build {#build}
 
 #### 2.2.1 Generating Apps for Distribution
@@ -76,7 +74,7 @@ The `Build` command builds the JavaScript bundles and assets, creates a build on
 
 If you already ran `prepare`, this is an example of a `build` command:
 
-```bash
+```bash {linenos=false}
 native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
@@ -107,7 +105,7 @@ When used, the `build dev-app` command will create a preview app much like the M
 
 Here is an example of a command featuring `build dev-app`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bundles\developer"
 ```
 
@@ -125,7 +123,6 @@ The `regenerate` command recreates the project on GitHub with the latest version
 There is no automated way to preserve changes you made to a previous template. If you have some, you must apply them manually in the new GitHub repository. In addition, when changing your app's Mendix version, please also update the `mxbuild-path` using the `prepare` command.
 {{% /alert %}}
 
-
 | Parameter                  | Description                                                                 | Example                                             |
 | -------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------- |
 | `--project-name`           | Absolute path to the directory where Java executable is located. | `My Cool App`                                       |
@@ -133,7 +130,7 @@ There is no automated way to preserve changes you made to a previous template. I
 
 An example of a `regenerate` command:
 
-```bash
+```bash {linenos=false}
 native-builder.exe regenerate --project-name "CoolApp" --mendix-version 8.5.0
 ```
 
@@ -147,7 +144,7 @@ The `push-update` command handles generating a new JavaScript bundle and assets,
 
 Here is an example of a command featuring `push-update`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
@@ -169,7 +166,7 @@ The `patch-update` command allows you to update the metadata of a published upda
 
 Here is an example of a command featuring `patch-update`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release patch-update --project-name "CoolApp" --label "v4" --target-version  "1.0.1"
 ```
 
@@ -190,7 +187,7 @@ The `rollback-update` command allows you to revert to a previous deployment rele
 
 Here is an example of a command featuring `rollback-update`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release rollback-update --project-name "CoolApp" --label "v4"
 ```
 
@@ -212,7 +209,7 @@ The `list` command displays a pretty-printed list of all deployed releases.
 
 Here is an example of a command featuring `list`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe release list --project-name "CoolApp"
 ```
 
@@ -228,7 +225,7 @@ When used, the `bundle` command **will only run the MXBuild step** (skipping Git
 
 Here is an example of a command featuring `bundle`:
 
-```bash
+```bash {linenos=false}
 native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 ```
 
@@ -246,7 +243,7 @@ Commands to modify the iOS configuration are grouped under the `config ios` comm
 
 To add or remove entitlements, use the `add-entitlements` or `remove-entitlements` commands:
 
-```bash
+```bash {linenos=false}
 native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitlements notification nfc
 ```
 
@@ -259,7 +256,7 @@ native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitl
 
 To add or remove background modes, use the `add-background-modes` or `remove-background-modes` commands:
 
-```bash
+```bash {linenos=false}
 native-builder.exe config ios add-background-modes --project-name "CoolApp" --modes notification
 ```
 
@@ -330,7 +327,6 @@ This parameter makes the Native Builder pick a compatible version of the Native 
 
 This parameter provides additional details when the Native Builder incurs errors. When `--verbose` is used and the Native Builder errors, the Native Builder will output a complete stack trace of the error. This is useful for cases where the Native Builder fails with an unknown error.
 
-
 ## 4 Advanced Usage {#advanced-usage}
 
 ### 4.1 Custom Native Code
@@ -372,7 +368,7 @@ The Native Template is tightly tied to the version of Studio Pro you are running
 
 **Unable to Commit {build number}** — Something went wrong while communicating with GitHub. Verify your connection, check that GitHub is available, and try running Native Builder again.
 
-### 6.2 App Center Errors
+### 6.2 App Center Errors {#app-center-errors}
 
 **Invalid API Token** — Your API token is invalid. Follow the [App Center Token](/howto8/mobile/deploying-native-app/#appcenter-token) section in *How to Deploy Your First Mendix Native Mobile App* and provide the API token to Native Builder.
 

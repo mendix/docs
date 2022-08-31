@@ -1,7 +1,6 @@
 ---
 title: "Parse & Format Date Function Calls"
 url: /refguide7/parse-and-format-date-function-calls/
-parent: "expressions"
 description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
 ---
 
@@ -15,11 +14,11 @@ Takes a string and tries to parse it. If it fails and a default value is specifi
 
 ### Input parameters
 
-*   a date
+* a date
     Type: String
-*   a format
+* a format
     Type: String
-*   a default value (**optional**)
+* a default value (**optional**)
     Type: DateTime
 
 ### Output
@@ -53,9 +52,9 @@ Converts the datetime to a string, formatted according to the format parameter. 
 
 ### Input parameters
 
-*   a date
+* a date
     Type: DateTime
-*   a format (**optional**)
+* a format (**optional**)
     Type: String
 
 ### Output
@@ -85,7 +84,7 @@ Converts the time part of datetime to a string in a standard format. `formatTime
 
 ### Input parameters
 
-*   a date
+* a date
     Type: DateTime
 
 ### Output
@@ -109,7 +108,7 @@ Converts the date part of datetime to a string in a standard format. `formatDate
 
 ### Input parameters
 
-*   a date
+* a date
     Type: DateTime
 
 ### Output

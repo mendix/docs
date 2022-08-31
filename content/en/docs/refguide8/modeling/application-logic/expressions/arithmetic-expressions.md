@@ -1,7 +1,6 @@
 ---
 title: "Arithmetic Expressions"
 url: /refguide8/arithmetic-expressions/
-parent: "expressions"
 weight: 20
 tags: ["studio pro", "expressions", "arithmetic expressions"]
 ---
@@ -37,13 +36,13 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-
-```java
+```java {linenos=false}
 2*3
 ```
+
 The output is:
 
-```java
+```java {linenos=false}
 6
 ```
 
@@ -70,27 +69,27 @@ Find the example of usages below:
 
 * The `div` syntax example: if you use the following input:
 
-  ```java
-  3 div 5
-  ```
+    ```java {linenos=false}
+    3 div 5
+    ```
 
-  The output is:
+    The output is:
 
-  ```java
-  0.6
-  ```
+    ```java {linenos=false}
+    0.6
+    ```
 
 * `:` syntax example: if you use the following input:
 
-  ```java
-  12 : 3
-  ```
+    ```java {linenos=false}
+    12 : 3
+    ```
 
-  The output is:
+    The output is:
 
-  ```java
-  4.0
-  ```
+    ```java {linenos=false}
+    4.0
+    ```
 
 ### 3.4 Remarks
 
@@ -98,37 +97,37 @@ The result of a division is only an approximation if it has an infinite decimal 
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     3 : 7
     ```
-    
+
     the output is:
     
-    ```java
+    ```java {linenos=false}
     0.4285714285714285714285714285714286
     ```
-    
+
     If you continue a calculation with the results of a division, the results might be unexpected. The following input:
-    
-    ```java
+
+    ```java {linenos=false}
     (3 : 7) * 7
     ```
-    
+
     results in the output below:
-    
-    ```java
+
+    ```java {linenos=false}
     3.0000000000000000000000000000000002
     ```
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     ceil((3 : 7) * 7)
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     4
     ```
 
@@ -157,15 +156,16 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 23 mod 5
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 3
 ```
+
 ## 5 Addition
 
 Adds two numbers.
@@ -191,13 +191,13 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 -3 + 4
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 1
 ```
 
@@ -224,12 +224,12 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 5 - 4
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 1
 ```

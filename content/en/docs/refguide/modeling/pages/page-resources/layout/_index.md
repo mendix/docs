@@ -1,7 +1,6 @@
 ---
 title: "Layout"
 url: /refguide/layout/
-parent: "page-resources"
 weight: 10
 tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -97,10 +96,10 @@ The **layout type**, determines the purpose of the layout and how a page using t
 
 Layouts can contain the following widgets:
 
-*   [Layout grid](/refguide/layout-grid/)
-*   [Scroll container](/refguide/scroll-container/)
-*   [Placeholder](/refguide/placeholder/)
-*   [Header](/refguide/header/)
-*   [Sidebar toggle](/refguide/sidebar-toggle-button/)
+* [Layout grid](/refguide/layout-grid/)
+* [Scroll container](/refguide/scroll-container/)
+* [Placeholder](/refguide/placeholder/)
+* [Header](/refguide/header/)
+* [Sidebar toggle](/refguide/sidebar-toggle-button/)
 
 Placeholder, header, and sidebar toggle are unique to layouts, whilst Layout grids and scroll containers can also be used on pages.

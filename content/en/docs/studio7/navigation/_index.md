@@ -17,9 +17,7 @@ Open the **Navigation Document** by clicking the corresponding icon in the left 
 {{< figure src="/attachments/studio7/navigation/navigation-icon.png"   width="300"  >}}
 
 {{% alert color="info" %}}
-
-In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide7/navigation/#profiles) in *Navigation in Mendix 7.4 & Above* in the *Studio Pro Guide*. 
-
+In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide7/navigation/#profiles) in *Navigation in Mendix 7.4 and Above* in the *Studio Pro Guide*. 
 {{% /alert %}}
 
 ## 2 Properties of Menu Items {#properties-of-menu-items}
@@ -47,9 +45,7 @@ You can choose the **On Click Action** in the **Events** section. The **On Click
 | Open Link      | Triggers an action based on the link type: <ul><li>**Web** – navigates to a website </li><li>**Email** – composes an email</li><li>**Phone Call** – starts a phone call</li><li>**Text Message** - sends a text message</li></ul>**Note** When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message. |
 
 {{% alert color="info" %}}
-
 If a menu item has a sub-item, the **On Click Action** should be **Nothing**. 
-
 {{% /alert %}}
 
 ### 2.2 General {#general-section-navigation}
@@ -67,8 +63,7 @@ The properties that can be configured in the **General** section, are described 
 To create a new navigation item, do the following:
 
 1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**.
-
-2.  Click a plus at the end of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
+2. Click a plus at the end of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
     {{< figure src="/attachments/studio7/navigation/adding-navigation-items.png" >}}
 

@@ -11,6 +11,21 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### August 27th, 2022
+
+#### Improvements
+
+* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/general/app-store-overview/#my-drafts) section of *Marketplace Overview*.
+
+### August 11th, 2022
+
+#### New Features
+
+* We have introduced a content curation feature, which allows Mendix Admins to curate Marketplace content for Studio. Mendix Admins can do the following from the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center:
+   * Limit available public Marketplace content in Studio
+   * Approve and hide private Marketplace content in Studio
+
+
 ### March 24th, 2022
 
 #### Improvements
@@ -66,9 +81,9 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](https://docs.mendix.com/appstore/general/app-store-overview#types), and Studio Pro **Compatibility**. 
+* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/general/app-store-overview/#types), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
-* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview/#company-subscriptions) experience using credit card for two app services in supported regions.
+* We have listed 10+ **Premium** [app services](/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview/#company-subscriptions) experience using credit card for two app services in supported regions.
 
 ### August 12th, 2021
 
@@ -105,8 +120,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### New Features
 
 * We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service/)):
-	* Automatic provisioning of the app service on subscription.
-	* The [Service Management Dashboard](/appstore/general/app-store-overview/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+    * Automatic provisioning of the app service on subscription.
+    * The [Service Management Dashboard](/appstore/general/app-store-overview/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4th, 2021
 
@@ -120,8 +135,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### Improvements
 
 * We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts/#lts) and [medium-term support (MTS)](/releasenotes/studio-pro/lts-mts/#mts).
-	{{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!
-	{{% /alert %}}
+
+    {{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!{{% /alert %}}
 
 #### Fixes
 
@@ -130,7 +145,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### Known Issues
 
 * There is an issue with users having trouble downloading Windows Service.
-	* Fixed on [May 4th, 2021](#windows-service).
+    * Fixed on [May 4th, 2021](#windows-service).
 
 ### March 23rd, 2021
 
@@ -227,7 +242,7 @@ For more information on these support levels, see [App Store Content Support](/a
 
 You can now create [user groups](/appstore/general/app-store-overview/#user-groups) for your company and assign your company’s App Store content to different groups. Management of user group content is restricted to only the members of the group. You can also add [guest](/appstore/general/app-store-overview/#guests) users to these groups and allow them to download selected private company content.
 
-The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/appstore/general/app-store-overview#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview/#guests).
+The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members](/appstore/general/app-store-overview/#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview/#guests).
 
 Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview/#group-content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 
@@ -251,20 +266,20 @@ We added the flexibility to label your App Store content with a [custom version 
 
 We renamed all the SAP-related connectors and app templates in the App Store to be consistent. The changes are:
 
- Type | Old Name | New Name |
- ----- | ----- | -----|
- Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Business Technology Platform |
- Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
- Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
- Connector | SAP OData Connector | OData Connector for SAP solutions |
- Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
- App Template | Fiori Blank | Blank App for SAP Fiori themed apps |
- App Template | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
- App Template | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
+| Type | Old Name | New Name |
+| ----- | ----- | -----|
+| Connector | SAP Cloud Platform XSUAA Connector | XSUAA Connector for SAP Business Technology Platform |
+| Connector | SAP Fiori UI Package | UI Package for SAP Fiori themed apps |
+| Connector | SAP Leonardo Machine Learning Foundation Connector | Connector for SAP Leonardo Machine Learning Foundation |
+| Connector | SAP OData Connector | OData Connector for SAP solutions |
+| Connector | SAP OData Model Creator | OData Model Creator for SAP solutions |
+| App Template | Fiori Blank | Blank App for SAP Fiori themed apps |
+| App Template | SAP Northwind OData | Northwind OData Service Master-Detail App for SAP solutions |
+| App Template | SAP Purchase Order Approval Tutorial | Purchase Order Approval Tutorial for SAP solutions |
 
 ### August 26th, 2019
 
-#### SAP OData Connector Improvements & Fixes
+#### SAP OData Connector Improvements and Fixes
 
 * We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
 * We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
@@ -308,7 +323,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 ### February 15th, 2019
 
-#### SAP OData Connector Improvements & Fixes
+#### SAP OData Connector Improvements and Fixes
 
 * We now throw an error which you can catch in a microflow if the destination does not exist, or the app is running locally. Previously the error could not be caught.
 * We fixed some typos in the OData Connector actions.

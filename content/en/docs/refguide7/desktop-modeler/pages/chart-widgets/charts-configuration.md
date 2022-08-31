@@ -1,7 +1,6 @@
 ---
 title: "Chart Configuration"
 url: /refguide7/charts-configuration/
-parent: "chart-widgets"
 weight: 10
 tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configuration"]
 ---
@@ -20,7 +19,7 @@ This guide covers the following widgets:
 * Line chart
 * Pie chart
 * Time series
-  * Note that some apps may have two *Time series* widgets. This document refers to the one with this icon: {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/time-series-icon.png" alt="Image of correct Time series widget" >}}
+    * Note that some apps may have two *Time series* widgets. This document refers to the one with this icon: {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/time-series-icon.png" alt="Image of correct Time series widget" >}}
 
 The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](/refguide7/charts-any-configuration/).
 
@@ -38,22 +37,22 @@ Add series and configure their properties, each series represents a dataset. For
 
 * The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 
-  In this case, the **Data source** and **Data points** are shown as separate tabs in the widget.
+    In this case, the **Data source** and **Data points** are shown as separate tabs in the widget.
 
-  {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/widget-data-source.png" alt="Pie chart dialog showing tabs for Data source and Data points" >}}
+    {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/widget-data-source.png" alt="Pie chart dialog showing tabs for Data source and Data points" >}}
 
-  The fields are the same as the ones described in the sections [Data source](#data-source) and [Data points](#data-points), below.
+    The fields are the same as the ones described in the sections [Data source](#data-source) and [Data points](#data-points), below.
 
 * Charts which support multiple series of data, like a line chart with multiple lines, support more than one series of data
 
-  In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
+    In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-  {{% alert color="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto7/extensibility/charts-dynamic-series/).{{% /alert %}}
+    {{% alert color="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto7/extensibility/charts-dynamic-series/).{{% /alert %}}
 
 1. Data source<a name="data-source"></a>
 
     The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
-  
+
     {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/series-item-data-source.png" alt="Edit series Data source tab" >}}
 
     * **Static/Dynamic**: Choose whether there is a fixed number of data series (lines, for example), or whether the number of data series is variable and will be decided by the app.
@@ -71,7 +70,7 @@ Add series and configure their properties, each series represents a dataset. For
 2. Data points<a name="data-points"></a>
 
     The attribute(s) within the data source used for the values to be plotted.
-    
+
     {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/series-item-data-points.png" alt="Edit series Data points tab" >}}
 
     * **X-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported
@@ -83,9 +82,9 @@ Add series and configure their properties, each series represents a dataset. For
     * **Sort order**: The sort-order of the data provided by the "X-axis sort attribute"
 
     * **Aggregation type**: What to do if there are two y values in this series for one x value (for example if there are two data points in one series: (2,3), and (2,4)) – most of the options are self-explanatory, examples are:
-      * Sum: plot the sum of the two values – (2,7) for the example above
-      * Average: plot the mean of the two values (2,3.5)
-      * None: plot just the first data point (2,3)
+        * Sum: plot the sum of the two values – (2,7) for the example above
+        * Average: plot the mean of the two values (2,3.5)
+        * None: plot just the first data point (2,3)
 
 3. Appearance
 
@@ -106,8 +105,8 @@ Add series and configure their properties, each series represents a dataset. For
     {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/series-item-dynamic.png" alt="Data series Dynamic series tab" >}}
 
     * **Series entity**: the entity which defines a series – the list of objects of this entity type will be used to construct the series; one series for each object.
-    
-      Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/howto7/extensibility/charts-dynamic-series/) for more information.
+
+        Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/howto7/extensibility/charts-dynamic-series/) for more information.
 
     * **Series name attribute**: the attribute in the series entity which will be displayed as the series name if a legend is displayed
 
@@ -120,26 +119,26 @@ Add series and configure their properties, each series represents a dataset. For
 6. Events
 
     The events to be supported if the user interacts with the chart.
-    
+
     {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/series-item-events.png" alt="Edit series Events tab" >}}
 
-    {{% alert color="info" %}}The context of the page, microflow, or nanoflow selected for an event or tooltip will be the plotted object from which the point on the chart is drawn. This means you can display or use the x and y values, _and_ any other values stored in that object.<br /><br />For example you could use the tooltip to display the precise y value of a point, plus information on when the data was collected{{% /alert %}}
-    
+    {{% alert color="info" %}}The context of the page, microflow, or nanoflow selected for an event or tooltip will be the plotted object from which the point on the chart is drawn. This means you can display or use the x and y values, *and* any other values stored in that object.<br /><br />For example you could use the tooltip to display the precise y value of a point, plus information on when the data was collected{{% /alert %}}
+
     * **On click**: Select the way a click of a data point should be handled:
-      * Do nothing
-      * Show a page
-      * Call a microflow
-      * Call a nanoflow
+        * Do nothing
+        * Show a page
+        * Call a microflow
+        * Call a nanoflow
 
         Configure the corresponding setting.
 
-      * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
+        * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
 
-      * **Open page as**: Full page, Popup or Blocking popup
+        * **Open page as**: Full page, Popup or Blocking popup
 
-      * **On click microflow**: The microflow that will be executed on click
+        * **On click microflow**: The microflow that will be executed on click
 
-      * **On click nanoflow**: The nanoflow that will be executed on click
+        * **On click nanoflow**: The nanoflow that will be executed on click
 
     * **Tooltip form**: The page to show when a user hovers over a chart plot point
 
@@ -161,11 +160,11 @@ The **Appearance** settings are used to set the size of the chart on the page.
 
 * **Height unit**: The type of unit which is used for the **Height** property
 
-  * **Percentage of width**: sets the aspect ratio
-  * **Pixels**: is an absolute height
-  * **Percentage of parent**: sets the height in relation to a container in which the widget is placed
-  
-  {{% alert color="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
+    * **Percentage of width**: sets the aspect ratio
+    * **Pixels**: is an absolute height
+    * **Percentage of parent**: sets the height in relation to a container in which the widget is placed
+
+    {{% alert color="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
 
 * **Height**: The height in pixels or percentage based on the setting of **Height unit**
 
@@ -185,20 +184,20 @@ See the following link for more information about plotly.js and the options: htt
 
 * **Mode**: You can use these charts in three different modes:
 
-  * **Basic**: quickly setup a chart with the various widget options
-  * **Advanced**: specify additional JSON configuration
-  * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
+    * **Basic**: quickly setup a chart with the various widget options
+    * **Advanced**: specify additional JSON configuration
+    * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
     {{< figure src="/attachments/refguide7/desktop-modeler/pages/chart-widgets/charts-configuration/toggle-editor.png" >}}
 
 * **Layout options**: The JSON containing the Plotly layout options
-  * [Samples](/refguide7/charts-advanced-cheat-sheet/#layout-all)
-  * [Full reference](https://plot.ly/javascript/reference/#layout)
+    * [Samples](/refguide7/charts-advanced-cheat-sheet/#layout-all)
+    * [Full reference](https://plot.ly/javascript/reference/#layout)
 
 * **Configuration options**: The JSON containing the Plotly configuration options
-  * [Samples](/refguide7/charts-advanced-cheat-sheet/#config-options)
-  * [Documentation](https://plot.ly/javascript/configuration-options/)
-  * [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
+    * [Samples](/refguide7/charts-advanced-cheat-sheet/#config-options)
+    * [Documentation](https://plot.ly/javascript/configuration-options/)
+    * [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
 
 #### 2.1.5 Common
 
@@ -273,7 +272,7 @@ The properties above are common across the chart types. In this section, the pro
 1. **Static series** Tab
 
     * **Series name**: this will be displayed in any legend on the chart
-    
+
     * **Bar color**: HTML color of the bar for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ### 3.6 Time Series Chart

@@ -28,7 +28,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
+Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
 ### 2.1 Firewall Settings
@@ -186,7 +186,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-###  9.2 Storage Types for Servers
+### 9.2 Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 

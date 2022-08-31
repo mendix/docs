@@ -5,11 +5,32 @@ weight: 97
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.66.0 {#466}
+
+**Release date: August 19th, 2022**
+
+* We added support for Mendix [9.17.0](/releasenotes/studio-pro/9/).
+* We added support for Mendix Metamodel [9.17.0](/releasenotes/sdk/metamodel-9.17/).
+
+## 4.65.0 {#465}
+
+**Release date: July 18th, 2022**
+
+* We added support for Mendix [9.16.0](/releasenotes/studio-pro/9.16/).
+* We added support for Mendix Metamodel [9.16.0](/releasenotes/sdk/metamodel-9.16/).
+
+## 4.64.0 {#464}
+
+**Release date: June 22nd, 2022**
+
+* We added support for Mendix [9.15.0](/releasenotes/studio-pro/9.15/).
+* We added support for Mendix Metamodel [9.15.0](/releasenotes/sdk/metamodel-9.15/).
+
 ## 4.63.0 {#463}
 
 **Release date: May 20th, 2022**
 
-* We added support for Mendix [9.14.0](/releasenotes/studio-pro/9/).
+* We added support for Mendix [9.14.0](/releasenotes/studio-pro/9.14/).
 * We added support for Mendix Metamodel [9.14.0](/releasenotes/sdk/metamodel-9.14/).
 
 ## 4.62.0 {#462}
@@ -277,18 +298,18 @@ weight: 97
 
 **Release date: February 8th, 2019**
 
-*  We added support for [Mendix 7.23.0](/releasenotes/studio-pro/7.23/).
-*  It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer Metamodel version than the one this Model SDK supports. This was not possible before, as we checked the Mendix Metamodel version for every operation. Now, we only check the Mendix Metamodel version when actually opening a working copy.
+* We added support for [Mendix 7.23.0](/releasenotes/studio-pro/7.23/).
+* It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer Metamodel version than the one this Model SDK supports. This was not possible before, as we checked the Mendix Metamodel version for every operation. Now, we only check the Mendix Metamodel version when actually opening a working copy.
 
 ## 4.18.0 {#418}
 
 **Release date: December 13th, 2018**
 
-*  We added the ability to use promises instead of callbacks when using the Model SDK. All methods in `ModelSdkClient` and `Model` as well as the `load()` method of model elements now feature promise-based overloads in addition to the original callback-based ones.
-  {{% alert color="info" %}}If you open a working copy using the promise-based methods but you are still using callbacks in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using `Model.setErrorHandler()`.{{% /alert %}}
-*  We added support for Mendix 7.22.0.
-  {{% alert color="info" %}}There is a small breaking API change where the property `navigation.NavigationDocument.profiles` is now of a different type to accommodate the introduction of a new type of navigation profile. For now, these profiles can be safely casted to `navigation.NavigationProfile`.{{% /alert %}}
-*  We added a lock type parameter to the `unlockWorkingCopy` API.
+* We added the ability to use promises instead of callbacks when using the Model SDK. All methods in `ModelSdkClient` and `Model` as well as the `load()` method of model elements now feature promise-based overloads in addition to the original callback-based ones.
+    {{% alert color="info" %}}If you open a working copy using the promise-based methods but you are still using callbacks in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using `Model.setErrorHandler()`.{{% /alert %}}
+* We added support for Mendix 7.22.0.
+    {{% alert color="info" %}}There is a small breaking API change where the property `navigation.NavigationDocument.profiles` is now of a different type to accommodate the introduction of a new type of navigation profile. For now, these profiles can be safely casted to `navigation.NavigationProfile`.{{% /alert %}}
+* We added a lock type parameter to the `unlockWorkingCopy` API.
 
 ## 4.17.0
 
@@ -442,7 +463,7 @@ weight: 97
 
 The code snippet below is an example of what was broken in **MS-352**. The default value of `layoutCall` should be `null`, but it used to be (incorrectly) set to a new instance of `LayoutCall`. This is no longer the case, and it can be fixed by initializing `layout.layoutCall` to a new `LayoutCall` instance before assigning the `layout` property.
 
-```
+```text
 const layout = pages.Layout.createIn(this.module);
 ...
 layout.layoutCall.layout = this.masterLayout;

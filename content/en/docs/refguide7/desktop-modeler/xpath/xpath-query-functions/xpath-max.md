@@ -1,7 +1,6 @@
 ---
 title: "XPath max"
 url: /refguide7/xpath-max/
-parent: "xpath-query-functions"
 ---
 
 ## 1 Overview

@@ -128,7 +128,7 @@ The developer can commit this to the Team Server repository at any time to make 
 
 {{< figure src="/attachments/refguide8/version-control/image3.png" >}}
 
-### 3.3 Work in Studio & Studio Pro
+### 3.3 Work in Studio and Studio Pro
 
 Two developers are working on the same [development line](#development-line) of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 

@@ -1,7 +1,6 @@
 ---
 title: "Module Security"
 url: /refguide8/module-security/
-parent: "security"
 weight: 20
 tags: ["studio pro", "module security", "security", "module"]
 aliases:
@@ -29,7 +28,7 @@ A module role defines a set of access permissions that you can assign to a user.
 A module role has the following properties:
 
 * **Name** – the name of a module role; end-users do not see the names of module roles, if they create or view user accounts, they only see the names of user roles
-*  **Documentation** – the documentation of a module role is there only for the convenience of Studio Pro users, it is not displayed to the end-users
+* **Documentation** – the documentation of a module role is there only for the convenience of Studio Pro users, it is not displayed to the end-users
 
     {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/module-security/module-roles-tab.png" >}}
 

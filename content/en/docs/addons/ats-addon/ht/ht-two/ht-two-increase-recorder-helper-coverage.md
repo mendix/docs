@@ -1,7 +1,7 @@
 ---
 title: "Increase ATS Recorder and Helper Coverage"
+linktitle: "Increase ATS Recorder & Helper Coverage"
 url: /addons/ats-addon/ht-two-increase-recorder-helper-coverage/
-parent: "ht-two"
 description: "Describes how to increase the ATS Recorder and Helper coverage of your application"
 tags: ["ATS", "testing"]
 ---
@@ -19,8 +19,8 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have the following prerequisites in place:
 
-*  Read and Installed the ATS Helper and Recorder, see [How to Install the ATS Helper and ATS Recorder](/addons/ats-addon/ht-two-install-ats-helper-recorder/)
-*  Completed the Rapid Application Developer course
+* Read and Installed the ATS Helper and Recorder, see [How to Install the ATS Helper and ATS Recorder](/addons/ats-addon/ht-two-install-ats-helper-recorder/)
+* Completed the Rapid Application Developer course
 
 ## 3 Increasing ATS Recorder Coverage of Your AUT
 
@@ -46,13 +46,13 @@ To add a constant in Mendix Studio Pro follow these steps:
 2. In the **Configuration** tab click **New**. This opens the **New Configuration** dialog.
 3. In the dialog click the **Constants** tab and click **New**. This opens the **Select Constant** dialog.
 4. Select a module in this dialog where you want to add the constant and click **New**. This opens the **Add Constant** dialog.
-5.  Enter a name in the dialog and click **OK**. This opens the **Constant** dialog. where you can add the following properties:
+5. Enter a name in the dialog and click **OK**. This opens the **Constant** dialog. where you can add the following properties:
 
-	* Name: EnableScopedSeleniumClasses
-	* Type: Boolean
-	* Default value: True
+    * Name: EnableScopedSeleniumClasses
+    * Type: Boolean
+    * Default value: True
 
-	{{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-increase-recorder-helper-coverage/add-constant.png" >}}
+    {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-increase-recorder-helper-coverage/add-constant.png" >}}
 
 6. Click **OK**. This opens the **New Constant Value** dialog.
 7. Click **OK** in the **New Constant Value** dialog and click **OK** in the **New Configuration** dialog.
@@ -70,6 +70,7 @@ Make sure you use some kind of naming structure when deciding to rename several 
 ### 3.3 Reducing the Use of Custom Widgets
 
 Custom widgets are often designed differently than Mendix widgets. As the ATS Recorder is designed to recognize Mendix widgets. Some custom widgets are not supported by the ATS Recorder, they can still be supported by ATS! The advice is to build functionalities with Mendix widgets. You must only use custom widgets in your application if Mendix widgets do not suffice. Questions that you must ask yourself when you create new functionalities:
+
 * Does it add value to the application if I add a custom widget instead of a standard widget?
 * Can it be solved in a different way, with the use of standard widgets?
 

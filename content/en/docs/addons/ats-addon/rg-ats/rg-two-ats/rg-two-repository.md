@@ -1,7 +1,6 @@
 ---
 title: "Repository"
 url: /addons/ats-addon/rg-two-repository/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction
@@ -18,19 +17,19 @@ The breadcrumbs in the repository allow for quick navigation between folders. Cl
 
 With the type icons on the left side of the item name, you can identify at a glance the type of an item. The following list describes all the type icons used in the repository:
 
-*  This is a folder:
+* This is a folder:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-repository/folder-icon.png" >}}
 
-*  This is a test case:
+* This is a test case:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-repository/test-case-icon.png" >}}
 
-*  This is test suite:
+* This is test suite:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-repository/test-suite-icon.png" >}}
 
-*  This is a action:
+* This is a action:
 
     {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-repository/action-icon.png" >}}
 
@@ -85,9 +84,10 @@ There are different scenarios for exporting data from ATS:
 * Exporting test cases
 * Exporting test suites
 * Exporting folders containing the following:
-  * Actions
-  * Actions and test cases
-  * Actions, test cases, and test suites
-  * Folders, actions, test cases, and test suites
+
+    * Actions
+    * Actions and test cases
+    * Actions, test cases, and test suites
+    * Folders, actions, test cases, and test suites
 
 To export the data, you have to mark the items in the **Repository** and then click **Export** in the top menu. You can also export the item right away from the edit view by clicking **Export** on the upper-right side of the screen.

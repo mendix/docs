@@ -1,7 +1,6 @@
 ---
 title: "Page Editor Consistency Errors"
 url: /refguide/consistency-errors-pages/
-parent: "consistency-errors"
 weight: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
@@ -13,9 +12,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 In this document, we explain how to solve the most common or complicated consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error on a page is when you do not specify the entity property of a data view on a page. 
 
 {{% alert color="info" %}}
-
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
-
 {{% /alert %}}
 
 Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
@@ -88,8 +85,7 @@ As the **Details** button to the **Customers** page is outside a data container,
 If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customer** page, we can fix this error the following way:
 
 1. Open the **Customers** page.
-
-2.  Drag the **Details** button inside the list view.
+2. Drag the **Details** button inside the list view.
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
 
@@ -100,12 +96,9 @@ Now the button gets the object of type *Customer* from the list view on the **Cu
 If you want to create a new customer and fill in the customer's details on the **Customers Details** page, you can do the following:
 
 1. Open the **Customers** page.
-
 2. Open properties for the **Details** button, and set **Create Object** as an **On Click Action**.
-
 3. Set **Customer** as **Entity**.
-
-4.  Set **Customer Details** as **Page**.
+4. Set **Customer Details** as **Page**.
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/button-create-object.png" alt="On Click Event Example" >}}
 
@@ -133,10 +126,9 @@ To fix this error you can do one of the following:
 
 * Place the **Details** button in a data container that will pass the correct type of data to the page:
 
-	{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png"   width="350"  >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png"   width="350"  >}}
 
 * Select another page for the button that will not expect any object to be passed to it, or will expect the object of type *Engineer*
-
 * Change the data source of the data view on the **Tasks** page to entity *Engineer*
 
 ## 5 Data Consistency Errors
@@ -167,8 +159,7 @@ The microflow parameter expects an argument *Customer*, and since this argument 
 To fix it, do the following:
 
 1. Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
-
-2.  Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
+2. Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
 
@@ -219,8 +210,7 @@ If you have the wrong type of association, you will get a consistency error: *As
 To fix this error, do the following:
 
 1. Open your domain model and double-click the association that you are using for the reference selector.
-
-2.  In **Properties of Association** dialog box, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
+2. In **Properties of Association** dialog box, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
 
@@ -229,9 +219,7 @@ To fix this error, do the following:
 You have changed the association multiplicity and fixed the error. 
 
 {{% alert color="info" %}}
-
 Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference selector, for example, a reference set selector or input reference set selector. 
-
 {{% /alert %}}
 
 ### 6.2 Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector {#incorrect-multiplicity-reference-set}
@@ -244,14 +232,13 @@ For example, you have several employees who can visit customers in different cit
 
 If you have a wrong type of association, you will get the following errors:
 
-*  *Association {Name} must be a reference set (not a reference)* – for an input reference set selector
-*   *The reference set selector expects an association of type reference set that starts in the data view entity* – for a reference set selector
+* *Association {Name} must be a reference set (not a reference)* – for an input reference set selector
+* *The reference set selector expects an association of type reference set that starts in the data view entity* – for a reference set selector
 
 To fix the error, do the following:
 
 1. Open your domain model and double-click the association that you are using for the reference set selector or the input reference set selector and do the following: <br/>
-
-2.  In **Properties of Association** dialog box, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
+2. In **Properties of Association** dialog box, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
 
@@ -260,14 +247,12 @@ To fix the error, do the following:
 You have changed the association multiplicity and fixed the error. 
 
 {{% alert color="info" %}}
-
 Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector or input reference set selector, for example, a reference selector. 
-
 {{% /alert %}}
 
-## 7 Images, Videos & Files Consistency Errors
+## 7 Images, Videos and Files Consistency Errors
 
-Images, videos & files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](/refguide/image-and-file-widgets/). 
+Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](/refguide/image-and-file-widgets/). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -275,6 +260,7 @@ Images, videos & files should be placed in a data container, otherwise you will 
 |            | An [image uploader](/refguide/image-uploader/) must be placed in a data view or snippet that is connected to the entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image (or its specialization) as an entity for this snippet or place the snippet in a data container. |
 |            | Move this widget into a data container, for example a data view or list view. | You have added a [dynamic image](/refguide/image-viewer/) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
 | CE0489     | Select an entity for the data source of this [dynamic image](/refguide/image-viewer/). | You have added a dynamic image to a page, it is placed inside a data view or a list view, but an entity for the dynamic image is not specified. | Open dynamic image properties > the **Data source** section and select an entity in the **Entity (path)** field. |
+
 ## 8 Image Widget Consistency Errors
 
 A consistency error for an image widget is described in the table below:
@@ -291,6 +277,6 @@ The most common consistency errors are connected with not configuring the on cli
 
 To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click event. 
 
-##  10 Read More
+## 10 Read More
 
 * [Pages](/refguide/pages/) 

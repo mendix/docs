@@ -1,7 +1,6 @@
 ---
 title: "Export Mappings"
 url: /refguide/export-mappings/
-parent: "mapping-documents"
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -72,10 +71,10 @@ For each value element that the complex schema element encompasses, an attribute
 
 For some selected schema elements defining an Entity is optional. This is the case when the schema element:
 
-*   does not contain any attributes,
-*   has a maximum occurrence of 1 (maxOccurs="1"),
-*   is not a choice element or contained by a choice element, and 
-*   is not an inheritance element or contained by an inheritance element. 
+* does not contain any attributes,
+* has a maximum occurrence of 1 (maxOccurs="1"),
+* is not a choice element or contained by a choice element, and 
+* is not an inheritance element or contained by an inheritance element. 
 
 An example of this is shown in figure 6.
 

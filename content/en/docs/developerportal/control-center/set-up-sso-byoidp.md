@@ -52,18 +52,18 @@ From here you can add a configuration, edit draft versions of a configuration, a
 
 When adding a configuration, you will need to provide the information described below:
 
-*  **Configuration name** – a name for the IDP setup in the Single Sign-On configuration for your own reference.
+* **Configuration name** – a name for the IDP setup in the Single Sign-On configuration for your own reference.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-1.png" alt="Customer IDP setup - step 1" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-1.png" alt="Customer IDP setup - step 1" >}}
 
 * **Redirect URL** – the callback URL to the Developer Portal that your IDP needs to send the authenticated user to.
 * **OpenID Connect well-known endpoint URL** – the endpoint at your IDP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
     If your IDP supports multiple protocols, make sure you enter the OpenID Connect endpoint.
 * **Client ID** – the ID of the Developer Portal registration in your IDP.
 * **Client secret** – the password or secret of the Developer Portal registration in your IDP. Enter this once. After saving your configuration it will no longer be shown to you.
-*  **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IDP. Mendix uses this data to map the user’s identity in your IDP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. In some cases, depending on your IDP, other scopes are necessary to fully map the user’s identity.
+* **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IDP. Mendix uses this data to map the user’s identity in your IDP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. In some cases, depending on your IDP, other scopes are necessary to fully map the user’s identity.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-2.png" alt="Customer IDP setup - step 2" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-2.png" alt="Customer IDP setup - step 2" >}}
 
 ### 3.2 Testing Your Configuration
 
@@ -71,7 +71,7 @@ Once you have configured the endpoint and the scope, you are ready to perform a 
 
 {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/customer-idp-wizard-page-3.png" alt="Customer IDP setup - step 3" >}}
 
-### 3.3 Mapping Between IDP & Mendix
+### 3.3 Mapping Between IDP and Mendix
 
 The data from your IdP may have different attribute names from the Mendix identity.
 
@@ -112,17 +112,17 @@ Microsoft Azure AD is one of the most used IDP’s, which supports OpenID Connec
 
 2. Create a new app registration by clicking **New registration** in the top left corner.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-overview.png" alt="Azure Active Directory - App registrations overview" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-overview.png" alt="Azure Active Directory - App registrations overview" >}}
 
 3. Enter a name for your configuration, and select the preferred account type. Under Redirect URI paste the callback URL you were shown when setting up the IDP  in the Developer Portal.
 
 4. Click **Register** to save the registration.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-1.png" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-1.png" >}}
 
 5. In the app registration details that opens after you save your registration, hover over **Application (client) ID** and copy the ID to the clipboard with the button that appears.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-2.png" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-2.png" >}}
 
     You will need this Client ID when setting up the Customer IDP in the Developer Portal.
 
@@ -130,7 +130,7 @@ Microsoft Azure AD is one of the most used IDP’s, which supports OpenID Connec
 
 7. Copy the **OpenID Connect metadata document** URL.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-3.png" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-3.png" >}}
 
 8. Close the sidebar with the X in the top right corner and you will return to the App registration details page.
 
@@ -138,17 +138,17 @@ Microsoft Azure AD is one of the most used IDP’s, which supports OpenID Connec
 
 10. Click **New client secret** in the page that opens.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-4.png" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-4.png" >}}
 
 11. In the pop-up box that opens, enter a name for your certificate, select a expiration type, and click **Add**.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-5.png" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-5.png" >}}
 
-	If you wish to let the certificate to expire, please write down the date the certificate will expire.
+    If you wish to let the certificate to expire, please write down the date the certificate will expire.
 
 12. Copy the client secret. You will need this to set up the Customer IDP setup in the Developer Portal.
 
-	{{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-6.png" >}}
+    {{< figure src="/attachments/developerportal/control-center/set-up-sso-byoidp/azure-app-registration-step-6.png" >}}
 
 That’s it! You are now ready to resume the Customer IDP setup in the Developer Portal.
 

@@ -6,7 +6,7 @@ A label can be used to described the purpose of the widget to the user. The labe
 
 This property determines whether the label is rendered and the widget is wrapped in a form group.
 
-_Default value:_ No
+*Default value:* No
 
 ### Label caption
 

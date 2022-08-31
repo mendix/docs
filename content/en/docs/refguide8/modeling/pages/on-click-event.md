@@ -1,7 +1,6 @@
 ---
 title: "On Click Event & Events Section"
 url: /refguide8/on-click-event/
-parent: "pages"
 weight: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
 aliases:
@@ -95,10 +94,8 @@ The **Show a page** event opens the specified page. Select the page which opens 
 The **Call a microflow** event executes the specified microflow.
 
 {{% alert color="info" %}}
-
 When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input widgets) will be overwritten by the results of the microflow.
 Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
-
 {{%/alert %}}
 
 The following settings are specific for this event:
@@ -132,9 +129,7 @@ If the microflow is triggered within a grid and has an object list parameter, th
 * **Asynchronous**
 
     * The client executes the microflow but does not wait for the result
-
     * The client checks the server every ten seconds to see whether the microflow is done executing
-
     * Only set the call type to asynchronous if you experience problems — sometimes, if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
 
 ##### 3.3.2.4 Show Progress Bar
@@ -187,7 +182,7 @@ For buttons which call a microflow from inside a grid, **Maintain selection afte
 
 ##### 3.3.2.11 Abort on Validation Errors
 
-For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed _before_ executing the microflow. If the validations fail, the microflow will not be executed.
+For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed *before* executing the microflow. If the validations fail, the microflow will not be executed.
 
 | Value | Description |
 | --- | --- |
@@ -207,8 +202,8 @@ The **Open link** event triggers an action based on a link type, some of which a
 
 * **Link Type** – the type of action triggered when pressing the button. For information on available link types, see the [Link Types](#on-click-link-type) section below. 
 * **Address** – usage of the address property depends on the chosen link type and whether you want to use a literal or to use the value of an attribute.
-  * **Use literal value**  – allows you to enter a fixed address.
-  * **Use attribute** – allows you to select an attribute which contains the value to be used as the address. In this case, the widget must have an entity as its context (for example, it is inside a data view).
+    * **Use literal value**  – allows you to enter a fixed address.
+    * **Use attribute** – allows you to select an attribute which contains the value to be used as the address. In this case, the widget must have an entity as its context (for example, it is inside a data view).
 
 #### 3.5.1 Link Types {#on-click-link-type}
 
@@ -222,9 +217,7 @@ The table below described link types available for the **Open link** on click ev
 | Text  | Specifies a number to which to send a text message   | `+1-202-555-0112`                         |
 
 {{% alert color="info" %}}
-
 When you Specify  **Email**, **Call**, or **Text** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
-
 {{%/alert %}}
 
 ### 3.6 Create Object {#create-object}

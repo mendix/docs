@@ -1,7 +1,6 @@
 ---
 title: "Get Checkbox Set Selector Value"
 url: /addons/ats-addon/rg-one-get-checkbox-set-selector-value/
-parent: "rg-one-checkbox-set-selector"
 ---
 
 ## 1 Description

@@ -1,7 +1,6 @@
 ---
 title: "User Task"
 url: /refguide/user-task/
-parent: "workflows"
 weight: 15
 tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---
@@ -77,7 +76,6 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task/task-description-example.jpg" alt="Task Description Example" >}} 
-
 
 ##### 2.2.3.2 Performing Other Actions on Parameters
 

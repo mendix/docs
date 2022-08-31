@@ -1,7 +1,6 @@
 ---
 title: "Running Now Metrics"
 url: /developerportal/operate/troubleshooting-mxcloud-runningnow/
-parent: "metrics"
 weight: 20
 description: "How to troubleshoot the running now in your node."
 tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]

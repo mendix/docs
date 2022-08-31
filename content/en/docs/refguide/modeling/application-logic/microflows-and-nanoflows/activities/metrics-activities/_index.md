@@ -1,7 +1,6 @@
 ---
 title: "Metrics Activities"
 url: /refguide/metrics-activities/
-parent: "activities"
 tags: ["studio pro", "microflow", "metrics", "micrometer"]
 ---
 

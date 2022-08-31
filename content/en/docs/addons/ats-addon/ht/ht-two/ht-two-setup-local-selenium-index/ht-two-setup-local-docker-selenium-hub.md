@@ -1,7 +1,6 @@
 ---
 title: "Set Up a Local Docker Selenium Hub"
 url: /addons/ats-addon/ht-two-setup-local-docker-selenium-hub/
-parent: "ht-two-setup-local-selenium-index"
 description: "Describes the options to setup a local selenium solution."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
@@ -23,14 +22,14 @@ The following components are needed:
 * Your machine should allow connections from ATS on port 4444
 * Since version 2.6, ATS uses the Selenium 3.8.1 API. That's why we recommend using this version of Selenium for the docker images as well
 
-## 3 Installing Your Hub & Nodes with Docker-Compose
+## 3 Installing Your Hub and Nodes with Docker-Compose
 
 The following steps describe how to install your hub and nodes with Docker-Compose:
 
 1. Create a folder or directory to place your docker-compose file
 2. Create a docker-compose.yml in your folder/directory: 
 
-    ```
+    ```yml
     hub: 
      image: selenium/hub:3.8.1
      environment:
@@ -63,7 +62,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-    ```
+    ```bash {linenos=false}
     sudo docker-compose up -d
     ```
 
@@ -71,16 +70,16 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 4. After the process has started, you can check the status with the following commands:
 
-    ```
-   sudo docker-compose ps
+    ```bash
+    sudo docker-compose ps
          Name                 Command           State           Ports         
-   ---------------------------------------------------------------------
-   docker_chrome_1    /opt/bin/entry_point.sh   Up                            
-   docker_firefox_1   /opt/bin/entry_point.sh   Up                            
-   docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
+    ---------------------------------------------------------------------
+    docker_chrome_1    /opt/bin/entry_point.sh   Up                            
+    docker_firefox_1   /opt/bin/entry_point.sh   Up                            
+    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
     ```
 
-5.  Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
+5. Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
 
     {{< figure src="/attachments/addons/ats-addon/ht/ht-two/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png" >}}
 
@@ -94,23 +93,23 @@ You can start testing by sending your test script to: `http://yourmachinenameorI
 
 Each node has one browser, so if you need more nodes of a certain browser, you can scale with docker-compose. With multiple nodes you can run tests in parallel. For example, if you want 3 Chrome browsers:
 
-    ```
-    sudo docker-compose up -d --scale chrome=3
-    docker_hub_1 is up-to-date
-    Starting docker_chrome_1 ... 
-    Starting docker_chrome_1 ... done
-    Creating docker_chrome_2 ... done
-    Creating docker_chrome_3 ... done
+```bash
+sudo docker-compose up -d --scale chrome=3
+docker_hub_1 is up-to-date
+Starting docker_chrome_1 ... 
+Starting docker_chrome_1 ... done
+Creating docker_chrome_2 ... done
+Creating docker_chrome_3 ... done
 
-    sudo docker-compose ps
-          Name                 Command           State           Ports         
-    ---------------------------------------------------------------------------
-    docker_chrome_1    /opt/bin/entry_point.sh   Up                            
-    docker_chrome_2    /opt/bin/entry_point.sh   Up                            
-    docker_chrome_3    /opt/bin/entry_point.sh   Up                            
-    docker_firefox_1   /opt/bin/entry_point.sh   Up                            
-    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
-    ```
+sudo docker-compose ps
+    Name                 Command           State           Ports         
+---------------------------------------------------------------------------
+docker_chrome_1    /opt/bin/entry_point.sh   Up                            
+docker_chrome_2    /opt/bin/entry_point.sh   Up                            
+docker_chrome_3    /opt/bin/entry_point.sh   Up                            
+docker_firefox_1   /opt/bin/entry_point.sh   Up                            
+docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
+```
 
 {{% alert color="info" %}}
 By default the hub only accepts a maximum of 5 sessions to run in parallel at a time, even if you configure more, see the official documentation.
@@ -120,38 +119,40 @@ By default the hub only accepts a maximum of 5 sessions to run in parallel at a 
 
 If you want to watch your test case live for debugging purpose, you can use the following docker-compose.yml:
 
-    hub: 
-     image: selenium/hub:3.8.1
-     environment:
-       - TZ=Europe/Amsterdam
-       - GRID_TIMEOUT=90
-     ports:
-       - 4444:4444
-    
-    firefox:
-     image: selenium/node-firefox-debug:3.8.1
-     links:
-       - hub:hub
-     environment:
-       - TZ=Europe/Amsterdam
-       - SCREEN_WIDTH=1600
-       - SCREEN_HEIGHT=900
-     ports:
-       - 5901:5900
-    
-    chrome:
-     image: selenium/node-chrome-debug:3.8.1
-     links:
-       - hub:hub
-     environment:
-       - TZ=Europe/Amsterdam
-       - SCREEN_WIDTH=1600
-       - SCREEN_HEIGHT=900
-     ports:
-       - 5900:5900
-     volumes:
-       - /dev/shm:/dev/shm
-     privileged: true
+```yml
+hub: 
+ image: selenium/hub:3.8.1
+ environment:
+   - TZ=Europe/Amsterdam
+   - GRID_TIMEOUT=90
+ ports:
+   - 4444:4444
+
+firefox:
+ image: selenium/node-firefox-debug:3.8.1
+ links:
+   - hub:hub
+ environment:
+   - TZ=Europe/Amsterdam
+   - SCREEN_WIDTH=1600
+   - SCREEN_HEIGHT=900
+ ports:
+   - 5901:5900
+
+chrome:
+ image: selenium/node-chrome-debug:3.8.1
+ links:
+   - hub:hub
+ environment:
+   - TZ=Europe/Amsterdam
+   - SCREEN_WIDTH=1600
+   - SCREEN_HEIGHT=900
+ ports:
+   - 5900:5900
+ volumes:
+   - /dev/shm:/dev/shm
+ privileged: true
+```
 
 Some side notes in case you follow this step:
 

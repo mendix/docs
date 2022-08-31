@@ -1,7 +1,6 @@
 ---
 title: "OQL"
 url: /refguide/oql/
-parent: "data-sets"
 tags: ["studio pro"]
 ---
 
@@ -35,4 +34,3 @@ An OQL query can use these components:
 | [Group by clause](/refguide/oql-group-by-clause/) (optional) | `GROUP BY Department` | Groups rows on the values of the specified attributes.  |
 | [Order by clause](/refguide/oql-order-by-clause/) (optional) | `ORDER BY Date` | Sorts rows on the specified attributes.  |
 | [Limit clause](/refguide/oql-limit-clause/) (optional) | `LIMIT 50 OFFSET 30` | Limits rows to a subset of the total amount.  |
-

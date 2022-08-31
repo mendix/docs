@@ -1,7 +1,6 @@
 ---
 title: "Operations"
 url: /refguide7/operations/
-parent: "published-web-services"
 ---
 
 
@@ -90,7 +89,7 @@ Here you can select which members of the entity can be passed and/or are optiona
 
 The order of XML elements in the WSDL does not by definition reflect the order of attributes in entities in the domain model. The order of members in the dialog is the same as the order of elements in the WSDL (and can be different from the order of attributes in entities). This gives a better overview of the WSDL contract that is exposed from Mendix. The structure you see in the members dialog reflects the structure in the WSDL.
 
-New attributes from entities will appear as new elements _below_ members that are already in the WSDL. This will prevent breaking the WSDL contract, because if you insert new XML elements inside a XML _Sequence_ container, existing web service consumers that strictly validate against the WSDL may break.
+New attributes from entities will appear as new elements *below* members that are already in the WSDL. This will prevent breaking the WSDL contract, because if you insert new XML elements inside a XML *Sequence* container, existing web service consumers that strictly validate against the WSDL may break.
 
 {{% /alert %}}{{% alert color="info" %}}
 

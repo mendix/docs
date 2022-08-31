@@ -1,7 +1,6 @@
 ---
 title: "Case-Sensitive Database Behavior"
 url: /refguide/case-sensitive-database-behavior/
-parent: "data-storage"
 tags: ["studio pro", "strings", "sort", "case", "query", "constraint"]
 weight: 20
 ---
@@ -45,7 +44,7 @@ Sorting and comparing are **case sensitive**. For versions below 8.14, all opera
 
 Does not support sorting on string attributes of unlimited length.
 
-### 2.4 MARIADB & MYSQL
+### 2.4 MARIADB and MYSQL
 
 All operations depend on the configured collation.
 The default collation is `utf8_general_ci` when the `utf8` character set is used, or `latin1_swedish_ci` when the `latin1` character set is used.

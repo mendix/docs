@@ -1,7 +1,6 @@
 ---
 title: "Show Home Page"
 url: /refguide/show-home-page/
-parent: "client-activities"
 weight: 30
 tags: ["studio pro", "show home page", "home page", "client activities"]
 aliases:
@@ -48,4 +47,3 @@ The **Action** section of the properties pane shows the action associated with t
 
 * [Show Page](/refguide/show-page/)
 * [Activities](/refguide/activities/)
-

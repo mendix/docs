@@ -1,7 +1,6 @@
 ---
 title: "Module Security"
 url: /refguide/module-security/
-parent: "security"
 weight: 20
 tags: ["studio pro", "module security", "security", "module"]
 aliases:
@@ -25,11 +24,11 @@ A module role is a specific role you create within the module to define a set of
 A module role has the following properties:
 
 * **Name** – the name of a module role; end-users do not see the names of module roles, if they create or view user accounts, they only see the names of user roles
-*  **Documentation** – the documentation of a module role is there only for the convenience of Studio Pro users, it is not displayed to the end-users
+* **Documentation** – the documentation of a module role is there only for the convenience of Studio Pro users, it is not displayed to the end-users
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/module-security/module-roles-tab.png" >}}
 
-## 2 Page Access
+## 2 Page Access {#page-access}
 
 **Page Access** defines which pages are visible to each role. The **Page access** tab is displayed as a matrix showing pages and modules roles. You can choose to show the unused pages in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
 

@@ -1,7 +1,6 @@
 ---
 title: "Project Menu"
 url: /refguide8/project-menu/
-parent: "menus"
 description: "Describes the Project Menu in Studio Pro."
 weight: 30
 tags: ["Studio Pro", "project menu", "top bar"]

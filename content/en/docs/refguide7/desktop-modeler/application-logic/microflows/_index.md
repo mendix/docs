@@ -1,7 +1,6 @@
 ---
 title: "Microflows"
 url: /refguide7/microflows/
-parent: "application-logic"
 weight: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -40,12 +39,12 @@ The graphical notation of microflows is based on the [Business Process Model and
 
 A microflow is composed of elements. Below is a categorized overview of all elements. The following categories are used:
 
-*   [Events](#events) represent start and end points of a microflow and special operations in a loop.
-*   [Flows](#flows) form the connection between elements.
-*   [Gateways](#gateways) deal with making choices and merging different paths again.
-*   [Activities](#activities) are the actions that are executed in a microflow.
-*   [Artifacts](#artifacts) provide the microflow with input and allow comments to be made.
-*   [Error handlers](#errorhandlers) can be set on an activity, gateway or loop to define how to handle an error.
+* [Events](#events) represent start and end points of a microflow and special operations in a loop.
+* [Flows](#flows) form the connection between elements.
+* [Gateways](#gateways) deal with making choices and merging different paths again.
+* [Activities](#activities) are the actions that are executed in a microflow.
+* [Artifacts](#artifacts) provide the microflow with input and allow comments to be made.
+* [Error handlers](#errorhandlers) can be set on an activity, gateway or loop to define how to handle an error.
 
 ## 4 Events<a name="events"></a>
 
@@ -114,9 +113,9 @@ When an error occurs in a microflow, all changes that have been made to objects 
 An error handler can be set on an activity, gateway or loop.
 On an activity or gateway it gives you three options:
 
-*   Rollback (default)
-*   Custom with rollback
-*   Custom without rollback
+* Rollback (default)
+* Custom with rollback
+* Custom without rollback
 
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
 
@@ -124,8 +123,8 @@ For the latter two options you can draw an additional flow from the block and ma
 
 On a loop you get two options:
 
-*   Rollback (default)
-*   Continue
+* Rollback (default)
+* Continue
 
 The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 
@@ -168,5 +167,5 @@ In microflows that apply entity access, it is not possible to inspect the attrib
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-*   [Debugging Microflows](/howto7/monitoring-troubleshooting/debug-microflows/)
-*   [Debugging Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows](/howto7/monitoring-troubleshooting/debug-microflows/)
+* [Debugging Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)

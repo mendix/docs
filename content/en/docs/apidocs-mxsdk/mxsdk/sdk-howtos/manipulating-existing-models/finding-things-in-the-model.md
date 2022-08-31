@@ -1,7 +1,6 @@
 ---
 title: "Find Things in the Model"
 url: /apidocs-mxsdk/mxsdk/finding-things-in-the-model/
-parent: "manipulating-existing-models"
 tags: ["marketplace", "app store module", "module"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Navigation Consistency Errors"
 url: /refguide/consistency-errors-navigation/
-parent: "consistency-errors"
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
 #To update screenshots in this document, use the Consistency Errors app.
@@ -12,9 +11,7 @@ tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
 In this document, we explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. An example of a consistency error is when you set a page that has a data view as a menu item. 
 
 {{% alert color="info" %}}
-
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
-
 {{% /alert %}}
 
 Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
@@ -40,11 +37,10 @@ For example, you have created a menu item called **Program** for a **Responsive*
 To fix the error, you can create an object and pass it to the page. Do the following:
 
 1. Open the navigation for the responsive profile.
-2.  Open properties of the **Program** menu item, and do the following: 
+2. Open properties of the **Program** menu item, and do the following: 
     1. Change the **On click** property from **Show a page** to **Create object**.
-2. Set **ProgramItem** as **Entity (path)**. 
-    3. Set **Program** as **On click page**. 
-
+    1. Set **ProgramItem** as **Entity (path)**. 
+    1. Set **Program** as **On click page**. 
 
 Now when an end-user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
 
@@ -59,31 +55,25 @@ For example, you have added a data view that expects an object of type *Customer
 You can fix this error by creating a microflow that will that will create a new *Customer* object and pass it to the page. Do the following:
 
 1. Open the responsive navigation profile.
-
-2.  In **Default home page field** click **Select**.
+2. In **Default home page field** click **Select**.
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/default-home-page-field.png" alt="Default Home Page Setting" >}}
 
 3. In the **Select Navigation Target** dialog box, click **New**, then select **Create Microflow**.
-
 4. Name the microflow *ACT_Open_HomePage*.
-
 5. Open the created microflow, add a **Create object** activity to it 
-
-6.  For the **Create object** activity, set **Entity** to **Customer**. 
+6. For the **Create object** activity, set **Entity** to **Customer**. 
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/create-object-properties.png" alt="Create Object Properties" >}}
 
 7. Add Show Page activity to the microflow and do the following in the **Show Page** pop-up dialog:<br/>
 
-    a. Set **Object to pass** to **NewCustomer**.<br/>
-
-    b. Set **Page** to **Home**.
+    1. Set **Object to pass** to **NewCustomer**.<br/>
+    1. Set **Page** to **Home**.
 
 Now the new object of type *Customer* will be created and passed to the home page.
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-navigation/open-home-page-microflow.png" alt="Open Home Page Microflow" >}}
-
 
 ## 3 Read More
 

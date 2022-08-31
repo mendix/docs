@@ -11,6 +11,77 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### August 25th, 2022
+
+### Improvements
+
+* We improved the accuracy of the Catalog's search results.
+* We added the option to the [Search API](/apidocs-mxsdk/apidocs/data-hub-apis/#search) to paginate through search results with an offset. This allows you to limit the number of results and specify how many to skip.
+* We made several improvements to the Catalog UI.
+
+### August 18th, 2022
+
+### Improvements
+
+* Company administrators can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+
+### Fixes
+
+* We fixed a bug where an empty V3 contract resulted in an error. The contract will now be parsed successfully and yield no entities because it is empty.
+* We fixed a bug where notifications were not sent when the notification title was more than 100 characters. The maximum number of characters in notification titles is now 100.
+
+### August 11th, 2022
+
+### Improvements
+
+* We made some improvements to the **Register a New Data Source** form, including improved processing of large contracts and improved responsiveness on pages with a large amount of applications and owners.
+
+### Fixes
+
+* We fixed a bug where notifications about deletion were mistakenly sent when updating a service. 
+* We fixed an issue where some **Company Admins** would get an error when trying to change the default discoverability setting.
+* We removed an undocumented field that was returned by the [Search API](/apidocs-mxsdk/apidocs/data-hub-apis/#search).
+* We fixed an issue where under certain conditions, published and consumed services were not registered automatically in the Catalog.
+
+### August 4th, 2022
+
+#### Improvements
+
+* We upgraded the Catalog page to include **Count** and **Pagination** OData restrictions. It now features a **Capabilities** tab, a tooltip for attributes that have restrictions, and tooltips for the CRUD indicator. 
+
+#### Fixes
+
+* The **Capabilities** filter will now be reset when returning to the homepage.
+
+### July 28th, 2022
+
+#### Improvements
+
+* Company administrators can now remove external participants from their company's Data Hub Catalog. To do so, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
+
+#### Fixes
+
+* We fixed an error that occured when the **Business Owner** field was initially left empty, and users could not assign a new **Business Owner** in subsequent attempts.
+
+### July 14th, 2022
+
+#### Improvements
+
+* When a user other than the Technical or Business Owner deletes an application, environment, or data source, the Technical and/or Business Owner will receive a notification. For more information on data source ownership, see the [Changing Owners of an App](/data-hub/data-hub-catalog/curate/#changing-owners) section of *Curate Registered Assets*.
+
+### June 30th, 2022
+
+#### Improvements
+
+* The Catalog has gotten a mini makeover! 
+    * The **Catalog** and **Curate** top menu items are now up in the bar at the top of the screen, the MxDock. 
+    * In the **Catalog**, you can now navigate between a **Data View**, which gives you insights about a Data Source, and a **Landscape View**, which situates the Data Source in the landscape.
+* You can now filter the search results by CRUD capabilities.
+
+#### Fixes
+
+* We fixed an error that occurred when filtering by *Environment* in the search pane.
+
 ### June 23rd, 2022
 
 #### Improvements
@@ -174,9 +245,9 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Improvements
 
 * The following OData contract parsing and validation improvements were added:
-	* Improved detection and feedback on the OData version
-	* Improved parsing and more detailed error messaging
-	* Improved validation (after parsing succeeded) and more detailed error messaging
+    * Improved detection and feedback on the OData version
+    * Improved parsing and more detailed error messaging
+    * Improved validation (after parsing succeeded) and more detailed error messaging
 
 ### January 14th, 2022
 
@@ -351,13 +422,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 * We fixed an issue where the Mendix Admin did not see external users after adding them.
 * We fixed styling issues on the **Administration** page.
 
-###  August 12th, 2021
+### August 12th, 2021
 
 #### New Features
 
 * We added the following write capabilities: 
     * Parsing updatable, insertable, and deletable capabilities from annotations is now available in OData v4 contracts
-    * Write capabilities are returned on the [Data Hub Search API ](/apidocs-mxsdk/apidocs/data-hub-apis/)
+    * Write capabilities are returned on the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/)
     * Write capabilities are displayed on the Data Hub UI
 
 #### Fixes
@@ -393,8 +464,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### New Features
 
 * New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/) endpoints now allow you to do the following:
-  * `GET` all published endpoints
-  * `GET`, `POST`, and `PUT` one individual published endpoint
+    * `GET` all published endpoints
+    * `GET`, `POST`, and `PUT` one individual published endpoint
 
 ### June 10th, 2021
 
@@ -409,8 +480,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### New Features
 
 * All [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
-  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis/) – includes GET calls for getting details of data sources
-  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis/) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
+    * [Search](/apidocs-mxsdk/apidocs/data-hub-apis/) – includes GET calls for getting details of data sources
+    * [Register](/apidocs-mxsdk/apidocs/data-hub-apis/) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
 
 ### May 27th, 2021
 
@@ -447,13 +518,13 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-*  [Search result](/data-hub/data-hub-catalog/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/data-hub/data-hub-catalog/curate/#validated) will appear above assets that are not validated.
+* [Search result](/data-hub/data-hub-catalog/search/#search-results) listings in Data Hub Catalog have been improved.  Data sources and datasets that are set as [Validated](/data-hub/data-hub-catalog/curate/#validated) will appear above assets that are not validated.
 
 ### April 1st, 2021
 
 #### Improvements
 
-*  [Registration](/data-hub/data-hub-catalog/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
+* [Registration](/data-hub/data-hub-catalog/register-data/) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
 
 ### March 18th, 2021
 

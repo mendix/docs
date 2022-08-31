@@ -1,7 +1,6 @@
 ---
 title: "Activities"
 url: /refguide8/activities/
-parent: "application-logic"
 weight: 40
 tags: ["studio pro", "microflows", "nanoflows", "activity"]
 ---

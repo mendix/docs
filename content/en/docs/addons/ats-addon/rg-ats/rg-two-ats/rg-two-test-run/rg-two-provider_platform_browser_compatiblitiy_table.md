@@ -1,7 +1,6 @@
 ---
 title: "Compatibility Table" 
 url: /addons/ats-addon/rg-two-provider_platform_browser_compatiblitiy_table/
-parent: "rg-two-test-run"
 ---
 
 ## 1 Introduction
@@ -18,7 +17,6 @@ Operating System       | Chrome   | Firefox  | Internet Explorer
 **macOS High Sierra**  | &#10003; | &#10003; | N/A
 **macOS Sierra**       | &#10003; | &#10003; | N/A
 **OS X El Capitan**    | &#10003; | &#10003; | N/A
-
 
 ## 3 Saucelabs
 

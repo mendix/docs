@@ -1,7 +1,6 @@
 ---
 title: "Data View & List View"
 url: /studio8/page-editor-data-view-list-view/
-parent: "page-editor-widgets"
 description: "Describes the data view and list view in the page editor of Mendix Studio."
 weight: 10
 tags: ["studio", "page editor", "pages", "data view", "list view"]
@@ -28,15 +27,10 @@ A data view and list view belong to the **Data Container** category of widgets. 
 Data view consists of the following properties:
 
 * [Data Source](#data-source-data-view)
-
 * [General](#general-section-data-view)
-
 * [Conditional Visibility](#visibility-data-view)
-
 * [Design](#design-section-data-view)
 
-    
-    
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-data-view-list-view/data-view-properties.png"   width="250"  >}}
 
 ### 2.1 Data Source Section {#data-source-data-view} 
@@ -58,7 +52,6 @@ The **General** section properties of are described in the table below:
 | Form Orientation                   | Determines the position of the [input element labels](/studio8/page-editor-widgets-input-elements/#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input widgets</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
 | Read-Only *(disabled by default)*  | When enabled, all [input elements](/studio8/page-editor-widgets-input-elements/) (for example, a text area, a check box) in the data view will be in read-only mode. |
 | Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. |
-
 
 ### 2.3 Conditional Visibility {#visibility-data-view}
 
@@ -93,7 +86,7 @@ The data source determines which objects will be shown in the list view. For gen
 
 ### 3.2 Events Section
 
- You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
+You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
 
 For more information on the **Events** section and on click actions, see [Events Section](/studio8/page-editor-widgets-events-section/). 
 
@@ -103,7 +96,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 * **Page Size** – the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
-	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-data-view-list-view/load-more-list-view.png"   width="400"  >}}
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-data-view-list-view/load-more-list-view.png"   width="400"  >}}
 
 * **Read-Only** (enabled by default) – when enabled, all [input elements](/studio8/page-editor-widgets-input-elements/) (for example, a text area, a check box) in the list view will be in read-only mode
 

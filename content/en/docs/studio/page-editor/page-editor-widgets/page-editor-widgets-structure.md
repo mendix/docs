@@ -2,7 +2,6 @@
 
 title: "Structure"
 url: /studio/page-editor-widgets-structure/
-parent: "page-editor-widgets"
 description: "Describes Structure widgets in Mendix Studio."
 weight: 60
 tags: ["studio", "page editor", "layout", "layout widgets", "structure widgets"]
@@ -15,13 +14,9 @@ Structure widgets are widgets that allow you to provide structure to your page a
 There are the following Structure widgets:
 
 * [Columns and Sidebars](#columns) 
-
 * [Container](#container-overview)
-
 * [Group Box](#group-box-overview)
-
 * [Tab Container](#tab-container)
-
 * [Snippet](#snippet)
 
     {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/structure-widgets.jpg" >}}
@@ -54,9 +49,7 @@ You can access the **Layout Grid** properties through the breadcrumb (for more i
 Layout grid properties consist of the following sections:
 
 * [Expand](#expand-section) 
-
 * [General](#general-section)
-
 * [Design](/studio/page-editor-widgets-design-section/)
 
     {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-grid-properties.png" alt="Layout Grid Properties"   width="250"  >}}
@@ -66,9 +59,7 @@ Layout grid properties consist of the following sections:
 The **Expand** section > **Add Row** allows you to add a row above or below the selected one to create more space to place widgets in.
 
 {{% alert color="info" %}} 
-
 A [row](#row) and a [column](#column) have the **Expand** section with the same setting.
-
 {{% /alert %}}
 
 To add a new row, do one of the following:
@@ -95,12 +86,10 @@ For information on the **Design** section and its properties, see [Design Sectio
 *Row* properties consist of the following sections:
 
 * [Expand](#expand-section-row)
-
 * [Container Settings](#container-settings) 
-
 * [General](#general-section-row)
 
-	{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/row-sections.png" alt="Row Properties"   width="250"  >}}
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/row-sections.png" alt="Row Properties"   width="250"  >}}
 
 #### 3.2.1 Expand Section {#expand-section-row}
 
@@ -111,9 +100,7 @@ The **Expand** section > **Add Row** allows you to add a row above or below the 
 In the **Container Settings** section, you can set the width for the layout grid and choose between full width or fixed width. 
 
 {{% alert color="info" %}}
-
 This property is the same as the property in the [General Section](#general-section) of the layout grid. For details, see the [General Section](#general-section).
-
 {{% /alert %}}
 
 #### 3.2.3 General Section {#general-section-row}
@@ -137,15 +124,13 @@ In the **General** section of a row you can select the number of columns in it, 
 Column properties consist of the following sections:
 
 * [Expand](#expand-section-column)
-
 * [General](#general-section-column)
 
-	{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/column-sections.png" alt="Column Sections"   width="250"  >}}
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/column-sections.png" alt="Column Sections"   width="250"  >}}
 
 #### 3.3.1 Expand Section {#expand-section-column}
 
 The **Expand** section of a column allows you to add a row or a column.
-
 
 ##### 3.3.1.1 Add Row
 
@@ -168,14 +153,12 @@ You can set the column width for desktop, tablet, or phone by choosing the corre
 You can choose the following options:
 
 * **Auto-fill** – takes the available space for a column (for example, if there is one column, it will span the column for the whole row, and for two columns, it will divide the space equally between them)
-
 * **Auto-fit content** – automatically fits the size of the column to its content
-
 * **Manual** – allows you to manually set the size of the columns 
 
     * When you select **Manual** the slider appears that allows you to set the width of the column from 1 to 12:
-    
-	    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/column-size.png" >}}
+
+        {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/column-size.png" >}}
 
 You can also resize columns manually in the working area: drag the column border to change its size. 
 
@@ -191,7 +174,7 @@ For the *desktop* and *tablet*, you might want to set the first column with a pi
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12*. In this case, the second column will be automatically wrapped to another line:
 
- {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-example-phone.png" alt="Layout Example, Phone"   width="300"  >}}
+{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/layout-example-phone.png" alt="Layout Example, Phone"   width="300"  >}}
 
 ##### 3.3.2.2 Align Vertically {#align-column}
 
@@ -237,13 +220,13 @@ You can place a widget or a group of widgets inside each tab and configure infor
 
 In the **General** section, you can configure the following properties:
 
-*  **Tabs** – use radio buttons to switch from one tab to another; click the tab and drag it to change the order of tabs; click the **Edit** icon to open the tab properties and configure it (for more information, see section the [Tab Properties](#tab-properties) section)
+* **Tabs** – use radio buttons to switch from one tab to another; click the tab and drag it to change the order of tabs; click the **Edit** icon to open the tab properties and configure it (for more information, see section the [Tab Properties](#tab-properties) section)
 
-	{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-tabs-property.png"   width="300"  >}}
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-container-tabs-property.png"   width="300"  >}}
 
-*  **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section the [Tab Properties](#tab-properties) section)
+* **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section the [Tab Properties](#tab-properties) section)
 
-	{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/add-new-tab.png"   width="300"  >}}
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/add-new-tab.png"   width="300"  >}}
 
 ### 6.2 Design Section
 
@@ -254,10 +237,9 @@ For information on the **Design** section and its properties, see [Design Sectio
 Each tab has the following properties: 
 
 * **Caption** – defines the name of the tab; you can also edit the caption by double-clicking it in the page 
+* **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
 
-*  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
-
-	{{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-properties.png"   width="300"  >}}
+    {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/tab-properties.png"   width="300"  >}}
 
 ## 7 Snippet Overview {#snippet}
 
@@ -276,9 +258,7 @@ The **Snippet** widget is not displayed if your  does not contain any snippets.
 To call a snippet and add it to your page, do the following:
 
 1. In the **Toolbox** > **Widgets**, find the **Snippet** widget and drag and drop it on your page. 
-
 2. Open properties and click the **Snippet** property.
-
 3. In the **Select Snippet** dialog box, select a snippet you would like to use on your page and click **Select**. 
 
     {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-structure/select-snippet.jpg" >}}

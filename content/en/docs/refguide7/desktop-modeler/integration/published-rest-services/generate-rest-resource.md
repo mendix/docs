@@ -1,7 +1,6 @@
 ---
 title: "Generate a Published REST Resource"
 url: /refguide7/generate-rest-resource/
-parent: "published-rest-services"
 weight: 20
 description: "Generate a published REST resource from an entity"
 tags: ["published REST", "resource", "entity", "operations", "expose"]

@@ -1,7 +1,6 @@
 ---
 title: "Properties Common in the Page Editor"
 url: /refguide/common-widget-properties/
-parent: "pages"
 weight: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
@@ -23,15 +22,15 @@ The Screen reader caption property allows information to be read by screen reade
 
 The **Screen reader caption** property can be set on the following widgets:
 
-*   [Text Box](/refguide/text-box/)
-*   [Text Area](/refguide/text-area/)
-*   [Drop-down](/refguide/drop-down/)
-*   [Check Box](/refguide/check-box/)
-*   [Radio Buttons](/refguide/radio-buttons/)
-*   [Date Picker](/refguide/date-picker/)
-*   [File Manager](/refguide/file-manager/)
-*   [Reference Selector](/refguide/reference-selector/)
-*   [Input Reference Set Selector](/refguide/input-reference-set-selector/)
+* [Text Box](/refguide/text-box/)
+* [Text Area](/refguide/text-area/)
+* [Drop-down](/refguide/drop-down/)
+* [Check Box](/refguide/check-box/)
+* [Radio Buttons](/refguide/radio-buttons/)
+* [Date Picker](/refguide/date-picker/)
+* [File Manager](/refguide/file-manager/)
+* [Reference Selector](/refguide/reference-selector/)
+* [Input Reference Set Selector](/refguide/input-reference-set-selector/)
 
 ## 3 Common Section{#common-properties}
 
@@ -97,12 +96,12 @@ This property identifies an attribute which is used in an input widget.
 
 With the following widgets, the Attribute (Path) specifies the attribute which is being changed (or displayed) by the widget:
 
-*   [Text Box](/refguide/text-box/)
-*   [Text Area](/refguide/text-area/)
-*   [Drop-down](/refguide/drop-down/)
-*   [Check Box](/refguide/check-box/)
-*   [Radio Buttons](/refguide/radio-buttons/)
-*   [Date Picker](/refguide/date-picker/)
+* [Text Box](/refguide/text-box/)
+* [Text Area](/refguide/text-area/)
+* [Drop-down](/refguide/drop-down/)
+* [Check Box](/refguide/check-box/)
+* [Radio Buttons](/refguide/radio-buttons/)
+* [Date Picker](/refguide/date-picker/)
 
 The attribute can be one of the following:
 
@@ -118,9 +117,9 @@ You can edit attributes of any enclosing data container including grandparent da
 
 For widgets which manipulate associations, the Attribute (Path) specifies an attribute which is from an entity which is reachable from the current data container using an association. This applies to the following input elements:
 
-*   [Reference Selector](/refguide/reference-selector/)
-*   [Reference Set Selector](/refguide/reference-set-selector/)
-*   [Input Reference Set Selector](/refguide/input-reference-set-selector/)
+* [Reference Selector](/refguide/reference-selector/)
+* [Reference Set Selector](/refguide/reference-set-selector/)
+* [Input Reference Set Selector](/refguide/input-reference-set-selector/)
 
 For these widgets, only an **Attribute path** can be selected. In other words, the selected attribute must be from an entity associated with the data container entity by following an association, of the type which matches the widget, through the domain model.
 
@@ -237,9 +236,9 @@ There are three options, described below:
 This mode only applies to attributes of type Decimal.
 {{% /alert %}}
 
-If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
+If set to *Fixed*, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
 
-If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
+If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
 Default: *Fixed*
 
@@ -315,6 +314,7 @@ The possible values of a predefined validation are the following:
 Custom validation is an expression that follows the [Microflow expression](/refguide/expressions/) syntax.
 
 There are a number of variables you can use in your expression:
+
 * `$currentObject` – the current object
 * `$value` – the current member (attribute or association) value
 
@@ -379,4 +379,3 @@ The widget can be made visible to a specific of the user roles available in your
 | Applicable roles  | The widget is visible if access rules allow it (for example if the user that is signed in has a role for which the target is set to be visible/accessible). |
 | All roles         | The widget is always visible. |
 | Selected roles    | This setting will render the widget as invisible to all users that are not linked to one of the selected user roles. |
-

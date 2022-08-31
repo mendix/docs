@@ -27,17 +27,17 @@ This document will explain how to access the application status page, what the i
 
 The Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
-1.  Go to the [Developer Portal](https://home.mendix.com).
-2.  Open the app that you want to monitor.
-3.  Click **Alerts**. This will display the status of your app node in various categories.
+1. Go to the [Developer Portal](https://home.mendix.com).
+2. Open the app that you want to monitor.
+3. Click **Alerts**. This will display the status of your app node in various categories.
 
-	{{< figure src="/attachments/developerportal/operate/monitoring-application-health/18580000.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/18580000.png" >}}
 
-	{{% alert color="warning" %}}The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.{{% /alert %}}
+    {{% alert color="warning" %}}The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.{{% /alert %}}
 
-4.  If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
+4. If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
 
-	{{< figure src="/attachments/developerportal/operate/monitoring-application-health/18579999.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/18579999.png" >}}
 
 This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page.
 
@@ -267,13 +267,11 @@ The reason you receive a message is this. When you are using a [basic license](/
 
 The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
 
-
 ## 6 Alerts History
 
 To access the history of the alerts from your app, follow these steps:
 
-1.  Click the tab **History** on the **Alerts** page.
-
+1. Click the tab **History** on the **Alerts** page.
 2. You will see an overview of all alerts that have been sent for this application.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alerts-history.png" >}}

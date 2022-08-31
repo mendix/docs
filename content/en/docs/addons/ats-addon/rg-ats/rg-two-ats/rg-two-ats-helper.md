@@ -1,7 +1,6 @@
 ---
 title: "ATS Helper"
 url: /addons/ats-addon/rg-two-ats-helper/
-parent: "rg-two-ats"
 ---
 
 ## 1 Introduction
@@ -16,17 +15,18 @@ Follow these steps to set the bookmark:
 
 1. Open your ATS instance in the browser.
 2. Log in with your account.
-3.  Open the information dialog by clicking this icon in the upper right corner of the screen:
+3. Open the information dialog by clicking this icon in the upper right corner of the screen:
 
-	{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/information.png" >}}
-   
-4.  Find the link that says **ATS Helper**:
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/information.png" >}}
 
-	{{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/info-dialog.png" >}}
+4. Find the link that says **ATS Helper**:
+
+    {{< figure src="/attachments/addons/ats-addon/rg-ats/rg-two-ats/rg-two-ats-helper/info-dialog.png" >}}
 
 5. Create a browser bookmark for this link with one of these methods:
-   * Drag the link to your browser's bookmark bar
-   * Right-click the link and select **Add bookmark for this link**
+
+    * Drag the link to your browser's bookmark bar
+    * Right-click the link and select **Add bookmark for this link**
 
 ### 2.1 Compatibility
 

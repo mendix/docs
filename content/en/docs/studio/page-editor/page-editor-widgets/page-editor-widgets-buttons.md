@@ -1,7 +1,6 @@
 ---
 title: "Buttons"
 url: /studio/page-editor-widgets-buttons/
-parent: "page-editor-widgets"
 description: "Describes button widgets in Mendix Studio."
 weight: 50
 tags: ["studio", "page editor", "button", "widgets"]
@@ -16,26 +15,24 @@ Button [widgets](/studio/page-editor-widgets/) allow end-users to perform variou
 The following categories and buttons are available in Mendix Studio as default widgets:
 
 * **Buttons** – buttons with general actions, such as opening or closing a page, calling a microflow, signing users out, opening a link:
-  * Open Page
-  * Call Microflow
-  * Close Page
-  * Sign Out
-  * Open Link
+    * Open Page
+    * Call Microflow
+    * Close Page
+    * Sign Out
+    * Open Link
 * **Data Buttons** – buttons that manipulate data and are used to create or delete an object, save or cancel changes:
-  * Create Object
-  * Save Changes
-  * Delete Object
-  * Cancel Changes
+    * Create Object
+    * Save Changes
+    * Delete Object
+    * Cancel Changes
 * **Workflow Buttons** – buttons that are related to [workflows](/studio/workflows/) and are used to call  a workflow, complete or show a [user task](/studio/workflows-user-task/), show a workflow page:
-  * Call Workflow
-  * Complete Task
-  * Show User Task
-  * Show Workflow
+    * Call Workflow
+    * Complete Task
+    * Show User Task
+    * Show Workflow
 
 {{% alert color="info" %}}
-
 Apart from the default button widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](/studio/page-editor-widgets/#widgets-by-origin) section in *Widgets*.
-
 {{% /alert %}}
 
 ## 2 Events Section
@@ -47,9 +44,7 @@ Properties in the **Events** section are partially preset for buttons listed abo
 For more information, see the [Default Properties in the Events Section](#default-properties) section. 
 
 {{% alert color="info" %}}
-
 You can change preset properties, and make the button perform another action. 
-
 {{% /alert %}}
 
 For more information on the **Events** section and on click actions, see [Events Section](/studio/page-editor-widgets-events-section/).

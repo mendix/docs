@@ -13,9 +13,7 @@ cascade:
 ---
 
 {{% alert color="warning" %}}
-
 The **Studio 7 Guide** describes Mendix Studio functionality that corresponds to Mendix 7.23.7 version. For details on the latest functionality and features, see the [Studio 9 Guide](/studio/). 
-
 {{% /alert %}}
 
 ## 1 Introduction 

@@ -1,7 +1,6 @@
 ---
 title: "Context Source"
 url: /refguide/context-source/
-parent: "data-sources"
 tags: ["studio pro", "context", "data source"]
 weight: 30
 ---

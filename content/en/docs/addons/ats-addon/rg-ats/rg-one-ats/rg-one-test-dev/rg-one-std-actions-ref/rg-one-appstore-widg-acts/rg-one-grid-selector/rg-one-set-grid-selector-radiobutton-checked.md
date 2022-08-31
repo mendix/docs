@@ -1,7 +1,6 @@
 ---
 title: "Set Grid Selector RadioButton Value"
 url: /addons/ats-addon/rg-one-set-grid-selector-radiobutton-checked/
-parent: "rg-one-grid-selector"
 ---
 
 ## 1 Description

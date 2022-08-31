@@ -1,7 +1,6 @@
 ---
 title: "千帆玉符 SSO – QianFan Single Sign-On"
 url: /developerportal/deploy/qianfan-sso/
-parent: "tencent-deploy"
 weight: 20
 description: "Use the QianFan SSO module (千帆玉符 SSO) to add Single Sign-on to your Tencent app using the user's QianFan credentials"
 tags: ["SSO", "Single Sign-on", "Tencent", "QianFan"]
@@ -19,11 +18,9 @@ This documentation is only relevant to customers deploying their Mendix app on t
 
 The Qianfan SSO module enables your app end-users to sign in with single sign-on (SSO) using an iDaaS account when your app is deployed to the Tencent Cloud. This document explains how to integrate the Qianfan SSO module with your Mendix app.
 
-
 ## 2 Purchasing and Launching the Service
 
 1. Open Qianfan Yufu identity management services.
-
 2. Use the following URL to purchase and launch the service:
 
     [https://cloud.tencent.com/product/cig](https://cloud.tencent.com/product/cig)
@@ -60,7 +57,7 @@ The Qianfan SSO module enables your app end-users to sign in with single sign-on
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image6.png" >}}
 
-    Or click** 转入人员** (Transfer Users).
+    Or click**转入人员** (Transfer Users).
 
 4. Enter the user information and click **确定** (OK).
 
@@ -233,21 +230,16 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 ### 4.3 Configuring the QianfanSSO Module
 
 1. Open **Settings**.
-
 2. Choose the **Runtime** tab.
-
 3. Set the **After startup** microflow to *QianfanSSO.QianfanSSO\_AfterStartup*.
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image39.png" >}}
 
 4. For local testing, you need to set the application's root URL:
 
-    1.  Choose the **Configurations** tab
-    
+    1. Choose the **Configurations** tab
     2. Select the *Default* configuration and click **Edit**.
-    
     3. Choose the **Server** tab.
-    
     4. Set the **Application Root URL** to the following:
 
         `http://127.0.0.1:8080`
@@ -268,7 +260,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     For example: `https://xxx.cig.tencentcs.com`
 
-9.  In the constant **Audience**, assign the API unique identifier:
+9. In the constant **Audience**, assign the API unique identifier:
 
     For example: `TEST_Administrator`
 
@@ -276,7 +268,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 10. In the constant “Prefix”, assign the first half of the permission name (including the underscore) from in section 3.5.1. For example, for the permission shown below, **Prefix** should be set to `TestApp_`:
 
-   {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image20.png" >}}
 
 ### 4.4 Configure the Login Page
 
@@ -299,13 +291,9 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 ### 4.5 Configure the Logout Page
 
 1. Add a **Button** widget to the page.
-
 2. Double-click the **Button** widget to open the **Edit Action Button** dialog box.
-
 3. Set the **On click** event to *Call a microflow*.
-
 4. Set the **Microflow** to *QianfanSSO.QianfanSSO\_Logout*.
-
 5. Set the **Caption** to *logout*.
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image45.png" >}}
@@ -350,18 +338,17 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 1. Once the local test passes, go to the App deployment page via **Environment** in the Mendix Platform
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image53.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image53.png" >}}
 
 2. Click **Add Environment**.
 
-{{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image54.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image54.png" >}}
 
 3. For **Purpose** select **Production** and enter the **Subscription Secret** you have purchased.
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image55.png" >}}
 
 4. Click **Next** and select the appropriate plan, then click **Create Environment**.
-
 5. Click **Create Package** and select the version to be built.
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/qianfan-sso/image56.png" >}}
@@ -391,7 +378,6 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 11. Since the App Url is a temporary URL, please use the Cluster CLB IP in the email you received when you purchased Mendix and update your local hostfile:
 
     * On Windows：`C:\Windows\System32\drivers\etc\hosts`
-
     * On Linux：`/etc/hosts`
 
 12. Update the IP for the App Url.

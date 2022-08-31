@@ -1,7 +1,6 @@
 ---
 title: "Add Date Function Calls"
 url: /refguide/add-date-function-calls/
-parent: "expressions"
 weight: 110
 tags: ["studio pro", "expressions", "add date function"]
 ---
@@ -10,9 +9,9 @@ tags: ["studio pro", "expressions", "add date function"]
 
 Add date function calls add a time period to a date and time and return the modified value. 
 
-The first parameter can be an attribute of a domain model entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function.
+The first parameter can be an attribute of a domain model entity of type **Date and time**, a variable of type **Date and time**, or a **Date and time** value created using a [Date Creation](/refguide/date-creation/) function. The second parameter specifies the time period to be added. 
 
-The second parameter specifies the time period to be added - you can use a negative time period to subtract it from the specified date.
+You can also subtract a time period from the specified date. For more information, see [Subtract Date Function Calls](/refguide/subtract-date-function-calls/).
 
 ## 2 addMilliseconds
 
@@ -39,13 +38,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1400)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:01:02:400 CET 2007"
 ```
 
@@ -74,13 +73,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:01:03 CET 2007"
 ```
 
@@ -109,13 +108,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addMinutes(dateTime(2007, 1, 1, 1, 1, 1), 3)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:04:01 CET 2007"
 ```
 
@@ -144,13 +143,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addHours(dateTime(2007, 1, 1, 1, 1, 1), 25)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 02 02:01:01 CET 2007"
 ```
 
@@ -179,13 +178,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addDays(dateTime(2007, 1, 1, 1, 1, 1), 3)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 04 01:01:01 CET 2007"
 ```
 
@@ -214,13 +213,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addWeeks(dateTime(2007, 1, 1, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 15 01:01:01 CET 2007"
 ```
 
@@ -249,19 +248,19 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addMonths(dateTime(2007, 1, 1, 1, 1, 1), 13)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Feb 01 01:01:01 CET 2008"
 ```
 
-## 9 addYears[UTC]
+## 9 addQuarters[UTC]
 
-The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to  `addYears` which uses the server's one.
+The `addQuartersUTC` function adds a number of quarters to a date using the UTC calendar as opposed to  `addQuarters` which uses the server's one.
 
 ### 9.1 Input Parameters
 
@@ -278,36 +277,69 @@ The output is described in the table below:
 
 | Value                                                        | Type          |
 | ------------------------------------------------------------ | ------------- |
-| A Date and time value that is the sum of the *initial date* and the specified number of *years*. | Date and time |
+| A Date and time value that is the sum of the *initial date* and the specified number of *quarters*. | Date and time |
 
 ### 9.3 Example
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
+addQuarters(dateTime(2007, 1, 1, 1, 1, 1), 1)
+```
+
+The output is:
+
+```java {linenos=false}
+Mon Apr 01 01:01:01 CET 2007
+```
+
+## 10 addYears[UTC]
+
+The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to  `addYears` which uses the server's one.
+
+### 10.1 Input Parameters
+
+The input parameters are described in the table below:
+
+| Value                           | Type          |
+| ------------------------------- | ------------- |
+| Initial date                    | Date and time |
+| The number of years to be added | Integer       |
+
+### 10.2 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type          |
+| ------------------------------------------------------------ | ------------- |
+| A Date and time value that is the sum of the *initial date* and the specified number of *years*. | Date and time |
+
+### 10.3 Example
+
+If you use the following input: 
+
+```java {linenos=false}
 addYears(dateTime(2007, 1, 1, 1, 1, 1), 11)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:01:01 CET 2018"
 ```
 
-## 10 Passing Values of the Long Type
+## 11 Passing Values of the Long Type
 
-It is possible to pass values of the Long type to different **Add date function** calls:
+It is possible to pass values of the Long type to different **Add date function** calls.
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addSeconds(dateTime(1970, 1, 1, 0, 0, 0), (long)(2147483647 + 100))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Tue Jan 19 04:15:47 CET 2038"
 ```
-
-

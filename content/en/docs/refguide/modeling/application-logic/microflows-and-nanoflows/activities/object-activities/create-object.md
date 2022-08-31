@@ -1,7 +1,6 @@
 ---
 title: "Create Object"
 url: /refguide/create-object/
-parent: "object-activities"
 weight: 40
 tags: ["studio pro"]
 ---
@@ -92,10 +91,14 @@ This is the name of the resulting object which can be used by all activities tha
 Wherever an object is initialized, all the events are always executed. The default **Create** button, a create activity in a microflow, and web services will always follow the steps described in the image below.
 
 * Events: all before and after events are executed, and if any before-create event returns false, an exception can be thrown
-	* If an exception occurs during an event, all the changes are reverted with the default error handling behavior
+    * If an exception occurs during an event, all the changes are reverted with the default error handling behavior
 * Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
 * Result: a new object is available after these triggers
-	* The object will have the **Instantiated** state
-	* This influences the behavior in the other object actions
+    * The object will have the **Instantiated** state
+    * This influences the behavior in the other object actions
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/18582173.png" >}}
+
+{{% alert color="info" %}}
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.
+{{% /alert %}}

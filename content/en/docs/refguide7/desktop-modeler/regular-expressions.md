@@ -31,10 +31,10 @@ Examples: **3072AP** and **7500 AH**
 
 The criteria are:
 
-*   The first character is a digit in the range 1 to 9.
-*   The second, third and fourth characters are digits in the range 0 to 9.
-*   The last two characters are letters, as expressed by the last two subexpression [A-Za-z], which indicate that the last two characters should be in the range A-Z or the range a-z.
-*   Between the digits and the letters there can be a space, as expressed by the subexpression which consists of a space and a question mark. The question mark indicates that the space is optional.
+* The first character is a digit in the range 1 to 9.
+* The second, third and fourth characters are digits in the range 0 to 9.
+* The last two characters are letters, as expressed by the last two subexpression [A-Za-z], which indicate that the last two characters should be in the range A-Z or the range a-z.
+* Between the digits and the letters there can be a space, as expressed by the subexpression which consists of a space and a question mark. The question mark indicates that the space is optional.
 
 {{% /alert %}}
 
@@ -46,11 +46,11 @@ A regular expression can contain the following types of subexpressions:
 
 * `[ ]` – a bracket expression matches a single character that is indicated within the brackets. For example:
 
-    * `[abc]` matches "_a_", "_b_", or "_c_"
+    * `[abc]` matches "*a*", "*b*", or "*c*"
 
-    * `[a-z]` specifies a range which matches any lowercase letter from "_a_" to "_z_"
+    * `[a-z]` specifies a range which matches any lowercase letter from "*a*" to "*z*"
 
-        These forms can be mixed: `[abcx-z]` matches "_a_", "_b_", "_c_", "_x_", "_y_", or "_z_", and is equivalent to `[a-cx-z]`
+        These forms can be mixed: `[abcx-z]` matches "*a*", "*b*", "*c*", "*x*", "*y*", or "*z*", and is equivalent to `[a-cx-z]`
 
         The `-` character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash (`\`)
 
@@ -59,12 +59,12 @@ A regular expression can contain the following types of subexpressions:
     * `[^abc]` matches any character other than "a", "b", or "c"
 
     * `[^a-z]` matches any single character that is not a lowercase letter from "a" to "z"
-    
+
         As above, literal characters and ranges can be mixed
 
-* `{m,n}` – matches the preceding element at least _m_ and not more than _n_ times. For example:
+* `{m,n}` – matches the preceding element at least *m* and not more than *n* times. For example:
 
-    * `a{3,5}` matches only "_aaa_", "_aaaa_", and "_aaaaa_"
+    * `a{3,5}` matches only "*aaa*", "*aaaa*", and "*aaaaa*"
 
 * `{n}` – matches the preceding element exactly n times. For example:
 

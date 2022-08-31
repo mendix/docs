@@ -1,7 +1,7 @@
 ---
 title: "Build JavaScript Actions: Part 1 (Basic)"
+linktitle: "1. Build JavaScript Actions"
 url: /howto/extensibility/write-javascript-actions/
-parent: "build-javascript-actions"
 weight: 10
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
@@ -24,21 +24,20 @@ This how-to will teach you how to do the following:
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 
-1.  In the **App Explorer**, right-click the module you would like to add a new JavaScript action to and select **Add other** >**JavaScript action**.
-
-2.  Give the JavaScript action a descriptive name:
+1. In the **App Explorer**, right-click the module you would like to add a new JavaScript action to and select **Add other** >**JavaScript action**.
+2. Give the JavaScript action a descriptive name:
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/descriptivename.png" alt="naming dialog" >}}
 
     You can now start creating the API for the JavaScript action, which consists of parameters and a return type.
 
-3.  Your **TextToSpeech** action only requires a single parameter. Create it by clicking the **Add** button in the top left corner. Give the parameter a name and add an extended description if desired:
+3. Your **TextToSpeech** action only requires a single parameter. Create it by clicking the **Add** button in the top left corner. Give the parameter a name and add an extended description if desired:
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/jsactiondescription.png" alt="javascript action description field" >}}
 
     You can leave the **Return type** at the default Boolean value. That means that the action will return `false` if no text is provided, and return `true` after it has successfully spoken the provided text.
   
-4.  Next, click the **Code** tab to begin editing the JavaScript action. Now you can start writing the actual action. Mendix Studio Pro already created a default template for you, using the parameters and return type we provided:
+4. Next, click the **Code** tab to begin editing the JavaScript action. Now you can start writing the actual action. Mendix Studio Pro already created a default template for you, using the parameters and return type we provided:
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/code.png" alt="text to speech code" >}}
 
@@ -138,7 +137,6 @@ To create a JavaScript action that can synthesize text to speech, follow these s
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/calljsactionnanoflow.png" alt="edit text in call javascript action dialog" >}}
 
 11. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Buttons**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
-
 12. Click a place on your page to drop your new button where you want it. With the button now on your page, you can test your work. Run your model, click your new button, and if your sound is on you should be greeted by the voice you programmed! 
 
 ## 3 Read More{#read-more}

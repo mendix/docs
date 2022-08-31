@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Menu Item"
 url: /addons/ats-addon/rg-one-findassert-menu-item/
-parent: "rg-one-navigation-menu"
 ---
 
 ## 1 Description
@@ -10,9 +9,9 @@ Finds/Asserts a visible Menu Item in a Navigation Tree, Menu Bar and Simple Menu
 
 ## 2 Supported Widgets
 
- + NavigationTree
- + MenuBar
- + SimpleMenuBar
+* NavigationTree
+* MenuBar
+* SimpleMenuBar
 
 ## 3 Usage
 

@@ -1,7 +1,6 @@
 ---
 title: "Build JavaScript Actions for Native Mobile"
 url: /howto/extensibility/create-native-javascript-action/
-parent: "build-javascript-actions"
 weight: 30
 description: "This tutorial will teach you to build a JavaScript action for native mobile apps."
 tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
@@ -81,23 +80,28 @@ Build an action to check if a device supports NFC:
 1. Open the **HasNFCSupport** JavaScript action. 
 1. Change the **Return type** to **Boolean**. 
 1. Add this import above the `EXTRA CODE` block: 
+
     ``` javascript
     import { Big } from "big.js";
     import { NativeModules } from "react-native";
     import NfcManager from "react-native-nfc-manager";
     ``` 
+
 1. Replace the content of the `USER CODE` block with the following: 
+
     ``` javascript
     if (!NativeModules.NfcManager) {
     throw new Error("The NfcManager module is not available in your app.");
     }
     return NfcManager.isSupported();
     ``` 
+
     Explaining the code: 
     * The `NativeModules` contains all loaded modules. This allows you to check if the app has the module installed. This will throw an error when the action is used in the **Make it Native** app. 
     * The NfcManager is imported from your newly added module. The `isSupported` functions check if NFC is supported by the hardware. They return a Promise that will resolved to a Boolean value to indicate if NFC is supported. 
     When finished, your code will look like this: 
-    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/create-native-javascript-action/action-has-nfc-support-code.png" alt="has NFC support action code" >}} 
+    {{< figure src="/attachments/howto/extensibility/build-javascript-actions/create-native-javascript-action/action-has-nfc-support-code.png" alt="has NFC support action code" >}}
+
 1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action. 
 
 Now make a JavaScript action to read the NFC tag information:
@@ -105,10 +109,13 @@ Now make a JavaScript action to read the NFC tag information:
 1. Create a JavaScript action named *ReadNFCTag*.
 1. Select **Return type** > **String**.
 1. Click the **Code** tab, and add the import above the `EXTRA CODE` block:
-    ``` javascript
+
+    ``` javascript {linenos=false}
     import NfcManager, { Ndef } from "react-native-nfc-manager";
     ```
+
 1. Add the following code to the USER CODE block:
+
     ``` javascript
     return new Promise(resolve => {
         NfcManager.registerTagEvent(tag => {
@@ -118,10 +125,12 @@ Now make a JavaScript action to read the NFC tag information:
         });
     });
     ```
+
     Explaining the code: 
     * Here you return a promise that resolves a string value. The nanoflow will wait until the resolve function is called. The registration listens for tags that are picked up by the reader. When the callback function is executed as a tag is found, un-register the listener to stop listening for other tags. The payload is decoded from a byte array into text. When the resolve function is called with the text parameter, that nanoflow will receive this value as the return parameter. 
     * When finished, your code will look like this:
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/create-native-javascript-action/action-read-nfc-tag-code.png" alt="Read NFC tag action code" >}}
+
 1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.
 
 ### 3.3 Installing a Dependency in Your App {#install-dependency-project}
@@ -129,16 +138,16 @@ Now make a JavaScript action to read the NFC tag information:
 The dependency is split into two parts: the native device part, and the client JavaScript part. In this section we will add the dependency JavaScript for the client bundle. For the bundling we need to add the dependency builder, so that we can add the `react-native-nfc-manager` JavaScript code.
 
 1. In your CLI, open the module folder which contains your JavaScript action:
-    ```
+
+    ```powershell {linenos=false}
     cd C:\MendixApps\NativeNFC\javascriptsource\nativenfc\actions
     ```
+
 1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
 1. Install the dependency with the command `npm install react-native-nfc-manager@1.2.2`.
 
 {{% alert type="info" %}}
-
 This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion, there could be problems if your commit contains a large number of files. To solve this, try removing unnecessary files before committing.
-
 {{% /alert %}}
 
 #### 3.3.1 Declaring Native Dependencies
@@ -196,9 +205,7 @@ To write your own NFC tag, do the following:
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/create-native-javascript-action/nfc-tools-write-tag.png" alt="write nfc tag"   width="250"  >}}
 
 {{% alert color="info" %}}
-
 This dialog box is your phone's operating system recognizing the NFC tag. On Android devices, you will see a success message anytime you touch an NFC tag to your device. What you truly need to test is your app's NFC scanning after tapping its button. You will be able to do this on all platforms: on iOS things work as expected, and on Android an app scanning NFC takes priority over the operating systems' scanning.
-
 {{% /alert %}}
 
 ### 3.6 Building a Native Custom Developer App {#custom-developer-app}

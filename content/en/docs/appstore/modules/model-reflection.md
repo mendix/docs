@@ -15,7 +15,7 @@ The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) mod
 
 The typical usage scenario is selecting and showing entities from your domain model to use for another configuration. 
 
-## 2 Configuration
+## 2 Configuration {#configuration}
 
 After importing the module, add **USE ME** > **MxObjects_Overview** to the navigation of your app. Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 
@@ -40,17 +40,17 @@ All the patterns use the locale from the context. Based on the user's language, 
 ### 2.2 Display Pattern Example (Using En_US Lanuage)
 
 * Long attribute with a thousand separator:
-	* Pattern:  `%,8d%n`
-	* Value: `12345678`
-	* Result: `12,345,678`
+    * Pattern:  `%,8d%n`
+    * Value: `12345678`
+    * Result: `12,345,678`
 * Date attribute:
-	* Pattern: `MM/dd/yyyy`
-	* Value: `2nd of July 2016`
-	* Result: `7/6/2016`
+    * Pattern: `MM/dd/yyyy`
+    * Value: `2nd of July 2016`
+    * Result: `7/6/2016`
 * Decimal attribute with a thousand separator of 2 decimals:
-	* Pattern: `#,##0.0`
-	* Value: `12345,678`
-	* Result: `12,345.68`
+    * Pattern: `#,##0.0`
+    * Value: `12345,678`
+    * Result: `12,345.68`
 
 ## 3 Read More
 

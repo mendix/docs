@@ -144,7 +144,7 @@ The developer can commit this to the Team Server repository at any time to make 
 
 {{< figure src="/attachments/refguide/version-control/image3.png" >}}
 
-### 3.3 Work in Studio & Studio Pro
+### 3.3 Work in Studio and Studio Pro
 
 Two developers are working on the same [development line](#development-line) of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
@@ -232,5 +232,3 @@ As with the examples in the [Version Control Processes for a Single Branch](#vc-
 Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 6 Documents in This Category
-
-

@@ -18,9 +18,10 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
+If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
-If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable.
+* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about the Mendix Cloud
+* the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide/configuration/#custom).
 
@@ -31,6 +32,7 @@ There is more information on how this is done in the Cloud Foundry buildpack in 
 In versions of Mendix below 9.13.0, durations, intervals, and timeouts have to be specified as a number. This can be somewhat confusing because
 different units are used for different settings. Also, specifying long durations in milliseconds can be a bit cumbersome.
 In Mendix 9.13.0 and above it is possible to specify durations in more user-friendly formats:
+
 * **ISO 8601 Periods**, such as `P7D`, `PT1H30M`, or `PT1S` (See https://en.wikipedia.org/wiki/ISO_8601#Durations for more information)
 * **HOCON durations**, such as `7 days`, `90m`, or `1 second` (See https://github.com/lightbend/config/blob/main/HOCON.md#duration-format for more information)
 
@@ -44,7 +46,8 @@ The following custom settings can be configured:
 | **<a name="ca-certificates">CACertificates</a>** | A comma-separated list of paths to CA certificates. |   |
 | **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
 | **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |   |
-| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" >}} |   |
+| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. See **NoClientCertificateUsages** if you want to make sure that no client certificate is used for a certain host or web service. The value of **ClientCertificateUsages** must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" >}} |   |
+| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
 | **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
 | **com.<wbr>mendix.<wbr>core.<wbr>isClusterSlave** | Set to `true` in a high-availability scenario when this is *not* the [Cluster Leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower). The buildpack will usually enforce this setting, but it may need to be set for some on-premises deployments. | `false` |
 | **com.<wbr>mendix.<wbr>core.<wbr>SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `Strict`, `Lax`, and `None`. The default is `Strict`. Setting it to `None` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `None`. If the connection is plain HTTP, then this setting must be changed to `Strict` (recommended) or `Lax`. |   |
@@ -62,7 +65,6 @@ The following custom settings can be configured:
 | **JavaKeyStorePassword** | Password for the default Java keystore. | changeit |
 | **LongLivedSessionTimeout** | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
 | **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
-| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
 | **ScheduledEventExecution** | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. {{% alert color="warning" %}}This setting cannot be configured when running locally. To enable and disable scheduled events when running locally, please use the 'Enabled' setting on the [Scheduled Events execution properties](/refguide/scheduled-events-task-queue/) in Studio Pro.{{% /alert %}} | NONE |
 | **SessionKeepAliveUpdatesInterval** | Defines after how much time expired sessions can be removed from the database. | 100000 (100s) |
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |

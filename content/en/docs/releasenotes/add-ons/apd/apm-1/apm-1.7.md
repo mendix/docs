@@ -1,7 +1,6 @@
 ---
 title: "1.7"
 url: /releasenotes/add-ons/apm-1.7/
-parent: "apm-1"
 weight: 99
 ---
 
@@ -13,15 +12,15 @@ The theme for this version is simplifying.
 
 The installation has been simplified by removing the layout linking step and by removing the dependency from the project style. Installation procedure:
 
-*   Import module
-*   Add to navigation
-*   Add to security
-*   Add to after startup/before shutdown
-*   Copy language if other than English US is used
-*   Start App
-*   Navigate to APM
-*   Use button to send mail with license request
-*   Upon receiving the license, copy-paste and save
+* Import module
+* Add to navigation
+* Add to security
+* Add to after startup/before shutdown
+* Copy language if other than English US is used
+* Start App
+* Navigate to APM
+* Use button to send mail with license request
+* Upon receiving the license, copy-paste and save
 
 {{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Welcome.png" >}}
 
@@ -29,10 +28,10 @@ The installation has been simplified by removing the layout linking step and by 
 
 Upgrades have been simplified to:
 
-*   Import module
-*   Remove old jar
-*   Start and all the needed data changes are automatically performed
-*   For 1.7.0 a new license needs to be requested, because the license is now per App
+* Import module
+* Remove old jar
+* Start and all the needed data changes are automatically performed
+* For 1.7.0 a new license needs to be requested, because the license is now per App
 
 ### GUI
 
@@ -72,19 +71,19 @@ This version supports Mendix 6.2.0 and above only. Also only on java 8.
 
 ### Bug fixes and minor changes
 
-*   Added a warning when you change a log level and the log tool is not running, so the user understands that his change has no immediate effect.
-*   Fixed catching an error when a trigger in the measurements tool has an error in the expression.
-*   In Mendix 6.6+ there was an issue with validations in the installation Wizard. This is fixed.
-*   An issue with a field length in the performance tool tree is fixed
-*   Updated CustomString widget so trap tool shows the number of exclusions again
-*   Modeler warnings and deprecations removed/fixed, so developers are not hindered by APM Tool warnings/deprecations when modeling.
-*   Removed or reduced usage of certain widgets when it was possible to replace the functionality with standard Mendix components.
-*   When creating a trap tool exclusion the message and stack trace strings are now escaped for special characters in the regular expression language, so you can immediately test and get at least 1 result
-*   Fixed a bug in the trap tool where an overload of errors could cause the trap tool and the entire application to become unresponsive.
-*   Added support for explain plan on built-in database
-*   Removed usage of retrieving data from persistable to non-persistable entities to be ready for Mendix 7
-*   Moved heapdump feature to separate security group, so on installation you can choose to use this feature or not
-*   Fixed a bug in the performance tool that sometime a (caught) null pointer would show up in the log
+* Added a warning when you change a log level and the log tool is not running, so the user understands that his change has no immediate effect.
+* Fixed catching an error when a trigger in the measurements tool has an error in the expression.
+* In Mendix 6.6+ there was an issue with validations in the installation Wizard. This is fixed.
+* An issue with a field length in the performance tool tree is fixed
+* Updated CustomString widget so trap tool shows the number of exclusions again
+* Modeler warnings and deprecations removed/fixed, so developers are not hindered by APM Tool warnings/deprecations when modeling.
+* Removed or reduced usage of certain widgets when it was possible to replace the functionality with standard Mendix components.
+* When creating a trap tool exclusion the message and stack trace strings are now escaped for special characters in the regular expression language, so you can immediately test and get at least 1 result
+* Fixed a bug in the trap tool where an overload of errors could cause the trap tool and the entire application to become unresponsive.
+* Added support for explain plan on built-in database
+* Removed usage of retrieving data from persistable to non-persistable entities to be ready for Mendix 7
+* Moved heapdump feature to separate security group, so on installation you can choose to use this feature or not
+* Fixed a bug in the performance tool that sometime a (caught) null pointer would show up in the log
 
 ### Known issues
 

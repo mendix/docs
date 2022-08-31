@@ -1,7 +1,6 @@
 ---
 title: "Get Property Value"
 url: /addons/ats-addon/rg-one-get-property-value/
-parent: "rg-one-get"
 ---
 
 ## 1 Description

@@ -22,4 +22,3 @@ Stay updated on the health of your app and reference these documents troubleshoo
 * [Solve Load & Import Errors](/howto8/monitoring-troubleshooting/solving-load-and-import-errors/) – helps you to solve problems that may occur when opening an app
 * [Manage App Performance](/howto8/monitoring-troubleshooting/manage-app-performance/) – teaches you how to manage app performance by using New Relic
 * [Detect & Resolve Performance Issues](/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/) – gives you an overview of possible performance issues with root causes and resolutions
-

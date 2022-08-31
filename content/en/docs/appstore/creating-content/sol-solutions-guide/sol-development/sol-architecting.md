@@ -2,7 +2,6 @@
 title: "Architecting Adaptive Solutions"
 url: /appstore/creating-content/sol-architecting/
 linktitle: "Architecting Solutions"
-parent: "sol-development"
 weight: 1
 description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
@@ -48,7 +47,7 @@ Identifying these main functional parts enables you to define API boundaries bet
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptive-solution-composition.png" alt="Adaptive Solution Composition" >}}
 
-### 3.2 Progressive & Emergent Architecture
+### 3.2 Progressive and Emergent Architecture
 
 The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the different parts described above (meaning, the immutable core compared with customizable modules or something which needs to be customer-specific). This is a level of knowledge that you will only reach once you are serving a large number of customers.
 
@@ -64,12 +63,12 @@ When designing the interfaces of your solutions, you should do the following:
 
 * Split your adaptive solution architecture into the [three main functional parts](#three-parts) described above
 * Think about which parts of the shared core are reusable in other parts:
-	* Define which shared logic should be reusable and define entry points to the shared logic as APIs
-	* Define which entities (data/state) are required in which parts of the functionality
+    * Define which shared logic should be reusable and define entry points to the shared logic as APIs
+    * Define which entities (data/state) are required in which parts of the functionality
 * Design APIs between common core and extension modules and consider making public only the parts that are explicitly required in other parts of your current architecture — design for today
 * Design APIs for custom-specific modules, focus on current customer requests and their value, and focus on a minimum viable product (MVP) by keeping it small and simple
 * Iterate with customers to evolve the adaptability of the solution by evolving the architecture
-	* Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
+    * Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
 
 ### 3.4 Applying IP Protection 
 

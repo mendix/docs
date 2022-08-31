@@ -1,7 +1,6 @@
 ---
 title: "XPath Source"
 url: /refguide/xpath-source/
-parent: "data-sources"
 tags: ["studio pro", "xpath", "xpath source", "data source", "data filter"]
 weight: 20
 ---
@@ -78,4 +77,3 @@ The feature to use objects and attributes can be used for [List view](/refguide/
 
 * [Data Containers](/refguide/data-widgets/)
 * [Data Grid](/refguide/data-grid/)
-

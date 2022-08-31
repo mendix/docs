@@ -1,7 +1,6 @@
 ---
 title: Custom Action Expense App
 url: /addons/ats-addon/ht-one-custom-action-expense-app/
-parent: "ht-one-custom-action-general"
 description: "Explains how to find and use the Custom Action App that is used in the how-to's."
 tags: ["ATS", "testing"]
 
@@ -41,6 +40,6 @@ Click the **Custom Actions** tab to open the page:
 
 {{< figure src="/attachments/addons/ats-addon/ht/ht-one/ht-one-create-custom-actions/ht-one-custom-action-general/ht-one-custom-action-expense-app/company-expenses-custom-action-page.png" >}}
 
-All the how-to's for unsupported widget actions and search context actions are based on widgets that are available on this page. Each how-to has a title that corresponds with a widget on this page. For example, **CAB.02 - Switch** is based on the switch widget on this page. This allows you to follow the how-to directly in the app to get a better understanding of what to do, how, and why.
+All the how-to's for unsupported widget actions and search context actions are based on widgets that are available on this page. Each how-to has a title that corresponds with a widget on this page. For example, **CAB.02 - Switch** is based on the Switch widget on this page. This allows you to follow the how-to directly in the app to get a better understanding of what to do, how, and why.
 
 Feel free to try and solve an issue yourself, but don't forget to verify you did it in the correct manner.

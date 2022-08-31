@@ -1,7 +1,6 @@
 ---
 title: "Best Practices for Writing Custom Actions"
 url: /addons/ats-addon/rg-one-best-practices/
-parent: "rg-one-test-dev"
 weight: 6
 ---
 
@@ -9,7 +8,7 @@ weight: 6
 
 In ATS there are two ways for creating custom actions. First you can extract actions from you test case steps, to encapsulate multiple test steps into a single test step. The second way is to create custom actions from scratch. This section provides you with *Do's and Don'ts* for your custom action creation process, to help you achieve the actions you want.  
 
-## 2 Write Reusable & Focused Actions
+## 2 Write Reusable and Focused Actions
 
 Use input parameters and generic functions instead of hardcoding every variable or option. Also don't write actions that do everything at once. Let your actions do one specific task, for example, the retrieval of a WebElement. This serves the readability of your actions/test cases and also makes maintenance much easier.     
 
@@ -25,14 +24,14 @@ Always use descriptive names for your actions and parameters, for example, "Set 
 
 Some parameter names used by the ATS core library:
 
- * Widget Name
- * Username
- * Password
- * Caption
- * Column Name
- * Column Value
- * Index
- * Page Title
- * Row/Item
- * Value
- * Element
+* Widget Name
+* Username
+* Password
+* Caption
+* Column Name
+* Column Value
+* Index
+* Page Title
+* Row/Item
+* Value
+* Element

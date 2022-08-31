@@ -1,7 +1,6 @@
 ---
 title: "Set Up a Local Selenium Solution"
 url: /addons/ats-addon/ht-two-setting-up-a-local-selenium-solution/
-parent: "ht-two-setup-local-selenium-index"
 description: "Describes the options to set up a local selenium solution."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
@@ -33,6 +32,7 @@ For an example of how to set up this Selenium solution, see: [How to Set Up a Lo
 ### 2.3 Characteristics of the Selenium Solution
 
 Characteristics of the Selenium solution are the following:
+
 * Live-view possible only on the machine where Selenium is installed
 * No (out-of-the-box) video recording
 

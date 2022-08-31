@@ -4,6 +4,8 @@ url: /developerportal/control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 20
+no_list: false 
+description_list: true
 aliases:
     - /developerportal/company-app-roles/users.html
     - /developerportal/company-app-roles/users
@@ -45,7 +47,6 @@ These are some examples of what you can find on the dashboard:
 
 On the **Active Apps** tab and the **Deactivated Apps** tab, you can see an overview of the active and deactivated apps that belong to your company.
 
-
 When you select one or more apps via the check boxes in the list, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating apps (on the **Active Apps** tab) or activating apps (on the **Deactivated Apps** tab), and deleting an app.
 
 {{% alert color="info" %}}
@@ -58,8 +59,8 @@ The consequences of deactivating and deleting an app are as below:
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| Project members can access the app project in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Project members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
 #### 3.1.2 App Details Page {#app-details}
@@ -75,11 +76,11 @@ Deleting and deactivating apps is currently not supported for licensed apps or a
 The app details page has the following tabs:
 
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
-*  **Members** – This tab presents the internal members and external members of the app.
+* **Members** – This tab presents the internal members and external members of the app.
 
     * You can directly deactivate an internal member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team/#managing) page.
-      * As a Mendix Admin, you can also add yourself to a team via this page.
+        * As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all the Mendix Cloud environments.
     * You can delete a free Mendix Cloud environment on this tab. Once the free environment is deleted, all data will be removed; however, the project members can still access the associated project and app repository in the Developer Portal.
 * **App Roles** – This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
@@ -218,9 +219,26 @@ An organization's Data Hub requires governance of the data-sharing policy down t
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 12 Read More
+## 12 Marketplace Content {#marketplace-content}
 
-* [How to Set Up an SSO (BYOIDP)](/developerportal/control-center/set-up-sso-byoidp/)
-* [Data Hub Administration](/developerportal/control-center/data-hub-admin/)
-* [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)
-* [Govern and Scale your App Landscape with Mendix Control Center](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
+
+{{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
+
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).
+
+The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
+
+The list has the following columns:
+
+* **Product Name** – This shows the component name. Clicking the name opens the Marketplace page of this component.
+
+* **Content Type** – This shows the type of the component.
+
+  {{% alert color="info" %}}Currently, you can only configure the visibility of widgets. Therefore, you can only find widgets in this list.{{% /alert %}}
+
+* **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
+
+* **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
+
+## 13 Documents in This Category

@@ -79,7 +79,7 @@ You can specify additional Cordova settings and plugins by adding an XML snippet
 
 For an overview of available elements and settings, refer to [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
 
-## 3 iOS & Android
+## 3 iOS and Android
 
 In these tabs, you will see an overview of all the images that will be used in the app store. The images are divided into two categories:
 

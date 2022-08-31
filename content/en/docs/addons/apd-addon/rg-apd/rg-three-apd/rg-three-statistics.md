@@ -1,7 +1,6 @@
 ---
 title: "Performance Statistics"
 url: /addons/apd-addon/rg-three-statistics/
-parent: "rg-three-apd"
 ---
 
 ## 1 Performance Statistics

@@ -1,7 +1,6 @@
 ---
 title: "Get Selected Option Index"
 url: /addons/ats-addon/rg-one-get-selected-option-index/
-parent: "rg-one-get"
 ---
 
 ## 1 Description

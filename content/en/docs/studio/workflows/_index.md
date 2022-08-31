@@ -42,10 +42,9 @@ You can perform the following basic functions when configuring workflows:
 To enable workflow functionality, do the following:
 
 1. Click the workflow icon in the left menu bar.
-
 2. Before enabling workflows, you need to enable security. Click **Enable Security**:
 
-   {{< figure src="/attachments/studio/workflows/enable-security.png" alt="Enable Security" >}}
+    {{< figure src="/attachments/studio/workflows/enable-security.png" alt="Enable Security" >}}
 
 3. After security is enabled, click **Enable Workflows**.
 
@@ -54,6 +53,7 @@ Workflows are enabled in your app and you can create a workflow.
 ### 2.2 Creating a Workflow {#create}
 
 There are two ways to create a workflow: 
+
 * [Using a wizard to build an approval workflow](/studio-how-to/workflow-how-to-configure-using-wizard/) – the wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you – not only the workflow itself but also pages and navigation
 * [Setting the workflow up manually](/studio-how-to/workflow-how-to-configure/) – if your use case does not fall under an approval request, then you can configure your workflow manually instead of using the wizard
 
@@ -62,9 +62,7 @@ There are two ways to create a workflow:
 To open a workflow in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.
-
 2. In the displayed list of workflows, select the one you want to open and click it:
-
 
 The selected workflow is opened.
 
@@ -73,7 +71,6 @@ The selected workflow is opened.
 To duplicate a workflow, do the following:
 
 1. Click the **Workflows** icon in the left menu bar.
-
 2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
     {{< figure src="/attachments/studio/workflows/duplicate.jpg" alt="Duplicate a Workflow" >}}
@@ -85,7 +82,6 @@ The workflow is duplicated.
 To copy and paste a workflow, do the following:
 
 1. Click the **Workflows** icon in the left menu bar.
-
 2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
     {{< figure src="/attachments/studio/workflows/copy.jpg" alt="Copy a Workflow" >}}
@@ -101,10 +97,10 @@ To delete a workflow in Studio, do one of the following:
 1. Open the workflow you want to delete and follow the steps below:
     1. Open the **Properties** tab.
     2. Click **Delete** at the bottom of the **Properties** tab.
-    
+
 2. Click the workflows icon in the left menu bar and do the following:
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
-    
+
         {{< figure src="/attachments/studio/workflows/delete-workflow.jpg" alt="Delete a Workflow" >}}
 
 The selected workflow is deleted. 
@@ -130,10 +126,10 @@ Do the following:
 
 1. Open a page from where you would like to trigger a workflow.
 2. Drag and drop a widget that has on-click action in its properties (for example, a button) inside the data container with the workflow entity. 
-4. Open button's properties > **Events** section. 
-5. Set **On Click Action** to **More**.
-6. Set **Action** to **Call Workflow**. 
-7. Set **Workflow** to the workflow you would like to trigger.
+3. Open button's properties > **Events** section. 
+4. Set **On Click Action** to **More**.
+5. Set **Action** to **Call Workflow**. 
+6. Set **Workflow** to the workflow you would like to trigger.
 
 You have configured the button to trigger the workflow.
 
@@ -177,6 +173,8 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 * [User actions](#user-actions)
 * [System actions](#system)
 
+A microflow action can be exposed in Studio Pro as a custom action in the workflow toolbox in both Studio and Studio Pro. This functionality is particularly useful if you plan to reuse the microflow logic several times. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow action in the workflow toolbox, see [How to Add a Custom Action to the Workflow Toolbox](/howto/logic-business-rules/add-action-to-workflow-toolbox/) in *Studio Pro 9 How-tos*.
+
 ### 5.1 General {#general}
 
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
@@ -187,11 +185,12 @@ The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Start event                                                  | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
-| [Decision](/studio/workflows-general-activities/#decision)  | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| [Jump activity](/studio/workflows-general-activities/#jump) | Allows you to jump to other activities in the workflow.      |
-| [Parallel split](/studio/workflows-general-activities/#parallel-split) | Adds two or more parallel paths to your workflow.            |
-| [End activity](/studio/workflows-general-activities/#end)   | Ends the path of the workflow                                |
+| Start event                                                  | Start event is the starting point of a workflow. Workflows are triggered either by the [Call workflow](/studio/page-editor-widgets-events-section/#call-workflow) on-click event on pages or by the [Workflow call](/studio/microflows/#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](/studio/workflow-properties/). |
+| [Annotation](/studio/workflows-general-activities/#annotation) | **Annotation** is used to put comments to a flow.            |
+| [Decision](/studio/workflows-general-activities/#decision)   | **Decision** makes a choice based on a condition and follows one and only one of the outgoing paths. |
+| [Jump activity](/studio/workflows-general-activities/#jump)  | The **Jump** activity allows you to jump to other activities in the workflow. |
+| [Parallel split](/studio/workflows-general-activities/#parallel-split) | **Parallel split** adds two or more parallel paths to your workflow. |
+| [End activity](/studio/workflows-general-activities/#end)    | End activity ends the path of the workflow                   |
 
 ### 5.2 User Actions {#user-actions}
 

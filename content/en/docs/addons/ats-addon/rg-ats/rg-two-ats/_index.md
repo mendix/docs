@@ -1,7 +1,6 @@
 ---
 title: "ATS 2 Reference Guide"
 url: /addons/ats-addon/rg-two-ats/
-parent: "rg-ats"
 weight: 10
 ---
 

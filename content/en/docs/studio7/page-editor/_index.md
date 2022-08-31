@@ -15,9 +15,7 @@ To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in 
 {{< figure src="/attachments/studio7/page-editor/pages-icon.png"   width="300"  >}}
 
 {{% alert color="warning" %}}
-
 Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](/howto/front-end/atlas-ui/).
-
 {{% /alert %}}
 
 ## 2 Components
@@ -40,8 +38,7 @@ After opening Studio, it automatically opens the home page of the app.
 To open a page in Studio, do the following:
 
 1. Click the **Pages** icon in the left menu bar. 
-
-2.  In the displayed list of app pages, select the one you want to open and click it.
+2. In the displayed list of app pages, select the one you want to open and click it.
 
     {{< figure src="/attachments/studio7/page-editor/opening-a-page.png"   width="400"  >}}
 
@@ -52,12 +49,12 @@ The selected page is opened.
 To create a new page in Studio, do the following:
 
 1. Click the **Pages** icon.
-2.  Click **New** in the top right corner of the displayed side panel.
+2. Click **New** in the top right corner of the displayed side panel.
 
     {{< figure src="/attachments/studio7/page-editor/new-page.png"   width="400"  >}}
 
 3. In the **Create new page** dialog window, fill out the title of the page, select the layout and the page template.  
-4.  Click **Create**.
+4. Click **Create**.
 
     {{< figure src="/attachments/studio7/page-editor/create-new-page-dialog.png" >}}
 
@@ -69,11 +66,11 @@ To delete a page in Studio, do the following:
 
 1. Open the page you want to delete.
 2. Open the **Properties** tab.
-3.  Click **Delete** at the bottom of the **Properties** tab.
+3. Click **Delete** at the bottom of the **Properties** tab.
 
     {{< figure src="/attachments/studio7/page-editor/page-delete.png" >}}
 
-   The selected page is deleted.
+    The selected page is deleted.
 
 ### 3.4 Viewing Elements On a Page
 
@@ -120,9 +117,7 @@ This tab consists of the following:
 Widgets are single user-interface elements that can be configured. You can [quickly configure](/studio7/page-editor-widgets/#quick-config) most of the non-custom widgets when adding them on a page. For more information, see [Widgets](/studio7/page-editor-widgets/). 
 
 {{% alert color="info" %}}
-
 You can update widgets in the [Widget Overview](/studio7/settings-widget-overview/). 
-
 {{% /alert %}}
 
 ### 5.2 Building Blocks {#building-blocks}
@@ -155,9 +150,7 @@ If you want to read documentation on a particular building block and to know mor
 {{< figure src="/attachments/studio7/page-editor/info-icon-building-blocks.png" >}}
 
 {{% alert color="info" %}}
-
 Building Blocks categories may differ because Atlas UI can be customized using Studio Pro.
-
 {{% /alert %}}
 
 ### 5.2 Widgets {#widgets}
@@ -165,9 +158,7 @@ Building Blocks categories may differ because Atlas UI can be customized using S
 Widgets are single user-interface elements that can be configured. You can [quickly configure](/studio7/page-editor-widgets/#quick-config) most of the non-custom widgets when adding them on a page. For more information, see [Widgets](/studio7/page-editor-widgets/). 
 
 {{% alert color="info" %}}
-
 You can update widgets in the [Widget Overview](/studio7/settings-widget-overview/). 
-
 {{% /alert %}}
 
 ## 6 Properties Tab {#page-editor-properties}
@@ -175,7 +166,6 @@ You can update widgets in the [Widget Overview](/studio7/settings-widget-overvie
 The **Properties** tab displays the properties of the currently selected element and differs depending on this element. 
 
 {{< figure src="/attachments/studio7/page-editor/properties.png"   width="300"  >}}
-
 
 ## 7 Read More
 

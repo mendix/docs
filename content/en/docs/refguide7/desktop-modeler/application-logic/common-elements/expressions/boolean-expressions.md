@@ -1,11 +1,9 @@
 ---
 title: "Boolean expressions"
 url: /refguide7/boolean-expressions/
-parent: "expressions"
 ---
-### Boolean expressions
 
-
+## Boolean expressions
 
 Boolean expressions can be used to perform logical operations such as checking if two conditions hold.
 

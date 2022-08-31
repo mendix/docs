@@ -1,7 +1,6 @@
 ---
 title: "Start Styling with Gulp & Sass"
 url: /howto7/front-end/style-with-gulp-and-sass/
-parent: "use-gulp-and-sass"
 weight: 2
 tags: ["gulp", "sass", "ux", "front end"]
 ---
@@ -52,7 +51,7 @@ If you are using Parallels on Mac, you can access your Mendix app on your Mac br
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.
 
-## 5 Development & Production
+## 5 Development and Production
 
 When running `npm run dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
 

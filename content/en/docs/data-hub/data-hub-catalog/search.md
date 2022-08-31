@@ -282,7 +282,7 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 The collapsible **Search** pane is used to search for registered assets in the Data Hub Catalog:
 
- {{< figure src="/attachments/data-hub/data-hub-catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-pane.png" alt="search pane"   width="300"  >}}
 
 #### 3.4.1 Specifying the Search
 
@@ -292,11 +292,13 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 
 You can filter search results by environment type. The **Production** environment filter is active by default.
 
-To change the environment type filter, click **Filter**:
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/dh-filter-box.png" alt="filter box" >}}
+To change the environment type filter, click **Filter**.
 
 In the **Filters** dialog box, check the **Environment Type** that you want to include in your search. Then click **Apply Filters**. The search results will only display results in the selected environments.
+
+You can also filter by CRUD (Creatable, Readable, Updatable, or Deletable) capabilities. See the [Viewing OData Capabilities in Data Hub Catalog](/data-hub/write-data/#view-capabilities) section of *Write Data to Another App* for more information.
+
+You will also see any OData restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
 #### 3.4.3 Search Results {#search-results}
 
@@ -321,24 +323,16 @@ When a data source is selected in the search results, the following details are 
 {{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-service.png" alt="service details" >}}
 
 * Application icon
-
 * Name of the data source
-
 * **Non-discoverable** icon – if the data source has been set to non-discoverable (by default, data sources are discoverable to all users in your company and no icon appears)
-
 * **Validated** icon – if it has been set for the asset
-
 * **Environment Name** – where the app is deployed
-
 * **Version** – version number of the service
-
 * **Connections** – number of apps that consume the service
-
 * A description of the data source
-
 * All **Datasets** that are exposed in the data source (you can expand each one to see details of the attributes and associations)
 
- {{% alert color="info" %}}In Mendix Studio Pro, the **Dataset** is the name of the **Entity set** of a published **Entity**. This defaults to the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
+{{% alert color="info" %}}In Mendix Studio Pro, the **Dataset** is the name of the **Entity set** of a published **Entity**. This defaults to the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
 You can perform the following actions from this screen:
 
@@ -358,13 +352,9 @@ When a **Dataset** is selected in the search results, the following details are 
 The source and endpoint details of the dataset are displayed:
 
 * Dataset name
-
 * **Part of** – a link to the data source details page that the dataset is exposed in
-
 * **Version** number of the data source that the dataset is exposed in
-
 * **Connections** – the number of apps that consume this dataset
-
 * A description of the dataset
 
 You can perform the following actions from this screen:
@@ -374,26 +364,24 @@ You can perform the following actions from this screen:
 
 #### 3.5.2.2 Dataset Information
 
- The **Attributes** tab lists the attributes that are exposed for the dataset in the OData service.
+The **Attributes** tab lists the attributes that are exposed for the dataset in the OData service.
 
- Under the **Associations** tab for each dataset, the associations are displayed:
+Under the **Associations** tab for each dataset, the associations are displayed:
 
- {{< figure src="/attachments/data-hub/data-hub-catalog/search/attributes-associations.png" alt="associations info" >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/attributes-associations.png" alt="associations info" >}}
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
-
 
 ### 3.6 Metadata Panel {#metadata}
 
 The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Data Hub Catalog:
 
- {{< figure src="/attachments/data-hub/data-hub-catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
+{{< figure src="/attachments/data-hub/data-hub-catalog/search/metadata.png" alt="metadata pane"   width="300"  >}}
 
 #### 3.6.1 Tags
 
-These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/data-hub/data-hub-catalog/curate/#tags) section of *How to 
-Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
+These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/data-hub/data-hub-catalog/curate/#tags) section of *How to Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
 #### 3.6.2 Business Owner {#busines-owner}
 
@@ -420,7 +408,7 @@ The following discoverability values can be set:
 
 #### 3.6.5 Validated
 
-This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below.
+This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below. See the [Validated](/data-hub/data-hub-catalog/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
 
 #### 3.6.6 Application
 
@@ -440,7 +428,7 @@ The **Curation Bar** is displayed in the asset detail screen if you are the owne
 
 * For the selected data source, you can edit [Application Details](/data-hub/data-hub-catalog/curate/#curate-application) and [Data Source Details](/data-hub/data-hub-catalog/curate/#service-details)
 
-For further details, see [Curate Registered Assets](/data-hub/data-hub-catalog/curate/).
+For further details, see the [Discoverable and Validated](/data-hub/data-hub-catalog/curate/#discoverability) section of *Curate Registered Assets*.
 
 ### 3.8 Data Source and Dataset URIs
 

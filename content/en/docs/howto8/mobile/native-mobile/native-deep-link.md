@@ -1,7 +1,7 @@
 ---
 title: "Set Up Deep Links in Native Mobile Apps"
+linktitle: "Deep Links in Native Mobile Apps"
 url: /howto8/mobile/native-deep-link/
-parent: "native-mobile"
 weight: 75
 description: "Connect URLs to your native mobile app by adding a deep link."
 tags: ["deep link", "url", "native", "mobile", "developer app", "make it native"]
@@ -49,13 +49,12 @@ Set up a native template with the **Native Mobile App Builder** by following the
 2. Once done with the wizard you will enable deep linking capabilities. First, select the **Capabilities** menu item:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/capability-menu-option.png" alt="capability menu option"   width="400"  >}}
-    
+
 3. Enter the `schema` name without the appending `://`:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/deep-link-input-field.png" alt="deep link input field"   width="400"  >}}
-    
-4. Click the **Save** button. 
 
+4. Click the **Save** button. 
 5. Navigate to the build page and click **Build**.
 
 {{% alert color="info" %}}
@@ -69,16 +68,16 @@ When running locally from source, on iOS you have to run `pod install` once more
     ``` shell
     native-builder.exe prepare --project-name "Native Deep Link" --app-name "Native Deep Link" --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "C:\mendix-projects\NativeDeepLink\NativeDeepLink.mpr" --github-access-token "c3f322c471623" --appcenter-api-token "2d5b570693d34"  --app-identifier "com.mendix.native.deeplink" --runtime-url "https://nativedeeplink-sandbox.mxapps.io/" --mendix-version "8.6.0"
     ```
-    
+
 1. Open your command line interface (CLI) of choice and change directory to the folder where you want to edit the build template:
 
-    ```shell
+    ```shell {linenos=false}
     cd c:/github
     ```
-    
+
 1. Use git to clone your Native Builder template from GitHub: 
 
-    ```shell
+    ```shell {linenos=false}
     git clone https://github.com/your-account/native-deeplink-app
     ```
 
@@ -112,9 +111,9 @@ The *info.plist* file registers the schema and host so that they will be associa
 1. Add `URL types`, then add `URL Schemes` and `URL identifier`:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/ios-info-plist.png" alt="ios info plist" >}}
-   
+
     When viewing *Info.plist* as a text file, you would see that a section is added:
-   
+
     ```xml
     <key>CFBundleURLTypes</key>
     <array>
@@ -149,7 +148,7 @@ The *info.plist* file registers the schema and host so that they will be associa
       return YES;
     }
     ```
-   
+
     This method will register the opened URL so it can be used in the **Native Deep Link** nanoflow actions. 
 
 #### 3.2.3 Rebuilding Your Native Mobile App
@@ -167,7 +166,7 @@ When running locally from source you have to launch your app again:
 
 1. Now rebuild and install your native mobile app to add your new capabilities:
 
-    ``` shell
+    ```shell {linenos=false}
     native-builder.exe build --project-name "Native Deep Link" --app-version "1.0.0" --build-number 1
     ```
 
@@ -186,7 +185,7 @@ The Register Deep Link nanoflow action registers a callback nanoflow, which is c
 {{% alert color="info" %}}
 The name of the input parameter is case sensitive and can not be changed.
 {{% /alert %}}
-        
+
 #### 4.1.2 Parsing a URL To a Mendix Object
 
 The Register Deep Link nanoflow action will create a new Mendix object, split a URL, and set all the object attributes with their values. For example, the URL https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top has the following attributes and values:
@@ -226,7 +225,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 1. In the **OL_RegisterDeepLink** nanoflow, add the action **Register DeepLink**, and in that action's **Url handler** create an nanoflow named *DL_ShowUrlDetails*:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/nanoflow-register-deep-link.png" alt="nanoflow register deeplink" >}}
-   
+
     This nanoflow will be called every time the app is opened using a URL.
 
 1. To parse the URL into an object, you will use a non-persistable entity named **DeepLinkParameter** from the **NativeMobileResources** module in the next step. For now, go to **NativeMobileResources** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
@@ -240,7 +239,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Add a **Parse URL to Object** activity to your nanoflow. Double-click it and configure it like this:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-deep-link/parse-url.png" alt="parse url" >}}
-   
+
 1. Add a **Show message** activity to the right of your **Parse URL to Object** activity.
 1. Double-click the **Show message** activity.
 1. In **Template** write *Your deep link callback URL {1} host = {2}*.
@@ -262,10 +261,10 @@ Please note that if you are not running the app from a local source, you must bu
 
 ## 5. Read more
 
-*   [Native Builder Reference Guide](/refguide8/native-builder/)
-*   [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
-*   [React Native Linking](https://facebook.github.io/react-native/docs/linking)
-*   [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
-*   [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
-*   [Universal Linking iOS](https://developer.apple.com/ios/universal-links/)
-*   [URL Schema vs Universal Link](https://medium.com/wolox-driving-innovation/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97)
+* [Native Builder Reference Guide](/refguide8/native-builder/)
+* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [React Native Linking](https://facebook.github.io/react-native/docs/linking)
+* [Deep Linking Android](https://developer.android.com/training/app-links/deep-linking)
+* [Deep Linking iOS](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
+* [Universal Linking iOS](https://developer.apple.com/ios/universal-links/)
+* [URL Schema vs Universal Link](https://medium.com/wolox-driving-innovation/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97)

@@ -10,6 +10,8 @@ tags: ["studio pro","OData","publish"]
 
 In Studio Pro, entities can be exposed as [OData resources](/refguide/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
 
+A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it.
+
 The standards used for OData in Mendix are:
 
 * [OData version 3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
@@ -55,7 +57,9 @@ This list gives an overview of all published attributes and associations.
 
 ## 3 Settings
 
-### 3.1 OData Version
+### 3.1 Configuration
+
+### 3.1.1 OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
@@ -63,9 +67,25 @@ You can choose between OData 4 (recommended) and OData 3. One of the main differ
 This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/). In earlier versions, all published OData services were OData 3.
 {{% /alert %}}
 
-### 3.2 Associations
+### 3.1.2 Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
+
+### 3.2 Export
+
+In this section, you can save the different representations of the service to file.
+
+#### 3.2.1 Service feed
+
+The service feed, available in XML and JSON, contains a list of the published entities.
+
+#### 3.2.2 Metadata
+
+The $metadata XML file contains the service's contract in OData's [CSDL](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) format.
+
+#### 3.2.3 OpenAPI {#openapi}
+
+The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format.
 
 ### 3.3 Security {#security}
 
@@ -73,9 +93,9 @@ You can configure security for the OData service when [App Security](/refguide/a
 
 #### 3.3.1 Requires Authentication {#authentication}
 
-Select whether clients need to authenticate or not. Choose *No* to allow access to the resources without restrictions. Choose *Yes* to be able to select which authentication methods to support.
+Select whether clients need to authenticate or not. Select **No** to allow access to the resources without restrictions. Select **Yes** to be able to select which authentication methods to support.
 
-Even when you choose *Yes*, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](/refguide/anonymous-users/).
+Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
 #### 3.3.2 Authentication Methods
 
@@ -165,7 +185,11 @@ Default value: *No*
 
 ### 6.1 General
 
-Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`.
+Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
+
+{{% alert color="info" %}}
+The Swagger UI feature was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/).
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.

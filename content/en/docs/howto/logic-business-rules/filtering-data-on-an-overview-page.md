@@ -66,7 +66,7 @@ In the previous section you set up a basic data structure and created some sampl
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581354.png" >}}
 
-5. Use the **Order status** search field to filter your list on a specific order status and click the 'Search' button on the right side.
+5. Use the **Order status** search field to filter your list on a specific order status and click the **Search** button on the right side.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581353.png" >}}
 
@@ -75,13 +75,13 @@ In the previous section you set up a basic data structure and created some sampl
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581351.png" >}}
 
-8. Redeploy your application and enter 50 in your newly added search field. Your list will be filtered to only show orders with a minimum value of 50.
+8. Redeploy your application and enter *50* in your newly added search field. Your list will be filtered to only show orders with a minimum value of 50.00.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581350.png" >}}
 
 ## 4 Filtering a List of Orders with the "Open" Status Using XPath 
 
-In the previous section you used the search bar to filter data on your overview page. Now you will add an XPath constraint on the Orders data grid. With an XPath constraint on a data grid you can (hard coded) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In this section you will constrain the data grid so it will only display orders with status 'Open'.
+In the previous section you used the search bar to filter data on your overview page. Now you will add an XPath constraint on the Orders data grid. With an XPath constraint (hard coded) on a data grid you can filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In this section you will constrain the data grid so that it will only display orders with status 'Open'.
 
 1. Select the **Order** data grid and in the **Properties** pane on the right, change **Data source** > **Type** to **XPath**, and then click the **XPath Constraint** field:
 
@@ -97,7 +97,7 @@ In the previous section you used the search bar to filter data on your overview 
 
 ## 5 Filtering a List of Orders on the Minimum Total Price Using XPath
 
-In the previous section you have constraint the data grid on status 'Open'. In this section we will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
+In the previous section you have constrained the data grid on status 'Open'. In this section we will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
 
 1. Select the **Order** data grid and in the **Properties** pane on the right, click the **XPath Constraint** field and enter the following expression: `[TotalPrice >= 50]`.
 
@@ -111,19 +111,19 @@ In the previous section you have constraint the data grid on status 'Open'. In t
 
 In the previous two sections you used single constraints to filter the data grid on status and minimum total price. In this section you will combine those two constraints. Combination can be made with logical operator **AND** and **OR**.  
 
-1. To constrain the results in the order overview to only the **Open** orders *or* orders with a minimum price of 50.00, you have to insert an `or` statement in the XPath constraint: `[OrderStatus = 'Open'] or [TotalPrice >= 50]`.
+1. To constrain the results in the order overview to only the **Open** orders OR orders with a minimum price of 50.00, you have to insert an `or` statement in the XPath constraint: `[OrderStatus = 'Open'] or [TotalPrice >= 50]`.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581366.png" >}}
 
-2. Run your application to see all the orders with the order status 'Open' or with a total price higher or equal to 50.
+2. Run your application to see all the orders with the order status 'Open' or with a total price higher than or equal to 50.00.
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581373.png" >}}
 
-3. To constrain the results in the order overview to only the **Open** orders *and* orders with a minimum price of 50.00, you have to insert an `and` statement in the XPath constraint: `[OrderStatus = 'Open'] and [TotalPrice >= 50]`.
+3. To constrain the results in the order overview to only the **Open** orders AND orders with a minimum price of 50.00, you have to insert an `and` statement in the XPath constraint: `[OrderStatus = 'Open'] and [TotalPrice >= 50]`.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581365.png" >}}
     
-4. Run your application to see orders which are 'Open' and have a minimum total price of 50.
+4. Run your application to see orders which are 'Open' and have a minimum total price of 50.00.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581364.png" >}}
 

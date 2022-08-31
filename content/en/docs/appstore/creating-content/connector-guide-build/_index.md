@@ -1,5 +1,5 @@
 ---
-title: "Building Connectors"
+title: "Build Connectors"
 url: /appstore/creating-content/connector-guide-build/
 category: "Creating Content"
 weight: 4
@@ -13,21 +13,22 @@ Welcome to the world of Mendix connectors. Mendix connectors allow you to connec
 **This how-to will teach you the following:**
 
 * What connectors are and how they work
-* How to build a connector
+* Basic steps for building and publishing connectors
 
 {{% alert color="info" %}}
-For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/). To learn more about advanced ways to build connectors, see [Wrap Services, APIS, or Databases with OData](/refguide/wrap-services-data/).
 {{% /alert %}}
 
 ### 1.1 Prerequisites  
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read the blog post [Introducting the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
+* Read the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
 * Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * Read the Evaluation Guide page about [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration/)
 * Read [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/) 
 * Watch the [Build a Mendix Connector](https://www.youtube.com/watch?v=wTQJ1MiXAow) tutorial
+* Install Studio Pro
 
 ## 2 What Are Connectors?
 
@@ -75,8 +76,6 @@ Once you deploy an application, the connector will automatically deploy with it.
 As an example, check out the [AWS IoT](/appstore/connectors/aws-iot/) connector. This connector uses AWS-provided Java libraries to interact with the AWS IoT service. The functions from these Java libraries in turn are exposed via a set of Mendix Java actions that are available in the toolbox to use in your logic.
 
 ## 3 Building a Mendix Connector in Studio Pro {#build-connector}
-
-Now that you know what connectors are, you can try building your own.
 
 When creating a new Mendix connector, it is advised to have an app in which you both develop and test your connector. This means that you will have a module that contains all your connector logic, along with one or more additional modules that assist in the testing and development. The logic in the additional modules are not required for the operation of the module and therefore need to be separated.
 
@@ -146,5 +145,7 @@ Because connectors are exported as modules and then published on the Marketplace
 
 ## 4 Read More
 
-* [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
-* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
+* Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
+* Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
+* See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors
+* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#3rd-party)

@@ -1,5 +1,6 @@
 ---
 title: "SAP Business Technology Platform"
+linktitle: "SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
 weight: 40
@@ -563,7 +564,7 @@ New values will only be applied when you restart your app. The value which is cu
 
 #### 7.4.1 Custom Runtime Settings
 
-You can add custom server settings which configure Mendix Runtime beyond the standard SAP deployment. See [Runtime Customization](/refguide/custom-settings/) for information about the settings which are available.
+You can add custom server settings which configure Mendix Runtime beyond the standard SAP deployment. See [Runtime Customization](/refguide/custom-settings/) and the [Mendix Cloud Foundry Buildpack GitHub repository](https://github.com/mendix/cf-mendix-buildpack#mendix-runtime-configuration) for information about the settings which are available.
 
 #### 7.4.2 Custom Environment Variables
 

@@ -1797,7 +1797,7 @@ The widget’s style properties are as follows:
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `dynamicItemClasses` > `dynamic_item_class_name` | object | The dynamic item classes property allows you to specify one or more styling objects like the class property, but based on an expression. This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the Class property. |
+| `dynamicItemClasses` > `dynamic_item_class_name` | object | The dynamic item classes property allows you to specify one or more styling objects like the class property, but based on an expression. This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the class property. |
 | `dynamicItemClasses` > `dynamic_item_class_name` > `listItem` | Applies a view style to all items belonging to a given dynamic style class. Same properties as `listItem` | |
 | `emptyPlaceholder` | Applies a view style to the empty placeholder. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `firstItem` | Applies a view style to the first item of the list. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |

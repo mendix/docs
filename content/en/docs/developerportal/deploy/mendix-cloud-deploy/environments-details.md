@@ -11,15 +11,15 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-The **Environment Details** page shows information about a particular environment, such as production or acceptance. You can use it to manage and debug several aspects of the environment.
+The **Environment Details** page shows information about a particular environment, for example production or acceptance. You can use it to manage and debug several aspects of the environment.
 
-To enter the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+To enter the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** by the specific environment. 
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" >}}   
 
 ## 2 General Tab
 
-The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted.
+The contents of the **General** tab depend on the Mendix Cloud version on which the app is hosted.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details-general.png" >}}   
 
@@ -45,7 +45,7 @@ In this tab, you can find the following information about your environment:
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
 * **Secondary Backup Location** the region where the backup is stored
-* **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
+* **Mendix Cloud Version** – Mendix Cloud v3 or v4
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
 
@@ -226,7 +226,7 @@ On this tab, you can manage the elements described below.
 
 You can perform the following actions:
 
-* **Create** (in which you have to provide the **domainname** and select the **certificate** from a drop-down menu)
+* **Create** (in which you have to provide the domain name and select the certificate from a drop-down menu)
 * **Edit**
 * **Delete**
 
@@ -240,7 +240,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-For the deprecated Mendix Cloud v3, only *X-Frame-Options* was supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
+The deprecated Mendix Cloud v3 only supports X-Frame-Options. Mendix Cloud v4 supports the following HTTP headers in the Developer Portal:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -268,7 +268,7 @@ There are three types of value for these headers:
 
 The changes to the headers will be implemented when the app is redeployed.
 
-Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
+For more information, see [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 #### 4.2.1 HTTP Response Headers Inserted Automatically
 

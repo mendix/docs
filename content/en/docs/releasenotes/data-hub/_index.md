@@ -13,18 +13,18 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### September 1st, 2022
 
-### Improvements
+#### Improvements
 
 * External users will receive an email when they are removed from a company's Data Hub Catalog. 
 * Company Admins can now add multiple external users by separating email addresses with a comma and space. 
 
-### Fixes
+#### Fixes
 
 * We fixed a bug where external users were sometimes unable to upload contracts.
 
 ### August 25th, 2022
 
-### Improvements
+#### Improvements
 
 * We improved the accuracy of the Catalog's search results.
 * We added the option to the [Search API](/apidocs-mxsdk/apidocs/data-hub-apis/#search) to paginate through search results with an offset. This allows you to limit the number of results and specify how many to skip.
@@ -32,11 +32,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### August 18th, 2022
 
-### Improvements
+#### Improvements
 
 * Company administrators can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
-### Fixes
+#### Fixes
 
 * We fixed a bug where an empty V3 contract resulted in an error. The contract will now be parsed successfully and yield no entities because it is empty.
 * We fixed a bug where notifications were not sent when the notification title was more than 100 characters. The maximum number of characters in notification titles is now 100.
@@ -47,7 +47,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 * We made some improvements to the **Register a New Data Source** form, including improved processing of large contracts and improved responsiveness on pages with a large amount of applications and owners.
 
-### Fixes
+#### Fixes
 
 * We fixed a bug where notifications about deletion were mistakenly sent when updating a service. 
 * We fixed an issue where some **Company Admins** would get an error when trying to change the default discoverability setting.

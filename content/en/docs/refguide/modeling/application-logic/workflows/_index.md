@@ -197,4 +197,4 @@ For more information on how to configure the **Workflow Commons** in an existing
 ## 9 Read More
 
 * [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/)
-* [Using Ad hoc Jump-to to change a running workflow instance](/refguide/ad-hoc-jump-to/)
+* [Using Ad hoc Jump-to to change a running workflow instance](/refguide/jump-to/)

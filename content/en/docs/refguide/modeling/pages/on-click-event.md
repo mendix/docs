@@ -118,7 +118,7 @@ This duplicates the [Microflow](#microflow) specified above.
 
 **Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
-If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or selection, and defaults to selection. This can be configured via the drop-down in the microflow settings page. A grid with single-selection always passes all rows to the microflow.
+If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or selection, and defaults to selection. This can be configured via the drop-down menu in the microflow settings page. A grid with single selection always passes all rows to the microflow.
 
 ##### 3.3.2.3 Microflow Call Type
 

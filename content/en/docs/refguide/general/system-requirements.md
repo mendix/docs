@@ -45,7 +45,7 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8083: mobile packager
 * 8090: admin port
 
-For more information on ports and modifying Studio Pro's default ports, see [Configurations](/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
+For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
 ### 2.2 TortoiseSVN
 

@@ -54,7 +54,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 ### 3.1 Selecting an Attribute as Key
 
-In Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, you can select which attributes you would like to use as a key. To learn more about selecting attributes as keys, see the [Selecting an Attribute as a Key](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
+In Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, you can select which attributes you would like to use as a key. To learn more about selecting attributes as keys, see the [Selecting an Attribute as a Key](/refguide/wrap-services-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
 
 ### 3.2 Required Validation Rules for Published Attributes
 
@@ -113,7 +113,7 @@ Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representa
 * **String**
 * **AutoNumber** 
 
-To learn more about selecting a key, unique see the [Key Selection](/appstore/creating-content/connector-guide-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
+To learn more about selecting a key, unique see the [Key Selection](/refguide/wrap-services-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
 
 ## 9 Capabilities {#capabilities}
 

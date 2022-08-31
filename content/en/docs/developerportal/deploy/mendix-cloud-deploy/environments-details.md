@@ -11,15 +11,19 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To enter the **Environment details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+The **Environment Details** page shows information about a particular environment, such as production or acceptance. You can use it to manage and debug several aspects of the environment.
+
+To enter the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" >}}   
 
 ## 2 General Tab
 
+The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted.
+
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details-general.png" >}}   
 
-The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
+In this tab, you can find the following information about your environment:
 
 * **Status**
     * White – the environment is stopped or was never deployed
@@ -71,8 +75,8 @@ When you click **Clear Environment** you will have two options:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
 
-* **Only clear the database** – this empties all data from your database — after delete confirmation, the application will be stopped, the existing database will be deleted, a new database will be created, and the application will be restarted — ensure you have a backup of any data you want to keep
-* **Clear the full environment (model and database)** *(default)* – this clears all data from your database and file storage, and removes your app from this environment — you should do this if you want to deploy a different app to this environment
+* **Only clear the database** – This empties all data from your database. After delete confirmation, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
+* **Clear the full environment (model and database)** *(default)* – This clears all data from your database and file storage, and removes your app from this environment. You should do this if you want to deploy a different app to this environment.
 
 You will need to confirm that you want to clear your environment by typing *clear* and clicking **Clear Environment**.
 
@@ -279,10 +283,10 @@ A number of non-configurable response headers are added automatically by Mendix 
 
 #### 4.2.2 Running Your App in an Iframe {#iframe}
 
-Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
+Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. For more information, see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
 
 {{% alert color="info" %}}
-There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. See the [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) blog post on *Webkit.org* for more information.
+There can be additional issues when using cookies in iframes for end-users using the **Safari** browser. Resolving these issues is outside the control of Mendix. For more information, see [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/).
 {{% /alert %}}
 
 ##### 4.2.2.1 Using Custom Domains
@@ -291,14 +295,14 @@ To avoid security issues when you want to embed the app in an iframe, we recomme
 
 ##### 4.2.2.2 Applying a Different SameSite Setting
 
-From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
+From Mendix version 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
 
 * for Mendix version 8 (8.12 and above), the default is `SameSite=None`, which means that they *can* be used in an iframe
 * for Mendix version 9.0 and above, the default is `SameSite=Strict`, which means that they *cannot* be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
 
-For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
+For Mendix versions below 8.12 there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
 The SAMESITE_COOKIE_PRE_MX812 setting will only be implemented the next time your app is deployed.
@@ -409,11 +413,11 @@ If you change the log level, this level will continue to be used even if you lat
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-For an application running a **single instance**, any changes will be applied immediately to the application.
+For an application running a single instance, any changes will be applied immediately to the application.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-For an application running **more than one instance**, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
+For an application running more than one instance, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -445,13 +449,13 @@ On this tab, you can add **Custom Runtime Settings** and **Custom Environment Va
 
 Use the Custom Runtime Settings section to perform the following actions:
 
-* **Add** a new runtime **setting** with a new **value**
+* **Add** a new runtime setting with a new value
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
 For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings/) and [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings/) documentation.
 
-The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
+The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are not configurable by users:
 
 * `CACertificates`
 * `ClientCertificatePasswords`
@@ -535,7 +539,7 @@ You can set tags on your environment. These are arbitrary strings that are not i
 * Custom tags can be added to metrics for third-party metrics solutions
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
 
-For example, you may wish to use tags when logging with *Datadog*. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the *Datadog* site.
+For example, you may wish to use tags when logging with Datadog. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the Datadog site.
 
 ## 9 Services Tab{#services}
 

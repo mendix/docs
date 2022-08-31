@@ -15,13 +15,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Improvements
 
-* We made an improvement in the external user removal feature. An external user that is removed from a company's Data Hub Catalog, will receieve an email that he/she can no longer browse that Catalog. 
-* We added more keyboard shortcuts (comma and space) to improve the user experience when a company admin invites external users by typing their email address in the Data Hub Control Center page.
+* External users will receive an email when they are removed from a company's Data Hub Catalog. 
+* Company Admins can now add multiple external users by separating email addresses with a comma and space. 
 
 ### Fixes
 
-* We fixed a bug where external users occasionally were not able to upload contracts  
-
+* We fixed a bug where external users were sometimes unable to upload contracts.
 
 ### August 25th, 2022
 

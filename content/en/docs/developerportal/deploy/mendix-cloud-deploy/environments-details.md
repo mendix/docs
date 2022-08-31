@@ -537,7 +537,7 @@ You can set tags on your environment. These are arbitrary strings that are not i
 
 For example, you may wish to use tags when logging with *Datadog*. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the *Datadog* site.
 
-## 9 Services Tab{#services}
+## 9 Services Tab {#services}
 
 Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
 
@@ -546,7 +546,6 @@ Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-
 The custom services that are currently available for each environment are as follows:
 
 * **Data Broker service** – required to use [Mendix Business Events](/appstore/modules/mendix-business-events/) on production apps
-
 
 ### 9.2 Enabling Custom Services
 

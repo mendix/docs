@@ -5,6 +5,16 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.25
+
+**Release date: August 16th, 2022**
+
+### Fixes
+
+* We updated the NDK version to match AppCenter.
+* We updated the react-native-permissions library.
+* We removed `mendix.templateVersion` from *package.json*.
+
 ## 6.2.24
 
 **Release date: July 26th, 2022**
@@ -85,7 +95,7 @@ description: "Native Template 6 release notes."
 
 * We fixed an issue where iOS custom developer apps incurred problems while building.
 
-## 6.2.13 & 6.2.14
+## 6.2.13 and 6.2.14
 
 **Release date: March 16th, 2022**
 

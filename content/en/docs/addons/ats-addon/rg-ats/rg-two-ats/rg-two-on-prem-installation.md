@@ -9,7 +9,7 @@ tags: ["ats", "installation", "requirements"]
 
 ATS runs on top of Mendix 6. On-premises is a deployment option for ATS. 
 
-## 2 Hardware Requirements & Hardware Sizing
+## 2 Hardware Requirements and Hardware Sizing
 
 ### 2.1 Mendix Business Server
 

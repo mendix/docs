@@ -34,7 +34,7 @@ Checks/clears a check box in a set selector by given entity attribute value.
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
@@ -57,7 +57,7 @@ Checks/clears the 'select all' check box.
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
 
 #### Return value
@@ -78,7 +78,7 @@ Sets the value of a check box.
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -100,7 +100,7 @@ Set a file manager to the given file path to upload a file.
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | File Path | FilePath | String | *Required* Full path to the local file, on the client system, to be uploaded. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -122,7 +122,7 @@ Checks/clears a check box for a given column and row caption in a grid selector 
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 | Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
@@ -145,7 +145,7 @@ Selects the radio button for a given column and row caption in a grid selector w
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 
@@ -189,7 +189,7 @@ Checks/clears the check box for a given entity attribute value.
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | *Required* If true then checks the check box/radio button, otherwise clears it. |
 
@@ -214,7 +214,7 @@ BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), InputReferenceSelector, R
 
 | Name | Key | Datatype | Description |
 | ---- | ---- | ---- | ---- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The value to set. The date/time format depends on the device type. For mobile devices the date/time should be formatted in the ISO 8601 standard meaning,      'yyyy-MM-ddTHH:mm' for date and time, or     'yyyy-MM-dd' for date, or      'HH:mm' for just the time. Seconds should be omitted. For desktop devices the string should be formatted so as to match the date/time picker format. This format is locale dependent, for example for the US the format is 'MM/dd/yyyy, hh:mm a'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -238,7 +238,7 @@ Supported widgets: drop-down, reference selector, search input drop-down, EnumSe
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Index | Index | Integer | *Required* Starts from 0, meaning the first element has index 0, the second element has index 1 etc. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -254,7 +254,7 @@ Read text, dates, numbers and selections from Mendix widgets.
 | ----------------- | -------------- |
 | [Get Validation Message](#GetValidationMessage) | Returns the validation message of a widget. |
 | [Get Value](#GetValue) | Returns the current value of all supported widgets. Supported widgets: text box, text area, drop-down, radio button, date picker, reference selector, search input text, search input drop-down, label, input reference set selector, OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector RadiobuttonList, Switch, AutoComplete, Format String, Custom String. |
-| [Get Active Tab Name](#GetActiveTabName) | Returns the name of the active tab page as specified in the Studio Pro. This is not the same as the caption of the tab which is shown in the browser. |
+| [Get Active Tab Name](#GetActiveTabName) | Returns the name of the active tab page as specified in Studio Pro. This is not the same as the caption of the tab which is shown in the browser. |
 | [Get Item/Row Index](#GetItemRowIndex) | Returns the index of a row in a data grid, or an item in a template grid or list view. Indexing is 0 based, meaning the first row/item has index 0, the second row/item has index 1 etc. |
 | [Get Row Cell Value](#GetRowCellValue) | Gets the cell value of a data grid row for a given column name. |
 | [Get Total Item/Row Count](#GetTotalItemRowCount) | Returns the total grid count from the paging status. Does not work if pagination is not shown. Supported widgets: data grid, template grid, list view. |
@@ -282,7 +282,7 @@ Returns the validation message of a widget.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return value
@@ -305,7 +305,7 @@ Supported widgets: text box, text area, drop-down, radio button, date picker, re
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -320,7 +320,7 @@ GetActiveTabName
 
 #### Description
 
-Returns the name of the active tab page as specified in the Studio Pro.
+Returns the name of the active tab page as specified in Studio Pro.
 
 This is not the same as the caption of the tab which is shown in the browser.
 
@@ -328,12 +328,12 @@ This is not the same as the caption of the tab which is shown in the browser.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | String | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return value
 
-*String* The name of a tab page as it is specified in the Studio Pro.
+*String* The name of a tab page as it is specified in Studio Pro.
 
 This is not the same as the caption of the tab which is shown in the browser.
 
@@ -398,7 +398,7 @@ Supported widgets: data grid, template grid, list view.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -419,7 +419,7 @@ Returns the number of currently visible items/rows in a data grid, template grid
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -440,7 +440,7 @@ Returns true if the check box is checked, false otherwise.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -465,7 +465,7 @@ Supported widgets: drop-down, reference selector, search input drop-down.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -486,7 +486,7 @@ Returns true if the group box is collapsed, false otherwise.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -509,7 +509,7 @@ The returned value is 'true' when the check box is checked, false otherwise.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 
@@ -533,7 +533,7 @@ The returned value is 'true' when the check box is checked, false otherwise.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 
 #### Return Value
 
@@ -555,7 +555,7 @@ The returned value is 'true' when the check box is checked, false otherwise.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 
 #### Return Value
@@ -578,7 +578,7 @@ The returned value is 'true' if the check box/radio button is checked, false oth
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 
@@ -636,7 +636,7 @@ Asserts that the validation message for a certain widget contains the specified 
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Validation Message | ValidationMessage | String | *Required* Text which is expected to be part of the validation message. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -659,8 +659,8 @@ Assert a certain value for the name of the active tab page.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
-| Active Tab Name | ActiveTabName | String | *Required* The name of a tab page as it is specified in the Studio Pro. This is not the same as the caption of the tab which is shown in the browser. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Active Tab Name | ActiveTabName | String | *Required* The name of a tab page as it is specified in Studio Pro. This is not the same as the caption of the tab which is shown in the browser. |
 | Search Context | SearchContext | String | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
 
@@ -682,7 +682,7 @@ Assert the value of a check box.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | Boolean | *Required* Expected status of the check box. A checked check box corresponds to 'true'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -707,7 +707,7 @@ Supported widgets: text box, text area, drop-down, radio button, date picker, re
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* Expected value. This is the text as shown in the browser, not a technical value or id. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -732,7 +732,7 @@ Supported widgets: drop-down, reference selector, search input drop-down.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The value of the drop-down option that you want to assert. This is the text as shown in the browser, not a technical value or id. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -754,7 +754,7 @@ Finds a check box by entity attribute value and asserts that the check box is se
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
@@ -777,7 +777,7 @@ Finds a check box by entity attribute value and asserts that the check box is se
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
@@ -801,7 +801,7 @@ Asserts that the check box found by given entity attribute value is checked/clea
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 | Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -824,7 +824,7 @@ Asserts the value of check box/radio button for a given column and row captions 
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 | Checked | Checked | Boolean | *Required* Expected status of a check box/radio button. A checked check box(radio button corresponds to the value 'true'. |
@@ -871,7 +871,7 @@ The action is limited to search in only within widgets that are visible.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Child Node Selector | ChildNodeSelector | String | *Required* Used to constrain the matching child widgets. For example use: \":contains('foo')\" to find only widget that contain the text 'foo' inside. Check the ATS reference guide for a complete list of available selectors. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -894,7 +894,7 @@ Finds/asserts a visible menu item in a navigation tree, menu bar, and simple men
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Caption | Caption | String | *Required* Caption of the menu item as shown in the browser. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -921,7 +921,7 @@ When multiple column name/value pairs are specified then a row must match all of
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column 1 Name | Column1Name | String | *Optional* Name of the column as assigned in the Mendix Studio Pro. This is not the caption of the column. |
 | Column 1 Value | Column1Value | String | *Optional* This value is used to identify a specific row in the data grid. The search is performed on the column that matches the 'Column 1 Name'. |
 | Column 2 Name | Column2Name | String | *Optional* Name of the column as assigned in the Mendix Studio Pro. This is not the caption of the column. |
@@ -953,7 +953,7 @@ Finds/asserts a row/item in a data grid, template grid, or list view by index.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Index | Index | Integer | *Required* Starts from 0, meaning the first element has index 0, the second element has index 1 etc. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -998,7 +998,7 @@ Finds/asserts the first selected item/row as a web element.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
 
@@ -1022,7 +1022,7 @@ Finds/asserts a Mendix widget by its given name and optionally value.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Optional* The value in the widget. Supply this if you want to restrict the result by this value. For example, when there are several instances of a widget with the same name. Supported widgets: text box, text area, date picker, drop-down, radio button, referece selector, search input text, search input drop-down, label. |
 | Visible Only | VisibleOnly | Boolean | *Optional* If set to true, it will only return widgets that are visible. When false the all widgets are returned, reagardles of visiblity. Defaults to false. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
@@ -1047,7 +1047,7 @@ Finds/asserts a check box by a given cell value and column caption. Returns the 
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -1070,7 +1070,7 @@ Returns the 'select all' checkbox for a set selector widget.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 
 #### Return value
 
@@ -1090,7 +1090,7 @@ Finds/asserts the check box by the given entity attribute value.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
 
@@ -1112,7 +1112,7 @@ Finds/asserts a check box/radio button for a given column and row captions in a 
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 | Negate | NegateParameter | Boolean | *Required* Negetes the asssert |
@@ -1188,7 +1188,7 @@ Clicks a data grid row by a certain column value.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Name | ColumnName | String | *Required* Name of the column as assigned in the Mendix Studio Pro. This is not the caption of the column. |
 | Column Value | ColumnValue | String | *Required* Value that you expect in the column of the row. |
 | Doubleclick | Doubleclick | Boolean | *Optional* If true performs a doubleclick, otherwise does a single click. Defaults to false. |
@@ -1212,7 +1212,7 @@ Clicks the 'drop down div converter' drop down button.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 
 #### Return Value
 
@@ -1232,7 +1232,7 @@ Clicks the 'drop down div converter' split button.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 
 #### Return Value
 
@@ -1252,7 +1252,7 @@ Clicks a menu item in a navigation tree, menu bar, and simple menu bar.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Caption | Caption | String | *Required* Caption of the menu item as shown in the browser. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -1274,7 +1274,7 @@ Clicks a Mendix widget (for example, button, link, image) by its name.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Doubleclick | Doubleclick | Boolean | *Optional* If true performs a doubleclick, otherwise does a single click. Defaults to false. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -1296,7 +1296,7 @@ Clicks on one of the following special widget buttons: refresh, load more, clear
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Button | Button | Enumeration | *Required* Defines which widget button to click. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
@@ -1318,7 +1318,7 @@ Closes a group box.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -1339,7 +1339,7 @@ Opens a group box.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -1360,7 +1360,7 @@ Sorts a data grid by a given column.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Name | ColumnName | String | *Required* Name of the column as assigned in the Mendix Studio Pro. This is not the caption of the column. |
 
 #### Return Value
@@ -1381,7 +1381,7 @@ Toggles the value of a Booleanslider.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 
 #### Return Value
 
@@ -1401,7 +1401,7 @@ Finds a check box by a given entity attribute and inverses the value.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 
@@ -1423,7 +1423,7 @@ Inverses the 'select all' check box.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 
 #### Return Value
 
@@ -1443,7 +1443,7 @@ Clicks on a check box to toggle its value.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 
 #### Return Value
@@ -1464,7 +1464,7 @@ Inverses the check box found by a given column and row caption.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Column Caption | ColumnCaption | String | *Required* Used to identify a column by it's caption in a set/grid selector widget. The caption should match the label as shown in the browser. |
 | Row Caption | RowCaption | String | *Required* Used to identify a row by it's caption in a grid selector widget. The caption should match the label as shown in the browser. |
 
@@ -1486,7 +1486,7 @@ Inverses the value of the check box found by a given entity attribute value.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The entitiy attribute value which is used to find the correct row in the widget. |
 
 #### Return Value
@@ -1576,7 +1576,7 @@ Sets the search text for a list view.
 
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
-| Widget Name | WidgetName | String | *Required* The name that was assigned in the Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
+| Widget Name | WidgetName | String | *Required* The name that was assigned in Studio Pro to that widget, for example, 'textBox1'. Use the 'ATS Helper' bookmarklet to see the names of different widgets in you page. For further qualification you can additionally put in the names of surrounding widgets  separated by a single space, for example, 'dataView1 textBox1'. |
 | Value | Value | String | *Required* The value to set. |
 | Search Context | SearchContext | WebElement | *Optional* Limits the search of the widget to this web element and its children. Can be used to dynamically restrict the search at runtime,  for instance to a certain template grid item. |
 

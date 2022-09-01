@@ -28,7 +28,7 @@ The retrieve properties pane consists of the following sections:
 
 ## 3 Action Section{#action}
 
-An example of complete task properties is represented in the image below:
+An example of retrieve workflow context properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/retrieve-workflow-context-properties.png" alt="retrieve Workflow Context Properties" >}}
 

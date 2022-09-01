@@ -24,7 +24,7 @@ Your profile header displays a quick overview of information about you. Your Men
 
 You can change these details in the [Settings](#settings).
 
-## 3 Overview & Stats
+## 3 Overview and Stats
 
 Your profile opens to the **Overview** tab, which shows you at a quick glance how you are doing on the platform. You can see the following:
 
@@ -228,7 +228,9 @@ Here you can connect your social accounts for **Twitter** and **LinkedIn**.
 
 ### 10.4 Security {#security}
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/#security) can change this.
+By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
+
+You can update your password via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen.
 
 ### 10.5 API Keys {#api-key}
 

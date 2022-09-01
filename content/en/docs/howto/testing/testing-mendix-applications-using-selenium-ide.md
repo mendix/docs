@@ -37,7 +37,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 This how-to uses the Company Expenses app template for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 {{% /alert %}}
 
-## 3 Installing & Running the Company Expenses App
+## 3 Installing and Running the Company Expenses App
 
 Follow these steps to install and run the Company Expenses app:
 
@@ -94,7 +94,7 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
     {{< figure src="/attachments/howto/testing/testing-mendix-applications-using-selenium-ide/green-test.png" >}}
 
-## 5  Locating  & Changing a Test Target
+## 5  Locating and Changing a Test Target
 
 It is possible that you will need to edit your Selenium IDE test script before you can run it regularly. This may happen because, for example, HTML tag IDs are generated dynamically and will be different with each run of the same page.
 
@@ -129,7 +129,6 @@ In this example scenario, you need to do the following:
 ## 6 Read More
 
 * [Automated Tests with TestNG](/howto/testing/create-automated-tests-with-testng/)
-* [Test Microflows Using the Unit Testing Module](/howto/testing/testing-microflows-using-the-unittesting-module/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
 * [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui/)

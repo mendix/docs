@@ -188,7 +188,7 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
 * [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
 
-### 3.12 Parse & Format Decimal Function Calls
+### 3.12 Parse and Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 

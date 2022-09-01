@@ -8,7 +8,7 @@ tags: ["test", "testing", "testng"]
 
 ## 1 Introduction
 
-Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](/howto/testing/testing-web-services-using-soapui/), unit tests with the [Unit Testing](/howto/testing/testing-microflows-using-the-unittesting-module/) module, and UI tests with [Selenium IDE](/howto/testing/testing-mendix-applications-using-selenium-ide/). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
+Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](/howto/testing/testing-web-services-using-soapui/), unit tests with the [Unit Testing](/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing-microflows-with-unit-testing) module, and UI tests with [Selenium IDE](/howto/testing/testing-mendix-applications-using-selenium-ide/). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
 
 TestNG is a Java testing framework that can be used to drive Selenium. In this how-to you will learn how to create an automated test with TestNG.
 
@@ -496,4 +496,3 @@ Happy testing!
 ## 10 Read More
 
 * [Test Mendix Applications Using Selenium IDE](/howto/testing/testing-mendix-applications-using-selenium-ide/)
-* [Test Microflows Using the Unit Testing Module](/howto/testing/testing-microflows-using-the-unittesting-module/)

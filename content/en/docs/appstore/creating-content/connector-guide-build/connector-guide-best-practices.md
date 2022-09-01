@@ -386,7 +386,7 @@ As with any automated testing, it is a great supplement for capturing known, exp
 
 ### 6.1 Testing Microflows
 
-Use the Mendix app where you built the module to test your module. The Unit Testing module can help call microflows and actions to aid in testing. See [Testing Microflows with the Unit Testing Module](/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing-microflows-with-unit-testing) for more information.
+Use the Mendix app where you built the module to test your module. The Unit Testing module can help call microflows and actions to aid in testing. See [Testing Microflows with the Unit Testing Module](/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing-microflows-with-unit-testing/) for more information.
 
 ### 6.2 Java Unit Tests {#unit-testing}
 

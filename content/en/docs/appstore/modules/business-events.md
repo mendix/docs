@@ -281,6 +281,9 @@ You can configure the app running in Studio Pro to use the postgres database cre
 
     On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
 
-## 7 Known Issues
 
-* In Studio Pro [9.14](//releasenotes/studio-pro/9.14/), having a log activity in your after-startup microflow results in an error when trying to build the app. You can work around this by removing the log activity in the after-startup microflow. This was fixed for Studio Pro [9.15](/releasenotes/studio-pro/9.15/) and above.
+Notes for additional documentation:
+* Event Name Prefix - event prefix to distinguish from events from other departments (so like, DML_); makes sure your event is uniquely named. Empty by default.
+* Adding subscriptions: in the Importing a contract > Add screen, or then after uploading a YAML file, drag from Data Hub pane.
+* Handler microflow is created at the same level as the consumed business event service document. > better way to organize (multiple events in same service)
+     * The moment you add a subcription, it's generated at the same level

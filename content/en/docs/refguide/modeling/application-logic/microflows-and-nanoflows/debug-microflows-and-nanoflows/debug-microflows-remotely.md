@@ -53,7 +53,7 @@ When your application is in the Mendix cloud:
 
 3. In the **Deploy** tab, click **Details** for the environment which you want to debug:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-remotely/debug-microflows-remotely/18580051.png" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debug-microflows-remotely/18580051.png" >}}
 
 4. In the **General** tab, click **Show Debugger Information**:
 
@@ -137,7 +137,7 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
         
     * Click **Connect…** in the **Debugger** pane:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-remotely/debug-microflows-remotely/debugger-pane.png" >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debug-microflows-remotely/debugger-pane.png" >}}
 
 2. In the **Connect Debugger** dialog box set the following:
 

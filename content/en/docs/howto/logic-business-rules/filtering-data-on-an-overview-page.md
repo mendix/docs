@@ -49,7 +49,7 @@ Before you continue, make sure that you know how to create the following:
 
 ## 3 Filtering the Orders List Using the Search Bar
 
-In the previous section you have set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow users to filter data on overview pages. In the following examples you will filter order data by their order status and by a minimum order price.
+In the previous section, you have set up a basic data structure and created some sample data. In this section, you will add search fields to the search bar to allow users to filter data on overview pages. You will filter order data by their order status and by a minimum order price.
 
 1. Open your **Orders** overview page and right-click the (empty) section above the **Search** button.
 
@@ -81,7 +81,7 @@ In the previous section you have set up a basic data structure and created some 
 
 ## 4 Filtering the Orders List by Order Status Using XPath 
 
-In the previous section you used the search bar to filter data on the **Orders** overview page. Now you will add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can (hard codedly) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In this section you will constrain the data grid so that it will only display orders with the status 'Open'.
+In the previous section, you used the search bar to filter data on the **Orders** overview page. Now you will add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can (hard codedly) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In this section, you will constrain the data grid so that it will only display orders with the status 'Open'.
 
 1. Select the **Orders** data grid to open its **Properties** pane.
 2. Change **Data source** > **Type** to **XPath** and then click the **XPath Constraint** field:
@@ -98,19 +98,20 @@ In the previous section you used the search bar to filter data on the **Orders**
 
 ## 5 Filtering the Orders List by Minimum Total Price Using XPath
 
-In the previous section you have constrained the data grid on orders with the status 'Open'. In this section you will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
+In the previous section, you have constrained the data grid on orders with the status 'Open'. In this section, you will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
 
-1. Select the **Orders** data grid and in the **Properties** pane on the right, click the **XPath Constraint** field and enter the following expression: `[TotalPrice >= 50]`.
+1. Select the **Orders** data grid to open the **Properties** pane.
+2. Click the **XPath Constraint** field and enter the following expression: `[TotalPrice >= 50]`.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581367.png" >}} 
 
-2. If you run your application you will see the following result set:
+3. Run your application to see the following result set:
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581368.png" >}}
 
 ## 6 Combining Constraints Using XPath
 
-In the previous two sections you used single constraints to constrain the data grid on order status and minimum total price. In this section you will combine those two constraints. Combination can be made with logical operators **AND** and **OR**.  
+In the previous two sections, you used single constraints to constrain the data grid on order status and minimum total price. In this section, you will combine those two constraints. Combination can be made with logical operators **AND** and **OR**.  
 
 1. To constrain the results in the orders list to either the 'Open' orders or orders with a minimum price of 50.00, you have to insert an `or` statement in the XPath constraint: `[OrderStatus = 'Open'] or [TotalPrice >= 50]`.
 
@@ -130,7 +131,7 @@ In the previous two sections you used single constraints to constrain the data g
 
 ## 7 Filtering the Orders List by Attributes of Associated Customers Using XPath
 
-In the previous section you have constrained the data grid on attributes of the same entity as the data grid entity. In this section you will constrain the data grid on attributes over an associated object. In the following example you will filter the orders by their associated customers based on which city they are located. 
+In the previous section, you have constrained the data grid on attributes of the same entity as the data grid entity. In this section, you will constrain the data grid on attributes of an associated object. In the following example you will filter the orders by cities where associated customers are from.
 
 1. To constrain the results in the orders list to only orders from customers in Rotterdam, enter the following XPath into the **XPath Contraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']` (Note that in this XPath, **MyFirstModule** has been renamed to *Sales*).
 

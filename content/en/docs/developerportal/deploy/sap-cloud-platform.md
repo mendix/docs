@@ -4,7 +4,7 @@ linktitle: "SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
 weight: 40
-description: "Reference documentation on deploying to SAP Business Technology Platform"
+description: "Describes how to deploy to SAP Business Technology Platform."
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

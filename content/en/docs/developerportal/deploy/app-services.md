@@ -3,7 +3,7 @@ title: "App Services"
 url: /developerportal/deploy/app-services/
 category: "Deployment"
 weight: 100
-description: "Describes the App Services page in the Developer Portal."
+description: "Describes how to deploy a (deprecated) app service to the Marketplace."
 tags: ["Developer Portal", "App Services", "Deploy"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

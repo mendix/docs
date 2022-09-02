@@ -3,7 +3,7 @@ title: "Logs"
 url: /developerportal/operate/logs/
 category: "Operations"
 weight: 30
-description: "This page describes the Logs page of the Developer Portal."
+description: "Describes how to see the logs from your app."
 tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

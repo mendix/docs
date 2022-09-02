@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 ## 1 Introduction
 
-With the [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module, applications can signal when something important happens, and apps can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+With the [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module, applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
 The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#event-broker) or run your own broker cluster.
 
@@ -32,7 +32,7 @@ To use the Mendix Business Events module, you will need the following:
 * An [event broker](#event-broker), either a licensed [Mendix Event Broker] or your own event broker cluster for local deployments, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
-## 2 Licensing
+## 2 Licensing {#licensing}
 
 The [Mendix Events Module](https://marketplace.mendix.com/link/component/117555) itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you.
 

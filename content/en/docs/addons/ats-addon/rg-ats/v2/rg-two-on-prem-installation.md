@@ -23,7 +23,7 @@ A recent CPU (minimal dual core, minimal 2 GHz), 4 GB of memory, and 20 GB of fr
 
  &#xfeff; | Standalone Server | Grid Hub | Grid Node 
 -----|----|--------------|--------------
-Minimal    | Recent CPU, 1GHz 2 GB RAM    | Recent CPU, 1GHz 2 GB RAM    | Recent CPU, 1 GHz 2 GB RAM
+Minimal    | Recent CPU, 1 GHz 2 GB RAM    | Recent CPU, 1 GHz 2 GB RAM    | Recent CPU, 1 GHz 2 GB RAM
 In addition per browser instance ¹    | 1 Core, 1 GHz 500 MB RAM | 200 MHz 200 MB RAM | 1 Core, 1 GHz 500 MB RAM
 
 ¹ This highly depends on a browser and on an application that is tested. The defined resources refer to medium-sized applications.

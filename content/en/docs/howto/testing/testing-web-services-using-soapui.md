@@ -228,8 +228,8 @@ Congratulations! You have just created your first automated test with SoapUI.
 * [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
 * [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-* [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-* [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely)
 
 Learn more about this topic using the following helpful links:
 

@@ -139,4 +139,4 @@ Make sure that the user account used to run the service has enough rights to the
 * [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
 * [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-* [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows)

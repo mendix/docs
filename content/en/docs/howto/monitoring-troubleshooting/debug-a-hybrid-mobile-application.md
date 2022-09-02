@@ -46,6 +46,6 @@ You can now navigate to the same address on your local browser to start the debu
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows)
 * [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-* [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely)

@@ -522,7 +522,7 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 ### 5.7 Debugger
 
-On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/#private-cloud).
+On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely#private-cloud).
 
 ## 6 Current Limitations{#limitations}
 

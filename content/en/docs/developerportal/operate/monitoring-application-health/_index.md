@@ -86,9 +86,9 @@ First actions to take | Inspect the trends for **Application node operating syst
 Application Server Memory | |
 :---|:---|
 Description | Track the amount of free RAM on the application server. The *flapping status* indicates how frequently the memory level drops and then recovers to acceptable value. |
-Example message | WARNING: 140MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
-Warning Threshold | Free RAM between 50MB and 150MB |
-Critical Threshold | Free RAM less than 50MB |
+Example message | WARNING: 140 MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
+Warning Threshold | Free RAM between 50 MB and 150 MB |
+Critical Threshold | Free RAM less than 50 MB |
 First actions to take | Review the flapping status to see how often this has occurred. Review your app's memory use to see if it can use less RAM. You may need to upgrade the app node memory so you don't reach the warning alert limit. |
 
 Critical Logs | |
@@ -176,9 +176,9 @@ Mendix Cloud v3 also has a number of alerting categories and thresholds. These d
 Application Server Memory | |
 :---|:---|
 Description | Track the amount of free RAM on the application server. The *flapping status* indicates how frequently the memory level drops and then recovers to acceptable value. |
-Example message | WARNING: 140MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
-Warning Threshold | Free RAM between 50MB and 150MB |
-Critical Threshold | Free RAM less than 50MB |
+Example message | WARNING: 140 MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
+Warning Threshold | Free RAM between 50 MB and 150 MB |
+Critical Threshold | Free RAM less than 50 MB |
 First actions to take | Review the flapping status to see how often this has occurred. Review your app's memory use to see if it can use less RAM. You may need to upgrade the app node memory so you don't reach the warning alert limit. |
 
 CPU | |

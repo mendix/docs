@@ -162,7 +162,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We corrected the OData file upload message that was incorrectly indicating the maximum file size as 1MB, when in fact the allowed maximum file size is 5MB.
+* We corrected the OData file upload message that was incorrectly indicating the maximum file size as 1 MB, when in fact the allowed maximum file size is 5 MB.
 
 ### March 31st, 2022
 

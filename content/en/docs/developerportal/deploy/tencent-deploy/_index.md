@@ -294,7 +294,7 @@ You will not be able to deploy to this environment until it has been fully prepa
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
 {{% alert color="warning" %}}
-There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+There is a limit of 200 MB on the size of a deployment package which can be deployed on the Tencent Cloud.
 {{% /alert %}}
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.

@@ -203,7 +203,7 @@ Once your app is deployed you can automatically register the app in your MindSph
 ### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to MindSphere Cloud Foundry
 
 {{% alert color="info" %}}
-There is a limit of 1.5GB on the size of the Mendix deployment package (MDA file) which can be deployed to MindSphere.
+There is a limit of 1.5 GB on the size of the Mendix deployment package (MDA file) which can be deployed to MindSphere.
 {{% /alert %}}
 
 #### 5.2.1 Pushing to Cloud Foundry

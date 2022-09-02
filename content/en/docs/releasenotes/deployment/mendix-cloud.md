@@ -312,7 +312,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
 #### Fix/Improvement
 
-* We implemented a new `upload` API which allows you to upload large (>300MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
+* We implemented a new `upload` API which allows you to upload large (>300 MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
 
 ### March 30th, 2021
 
@@ -1045,7 +1045,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
+* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30 GB) to their environments. It has been tested with the archives (~90 GBs) on Mendix Cloud v4.
 * We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
 ### April 9th, 2018
@@ -1102,7 +1102,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
+* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1 GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
 
 ### February 22nd, 2018
 

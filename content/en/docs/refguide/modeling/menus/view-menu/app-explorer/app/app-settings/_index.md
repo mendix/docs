@@ -166,9 +166,13 @@ This table presents the results of rounding the input to one digit with the give
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
 {{% alert color="warning" %}}
-
 In production, this only works with licenses based on concurrent users.
+{{% /alert %}}
 
+{{% alert color="info" %}}
+When set to *No*, there may still be instances when a user remains signed in even though you wish them to be signed out (for example, if a user clicks the **Home** page from the navigation). This is because logging out is only triggered by a query to the Runtime. Navigating between pages is not enough to trigger a query to the Runtime.
+
+To force a query to the runtime, use microflows. For example, create a microflow that shows the **Home** page, then configure your app's navigation to call this microflow rather than relying on the navigation to directly show the page itself. This will ensure the Runtime is queried and the user is logged out of their session.
 {{% /alert %}}
 
 Default: *Yes*

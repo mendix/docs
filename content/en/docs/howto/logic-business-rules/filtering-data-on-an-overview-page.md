@@ -38,7 +38,7 @@ Before you continue, make sure that you know how to create the following:
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
 2. Create overview and detail pages to manage the **Customer** and the **Order** entities and their objects.
-3. Create menu items to access the **Order** and the **Customer** overview pages.
+3. Create menu items to access the **Customer** and the **Order** overview pages.
 4. Add the following customer data to your app:
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581374.png" >}}
@@ -100,7 +100,7 @@ In the previous section, you used the search bar to filter data on the **Orders*
 
 In the previous section, you have constrained the data grid on orders with the status 'Open'. In this section, you will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
 
-1. Select the **Orders** data grid to open the **Properties** pane.
+1. Select the **Orders** data grid to open its **Properties** pane.
 2. Click the **XPath Constraint** field and enter the following expression: `[TotalPrice >= 50]`.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581367.png" >}} 

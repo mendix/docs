@@ -83,7 +83,7 @@ You will need to confirm that you want to clear your environment by typing *clea
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely)
+* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 
 #### 2.1.3 Logging and Debugging in Mendix Cloud v3
 

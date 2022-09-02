@@ -66,6 +66,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows)
-* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * [Java Actions](/refguide/java-actions/)

@@ -51,7 +51,7 @@ Before you continue, make sure that you know how to create the following:
 
 In the previous section you have set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow users to filter data on overview pages. In the following examples you will filter order data by their order status and by a minimum order price.
 
-1. Open your **Orders** overview page and right click the (empty) section above the **Search** button.
+1. Open your **Orders** overview page and right-click the (empty) section above the **Search** button.
 
     {{% alert color="warning" %}} The search bar section might already be populated if you automatically filled the contents of your data grid. {{% /alert %}}
 
@@ -62,7 +62,7 @@ In the previous section you have set up a basic data structure and created some 
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581355.png" >}}
 
-4. Redeploy your application and click the **Search** button on your **Orders** overview page. The new search field appears.
+4. Run your application and click the **Search** button on your **Orders** overview page. The new search field appears.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581354.png" >}}
 
@@ -75,7 +75,7 @@ In the previous section you have set up a basic data structure and created some 
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581351.png" >}}
 
-8. Redeploy your application and enter *50* in your newly added search field. Your list will be filtered to only show orders with a minimum value of 50.00.
+8. Run your application and enter *50* in your newly added search field. Your list will be filtered to only show orders with a minimum value of 50.00.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581350.png" >}}
 
@@ -83,43 +83,44 @@ In the previous section you have set up a basic data structure and created some 
 
 In the previous section you used the search bar to filter data on the **Orders** overview page. Now you will add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can (hard codedly) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In this section you will constrain the data grid so that it will only display orders with the status 'Open'.
 
-1. Select the **Order** data grid and in the **Properties** pane on the right, change **Data source** > **Type** to **XPath**, and then click the **XPath Constraint** field:
+1. Select the **Orders** data grid to open its **Properties** pane.
+2. Change **Data source** > **Type** to **XPath** and then click the **XPath Constraint** field:
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581372.png" >}}
 
-2. Enter the following expression in the **XPath Constraint** editor: `[OrderStatus = ‘Open’]`. The data grid will now only show orders with status ‘Open’. 
+3. Enter the following expression in the **XPath Constraint** editor: `[OrderStatus = ‘Open’]`. The data grid will now only show orders with the status ‘Open’. 
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581371.png" >}}
 
-3. Run your application to see the following result set:
+4. Run your application to see the following result set:
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581370.png" >}}
 
 ## 5 Filtering the Orders List by Minimum Total Price Using XPath
 
-In the previous section you have constrained the data grid on status 'Open'. In this section we will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
+In the previous section you have constrained the data grid on orders with the status 'Open'. In this section you will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
 
-1. Select the **Order** data grid and in the **Properties** pane on the right, click the **XPath Constraint** field and enter the following expression: `[TotalPrice >= 50]`.
+1. Select the **Orders** data grid and in the **Properties** pane on the right, click the **XPath Constraint** field and enter the following expression: `[TotalPrice >= 50]`.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581367.png" >}} 
 
-2. If you run your application you will see the following result set.
+2. If you run your application you will see the following result set:
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581368.png" >}}
 
 ## 6 Combining Constraints Using XPath
 
-In the previous two sections you used single constraints to filter the data grid on status and minimum total price. In this section you will combine those two constraints. Combination can be made with logical operator **AND** and **OR**.  
+In the previous two sections you used single constraints to constrain the data grid on order status and minimum total price. In this section you will combine those two constraints. Combination can be made with logical operators **AND** and **OR**.  
 
-1. To constrain the results in the order overview to only the **Open** orders OR orders with a minimum price of 50.00, you have to insert an `or` statement in the XPath constraint: `[OrderStatus = 'Open'] or [TotalPrice >= 50]`.
+1. To constrain the results in the orders list to either the 'Open' orders or orders with a minimum price of 50.00, you have to insert an `or` statement in the XPath constraint: `[OrderStatus = 'Open'] or [TotalPrice >= 50]`.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581366.png" >}}
 
-2. Run your application to see all the orders with the order status 'Open' or with a total price higher than or equal to 50.00.
+2. Run your application to see orders which are either 'Open' or have a total price higher than or equal to 50.00.
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581373.png" >}}
 
-3. To constrain the results in the order overview to only the **Open** orders AND orders with a minimum price of 50.00, you have to insert an `and` statement in the XPath constraint: `[OrderStatus = 'Open'] and [TotalPrice >= 50]`.
+3. To constrain the results in the orders list to orders which are 'Open' and have a minimum price of 50.00, you have to insert an `and` statement in the XPath constraint: `[OrderStatus = 'Open'] and [TotalPrice >= 50]`.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581365.png" >}}
     
@@ -129,13 +130,13 @@ In the previous two sections you used single constraints to filter the data grid
 
 ## 7 Filtering the Orders List by Attributes of Associated Customers Using XPath
 
-In the previous section you have constrained the data grid on attributes of the same entity as the data grid entity. In this section you will constrain on attributes over an associated object. In the example of this section you will filter the orders by their associated customers based on the city letter of the customer. 
+In the previous section you have constrained the data grid on attributes of the same entity as the data grid entity. In this section you will constrain the data grid on attributes over an associated object. In the following example you will filter the orders by their associated customers based on which city they are located. 
 
-1. To constrain the results in the order overview to only orders from customers in Rotterdam, enter the following XPath into the **XPath Contraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']`.
+1. To constrain the results in the orders list to only orders from customers in Rotterdam, enter the following XPath into the **XPath Contraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']` (Note that in this XPath, **MyFirstModule** has been renamed to *Sales*).
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581363.png" >}}
 
-2. Run your application to only see the orders of customers in Rotterdam.
+2. Run your application to only see the orders from customers in Rotterdam.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581362.png" >}}
 

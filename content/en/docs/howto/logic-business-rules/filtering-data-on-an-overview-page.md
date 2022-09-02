@@ -9,19 +9,19 @@ tags: ["filter", "xpath"]
 
 ## 1 Introduction
 
-To filter data on your page, you can use the search bar functionality, or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard-coded constraint on your data grid that filters the data.
+To filter data on your page, you can use the search bar functionality, or you can add an XPath constraint to your data grid. The search bar contains search fields that allow end-users to quickly find the information they need. XPath is a hard-coded constraint on your data grid that filters the data.
 
 This how-to will start with preparing a data structure and some example data. After this setup, you will filter your data with a search bar. Then you will filter your data using different XPath constraints.
 
-This how-to serves as a comparison for filtering data and emphasizes how to use XPath for the filtering.
+This how-to compares two different ways of filtering data and emphasizes how to use XPath to filter data.
 
 This how-to will teach you how to do the following:
 
 * Prepare the data structure
 * Prepare the GUI
 * Prepare the data
-* Filter a list using the search bar
-* Filter a list using XPath
+* Filter data using the search bar
+* Filter data using XPath
 
 ## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
 
@@ -37,8 +37,8 @@ Before you continue, make sure that you know how to create the following:
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
-2. Create **overview** and **detail** pages to manage objects of type **Customer** and **Order**.
-3. Create **menu items** to access the **Order** and the **Customer** overview pages.
+2. Create overview and detail pages to manage the **Customer** and the **Order** entities and their objects.
+3. Create menu items to access the **Order** and the **Customer** overview pages.
 4. Add the following customer data to your app:
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581374.png" >}}
@@ -47,31 +47,31 @@ Before you continue, make sure that you know how to create the following:
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581373.png" >}}
 
-## 3 Filtering a List of Orders Using the Search Bar
+## 3 Filtering the Orders List Using the Search Bar
 
-In the previous section you set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow the user to filter data on your overview page. In the examples you will filter on the order status and on a minimum price.
+In the previous section you have set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow users to filter data on overview pages. In the following examples you will filter order data by their order status and by a minimum order price.
 
-1. Open your **orders overview** and right click the (empty) section above the **Search** button.
+1. Open your **Orders** overview page and right click the (empty) section above the **Search** button.
 
-    {{% alert color="warning" %}} The search bar section might be already populated if you automatically filled the contents of your data grid. {{% /alert %}}
+    {{% alert color="warning" %}} The search bar section might already be populated if you automatically filled the contents of your data grid. {{% /alert %}}
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581359.png" >}}
 
-2. Right click the search bar section and select **Add search field** > **Drop-down**.
-3. Add the **OrderStatus** attribute to the search field and define the name.
+2. Right-click the search bar section and select **Add search field** > **Drop-down**.
+3. Add the **OrderStatus** attribute to the search field and enter *Order status* for the **Caption**.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581355.png" >}}
 
-4. Redeploy your application and click the **Search** button on your orders overview. The new search field appears.
+4. Redeploy your application and click the **Search** button on your **Orders** overview page. The new search field appears.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581354.png" >}}
 
-5. Use the **Order status** search field to filter your list on a specific order status and click the **Search** button on the right side.
+5. Use the **Order status** search field to filter your list by order status and click the **Search** button on the right side.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581353.png" >}}
 
-6. To filter on a minimum price, add another search field by selecting **Add search field** > **Comparison**.
-7. Select the **TotalPrice** attribute, name the search field **Minimum total price** and change the **Comparison** from **Contains** to **Greater or equal.**
+6. To filter order data by a mimimum total price, add another search field by selecting **Add search field** > **Comparison**.
+7. Select the **TotalPrice** attribute, set **Comparison** to **Greater or equal**, and change the **Caption** to *Minimum total price*.
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581351.png" >}}
 
@@ -79,9 +79,9 @@ In the previous section you set up a basic data structure and created some sampl
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581350.png" >}}
 
-## 4 Filtering a List of Orders with the "Open" Status Using XPath 
+## 4 Filtering the Orders List by Order Status Using XPath 
 
-In the previous section you used the search bar to filter data on your overview page. Now you will add an XPath constraint on the Orders data grid. With an XPath constraint (hard coded) on a data grid you can filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In this section you will constrain the data grid so that it will only display orders with status 'Open'.
+In the previous section you used the search bar to filter data on the **Orders** overview page. Now you will add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can (hard codedly) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In this section you will constrain the data grid so that it will only display orders with the status 'Open'.
 
 1. Select the **Order** data grid and in the **Properties** pane on the right, change **Data source** > **Type** to **XPath**, and then click the **XPath Constraint** field:
 
@@ -95,7 +95,7 @@ In the previous section you used the search bar to filter data on your overview 
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581370.png" >}}
 
-## 5 Filtering a List of Orders on the Minimum Total Price Using XPath
+## 5 Filtering the Orders List by Minimum Total Price Using XPath
 
 In the previous section you have constrained the data grid on status 'Open'. In this section we will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
 
@@ -127,7 +127,7 @@ In the previous two sections you used single constraints to filter the data grid
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581364.png" >}}
 
-## 7 Filtering the Order List with Attributes of Associated Customers Using XPath
+## 7 Filtering the Orders List by Attributes of Associated Customers Using XPath
 
 In the previous section you have constrained the data grid on attributes of the same entity as the data grid entity. In this section you will constrain on attributes over an associated object. In the example of this section you will filter the orders by their associated customers based on the city letter of the customer. 
 

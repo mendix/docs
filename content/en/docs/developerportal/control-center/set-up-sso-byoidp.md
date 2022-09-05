@@ -183,7 +183,7 @@ If you have issues using BYOIDP, the following suggestions give an initial guide
 
 ### 9.1 Wrong Client Credentials
 
-Without proper exchange of client_id and client_secret between the IdP and Mendix platform, Mendix cannot authenticate at the /token endpoint and delegated login will fail. This can happen when the wrong client credentials are supplied.
+Without proper exchange of `client_id` and `client_secret` between the IdP and Mendix platform, Mendix cannot authenticate at the /token endpoint and delegated login will fail. This can happen when the wrong client credentials are supplied.
 
 ### 9.2 Wrong Authentication Method
 
@@ -193,16 +193,16 @@ Mendix supports two client authentication methods: `client_secret_post` (client 
 
 ### 9.3 Incorrect Conditional Access Policies
 
-Studio Pro uses an embedded browser for login. The customer’s conditional access policies in AzureAD may block Studio Pro this. For example, customers using Microsoft’s Intune for MDM/MAM will hit this limitation.
+Studio Pro uses an embedded browser for login. The customer’s conditional access policies in AzureAD may block Studio Pro for this. For example, customers using Microsoft’s Intune for MDM/MAM will hit this limitation.
 
-Mendix has created an enhancement of Studio Pro that uses system browser to overcome this limitation. This feature is in ‘private beta’ and can be provided on request.
+Mendix has created an enhancement of Studio Pro that uses system browser to overcome this limitation. This feature is in Private Beta and can be provided on request.
 
 ### 9.4 IdP Does Not Allow Untrusted Devices
 
 Studio Pro uses an embedded browser for login. Login via embedded browser may not work when customer’s IdP is allowing only for trusted devices and doesn’t recognize the embedded browser.
 
-Mendix has created an enhancement of Studio Pro that uses system browser to overcome this limitation. This feature is in ‘private beta’ and can be provided on request.
+Mendix has created an enhancement of Studio Pro that uses system browser to overcome this limitation. This feature is in Private Beta and can be provided on request.
 
 ### 9.5 IdP Does Not Have JWKS Endpoint
 
-If the IDP’s well-known endpoint doesn’t have a URL for the JWKS endpoint, Mendix cannot validate the signature on the received ID-token and the delegated authentication fails.
+If the IDP’s well-known endpoint does not have a URL for the JWKS endpoint, Mendix cannot validate the signature on the received ID-token and the delegated authentication fails.

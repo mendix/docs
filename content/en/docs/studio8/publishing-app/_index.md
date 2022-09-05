@@ -55,7 +55,7 @@ By default all apps created in Mendix Studio are Free Apps. A Free App is a comp
 
 |                     | Free App                                                     | Licensed App                                                 |
 | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Number of Users** | Unlimited users.                                             | Depends on your pricing plan.                                |
+| **Number of users** | Unlimited users.                                             | Depends on your pricing plan.                                |
 | **Storage**         | 100 MB of data and 100 MB of file storage space.               | Depends on your pricing plan.                                |
 | **Environments**    | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Sleep mode**      | Goes into sleep mode after an hour of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in sleep mode. | Does not have a sleep mode.                                  |

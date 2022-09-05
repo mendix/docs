@@ -73,7 +73,7 @@ If you set this to **No**, you can only specify a microflow with no parameters.
 This property defines the microflow that is executed for the specified event. The microflow must have parameter and return types consistent with the moment and event of the event handler:
 
 * Microflows of all event handlers except **Before Create** can get the object on which the event occurs as parameter.
-* Microflows that are executed _before_ the event should return a Boolean value that specifies whether the event should continue (true) or be cancelled (false). When multiple microflows handle the same event, it is cancelled immediately when one of the microflows returns false. In that case, some microflows might not be executed at all. You can use this feature, for example, to cancel committing an object when a certain condition is not met.
+* Microflows that are executed *before* the event should return a Boolean value that specifies whether the event should continue (true) or be cancelled (false). When multiple microflows handle the same event, it is cancelled immediately when one of the microflows returns false. In that case, some microflows might not be executed at all. You can use this feature, for example, to cancel committing an object when a certain condition is not met.
 
 | [Moment](#moment) | [Event](#event) | Can Get Object as Parameter | Returns a Boolean Value |
 | --- | --- | --- | --- |

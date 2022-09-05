@@ -16,4 +16,3 @@ This query returns all customers whose name ends with the sub-string `sen`:
 ```
 
 Customers with the name "Jansen" or "Isaacsen" will be returned, for example, because both names end with "sen."
-

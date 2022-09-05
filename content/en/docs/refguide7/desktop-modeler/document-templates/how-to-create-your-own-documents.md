@@ -124,6 +124,7 @@ Now, your **Generate document** configuration should look like this:
 {{< figure src="/attachments/refguide7/desktop-modeler/document-templates/how-to-create-your-own-documents/2018-03-01_14-12-03.png" >}}
 
 The document template is now configured, and the microflow is ready to be used. If we call this microflow as a sub-microflow, you can add a download activity in the main microflow. This microflow could 
+
 * call the sub-microflow to create the document
 * retrieve the created document, and
 * download the file:

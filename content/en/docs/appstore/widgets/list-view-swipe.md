@@ -47,34 +47,34 @@ Use the following details for styling:
 
 * The styling base class is `.widget-listview-swipe`
 * This is the default style, which can be overwritten in CSS:
-	* The `widget-listview-swipe-foreground` is white (#FFFFF)
-	* The `widget-listview-swipe-background` is light light gray (#d3d3d3)
-	* The `widget-listview-swipe-background-after` is gray (#808080)
+    * The `widget-listview-swipe-foreground` is white (#FFFFF)
+    * The `widget-listview-swipe-background` is light light gray (#d3d3d3)
+    * The `widget-listview-swipe-background-after` is gray (#808080)
 * You can apply a custom style for the whole swipe widget to the following:
-	* `.widget-listview-swipe-foreground`
-	* `.widget-listview-swipe-background-left`
-	* `.widget-listview-swipe-background-right`
-	* `.widget-listview-swipe-background-shared`
-	* `.widget-listview-swipe-background-after-left`
-	* `.widget-listview-swipe-background-after-right`
-	* `.widget-listview-swipe-background-after-shared`
+    * `.widget-listview-swipe-foreground`
+    * `.widget-listview-swipe-background-left`
+    * `.widget-listview-swipe-background-right`
+    * `.widget-listview-swipe-background-shared`
+    * `.widget-listview-swipe-background-after-left`
+    * `.widget-listview-swipe-background-after-right`
+    * `.widget-listview-swipe-background-after-shared`
 * To disable classes, use the following:
-	* `.widget-listview-swipe-disabled`
-	* `.widget-listview-swipe-disabled-left`
-	* `.widget-listview-swipe-disabled-right`
+    * `.widget-listview-swipe-disabled`
+    * `.widget-listview-swipe-disabled-left`
+    * `.widget-listview-swipe-disabled-right`
 * These interactive classes are attached during an action: 
-	* `.will-accept-swipe`
-	* `.swiping-right`
-	* `.swiping-left`
+    * `.will-accept-swipe`
+    * `.swiping-right`
+    * `.swiping-left`
 
 ### 3.1 Designing the Background
 
 To design the background of the view, follow these steps:
 
 1. Create one to four containers inside the list view item:
-	* The "swipe" container is shown as the foreground and is swiped away – add the `widget-listview-swipe-foreground` class to place this over the background containers
-	* The  "hide" container is shown after swiping, during the hide animation
-	* It is possible to create a container for left and right swiping, or to share the containers
+    * The "swipe" container is shown as the foreground and is swiped away – add the `widget-listview-swipe-foreground` class to place this over the background containers
+    * The  "hide" container is shown after swiping, during the hide animation
+    * It is possible to create a container for left and right swiping, or to share the containers
 2. Add the container names to their respective fields in the widget editor (as in, **Swipe container** and **Hide container** as configured on the **Swipe to left** or **Swipe to right** tabs).
 
 ### 3.2 Disabling the Swipe

@@ -94,20 +94,7 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 ## 4 Data Hub License Limitations {#license-limitations}
 
-Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
-
-There are two types of Data Hub licenses currently available:
-
-* **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed.
-
-* **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data.
-  The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](/refguide8/project-settings/#scheduled)).
-
-  {{% alert color="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
-  {{% alert color="info" %}}For Mendix 8.12.3 and later, apps running without a [Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud/) (and also when running from the Studios) do not have this limitation. This also means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
-
-Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
-
+Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has. See [Data Hub Licenses](/data-hub/#data-hub-licences) to learn more.
 
 ### 4.1 Local development
 

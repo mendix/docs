@@ -32,14 +32,12 @@ To configure **Content** without adding attributes, you can do one of the follow
 To configure **Content** and add attributes to it, do the following:
 
 1. Place the widget (**Text**, **Paragraph**, or **Heading**) inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View & List View Properties](/studio7/page-editor-data-view-list-view/). This is necessary to allow attributes of the selected entity to be inserted into the text. 
-
-2.  Open **Properties** of the **Text**, **Paragraph**, or **Heading**, delete the default text in the **General** section > **Content** and start typing the message you want to show to the end-user.  
+2. Open **Properties** of the **Text**, **Paragraph**, or **Heading**, delete the default text in the **General** section > **Content** and start typing the message you want to show to the end-user.  
 
     {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-text/content.png"   width="350"  >}}
 
 3. To insert attribute values into your message, click **Add attribute** or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.  The list of attributes which can be inserted will be shown. 
-
-4.  Scroll through the list of attributes (you can also use <kbd>Up</kbd> and <kbd>Down</kbd> arrows for that) and select the attribute you want to add to the **Text**. 
+4. Scroll through the list of attributes (you can also use <kbd>Up</kbd> and <kbd>Down</kbd> arrows for that) and select the attribute you want to add to the **Text**. 
 
     {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-text/list-of-attributes.png"   width="350"  >}}
 
@@ -74,12 +72,8 @@ The **Title** that you see in the page properties and in widget is one and the s
 
 {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-text/page-title-interrelation.png" >}}
 
-
-
 {{% alert color="info" %}}
-
 You can put several **Title** widgets on your page, but they will all display the same text and cannot be edited individually.
-
 {{% /alert %}}
 
 ## 4 Design Section {#input-elements-design}

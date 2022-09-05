@@ -27,7 +27,7 @@ Takes an enumeration value and returns the caption of this value. The caption is
 
 ### Input parameters
 
-*   an enumeration value
+* an enumeration value
     Type: any enumeration
 
 ### Output
@@ -45,7 +45,7 @@ Takes an enumeration value and returns the key (called Name in the Modeler) of t
 
 ### Input parameters
 
-*   an enumeration value
+* an enumeration value
     Type: any enumeration
 
 ### Output

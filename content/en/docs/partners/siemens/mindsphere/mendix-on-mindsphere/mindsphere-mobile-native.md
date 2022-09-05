@@ -29,7 +29,7 @@ This documentation is structured into two main parts:
 The setup of your development environment consists of the following steps:
 
 1. Register a new mobile app in Developer Cockpit
-2. Create a project based on the [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164)
+2. Create an app based on the [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164)
 3. Build your own development app
 4. Try it out
 
@@ -66,18 +66,15 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_Configure.png" alt="DeveloperCockpit" >}}
 
 1. Extend the **Application Scopes** section and click **Create Scope**.
-
 1. Add a scope with name **admin** and assign it the role **admin**.
-
 1. Click **Create Scope** again and enter **user** as the scope name and assign it to the **admin** and **user** roles.
-
 1. The final result should look similar to:
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_ScopesRoles.png" alt="DeveloperCockpit" >}}
 
 1. Click **Back to App** and **Register** to finalize the registration on MindSphere:
 
-     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_Register.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_Register.png" alt="DeveloperCockpit" >}}
 
 1. You will see the following popup after registration:
 
@@ -99,11 +96,11 @@ Currently you can register either a mobile app or a web app in the MindSphere De
 
 ### 2.2 Start Developing your App with Mendix Studio Pro
 
-Create a new Mendix Team Server project based on the [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) template.
+Create a new Mendix Team Server app based on the [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) template.
 
 Now, you need to make some configuration changes in the app itself.
 
-In the project explorer open the configuration of the app store module **MindsphereSingleSignOn**:
+In the **App Explorer** open the configuration of the app store module **MindsphereSingleSignOn**:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_SSO_configuration.png" alt="Studio SSO configuration" >}}
 
@@ -114,15 +111,12 @@ Change these constants:
 If you are not working on *eu1.mindsphere.io*:
 
 * **MindSphereGatewayURL**
-
 * **PublicKeyURL**
 
 In the **NativeMobile** folder:
 
 * **ClientID** = **client_id** from app registration in Developer Cockpit
-
 * **ClientSecret** = **client_secret** from app registration in Developer Cockpit
-
 * **Scheme** = **custom_scheme** from app registration in Developer Cockpit
 
 ### 2.3 Building your Own Development App{#buildcustomapp}
@@ -175,7 +169,6 @@ As of now your application has the user roles **admin** and **user**, but none o
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png" alt="DeveloperCockpit" >}}
 
 1. Select your application.
-
 1. Click the **Configure** button to open the roles tab.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_Configure.png" alt="DeveloperCockpit" >}}
@@ -189,7 +182,7 @@ As of now your application has the user roles **admin** and **user**, but none o
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_ChooseAPIRole.png" alt="DeveloperCockpit" >}}
 
     Your application has now been updated to be allowed to make API calls
-    
+
     {{% alert color="info" %}}To enable this for your local test session you have to force a logout of the user. For this, tap the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The token now includes the added API roles.{{% /alert %}}
 
 ### 2.6 Deploying your app
@@ -202,7 +195,7 @@ The **Siemens MindSphere SSO** module provides a couple of nanoflows which shoul
 
 ### 3.1 Authentication
 
-Authentication is based on the usage of **Anonymous** users and is enabled in the project securities.
+Authentication is based on the usage of **Anonymous** users and is enabled in the **App Security** dialog box.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Security_Anonymous.png" alt="StudioPro" >}}
 

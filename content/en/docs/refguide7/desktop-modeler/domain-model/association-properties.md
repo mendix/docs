@@ -9,7 +9,7 @@ tags: ["domain model", "association"]
 
 An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
-The value of the association can only be viewed or edited from the object of the entity that is the _[owner](/refguide7/associations/#owner)_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities.
+The value of the association can only be viewed or edited from the object of the entity that is the [owner](/refguide7/associations/#owner) of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities.
 
 The [multiplicity](#multiplicity) (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
@@ -28,7 +28,6 @@ An association between a persistable entity and a non-persistable entity must st
 If you double-click an association, its properties are opened. 
 
 {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/association-properties/dm-association-properties.png" alt="Association Properties" >}}
-
 
 Associations have the following properties:
 

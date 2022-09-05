@@ -73,7 +73,7 @@ If **Allow deleting existing objects** is checked, users are allowed to delete e
 
 The set of objects that can be deleted can be limited by using an [XPath constraint](#xpath-constraint).
 
-#### 2.3.2 Member Read & Write Rights Section
+#### 2.3.2 Member Read and Write Rights Section
 
 **Member read and write rights** define the access rights for every member ([attribute](/refguide/attributes/) or [association](/refguide/associations/)) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value. The set of objects to which these rights apply can be limited by using an [XPath constraint](#xpath-constraint).
 
@@ -130,6 +130,7 @@ The **Path to user...** button adds an XPath constraint so the access rule is on
 ```
 
 As an example:
+
 1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated with the **Customer** entity via the **Order_Customer** association.
 2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
 The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule.
@@ -146,7 +147,7 @@ Access rules are abstract descriptions of access rights. To apply them they need
 
 ### 3.1 New Objects
 
-When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does _not_ lead to access rules or XPath rules being re-evaluated.
+When a new object is created, or when a new object is sent to the runtime server as part of a request, all XPath constraints are assumed to evaluate as `true`. This evaluation result is stored in memory and valid for the lifetime of the request. Committing the object does *not* lead to access rules or XPath rules being re-evaluated.
 
 ### 3.2 Objects Stored in the Database
 

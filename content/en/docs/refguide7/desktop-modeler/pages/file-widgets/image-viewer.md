@@ -42,7 +42,7 @@ This property specifies what happens when the image is clicked:
 | Call microflow | The specified microflow is executed. |
 | Enlarge | The image is shown at full size. |
 
-_Default value:_ Do nothing
+*Default value:* Do nothing
 
 ### Microflow (in the case 'Call microflow')
 
@@ -62,19 +62,19 @@ This is the image that is displayed if no image is uploaded.
 
 {{% snippet file="/static/_includes/refguide7/Image+Width+Unit.md" %}}
 
-_Default value_: Percentage
+*Default value*: Percentage
 
 {{% snippet file="/static/_includes/refguide7/Image+Width.md" %}}
 
-_Default value_: 100
+*Default value*: 100
 
 {{% snippet file="/static/_includes/refguide7/Image+Height+Unit.md" %}}
 
-_Default value_: Auto
+*Default value*: Auto
 
 {{% snippet file="/static/_includes/refguide7/Image+Height.md" %}}
 
-_Default value_: not applicable
+*Default value*: not applicable
 
 {{% snippet file="/static/_includes/refguide7/Image+Responsive.md" %}}
 
@@ -82,7 +82,7 @@ _Default value_: not applicable
 
 This property indicates whether the generated thumbnail is shown or the full image.
 
-_Default value:_ Thumbnail
+*Default value:* Thumbnail
 
 ## Visibility properties
 
@@ -92,5 +92,5 @@ _Default value:_ Thumbnail
 
 ## Related articles
 
-*   [Data view](/refguide7/data-view/)
-*   [Entities](/refguide7/entities/)
+* [Data view](/refguide7/data-view/)
+* [Entities](/refguide7/entities/)

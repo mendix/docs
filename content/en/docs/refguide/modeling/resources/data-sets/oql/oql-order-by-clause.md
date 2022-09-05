@@ -12,7 +12,6 @@ This clause can include items that do not appear in the `SELECT` clause, except 
 
 ## 2 Syntax
 
-
 The syntax is as follows:
 
 ```sql

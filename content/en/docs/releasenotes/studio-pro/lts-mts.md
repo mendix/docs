@@ -12,19 +12,19 @@ The goal of this document is to clarify Mendix Studio Pro version options and he
 To define different types of versions and releases, consider the example of [8.18.1](/releasenotes/studio-pro/8.18/#8181):
 
 * **8** – the first number in a release indicates the major version
-	* A major version is generally released every 18 months (please note we reserve the right to change this timeline with a minimum of 12 months for each major release and a maximum of 24 months)
-	* Includes new features and fixes
-	* Can include breaking changes
-	* In relation to our SLA and to clarify our current offering, today Mendix supports major versions 7, 8, and 9
-		* Once version 10 has been released, support on version 7 will end
+    * A major version is generally released every 18 months (please note we reserve the right to change this timeline with a minimum of 12 months for each major release and a maximum of 24 months)
+    * Includes new features and fixes
+    * Can include breaking changes
+    * In relation to our SLA and to clarify our current offering, today Mendix supports major versions 7, 8, and 9
+        * Once version 10 has been released, support on version 7 will end
 * **18** – the second number in a release indicates the minor version 
-	* A minor version is generally released every month
-	* Includes new features and fixes
-	* Does not include breaking changes
+    * A minor version is generally released every month
+    * Includes new features and fixes
+    * Does not include breaking changes
 * <a name="patch"></a>**1** – the third number in a release indicates the patch version 
-	* A patch version is released on an as-needed basis
-	* Includes security fixes and critical bug fixes
-	* Does not include new features or breaking changes
+    * A patch version is released on an as-needed basis
+    * Includes security fixes and critical bug fixes
+    * Does not include new features or breaking changes
 
 ## 2 Long-Term Support Version (LTS) {#lts}
 

@@ -14,9 +14,7 @@ In this document, we explain how to solve the most common consistency errors tha
 An example of a consistency error is when you set a page that has a data view as a menu item. 
 
 {{% alert color="info" %}}
-
 This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
-
 {{% /alert %}}
 
 Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
@@ -43,12 +41,10 @@ For example, you have created a menu item called **Program**. This menu item ope
 To fix the error, you can create an object and pass it to the page. Do the following:
 
 1. Open the navigation document.
-
 2. Open properties of the **Program** menu item, and do the following:<br />
 
-    a. In the **Events** section, make sure that the on-click action is set to **Page** and enable the **Create Object** option.<br />
-
-    b. Set **ProgramItem** as **Entity**.<br />
+    1. In the **Events** section, make sure that the on-click action is set to **Page** and enable the **Create Object** option.<br />
+    1. Set **ProgramItem** as **Entity**.<br />
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-navigation/menu-item-properties.png" alt="Menu Item Properties"   width="350"  >}}
 
@@ -73,35 +69,28 @@ In this example, the best way to solve the error is to set another page as the h
 However, you can also solve this error by creating a microflow that will create a new *Customer* object and pass it to the page, do the following:
 
 1. Open **Navigation** > properties of the home page menu item.
-
-2.  Change the **On Click Action** from **Page** to **Microflow**. 
+2. Change the **On Click Action** from **Page** to **Microflow**. 
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-navigation/menu-item-on-click-action.png" alt="Menu Item Properties"   width="350"  >}}
 
 3. Click **Select Microflow** and click **New Microflow** in the pop-up window.
-
 4. Name the microflow *ACT_Open_HomePage*.
-
 5. The created microflow is opened. In the **Toolbox** > **Object Activities**, select **Create Object**, drag and drop it to the microflow.
-
-6.  Open the **Create object** activity properties, and set **Entity** to **Customer**.
+6. Open the **Create object** activity properties, and set **Entity** to **Customer**.
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-navigation/create-object-properties.png" alt="Create Object Activity Properties"   width="350"  >}}
 
 7. In the **Toolbox** > **Client Activities**, select **Show Page** activity, drag and drop it to the microflow.
+8. Open the **Show Page** activity properties and do the following:<br />
 
-8.  Open the **Show Page** activity properties and do the following:<br />
+    1. Set **Page** to **Home**.<br />
+    1. Set **Object to pass** to **NewCustomer**.<br />
 
-    a.  Set **Page** to **Home**.<br />
-
-    b. Set **Object to pass** to **NewCustomer**.<br />
-
-    {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-navigation/show-page-properties.png" alt="Show Page Properties"   width="350"  >}}
+        {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-navigation/show-page-properties.png" alt="Show Page Properties"   width="350"  >}}
 
 Now the new object of type *Customer* will be created and passed to the home page.
 
 {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-navigation/open-page-microflow.png" alt="Open Home Page Microflow" >}}
-
 
 ## 3 Read More
 

@@ -19,9 +19,7 @@ Via this menu you can also enable or disable the [full screen mode](#full-screen
 You can change the default layout of panes and arrange them in the layout you like.
 
 {{% alert color="info" %}}
-
 Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](/refguide/studio-pro-overview/#documents) section in *Studio Pro Overview*.
-
 {{% /alert %}}
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
@@ -30,29 +28,20 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
-   1. Pane-height – left 
+    1. Pane-height – left 
+    2. Pane-height – right 
+    3. Pane-height – top
+    4. Pane-height – bottom
+    5. New pane as a new tab
 
-   2. Pane-height – right 
-
-   3. Pane-height – top
-
-   4. Pane-height – bottom
-
-   5. New pane as a new tab
-
-      {{% alert color="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.
-      
-      {{% /alert %}}
+        {{% alert color="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.{{% /alert %}}
 
 2. Within the current *window* you can position a pane in one of the following ways:
 
-   1. Full-window height – left
-
-   2. Full-window height – right
-
-   3. Full-window height – top
-
-   4. Full-window height – bottom
+    1. Full-window height – left
+    2. Full-window height – right
+    3. Full-window height – top
+    4. Full-window height – bottom
 
 If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
@@ -114,7 +103,7 @@ The **Toolbox** has a tile view showing larger icons and a list view showing a l
 
 ### 3.11 Debug Windows
 
-For more information on debugging, see [How to Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/).
+For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/).
 
 #### 3.11.1 Breakpoints
 

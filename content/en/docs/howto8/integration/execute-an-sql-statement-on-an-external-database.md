@@ -1,5 +1,6 @@
 ---
 title: "Execute an SQL Statement on an External Database"
+linktitle: "Execute SQL on External Database"
 url: /howto8/integration/execute-an-sql-statement-on-an-external-database/
 category: "Integration"
 weight: 17
@@ -55,22 +56,22 @@ To use an ExecuteStatement action in a microflow, follow these steps:
 
 1. Find the **Database Connector** in the **Toolbox**.
 
-	{{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399122.png" >}}
+    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399122.png" >}}
 
 2. Drag the **Execute statement** action to your microflow: 
 
-	{{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
+    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
 
 3. Configure the statement:
-	* Provide all the valid arguments to the statement action
-	* The **Jdbc url** argument must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver
-		* It will always begin with `jdbc:` protocol text, but the rest is up to the particular vendor (for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a>` JDBC URL format can be used for MySQL databases)
-	* Specify the **Output Variable name**
-		* In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
+    * Provide all the valid arguments to the statement action
+    * The **Jdbc url** argument must specify a database URL that points to your relational database and is dependent upon the particular database and JDBC driver
+        * It will always begin with `jdbc:` protocol text, but the rest is up to the particular vendor (for example, the `jdbc:<a rel="nofollow">mysql://hostname/databaseName'</a>` JDBC URL format can be used for MySQL databases)
+    * Specify the **Output Variable name**
+        * In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
 
-	{{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
+    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
 
-	The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
+    The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
 
 {{% alert color="warning" %}}
 It is your responsibility to apply the proper security, as this action can allow for SQL injection into your Mendix application. Among others things, do not use user-supplied or environment-supplied variables in your SQL statement; if possible, you should prefer them to be static.

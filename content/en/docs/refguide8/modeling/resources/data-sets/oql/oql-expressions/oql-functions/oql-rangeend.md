@@ -14,7 +14,7 @@ The `RANGEEND` function extracts the end value of a range parameter.
 
 The syntax is as follows:
 
-```
+```sql {linenos=false}
 RANGEEND ( $range )
 ```
 

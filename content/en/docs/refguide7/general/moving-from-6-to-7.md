@@ -38,7 +38,7 @@ Seriously, make a backup!
 
 Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version.
 
-### 2.3 Fixing Errors, Warnings & Deprecations
+### 2.3 Fixing Errors, Warnings, and Deprecations
 
 Fix errors, warnings, and deprecations as much as possible. Take special note of the **Deprecations** in the **Errors** pane. Most features that are deprecated in Mendix 6 will be completely gone in Mendix 7, and these will result in errors in your project.
 
@@ -149,7 +149,7 @@ Support for navigation layouts of the **Legacy** type has been dropped. Layout t
 
 For more information, see [Layouts](/refguide7/layout/#layout-type) and the blog post [Layouts Have Types](https://www.mendix.com/blog/layouts-have-types/).
 
-#### 6.1.3 Apply Context & Remove from Context
+#### 6.1.3 Apply Context and Remove from Context
 
 The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated in Mendix version 5.19, and they have been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
 
@@ -273,7 +273,7 @@ These are mainly used to refer to the name of system entities or their attribute
 
 For example, `SystemModuleConstants.FILE_DOCUMENT_NAME` can be replaced by the `FileDocument` proxy:
 
-```
+```text
 import com.mendix.systemwideinterfaces.SystemModuleConstants;
 
 private final String FILE_DOCUMENT_NAME = SystemModuleConstants.FILE_DOCUMENT_NAME;
@@ -281,7 +281,7 @@ private final String FILE_DOCUMENT_NAME = SystemModuleConstants.FILE_DOCUMENT_NA
 
 should be replaced by:
 
-```
+```text
 import system.proxies.FileDocument.MemberNames;
 
 private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
@@ -322,7 +322,7 @@ Let us retrieve a MendixObject using the getPrimaryKeyValue() method in Mendix 6
 
 A similar approach to get a MendixObject in Mendix 7.x would be as follows:
 
- `List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
+`List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
 `IDataRow dataRow = dataRows.get(0);`<br>
 `IMendixIdentifier mendixIdentifier = dataRow.getValue(context, 0);`<br>
 `IMendixObject mendixObj = Core.retrieveId(context, mendixIdentifier);`<br>

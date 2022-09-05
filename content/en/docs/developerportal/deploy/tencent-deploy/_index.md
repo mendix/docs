@@ -2,7 +2,7 @@
 title: "Tencent Cloud (腾讯云)"
 url: /developerportal/deploy/tencent-deploy/
 category: "Deployment"
-description: "Describes the processes for deploying a Mendix app to the Tencent Cloud"
+description: "Describes how to deploy to the Tencent Cloud."
 weight: 45
 tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
@@ -34,7 +34,7 @@ To deploy an app to Tencent, you need the following:
 * Mendix Studio Pro China Edition
 
     * You will be able to download Mendix Studio Pro, as part of your initial sign up:
-       {{< figure src="/attachments/developerportal/deploy/tencent-deploy/download-studio-pro.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/tencent-deploy/download-studio-pro.png" >}}
     You can also get a copy from the **Get Studio Pro** option in the **Switch to** menu at the top left of **App & Team Management**.
 
 * A Mendix app created with Studio Pro
@@ -187,31 +187,29 @@ The **Members** tab allows you to manage the list of members of the namespace an
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
 1. The **Members** tab displays a list of current members (if any).
-
 2. Click **Invite Member**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-members.png" >}}
 
 3. Enter the **Tencent ID** of the person you want to invite.
-
 4. Give them the rights they need. This can be:
-   
+
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
 5. Click **Invite** to send an invite to this person.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-member-invite.png" >}}
 
 6. The next time the user signs in to the Mendix Developer Portal, they will be added to the namespace.
 
-##### 3.3.2.2 Editing & Removing Members
+##### 3.3.2.2 Editing and Removing Members
 
 You can remove existing members.
 
 1. On the **Members** tab of the namespace details, click **Remove** next to the member you want to remove.
-        
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/namespace-member-remove.png" >}}
 
 If you want to change the rights for an existing member, you will have to remove them and then add them again with the updated rights.
@@ -238,6 +236,7 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 ## 4 Deploying an App for the First Time
 
 ### 4.1 Creating an Environment{#create-environment}
+
 When deploying your app for the first time, there will be no environments and no deployment packages available. The **Environments** page for your app in the Developer Portal will show you the current status.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/environments-none.png" >}}
@@ -251,19 +250,16 @@ First you need to create an environment:
     {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
 3. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
-
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
-
 5. Select the **Purpose**.
-   
-    1. For development of the app, for example acceptance testing, choose **Development**.
 
+    1. For development of the app, for example acceptance testing, choose **Development**.
     2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
 
         {{% alert color="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 6. Click **Next**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/create-environment.png" >}}
 
 7. Select **Core Resources**.
@@ -282,13 +278,11 @@ First you need to create an environment:
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
 8. Select a **Database plan** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
-
 9. Select a **Storage plan** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image7.png" >}}
 
 10. Click **Create Environment**.
-
 11. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/environments-new.png" >}}
@@ -300,19 +294,19 @@ You will not be able to deploy to this environment until it has been fully prepa
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
 {{% alert color="warning" %}}
-There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+There is a limit of 200 MB on the size of a deployment package which can be deployed on the Tencent Cloud.
 {{% /alert %}}
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image9.png" >}}
 
 2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image10.png" >}}
 
 3. Select the revision/commit for which you want to create a deployment package and click **Next**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image11.png" >}}
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
@@ -320,7 +314,7 @@ There is a limit of 200MB on the size of a deployment package which can be deplo
 5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
 6. Click **Build this revision.**
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image12.png" >}}
 
 7. Confirm the information message and you will be returned to the **Environments** page.
@@ -344,21 +338,16 @@ You also need to check that the **PlaceholderMDA**, an initial app which is depl
 If everything has been created successfully, and the PlaceholderMDA has been built and is running, you can deploy the deployment package of your app by doing the following:
 
 1. Click **Deploy** next to the deployment package you wish to deploy.
-
 2. Confirm the **Target** environment (you can select a different one here if one is available).
-
 3. Confirm that the **Status** is *Ready*.
-
 4. Click **Transport**.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image15.png" >}}
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
-
 6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
-
 7. Click **Continue** to continue to the Start Application confirmation page.
-   
+
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/image16.png" >}}
 
 8. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
@@ -693,4 +682,3 @@ This section covers an issue which can arise where Mendix cannot recover automat
 ### 8.1 Status Reporting
 
 Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
-

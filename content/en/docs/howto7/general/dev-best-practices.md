@@ -1,5 +1,6 @@
 ---
 title: "Implement Best Practices for Development"
+linktitle: "Best Practices for Development"
 url: /howto7/general/dev-best-practices/
 category: "General"
 weight: 3
@@ -194,7 +195,7 @@ For integrations, you have the following types of microflow:
 
 ### 3.5 Other Document Types
 
-#### 3.5.1 Layouts & Snippets
+#### 3.5.1 Layouts and Snippets
 
 [Layouts](/refguide7/layout/) and [snippets](/refguide7/snippet/) should be identified with prefixes.
 
@@ -251,7 +252,7 @@ You can define the [home pages](/refguide7/show-home-page/) per device and role 
 | Role based home page | Tablet  | Home_Tablet_{Userrole}  |
 | Role based home page | Mobile  | Home_Phone_{Userrole}   |
 
-## 4 General Guidelines & Best Practices
+## 4 General Guidelines and Best Practices
 
 ### 4.1 Domain Models
 
@@ -281,7 +282,7 @@ Split microflows up into logical, functional elements. If a microflow has more t
 
 Certain cases (such as validation checks) may require this rule to be ignored to produce an understandable result.
 
-#### 4.2.2 Documentation & Annotations {#documentation-and-annotations}
+#### 4.2.2 Documentation and Annotations {#documentation-and-annotations}
 
 All complex microflows (more than ten activities or more than two splits) should have an [annotation](/refguide7/annotations/) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 
@@ -303,13 +304,13 @@ Event triggers on input fields must be kept as simple as possible, since they ar
 
 The number of parameters for a microflow should be kept to a minimum to facilitate reusability. The more parameters a microflow has, the more difficult it is to determine what should be put into the parameters to make the microflow run correctly.
 
-#### 4.2.5 Error Handling & Logging
+#### 4.2.5 Error Handling and Logging
 
 Use microflow [error handling](/howto7/logic-business-rules/set-up-error-handling/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide7/logging/). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
-### 4.3 Warnings & Modeler Feedback
+### 4.3 Warnings and Modeler Feedback
 
 No warnings should be visible in the Modeler, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 

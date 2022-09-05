@@ -1,5 +1,6 @@
 ---
 title: "Release Over the Air Updates with App Center's CodePush using the CLI"
+linktitle: "Over the Air Updates with CodePush & CLI"
 url: /howto8/mobile/how-to-ota-cli/
 weight: 71
 description: A tutorial for pushing over the air updates (OTA).
@@ -76,7 +77,7 @@ Before OTA updates, you would have to make a new release and configure it in the
 
 To release a new version OTA, follow these steps:
 
-1.  Correct the title and message as follows:
+1. Correct the title and message as follows:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/modeller-correct.png" alt="Make some changes"   width="300"  >}}
 
@@ -85,18 +86,19 @@ To release a new version OTA, follow these steps:
 4. Open a command line interface (CLI) such as Command Prompt.
 5. Navigate to the directory of your Native Builder:
 
-    ```
+    ```powershell {linenos=false}
     cd {path to Native Builder executable file}`
     ```
 
 6. Run the following command to build and push a new update:
 
-    ```
+    ```text {linenos=false}
     native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
     ```
 
     {{% alert color="info" %}}
 This command does the following:<br />
+
 * Runs Mx Build to build your project<br />
 * Packages your project to be pushed as a new update<br />
 * Pushes the new update package for the app's version 1.0.0<br />
@@ -109,8 +111,8 @@ This command does the following:<br />
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-update-prompt.png" alt="Update available prompt"   width="300"  >}}
 
-3.  Tap **Confirm** to update your app.
-4.  The app should reload and greet you with the following dialog box:
+3. Tap **Confirm** to update your app.
+4. The app should reload and greet you with the following dialog box:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  >}}
 
@@ -122,7 +124,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 1. Get your list of available releases by running the following command:
 
-    ```
+    ```text {linenos=false}
     `native-builder.exe release list --project-name "CoolApp"`
     ```
 
@@ -130,7 +132,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 2. To roll back from {v2} to {v1} type the following command:
 
-    ```
+    ```text {linenos=false}
     native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
     ```
 
@@ -150,7 +152,7 @@ In case you want to test the stability of a new update, it is good practice to t
 
 To roll out your app to only *some* of your users, run this command:
 
-```
+```text {linenos=false}
 `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
 ```
 
@@ -158,7 +160,7 @@ Instead of passing a rollout percentage of 100%, you are passing 50%. This means
 
 To fully roll out the update, run this command:
 
-```
+```text {linenos=false}
 native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
@@ -175,7 +177,7 @@ The key here is `patch-update`. The `patch-update` command allows you to modify 
 
 Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command:
 
-```
+```text {linenos=false}
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
 ```
 

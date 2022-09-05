@@ -1,5 +1,6 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
+linktitle: "Set Up Firebase Cloud Messaging"
 url: /howto8/mobile/setting-up-google-firebase-cloud-messaging-server/
 weight: 55
 tags: ["mobile", "push notification", "google", "firebase", "server"]
@@ -32,9 +33,9 @@ Open the [Firebase developer's console](https://console.firebase.google.com/) an
 To import your project, do the following:
 
 1. In the Firebase console, select **Import Google Project**. 
-1.  Select your GCM project from the list of existing projects, select a region, and click **Add Firebase**:
+1. Select your GCM project from the list of existing projects, select a region, and click **Add Firebase**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/Add_Firebase_to_a_Google_Project.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/Add_Firebase_to_a_Google_Project.png"   width="350"  >}}
 
 With that done, continue with [Configuring APNs Credentials](#configuring) below.
 
@@ -50,9 +51,9 @@ To create a project, do the following:
 
 1. Click **Create new project**.
 1. Fill in your application's project name and region. 
-1.  Click **Create**"
+1. Click **Create**"
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/Create_Firebase_Project.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/Create_Firebase_Project.png"   width="350"  >}}
 
 ## 4 Adding an Android or iOS App {#native-apps}
 
@@ -69,17 +70,17 @@ Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
 
 Do the following to add your app to FCM:
 
-1.  Click the **Project Overview** cogwheel and select **Project settings**:
+1. Click the **Project Overview** cogwheel and select **Project settings**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/project_settings.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/project_settings.png"   width="350"  >}}
 
-1.  Go to the **General** tab and click **Add app**:
+1. Go to the **General** tab and click **Add app**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/add_app.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/add_app.png"   width="350"  >}}
 
-1.  Select Android and, fill in the bundle_id, and skip the rest of the steps: 
+1. Select Android and, fill in the bundle_id, and skip the rest of the steps: 
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/android_setup.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/android_setup.png"   width="350"  >}}
 
 Bundle ID must be matching with your package ID. Make sure to repeat this step for iOS as well.
 
@@ -88,9 +89,9 @@ Bundle ID must be matching with your package ID. Make sure to repeat this step f
 If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
 
 1. Click in the upper-left corner of the screen and select **Project settings**.
-1.  Navigate to the **Cloud messaging** tab:
+1. Navigate to the **Cloud messaging** tab:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_cloud_messaging.png"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_cloud_messaging.png"   width="350"  >}}
 
 1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
 

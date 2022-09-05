@@ -2,6 +2,9 @@
 title: "Getting the Mendix Developer App"
 url: /refguide8/getting-the-mendix-app/
 tags: ["studio pro"]
+aliases: 
+    - /refguide/getting-the-mendix-app.html
+    - /refguide/getting-the-mendix-app
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

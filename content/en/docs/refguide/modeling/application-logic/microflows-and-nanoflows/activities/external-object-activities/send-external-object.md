@@ -63,6 +63,6 @@ The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/
 
 ## 5 Related
 
-Persistable objects are persisted by using the [commit](/refguide/committing-objects/)activity. External entities cannot be committed. Use this activity instead.
+Persistable objects are persisted by using the [commit](/refguide/committing-objects/) activity. External entities cannot be committed. Use this activity instead.
 
 The [Save](/refguide/button-widgets/) button does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has this activity.

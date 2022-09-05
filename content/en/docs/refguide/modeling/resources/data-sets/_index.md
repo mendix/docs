@@ -39,17 +39,15 @@ SELECT CustomerObj/Name As Name, SUM(OrderObj/TotalAmount) As TotalAmount
 A dataset can have multiple parameters. Parameters are used to filter / manipulate datasets. Security on datasets is configured based on the parameters. In a Java action, the parameters are used in the generated template.
 
 {{% alert color="info" %}}
-
 In OQL, parameters can be called using a **$** symbol, for example: **$Month**.
-
 {{% /alert %}}
 
 A parameter has the following configurable properties:
 
 * **Name** – This is the name of the parameter.
-* **Type** – The type of the parameter can be: **Boolean**, **Date and time**, **Enumeration**, **Decimal**, **Integer/Long**, or **String**.
+* **Type** – The type of the parameter can be: **Boolean**, **Date and time**, **Enumeration**, **Decimal**, **Integer/Long**, or **Object**.
 * **Constraints** – The constraints on a parameter influence which values can be selected for parameter input values by the end-user. Constraints can be associated with [user roles](/refguide/user-roles/) in dataset security. There are two types of constraints: 
-  * Ranges which apply to numeric and date parameters
-  * XPath constraints which apply to object parameters
+    * Ranges which apply to numeric and date parameters
+    * XPath constraints which apply to object parameters
 * **Ranges** – When a parameter is defined as a range, the drop-down box in the report shows each range instead of all values within the ranges. Decimal parameters are always ranges.
 * **XPath Constraints** – An XPath constraint can be defined using [XPath](/refguide/xpath/). Multiple constraints can be defined on a parameter and each constraint can be associated with a user role.

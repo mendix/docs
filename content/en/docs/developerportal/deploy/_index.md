@@ -18,6 +18,7 @@ tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubern
 A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing. You can deploy to the Mendix cloud, which is the default location for both free and licensed apps. You can also deploy to IBM Cloud, SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
 
 {{% alert color="warning" %}}
+
 * Each app can only be deployed to one type of target platform (for example Mendix Cloud nodes) in addition to local testing
 * Some features which rely on the target platform can work differently depending on what is supported (for example in Cloud Foundry, Kubernetes, or Windows server)
     * If you want to use a particular feature, check that it is supported by your chosen target platform
@@ -32,9 +33,11 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 
 ## 2 Run Locally or Preview
 
-### 2.1 Studio Pro
+### 2.1 Studio Pro {#run-in-studio-pro}
 
 In *Studio Pro*, you can click the play button (▶) in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
+
+To speed up the development process, most changes you make within Studio Pro will use "Instant Update" to be reflected immediately in the locally-running app. However, some changes (such as changes to the domain model) will need the whole app to be restarted.
 
 ### 2.2 Studio
 
@@ -82,7 +85,7 @@ The instructions for doing this are in [Private Cloud](/developerportal/deploy/p
 
 From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](/developerportal/deploy/cloud-foundry-deploy/) and the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 
-## 9 Docker & Kubernetes
+## 9 Docker and Kubernetes
 
 Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
 

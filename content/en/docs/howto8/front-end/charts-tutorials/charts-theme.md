@@ -33,23 +33,16 @@ This is how the original chart looks:
 To create the required custom configuration easily, follow these steps:
 
 1. Open the app with the chart(s).
-
 1. Open a page with a chart.
-
 1. Open the chart widget settings.
-
 1. Go to the tab **Advanced**.
-
 1. Set the **Mode** to **Developer**.
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png" alt="chart widget properties" >}}
 
 1. Run the app.
-
 1. Open the page with the chart in the browser.
-
 1. Click the **Toggle Editor** button.
-
 1. In the **Layout** section add the **Custom settings**.
 
     ```json
@@ -68,7 +61,7 @@ To create the required custom configuration easily, follow these steps:
 
     {{% alert color="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
 
-12. In Studio Pro, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
+1. In Studio Pro, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
 
     {{% alert color="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
 
@@ -77,9 +70,7 @@ To create the required custom configuration easily, follow these steps:
 To add a theme file which will apply to all charts in the app, follow these steps:
 
 1. From Studio Pro, go to the menu **Project > Show Project Directory in Explorer**.
-
 1. Open the **theme** folder.
-
 1. Create a new file: *com.mendix.charts.json*
 
     {{% alert color="info" %}}Please note that<br/>
@@ -93,7 +84,6 @@ To add a theme file which will apply to all charts in the app, follow these step
 To change the font in all charts in the app, follow these steps:
 
 1. Edit the *[project folder]/theme/com.mendix.charts.json* file in a plain text editor.
-
 1. Replace or update the content. In the **layout** section, place the style changes that were created in the first section of this how to.
 
     ```json
@@ -109,7 +99,6 @@ To change the font in all charts in the app, follow these steps:
     ```
 
 1. Restart the Mendix app.
-
 1. Validate the expected result.
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="chart updated" >}}

@@ -22,4 +22,3 @@ It also contains guidelines on [creating Marketplace content](/appstore/creating
 For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the Mendix Marketplace. For more information, see the [Marketplace release notes](/releasenotes/app-store/).
 
 ## 2 Guide Categories
-

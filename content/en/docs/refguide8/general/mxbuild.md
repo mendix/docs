@@ -14,13 +14,11 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 The version of MxBuild which you need is dependent on the version of the Mendix model you want to build. You can find your correct MxBuild by entering this URL into a browser and replacing `mxversion` with your own, full Mendix version number: `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
 
 {{% alert color="info" %}}
-
 A build number is included in the version, and this has to be included in the link path mentioned above — for example`8.12.1.3458` is the 3458 build of the 8.12.1 Studio Pro release.
 
 You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\8.12.1.3458`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz](https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz)).
 
 Any public version in this [list of Studio Pro releases](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
-
 {{% /alert %}}
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
@@ -77,7 +75,7 @@ Options when creating a package are described in the table below;
 
 For example, to create a deployment package `out.mda` in the current directory using the app `MyApp` using the *Windows* version of MxBuild, you can use the following command:
 
-```bat
+```bat {linenos=false}
 mxbuild --target=package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 
@@ -91,7 +89,6 @@ When MxBuild exits, one of the following codes will be returned:
 | 1 | An internal error occurred. |
 | 2 | There is something wrong with the command-line options. |
 | 3 | Deployment of the Mendix project failed. |
-
 
 If the exit code is larger than 0, MxBuild will show you the message describing the error.
 

@@ -13,24 +13,24 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
 
 {{% alert color="info" %}}
-You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app project, since that will make data migration difficult later.
+You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app, since that will make data migration difficult later.
 {{% /alert %}}
 
-### 1.1 Getting Your Team Access to an App Project in Epics
+### 1.1 Getting Your Team Access to an App in Epics
 
-Only a Scrum Master can give the team access to an app project in Epics. To do so, the Scrum Master should open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), then go to the [General Settings](/developerportal/collaborate/general-settings/) page, then go to the [Stories](/developerportal/collaborate/general-settings/#stories) tab, and click **Set up**, as shown in the screenshot below. This gives everyone in the team access to this app project in Epics.
+Only a Scrum Master can give the team access to an app in Epics. To do so, the Scrum Master should open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), then go to the [General Settings](/developerportal/collaborate/general-settings/) page, then go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab, and click **Switch to Epics**, as shown in the screenshot below. This gives everyone in the team access to this app in Epics.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/stories.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/project-management.png" >}}
 
-To give the team access to another app project in Epics, the Scrum Master needs to repeat this procedure.
+To give the team access to another app in Epics, the Scrum Master needs to repeat this procedure.
 
-### 1.2 Opening an App Project in Epics
+### 1.2 Opening an App in Epics
 
-Once you have access to an app project in Epics, you can open it there. To do so, open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), and then go to the [Stories](/developerportal/collaborate/stories/) page. You will see a notification on the top of the page, as shown in the screenshot below. Click **Check it Out** to open the app project.
+Once you have access to an app in Epics, you can open it there. To do so, open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), and then go to the [Stories](/developerportal/collaborate/stories/) page. You will see a notification on the top of the page, as shown in the screenshot below. Click **Check it Out** to open the app.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epics-check-it-out.png" >}}
 
-After you open an app project in Epics, you can easily switch to other app projects that you have access to. To do so, click the name of the current app project on the upper-left corner, and then select a different app project from the drop-down list.
+After you open an app in Epics, you can easily switch to other apps that you have access to. To do so, click the name of the current app on the upper-left corner, and then select a different app from the drop-down list.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/switch-app.png" >}}
 
@@ -80,7 +80,7 @@ A story card shows the following information:
 * Story title (②)
 * Epic related to the story (③)
 * Tags (④)
-*  Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon (⑤)
+* Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon (⑤)
 
     {{< figure src="/attachments/developerportal/collaborate/epics/feature-bug.png" >}}
 
@@ -109,12 +109,12 @@ On the upper-right corner, there are three icons. You can click these icons to c
 
 The story details page shows the following items:
 
-*  **Description** – This is the description of the story.
+* **Description** – This is the description of the story.
 
     * You can edit the description of the story by clicking **Edit Description** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
     * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
-* **Assign to** – You can assign the story to anybody who can access the app project in the Developer Portal.
+* **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** page and the **Planning** page.
 * **Tasks** – You can add a task by clicking **+ Add Task**. You can move the tasks by dragging them around.
 * **Story Type** – You can set the story type to **Bug** or **Feature**. 
@@ -162,7 +162,7 @@ Clicking a row opens the [story details](#story-details) page.
 
 ### 2.3 The Epics Page
 
-The **Epics** page shows all the epics for your current app project. 
+The **Epics** page shows all the epics for your current app. 
 
 Each row shows the following information about an epic:
 
@@ -187,13 +187,13 @@ On the upper-right corner, there is an ellipsis (**...**) icon. You can click th
 
 The epic details page shows the following items:
 
-*  **Objective** – This is the description of the epic.
+* **Objective** – This is the description of the epic.
 
     * You can edit the objective of the epic by clicking **Edit Objective** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
     * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
 
-* **Assign to** – You can assign the epic to anybody who can access the app project in the Developer Portal.
+* **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
 * **Tags** – You can add or remove tags. To create a new tag, type the new tag in the text box and then click **Create new "[tag name]"**.
 * **Attachments** – You can add attachments by clicking **+** below **Attachments**. 
 * **Archived Stories** – This lists all the archived stories that are linked to this epic.

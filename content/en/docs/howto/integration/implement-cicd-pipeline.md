@@ -1,5 +1,6 @@
 ---
-title: "Implement a Simple CICD Pipeline with Mendix APIs"
+title: "Implement a Simple CI/CD Pipeline with Mendix APIs"
+linktitle: "CI/CD Pipeline for Mendix Cloud"
 url: /howto/integration/implement-cicd-pipeline/
 category: "Integration"
 tags: ["cicd", "continuous", "integration", "delivery", "deployment", "automation", "testing"]
@@ -108,11 +109,8 @@ When the tests are completed (check the status for when completed is `true`), yo
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/11UnitTestsStatus.png" >}}
 
-
 {{% alert color="info" %}}
-
 You can also (manually) create a web service that exposes the standard unit structure from the data available in the Unit Testing module.
-
 {{% /alert %}}
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests

@@ -114,4 +114,3 @@ Make sure your app is not running before you restore a backup. You can stop your
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" >}}
 
 Now start your app and it is ready for use.
-

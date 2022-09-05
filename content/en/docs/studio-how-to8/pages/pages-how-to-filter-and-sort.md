@@ -50,7 +50,6 @@ You also would like to show reports that were created or modified in February 20
 To configure a filter, do the following:
 
 1. Select the list view or the data grid and open its properties:
-
 2. In the **Data Source** section, click **Filter**:
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/properties-filter.png"   width="250"  >}}
@@ -59,17 +58,16 @@ To configure a filter, do the following:
 
     1. Select the **Passed** attribute in the drop-down menu:
 
-    	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-filter-select-attribute.png"   width="550"  >}}
+        {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-filter-select-attribute.png"   width="550"  >}}
 
     2. Once you select the first part of the condition, you can select the other part to complete it. Select *false*:
 
-    	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-filter-condition.png"   width="550"  >}}
+        {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-filter-condition.png"   width="550"  >}}
 
     3. To filter inspection reports for the current day, you need to add another condition to your filter: click **Add new condition** and select the **DateAndTime** attribute in the drop-down menu.
-
     4. Add the second part of the condition: the date should be today's date. Select *Today* in the drop-down menu: 
 
-		{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/filter-date-and-time.png"   width="550"  >}}
+        {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/filter-date-and-time.png"   width="550"  >}}
 
     5. Click **Add**.
 
@@ -80,12 +78,10 @@ Good job! You have created the filter that has two conditions and reads the foll
 To sort items in the list by date and time starting from the latest one, follow the steps below:
 
 1. Select the list view or the data grid and open its properties.
-
 2. In **Sorting Order** property, click **Add Sorting Rule**.
-
 3. In **Add sorting rule** dialog box, select the **DateAndTime** attribute and set **Order** to *Descending*.
 
-	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-sorting-rule.png"   width="450"  >}}
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-filter-and-sort/add-sorting-rule.png"   width="450"  >}}
 
 4. Click **Add**.
 

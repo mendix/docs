@@ -60,4 +60,3 @@ In the **Project directory** field, specify the directory where the project file
 ## 4 Read More
 
 * [Export Project Package](/refguide7/export-project-package-dialog/)
-

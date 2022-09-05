@@ -44,9 +44,7 @@ Choose the branch line that you want to merge. It is not necessary to select ind
 ## 4 Advanced Merge
 
 {{% alert color="info" %}}
-
 This option is only available for SVN.
-
 {{% /alert %}}
 
 This scenario may be used for merge actions that are only needed in exceptional circumstances. Use this option with caution.
@@ -60,6 +58,3 @@ Choose the branch line that you want to merge, or select 'Main line' when you wa
 ### 4.2 Start / End Revision
 
 Select the start revision (revision with the lowest number) and the end revision (revision with the highest number) of the range you want to merge. If you want to merge all commits of the selected branch line, simply select the first and the last revision of the branch. It's not necessary to select the 'Create branch' revision.
-
-
-

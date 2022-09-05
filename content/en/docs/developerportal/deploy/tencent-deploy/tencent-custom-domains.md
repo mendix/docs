@@ -97,7 +97,6 @@ If you do not have an SSL/TLS certificate, you can purchase one from the Tencent
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/get-signed-certificate.png" >}}
 
-
 ### 4.2 Uploading the Custom Domain Certificate{#Uploading}
 
 To upload a custom domain certificate, you need to have the following things prepared:

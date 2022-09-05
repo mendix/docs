@@ -16,4 +16,3 @@ This query returns all the customers who are classified as "gold customers":
 ```java
 //Sales.Customer[IsGoldCustomer = true()]
 ```
-

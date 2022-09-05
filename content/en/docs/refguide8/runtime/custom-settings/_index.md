@@ -39,8 +39,8 @@ The following custom settings can be configured:
 | <a name="ca-certificates"></a>**CACertificates** | A comma-separated list of paths to CA certificates. |   |
 | **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
 | **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
-| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide8/runtime/custom-settings/code_snippet.png" >}} |  |
-| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |  |
+| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. See **NoClientCertificateUsages** if you want to make sure that no client certificate is used for a certain host or web service. The value of **ClientCertificateUsages** must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" >}} |   |
+| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
 | **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `"Strict"`, `"Lax"`, and `"None"`. At present, `"None"` is the default, but this will change to `"Strict"` in the next major Mendix release. Setting it to `"None"` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `"None"`. If the connection is plain HTTP, then this setting must be changed to `"Strict"` (recommended) or `"Lax"`. This setting is available in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11/#8110) and above. | |
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | **HashAlgorithm** | Specifies the hash algorithm used to generate hash values for attributes of the HashString type, such as the password of a user. This setting overrides the setting in Studio Pro, see [Hash Algorithm](/refguide8/project-settings/#hash-algorithm). Possible values are `BCRYPT`, `SSHA256`, `SHA256` (not recommended) and `MD5` (not recommended). To override the default BCrypt cost, you can specify `BCRYPT:cost`, where 'cost' is a number between 10 and 30. An example value is `BCRYPT:12`. | BCRYPT |
@@ -48,7 +48,7 @@ The following custom settings can be configured:
 | **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities.<br/>{{% alert color="warning" %}}If you change the value of `http.client.MaxConnectionsPerRoute`, you will need to increase this value in line with that, up to a maximum of 250.{{% /alert %}} | 20 |
 | **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup. | `12 * 60 * 60` (12 hours) (for Studio Pro 8.18.0 and below) or `355` (for Studio Pro 8.18.1 and above) |
 | **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 |
-| **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
+| **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, and `com.mendix.storage.azure`. | com.mendix.storage.localfilesystem |
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use [Apache Commons](http://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 8.18.6 and later. | false |
@@ -178,28 +178,7 @@ These settings can be used to store files using the Microsoft Azure blob storage
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 {{% /alert %}}
 
-## 8 IBM Cloud (Bluemix) Object Storage Settings
-
-These settings can be used to store files using the IBM Cloud object storage service.
-
-Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
-
-{{% alert color="info" %}}
-Unlike other storage services, IBM Cloud does not provide server-side encryption.
-{{% /alert %}}
-
-| Name | Description | Default Value |
-| --- | --- | --- |
-| **com.mendix.core.StorageService** | Has to be set to `com.mendix.storage.swift` to select IBM Cloud as the storage service |   |
-| **com.mendix.storage.swift.Container** | Container name of the object storage service |   |
-| **com.mendix.storage.swift.Container.AutoCreate** | If enabled (value `true`) the container will be automatically created if it does not exist. | false |
-| **com.mendix.storage.swift.credentials.DomainId** | Unique identifier of the domain |   |
-| **com.mendix.storage.swift.credentials.Authurl** | Authentication URL |   |
-| **com.mendix.storage.swift.credentials.Username** | Username |   |
-| **com.mendix.storage.swift.credentials.Password** | Password |   |
-| **com.mendix.storage.swift.credentials.Region** | Region |   |
-
-## 9 Web Client Settings{#web-client-settings}
+## 8 Web Client Settings{#web-client-settings}
 
 The settings below influence the behavior of the Mendix web client.
 
@@ -213,7 +192,7 @@ The settings below influence the behavior of the Mendix web client.
 | **com.mendix.webui.StateSizeWarningThreshold** | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | **com.mendix.webui.CommittedObjectsThreshold** | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 10 Proxy Settings
+## 9 Proxy Settings
 
 The settings below allow you to use a proxy.
 

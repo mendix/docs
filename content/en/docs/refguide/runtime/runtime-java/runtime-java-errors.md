@@ -10,6 +10,7 @@ tags: ["runtime", "java"]
 Once your application starts performing poorly, becomes unstable or even worse: crashes, the first thing to do is check your application log for hints on what could be causing this. If there are any **FATAL** or **CRITICAL** log lines in there, immediately start working on resolving them. Any **ERROR** log line should be treated as such as well, so you should always strive to get rid of them.
 
 ## 2 Common Errors
+
 Some of the more common errors you can find in the application log that can cause your application to go down are the topic of this article. Let’s dive right in.
 
 ### 2.1 java.lang.StackOverflowError
@@ -22,13 +23,13 @@ This is an error you run into when the JVM Heap tells you "Enough is enough. I c
 
 The following things can cause this error:
 
-*   Memory leak
-    *   Introduced by developer, custom code
-    *   A bug in Mendix Runtime
-    *   A bug in a Java library used by custom code of the developer or by the Mendix Runtime
-    *   A bug in Java Runtime
-*   Massive creation of objects (for example, by retrieving 1 trillion entities in a single microflow at once)
-*   Configuration issue or sizing issue
+* Memory leak
+    * Introduced by developer, custom code
+    * A bug in Mendix Runtime
+    * A bug in a Java library used by custom code of the developer or by the Mendix Runtime
+    * A bug in Java Runtime
+* Massive creation of objects (for example, by retrieving 1 trillion entities in a single microflow at once)
+* Configuration issue or sizing issue
 
 A memory leak should look like the garbage collector stops running. See the first half of the graph here for an example:
 
@@ -52,9 +53,9 @@ Such a cryptic description. But it is quite simple really. This is the JVM telli
 
 The most common causes for this error are:
 
-1.  Mostly: creating a lot of objects in a short amount of time.
-2.  Sometimes: creating a lot of objects in rapid succession.
-3.  Rarely: something else.
+1. Mostly: creating a lot of objects in a short amount of time.
+2. Sometimes: creating a lot of objects in rapid succession.
+3. Rarely: something else.
 
 If you want to reproduce this error, do something like this:
 
@@ -69,4 +70,3 @@ That concludes this list of some of the more common errors in the application lo
 If you see the grey *committed* line peak into the white part of the *Application node operating system memory* graph, your app node needs more memory. Upgrading to a larger container is strongly recommended in this case. See the following graph for an example of this problem:
 
 {{< figure src="/attachments/refguide/runtime/runtime-java/runtime-java-errors/6.jpg" >}}
-

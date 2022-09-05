@@ -29,12 +29,12 @@ Expressions can be used in the following properties on a page:
 
 Expressions can be used for the following activities in a microflow: 
 
-*  Change Object
-*  Change Variable
-*  Create Object
-*  Create Variable
-*  [Decision](/studio/microflows-decision/)
-*  End Event
+* Change Object
+* Change Variable
+* Create Object
+* Create Variable
+* [Decision](/studio/microflows-decision/)
+* End Event
 
 ## 2 Writing an Expression
 
@@ -44,7 +44,7 @@ Attributes and associations of objects are accessed using a slash (for example, 
 
 You can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
-```
+```text
 $CurrentPrice/Price - (($CurrentPrice/Price div 100) * $OrderLine/Discount)
 ```
 
@@ -64,7 +64,6 @@ You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl
 If there is an errors in the expression, the place where the error is, is highlighted red and an error message is shown when you hover over it.  In some cases there are quick fixes available to quickly solve the issue.
 
 {{< figure src="/attachments/studio/expressions/expression-error.png" >}}
-
 
 ### 2.3  Expression Examples
 
@@ -189,7 +188,7 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
 * [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
 
-### 3.12 Parse & Format Decimal Function Calls
+### 3.12 Parse and Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 

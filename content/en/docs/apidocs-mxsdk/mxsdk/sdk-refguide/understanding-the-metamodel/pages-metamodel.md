@@ -11,7 +11,6 @@ Pages are defined based on Layouts (see below). Pages, Layouts and Snippets inhe
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582251.svg" >}}
 
-
 Studio Pro Guide | Model SDK API docs
 --- | --- |
 [Pages overview](/refguide/pages/) | [Page](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.page.html)
@@ -85,17 +84,17 @@ Studio Pro Guide | Model SDK API docs
 
 Most simple input widgets derive their content from their context. A text box will, for instance, only allow input for attributes of the target entity. The exceptions are widgets that require an entire object or a list of objects to function. The contents for these widgets can be supplied by four distinct methods:
 
-*   [Directly from the database](/refguide/database-source/)
-*   [By association to an object already in the context](/refguide/association-source/)
-*   [By microflow](/refguide/microflow-source/)
-*   [By an object chosen from a grid or list view displayed in the same page (called 'listening')](/refguide/listen-to-grid-source/)
+* [Directly from the database](/refguide/database-source/)
+* [By association to an object already in the context](/refguide/association-source/)
+* [By microflow](/refguide/microflow-source/)
+* [By an object chosen from a grid or list view displayed in the same page (called 'listening')](/refguide/listen-to-grid-source/)
 
 All Data Sources, except the last two (MicroflowSource and ListenTargetSource), need an EntityPath to know which entity they are connected to. An EntityPath takes a form like `MyFirstModule.Example_Account/Administration.Account.` In this example we are dealing with an association between the entity Example in the module MyFirstModule and the entity Account in the module Administration.
 
 There are basically two ways to retrieve entities from the database:
 
-1.  By using a `ListViewDatabaseSource` or `GridDatabaseSource` (depending on the type of widget) and, if required, adding individual `DatabaseConstraint`s to it, or
-2.  By specifying an XPath query yourself.
+1. By using a `ListViewDatabaseSource` or `GridDatabaseSource` (depending on the type of widget) and, if required, adding individual `DatabaseConstraint`s to it, or
+2. By specifying an XPath query yourself.
 
 An `ImageViewerSource` only works with the ImageViewer widget and is restricted to (specializations of) the `System.Image` entity.
 
@@ -121,7 +120,7 @@ A data grid shows a list of objects in a grid. For example, a data grid can show
 
 ### 6.3 Reference Set selector
 
-A reference set selector allows you to set an association of type _reference set_ by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to a group of type _reference set_ in the domain model.
+A reference set selector allows you to set an association of type *reference set* by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to a group of type *reference set* in the domain model.
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582297.svg" >}}
 
@@ -163,7 +162,7 @@ Studio Pro Guide | Model SDK API docs
 
 ## 9 Association Widgets
 
-The _reference selector_ is an input widget that can be used to display and edit associations. The _reference set selector_ allows you to set an association of type reference set by selecting objects. When the value of an association widget changes, a microflow can be triggered. The way in which this happens is determined by the MicroflowSettings. An Association is, by nature, associated to an entity. Where this entity is retrieved from can be determined using a SelectorSource. There are two types of selector sources: one using an XPath query, and one that triggers a Microflow.
+The *reference selector* is an input widget that can be used to display and edit associations. The *reference set selector* allows you to set an association of type reference set by selecting objects. When the value of an association widget changes, a microflow can be triggered. The way in which this happens is determined by the MicroflowSettings. An Association is, by nature, associated to an entity. Where this entity is retrieved from can be determined using a SelectorSource. There are two types of selector sources: one using an XPath query, and one that triggers a Microflow.
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/18582318.svg" >}}
 
@@ -178,6 +177,6 @@ Studio Pro Guide | Model SDK API docs
 
 ## 10 Read More
 
-*   Blog: [Designing Flexible User Interfaces with Layouts](https://www.mendix.com/blog/designing-flexible-user-interfaces-layouts/)
-*   Blog: [Creating Maintainable Interfaces with Snippets](https://www.mendix.com/blog/creating-maintainable-interfaces-with-snippets/)
-*   Blog: [Introducing Support for Glyphicons in Mendix](https://www.mendix.com/blog/introducing-support-for-glyphicons-in-mendix/)
+* Blog: [Designing Flexible User Interfaces with Layouts](https://www.mendix.com/blog/designing-flexible-user-interfaces-layouts/)
+* Blog: [Creating Maintainable Interfaces with Snippets](https://www.mendix.com/blog/creating-maintainable-interfaces-with-snippets/)
+* Blog: [Introducing Support for Glyphicons in Mendix](https://www.mendix.com/blog/introducing-support-for-glyphicons-in-mendix/)

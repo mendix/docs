@@ -18,9 +18,10 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
+If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
-If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable.
+* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about the Mendix Cloud
+* the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide/configuration/#custom).
 
@@ -31,6 +32,7 @@ There is more information on how this is done in the Cloud Foundry buildpack in 
 In versions of Mendix below 9.13.0, durations, intervals, and timeouts have to be specified as a number. This can be somewhat confusing because
 different units are used for different settings. Also, specifying long durations in milliseconds can be a bit cumbersome.
 In Mendix 9.13.0 and above it is possible to specify durations in more user-friendly formats:
+
 * **ISO 8601 Periods**, such as `P7D`, `PT1H30M`, or `PT1S` (See https://en.wikipedia.org/wiki/ISO_8601#Durations for more information)
 * **HOCON durations**, such as `7 days`, `90m`, or `1 second` (See https://github.com/lightbend/config/blob/main/HOCON.md#duration-format for more information)
 
@@ -44,13 +46,14 @@ The following custom settings can be configured:
 | **<a name="ca-certificates">CACertificates</a>** | A comma-separated list of paths to CA certificates. |   |
 | **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
 | **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |   |
-| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" >}} |   |
+| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. See **NoClientCertificateUsages** if you want to make sure that no client certificate is used for a certain host or web service. The value of **ClientCertificateUsages** must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" >}} |   |
+| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
 | **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
 | **com.<wbr>mendix.<wbr>core.<wbr>isClusterSlave** | Set to `true` in a high-availability scenario when this is *not* the [Cluster Leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower). The buildpack will usually enforce this setting, but it may need to be set for some on-premises deployments. | `false` |
 | **com.<wbr>mendix.<wbr>core.<wbr>SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `Strict`, `Lax`, and `None`. The default is `Strict`. Setting it to `None` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `None`. If the connection is plain HTTP, then this setting must be changed to `Strict` (recommended) or `Lax`. |   |
 | **com.<wbr>mendix.<wbr>core.<wbr>ScheduledEventsCleanupAge** | This setting specifies (in milliseconds) how old rows in the System.<wbr>ScheduledEventInformation table have to be before they are removed from the database. See [Scheduled Events](/refguide/scheduled-events-legacy/#cleanup) for more details. |   |
 | **com.<wbr>mendix.<wbr>core.<wbr>SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
-| **com.<wbr>mendix.<wbr>core.<wbr>StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage. localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.<wbr>mendix.<wbr>storage.<wbr>localfilesystem |
+| **com.<wbr>mendix.<wbr>core.<wbr>StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage. localfilesystem`, `com.mendix.storage.s3`, and `com.mendix.storage.azure`. | com.<wbr>mendix.<wbr>storage.<wbr>localfilesystem |
 | **com.<wbr>mendix.<wbr>core.<wbr>UseMimeDecoderForBase64** | Introduced in Studio Pro 9.6.10 (MTS) and 9.12.0. The setting defines whether to use the Basic decoder ([RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)) or MIME decoder ([RFC 2045](https://datatracker.ietf.org/doc/html/rfc2045)) when decoding base64 binary data. The Basic decoder is recommended due to its strictness in not accepting any character outside the Base64 specification, see [Security Considerations](https://datatracker.ietf.org/doc/html/rfc4648#section-12). This setting exists for reasons of backward compatibility. Using the MIME decoder is deprecated and the option will be removed in future versions. | false |
 | **com.<wbr>mendix.<wbr>storage.<wbr>PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | **com.<wbr>mendix.<wbr>core.<wbr>ProcessedTasksCleanupAge** | This setting specifies (in milliseconds) how old rows in the System.<wbr>ProcessedQueueTask have to be before they are removed from the database. See [Task Queue](/refguide/task-queue/#cleanup) for more details. |
@@ -62,7 +65,6 @@ The following custom settings can be configured:
 | **JavaKeyStorePassword** | Password for the default Java keystore. | changeit |
 | **LongLivedSessionTimeout** | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
 | **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
-| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
 | **ScheduledEventExecution** | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. {{% alert color="warning" %}}This setting cannot be configured when running locally. To enable and disable scheduled events when running locally, please use the 'Enabled' setting on the [Scheduled Events execution properties](/refguide/scheduled-events-task-queue/) in Studio Pro.{{% /alert %}} | NONE |
 | **SessionKeepAliveUpdatesInterval** | Defines after how much time expired sessions can be removed from the database. | 100000 (100s) |
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
@@ -208,32 +210,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 {{% /alert %}}
 
-## 8 IBM Cloud (Bluemix) Object Storage Settings
-
-These settings can be used to store files using the IBM Cloud object storage service.
-
-{{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
-{{% /alert %}}
-
-Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
-
-{{% alert color="info" %}}
-Unlike other storage services, IBM Cloud does not provide server-side encryption.
-{{% /alert %}}
-
-| Name | Description | Default Value |
-| --- | --- | --- |
-| **com.<wbr>mendix.<wbr>core.<wbr>StorageService** | Has to be set to `com.mendix.storage.swift` to select IBM Cloud as the storage service |   |
-| **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>Container** | Container name of the object storage service |   |
-| **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>Container.<wbr>AutoCreate** | If enabled (value `true`) the container will be automatically created if it does not exist. | false |
-| **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>credentials.<wbr>DomainId** | Unique identifier of the domain |   |
-| **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>credentials.<wbr>Authurl** | Authentication URL |   |
-| **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>credentials.<wbr>Username** | Username |   |
-| **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>credentials.<wbr>Password** | Password |   |
-| **com.<wbr>mendix.<wbr>storage.<wbr>swift.<wbr>credentials.<wbr>Region** | Region |   |
-
-## 9 Web Client Settings{#web-client-settings}
+## 8 Web Client Settings{#web-client-settings}
 
 The settings below influence the behavior of the Mendix web client.
 
@@ -247,7 +224,7 @@ The settings below influence the behavior of the Mendix web client.
 | **com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold** | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | **com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold** | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 10 Metrics Settings{#metrics-settings}
+## 9 Metrics Settings{#metrics-settings}
 
 The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide/metrics/) for more information and the specification of the settings format. 
 
@@ -257,7 +234,7 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 | **Metrics.Registries** | Registries to send metrics to |   |
 | **Metrics.ApplicationTags** | Common tags used for every meter |   |
 
-## 11 Proxy Settings
+## 10 Proxy Settings
 
 The settings below allow you to use a proxy. 
 

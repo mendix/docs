@@ -53,7 +53,7 @@ There are five main differences between nanoflows and microflows:
 5. Because nanoflows use JavaScript libraries and microflows use Java libraries, there can sometimes be slight differences in the way expressions are executed.
 6. Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
 
-## 4 Notation & Categories
+## 4 Notation and Categories
 
 The graphical notation of nanoflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
 

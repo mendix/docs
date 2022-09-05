@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Catalog"
 url: /data-hub/data-hub-catalog/
-description: "Introduces the processes and properties of Mendix Data Hub."
+description: "Introduces the processes and properties of Data Hub Catalog."
 weight: 30
 no_list: false 
 description_list: true 
@@ -10,9 +10,11 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-The Data Hub Catalog is the core of Mendix Data Hub for finding the shared registered assets that are made available through OData services published in an organization. It enables a single data source to be consistently used in several apps, ensuring that they will all be using the latest set of data maintained in the source. These registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily.
+The Data Hub Catalog is a development tool provided in the Mendix Cloud. OData REST services provided by Mendix Apps running in the Mendix Cloud will automatically be registered in the Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/data-hub/data-hub-catalog/curate/) registered assets are curated in the Data Hub Catalog to ensure that they are exposed to the relevant users and can be found easily. The [Data Hub Landscape](/data-hub/data-hub-landscape/), part of the Catalog, is a graphical representation of the relationship between apps and services.
 
-The Data Hub Catalog functionality is enhanced by the [Data Hub Landscape](/data-hub/data-hub-landscape/), which enables the networks of shared data and resources to be graphically represented in a network of relationships between apps and services. This integration enables different views of the registered assets to show, at a glance, popular apps and the network of dependencies between apps and services.
+{{% alert color="info" %}}
+If you deploy your Mendix apps in an alternative environment, e.g., on-prem or private cloud, you can use the Data Hub Catalog APIs to register your apps and services in the Data Hub Catalog, to enable to same visibility of your deployed APIs. For information about using Data Hub for local deployment, see Data Hub without Mendix Cloud {{% /alert %}}
+
 
 ## 2 Data Hub Home {#data-hub-home}
 
@@ -82,13 +84,11 @@ The information that is registered for data sources and exposed datasets are as 
 * **Endpoints** – All registered assets are defined as endpoints (URLs) in the Catalog. The endpoint of the service is accessed by the consuming app.
 * **Environment** – To complete the location of the asset, the endpoints are published to an environment. The location of the OData service also includes the environment to which the publishing app is deployed. Connecting to a data source in the correct environment is very important. For example, when developing an app, you want to connect to the test data of the app deployed to a non-production test or acceptance environment. However, the final production app will have to access the datasets from the production environment - the actual live or working data. In the Data Hub, the **Environment Type** is also specified which indicates to users the quality of the data.
 
-	{{% alert color="info" %}}
-  You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, you can remove the default filter on the search results to include non-production environments. {{% /alert %}}
+    {{% alert color="info" %}}You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane/) of Studio Pro, you can remove the default filter on the search results to include non-production environments. {{% /alert %}}
 
 * **Published OData service** – At the service endpoint, there are the OData service metadata contract files that define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets, attributes, and associations in the [published OData service](/refguide/published-odata-services/). 
 * **Versions** – The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment.
 
-	{{% alert color="info" %}}
-  If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
+    {{% alert color="info" %}}If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
 
 ## 5 Documents in This Category

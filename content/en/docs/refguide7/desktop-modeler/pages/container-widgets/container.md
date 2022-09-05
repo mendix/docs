@@ -40,7 +40,7 @@ The render mode determines which HTML5 tag will be used to show the container in
 | Hgroup    | `hgroup`    |
 | Address   | `address`   |
 
-_Default value:_ Div
+*Default value:* Div
 
 ## Visibility properties
 

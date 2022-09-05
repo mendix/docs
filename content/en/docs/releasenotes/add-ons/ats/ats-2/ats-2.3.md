@@ -12,9 +12,9 @@ weight: 97
 
 * The support for Mendix 7.6 is no longer experimental. Furthermore, we added compatibility for Mendix 7.8. You can now test a Mendix application that you've created on Mendix 5.14.1 up to Mendix 7.8.
 * ATS will now automatically detect and wait on many additional scenarios that are designated to block the execution of your tests:
-  * The execution of asynchronous microflows with a non-blocking progress bar
-  * The download of microflow result data (the objects returned from a microflow)
-  * UI rendering changes (for example, with conditional visibility)
+    * The execution of asynchronous microflows with a non-blocking progress bar
+    * The download of microflow result data (the objects returned from a microflow)
+    * UI rendering changes (for example, with conditional visibility)
 
 ## 2.3.0
 

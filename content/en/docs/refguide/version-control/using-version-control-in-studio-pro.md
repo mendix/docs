@@ -297,6 +297,40 @@ The second method should be used if the first method is not possible for some re
 3. Commit your changes using Studio Pro. 
 4. Reopen the main line app in Studio Pro only after overwriting the files.
 
+#### 7.2.5 Merging Using Git in the Command Line
+
+For merging *.mpr* files using Git in the command line to work, it is necessary to attach mx.exe merge to Git as a driver.
+
+When doing a **git merge** operation on two branches in the command line, Git attempts to merge the binaries of *.mpr* files, which does not work. You need to apply Studio Pro merge algorithm and that is where mx.exe as a driver is needed.
+
+Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
+
+```text {linenos=false}
+[core]
+  attributesfile = ~/.gitattributes
+[merge "custom"]
+  name = custom merge driver for specific files
+  driver = [MX.EXE_PATH] merge %O %A %B
+```
+
+Where *[MX.EXE_PATH]* should be replaced by the mx.exe path with only forward slashes pointing to a drive using */C/* instead of *C:/*.
+
+You can also configure the git driver locally per repository using the following commands:
+
+```text {linenos=false}
+git config merge.custom.name "custom merge driver for specific files"
+git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
+```
+
+After setting up the driver either locally or globally, create a *.gitattributes* file in the same folder with the following contents:
+
+```text {linenos=false}
+*.mpr merge=custom
+```
+
+Save the files and now when **git merge** is run and it involves *.mpr* files, the mx.exe merge will run Studio Pro merge algorithm before Git finishes the merge.
+
+
 ## 8 Versioning an App Deployed to the Cloud {#versioning-app}
 
 ### 8.1 Deploying Locally
@@ -355,13 +389,13 @@ Connecting to Git is done via a Personal Access Token (PAT). For more informatio
 
 Connecting to SVN is done with your Mendix credentials.
 
-### 9.3 Adding Files & Directories
+### 9.3 Adding Files and Directories
 
 If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.
 
 Make sure you use the **Export** feature of TortoiseSVN/TortoiseGit if you are copying a directory that is already under version control in your app.
 
-### 9.4 Deleting Files & Directories
+### 9.4 Deleting Files and Directories
 
 If you delete a file from your app, Studio Pro will automatically also delete it from the Team Server.
 
@@ -369,7 +403,7 @@ If you are using SVN and want to delete a whole directory, you have to use the d
 
 When using Git, a folder is no longer be tracked if all the files in the folder are removed.
 
-### 9.5 Branching & Deploying
+### 9.5 Branching and Deploying
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 

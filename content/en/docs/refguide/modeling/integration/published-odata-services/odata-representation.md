@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 This document describes how entities are represented in a published OData service.
 
-## 2 Attributes
+## 2 Attributes {#attributes}
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ This document describes how entities are represented in a published OData servic
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not exposed, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 
-### 2.1 Representation of ID
+### 2.1 Representation of ID {#id-representation}
 
 Each entity has an ID, which is not shown as an attribute in the domain model. This is indicated in the service's metadata.
 

@@ -75,7 +75,7 @@ If **Allow deleting existing objects** is checked, users are allowed to delete e
 
 The set of objects that can be deleted can be limited by using an [XPath constraint](#xpath-constraint).
 
-#### 2.3.2 Member Read & Write Rights Section
+#### 2.3.2 Member Read and Write Rights Section
 
 **Member read and write rights** define the access rights for every member ([attribute](/refguide8/attributes/) or [association](/refguide8/associations/)) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value. The set of objects to which these rights apply can be limited by using an [XPath constraint](#xpath-constraint).
 

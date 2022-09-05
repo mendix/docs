@@ -120,7 +120,7 @@ When you create a new Sass file, follow this naming guideline: *\_{namefilehere}
 
 {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/name-example.png" >}}
 
-### 4.2 Importing New Sub-Folders & Files
+### 4.2 Importing New Sub-Folders and Files
 
 Before you can see any changes in your app with your new Sass, you need to import the folders and files first. If you open *custom.scss*, you will see this:
 

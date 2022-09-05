@@ -103,7 +103,7 @@ The **Toolbox** has a tile view showing larger icons and a list view showing a l
 
 ### 3.11 Debug Windows
 
-For more information on debugging, see [How to Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/).
+For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/).
 
 #### 3.11.1 Breakpoints
 

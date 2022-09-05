@@ -22,7 +22,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 * Secure your applications (see [How to Create a Secure App](/howto/security/create-a-secure-app/))
 
-## 3 Preparing the Data Structure, GUI & Modules
+## 3 Preparing the Data Structure, GUI and Modules
 
 Before you can start importing data into your application, you first need to set up the data structure and GUI by following these these steps:
 
@@ -200,7 +200,7 @@ Follow these steps to create the import template via the Excel file:
 
     {{% alert color="info" %}}Remember that you have to set a key attribute for the **Customer** object as well as the **Order** object.{{% /alert %}}
 
-## 8 Exporting & Importing a Template
+## 8 Exporting and Importing a Template
 
 Once you have completed an Excel template, you can export the template (for example, from a test environment) and import it (for example, into an acceptance environment). When exporting and importing a template, the exact template will be uploaded, which means that columns are generated, the Mendix object is selected, the attributes are connected, and the parse microflows are selected.
 

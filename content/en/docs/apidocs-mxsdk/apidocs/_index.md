@@ -60,7 +60,7 @@ Use this API to build on top of the [feedback management](/developerportal/colla
 
 For details, see [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
 
-## 10 Model SDK & Platform SDK
+## 10 Model SDK and Platform SDK
 
 Use these SDKs to gain access to the inner-workings of a Mendix app.
 

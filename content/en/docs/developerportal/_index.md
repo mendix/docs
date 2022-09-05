@@ -87,7 +87,7 @@ The actions available depend on the app selected:
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 
-## 4 My Company's Apps & Buzz {#my-company-apps}
+## 4 My Company's Apps and Buzz {#my-company-apps}
 
 In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
@@ -108,8 +108,6 @@ For details on **Company Buzz**, see the [Company Buzz](/developerportal/collabo
 ## 5 Getting Assistance
 
 Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
-
-{{< figure src="/attachments/developerportal/developerportal-assistance.jpg" >}}
 
 * **Get Started with Mendix** – click this to check out [Mendix Basics](https://guidance.mendix.com/link/onboarding)
 * **What's New?** – click this to see our [latest features](https://www.mendix.com/releases/)

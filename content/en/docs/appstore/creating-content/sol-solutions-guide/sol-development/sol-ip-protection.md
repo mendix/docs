@@ -70,7 +70,7 @@ To protect your solutions, follow these steps:
 
 Approach this iteratively, as it is often very hard to define these boundaries “right first time.” Instead, open up as little as possible and increase API surface with incremental releases.
 
-#### 4.3.2 Protecting App Services, Connectors & Modules
+#### 4.3.2 Protecting App Services, Connectors, and Modules
 
 App services, connectors, and modules that are made available on the Marketplace often contain intellectual property and custom [usage metering](#metering). It is important to protect that content.
 

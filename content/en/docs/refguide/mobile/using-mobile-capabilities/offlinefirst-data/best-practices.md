@@ -94,7 +94,7 @@ To avoid backwards-compatibility errors in offline microflow calls after the ini
 
 If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
 
-### 4.3 Autonumbers & Calculated Attributes {#autonumbers}
+### 4.3 Autonumbers and Calculated Attributes {#autonumbers}
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 

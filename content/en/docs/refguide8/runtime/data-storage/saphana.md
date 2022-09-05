@@ -15,7 +15,7 @@ Retrieving an entity that is sorted on an attribute of one of its associated ent
 
 For example, you have two associated entities — **Person** and **Address** — and they have the **name** and **street** attributes, respectively. You cannot retrieve `Person` objects sorted on `Person_Address/Address/street`. 
 
-## 3 Behavior of Unlimited & Very Long Strings
+## 3 Behavior of Unlimited and Very Long Strings
 
 ### 3.1 Comparison Functions
 
@@ -27,7 +27,7 @@ See also [Case-Sensitive Database Behavior](/refguide8/case-sensitive-database-b
 In versions of Mendix below 8.11.0, string comparisons in SAP HANA were case sensitive.
 {{% /alert %}}
 
-### 3.2 Sorting, Grouping & Aggregating
+### 3.2 Sorting, Grouping and Aggregating
 
 It is not possible to sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 5000 characters. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.  
 

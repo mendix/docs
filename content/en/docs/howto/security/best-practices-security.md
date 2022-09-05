@@ -236,7 +236,7 @@ To keep your app hygiene at a good level, perform the following steps:
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).
 
-## 13 Configuring User Roles & Access
+## 13 Configuring User Roles and Access
 
 Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
 

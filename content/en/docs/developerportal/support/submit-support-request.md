@@ -3,7 +3,7 @@ title: "Submit a Support Request"
 url: /developerportal/support/submit-support-request/
 category: "Mendix Support"
 weight: 2
-description: "Describes submitting a request with Mendix Support."
+description: "Describes the details necessary for Mendix Support to process your request."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor request-priority below is mapped, so it should not be removed or changed.
@@ -19,7 +19,7 @@ For critical production incidents, please contact Mendix Support by [phone](http
 
 ## 2 Checking Useful Links Before Submitting a Request
 
-Before submitting a new Menix Support request, check these resources to make sure your question has not already been answered:
+Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix Documentation](https://docs.mendix.com/)
@@ -125,7 +125,7 @@ The [ticket priority](/developerportal/support/ticket-priority/) that Mendix Sup
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/204371729-pic5.png" >}}
 
-## 5 Providing Attachments & Additional Information
+## 5 Providing Attachments and Additional Information
 
 Depending on the type of request, providing attachments and additional information may be helpful. The scenarios below list what additional information should be provided.
 
@@ -137,23 +137,23 @@ You can add large attachments such as app files to the request. Please note that
 Attachments added to Mendix Support requests will be automatically deleted after 365 days.
 {{% /alert %}}
 
-### 5.2 Cloud Problems & Deployment Issues
+### 5.2 Cloud Problems and Deployment Issues
 
 * Log file (*.txt*)
 * Date and time of the incident
 
-### 5.3 Team Server Problems & App Issues
+### 5.3 Team Server Problems and App Issues
 
 * [App ID](/developerportal/settings/general-settings/)
 
-### 5.4 Studio & Studio Pro Problems
+### 5.4 Studio and Studio Pro Problems
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
 * Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps
 
-### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
+### 5.5 Marketplace Content Problems and Module, Widget, and Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
@@ -183,7 +183,7 @@ On the **All requests** tab, you can click **Follow** for an app to be informed 
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/follow.png" >}}
 
-## 7 Viewing & Updating Tickets
+## 7 Viewing and Updating Tickets
 
 From the overview, you can easily open a specific request, or you can search for a request by using the **Search** option. Once you have opened a ticket, you can add comments to the ticket assignee or add new attachments.
 

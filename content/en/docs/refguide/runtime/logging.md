@@ -87,7 +87,6 @@ This list is currently incomplete and is being updated.
 | Services | |
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
-| StorageSwift | |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | |
 | Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, such as a start or an end of a workflow, execution of workflow actions, and errors that occur during the execution. |

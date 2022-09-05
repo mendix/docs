@@ -10,13 +10,13 @@ tags: ["marketplace", "marketplace component", "widget", "feedback", "platform s
 {{% alert color="warning" %}}
 **All Mendix Feedback widgets with versions lower than 8.4.0 are deprecated. If you are using one of these versions, please download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
 
-We will disable widgets with versions below 8.4.0 on October 1st, 2022. The feedback provided by users via the widget will no longer be sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
+We will disable widgets with versions below 8.4.0 on October 1st, 2022. The feedback provided via the widget will no longer be sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
 Please make sure to upgrade your Mendix Feedback widget to the latest version compatible with your app before October 1st, 2022.
 
 If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher.
 
-In case of any questions please contact [Mendix Support](https://support.mendix.com/hc/en-us).
+In case of any questions, please contact [Mendix Support](https://support.mendix.com/hc/en-us).
 {{% /alert %}}
 
 ## 1 Introduction

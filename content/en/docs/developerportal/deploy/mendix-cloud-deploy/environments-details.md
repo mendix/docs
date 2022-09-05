@@ -220,7 +220,7 @@ On this tab, you can manage the elements described below.
 
 ### 4.1 Custom Domains
 
-* **Domainname**
+* **Domain name**
 * **Certificate**
 * **Expire** date
 

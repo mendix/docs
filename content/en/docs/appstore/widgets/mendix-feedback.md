@@ -7,6 +7,19 @@ tags: ["marketplace", "marketplace component", "widget", "feedback", "platform s
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+**All Mendix Feedback widgets with versions lower than 8.4.0 are deprecated. We have built a new Mendix Feedback widget and Feedback API to replace this deprecated version. Please download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
+
+We will switch off the old Feedback API on October 1st, 2022, which means that Mendix Feedback widget versions lower than 8.4.0 will stop working on that date. The feedback provided by users via the widget will no longer be sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
+
+Please make sure you upgrade your Mendix Feedback widget to the latest version compatible with your app before October 1st, 2022.
+
+If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher.
+
+In case of any questions please contact [Mendix Support](https://support.mendix.com/hc/en-us).
+{{% /alert %}}
+
+
 ## 1 Introduction
 
 The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.

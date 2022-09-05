@@ -3,9 +3,7 @@ title: "Indentation & Spacing Test"
 url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
 description: "Various test cases for rendering of indents and spaces"
-banner: >
-    This is a draft and will not be rendered in the production website. 
-    Use this page to test how spacing and indents will render with various elements and shortcodes.
+banner: "This is a draft and will not be rendered in the production website. Use this page to test how spacing and indents will render with various elements and shortcodes."
 ---
 
 ## Heading 2

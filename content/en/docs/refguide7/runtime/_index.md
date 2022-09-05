@@ -2,7 +2,6 @@
 title: "Mendix Runtime"
 url: /refguide7/runtime/
 weight: 40
-hide_feedback: true
 ---
 
 ## 1 Introduction

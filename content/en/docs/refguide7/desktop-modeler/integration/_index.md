@@ -2,7 +2,6 @@
 title: "Integration"
 url: /refguide7/integration/
 category: "Desktop Modeler"
-hide_feedback: true
 ---
 
 

@@ -2,7 +2,6 @@
 title: "Testing"
 url: /howto7/testing/
 weight: 100
-hide_feedback: true
 tags: ["test", "testing"]
 ---
 

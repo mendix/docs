@@ -5,7 +5,6 @@ description: "These introductory how-to's describe Mendix Studio Pro basics and 
 weight: 10
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["studio pro", "how-to", "general"]
 ---
 

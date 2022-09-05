@@ -3,7 +3,6 @@ title: "Studio 9 Guide"
 url: /studio/
 tags: ["studio", "web modeler"]
 weight: 20
-hide_feedback: true
 cascade:
     - space: "Studio 9 Guide"
     - mendix_version: "9"

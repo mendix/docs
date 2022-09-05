@@ -3,7 +3,6 @@ title: "Mendix Platform SDK"
 url: /apidocs-mxsdk/mxsdk/
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["sdk", "platform sdk", "model sdk"]
 ---
 

@@ -5,7 +5,6 @@ description: "Presents details on the connectors available in the Mendix Marketp
 weight: 40
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["marketplace", "marketplace component", "connector"]
 ---
 

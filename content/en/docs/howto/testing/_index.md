@@ -4,7 +4,6 @@ url: /howto/testing/
 weight: 100
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["test", "testing"]
 ---
 

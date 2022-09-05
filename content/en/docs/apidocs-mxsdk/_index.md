@@ -5,7 +5,6 @@ description: "Presents the Mendix API documentation as well as the documentation
 weight: 50
 no_list: false
 description_list: true
-hide_feedback: true
 cascade:
     - space: "APIs & SDK"
     - mendix_version: ""

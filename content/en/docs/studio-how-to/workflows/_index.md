@@ -3,7 +3,6 @@ title: "Workflows"
 url: /studio-how-to/workflows/
 description: "A landing page for Studio how-to's on workflows."
 weight: 05
-hide_feedback: true
 tags: ["studio", "workflow", "how-to"]
 ---
 

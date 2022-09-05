@@ -2,7 +2,6 @@
 title: "Collaboration"
 url: /studio8/collaboration/
 weight: 100
-hide_feedback: true
 description: "Describes collaborative development and Buzz in Mendix Studio."
 tags: ["studio", "data", "working with data", "work with data"]
 ---

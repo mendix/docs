@@ -2,7 +2,6 @@
 title: "Front End"
 url: /howto7/front-end/
 weight: 20
-hide_feedback: true
 ---
 
 ## 1 Introduction 

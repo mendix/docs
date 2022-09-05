@@ -5,7 +5,6 @@ description: "Describes the main tools that Mendix maintains to support the awes
 weight: 25
 no_list: false 
 description_list: true
-hide_feedback: true
 tags: ["community", "documentation", "profile", "partner", "forum", "mvp"]
 ---
 

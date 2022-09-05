@@ -2,7 +2,6 @@
 title: "General Info"
 url: /refguide8/general/
 weight: 10
-hide_feedback: true
 tags: ["studio pro"]
 ---
 

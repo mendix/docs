@@ -4,7 +4,6 @@ url: /addons/apd-addon/
 weight: 20
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["apd", "application test monitor", "application performance diagnostics"]
 aliases:
     - /addons/apm-addon/index.html

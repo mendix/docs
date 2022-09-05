@@ -4,7 +4,6 @@ url: /addons/ats-addon/
 weight: 10
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["ats", "application test suite", "clevr"]
 ---
 

@@ -5,7 +5,6 @@ description: "Presents details on the app services available in the Mendix Marke
 weight: 30
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["marketplace", "marketplace component", "app service"]
 ---
 

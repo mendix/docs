@@ -5,7 +5,6 @@ description: "How to create content for the Mendix Marketplace."
 weight: 20
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["marketplace", "content", "app service", "solution"]
 ---
 

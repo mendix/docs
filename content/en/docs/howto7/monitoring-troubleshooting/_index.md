@@ -2,7 +2,6 @@
 title: "Monitoring & Troubleshooting"
 url: /howto7/monitoring-troubleshooting/
 weight: 110
-hide_feedback: true
 tags: ["monitoring", "troubleshooting"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

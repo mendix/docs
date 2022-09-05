@@ -4,7 +4,6 @@ url: /howto/front-end/
 weight: 30
 no_list: false
 description_list: true
-hide_feedback: true
 tags: ["studio pro"]
 ---
 

@@ -6,7 +6,6 @@ tags: ["studio pro"]
 weight: 65
 no_list: false
 description_list: true
-hide_feedback: true
 cascade:
     - space: "Studio Pro 8 How-tos"
     - mendix_version: "8"

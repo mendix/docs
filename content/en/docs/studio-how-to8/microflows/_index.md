@@ -3,7 +3,6 @@ title: "Microflows"
 url: /studio-how-to8/microflows/
 description: "A landing page for Studio how-to's on microflows."
 weight: 50
-hide_feedback: true
 tags: ["studio", "microflow", "how-to"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Mendix Product Naming Guide - moved"
+title: "PNG - moved"
 url: /product-naming/
 draft: true
 weight: 95

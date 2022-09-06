@@ -41,11 +41,11 @@ Before you continue, make sure that you know how to create the following:
 3. Create menu items to access the **Customer** and the **Order** overview pages.
 4. Add the following customer data to your app:
 
-    {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581376.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581376.png" >}}
 
 5. Add the following order data to your app:
 
-    {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581375.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581375.png" >}}
 
 ## 3 Filtering the Orders List Using the Search Bar
 
@@ -119,7 +119,7 @@ In the previous two sections, you used single constraints to constrain the data 
 
 2. Run your application to see orders which are either 'Open' or have a total price higher than or equal to 50.00.
 
-    {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581375.png" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581375.png" >}}
 
 3. To constrain the results in the orders list to orders which are 'Open' and have a minimum price of 50.00, you have to insert an `and` statement in the XPath constraint: `[OrderStatus = 'Open'] and [TotalPrice >= 50]`.
 

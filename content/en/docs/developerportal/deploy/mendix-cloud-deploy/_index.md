@@ -256,7 +256,7 @@ The Premium resource packs listed below can only be purchased with a Premium pla
 | XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
 | XXXL21 | 64 GB | 16 | 64 GB | 8 | 320 GB | 640 GB |
 
-The legacy cloud resource packs listed below are still being used but are not available to new customers.
+The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -86,7 +86,7 @@ In the previous section, you used the search bar to filter data on the **Orders*
 1. Select the **Orders** data grid to open its **Properties** pane.
 2. Change **Data source** > **Type** to **XPath** and then click the **XPath Constraint** field:
 
-    {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581372.png" width="800px">}}
+    {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/18581372.png" width="500px">}}
 
 3. Enter the following expression in the **XPath Constraint** editor: `[OrderStatus = ‘Open’]`. The data grid will now only show orders with the status ‘Open’. 
 

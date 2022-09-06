@@ -45,8 +45,8 @@
               <a data-proofer-ignore href="{{ $editURL }}" target="_blank"><img class="my-icon" src="/icons/content-paper-edit.svg" title="View on Github"></a>
           </div>
           <div class="col-3">
-              <!-- NK - changed icon properties -->
-              <a href="{{ $issuesURL }}" target="_blank"><img class="my-icon" src="/icons/messages-bubble-text-1.svg" title="Leave feedback"></a>
+              <!-- NK - changed icon properties, added class name for feedback widget -->
+              <a href="{{ $issuesURL }}" target="_blank" class="feedback-issue"><img class="my-icon" src="/icons/messages-bubble-text-1.svg" title="Leave feedback"></a>
               <!-- NK - deactivated icon for project issue -->
               {{/* {{ with $gh_project_repo -}}
                 {{ $project_issueURL := printf "%s/issues/new" . -}}

@@ -194,8 +194,8 @@ The **Material** tab contains properties for configuring appearance:
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/interaction-tab.png" alt="Interaction tab"   width="400"  >}}
 
 * **Dragging** – allows a user to move an object by moving their phone, the object will follow on the floor/desk/etc in the middle of the screen. 
-* **Enable dragging** - dictates if the dragging behaviour is enabled, you could for example enable and disable this when the user clicks on the object using the **On click** event in the **Events** tab.
-* **Dragging type** – the type of dragging behaviour you want, **Fixed  Distance** will make the object follow you at always the same distance as it started. **Fixed to world** will make the object stick to the world, for example objects like floors, desks, walls etc.
+* **Enable dragging** - dictates if the dragging behavior is enabled, you could for example enable and disable this when the user clicks on the object using the **On click** event in the **Events** tab.
+* **Dragging type** – the type of dragging behavior you want, **Fixed  Distance** will make the object follow you at always the same distance as it started. **Fixed to world** will make the object stick to the world, for example objects like floors, desks, walls etc.
 * **On drag** – an event that is triggered when the object is has started or stopped moving through dragging:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/dragging.gif" alt="Dragging gif"   width="400"  >}}

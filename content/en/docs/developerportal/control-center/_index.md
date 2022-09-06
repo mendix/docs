@@ -213,15 +213,13 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Subscriptions {#subscriptions}
-
-{{% todo %}}1. Check if the order of the sections reflect the final product. 2. Check whether the final name of the menu item is Subscriptions. 3. Add a screenshot of the final page.{{% /todo %}}
+## 11 Billing Accounts {#billing-accounts}
 
 Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
 
 {{< figure src="/attachments/developerportal/control-center/billing-accounts-page.png" alt="billing accounts page" >}}
 
-The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list.
+The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
 
 You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
 

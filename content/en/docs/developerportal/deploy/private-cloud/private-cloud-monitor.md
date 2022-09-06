@@ -386,15 +386,6 @@ In addition, this dashboard will display Mendix app and Runtime logs.
 and which addons are installed, some labels or metrics might be missing or have a different name.
 The reference dashboards are compatible with Prometheus installed as described in [Installing Monitoring Tools](#install-grafana-loki), above.{{% /alert %}}
 
-{{% alert color="warning" %}}
-Mendix for Private Cloud uses a `m2ee-metrics` sidecar that collects metrics from the [admin port](/refguide/monitoring-mendix-runtime/) and translates them into a format supported by Prometheus.
-This approach works with all Mendix versions, starting from Mendix 7.23.
-
-Mendix 9.6 introduces native [Prometheus metrics](/refguide/metrics/). 
-The Mendix Runtime Prometheus metrics are not yet supported by Mendix for Private Cloud.
-The reference dashboard provided in this document will not be compatible with the native Mendix 9.6 metrics.
-{{% /alert %}}
-
 ### 4.1 Import the Dashboard{#import-dashboard}
 
 To install the reference dashboard, download the dashboard JSON to a local file using the links below.

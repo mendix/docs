@@ -11,7 +11,7 @@ aliases:
 
 Working with augmented reality (AR) is not all that different from implementing any other piece of Native functionality. Using just a few widgets, you can add two-or-three dimensional AR to your native mobile application. In this guide you will make a 3D cube by dragging and dropping widgets into your Mendix app and then configuring them.
 
-## 2 Prerequisites
+## 2 Prerequisites {#prerecs}
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -177,7 +177,7 @@ The **Material** tab contains properties for configuring appearance:
 
 * **Lighting type** – the way light from the scene will fall on your object. 
     * **Simple** is the standard **Lighting Type**, this is not very realistic but will make the object visible and is the easiest to work with. 
-    * **Realistic** lighting is the more advanced option, it takes a reflection image into account. You have to supply this image in the **Container (AR)** widget (see Prerequisites).
+    * **Realistic** lighting is the more advanced option, it takes a reflection image into account. You have to supply this image in the **Container (AR)** widget (see the [Prerequisites](#prerecs) section above).
 
     Here is a cube with **Lighting type** > **Simple**:
 
@@ -193,9 +193,11 @@ The **Material** tab contains properties for configuring appearance:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/interaction-tab.png" alt="Interaction tab"   width="400"  >}}
 
-* **Dragging** – allows a user to move an object by moving their phone, the object will follow on the floor/desk/etc in the middle of the screen. 
-* **Enable dragging** - dictates if the dragging behavior is enabled, you could for example enable and disable this when the user clicks on the object using the **On click** event in the **Events** tab.
-* **Dragging type** – the type of dragging behavior you want, **Fixed  Distance** will make the object follow you at always the same distance as it started. **Fixed to world** will make the object stick to the world, for example objects like floors, desks, walls etc.
+* **Dragging** – allows a user to move an object by moving their phone (the object will follow on the floor, desk, or other surface in the middle of the screen). 
+* **Enable dragging** - dictates if the dragging behavior is enabled. For example, you could enable and disable this when the user clicks on the object using the **On click** event in the **Events** tab.
+* **Dragging type** – specifies the type of dragging behavior:
+    * **Fixed  Distance**: makes the object follow you at always the same distance as it started
+    * **Fixed to world**: makes the object stick to the world, for example objects like floors, desks, and walls 
 * **On drag** – an event that is triggered when the object is has started or stopped moving through dragging:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/dragging.gif" alt="Dragging gif"   width="400"  >}}

@@ -19,7 +19,7 @@ To enter the **Environment Details** page, go to the [Developer Portal](http://s
 
 ## 2 General Tab
 
-The contents of the **General** tab depend on the Mendix Cloud version on which the app is hosted. By default, apps are deployed to the [Mendix Cloud v4](/developerportal/deploy/mxcloudv4/), but some older apps may still run on the deprecated Mendix Cloud v3. For more information on the differences between Mendix Cloud v3 and v4, as well as migrating your app to the latest Cloud version, see [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/).
+The contents of the **General** tab depend on the Mendix Cloud version on which the app is hosted. By default, apps are deployed to [Mendix Cloud v4](/developerportal/deploy/mxcloudv4/), but some older apps may still run on the deprecated Mendix Cloud v3. For more information on the differences between Mendix Cloud v3 and v4, as well as migrating your app to the latest Cloud version, see [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/).
 
 In this tab, you can find the following information about your environment:
 
@@ -30,7 +30,7 @@ In this tab, you can find the following information about your environment:
     * Red – the environment is not working correctly
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-status.png" alt="The symbol displaying the environment status is located under the name of the environment" >}}   
 * **Running since** – the date on which the app was started
-* **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see [Naming of Environments](#naming)
+* **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
 * **Project ID** – the unique identifier of your app
 * **Environment ID** – the unique identifier of this environment
@@ -38,7 +38,7 @@ In this tab, you can find the following information about your environment:
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Mendix Studios Target** – if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 * **Plan** – for Mendix Cloud v4, this indicates the type of plan covered by this license
-* **Instances** – for Mendix Cloud v4, this shows a summary of the number and memory allocation of instances of this environment - for more information, see [Scaling - Mendix Cloud v4](#scaling)
+* **Instances** – for Mendix Cloud v4, this shows a summary of the number and memory allocation of instances of this environment - for more information, see the [Scaling - Mendix Cloud v4](#scaling) section below
 * **Database Status** – for Mendix Cloud v3, this shows the status of the database; by default, the status is Running
 * **Database Version** – the PostgreSQL version supporting the database
 * **Region** – the region where the app is hosted

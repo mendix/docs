@@ -3,7 +3,7 @@ title: "Metrics"
 url: /developerportal/operate/metrics/
 category: "Operations"
 weight: 10
-description: "This page describes the Metrics page of the Developer Portal."
+description: "Describes how to monitor the performance and health of your app."
 tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,7 +11,7 @@ tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Porta
 
 ## 1 Introduction
 
-On the **Metrics** page you can monitor the performance and health of your App. The Metrics page is divided into three tabs, each of which is described below.
+On the **Metrics** page you can monitor the performance and health of your app. The Metrics page is divided into three tabs, each of which is described below.
 
 ## 2 Trends
 

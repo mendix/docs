@@ -29,7 +29,7 @@ To use the **BAPI Connector for SAP Solutions** you need the following:
 1. An SAP back-end system (for example SAP Business Suite, SAP S/4HANA, or SAP S/4HANA Cloud) which has Remote Function Modules/BAPI enabled.
 2. Access to the SAP System over the network from where the Mendix application is deployed.
 3. Mendix Studio Pro version 8.18.10 or above.
-4. At least 1GB memory per instance if running on SAP BTP.
+4. At least 1 GB memory per instance if running on SAP BTP.
 
 ## 3 Developing using the BAPI Connector for SAP Solutions
 
@@ -260,5 +260,5 @@ See [How to Use the Model Creator for SAP Integrations](/partners/sap/use-sap-mo
 3. The BAPI Connector for SAP Solutions is limited to discovering and using a SAP BAPI. It cannot be used for invoking Remote-enabled Function Modules (RFMs).
 
 {{% alert color="info" %}}
-Minimum 1GB memory per instance is required to run application on SAP BTP.
+Minimum 1 GB memory per instance is required to run application on SAP BTP.
 {{% /alert %}}

@@ -292,7 +292,9 @@ The output is of type Decimal:
 15.625
 ```
 
-Calculation of 'pow' with a decimal power might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
+{{% alert color="info" %}}
+Calculation of `pow` with a decimal power might be less accurate, as the standard Java/Javascript libraries do not support these calculations with high precision. Use a specialized library in a custom Java/Javascript action if high precision is required for this case.
+{{% /alert %}}
 
 ### 8.4 (square) root
 

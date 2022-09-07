@@ -164,7 +164,7 @@ To provide more clarity for Studio and Studio Pro users you can specify a toolbo
 
 When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. It is possible to specify different categories for Studio and Studio Pro. When only the Studio Pro category is specified, then that category is also used in Studio.
 
-A category can by provided through `studioCategory` and `studioProCategory` tags:
+A category can be provided through `studioCategory` and `studioProCategory` tags:
 
 ```xml
    <studioProCategory>Open Street Maps</studioProCategory>

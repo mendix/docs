@@ -1,7 +1,7 @@
 ---
 title: "Mendix Support"
 url: /developerportal/support/
-description: ""
+description: "Provides information on how to obtain support for your Mendix apps."
 weight: 30
 no_list: false 
 description_list: true
@@ -242,9 +242,3 @@ This includes the implementation and configuration of features, and the data and
 These components are not accessible for Mendix Support and issues in the application are out of the scope of Mendix Support, although we will gladly assist in case of questions.
 
 ## 11 Documents in This Category
-
-* [Prepare Your App for Support](/developerportal/support/prepare-your-app/) – shows you how to configure app authorization to select the affected app(s) in the Mendix Support Portal
-* [Submit a Support Request](/developerportal/support/submit-support-request/) – presents the details necessary for Mendix Support to process your request
-* [Make a New App Node Request](/developerportal/support/new-app-node-request-template/) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
-* [Support Ticket Priority](/developerportal/support/ticket-priority/) – describes how priority levels are determined for Mendix Support
-* [Support Escalation Process](/developerportal/support/escalation-management-process/) – describes how a support request can be escalated to bring your issue to closure

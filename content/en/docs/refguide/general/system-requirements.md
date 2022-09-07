@@ -33,11 +33,19 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 ### 2.1 Firewall Settings
 
-Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to whitelist them.
+Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to whitelist them:
 
 * `*.mendix.com`
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
+
+To run a Mendix app, Mendix Studio Pro uses the following ports by default. If your firewall is blocking these, you will need to open them:
+
+* 8080: runtime port
+* 8083: mobile packager
+* 8090: admin port
+
+For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
 ### 2.2 TortoiseSVN
 

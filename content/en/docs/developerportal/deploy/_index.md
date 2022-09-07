@@ -1,9 +1,8 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
+description: "Describes the deployment section of the Developer Portal: how to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 10
-description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
-weight: 5
 no_list: false 
 description_list: true
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment", "Mendix Cloud Dedicated"]
@@ -104,7 +103,7 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 
 ## 12 Mendix Applications on Industrial Edge
 
-You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shop floor. Thus enables the extensions of automation, deployment of demanding streamprocessing and learning algorithms as well as the hosting from integration code to site automation.
+You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shop floor. Thus enables the extensions of automation, deployment of demanding stream processing and learning algorithms as well as the hosting from integration code to site automation.
 
 To find out how to do this, read [Mendix Applications on Industrial Edge](/developerportal/deploy/mendix-app-on-industrial-edge/).
 

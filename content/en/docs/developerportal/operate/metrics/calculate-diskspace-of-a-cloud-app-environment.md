@@ -27,7 +27,7 @@ Each Mendix environment consists of an application server (app-node) and a datab
 All Mendix Cloud environments are running on an **'S'** container by default.
 An **'S'** container consists of:
 
-* 10GB disk space
+* 10 GB disk space
 * 1 GB Mx RAM
 * 1 GB DB RAM
 

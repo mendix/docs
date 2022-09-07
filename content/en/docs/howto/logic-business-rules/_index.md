@@ -2,8 +2,8 @@
 title: "Logic & Business Rules"
 url: /howto/logic-business-rules/
 weight: 60
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 tags: ["studio pro", "how-to"]
 ---
 

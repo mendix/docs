@@ -3,12 +3,12 @@ title: "Data Hub Guide"
 url: /data-hub/
 description: "This guide describes Mendix Data Hub for finding and sharing enterprise data assets."
 weight: 40
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 cascade:
     - space: "Data Hub Guide"
     - mendix_version: ""
-tags: ["data hub", "data hub catalog", "data hub landscape", "external entities"]
+tags: ["data hub", "data hub catalog", "data hub landscape", "external entities", "external users"]
 aliases:
     - /data-hub/data-catalog/index.html
 ---
@@ -56,6 +56,10 @@ A Mendix Admin can do the following:
 * Access all the registered assets in the Data Hub Catalog for the organization
 
 For more information, see the [Data Hub](/developerportal/control-center/#data-hub) section of *Control Center*. 
+
+#### 3.2.1 External Users
+
+Mendix Admins can add **External Users** to their company's Catalog. See the [External Users](/developerportal/control-center/data-hub-admin/#external-users) section in *Data Hub Administration*.
 
 ### 3.3 Data Hub Curator {#curator}
 

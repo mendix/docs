@@ -14,7 +14,7 @@ aliases:
 
 Expressions change a value based on a function or combination of functions. 
 
-Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`).
+Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`). Expressions can also include Mendix system items which contain information about the current user session. See [System Items](#system-items), below.
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
@@ -60,11 +60,31 @@ This way the first statement gets evaluated.
 
 [Regular Expression](/refguide/regular-expressions/) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings is the same as the ones described in the [Expression](/refguide/regular-expressions/#expression) section of *Regular Expressions*.
 
-## 2 Unary Expressions
+## 2 System Items{#system-items}
+
+Mendix provides you with a number of system items which describe the current user's session. You can use these in the same way as any other named item.
+
+### 2.1 $currentUser
+
+This is an object of type `System.User` which contains the attributes for the currently signed-in user.
+
+{{% alert color="warning" %}}
+For performance reasons, this information is cached. If you need the current value of attributes which might have changed during the session, you should retrieve the latest data from the database.
+{{% /alert %}}
+
+### 2.2 $currentSession
+
+This is an object of type `System.Session` which contains the attributes for the current user session.
+
+{{% alert color="warning" %}}
+For performance reasons, this information is cached. If you need the current value of attributes which might have changed during the session, you should retrieve the latest data from the database.
+{{% /alert %}}
+
+## 3 Unary Expressions
 
 * [Unary minus ( - )](/refguide/unary-expressions/)
 
-## 3 Arithmetic Expressions
+## 4 Arithmetic Expressions
 
 * [Multiplication ( * )](/refguide/arithmetic-expressions/)
 * [Division ( div or : )](/refguide/arithmetic-expressions/)
@@ -72,7 +92,7 @@ This way the first statement gets evaluated.
 * [Addition ( + )](/refguide/arithmetic-expressions/)
 * [Subtraction ( - )](/refguide/arithmetic-expressions/)
 
-## 4 Relational Expressions
+## 5 Relational Expressions
 
 * [Less than ( < )](/refguide/relational-expressions/)
 * [Greater than ( > )](/refguide/relational-expressions/)
@@ -81,23 +101,23 @@ This way the first statement gets evaluated.
 * [Is equal to ( = )](/refguide/relational-expressions/)
 * [Is not equal to ( != )](/refguide/relational-expressions/)
 
-## 5 Special Checks
+## 6 Special Checks
 
 * [Checking for an empty object](/refguide/special-checks/)
 * [Checking for an empty object member](/refguide/special-checks/)
 * [`isNew`](/refguide/special-checks/) – checks whether an object is new
 
-## 6 Boolean Expressions
+## 7 Boolean Expressions
 
 * [and](/refguide/boolean-expressions/)
 * [or](/refguide/boolean-expressions/)
 * [not](/refguide/boolean-expressions/)
 
-## 7 If Expressions
+## 8 If Expressions
 
 * [if](/refguide/if-expressions/) – performs a conditional action
 
-## 8 Mathematical Function Calls
+## 9 Mathematical Function Calls
 
 * [`max`](/refguide/mathematical-function-calls/) – the maximum of a list of numbers
 * [`min`](/refguide/mathematical-function-calls/) – the minimum of a list of numbers
@@ -108,7 +128,7 @@ This way the first statement gets evaluated.
 * [`pow`](/refguide/mathematical-function-calls/) – the exponentiation
 * [`abs`](/refguide/mathematical-function-calls/) – the absolute value
 
-## 9 String Function Calls
+## 10 String Function Calls
 
 * [`toUpperCase`](/refguide/string-function-calls/) – converts the string to upper-case
 * [`toLowerCase`](/refguide/string-function-calls/) – converts the string to lower-case
@@ -127,12 +147,12 @@ This way the first statement gets evaluated.
 * [`urlEncode`](/refguide/string-function-calls/) – converts a string to be used in a URL
 * [`urlDecode`](/refguide/string-function-calls/) – converts a string back from a URL
 
-## 10 Date Creation
+## 11 Date Creation
 
 * [`dateTime`](/refguide/date-creation/) – creating a date value using the server's calendar
 * [`dateTimeUTC`](/refguide/date-creation/) – creating a date value using the UTC calendar
 
-## 11 Between Date Function Calls
+## 12 Between Date Function Calls
 
 * [`millisecondsBetween`](/refguide/between-date-function-calls/) – the milliseconds between two dates
 * [`secondsBetween`](/refguide/between-date-function-calls/) – the seconds between two dates
@@ -143,7 +163,7 @@ This way the first statement gets evaluated.
 * [`calendarMonthsBetween`](/refguide/between-date-function-calls/) - the months between two dates
 * [`calendarYearsBetween`](/refguide/between-date-function-calls/) - the years between two dates
 
-## 12 Add Date Function Calls
+## 13 Add Date Function Calls
 
 * [`addMilliseconds`](/refguide/add-date-function-calls/) – adds milliseconds to a date
 * [`addSeconds`](/refguide/add-date-function-calls/) – adds seconds to a date
@@ -160,7 +180,7 @@ This way the first statement gets evaluated.
 * [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
 * [`addYearsUTC`](/refguide/add-date-function-calls/) – adds years to a date using the UTC calendar
 
-## 13 Subtract Date Function Calls
+## 14 Subtract Date Function Calls
 
 * [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
 * [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
@@ -177,7 +197,7 @@ This way the first statement gets evaluated.
 * [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
 * [`subtractYearsUTC`](/refguide/subtract-date-function-calls/) – subtracts years from a date using the UTC calendar
 
-## 14 Trim to Date
+## 15 Trim to Date
 
 * [`trimToSeconds`](/refguide/trim-to-date/) – trims to seconds
 * [`trimToMinutes`](/refguide/trim-to-date/) – trims to minutes
@@ -190,20 +210,20 @@ This way the first statement gets evaluated.
 * [`trimToYears`](/refguide/trim-to-date/) – trims to years
 * [`trimToYearsUTC`](/refguide/trim-to-date/) – trims to years using the UTC calendar
 
-## 15 To String
+## 16 To String
 
 See [To String](/refguide/to-string/) for details.
 
-## 16 Parse Integer
+## 17 Parse Integer
 
 See [Parse Integer](/refguide/parse-integer/) for details.
 
-## 17 Parse and Format Decimal Function Calls
+## 18 Parse and Format Decimal Function Calls
 
 * [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string
 
-## 18 Parse and Format Date Function Calls
+## 19 Parse and Format Date Function Calls
 
 * [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a string to a date value
 * [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string
@@ -212,7 +232,7 @@ See [Parse Integer](/refguide/parse-integer/) for details.
 * [`dateTimeToEpoch`](/refguide/parse-and-format-date-function-calls/) – converts a date to a long
 * [`epochToDateTime`](/refguide/parse-and-format-date-function-calls/) – converts a long to a date
 
-## 19 Enumerations in Expressions
+## 20 Enumerations in Expressions
 
 * [`getCaption`](/refguide/enumerations-in-expressions/) – gets the caption of an enumeration value in current language
 * [`getKey`](/refguide/enumerations-in-expressions/) – gets the technical name of an enumeration value

@@ -2,8 +2,8 @@
 title: "Testing"
 url: /howto/testing/
 weight: 100
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 tags: ["test", "testing"]
 ---
 

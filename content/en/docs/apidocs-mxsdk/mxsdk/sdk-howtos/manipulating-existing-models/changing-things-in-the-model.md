@@ -28,7 +28,7 @@ function createEntity(domainModel: domainmodels.DomainModel, entityName: string,
     const newEntity = domainmodels.Entity.createIn(domainModel);
     newEntity.name = entityName;
 
-    // location on the canvas in the Mendix Studio Pro:
+    // location in the Mendix Studio Pro working area:
     newEntity.location = { x: 100, y: 100 };
 
     // new attribute (which is by default a string attribute):

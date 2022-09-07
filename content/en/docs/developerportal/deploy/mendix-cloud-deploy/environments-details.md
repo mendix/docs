@@ -38,7 +38,7 @@ In this tab, you can find the following information about your environment:
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Mendix Studios Target** – if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 * **Plan** – for Mendix Cloud v4, this indicates the type of plan covered by this license
-* **Instances** – for Mendix Cloud v4, this shows a summary of the number and memory allocation of instances of this environment - for more information, see the [Scaling - Mendix Cloud v4](#scaling) section below
+* **Instances** – for Mendix Cloud v4, this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud v4](#scaling) section below
 * **Database Status** – for Mendix Cloud v3, this shows the status of the database; by default, the status is Running
 * **Database Version** – the PostgreSQL version supporting the database
 * **Region** – the region where the app is hosted
@@ -68,12 +68,12 @@ During a [maintenance window](/developerportal/deploy/maintenance-windows/), you
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is always enabled. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/).
+* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is always enabled. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
 
 #### 2.1.2 Actions Specific to Mendix Cloud v3
 
 {{% alert color="warning" %}}
-Our Mendix Cloud v3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud v4. To learn more about Mendix Cloud v4 and how to migrate from Mendix Cloud v3, see [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/). 
+Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud v4. To learn more about Mendix Cloud v4 and how to migrate from Mendix Cloud v3, see [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v3.png" alt="A screenshot of the available actions with v3-specific actions on the bottom">}}
@@ -81,7 +81,7 @@ Our Mendix Cloud v3 is deprecated, currently in a grace period, and will be reti
 In Mendix Cloud v3 environments, you have two additional action buttons:
 
 * **View Current Log**
-* **Enable/Disable Debugging** – Enables or disables the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/).
+* **Enable/Disable Debugging** – Enables or disables the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
 
 #### 2.1.3 Clearing an Environment {#clear-environment}
 
@@ -139,7 +139,7 @@ If you have 1 GB RAM of the **Total Allocated Memory**, you have one instance av
 
 ### 2.4 Overviews {#overviews}
 
-At the bottom of the page, there are three overview grids with information about the deployment package details, plan details, and licence.
+At the bottom of the **Environment Details** page, there are three overview grids with information about the deployment package details, plan details, and license.
 
 #### 2.4.1 Deployment Package Details
 
@@ -151,7 +151,7 @@ In this section, you can find information about the deployment package that is c
 * **Size (MB)** of the deployment package
 * **Upload date** of the deployment package
 
-#### 2.4.2 Plan Details - Mendix Cloud v4
+#### 2.4.2 Plan Details – Mendix Cloud v4
 
 This section shows details of the plan which applies to this environment.
 
@@ -228,7 +228,7 @@ On this tab, you can manage the elements described below.
 
 You can perform the following actions:
 
-* **Create** (in which you have to provide the domain name and select the certificate from a drop-down menu)
+* **Create** – provide the domain name and select the certificate from a drop-down menu
 * **Edit**
 * **Delete**
 
@@ -246,13 +246,13 @@ The deprecated Mendix Cloud v3 only supports X-Frame-Options. Mendix Cloud v4 su
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
-| Access-Control-Allow-Origin | Indicates whether the response can be shared with requesting code from the given origin | |
-| Content-Security-Policy | Allows web site administrators to control resources the user agent is allowed to load for a given page | Requires a string value.<br/>See [Content Security Policy](#csp), below, for more information. |
-| Referrer-Policy | Governs which referrer information should be included with requests made | |
-| X-Content-Type-Options | Indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
-| X-Frame-Options | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an iframe. <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
-| X-Permitted-Cross-Domain-Policies | Specifies whether this page can load resources from a different domain | |
-| X-XSS-Protection | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks | |
+| Access-Control-Allow-Origin | Indicates whether the response can be shared with requesting code from the given origin. |
+| Content-Security-Policy | Allows web site administrators to control resources the user agent is allowed to load for a given page. Requires a string value.<br/>See [Content Security Policy](#csp), below, for more information. |
+| Referrer-Policy | Governs which referrer information should be included with requests made. |
+| X-Content-Type-Options | Indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
+| X-Frame-Options | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>`. The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an iframe. <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
+| X-Permitted-Cross-Domain-Policies | Specifies whether this page can load resources from a different domain. |
+| X-XSS-Protection | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. |
 
 There are three types of value for these headers:
 
@@ -297,22 +297,22 @@ To avoid security issues when you want to embed the app in an iframe, we recomme
 
 ##### 4.2.2.2 Applying a Different SameSite Setting
 
-From Mendix version 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
+From Studio Pro version 8.12, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
 
-* For Mendix version 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
-* For Mendix version 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
+* For Studio Pro version 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
+* For Studio Pro version 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
 
 For Mendix versions below 8.12, there was no SameSite value set on cookies, and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
-The SAMESITE_COOKIE_PRE_MX812 setting is implemented the next time your app is deployed after you apply the change.
+The **SAMESITE_COOKIE_PRE_MX812** setting is implemented the next time your app is deployed after you apply the change.
 {{% /alert %}}
 
-##### 4.2.2.3 Using Custom Sign In Pages
+##### 4.2.2.3 Using Custom Sign-In Pages
 
-If you use a custom sign in page, the `originURI` cookie is normally set by your *index.html*. If your Mendix app runs within an iframe, this cookie needs to be set with the `SameSite=None` and `Secure` attributes.
+If you use a custom sign-in page, the `originURI` cookie is normally set by your *index.html*. If your Mendix app runs within an iframe, this cookie needs to be set with the `SameSite=None` and `Secure` attributes.
 
 To do this, find all the places in your theme folder where this cookie is set. It looks like `document.cookie = "originURI=/login.html"`.
 Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "")`.
@@ -346,11 +346,11 @@ You can add or edit a number of different IP address and port combinations. Any 
 
 For each range where you define whitelisted IP addresses and ports, you can enter the following information:
 
-* **Name** – enter a name to identify this range, for example, *192 Group*.
-* **IP** – specify an inclusive range of whitelisted IP addresses in IPv4 format, for example, *192.168.10.1* to *192.168.10.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same.
-* **Port** – specify an inclusive range of ports which are whitelisted for the IP range above, for example, *80* to *5000*. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range.
-* **Protocol** – select whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic.
-* **Description** – enter an optional description of this IP range, for example which API it supports.
+* **Name** – Enter a name to identify this range, for example, *192 Group*.
+* **IP** – Specify an inclusive range of whitelisted IP addresses in IPv4 format, for example, *192.168.10.1* to *192.168.10.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same.
+* **Port** – Specify an inclusive range of ports which are whitelisted for the IP range above, for example, *80* to *5000*. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range.
+* **Protocol** – Select whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic.
+* **Description** – Enter an optional description of this IP range, for example which API it supports.
 
 Click **Save** to save your range. The new values are applied within a few minutes without needing an app restart.
 
@@ -436,7 +436,7 @@ On this tab, you can add **Custom Runtime Settings** and **Custom Environment Va
 
 ### 6.1 Custom Runtime Settings {#custom-runtime-settings}
 
-Use the Custom Runtime Settings section to perform the following actions:
+Use the **Custom Runtime Settings** section to perform the following actions:
 
 * **Add** a new runtime setting with a new value
 * **Edit** the runtime setting
@@ -444,7 +444,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 
 For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings/) and [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings/) documentation.
 
-The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are not configurable by users:
+Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are not configurable by users:
 
 * `CACertificates`
 * `ClientCertificatePasswords`
@@ -526,8 +526,8 @@ Tags serve two purposes:
 * Custom tags can be added to metrics for third-party metrics solutions
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
 
-For example, you may wish to use tags when logging with Datadog. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the Datadog site.
+For example, you may wish to use tags when logging with Datadog. For more information, see [Getting started with tags](https://docs.datadoghq.com/tagging/).
 
 ## 9 Services Tab {#services}
 
-You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its Technical Contact. For more information, see [Services](/developerportal/deploy/environments/#services).
+You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).

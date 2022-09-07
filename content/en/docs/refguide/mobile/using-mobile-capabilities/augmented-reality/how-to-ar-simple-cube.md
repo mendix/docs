@@ -26,7 +26,7 @@ For iOS:
 * Have an iOS mobile device that supports ARKit (iPhone 6S and up).
 * Install the Make It Native app on your iOS mobile device for testing purposes.
 
-If you want to make use of the **Realistic** lighting option, that would make your objects more lifelike, you should also have an HDR image to use for rendering this light. [Follow this guide](https://doc.babylonjs.com/divingDeeper/materials/using/HDREnvironment#creating-a-compressed-environment-texture-using-the-sandbox) on how to create a .env texture to use in the **Container (AR)** widget.
+If you want to make use of the **Realistic** lighting option which can make your objects more lifelike, then you should also have an HDR image to use for rendering this light. [Follow Babylon.JS' guide](https://doc.babylonjs.com/divingDeeper/materials/using/HDREnvironment#creating-a-compressed-environment-texture-using-the-sandbox) to create a *.env* texture which you can use in the **Container (AR)** widget.
 
 ## 3 Embedding Widgets in Your App
 

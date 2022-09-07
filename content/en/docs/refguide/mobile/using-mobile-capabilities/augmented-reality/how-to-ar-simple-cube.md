@@ -153,7 +153,7 @@ In the **General** tab you can configure **Position**, **Rotation**, and **Scale
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/scale-half.jpg" alt="Cube with Scale (0.05,0.05,0.05)"   width="400"  >}}
 
-For **Position**, **Rotation** and **Scale** an **Attribute** can also be used to set the **Position**, **Rotation** and **Scale** **X** **Y** and **Z** values. To use the **Attribute** option simply select this instead of **Expression** at **Position type**, **Rotation type** or **Scale type**. The last option is to use **Static**, where you can also put a value but can't change this value in the app itself.  
+For **Position**, **Rotation** and **Scale** an **Attribute** can also be used to set the **Position**, **Rotation** and **Scale** **X** **Y** and **Z** values. To use the **Attribute** option simply select this instead of **Expression** at **Position type**, **Rotation type** or **Scale type**. The last option is to use **Static**, where you can also put a value but cannot change this value in the app itself.  
 
 ### 4.2 Material {#material}
 

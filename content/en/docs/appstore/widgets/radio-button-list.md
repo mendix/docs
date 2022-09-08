@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "radio button list", "p
 ---
 
 {{% alert color="warning" %}}
-This widget is partly deprecated – the [Attribute Radio Button list](#attribute-radio-button-list) type is deprecated, but the [Association Radio Button list](#association-radio-button-list) type is still supported.
+This widget is deprecated – specifically the [Attribute Radio Button list](#attribute-radio-button-list) type is deprecated. Deprecated status means that Mendix Support will accept security-related tickets only. For more information, see the [Deprecated](/appstore/general/app-store-content-support/#deprecated) section of *Marketplace Content Support*. 
 {{% /alert %}}
 
 ## 1 Introduction

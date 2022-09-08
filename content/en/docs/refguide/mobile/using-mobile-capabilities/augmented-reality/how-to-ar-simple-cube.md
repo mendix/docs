@@ -65,7 +65,7 @@ Very little configuration is necessary to make your AR function. All you need is
 1. Set **X**, **Y** and **Z** of Scale to 0.1. This way the **Cube (AR)** will be the same size as your physical tracker.
 1. Click **Run** in Mendix Studio Pro to automatically refresh your Make It Native app. Now your **Hello World AR** app is up and running. You should now see a simple white cube rendered on top of a tracker:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/white-cube.jpg" alt="White cube"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/white-cube.png" alt="White cube"   width="400"  >}}
 
 Now that you have a simple scene running, you will a closer look at the widgets you used to understand what they do.
 
@@ -97,11 +97,11 @@ Your standard cube will not look different when turned around. To show orientati
 
 Here is a cube with the **Up** orientation:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/up-cube.jpg" alt="Cube on tracker with Up orientation"   width="400"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/up-cube.png" alt="Cube on tracker with Up orientation"   width="400"  >}}
 
 Here is a cube with the **Left** orientation:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/left-cube.jpg" alt="Cube on tracker with Left orientation"   width="400"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/left-cube.png" alt="Cube on tracker with Left orientation"   width="400"  >}}
 
 **Physical marker size** - this is where you put the physical size of your tracker, and how AR determains how far away the marker is. Since most phones will use only one camera, this value is used to calculate depth. Putting a wrong value here won't break AR, but will change the depth at which your objects are rendered. Which in turn may also lead to more jittering or 'vibrating' of your 3D models.
 
@@ -123,35 +123,35 @@ In the **General** tab you can configure **Position**, **Rotation**, and **Scale
 
     Here is a cube in **Position** (0.1,0,0):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/first-position.jpg" alt="Cube on Position (0.1,0,0)"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/first-position.png" alt="Cube on Position (0.1,0,0)"   width="400"  >}}
 
     Here is a cube in **Position** (0,0.1,0):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/second-position.jpg" alt="Cube on Position (0,0.1,0)"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/second-position.png" alt="Cube on Position (0,0.1,0)"   width="400"  >}}
 
     Here is a cube in **Position** (0,0,0.1):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/third-position.jpg" alt="Cube on Position (0,0,0.1)"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/third-position.png" alt="Cube on Position (0,0,0.1)"   width="400"  >}}
 
 * **Rotation** – the rotation of the cube in 360 degrees. Set **Rotation** **X** to *45* to see your cube rotated 45 degrees on its X axis:
 
     Here is a cube with **Rotation** (0,0,0):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/rotation-zero.jpg" alt="Cube with Rotation (0,0,0)"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/white-cube.png" alt="Cube with Rotation (0,0,0)"   width="400"  >}}
 
     Here is a cube with **Rotation** (45,0,0):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/rotation-forty-five.jpg" alt="Cube with Rotation (45,0,0)"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/rotation-forty-five.png" alt="Cube with Rotation (45,0,0)"   width="400"  >}}
 
 * **Scale** – the size of the object, also relative to the tracker it is embedded in. When the **Scale** is set to *(0,0,0)* the object will be invisible. Because **0.1** is exactly the size of the tracker, set **Scale X**, **Y**  and **Z** to *0.05* to see your cube shrink in the tracker:
 
     Here is a cube with **Scale** (0.1,0.1,0.1):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/scale-one.jpg" alt="Cube with Scale (0.1,0.1,0.1)"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/white-cube.png" alt="Cube with Scale (0.1,0.1,0.1)"   width="400"  >}}
 
     Here is a cube with **Scale** (0.05,0.05,0.05):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/scale-half.jpg" alt="Cube with Scale (0.05,0.05,0.05)"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/scale-half.png" alt="Cube with Scale (0.05,0.05,0.05)"   width="400"  >}}
 
 For **Position**, **Rotation** and **Scale** an **Attribute** can also be used to set the **Position**, **Rotation** and **Scale** **X** **Y** and **Z** values. To use the **Attribute** option simply select this instead of **Expression** at **Position type**, **Rotation type** or **Scale type**. The last option is to use **Static**, where you can also put a value but cannot change this value in the app itself.  
 
@@ -165,15 +165,15 @@ The **Material** tab contains properties for configuring appearance:
 
 * **Texture** – an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores any **Color** value – if you want to make your cube one solid color, make sure the Texture is set to **none**):
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/sample-texture.jpg" alt="Texture"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/sample-texture.png" alt="Texture"   width="400"  >}}
 
 * **Color** – the color of the cube. You can have either a **Texture** or **Color**, but not both. The color must be supplied in the *#rrggbb* format.  *#0CABF9* (a light blue) is the standard color. Change the value to *#00FF00* to make your cube appear this way:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/green-color.jpg" alt="Color"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/green.png" alt="Color"   width="400"  >}}
 
 * **Opacity** – the clarity or opacity of the cube. *1* is fully opaque, while *0* is fully transparent. Change the color of your cube back to *white* and change the opacity value to *0.5* to see your cube become partly transparent:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/opacity.jpg" alt="Opacity"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/opacity.png" alt="Opacity"   width="400"  >}}
 
 * **Lighting type** – the way light from the scene will fall on your object. 
     * **Simple** is the standard **Lighting Type**, this is not very realistic but will make the object visible and is the easiest to work with. 
@@ -181,11 +181,11 @@ The **Material** tab contains properties for configuring appearance:
 
     Here is a cube with **Lighting type** > **Simple**:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/phong.jpg" alt="Cube with lighting type Phong"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/white-cube.png" alt="Cube with lighting type Phong"   width="400"  >}}
 
     Here is a cube with **Lighting type** > **Realistic**:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/constant.jpg" alt="Cube with lighting type Constant"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/realistic.png" alt="Cube with lighting type Constant"   width="400"  >}}
 
 ### 4.3 Interaction
 

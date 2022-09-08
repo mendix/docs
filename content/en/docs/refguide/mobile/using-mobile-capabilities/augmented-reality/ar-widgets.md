@@ -80,7 +80,7 @@ Visual widgets are widgets that add a virtual object to the scene.
 
 {{< figure src="/attachments/refguide/mobile/ar-widgets/3DObject.gif" alt="3DObject" >}}
 
-Beyond using simple 3D objects, there are also ways to add more complex and custom objects to your scene. The 3D object widget takes either a URL. There are currently 3 types supported: *.obj*, *.gltf*, and *.glb*. Each with their own benefits. 
+Beyond using simple 3D objects, there are also ways to add more complex and custom objects to your scene. The 3D object widget takes a URL. there are currently 3 types supported: *.obj*, *.gltf*, and *.glb*. Each with their own benefits. 
 
 ## 5 Common Properties
 

@@ -235,7 +235,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 2. Create a microflow as follows:
     1. Name the microflow *GetSupportedVoices*. 
-    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
+    2. Right-click the working area and select **Add** > **Parameter** from the pop-up menu. 
     3. Double-click the parameter to open the **Parameter** dialog box.
     4. Set **Data type** to **Object** and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.
     5. For **Name**, enter *speechSynthesizer*.

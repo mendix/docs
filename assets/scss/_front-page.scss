@@ -1,0 +1,183 @@
+h1.page-title{
+	font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+	font-size: 2.5rem;
+	margin-left: 0.75rem;
+    color: $secondary;
+    opacity: 0.85; //#232B3B;
+}
+h5.lp{
+	margin-left: 0.75rem;
+    color: $secondary;
+    opacity: 0.7; //#474E5C;
+}
+div.card-icon{
+	margin: auto; 
+	padding: 10% 0 0 0;
+
+	i {
+		font-size: 3rem;
+		color: $blue;
+	}
+}
+div.link-title{
+	font-weight: $font-weight-bold;
+	font-size: 1.2rem;
+	padding: 0 0 5% 0;
+	a {
+		color: $secondary;
+		&:hover {
+            color: $blue;
+		}
+	}
+}
+ul.landing-list{
+	padding-left: 0.5rem;
+}
+ul.contributing-list{
+	padding-left: 1rem;
+	margin-left: 0.75rem;
+}
+
+li.link-list{
+	margin-top: 0.5rem;
+	font-size: 1rem;
+	list-style-position: outside;
+	list-style: none;
+	color: $blue;
+	a {
+		&:hover {
+            color: darken($blue, 20%);
+		}
+	}
+}
+p.rn-date{
+	color: $gray-600;
+	font-size: 0.85rem;
+}
+
+div.my-column{
+	background: $gray-100;
+	border: 1px solid $gray-200;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-top: 0.75rem;
+	margin-bottom: 1rem;
+	margin-right: 2rem;
+	padding: 1rem;
+	@include media-breakpoint-up(xl){
+		flex: 0 0 31%;
+		max-width: 31%;
+	}
+	@include media-breakpoint-down(lg){
+		flex: 0 0 46%;
+		max-width: 46%;
+	}
+}
+div.w-50{
+	background: $gray-100;
+	border: 1px solid $gray-200;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin: 0.75rem 0.05rem 0.75rem 4.5%;
+	padding: 0;
+	@include media-breakpoint-up(xl){
+		flex: 0 0 44%;
+		max-width: 44%;
+	}
+	@include media-breakpoint-down(lg){
+		flex: 0 0 90%;
+		max-width: 90%;
+	}
+	@include media-breakpoint-down(md){
+		flex: 0 0 90%;
+		max-width: 90%;
+	}
+}
+div.image-card-col{
+	padding-right: 0;
+}
+div.image-card{
+	border: 1px solid $gray-200;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin: 0.5rem 0.75rem 1rem 0rem;
+    height: 300px; // NK - fixed height for most popular cards
+}
+div.image-card-row{
+	padding: 0;
+	margin: 0rem 2rem 0rem 1rem;
+}
+
+div.my-row{
+	padding: 0;
+	margin: 0;
+	max-width: 1280px;
+}
+div.inner-row{
+	padding: 0;
+	margin: 0rem 1rem 0rem 0rem;
+}
+h3.title-row{
+	font-weight: $font-weight-medium;
+	margin: 0.5rem 0rem 1rem 1.75rem;
+}
+p.landing-page-note{
+	margin: 1rem 0rem 1rem 1.75rem;
+}
+div.landing-page-alert{
+	margin: 0rem 1.75rem 1rem 1.75rem;
+}
+div.cards-layout{
+	padding-right: 0;
+	padding-left: 0;
+}
+img.my-icon{
+	width: 24px;
+	height: 24px;
+	margin: 0.5rem 0rem 0rem 1.5rem;
+}
+img.nav-icon{
+	width: 24px;
+	height: 24px;
+	margin: 0.5rem 1.5rem;
+}
+h4.card-title{
+	color: $gray-900;
+	font-weight: $font-weight-medium; // NK - adjusted weight
+	margin: 0.5rem 0;
+	font-size: $h3-font-size; // NK - adjusted size
+}
+h4.card-title-w-50{
+	color: $gray-900;
+	font-weight: $font-weight-medium; // NK - adjusted weight
+	font-size: $h3-font-size; // NK - adjusted size
+	margin: 0.5rem 0rem 0.5rem 1rem; // NK - bring title closer to icon
+
+		&:hover {
+			color: $blue;
+			text-decoration: none;
+		}
+}
+div.card-body{
+	padding: 1rem;
+}
+p.card-text{
+	margin-top: 1rem;
+	font-size: 1.125rem;
+}
+div.my-container{
+	padding: 0;
+	margin: 0;
+}
+a.doc-link{
+	border-radius: 0.5rem;
+	padding: 0.375rem 0.375rem;
+    position: absolute; // NK - fixed position of button
+    bottom: 1rem; // NK - fixed position of button
+    right: 1rem; // NK - fixed position of button
+}
+// 404 page
+a.home-btn{
+	border-radius: 0.5rem;
+	padding: 0.375rem 0.375rem;
+}

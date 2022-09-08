@@ -1,0 +1,167 @@
+{{- /*
+Algolia generation based on this blog: https://forestry.io/blog/search-with-algolia-in-hugo/
+Define Global variables
+*/ -}}
+{{- $firstloop := true -}}
+{{- /* Use a local scratchpad - Page scratchpad already contains other stuff */ -}}
+{{- $scratch := newScratch -}}
+{{- /* 
+     * Put list of characters we will split into $splitcharList
+     * headers, paragraph, table header, table data, list item, alert boxes, code blocks (should ignore <code> inside a paragraph)
+     * Do we want to have headings separate? 
+*/ -}}
+{{- $splitcharList := slice `<h2` `<h3` `<h4` `<h5` `<h6` `<p` `<th` `<td` `<li` `<div class="alert` `<code ` -}}
+{{- /* Include What Pages? */ -}}
+{{- /* range $i, $hit := .Site.AllPages */ -}}
+{{- $section := $.Site.GetPage "section" .Section }}
+{{- warnf "Algolia being generated" -}}
+    {{- range $pageDot := where .Site.Pages "Type" "in" (slice "docs") -}}
+    {{- if or (and ($pageDot.IsDescendant $section) (and (not $pageDot.Draft) (not $pageDot.Params.private))) $section.IsHome -}}
+        {{- /* Make a slice of the page content */ -}}
+        {{- $contentSlices := slice .Content -}}
+        {{- /* Make an empty slice to hold the results */ -}}
+        {{- $resultSlices := slice "" -}}
+        {{- /* Cycle through the split characters in splitcharList */ -}}
+        {{- range $splitchar := $splitcharList -}}
+            {{- /* Cycle through the slices in $contentSlices */ -}}
+            {{- range $htmlSlice := $contentSlices -}}
+                {{- /* Split HTML on $splitchar */ -}}
+                {{- $thischarSplit := split $htmlSlice $splitchar -}}
+                {{- /* Add the original $splitchar back in (but not first slice - it is before the split) */ -}}
+                {{- $firstloop = true -}}
+                {{- range $splitString := $thischarSplit -}}
+                    {{- if $firstloop -}}
+                        {{- $firstloop = false -}}
+                    {{- else -}}
+                        {{- $splitString = printf "%s%s" $splitchar $splitString -}}
+                    {{- end -}}
+                    {{- /* Append result to the resultSlices (more difficult to update in place?) See if this discussion helps? https://discourse.gohugo.io/t/is-it-possible-to-change-map-value-by-key/32538/12 */ -}}
+                    {{- $resultSlices = $resultSlices | append $splitString -}}
+                {{- end -}}
+            {{- end -}}
+            {{- /* Put resultSlices back into contentSlices, reset resultSlices and go round again */ -}}
+            {{- $contentSlices = $resultSlices -}}
+            {{- $resultSlices = slice "" -}}
+        {{- end -}}
+        {{- /* 
+        $contentSlices now contains a slice of strings containing the file content split by the markers in splitcharList
+        */ -}}
+        
+        {{- /*
+        Cycle through all the HTML strings in contentSlices and put them into the map
+        Set the hit's objectID
+        */ -}}
+        {{- $sliceNumber := 0 -}}
+        {{- $startSlice := "" -}}
+        {{- $uniqueHit := "" -}}
+        {{- $h2 := "" }}
+        {{- $h3 := "" }}
+        {{- $h4 := "" }}
+        {{- $h5 := "" }}
+        {{- $h6 := "" }}
+        {{- $text := "" }}
+        {{- range $processSlice := $contentSlices  -}}
+            {{- /* sliceNumber tells us where we are in the file and gives us a way of making each hit unique */ -}}
+            {{- $sliceNumber = add $sliceNumber 1 -}}
+            {{- /* Make sure process slice is not empty */ -}}
+            {{- with $processSlice -}}
+                {{- /* On Linux (only - not Windows) crashes with an out-of-bounds on $processSlice. Only perform this if $processSlice is > 3 characters */ -}}
+                {{- if gt (len $processSlice) 3 -}}
+                    {{- $startSlice = slicestr $processSlice 0 3 -}}
+                    {{- /* Set up the heading level we are in */ -}}
+                    {{- if eq $startSlice "<h2" -}}
+                        {{- $h2 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h3 = "" -}}
+                        {{- $h4 = "" -}}
+                        {{- $h5 = "" -}}
+                        {{- $h6 = "" -}}
+                    {{- else if eq $startSlice "<h3" -}}
+                        {{- $h3 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h4 = "" -}}
+                        {{- $h5 = "" -}}
+                        {{- $h6 = "" -}}
+                    {{- else if eq $startSlice "<h4" -}}
+                        {{- $h4 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h5 = "" -}}
+                        {{- $h6 = "" -}}
+                    {{- else if eq $startSlice "<h5" -}}
+                        {{- $h5 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h6 = "" -}}
+                    {{- else if eq $startSlice "<h6" -}}
+                        {{- $h6 = htmlUnescape ($processSlice | plainify) -}}
+                    {{- else -}}
+                        {{- /*
+                             * Get all the information for this piece of text (not a heading) and label it uniquely
+                             * Store the values in iterable object - hardcoded for our Algolia requirements 
+                        */ -}}
+                        {{- $uniqueHit = printf "%s%04d" $pageDot.File.Path $sliceNumber -}}
+                        {{- /* Upload a unique object ID for Algolia - needs to be unique per slice, otherwise records are merged */ -}}
+                        {{- $scratch.SetInMap $uniqueHit "objectID" (printf "%s%04d" $pageDot.File.UniqueID $sliceNumber) -}}
+                        {{- $scratch.SetInMap $uniqueHit "title" $pageDot.Title -}}
+                        {{- /* Create a tag which is unique_hierarchy: file > h2 > h3 ... etc. where these exist */ -}}
+                        {{- $uniqueHierarchy := $pageDot.Title -}}
+                        {{- /* only add header tags that exist */ -}}
+                        {{- with $h2 -}}
+                            {{- $scratch.SetInMap $uniqueHit "h2" $h2 -}}
+                            {{- $uniqueHierarchy = printf "%s > %s" $uniqueHierarchy $h2 -}}
+                        {{- end -}}
+                        {{- with $h3 -}}
+                            {{- $scratch.SetInMap $uniqueHit "h3" $h3 -}}
+                            {{- $uniqueHierarchy = printf "%s > %s" $uniqueHierarchy $h3 -}}
+                        {{- end -}}
+                        {{- with $h4 -}}
+                            {{- $scratch.SetInMap $uniqueHit "h4" $h4 -}}
+                            {{- $uniqueHierarchy = printf "%s > %s" $uniqueHierarchy $h4 -}}
+                        {{- end -}}
+                        {{- with $h5 -}}
+                            {{- $scratch.SetInMap $uniqueHit "h5" $h5 -}}
+                            {{- $uniqueHierarchy = printf "%s > %s" $uniqueHierarchy $h5 -}}
+                        {{- end -}}
+                        {{- with $h6 -}}
+                            {{- $scratch.SetInMap $uniqueHit "h6" $h6 -}}
+                            {{- $uniqueHierarchy = printf "%s > %s" $uniqueHierarchy $h6 -}}
+                        {{- end -}}
+                        {{- $text = trim (htmlUnescape ($processSlice | plainify)) " " -}}
+                        {{- $scratch.SetInMap $uniqueHit "text" $text -}}
+                        {{- $scratch.SetInMap $uniqueHit "tags" $pageDot.Params.tags -}}
+                        {{- $scratch.SetInMap $uniqueHit "mendix_version" $pageDot.Params.mendix_version -}}
+                        {{- $scratch.SetInMap $uniqueHit "time_stamp" $pageDot.Lastmod.UTC.Unix -}}
+                        {{- $scratch.SetInMap $uniqueHit "weight.position" $sliceNumber -}}
+                        {{- $scratch.SetInMap $uniqueHit "space" $pageDot.Params.space -}}
+                        {{- $scratch.SetInMap $uniqueHit "type" $pageDot.Type -}}
+                        {{- $scratch.SetInMap $uniqueHit "category" $pageDot.Params.category -}}
+                        {{- $scratch.SetInMap $uniqueHit "menu_order" $pageDot.Weight -}}
+                        {{- $scratch.SetInMap $uniqueHit "description" $pageDot.Description -}}
+                        {{- /* Set different tags depending on whether it is paragraph, list, table, code, or alert */ -}}
+                        {{- $tagName := "p" -}}
+                        {{- with $startSlice -}}
+                            {{- if eq $startSlice "<li" -}}
+                                {{- $tagName = "li" -}}
+                            {{- else if eq $startSlice "<th" -}}
+                                {{- $tagName = "th" -}}
+                            {{- else if eq $startSlice "<td" -}}
+                                {{- $tagName = "td" -}}
+                            {{- else if eq $startSlice "<co" -}}
+                                {{- $tagName = "code" -}}
+                            {{- else if eq $startSlice "<di" -}}
+                                {{- $tagName = "alert" -}}
+                            {{- end -}}
+                        {{- end -}}
+                        {{- $scratch.SetInMap $uniqueHit "weight.tag_name" $tagName -}}
+                        {{- /* .RelPermalink gives the page address relative to the baseURL. It reflects any changes from the url: tag in the front matter */ -}}
+                        {{- $scratch.SetInMap $uniqueHit "url" $pageDot.RelPermalink -}}
+                        {{- $scratch.SetInMap $uniqueHit "slug" $pageDot.File.TranslationBaseName -}}
+                        {{- $scratch.SetInMap $uniqueHit "unique_hierarchy" $uniqueHierarchy -}}
+                    {{- end -}}
+                    {{- /* Need to make each hits value unique, otherwise will get strange results - Don't add null values of $uniqueHit or $text */ -}}
+                    {{- with $uniqueHit -}}
+                        {{- with $text -}}
+                            {{- $scratch.SetInMap "hits" $uniqueHit ($scratch.Get $uniqueHit) -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- jsonify ($scratch.GetSortedMapValues "hits") -}}

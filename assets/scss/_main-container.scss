@@ -1,0 +1,63 @@
+// The outer page container i.e. common styles for any page.
+.td-outer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+	position: absolute; // NK - custom edit
+}
+
+// The outer page container for the default base template.
+.td-default {
+    main {
+        > section:first-of-type {
+            @include media-breakpoint-up(md) {
+                padding-top: 8rem;
+            }
+        }
+
+        section {
+            @extend .td-block-padding;
+        }
+    }
+}
+
+.td-main {
+    flex-grow: 1;
+
+
+    main {
+        @include media-breakpoint-up(md) {
+            padding-top: 3.75rem;  // NK - made smaller
+			border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
+			border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
+        }
+
+
+        padding-bottom: 2rem;
+    }
+    // NK - custom addition
+    main.lp{
+        @include media-breakpoint-up(xl){
+            min-width: 800px;
+        }
+    }
+
+	div.stretch-main{
+		height: 100%; // NK - so that all of main (side menus and content get stretched to bottom of page)
+	}
+}
+// NK - to fully stretch the footer & bottom of dock
+div.footer{
+	background-color: $gray-100;
+	border-top: 1px solid $gray-border;
+    border-bottom: 1px solid $gray-border;
+	margin: 0 -15px;
+	padding: 0.5rem 0;
+}
+div.mx-dock-footer{
+	margin: 0 -15px;
+}
+
+div.date-format{
+    font-size: 0.8rem;
+}

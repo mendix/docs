@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### September 8th, 2022
+
+#### Improvements
+
+* You will now see an error message when the parsing of a contract fails due to the parsing service being offline. 
+
 ### September 1st, 2022
 
 #### Improvements

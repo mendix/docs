@@ -37,11 +37,11 @@ This means that equal response and resolve times are applicable, and the standar
 Content in this support category is supported as-is. When changing the content, the module will no longer be Platform-supported.
 {{% /alert %}}
 
-### 2.2 Deprecated Support Category
+### 2.2 Deprecated Support Category {#deprecated}
 
 We will move Platform-supported content into this category when we consider the content end-of-life. We factor in popularity, the availability of improved alternative(s), and industry standards when deciding on this.
 
-Support for content in this category is decided by Mendix on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com). However, the Mendix SLA no longer applies. 
+Support for content in this category is limited and is decided by Mendix on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com). However, the Mendix SLA no longer applies. 
 
 ### 2.3 Community Support Category {#community-category}
 
@@ -59,7 +59,7 @@ The level of support depends on the availability and effort of the developer and
 | Support Category  | Standard/Premium SLA | Platform SLA | No SLA |
 | --- | --- | --- | --- |
 | Platform support | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
-| Deprecated | [Mendix Support](https://support.mendix.com/)   | [Mendix Support](https://support.mendix.com/) | Mendix community |
+| Deprecated | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | [Mendix Support (Limited)](https://support.mendix.com/) (for more information, see the [Deprecated Support Category](#deprecated) section above) | Mendix community |
 | Community support | Mendix community | Mendix community | Mendix community |
 
 ## 3 Read More

@@ -5,6 +5,14 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.26
+
+**Release date: September 8th, 2022**
+
+#### Improvements
+
+* We enabled compatibility with Android 12 and higher.
+
 ## 6.2.25
 
 **Release date: August 16th, 2022**

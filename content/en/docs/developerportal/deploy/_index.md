@@ -29,7 +29,6 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 * [General](/developerportal/deploy/general/) – contains information which applies to deployments in many different environments
 * Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, for example, [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
 * [Mobile App](/developerportal/deploy/mobileapp/) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
-* [App Services](/developerportal/deploy/app-services/) – describes what can be published to the Mendix Marketplace, and how to do this
 
 ## 2 Run Locally or Preview
 

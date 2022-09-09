@@ -27,12 +27,12 @@ This how-to will teach you how to do the following:
 
 For this how-to, it is necessary that you set up a test app with test data. To do so, follow these steps:
 
-1. Follow [Creaste a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/) and create the following domain model:
+1. Follow the guide [Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/) and create the following domain model:
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
 2. [Create overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and the **Order** entities and their objects.
-3. [Create Menu Items](/howto/general/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and the **Order** overview pages.
+3. [Create menu items](/howto/general/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and the **Order** overview pages.
 4. Add the following customer data to your app:
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/example-customers-data.png" width="500px" >}}
@@ -49,7 +49,7 @@ In the previous section, you set up a basic data structure and created some samp
 
     {{% alert color="warning" %}} The search bar section might already be populated if you automatically filled the contents of your data grid. {{% /alert %}}
 
-    {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/empty-search-field.png" width="500px">}}
+    {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/empty-search-bar-section.png" width="500px">}}
 
 2. Right-click the (empty) search bar section and select **Add search field** > **Drop-down**.
 3. Add the **OrderStatus** attribute to the search field and enter *Order status* for the **Caption**.

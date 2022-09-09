@@ -9,9 +9,10 @@ description: "Native Template 6 release notes."
 
 **Release date: September 8th, 2022**
 
-#### Features
+#### Improvements
 
-* We enabled compatibility with Android 12 and above.
+* We enabled compatibility with Android 12 and higher.
+
 ## 6.2.25
 
 **Release date: August 16th, 2022**

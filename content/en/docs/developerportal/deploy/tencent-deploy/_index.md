@@ -665,7 +665,7 @@ Delete all environments before you delete an app. If you delete an app which has
 
 ### 7.3 App Security and Production
 
-If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **个副本正在运行** and **运行时** showing a spinner.
+If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **副本正在运行** and **运行时** showing a spinner.
 
 ### 7.4 ApplicationRootUrl Needs to be Set Manually
 

@@ -173,11 +173,15 @@ For example, you have a [data view](/studio/page-editor-data-view-list-view/) wi
 
 The association with the correct [multiplicity](/studio/domain-models-association-properties/#multiplicity) has been added to your app. 
 
-## 3 The Show Option
+## 3 Parameters
+
+Page parameters provide context for the page and its widgets, such as data view, list view, data grid. For more information, see Page Parameter.    
+
+## 4 The Show Option
 
 Located in the upper-left corner of a page, the **Show** option highlights items that have [conditional visibility](/studio/page-editor-widgets-visibility-section/) configured for them. Click the eye icon to enable this option. For more information on conditional visibility and how it works, see [Conditional Visibility Section](/studio/page-editor-widgets-visibility-section/).  
 
-## 4 Breadcrumb {#breadcrumb}
+## 5 Breadcrumb {#breadcrumb}
 
 A breadcrumb is displayed on every page in the left bottom corner of Studio.
 
@@ -189,7 +193,7 @@ The breadcrumb serves two functions:
 
 * Allows you to select an element on the page and view its properties. To navigate to an element on a page and view element's properties, click this element in the breadcrumb.
 
-## 5 Toolbox Elements
+## 6 Toolbox Elements
 
 The **Toolbox** shows the tools that can be used on pages. 
 
@@ -198,7 +202,7 @@ This tab consists of the following:
 * [Widgets](#widgets)
 * [Building Blocks](#building-blocks)
 
-### 5.1 Widgets {#widgets}
+### 6.1 Widgets {#widgets}
 
 Widgets are single user-interface elements that can be configured. 
 
@@ -206,7 +210,7 @@ You can [quickly configure](/studio/page-editor-widgets/#quick-config) most of t
 
 You can update widgets in the [Widget Overview](/studio/settings-widget-overview/). 
 
-### 5.2 Building Blocks {#building-blocks}
+### 6.2 Building Blocks {#building-blocks}
 
 Building blocks consist of pre-set widgets that allow you to build a page faster:  
 
@@ -237,7 +241,7 @@ If you want to read documentation on a particular building block and to know mor
 Building blocks categories may differ because Atlas UI can be customized using Studio Pro.
 {{% /alert %}}
 
-## 6 Properties Tab {#page-editor-properties}
+## 7 Properties Tab {#page-editor-properties}
 
 The **Properties** tab displays the properties of the currently selected element and can differ per element. 
 
@@ -247,6 +251,6 @@ For example, if you click **Layout**—which is the layout that you choose when 
 
 {{< figure src="/attachments/studio/page-editor/layout.png" >}}
 
-## 7 Main Documents in This Category
+## 8 Main Documents in This Category
 
 * [Widgets](/studio/page-editor-widgets/) – describes different type of widgets

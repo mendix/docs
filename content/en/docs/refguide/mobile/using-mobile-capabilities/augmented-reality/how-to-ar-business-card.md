@@ -96,3 +96,7 @@ Now all that is left is to add a nanoflow that opens a URL to the **Events** > *
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/call-url-event-dialogue.png" alt="call url event"   width="400"  >}}
 
 Congratulations, you now have a functioning AR business card demo with custom 3D objects!
+
+## 4 Read More
+
+* [Native Mobile AR](appstore/modules/native-mobile-ar/)

@@ -234,3 +234,7 @@ The **Appearance** tab appears this way:
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/appearance-tab.png" alt="Appearance tab"   width="400"  >}}
 
 Currently the properties in the **Appearance** tab have no influence on AR widgets. This tab can be ignored.
+
+## 5 Read More
+
+* [Native Mobile AR](/appstore/modules/native-mobile-ar/)

@@ -99,27 +99,27 @@ It is possible to set a position on visual widgets that is not relative by addin
 
 ### 5.2 Rotation
 
-**Rotation** can be used to turn an object on three different axes. When using rotation for custom 3D objects it will turn around the pivot point of the 3D file — the center of the object is not automatically selected.
+**Rotation** can be used to turn an object on three different axes. When used for custom 3D objects, it will turn around the pivot point of the 3D file—the center of the object is not automatically selected.
 
 ### 5.3 Scale
 
-**Scale** is used for setting the size of objects. Widgets that have a set object (**Cube (AR)**, **Sphere (AR)**, or **Square (AR)**) will have a size of 1 or 2 meters. Objects that are added through the 3D Object widget might not conform to that standard unless they are correctly exported with the 1 unit = 1 meter scale. Without that standard scale, objects added with the 3D Object widget can be much larger or smaller than what the scale is set to.
+**Scale** is used for setting the size of objects. Widgets that have a set object (**Cube (AR)**, **Sphere (AR)**, or **Square (AR)**) will have a size of 1 or 2 meters. Objects that are added through the **3D Object** widget might not conform to that standard unless they are correctly exported with the 1 unit = 1 meter scale. Without that standard scale, objects added with the **3D Object** widget can be much larger or smaller than what the scale is set to.
 
 ### 5.4 Material
 
 The **Material** tab sets things like color and also the realism of the object that has to be rendered. For example, setting the **Lighting Type** mode to PBR will enable physically-based rendering (do not forget to set an HDR image as the reflection map and light source in the **Container (AR)**).
 
-**Material** configurations actually render a 3D element in the camera view. **Cube (AR)**, **Sphere (AR)**, and **Square (AR)** each render a simple 3D object. Only the **Square (AR)** widget can sometimes be invisible from one side. The simple visual widgets come with a way to customize them through scale and material. A material for a 3D object describes what it should look like — think of it like styling. You can add a texture (image), color, different lighting. The only difference between these objects is in appearance — the configuration is the same on each widget.
+**Material** configurations actually render a 3D element in the camera view. **Cube (AR)**, **Sphere (AR)**, and **Square (AR)** each render a simple 3D object. Only the **Square (AR)** widget can sometimes be invisible from one side. The simple visual widgets come with a way to customize them through scale and material. A material for a 3D object describes what it should look like—think of it like styling. You can add a texture (image), color, and different lighting. The only difference between these objects is in appearance—the configuration is the same on each widget.
 
 ### 5.5 Interaction
 
-Interaction is used for all actions your 3D objects can do that interact with the environment or the user.
+**Interaction** is used for all actions your 3D objects can do that interact with the environment or the user.
 
 #### 5.5.1 Dragging
 
-By enabling dragging users can move this object around in their space. The dragging type allows users to either have the
-object at the same distance when they are dragging it. Effectively this means the object is 'stuck' to the phone while
-they move it around. By changing the type to fixed to world, the object will now be stuck to floors and walls while the
+With dragging enabled, users can move this object around in their space. The dragging type allows users to have the
+object at the same distance when they are dragging it. Effectively, this means the object is 'stuck' to the phone while
+they move it around. By changing the type to fixed to world, the object will now be stuck to floors and walls when the
 user drags it around.
 
 #### 5.5.2 Pinching
@@ -128,15 +128,15 @@ By enabling pinching, and selecting pinch to scale, you allow the user to scale 
 
 ### 5.6 Events
 
-Events can be used to give feedback to the user, for example when they've tapped on an object. 
+**Events** can be used to give feedback to the user, for example when they have tapped an object. 
 
 #### 5.6.1 On click
 
-This event is called when the object is clicked/tapped by a user. 
+This event is called when the object is clicked or tapped by a user. 
 
 #### 5.6.2 On hover enter
 
-This is called when the object is in the center of the screen. 
+This event is called when the object is in the center of the screen. 
 
 #### 5.6.3 On hover exit
 

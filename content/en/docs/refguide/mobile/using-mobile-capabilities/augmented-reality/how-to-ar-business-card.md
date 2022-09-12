@@ -99,4 +99,4 @@ Congratulations, you now have a functioning AR business card demo with custom 3D
 
 ## 4 Read More
 
-* [Native Mobile AR](appstore/modules/native-mobile-ar/)
+* [Native Mobile AR](/appstore/modules/native-mobile-ar/)

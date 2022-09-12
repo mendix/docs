@@ -32,7 +32,7 @@ There are seven total AR widgets. They can be grouped into two types:
 
 ## 3 Structure Widgets {#structure-widgets}
 
-Structure widgets are the AR widgets that can contain other widgets. These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Structure  widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
+Structure widgets are the AR widgets that can contain other widgets. These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Structure widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
 
 ### 3.1 Container (AR) {#container}
 

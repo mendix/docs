@@ -14,37 +14,31 @@ The [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) mod
 This document will place the Augmented Reality (AR) widgets into context, as well as explain how they can be used
 to create AR experiences. The following terms will be used frequently:
 
-* Augmented reality (AR): adding virtual objects to the real world, through the mobile phone camera view
+* Augmented reality (AR): adds virtual objects to the real world, through the mobile phone camera view
 * AR scene: the place where all objects are placed in
 * Billboard: describes the rotation behavior of an object, where it will always face the camera
 * Origin: the starting position, specifically (0,0,0)
 
 ## 2 Overview of AR Widgets
 
-There are seven total AR widgets. Some are [structure widgets](#structure-widgets), while others are [visual widgets](#visual-widgets):
+There are seven total AR widgets. They can be grouped into two types:
 
-| Structure Widgets  | Visual Widgets |
-| ------------------ | -------------- |
-| Container (AR)     | 3D Object (AR) |
-| Image Tracker (AR) | Cube (AR)      |
-| Node (AR)          | Sphere (AR)    |
-|                    | Square (AR)    |
+| [Structure Widgets](#structure-widgets) | [Visual Widgets](#visual-widgets) |
+| --------------------------------------- | --------------------------------- |
+| [Container (AR)](#container)            | [3D Object (AR)](#3d-object)      |
+| [Image Tracker (AR)](#image-tracker)    | [Cube (AR)](#cube)                |
+| [Node (AR)](#node)                      | [Sphere (AR)](#sphere)            |
+|                                         | [Square (AR)](#square)            |
 
 ## 3 Structure Widgets {#structure-widgets}
 
-These are the AR widgets that can contain other widgets:
+Structure widgets are the AR widgets that can contain other widgets. These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Structure  widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
 
-* Container (AR)
-* Image Tracker (AR)
-* Node (AR)
-
-These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Structure  widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
-
-### 3.1 Container (AR)
+### 3.1 Container (AR) {#container}
 
 **Container (AR)** starts the AR camera view, and contains all other AR widgets. This widget is the start of every AR app.
 
-### 3.2 Image Tracker (AR)
+### 3.2 Image Tracker (AR) {#image-tracker}
 
 **ImageTracker (AR)** takes an image to track. When this image is found in the camera view, it becomes the new origin of
 every AR widget that is embedded in it. For example, if you use an **ImageTracker (AR)** to recognize an image, and put a
@@ -52,7 +46,7 @@ every AR widget that is embedded in it. For example, if you use an **ImageTracke
 
 {{< figure src="/attachments/appstore/modules/native-mobile-ar/scale-one.jpg" alt="Cube"   width="300"  >}}
 
-### 3.3 Node (AR)
+### 3.3 Node (AR) {#node}
 
 **Node (AR)** can help group other widgets. Everything embedded in a **Node (AR)** can be oriented with fixed distances and rotations from each other. **Node (AR)** also has a feature that can make the objects in it 'billboard' to the camera, which is useful for UI like elements. To see an example of this, check **AR-Examples** > **Car Color Picker** and note the the spheres above the car.
 
@@ -60,19 +54,19 @@ every AR widget that is embedded in it. For example, if you use an **ImageTracke
 
 Visual widgets are widgets that add a virtual object to the scene.
 
-### 4.1 Cube (AR)
+### 4.1 Cube (AR) {#cube}
 
 {{< figure src="/attachments/appstore/modules/native-mobile-ar/Cube.gif" alt="Cube" >}}
 
-### 4.2 Sphere (AR)
+### 4.2 Sphere (AR) {#sphere}
 
 {{< figure src="/attachments/appstore/modules/native-mobile-ar/Sphere.gif" alt="Sphere" >}}
 
-### 4.3 Square (AR)
+### 4.3 Square (AR) {#square}
 
 {{< figure src="/attachments/appstore/modules/native-mobile-ar/Square.gif" alt="Square" >}}
 
-### 4.4 3D Object (AR)
+### 4.4 3D Object (AR) {#3d-object}
 
 {{< figure src="/attachments/appstore/modules/native-mobile-ar/3DObject.gif" alt="3DObject" >}}
 
@@ -93,7 +87,7 @@ All AR widgets share these properties:
 
 **Position** describes where an object should be. In AR, position can be a bit confusing. This is why most positioning is relative to a parent node.
 
-This means that the origin of (0,0,0) is in the middle of either the **ImageTracker (AR)**, or (0,0,0) is exactly where the phone was when the user started their AR session in their space. 
+This either means that the origin of (0,0,0) is in the middle of the **ImageTracker (AR)**, or (0,0,0) is exactly where the phone was when the user started their AR session in their space. 
 
 It is possible to set a position on visual widgets that is not relative by adding the widget directly into the **Container (AR)**. The 0,0,0 position is then exactly where the camera starts at the beginning of the scene. After the scene has started, the position will not move along with the camera anymore.
 
@@ -103,7 +97,7 @@ It is possible to set a position on visual widgets that is not relative by addin
 
 ### 5.3 Scale
 
-**Scale** is used for setting the size of objects. Widgets that have a set object (**Cube (AR)**, **Sphere (AR)**, or **Square (AR)**) will have a size of 1 or 2 meters. Objects that are added through the **3D Object** widget might not conform to that standard unless they are correctly exported with the 1 unit = 1 meter scale. Without that standard scale, objects added with the **3D Object** widget can be much larger or smaller than what the scale is set to.
+**Scale** is used for setting the size of objects. Widgets that have a set object (**Cube (AR)**, **Sphere (AR)**, or **Square (AR)**) will have a size of 1 or 2 meters. Objects that are added through the **3D Object** widget might not conform to that standard, unless they are correctly exported with the 1 unit = 1 meter scale. Without that standard scale, objects added with the **3D Object** widget can be much larger or smaller than what the scale is set to.
 
 ### 5.4 Material
 
@@ -124,7 +118,7 @@ user drags it around.
 
 #### 5.5.2 Pinching
 
-By enabling pinching, and selecting pinch to scale, you allow the user to scale the object through the pinching gesture.
+By enabling pinching and setting pinch to scale, you allow the user to scale the object through the pinching gesture.
 
 ### 5.6 Events
 

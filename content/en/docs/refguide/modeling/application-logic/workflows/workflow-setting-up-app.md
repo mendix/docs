@@ -62,8 +62,10 @@ You can find the following microflows in Workflow Commons:
 *   **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
 *   **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
 *   **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_JumpTo** - Shows a list of activities the workflow can jump to in a pop-up. After selecting the desired changes, these will be applied to the workflow instance. 
 *   **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
 *   **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Retry** – Retries a failed workflow from the failed activity to see whether the workflow can get back into the in-progress state. The workflow instance is passed in as a parameter.
 *   **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
 
 ## 3 Setting Up User Assignment and Security

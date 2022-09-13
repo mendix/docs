@@ -41,8 +41,8 @@ Here you will choose an app starting point. It is key that you choose a starting
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/starting-point.png" width="450px" alt="New app">}}
 
-1. Search for the **Blank Native Mobile App** and click **Use this starting point**:
-    * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
+1. Search for the **Blank Web App** and click **Use this starting point**:
+    * **Why choose this template?** — Choosing the **Blank Web App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
     * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
 1. Name your app *Quickstart App* and click the **Create app** button.
 1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. After that the project will open on your app’s home page called **Home_Web**:

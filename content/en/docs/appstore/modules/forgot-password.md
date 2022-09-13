@@ -9,9 +9,10 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 
 ## 1 Introduction
 
-The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module works in conjunction with other modules and widgets to implement forgot-my-password functions. 
+The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password.
+With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios(Sign up and Forgot password).
 
-With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password. 
+There are three versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro version 7, 8, or 9. These all work in the same way, and require the same dependencies specified below.
 
 ### 1.1 Dependencies {#dependencies}
 
@@ -20,14 +21,50 @@ With this module, the end-user can enter their email address, and an email will 
 * [Encryption](/appstore/modules/encryption/)
 * [Model Reflection](/appstore/modules/model-reflection/)
 
-## 2 Configuration
+## 2 Installation
 
-Once you have downloaded the required modules listed in the [Dependencies](#dependencies) section above, you can reuse the snippets and microflows from the **Use Me** folder.
+* Import ‘ForgotPassword’ module into your app
+* Add dependencies as listed in previous section from the Marketplace
+* Configurations need to done in settings tab 
+    * Add 32 length character value for Encryption.EncryptionKey constant
+        {{< figure src="/attachments/appstore/modules/forgot-password/encryption-key.png" >}}
+    * Add startup microflow(“Deeplink.StartDeeplink”) on Runtime tab of settings as shown below 
+        {{< figure src="/attachments/appstore/modules/forgot-password/after-startup.png" >}}
+* Configurations in App security tab 
+    * Create a ‘Guest’ role in ‘MyFirstModule’  
+        {{< figure src="/attachments/appstore/modules/forgot-password/guest-role.png" >}}
+    * Provide the permissions for the user roles by referring to the image 
+        {{< figure src="/attachments/appstore/modules/forgot-password/user-role-permissions.png" >}}    
+    * Allow Anonymous user
+        {{< figure src="/attachments/appstore/modules/forgot-password/allow-anonymous.png" >}}    
+* Set the target of User role ‘Guest’ to ‘Nav_GuestHomePage’ microflow of ForgotPassword module which either show the **LoginPage** or trigger the deep link process on Role based home pages tab in Navigation
+    {{< figure src="/attachments/appstore/modules/forgot-password/role-based-home.png" >}}
+* Configure the menu as shown below in Navigation tab 
+        {{< figure src="/attachments/appstore/modules/forgot-password/navigation-tab.png" >}}
+* Run the application and you will be able to see login page. Login as ‘demo_administrator’ from demo_users to configure ForgotPassword on UI 
+* Make sure to configure or validate SMTP settings
+* Click on ‘Create email template’ on ‘Reset Password Email’ tab and provide the details and do the same for ‘Signup Email’ 
+        {{< figure src="/attachments/appstore/modules/forgot-password/email-template.png" >}}
+* Click on ‘Create deeplink’ so that deep link will be created on ‘Deeplink’ tab 
+        {{< figure src="/attachments/appstore/modules/forgot-password/create-deeplink.png" >}}
+        {{< figure src="/attachments/appstore/modules/forgot-password/configure-deeplink.png" >}}
+* Logout and go back to login page and click on ‘Signup’ button. Enter your name and mail ID and click on send button. You will get an e-mail with a link and get a popup page on UI  
+        {{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
+        {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
+* When you open the link in the browser, a pop up page opens and you can reset your password. 
+        {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
 
-The configuration page allows you to create the email and deep link templates that are used by this module. You should NOT create your own templates through the configuration of the Email with Templates and Dep Link modules. By clicking **Create**, all the default settings will be there to allow you to reset the password. The only thing you need to do is configure or validate your SMTP settings. 
+## 3 Upgrading from Mendix Version 8 to Mendix Version 9
 
-Signup and password reset are included into this module. To disable the signup functionality, remove the **Sign up** button from the login snippet and empty the content of the **CreateNewUserFromSignUp** microflow.
+To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below from within Studio Pro: 
 
-The **ForgotPasswordConfiguration** page should be accessible to the administrator only. This snippet allows for configuring the email template and deep link, and it shows all the open password reset requests
+*Note: When you were using Forgot Password in Mx8, the dependencies of Forgot Password module should be of the latest versions compatible with Mx8 version*
 
-The **Nav_GuestHomePage** microflow is an example for a home page for an anonymous user. This microflow will either show the **LoginPage** or trigger the deep link process. If you choose to use a different home page or a different home-page microflow, you can set the **Step1_ShowForgotPasswordPage** microflow to be triggered by the anonymous user. This microflow starts the reset password function.
+1. Open your app in Mendix 9.12.5 or above and allow it to be upgraded
+2. Import the ‘Forgot Password’ module of Mx9 version
+3. You can see 4 errors in the Errors tab
+    {{< figure src="/attachments/appstore/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the error tab" >}}
+4. Open the page of one of the errors and now change the (master) layout to Atlas_TopBar(Atlas_UI_Resources)
+    {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}}
+5. Now 2 errors will be resolved and you are left with 2 errors. Open the page of error and again change (master) layout to Atlas_TopBar(Atlas_UI_Resources) 
+ 

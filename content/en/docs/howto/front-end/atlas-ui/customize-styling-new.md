@@ -589,13 +589,13 @@ Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folde
 Open your Mendix app's *theme/web/custom-variables.scss* file and locate the following line:
 
 ```scss {linenos=false}
-$font-family-import: https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700
+$font-family-import: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
 ```
 
 Replace that line with the following code:
 
 ```scss {linenos=false}
-$font-family-import: ./fonts/open-sans.css
+$font-family-import: "./fonts/open-sans.css"
 ```
 
 Then, save your changes. Run your app and you should see fonts rendered correctly

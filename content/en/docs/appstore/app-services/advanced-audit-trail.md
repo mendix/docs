@@ -17,7 +17,9 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 
 {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png" >}}
 
-{{% alert color="info" %}}The Advanced Audit Trail app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers a better search experience and better performance.{{% /alert %}}
+{{% alert color="info" %}}
+The Advanced Audit Trail app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers a better search experience and better performance.
+{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 

@@ -288,7 +288,17 @@ This widget enables setting and saving your personal preferences.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
 
-With this widget, you can select different PMI entity types, model view, and design group. The selected items will not be loaded. For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
+With this widget, you can use the following filtering settings:
+
+- Filter PMI entities by type
+
+- Filter model view
+
+- Filter design group
+
+- Show assembly level PMI
+
+For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
 
 #### 4.6.3 Toolbar Widgets
 
@@ -330,7 +340,7 @@ If you deploy your app in your own environment, you need to configure the licens
 
 When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to visualize your local JT model quickly.
 
-### 5.1 Uploading & Viewing a 3D JT Model in Your Browser
+### 5.1 Uploading and Viewing a 3D JT Model in Your Browser
 
 For the [Viewer](#viewer) widget to visualize a JT model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](#uploader) widget and set to that of the Viewer widget.
 
@@ -578,7 +588,7 @@ You can change the setting of the Preference widget to customize the behavior of
 
 {{< figure src="/attachments/appstore/app-services/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
-On the **PMI** tab, you can set filter options for PMI and click **Ok** to save the changes. The items that you selected will not be loaded.
+On the **PMI** tab, you can set filtering options for PMI and click **Ok** to save the changes.
 
 ## 6 Read More
 

@@ -20,3 +20,4 @@ Guides in this section will help you implement key features of native apps and/o
 * [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-&-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
 * [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
 * [Content Security Policy](/refguide/mobile/using-mobile-capabilities/csp/): by employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context
+* [Generic Permission Action](/refguide/mobile/using-mobile-capabilities/generic-permission-action/): this guide allows native apps to request permissions from iOS and Android device users

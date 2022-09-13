@@ -7,7 +7,7 @@ url: /apidocs-mxsdk/mxsdk/changing-things-in-the-model/
 
 All units and elements can be freely altered after loading as long as you adhere to the type system. The properties `id`, `container`, `structureTypeName`, `isLoaded` and `unit`, as defined on the [IStructure](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/istructure.html) object, should not be used: these are (mostly) for internal purposes.
 
-## 2 Creating New Units & Elements
+## 2 Creating New Units and Elements
 
 To create new units, you need to pass the parent structural unit to the constructor.
 
@@ -28,7 +28,7 @@ function createEntity(domainModel: domainmodels.DomainModel, entityName: string,
     const newEntity = domainmodels.Entity.createIn(domainModel);
     newEntity.name = entityName;
 
-    // location on the canvas in the Mendix Studio Pro:
+    // location in the Mendix Studio Pro working area:
     newEntity.location = { x: 100, y: 100 };
 
     // new attribute (which is by default a string attribute):

@@ -3,8 +3,7 @@ title: "Indentation & Spacing Test"
 url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
 description: "Various test cases for rendering of indents and spaces"
-banner: "This is a draft and will not be rendered in the production website. 
-Use this page to test how spacing and indents will render with various elements and shortcodes."
+banner: "This is a draft and will not be rendered in the production website. Use this page to test how spacing and indents will render with various elements and shortcodes."
 ---
 
 ## Heading 2
@@ -214,7 +213,23 @@ Lists in alerts:
 
 ### 2.2 TODOs and Comments
 
-[//]: # Comments do NOT work. Use todo shortcode instead: \{\{% todo %\}\}[ToDo comment text, only visible in development]\{\{% /todo %\}\}
+Two ways to add comments:
+
+1. With empty Markdown relative link
+
+    ```text
+    [//]: # "my comment here"
+
+    OR
+
+    [//]: # (my other comment here)
+    ```
+
+1. Use todo shortcode, which will output the comment into the Travis log:
+
+    ```text
+    {{%/* todo */%}}[ToDo comment text, only visible in development]{{%/* /todo */%}}
+    ```
 
 ### 2.3 Details
 

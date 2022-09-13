@@ -136,7 +136,7 @@ To edit the Java action in Eclipse, follow these steps:
 
     {{< figure src="/attachments/howto/logic-business-rules/extending-your-application-with-custom-java/microflow4.png"   width="500"  >}}
 
-## 6 Deploying & Seeing the Results
+## 6 Deploying and Seeing the Results
 
 1. Click the play button (**Run Locally**) to deploy the application locally and click **View App** to open the application in your browser.
 2. Select **Add asset** from the top right.

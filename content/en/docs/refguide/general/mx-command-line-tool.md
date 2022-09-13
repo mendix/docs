@@ -31,7 +31,7 @@ The MPR file must be the same version as mx.
 
 Use the following command pattern for `mx check`:
 
-`mx check [OPTIONS] INPUT`
+`mx check [OPTIONS] INPUT [Optional path to exported Suppress Warnings file (JSON)]`
 
 The `OPTIONS` are described in the table below:
 
@@ -48,6 +48,8 @@ Errors in the MPR are always reported.
 
 For `INPUT`, enter a single *.mpr* file.
 
+From Studio Pro version 9.17, you can optionally specify the path to an exported Suppress Warnings file (JSON file). This means that `mx check -w` will use the list of suppressed warnings in the JSON file, instead of the default behavior which is to read from the *project-settings.user.json* file in the app directory.
+
 #### 3.1.2 Examples
 
 Examples of commands are described in the table below:
@@ -57,7 +59,8 @@ Examples of commands are described in the table below:
 | `mx check --help` | Displays the help text for the check command. |
 | `mx check C:\MxProjects\App-main\App-main.mpr` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors. |
 | `mx check C:\MxProjects\App-main\App-main.mpr -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and performance recommendations. |
-| `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, and deprecations. |
+| `mx check C:\MxProjects\App-main\App-main.mpr --warnings --deprecations` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, and deprecations. Suppressed warnings will be read from the *project-settings.user.json* file within the app directory. |
+| `mx check C:\MxProjects\App-main\App-main.mpr c:\MxFiles\my-exported-suppressed-warnings.json --warnings ` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors and warnings. Suppressed warnings will be read from the JSON file *my-exported-suppressed-warnings.json*. |
 | `mx check C:\MxProjects\App-main\App-main.mpr -w -d -p` | Checks the app at `C:\MxProjects\App-main\App-main.mpr` for errors, warnings, deprecations, and performance recommendations. |
 
 #### 3.1.3 Return Codes

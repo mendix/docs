@@ -35,7 +35,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 7. Click **OK**
 
-## 3 Creating an Import Mapping
+## 3 Creating an Import Mapping {#create-import-mapping}
 
 An [import mapping](/refguide/import-mappings/) specifies how the JSON relates to [entities](/refguide/entities/). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 

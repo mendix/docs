@@ -36,7 +36,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Usage-based metering and billing | Currently in Private Beta<br/>GA: TBD |
 | Supplier onboarding (including documentation) | Currently in Private Beta<br/>GA: TBD |
 
-## 4 End-User Services & Studio
+## 4 End-User Services and Studio
 
 | Feature | Expected Release |
 | --- | --- |
@@ -72,7 +72,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Data widgets – Tree Table | GA: Sep 2022 |
 | Data widgets – Spread Sheet Grid | GA: Dec 2022 |
 
-## 7 Page Bot & Machine Learning Toolkit
+## 7 Page Bot and Machine Learning Toolkit
 
 | Feature | Expected Release |
 | --- | --- |

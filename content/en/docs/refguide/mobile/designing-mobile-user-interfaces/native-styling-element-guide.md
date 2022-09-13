@@ -523,9 +523,9 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
-## 7 Images, Videos & Files
+## 7 Images, Videos and Files
 
-Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](/refguide/image-and-file-widgets/).
+Images, videos and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](/refguide/image-and-file-widgets/).
 
 ### 7.1 Static Image {#image}
 
@@ -641,7 +641,7 @@ The navigation style properties are as follows:
 | `bottomBar` | `container` | This has all ViewStyle properties. |
 | `bottomBar` | `label` | This has all TextStyle properties. |
 | `bottomBar` | `selectedLabel` | This has all TextStyle properties. |
-| `bottomBar` | `icon` | This has all ViewStyle properties. |
+| `bottomBar` | `icon` | This has all TextStyle properties. |
 | `bottomBar` | `selectedIcon` | This has all ViewStyle properties. |
 | `progressOverlay` | `background` | This has all ViewStyle properties. |
 | `progressOverlay` | `container` | This has all ViewStyle properties. |

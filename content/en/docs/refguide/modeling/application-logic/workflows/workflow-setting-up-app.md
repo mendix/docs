@@ -58,14 +58,16 @@ If you would like to customize page templates, you can do that with the help of 
 Preconfigured microflows help you assigning user tasks, and one allows you to abort workflows.
 You can find the following microflows in Workflow Commons:
 
-* **ACT_UserTask_AssignToMe** – Assigns a user task, which is passed as a parameter, and assigns it to the current user.
-* **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters.
-* **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
-* **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
-* **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
-* **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
-* **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
-* **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
+*   **ACT_UserTask_AssignToMe** – Assigns a user task, which is passed as a parameter, and assigns it to the current user.
+*   **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters.
+*   **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
+*   **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_JumpTo** – Shows a list of activities the workflow can jump to. After selecting the activity, changes will be applied to the workflow instance. 
+*   **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Retry** – Retries a failed workflow from the failed activity to check whether the workflow can get back into the in-progress state. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
 
 ## 3 Setting Up User Assignment and Security
 

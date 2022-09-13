@@ -111,6 +111,67 @@ To access your IoT data using the OData technology provided by the Mendix Data H
 
 1. Click the **Submit** button to finalize the creation of your contract.
 
+### 2.4 Linking to Data Lake Manager
+
+Once you have the name of your MindSphere account, you can use this to link your account to the required assets. You will be able to sign in to this account using your Mendix account credentials (user ID and password).
+
+#### 2.4.1 Creating New Resources
+
+To set up new assets, follow the [Workflow for uploading objects](https://documentation.mindsphere.io/MindSphere/apps/Integrated-Data-Lake/introduction.html) instructions in the MindSphere Integrated Data Lake Manager documentation.
+
+Full information can be found in the [MindSphere Integrated Data Lake Manager](https://documentation.mindsphere.io/MindSphere/apps/Integrated-Data-Lake/introduction.html) documentation on the MindSphere site.
+
+#### 2.4.2 Availability of Data Lake Resources (folders)
+
+There are two ways to use the Mendix App Service.
+
+* You can make REST calls to the standard MindSphere end points for your tenant. Instructions for doing this are in [Using MindSphere IIoT for Makers Through REST Calls](#using-rest).
+
+    In this case your assets are now set up and you can continue by [Creating Binding Keys](#binding-keys).
+
+* You can publish your resources through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities/) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane/) in Studio Pro.
+
+    The instructions for doing this are below, and instructions for using the external entities are in [Using MindSphere IIoT for Makers Through Mendix Data Hub](#using-data-hub).
+
+#### 2.4.3 Publishing Resources to Data Hub
+
+To access your data from Data Lake storage using the OData technology provided by the Mendix Data Hub, you first have to publish your asset information to Mendix Data Hub. To do this, you create a **contract** within the MindSphere **Integrated Data Lake Manager**. Do the following to manage your contracts:
+
+1. Go to the **Integrated Data Lake Manager** in the MindSphere Launchpad.
+1. On the left hand side, you find the tile **oData Contracts**. Click on the tile to open contracts view.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_tile.png" alt="data-lake-manager" >}}
+
+1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
+
+    * If no contracts are available, click **Create contract** to start your first one.
+    
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_empty.png" alt="data-lake-manager" >}}
+    
+    * If you have already some contracts, click **Add contracts** to add another one.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_add.png" alt="data-lake-manager" >}}
+
+1. In the **Meta Information** section of the wizard you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_metadata.png" alt="data-lake-manager" >}}
+
+1. In **Folder Selection** section, select the folder to be published in the contract. on the right panel, selected folders are listed.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_folder_selection.png" alt="data-lake-manager" >}}
+
+1. In the summary section, you can specify the following:
+    * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
+    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix app; it is therefore preselected
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_summary.png" alt="data-lake-manager" >}}
+
+1. By default, contract is saved in OData Contract Registry(ODCR) within MindSphere.
+
+1. Click the **Submit** button to finalize the creation of your contract.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_list.png" alt="data-lake-manager" >}}
+
 {{% alert color="info" %}}
 In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api/#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api/#company-account).
 

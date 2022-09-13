@@ -28,16 +28,24 @@ You can choose which JDK is used for building and running locally via the **Edit
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
+Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
 ### 2.1 Firewall Settings
 
-Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to whitelist them.
+Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to whitelist them:
 
 * `*.mendix.com`
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
+
+To run a Mendix app, Mendix Studio Pro uses the following ports by default. If your firewall is blocking these, you will need to open them:
+
+* 8080: runtime port
+* 8083: mobile packager
+* 8090: admin port
+
+For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
 ### 2.2 TortoiseSVN
 
@@ -186,7 +194,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-###  9.2 Storage Types for Servers
+### 9.2 Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 

@@ -17,6 +17,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### July 21st, 2022
+
+* We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
+
 ### July 8th, 2022
 
 #### Improvements
@@ -82,8 +86,8 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 #### Improvements
 
 * We have added two new graphs on the [Metrics page for Cloud V4](/developerportal/operate/trends-v4/):
-   * Number of files in storage
-   * Size of files in storage (in bytes)
+    * Number of files in storage
+    * Size of files in storage (in bytes)
 * We have updated the alert order on the [Alerts page](/developerportal/operate/monitoring-application-health/) for better visibility
 * We have made improvements to the email alert subscription service to make it more reliable
 
@@ -104,7 +108,7 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 * We have implemented a Web Application Firewall (WAF) service for Free Apps deployed to the Mendix Cloud.
 
     The Web Application Firewall (WAF) is a security service that protects applications from malicious and unwanted internet traffic without modifying your application code. WAF for Free Apps addresses various attack categories including many high risk and commonly occurring vulnerabilities described in OWASP publications such as [OWASP Top 10](https://owasp.org/www-project-top-ten/). These include the following:
-    
+
     * Cross site scripting
     * HTTP protocol violations
     * Bots, crawlers, and scanners
@@ -258,9 +262,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Improvements
 
-* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is
-  used to run your Mendix application will be automatically updated to the
-  latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
+* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is used to run your Mendix application will be automatically updated to the latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
 
 ### May 27th, 2021
 
@@ -272,10 +274,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Improvements
 
-* Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to
-  authenticate DNS lookups. There is nothing that you need to do for this
-  change to take effect. Going forward, all DNS requests to these domains
-  will automatically use DNSSEC.
+* Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to authenticate DNS lookups. There is nothing that you need to do for this change to take effect. Going forward, all DNS requests to these domains will automatically use DNSSEC.
 
 ### May 12th, 2021
 
@@ -313,7 +312,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
 #### Fix/Improvement
 
-* We implemented a new `upload` API which allows you to upload large (>300MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
+* We implemented a new `upload` API which allows you to upload large (>300 MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
 
 ### March 30th, 2021
 
@@ -381,7 +380,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
-	For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
+    For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
 
 * As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
 
@@ -522,9 +521,9 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 #### Fixes
 
 * We fixed issues related to the [Deploy to Licensed Cloud Node](/refguide/app-menu/#deploy) flow in Mendix Studio Pro:
-	* We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide/app-menu/#deploy) flow in Mendix Studio Pro.
-	* We improved the error messages for Mendix Cloud v4 apps that appear when you deploy from Studio Pro with no [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set or you do not have sufficient privileges to deploy to the Studios target.
-	* We fixed an issue where you were able to log in as a **Demo User** to the Studios target. Please note that in this scenario, you have to clear the Studios target and redeploy to the affected environment. The target can then be set after redeploying. (Ticket 106312)
+    * We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide/app-menu/#deploy) flow in Mendix Studio Pro.
+    * We improved the error messages for Mendix Cloud v4 apps that appear when you deploy from Studio Pro with no [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set or you do not have sufficient privileges to deploy to the Studios target.
+    * We fixed an issue where you were able to log in as a **Demo User** to the Studios target. Please note that in this scenario, you have to clear the Studios target and redeploy to the affected environment. The target can then be set after redeploying. (Ticket 106312)
 
 ### August 26th, 2020
 
@@ -561,7 +560,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 #### Improvements
 
 * We added the ability to set the `SameSite` value on cookies to `None` for existing apps. This enables apps to run in iframes in browsers where the default SameSite setting for cookies is `Lax` or `Strict`. (Tickets 97187, 97190, 97699, 97701, 97900, and 98507)
-    *  This is implemented through the `SAMESITE_COOKIE_PRE_MX812` custom environment variable. For more information see [Running Your App in an Iframe](/developerportal/deploy/environments-details/#iframe) in the *Environment Details* documentation.
+    * This is implemented through the `SAMESITE_COOKIE_PRE_MX812` custom environment variable. For more information see [Running Your App in an Iframe](/developerportal/deploy/environments-details/#iframe) in the *Environment Details* documentation.
 
 ### July 8th, 2020
 
@@ -574,10 +573,10 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 ### July 2nd, 2020
 
-#### Improvements & Fixes
+#### Improvements and Fixes
 
 * We have changed the way that the *unused java heap* metric is calculated to make the data more accurate.
-	* This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, & 103225).
+    * This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, & 103225).
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
@@ -685,7 +684,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 ### November 7th, 2019{#20201107}
 
-#### Improvements & Fixes
+#### Improvements and Fixes
 
 * We have improved the stability and performance of Mendix Cloud Deployment and Operations.
 
@@ -809,7 +808,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Improvements
 
 * For Mendix Cloud v4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details/#http-headers).
-	* If you add or change these settings, you will need to redeploy your app before the changes take effect.
+    * If you add or change these settings, you will need to redeploy your app before the changes take effect.
 * For Mendix Cloud v4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
 * We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
 
@@ -868,7 +867,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements{#tls}
 
-**TLS v1.0 & v1.1 Disabled for Mendix Cloud v4**
+**TLS v1.0 and v1.1 Disabled for Mendix Cloud v4**
 
 * We have implemented a change on our Mendix Cloud v4 infrastructure so that incoming connections that do not support TLS v1.2 or higher will stop working. This effectively means that TLS v1.0 and v1.1 are disabled, and Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html) again.
 
@@ -1019,9 +1018,9 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/).
-*  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
+* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
-	{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/CPHealthIcon.png"   width="300"  >}}
+    {{< figure src="/attachments/releasenotes/deployment/mendix-cloud/CPHealthIcon.png"   width="300"  >}}
 
 * The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
@@ -1046,7 +1045,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
+* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30 GB) to their environments. It has been tested with the archives (~90 GBs) on Mendix Cloud v4.
 * We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
 ### April 9th, 2018
@@ -1103,7 +1102,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
+* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1 GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
 
 ### February 22nd, 2018
 

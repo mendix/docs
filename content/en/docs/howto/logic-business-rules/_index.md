@@ -2,8 +2,8 @@
 title: "Logic & Business Rules"
 url: /howto/logic-business-rules/
 weight: 60
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 tags: ["studio pro", "how-to"]
 ---
 
@@ -16,4 +16,3 @@ Mendix is all about collaboration between business and IT, and microflows help t
 With these how-to's, you can learn how to translate your business logic into microflows and build and debug them from the beginner to the expert level.
 
 ## 2 Documents in This Category
-

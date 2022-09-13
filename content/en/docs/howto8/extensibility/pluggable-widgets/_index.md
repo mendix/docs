@@ -10,4 +10,3 @@ Pluggable web widgets are Mendix's custom-built widgets based on React. This lan
 
 * [Build a Pluggable Web Widget: Part 1](/howto8/extensibility/create-a-pluggable-widget-one/)
 * [Build a Pluggable Web Widget: Part 2 (Advanced)](/howto8/extensibility/create-a-pluggable-widget-two/)
-

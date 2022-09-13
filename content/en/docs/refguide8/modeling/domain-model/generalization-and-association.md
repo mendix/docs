@@ -1,5 +1,6 @@
 ---
 title: "Generalization vs One-to-One Associations"
+linktitle: "Generalization vs 1-to-1 Associations"
 url: /refguide8/generalization-and-association/
 weight: 50
 tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]
@@ -17,7 +18,7 @@ Mendix developers have to choose on a daily basis whether or not they want to us
 
 When defining closely related structures, it can be difficult to decide on the best architecture. Should the entity inherit from a base structure or do you rather want to use a one-to-one association? You should consider both options as each one can have a huge impact on the performance of the application or the speed of development.
 
-## 2 Generalization, Specialization & Inheritance
+## 2 Generalization, Specialization, and Inheritance
 
 The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/wiki/Class_diagram) in [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class (meaning, the generalization). In Mendix generalization is expressed with a blue label above the specialized entity, specifying the generalization entity name.
 
@@ -33,7 +34,7 @@ The Mendix Platform uses transactions, which means that every microflow, commit,
 
 The Mendix Platform uses the isolation level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means that only committed objects can be read outside the transaction. If another microflow is trying to read an object that is in the middle of being changed, it will have to wait until the transaction has completed. The details of the way the database implements this isolation level depend on the underlying database management system (for example, PostgreSQL). This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
-### 2.2 Creating & Changing Objects
+### 2.2 Creating and Changing Objects
 
 When changing an object, the Mendix Platform will write those changes to the database as soon as you execute the commit activity or when you set the **Commit** action on the change object to **Yes**. The update or insert query will be performed based on the values you have changed. However, this does not end the transaction. The precise behavior varies according to the database management system being used, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
 
@@ -98,8 +99,8 @@ This explanation might not have given you an explicit answer to the question of 
 There are, however, a few situations where a clear answer can be given:
 
 * Use one-to-one associations for entities with:
-  * a high number of transactions on the different sub entities (we consider multiple changes or creates per second as being high)
-  * only a handful common attributes — if you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either
+    * a high number of transactions on the different sub entities (we consider multiple changes or creates per second as being high)
+    * only a handful common attributes — if you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either
 
 * Use inheritance for entities:
-  * that always require the information from the associated objects, and users intensively search and sort on the associated attributes
+    * that always require the information from the associated objects, and users intensively search and sort on the associated attributes

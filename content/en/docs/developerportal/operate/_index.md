@@ -1,7 +1,7 @@
 ---
 title: "Operations"
 url: /developerportal/operate/
-description: "The day-to-day operation of an app from the the Developer Portal. This is mainly useful for apps running in the Mendix Cloud."
+description: "Describes the day-to-day operation of an app from the Developer Portal. This is mainly useful for apps running in the Mendix Cloud."
 weight: 15
 no_list: false 
 description_list: true
@@ -57,4 +57,3 @@ For details of managing your backups in the Mendix Cloud, see [Backups](/develop
 If your app is deployed to SAP BTP or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to manage your app's backups.
 
 ## 3 Documents in This Category
-

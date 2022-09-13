@@ -17,50 +17,37 @@ With the **App from a spreadsheet** you can import a Microsoft Excel spreadsheet
 To create an app based on a spreadsheet, you need to use the **App from a spreadsheet** in the Developer Portal. Do the following:
 
 1. Make sure your spreadsheet is in the *.xlsx* format
-
 2. Open the Developer Portal and click the **Create App** button in the upper-right corner.
-
 3. Choose **App from a spreadsheet** to create an app with the spreadsheet import functionality.
+4. Make sure that the spreadsheet meets the following requirements:<br/>
 
-4.  Make sure that the spreadsheet meets the following requirements:<br/>
+    1. The size of your file does not exceed 1 MB. <br/>
+    1. The number of worksheets does not exceed 50.<br/>
+    1. The number of columns per worksheet does not exceed 100.<br/>
+    1. A column name does not exceed 100 characters.<br/>
 
-	a. The size of your file does not exceed 1MB. <br/>
+5. Make sure that you have normalized your data in the spreadsheet. Check if the following requirements are met: 
 
-	b. The number of worksheets does not exceed 50.<br/>
+    1. Each column should name a unique name within a workbook. 
 
-	c. The number of columns per worksheet does not exceed 100.<br/>
+        {{% alert color="info" %}}If a column name consists of several lines, Mendix Studio will process the only first one. If your column does not have a name, but has values in it, it will be named "_EMPTY".{{% /alert %}}
 
-	d. A column name does not exceed 100 characters.<br/>
-  
-5.  Make sure that you have normalized your data in the spreadsheet. Check if the following requirements are met: 
-
-    a. Each column should name a unique name within a workbook. 
-
-      {{% alert color="info" %}}If a column name consists of several lines, Mendix Studio will process the only first one. If your column does not have a name, but has values in it, it will be named "_EMPTY".
-
-      {{% /alert %}}
-
-    b. Each cell of the worksheet (a row or a column) should contain a single value or be empty. 
-
-    c. If you want to create links (associations) between two columns, make sure the conditions mentioned above for creating these links are met. <br/>
+    1. Each cell of the worksheet (a row or a column) should contain a single value or be empty. 
+    1. If you want to create links (associations) between two columns, make sure the conditions mentioned above for creating these links are met. <br/>
 
 ## 3 Converting Your Data
 
 During the import process, spreadsheet data is analyzed and converted the following way:
 
 1. Your worksheets are converted into entities.
-
 2. Your columns are converted into attributes.
-
 3. The links between the worksheets are identified and can be converted into associations if all of the following conditions are met: 
-	
+
     1. All values of one column in your spreadsheet are used in another column.
     2. The values of the other column are unique. 
     3. The type of data in these columns is converted to string or enumeration attribute types. For more information on correspondence between Excel data types and attribute types, see the [Correspondence Between Excel Data Types and Attribute Types](#excel-type-attribute-type) section.
-    
 
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](/attachments/studio/work-with-data/start-with-data/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
-
 
 ## 4 Starting an App From a Spreadsheet {#importing-spreadsheet}
 
@@ -69,9 +56,7 @@ When you create your app, a page where you can upload your spreadsheet is opened
 {{< figure src="/attachments/studio/work-with-data/start-with-data/drag-and-drop.png"   width="300"  >}}
 
 {{% alert color="info" %}}
-
 If you choose to start without data, you will have just a blank app, and will not be able to import a spreadsheet later. 
-
 {{% /alert %}}
 
 ### 4.1 Previewing Spreadsheet Data
@@ -112,9 +97,7 @@ To review a list of associations and unselect the ones that you do not want to b
 For example, in the image above you can see that an association will be created from the **MarketingDocs** entity to the **Contributors** entity. This association was discovered through the column **Responsible** in **MarketingDocs** and the column **Name** in **Contributors**.  As a result, when data is imported the **MarketingDocs** entity will not have **Responsible** as an attribute, instead it will have an association to the **Contributors** entity and will get data from this entity through the association.
 
 {{% alert color="info" %}}
-
 A column can be used to create an association **from** it once only. If an association is created to lead **from** a column, no link can be created as a link **to** it. 
-
 {{% /alert %}}
 
 #### 4.1.2 Managing Attribute Types {#managing-attribute-types}
@@ -145,9 +128,7 @@ Open the domain model to see all created entities and attributes:
 {{< figure src="/attachments/studio/work-with-data/start-with-data/domain-model-example.png"   width="350"  >}}
 
 {{% alert color="success" %}}
-
 After import is completed, you can [preview or publish your app](/studio/publishing-app/) and see all your data or continue configuring your app.
-
 {{% /alert %}}
 
 ### 4.3 Generating Pages {#generating-pages}
@@ -159,13 +140,11 @@ If **Generate pages for my data** has been selected in the preview page, pages a
     {{< figure src="/attachments/studio/work-with-data/start-with-data/manage-data-page.png" >}}
 
 * An *{EntityName}__NewEdit* page is created – a page for each of your entities for creating and saving a new object of this entity
-
 * A link from the *HomePage* is created – a card with buttons linking to the *Manage_Data* page   
 
     {{< figure src="/attachments/studio/work-with-data/start-with-data/home-page.png" >}}
 
 * The *Manage Data* menu item is created in the navigation with a link to the *Manage_Data* page
-
 * Your data is transferred to the preview and publish environment, that means when you preview or publish your app, you can view your data there
 
 ## 5 Read More

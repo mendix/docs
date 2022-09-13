@@ -38,7 +38,7 @@ As the owner of the Mendix Vendor account, you must have permission to legally b
 
 Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
 
-## 4 Legal & Compliance Checks
+## 4 Legal and Compliance Checks
 
 The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
 

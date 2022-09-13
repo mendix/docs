@@ -1,5 +1,6 @@
 ---
 title: "Importing and Exporting Apps, Modules, Widgets, and Documents"
+linktitle: "Importing & Exporting Elements"
 url: /refguide/import-and-export/
 category: "App Modeling"
 weight: 12
@@ -17,6 +18,7 @@ When you have an app package, you cannot import individual modules or widgets fr
 {{% /alert %}}
 
 You can import and export the following:
+
 * apps
 * modules
 * widgets
@@ -49,7 +51,7 @@ To import a complete app or solution package, follow these steps:
     * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server** or **Locally on disk**
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
-   
+
 3. Click **OK**.
 
 The app is imported. 
@@ -63,18 +65,14 @@ Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an
 To import module packages through the App Explorer in Studio Pro, follow these steps:
 
 1. Right-click your app in the **App Explorer** and select **Import Module Package**.
-
 2. Select your Mendix module package file and click **Open**. The **Import Module** dialog box will open.
-
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/import-module.png" >}}
 
-    {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
-    {{% /alert %}}
-    
-4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
+    {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.{{% /alert %}}
 
+4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
 5. Click **OK**. 
 
 If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module is displayed:
@@ -85,9 +83,7 @@ You see a new or replaced module in the **App Explorer**. You also see your chan
 #### 2.2.2 Importing an Add-On Module Package Through the App Directory
 
 {{% alert color="info" %}}
-
 You can only use this procedure to import add-on modules (*.mxmodule* files).
-
 {{% /alert %}}
 
 If you would like to import an add-on module (the *.mxmodule* file) to your app, you can add it manually to the app directory. Follow the steps below:
@@ -137,16 +133,13 @@ The package can contain a single example of one of the following:
 To import module documents, follow these steps:
 
 1. Right-click a module in the **App Explorer** and select **Import document from file...**.
+2. In the **Import Document from File** dialog box, select your Mendix package file containing the document you want to import and click **Open**.
 
-2.  In the **Import Document from File** dialog box, select your Mendix package file containing the document you want to import and click **Open**.
-
-    {{% alert color="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the element or **Cancel**.
-    {{% /alert %}}
+    {{% alert color="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the element or **Cancel**.{{% /alert %}}
 
 3. Click **OK** to import the element into your module.
 
-    {{% alert color="info" %}}You may need to update the new element's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any elements imported.
-    {{% /alert %}}
+    {{% alert color="info" %}}You may need to update the new element's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any elements imported.{{% /alert %}}
 
 ### 2.4 Importing Widgets
 
@@ -159,13 +152,11 @@ To import widgets, follow these steps:
     {{< figure src="/attachments/refguide/modeling/import-and-export/show-app-directory.png" >}}
 
 2. Open the **widgets** folder in your app directory and put your Mendix package file there.
-
 3. Open the **App** menu and select **Synchronize App Directory** to synchronize the changes in the app directory:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/synchronize-app-directory.png" >}}
 
-    {{% alert color="info" %}}You can also press **F4** to synchronize your app directory.
-    {{% /alert %}}
+    {{% alert color="info" %}}You can also press **F4** to synchronize your app directory.{{% /alert %}}
 
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu.
 
@@ -219,7 +210,6 @@ Widgets are automatically available in the **widgets** folder in your app direct
 Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 
 1. Right-click the document you want to export and select **Export document to file...**.
-
 2. In the  **Export Page to File** dialog box, enter the **Name** for your package and click **Save**.
 
 ## 4 Read More

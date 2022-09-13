@@ -75,7 +75,7 @@ The following actions are available in the drop-down menu:
 * **View documentation about {an error or the name of the element}** – opens the corresponding document that describes this check failure and gives instructions on how to fix it; if there is no documentation on the current message, the option is greyed-out
 * Message-specific actions – actions that depend on the message, in the example above, you can remove the microflow parameter that is not used in the app
 
-##  4 Read More
+## 4 Read More
 
 * [Consistency Errors](/refguide/consistency-errors/)
 * [Studio Pro Overview](/refguide/studio-pro-overview/)

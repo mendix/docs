@@ -17,17 +17,17 @@ If the user needs to set a range, instead of one value, you should use the [Rang
 
 ### 1.1 Features
 
-- Configure the maximum and minimum values, which define the limits of the slider's track, and then the user can set the slider value within these limits
+* Configure the maximum and minimum values, which define the limits of the slider's track, and then the user can set the slider value within these limits
 
-  {{< figure src="/attachments/appstore/widgets/slider/slider1.png" >}}
+    {< figure src="/attachments/appstore/widgets/slider/slider1.png" >}}
 
-- Set a step value, which is the difference between two adjacent values on the slider
+* Set a step value, which is the difference between two adjacent values on the slider
 
-  {{< figure src="/attachments/appstore/widgets/slider/slider2.png" >}}
+    {{< figure src="/attachments/appstore/widgets/slider/slider2.png" >}}
 
-- Set a microflow that is executed when the user changes the slider value
-- Show a tooltip when the user clicks or moves the slider handle
-- Render the slider with colors
+* Set a microflow that is executed when the user changes the slider value
+* Show a tooltip when the user clicks or moves the slider handle
+* Render the slider with colors
 
 ## 2 Configuration
 
@@ -45,35 +45,35 @@ To configure this widget, follow these steps:
 
 #### 2.1.2 General Section
 
-- **Minimum value type** – sets the type of the value source for the **Minimum value** property
-    - **Static** – if selected, the minimum value is a static value
-    - **Dynamic** – if selected, the minimum value is a dynamic value
-    - **Expression** – if selected, the minimum value is an [expression](/refguide/expressions/)
-- **Minimum value** – sets the minimum value of the slider
-- **Maximum value type** – sets the type of the value source for the **Maximum value** property
-    - **Static** – if selected, the maximum value is a static value
-    - **Dynamic** – if selected, the maximum value is a dynamic value
-    - **Expression** – if selected, the maximum value is an [expression](/refguide/expressions/)
-- **Maximum value** – sets the maximum value of the slider
-- **Step size type** – sets the type of the value source for the **Step size** property
-    - **Static** – if selected, the step size is a static value
-    - **Dynamic** – if selected, the step size is a dynamic value
-    - **Expression** – if selected, the step size is an [expression](/refguide/expressions/)
-- **Step size** – sets the difference between two adjacent values on the slider
-- **Show tooltip**
-    - **Yes** (default) – if selected, a tooltip is displayed when the user clicks or moves the slider handle
-        - **Tooltip type** – sets the tooltip type
-            - **Current value** (default) – if selected, the tooltip shows the current slider value
-            - **Custom** – if selected, you can define a custom tooltip
-            	  - **Tooltip** – defines the custom tooltip
-    - **No** – if selected, no tooltip is shown
-- **Tooltip always visible**
-    - **Yes** –  if selected, the tooltip is always visible
-    - **No** (default) – if selected, the tooltip is only shown when the user clicks or moves the slider handle
-- **Show label** 
-    - **Yes** – if selected, you can define the label caption
-        - **Label caption** – defines the label caption of the widget that is displayed on the page
-  - **No** (default) – if selected, there is no label for this widget on the page
+* **Minimum value type** – sets the type of the value source for the **Minimum value** property
+    * **Static** – if selected, the minimum value is a static value
+    * **Dynamic** – if selected, the minimum value is a dynamic value
+    * **Expression** – if selected, the minimum value is an [expression](/refguide/expressions/)
+* **Minimum value** – sets the minimum value of the slider
+* **Maximum value type** – sets the type of the value source for the **Maximum value** property
+    * **Static** – if selected, the maximum value is a static value
+    * **Dynamic** – if selected, the maximum value is a dynamic value
+    * **Expression** – if selected, the maximum value is an [expression](/refguide/expressions/)
+* **Maximum value** – sets the maximum value of the slider
+* **Step size type** – sets the type of the value source for the **Step size** property
+    * **Static** – if selected, the step size is a static value
+    * **Dynamic** – if selected, the step size is a dynamic value
+    * **Expression** – if selected, the step size is an [expression](/refguide/expressions/)
+* **Step size** – sets the difference between two adjacent values on the slider
+* **Show tooltip**
+    * **Yes** (default) – if selected, a tooltip is displayed when the user clicks or moves the slider handle
+        * **Tooltip type** – sets the tooltip type
+            * **Current value** (default) – if selected, the tooltip shows the current slider value
+            * **Custom** – if selected, you can define a custom tooltip
+                * **Tooltip** – defines the custom tooltip
+    * **No** – if selected, no tooltip is shown
+* **Tooltip always visible**
+    * **Yes** –  if selected, the tooltip is always visible
+    * **No** (default) – if selected, the tooltip is only shown when the user clicks or moves the slider handle
+* **Show label** 
+    * **Yes** – if selected, you can define the label caption
+        * **Label caption** – defines the label caption of the widget that is displayed on the page
+    * **No** (default) – if selected, there is no label for this widget on the page
 
 #### 2.1.3 Editability Section
 
@@ -89,15 +89,15 @@ To configure this widget, follow these steps:
 
 ### 2.2 Track Tab
 
-- **Number of markers** – sets the number of the markers that appear along the slider's track
-- **Decimal places** – sets the number of decimal places for marker values
-- **Orientation** – determines the orientation of the slider
-    - **Horizontal** – if selected, the orientation of the slider is horizontal
-    - **Vertical** – if selected, the orientation of the slider is vertical and you must set **Height unit** and **Height**
-        - **Height unit** – specifies the type of unit which is used for the **Height** property
-            - **Percentage** (default) – if selected, the aspect ratio is used to specify the height
-            - **Pixels** – if selected, an absolute value is used to specify the height
-        - **Height** – the height in pixels or percentage based on the setting of **Height unit**
+* **Number of markers** – sets the number of the markers that appear along the slider's track
+* **Decimal places** – sets the number of decimal places for marker values
+* **Orientation** – determines the orientation of the slider
+    * **Horizontal** – if selected, the orientation of the slider is horizontal
+    * **Vertical** – if selected, the orientation of the slider is vertical and you must set **Height unit** and **Height**
+        * **Height unit** – specifies the type of unit which is used for the **Height** property
+            * **Percentage** (default) – if selected, the aspect ratio is used to specify the height
+            * **Pixels** – if selected, an absolute value is used to specify the height
+        * **Height** – the height in pixels or percentage based on the setting of **Height unit**
 
 ### 2.3 Events Tab
 

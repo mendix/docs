@@ -24,7 +24,7 @@ Additionally, the following operators are supported in Java code only:
 
 | Operator | Description | Example | Return value |
 | --- | --- | --- | --- |
-| `+ ` | Addition | `6 + 4` | 10 |
+| `+` | Addition | `6 + 4` | 10 |
 | `-` | Subtraction | `6 - 4` | 2 |
 | `*` | Multiplication | `6 * 4` | 24 |
 | `div` | Division | `8 div 4` | 2 |

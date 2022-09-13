@@ -3,7 +3,7 @@ title: "Docker"
 url: /developerportal/deploy/docker-deploy/
 category: "Deployment"
 weight: 60
-description: "Describes how to build a new Docker image using the Mendix buildpack."
+description: "Describes how to deploy using a Docker image."
 tags: ["Docker", "Cloud", "container", "CI/CD"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -39,9 +39,9 @@ To build the Docker image, follow these steps:
     {{< figure src="/attachments/developerportal/deploy/docker-deploy/create-deployment-package.png" >}}
 
 6. Copy the project folder and all its subfolders to the unzipped docker build folder. The project folder needs to be in the same folder as the Docker file, otherwise Docker cannot access it.
-7.  Execute the following command:
+7. Execute the following command:
 
-    ```bash
+    ```bash {linenos=false}
     docker build --build-arg BUILD_PATH="{relative-mendix-project-location}" -t {image name} .
     ```
 

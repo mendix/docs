@@ -27,13 +27,13 @@ This property indicates how the end user can interact with the file manager.
 | Download | The file manager can only be used to download a file. |
 | Both | The file manager can be used to upload, and to download a file. |
 
-_Default value:_ Both
+*Default value:* Both
 
 ### Max file size (MB)
 
 This property determines the maximum size of files (in megabytes) that can be uploaded.
 
-_Default value:_ 5
+*Default value:* 5
 
 ### Allowed extensions
 
@@ -49,7 +49,7 @@ The feature to allow extensions is not meant as a security feature, as the file 
 
 This property indicates whether the file will be shown in the browser, instead of being downloaded.
 
-_Default value:_ False
+*Default value:* False
 
 {{% snippet file="/static/_includes/refguide7/Label+Property.md" %}}
 
@@ -77,6 +77,6 @@ _Default value:_ False
 
 ## Related articles
 
-*   [Data view](/refguide7/data-view/)
-*   [Entities](/refguide7/entities/)
-*   [Associations](/refguide7/associations/)
+* [Data view](/refguide7/data-view/)
+* [Entities](/refguide7/entities/)
+* [Associations](/refguide7/associations/)

@@ -46,7 +46,7 @@ The sidebar toggle is right-to-left-aware (RTL) which means that in RTL language
 
 {{% /alert %}}
 
-_Default value:_ Left
+*Default value:* Left
 
 ### Mode
 

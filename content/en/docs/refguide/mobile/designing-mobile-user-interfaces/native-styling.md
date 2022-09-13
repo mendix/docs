@@ -77,9 +77,9 @@ These resources let you style your app with a wide variety of interface parts. H
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/button-one.png" alt="button" width="400" >}}
 
-2. Click the play button (**Run Locally**) and then click **View App** to see your app. The button will be blue with white text, which is its default styling.
-3. Open *theme/native/custom-variables.js* using your IDE of choice.
-4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
+1. Click the play button (**Run Locally**) and then click **View App** to see your app. The button will be blue with white text, which is its default styling.
+1. Open *theme/native/custom-variables.js* using your IDE of choice.
+1. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
     ```javascript
     //Brand Style
@@ -91,8 +91,8 @@ These resources let you style your app with a wide variety of interface parts. H
     };
     ```
 
-5. Save your file.
-6. Click the play button (**Run Locally**) to apply your changes:
+1. Save your file.
+1. Click the play button (**Run Locally**) to apply your changes:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/brand-primary-rosybrown.png" alt="rosybrown button" width="400" >}}
 
@@ -112,7 +112,7 @@ Classes are groups of styling properties which define how certain elements of yo
 5. Click the play button (**Run Locally**) to save and refresh your app. Notice the button turned green:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/green-button.png" alt="green button" width="400" >}}
-    
+
     You have successfully applied an Atlas-provided class to a button widget.
 
 ### 5.4 Design Properties
@@ -205,14 +205,15 @@ In this section you will learn to turn the class you made into a design property
         "class": "btnBordered"
     },
     ```
-4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
-5. Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
+
+5. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+6. Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/bordered-design-property.png" alt="bordered design property" width="400" >}}
 
-6. Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
+7. Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
 
-7. Click the play button (**Run Locally**) again and view your app:
+8. Click the play button (**Run Locally**) again and view your app:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/design-property-border-button.png" alt="design properties border" width="400" >}}
 

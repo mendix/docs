@@ -20,4 +20,3 @@ System variables are tokens whose values can be used in XPath expressions. For a
 {{% alert color="info" %}}
 It is not possible to add mathematical expressions in an XPath outside of tokens. Mathematical expressions should be calculated outside of the XPath expression.
 {{% /alert %}}
-

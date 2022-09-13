@@ -1,8 +1,6 @@
 ---
 title: "Restore a Backup Locally"
 url: /developerportal/operate/restore-backup-locally/
-# try using linktitle rather than having to rename everything to add the -a-
-url: /developerportal/operate/restore-backup-locally/
 weight: 40
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Local","Developer Portal"]
@@ -29,8 +27,7 @@ This how-to will teach you how to do the following:
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/postgres-password.png" >}}
 
-    {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data. 
-    {{% /alert %}}
+    {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data.{{% /alert %}}
 
 * When restoring a database hosted in Mendix Cloud v4, or downloading a full backup, you will need a utility such as [7zip](http://www.7-zip.org/) on your local machine which can extract files from *.gz* and *.tar* archives.
 
@@ -65,14 +62,14 @@ If you have downloaded a full backup, this will also have been archived as a *.t
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-options.png" >}}
 
 10. Click **Restore**.
-11.	Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.
+11. Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.
 
 ## 4 Linking the Database to the App in Mendix Studio Pro
 
 After the backup has been restored as a local Postgres database, you have to link the database to Studio Pro. This tells Studio Pro to use the database that you have just created in PostgreSQL, rather than the database that was originally created with the app.
 
 1. Open your app in **Studio Pro**.
-2. Open **Project... > Settings** from the **App Explorer**.
+2. Open **App > Settings** from the **App Explorer**.
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/app-settings.png" >}}
 
@@ -105,7 +102,7 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/backup-choice.png" >}}
 
-2. Select **Project > Show App Directory in Explorer** from the Studio Pro menu:
+2. Select **App > Show App Directory in Explorer** from the Studio Pro menu:
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/project-directory.png" >}}
 

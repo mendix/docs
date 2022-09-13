@@ -33,7 +33,3 @@ The properties of anonymous users are described in the table below:
 * [Administrator](/refguide8/administrator/)
 * [Demo Users](/refguide8/demo-users/)
 * [Password Policy](/refguide8/password-policy/)
-
-
-
-

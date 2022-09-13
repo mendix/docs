@@ -21,11 +21,11 @@ To enter the **Environment details** page, go to the [Developer Portal](http://s
 
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
-*  **Status**
-   * White – the environment is stopped or was never deployed
-   * Green – the environment is working correctly
-   * Orange – the environment has warnings
-   * Red – the environment is not working correctly
+* **Status**
+    * White – the environment is stopped or was never deployed
+    * Green – the environment is working correctly
+    * Orange – the environment has warnings
+    * Red – the environment is not working correctly
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-status.png" >}}   
 * **Running since** date – the date on which the app was started
 * **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)): see [Naming of Environments](#naming) for more information
@@ -83,7 +83,7 @@ You will need to confirm that you want to clear your environment by typing *clea
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 
 #### 2.1.3 Logging and Debugging in Mendix Cloud v3
 
@@ -96,7 +96,7 @@ Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be reti
 In Mendix Cloud v3 environments, you have two additional action buttons:
 
 * **View Current Log**
-* **Enable/Disable Debugging** – enables or disables the debugger option — for more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)
+* **Enable/Disable Debugging** – enables or disables the debugger option — for more information about enabling the debugger, see [Debugging Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4 {#naming}
 
@@ -119,8 +119,8 @@ If your app is hosted in Mendix Cloud v4, you will see a section named **Instanc
 In **Scaling**, there are two sliders that you can control:
 
 * Use the **Instances** slider to increase or decrease the amount from one to four instances by sliding the slider
-   * The instances are meant for improved resiliency and increased processing power
-   * The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among four instances if you have more than 1GB of RAM memory
+    * The instances are meant for improved resiliency and increased processing power
+    * The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among four instances if you have more than 1GB of RAM memory
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance by sliding the slider
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
@@ -250,15 +250,15 @@ For the deprecated Mendix Cloud v3, only *X-Frame-Options* was supported. For Me
 
 There are three types of value for these headers:
 
-*  Choose a value from a drop-down
+* Choose a value from a drop-down
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-dropdown.png" >}}
 
-*  Choose a value from a drop-down and specify a URL
+* Choose a value from a drop-down and specify a URL
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-url.png" >}}
 
-*  Enter the required values as a string
+* Enter the required values as a string
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/http-header-string.png" >}}
 
@@ -317,7 +317,7 @@ A Content Security Policy informs the client (browser) where your page will load
 
 Setting a full content security policy is dependent on what your app does. However, a starting point which declares the content security policy which works with a basic Mendix app is given below:
 
-```code
+```text {linenos=false}
 default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-src 'self' ; font-src 'self' https://fonts.gstatic.com data: ; img-src 'self' data: ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ; base-uri 'self' ; form-action 'self' ; object-src 'none' ; frame-ancestors 'self' ;
 ```
 

@@ -12,9 +12,9 @@ Take a string and try to parse it to a long integer.
 
 ### Input parameters
 
-*   The string to parse
+* The string to parse
     Type: String
-*   (Optional) Default value
+* (Optional) Default value
     Type: Integer/Long
 
 ### Output

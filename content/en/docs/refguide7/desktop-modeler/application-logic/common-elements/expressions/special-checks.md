@@ -52,7 +52,6 @@ Assuming $object1 is an domain entity and that it has a member called 'member1',
 
 ## Checking Whether an Object Is New<a name="new"></a>
 
-
 ### Input
 
 An object.

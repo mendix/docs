@@ -17,4 +17,4 @@ If [security](/refguide7/project-security/) is enabled, the menu will only show 
 
 See also:
 
-*   [Menu Item](/refguide7/menu-item/)
+* [Menu Item](/refguide7/menu-item/)

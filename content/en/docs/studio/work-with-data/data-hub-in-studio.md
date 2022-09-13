@@ -20,10 +20,6 @@ For example, you have an *Employee Onboarding app* containing information on wha
 
 For more information on how to use data in your app, see the [Selecting External Entities on Pages](#select-external-entities) section.
 
-{{% alert color="info" %}}
-You can access Data Hub if your organization has a Data Hub license. 
-{{% /alert %}}
-
 ## 2 Selecting External Entities on Pages {#select-external-entities}
 
 The entities which are available through the Data Hub Catalog are called *external entities* as they are coming from an external source (*a source app*). 
@@ -36,12 +32,12 @@ You can select external entities as a data source for data containers (a data vi
     1. **Search for a specific service or entity name** – enter a search term in the search field to find an entity you would like to add:
 
         {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/searching-for-entity.png" alt="Searching for an Entity"   width="400"  >}}
-        
+
     2. **Browse through available data** – click the **Data Hub** section and browse through available services and entities:
-    
+
         {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/selecting-entity.png" alt="Selecting an Entity"   width="400"  >}}
 
-3. Click **Select**.
+4. Click **Select**.
 
 The selected external entity will be added to your domain model automatically together with all integration and security settings. 
 {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/domain-model-example.png" alt="Domain Model" >}}
@@ -66,7 +62,7 @@ In the **Data Hub** tab, you can do the following:
 
     * **All Services** – all services will be shown in the **Data Hub** tab.
     * **Studio Compatible Services** – only services that are compatible with Studio are displayed in the **Data Hub** tab.
-    
+
 * **View services used by your app** – services that are already used in your app are marked with a green check-mark.
 
 * **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first. 
@@ -79,25 +75,17 @@ In the **Data Hub** tab, you can do the following:
     * **Show Changes** – takes you to the Data Hub Catalog where you can check what has been changed in the service.  
 
 * **View external entities available within the service** – you can expand the service information to see which external entities are available.
-
 * **View information on the service** – a service name and version number. Click the information icon to view the following information on the service:
 
     * **Service name** – the name of the shared data source registered in the Data Hub Catalog.
-
     * **Version** – every service has a version number. When you consume data from a service, you consume from a specific version of a service published to an environment. New versions of a service are issued if changes are made.
-    
     * **Last Updated** – indicated the date when the service was last updated.
-    
     * **Technical Owner** – links to the technical owner of the service (by default this is the owner who registered the service, but this can be changed in the Data Hub Catalog). 
-    
     * **Business Owner** – links to the business owner of the data that the service connects to.
-    
     * **Contact** – contact of the business owner. 
-    
     * **View in Data Hub Catalog** – a link to the Data Hub Catalog of your organization.
-    
-        {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/service-information.jpg" alt="Service Information"   width="300"  >}}
 
+        {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/service-information.jpg" alt="Service Information"   width="300"  >}}
 
 ## 3 External Entity Properties
 
@@ -120,9 +108,7 @@ External attributes may have limitations that you can see in their properties. L
 {{< figure src="/attachments/studio/work-with-data/data-hub-in-studio/attribute-with-limitations.jpg" alt="Attribute with Limitations"   width="250"  >}}
 
 {{% alert color="info" %}}
-
 You cannot delete attributes of external entities.
-
 {{% /alert %}}
 
 ### 3.2 External Entity Associations

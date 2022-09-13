@@ -24,16 +24,16 @@ weight: 100
 
 | Story # | Impact | Description |
 | --- | --- | --- |
-| 600896 | Low | Various meta model updates _for Mendix version 6.1.0_ - see below. |
+| 600896 | Low | Various meta model updates *for Mendix version 6.1.0* - see below. |
 
 The following changes are made per 600896 and pertain exclusively to models made with Mendix version 6.1.0 and above:
 
-*   Introduced a new modeling construct `SelectorDatabaseSource` for pages.
-*   `DatabaseConstraint` cannot be created directly in a `DatabaseSourceBase` instance anymore. Instead, use the `create` method of `DatabaseConstraint` and assign the instance explicitly to a suitable container, as in, `databaseConstraints` of either an instance of (a sub type of) `DatabaseSourceBase` or `SelectorDatabaseSource`.
-*   These properties have been deleted, so should not be accessed on models with Mendix version 6.1.0 and above:
-    *   `systemEntityType` of both `MsdMicroflow` and `MsdMicroflowParameter`,
-    *   `parameterTypeName` of `ExportMapping`, and
-    *   `allowSimpleMappingInheritance` of `OperationInfo`.
+* Introduced a new modeling construct `SelectorDatabaseSource` for pages.
+* `DatabaseConstraint` cannot be created directly in a `DatabaseSourceBase` instance anymore. Instead, use the `create` method of `DatabaseConstraint` and assign the instance explicitly to a suitable container, as in, `databaseConstraints` of either an instance of (a sub type of) `DatabaseSourceBase` or `SelectorDatabaseSource`.
+* These properties have been deleted, so should not be accessed on models with Mendix version 6.1.0 and above:
+    * `systemEntityType` of both `MsdMicroflow` and `MsdMicroflowParameter`,
+    * `parameterTypeName` of `ExportMapping`, and
+    * `allowSimpleMappingInheritance` of `OperationInfo`.
 
 ## 1.0.2
 
@@ -81,7 +81,7 @@ In this release we moved from argument less constructors to factory methods. Thi
 
 So if you had:
 
-```
+```text
 <code>function newEntity(domainModel: domainmodels.DomainModel, name: string) {
 	var entity = new domainmodels.Entity();
 	domainModel.entities.push(entity);
@@ -93,7 +93,7 @@ So if you had:
 
 This will become:
 
-```
+```text
 <code>function newEntity(domainModel: domainmodels.DomainModel, name: string) {
 	var entity = domainmodels.Entity.create(domainModel.model); // all factories need to know about the owning model
 	domainModel.entities.push(entity);
@@ -103,9 +103,9 @@ This will become:
 }</code>
 ```
 
-This seems to make it less convenient to make new structures. However, we introduced convenience factory methods that automatically create new elements _and_ registers them on their parent. So from this release onward you can just write:
+This seems to make it less convenient to make new structures. However, we introduced convenience factory methods that automatically create new elements *and* registers them on their parent. So from this release onward you can just write:
 
-```
+```text
 <code>function newEntity(domainModel: domainmodels.DomainModel, name: string) {
 	var entity = domainmodels.Entity.createIn(domainModel); // pass the domainModel instead of a model
 	entity.name = name;

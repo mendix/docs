@@ -13,19 +13,18 @@ weight: 96
 This is the first version that is also fully available for Mendix 7. Due to some incompatibilities between 6 and 7, there are now two packages available:
 
 * Package 1
-  * This is the standard package, which is fully compatible with Mendix 7
-  * This is available in the [Mendix Marketplace](https://marketplace.mendix.com/link/component/6127/Mendix/Mendix-Application-Performance-Monitor)
+    * This is the standard package, which is fully compatible with Mendix 7
+    * This is available in the [Mendix Marketplace](https://marketplace.mendix.com/link/component/6127/Mendix/Mendix-Application-Performance-Monitor)
 
 * Package 2
-  * This is the same version packaged for Mendix 6
-  * This is available on the **All Versions** tab in the Marketplace via the Modeler
+    * This is the same version packaged for Mendix 6
+    * This is available on the **All Versions** tab in the Marketplace via the Modeler
 
 With the release of Mendix 7, the Mendix documentation changed and the help links in APM pointed to the wrong location. This has been fixed.
 
 ### Bug fixes
 
 * In the creation of a trigger in a measurement with a query as the source, the created trigger was connected to the parameter (or so it seemed in the UI). This has been fixed to work as expected.
-
 * A range validation in the BaseTrigger entity that was on the TriggerContinuationPaused Boolean and should have been on TriggerContinuationDelay has been fixed.
 
 ## 1.10.0
@@ -64,13 +63,13 @@ At the same time, we fixed a bug in the trap tool that left empty trap records w
 
 ### Other Fixes/Improvements
 
-*   The licensing mechanism is improved, so we can issue a one time code immediatly. When entering this code in the **License request code** field during the installation of APM, a license key will automatically be generated (24/7 within a minute as long as the
+* The licensing mechanism is improved, so we can issue a one time code immediatly. When entering this code in the **License request code** field during the installation of APM, a license key will automatically be generated (24/7 within a minute as long as the
 license server is up).
-*	The measurements tool **Search** tab shows the values in a decimal format with two decimals so that it is more readable.
-*	We renamed the Java parameter that led to issues in installation of APM in some Mendix releases.
-*	We fixed some mappings in OData.
-*	We improved the sample data for measurements, queries, exclusions, and a statistics trigger.
-*	We removed tester/developer features like APM tool runtime statistics on a developer page (as
+* The measurements tool **Search** tab shows the values in a decimal format with two decimals so that it is more readable.
+* We renamed the Java parameter that led to issues in installation of APM in some Mendix releases.
+* We fixed some mappings in OData.
+* We improved the sample data for measurements, queries, exclusions, and a statistics trigger.
+* We removed tester/developer features like APM tool runtime statistics on a developer page (as
 developer) and a page with test features from the APM tool.
-*	A random offset is added in the measurements tool scheduled events to make sure they do not run at the same time if they have the same frequency. This should spread out CPU usage and lead to a better performance.
-*	The automatic data cleanup now runs at midnight.
+* A random offset is added in the measurements tool scheduled events to make sure they do not run at the same time if they have the same frequency. This should spread out CPU usage and lead to a better performance.
+* The automatic data cleanup now runs at midnight.

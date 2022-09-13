@@ -25,19 +25,19 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To replace the default Save button with a custom one, follow these steps:
 
-1.  Open the **Customer** detail page, which should look like this:
+1. Open the **Customer** detail page, which should look like this:
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580990.png" >}}
 
 2. Right-click the **Save** button and remove it by selecting **Delete**.
 3. Right-click the drop-zone under the **Cancel**, select **Add widget**, and then select **Call microflow button**.
-4.  In the **Select Microflow** dialog box, click **New** to create a new microflow called **Customer_Save**.
+4. In the **Select Microflow** dialog box, click **New** to create a new microflow called **Customer_Save**.
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/customer-save.png" >}}
 
 5. After the button is created, double-click it to open its properties editor.
 6. Change the **Caption** to *Save*.
-7.  Change the **Icon** to an image of your choice.
+7. Change the **Icon** to an image of your choice.
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580987.png" >}}
 
@@ -45,8 +45,8 @@ To replace the default Save button with a custom one, follow these steps:
 
 ## 4 Re-creating the Default Save Behavior
 
-1.  Right-click the new **Microflow** button and select **Go to microflow** to open the new microflow. The Microflow should look like this:
-    
+1. Right-click the new **Microflow** button and select **Go to microflow** to open the new microflow. The Microflow should look like this:
+
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580984.png" >}}
 
 2. Open the **Toolbox** from the lower-right corner of the Modeler:
@@ -54,28 +54,28 @@ To replace the default Save button with a custom one, follow these steps:
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/8946802.png" >}}
 
 3. Drag a **Commit object(s)** action from the **Toolbox** to the line between the green start and red end events, which will insert a commit action activity.
-4.  Double-click the new activity to open its properties:
+4. Double-click the new activity to open its properties:
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580983.png" >}}
 
-5.  In the **Input** section, select **Customer** for **Variable** and click **OK**. The microflow should now look like this:
-    
+5. In the **Input** section, select **Customer** for **Variable** and click **OK**. The microflow should now look like this:
+
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580982.png" >}}
 
-6.  Drag a **Close page** action from the **Toolbox** to the line between the green start and red end events, which will insert a close page action activity. You have now re-created the default save behavior, and the m should look like this:
+6. Drag a **Close page** action from the **Toolbox** to the line between the green start and red end events, which will insert a close page action activity. You have now re-created the default save behavior, and the m should look like this:
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580981.png" >}}
 
 ## 5 Extending the Microflow with Your Own Functionality
 
 1. Drag a **Show message** action from the **Toolbox** to the line between the start and end events, which will insert a show message action activity.
-2.  Double-click the new activity to open its properties:
+2. Double-click the new activity to open its properties:
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580980.png" >}}
 
 3. Select the **Type** of message.
 4. Enter a message as a **Template** value.
-5.  Click **OK** to save the properties. The microflow should now look like this:
+5. Click **OK** to save the properties. The microflow should now look like this:
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-a-custom-save-button/18580979.png" >}}
 

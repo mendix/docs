@@ -27,9 +27,7 @@ React Native modules expose native Java/Objective-C and C++ objects allowing for
 ## 2 Module Types {#module-types}
 
 {{% alert color="info" %}}
-
 Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
-
 {{% /alert %}}
 
 When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide/module-settings/). 
@@ -40,8 +38,7 @@ There are the following type of modules:
 * [Add-on modules](/refguide/module-settings/#add-on-module) 
 * [Solution modules](/refguide/module-settings/#solution-module)
 
-
-##  3 Common
+## 3 Common
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |

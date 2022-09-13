@@ -7,4 +7,3 @@ simple_list: true
 ---
 
 These are the release notes for the Mendix Metamodel version 9:
-

@@ -3,7 +3,7 @@ title: "Backups"
 url: /developerportal/operate/backups/
 category: "Operations"
 weight: 40
-description: "The Backups page of the Developer Portal described."
+description: "This page describes the Backups page of the Developer Portal."
 tags: ["Operate", "App", "Developer Portal", "Backup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -31,14 +31,15 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 
 | Region | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
 | --- | --- | --- | --- |  --- |
-| Dublin | Frankfurt | 23:00 | 00:00 |  3 hours | 
+| Dublin | Frankfurt | 23:00 | 00:00 |  3 hours |
 | Frankfurt | Dublin | 00:00 | 01:00 | 3 hours |
 | London | Frankfurt | 23:00 | 23:00 | 2 hours |
 | Oregon | Ohio | 07:00 | 00:00 | 1 hour |
 | Singapore | Sydney | 17:00 | 01:00 | 1 hour |
 | Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
 | N. Virginia | N. California | 05:00 | 00:00 | 4 hours |
-| Canada | Oregon | 05:00 | 00:00 | 1 hours |
+| Canada | Oregon | 05:00 | 00:00 | 1 hour |
+| Mumbai | Singapore | 19:30 | 01:00 | 1 hour |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 
@@ -124,7 +125,7 @@ When you click **Details**, you can view the following details:
 Backup Details | Cloud Version | Description
 :---|:---|:---
 **Origin of Environment** | v3 | From which environment this backup was made
-**Status** | v3 & v4 | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
+**Status** | v3 and v4 | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
 **Created by**/ <br /> **Type** | v3 <br /> v4 | The name of the person who created the backup. Automated system backups are named **Nightly**
 **ID**/ <br /> **Snapshot id** | v3 <br /> v4 | Unique identifier for the backup *snapshot*
 **Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup
@@ -139,7 +140,7 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 
 ## 4 Known issues
 
-**Mendix Cloud v4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for _all_ backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
+**Mendix Cloud v4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for *all* backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
 
 ## 5 Read More
 

@@ -1,5 +1,6 @@
 ---
 title: "Part 1: Add Module Dependencies"
+linktitle: "1. Add Module Dependencies"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-add-module-depends/
 weight: 20
 description: Tutorial for adding push notification module dependencies.

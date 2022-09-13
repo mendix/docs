@@ -71,9 +71,9 @@ The **Render mode** determines which HTML5 tag will be used to show the containe
 
 {{% alert color="info" %}}Render mode is not supported on native mobile pages.{{% /alert %}}
 
-### 2.5 Events Section {#events}	
+### 2.5 Events Section {#events}
 
-#### 2.5.1 On-Click {#on-click}	
+#### 2.5.1 On-Click {#on-click}
 
 The **On-click** property specifies the action that will be executed when the user clicks the container (either with their mouse pointer or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> keys when the container is in focus).
 

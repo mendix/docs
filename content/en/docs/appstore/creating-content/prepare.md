@@ -56,7 +56,7 @@ Although OSB API supports endpoints for many operations (as specified in the [Op
 
 For additional assistance and an example of how to provision and bind an app to a logging service, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
-### 4.2 Identity & Access Management (IAM)
+### 4.2 Identity and Access Management (IAM)
 
 When you submit your content to the Marketplace, you can easily integrate its IAM system with the Mendix Platform.
 
@@ -77,10 +77,10 @@ For more information about IAM integration, contact *DIS_AppServices_Supplier_Te
 Metering consists of the following:
 
 * Usage-based metering (via the API gateway)
-	* API (payload, count)
-	* An asynchronous service 
+    * API (payload, count)
+    * An asynchronous service 
 * Active users (via Mendix Runtime)
-	* Widget
+    * Widget
 * Metering (via the content’s own solution) 
 
 ### 4.4 Documentation
@@ -99,7 +99,7 @@ If your content is a controlled item, Mendix needs to ensure it is prevented fro
 
 If you are unclear what this means to you and your content, there are useful resources online.  If you are stuck, contact *DIS_AppServices_Supplier_Team@mendix.com* for guidance.
 
-### 4.6 Pricing & Free Trials {#pricing}
+### 4.6 Pricing and Free Trials {#pricing}
 
 As a Mendix Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your content. Once you have decided on your preferred pricing model and whether you want to offer your content as a free trial, you can apply these these options to your content via steps in the Add Content wizard.
 
@@ -121,7 +121,7 @@ The Marketplace supports time-based trials, so you must clearly define the terms
 
 The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end.
 
-#### 4.6.3 Payments, Marketplace Operating Fees & Supported Regions
+#### 4.6.3 Payments, Marketplace Operating Fees, and Supported Regions
 
 One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments. A user pays a fee to use your content according to the pricing model you specify for it. The Marketplace meters usage of your content and sends a bill to the user.
 

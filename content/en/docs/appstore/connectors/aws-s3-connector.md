@@ -1,14 +1,14 @@
 ---
-title: "AWS S3 Connector"
+title: "Amazon S3"
 url: /appstore/connectors/aws-s3-connector/
-description: "Describes the configuration and usage of the AWS S3 connector, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Amazon S3 connector, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "aws", "s3", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [AWS S3 Connector](https://marketplace.mendix.com/link/component/120340) allows your app to use AWS S3 buckets directly.
+The [Amazon S3](https://marketplace.mendix.com/link/component/120340) connector allows your app to use AWS S3 buckets directly.
 
 ### 1.1 Typical Use Cases
 
@@ -16,25 +16,25 @@ Your app uses objects which you want to store independently from the database. U
 
 ### 1.2  Dependencies
 
-This connector uses the AWS Authentication Module to provide the credentials with which to authenticate to the S3 bucket. You need to have the downloaded and configured the AWS Authentication Module to use the AWS S3 Connector. See [AWS Authentication Module](/appstore/connectors/aws-authentication/) for more information.
+This connector uses the AWS Authentication connector to provide the credentials with which to authenticate to the S3 bucket. You need to have the downloaded and configured the AWS Authentication connector to use the Amazon S3 connector. See [AWS Authentication connector](/appstore/connectors/aws-authentication/) for more information.
 
 ## 2 Configuration
 
-The Java actions provided in the module need AWS credentials. These are provided using the [AWS Authentication Module](/appstore/connectors/aws-authentication/). This needs to be set up as described in the linked document.
+The Java actions provided in the module need AWS credentials. These are provided using the [AWS Authentication](/appstore/connectors/aws-authentication/) connector. This needs to be set up as described in the linked document.
 
-To include the AWS S3 Connector module in your app, do the following.
+To include the Amazon S3 connector in your app, do the following.
 
 1. Open your app in Studio Pro
 
-2. Download the [AWS S3 Connector](https://marketplace.mendix.com/link/component/120340) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+2. Download the [Amazon S3](https://marketplace.mendix.com/link/component/120340) connector from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 
-## 3 Using the AWS S3 Connector Module
+## 3 Using the Amazon S3 Connector
 
-The AWS S3 Connector module contains a number of Java actions which can be used in your microflows to connect to one or more S3 buckets. These use the domain model of the module to connect to your S3 bucket(s).
+The Amazon S3 connector module contains a number of Java actions which can be used in your microflows to connect to one or more S3 buckets. These use the domain model of the module to connect to your S3 bucket(s).
 
 ### 3.1 Domain Model
 
-The domain model used by the AWS S3 Connector is shown below.
+The domain model used by the Amazon S3 connector is shown below.
 
 {{< figure src="/attachments/appstore/connectors/aws-s3-connector/domain-model.png" >}}
 
@@ -57,7 +57,7 @@ The module comes with some example microflows which you can find in **App** > **
 
 To use these Java Actions you must do the following:
 
-1. Provide a **Credentials** object which you have retrieved using the `GetStaticCredentials` microflow in the [AWS Authentication Module](/appstore/connectors/aws-authentication/) — this needs to be passed to all the Java actions as a parameter to allow authentication to take place.
+1. Provide a **Credentials** object which you have retrieved using the `GetStaticCredentials` microflow in the [AWS Authentication](/appstore/connectors/aws-authentication/) connector — this needs to be passed to all the Java actions as a parameter to allow authentication to take place.
 
 2. Provide other parameters to the action as objects of entities in the AWSS3Connector domain model. 
 
@@ -205,4 +205,3 @@ This action copies an object from one bucket to another bucket.  The new object 
 **Returns**
 
 * Boolean – `true` if object was successfully copied, otherwise `false`
-

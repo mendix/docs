@@ -3,7 +3,7 @@ title: "List View Controls"
 url: /appstore/widgets/list-view-controls/
 category: "Widgets"
 description: "Describes the configuration and usage of the List View Controls widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "list view control", "check box filter", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "list view control", "check box filter", "platform support", "list"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -45,13 +45,13 @@ This widget enables filtering a list view at runtime with various constraints.
 ### 2.2 Configuration
 
 * **General** tab
-	* **List view with entity** – the entity name for the target list view
+    * **List view with entity** – the entity name for the target list view
 * **Checked** and **Unchecked** tabs
-	* **Filter** – start setting up the filter actions to be applied when the widget is checked or unchecked
-		* **Attribute** – select an attribute and input an attribute value by which to filter
-			* **Boolean** data type – use a `true` or `false` string
-			* **Enumeration** data type – use the enumeration name/key (not **caption**)
-		* **XPath** – input a constraint by which to filter (**none** is for an empty option which resets the filter then selected)
+    * **Filter** – start setting up the filter actions to be applied when the widget is checked or unchecked
+        * **Attribute** – select an attribute and input an attribute value by which to filter
+            * **Boolean** data type – use a `true` or `false` string
+            * **Enumeration** data type – use the enumeration name/key (not **caption**)
+        * **XPath** – input a constraint by which to filter (**none** is for an empty option which resets the filter then selected)
 
 {{% alert color="info" %}}
 The widget connects to the first list view it finds from within its parent container and outer wards.
@@ -75,11 +75,11 @@ When placed above a list view, this widget enables filtering the list view at ru
 ### 3.2 Configuration
 
 * **General** tab
-	* **List view with entity** – the entity name for the target list view
-	* **Filter options** > **New** – only one empty filter option should be selected
-		* **None** – an empty option that resets the filter then selected; this does not require a caption
-		* **Attribute** – select an attribute and input a value by which to filter
-		* **XPath** – input a constraint by which to filter
+    * **List view with entity** – the entity name for the target list view
+    * **Filter options** > **New** – only one empty filter option should be selected
+        * **None** – an empty option that resets the filter then selected; this does not require a caption
+        * **Attribute** – select an attribute and input a value by which to filter
+        * **XPath** – input a constraint by which to filter
 
 ### 3.3 Example
 
@@ -97,13 +97,12 @@ This widget adds an interactive sort to your list view. It supports sorting on a
 ### 4.2 Configuration
 
 * **Data source** tab
-	* **List view with entity** – select the **entity** property of the list widget you want to sort; this entity must be the one used on the list view.
-	* **Sort attributes** – select the attribute on the list widget entity to be sorted
+    * **List view with entity** – select the **entity** property of the list widget you want to sort; this entity must be the one used on the list view.
+    * **Sort attributes** – select the attribute on the list widget entity to be sorted
 
 ### 4.3 Example
 
 {{< figure src="/attachments/appstore/widgets/list-view-controls/drop-down-sort.gif"   width="300"  >}}
-
 
 ## 5 Header Sort Widget {#header-sort}
 
@@ -123,26 +122,26 @@ With this widget, you can add Bootstrap-like paging to your list view, similar t
 ### 6.2 Configuration
 
 * **Appearance** tab
-	* **Hide unused paging** – specify if the buttons should be hidden when they are not needed (for example, when the records are few)
-	* **Paging style** – specify how the buttons should look:
-		* **Default** – shows the pagination with the looks similar to Mendix data grid paging
-		* **Page number buttons** – shows the pagination as numbers with the default set to seven
-		* **Custom** – allows the pagination to be configured to look the way one desires
+    * **Hide unused paging** – specify if the buttons should be hidden when they are not needed (for example, when the records are few)
+    * **Paging style** – specify how the buttons should look:
+        * **Default** – shows the pagination with the looks similar to Mendix data grid paging
+        * **Page number buttons** – shows the pagination as numbers with the default set to seven
+        * **Custom** – allows the pagination to be configured to look the way one desires
 
 ### 6.3 Examples
 
 * Lower pagination:
-	
-	{{< figure src="/attachments/appstore/widgets/list-view-controls/lower-pagination.gif"   width="300"  >}}
-  
+
+    {{< figure src="/attachments/appstore/widgets/list-view-controls/lower-pagination.gif"   width="300"  >}}
+
 * Multiple paginations:
 
-	{{< figure src="/attachments/appstore/widgets/list-view-controls/multiple-pagination.gif"   width="300"  >}}
+    {{< figure src="/attachments/appstore/widgets/list-view-controls/multiple-pagination.gif"   width="300"  >}}
 
 * Page size:
-	
-	{{< figure src="/attachments/appstore/widgets/list-view-controls/page-size.gif"   width="300"  >}}
-	
+
+    {{< figure src="/attachments/appstore/widgets/list-view-controls/page-size.gif"   width="300"  >}}
+
 ## 7 Text Box Search Widget {#text-box-search}
 
 Add an interactive search box to all of your list views with this widget. This supports searching on a single field, similar to the built-in list view search capabilities.
@@ -155,8 +154,8 @@ Add an interactive search box to all of your list views with this widget. This s
 ### 7.2 Configuration
 
 * **General** tab
-	* **List view with entity** – select an entity that matches the list view entity
-	* **Attributes** – select the attributes to be used in the text search
+    * **List view with entity** – select an entity that matches the list view entity
+    * **Attributes** – select the attributes to be used in the text search
 
 ### 7.3 Sample
 
@@ -201,11 +200,11 @@ While developing, you will probably rely mostly on `npm start`. However, there a
 | lint | Lints all *.js* files. |
 | lint:fix | Lints and fixes all *.ts* files. |
 
-### 8.4 CI & Remote Testing
+### 8.4 CI and Remote Testing
 
 To enable continuous integration services, copy the *node_modules/mendix-widget-build-script/dist/localSettings.js* file to your app root, and update the settings to run the update deployment from the local source. Do not forget to exclude this file in the *.gitignore* file, as it contains sensitive data.
 
-```
+```javascript
 exports.settings = {
     appName: "appName",
     key: "xxxxxxxx-xxxx-xxxx-xxxxx-xxxxxxxxxxxx",

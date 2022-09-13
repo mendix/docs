@@ -39,7 +39,7 @@ The render mode determines how the text will be shown in the web browser.
 | ...       | ... |
 | Heading 6 | The text will be rendered as a small heading (`<h6>` tag in HTML) |
 
-_Default value:_ Text
+*Default value:* Text
 
 ## Visibility properties
 

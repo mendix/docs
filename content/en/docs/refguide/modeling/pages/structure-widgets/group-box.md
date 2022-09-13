@@ -68,5 +68,3 @@ Possible values of this property are the following:
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)
-
-

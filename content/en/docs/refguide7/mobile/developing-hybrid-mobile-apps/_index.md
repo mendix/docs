@@ -35,4 +35,3 @@ Your mobile device has to be on the same network as your development machine for
 * [Getting the Mendix Developer App](/refguide7/getting-the-mendix-app/)
 * [Customizing Hybrid Mobile Apps](/refguide7/customizing-hybrid-mobile-apps/)
 * [Packaging Hybrid Mobile Apps](/refguide7/packaging-hybrid-mobile-apps/)
-

@@ -1,5 +1,6 @@
 ---
 title: "Part 5: Implement Push Notifications in Your Native App"
+linktitle: "5. Push Notifications in Native App"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/
 weight: 60
 description: Tutorial for implementing push notifications in a native app.
@@ -27,12 +28,12 @@ Completing the previous section brings the **App events** widget into your app. 
 If you already had an **App events** widget on your homepage, follow these steps:
 
 1. Open the **App events** widget.
-1.  In  **Page load**, select **Call a nanoflow** from the **On load**  drop-down list. 
-2.  For **Nanoflow**, click **Select** and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module:<br /> 
-	a. If you already have a nanoflow selected, make a **Call nanoflow** activity to the nanoflow in that existing nanoflow.<br />
+1. In  **Page load**, select **Call a nanoflow** from the **On load**  drop-down list. 
+1. For **Nanoflow**, click **Select** and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module:<br /> 
+    * If you already have a nanoflow selected, make a **Call nanoflow** activity to the nanoflow in that existing nanoflow.<br />
 1. In **App resume**, select **Call a nanoflow** from the **On Resume** drop-down list. 
 1. For **Nanoflow**, click and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module: <br />
-    a. If you already have a nanoflow selected, make a **Call nanoflow** activity to the  nanoflow in that existing nanoflow. <br /> 
+    * If you already have a nanoflow selected, make a **Call nanoflow** activity to the  nanoflow in that existing nanoflow. <br /> 
 
 ## 3 Notifications Widget
 

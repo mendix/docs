@@ -64,7 +64,7 @@ In *theme/web/index.html* do the following:
 
 1. Remove the line with the `{{unsupportedbrowsers}}` tag
 1. Remove the `<script>` tag with the `dojoConfig` inside
-1.  At the top of the `<head`> tag, add a reference to the `unsupported-browser.js` script:
+1. At the top of the `<head`> tag, add a reference to the `unsupported-browser.js` script:
 
     ```js
     <html>
@@ -75,7 +75,8 @@ In *theme/web/index.html* do the following:
         ...
     </html>
     ```
-1.  In the `<body>` tag, add a reference to the `appSetup.js` script before `mxui.js` is loaded:
+
+1. In the `<body>` tag, add a reference to the `appSetup.js` script before `mxui.js` is loaded:
 
     ```js
     <html>

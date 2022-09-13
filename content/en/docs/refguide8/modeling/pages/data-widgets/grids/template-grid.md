@@ -171,7 +171,7 @@ Default: *0*
 To perform actions on a template grid, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
 
 * **Go to entity** – opens a domain model and highlights an an entity that is used as the data source 
-* **Go to data source** **microflow **– this action is only displayed when a microflow is set as the data source and opens this microflow 
+* **Go to data source** **microflow**– this action is only displayed when a microflow is set as the data source and opens this microflow 
 
 ## 5 Read More
 

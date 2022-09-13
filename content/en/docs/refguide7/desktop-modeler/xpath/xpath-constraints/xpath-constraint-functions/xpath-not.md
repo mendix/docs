@@ -42,4 +42,5 @@ The query above does not return the same result as the one below, which returns 
 ```java
 //Sales.Customer[Sales.Customer_Order/Sales.Order/TotalPrice <= 30000]
 ```
+
 For example, if a customer has placed two orders—one for 15,000 and one for 35,000—this query will return this customer, while the *not* query will not. Customers who have not placed any orders will not be returned by this query.

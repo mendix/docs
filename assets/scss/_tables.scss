@@ -16,6 +16,10 @@
     vertical-align: top;
     border: $table-border-width solid $table-border-color; // NK - added borders to tables
     font-size: 0.8rem; // NK - smaller font size
+
+    ul, ol > ul li, > ol li {
+        margin-bottom: .25rem;  // NK - removes margin padding at end of list item in table cell
+    }
   }
 
   thead th {

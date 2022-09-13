@@ -56,4 +56,3 @@ INNER JOIN Sales.Order/Sales.Customer_Order/Sales.Customer/Sales.Customer_Addres
 GROUP BY Sales.Address/City
 HAVING SUM(Sales.Order/TotalPrice) > 1000.0 OR Sales.Address/City = 'Losdun'
 ```
-

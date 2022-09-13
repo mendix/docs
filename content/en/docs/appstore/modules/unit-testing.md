@@ -24,19 +24,20 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 ## 2 Installation
 
 1. Import the Unit Testing module into your app.
+    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 2. Download the latest Object Handling module into your app.
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 5. The following steps are optional:
-	* For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
-	* For running remote unit tests via API:
-		* Add the **Startup** flow to your app model's startup sequence
-		* Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
-		* When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path
+    * For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
+    * For running remote unit tests via API:
+        * Add the **Startup** flow to your app model's startup sequence
+        * Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
+        * When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path
 
 ## 3 Usage
 
-To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your project. When you select  a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
+To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your app. When you select  a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
 
 Click **Run all module tests** to run all the unit tests in all the suites or all the unit tests in the selected suite. When the unit tests are running, the progress will be tracked.
 
@@ -48,11 +49,11 @@ When a unit test has been run, additional details about the test result will app
 
 ### 4.1 Creating Microflow Unit Tests
 
-To create a new microflow test in a module, just add a microflow with a name that starts with **Test** or **UT** (case-insensitive). A test microflow should have no input arguments and either no result type, a Boolean result type, or a string result type. For string results, a non-empty string is interpreted as an error message. A microflow without a return type is considered to be successful as long as no exceptions are thrown.
+To create a new microflow test in a module, just add a microflow with a name that starts with **TEST_** or **UT_** (case-insensitive). A test microflow should have no input arguments and either no result type, a Boolean result type, or a string result type. For string results, a non-empty string is interpreted as an error message. A microflow without a return type is considered to be successful as long as no exceptions are thrown.
 
 In addition, it is possible to create a **Setup** and **TearDown** microflow per module. Those microflows are invoked once before and after each test run (regardless of whether the test run consists of one or multiple unit tests).
 
-The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (although using the [microflow/nanoflow debugger](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/) is usually more insightful).
+The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (although using the [microflow/nanoflow debugger](/refguide/debug-microflows-and-nanoflows/) is usually more insightful).
 
 ### 4.2 Creating a Java Unit Tests (with JUNit)
 
@@ -104,4 +105,4 @@ The completed flag will be `false` as long as the test run is not finished. The 
 
 ## 6 Read More
 
-* [How to Test Microflows Using the UnitTesting Module](/howto/testing/testing-microflows-using-the-unittesting-module/)
+* [How to Test Microflows Using the UnitTesting Module](/refguide/testing-microflows-with-unit-testing-module/)

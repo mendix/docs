@@ -1,5 +1,6 @@
 ---
 title: "Part 4: Configure Push Notifications"
+linktitle: "4. Configure Push Notifications"
 url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-config-push/
 weight: 50
 description: Tutorial for configuring push notifications.

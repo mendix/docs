@@ -11,9 +11,7 @@ tags: ["adaptive solutions", "ip protection"]
 Because subscriptions for solutions, app services, connectors, and modules are sold on the Mendix Marketplace, you will have intellectual property (IP) protection concerns as a publisher. You will want to protect the IP contained within the model that makes up the content you are selling. In addition, you will want to protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your Marketplace components.
 
 {{% alert color="info" %}}
-
 Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
-
 {{% /alert %}}
 
 ## 2 Why IP Protection?
@@ -37,14 +35,14 @@ Not all parts of a component need to be protected. It is often desirable to prot
 ### 4.1 Best Practices for Architecting
 
 * Identify your core IP
-	* Think about which parts of the solution are most critical
-	* Think about which parts of the solution will be adjusted by your customer (those parts cannot be protected)
+    * Think about which parts of the solution are most critical
+    * Think about which parts of the solution will be adjusted by your customer (those parts cannot be protected)
 * Define the API
-	* Identify the API of the IP-protected content
-	* Think about extension needs, but keep it simple
-	* Create simple interfaces with a limited feature set instead of over-engineering to support everything
-	* Remember that APIs with lots of options are much harder to use, so simplicity is key
-	* Limit API exposure, as it is easier to add more later than to retract interfaces
+    * Identify the API of the IP-protected content
+    * Think about extension needs, but keep it simple
+    * Create simple interfaces with a limited feature set instead of over-engineering to support everything
+    * Remember that APIs with lots of options are much harder to use, so simplicity is key
+    * Limit API exposure, as it is easier to add more later than to retract interfaces
 
 ### 4.2 Hiding Implementations {#implementation}
 
@@ -72,7 +70,7 @@ To protect your solutions, follow these steps:
 
 Approach this iteratively, as it is often very hard to define these boundaries “right first time.” Instead, open up as little as possible and increase API surface with incremental releases.
 
-#### 4.3.2 Protecting App Services, Connectors & Modules
+#### 4.3.2 Protecting App Services, Connectors, and Modules
 
 App services, connectors, and modules that are made available on the Marketplace often contain intellectual property and custom [usage metering](#metering). It is important to protect that content.
 
@@ -102,9 +100,9 @@ These are the best practices for usage metering:
 
 * Verify that usage metering is "on the right side" and hidden behind the API
 * Make sure the usage metering does not depend on the specific invocation of an API
-	* Relying on an AfterStartup microflow to start regular-interval usage metering is not a good idea, because it can be accidentally disabled
-	* However, you can safely use an AfterStartup microflow if it is also used for functional purposes (for example, starting a custom request handler, or initializing a module when the module will not function without it)
+    * Relying on an AfterStartup microflow to start regular-interval usage metering is not a good idea, because it can be accidentally disabled
+    * However, you can safely use an AfterStartup microflow if it is also used for functional purposes (for example, starting a custom request handler, or initializing a module when the module will not function without it)
 * Have a legal agreement for your solution or app service in place that includes a clause requiring the customer to ensure that any custom usage metering functions as intended
-	* This means that, even in the case where for some reason you cannot protect the metering implementation at the technical level, you are still covered at the legal level
+    * This means that, even in the case where for some reason you cannot protect the metering implementation at the technical level, you are still covered at the legal level
 
 <!-- TODO: Provide examples -->

@@ -11,11 +11,7 @@ This event can only be used in **Microflows**.
 
 ## 1 Introduction
 
-An error event defines where a microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them. You can control whether all database actions within the current transaction will be rolled back.
-
-For more information on error handlers and their settings in microflows, see the [Error Handlers](#errorhandlers) subsection of [Handling Errors in Microflows](#errors-in-microflows), below. More information on error handlers and their settings in nanoflows is in the [Error Handlers](#errorhandlers-nano) subsection of [Handling Errors in Nanoflows](#errors-in-nanoflows), below.
-
-Link an error event and an activity which has an error handlers set on it with a [sequence flow](/refguide/sequence-flow/).
+An error event defines where a microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them. You can control whether all database actions within the current transaction will be rolled back (for more infromation, ) {{% todo %}}see xxx {{% / todo %}}
 
 {{% alert color="warning" %}}
 You can only use an error event if an error is in scope: Studio Pro does not accept it if you connect the normal execution flow to an error event, because there would not be an error to pass back to the caller.
@@ -26,8 +22,10 @@ In this example, an error occurs while committing an object to the database. It 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/error-event/error-event.png" >}}
 
 {{% alert color="info" %}}
-When adding an error event, you need to add an [error handler](#errorhandlers) for an activity before the error event, and select **Set as error handler** for the sequence flow.
+When adding an error event, you need to add an [error handler](#errorhandlers) for an activity before the error event. Link an error event and an activity which has an error handlers set on it with a [sequence flow](/refguide/sequence-flow/) and select **Set as error handler** for the sequence flow.
 {{% /alert %}}
+
+## 2 Read More
 
 ## 2 Handling Errors in Microflows{#errors-in-microflows}
 
@@ -43,18 +41,18 @@ On an activity or decision, you have three options:
 * **Custom with rollback**
 * **Custom without rollback**
 
-For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
-
-Unlike the [Rollback object](/refguide/rollback-object/) action, the rollback option of an error event does not take into account whether an object has been committed. This means that even committed objects will be rolled back to the value they had when the microflow (or the microflow it was called from) began. The rollback also applies to any changes you made in [Event Handlers](/refguide/event-handlers/) such as *after commit*.
-
-The **Custom without rollback** option is only invoked when the action itself causes an error event, meaning you will still have access to any database objects you created or modified before the action which caused the error handler event. If you want to keep changes to objects of a persistable entity, you still need to commit them explicitly after a **Custom without rollback** error if they weren't committed before the error occurred.
+For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting **Custom with rollback**, it will trigger this path when the error occurs and still rollback your objects afterwards. The **Custom without rollback** option does not rollback the objects. After you selected a flow as the error handler, it will show this as in the following image:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/error-event/custom-without-rollback-microflows.png" >}}
 
+Unlike the [Rollback object](/refguide/rollback-object/) action, the **Rollback** option of an error event does not take into account whether an object has been committed. This means that even committed objects will be rolled back to the value they had when the microflow (or the microflow it was called from) began. The rollback also applies to any changes you made in [Event Handlers](/refguide/event-handlers/) such as **After Commit**.
+
+The **Custom without rollback** option is only invoked when the action itself causes an error event, meaning you will still have access to any database objects you created or modified before the action which caused the error handler event. If you want to keep changes to objects of a persistable entity, you still need to commit them explicitly after a **Custom without rollback** error if they weren't committed before the error occurred.
+
 On a loop you get two options:
 
-* Rollback (default)
-* Continue
+* **Rollback** (default)
+* **Continue**
 
 The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 

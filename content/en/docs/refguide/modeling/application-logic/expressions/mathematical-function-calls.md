@@ -346,7 +346,9 @@ The input parameters are described in the table below:
 | -------- | --------------------- |
 | A number | Integer/Long, Decimal |
 
-> Note that a negative input for `sqrt` will result in an error
+{{% alert color="info" %}}
+A negative input for sqrt results in an error.
+{{% /alert %}}
 
 ### 10.2 Output
 

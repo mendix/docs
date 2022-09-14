@@ -1,5 +1,5 @@
 ---
-title: "Error Handling in Microflows"
+title: "Set Up Error Handling"
 url: /howto/logic-business-rules/set-up-error-handling/
 category: "Logic & Business Rules"
 weight: 80

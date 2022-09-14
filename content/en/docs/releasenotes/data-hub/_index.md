@@ -15,13 +15,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* Added Authentication details page in Data Source registration form.
-* Added a filter to the Search API to view the resources owned by a user.
-* Updated Catalog UI to support pagination in the search results.
+* We added an **Authentication** details page on the data source registration form.
+* We added a filter to the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/) to view the resources owned by a user.
+* We updated the Data Hub Catalog UI to support pagination in the search results.
 
 #### Fixes
 
-* We fixed a bug where users were getting a 404 page when they go to Catalog by clicking the CTA in a notification email.
+* We fixed a bug where a 404 page was shown after clicking the Data Hub Catalog call-to-action in a notification email.
 
 ### September 8th, 2022
 

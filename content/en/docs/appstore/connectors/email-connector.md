@@ -245,7 +245,7 @@ On the [Azure portal](https://portal.azure.com/), ensure that you have the follo
 
 {{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
 
-#### 4.7.3 Client ID, Tenant ID, and Client Secret 
+#### 4.7.3 Client ID and Client Secret 
 
 This module requires a **Client ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
 

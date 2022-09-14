@@ -9,8 +9,9 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 
 ## 1 Introduction
 
-The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password.
-With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios(Sign up and Forgot password).
+The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password. It works with the local accounts which are managed within your Mendix app. These are the best choice when you do not need to use a Single Sign On (SSO) solution to integrate with your existing Identity and Access Management (IAM) infrastructure.
+
+This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (Sign up and Forgot password). In the sign up case, the end-user will also be asked to provide 
 
 There are three versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro version 7, 8, or 9. These all work in the same way, and require the same dependencies specified below.
 
@@ -21,40 +22,55 @@ There are three versions of the Forgot Password module, depending on whether you
 * [Encryption](/appstore/modules/encryption/)
 * [Model Reflection](/appstore/modules/model-reflection/)
 
-## 2 Installation
+## 2 Installating the Forgot Password Module
 
-* Import ‘ForgotPassword’ module into your app
-* Add dependencies as listed in previous section from the Marketplace
-* Configurations need to done in settings tab 
-    * Add 32 length character value for Encryption.EncryptionKey constant
+{{% alert color="info" %}}
+In these instructions, it is assumed that your main module is `MyFirstModule`. If you are using a different module name, use that instead of `MyFirstModule`.
+{{% /alert %}}
+
+1. Import the [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module into your app
+1. Add the [Dependencies](#dependencies) listed above from the Marketplace.
+1. Open the [App Settings](/refguide/app-settings/) and make the following changes: 
+    * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add 32 character string value for the constant `Encryption.EncryptionKey`
         {{< figure src="/attachments/appstore/modules/forgot-password/encryption-key.png" >}}
-    * Add startup microflow(“Deeplink.StartDeeplink”) on Runtime tab of settings as shown below 
-        {{< figure src="/attachments/appstore/modules/forgot-password/after-startup.png" >}}
-* Configurations in App security tab 
-    * Create a ‘Guest’ role in ‘MyFirstModule’  
-        {{< figure src="/attachments/appstore/modules/forgot-password/guest-role.png" >}}
-    * Provide the permissions for the user roles by referring to the image 
-        {{< figure src="/attachments/appstore/modules/forgot-password/user-role-permissions.png" >}}    
-    * Allow Anonymous user
-        {{< figure src="/attachments/appstore/modules/forgot-password/allow-anonymous.png" >}}    
-* Set the target of User role ‘Guest’ to ‘Nav_GuestHomePage’ microflow of ForgotPassword module which either show the **LoginPage** or trigger the deep link process on Role based home pages tab in Navigation
-    {{< figure src="/attachments/appstore/modules/forgot-password/role-based-home.png" >}}
-* Configure the menu as shown below in Navigation tab 
-        {{< figure src="/attachments/appstore/modules/forgot-password/navigation-tab.png" >}}
-* Run the application and you will be able to see login page. Login as ‘demo_administrator’ from demo_users to configure ForgotPassword on UI 
-* Make sure to configure or validate SMTP settings
-* Click on ‘Create email template’ on ‘Reset Password Email’ tab and provide the details and do the same for ‘Signup Email’ 
+    * In the **Runtime** tab, add the microflow `Deeplink.StartDeeplink` as the **After startup** microflow or as a sub-microflow to an existing after startup microflow 
+1. Open [App security](/refguide/app-security/) and do the following: 
+    * In the **User roles** tab, add a new role, `Guest` in `MyFirstModule`
+    * Set the following permissions for the user roles:
+        * Administrator – `Administration.Administrator, DeepLink.Admin, EmailTemplateAdministrator, Encryption.user, ForgotPassword.Administrator, MxModeIReflection.ModeAdministrator. System.Administrator, MyFirstModule.Administrator`
+        * Guest – `DeepLink.User, ForgotPassword.Guest_ResetPassword, ForgotPassword.Guest_SignUp, System.User, MyFirstModule.Guest`
+        * User – `Administration.User. DeepLink.User, EmailTemplate.Administrator, ForgotPassword.Guest_ResetPassword, MxModelReflection.Readonly, MxModelReflection.TokenUser. System.User. MyFirstModule.User`
+    * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
+1. Open [Navigation](/refguide/navigation/) and do the following'
+    * Set **Role-based home pages** so the target of user role `Guest` is `ForgotPassword.Nav_GuestHomePage`
+        {{< figure src="/attachments/appstore/modules/forgot-password/role-based-home.png" >}}
+        The `Nav_GuestHomePage` microflow is the home page for an anonymous user. This microflow will either show the Login Page or trigger the deep link process which performs the reset password function.
+    * Add the menu item `ForgotPasswordConfiguration` to the app navigation. This item should open the page `ForgotPassword.ForgotPasswordConfiguration_Edit` and be assigned to the `Administrator` user role.
+        {{% alert color="warning" %}}The `ForgotPasswordConfiguration` page should be accessible to the administrator only. It allows the administrator to configure the email template and deep link, and it shows all the open password reset requests.{{% /alert %}}
+1. Run the application
+1. Login as `demo_administrator` from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item
+1. In the **Reset Password Email** tab, do the following:
+    * Click **SMTP settings** to configure or validate SMTP settings for the [Email with Templates](/appstore/modules/email-with-templates/) module
+    * Click **Reset email template** and provide the details for the email sent when an end-user has forgotten their password
         {{< figure src="/attachments/appstore/modules/forgot-password/email-template.png" >}}
-* Click on ‘Create deeplink’ so that deep link will be created on ‘Deeplink’ tab 
-        {{< figure src="/attachments/appstore/modules/forgot-password/create-deeplink.png" >}}
+1. In the **Signup Email** tab, provide the details for the email sent when an end-user wants to sign up to use the app.
+1. In the **Deeplink** tab, configure the deeplink to use the `ForgotPassword.Step3_DL_SetNewPassword` microflow. 
         {{< figure src="/attachments/appstore/modules/forgot-password/configure-deeplink.png" >}}
-* Logout and go back to login page and click on ‘Signup’ button. Enter your name and mail ID and click on send button. You will get an e-mail with a link and get a popup page on UI  
+
+## 3 Testing the Forgot Password Module
+
+1. Logout of the app.
+1. On the sign in page, click `Signup`,
+1. Enter your name and mail ID and click `Send`.
+    You will get confirmation that a password recovery email has been sent  
         {{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
+    You will receive an email containing a link to reset your password
         {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
-* When you open the link in the browser, a pop up page opens and you can reset your password. 
+1. Open the link in the browser
+    You can now reset your password. 
         {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
 
-## 3 Upgrading from Mendix Version 8 to Mendix Version 9
+## 4 Upgrading from Mendix Version 8 to Mendix Version 9
 
 To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below from within Studio Pro: 
 

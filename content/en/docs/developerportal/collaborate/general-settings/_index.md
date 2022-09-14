@@ -17,7 +17,7 @@ aliases:
 
 The **General Settings** page presents an overview of your app.
 
-On the top of page, you can see the image of the app, the app name, and the company that owns the app. 
+On the top of page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle which enables or disables notifications for this app.
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/general-information.png"  >}}
 

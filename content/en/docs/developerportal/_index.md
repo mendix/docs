@@ -77,7 +77,7 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.jpg" alt="Quick actions menu for an app" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" >}}
 
 The actions available depend on the app selected:
 
@@ -127,7 +127,9 @@ To configure what types of notifications you receive, click the settings icon an
 
 {{< figure src="/attachments/developerportal/notification-settings-icon.png" >}}
 
-{{% alert color="info" %}}If you no longer would like to receive notifications when new feedback is submitted for a specific app, go to the [Team](/developerportal/collaborate/team/) page for this app, and then change your role to a role that does not have the permission **Can edit 'Stories, Documents and Feedback'**.{{% /alert %}}
+{{% alert color="info" %}}If you no longer would like to receive notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for this app, and then click on **Stop Watching**.<br/>
+
+If you would like to disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.{{% /alert %}}
 
 ## 7 Guide Categories
 

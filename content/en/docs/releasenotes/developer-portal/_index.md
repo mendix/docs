@@ -20,12 +20,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 ### September 15th, 2022
 
 #### New Features
-* We added the option to watch/unwatch apps both on the [General Settings](https://docs.mendix.com/developerportal/collaborate/general-settings/) page and on the three-dot menu of the app card on the [My Apps](https://docs.mendix.com/developerportal/#my-apps) page. Watching an app at the moment means you will receive feedback notifications for that specific app, while unwatching turns the notifications off.
+* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
 
 #### Fixes
 
-* We fixed an issue where users were not able to delete an App, if other users were members of this App as well.
-* We fixed a navigation issue when clicking the "Go to Environments" button in [Cloud Settings](https://docs.mendix.com/developerportal/collaborate/general-settings/#3-cloud-settings).
+* We fixed an issue where users were not able to delete an app, if other users were still members of this app.
+* We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
 
 ## 2022
 

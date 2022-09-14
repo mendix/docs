@@ -15,6 +15,8 @@ This module allows the end-user to enter their email address, and an email will 
 
 There are three versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro version 7, 8, or 9. These all work in the same way, and require the same dependencies specified below.
 
+If you already use the Forgot Password module in your Mendix version 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix Version 8 to Mendix Version 9](#upgrade8-9), at the end of this page.
+
 ### 1.1 Dependencies {#dependencies}
 
 * [Email with Templates](/appstore/modules/email-with-templates/)
@@ -70,7 +72,7 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
     You can now reset your password. 
         {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
 
-## 4 Upgrading from Mendix Version 8 to Mendix Version 9
+## 4 Upgrading from Mendix Version 8 to Mendix Version 9 {#upgrade8-9}
 
 To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below from within Studio Pro: 
 

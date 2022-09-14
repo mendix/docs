@@ -8,6 +8,10 @@ tags: ["studio", "parameter", "page parameter", "page"]
 
 ## 1 Introduction 
 
+Page parameters allow you using multiple objects on a page that do not have an association. You can pass multiple objects when opening a page same as with microflows. 
+
+For example, you can add multiple top-level data views, each connected to a different parameter. Additionally, you can directly select associations of a page parameter, reducing the need for an additional data view just to be able to follow the association, therefore reducing complexity of the page.
+
 ## 2 Properties
 
 Parameter consists of the following general properties:

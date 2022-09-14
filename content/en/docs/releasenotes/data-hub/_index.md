@@ -11,6 +11,18 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### September 15th, 2022
+
+#### Improvements
+
+* Added Authentication details page in Data Source registration form.
+* Added a filter to the Search API to view the resources owned by a user.
+* Updated Catalog UI to support pagination in the search results.
+
+#### Fixes
+
+* We fixed a bug where users were getting a 404 page when they go to Catalog by clicking the CTA in a notification email.
+
 ### September 8th, 2022
 
 #### Improvements

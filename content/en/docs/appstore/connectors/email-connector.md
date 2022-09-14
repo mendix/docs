@@ -16,6 +16,8 @@ The [Email Connector](https://marketplace.mendix.com/link/component/120739) allo
 The Email Connector includes the following features:
 
 * Configuration of multiple accounts
+    * Use basic authentication for any mail server
+    * Use OAuth 2.0 to configure Microsoft Azure AD account
 * Send emails with digital signatures and encryption
 * Set up email templates
 * Actions that can be performed after receiving emails:

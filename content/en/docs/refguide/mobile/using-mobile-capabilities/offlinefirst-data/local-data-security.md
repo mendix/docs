@@ -55,11 +55,11 @@ Mendix 9.18 and above offer to encrypt the local database of native apps. Databa
 Before enabling local database encryption, ensure that these prerequisites are met:
 
 - Use Mendix 9.18 or above
-- Upgrade the native template to the latest version
+- Upgrade the native template to version 6.3.0 or above
 - Upgrade Make It Native to the latest version
 
 {{% alert color="warn" %}}
-Local database encryption requires the latest version of the native template. If this setting is enabled using an older version of the native template, the app will not start. Be careful about the template version when using Over-The-Air Updates to enable database encryption.
+Local database encryption requires native template version 6.3.0 or above. If this setting is enabled using an older version of the native template, the app will not start. Be careful about the template version when using Over-The-Air Updates to enable database encryption.
 {{% /alert %}}
 
 ### 4.2 Enabling Database Encryption for New Apps
@@ -75,13 +75,13 @@ Enabling database encryption and deploying a new version of the Mendix app to th
 
 Always consider the [prerequisites above](#encryption-prerequisites) before enabling database encryption, especially for existing apps
 
-### 4.4 Disabling Database Encryprion
+### 4.4 Disabling Database Encryption
 
 Disabling database encryption will apply only to newly installed apps. Existing app users will continue to work with an encrypted local database until they uninstall and re-install the app by hand.   
 
 ### 4.5 Native Database Encryption and Make It Native App
 
-Local database encryption also works with the Make It Native App and a custom developer app. Ensure that you upgrade the Make It Native App and your application template to the latest version, or the app may not start.
+Local database encryption also works with the Make It Native App and a custom developer app. Ensure that you upgrade the Make It Native App and your application template to version 6.3.0 or above, or the app may not start.
 
 ### 4.6 How Can I Verify That The Database Is Encrypted?
 

@@ -10,20 +10,20 @@ aliases:
 
 ## 1 Introduction
 
-Offline-first apps built with Mendix store the data and files locally to provide a smooth experience for the end-users. Consequently, the devices store a copy of the data locally. This documentation walks through best practices and techniques to ensure that the local data is kept securely.
+Offline-first apps built with Mendix store the data in the local database to provide smooth end-user experiences. Consequently, the devices store a copy of the data locally. This documentation walks through best practices and techniques to ensure that the local data is kept securely.
 
 ## 2 How Safe Is The Local Data?
-For native mobile apps, the Mendix client stores the data and files in the file system, often sandboxed and encrypted by the operating system. This ensures the application's data can't be accessed by other apps, external entities, or the end-user. Data stored in a Mendix app is excluded from the standard backup mechanisms as well to prevent leaking the data outside of the app's boundaries. However, in cases where the operating system is compromised such as rooting an Android device, some of the built-in mechanisms could be bypassed.
+For native mobile apps, the Mendix client stores the data and files in the file system, often sandboxed and encrypted by the operating system. This ensures that other apps, external entities, or end-users can't access the application's data. Data stored in a Mendix app is excluded from the standard backup mechanisms to prevent leaking data outside the app's boundaries. However, the built-in mechanisms could be bypassed in cases where the operating system is compromised, such as rooting an Android device.
 
-Offline-first PWAs use the underlying browser APIs to store the data in the host environment. In many cases the browse will store the data in a hidden folder in the user’s directory. Depending on the configuration of the operating system the contents of this folder may or may not be encrypted.
+Offline-first PWAs use the underlying browser APIs to store the data in the host environment. The browser often keeps the data in a hidden folder in the user's directory. Depending on the operating system's configuration, this folder's contents may or may not be encrypted.
 
 ## 3 Best Practices
 
-In general, it is a best practice to synchronize as little data as possible to the device and to avoid synchronizing any confidential or privacy related data that is not related to the current user.
+It is a best practice to synchronize as little data as possible to the device and avoid synchronizing any confidential or privacy related data that is not related to the current user.
 
 ### 3.1 Ensure Domain-model Access Rules are Configured Correctly
 
-The Mendix client only stores objects and attributes that can be read by the current user's roles. Incomplete or misconfigured access rules on the domain model may cause too much data to be synchronized to the device databases.
+The Mendix client only stores objects and attributes that the current user has read access. Incomplete or misconfigured access rules on the domain model may cause too much data to be synchronized to the device databases.
 
 To learn more about configuring access rules, see [Access Rules](/refguide/access-rules/).
 
@@ -35,17 +35,17 @@ To learn more about customizing the synchronization behavior, see [Customizable 
 
 ### 3.3 Use Non-Persistable Entities
 
-For sensitive data which should never be stored locally, consider using Non-Persistent entities to store the data temporarily and use Microflow calls to process the data on the server securely. Non-persistent entities are only stored in memory, and removed when the app is closed, or when the app no longer needs them. However, this approach requires connectivity to the Mendix runtime to call Microflows and thus limit the offline-first capabilities of the app.
+For sensitive data that should never be stored locally, consider using Non-Persistent entities to store the data temporarily and use Microflow calls to securely process the data on the server. The app keeps the Non-persistent objects only in the memory and removes them when they are no longer needed. However, this approach requires connectivity to the Mendix runtime to call Microflows and thus limits the offline-first capabilities of the app.
 
 ### 3.4 Encrypt the Local Database
 
-If you have to store sensitive data on a device and cannot control the operating system your app is running on, you should enable database encryption for your app. This ensures that all data in the local database is encrypted before storing it on the device. Note that local database encryption will have an impact on the performance of your app and to enable it a full synchronization of all clients is required.
+Suppose you have to store sensitive data on a device and cannot control the operating system your app is running on. In that case, you should enable database encryption for your app. This ensures that all data in the local database is encrypted before storing it on the device. Note that encryption will impact your app's performance. Full synchronization of all clients is required to enable it.
 
 To learn more, see [Encrypted Local Database](#encrypted-local-database)
 
 ## 4 Encrypted Local Database {#encrypted-local-database)
 
-Mendix 9.18 and above offers to encrypt the local database of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
+Mendix 9.18 and above offer to encrypt the local database of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 
 {{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="739"  >}}
 
@@ -59,18 +59,18 @@ Before enabling local database encryption, ensure that these prerequisites are m
 - Upgrade Make It Native to the latest version
 
 {{% alert color="warn" %}}
-Local database encryption requires the latest version of the native template. If this setting is enabled using an older version of the native template, the app will not start. Be especially careful about the template version when using Over-The-Air Updates to enable database encryption.
+Local database encryption requires the latest version of the native template. If this setting is enabled using an older version of the native template, the app will not start. Be careful about the template version when using Over-The-Air Updates to enable database encryption.
 {{% /alert %}}
 
 ### 4.2 Enabling Database Encryption for New Apps
 
-If you are working on a new Mendix app which you haven't released to your users before, you can check the check box shown above, and use the latest version of native template to build and release your app.
+Suppose you are working on a new Mendix app that you haven't released to your users before. In that case, you can check the check box shown above and use the latest version of the native template to build and release your app.
 
 
 ### 4.3 Enabling Database Encryption for Existing Apps
 
-Using an existing app with an encrypted database requires a careful upgrade strategy, because there are already users with an unencrypted database. 
-Encrypting the existing database is not possible. Therefore, to use this feature, the existing database needs to be removed and a new (encrypted) database needs to be created. 
+Using an existing app with an encrypted database requires a careful upgrade strategy because there are already users with an unencrypted database. 
+Encrypting the existing database is not possible. Therefore, the Mendix client needs to remove the current database and create a new (encrypted) database to use this feature.
 Enabling database encryption and deploying a new version of the Mendix app to the cloud does not affect the existing devices. This setting takes effect once they update their apps either through OTA or app update. After the app is updated on the device, it will sign out the current user and start with an empty database. This step may cause the unsynchronized data to be lost. 
 
 Always consider the [prerequisites above](#encryption-prerequisites) before enabling database encryption, especially for existing apps
@@ -81,36 +81,36 @@ Disabling database encryption will apply only to newly installed apps. Existing 
 
 ### 4.5 Native Database Encryption and Make It Native App
 
-Local database encryption also works with the Make It Native App and a custom developer app. Ensure that you upgrade the Make It Native App and your application template to the latest version or the app may not start.
+Local database encryption also works with the Make It Native App and a custom developer app. Ensure that you upgrade the Make It Native App and your application template to the latest version, or the app may not start.
 
 ### 4.6 How Can I Verify That The Database Is Encrypted?
 
-Verifying the database encryption requires access to the database file stored on the device / emulator, which is only possible for debug builds of your app. 
+Verifying the database encryption requires access to the database file stored on the device/emulator, which is only possible for debug builds of your app. 
 
-Once you access to the database file, you can attempt to open it using any SQLite viewer, such as [DB Browser for SQLite](https://sqlitebrowser.org/). For unencrypted databases, the viewer will open it immediately whereas the same operation will fail for encrypted databases.
+Once you access the database file, you can attempt to open it using any SQLite viewer, such as [DB Browser for SQLite](https://sqlitebrowser.org/). The viewer will open it immediately for unencrypted databases, whereas the same operation will fail for encrypted databases.
 
 #### 4.6.1 Locate the database file on Android
 Viewing the file system of an Android device requires [Android Studio](https://developer.android.com/studio/)
 
-- Ensure that you’re running a debug build of your app / custom developer app.
+- Ensure that you're running a debug build of your app/custom developer app.
 - Enable [USB debugging](https://developer.android.com/studio/debug/dev-options) on your device and connect it to your computer.
 - Start Android Studio, and activate the [Device File Explorer](https://developer.android.com/studio/debug/device-file-explorer).
 - Navigate to the following folder: `/data/data/{your_app_id}/databases/`.
-- Find the database file in this directory (often named “`default`" without an extension). Right-click on it to open the context menu and select “Save as”. 
+- Find the database file in this directory (often named "`default`" without an extension). Right-click on it to open the context menu and select "Save as". 
 - Save the file to a directory on your computer.
 
 #### 4.6.2 Locate the database file on IOS
 
-- Ensure that you’re running a debug build of your app in a simulator, and not on a physical device.
+- Ensure that you're running a debug build of your app in a simulator and not on a physical device.
 - Open Finder on your Mac and click the `Go → Go to the folder` menu item.
 - Enter `~/Library/Developer/CoreSimulator/Devices` to the prompt.
 - Once the Devices folder is opened, sort the folders by `Date Modified` (descending).
 - Go to the first folder (e.g `9DA843C5-089F-44F6-AB1A-3ECEF6D3D05C`).
-- Go to `data`->`Containers`->`Data`->`Application`
+- Go to `data`->`Containers`->`Data`->`Application.`
 - Sort folders by `Date Modified` (descending) and go to the first one.
-- Go to `Library`->`LocalDatabase`
-- You will see a file named `default` (without an extension). This is the database file used by the Mendix client.
+- Go to `Library`->`LocalDatabase.`
+- You will see a file named `default` (without an extension). This file is the database file used by the Mendix client.
 
 ### 4.7 How Does Database Encryption Work?
 
-The local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, and the key is stored in the local storage of the app, also encrypted with another key, which is stored in the secure storage system of the OS. (IOS/Keychain and Android/Keystore). The Mendix client reads and decrypts the database key stored in the local storage, and uses it to unlock the database.
+The local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the secure storage system of the OS. (IOS/Keychain and Android/Keystore). The Mendix client reads and decrypts the database key stored in the local storage and uses it to unlock the database.

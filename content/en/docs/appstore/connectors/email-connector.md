@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.18](/releasenotes/studio-pro/8.18/) and above.
+The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.19](/releasenotes/studio-pro/8.18/) and above.
 
 ### 1.1 Features
 
@@ -35,7 +35,8 @@ The Email Connector includes the following features:
 Before you use the Email Connector, do the following:
 
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
-2. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email with Templates](/appstore/modules/email-with-templates/)).
+2. Download and [configure](/appstore/modules/encryption/#configuration) the [Encryption](https://marketplace.mendix.com/link/component/1011) module from the Mendix Marketplace.
+3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email with Templates](/appstore/modules/email-with-templates/)).
 
 {{% alert color="warning" %}}
 Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured, or if you have not removed older email modules.
@@ -58,7 +59,7 @@ If you already have these widgets in your app, and they are not up-to-date, you 
 
 After you install the [Email Connector](https://marketplace.mendix.com/link/component/120739), configure the following in Studio Pro:
 
-1. Provide a value for the **EncryptionKey** constant available under **USE_ME** folder for password storage.
+1. Provide a value for the **EncryptionKey** constant provided by Encryption module.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
 3. Link [User Roles](/refguide/user-roles/) in app **Security** to ensure that the configuration page displays when you locally run the app.
 
@@ -224,17 +225,35 @@ The input paramater includes the following:
 
 ### 4.6 Creating a Account Using Custom Encryption
 
-In most cases, following the steps in the [Setup in Studio Pro](#setup) and [Email Account Configuration](#accountconfig) sections above are sufficient. You might prefer to use custom encryption for storing the email account password, instead of using the [Encryption](/appstore/modules/encryption/) module or storing the password as plain text.
+In most cases, following the steps in the [Setup in Studio Pro](#setup) and [Email Account Configuration](#accountconfig) sections above are sufficient. Email account password, LDAP server password and .p12 certificate password are always encrypted by using Encryption module.
 
-When modelling your app in Studio Pro, use the [Create Object](/refguide/create-object/) activity to create the account, and then include the **Encrypt** Java action included in the Email Connector. The **Encrypt** Java action takes a *plain string* parameter and an *encryption key* of 32 characters. 
+### 4.7 Creating a account using Microsoft Azure OAuth provider
 
-If you do not encrypt the password, all functions will still work as expected.
+You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
 
-### 4.7 Queuing Emails
+Click the **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+
+#### 4.7.1 Registering Your App on the Azure Portal
+
+To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+
+While registering, set the redirect URI to `https://(yourapp_domain)/mxecoh/callback/{Callback_operation_path}`. **Callback_operation_path** is a string that you can set anything and the same needs to be entrted in Mendix app while configuring OAuth provider.
+
+#### 4.7.2 Enable Permissions in the Azure Portal
+
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+{{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
+
+#### 4.7.3 Client ID, Tenant ID, and Client Secret 
+
+This module requires a **Client ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
+
+### 4.8 Queuing Emails
 
 Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending. On the third attempt, any messages that are still failing will move from the **Queued** folder to the **Failed** folder.
 
-### 4.8 Attachments
+### 4.9 Attachments
 
 To add attachments to the email message, do the following:
 

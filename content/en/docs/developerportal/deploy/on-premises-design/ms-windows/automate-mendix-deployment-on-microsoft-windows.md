@@ -108,7 +108,7 @@ wget $targetURL -OutFile $targetFile
 
 If you encounter any issues while configuring automated Mendix deployment on Windows, see the following troubleshooting tips to help you solve them.
 
-### 5.1 Error Message - Could Not Load File or Assembly
+### 5.1 Could Not Load File or Assembly
 
 PowerShell shows an error message similar to the following:
 
@@ -143,7 +143,7 @@ To solve this issue, follow these steps:
     ```
 With the above configuration, PowerShell primarily uses .NET version 4, but also supports the version that it previously used, for example, version 2.
 
-### 5.2 Error Message - Could Not Load File or Assembly System.Management.Automation
+### 5.2 Could Not Load File or Assembly System.Management.Automation
 
 PowerShell shows an error message similar to the following:
 

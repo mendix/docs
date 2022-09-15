@@ -55,7 +55,7 @@ In this tab, you can find the following items:
 Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/collaborate/leave-delete-app/).
 {{% /alert %}}
 
-## 3 Cloud Settings
+## 3 Cloud Settings {#cloud-settings}
 
 On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 

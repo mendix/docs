@@ -30,7 +30,8 @@ For information on the current status of deployment to Mendix Cloud and any plan
 ### September 13th, 2022
 
 #### Improvements
-* We've updated our alerting template to have human readable alert names and in line with documentation.
+
+* We updated our alert template to make the alert names more descriptive and transparent. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 
 ### July 21st, 2022

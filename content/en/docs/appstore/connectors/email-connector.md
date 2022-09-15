@@ -243,7 +243,7 @@ While registering, set the redirect URI to `https://(yourapp_domain)/mxecoh/call
 
 #### 4.7.2 Enable Permissions in the Azure Portal
 
-As this module contains functionality of sending and receiving emails so while OAuth flow module will ask permissions for sedning and receiving email.
+As this module contains functionality of sending and receiving emails so while OAuth flow module will ask permissions for sending and receiving email.
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 

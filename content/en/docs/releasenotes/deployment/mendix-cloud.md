@@ -25,7 +25,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fix
 
-* We fixed an issue with the performance of the revision browser while building an MDA from portal. (Ticket 163959)
+* We improved the performance of the Developer Portal when selecting which revision to use to build a deployment package from an MDA. (Ticket 163959)
 
 ### July 21st, 2022
 

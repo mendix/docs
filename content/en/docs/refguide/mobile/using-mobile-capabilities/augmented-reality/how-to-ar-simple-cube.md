@@ -19,12 +19,12 @@ For Android:
 
 * Have an Android mobile device that can [support ARCore](https://developers.google.com/ar/discover/supported*devices#android_play).
 * Install [Google Play Services for AR](https://play.google.com/store/apps/details?id=com.google.ar.core&hl=en) on your device.
-* Install the Make It Native app on your Android mobile device for testing purposes.
+* Install the latest Make It Native app on your Android mobile device for testing purposes.
 
 For iOS:
 
 * Have an iOS mobile device that supports ARKit (iPhone 6S and up).
-* Install the Make It Native app on your iOS mobile device for testing purposes.
+* Install the latest Make It Native app on your iOS mobile device for testing purposes.
 
 If you want to make use of the **Realistic** lighting option which can make your objects more lifelike, then you should also have an HDR image to use for rendering this light. [Follow Babylon.JS' guide](https://doc.babylonjs.com/divingDeeper/materials/using/HDREnvironment#creating-a-compressed-environment-texture-using-the-sandbox) to create a *.env* texture which you can use in the **Container (AR)** widget.
 
@@ -36,7 +36,7 @@ Create a new app by following these steps:
 1. Click **Use this starting point.**
 1. Name your app *Hello World* and click **Create app** to close the dialog box.
 1. Open the **Home_Native** page and remove the intro screen widget and other containers.
-1. Download the Native Mobile AR module from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209) and import it to your app.
+1. Download the Native Mobile AR (version 2 or higher) module from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209) and import it to your app.
 
 You will begin by embedding the following widgets into your Mendix app:
 

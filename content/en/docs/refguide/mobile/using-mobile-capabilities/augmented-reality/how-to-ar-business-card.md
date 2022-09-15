@@ -15,12 +15,12 @@ Follow the sections below to build a demo. While doing so, you will become famil
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Install Studio Pro and Developer Apps with AR capabilities
-* Download the AR widgets from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209)
-* Create a new empty page with **Container (AR)** and **ImageTracker (AR)** widgets
-* Add your business card png as the **Image** to the **ImageTracker (AR)**
+* Install Studio Pro and the latest Make It Native Apps with AR capabilities.
+* Download the AR widgets (version 2 or higher) from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209).
+* Create a new empty page with **Container (AR)** and **ImageTracker (AR)** widgets.
+* Add your business card png as the **Image** to the **ImageTracker (AR).**
 * Obtain 3D objects to add to your AR business card (this document uses Twitter and LinkedIn logos).
-* Have a PNG of your business card
+* Have a PNG of your business card.
 
 Download these widgets:
 

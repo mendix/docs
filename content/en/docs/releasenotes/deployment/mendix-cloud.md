@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
-### September 14th, 2022
+### September 15th, 2022
 
 #### Improvements
 

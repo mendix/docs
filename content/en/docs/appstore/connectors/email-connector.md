@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails. It is available for Studio Pro [8.18.19](/releasenotes/studio-pro/8.18/) and above.
+The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails.
 
 ### 1.1 Features
 
@@ -17,7 +17,7 @@ The Email Connector includes the following features:
 
 * Configuration of multiple accounts
     * Supports basic authentication
-    * Supports OAuth 2.0 to configure Microsoft Azure AD account
+    * Supports OAuth 2.0 to configure Microsoft Azure AD accounts
 * Send emails with digital signatures and encryption
 * Set up email templates
 * Actions that can be performed after receiving emails:
@@ -225,21 +225,17 @@ The input paramater includes the following:
 
 * **Email account** – email account consisting of incoming email configuration
 
-### 4.6 Creating a Account Using Custom Encryption
-
-In most cases, following the steps in the [Setup in Studio Pro](#setup) and [Email Account Configuration](#accountconfig) sections above are sufficient. Email account password, LDAP server password and .p12 certificate password are always encrypted by using Encryption module.
-
 ### 4.7 Creating a account using Microsoft Azure OAuth provider
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
 
-Click the **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. If the account is already registered on the Azure portal, the required fields will already be filled in. If not, or if you need to make changes, you will need to register your app on the Azure portal.
+Click the **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. Refer [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details).  
 
 #### 4.7.1 Registering Your App on the Azure Portal
 
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-While registering, set the redirect URI to `https://(yourapp_domain)/mxecoh/callback/{Callback_operation_path}`. **Callback_operation_path** is a string that you can set anything and the same needs to be entrted in Mendix app while configuring OAuth provider.
+While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details)
 
 #### 4.7.2 Enable Permissions in the Azure Portal
 
@@ -249,9 +245,14 @@ On the [Azure portal](https://portal.azure.com/), ensure that you have the follo
 
 {{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
 
-#### 4.7.3 Client ID and Client Secret 
+#### 4.7.3 OAuth Provider Configuration Details
 
-This module requires a **Client ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
+To configure OAuth provider following details are required:
+
+* **Client ID** This will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
+* **Client Secret** This will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
+* **Callback operation path** You can enter any string based on which callback URL will be auto generated
+* **Callback URL** This is the URL where OAuth provider will redirect with authorization code and it needs to be configured on Azure portal as callback/redirect URI
 
 ### 4.8 Queuing Emails
 

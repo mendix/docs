@@ -49,7 +49,7 @@ On an activity or decision, you have three options:
 * **Custom with rollback**
 * **Custom without rollback**
 
-For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting **Custom with rollback**, it will trigger this path when the error occurs and still rollback your objects afterwards. The **Custom without rollback** option does not rollback the objects. After you selected a flow as the error handler, it will show this as in the following image:
+For the latter two options, you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting **Custom with rollback**, it will trigger this path when the error occurs and still rollback your objects afterwards. The **Custom without rollback** option does not rollback the objects. After you selected a flow as the error handler, it will show this as in the following image:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/error-event/custom-without-rollback-microflows.png" >}}
 
@@ -57,12 +57,12 @@ Unlike the [Rollback object](/refguide/rollback-object/) action, the **Rollback*
 
 The **Custom without rollback** option is only invoked when the action itself causes an error event, meaning you will still have access to any database objects you created or modified before the action which caused the error handler event. If you want to keep changes to objects of a persistable entity, you still need to commit them explicitly after a **Custom without rollback** error if they weren't committed before the error occurred.
 
-On a loop you get two options:
+On a loop, you get two options:
 
 * **Rollback** (default)
 * **Continue**
 
-The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
+The **Continue** option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/error-event/error-event-loop.png" >}}
 
@@ -221,52 +221,52 @@ At status 3 in the above example:
 
 ## 5 Combinations of Different Types of Error Handling
 
-Most of the time you will be using a single activity with custom error handling. However, if you are developing more complicated processes where you are sending data outside of the application, it is important to realize what happens when an error occurs later in the process. For example, you do not want to send out notifications about a status change if an error occurs and therefore reverts the change.
+Most of the time, you will be using a single activity with custom error handling. However, if you are developing more complicated processes where you are sending data outside of the application, it is important to realize what happens when an error occurs later in the process. For example, you do not want to send out notifications about a status change if an error occurs and therefore reverts the change.
 
-Especially when interacting with other systems, you need to think about how you want to process the errors. The best solution depends on what you want to do: continue, skip/revert the record you are working on, or keep the changes you have made so far but stop the process. All of these options can be done as long as you know what you want to achieve. The instructions below will show you a couple of examples of how you can use different combinations of the error handling options. 
+Especially when interacting with other systems, you need to think about how you want to process the errors. The best solution depends on what you want to do: continue, skip/revert the record you are working on, or keep the changes you have made so far but stop the process. All of these options can be done as long as you know what you want to achieve. The instructions below will show you a couple of examples of how you can combine different error handling options. 
 
 ### 5.1 Rollback in the Parent Flow, Rollback in the Subflow
 
 | Color | Description |
 | --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – this transaction is initiated when the microflow starts. Custom error handling with rollback does not initiate any transactions. Therefore, the microflow is executed, but all the actions in both the parent and the subflow will be reverted. None of the changes made anywhere in this transaction will be applied. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}} | Transaction initiated by **Custom with rollback** activity – after catching the exception, a new transaction is initiated to execute the remainder of the microflow activities. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}} | Transaction initiated by **Custom with rollback** activity – after catching the exception, a new transaction is initiated to execute the remaining microflow activities. |
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580948.png" width="600px">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580948.png" width="550px">}}
 
 ### 5.2 Rollback in the Parent Flow, Continuing in the Subflow
 
 | Color | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – this transaction is initiated when the microflow starts. This transaction will be completely reverted because the subflow re-throws the exception. None of the changes made during this transaction will be persisted. (If the subflow wasn't rethrowing the exception, all changes except **SendEmail** would have been persisted in the database.) |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}} | Transaction initiated by **Custom with rollback** activity – after catching the exception, a new transaction is initiated to execute the remainder of the microflow activities. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – this transaction is initiated when the microflow starts. This transaction will be completely reverted because the subflow re-throws the exception. None of the changes made during this transaction will be persisted. (If the subflow wasn't re-throwing the exception, all changes except **SendEmail** would have been persisted in the database.) |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}} | Transaction initiated by **Custom with rollback** activity – after catching the exception, a new transaction is initiated to execute the remaining microflow activities. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/green.png" >}} | Transaction initiated by subflow – at the start of the subflow, a new transaction is initiated. Any changes made in this transaction will be reverted because the activities in the **SendEmail** subflow use default error handling. |
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580945.png" width="600px">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580945.png" width="550px">}}
 
 ### 5.3 Continuing in the Parent Flow, Rollback in the Subflow
 
 | Color | Description |
 | --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – this transaction is initiated when the microflow starts. This transaction will complete successfully and any changes made during this transaction will be persisted. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}} | Transaction initiated by subflow – at the start of the subflow, a new transaction is initiated. All changes in this transaction will be reverted because of the custom error handler "with rollback." As a result, the change on the customer will not be applied. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}} | Transaction initiated by subflow – at the start of the subflow, a new transaction is initiated. All changes in this transaction will be reverted because of the custom error handler with rollback. As a result, the change on the customer will not be applied. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/green.png" >}} | Transaction initiated after the exception was caught by the error handler – when this transaction is initiated, after executing some actions, it will re-throw the original exception. These changes will be persisted because of the error handling on the initial sub-microflow call. |
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580947.png" width="600px">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580947.png" width="550px">}}
 
 ### 5.4 Continuing in the Parent Flow, Continuing in the Subflow
 
 | Color | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – nothing will be reverted. The only difference compared to successful execution is that no e-mail will be sent, and the process will finish using the error flow instead of the normal process flow.
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – nothing will be reverted. The only difference compared to successful execution is that no email will be sent, and the process will finish using the error flow instead of the normal process flow.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}}  | Transaction initiated by subflow – at the start of the subflow, a new transaction is initiated. All the changes in this transaction will be kept because the **SendEmail** subflow is configured to continue without rollback. Even though the exception is re-thrown, the initial microflow call is configured for custom without rollback; therefore, none of the changes will be reverted. The process will just take the error flow instead of the default flow.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/green.png" >}} | Transaction initiated by subflow – at the start of the subflow, a new transaction is initiated. Any changes made in this transaction will be reverted because the activities in the **SendEmail** subflow use default error handling.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580946.png" width="600px">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580946.png" width="550px">}}
 
 ## 6 Inspecting Errors
 
-When an error occurs inside a microflow, under the hood a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (as in, after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error objects, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity **System.Error**, while `$latestSoapFault` is an object of entity **System.SoapFault**, which is a specialization of **System.Error**.
+When an error occurs inside a microflow, under the hood, a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (as in, after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error objects, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity **System.Error**, while `$latestSoapFault` is an object of entity **System.SoapFault**, which is a specialization of **System.Error**.
 
 In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
@@ -297,10 +297,10 @@ In microflows that apply entity access, it is not possible to inspect the attrib
 
 Consider the following best practices for error handling:
 
-* Always use a log activity to print the error message and stack trace
-* Never use the continue option, since that doesn't give you the option to print any info (the platform will just ignore the error)
-* Always add custom error handling on integration or e-mail activities
-* Don’t overdo it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the platform to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception
+* Always use a log activity to print the error message and stack trace.
+* Never use the **Continue** option, since that does not give you the option to print any infomation (the platform will just ignore the error).
+* Always add custom error handling on integration or email activities.
+* Don’t overdo it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the platform to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception.
 
 ## 8 Read More
 

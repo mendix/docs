@@ -22,6 +22,6 @@ With the **Custom without rollback** option, you can draw an additional flow fro
 
 ## 3 Error Inspection
 
-In a custom error handler executed after an error occurs, the `$latestError` variable is set to the message of the error information. The `$latestError` variable type is `String`, unlike in [microflows](/refguide/microflows/) where errors' type is the `System.Error` entity.
+In a custom error handler executed after an error occurs, the `$latestError` variable is set to show error message. The `$latestError` variable type is **String**, unlike in [microflows](/refguide/microflows/) where errors' type is the **System.Error** entity.
 
 The `$latestSoapFault` variable is not available in nanoflows.

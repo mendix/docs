@@ -8,7 +8,14 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 ## 1 Introduction
 
-When using AWS connectors, you need to authenticate to the services being connected to. This is done using the [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector available from the Mendix Marketplace.
+AWS Authentication Connector provides a way to authenticate on AWS for  other compatible AWS connectors (like Amazon S3 Connector, Amazon SNS  Connector & Amazon SQS Connector).
+
+There are two types of credentials that can be used through the AWS Authentication Connector:
+
+- Static credentials: Static credentials use an access key and secret mechanism.
+- Session credentials: Session credentials use Amazon IAM RolesAnywhere to assume an AWS Role.  IAM RolesAnywhere is used to create a sessionToken valid for a specific  duration. Default duration is 1hr.
+
+Credentials object returned by the above actions can be used as authentication for other AWS connectors like S3, SNS, SQS, etc.
 
 ### 1.1 Typical Use Cases
 

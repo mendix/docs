@@ -10,11 +10,13 @@ tags: ["error", "error handling", "rollback", "microflow", "logic"]
 
 When working with microflows, it is important to realize that there are always transactions. These transactions help in achieving the correct result. In case something goes wrong, they also help us to keep all the information in our application consistent. 
 
+This document tells you how errors can be handled in microflows, how error handling transactions work, and how different error handling options can be combined. It also provides information on how you can inspect errors using predefined error objects.
+
 ## 2 Transactions
 
 ### 2.1 Transactions Keep Your Data Consistent
 
-Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed, or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. That means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed, or nothing is executed. That is the only way to keep processes and data consistent. 
+Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed, or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. This means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed, or nothing is executed. That is the only way to keep processes and data consistent. 
 
 ### 2.2 Transactions Keep the Changes Isolated
 
@@ -24,7 +26,7 @@ To ensure that every user or process can only see persisted data, all the data c
 
 ### 2.3 Transactions Prevent Two processes from Using the Same Object at the Same Time
 
-When an object is updated, the platform will place a lock on that object for the duration of the transaction. That means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction is finished, the lock will be released automatically and any waiting processes will continue normally.
+When an object is updated, the platform will place a lock on that object for the duration of the transaction. This means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction is finished, the lock will be released automatically and any waiting processes will continue normally.
 
 Please note that this is not the same as preventing two users from editing the same object. It is still possible for two users to open the same object and change it 1 millisecond after each other. The latest change will still be applied.
 

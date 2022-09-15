@@ -9,7 +9,10 @@ tags: ["marketplace", "marketplace component", "native mobile resources", "platf
 
 ## 1 Introduction
 
-The [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module contains the widgets for building AR experience with native mobile. This module is also part of the [AR Starter App](https://marketplace.mendix.com/link/component/117211) that contains examples. Currently, only version 2 and higher of these widgets will work with the Make It Native App. Please make sure you are using version 2 or higher.
+The [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module contains the widgets for building AR experience with native mobile. This module is also part of the [AR Starter App](https://marketplace.mendix.com/link/component/117211) that contains examples.
+
+{{% alert color="info" %}}Currently, only version 2 and higher of these widgets work with the Make It Native App. Make sure you use version 2 or higher for this app.{{% /alert %}}
+
 This document will place the Augmented Reality (AR) widgets into context, as well as explain how they can be used to create AR experiences. The following terms will be used frequently:
 
 * Augmented reality (AR): adds virtual objects to the real world, through the mobile phone camera view

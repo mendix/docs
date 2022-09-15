@@ -221,12 +221,14 @@ The **Workflow Activities** section contain activities that interact with workfl
 
 The **Workflow Activities** are described in the table below:
 
-| Activity               | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| Call Workflow          | The **Call Workflow** activity starts the selected workflow. |
-| Complete Task          | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
-| Retrieve Workflow Data | The **Retrieve Workflow Data** activity can be used to retrieve the selected Workflow Context entity. The action determines the return type based on the selected workflow (the configured Workflow Context entity of that workflow). |
-| Show User Task Page    | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
+| Activity                 | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| Apply Jump-To Option     | The **Apply Jump-To Option** activity allows the workflow to jump to a selected activity. This activity should be used after the **Generate Jump-To Options** activity that generates the list of possible workflow activities the workflow can jump to. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue. |
+| Call Workflow            | The **Call Workflow** activity starts the selected workflow. |
+| Complete Task            | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
+| Generate Jump-To Options | The **Generate Jump-To Options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The **Apply Jump-To Option** activity should be used after the **Generate Jump-To Options** to let the workflow continue from the selected activity. |
+| Retrieve Workflow Data   | The **Retrieve Workflow Data** activity can be used to retrieve the selected Workflow Context entity. The action determines the return type based on the selected workflow (the configured Workflow Context entity of that workflow). |
+| Show User Task Page      | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
 
 ### 4.5 Workflow Administration {#workflow-administration}
 

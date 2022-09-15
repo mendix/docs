@@ -86,7 +86,7 @@ In Studio Pro, you can use the `GetAutoConfig` Java action to get the all suppor
 
 #### 3.1.2 Manual Configuration
 
-To manually configure the account you have to enter **protocol**, **server host** and **server port** for send and receive email configuration. Refer email server documentation to get this information.
+To manually configure the account, you have to enter **protocol**, **server host** and **server port** for send and receive email configuration. Refer email server documentation to get this information.
 
 ### 3.2 Account Settings {#other-account-settings}
 
@@ -228,7 +228,7 @@ The input paramater includes the following:
 
 * **Email account** – email account consisting of incoming email configuration
 
-### 4.7 Creating a account using Microsoft Azure OAuth provider
+### 4.7 Creating an account using Microsoft Azure OAuth provider
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0, only one OAuth 2.0 provider can be configured for app.
 
@@ -280,8 +280,8 @@ To add attachments to the email message, do the following:
 
 ## 6 Troubleshooting
 
-* If you alredy have an email account configured using basic authentication in your app and wants to use OAuth 2.0 authentication without removing email account then refer following steps
-   * On **EmailConnector_Overview** page click the **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. Refer [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details).  
+* If you already have an email account configured using basic authentication in your app and wants to use OAuth 2.0 authentication without removing email account then refer following steps
+   * On **EmailConnector_Overview** page click the **Add Account** button to add a new account and select the option **Use Microsoft Azure AD**. Refer [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details).  
    * For desired email account, set **isOAuthUsed** attribute from **EmailAccount** entity to **true**
 	* Associate existing email account with newly created OAuth provider
 	* Navigate to **EmailConnector_Overview** page and follow warning message visible for desired email account

@@ -247,7 +247,7 @@ As this module contains functionality of sending and receiving emails so while O
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/modules/imap/azure-permissions.png" >}}
+{{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
 
 #### 4.7.3 Client ID and Client Secret 
 

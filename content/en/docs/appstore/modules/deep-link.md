@@ -38,6 +38,8 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Deep Link module into your app.
 
+{{% alert color="info" %}}After you install the Deep Link module and set up deep links, these links will not break if you upgrade from Mendix Studio Pro 8 to 9.{{% /alert %}}
+
 ## 3. Configuration
 
 After importing the Deep Link module into your app, you need to configure it.
@@ -100,7 +102,7 @@ To view all the available deep link configurations and example URLs, add the **D
         * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location.
     
 *  **SSOHandlerLocation** – This value is used when the app needs to determine whether the user has a valid session with the Identity Provider. When both the application and a deep link are configured to support anonymous users, the location value in this constant is requested before a user is directed to the destination deep link.
-    
+   
     * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler is not expected to provide users with a login page, but is supposed to redirect the anonymous user to the target location, while still having an anonymous user session).
     * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location.
 

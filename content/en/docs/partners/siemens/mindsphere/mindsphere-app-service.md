@@ -142,7 +142,7 @@ To access your data from Data Lake storage using the OData technology provided b
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_tile.png" alt="data-lake-manager" >}}
 
-1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
+1. You will now see a list of your already existing contracts or an indication that no contracts are created yet.
 
     * If no contracts are available, click **Create contract** to start your first one.
     

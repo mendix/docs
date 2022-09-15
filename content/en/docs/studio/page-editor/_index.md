@@ -175,7 +175,7 @@ The association with the correct [multiplicity](/studio/domain-models-associatio
 
 ## 3 Parameters
 
-Page parameters provide context for the page and its widgets, such as data view, list view, data grid. For more information, see Page Parameter.    
+Page parameters provide context for the page and can be used in data views. For more information, see [Page Parameter](/studio/page-parameter/).    
 
 ## 4 The Show Option
 

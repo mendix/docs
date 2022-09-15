@@ -2,17 +2,18 @@
 title: "Offline Data Security"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/
 weight: 85
-description: ""
-tags: ["offline-first", "database", "security"]
+description: "This documentation describes best practices to keep your offline data secure."
+tags: ["offline-first", "database", "security", "encryption"]
 aliases:
     - /howto/mobile/encryption-database/
 ---
 
 ## 1 Introduction
 
-Offline-first apps built with Mendix store the data in the local database to provide smooth end-user experiences. Consequently, the devices store a copy of the data locally. This documentation walks through best practices and techniques to ensure that the local data is kept securely.
+Offline-first apps built with Mendix store data in the local database to provide smooth end-user experiences. Consequently, the devices store a copy of the data locally. This documentation walks through best practices and techniques to ensure that the local data is kept securely.
 
 ## 2 How Safe Is The Local Data?
+
 For native mobile apps, the Mendix client stores the data and files in the file system, often sandboxed and encrypted by the operating system. This ensures that other apps, external entities, or end-users can't access the application's data. Data stored in a Mendix app is excluded from the standard backup mechanisms to prevent leaking data outside the app's boundaries. However, the built-in mechanisms could be bypassed in cases where the operating system is compromised, such as rooting an Android device.
 
 Offline-first PWAs use the underlying browser APIs to store the data in the host environment. The browser often keeps the data in a hidden folder in the user's directory. Depending on the operating system's configuration, this folder's contents may or may not be encrypted.
@@ -47,16 +48,15 @@ To learn more, see [Encrypted Local Database](#encrypted-local-database)
 
 Mendix 9.18 and above offer to encrypt the local database of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 
-{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="739"  >}}
-
+{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 
 ### 4.1 Prerequisites {#encryption-prerequisites}
 
 Before enabling local database encryption, ensure that these prerequisites are met:
 
-- Use Mendix 9.18 or above
-- Upgrade the native template to version 6.3.0 or above
-- Upgrade Make It Native to the latest version
+* Use Mendix 9.18 or above
+* Upgrade the native template to version 6.3.0 or above
+* Upgrade Make It Native to the latest version
 
 {{% alert color="warn" %}}
 Local database encryption requires native template version 6.3.0 or above. If this setting is enabled using an older version of the native template, the app will not start. Be careful about the template version when using Over-The-Air Updates to enable database encryption.
@@ -70,7 +70,9 @@ Suppose you are working on a new Mendix app that you haven't released to your us
 ### 4.3 Enabling Database Encryption for Existing Apps
 
 Using an existing app with an encrypted database requires a careful upgrade strategy because there are already users with an unencrypted database. 
+
 Encrypting the existing database is not possible. Therefore, the Mendix client needs to remove the current database and create a new (encrypted) database to use this feature.
+
 Enabling database encryption and deploying a new version of the Mendix app to the cloud does not affect the existing devices. This setting takes effect once they update their apps either through OTA or app update. After the app is updated on the device, it will sign out the current user and start with an empty database. This step may cause the unsynchronized data to be lost. 
 
 Always consider the [prerequisites above](#encryption-prerequisites) before enabling database encryption, especially for existing apps
@@ -90,26 +92,27 @@ Verifying the database encryption requires access to the database file stored on
 Once you access the database file, you can attempt to open it using any SQLite viewer, such as [DB Browser for SQLite](https://sqlitebrowser.org/). The viewer will open it immediately for unencrypted databases, whereas the same operation will fail for encrypted databases.
 
 #### 4.6.1 Locate the database file on Android
+
 Viewing the file system of an Android device requires [Android Studio](https://developer.android.com/studio/)
 
-- Ensure that you're running a debug build of your app/custom developer app.
-- Enable [USB debugging](https://developer.android.com/studio/debug/dev-options) on your device and connect it to your computer.
-- Start Android Studio, and activate the [Device File Explorer](https://developer.android.com/studio/debug/device-file-explorer).
-- Navigate to the following folder: `/data/data/{your_app_id}/databases/`.
-- Find the database file in this directory (often named "`default`" without an extension). Right-click on it to open the context menu and select "Save as". 
-- Save the file to a directory on your computer.
+1. Ensure that you're running a debug build of your app/custom developer app.
+1. Enable [USB debugging](https://developer.android.com/studio/debug/dev-options) on your device and connect it to your computer.
+1. Start Android Studio, and activate the [Device File Explorer](https://developer.android.com/studio/debug/device-file-explorer).
+1. Navigate to the following folder: `/data/data/{your_app_id}/databases/`.
+1. Find the database file in this directory (often named "`default`" without an extension). Right-click on it to open the context menu and select "Save as". 
+1. Save the file to a directory on your computer.
 
 #### 4.6.2 Locate the database file on IOS
 
-- Ensure that you're running a debug build of your app in a simulator and not on a physical device.
-- Open Finder on your Mac and click the `Go → Go to the folder` menu item.
-- Enter `~/Library/Developer/CoreSimulator/Devices` to the prompt.
-- Once the Devices folder is opened, sort the folders by `Date Modified` (descending).
-- Go to the first folder (e.g `9DA843C5-089F-44F6-AB1A-3ECEF6D3D05C`).
-- Go to `data`->`Containers`->`Data`->`Application.`
-- Sort folders by `Date Modified` (descending) and go to the first one.
-- Go to `Library`->`LocalDatabase.`
-- You will see a file named `default` (without an extension). This file is the database file used by the Mendix client.
+1. Ensure that you're running a debug build of your app in a simulator and not on a physical device.
+1. Open Finder on your Mac and click the `Go → Go to the folder` menu item.
+1. Enter `~/Library/Developer/CoreSimulator/Devices` to the prompt.
+1. Once the Devices folder is opened, sort the folders by `Date Modified` (descending).
+1. Go to the first folder (e.g `9DA843C5-089F-44F6-AB1A-3ECEF6D3D05C`).
+1. Go to `data`->`Containers`->`Data`->`Application.`
+1. Sort folders by `Date Modified` (descending) and go to the first one.
+1. Go to `Library`->`LocalDatabase.`
+1. You will see a file named `default` (without an extension). This file is the database file used by the Mendix client.
 
 ### 4.7 How Does Database Encryption Work?
 

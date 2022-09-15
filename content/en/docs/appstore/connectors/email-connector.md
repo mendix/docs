@@ -70,20 +70,23 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 Once you run your Studio Pro app, you can start configuring your email accounts in the Email Connector UI.
 
 ### 3.1 Adding Email Account
-
-You can add and configure an email account in the Email Connector either automatically or manually.
-
-#### 3.1.1 Automatic Configuration
-
 When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on `Get Started` button and follow the steps to add email account. 
 
 On the Email Connector dashboard, click on `Add Email Account` and follow the wizard.
 
+You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. For configuring OAuth 2.0 accounts refer [Creating a account using Microsoft Azure OAuth provider](/appstore/connectors/email-connector/#47-creating-a-account-using-microsoft-azure-oauth-provider). Account configuration wizard supports automatic and manual configurations.
+
+#### 3.1.1 Automatic Configuration
+
+Based on entered email address domain module will try to fetch send and receive email configuration details, this auto discovery of configuration works for well-known email domains (i.e. Gmail, Outlook, Yahoo, Microsoft etc.) and if it fails to detect the email settings automatically, you will be asked to enter all the settings manually to add the email account.
+
+{{% alert color="info" %}}
+In Studio Pro, you can use the `GetAutoConfig` Java action to get the all supported email configurations for the provided username. It will return results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records and get the desired configuration and create the `Email_Connector.EmailAccount`.
+{{% /alert %}}
+
 #### 3.1.2 Manual Configuration
 
-If you follow the wizard and if it fails to detect the email settings automatically, you will be asked to enter all the settings manually to add the email account.
-
-In Studio Pro, you can use the `GetAutoConfig` Java action to get the all supported email configurations for the provided username. It will return results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records and get the desired configuration and create the `Email_Connector.EmailAccount`.
+To manually configure the account you have to enter **protocol**, **server host** and **server port** for send and receive email configuration. Refer email server documentation to get this information.
 
 ### 3.2 Account Settings {#other-account-settings}
 
@@ -227,7 +230,7 @@ The input paramater includes the following:
 
 ### 4.7 Creating a account using Microsoft Azure OAuth provider
 
-You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. You can only add one OAuth 2.0 configuration for each app.
+You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0, only one OAuth 2.0 provider can be configured for app.
 
 Click the **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. Refer [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details).  
 
@@ -277,6 +280,11 @@ To add attachments to the email message, do the following:
 
 ## 6 Troubleshooting
 
+* If you alredy have an email account configured using basic authentication in your app and wants to use OAuth 2.0 authentication without removing email account then refer following steps
+   * On **EmailConnector_Overview** page click the **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. Refer [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details).  
+   * For desired email account, set **isOAuthUsed** attribute from **EmailAccount** entity to **true**
+	* Associate existing email account with newly created OAuth provider
+	* Navigate to **EmailConnector_Overview** page and follow warning message visible for desired email account
 * If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
 * If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
 * If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.

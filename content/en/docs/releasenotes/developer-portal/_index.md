@@ -28,7 +28,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue where users were not able to delete an app, if other users were still members of this app.
 * We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
 
-## 2022
+### September 13th, 2022
+
+#### Improvements
+* We've updated our alerting template to have human readable alert names and in line with documentation.
 
 ### August 25th, 2022
 

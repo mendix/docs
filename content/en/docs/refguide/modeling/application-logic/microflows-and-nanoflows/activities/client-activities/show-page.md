@@ -44,23 +44,19 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Object to Pass {#object-to-pass}
-
-An object that will be passed to the page that is opened. This object will be used by [data views](/refguide/data-view/) with a page parameter data source.
-
-### 3.2 Page
+### 3.1 Page
 
 The [page](/refguide/page/) that is displayed to an end-user. If the [Object to pass](#object-to-pass) property is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
 To create a new page that **Show page** activity will show, click the **Select** button > **New**. If you have selected an **Object to pass**, Studio Pro will automatically create a data view to edit that object.
 
-### 3.3 Page Title
+### 3.2 Page Title
 
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
 This feature allows you to re-use the same page for the **New** and **Edit** buttons of a [data grid](/refguide/data-grid/). By simply setting the titles to, for example, *New Customer* and *Edit Customer*, you can save yourself the trouble of duplicating pages.
 
-### 3.4 Close Pages {#close-pages}
+### 3.3 Close Pages {#close-pages}
 
 {{% alert color="info" %}}
 This option is only available for native mobile.
@@ -78,6 +74,10 @@ Often you need to have control of page history, for example to show the correct 
 | Multiple | After navigating to the **target page**, remove the **source page** and one or more pages before it from history. Configure the total number of pages removed using an expression. |
 | All | After navigating to the **target page**, remove the **source page** and all pages before it from history. This option is similar to the **Single** and **Multiple** options, except only pages in the current stack will be closed. |
 | Clear history | Prevent the user from navigating back altogether. This is especially useful when navigating away from a login or tutorial flow.<br />{{% alert color="warning" %}}In the page editor and in nanoflows as well as in native apps, this option can only be used in combination with target pages that are included in the bottom bar configuration (if the layout has a bottom bar) and that have a default layout type (meaning, not a pop-up).{{% /alert %}} |
+
+### 3.4 Parameters Section {#parameters}
+
+Depending on the selected page, you will see a list of its parameters. For each parameter, you can configure a variable or expression to specify which object should be passed to it. These objects will be used by [data views](/refguide/data-view/) with a page parameter data source. If only one variable of the expected type for a certain parameter is available, that variable is automatically filled in.
 
 ## 4 Common Section{#common}
 

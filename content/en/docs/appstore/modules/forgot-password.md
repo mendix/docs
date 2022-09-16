@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 
 ## 1 Introduction
 
-The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password. It works with the local accounts which are managed within your Mendix app. These are the best choice when you do not need to use a Single Sign On (SSO) solution to integrate with your existing Identity and Access Management (IAM) infrastructure.
+The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password. It works with the local accounts which are managed within your Mendix app. These are the best choice when you do not want to use a Single Sign On (SSO) solution to integrate with your existing Identity and Access Management (IAM) infrastructure.
 
 This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (Sign up and Forgot password). In the sign up case, the end-user will also be asked to provide their name.
 
@@ -21,12 +21,12 @@ If you already use the Forgot Password module in your Mendix version 8 app, you 
 
 The Forgot Password module has the following dependencies:
 
-* [Email with Templates](/appstore/modules/email-with-templates/)
+* [E-mail Module with Templates](/appstore/modules/email-with-templates/)
 * [Deep Link](/appstore/modules/deep-link/)
 * [Encryption](/appstore/modules/encryption/)
-* [Model Reflection](/appstore/modules/model-reflection/)
+* [Mx Model Reflection](/appstore/modules/model-reflection/)
 
-## 2 Installating the Forgot Password Module
+## 2 Installing the Forgot Password Module
 
 {{% alert color="info" %}}
 In these instructions, it is assumed that your main module is `MyFirstModule`. If you are using a different module name, use that instead of `MyFirstModule`.
@@ -58,6 +58,12 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
     * Click **Reset email template** and provide the details for the email sent when an end-user has forgotten their password
         {{< figure src="/attachments/appstore/modules/forgot-password/email-template.png" >}}
 1. In the **Signup Email** tab, provide the details for the email sent when an end-user wants to sign up to use the app.
+    {{% alert color="info" %}}
+To disable the signup functionality and use the Forgot Password module only for resetting passwords, do the following:
+
+* remove the **Sign up** button from the `LoginSnippet` snippet in the `_Use Me` folder of the `ForgotPassword` Marketplace module
+* remove all the actions from the `CreateNewUserFromSignUp` microflow.
+    {{% /alert %}}
 1. In the **Deeplink** tab, configure the deeplink to use the `ForgotPassword.Step3_DL_SetNewPassword` microflow.
         {{< figure src="/attachments/appstore/modules/forgot-password/configure-deeplink.png" >}}
 
@@ -78,10 +84,13 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below 
 
 1. Upgrade all the [dependencies](#dependencies) of the Forgot Password module to the latest version compatible with Mendix version 8.
 1. Open your app in Mendix 9.12.5 or above and allow it to be upgraded.
+1. Import the [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module into your app.
+
     You will see four errors in the [Errors Pane](/refguide/errors-pane/).
     {{< figure src="/attachments/appstore/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" >}}
 1. Open the page of one of the errors (for example, by double-clicking the error) and change the (master) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
     {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}}
 1. This will resolve two of the errors. Open the page of error and again change the (master) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
-    You have now successfully upgraded the Forgot Password Module to work with Mendix version 9.
+
+You have now successfully upgraded the Forgot Password Module to work with Mendix version 9.
  

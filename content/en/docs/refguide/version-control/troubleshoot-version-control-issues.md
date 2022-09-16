@@ -4,7 +4,7 @@ url: /refguide/troubleshoot-version-control-issues/
 linktitle: "Troubleshoot Version Control & Team Server Issues"
 category: "Collaboration"
 weight: 18
-description: "This document presents a list of problems and fixes for version control issues."
+description: "Presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]
 aliases:
     - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/

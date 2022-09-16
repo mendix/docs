@@ -305,3 +305,4 @@ Consider the following best practices for error handling:
 
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Submicroflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Error Handling in Nanoflows](/refguide/error-handling-in-nanoflows/)

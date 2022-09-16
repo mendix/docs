@@ -1,7 +1,7 @@
 ---
 title: "Use Translatable Validation Messages"
 url: /howto/logic-business-rules/translatable-validation-messages/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 140
 tags: ["validation", "microflow", "translate"]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Use Layouts & Snippets"
+title: "Use Layouts and Snippets"
 url: /howto/front-end/layouts-and-snippets/
 category: "Front End"
 weight: 30
@@ -107,7 +107,7 @@ By adjusting the canvas width, you can emulate the end-user's view of the page i
 
 After defining the structure of the layout with the layout container(s), the region's content must be defined. This can either be done per page, with page-specific elements (for example, by adding data containers in the empty areas), or within the layout in order to define the elements that will be used on each page with this layout. It is common that this will be the general app navigation or specific navigation for a specific function. All the widgets can be used, except data and input elements, since they need a source. 
 
-Two of the most useful widget types are menus & navigation and snippets. You will learn more about those two types below.
+Two of the most useful widget types are menus and navigation, and snippets. You will learn more about those two types below.
 
 ## 5 Menus and Navigation
 
@@ -207,5 +207,5 @@ In addition, a snippet can define an entity that serves as a context for the wid
 * [Atlas UI](/howto/front-end/atlas-ui/)
 * [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/)
 * [Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
-* [Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

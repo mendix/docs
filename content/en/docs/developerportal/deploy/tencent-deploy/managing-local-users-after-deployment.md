@@ -50,7 +50,7 @@ The password is used to sign into the application as the Administrator. You can 
 
 #### 2.1.3 User Role
 
-The user role assigned to the Administrator. For more information, see [Security, Roles & Permissions](/studio8/settings-security/).
+The user role assigned to the Administrator. For more information, see [Security, Roles, and Permissions](/studio8/settings-security/).
 Default: *Administrator*
 
 {{% alert color="info" %}}

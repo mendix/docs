@@ -174,5 +174,5 @@ For details on the technical configuration of webhooks, see [Webhooks](/apidocs-
 
 ## 8 Read More
 
-* [Leave & Delete an App](/developerportal/collaborate/leave-delete-app/)
+* [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

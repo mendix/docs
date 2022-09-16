@@ -1,7 +1,7 @@
 ---
 title: "Define Access Rules Using XPath"
 url: /howto/logic-business-rules/define-access-rules-using-xpath/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 100
 tags: ["microflow", "logic", "access rule", "xpath"]
 ---

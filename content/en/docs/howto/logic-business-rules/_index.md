@@ -1,5 +1,5 @@
 ---
-title: "Logic & Business Rules"
+title: "Logic and Business Rules"
 url: /howto/logic-business-rules/
 weight: 60
 no_list: false

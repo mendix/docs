@@ -324,4 +324,4 @@ Abusing the Mendix Forum, point system, or other community tools is not allowed.
 
 ## 12 Main Document in This Category
 
-* [OAuth & Scopes](/developerportal/community-tools/oauth-scopes/) – provides introductory information on how OAuth and scopes work, as well as details on scopes generated in the Developer Portal
+* [OAuth and Scopes](/developerportal/community-tools/oauth-scopes/) – provides introductory information on how OAuth and scopes work, as well as details on scopes generated in the Developer Portal

@@ -99,7 +99,7 @@ The changed **Order** and **Customer** information:
 
 ### 4.2 Error Handling – Custom with Rollback
 
-Any sub-microflow initiated with error handling set to **Custom with Rollback** will NOT initiate a new transaction. The original transaction will be re-used in the subflow. If an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction. See the follwoing exampe:
+Any sub-microflow initiated with error handling set to **Custom with rollback** will NOT initiate a new transaction. The original transaction will be re-used in the subflow. If an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction. See the follwoing exampe:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580956.png" width="400px">}}
 
@@ -161,7 +161,7 @@ Because you are switching transactions, merging back to the original process is 
 
 ### 4.3 Error Handling – Custom without Rollback
 
-A sub-microflow with error handling set to **Custom without Rollback** will always create a sub-transaction. All actions within the parent microflow will be persisted, and what happens inside the sub-microflow is determined by the sub-microflow. If no custom error handling is specified in the sub-microflow, only the changes in the sub-microflow can be reverted in case of an error. See the following example:
+A sub-microflow with error handling set to **Custom without rollback** will always create a sub-transaction. All actions within the parent microflow will be persisted, and what happens inside the sub-microflow is determined by the sub-microflow. If no custom error handling is specified in the sub-microflow, only the changes in the sub-microflow can be reverted in case of an error. See the following example:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580960.png" width="400px">}}
 

@@ -1,0 +1,69 @@
+
+<style>
+  .feedback--box {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top-width: 0.15rem;
+    border-top-style: solid;
+    border-top-color: #0CABF9;
+  }
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none feedback--box"><!-- NK -added class name for styling defined at top of file -->
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  {{ .yes | safeHTML }}
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a class="feedback--link" target="_blank" href="">tell us how we can improve</a>.
+</p>
+</div>
+<!-- NK - lines 39-41 grab feedback issue link generated from page-meta-links.html -->
+<script>
+  document.querySelector('.feedback--link').href = document.querySelector('a.feedback-issue').href;
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>

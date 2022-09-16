@@ -13,7 +13,7 @@ The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) conne
 
 OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework. This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA Server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
 
-You can check out a [sample module](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used.
+You can check out a [sample module](https://marketplace.mendix.com/link/component/117392), which gives an example of how the connector can be used.
 
 ### 1.1 Features
 

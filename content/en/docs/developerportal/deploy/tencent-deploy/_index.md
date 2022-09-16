@@ -2,7 +2,7 @@
 title: "Tencent Cloud (腾讯云)"
 url: /developerportal/deploy/tencent-deploy/
 category: "Deployment"
-description: "Describes the processes for deploying a Mendix app to the Tencent Cloud"
+description: "Describes how to deploy to the Tencent Cloud."
 weight: 45
 tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
@@ -204,7 +204,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The next time the user signs in to the Mendix Developer Portal, they will be added to the namespace.
 
-##### 3.3.2.2 Editing & Removing Members
+##### 3.3.2.2 Editing and Removing Members
 
 You can remove existing members.
 
@@ -294,7 +294,7 @@ You will not be able to deploy to this environment until it has been fully prepa
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
 {{% alert color="warning" %}}
-There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+There is a limit of 200 MB on the size of a deployment package which can be deployed on the Tencent Cloud.
 {{% /alert %}}
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.

@@ -109,7 +109,7 @@ After defining the structure of the layout with the layout container(s), the reg
 
 Two of the most useful widget types are menus & navigation and snippets. You will learn more about those two types below.
 
-## 5 Menus & Navigation
+## 5 Menus and Navigation
 
 ### 5.1 Menu Bar
 

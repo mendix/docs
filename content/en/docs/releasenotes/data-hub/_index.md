@@ -11,13 +11,50 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### September 15th, 2022
+
+#### Improvements
+
+* We added an **Authentication** details page on the data source registration form.
+* We added a filter to the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/) to view the resources owned by a user.
+* We updated the Data Hub Catalog UI to support pagination in the search results.
+
+#### Fixes
+
+* We fixed a bug where a 404 page was shown after clicking the Data Hub Catalog call-to-action in a notification email.
+
+### September 8th, 2022
+
+#### Improvements
+
+* You will now see an error message when the parsing of a contract fails due to the parsing service being offline. 
+
+### September 1st, 2022
+
+#### Improvements
+
+* External users will receive an email when they are removed from a company's Data Hub Catalog. 
+* Company Admins can now add multiple external users by separating email addresses with a comma and space. 
+
+#### Fixes
+
+* We fixed a bug where external users were sometimes unable to upload contracts.
+
+### August 25th, 2022
+
+#### Improvements
+
+* We improved the accuracy of the Catalog's search results.
+* We added the option to the [Search API](/apidocs-mxsdk/apidocs/data-hub-apis/#search) to paginate through search results with an offset. This allows you to limit the number of results and specify how many to skip.
+* We made several improvements to the Catalog UI.
+
 ### August 18th, 2022
 
-### Improvements
+#### Improvements
 
 * Company administrators can now assign a new [external user](/developerportal/control-center/data-hub-admin/#external-users) when removing the existing one from company's Data Hub Catalog. To remove a user, go to the **Control Center** > **Data Hub** > **External Users** and click **Remove**.
 
-### Fixes
+#### Fixes
 
 * We fixed a bug where an empty V3 contract resulted in an error. The contract will now be parsed successfully and yield no entities because it is empty.
 * We fixed a bug where notifications were not sent when the notification title was more than 100 characters. The maximum number of characters in notification titles is now 100.
@@ -28,7 +65,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 * We made some improvements to the **Register a New Data Source** form, including improved processing of large contracts and improved responsiveness on pages with a large amount of applications and owners.
 
-### Fixes
+#### Fixes
 
 * We fixed a bug where notifications about deletion were mistakenly sent when updating a service. 
 * We fixed an issue where some **Company Admins** would get an error when trying to change the default discoverability setting.
@@ -143,7 +180,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We corrected the OData file upload message that was incorrectly indicating the maximum file size as 1MB, when in fact the allowed maximum file size is 5MB.
+* We corrected the OData file upload message that was incorrectly indicating the maximum file size as 1 MB, when in fact the allowed maximum file size is 5 MB.
 
 ### March 31st, 2022
 

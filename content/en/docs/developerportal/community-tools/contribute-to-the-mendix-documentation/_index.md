@@ -84,7 +84,7 @@ To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, s
 * To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/how-to-template.md)
 * To get the *Studio Pro Guide* page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/ref-guide-page-template.md)
 
-### 5.2 Guidelines & Conventions {#naming}
+### 5.2 Guidelines and Conventions {#naming}
 
 Follow these guidelines and conventions when writing:
 

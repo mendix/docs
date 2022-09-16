@@ -40,7 +40,7 @@ In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu
 
 For more information on menus, see [Menus](/refguide/menus/). 
 
-### 2.2 Run & View App {#run-and-view}
+### 2.2 Run and View App {#run-and-view}
 
 You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
 

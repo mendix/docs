@@ -197,7 +197,7 @@ Using your new app, ensure all pages, buttons, and functionality work the way yo
 
 To upload your Mendix app to the Play Console, follow the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
 
-### 6.5 Create, Review & Roll Out a Release
+### 6.5 Create, Review and Roll Out a Release
 
 1. To create a release of your Mendix app and roll it out, follow the instructions on the [Step 1: Create a release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
 2. To test your app on a real device, complete the steps in Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) page.

@@ -103,7 +103,7 @@ Once you are done with the model changes, you can commit the changes back to the
 
 For more information, see [Async Await](https://basarat.gitbook.io/typescript/future-javascript/async-await) and [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
 
-## 4 Compiling & Running the Script
+## 4 Compiling and Running the Script
 
 1. Compile the script with the TypeScript compiler into JavaScript using the following command:
 

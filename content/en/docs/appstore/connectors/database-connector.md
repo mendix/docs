@@ -40,7 +40,7 @@ Once you have imported the Database Connector into your app, you will have the *
 
 {{< figure src="/attachments/appstore/connectors/database-connector/database-connector-in-toolbox.png" >}}
 
-### 3.1 Executing Queries & Statements
+### 3.1 Executing Queries and Statements
 
 #### 3.1.1 Usage
 

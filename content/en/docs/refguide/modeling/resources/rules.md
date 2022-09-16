@@ -20,6 +20,8 @@ Rules are very similar to microflows; see the documentation on [Microflows](/ref
 * A rule cannot interact with the client; the actions to show or close forms, show messages, send validation feedback and download files are not available in rules
 * A rule cannot call web services, generate documents or import XML
 
+These differences mean that rules perform better than microflows if you don't need any of the additional features which microflows provide.
+
 ## 3 Read More
 
 * [Microflows](/refguide/microflows/)

@@ -3,7 +3,7 @@ title: "Docker"
 url: /developerportal/deploy/docker-deploy/
 category: "Deployment"
 weight: 60
-description: "Describes how to build a new Docker image using the Mendix buildpack."
+description: "Describes how to deploy using a Docker image."
 tags: ["Docker", "Cloud", "container", "CI/CD"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

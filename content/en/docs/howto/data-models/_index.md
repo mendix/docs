@@ -2,8 +2,8 @@
 title: "Data Models"
 url: /howto/data-models/
 weight: 50
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 tags: ["studio pro"]
 ---
 

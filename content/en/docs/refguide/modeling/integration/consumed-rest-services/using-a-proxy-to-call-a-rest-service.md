@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 In some cases, you will be stuck behind a firewall and thus unable to call a REST service directly. This page shows you how to configure your app to use a proxy to call such services.
 
-## 2 Proxy Host & Proxy Port
+## 2 Proxy Host and Proxy Port
 
 There are two parameters that specify which proxy server to use when making REST calls: `http.proxyHost` and `http.proxyPort`. Some proxies require authentication, which you may specify as `http.proxyUser` and `http.proxyPassword`.
 

@@ -47,10 +47,10 @@ The Runtime detects the following situations as being conflicting when upgrading
 Depending on the actual workflow, the above situations may functionally not lead to a problem. Of course, this requires a prior knowledge of the business domain. As a result, the Runtime may detect more conflicts than strictly required from a business perspective.
 {{% /alert %}}
 
-Conflicted workflow instances will be marked with state **Incompatible**. The **Reason** field will be updated with a text explaining the found conflicts. The workflow cannot be executed in this state. 
+Conflicted workflow instances will be marked with state **Incompatible**. The **Reason** field will be updated with a text explaining the found conflicts. The workflow cannot be executed in this state. You can build customized migration for incompatible workflow instances that cannot be automatically migrated: use [Generate jump-to options](/refguide/generate-jump-to-options/) and [Apply jump-to option](/refguide/apply-jump-to-option/) activities in a microflow. For more information, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
 
 {{% alert color="info" %}}
-The system can change an Incompatible workflow instance into the state **InProgress** and auto-upgrade it when a subsequent app deployment changes the **WorkflowDefinition** to no longer be conflicting.
+The system can change an incompatible workflow instance into the **InProgress** state and auto-upgrade it when subsequent app deployment changes the **WorkflowDefinition** to no longer conflicting.
 {{% /alert %}}
 
 ## 4 System Module Entities

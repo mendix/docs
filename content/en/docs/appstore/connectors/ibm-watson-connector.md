@@ -453,7 +453,7 @@ This is a string containing the URL assigned to the Visual Recognition service i
 This is an object of type **VisualRecognitionImage** which contains the image which is to be classified. The image must
 
 * have a pixel density of at least 32X32 pixels per inch
-* be less that 10MB
+* be less that 10 MB
 * be in one of the following formats
     * png
     * jpg
@@ -492,7 +492,7 @@ For example, if you want to have a classifier to identify different sorts of mam
 
 Each ZIP file must
 
-* have a maximum size of 100MB
+* have a maximum size of 100 MB
 * contain at least 10 images in jpg or png format (minimum recommended image resolution is 32X32 pixels)
 * contain less than 10,000 images
 
@@ -579,7 +579,7 @@ This is an object of type, or a specialization of, System.Image containing the i
 The image must
 
 * have a pixel density of at least 32X32 pixels per inch
-* be less that 10MB
+* be less that 10 MB
 * be in one of the following formats
     * *.png*
     * *.jpg*

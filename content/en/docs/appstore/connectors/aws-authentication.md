@@ -8,26 +8,22 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 ## 1 Introduction
 
-AWS Authentication Connector provides a way to authenticate on AWS for  other compatible AWS connectors (like Amazon S3 Connector, Amazon SNS  Connector & Amazon SQS Connector).
+AWS Authentication Connector provides a way to authenticate on AWS for other compatible AWS connectors (for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, the [Amazon Rekognition](new-url) connector the Amazon SNS connector, and the Amazon SQS connector).
 
-There are two types of credentials that can be used through the AWS Authentication Connector:
+There are two types of credentials that can be used through the AWS Authentication connector:
 
-- Static credentials: Static credentials use an access key and secret mechanism.
-- Session credentials: Session credentials use Amazon IAM RolesAnywhere to assume an AWS Role.  IAM RolesAnywhere is used to create a sessionToken valid for a specific  duration. Default duration is 1hr.
+- Static credentials: use an access key and secret mechanism.
+- Session credentials: use Amazon IAM RolesAnywhere to assume an AWS Role.  IAM RolesAnywhere is used to create a sessionToken valid for a specific duration. Default duration is one hour.
 
-Credentials object returned by the above actions can be used as authentication for other AWS connectors like S3, SNS, SQS, etc.
+Credentials object returned by the actions above can be used as authentication for other compatible AWS connectors.
 
 ### 1.1 Typical Use Cases
 
-You want to use the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector. You can only connect to your S3 bucket when you have the correct credentials. These are provided by the AWS Authentication connector.
+You want to use an AWS connector, for example the [Amazon S3](/appstore/connectors/aws-s3-connector/). You can only connect to your S3 bucket when you have the correct credentials. These are provided by the AWS Authentication connector.
 
-## 2 Configuration
+## 2 Installation
 
-The following actions need to be taken to use the AWS Authentication connector in your app.
-
-1. Open your app in Studio Pro
-
-2. Download the [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS Authentication connector into your app.
 
 ## 3 Obtaining Credentials from AWS
 
@@ -67,3 +63,47 @@ You will need to provide the following values, obtained from the AWS Console:
 You can decide how to provide these securely within your app.
 
 The action returns a `Credentials` object. See the documentation for your specific connector for more information on how to use the Credentials object.
+
+
+
+
+
+
+
+### 1.1 Static Credentials {#static}
+
+Static credentials use an access key and secret mechanism.
+
+Users can create and access these keys from the **AWS Console** > **My Security Credentials** > **AWS IAM Credentials**. Further users need to use the **Get Static Credentials** action in a microflow to create credentials using the access key id and secret access key.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
+
+### 1.2 Session Credentials {#session}
+
+Session credentials use Amazon IAM RolesAnywhere to assume an AWS Role.  IAM RolesAnywhere is used to create a sessionToken valid for a specific duration. Default duration is one hour.
+
+For IAM RolesAnywhere setup, refer to [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html).
+
+Then users need to add the client certificate used for creating Trust Anchor in RolesAnywhere in Mendix Deployment Portal on the [Network](/developerportal/deploy/environments-details/#network-tab) tab on the **Outgoing Connections Certificates** section.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
+
+Make sure to add an identifier to the certificate which will be used as input while creating the session credentials.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
+
+Then, users need to use the **Get Session Credentials** action in a microflow to create credentials with the below parameters:
+
+| Parameter                         | Value                                                        |
+| --------------------------------- | ------------------------------------------------------------ |
+| **Region**                        | AWS Region                                                   |
+| **Role ARN**                      | Arn of the AWS role to assume                                |
+| **Profile ARN**                   | Arn of the Profile created at IAM RolesAnywhere              |
+| **Trust Anchor ARN**              | Arn of the Trust Anchor created at IAM RolesAnywhere         |
+| **Client Certificate Identifier** | Identifier mentioned (as Pin) in the Outgoing Certificates in Runtime tab of Mendix Cloud Environment |
+| **Duration**                      | Duration for which the session token should be valid         |
+| **Session Name**                  | An identifier for the assumed role session                   |
+
+For example:
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-session-credentials.png" >}}

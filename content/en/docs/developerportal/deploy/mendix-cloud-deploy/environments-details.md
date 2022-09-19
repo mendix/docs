@@ -104,7 +104,7 @@ To clear the environment, follow these steps:
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4 {#naming}
 
-If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app, you can rename the environments as you wish.
+If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app, you can rename the environments.
 
 To rename the environment, follow these steps:
 

@@ -347,7 +347,7 @@ You can add or edit a number of different IP address and port combinations. Any 
 For each range where you define whitelisted IP addresses and ports, you can enter the following information:
 
 * **Name** – Enter a name to identify this range, for example, *192 Group*.
-* **IP** – Specify an inclusive range of whitelisted IP addresses in IPv4 format, for example, *192.168.10.1* to *192.168.10.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same.
+* **IP** – Specify an inclusive range of whitelisted IP addresses in IPv4 format, for example, *142.251.39.1* to *142.251.39.255*. All the IP addresses must be in a public range, see [Valid IP Ranges](#valid-ip), below. All addresses between the **Start** address and the **End** address are whitelisted, including the start and end addresses. If you only want to whitelist a single address, make the start and end addresses the same.
 * **Port** – Specify an inclusive range of ports which are whitelisted for the IP range above, for example, *80* to *5000*. You can use several whitelist entries if you want to whitelist different port ranges for the same IP range.
 * **Protocol** – Select whether the whitelisting is for **TCP**, **UDP**, or **ALL** traffic.
 * **Description** – Enter an optional description of this IP range, for example which API it supports.

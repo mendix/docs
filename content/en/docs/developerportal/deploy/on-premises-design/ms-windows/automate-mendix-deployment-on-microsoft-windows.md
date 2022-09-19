@@ -158,3 +158,23 @@ Windows Management Framework 3.0 is not installed.
 #### 5.2.2 Solution
 
 Install [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595).
+
+### 5.3 Cannot Open {App Name} Service on Computer
+
+PowerShell shows an error message similar to the following:
+
+```text {linenos=false}
+Start-MxApp : Cannot open App1 service on computer '.'.
+At line:1 char:1
++ Start-MxApp App1 -synchronizedatabase
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (App1:String) [Start-MxApp], InvalidOperationException
+    + FullyQualifiedErrorId : AppProcessError,Mendix.Service.Commands.StartAppCommand
+```
+#### 5.3.1 Cause
+
+PowerShell is run without administrator privileges.
+
+#### 5.3.2 Solution
+
+Run PowerShell as an administrator.

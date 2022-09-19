@@ -44,9 +44,9 @@ To download and install the Microsoft Teams Connector app service in your app, f
 
 {{% alert color="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
 
-## 3 Usage
+## 4 Usage
 
-### 3.1 Configuring Webhooks in the Communication Services Console
+### 4.1 Configuring Webhooks in the Communication Services Console
 
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) to which you want to send messages. 
 2. Log into the Marketplace.
@@ -93,9 +93,9 @@ To download and install the Microsoft Teams Connector app service in your app, f
 
         {{% alert color="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.{{% /alert %}}
 
-### 3.2 Sending Message to a Teams Channel
+### 4.2 Sending Message to a Teams Channel
 
-#### 3.2.1 Configuring the Send Message to Webhook Activity
+#### 4.2.1 Configuring the Send Message to Webhook Activity
 
 You can use the **Send Message to Webhook** activity in a microflow to send messages to a Teams channel:
 
@@ -139,7 +139,7 @@ After the **Send Message to Webhook** activity is configured, once the microflow
 * If the message is successfully sent, the value of the **SentMessage** attribute is `true`.
 * If the message could not be sent, the value of the **SentMessage** attribute is `false`.
 
-#### 3.2.2 Building a Message Card {#build-message-card}
+#### 4.2.2 Building a Message Card {#build-message-card}
 
 Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using the Microsoft Teams connector. To build a message card, perform the following steps:
 
@@ -165,13 +165,13 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 
         {{% alert color="info" %}}For more information about the design of a message card, see [Design guidelines](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
-### 3.3 Sending Message Using Microsoft Credentials
+### 4.3 Sending Message Using Microsoft Credentials
 
 Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the **Send Message** activity to send messages with Microflow credentials.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/activities-in-toolbox.png" >}}
 
-#### 3.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
+#### 4.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
 
 1. Log in to the  [MicrosoftAzurel](https://portal.azure.com/#home) portal with your company account.
 2. If your account gives you access to more than one tenant, select your account on the upper-right corner, and set your portal session to the Azure AD tenant of your company.
@@ -203,7 +203,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
     {{% alert color="info" %}}For more information bout registering an application in Azure portal, see [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/graph/auth-register-app-v2)).{{% /alert %}}
 
-#### 3.3.2 Configuring Constants
+#### 4.3.2 Configuring Constants
 
 1. If you have not configured the LicenseSecret and the LicenseKey, [configure](#configure-keys) them.
 
@@ -213,7 +213,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 3. Configure the values of constants **AzureClientId**, **AzureClientSecret**, **AzureTenantId** and **RedirectURI** with the values that were used and generated when you [register the application on the Microsoft Azure portal](#register-application-on-azure-portal).
 4. Make sure that the constant **DeepLinkName** contains the text after the last slash in the **RedirectURI** value. For example, if your **RedirectURI** is  `https://contosoapp1/link/auth`, then the **DeepLinkName** should be `auth`.
 
-#### 3.3.3 Configuring the Microflows
+#### 4.3.3 Configuring the Microflows
 
 1. Go to the Marketplace and log in with your Mendix account.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to install the [Deep Link](https://marketplace.mendix.com/link/component/43) module to your app.
@@ -228,7 +228,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-home-page-microflow.png" >}}
 
-#### 3.3.4 Obtaining the Channel Link on Microsoft Teams{#obtain-channel-link}
+#### 4.3.4 Obtaining the Channel Link on Microsoft Teams{#obtain-channel-link}
 
 One of the input items required for the **Send Message** activity is the channel link. To get this link for your channel, do as follows:
 
@@ -242,7 +242,7 @@ A pop-up window opens and shows containing the channel link.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/channel-link.png" >}}
 
-#### 3.3.5 Configuring the Send Message and SignInMicroflow Activities
+#### 4.3.5 Configuring the Send Message and SignInMicroflow Activities
 
 1. From the microflow toolbox, drag the **Send Message** activity into your microflow.
 2. Double-click the **Send Message** activity to open the **Send Message** dialog box.
@@ -277,3 +277,5 @@ After the **Send Message** activity is configured, once triggered, the activity 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sign-in-microflow.png" >}}
 
     {{% alert color="info" %}}Once you are logged in by using the **SignInMicroflow** activity, you need to call this microflow again to send the message.{{% /alert %}}
+
+

@@ -45,6 +45,8 @@ SELECT Person.* FROM Sales.Customer AS Person
 SELECT "Sales.Order".* FROM "Sales.Order"
 ```
 
+NB. Here entity name Order is encapsulated with " " because it is a reserved OQL-word, since it is also used in ORDER BY. Any module name, entity name or attribute name called order, or group, or having, or where, has to get encapsulated like this.
+
 ### 2.4 expression
 
 `expression` is either a constant, a function or any combination of attribute names, constants, and functions connected by operator(s) or a subquery. When you add more expressions, place a comma between each expression.

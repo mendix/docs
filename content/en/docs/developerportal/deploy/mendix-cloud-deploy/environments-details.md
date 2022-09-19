@@ -24,10 +24,10 @@ The contents of the **General** tab depend on the Mendix Cloud version on which 
 In this tab, you can find the following information about your environment:
 
 * **Status**
-    * White – the environment is stopped or was never deployed
-    * Green – the environment is working correctly
-    * Orange – the environment has warnings
-    * Red – the environment is not working correctly
+    * White (blank) – the environment is stopped or was never deployed
+    * Green (check) – the environment is working correctly
+    * Orange (horizontal line) – the environment has warnings
+    * Red (cross) – the environment is not working correctly
         {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-status.png" alt="The symbol displaying the environment status is located under the name of the environment" >}}   
 * **Running since** – the date on which the app was started
 * **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below

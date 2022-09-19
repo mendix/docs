@@ -12,10 +12,10 @@ AWS Authentication Connector provides a way to authenticate on AWS for other com
 
 There are two types of credentials that can be used through the AWS Authentication connector:
 
-- Static credentials: use an access key and secret mechanism.
-- Session credentials: use Amazon IAM RolesAnywhere to assume an AWS Role.  IAM RolesAnywhere is used to create a sessionToken valid for a specific duration. Default duration is one hour.
+- Static credentials
+- Session credentials
 
-Credentials object returned by the actions above can be used as authentication for other compatible AWS connectors.
+You can use the **Get Static Credentials** action and the **Get Session Credentials Credentials** action to generate these credentials respectively. The Credentials object returned can be used as authentication for other compatible AWS connectors.
 
 ### 1.1 Typical Use Cases
 
@@ -27,11 +27,11 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Usage
 
-### 3.1 Static Credentials
+### 3.1 Creating Static Credentials
 
 Static credentials use an access key and secret mechanism.
 
-#### 3.1.1 Obtaining Credentials from AWS
+#### 3.1.1 Obtaining IAM Credentials on AWS
 
 Within AWS, you can create IAM Credentials using the AWS console.
 
@@ -52,38 +52,49 @@ Once you have created the credentials, you cannot retrieve your secret access ke
 You can only set up two access keys for each user.
 {{% /alert %}}
 
-#### 3.1.2 Using the AWS Authentication Connector with Static Credentials
+#### 3.1.2 Using the Get Static Credentials Action in Studio Pro
 
 You can now use the AWS Authentication connector in your app as follows:
 
-1. Drag the **Get Static Credentials** action from the **Toolbox** to a microflow to create credentials using the access key id and secret access key.
-2.  Double-click the **Get Static Credentials** action and fill in **Access key ID** and **Secret access key** that you obtained from the AWS Console.
+1. Open your app in Studio Pro.
+2. Drag the **Get Static Credentials** action from the **Toolbox** to a microflow to create credentials using the access key id and secret access key.
+3. Double-click the **Get Static Credentials** action and fill in **Access key ID** and **Secret access key** that you obtained from the AWS Console.
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
 
-    You can decide how to provide these securely within your app.
+   You can decide how to provide these securely within your app.
 
-The action returns a **Credentials** object. See the documentation for your specific connector for more information on how to use this object.
+The action returns a **Credentials** object. For more information on how to use this object, see the documentation for your specific connector.
 
-### 3.2 Session Credentials {#session}
+### 3.2 Creating Session Credentials {#session}
 
-Session credentials use Amazon IAM RolesAnywhere to assume an AWS Role.  IAM RolesAnywhere is used to create a sessionToken valid for a specific duration. Default duration is one hour.
+Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role.  IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour.
 
-#### 3.1.1 Obtaining Credentials from AWS
+#### 3.1.1 Setting up IAM Roles Anywhere on AWS
 
-For IAM RolesAnywhere setup, refer to [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html).
+For the setup of IAM Roles Anywhere, see [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html).
 
-#### 3.2.2 Using the AWS Authentication Connector with Session Credentials
+#### 3.2.2  Adding the Client Certificate in Mendix Deployment Portal
+
+Add the client certificate used for creating Trust Anchor in RolesAnywhere as follows:
+
+1. Log in to the Developer Portal.
+
+2. Select your app, click **Environments**, and then click **Details** on the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
+
+3. Go to the **Network** tab, add the client certificate used for creating Trust Anchor in RolesAnywhere on the **Outgoing Connections Certificates** section.
+
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
+
+   {{% alert color="info" %}}Make sure to add an identifier to the certificate which will be used as input while creating the session credentials.{{% /alert %}}
+
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
+
+#### 3.2.3 Using the Get Session Credentials Action in Studio Pro
 
 You can now use the AWS Authentication connector in your app as follows:
 
-1. Add the client certificate used for creating Trust Anchor in RolesAnywhere in Mendix Deployment Portal on the [Network](/developerportal/deploy/environments-details/#network-tab) tab on the **Outgoing Connections Certificates** section.
-
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
-
-    {{% alert color="info" %}}Make sure to add an identifier to the certificate which will be used as input while creating the session credentials.{{% /alert %}}
-
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
+1. Open your app in Studio Pro.
 
 2. Drag the **Get Session Credentials** action from the **Toolbox** to a microflow to create credentials.
 
@@ -103,4 +114,4 @@ You can now use the AWS Authentication connector in your app as follows:
 
     {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-session-credentials.png" >}}
 
-The action returns a **Credentials** object. See the documentation for your specific connector for more information on how to use this object.
+The action returns a **Credentials** object. For more information on how to use this object, see the documentation for your specific connector.

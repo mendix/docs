@@ -36,13 +36,70 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 * You have installed the [Deep link](https://marketplace.mendix.com/link/component/43) module in your app.
 * You have a Microsoft Account in Azure Active Directory.
 
-## 2 Installing the Component in Your App
+## 2 Installation
+
+### 2.1  Obtaining the LicenseSecret and the LicenseKey {#obtain-keys}
+
+Microsoft Teams Connector is a premium Mendix product that is subject to a purchase and subscription. To successfully deploy an app that uses Microsoft Teams Connector, you need to start a trial or a subscription to get a valid combination of **LicenseSecret** and **LicenseKey**.
+
+#### 2.1.1 Starting a Trial
+
+A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
+
+1. Go to the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page in the Marketplace.
+2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
+3. Select the check box to agree to the **Terms & Conditions**.
+4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
+6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
+7. Click **Microsoft Teams Connector** to open the service management dashboard.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
+
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
+
+#### 2.1.2 Starting a Subscription
+
+1. Go to the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page in the marketplace.
+2. Click **Subscribe** to start a subscription.
+3. Select your subscription plan.
+4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
+5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Microsoft Teams Connector** to open the service management dashboard.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
+
+{{% alert color="info" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service. See the image below.{{% /alert %}}
+
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-instance-name.png" >}}
+
+### 2.2 Installing the Component in Your App
 
 To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-protected-module.png" >}}
 
 {{% alert color="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
+
+## 3 Configuring the LicenseSecret and the LicenseKey {#configure-keys}
+
+Before you deploy an app, you should configure the binding keys in your app as follows:
+
+1. In the **App Explorer**, go to **Settings**. The **App Settings** dialog box opens. 
+2. On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
+3. Go to the **Constants** tab.
+4. Click **New**. The **Select Constant** dialog box opens.
+5. Go to **MicrosoftTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
+
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configuring-license-keys.png" >}}
+
+6. Select **LicenseSecret**.
+7. In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
+8. Click **OK** to save the settings and closes the dialog box.
+9. Perform steps 4 and 5 again.
+10. Select **LicenseKey**.
+11. In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey you got.
+12. Click **OK** to save the settings and closes the dialog box.
+13. After you finish building the app, click **Run** to deploy your app to the cloud.
 
 ## 4 Usage
 
@@ -278,4 +335,37 @@ After the **Send Message** activity is configured, once triggered, the activity 
 
     {{% alert color="info" %}}Once you are logged in by using the **SignInMicroflow** activity, you need to call this microflow again to send the message.{{% /alert %}}
 
+## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams Webhooks usage:
+
+1. Log into the Marketplace.
+2. Go to **My Marketplace** and then do as follows:
+
+    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+3. Find **Microsoft Teams connector** in the list.
+4. Click **Usage Dashboard** to see the following statistics:
+    * **This Month** – shows usage statistics for the current month
+    * **Last Month** – shows usage statistics for last month
+    * **Total** – shows usage statistics from the start of the subscription date to today
+
+## 6 Troubleshooting
+
+### 6.1 License
+
+When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#obtain-keys) is correct.
+
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/license-invalid-popup.png" >}}
+
+### 6.2 Quota
+
+When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [Usage dashboard](#statistics).
+
+{{< figure src="/attachments/appstore/app-services/ms-teams-connector/quota-exhausted-popup.png" >}}
+
+### 6.3 Waiting Time for Using Webhook URLs
+
+If the app deployed in the sandbox goes into the sleep mode, after the app resumes, you may have to wait up to five minutes before you can use the latest-configured Webhook URL.
+
+Although an app deployed to the licensed node would never go into the sleep node, you still need to wait for five minutes before you can use each newly-configured Webhook URL for the first time.

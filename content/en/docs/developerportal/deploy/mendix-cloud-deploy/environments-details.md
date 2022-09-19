@@ -249,7 +249,7 @@ The deprecated Mendix Cloud v3 only supports X-Frame-Options. Mendix Cloud v4 su
 | Access-Control-Allow-Origin | Indicates whether the response can be shared with requesting code from the given origin. |
 | Content-Security-Policy | Allows web site administrators to control resources the user agent is allowed to load for a given page. Requires a string value.<br/>See [Content Security Policy](#csp), below, for more information. |
 | Referrer-Policy | Governs which referrer information should be included with requests made. |
-| X-Content-Type-Options | Indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
+| X-Content-Type-Options | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | X-Frame-Options | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>`. The default is not to allow apps to be rendered inside frames. <br/> This was the value set previously to prevent embedding in an iframe. <br/> See [Running Your App in an Iframe](#iframe), below, for information about running your app inside an iframe. |
 | X-Permitted-Cross-Domain-Policies | Specifies whether this page can load resources from a different domain. |
 | X-XSS-Protection | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. |

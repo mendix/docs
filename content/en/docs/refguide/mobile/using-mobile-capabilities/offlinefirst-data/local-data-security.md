@@ -58,18 +58,17 @@ Mendix 9.18 and above offer to encrypt the local database of native apps. Databa
 
 Before enabling local database encryption, ensure that these prerequisites are met:
 
-* Use Mendix 9.18 or above
-* Upgrade the native template to version 6.3.0 or above
+* Use Mendix Studio Pro v9.18 (or a higher version) 
+* Upgrade your Native Template to v6.3.0 (or a higher version) 
 * Upgrade Make It Native to the latest version
 
-{{% alert color="warn" %}}
-Local database encryption requires native template version 6.3.0 or above. If this setting is enabled using an older version of the native template, the app will not start. Be careful about the template version when using Over-The-Air Updates to enable database encryption.
+{{% alert color="alert" %}}
+Local database encryption works in Native Template v6.3.0 and higher. If this setting is enabled using an older version of the native template, the app will not start. Thus, be careful about the template version when using over-the-air updates to enable database encryption.
 {{% /alert %}}
 
 ### 4.2 Enabling Database Encryption for New Apps
 
 Suppose you are working on a new Mendix app that you haven't released to your users before. In that case, you can check the check box shown above and use the latest version of the native template to build and release your app.
-
 
 ### 4.3 Enabling Database Encryption for Existing Apps
 

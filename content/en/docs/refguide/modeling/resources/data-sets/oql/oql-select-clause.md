@@ -45,7 +45,7 @@ SELECT Person.* FROM Sales.Customer AS Person
 SELECT "Sales.Order".* FROM "Sales.Order"
 ```
 
-NB. Here entity name Order is encapsulated with " " because it is a reserved OQL-word, since it is also used in ORDER BY. Any module name, entity name or attribute name called order, or group, or having, or where, has to get encapsulated like this.
+NB. Here entity name Order is encapsulated with " " because it is a reserved OQL-word, since it is also used in ORDER BY. Any module name, entity name or attribute name called any reserver OQL-word (order, group, having, where, day, by) has to get encapsulated like this.
 
 ### 2.4 expression
 

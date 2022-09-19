@@ -13,7 +13,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 The **Environment Details** page shows information about a particular environment, for example production or acceptance. You can use it to manage and debug several aspects of the environment.
 
-To enter the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** by the specific environment.
+To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com), select your licensed app, click **Environments**, and then click **Details** by the specific environment.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details button is located on the right side of the row">}}   
 

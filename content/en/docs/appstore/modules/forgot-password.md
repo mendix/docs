@@ -13,7 +13,13 @@ The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) modul
 
 This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (Sign up and Forgot password). In the sign up case, the end-user will also be asked to provide their name.
 
-There are three versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro version 7, 8, or 9. These all work in the same way, and require the same dependencies specified below.
+There are three versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro version 7, 8, or 9 — see the table, below. These all work in the same way, and require the same dependencies specified below.
+
+| Mendix Version | Forgot Password Version |
+| --- | --- |
+| 9.12.5 and above | 5.x.x |
+| 8.18.x | 4.x.x |
+| 7.23.x | 3.6.x and above |
 
 If you already use the Forgot Password module in your Mendix version 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix Version 8 to Mendix Version 9](#upgrade8-9), at the end of this page.
 
@@ -34,6 +40,7 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
 
 1. Import the [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module into your app.
 1. Add the [Dependencies](#dependencies) listed above from the Marketplace.
+    {{% alert color="info" %}}You can accept any warnings about files being overwritten.{{% /alert %}}
 1. Open the [App Settings](/refguide/app-settings/) and make the following changes:
     * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant `Encryption.EncryptionKey`
         {{< figure src="/attachments/appstore/modules/forgot-password/encryption-key.png" >}}

@@ -63,6 +63,7 @@ An MTS is a minor version released approximately every 6 months after a new majo
 
 These are the current MTS versions for Studio Pro:
 
+* [9.18](/releasenotes/studio-pro/9.18/) (started in September 2022)
 * [9.12](/releasenotes/studio-pro/9.12/) (started in March 2022)
 * [9.6](/releasenotes/studio-pro/9.6/) (started in September 2021)
 

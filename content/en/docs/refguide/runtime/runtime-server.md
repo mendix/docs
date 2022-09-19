@@ -67,7 +67,7 @@ This is the database (or sometimes the schema of a shared database) which holds 
 
 ### 2.11 Query Executor
 
-This manages the CRUD (create, read, update, and delete) operations for retrieving and storing data in the relational database which is bound to the app. The operations are performed using SQL which is tailored to the underlying database. Where queries are not formatted in SQL, the query executor converts them from their original format (for example XPath or OQL).
+This manages the CRUD (create, read, update, and delete) operations for retrieving and storing data in the relational database which is bound to the app. The operations are performed using SQL which is tailored to the underlying database. Where queries are not formatted in SQL, the query executor converts them from their original format (for example, XPath or OQL).
 
 The query executor also applies the security which is set within the app.
 
@@ -116,6 +116,6 @@ This decodes HTTPS requests from Mendix Clients or other services, and passes th
 
 This is the web browser (for example, Google Chrome) or mobile device (for example, an iPhone) which allows the user to interact with the app. It typically has a screen, pointer device, and input device to allow users to use the app.
 
-The Runtime Server communicates with the Mendix Client by using a private API called *xas*.
+The Runtime Server communicates with the Mendix Client by using a private API called xas.
 
 For a description of the Mendix Client, see [Mendix Client](/refguide/mendix-client/).

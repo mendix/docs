@@ -5,6 +5,28 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.27
+
+**Release date: September 19th, 2022**
+
+#### Features
+
+- We added support from the following fonts from `react-native-vector-icons` library:
+    * AntDesign
+    * Entype
+    * EvilIcons
+    * Feather
+    * FontAwesome
+    * FontAwesome 5
+    * Fontisto
+    * Foundation
+    * Ionicons
+    * MaterialCommunityIcons
+    * MaterialIcons
+    * Octicons
+    * SimpleLineIcons
+    * Zocial
+
 ## 6.2.26
 
 **Release date: September 8th, 2022**

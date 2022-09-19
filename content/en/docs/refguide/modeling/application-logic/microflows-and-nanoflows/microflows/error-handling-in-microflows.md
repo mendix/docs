@@ -80,21 +80,12 @@ Take the following microflow as an example. The changed order and customer infor
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580951.png" width="550px">}}
 
 The changed **Order** and **Customer** information:
-<table>
-<tr><th>Order</th><th>Customer </th></tr>
-<tr><td>
-
-| ID | Date |
-| -- | -- |
-| 1234 | 1/1/2018 |
-
-</td><td>
-
-| ID | Status |
-| -- | -- |
-| 1234 | Gold |
-
-</td></tr> </table>
+| Entity | Attribute | Value |
+| -- | -- | -- |
+| **Order** | ID | 1234 |
+|           | Date | 1/1/2018 |
+|**Customer**| ID | 1234 |
+|            | Status | Gold |
 
 ### 4.2 Error Handling – Custom with Rollback
 
@@ -105,56 +96,28 @@ Any sub-microflow initiated with error handling set to **Custom with rollback** 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580950.png" width="550px">}}
 
 At status 1 in the above example:
-<table>
-<tr><th>Order</th><th>Customer </th></tr>
-<tr><td>
-
-| ... | ... |
-| -- | -- |
-| ... | ... |
-
-</td><td>
-
-| ID | Status |
-| -- | -- |
-| 1234 | Silver |
-
-</td></tr> </table>
+| Entity | Attribute | Value |
+| -- | -- | -- |
+| **Order** | ... | ... |
+|           | ... | ... |
+|**Customer**| ID | 1234 |
+|            | Status | Silver |
 
 At status 2 in the above example:
-<table>
-<tr><th>Order</th><th>Customer </th></tr>
-<tr><td>
-
-| ID | Date |
-| -- | -- |
-| 1234 | 1/1/2018 |
-
-</td><td>
-
-| ID | Status |
-| -- | -- |
-| 1234 | Gold |
-
-</td></tr> </table>
+| Entity | Attribute | Value |
+| -- | -- | -- |
+| **Order** | ID | 1234 |
+|           | Date | 1/1/2018 |
+|**Customer**| ID | 1234 |
+|            | Status | Gold |
 
 At status 3 in the above example:
-
-<table>
-<tr><th>Order</th><th>Customer </th></tr>
-<tr><td>
-
-| ... | ... |
-| -- | -- |
-| ... | ... |
-
-</td><td>
-
-| ID | Status |
-| -- | -- |
-| 1234 | Silver |
-
-</td></tr> </table>
+| Entity | Attribute | Value |
+| -- | -- | -- |
+| **Order** | ... | ... |
+|           | ... | ... |
+|**Customer**| ID | 1234 |
+|            | Status | Silver |
 
 Because you are switching transactions, merging back to the original process is not recommended, as this will result in inconsistent data. If you use error handling with rollback in a subflow, you should make sure that all parent microflows are configured to use error handling continuously. It is preferable that you re-throw the exception after running your custom actions.
 
@@ -167,56 +130,28 @@ A sub-microflow with error handling set to **Custom without rollback** will alwa
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580949.png" width="550px">}}
 
 At status 1 in the above example:
-<table>
-<tr><th>Order</th><th>Customer </th></tr>
-<tr><td>
-
-| ... | ... |
-| -- | -- |
-| ... | ... |
-
-</td><td>
-
-| ID | Status |
-| -- | -- |
-| 1234 | Silver |
-
-</td></tr> </table>
+| Entity | Attribute | Value |
+| -- | -- | -- |
+| **Order** | ... | ... |
+|           | ... | ... |
+|**Customer**| ID | 1234 |
+|            | Status | Silver |
 
 At status 2 in the above example:
-<table>
-<tr><th>Order</th><th>Customer </th></tr>
-<tr><td>
-
-| ID | Date |
-| -- | -- |
-| 1234 | 1/1/2018 |
-
-</td><td>
-
-| ID | Status |
-| -- | -- |
-| 1234 | Gold |
-
-</td></tr> </table>
+| Entity | Attribute | Value |
+| -- | -- | -- |
+| **Order** | ID | 1234 |
+|           | Date | 1/1/2018 |
+|**Customer**| ID | 1234 |
+|            | Status | Gold |
 
 At status 3 in the above example:
-
-<table>
-<tr><th>Order</th><th>Customer </th></tr>
-<tr><td>
-
-| ID | Date |
-| -- | -- |
-| 1234 | 1/1/2018 |
-
-</td><td>
-
-| ID | Status |
-| -- | -- |
-| 1234 | Silver |
-
-</td></tr> </table>
+| Entity | Attribute | Value |
+| -- | -- | -- |
+| **Order** | ID | 1234 |
+|           | Date | 1/1/2018 |
+|**Customer**| ID | 1234 |
+|            | Status | Silver |
 
 ## 5 Combinations of Different Types of Error Handling
 

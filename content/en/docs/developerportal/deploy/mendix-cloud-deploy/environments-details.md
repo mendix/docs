@@ -139,7 +139,7 @@ If you have 1 GB RAM of the **Total Allocated Memory**, you have one instance av
 
 ### 2.4 Overviews {#overviews}
 
-At the bottom of the **Environment Details** page, there are three overview grids with information about the deployment package details, plan details, and license.
+At the bottom of the **Environment Details** page, there are three overview grids showing the deployment package details, plan details, and license.
 
 #### 2.4.1 Deployment Package Details
 

@@ -116,7 +116,7 @@ Follow the steps below:
         
         6. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
         
-        7. Open the **Toolbox**, search for a **File Uploader**, drag and drop it inside the data view. 
+        7. Open the **Toolbox**, search for a **File Uploader**, drag and drop it inside the data view on the **Attach File** page. 
         
         8. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
         

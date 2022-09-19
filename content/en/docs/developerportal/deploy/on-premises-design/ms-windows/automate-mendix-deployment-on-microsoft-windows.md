@@ -8,7 +8,7 @@ tags: ["deploy", "Windows", "Mendix Service Console", "Microsoft", "CI/CD pipeli
 
 ## 1 Introduction
 
-On Windows servers, instead of deploying your application manually, you can automate that part of your CI/CD pipeline by using [Power Shell cmdlets](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/cmdlet-overview). This document describes the required configuration, and provides sample automation scripts that you can use as basis for scripting your own deployment.
+On Windows servers, instead of deploying your application manually, you can automate that part of your CI/CD pipeline by using [Power Shell cmdlets](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/cmdlet-overview). Automating deployment makes the process of updating your application faster and lessens the potential for user errors by replacing the manual deployment steps with automation scripts. This document describes the required configuration, and provides sample automation scripts that you can use as basis for scripting your own deployment.
 
 ## 2 Prerequisites
 
@@ -72,19 +72,7 @@ Start-MxApp MyFirstApp -SynchronizeDatabase
 Stopping your app before you update it is a necessary part of the process. Do not attempt to extract the deployment package into your app while the app is running.
 {{% /alert %}}
 
-### 4.2 Sample Script - Update the Mendix Runtime
-
-The following script example demonstrates how you can update the [Mendix Runtime](/refguide/runtime/) to a version that matches the app that you are deploying. This is only required when you upgrade Mendix versions. The sample script first downloads the required Mendix Runtime version through PowerShell, and then extracts the Mendix Platform libraries into the server distribution folder. In this case, the app can remain running, as this process only extracts the new server version without affecting previously installed Mendix Platform versions.
-
-```text {linenos=table}
-# download Mendix Runtime
-wget https://cdn.mendix.com/runtime/mendix-{<major>.<minor>.<patch>.<build>}.tar.gz -OutFile {<target folder for the downloaded file>}\mendix-{<major>.<minor>.<patch>.<build>}.gz
-
-# extract Mendix Platform into the distribution folder
-Install-MxServer -LiteralPath {<target folder for the downloaded file>}\mendix-{<major>.<minor>.<patch>.<build>}.gz
-```
-
-### 4.3 Sample Script - Determine the Mendix Runtime Version
+### 4.2 Sample Script - Determine the Mendix Runtime Version
 
 The following script demonstrates how you can check which version of the Mendix Runtime is required for your app. It inspects a deployment package, finds the Mendix Runtime version it needs, and downloads the correct version.
 
@@ -102,6 +90,18 @@ $mxJson.RuntimeVersion
 $targetURL = 'https://cdn.mendix.com/runtime/mendix-' + $mxJson.RuntimeVersion + ".tar.gz"
 $targetFile = 'C:\Mendix\runtimes\mendix-' + $mxJson.RuntimeVersion + '.tar.gz'
 wget $targetURL -OutFile $targetFile
+```
+
+### 4.3 Sample Script - Update the Mendix Runtime
+
+The following script example demonstrates how you can update the [Mendix Runtime](/refguide/runtime/) to a version that matches the app that you are deploying. This is only required when you upgrade Mendix versions. The sample script first downloads the required Mendix Runtime version through PowerShell, and then extracts the Mendix Platform libraries into the server distribution folder. In this case, the app can remain running, as this process only extracts the new server version without affecting previously installed Mendix Platform versions.
+
+```text {linenos=table}
+# download Mendix Runtime
+wget https://cdn.mendix.com/runtime/mendix-{<major>.<minor>.<patch>.<build>}.tar.gz -OutFile {<target folder for the downloaded file>}\mendix-{<major>.<minor>.<patch>.<build>}.gz
+
+# extract Mendix Platform into the distribution folder
+Install-MxServer -LiteralPath {<target folder for the downloaded file>}\mendix-{<major>.<minor>.<patch>.<build>}.gz
 ```
 
 ## 5 Troubleshooting

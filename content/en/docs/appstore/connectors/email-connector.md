@@ -36,8 +36,8 @@ The Email Connector includes the following features:
 
 Before you use the Email Connector, do the following:
 
-1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Mendix Marketplace.
-2. Download and [configure](/appstore/modules/encryption/#configuration) the [Encryption](https://marketplace.mendix.com/link/component/1011) module from the Mendix Marketplace.
+1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module.
+2. Download and [configure](/appstore/modules/encryption/#configuration) the [Encryption](https://marketplace.mendix.com/link/component/1011) module.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email with Templates](/appstore/modules/email-with-templates/)).
 
 {{% alert color="warning" %}}
@@ -283,8 +283,8 @@ To add attachments to the email message, do the following:
 * If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
      1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
      2. For the desired email account, set the **isOAuthUsed** attribute from **EmailAccount** entity to **True**.
-	* Associate the existing email account with newly created OAuth provider.
-	* Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
+          * Associate the existing email account with newly created OAuth provider.
+          * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 * If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
 * If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
 * If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.

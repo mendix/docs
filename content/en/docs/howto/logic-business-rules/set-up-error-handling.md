@@ -33,7 +33,7 @@ Please note that this is not the same as preventing two users from editing the s
 
 ## 3 Error Handling Options
 
-When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`. The following table presents different options of error handling. 
+When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`. The following table presents different options for error handling. 
 
 | Type | Image | Description |
 | --- | --- | --- |

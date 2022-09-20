@@ -142,7 +142,7 @@ To displayed all the details that a contact has, do the following:
 
 9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/job-title-text-box.png" >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/job-title-text-box.png" width="350">}}
 
 10. Open text box properties and click **Data Source** > **Attribute**. 
 11. In the **Select Attribute** dialog box, choose **JobTitle** and click **Select**.

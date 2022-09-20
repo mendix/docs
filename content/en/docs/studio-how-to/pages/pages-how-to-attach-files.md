@@ -80,7 +80,7 @@ Follow the steps below:
 
 3. Drag and drop the button above **Save** and **Cancel** buttons:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/open-page-button.png" alt="Open Page Button"   width="450"  >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/open-page-button.png" alt="Open Page Button"   width="350"  >}}
 
 4. Open button properties and do the following:
 
@@ -108,7 +108,7 @@ Follow the steps below:
         
         4. The **Autofill Contents** option is on, so contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.    
         
-            {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-attach-file-page.png"   width="500"  >}}
+            {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-attach-file-page.png"  width="500"  >}}
         
         4. A new pop-up page with a preconfigured form (a data view) is created:
         
@@ -122,7 +122,7 @@ Follow the steps below:
         
         9. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**:
         
-            {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-object-property.png" alt="Create Object Property"   >}}
+            {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-object-property.png" alt="Create Object Property"   width="300"  >}}
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 
@@ -161,6 +161,6 @@ Congratulations! You have configured the form that allows IT administrators to a
 
 [Preview your app](/studio/publishing-app/) to test how the file uploading and downloading works:
 
-{{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/list-previewed.png" alt="Previewed List" >}} 
+{{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/list-previewed.png" alt="Previewed List"  width="600" >}} 
 
 You can also configure a button to attach images instead of files. For more information, see [How to Enable End-Users to Attach Images](/studio-how-to/pages-how-to-attach-images/).

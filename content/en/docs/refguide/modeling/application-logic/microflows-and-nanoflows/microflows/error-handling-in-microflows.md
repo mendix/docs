@@ -16,7 +16,7 @@ This document tells you how errors can be handled in microflows, how error handl
 
 ### 2.1 Transactions Keep Your Data Consistent
 
-Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed, or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. This means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed, or nothing is executed. That is the only way to keep processes and data consistent. 
+Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. This means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed or nothing is executed. That is the only way to keep processes and data consistent. 
 
 ### 2.2 Transactions Keep the Changes Isolated
 
@@ -24,7 +24,7 @@ While updating or creating your objects, you do not want users to see temporary 
 
 To ensure that every user or process can only see persisted data, all the data changed in a transaction is only available within that specific transaction. None of the changes made inside that microflow will be available outside the microflow, not even to the user that initiated the microflow. The information will only be available to the whole application once the microflow has successfully completed all the actions.
 
-### 2.3 Transactions Prevent Two processes from Using the Same Object at the Same Time
+### 2.3 Transactions Prevent Two Processes from Using the Same Object at the Same Time
 
 When an object is updated, the platform will place a lock on that object for the duration of the transaction. This means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction is finished, the lock will be released automatically and any waiting processes will continue normally.
 
@@ -32,7 +32,7 @@ Please note that this is not the same as preventing two users from editing the s
 
 ## 3 Error Handling Options {#error-handling-options}
 
-When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`. The following table presents different options of error handling. 
+When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can handle errors in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`. The following table presents different options for error handling. 
 
 | Type | Image | Description |
 | --- | --- | --- |

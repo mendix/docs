@@ -74,7 +74,7 @@ When you run your app to use this module for the first time, and earlier data is
 
 On the Email Connector dashboard, click on `Add Email Account` and follow the wizard.
 
-You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. To configure OAuth 2.0 accounts, see [Creating a account using Microsoft Azure OAuth provider](/appstore/connectors/email-connector/#47-creating-a-account-using-microsoft-azure-oauth-provider). The account configuration wizard supports automatic and manual configurations.
+You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. To configure OAuth 2.0 accounts, see [Creating an Account Using Microsoft Azure OAuth 2.0](#create-oauth). The account configuration wizard supports automatic and manual configurations.
 
 #### 3.1.1 Automatic Configuration
 
@@ -228,7 +228,7 @@ The input paramater includes the following:
 
 * **Email account** – email account consisting of incoming email configuration
 
-### 4.7 Creating an Account Using Microsoft Azure OAuth Provider
+### 4.7 Creating an Account Using Microsoft Azure OAuth 2.0 {#create-oauth}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Only one OAuth 2.0 provider can be configured per app.
 

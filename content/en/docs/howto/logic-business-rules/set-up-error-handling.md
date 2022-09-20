@@ -17,7 +17,7 @@ This document tells you how errors can be handled in microflows, how error handl
 
 ### 2.1 Transactions Keep Your Data Consistent
 
-Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed, or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. This means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed, or nothing is executed. That is the only way to keep processes and data consistent. 
+Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. This means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed or nothing is executed. That is the only way to keep processes and data consistent. 
 
 ### 2.2 Transactions Keep the Changes Isolated
 

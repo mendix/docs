@@ -15,7 +15,7 @@ This description of the Runtime Server is based on an app running in the cloud. 
 
 ## 2 Description
 
-The Runtime Server is [deployed to the cloud](/refguide/runtime-deployment/) and waits for requests from the Mendix Client or a call from another app or service. It processes the request and returns the requested data, plus any additional state information where appropriate. For details of how this communication takes place, see [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/). The Runtime Server itself is stateless, which allows it to be efficiently scaled to multiple instances.
+The Runtime Server is [deployed](/refguide/runtime-deployment/) and waits for requests from the Mendix Client or a call from another app or service. It processes the request and returns the requested data, plus any additional state information where appropriate; for more information, see [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/). The Runtime Server itself is stateless, which allows it to be efficiently scaled to multiple instances.
 
 Below is a chart showing the components of the Runtime Server. Each of the components is described below the chart.
 
@@ -93,15 +93,15 @@ This runs custom Java which is held as Java actions in the app model.
 
 ### 2.17 Mendix Client API
 
-This receives requests from the Mendix Client, decodes them and passes them to the Runtime Core or the Object Manager, and formats a response to the Mendix Client once the request has been processed. The Mendix Client API is known as *xas* (XML Application Server).
+This receives requests from the Mendix Client, decodes them and passes them to the runtime core or the object manager, and formats a response to the Mendix Client once the request has been processed. The Mendix Client API is known as xas (XML Application Server).
 
 ### 2.18 Custom Request Handler
 
-This is a request handler added to the app using the `com.mendix.core.Core#addRequestHandler(…)` API call.
+This is a request handler added to the app using the `com.mendix.core.Core#addRequestHandler({name of the request handler})` API call.
 
 ### 2.19 External Service Requests
 
-This receives requests from other services, decodes them, and passes them to the Runtime Core or Object Manager. After the request has been processed, this component formats a response to the request. The following requests can be processed:
+This receives requests from other services, decodes them, and passes them to the runtime core or the object manager. After the request has been processed, this component formats a response to the request. The following requests can be processed:
 
 * Webservice – this exposes microflows via a SOAP interface
 * REST – this exposes microflows via a REST endpoint

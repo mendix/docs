@@ -314,7 +314,7 @@ The **SAMESITE_COOKIE_PRE_MX812** setting is implemented the next time your app 
 
 If you use a custom sign-in page, the `originURI` cookie is normally set by your *index.html*. If your Mendix app runs within an iframe, this cookie needs to be set with the `SameSite=None` and `Secure` attributes.
 
-To do this, find all the places in your theme folder where this cookie is set. It looks like `document.cookie = "originURI=/login.html"`.
+To do this, find all the places in your [theme folder](/howto/front-end/customize-styling-new/) where this cookie is set. It looks like `document.cookie = "originURI=/login.html"`.
 Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "")`.
 
 #### 4.2.3 Content Security Policy {#csp}

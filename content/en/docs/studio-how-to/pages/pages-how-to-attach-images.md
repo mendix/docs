@@ -79,7 +79,7 @@ Follow the steps below:
 
 3. Drag and drop the button above **Save** and **Cancel** buttons:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/new-button.png"   width="450"  >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/open-page-button.png"   width="450"  >}}
 
 4. Open button properties and do the following:
 
@@ -115,7 +115,7 @@ Follow the steps below:
 15. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view on the **Attach Images** page. 
 
 16. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
-        
+    
 17. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**: 
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:

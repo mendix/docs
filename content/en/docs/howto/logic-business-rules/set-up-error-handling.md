@@ -25,7 +25,7 @@ While updating or creating your objects, you do not want users to see temporary 
 
 To ensure that every user or process can only see persisted data, all the data changed in a transaction is only available within that specific transaction. None of the changes made inside that microflow will be available outside the microflow, not even to the user that initiated the microflow. The information will only be available to the whole application once the microflow has successfully completed all the actions.
 
-### 2.3 Transactions Prevent Two processes from Using the Same Object at the Same Time
+### 2.3 Transactions Prevent Two Processes from Using the Same Object at the Same Time
 
 When an object is updated, the platform will place a lock on that object for the duration of the transaction. This means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction is finished, the lock will be released automatically and any waiting processes will continue normally.
 

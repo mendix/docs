@@ -61,7 +61,7 @@ If you already have these widgets in your app, and they are not up-to-date, you 
 
 After you install the [Email Connector](https://marketplace.mendix.com/link/component/120739), configure the following in Studio Pro:
 
-1. Provide a value for the **EncryptionKey** constant provided by Encryption module.
+1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
 3. Link [User Roles](/refguide/user-roles/) in app **Security** to ensure that the configuration page displays when you locally run the app.
 
@@ -74,11 +74,11 @@ When you run your app to use this module for the first time, and earlier data is
 
 On the Email Connector dashboard, click on `Add Email Account` and follow the wizard.
 
-You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. For configuring OAuth 2.0 accounts refer [Creating a account using Microsoft Azure OAuth provider](/appstore/connectors/email-connector/#47-creating-a-account-using-microsoft-azure-oauth-provider). Account configuration wizard supports automatic and manual configurations.
+You can add and configure an email account in the Email Connector using basic authentication and OAuth 2.0 for Microsoft Azure AD accounts. To configure OAuth 2.0 accounts, see [Creating a account using Microsoft Azure OAuth provider](/appstore/connectors/email-connector/#47-creating-a-account-using-microsoft-azure-oauth-provider). The account configuration wizard supports automatic and manual configurations.
 
 #### 3.1.1 Automatic Configuration
 
-Based on entered email address domain module will try to fetch send and receive email configuration details, this auto discovery of configuration works for well-known email domains (i.e. Gmail, Outlook, Yahoo, Microsoft etc.) and if it fails to detect the email settings automatically, you will be asked to enter all the settings manually to add the email account.
+Based on the entered email address domain, the module will try to fetch send and receive email configuration details. This auto-discovery of configuration works for well-known email domains (including Gmail, Outlook, Yahoo, and Microsoft). If it fails to detect the email settings automatically, you will be asked to enter all the settings manually to add the email account.
 
 {{% alert color="info" %}}
 In Studio Pro, you can use the `GetAutoConfig` Java action to get the all supported email configurations for the provided username. It will return results as `Email_Connector.EmailProvider`. Process the `Email_Connector.EmailProvider` records and get the desired configuration and create the `Email_Connector.EmailAccount`.
@@ -228,34 +228,34 @@ The input paramater includes the following:
 
 * **Email account** – email account consisting of incoming email configuration
 
-### 4.7 Creating an account using Microsoft Azure OAuth provider
+### 4.7 Creating an Account Using Microsoft Azure OAuth Provider
 
-You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0, only one OAuth 2.0 provider can be configured for app.
+You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Only one OAuth 2.0 provider can be configured per app.
 
-Click the **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. Refer [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details).  
+Click **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
 
 #### 4.7.1 Registering Your App on the Azure Portal
 
 To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details)
+While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details)
 
 #### 4.7.2 Enable Permissions in the Azure Portal
 
-As this module contains functionality of sending and receiving emails so while OAuth flow module will ask permissions for sending and receiving email.
+This module contains functionality of sending and receiving emails, so during the OAuth process the module will ask for permissions for sending and receiving email.
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
 
-#### 4.7.3 OAuth Provider Configuration Details
+#### 4.7.3 OAuth Provider Configuration Details {#oauth-config-details}
 
-To configure OAuth provider following details are required:
+To configure OAuth provider, the following details are required:
 
-* **Client ID** This will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
-* **Client Secret** This will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
-* **Callback operation path** You can enter any string based on which callback URL will be auto generated
-* **Callback URL** This is the URL where OAuth provider will redirect with authorization code and it needs to be configured on Azure portal as callback/redirect URI
+* **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
+* **Client Secret** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
+* **Callback operation path** – enter any string, based on which the callback URL will be auto-generated
+* **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as callback/redirect URI
 
 ### 4.8 Queuing Emails
 
@@ -273,18 +273,18 @@ To add attachments to the email message, do the following:
 
 ## 5 Key Microflows
 
-* **Sample_ASU_SubscribeForEmailNotification** - an after startup microflow which will subscribe to email notification based on account settings
+* **Sample_ASU_SubscribeForEmailNotification** – an after startup microflow which will subscribe to email notification based on account settings
 * **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
 * **SE_Cleanup** – a microflow that can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
 * **SE_SendQueuedEmails** - a microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**
 
 ## 6 Troubleshooting
 
-* If you already have an email account configured using basic authentication in your app and wants to use OAuth 2.0 authentication without removing email account then refer following steps
-   * On **EmailConnector_Overview** page click the **Add Account** button to add a new account and select the option **Use Microsoft Azure AD**. Refer [OAuth Provider Configuration Details](/appstore/connectors/email-connector/#473-oauth-provider-configuration-details).  
-   * For desired email account, set **isOAuthUsed** attribute from **EmailAccount** entity to **true**
-	* Associate existing email account with newly created OAuth provider
-	* Navigate to **EmailConnector_Overview** page and follow warning message visible for desired email account
+* If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
+     1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
+     2. For the desired email account, set the **isOAuthUsed** attribute from **EmailAccount** entity to **True**.
+	* Associate the existing email account with newly created OAuth provider.
+	* Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 * If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
 * If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
 * If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.

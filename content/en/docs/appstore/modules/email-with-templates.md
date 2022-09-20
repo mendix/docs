@@ -1,5 +1,5 @@
 ---
-title: "Email with Templates"
+title: "Email Module with Templates"
 url: /appstore/modules/email-with-templates/
 category: "Modules"
 description: "Describes the configuration and usage of the Email with Templates module, which is available in the Mendix Marketplace."
@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "email with templates", "token", 
 
 ## 1 Introduction
 
-The [Email with Templates](https://marketplace.mendix.com/link/component/259/) module lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
+[Email Module with Templates](https://marketplace.mendix.com/link/component/259/) lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
 
 For a deep-dive look into using this module, check out this video:
 

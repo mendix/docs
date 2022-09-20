@@ -9,13 +9,13 @@ tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 
 ## 1 Introduction
 
-The Mendix Runtime is an interpreter which runs a Mendix model and serves pages to the user.
+The Mendix Runtime is an interpreter which runs a [Mendix model](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/) and serves pages to the user.
 
-Each patch version of Mendix comes with its own version of the Mendix Runtime which implements the features which are available in that version of Mendix. For example, runtimes for Mendix 8.4.1 and 8.4.2 are different and can only run Mendix apps built for that version.
+Each [patch version](/releasenotes/studio-pro/lts-mts/) of Mendix comes with its own version of the Mendix Runtime which implements the features which are available in that version of Mendix. For example, runtimes for Mendix 8.4.1 and 8.4.2 are different and can only run Mendix apps built for that version.
 
 ## 2 Runtime Overview
 
-The Mendix Runtime consists of two parts: the [Runtime Server](/refguide/runtime-server/) and the [Mendix Client](/refguide/mendix-client/). The relationship between the two is shown in the chart below.
+The Mendix Runtime consists of two parts: the [Runtime Server](/refguide/runtime-server/) and the [Mendix Client](/refguide/mendix-client/). The relationship between the two is shown in the diagram below.
 
 {{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
 
@@ -39,7 +39,7 @@ If there is more than one instance of an app, one of the instances is the *Clust
 
 More information on multiple instances is in [Clustered Mendix Runtime](/refguide/clustered-mendix-runtime/).
 
-Each of the components of Mendix Runtime is described below:
+Each of the components of Mendix Runtime is described below.
 
 ### 2.1 External Services
 
@@ -63,7 +63,7 @@ This is the operating system on which the Mendix app is running, plus additional
 
 ### 2.6 Instance
 
-Also called the **App Container**, this launches and exposes the Runtime Server. At least one instance must exist, but to provide high availability and better performance there can be many instances.
+Also called the App Container, this launches and exposes the Runtime Server. At least one instance must exist, but to provide high availability and better performance there can be many instances.
 
 ### 2.7 Runtime Server
 
@@ -77,7 +77,7 @@ The Mendix Client communicates with the load balancer using HTTPS. Communication
 
 ### 2.9 CDN Static Config
 
-The CDN (Content Delivery Network) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, Cascading Style Sheets (CSS files) which define the app's theme, and JavaScript files which define client-side logic.
+The Content Delivery Network (CDN) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, CSS files which define the app's theme, and JavaScript files which define client-side logic.
 
 ### 2.10 Mendix Client
 

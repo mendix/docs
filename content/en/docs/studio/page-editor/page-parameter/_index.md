@@ -8,13 +8,15 @@ tags: ["studio", "parameter", "page parameter", "page"]
 
 ## 1 Introduction 
 
-A page parameter is an input that needs to be passed from the calling page or a microflow to the current page. Page parameters determine information that can be re-used on the page. For example, if you would like to build an **Employee_Detail_Edit** page, then the page will have a parameter **Employee**. When calling the page a specific Employee object needs to be passed in order to be able to show the corresponding Employee data.
+A page parameter is an input that needs to be passed from the calling page or a microflow to the current page. Page parameters determine information that can be re-used on the page. For example, if you would like to build an **Employee_Details_Edit** page, the page will have a parameter **Employee**. This means that when this page is called a corresponding Employee object needs to be passed to it to show the corresponding Employee data.
 
 Page parameters provide context to data views and allow you using multiple objects that do not have an association. 
 
 {{< figure src="/attachments/studio/page-editor/page-parameter/page-parameters.png" >}}
 
-You can pass multiple objects when opening a page same way microflows do. For example, you can add multiple top-level data views, each connected to a different parameter and displaying data from their entities. Additionally, you can directly select associations of a page parameter.
+You can pass multiple objects when opening a page same way microflows do. For example, you can add multiple top-level data views, each connected to a different parameter and displaying data from their entities: you can show Employee’s data in one data view and Order’s data in another data view adding two page parameters to the page.
+
+Page parameters can be referred to from both top-level data views and data views placed inside other data views. Additionally, you can select associations of a page parameter, which reduces the need for an additional data view just to be able to follow the association. 
 
 ## 2 Properties
 

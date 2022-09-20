@@ -90,7 +90,7 @@ The changed **Order** and **Customer** information:
 
 ### 4.2 Error Handling – Custom with Rollback
 
-Any sub-microflow initiated with error handling set to **Custom with rollback** will NOT initiate a new transaction. The original transaction will be re-used in the subflow. If an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction. See the follwoing exampe:
+Any sub-microflow initiated with error handling set to **Custom with rollback** will NOT initiate a new transaction. The original transaction will be re-used in the subflow. If an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction. See the following example:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/18580956.png" width="400px">}}
 

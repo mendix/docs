@@ -50,7 +50,7 @@ The output is:
 
 ## 3 beginOfWeek
 
-The `beginOfWeek` function calculates the beginning of the week compared to the initial date. The beginning and the end of the week are based on the user's locale.
+The `beginOfWeek` function calculates the beginning of the week compared to the initial date. The beginning and the end of the week are based on the user's locale. In the case of an anonymous user, the browser's locale is used instead.
 
 ### 3.1 Input Parameters
 

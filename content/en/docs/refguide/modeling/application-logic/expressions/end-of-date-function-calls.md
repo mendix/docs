@@ -49,7 +49,7 @@ The output is:
 
 ## 3 endOfWeek
 
-The `endOfWeek` function calculates the end of the week compared to the initial date. The beginning and the end of the week are based on the user's locale.
+The `endOfWeek` function calculates the end of the week compared to the initial date. The beginning and the end of the week are based on the user's locale. In the case of an anonymous user, the browser's locale is used instead.
 
 ### 3.1 Input Parameters
 

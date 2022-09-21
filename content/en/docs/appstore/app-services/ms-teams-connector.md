@@ -205,13 +205,9 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
 #### 3.3.2 Configuring Constants
 
-1. If you have not configured the LicenseSecret and the LicenseKey, [configure](#configure-keys) them.
-
-    {{% alert color="info" %}}You only need to configure LicenseSecret and LicenseKey once. Once they are configured, you can use both the **Send Message** and Send **MessagetoWebhook** activities.{{% /alert %}}
-
-2. Go to **Azure App** folder inside the **Configurations** folder.
-3. Configure the values of constants **AzureClientId**, **AzureClientSecret**, **AzureTenantId** and **RedirectURI** with the values that were used and generated when you [register the application on the Microsoft Azure portal](#register-application-on-azure-portal).
-4. Make sure that the constant **DeepLinkName** contains the text after the last slash in the **RedirectURI** value. For example, if your **RedirectURI** is  `https://contosoapp1/link/auth`, then the **DeepLinkName** should be `auth`.
+1. Go to **Azure App** folder inside the **Configurations** folder.
+2. Configure the values of constants **AzureClientId**, **AzureClientSecret**, **AzureTenantId** and **RedirectURI** with the values that were used and generated when you [register the application on the Microsoft Azure portal](#register-application-on-azure-portal).
+3. Make sure that the constant **DeepLinkName** contains the text after the last slash in the **RedirectURI** value. For example, if your **RedirectURI** is  `https://contosoapp1/link/auth`, then the **DeepLinkName** should be `auth`.
 
 #### 3.3.3 Configuring the Microflows
 

@@ -17,6 +17,23 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### September 15th, 2022
+
+#### Improvements
+
+* We have improved the maintenance banner message at application and environment level to show more information about the maintenance.
+
+#### Fix
+
+* We improved the performance of the Developer Portal when selecting which revision to use to build a deployment package from an MDA. (Ticket 163959)
+
+### September 13th, 2022
+
+#### Improvements
+
+* We updated our alert template to make the alert names more descriptive and transparent. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
+
+
 ### July 21st, 2022
 
 * We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).

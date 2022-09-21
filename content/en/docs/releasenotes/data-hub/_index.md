@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* We added a toggle that allows you to filter only your owned content in Catalog.
+* You can now filter your owned content in Catalog. Click **Filter** to add filters, and select the check box for **Owned by me** in the **Ownership** section.
 
 ### September 15th, 2022
 

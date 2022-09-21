@@ -36,43 +36,7 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 * You have installed the [Deep link](https://marketplace.mendix.com/link/component/43) module in your app.
 * You have a Microsoft Account in Azure Active Directory.
 
-## 2 Installation
-
-### 2.1  Obtaining the LicenseSecret and the LicenseKey {#obtain-keys}
-
-Microsoft Teams Connector is a premium Mendix product that is subject to a purchase and subscription. To successfully deploy an app that uses Microsoft Teams Connector, you need to start a trial or a subscription to get a valid combination of **LicenseSecret** and **LicenseKey**.
-
-#### 2.1.1 Starting a Trial
-
-A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
-
-1. Go to the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page in the Marketplace.
-2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-3. Select the check box to agree to the **Terms & Conditions**.
-4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **Microsoft Teams Connector** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
-
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/binding-key-generation.png" >}}
-
-#### 2.1.2 Starting a Subscription
-
-1. Go to the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page in the marketplace.
-2. Click **Subscribe** to start a subscription.
-3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Microsoft Teams Connector** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create the **LicenseSecret** and the **LicenseKey**. Save them somewhere safe. Later you will need to [configure the LicenseSecret and the LicenseKey](/appstore/app-services/intelligent-document-service/#configure-keys) in your app.
-
-{{% alert color="info" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service. See the image below.{{% /alert %}}
-
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-instance-name.png" >}}
-
-### 2.2 Installing the Component in Your App
+## 2 Installing the Component in Your App
 
 To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
 
@@ -80,30 +44,10 @@ To download and install the Microsoft Teams Connector app service in your app, f
 
 {{% alert color="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
 
-## 3 Configuring the LicenseSecret and the LicenseKey {#configure-keys}
 
-Before you deploy an app, you should configure the binding keys in your app as follows:
+## 3 Usage
 
-1. In the **App Explorer**, go to **Settings**. The **App Settings** dialog box opens. 
-2. On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
-3. Go to the **Constants** tab.
-4. Click **New**. The **Select Constant** dialog box opens.
-5. Go to **MicrosoftTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
-
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configuring-license-keys.png" >}}
-
-6. Select **LicenseSecret**.
-7. In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
-8. Click **OK** to save the settings and closes the dialog box.
-9. Perform steps 4 and 5 again.
-10. Select **LicenseKey**.
-11. In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey you got.
-12. Click **OK** to save the settings and closes the dialog box.
-13. After you finish building the app, click **Run** to deploy your app to the cloud.
-
-## 4 Usage
-
-### 4.1 Configuring Webhooks in the Communication Services Console
+### 3.1 Configuring Webhooks in the Communication Services Console
 
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) to which you want to send messages. 
 2. Log into the Marketplace.
@@ -150,9 +94,9 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
         {{% alert color="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.{{% /alert %}}
 
-### 4.2 Sending Message to a Teams Channel
+### 3.2 Sending Message to a Teams Channel
 
-#### 4.2.1 Configuring the Send Message to Webhook Activity
+#### 3.2.1 Configuring the Send Message to Webhook Activity
 
 You can use the **Send Message to Webhook** activity in a microflow to send messages to a Teams channel:
 
@@ -196,7 +140,7 @@ After the **Send Message to Webhook** activity is configured, once the microflow
 * If the message is successfully sent, the value of the **SentMessage** attribute is `true`.
 * If the message could not be sent, the value of the **SentMessage** attribute is `false`.
 
-#### 4.2.2 Building a Message Card {#build-message-card}
+#### 3.2.2 Building a Message Card {#build-message-card}
 
 Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using the Microsoft Teams connector. To build a message card, perform the following steps:
 
@@ -222,13 +166,13 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 
         {{% alert color="info" %}}For more information about the design of a message card, see [Design guidelines](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
-### 4.3 Sending Message Using Microsoft Credentials
+### 3.3 Sending Message Using Microsoft Credentials
 
 Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the **Send Message** activity to send messages with Microflow credentials.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/activities-in-toolbox.png" >}}
 
-#### 4.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
+#### 3.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
 
 1. Log in to the  [MicrosoftAzurel](https://portal.azure.com/#home) portal with your company account.
 2. If your account gives you access to more than one tenant, select your account on the upper-right corner, and set your portal session to the Azure AD tenant of your company.
@@ -260,7 +204,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
     {{% alert color="info" %}}For more information bout registering an application in Azure portal, see [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/graph/auth-register-app-v2)).{{% /alert %}}
 
-#### 4.3.2 Configuring Constants
+#### 3.3.2 Configuring Constants
 
 1. If you have not configured the LicenseSecret and the LicenseKey, [configure](#configure-keys) them.
 
@@ -270,7 +214,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 3. Configure the values of constants **AzureClientId**, **AzureClientSecret**, **AzureTenantId** and **RedirectURI** with the values that were used and generated when you [register the application on the Microsoft Azure portal](#register-application-on-azure-portal).
 4. Make sure that the constant **DeepLinkName** contains the text after the last slash in the **RedirectURI** value. For example, if your **RedirectURI** is  `https://contosoapp1/link/auth`, then the **DeepLinkName** should be `auth`.
 
-#### 4.3.3 Configuring the Microflows
+#### 3.3.3 Configuring the Microflows
 
 1. Go to the Marketplace and log in with your Mendix account.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to install the [Deep Link](https://marketplace.mendix.com/link/component/43) module to your app.
@@ -285,7 +229,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-home-page-microflow.png" >}}
 
-#### 4.3.4 Obtaining the Channel Link on Microsoft Teams{#obtain-channel-link}
+#### 3.3.4 Obtaining the Channel Link on Microsoft Teams{#obtain-channel-link}
 
 One of the input items required for the **Send Message** activity is the channel link. To get this link for your channel, do as follows:
 
@@ -299,7 +243,7 @@ A pop-up window opens and shows containing the channel link.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/channel-link.png" >}}
 
-#### 4.3.5 Configuring the Send Message and SignInMicroflow Activities
+#### 3.3.5 Configuring the Send Message and SignInMicroflow Activities
 
 1. From the microflow toolbox, drag the **Send Message** activity into your microflow.
 2. Double-click the **Send Message** activity to open the **Send Message** dialog box.
@@ -334,38 +278,3 @@ After the **Send Message** activity is configured, once triggered, the activity 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sign-in-microflow.png" >}}
 
     {{% alert color="info" %}}Once you are logged in by using the **SignInMicroflow** activity, you need to call this microflow again to send the message.{{% /alert %}}
-
-## 5 Checking Statistics Using the Usage Dashboard {#statistics}
-
-The **Usage Dashboard** shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams Webhooks usage:
-
-1. Log into the Marketplace.
-2. Go to **My Marketplace** and then do as follows:
-
-    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-3. Find **Microsoft Teams connector** in the list.
-4. Click **Usage Dashboard** to see the following statistics:
-    * **This Month** – shows usage statistics for the current month
-    * **Last Month** – shows usage statistics for last month
-    * **Total** – shows usage statistics from the start of the subscription date to today
-
-## 6 Troubleshooting
-
-### 6.1 License
-
-When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#obtain-keys) is correct.
-
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/license-invalid-popup.png" >}}
-
-### 6.2 Quota
-
-When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [Usage dashboard](#statistics).
-
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/quota-exhausted-popup.png" >}}
-
-### 6.3 Waiting Time for Using Webhook URLs
-
-If the app deployed in the sandbox goes into the sleep mode, after the app resumes, you may have to wait up to five minutes before you can use the latest-configured Webhook URL.
-
-Although an app deployed to the licensed node would never go into the sleep node, you still need to wait for five minutes before you can use each newly-configured Webhook URL for the first time.

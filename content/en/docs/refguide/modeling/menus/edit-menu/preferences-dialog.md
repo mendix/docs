@@ -125,6 +125,12 @@ With this option, you can enable the new merge algorithm that is used when you u
 
 Default: *enabled*
 
+### 7.3 Browser Sign In
+
+This browser sign in option allows you to use your default browser to sign in to Studio Pro. If there is an active Mendix session in your browser, you will be signed in using that.
+
+Default: *enabled*
+
 ## 8 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

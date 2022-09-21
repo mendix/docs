@@ -61,11 +61,19 @@ There is a single Kafka broker for Free Apps that all your company Free Apps can
 * Events are published to one shared Kafka topic
 * Any Free App in your company can receive these events
 
-#### 3.1 Event Broker Topics and Channels
+### 3.1 Managing the Mendix Event Broker
+
+Apps that are connected to the Event Broker service
+
+#### 3.1.1 Environments and Spaces
+
+
+
+#### 3.1.2 Mendix Event Broker Topics and Channels
 
 For licensed users, all events from Free Apps are published to one shared topic. Events published by apps running on licensed nodes are published to their own channels. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
-#### 3.2 Event Broker Error Handling
+#### 3.1.3 Mendix Event Broker Error Handling
 
 Event publishing is part of the transaction where the publishing occurs. This means that if you decide that something has gone wrong in your microflow logic, and you roll back all changes, the publishing of your events is also rolled back. No event will be sent to other apps.
 
@@ -164,10 +172,11 @@ In order to start consuming a business event contract, you first need to create 
 
 1.  Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**.
 
-2.  Provide the name for your service and click **OK** to create it.
+2.  Provide the name for your service.
 
-3.  To populate the service you are prompted to **Import Service Contract (AsyncAPI)**. Import the file, which was created in the [Create a Published Business Event Service](#create-be) step. This will make subscriptions to business events available for you to start mapping to entities within your consuming application:
-{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
+3.  Import a AsyncAPI service contract. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
+
+4.  Click **OK**.
 
 ##### 5.1.1.1 Automatically Created Event Handler Microflow and Entity
 
@@ -294,4 +303,4 @@ You can configure the app running in Studio Pro to use the postgres database cre
 
 * Adding subscriptions: in the Importing a contract > Add screen, or then after uploading a YAML file, drag from Data Hub pane.
 * Handler microflow is created at the same level as the consumed business event service document. > better way to organize (multiple events in same service)
-     * The moment you add a subcription, it's generated at the same level
+     * The moment you add a subscription, it's generated at the same level

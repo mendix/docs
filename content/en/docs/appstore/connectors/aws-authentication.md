@@ -71,7 +71,7 @@ Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Rol
 
 #### 3.1.1 Setting up IAM Roles Anywhere on AWS
 
-For the setup of IAM Roles Anywhere, see [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html).
+For the setup of IAM Roles Anywhere, see [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html). Make sure that the user that you create or choose has the required permissions. The permissions given to this user are beyond the scope of this document, but should be the minimum access required to perform the functions of your AWS connector(s).
 
 #### 3.2.2  Adding the Client Certificate in Mendix Deployment Portal
 

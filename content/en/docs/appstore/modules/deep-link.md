@@ -38,6 +38,8 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Deep Link module into your app.
 
+{{% alert color="info" %}}After you install the Deep Link module and set up deep links, these links will not break if you upgrade from Mendix Studio Pro 8 to 9.{{% /alert %}}
+
 ## 3. Configuration
 
 After importing the Deep Link module into your app, you need to configure it.
@@ -100,7 +102,7 @@ To view all the available deep link configurations and example URLs, add the **D
         * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location.
     
 *  **SSOHandlerLocation** – This value is used when the app needs to determine whether the user has a valid session with the Identity Provider. When both the application and a deep link are configured to support anonymous users, the location value in this constant is requested before a user is directed to the destination deep link.
-    
+   
     * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler is not expected to provide users with a login page, but is supposed to redirect the anonymous user to the target location, while still having an anonymous user session).
     * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location.
 
@@ -108,4 +110,8 @@ To view all the available deep link configurations and example URLs, add the **D
 
 ### 4.1 Endless Redirect Loop (Mendix 9 and Above) 
 
-When using the Deep Link module in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because for Mendix 9, the [default value for SameSite cookies](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) has been changed to `"Strict"` meaning that session cookies cannot be forwarded. To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
+When using the Deep Link module in Mendix 9 and above, you might get stuck in an endless redirect loop.
+
+This is because for Mendix 9, the [default value for SameSite cookies](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) has been changed to `"Strict"` meaning that session cookies cannot be forwarded.
+
+To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).

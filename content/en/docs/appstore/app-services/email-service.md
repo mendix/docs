@@ -89,34 +89,7 @@ Before you deploy an app, you should configure the binding keys in your app as f
 
 ### 4.1 Sending Messages to Recipients 
 
-Catering to different personas, we provide two activities to send messages to recipients: **Send Email Basic** and **Send Email**.
-
-#### 4.1.1 Send Email Basic
-
-You can use the **Send Email Basic** activity in a microflow to send plain text messages.
-
-To configure the **Send Email Basic** activity, double-click the activity and specify the following settings in the **Properties** pane:
-
-{{< figure src="/attachments/appstore/app-services/email-service/Send_Email_Basic.png" >}}
-
-* **Required Fields**
-    
-    * **From** – This defines the sender's name and email, for example: `'name<email.com>' or 'email.com'`.
-    * **To** – This defines the recipients of the email. Each recipient should have a name and an email address. The information for each recipient is saperated by a comma, for example: `'name1<email1.com>, name2<email2.com>'or 'email1.com','email2.com'`.
-    * **Subject**  – This defines the subject of the email.
-    
-* **Optional Fields**
-
-    {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
-
-    * **Cc** – This defines the recipients of the email. Each recipient should have a name and an email address. The information for each recipient is saperated by a comma, for example: `'name1<email1.com>, name2<email2.com>'or 'email1.com','email2.com'`.
-    * **Bcc** – This defines the recipients of the email. Each recipient should have a name and an email address. The information for each recipient is saperated by a comma, for example: `'name1<email1.com>, name2<email2.com>'or 'email1.com','email2.com'`.
-    * **Body** – This defines the body of the email in text format only.
-
-
-#### 4.1.2 Send Email
-
-You can use the **Send Email** activity in a microflow to send HTML or plain text messages. The Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
+You can use the Email Service in a microflow to send HTML or plain text messages. The Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
 {{< figure src="/attachments/appstore/app-services/email-service/inbuilt-domain-entities.png" >}}
 
@@ -135,25 +108,25 @@ To configure the **Send email** activity, double-click the activity and specify 
 {{< figure src="/attachments/appstore/app-services/email-service/send-email-dialog-box.png" >}}
 
 * **Required Fields**
-    * **From** – This defines the sender's email.
-    * **To**  – This defines the recipients of the email.
-    * **Subject**  – This defines the subject of the email.
+    * **From** – Defines the sender's email
+    * **To**  – Defines the recipients of the email
+    * **Subject**  – Defines the subject of the email
 * **Optional Fields**
 
     {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
 
-    * **Cc** – This defines the recipients on the CC list of the email.
-    * **Bcc** – This defines the recipients on the BCC list of the email.
-    * **Content type** – This defines whether the email is a **Text** or **HTML** message.
-    * **Body** – This defines the body of the email.
+    * **Cc** – Defines the recipients on the CC list of the email
+    * **Bcc** – Defines the recipients on the BCC list of the email
+    * **Content type** – Defines whether the email is a **Text** or **HTML** message
+    * **Body** – Defines the body of the email
 
         {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
 
-    * **Attachment** – This defines the attachment to the email.
+    * **Attachment** – Defines the attachment to the email
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
 
-##### 4.1.2.1 Generating HTML Body Content {#generate-html-body}
+#### 4.1.1 Generating HTML Body Content {#generate-html-body}
 
 The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables.
 

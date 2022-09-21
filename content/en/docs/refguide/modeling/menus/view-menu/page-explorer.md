@@ -1,7 +1,7 @@
 ---
 title: "Page Explorer"
 url: /refguide/page-explorer/
-weight: 45
+weight: 50
 description: "Describes the Page Explorer pane in Mendix Studio Pro."
 tags: ["studio pro", "page", "page editor", "page explorer", "design mode"]
 
@@ -9,19 +9,19 @@ tags: ["studio pro", "page", "page editor", "page explorer", "design mode"]
 
 ## 1 Introduction
 
-The **Page Explorer** shows the structure of your page as a tree view:
+The **Page Explorer** shows the structure of your page in a tree view:
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/page-explorer.png" >}}
 
-This simplified page view makes the page building experience with [Design Mode](/refguide/page/#design-mode) more powerful, as it allows to view and edit nested containers which are hard to see and select in the WYSIWYG editor. However, it can be used in combination with [Structure Mode](/refguide/page/#structure-mode) as well, e.g. to get a quick overview of the page.
+The **Page Explorer** is a simplified page view that makes the page building easier. In combination with [Design mode](/refguide/page/#design-mode) it allows you to view and edit nested containers which are hard to see and select in the WYSIWYG editor. However, it can be used in combination with [Structure mode](/refguide/page/#structure-mode) as well, for example, to get a quick overview of the page.
 
-## 2 Capabilities
+## 2 Performing Basic Functions
 
-The **Page Explorer** gives you a quick and clear overview of the page structure. Next to that, it has the following capabilities:
-* add or move widgets via drag & drop
+In the **Page Explorer**, you can do the following:
+* add or move widgets via drag and drop
 * copy, paste, and delete widgets
-* open widget properties (double-click)
-* same context menu as the page editor, with the additional option to add widgets/building blocks
+* open widget properties (the **Properties** pane is opened when you select a widget; alternatively, you can double-click the widget in the **Page Explorer** to open the **Properties** dialog box)
+* open the same context menu as the page editor, with the additional option to add widgets/building blocks
 * expand/collapse structure widgets to focus on one area of the page structure
 
 ## 3 Read More

@@ -3,6 +3,7 @@ title: "Configure String Concatenation"
 url: /howto/logic-business-rules/string-concatenation/
 category: "Logic & Business Rules"
 weight: 110
+description: "Presents three examples as well as best practices on configuring string concatenation."
 tags: ["microflow", "logic", "string", "concatenation"]
 ---
 

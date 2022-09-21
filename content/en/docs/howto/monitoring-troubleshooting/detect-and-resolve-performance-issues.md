@@ -2,6 +2,7 @@
 title: "Detect & Resolve Performance Issues"
 url: /howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/
 category: "Monitoring & Troubleshooting"
+description: "Presents an overview of possible performance issues with root causes and resolutions."
 tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
 

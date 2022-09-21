@@ -4,6 +4,7 @@ linktitle: "Best Practices for Development"
 url: /howto/general/dev-best-practices/
 category: "General Info"
 weight: 30
+description: "Presents Mendix best practices for developing Mendix applications."
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 #Academy are SMEs for verification, they discuss and link to this doc in training
 ---

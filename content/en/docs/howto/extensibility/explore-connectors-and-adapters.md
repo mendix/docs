@@ -3,6 +3,7 @@ title: "Explore Connectors & Adapters"
 url: /howto/extensibility/explore-connectors-and-adapters/
 category: "Extensibility"
 weight: 70
+description: "Presents some choice examples from the Mendix Marketplace to consider for your app development."
 tags: ["extensibility", "connector", "adapter", "extensibility"]
 ---
 

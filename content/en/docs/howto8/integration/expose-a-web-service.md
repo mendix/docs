@@ -74,8 +74,8 @@ To create the functionality to expose, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/expose-a-web-service/18581709.png" >}}
 
-	Reference this microflow:
-    
+    Reference this microflow:
+
     {{< figure src="/attachments/howto8/integration/expose-a-web-service/model.jpg" >}}
 
 ## <a name="6"></a>6 Publishing a Microflow

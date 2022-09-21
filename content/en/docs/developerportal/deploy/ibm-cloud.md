@@ -3,7 +3,7 @@ title: "IBM Cloud"
 url: /developerportal/deploy/ibm-cloud/
 category: "Deployment"
 weight: 65
-description: "Describes how to deploy a Mendix app to the IBM Cloud"
+description: "Describes how to deploy to the IBM Cloud."
 tags: ["IBM", "IBM Cloud", "Deployment", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -408,7 +408,6 @@ Mendix needs access to a relational database back end and can run using differen
 ### 8.1 Running Mendix on PostgreSQL
 
 When you create your environment on IBM Cloud, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
-
 
 ## 9 Issues
 

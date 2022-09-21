@@ -14,7 +14,7 @@ tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 
 Layouts specify what comes where. Each [page](/refguide8/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
 
-A layout consists of content and [placeholders](/refguide8/placeholder/). The content is everything that should be present in every page that uses the layout, from navigation bars to sign-out buttons. Placeholders are empty areas that later form the canvas for any pages that make use of the layout. The layout content remains the same in every page, but the placeholders cover what is unique to every individual page. 
+A layout consists of content and [placeholders](/refguide8/placeholder/). The content is everything that should be present in every page that uses the layout, from navigation bars to sign-out buttons. Placeholders are empty areas that later form the working area for any pages that make use of the layout. The layout content remains the same in every page, but the placeholders cover what is unique to every individual page. 
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the master layout. If a layout has a master layout, it can use the placeholders defined in the master to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the master layout. 
 
@@ -100,10 +100,10 @@ The **layout type**, determines the purpose of the layout and how a page using t
 
 Layouts can contain the following widgets:
 
-*   [Layout grid](/refguide8/layout-grid/)
-*   [Scroll container](/refguide8/scroll-container/)
-*   [Placeholder](/refguide8/placeholder/)
-*   [Header](/refguide8/header/)
-*   [Sidebar toggle](/refguide8/sidebar-toggle-button/)
+* [Layout grid](/refguide8/layout-grid/)
+* [Scroll container](/refguide8/scroll-container/)
+* [Placeholder](/refguide8/placeholder/)
+* [Header](/refguide8/header/)
+* [Sidebar toggle](/refguide8/sidebar-toggle-button/)
 
 Placeholder, header, and sidebar toggle are unique to layouts, whilst Layout grids and scroll containers can also be used on pages.

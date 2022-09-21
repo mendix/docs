@@ -94,10 +94,10 @@ Read the next sections to find out which monitoring actions are supported.
 
 This request returns the current executions of actions known by the Mendix Runtime. Actions can amongst others be microflows, Java actions, web service calls and scheduled events. For each execution the following is reported:
 
-*   The "duration" of the execution in milliseconds.
-*   The "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
-*   The "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
-*   The "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, for example, for a microflow the current activity and the name of the microflow are shown.
+* The "duration" of the execution in milliseconds.
+* The "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
+* The "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
+* The "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, for example, for a microflow the current activity and the name of the microflow are shown.
 
 ## 3 Runtime Statistics
 
@@ -230,10 +230,10 @@ For backwards compatibility reasons the fields "code", "eden", "tenured", "survi
 
 Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](http://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryUsage.html) page. The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM, in the same order and with some fields of the [MemoryPoolMxBean](http://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryPoolMXBean.html):
 
-*   "usage": returns an estimate of the memory usage of this memory pool (in bytes).
-*   "is_heap": is this memory pool part of the heap or not?
-*   "name": the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or  garbage collection options.
-*   "index": the index in the JSON Array. This field is not strictly needed as the pools are returned in a list so you can, and should, rely on the order of the list in case you are processing them in a program.
+* "usage": returns an estimate of the memory usage of this memory pool (in bytes).
+* "is_heap": is this memory pool part of the heap or not?
+* "name": the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or  garbage collection options.
+* "index": the index in the JSON Array. This field is not strictly needed as the pools are returned in a list so you can, and should, rely on the order of the list in case you are processing them in a program.
 
 {{% alert color="info" %}}
 
@@ -400,6 +400,7 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 
 Returns all the current thread stack traces by name. This is useful to low level analyze what is happening in the application. Use the "get_current_runtime_executions" request to retrieve information on a higher level (microflows and other actions).
 {#check-health}
+
 ## 8 Runtime Status {#runtime-status}
 
 **Request**

@@ -19,7 +19,7 @@ The **Change workflow state** activity can be used to add **Abort**, **Continue*
 
 An example of change workflow state properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/change-workflow-state-properties.png" alt="Change Workflow State Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/properties.png" alt="Change Workflow State Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -53,9 +53,7 @@ You can select the following operations that represent the new state of the work
 * **Retry workflow** – This operation allows you to retry the failed workflow. **Retry workflow** differs from **Restart workflow** – **Restart workflow** starts the same workflow from the beginning, while **Retry workflow** retries the failed activity to see whether the workflow can get back into the in-progress state.
 
 {{% alert color="info" %}}
-
 The workflow instance state changes are reflected in the **System.Workflow.State** attribute.
-
 {{% /alert %}}
 
 ### 3.2 Workflow Object

@@ -33,13 +33,13 @@ Indicates the maximum number of rows that can be present in the datagrid when ex
 
 ### Date export format
 
-Defines how dates will be exported. When _Date value_ is selected, date values will be exported as real dates, so that it is possible to use Excel date functions like sorting. When _Text_ is selected, date values will be exported exactly as shown in the data grid.
+Defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, so that it is possible to use Excel date functions like sorting. When *Text* is selected, date values will be exported exactly as shown in the data grid.
 
-_Default value:_ Date value
+*Default value:* Date value
 
 {{% alert color="warning" %}}
 
-When choosing _Date value_, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
+When choosing *Date value*, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
 
 {{% /alert %}}
 

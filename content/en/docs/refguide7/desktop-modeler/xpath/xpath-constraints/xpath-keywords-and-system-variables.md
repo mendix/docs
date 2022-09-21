@@ -115,6 +115,7 @@ This query returns users with the role "Administrator":
 ```java
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
 ```
+
 {{% alert color="info" %}}
 Because system variables are written as a string (between quotes), it is not possible to use parentheses to group expressions.
 {{% /alert %}}

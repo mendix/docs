@@ -84,7 +84,6 @@ This list is currently incomplete and is being worked on.
 | Services | |
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
-| StorageSwift | |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | |
 

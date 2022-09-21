@@ -45,7 +45,7 @@ The following errors might be returned by the service. In general, 4xx errors in
 
 On errors (4xx and 5xx responses), the response can contain an errorCode. This is a request-specific code that describes the error in a machine-readable form. The API documentation describes possible error codes per request.
 
-#### 3.1.1 Authentication & Authorization Error Codes
+#### 3.1.1 Authentication and Authorization Error Codes
 
 The following error codes can be returned on authentication and authorization errors.
 
@@ -113,7 +113,7 @@ Company Manager, Member Manager
 
 ##### 4.2.2.1 Parameter
 
-*   _emailAddress_ : The email address of the user account you are trying to retrieve. Please note that this address should be URL-encoded.
+* *emailAddress* : The email address of the user account you are trying to retrieve. Please note that this address should be URL-encoded.
 
 ##### 4.2.2.2 Example
 
@@ -128,7 +128,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 #### 4.2.3 Output
 
-JSON object with a single key-value pair containing key _openId_ containing the OpenID for the requested user account. HTTP status 200.
+JSON object with a single key-value pair containing key *openId* containing the OpenID for the requested user account. HTTP status 200.
 
 ##### 4.2.3.1 Example
 
@@ -145,7 +145,7 @@ Retrieves the OpenIDs of all users in your company.
 
 ```http
 HTTP Method: GET
- URL: https://usermanagement.mendix.com/legacy-api/1/users
+URL: https://usermanagement.mendix.com/legacy-api/1/users
 ```
 
 #### 4.3.1 Can Be Invoked By
@@ -156,9 +156,9 @@ Company Manager, Member Manager
 
 ##### 4.3.2.1 Optional Parameters
 
-*   _search_ : Search string to find groups by name. Defaults to empty.
-*   _offset_ : Offset within the dataset. Defaults to zero.
-*   _limit_ : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
+* *search* : Search string to find groups by name. Defaults to empty.
+* *offset* : Offset within the dataset. Defaults to zero.
+* *limit* : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
 
 ##### 4.3.2.2 Example
 
@@ -173,7 +173,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 #### 4.3.3 Output
 
-A JSON object with two key-value pairs; _count_ indicating the total number of users in the company satisfying the search parameters (Note that depending on the chosen values for _limit_ and _offset_, the number of results in the response may be lower than the _count_.) and _users_ containing an array of objects with a single key-value pair _openId_ containing the OpenID of a user from the company. HTTP Status 200.
+A JSON object with two key-value pairs; *count* indicating the total number of users in the company satisfying the search parameters (Note that depending on the chosen values for *limit* and *offset*, the number of results in the response may be lower than the *count*.) and *users* containing an array of objects with a single key-value pair *openId* containing the OpenID of a user from the company. HTTP Status 200.
 
 ```json
 {
@@ -218,13 +218,13 @@ Company Manager, Member Manager
 
 ##### 4.4.2.1 Parameter
 
-*   _openId_ : The OpenID of the user account you are trying to retrieve. Please note that since the OpenID is a URL itself, it should be URL-encoded.
+* *openId* : The OpenID of the user account you are trying to retrieve. Please note that since the OpenID is a URL itself, it should be URL-encoded.
 
 ##### 4.4.2.2 Payload
 
 A JSON object with keys:
 
-*   _activeStatus_ (Boolean, optional) : The value to which the active status of the user should be changed. Default value: true
+* *activeStatus* (Boolean, optional) : The value to which the active status of the user should be changed. Default value: true
 
 ##### 4.4.2.3 Example
 
@@ -262,7 +262,7 @@ Company Manager, Member Manager
 
 ##### 4.5.2.1 Parameter
 
-*   _securityGroupUuid_ : The UUID of the security group you want to retrieve.
+* *securityGroupUuid* : The UUID of the security group you want to retrieve.
 
 ##### 4.5.2.2 Example
 
@@ -279,11 +279,11 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 A JSON object with the following key value pairs:
 
-*   _name_ : The name of the security group
-*   _description_ : Description of the security group.
-*   _uuid_ : UUID of the security group.
-*   _memberCount_ : Number of users in the security group.
-*   _userGroupLocked_ : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal.
+* *name* : The name of the security group
+* *description* : Description of the security group.
+* *uuid* : UUID of the security group.
+* *memberCount* : Number of users in the security group.
+* *userGroupLocked* : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal.
 
 If the call is successful, it should return HTTP status 200.
 
@@ -316,7 +316,7 @@ Company Manager, Member Manager
 
 ##### 4.6.2.1 Parameter
 
-*   _securityGroupName_ : The name of the security group you want to retrieve.
+* *securityGroupName* : The name of the security group you want to retrieve.
 
 ##### 4.6.2.2 Example
 
@@ -334,11 +334,11 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 A JSON object with the following key value pairs:
 
-*   _name_ : The name of the security group
-*   _description_ : Description of the security group.
-*   _uuid_ : UUID of the security group.
-*   _memberCount_ : Number of users in the security group.
-*   _userGroupLocked_ : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal.
+* *name* : The name of the security group
+* *description* : Description of the security group.
+* *uuid* : UUID of the security group.
+* *memberCount* : Number of users in the security group.
+* *userGroupLocked* : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal.
 
 If the call is successful, it should return HTTP status 200.
 
@@ -371,9 +371,9 @@ Company Manager, Member Manager
 
 ##### 4.7.2.1 Optional Parameters
 
-*   _search_ : Search string to find groups by name. Defaults to empty.
-*   _offset_ : Offset within the dataset. Defaults to zero.
-*   _limit_ : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
+* *search* : Search string to find groups by name. Defaults to empty.
+* *offset* : Offset within the dataset. Defaults to zero.
+* *limit* : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
 
 ##### 4.7.2.2 Example
 
@@ -388,13 +388,13 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 #### 4.7.3 Output
 
-JSON object with two key-value pairs; _count_ indicating the total number of security groups in the company satisfying the request (Note that depending on the chosen values for _limit_ and _offset_, the number of results in the response may be lower than the _count_.) and _group_ containing an array of objects with the following key-value pairs:
+JSON object with two key-value pairs; *count* indicating the total number of security groups in the company satisfying the request (Note that depending on the chosen values for *limit* and *offset*, the number of results in the response may be lower than the *count*.) and *group* containing an array of objects with the following key-value pairs:
 
-*   _name_ : The name of the security group
-*   _description_ : Description of the security group.
-*   _uuid_ : UUID of the security group.
-*   _memberCount_ : Number of users in the security group.
-*   _userGroupLocked_ : If this is set to true, this security group cannot be changed from the user interface in the Mendix Platform.
+* *name* : The name of the security group
+* *description* : Description of the security group.
+* *uuid* : UUID of the security group.
+* *memberCount* : Number of users in the security group.
+* *userGroupLocked* : If this is set to true, this security group cannot be changed from the user interface in the Mendix Platform.
 
 If the call is successful, it should return HTTP status 200.
 
@@ -440,13 +440,13 @@ Company Manager, Member Manager
 
 ##### 4.8.2.1 Parameter
 
-*   _securityGroupUuid_ : The UUID of the security group of which you want to retrieve the members.
+* *securityGroupUuid* : The UUID of the security group of which you want to retrieve the members.
 
 ##### 4.8.2.2 Optional Parameters
 
-*   _search_ : Search string to filter members by name. Defaults to empty. Not supported yet.
-*   _offset_ : Offset within the dataset. Defaults to zero.
-*   _limit_ : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
+* *search* : Search string to filter members by name. Defaults to empty. Not supported yet.
+* *offset* : Offset within the dataset. Defaults to zero.
+* *limit* : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
 
 ##### 4.8.2.3 Example
 
@@ -462,7 +462,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 #### 4.8.3 Output
 
-A JSON object with two key-value pairs; _count_ indicating the total number of users in the security group satisfying the search parameters (Note that depending on the chosen values for _limit_ and _offset_, the number of results in the response may be lower than the _count_.) and _users_ containing an array of objects with a single key-value pair _openId_ containing the OpenID of a user from the security group. HTTP Status 200.
+A JSON object with two key-value pairs; *count* indicating the total number of users in the security group satisfying the search parameters (Note that depending on the chosen values for *limit* and *offset*, the number of results in the response may be lower than the *count*.) and *users* containing an array of objects with a single key-value pair *openId* containing the OpenID of a user from the security group. HTTP Status 200.
 
 ##### 4.8.3.1 Example
 
@@ -500,9 +500,9 @@ Company Manager
 
 A JSON object with the following keys:
 
-*   _name_ (String, required) : The name of the security group.
-*   _description_ (String, optional) : A description for the security group.
-*   _userGroupLocked_ (Boolean, optional) : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal. Default value: false.
+* *name* (String, required) : The name of the security group.
+* *description* (String, optional) : A description for the security group.
+* *userGroupLocked* (Boolean, optional) : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal. Default value: false.
 
 ##### 4.9.2.2 Example
 
@@ -522,7 +522,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 #### 4.9.3 Output
 
-JSON object with two key-value pairs; _uuid_ containing the UUID of the security group and _getUrl_ containing the URL at which the group can be retrieved. HTTP status 201.
+JSON object with two key-value pairs; *uuid* containing the UUID of the security group and *getUrl* containing the URL at which the group can be retrieved. HTTP status 201.
 
 ##### 4.9.3.1 Example
 
@@ -550,15 +550,15 @@ Company Manager
 
 ##### 4.10.2.1 Parameter
 
-*   _securityGroupUuid_ : The UUID of the security group you want to update.
+* *securityGroupUuid* : The UUID of the security group you want to update.
 
 ##### 4.10.2.2 Payload
 
 A JSON object with the following keys:
 
-*   _name_ (String, optional) : The name of the security group.
-*   _description_ (String, optional) : A description for the security group.
-*   _userGroupLocked_ (Boolean, optional) : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal. Default value: false.
+* *name* (String, optional) : The name of the security group.
+* *description* (String, optional) : A description for the security group.
+* *userGroupLocked* (Boolean, optional) : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal. Default value: false.
 
 ##### 4.10.2.3 Example
 
@@ -597,7 +597,7 @@ Company Manager
 
 ##### 4.11.2.1 Parameter
 
-*   _securityGroupUuid_ : The UUID of the security group you want to delete.
+* *securityGroupUuid* : The UUID of the security group you want to delete.
 
 ##### 4.11.2.2 Example
 
@@ -632,7 +632,7 @@ Company Manager, Member Manager
 
 ##### 4.12.2.1 Parameter
 
-*   _securityGroupUuid_ : The UUID of the security group to which you want to add a user account.
+* *securityGroupUuid* : The UUID of the security group to which you want to add a user account.
 
 ##### 4.12.2.2 Payload
 
@@ -675,8 +675,8 @@ Company Manager, Members Manager
 
 ##### 4.13.2.1 Parameters
 
-*   _securityGroupUuid_ : The UUID of the security group from which you want to remove a user account.
-*   _openId_ : The OpenID of the user account you want to remove from the security group. Please note that since the OpenID is a URL itself, it should be URL-encoded.
+* *securityGroupUuid* : The UUID of the security group from which you want to remove a user account.
+* *openId* : The OpenID of the user account you want to remove from the security group. Please note that since the OpenID is a URL itself, it should be URL-encoded.
 
 ##### 4.13.2.2 Example
 

@@ -57,7 +57,7 @@ The content on the page comes pre-made as a part of the template. To get started
 1. Add a **List view** to the page via the Toolbox. A list view works like the template grid (used in [Part 1](/refguide/quickstart-part1/)) except it can scroll, which is better for mobile users.
 1. Right-click the list view, then click **Select data source**, 
 1. Leave the **Type** as **Database**, click **Select** next to **Entity**, and search for the **Picture** entity. 
-1.  When prompted to automatically fill the contents of the list view, click **No**:
+1. When prompted to automatically fill the contents of the list view, click **No**:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/list-view-fill.png" width="450px" alt="List view">}}
 
@@ -81,7 +81,7 @@ Your images will now be displayed from the database, but the labels on the page 
 1. Double-click the label captioned **Card title** to open its properties.
 1. Click the **Edit** button next to **Caption**.
 1. In the new window, replace the caption field with the place holder *{1}*. 
-1.  Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute:
+1. Then click **Parameter** > **New** to add a new parameter and select the **Title** attribute:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/add-title-param.png" width="450px" alt="Configure edit button">}}
 
@@ -93,7 +93,7 @@ Now your existing images are being displayed from the database. Next, you will d
 
 Your app needs a button which allows the user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users:
 
-1.  Drag the **Floating action button** from the **Toolbox** onto the page:
+1. Drag the **Floating action button** from the **Toolbox** onto the page:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/floating-action-button.png" width="450px" alt="Floating action button">}}
 
@@ -119,7 +119,7 @@ As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/add-activities.png" width="450px" alt="Take picture action">}}
 
-1.  Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
+1. Configure the **Take Picture** action by double-clicking it and configuring the properties like this:
     1. Picture: $NewPicture
     1. Picture source: camera
     1. Picture quality: original
@@ -154,7 +154,7 @@ Just like before, you need to validate that the user has entered the title and d
 The final thing to do is ensure all the data captured by the user is synchronized from the device to the server. You can do this quickly by editing the properties of this page's save button: 
 
 1. Double-click the **Save** button. 
-1.  Set **Auto-synchronize** to **Yes**:
+1. Set **Auto-synchronize** to **Yes**:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/edit-button-props.png" width="450px" alt="Auto sync set to yes">}}
 

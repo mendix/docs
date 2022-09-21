@@ -81,7 +81,7 @@ Click **More** to access the following options:
 * **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
 
-#### 2.4.1 Importing & Exporting to Excel {#import-export}
+#### 2.4.1 Importing and Exporting to Excel {#import-export}
 
 After you click **Import / Export**, you will be asked what you want to do:
 
@@ -178,15 +178,15 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 * Select the story, click **Move**, and then select the new Sprint from the **Move Stories** dialog box
 
-	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-move-button.jpg"   width="500"  >}}
+    {{< figure src="/attachments/developerportal/collaborate/stories/move-story-move-button.jpg"   width="500"  >}}
 
 * Select the story and drag it to the desired Sprint location:
 
-	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-drag-new.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/stories/move-story-drag-new.png" >}}
 
 * Click the story title to open the story details page, then click **Move Story**:
 
-	{{< figure src="/attachments/developerportal/collaborate/stories/move-story-details.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/stories/move-story-details.png" >}}
 
 {{% alert color="info" %}}
 Moving a story will move the tasks as well.
@@ -205,7 +205,7 @@ To manage stories in Studio Pro, follow these steps:
 1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the upper-right corner of the page.
 2. Open **View** > **Stories**. You can see your active Sprints in the **Stories** pane.
 
-	{{< figure src="/attachments/developerportal/collaborate/stories/stories-pane.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/stories/stories-pane.png" >}}
 
 3. To change the status of a story in Studio Pro, click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 

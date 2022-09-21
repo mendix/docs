@@ -35,7 +35,7 @@ Add `-javaagent:/PATH/TO/NEWRELIC.JAR` to your java options in the *m2ee.yaml* f
 
 The configuration section in *m2ee.yaml* should look like this:
 
-```
+```yml
  javaopts: [
  "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx256M", "-Xms256M",
  "-Djava.io.tmpdir=/path/to/project/data/tmp",

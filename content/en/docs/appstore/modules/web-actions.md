@@ -23,26 +23,25 @@ The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module 
 
 To take a picture, follow these steps:
 
-1.  To use the **Take picture** action, create an entity that extends the **System.Image** entity:
+1. To use the **Take picture** action, create an entity that extends the **System.Image** entity:
 
     {{< figure src="/attachments/appstore/modules/web-actions/entity.png" alt="Example entity" >}}
 
-2.  Drag the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
+2. Drag the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
 
     {{< figure src="/attachments/appstore/modules/web-actions/nanoflow.png" alt="Example nanoflow" >}}
 
-3.  Double-click the **Take picture** action and select which object you pass to the action to fill with the image properties:
+3. Double-click the **Take picture** action and select which object you pass to the action to fill with the image properties:
 
     {{< figure src="/attachments/appstore/modules/web-actions/properties.png" alt="Properties" >}}
 
-4.  If needed, configure an option which shows a confirmation screen allowing users to accept or retake the picture:
+4. If needed, configure an option which shows a confirmation screen allowing users to accept or retake the picture:
 
     {{< figure src="/attachments/appstore/modules/web-actions/confirmation.png" alt="Confirmation Screen" >}}
 
-5.  After the execution, check if the picture was taken or not. The value returned from the action is a Boolean:
+5. After the execution, check if the picture was taken or not. The value returned from the action is a Boolean:
 
     {{< figure src="/attachments/appstore/modules/web-actions/check.png" alt="Check" >}}
-
 
 ## 3 Strict CSP Compatibility
 

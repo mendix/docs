@@ -98,7 +98,6 @@ When MxBuild exits, one of the following codes will be returned:
 | 2 | There's something wrong with the command-line options |
 | 3 | Deployment of the Mendix project failed |
 
-
 If the exit code is larger than 0, MxBuild will also output a message describing the error.
 
 ## 4 Project Errors {#project-errors}

@@ -46,10 +46,10 @@ The top level of the **Changes** pane is a grid listing changed documents, for e
 The grid contains information on the following items:
 
 * **Status** – shows the type of changes applied to the document. The status can be one of the following:
-  * **Added** – a new document was created; indicated with a green circle
-  * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated with a yellow circle
-  * **Deleted** – a document was deleted; indicated with a red circle with a minus
-  * **Conflicted** – a document contains conflicting changes; indicated with a red circle with an exclamation mark
+    * **Added** – a new document was created; indicated with a green circle
+    * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated with a yellow circle
+    * **Deleted** – a document was deleted; indicated with a red circle with a minus
+    * **Conflicted** – a document contains conflicting changes; indicated with a red circle with an exclamation mark
 * **Item** – indicates a name of the changes document
 * **Module** – a module where the changed document is
 * **Details** – can contain details on the status, for example, when you have conflicting changes 
@@ -107,8 +107,7 @@ The toolbar at this level contains the following buttons:
 * **Show Changes in mine** – it shows changes to a document on a current development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](/refguide8/using-version-control-in-studio-pro/#conflicts) section in *Using Version Control in Studio Pro*)
 * **Show Changes in theirs** – it shows incoming changes to a document from another development line (for more information on how to solve conflicts, see the [Dealing With Conflicts](/refguide8/using-version-control-in-studio-pro/#conflicts) section in *Using Version Control in Studio Pro*)
 
-	{{% alert color="info" %}}**Show Conflicts**, **Show Changes in mine**, and **Show Changes in theirs** described above are toggles, and each selection de-selects the other two.
-	{{% /alert %}}
+    {{% alert color="info" %}}**Show Conflicts**, **Show Changes in mine**, and **Show Changes in theirs** described above are toggles, and each selection de-selects the other two.{{% /alert %}}
 
 The columns on the left side of the grid will vary based on what toggle button is pressed on the toolbar.
 
@@ -118,22 +117,21 @@ The left side of the grid contains the following columns when **Show Conflicts**
 * **Theirs** – the status of the incoming change on another development line
 * **Mine** – indicates the status of the change on the current development line
 
-	{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/conflict-grid.png" alt="Conflict Grid" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/conflict-grid.png" alt="Conflict Grid" >}}
 
 The left side of the grid contains the following columns when **Show Changes in mine** toggle is enabled:
 
 * **Element** – the name of the modified element
 * **Mine** – indicates the status of the change on the current development line
 
-	{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-mine-grid.png" alt="Conflict Grid" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-mine-grid.png" alt="Conflict Grid" >}}
 
 The left side of the grid contains the following columns when **Show Changes in theirs** toggle is enabled:
 
 * **Element** – the name of the modified element
 * **Theirs** – indicates the status of the change on the other development line
 
-	{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-merge-end-grid.png" alt="Conflict Grid" >}}
-	
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-merge-end-grid.png" alt="Conflict Grid" >}}
 
 The columns on the grid on the right will vary depending on what kind of conflicting element is selected on the left side.
 
@@ -150,7 +148,7 @@ If the selected item on the left side is a conflict that resulted in one side ch
 * **Theirs** – the original property value
 * **Mine** – the change to the property that was made on the current development line
 
-##  5 Read More
+## 5 Read More
 
 * [Studio Pro Overview](/refguide8/studio-pro-overview/)
 * [Version Control](/refguide8/version-control/) 

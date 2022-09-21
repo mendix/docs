@@ -53,10 +53,9 @@ If the set of objects selected for synchronization contains objects without loca
 The **Synchronize** activity properties consists of the following sections:
 
 * [Action](#action)
-
 * [Common](#common)
 
-	{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
 
 ## 3 Action Section {#action}
 

@@ -53,7 +53,7 @@ Microflows can be called from offline apps by using [microflow call](/refguide/m
 {{% alert color="info" %}}
 If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler(s) will run. 
 {{% /alert %}}
-	
+
 #### 4.1.2 UI Actions
 
 UI-related actions will be ignored and will not have any effect. We encourage you to model such UI-side effects in the caller nanoflow.
@@ -94,7 +94,7 @@ To avoid backwards-compatibility errors in offline microflow calls after the ini
 
 If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
 
-### 4.3 Autonumbers & Calculated Attributes {#autonumbers}
+### 4.3 Autonumbers and Calculated Attributes {#autonumbers}
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
@@ -129,4 +129,3 @@ Attributes with the hashed string [attribute type](/refguide/attributes/#type) w
 ### 4.10 Access Rules with XPath Constraints {#access-rules}
 
 While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a `Customer` entity with `Locked` (Boolean) and `Name` (string) attributes. There is an access rule where the `Name` attribute of the customer is writable only when the `Locked` attribute is false. Changing and committing the `Locked` attribute’s value while offline will not change the read-only status of the `Name` attribute. Instead, this change will take effect after you synchronize the changed `Customer` object.
-

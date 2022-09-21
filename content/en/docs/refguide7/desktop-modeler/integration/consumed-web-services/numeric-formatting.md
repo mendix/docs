@@ -10,10 +10,10 @@ A number will be translated into XML untouched, except that any trailing zeroes 
 
 How numbers in XML should be represented can be specified in an XSD (or WSDL) by using schema facets.
 
-We currently support _totalDigits_ and _fractionDigits_ for numeric elements.
+We currently support *totalDigits* and *fractionDigits* for numeric elements.
 
-*   totalDigits: defines the maximum number of digits in the number (excluding the dot and minus sign)
-*   fractionDigits: defines the maximum number of digits after the decimal dot
+* totalDigits: defines the maximum number of digits in the number (excluding the dot and minus sign)
+* fractionDigits: defines the maximum number of digits after the decimal dot
 
 This means that if we encounter a number that does not match the required output format, we will round it so it does match. If it is not possible to represent the number correctly by formatting the number then it will simply be put in the XML as is. Example: An XSD specifies a maximum amount of digits of 3 but the number is 1000.
 

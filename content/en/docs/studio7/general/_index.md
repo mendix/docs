@@ -31,8 +31,7 @@ You can edit an app in Mendix Studio by opening your app in [Developer Portal](h
 You can also open your app in Studio via Studio Pro. Do the following:
 
 1. In Studio Pro, open the app in that you want to view in Studio.
-
-2.  Click the globe icon in the top right corner (only available if Studio is enabled).
+2. Click the globe icon in the top right corner (only available if Studio is enabled).
 
     {{< figure src="/attachments/studio7/general/globe-icon.png" >}}
 
@@ -45,10 +44,9 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 {{< figure src="/attachments/studio7/general/upgrade.png"   width="350"  >}}
 
 {{% alert color="info" %}}
-When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
+When you upgrade your app in Studio to the latest Mendix version, you will need to upgrade your app in Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. The reason for this is that once you update Studio, you need to update Studio Pro as well.
-
 {{% /alert %}}
 
 ## 4 Switching App Modes
@@ -57,11 +55,11 @@ After opening Studio,  the home page of the app opens.
 
 You can change the view of your page to different views by clicking the corresponding icons:
 
-*  Mobile
-*  Tablet
-*  Responsive (Desktop)    
+* Mobile
+* Tablet
+* Responsive (Desktop)    
 
-	{{< figure src="/attachments/studio7/general/view.png"   width="350"  >}}
+    {{< figure src="/attachments/studio7/general/view.png"   width="350"  >}}
 
 ## 5 Left Menu Bar
 

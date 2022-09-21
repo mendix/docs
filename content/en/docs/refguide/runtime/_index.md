@@ -2,8 +2,8 @@
 title: "Mendix Runtime"
 url: /refguide/runtime/
 weight: 40
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
@@ -95,4 +95,3 @@ If the app contains published services, links to available API documentation suc
 {{% /alert %}}
 
 ## 5 Documents in This Category
-

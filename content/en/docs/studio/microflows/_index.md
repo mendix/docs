@@ -16,14 +16,14 @@ Mendix Studio has a lot of built-in logic that works out of the box (for example
 
 You need to use microflows for the following cases:
 
-*  To change/extend the standard behavior of buttons
+* To change/extend the standard behavior of buttons
 * To add custom logic to your application
 * To integrate with other systems, databases, web services, etc.
 
 Examples of using microflows can be the following:
 
-*  You check the values that an end-user has entered, and you either show the end-user an error message or another page
-*  You are creating a to-do list and you want to use custom logic when the status of an item on the list has changed
+* You check the values that an end-user has entered, and you either show the end-user an error message or another page
+* You are creating a to-do list and you want to use custom logic when the status of an item on the list has changed
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
@@ -64,9 +64,7 @@ You can perform the following basic functions when working on microflows:
 To open a microflow in Studio, do the following:
 
 1. Click the microflow icon in the left menu bar.
-
 2. In the displayed list of microflows, select the one you want to open and click it.
-
 
 The selected microflow is opened.
 
@@ -75,13 +73,13 @@ The selected microflow is opened.
 To create a new microflow and to start building custom logic, do the following:
 
 1. Click the **Microflow** icon in the left menu bar. 
-2.  Select the module you would like to add a new microflow to and click the plus icon next to this module. 
+2. Select the module you would like to add a new microflow to and click the plus icon next to this module. 
 
     {{< figure src="/attachments/studio/microflows/new-microflow.png" alt="Adding New Microflow" >}}
-    
+
     For more information on what modules are, see [Domain Model](/studio/domain-models/).
 
-3.  Fill in the name of the microflow in the pop-up dialog and click **Create**.
+3. Fill in the name of the microflow in the pop-up dialog and click **Create**.
 
     {{< figure src="/attachments/studio/microflows/new-microflow-dialog.png" alt="Create New Microflow Dialog" >}}    
 
@@ -92,8 +90,7 @@ The new microflow is created, you can now add logic using events and activities.
 To duplicate a microflow, do the following:
 
 1. Click the **Microflows** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Duplicate** in the drop-down menu:
 
     {{< figure src="/attachments/studio/microflows/duplicate-microflow.png" alt="Duplication a Microflow"   width="350"  >}}
 
@@ -104,8 +101,7 @@ The microflow is duplicated.
 To copy and paste a microflow, do the following:
 
 1. Click the **Microflows** icon in the left menu bar.
-
-2.  In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
+2. In the side panel, click the ellipsis icon and select **Copy to clipboard** in the drop-down menu:
 
     {{< figure src="/attachments/studio/microflows/copy-microflow.png" alt="Copying a Microflow"   width="350"  >}}
 
@@ -120,13 +116,12 @@ To delete a microflow in Studio, do one of the following:
 1. Open the microflow you want to delete and follow the steps below:
 
     1. Open the **Properties** tab.
-
     2. Click **Delete** at the bottom of the **Properties** tab.
 
 2. Click the **Microflows** icon in the left menu bar and do the following:
 
     1. In the side panel, click the ellipsis icon and select **Delete** in the drop-down menu:
-    
+
         {{< figure src="/attachments/studio/microflows/delete-microflow.png" alt="Delete Microflow"   width="350"  >}}
 
 ### 3.6 Adding a New Event or Activity {#add-elements}
@@ -145,7 +140,6 @@ You can disable an activity from the flow, which means that when running your mi
 To disable an activity, do the following:
 
 1. Select the activity you would like to disable from the flow.
-
 2. In the **Properties** tab, click the **More** icon at the bottom (next to the **Delete** button):
 
     {{< figure src="/attachments/studio/microflows/disable-activity.png" alt="Disabling an Activity" >}}
@@ -164,6 +158,8 @@ The **Toolbox** tab contains elements that you can drag and drop on to a microfl
 * [Workflow Activities](#microflow-workflow-activities)
 * [Workflow Administration](#workflow-administration)
 * [Variable Activities](#microflow-variable-activities)
+
+Microflow and Java actions can be exposed in Studio Pro as custom actions for the microflow toolbox  in both Studio and Studio Pro. This feature can be used when you would like to provide a set of standard actions specific to your company to developers. For example, you can distribute a set of communication actions using your company’s specific e-mail connector. Actions that are exposed appear in the custom category in the **Toolbox**. For more information on exposing a microflow or Java action in Studio Pro, see the [Expose as Microflow Action](/refguide/microflow/#expose-as-microflow) section in *Microflow Properties* and  the [Expose as Microflow Action](/refguide/java-actions/#expose-microflow-action) section in *Java Actions*.
 
 ### 4.1 General {#microflow-general-section}
 
@@ -225,12 +221,14 @@ The **Workflow Activities** section contain activities that interact with workfl
 
 The **Workflow Activities** are described in the table below:
 
-| Activity               | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| Call Workflow          | The **Call Workflow** activity starts the selected workflow. |
-| Complete Task          | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
-| Retrieve Workflow Data | The **Retrieve Workflow Data** activity can be used to retrieve the selected Workflow Context entity. The action determines the return type based on the selected workflow (the configured Workflow Context entity of that workflow). |
-| Show User Task Page    | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
+| Activity                 | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| Apply Jump-To Option     | The **Apply Jump-To Option** activity allows the workflow to jump to a selected activity. This activity should be used after the **Generate Jump-To Options** activity that generates the list of possible workflow activities the workflow can jump to. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue.<br />This functionality is configured and used in the Workflow Commons module (a workflow-specific module) on Admin pages. |
+| Call Workflow            | The **Call Workflow** activity starts the selected workflow. |
+| Complete Task            | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
+| Generate Jump-To Options | The **Generate Jump-To Options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The **Apply Jump-To Option** activity should be used after the **Generate Jump-To Options** to let the workflow continue from the selected activity.<br />This functionality is configured and used in the Workflow Commons module (a workflow-specific module) on Admin pages. |
+| Retrieve Workflow Data   | The **Retrieve Workflow Data** activity can be used to retrieve the selected Workflow Context entity. The action determines the return type based on the selected workflow (the configured Workflow Context entity of that workflow). |
+| Show User Task Page      | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
 
 ### 4.5 Workflow Administration {#workflow-administration}
 

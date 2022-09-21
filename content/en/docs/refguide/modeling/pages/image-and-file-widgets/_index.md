@@ -25,7 +25,6 @@ Images, videos & files allow end-users to upload, download, and display files, i
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader-example.png" alt="Image Uploader Example" >}}
 
-
 ## 2 Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}

@@ -15,9 +15,9 @@ Here is a domain model that defines customers and orders. The line between them 
 
 ## Components
 
-*   [Entities](/refguide7/entities/)
-*   [Associations](/refguide7/associations/)
-*   [Annotations](/refguide7/annotations/)
+* [Entities](/refguide7/entities/)
+* [Associations](/refguide7/associations/)
+* [Annotations](/refguide7/annotations/)
 
 ## Technical Appendix
 

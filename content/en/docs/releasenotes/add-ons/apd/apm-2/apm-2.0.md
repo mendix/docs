@@ -90,12 +90,12 @@ We made the following improvements to the browser agent:
 
 * If logs and performance run as threads, there is a limit on the buffer between the Mendix log thread and the APM threads. If the Mendix Platform delivers too quickly, APM will now drop the messages.
 * Advanced settings have been added to allow for the following functions:
-	* **Use profiler**
-	* **User recorder**
-	* **Max trap collection**
-	* **Max statistics collection**
+    * **Use profiler**
+    * **User recorder**
+    * **Max trap collection**
+    * **Max statistics collection**
 
-	With this, the agent can be tuned, and the settings cannot be overruled from the manager (for example, for protecting a production environment or in the event of conflicts for not using the profiler).
+    With this, the agent can be tuned, and the settings cannot be overruled from the manager (for example, for protecting a production environment or in the event of conflicts for not using the profiler).
 * There is now the **NONE** option for statistics and trap collection, with which you effectively turn off the tools.
 * There is now a hard-coded maximum of messages that the APM agent and APM Manager can accept from a Mendix log thread for both the message and stack trace.
 * There is now  a maximum message length in `MendixMessage` via an advanced setting.

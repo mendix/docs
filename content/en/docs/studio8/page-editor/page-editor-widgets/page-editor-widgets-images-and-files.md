@@ -8,21 +8,18 @@ tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "fi
 
 ## 1 Introduction 
 
-**Images & Files** are widgets that allow end-users to view, download, and upload images or files. For example, with an image uploader end-users will be able to upload a profile image:
+**Images and Files** are widgets that allow end-users to view, download, and upload images or files. For example, with an image uploader end-users will be able to upload a profile image:
 
 {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/image-uploader-example.png"   width="350"  >}}
 
 There are the following image and file widgets in Mendix Studio:
 
 * **Image** – allows you to show a static (non-changing) image in your app
+* **Dynamic Image** – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
+* **Image Uploader** – allows end-users to upload an image
+* **File Manager** – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
 
-*  **Dynamic Image** – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
-
-*  **Image Uploader** – allows end-users to upload an image
-
-*   **File Manager** – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
-  
-	{{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/images-and-files.png"   width="350"  >}}
+    {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-images-and-files/images-and-files.png"   width="350"  >}}
 
 ## 2 Image and Dynamic Image 
 
@@ -114,14 +111,10 @@ This property only appears if **Show Label** is enabled. Specify the name that w
 Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: 
 
 * **Editable** – the value displayed by the widget is editable
-
 * **Read-only** – the value is in read-only mode
-
 * **Conditional** – the widget is editable only if specified conditions are met based on an attribute value (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below) or based on an expression. You can create a condition based on an expression in Studio Pro only (for details, see the [Editability Section](/refguide8/common-widget-properties/#editability) in *Properties Common in the Page Editor*)
 
-  {{% alert color="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
-
-  {{%/alert %}}
+    {{% alert color="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
 ##### 3.1.2.4 Attribute-Based {#attribute-based}
 
@@ -130,15 +123,11 @@ The **Attribute-Based** property is only shown when [Conditional Editability](#e
 **Attribute-Based** conditional editability allows you to show widgets only when they match a certain value of the selected attribute. 
 
 {{% alert color="info" %}}
-
 The attribute must be of the Boolean or enumeration type.
-
 {{%/alert %}} 
 
 {{% alert color="info" %}}
-
 You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view. For more information on how to place widgets on a page, see [Adding Elements on a Page](/studio8/page-editor/#adding-elements) section in *Pages*. 
-
 {{%/alert %}}
 
 ##### 3.1.2.5 Attribute Values {#attribute-values}
@@ -152,9 +141,7 @@ For example, you would like to allow users upload images only when their *email 
 #### 3.1.3 Controls Section
 
 {{% alert color="info" %}}
-
 The **Controls** section is available for **File Manager** only. 
-
 {{% /alert %}}
 
 The **Show Buttons For** option specifies whether end-users are able to upload and/or download files and has the following options:

@@ -10,6 +10,7 @@ cascade:
     - space: "Mendix 7 Reference Guide"
     - mendix_version: "7"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
         priority: 0.3
 ---
@@ -21,6 +22,3 @@ Before installing Mendix 7, please read [System Requirements](/refguide7/system-
 If you are looking for step-by-step guides on performing various Mendix actions, browse the [Mendix How-tos](/howto7/).
 
 The *Mendix Reference Guide* is divided into the following categories:
-
-
-

@@ -88,7 +88,7 @@ By default OTA updates are disabled for your Native Mobile Profile. To enable th
 1. Navigate to the Native Mobile Profile.
 1. Select **Enable over-the-air updates**: 
 
-  {{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="400"  >}}
 
 1. Deploy your app to the cloud.
 

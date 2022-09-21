@@ -33,7 +33,7 @@ Defines the type of change that is applied to the list.
 | Clear | The list is emptied. |
 | Replace | The list is emptied and the object(s) referred to by value are added to the list. |
 
-_Default value:_ Add
+*Default value:* Add
 
 If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [List Operation](/refguide7/list-operation/) to examine the list before adding the object(s).
 

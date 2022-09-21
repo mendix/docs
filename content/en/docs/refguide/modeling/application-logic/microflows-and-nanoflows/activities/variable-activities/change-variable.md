@@ -15,8 +15,6 @@ Change variable allows you to change the value of an existing variable. For exam
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/change-variable/change-variable.png" alt="Change Variable" >}}
 
-
-
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:

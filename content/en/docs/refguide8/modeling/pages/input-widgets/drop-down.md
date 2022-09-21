@@ -109,5 +109,5 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ## 3 Read More
 
-*   [Data View](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data View](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

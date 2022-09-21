@@ -12,7 +12,7 @@ During development, these log levels can be set in the console (advanced -> set 
 
 You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring the Log Levels for Standard Log Messages](/howto/monitoring-troubleshooting/log-levels/#standard-log-levels) in *How To Set Log Levels* for more information.
 
-## 2 Log Levels
+## 2 Log Levels {#log-levels}
 
 ### 2.1 Critical
 
@@ -87,7 +87,6 @@ This list is currently incomplete and is being updated.
 | Services | |
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
-| StorageSwift | |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | |
 | Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, such as a start or an end of a workflow, execution of workflow actions, and errors that occur during the execution. |

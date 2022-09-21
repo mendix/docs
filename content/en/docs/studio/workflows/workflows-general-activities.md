@@ -85,9 +85,7 @@ The parallel split is used to have parallel processes in your workflow. For exam
 {{< figure src="/attachments/studio/workflows/workflows-general-activities/parallel-split-example.jpg" alt="Parallel Split Example" >}}
 
 {{% alert color="info" %}}
-
 The workflow will only continue to the next activity when all paths of the parallel split have been completed.
-
 {{% /alert %}}
 
 ### 5.1 Parallel Split Properties

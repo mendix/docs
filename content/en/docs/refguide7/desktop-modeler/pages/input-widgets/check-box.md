@@ -55,5 +55,5 @@ This check box allows you to change whether someone is subscribed to the newslet
 
 ## Related articles
 
-*   [Data view](/refguide7/data-view/)
-*   [Attribute](/refguide7/attributes/)s
+* [Data view](/refguide7/data-view/)
+* [Attribute](/refguide7/attributes/)s

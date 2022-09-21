@@ -103,4 +103,4 @@ The page has displays a reference selector for the reference to country and an i
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
+* [Data view](/refguide7/data-view/)

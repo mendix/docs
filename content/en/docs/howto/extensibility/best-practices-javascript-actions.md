@@ -1,5 +1,6 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
+linktitle: "JavaScript Actions Best Practices"
 url: /howto/extensibility/best-practices-javascript-actions/
 category: "Extensibility"
 weight: 60
@@ -173,7 +174,7 @@ y = x.plus(0.2)            // '0.3'
 
 If you know your JavaScript action does not require this extended precision (for example, if you expect a simple integer between 1 and 100), you can easily convert a `Big` object to a JavaScript number:
 
-```javascript
+```javascript {linenos=false}
 const numberValue = Number(bigJsValue); // number
 ```
 
@@ -214,7 +215,7 @@ For more information on changing objects, consult the [Set](https://apidocs.rnd.
 
 Use the following code for loading platform-shipped dependencies (please note the shipped dependencies might vary per Mendix version):
 
-```javascript
+```javascript {linenos=false}
 // Synchronous libs that are already loaded
 var lang = require("mendix/lang");
 ```
@@ -254,7 +255,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 
 #### 2.2.7 Understanding Hybrid App External Dependencies
 
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base & Template* release notes.
+The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
 
 It is also possible to add new plugins during a mobile build.
 
@@ -350,6 +351,7 @@ async function GetUserNameSampleRest(userID) {
     // END USER CODE
 }
 ```
+
 Explaining the Fetch API code:
 
 * The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
@@ -477,7 +479,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 * Do not assume your user's browser – remember not all browsers have the same capabilities
 * Permanent rendering should be done using pluggable widgets – the new Mendix Client will render the page at will and remove your changes (for example, when you are rendering DOM, work on a DOM node of the `index.html`)
 * Changes to the DOM might be lost due to the Mendix Client which can render the DOM at will (for example, when you add a CSS class to another component the Mendix Client will render the page at will and remove your changes) – you can create and change DOM elements that are placed outside `<div id="content"></div>`
-* Avoid using deprecated libraries – do not use Dojo or Dijit as they will be deprecated (jQuery should also no longer be used)
+* Avoid using deprecated libraries – do not use Dojo or Dijit as they are deprecated (jQuery should also no longer be used)
 * Avoid using Boolean actions that return `undefined`– the Boolean variable is the only variable that requires a value, is the only acceptable state is  `true` or `false`(other variables could be set to `undefined` and can be checked in Mendix Studio Pro as `$variable != empty`)
 
 ## 7 Read More

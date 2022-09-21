@@ -39,14 +39,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
-    ```shell
-    $ npm install -g yo
+    ```shell {linenos=false}
+    npm install -g yo
     ```
 
 * Install the latest Mendix Pluggable Widget Generator for Yeoman for Mendix 8 with the following command:
 
-    ```shell
-    $ npm install -g @mendix/generator-widget@"<9"
+    ```shell {linenos=false}
+    npm install -g @mendix/generator-widget@"<9"
     ```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
@@ -79,8 +79,8 @@ To scaffold your project folder for the group box widget, follow these steps:
 
 3. Start the generator by executing the following command:
 
-    ```shell
-    $ yo @mendix/widget GroupBox
+    ```shell {linenos=false}
+    yo @mendix/widget GroupBox
     ```
 
 4. The generator will ask you for some input during setup. Provide this information to the generator:
@@ -136,7 +136,7 @@ Create a test case by following these steps:
 2. In the **Open App** dialog box, select **Locally on disk**.
 3. Open the *GroupBoxTestProject.mpr* file inside your group box widget project folder.
 4. Open **Home_Native** page.
-5.  Copy the **Home** container and paste it underneath that container:
+5. Copy the **Home** container and paste it underneath that container:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/home-container.png" alt="home container" >}}
 
@@ -152,7 +152,7 @@ You have set up your test project. To verify that your Mendix test project is se
 
 1. In Studio Pro, run the test project locally.
 2. Use the Make It Native app to open your new app.
-3.  Verify that your app's home page contains the yellow text **Hello {your name}**.
+3. Verify that your app's home page contains the yellow text **Hello {your name}**.
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/1-yellow-text-mobile.png" alt="hello user" >}}
 
@@ -202,8 +202,8 @@ Define the structure and default style of the group box widget with these steps:
 4. Change the current working directory to your project folder.
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
 
-    ```shell
-    $ npm run dev
+    ```shell {linenos=false}
+    npm run dev
     ```
 
     The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
@@ -262,7 +262,7 @@ The UI of your widget does not look like a group box yet. Apply a default style 
     ```
 
     The objects assigned to the properties of **defaultStyle** are passed to the style props of the React Native components that you use in the **render** method. The property names inside the objects are similar to CSS style properties. To learn more about the supported properties and what effect they have, visit the following links:
-    
+
     * [\<View> style props](https://facebook.github.io/react-native/docs/view-style-props)
     * [\<Text> style props](https://facebook.github.io/react-native/docs/text-style-props)
 
@@ -276,16 +276,15 @@ When you build a widget for native mobile, keep in mind that the widget can be u
 
 For the group box widget it would be nice to have square corners on Android devices. Apply this style behavior with the following steps:
 
-
 1. In **src/components/HelloWorldSample.tsx** you must adjust the import statement in order to use the **Platform** detection feature. Change the import from this:
 
-    ```tsx
+    ```tsx {linenos=false}
     import { Text, View } from "react-native";
     ```
 
     to this:
 
-    ```tsx
+    ```tsx {linenos=false}
     import { Text, View, Platform } from "react-native";
     ```
 
@@ -335,7 +334,7 @@ As you might have noticed, the display component is still called **HelloWorldSam
 3. Rename the **HelloWorldSampleProps** interface to *GroupBoxProps*.
 4. Change the **GroupBox** class declaration to the following:
 
-    ```tsx
+    ```tsx {linenos=false}
     export class GroupBox extends Component<GroupBoxProps>
     ```
 
@@ -346,13 +345,13 @@ To fix the errors in the container component, use these steps:
 1. Open *src/GroupBox.tsx*.
 2. Replace the following import:
 
-    ```tsx
+    ```tsx {linenos=false}
     import { HelloWorldSample } from "./components/HelloWorldSample";
     ```
 
     with this:
 
-    ```tsx
+    ```tsx {linenos=false}
     import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
     ```
 
@@ -492,7 +491,7 @@ You will also want Mendix developers to be able to fill content in the group box
 1. In **src/GroupBox.xml**, add a content property element above the header caption property.
 2. Change the name element from **Group Box** to *Group box* so its name fits correct conventions. 
 3. Remove the "needsEntityContext" attribute from the widget element, since this is no longer necessary. 
-3. Your file should now look like this:
+4. Your file should now look like this:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -518,9 +517,9 @@ You will also want Mendix developers to be able to fill content in the group box
     </widget>
     ```
 
-3. Save the file.
-4. Open **src/GroupBox.tsx**.
-5. Change the **render** method as follows to pass the content (React Native components) to the display component:
+5. Save the file.
+6. Open **src/GroupBox.tsx**.
+7. Change the **render** method as follows to pass the content (React Native components) to the display component:
 
     ```tsx
     render(): ReactNode {
@@ -534,9 +533,9 @@ You will also want Mendix developers to be able to fill content in the group box
     }
     ```
 
-6. Save the file.
-7. Open **src/components/GroupBox.tsx**.
-8. Adjust the **render** method to render the content:
+8. Save the file.
+9. Open **src/components/GroupBox.tsx**.
+10. Adjust the **render** method to render the content:
 
     ```tsx
     render(): ReactNode {
@@ -632,11 +631,11 @@ To start, make the complete header clickable:
 1. Navigate to the display component (**src/components/GroupBox.tsx**).
 2. Import the React component **ComponentClass** so that your React imports look like this:
 
-    ```tsx
+    ```tsx {linenos=false}
     import { Children, Component, ReactNode, createElement, ComponentClass } from "react";
     ```
 
-2. Import the React Native components **TouchableOpacity** and **TouchableNativeFeedback** so that your React Native imports look like this:
+3. Import the React Native components **TouchableOpacity** and **TouchableNativeFeedback** so that your React Native imports look like this:
 
     ```tsx
     import {
@@ -648,7 +647,7 @@ To start, make the complete header clickable:
     } from "react-native";
     ```
 
-3. Create the following lambda method that is responsible for rendering the clickable header:
+4. Create the following lambda method that is responsible for rendering the clickable header:
 
     ```tsx
     private renderHeader = () => {
@@ -667,7 +666,7 @@ To start, make the complete header clickable:
 
     In the method above, the **Touchable** constant is a dynamic component. Depending on which platform on your app is running, the **Touchable** constant represents either the React Native built-in component **TouchableOpacity** or **TouchableNativeFeedback**. Each platform uses a different component to achieve a different type of tap feedback. Tapping on Android causes a ripple effect, whereas on iOS tapping causes an opacity effect.
 
-4. Change the **render** method to make use of **renderHeader**:
+5. Change the **render** method to make use of **renderHeader**:
 
     ```tsx
     render(): ReactNode {
@@ -680,9 +679,9 @@ To start, make the complete header clickable:
     }
     ```
 
-5. Make sure all files have been saved.
-6. Reload your test app in the Make It Native app to view the change.
-7. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it is clickable.
+6. Make sure all files have been saved.
+7. Reload your test app in the Make It Native app to view the change.
+8. Verify the header is clickable by tapping it. You should see a light-up effect on iOS. Note that on Android, the ripple effect is not visible on a black background, so you cannot verify yet if it is clickable.
 
 Now make it possible to expand or collapse the group box:
 
@@ -697,7 +696,7 @@ Now make it possible to expand or collapse the group box:
 
 3. Change the class definition to give our component a state to keep track on whether it is collapsed or not:
 
-    ```tsx
+    ```tsx {linenos=false}
     export class GroupBox extends Component<GroupBoxProps, GroupBoxState>
     ```
 
@@ -928,8 +927,8 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/euro-icon.png" alt="euro" >}}
 
-10. Click **OK**, then run the app locally.
-11. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict separation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
+12. Click **OK**, then run the app locally.
+13. Inspect your changes. Notice that you cannot see any icon in group box's header. This is because your background color and text color are both black. Remember that in the **defaultStyle** constant of your display component you defined that text of React Native components that get the **headerContent** style applied to it should be white. However, you are not explicitly applying this style to our **Icon** component that you pass from our container component to the display component. You could argue to move the creation of the **Icon** component inside your display component, but this will go against the strict separation of concerns related to the container and display component, since the **Icon** component is Mendix specific. Therefore, it should be part of the container component.
 
 Fix your icon issue by introducing a default style for your container component:
 
@@ -949,13 +948,13 @@ Fix your icon issue by introducing a default style for your container component:
 
 2. Import the `flattenStyles` function:
 
-    ```tsx
+    ```tsx {linenos=false}
     import { Style, flattenStyles } from "./utils/common";
     ```
 
 3. Add the following private attribute to the container component class:
 
-    ```tsx
+    ```tsx {linenos=false}
     private readonly styles = flattenStyles(defaultStyle, this.props.style);
     ```
 
@@ -1087,39 +1086,39 @@ First change the widget property configuration:
     
 4. Add this image as a widget icon by following the substeps below:
 
-    a. Download this image:
+    1. Download this image:
 
-    {{< figure src="/attachments/howto8/extensibility/build-native-widget/group-box.png" alt="Group box icon" >}}
+        {{< figure src="/attachments/howto8/extensibility/build-native-widget/group-box.png" alt="Group box icon" >}}
 
-    b. Generate a Base64 representation of the *.png* file:
+    2. Generate a Base64 representation of the *.png* file:
 
-    **— For Windows**:
+        **— For Windows**:
 
-    i. Open command prompt.<br />
-    ii. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
-    iii. Execute the following command to generate the Base64 representation:<br />
-    
-    ```shell
-    $ certutil -encode GroupBox.png data.b64
-    ```
-    
-    Upon success, you will see a **data.b64** file in the same location as your original image.
-    
-    **— For Unix**:
-    
-    i. Open a terminal.<br />
-    ii. Change the current working directory to the folder where the "GroupBox.png" is stored.<br />
-    iii. Execute the following command to generate the Base64 representation:<br />
-    
-    ```shell
-    $ base64 -i GroupBox.png -o data.b64
-    ```
-    
-    Upon success, you will see a **data.b64** file in the same location as your original image.
-    
-    c. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
+        1. Open command prompt.<br />
+        2. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
+        3. Execute the following command to generate the Base64 representation:<br />
 
-     ```xml
+        ```shell {linenos=false}
+        certutil -encode GroupBox.png data.b64
+        ```
+
+        Upon success, you will see a **data.b64** file in the same location as your original image.
+
+        **— For Unix**:
+
+        1. Open a terminal.<br />
+        2. Change the current working directory to the folder where the "GroupBox.png" is stored.<br />
+        3. Execute the following command to generate the Base64 representation:<br />
+
+        ```shell {linenos=false}
+        base64 -i GroupBox.png -o data.b64
+        ```
+
+        Upon success, you will see a **data.b64** file in the same location as your original image.
+
+    3. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
+
+    ```xml
     <?xml version="1.0" encoding="utf-8" ?>
     <widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
         xmlns="http://www.mendix.com/widget/1.0/"
@@ -1195,7 +1194,7 @@ Now support this section's two features with your display component:
 
     If you do not want the group box to be collapsible at all, you must remove the **Touchable** component that wraps the header to prevent toggling the collapsed state. Moreover, remove the icons inside the header indicating the group box is collapsible. Enact these changes by following these steps:
 
-1. Change the **renderHeader** method so that it does not render the **Touchable** component around the header **View** component:
+4. Change the **renderHeader** method so that it does not render the **Touchable** component around the header **View** component:
 
     ```tsx
     private renderHeader = () => {
@@ -1217,7 +1216,7 @@ Now support this section's two features with your display component:
     };
     ```
 
-2. Prevent the header **View** component from being rendered at all when the group box is not collapsible and there is no header caption. Otherwise, the header would be visible as an empty block:
+5. Prevent the header **View** component from being rendered at all when the group box is not collapsible and there is no header caption. Otherwise, the header would be visible as an empty block:
 
     ```tsx
     private renderHeader = () => {
@@ -1241,7 +1240,7 @@ Now support this section's two features with your display component:
     };
     ```
 
-3. Change the **renderIcon** method to prevent an icon from being rendered when the group box is not collapsible by adding a guard that returns null:
+6. Change the **renderIcon** method to prevent an icon from being rendered when the group box is not collapsible by adding a guard that returns null:
 
     ```tsx
     private renderIcon = (): ReactNode => {
@@ -1259,7 +1258,7 @@ Now support this section's two features with your display component:
     };
     ```
 
-4. Change the **render** method to so it can function when there is neither header nor content to be rendered by returning null:
+7. Change the **render** method to so it can function when there is neither header nor content to be rendered by returning null:
 
     ```tsx
     render(): ReactNode {
@@ -1282,7 +1281,6 @@ Now support this section's two features with your display component:
 The last thing to do is change the container component so that the properties get passed to the display component:
 
 1. Navigate to the container component **src/GroupBox.tsx**.
-
 2. Change the **render** method to supply the display component with the information from the collapsible prop that the container component receives:
 
     ```tsx
@@ -1405,7 +1403,7 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
 2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the new file.
 3. Add the following import to **test/MxTestProject/theme/styles/native/app/custom.js**:
 
-    ```js
+    ```javascript {linenos=false}
     export * from "./group-box";
     ```
 
@@ -1457,7 +1455,7 @@ The developer needs to have the class names memorized to apply a certain group b
 7. Rerun the app locally and verify the new success style in the Make It Native App:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/11-success.png" alt="mobile success" >}}
-    
+
 ## 4 Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)

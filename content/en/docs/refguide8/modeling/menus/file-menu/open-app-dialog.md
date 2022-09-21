@@ -19,7 +19,7 @@ aliases:
 To open a project in Mendix Studio Pro, do one of the following:
 
 * Open the **File** menu in the top bar > **Open Project**
-*  Click **Open App** on the Studio Pro landing page
+* Click **Open App** on the Studio Pro landing page
 
 The **Open App** dialog box will open, where you can select the app location:
 
@@ -44,9 +44,7 @@ For more information about development lines, see [Version Control](/refguide8/v
 ### 2.2 Private Server {#private-server}
 
 {{% alert color="info" %}}
-
 The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Advanced** > **Enable private version control**. 
-
 {{% /alert %}}
 
 In the **App repository address** field, enter the address of the app you want to open and press the **Connect** button to load development lines from the repository. Then choose the development line in which you want to start developing.

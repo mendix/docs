@@ -2,18 +2,18 @@
 title: "External Entities"
 url: /refguide/external-entities/
 weight: 15
-tags: ["domain model", "entity", "entities", "attribute", "external entities", "even handler", "access rule", "studio pro", "consumed OData Service"]
+tags: ["domain model", "entity", "entities", "attribute", "external entities", "event handler", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
 
 External entities can be added to the Domain Model through the [Data Hub pane](/refguide/data-hub-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
 
-Datasets are maintained and updated in the source application. You can integrate or *consume* these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
+Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
 
-External entities can be used with local entities, however, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
+External entities can be used with local entities. However, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
 
-To follow how to add external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
+To follow how to add external entities from the **Data Hub** pane, see [Adding External Entities](#adding-external-entities).
 
 {{% alert color="info" %}}
 A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
@@ -27,14 +27,13 @@ To add an external entity to your app model, follow these steps:
 
     {{% alert color="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search/), an OData service may be registered multiple times with different version numbers or deployed to different environments, all exposing the entity (dataset) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
-3. Drag and drop the entity in the Domain Model. 
-
-4. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
+1. Drag and drop the entity in the Domain Model. 
+1. The entity and its attributes are then added to your app and two documents are added in the **App Explorer**: 
 
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service
     * the **OData Location** that specifies the location constants for the service
 
-	    {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
+        {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
 
 {{% alert color="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
@@ -95,10 +94,10 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
 
 * **General Tab**
-	* **Name** – a local name for the attribute can be specified.
-	* **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
-	* **Summary** – a read-only summary displaying the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
-	* **Type** – read-only vlues for the **Type** and **Length** and **Max. Length** of the attribute as defined in the originating app
+    * **Name** – a local name for the attribute can be specified.
+    * **Original Name** – this is a read-only value that displays the original name of the attribute as given in the originating app
+    * **Summary** – a read-only summary displaying the description for the attribute in the originating app; to enter a local description, add this in the [Documentation tab](#documentation)
+    * **Type** – read-only vlues for the **Type** and **Length** and **Max. Length** of the attribute as defined in the originating app
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
 ### 2.3 Associations {#associations}
@@ -159,8 +158,8 @@ You can add any local information about the external entity in this tab.
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The datasets associated with the entities are maintained in the originating apps.
 
 External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
- 
- * The **Commit** activity does not work. Use **Send External Object** instead.
- * On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
+
+* The **Commit** activity does not work. Use **Send External Object** instead.
+* On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
 
 For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/) in the *Data Hub Guide*.

@@ -1,5 +1,6 @@
 ---
 title: "Build Apps Using the Native Builder CLI"
+linktitle: "Build Apps Using Native Builder CLI"
 url: /howto8/mobile/use-cli-docs/
 weight: 89
 description: Tutorials for building native mobile apps using the Native Builder CLI.

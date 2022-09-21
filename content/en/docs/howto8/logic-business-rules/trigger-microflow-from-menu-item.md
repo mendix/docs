@@ -29,8 +29,7 @@ Microflows can be triggered in many different ways. For this how-to, you will us
 
 To create a menu item, follow these steps:
 
-1.  Open the **Navigation** editor.
-
+1. Open the **Navigation** editor.
 2. In the **Responsive** tab > the **Menu** section, click **New Item**:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/new-menu-item.jpg" >}}
@@ -48,7 +47,6 @@ To create a menu item, follow these steps:
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/new-microflow.png" >}}
 
 6. Enter *HelloWorld* for the **Name** of the new microflow.
-
 7. Save the new menu item by clicking **OK**.
 
 You have created the menu item that will trigger the **Hello World** microflow. 
@@ -59,7 +57,7 @@ The new microflow is now empty and needs to be configured to show the message to
 
 To edit the new microflow, follow these steps:
 
-1.  Open the **Hello World** microflow by right-clicking the new menu item created in the [Creating a Menu Item](#creating-menu-item) section above and selecting **Go to target** from the context menu:
+1. Open the **Hello World** microflow by right-clicking the new menu item created in the [Creating a Menu Item](#creating-menu-item) section above and selecting **Go to target** from the context menu:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/go-to-target.png" >}}
 
@@ -67,22 +65,20 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/created-microflow.png" >}}
 
-2.  Open the **Toolbox** and search for the **Show message** activity:
-    
+2. Open the **Toolbox** and search for the **Show message** activity:
+
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/toolbox.png" >}}
 
-3.  Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
+3. Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/show-message-activity.png" >}}
 
 4. Double-click the message activity to open the **Show Message** properties.
-
-5.  Enter *Hello World* for the **Template** value and click **OK**:
+5. Enter *Hello World* for the **Template** value and click **OK**:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/show-message-properties.png" >}}
 
 6. Click **Run Locally** and then **View** to see the application in your default browser.
-
 7. Click the **Hello World** menu item in the menu bar to see the message:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/hello-world-message.png" >}}

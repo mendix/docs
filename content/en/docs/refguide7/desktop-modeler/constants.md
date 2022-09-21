@@ -19,8 +19,8 @@ The value for a constant can also be overridden in a [Configuration](/refguide7/
 
 Constants can be used in:
 
-*   [Microflow expressions](/refguide7/expressions/): by prefixing the full name of the constant with @.
-*   [Consumed Web Services](/refguide7/consumed-web-services/): in this case the constant is a URL that specifies where the web service is located. This can vary based on the environment in which the application is running, so that you can for example use different web services for development and production.
+* [Microflow expressions](/refguide7/expressions/): by prefixing the full name of the constant with @.
+* [Consumed Web Services](/refguide7/consumed-web-services/): in this case the constant is a URL that specifies where the web service is located. This can vary based on the environment in which the application is running, so that you can for example use different web services for development and production.
 
 ## Common Properties
 

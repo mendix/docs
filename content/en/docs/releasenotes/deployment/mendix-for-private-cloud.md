@@ -176,7 +176,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 #### Portal Improvements
 
-* We have increased the deployment package size limit from 200MB to 512MB.
+* We have increased the deployment package size limit from 200 MB to 512 MB.
 * We have fixed an issue when the Runtime version was not visible on the transport package screen.
 * We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
 * We have changed the left navigation panel to match the rest of the Developer Portal.

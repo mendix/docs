@@ -480,7 +480,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
 
 2. Create a microflow as follows:
     1. Name the microflow *GetDetectorSupportedLanguages*. 
-    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
+    2. Right-click the working area and select **Add** > **Parameter** from the pop-up menu. 
     3. Double-click the parameter to open the **Parameter** dialog box.
     4. Set **Data type** to **Object** and select **Detector** entity from **TextAnalytics** module as target object.
     5. For **Name**, enter *detector*.

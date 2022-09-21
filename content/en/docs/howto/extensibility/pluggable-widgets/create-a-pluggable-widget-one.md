@@ -211,7 +211,7 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
 
     Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.editorPreview.tsx* and *TextBox.tsx*, as these lines are no longer in use.
 
-7. Add a test widget to the proappject home page:<br />
+7. Add a test widget to the project home page:<br />
     1. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu.<br />
     2. Navigate to **Home > Add widget** in the editor menu.<br />
     3. Select the newly-created **TextBox** widget at the bottom of the list.<br />

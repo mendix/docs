@@ -3,7 +3,7 @@ title: "Submit a Support Request"
 url: /developerportal/support/submit-support-request/
 category: "Mendix Support"
 weight: 2
-description: "Describes submitting a request with Mendix Support."
+description: "Describes the details necessary for Mendix Support to process your request."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor request-priority below is mapped, so it should not be removed or changed.
@@ -19,7 +19,7 @@ For critical production incidents, please contact Mendix Support by [phone](http
 
 ## 2 Checking Useful Links Before Submitting a Request
 
-Before submitting a new Menix Support request, check these resources to make sure your question has not already been answered:
+Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix Documentation](https://docs.mendix.com/)

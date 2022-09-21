@@ -288,7 +288,17 @@ This widget enables setting and saving your personal preferences.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
 
-With this widget, you can select different PMI entity types, model view, and design group. The selected items will not be loaded. For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
+With this widget, you can use the following filtering settings:
+
+- Filter PMI entities by type
+
+- Filter model view
+
+- Filter design group
+
+- Show assembly level PMI
+
+For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
 
 #### 4.6.3 Toolbar Widgets
 
@@ -578,7 +588,7 @@ You can change the setting of the Preference widget to customize the behavior of
 
 {{< figure src="/attachments/appstore/app-services/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
-On the **PMI** tab, you can set filter options for PMI and click **Ok** to save the changes. The items that you selected will not be loaded.
+On the **PMI** tab, you can set filtering options for PMI and click **Ok** to save the changes.
 
 ## 6 Read More
 

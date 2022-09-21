@@ -7,6 +7,7 @@ cascade:
     - space: "Studio 8 How-tos"
     - mendix_version: "8"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
         priority: 0.3
 ---

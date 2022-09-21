@@ -332,7 +332,7 @@ If SASS compilation fails, it will be shown in Studio Pro as a consistency error
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/compilation-error.png" alt="theme compilation error" >}}
 
-The content from the **public** folder will be copied to the same folder as the *theme.compiled.css* file when deployed. This allows you to reference those resources using a relative path in the theme module's *SCSS*. For example, to use the image *themesource/{module}/public/images/login-background.jpg* from *themesource/{module}/web/main.scss*, you can simply use `url("./images/login-background.jpg)`.
+The content from the **public** folder will be copied to the same folder as the *theme.compiled.css* file when deployed. This allows you to reference those resources using a relative path in the theme module's *SCSS*. For example, to use the image *themesource/{module}/public/images/login-background.jpg* from *themesource/{module}/web/main.scss*, you can simply use `url("./images/login-background.jpg")`.
 
 Note that public folders will be copied in the same order *.scss* files are compiled. Therefore if two modules have the same public resource, the last to be copied will end up in the deployment folder.
 
@@ -589,13 +589,13 @@ Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folde
 Open your Mendix app's *theme/web/custom-variables.scss* file and locate the following line:
 
 ```scss {linenos=false}
-$font-family-import: https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700
+$font-family-import: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
 ```
 
 Replace that line with the following code:
 
 ```scss {linenos=false}
-$font-family-import: ./fonts/open-sans.css
+$font-family-import: "./fonts/open-sans.css"
 ```
 
 Then, save your changes. Run your app and you should see fonts rendered correctly

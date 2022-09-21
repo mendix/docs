@@ -15,12 +15,12 @@ Follow the sections below to build a demo. While doing so, you will become famil
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Install Studio Pro and Developer Apps with AR capabilities
-* Download the AR widgets from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209)
-* Create a new empty page with **Container (AR)** and **ImageTracker (AR)** widgets
-* Add your business card png as the **Image** to the **ImageTracker (AR)**
+* Install Studio Pro and the latest Make It Native Apps with AR capabilities.
+* Download the AR widgets (version 2 or higher) from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209).
+* Create a new empty page with **Container (AR)** and **ImageTracker (AR)** widgets.
+* Add your business card png as the **Image** to the **ImageTracker (AR)**.
 * Obtain 3D objects to add to your AR business card (this document uses Twitter and LinkedIn logos).
-* Have a PNG of your business card
+* Have a PNG of your business card.
 
 Download these widgets:
 
@@ -83,7 +83,7 @@ The following settings correctly place them underneath our business card (since 
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/linkedin-3d-object.png" alt="linkedin 3d object" width="400" >}}
 
-Since you are using *.obj* files, you can alter the color or texture within Mendix. Currently, Twitter has a color of #1DA1F2 and Linkedin has #0A66C2:
+You can alter the color or texture of the 3D objects within Mendix. Currently, Twitter has a color of #1DA1F2 and Linkedin has #0A66C2:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-material-dialogue.png" alt="twitter material"   width="400"  >}}
 
@@ -96,3 +96,7 @@ Now all that is left is to add a nanoflow that opens a URL to the **Events** > *
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/call-url-event-dialogue.png" alt="call url event"   width="400"  >}}
 
 Congratulations, you now have a functioning AR business card demo with custom 3D objects!
+
+## 4 Read More
+
+* [Native Mobile AR](/appstore/modules/native-mobile-ar/)

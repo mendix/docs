@@ -27,7 +27,7 @@ If you already use the Forgot Password module in your Mendix version 8 app, you 
 
 The Forgot Password module has the following dependencies:
 
-* [E-mail Module with Templates](/appstore/modules/email-with-templates/)
+* [Email Module with Templates](/appstore/modules/email-with-templates/)
 * [Deep Link](/appstore/modules/deep-link/)
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)

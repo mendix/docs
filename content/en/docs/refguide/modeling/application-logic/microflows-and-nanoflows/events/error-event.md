@@ -27,4 +27,5 @@ When adding an error event, you need to add an [error handler](/refguide/error-h
 
 ## 2 Read More
 
+* [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
 * [Error Handling in Nanoflows](/refguide/error-handling-in-nanoflows/)

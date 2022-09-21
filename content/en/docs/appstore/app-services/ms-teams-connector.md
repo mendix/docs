@@ -44,7 +44,6 @@ To download and install the Microsoft Teams Connector app service in your app, f
 
 {{% alert color="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
 
-
 ## 3 Usage
 
 ### 3.1 Configuring Webhooks in the Communication Services Console

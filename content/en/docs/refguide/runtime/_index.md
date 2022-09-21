@@ -9,23 +9,29 @@ tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 
 ## 1 Introduction
 
-The Mendix Runtime is effectively an interpreter which "runs" a Mendix model and serves pages to the user.
+The Mendix Runtime is an interpreter which runs a [Mendix model](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/) and serves pages to the user.
 
-Each patch version of Mendix comes with its own version of the runtime which implements the features which are available in that version of Mendix. For example, runtimes for Mendix 8.4.1 and 8.4.2 are different and can only run Mendix apps built for that version.
+Each [patch version](/releasenotes/studio-pro/lts-mts/) of Mendix comes with its own version of the Mendix Runtime which implements the features which are available in that version of Mendix. For example, runtimes for Mendix 8.4.1 and 8.4.2 are different and can only run Mendix apps built for that version.
 
 ## 2 Runtime Overview
 
-The Mendix runtime consists of two parts: the [Runtime Server](/refguide/runtime-server/) and the [Mendix Client](/refguide/mendix-client/). The relationship between the two is shown in the chart below.
+The Mendix Runtime consists of two parts: the [Runtime Server](/refguide/runtime-server/) and the [Mendix Client](/refguide/mendix-client/). The relationship between the two is shown in the diagram below.
 
-The Runtime Server is launched on a cloud platform, executes microflows, and connects to files, the relational database, and any other required services. It waits to be contacted by the Mendix Client. The Runtime Server is described in more detail in [Runtime Server](/refguide/runtime-server/).
+{{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
 
-The Mendix Client is started by the end-user. This can be within a web browser, or on another supported device. If it is in online mode, it starts a session with the Runtime Server which may or may not require authentication. The Runtime Server records the session details in the database so that the Mendix Client can make requests. The Mendix Client is described in more detail in [Mendix Client](/refguide/mendix-client/).
+Each of the components of Mendix Runtime is described below.
 
-The end-user interacts with the Mendix Client which then makes requests to the Runtime Server to process data or perform server-side functions (for example, microflows). At the end of the request, all state (including uncommitted data) is passed back to the Mendix Client. You can find more details of how this communication takes place in [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
+### 2.1 Runtime Server and Mendix Client
 
-Passing state from the Runtime Server to the Mendix Client enables the Runtime Server to be stateless, which means that any Runtime Server instance can respond to a request from the Mendix Client. A load balancer decides which Runtime Server instance will respond to a request. When an end-user session ends, the Runtime Server removes references to that session.
+The *Runtime Server* is launched on a cloud platform. It executes microflows, and connects to files, the relational database, and any other required services. It waits to be contacted by the Mendix Client. The Runtime Server is described in more detail in [Runtime Server](/refguide/runtime-server/).
 
-Where there is more than one instance of an app, one of the instances will be the *Cluster Leader*. The Runtime Server in that instance will be responsible for a number of activities which cannot easily be distributed. These include:
+The *Mendix Client* is started by the user, either within a web browser, or on another supported device. If it is in online mode, it starts a session with the Runtime Server which may or may not require authentication. The Runtime Server records the session details in the database, so that the Mendix Client can make requests. The Mendix Client is described in more detail in [Mendix Client](/refguide/mendix-client/).
+
+The user interacts with the Mendix Client, which then makes requests to the Runtime Server to process data or perform server-side functions (for example, microflows). At the end of the request, all state (including uncommitted data) is passed back to the Mendix Client. You can find more details of how this communication takes place in [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
+
+Passing state from the Runtime Server to the Mendix Client enables the Runtime Server to be stateless, which means that any Runtime Server instance can respond to a request from the Mendix Client. A load balancer decides which Runtime Server instance will respond to a request. When a user session ends, the Runtime Server removes references to that session.
+
+If there is more than one instance of an app, one of the instances is the *Cluster Leader*. The Runtime Server in that instance is responsible for a number of activities which cannot easily be distributed. These include:
 
 * Session cleanup handling
 * Cluster node expiration handling
@@ -37,50 +43,39 @@ Where there is more than one instance of an app, one of the instances will be th
 
 More information on multiple instances is in [Clustered Mendix Runtime](/refguide/clustered-mendix-runtime/).
 
-{{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
-
-Each of the components of the chart is described below:
-
-### 2.1 External Services
+### 2.2 External Services
 
 External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP(S) connections.
 
-### 2.2 Infrastructure
+### 2.3 Infrastructure
 
-This is the hardware on which the Mendix app will be deployed. It is usually provided as Infrastructure as a Service (IaaS) which provides virtual machines in the public or private cloud. However, the infrastructure can also be physical machines running on-premises. Examples of infrastructure are Amazon Web Services (AWS), Microsoft Azure, or Windows Server machines.
+This is the hardware on which the Mendix app is deployed. It is usually provided as Infrastructure as a Service (IaaS), which provides virtual machines in the public or private cloud. However, the infrastructure can also be physical machines running on-premises. Examples of infrastructure are Amazon Web Services (AWS), Microsoft Azure, or Windows Server machines.
 
-### 2.3 Files
+### 2.4 Files
 
-This is where files are stored which are part of the data used by the app. In particular it contains the value of *FileDocument* objects, including images, which are binary objects that are stored outside the database to avoid size and performance restrictions.
+This is the storage location for data files used by the app. More specifically, it contains the value of FileDocument objects, including images, which are binary objects that are stored outside the database to avoid size and performance restrictions.
 
-### 2.4 Relational Database
+### 2.5 Relational Database
 
-This is the database (or sometimes the schema of a shared database) which holds the objects as defined in the domain model(s) in the app.
+This is the database (or sometimes the schema of a shared database) which holds the objects as defined in the domain models in the app.
 
-### 2.5 Platform
+### 2.6 Platform
 
-This is the operating system on which the Mendix app is running plus additional services, such as a database, which have been bound to the app.
+This is the operating system on which the Mendix app is running, plus additional services, such as a database, which are bound to the app.
 
-### 2.6 Instance
+### 2.7 Instance
 
-Also called the **App Container**. This launches and exposes the Runtime Server. There may be only one instance, but to provide high availability and better performance there can be many instances.
-
-### 2.7 Runtime Server
-
-This is the server side of the Mendix runtime. It is described in [Runtime Server](/refguide/runtime-server/).
+Also called the App Container, this launches and exposes the Runtime Server. At least one instance must exist, but to provide high availability and better performance there can be many instances.
 
 ### 2.8 Load Balancer
 
 The load balancer takes incoming requests from the Mendix Client and forwards them to a Runtime Server instance. It balances the load by making sure that requests are distributed evenly to the different instances.
+
 The Mendix Client communicates with the load balancer using HTTPS. Communication on the server side of the load balancer, to environment instances and CDN, is performed using HTTP.
 
 ### 2.9 CDN Static Config
 
-The CDN (Content Delivery Network) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
-
-### 2.10 Mendix Client
-
-This is the browser or device which allows the end-user to interact with the app. This can be a web browser, such as Chrome, or a mobile device, such as an iPhone. It typically has a screen, pointer device, and input device to allow end-users to use the app. The Mendix Client is described in [Mendix Client](/refguide/mendix-client/).
+The Content Delivery Network (CDN) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, CSS files which define the app's theme, and JavaScript files which define client-side logic.
 
 ## 3 Licensing
 

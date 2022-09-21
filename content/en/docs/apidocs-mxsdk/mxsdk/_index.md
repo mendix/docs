@@ -8,7 +8,7 @@ tags: ["sdk", "platform sdk", "model sdk"]
 
 ## 1 Introduction and FAQ
 
-Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) can make your life easier, you should learn about the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Start with the [SDK Introduction](/apidocs-mxsdk/mxsdk/sdk-intro/) and the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). 
+Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) can make your life easier, start with the [SDK Introduction](/apidocs-mxsdk/mxsdk/sdk-intro/) and the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). 
 
 ## 2 SDK Reference Guide
 

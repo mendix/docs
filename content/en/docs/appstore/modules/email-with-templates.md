@@ -1,15 +1,15 @@
 ---
-title: "Email with Templates"
+title: "Email Module with Templates"
 url: /appstore/modules/email-with-templates/
 category: "Modules"
-description: "Describes the configuration and usage of the Email with Templates module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "email with templates", "token", "platform support"]
+description: "Describes the configuration and usage of the Email Module with Templates, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "email module with templates", "token", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Email with Templates](https://marketplace.mendix.com/link/component/259/) module lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
+[Email Module with Templates](https://marketplace.mendix.com/link/component/259/) lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
 
 For a deep-dive look into using this module, check out this video:
 
@@ -83,7 +83,7 @@ On the [Azure portal](https://portal.azure.com/), ensure that you have the follo
 
 #### 3.1.4 Client ID, Tenant ID, and Client Secret 
 
-The **Email with Templates** module requires a **Client ID**, **Tenant ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
+The Email Module with Templates requires a **Client ID**, **Tenant ID** and **Client Secret**. These will be available on the [Azure portal](https://portal.azure.com/) once you have registered your app.
 
 #### 3.1.5 Configure After-Startup Microflow
 

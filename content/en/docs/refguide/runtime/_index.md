@@ -19,6 +19,10 @@ The Mendix Runtime consists of two parts: the [Runtime Server](/refguide/runtime
 
 {{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
 
+Each of the components of Mendix Runtime is described below.
+
+### 2.1 Runtime Server and Mendix Client
+
 The *Runtime Server* is launched on a cloud platform. It executes microflows, and connects to files, the relational database, and any other required services. It waits to be contacted by the Mendix Client. The Runtime Server is described in more detail in [Runtime Server](/refguide/runtime-server/).
 
 The *Mendix Client* is started by the user, either within a web browser, or on another supported device. If it is in online mode, it starts a session with the Runtime Server which may or may not require authentication. The Runtime Server records the session details in the database, so that the Mendix Client can make requests. The Mendix Client is described in more detail in [Mendix Client](/refguide/mendix-client/).
@@ -39,35 +43,29 @@ If there is more than one instance of an app, one of the instances is the *Clust
 
 More information on multiple instances is in [Clustered Mendix Runtime](/refguide/clustered-mendix-runtime/).
 
-Each of the components of Mendix Runtime is described below.
-
-### 2.1 External Services
+### 2.2 External Services
 
 External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP(S) connections.
 
-### 2.2 Infrastructure
+### 2.3 Infrastructure
 
 This is the hardware on which the Mendix app is deployed. It is usually provided as Infrastructure as a Service (IaaS), which provides virtual machines in the public or private cloud. However, the infrastructure can also be physical machines running on-premises. Examples of infrastructure are Amazon Web Services (AWS), Microsoft Azure, or Windows Server machines.
 
-### 2.3 Files
+### 2.4 Files
 
-This is the storage location for data files used by the app. More specifically, it contains the value of *FileDocument* objects, including images, which are binary objects that are stored outside the database to avoid size and performance restrictions.
+This is the storage location for data files used by the app. More specifically, it contains the value of FileDocument objects, including images, which are binary objects that are stored outside the database to avoid size and performance restrictions.
 
-### 2.4 Relational Database
+### 2.5 Relational Database
 
 This is the database (or sometimes the schema of a shared database) which holds the objects as defined in the domain models in the app.
 
-### 2.5 Platform
+### 2.6 Platform
 
 This is the operating system on which the Mendix app is running, plus additional services, such as a database, which are bound to the app.
 
-### 2.6 Instance
+### 2.7 Instance
 
 Also called the App Container, this launches and exposes the Runtime Server. At least one instance must exist, but to provide high availability and better performance there can be many instances.
-
-### 2.7 Runtime Server
-
-This is the server side of the Mendix Runtime. For more information, see [Runtime Server](/refguide/runtime-server/).
 
 ### 2.8 Load Balancer
 
@@ -78,10 +76,6 @@ The Mendix Client communicates with the load balancer using HTTPS. Communication
 ### 2.9 CDN Static Config
 
 The Content Delivery Network (CDN) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, CSS files which define the app's theme, and JavaScript files which define client-side logic.
-
-### 2.10 Mendix Client
-
-This is the web browser (for example, Google Chrome) or mobile device (for example, an iPhone) which allows the user to interact with the app. It typically has a screen, pointer device, and input device to allow users to use the app. The Mendix Client is described in [Mendix Client](/refguide/mendix-client/).
 
 ## 3 Licensing
 

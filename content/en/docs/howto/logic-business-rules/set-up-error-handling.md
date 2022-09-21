@@ -17,7 +17,7 @@ This document tells you how errors can be handled in microflows, how error handl
 
 ### 2.1 Transactions Keep Your Data Consistent
 
-Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. This means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed or nothing is executed. That is the only way to keep processes and data consistent. 
+Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed or nothing is executed. Accordingly, if you do not specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. This means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed or nothing is executed. That is the only way to keep processes and data consistent. 
 
 ### 2.2 Transactions Keep the Changes Isolated
 
@@ -57,7 +57,7 @@ For the latter two options, you can draw an additional flow from the microflow e
 
 Unlike the [Rollback object](/refguide/rollback-object/) action, the **Rollback** option of an error event does not take into account whether an object has been committed. This means that even committed objects will be rolled back to the value they had when the microflow (or the microflow it was called from) began. The rollback also applies to any changes you made in [Event Handlers](/refguide/event-handlers/) such as **After Commit**.
 
-The **Custom without rollback** option is only invoked when the action itself causes an error event, meaning you will still have access to any database objects you created or modified before the action which caused the error handler event. If you want to keep changes to objects of a persistable entity, you still need to commit them explicitly after a **Custom without rollback** error if they weren't committed before the error occurred.
+The **Custom without rollback** option is only invoked when the action itself causes an error event, meaning you will still have access to any database objects you created or modified before the action which caused the error handler event. If you want to keep changes to objects of a persistable entity, you still need to commit them explicitly after a **Custom without rollback** error if they were not committed before the error occurred.
 
 ### 3.2 Error Handling on a Loop
 
@@ -150,7 +150,7 @@ Most of the time, you will be using a single activity with custom error handling
 
 Especially when interacting with other systems, you need to think about how you want to process the errors. The best solution depends on what you want to do: continue, skip/revert the record you are working on, or keep the changes you have made so far but stop the process. All of these options can be done as long as you know what you want to achieve. The instructions below will show you a couple of examples of how you can combine different error handling options. 
 
-### 5.1 Rollback in the Parent Microflow, Rollback in the Sub-microflow
+### 5.1 Rollback in the Parent Microflow, Rollback in the Sub-Microflow
 
 | Color | Description |
 | --- | --- |
@@ -163,7 +163,7 @@ Especially when interacting with other systems, you need to think about how you 
 
 | Color | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – this transaction is initiated when the microflow starts. This transaction will be completely reverted because the sub-microflow re-throws the exception. None of the changes made during this transaction will be persisted. (If the sub-microflow wasn't re-throwing the exception, all changes except **SendEmail** would have been persisted in the database.) |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/orange.png" >}} | Initial transaction – this transaction is initiated when the microflow starts. This transaction will be completely reverted because the sub-microflow re-throws the exception. None of the changes made during this transaction will be persisted. (If the sub-microflow was not re-throwing the exception, all changes except **SendEmail** would have been persisted in the database.) |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/blue.png" >}} | Transaction initiated by **Custom with rollback** activity – after catching the exception, a new transaction is initiated to execute the remaining microflow activities. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/green.png" >}} | Transaction initiated by sub-microflow – at the start of the sub-microflow, a new transaction is initiated. Any changes made in this transaction will be reverted because the activities in the **SendEmail** sub-microflow use default error handling. |
 

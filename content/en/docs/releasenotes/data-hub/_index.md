@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### September 22nd, 2022
+
+#### Improvements
+
+* We added a toggle that allows you to filter only your owned content in Catalog.
+
 ### September 8th, 2022
 
 #### Improvements

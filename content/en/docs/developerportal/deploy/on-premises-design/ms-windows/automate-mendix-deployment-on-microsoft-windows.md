@@ -117,7 +117,7 @@ Could not load file or assembly, Version=3.3.0.0, Culture=neutral, PublicKeyToke
 
 #### 5.1.1 Cause
 
-This error or any similar error message is  likely related to a mismatch in the .NET version between PowerShell and the Mendix cmdlets. The Mendix cmdlets require .NET version 4, so the error may show if PowerShell is using .NET 2 or 3.
+This error, or any similar error message, is likely to be related to a mismatch in the .NET version between PowerShell and the Mendix cmdlets. The Mendix cmdlets require .NET version 4, so the error may show if PowerShell is using .NET 2 or 3.
 
 #### 5.1.2 Solution
 

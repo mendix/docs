@@ -1,0 +1,20 @@
+# www.robotstxt.org
+
+{{- $isProduction := eq hugo.Environment "production" -}}
+{{- if $isProduction }}
+# Allow crawling of all content
+{{- else }}
+# Prevent crawling - not production site
+{{- end }}
+
+User-agent: *
+Sitemap: {{ "/sitemap.xml" | absURL }}
+Disallow: /_includes/
+Disallow: /_print/
+Disallow: /attachments/
+Disallow: /404.html
+{{- if not $isProduction }}
+Disallow: /
+{{- end }}
+
+# End of robots.txt file

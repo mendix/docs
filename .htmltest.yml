@@ -1,0 +1,49 @@
+# ==========================
+# Configuration for HTMLTEST
+# ========================== 
+# See documentation in repo: https://github.com/wjdp/htmltest
+
+DirectoryPath: "./public"
+DirectoryIndex: "index.html"
+FileExtension: .html
+# Do not check external files - will want to do this monthly or so - implement later
+CheckExternal: false
+CheckMailto: false
+# Not checking scripts for speed - should be OK as generated through HUGO
+CheckScripts: false
+CheckTel: false
+IgnoreAltMissing: true
+IgnoreDirectoryMissingTrailingSlash: false
+IgnoreDirs:
+- "_includes"
+- "_print"
+- "attachments"
+- "css"
+- "favicons"
+- "icons"
+- "js"
+- "scss"
+- "webfonts"
+IgnoreEmptyHref: true
+IgnoreInternalEmptyHash: true
+IgnoreInternalURLs:
+- "/misc/js/script.js"
+- "/js/"
+# HUGO generates a lot of tags which don't need to be tested
+IgnoreTagAttribute: "data-proofer-ignore"
+# Ignore URLs which return a 401/403 authentication error - might want to check these ignored URLs occasionally to ensure they are still valid.
+# NOTE DOUBLE \\ needed to escape special characters in the string
+IgnoreURLs:
+- "example.com"
+- "support.mendix.com.*"
+- "sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.*"
+- "www.microsoft.com/en-us/download/details.aspx\\?id=11774"
+
+# ==========================================================
+# Speed up using concurrent testing by changing flag to true
+# Using 4 concurrent documents halves the processing time
+# EXPERIMENTAL - REMOVE IF THERE ARE PROBLEMS
+#===========================================================
+
+TestFilesConcurrently: false
+DocumentConcurrencylimit: 4

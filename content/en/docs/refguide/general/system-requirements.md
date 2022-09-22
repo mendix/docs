@@ -16,12 +16,26 @@ This document presents the system requirements for the various parts of the Mend
 
 Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
-The following frameworks are automatically installed (if necessary):
+The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
-* Microsoft .NET 6.0.0 and all applicable Windows security patches
-* Microsoft Visual C++ 2010 SP1 Redistributable Package
-* Microsoft Visual C++ 2015 Redistributable Package
-* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically) if you do not have any JDK 11 installed) 
+* Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
+{{% todo %}}Do we still need C++ 2010 for any versions of Mx9?{{% /todo %}}
+* Microsoft Visual C++ 2015 Redistributable Package (x64)
+* Microsoft Visual C++ 2019 Redistributable Package (x64)
+* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
+    * AdoptOpenJDK 11 (x64) – for Mendix versions below 9.14.0
+    * Adoptium Temurin JDK 11 (x64) – for Mendix versions from 9.14.0 and below 9.18.0
+    * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
+    
+    Oracle JDK 11 can also be used if this is already installed.
+{{% todo %}}Are the following needed for all versions of Mx9?{{% /todo %}}
+* Git for Windows (x64)
+* Mendix Native Mobile Builder
+* Microsoft Edge WebView2 Evergreen Runtime (x64)
+
+If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
+
+* .NET 6 Desktop Runtime (arm64)
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.

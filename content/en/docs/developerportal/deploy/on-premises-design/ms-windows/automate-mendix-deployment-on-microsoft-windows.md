@@ -48,7 +48,7 @@ The scripts are intended to show the range of available deployment options. They
 
 ### 4.1 Sample Script - Update App
 
-The following script example demonstrates the process required to update your app. First, it imports the necessary cmdlets. After that, it stops your app and updates it with files extracted from the Mendix Deployment Package. Finally, the script restarts the app with the `SynchronizeDatabase` parameter to synchronize the database without user input. Without this parameter, you must give additional confirmation to execute the database commands.
+The following script example demonstrates the process required to update your app. Firstly, it imports the necessary cmdlets. After that, it stops your app and updates it with files extracted from the Mendix Deployment Package. Finally, the script restarts the app with the `SynchronizeDatabase` parameter to synchronize the database without user input. Without this parameter, you must give additional confirmation to execute the database commands.
 
 ```text {linenos=table}
 Import-Module '{<Mendix Service Console installation directory>}\Mendix.Service.Commands.dll'                                                                                                                        

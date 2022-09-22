@@ -87,11 +87,19 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 5.2 Enable Private Version Control with Subversion {#enable}
+### 5.2 Subversion 
+#### 5.2.1 Enable private version control with Subversion {#enable}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
-### 5.3 Enable Private Version Control with Git 
+### 5.3 Git 
+#### 5.3.1 User details
+Specify your name and email here to let Git compose well formed commit messages. 
+
+#### 5.3.2 Automatic repository optimization
+Select this option when you want to run Git repository optimization process automatically on a regular basis. This will help you to keep the storage structure in a good shape, aloowing for benefits from both preformance and repository size perspectives. Studio Pro keeps track on number of commits made to the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information look [here](link to git-gc-page) 
+
+#### 5.3.3 Enable private version control with Git (Beta)
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 

@@ -105,7 +105,7 @@ Install-MxServer -LiteralPath {<target folder for the downloaded file>}\mendix-{
 
 ## 5 Troubleshooting
 
-If you encounter any issues while configuring automated Mendix deployment on Windows, see the following troubleshooting tips to help you solve them.
+If you encounter any issues while automating Mendix deployment on Windows using cmdlets, use the following troubleshooting tips to help you solve them.
 
 ### 5.1 Could Not Load File or Assembly
 

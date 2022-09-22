@@ -14,7 +14,7 @@ Page parameters provide context to data views and allow you using multiple objec
 
 {{< figure src="/attachments/studio/page-editor/page-parameter/page-parameters.png" >}}
 
-You can pass multiple objects when opening a page same way microflows do. For example, you can add multiple top-level data views, each connected to a different parameter and displaying data from their entities: you can show Employee’s data in one data view and Order’s data in another data view adding two page parameters to the page.
+You can pass multiple objects when opening a page the same way microflows do. For example, you can add multiple top-level data views, each connected to a different parameter and displaying data from their entities: you can show Employee’s data in one data view and Order’s data in another data view adding two page parameters to the page.
 
 Page parameters can be referred to from both top-level data views and data views placed inside other data views. Additionally, you can select associations of a page parameter, which reduces the need for an additional data view just to be able to follow the association. 
 

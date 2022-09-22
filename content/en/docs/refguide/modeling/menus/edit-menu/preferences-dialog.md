@@ -97,7 +97,7 @@ Select this option when you want to work on an app that is not stored in [Mendix
 Specify your name and email here to let Git compose well formed commit messages. 
 
 #### 5.3.2 Automatic repository optimization
-Select this option when you want to run Git repository optimization process automatically on a regular basis. This will help you to keep the storage structure in a good shape, aloowing for benefits from both preformance and repository size perspectives. Studio Pro keeps track on number of commits made to the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information look [here](link to git-gc-page) 
+Select this option when you want to run Git repository optimization process automatically on a regular basis. This will help you to keep the storage structure in a good shape, aloowing for benefits from both preformance and repository size perspectives. Studio Pro keeps track on number of commits made to the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information look [here](/refguide/git-storage-optimization-dialog/) 
 
 #### 5.3.3 Enable private version control with Git (Beta)
 

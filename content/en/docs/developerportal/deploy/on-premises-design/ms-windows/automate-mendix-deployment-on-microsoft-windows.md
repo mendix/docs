@@ -8,7 +8,7 @@ tags: ["deploy", "Windows", "Mendix Service Console", "Microsoft", "CI/CD pipeli
 
 ## 1 Introduction
 
-On Windows servers, instead of deploying your application manually, you can automate that part of your CI/CD pipeline by using [Power Shell cmdlets](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/cmdlet-overview). Automating deployment makes the process of updating your application faster and lessens the potential for user errors by replacing the manual deployment steps with automation scripts. This document describes the required configuration, and provides sample automation scripts that you can use as basis for scripting your own deployment.
+On Windows servers, instead of deploying your application manually, you can automate that part of your CI/CD pipeline by using [PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/cmdlet-overview). Automating deployment makes the process of updating your application faster and lessens the potential for user errors by replacing the manual deployment steps with automation scripts. This document describes the required configuration, and provides sample automation scripts that you can use as basis for scripting your own deployment.
 
 ## 2 Prerequisites
 

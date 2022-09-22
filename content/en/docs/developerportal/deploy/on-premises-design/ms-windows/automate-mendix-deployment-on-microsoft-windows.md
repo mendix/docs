@@ -64,7 +64,7 @@ Stop-MxApp $APP_NAME                              
 Update-MxApp $APP_NAME -LiteralPath $MDA_PATH + "/" + $MDA_FILE
 
 # start app, update database                                     
-Start-MxApp MyFirstApp -SynchronizeDatabase
+Start-MxApp $APP_NAME -SynchronizeDatabase
 ```
 
 {{% alert color="warning" %}}

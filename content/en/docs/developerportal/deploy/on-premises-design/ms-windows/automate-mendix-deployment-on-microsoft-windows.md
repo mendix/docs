@@ -15,6 +15,7 @@ On Windows servers, instead of deploying your application manually, you can auto
 Before starting this how-to, make sure you complete the following prerequisites:
 
 * Manually deploy your Mendix app and ensure that there are no errors during the deployment. For more information, see [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
+* Ensure that your Windows PowerShell version is 5.1. Other versions are currently not supported.
 * Ensure that your Windows Service Console version is 4.3 or above.
 * Familiarize yourself with the update process for Mendix apps running on Windows. For more information, see [MS Windows: Update a Mendix App](/developerportal/deploy/updating-a-mendix-application/).
 
@@ -177,3 +178,37 @@ PowerShell is run without administrator privileges.
 #### 5.3.2 Solution
 
 Run PowerShell as an administrator.
+
+### 5.4 Could not load file or assembly Mendix.Service
+
+PowerShell shows an error message similar to the following:
+
+```text {linenos=false}
+Start-MxApp: Could not load file or assembly 'Mendix.Service, Version=4.7.0.0, Culture=neutral, PublicKeyToken=null'. Het systeem kan het opgegeven bestand niet vinden.
+```
+#### 5.4.1 Cause
+
+You ran the `Start-MxApp` cmdlet in a version of PowerShell other than 5.1.
+
+#### 5.4.2 Solution
+
+Use Windows PowerShell 5.1 to run Mendix cmdlets. Other versions of PowerShell are currently not supported.
+
+### 5.5 Unable to start the app. Reason: The database does not exist.
+
+When you run the `Start-MxApp $APP_NAME` or `Start-MxApp $APP_NAME -synchronizedatabase` cmdlets, PowerShell shows an error message similar to the following:
+
+```Start-MxApp : Unable to start the app. Reason: The database does not exist. 
+At line:1 char:1 
++ Start-MxApp MyFirstApp -synchronizedatabase 
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
++ CategoryInfo : InvalidOperation: (MyFirstApp:String) [Start-MxApp], Exception 
++ FullyQualifiedErrorId : AppProcessError,Mendix.Service.Commands.StartAppCommand
+```
+#### 5.5.1 Cause
+
+You tried to start the app without first creating the app database.
+
+#### 5.5.2 Solution
+
+Deploy your app manually before you running automated deployment scripts. For more information, see [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).

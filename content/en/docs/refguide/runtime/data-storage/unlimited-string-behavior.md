@@ -7,7 +7,7 @@ weight: 20
 
 ## 1 Introduction
 
-In the domain model, you can select the attribute type String and set its length to **Unlimited**. Underlying implementation of this attribute differs per database.
+In the domain model, you can select the attribute type String and set its length to **Unlimited**. The underlying implementation of this attribute differs per database.
 
 ## 2 Behavior of Unlimited Strings by Database Type
 

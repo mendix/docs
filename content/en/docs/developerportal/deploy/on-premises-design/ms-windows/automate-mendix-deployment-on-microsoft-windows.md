@@ -33,7 +33,6 @@ To install Mendix-specific cmdlets that you can use to script your app deploymen
     * `Stop-MxApp`
     * `Update-MxApp`
     * `Install-MxServer`
-    * `Get-MxApp`
     
     For more information about each command and its parameters, add `-?` after the command, for example, `Start-MxApp -?`.
 

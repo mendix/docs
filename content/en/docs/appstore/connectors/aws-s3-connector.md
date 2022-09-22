@@ -61,7 +61,7 @@ To use these Java Actions you must do the following:
 
 2. Provide other parameters to the action as objects of entities in the AWSS3Connector domain model. 
 
-3. Have an [error handler](/howto/logic-business-rules/set-up-error-handling/) defined for the Java action to deal with any errors.
+3. Have an [error handler](/refguide/error-handling-in-microflows/) defined for the Java action to deal with any errors.
 
 The Java Actions you can use are listed below. You can drag them into your microflows from the **Toolbox**.
 

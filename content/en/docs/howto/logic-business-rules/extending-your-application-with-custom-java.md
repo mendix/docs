@@ -164,6 +164,5 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 * [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Set Up Error Handling](/howto/logic-business-rules/set-up-error-handling/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract & Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

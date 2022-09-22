@@ -12,7 +12,7 @@ On Windows servers, instead of deploying your application manually, you can auto
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you complete the following prerequisites:
 
 * Manually deploy your Mendix app and ensure that there are no errors during the deployment. For more information, see [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
 * Ensure that your Windows Service Console version is 4.3 or above.

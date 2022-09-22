@@ -14,30 +14,30 @@ Git can accumulate various types of garbage objects inside your repositories. Th
 
 The are two ways you can use this option:
 
-* **Manual repository optimization** – Use this option when you need to perform garbage collection immediately. 
+* [Manual repository optimization](#manual-optimization) – Use this option when you need to perform garbage collection immediately. 
 
-* **Automatic repository optimization** – Use this option to keep your repository to regularly clean your repository, running the optimization process in background repeatedly. 
+* [Automatic repository optimization](#automatic-optimization) – Use this option to keep your repository to regularly clean your repository, running the optimization process in background repeatedly. 
 
 {{% alert color="warning" %}}
 Make sure that you are not performing any commands through Git command line on the repository while the storage optimization is in progress. In some (very rare and limited) cases this might lead to a damage, a serious repository structure corruption.
 {{% /alert %}}
 
-## 2 Manual Repository Optimization
+## 2 Manual Repository Optimization {#manual-optimization}
 
 To optimize Git repository storage manually, do the following:
 
 1. Open the **Version Control** menu > **Optimize Repository Storage...**.
 2. In the **Optimize Repository Storage** pop-up window, press **Optimize** button. 
 
-The optimization process should start immediately. The status of the running process to be reflected in the progress bar of the pop-up window and the Studio Pro status bar. You can close the pop-up window and continue working on the app as usual, though most of the **Version Control** menu items such as **Update**, **Commit** and **History** are disabled until the process is completed.
+The optimization process should start immediately. The status of the running process is displayed in the progress bar of the pop-up window and the Studio Pro status bar. The operation might some time. You can close the pop-up window and continue working on the app as usual. However, while optimization is in progress, most of version control commands, such as committing and updating, are disabled. 
 
-When the process is completed, you will see the **Git storage optimization** notification message and the disabled commands are available again.  
+When the process is completed, you will see the **Git storage optimization** notification message and the disabled commands become available again.  
 
 {{% alert color="info" %}}
 Finishing the optimization process does not close the **Optimize Repository Storage** pop-up window automatically. You have to do this manually. You can also close the form during optimization process, that will not affect the process.
 {{% /alert %}}
 
-## 3 Automatic Repository Optimization
+## 3 Automatic Repository Optimization {#automatic-optimization}
 
 To optimize Git repository storage automatically, do the following:
 

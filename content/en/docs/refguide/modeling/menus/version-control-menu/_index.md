@@ -75,7 +75,7 @@ When you optimize the repository storage, the file revisions are compressed to r
 
 {{% alert color="info" %}}
 
-The operation might some time. While optimization is in progress, most of version control commands, such as committing and updating, are disabled. For more information read through [Git Storage Optimization](/refguide/git-storage-optimization-dialog/) page.
+The operation might some time. While optimization is in progress, most of version control commands, such as committing and updating, are disabled. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization/).
 
 {{% /alert %}}
 

@@ -6,6 +6,12 @@ description: "Describes Mendix Validation Assist on pages."
 tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bot", "validation", "data validations", "field validation", "form validation"]
 ---
 
+{{% alert color="info" %}}
+
+This feature is currently in [Public Beta](/releasenotes/beta-features/).
+
+{{% /alert %}}
+
 ## 1 Introduction 
 
 The Validation Assist helps developers build validation microflows in a more automated way using pre-built expressions.  [Validation rules](https://docs.mendix.com/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](https://docs.mendix.com/howto/data-models/setting-up-data-validation/) in Mendix. Building data validations in microflows is a manual and repetitive task and Validation Assist helps automate it. 

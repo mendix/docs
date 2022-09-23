@@ -10,7 +10,7 @@ tags: ["studio pro", "consumed business event", "published business event"]
 
 Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/modules/business-events/) module, applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-### Adding the Services in Studio Pro
+### Adding Business Event Services in Studio Pro
 
 To add a service, right-click on a module in your app and go to **Add other** > **Published Business Event Service** or **Consumed Business Event Service**.
 

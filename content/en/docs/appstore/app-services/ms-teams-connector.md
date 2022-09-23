@@ -142,7 +142,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
 #### 3.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
 
-1. Log in to the [MicrosoftAzurel](https://portal.azure.com/#home) portal with your company account.
+1. Log in to the [Microsoft Azure](https://portal.azure.com/#home) portal with your company account.
 2. If your account gives you access to more than one tenant, select your account on the upper-right corner, and set your portal session to the Azure AD tenant of your company.
 
     {{% alert color="info" %}}If your access is denied, contact your IT team.{{% /alert %}}

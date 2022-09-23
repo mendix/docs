@@ -1,6 +1,5 @@
 ---
 title: "Configuration Module API for Pluggable Widgets"
-linktitle: "Configuration Module API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-config-api/
 description: A guide for understanding the configuration module API which influences the behaviour of pluggable widgets in Studio Pro.
 tags: ["Widget", "Pluggable", "Custom", "Preview", "Structure Mode", "Visibility", "editorConfig"]
@@ -11,21 +10,23 @@ aliases:
 
 ## 1 Introduction
 
-The configuration module of a pluggable widget allows for several modeler experience improvements. It is expected to be in a javascript file with the same name as the widget’s XML file, ending with `.editorConfig.js`. (For example, next to `TextBox.xml` would be a `TextBox.editorConfig.js`.)
+A pluggable widget's configuration module allows for several modeler experience improvements. 
+
+It is usually located in a JavaScript file using the same name as the widget’s XML file, ending with *.editorConfig.js*. For example, next to *TextBox.xml* would be a *TextBox.editorConfig.js*.
 
 The file is expected to be in CommonJS format, using the `exports` object to export functions.
 
 ## 2 Widget Developer Console
 
-Errors that are related to the configuration module are shown in the "Widget Developer Console". This console is separate from the default console and can be found in the View menu.  
+Errors that are related to the configuration module are shown in the Widget Developer Console. This console is separate from the default console and can be found in the [View menu](/refguide/view-menu/).  
 
-## 3 Customizing the widget’s properties
+## 3 Customizing the Widget’s Properties
 
-To customize the properties available in the studio’s for the pluggable widget, the module should export a `getProperties` function. This function gets passed three parameters:
+To customize the properties available in the Studios for the pluggable widget, the module should export a `getProperties` function. This function is passed three parameters:
 
-- The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
-- The default property configuration.
-- An indicator for which studio the properties are built. This property is `"web"` for Studio, and `"desktop"` for Studio Pro.
+* The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
+* The default property configuration
+* An indicator for which of the Studios the properties are built for (this property is `"web"` for Studio and `"desktop"` for Studio Pro)
 
 ```typescript
 function getProperties(

@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/117555), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#event-broker) or run your own broker cluster.
+The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#mendix-event-broker) or run your own broker cluster.
 
 Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.
 
@@ -49,8 +49,8 @@ Licenses for the Mendix Event Broker are available for all regions, but once sel
 #### 2.1.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
 Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
-     1. On the App level, under Environments > [Services](/developerportal/deploy/mendix-cloud-deploy/environments/#service)
-     2. For all environments, on the [Environment Details](/developerportal/deploy/mendix-cloud-deploy/environments-details/#services) page
+     1. On the App level, under Environments > [Services](/developerportal/deploy/environments/#service)
+     2. For all environments, on the [Environment Details](/developerportal/deploy/environments-details/#services) page
 
 ## 3 Mendix Event Broker {#mendix-event-broker}
 
@@ -239,7 +239,7 @@ When you deploy your apps to the free cluster, a free event broker is provided a
 
 ### 6.2 Production Deployment
 
-To deploy to production, you must have a subscription to the [Mendix Event Broker](#event-broker). See [Mendix Event Broker License](#event-broker-license) for licensing information.
+To deploy to production, you must have a subscription to the [Mendix Event Broker](#mendix-event-broker). See [Mendix Event Broker License](#event-broker-license) for licensing information.
 
 You can also use your own event broker cluster.
 

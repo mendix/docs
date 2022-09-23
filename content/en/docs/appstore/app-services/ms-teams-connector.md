@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 ## 1 Introduction
 
-The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
+The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app sends out the message to the Microsoft Teams channel. 
 
 This app service is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
 
@@ -38,7 +38,7 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 
 ## 2 Installing the Component in Your App
 
-To download and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
+You can directly download the Mxmodule from the marketplace from the download tab and install the Microsoft Teams Connector app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-protected-module.png" >}}
 
@@ -46,52 +46,17 @@ To download and install the Microsoft Teams Connector app service in your app, f
 
 ## 3 Usage
 
-### 3.1 Configuring Webhooks in the Communication Services Console
+### 3.1 Configuring Webhook Url
 
-1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) to which you want to send messages. 
-2. Log into the Marketplace.
-3. Go to **My Marketplace** and then do as follows:
+1. Go to your Teams Channel in the Microsoft Teams.
+2. Hover over the **...** icon.
+3. Click on **connectors** as shown in the figure.
 
-    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/Connectors.png" >}}
 
-4. Click **Microsoft Teams Connector** to open the service management dashboard.
-5. Click **Manage Instances**. You are redirected to the [Communication Services Console](https://communication-appservices.mendixcloud.com/login.html) login page.
-6. Sign in to Communication Services Console using Mendix SSO.
-
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/console-login-view.png" >}}
-
-    The **Communication Services Console** shows all the communication services that you have subscribed.
-
-7. Go to the **Microsoft Teams Connector** tab. 
-8. Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
-
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-webhook-button-enabled.png" >}}
-
-9. Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
-
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-adder-popup.png" >}}
-
-10. Enter a **Webhook Name** for the Webhook.
-11. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
-12. **Save** the changes. The Webhook is added to the list.
-
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/webhook-data-view.png" >}}
-
-    The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
-
-    {{% alert color="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can click the **...** icon and then edit or delete the Webhook.{{% /alert %}}
-
-13. Copy the **Webhook ID** as follows:
-    1. Hover over the **...** icon in the **Action** column to open the pop-up menu.
-
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/edit-webhook-popup.png" >}}
-
-    2. Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
-
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/copied-popup.png" >}}
-
-        {{% alert color="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.{{% /alert %}}
+4. Enter the details and copy the connector url as shown in the figure.
+  
+     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-connectors.png" >}}
 
 ### 3.2 Sending Message to a Teams Channel
 
@@ -110,7 +75,7 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
     {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
-    1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
+    1. Set the **webhookURL** parameter to the **Webhook URL** generated in the Step 3.1.
     2. For **Message type**, select **Text** or **Card** from the drop-down list:
 
         * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
@@ -131,7 +96,7 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
     4. Click **OK** to save the changes and close the dialog box.
 
-After the **Send Message to Webhook** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
+After the **Send Message to Webhook** activity is configured, once the microflow that uses this activity is triggered, the app sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
 
 {{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
 

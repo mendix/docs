@@ -296,3 +296,5 @@ This service returns a `RecognizeCelebrity` object with results:
 | `FaceRecognizedCelebrity`        | `AmazonRekognitionConnector.FaceCelebrity`    | This entity provides information about the celebrity's face, such as its location in the image. It is a specialization of the `FaceCelebrity` generalization entity. |
 | `Celebrity`                      |                                               | This entity provides information about a celebrity recognized by the `RecognizeCelebrities` operation. It includes an identifier, a confidence, and a name. The identifier is an unique identifier for the recognized celebrity. The confidence is that of Amazon Rekognition service that it recognizes a celebrity. The name is that of the recognized celebrity. |
 | `LandmarkRecognizeCelebrity`     | `AmazonRekognitionConnector.Landmark`         | This entity contains the landmark results for the `RecognizeCelebrities` action. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
+
+test

@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 ## 1 Introduction
 
-With the [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module, applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+With [Mendix Business Events](https://marketplace.mendix.com/link/component/117555), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
 The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#event-broker) or run your own broker cluster.
 
@@ -28,8 +28,9 @@ Business events help you automate the resulting actions when something happens i
 
 ### 1.2 Pre-Requisites
 
-To use the Mendix Business Events module, you will need the following:
+To use Mendix Business Events, you will need the following:
 
+* The Mendix Business Events Module in the Mendix Marketplace
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above
 * At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
 * An [event broker](#event-broker), either a licensed [Mendix Event Broker] or your own event broker cluster for local deployments, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
@@ -37,7 +38,7 @@ To use the Mendix Business Events module, you will need the following:
 
 ## 2 Licensing {#licensing}
 
-The [Mendix Events Module](https://marketplace.mendix.com/link/component/117555) itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you.
+The Mendix Business Events module itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](#event-broker-license) for a broker to be set up for you.
 
 ### 2.1 Mendix Event Broker License {#event-broker-license}
 

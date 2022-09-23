@@ -26,7 +26,7 @@ To ensure that every user or process can only see persisted data, all the data c
 
 ### 2.3 Transactions Prevent Two Processes from Using the Same Object at the Same Time
 
-When an object is updated, the Mendix Runtime will place a lock on that object for the duration of the transaction. This means that while the transaction is running, no other transactions within the same session are allowed to read or write that object. As soon as the transaction is finished, the lock will be released automatically and any waiting processes will continue normally.
+When an object is updated, the Mendix Runtime will place a lock on that object for the duration of the transaction. This means that while the transaction is running, no other transactions (even in the same session) are allowed to read or write that object. As soon as the transaction is finished, the lock will be released automatically and any waiting processes will continue normally.
 
 Please note that this is not the same as preventing two users from editing the same object. It is still possible for two users to open the same object and change it 1 millisecond after each other. The latest change will still be applied.
 

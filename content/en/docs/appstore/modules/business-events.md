@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 ## 1 Introduction
 
-With [Mendix Business Events](https://marketplace.mendix.com/link/component/117555), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
 The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#mendix-event-broker) or run your own broker cluster.
 
@@ -30,7 +30,7 @@ Business events help you automate the resulting actions when something happens i
 
 To use Mendix Business Events, you will need the following:
 
-* The Mendix Business Events Module in the Mendix Marketplace
+* The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module from the Mendix Marketplace
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above
 * At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
 * An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) or your own event broker cluster for local deployments, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
@@ -92,7 +92,7 @@ This is implemented as follows:
 
 ## 4 Configuration
 
-To publish or consume business events, download and import the [Mendix Business Events](https://marketplace.mendix.com/link/component/117555) module, then right-click on the **App Explorer** and import it into your app.
+To publish or consume business events, download and import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module, then right-click on the **App Explorer** and import it into your app.
 
 ### 4.1 Configuring Local Deployments {#config-local-deployment}
 

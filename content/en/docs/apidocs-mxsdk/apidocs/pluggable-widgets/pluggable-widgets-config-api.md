@@ -325,14 +325,13 @@ If the caption is `null`, `undefined`, or not a string, then the default caption
 
 ## 7 Widget Preview in Structure Mode
 
-To configure the appearance of the custom widget in Studio Pro, export a `getPreview` function.
-This function receives two parameters: the first one contains the current values, and the second one indicates whether dark mode is set. The function should return a preview properties object containing the configuration of the custom widget preview.
+To configure the appearance of the custom widget in Studio Pro, export a `getPreview` function. This function receives two parameters: the first one contains the current values, and the second one indicates whether dark mode is set. The function should return a preview properties object containing the configuration of the custom widget preview.
 
-Please note that the default colors will be automatically adjusted for dark mode (e.g. font color, border color, etc.). However, the `isDarkMode` flag can be used when setting colors explicitly.
+Please note that the default colors will be automatically adjusted for dark mode (for example font color, border color, and more). However, the `isDarkMode` flag can be used when setting colors explicitly.
 
 The following describes the API for the preview properties object that the `getPreview` should return.
 
-General Element Structure:
+The general element structure:
 
 ```typescript
 type BaseProps = {
@@ -341,12 +340,12 @@ type BaseProps = {
 }
 ```
 
-All types of preview properties share two common properties: `type`, and `grow`: 
+All types of preview properties share two common properties: `type` and `grow`: 
 
 * `type` can be any of the preview types described below, such as `"Image"`, `"Text"`, or `"RowLayout"`
-* `grow` is optional and only takes effect if the current element is a child of a row layout. Examples of using this can be found in the row layout section below
+* `grow` is optional and only takes effect if the current element is a child of a row layout (see the [Row Layout](#row-layout) section for examples)
 
-The following elements extend the base preview props with properties native to their elements. For example, it could contain `content` for text elements, or `document` and `width` for image elements. The following will list all available element types and their properties.
+The following elements extend the base preview props with properties native to their elements. For example, it could contain `content` for text elements, or `document` and `width` for image elements. The following element sections will list all available element types and their properties.
 
 ### 7.1 Image
 
@@ -361,15 +360,16 @@ type ImageProps = BaseProps & {
 }
 ```
 
-Images properties can receive different types of input (always requires _either_ a `document` or `data`):
+Images properties can receive different types of input (but they always requires *either* a `document` or a `data`):
 
-* `document`: An SVG image string
-* `data`: A base64 encoded image string
-* `property`: The value of an image property. _Note: When passing an image property, it will only show if a static image has been set. A `document` or `data` still needs to be passed as well, which will act as a fallback image when the property is empty or a dynamic image has been set._
+* `document`: an SVG image string
+* `data`: a base64 encoded image string
+* `property`: the value of an image property. 
+    * Please note when passing an image property, it will only show if a static image has been set (a `document` or `data` still needs to be passed as well, which will act as a fallback image when the property is empty or a dynamic image has been set)
 
 Additionally, a fixed `width` and `height` can be set. If not set, it will maximize to the available width. If the width and height are set to an aspect ratio that is different from the original image aspect ratio, it will show a section of the image so the image is not distorted.
 
-Example of a circle SVG:
+Here is an example of a circle SVG:
 
 ```typescript
 export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => {
@@ -418,7 +418,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
 ```
     {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
 
-### 7.3 Row Layout
+### 7.3 Row Layout {#row-layout}
 
 ```typescript
 type RowLayoutProps = ContainerProps & {

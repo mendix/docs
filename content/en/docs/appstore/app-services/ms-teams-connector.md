@@ -49,19 +49,16 @@ Follow the instructions in the [Importing Content from the App Explorer](/appsto
 ### 3.1 Generating the Webhook URL {#generate-webhook-url}
 
 1. In Microsoft Teams, go to your Teams channel.
-
 2. Click the ellipsis (**...**) icon of your Teams channel to open the pop-up menu.
-
-3. Click **Connectors** to open the **Incoming Webhook** page.
+3.  Click **Connectors** to open the **Incoming Webhook** page.
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connectors.png" >}}
 
-4. Enter the details for your Webhook.
+4.  Enter the details for your Webhook and copy the connector URL as shown in the image below.
 
-5. Copy the connector URL as shown in the image below. Save the URL for later use.
+    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-connectors.png" >}}
 
-     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-connectors.png" >}}
-
+5. Save the URL for later use.
 6. Click **Save** to save the changes and close the page.
 
 ### 3.2 Sending Messages to a Teams Channel
@@ -77,6 +74,7 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
 
 2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
+
 3. Specify the following settings with expression syntax:
 
     {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
@@ -144,7 +142,7 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 
 #### 3.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
 
-1. Log in to the  [MicrosoftAzurel](https://portal.azure.com/#home) portal with your company account.
+1. Log in to the [MicrosoftAzurel](https://portal.azure.com/#home) portal with your company account.
 2. If your account gives you access to more than one tenant, select your account on the upper-right corner, and set your portal session to the Azure AD tenant of your company.
 
     {{% alert color="info" %}}If your access is denied, contact your IT team.{{% /alert %}}

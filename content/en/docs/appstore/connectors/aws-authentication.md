@@ -127,7 +127,7 @@ To run the AWS authentication connector locally, you must add the client certifi
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 
-   {{% alert color="info" %}}Fore more information, see [Runtime Customisation](refguide/custom-settings/).{{% /alert %}}
+   {{% alert color="info" %}}Fore more information, see [Runtime Customisation](/refguide/custom-settings/).{{% /alert %}}
 
 4. Click **OK** to save all the changes.
 

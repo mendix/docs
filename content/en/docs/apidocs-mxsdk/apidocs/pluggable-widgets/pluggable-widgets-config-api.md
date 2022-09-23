@@ -660,7 +660,7 @@ The datasource preview type can be used when developing a widget with a datasour
     })
 ```
 
-Preview (a datasource component containing a dropzone with two text boxes):
+Here is a preview of a datasource component containing a dropzone with two text boxes:
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="600"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
 

@@ -292,10 +292,11 @@ Any problem returned from this function will be shown in the [Errors](/refguide/
 
 ### 5.1 Targeting a Property of a Sub-Object
 
-A property of the type `object` contains a list of objects with properties. In this case, it is possible to specify in which property of which object a problem occurred. This can be done by specifying the property as `<property>/<index>/<sub-property>`, while index is the 1-based index of the object list. 
+A property of the type `object` contains a list of objects with properties. In this case, it is possible to specify in which property of which object a problem occurred. This can be done by specifying the property as `<property>/<index>/<sub-property>` where index is the 1-based index of the object list. 
 
 #### 5.1.1 Example
-If an object-property `dataPoints` with the sub-properties `x` and `y` exists, while `y` should not be larger than 10, the following code will return the corresponding error:
+
+For example, if an object-property `dataPoints` with the sub-properties `x` and `y` exists, and `y` should not be larger than 10, the following code will return the corresponding error:
 
 ```typescript
 function check(values) {
@@ -312,22 +313,22 @@ function check(values) {
 }
 ```
 
-## 6 Customizing Page Explorer caption
+## 6 Customizing Page Explorer Caption
 
-The Page Explorer will normally use the type name of the custom widget as its caption. If a custom caption should be used, the module can export a `getCustomCaption` function. This function gets the values passed following the values API and the current platform.
+The Page Explorer will normally use the type name of the custom widget as its caption. If a custom caption should be used, the module can export a `getCustomCaption` function. This function gets the values passed following the values API and the current platform:
 
 ```typescript
 function getCustomCaption(values: ValuesAPI, platform: "desktop" | "web"): string
 ```
 
-If the caption is `null`, `undefined` or not a string, the default caption will be used.
+If the caption is `null`, `undefined`, or not a string, then the default caption will be used.
 
 ## 7 Widget Preview in Structure Mode
 
 To configure the appearance of the custom widget in Studio Pro, export a `getPreview` function.
 This function receives two parameters: the first one contains the current values, and the second one indicates whether dark mode is set. The function should return a preview properties object containing the configuration of the custom widget preview.
 
-_Note: The default colors will be automatically adjusted for dark mode (e.g. font color, border color, etc.). However, the `isDarkMode` flag can be used when setting colors explicitly._
+Please note that the default colors will be automatically adjusted for dark mode (e.g. font color, border color, etc.). However, the `isDarkMode` flag can be used when setting colors explicitly.
 
 The following describes the API for the preview properties object that the `getPreview` should return.
 
@@ -342,12 +343,13 @@ type BaseProps = {
 
 All types of preview properties share two common properties: `type`, and `grow`: 
 
-- `type` can be any of the preview types described below, such as `"Image"`, `"Text"`, or `"RowLayout"`
-- `grow` is optional and only takes effect if the current element is a child of a row layout. Examples of using this can be found in the row layout section below
+* `type` can be any of the preview types described below, such as `"Image"`, `"Text"`, or `"RowLayout"`
+* `grow` is optional and only takes effect if the current element is a child of a row layout. Examples of using this can be found in the row layout section below
 
 The following elements extend the base preview props with properties native to their elements. For example, it could contain `content` for text elements, or `document` and `width` for image elements. The following will list all available element types and their properties.
 
 ### 7.1 Image
+
 ```typescript
 type ImageProps = BaseProps & {
     type: "Image";
@@ -361,13 +363,14 @@ type ImageProps = BaseProps & {
 
 Images properties can receive different types of input (always requires _either_ a `document` or `data`):
 
-- `document`: An SVG image string
-- `data`: A base64 encoded image string
-- `property`: The value of an image property. _Note: When passing an image property, it will only show if a static image has been set. A `document` or `data` still needs to be passed as well, which will act as a fallback image when the property is empty or a dynamic image has been set._
+* `document`: An SVG image string
+* `data`: A base64 encoded image string
+* `property`: The value of an image property. _Note: When passing an image property, it will only show if a static image has been set. A `document` or `data` still needs to be passed as well, which will act as a fallback image when the property is empty or a dynamic image has been set._
 
 Additionally, a fixed `width` and `height` can be set. If not set, it will maximize to the available width. If the width and height are set to an aspect ratio that is different from the original image aspect ratio, it will show a section of the image so the image is not distorted.
 
-Example of a circle svg:
+Example of a circle SVG:
+
 ```typescript
 export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => {
     const mySvgImage = `
@@ -382,7 +385,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
 };
 ```
 
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="400"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="400"  >}}
 
 ### 7.2 Container
 
@@ -401,6 +404,7 @@ type ContainerProps = BaseProps & {
 Containers can be used to stack multiple elements vertically. These elements are passed as `children` in form of an array of props. The `borders` property can be used to set borders around the whole content to visually group them.
 
 Example of two texts with borders around them:
+
 ```typescript
 export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
     {
@@ -426,7 +430,7 @@ type RowLayoutProps = ContainerProps & {
 Row layouts are similar to a container, and can be used to render multiple elements horizontally next to each other. They have all the props that a container has, with the addition of a `columnSize`, which defines whether its children sizes are equal fixed weights or determined by their content (see the next sub-section).
 
 
-#### 7.3.1 Column size
+#### 7.3.1 Column Size
 <u>Fixed (default):</u>
 
 When the `columnSize` is not set or set to `"fixed"`, all available space is split into fixed weights. It will then fit the child content into the column, rather than expanding & shrinking the column based on the content size. This is for example useful to create grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically get the value 1.
@@ -454,14 +458,15 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
 When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space with which a child grows, a `grow` factor can be set for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically get the value 1.
 
 If a layout has less space than the elements prefer, items are shrunk disproportionally to their `grow` factors (high grow factor = low shrink factor) until they reach their minimum sizes:
-* a `text` gets wrapped to become smaller
-* an `image` doesn't shrink further than its original size, unless manually set with the width property or when all elements have reached their minimum size
+
+* A `text` gets wrapped to become smaller
+* An `image` doesn't shrink further than its original size, unless manually set with the width property or when all elements have reached their minimum size
 
 Once all items have reached their minimum size, the layout will force smaller sizes proportionally to their `grow` value.
 
-_Note: Forcing items smaller than they require works for images, but might cause unexpected behaviour with other elements._
+Please note that forcing items smaller than they require works for images, but might cause unexpected behavior with other elements.
 
-Example to show how grow factors behave:
+Here is an example to show how grow factors behave:
 
 ```typescript
 export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
@@ -493,9 +498,9 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
     });
 ```
 
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
 
-An example of a button to show how to center items using row layouts:
+Here is an example of a button to show how to center items using row layouts:
 
 ```typescript
 export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
@@ -524,7 +529,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
     });
 ```
 
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  >}}
 
 ### 7.4 Text
 
@@ -541,7 +546,7 @@ type TextProps = BaseProps & {
 
 The text to be displayed must be passed as `content`. You can optionally set a `fontSize`.  _Note: Only integers are supported as font size._ 
 
-Example:
+Here is an example:
 
 ```typescript
 export const getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => (
@@ -582,7 +587,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
 })
 ```
 
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
 
 ### 7.6 Selectable
 
@@ -594,7 +599,9 @@ type SelectableProps = BaseProps & {
 ```
 
 The selectable preview type can be used to make an instance of an object list selectable. If an object instance is made selectable, it will behave similar to a widget. Its properties will be shown in the `Properties` section and can also be edited in a pop-up by double-clicking the section that is visualized by the `child` properties. Note that this only works in combination with a property of type `object`.
+
 To configure a selectable, the object from the Value API needs to be passed as `object`, and the preview properties to visualize the object as `child`. 
+
 The following example shows how to render a container with a list of selectable objects. In this case, each object is shown as a text with its caption:
 
 ```typescript
@@ -622,7 +629,7 @@ export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean) {
 }
 ```
 
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  >}}
 
 ### 7.7 Datasource
 
@@ -649,5 +656,5 @@ The datasource preview type can be used when developing a widget with a datasour
 
 Preview (a datasource component containing a dropzone with two text boxes):
 
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="600"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="600"  >}}
 

@@ -33,7 +33,7 @@ To use Mendix Business Events, you will need the following:
 * The Mendix Business Events Module in the Mendix Marketplace
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above
 * At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
-* An [event broker](#event-broker), either a licensed [Mendix Event Broker] or your own event broker cluster for local deployments, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
+* An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) or your own event broker cluster for local deployments, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
 ## 2 Licensing {#licensing}

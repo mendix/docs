@@ -55,7 +55,7 @@ The entities in the table below describe all generalizations. These are (re-)use
 | Emotion           | This entity holds the information regarding the emotions that appear to be expressed on the face, and the confidence level in the determination. The API is only making a determination of the physical appearance of a person's face. It is not a determination of the person’s internal emotional state and should not be used in such a way. For example, a person pretending to have a sad face might not be sad emotionally.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 | PersonsEquipment  | This entity holds information regarding a person's status of wearing protective equipment, including the value. The value is a representation of the ID of the detected person.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 
-### 2.3 Enumerations
+### 2.3 Configuring Enumerations
 
 #### 2.3.1 QualityFilter
 

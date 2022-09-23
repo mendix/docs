@@ -71,11 +71,11 @@ The **Optimize Repository Storage…** option is only available in Git.
 {{% /alert %}}
 
 The **Optimize Repository Storage…** option allows you to perform a number of housekeeping tasks in the current Git repository. Git repositories can accumulate various types of garbage over the time, which may lead to possible performance bottlenecks when using version control features.
-When you optimize the repository storage, the file revisions are compressed to reduce disk space and increase performance and unreachable Git storage objects are removed. For more information on storage optimization, see [Git Storage Optimization](/refguide/git-storage-optimization/).
+When you optimize the repository storage, the file revisions are compressed to reduce disk space and increase performance and unreachable Git storage objects are removed. For more information on storage optimization, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
 
 {{% alert color="info" %}}
 
-The operation might some time. While optimization is in progress, most of version control commands, such as committing and updating, are disabled. 
+The operation might take some time. While optimization is in progress, most of version control commands, such as committing and updating, are disabled. 
 
 {{% /alert %}}
 

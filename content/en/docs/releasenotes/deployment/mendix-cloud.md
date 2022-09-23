@@ -33,8 +33,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We updated our alert template to make the alert names more descriptive and transparent. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
+### August 8th, 2022
+
+#### Improvements
+
+* We added the AWS Mumbai region as a new deployment target in Mendix Cloud Asia Pacific.
 
 ### July 21st, 2022
+
+#### Improvements
 
 * We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
 

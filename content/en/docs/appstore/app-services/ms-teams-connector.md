@@ -81,7 +81,7 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-to-webhook.png" >}}
 
-    1. Set the **webhookURL** parameter to the Webhook URL that was [generated](#generate-webhook-url).
+    1. Set the **Webhook URL** parameter to the Webhook URL that was [generated](#generate-webhook-url).
     2. For **Message type**, select **Text** or **Card** from the drop-down list:
 
         * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.

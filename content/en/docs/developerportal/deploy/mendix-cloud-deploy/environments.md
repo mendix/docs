@@ -168,7 +168,7 @@ In the **Services** tab, the [Technical Contact](/developerportal/collaborate/ap
 
 The custom services that are currently available on the app level, or the **Environments** page, are as follows:
 
-* **Data Broker Service** – required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps
+* **Event Broker Service** – required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps
 
 ### 6.2 Enabling Custom Services
 

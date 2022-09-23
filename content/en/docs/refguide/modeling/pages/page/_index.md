@@ -162,7 +162,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 ### 3.2 Design Mode {#design-mode}
 
-In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
+In **Design mode**, the page is laid out as it will appear when published, so that it is easy to see the spatial relationship between the elements.
 
 For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 

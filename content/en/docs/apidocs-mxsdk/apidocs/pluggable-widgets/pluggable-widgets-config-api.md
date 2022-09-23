@@ -36,15 +36,17 @@ function getProperties(
 ): Properties
 ```
 
-Using this API, it is possible to have different captions and descriptions of properties between the two Studios, as well as dynamically show/hide certain properties based on configured values.
-
-_Note: When a property is hidden for both web and desktop, its value will be cleared._
+Using this API, it is possible to have different captions and descriptions of properties between the two Studios. It is also possible to dynamically show or hide certain properties based on configured values.
 
 {{% alert color="info" %}}
-Be advised that hiding a property that is required according to the XML will still give a consistency error that it is required. It is therefore discouraged to hide properties that are required.<br><br>If the property needs to be required if it is visible, implement the check manually using the custom validation function.
+Please note that when a property is hidden for both web and desktop, its value will be cleared.
 {{% /alert %}}
 
-The structure expected is as follows:
+{{% alert color="info" %}}
+Be advised that hiding a property which is required according to the XML will still give a consistency error that it is required. We therefore discourage hiding properties that are required.<br><br>If the property needs to be required if it is visible, implement the check manually using the custom validation function.
+{{% /alert %}}
+
+The expected property configuration structure is as follows:
 
 - `Properties` is expected to be an array of `PropertyGroups`.
 - A `PropertyGroup` is an object that must have a `caption`

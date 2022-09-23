@@ -148,7 +148,7 @@ With the above configuration, PowerShell primarily uses .NET version 4, but also
 PowerShell shows an error message similar to the following:
 
 ```text {linenos=false}
-Could not load file or assembly 'System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
+Could not load file or assembly 'System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken={token number}' or one of its dependencies. The system cannot find the file specified.
 ```
 
 #### 5.2.1 Cause

@@ -185,6 +185,8 @@ In order to start consuming a business event contract, you first need to create 
 
 4.  Click **OK**.
 
+{{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
+
 ##### 5.1.1.1 Automatically Created Event Handler Microflow and Entity
 
 When you click **Add** to add the events from the Contract into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.

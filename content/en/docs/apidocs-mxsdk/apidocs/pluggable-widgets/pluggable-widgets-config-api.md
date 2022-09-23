@@ -401,9 +401,9 @@ type ContainerProps = BaseProps & {
 }
 ```
 
-Containers can be used to stack multiple elements vertically. These elements are passed as `children` in form of an array of props. The `borders` property can be used to set borders around the whole content to visually group them.
+Containers can be used to stack multiple elements vertically. These elements are passed as `children` as an array of props. The `borders` property can be used to set borders around the whole content to visually group them.
 
-Example of two texts with borders around them:
+Here is an example of two texts with borders around them:
 
 ```typescript
 export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
@@ -416,7 +416,8 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
         ]
     });
 ```
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
+
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
 
 ### 7.3 Row Layout {#row-layout}
 
@@ -427,16 +428,18 @@ type RowLayoutProps = ContainerProps & {
 }
 ```
 
-Row layouts are similar to a container, and can be used to render multiple elements horizontally next to each other. They have all the props that a container has, with the addition of a `columnSize`, which defines whether its children sizes are equal fixed weights or determined by their content (see the next sub-section).
-
+Row layouts are similar to a container, and can be used to render multiple elements horizontally next to each other. They have all the props that a container has, with the addition of a `columnSize`, which defines whether its children sizes are equal fixed weights or determined by their content (for more information, see the next section).
 
 #### 7.3.1 Column Size
-<u>Fixed (default):</u>
 
-When the `columnSize` is not set or set to `"fixed"`, all available space is split into fixed weights. It will then fit the child content into the column, rather than expanding & shrinking the column based on the content size. This is for example useful to create grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically get the value 1.
+##### 7.3.1.1 Fixed (Default)
 
-Example:
-The following code creates a row layout with four children. The first child (image) takes the first half of the available space, and the other three children (texts) share the other half. This can be achieved by simply setting the `grow` property of the first child to 3.
+When `columnSize` is not set (or set to `"fixed"`) all available space is split into fixed weights. It will then fit the child content into the column, rather than expanding and shrinking the column based on the content size. 
+
+As an example, this is useful for creating grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically recieve the value 1.
+
+As an example, consider this. The following code creates a row layout with four children. The first child (`Image`) takes the first half of the available space, and the other three children (`Texts`) share the other half. This can be achieved by simply setting the `grow` property of the first child to 3:
+
 ```typescript
 export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
     {
@@ -451,16 +454,16 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
     });
 ```
 
-    {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  >}}
 
-<u>Grow:</u>
+##### 7.3.1.2 Grow
 
-When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space with which a child grows, a `grow` factor can be set for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically get the value 1.
+When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space into which a child grows, you can set a `grow` factor for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically recieve the value 1.
 
-If a layout has less space than the elements prefer, items are shrunk disproportionally to their `grow` factors (high grow factor = low shrink factor) until they reach their minimum sizes:
+If a layout has less space than the elements prefer, items are shrunk disproportionally to their `grow` factors (a high grow factor means a low shrink factor) until they reach their minimum sizes:
 
 * A `text` gets wrapped to become smaller
-* An `image` doesn't shrink further than its original size, unless manually set with the width property or when all elements have reached their minimum size
+* An `image` does not shrink further than its original size unless manually set with the `width` property or when all elements have reached their minimum size
 
 Once all items have reached their minimum size, the layout will force smaller sizes proportionally to their `grow` value.
 
@@ -499,6 +502,8 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
 ```
 
 {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
+
+##### 7.3.1.3 Example
 
 Here is an example of a button to show how to center items using row layouts:
 
@@ -544,7 +549,7 @@ type TextProps = BaseProps & {
 }
 ```
 
-The text to be displayed must be passed as `content`. You can optionally set a `fontSize`.  _Note: Only integers are supported as font size._ 
+The text to be displayed must be passed as `content`. You can optionally set a `fontSize`. Please note that only integers are supported as font size.
 
 Here is an example:
 
@@ -556,7 +561,7 @@ export const getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => 
     });
 ```
 
-### 7.5 Drop Zones (widget containers)
+### 7.5 Drop Zones 
 
 ```typescript
 type DropZoneProps = BaseProps & {
@@ -567,6 +572,7 @@ type DropZoneProps = BaseProps & {
 ```
 
 The drop zone preview type can be used to add drop zones to the widget preview. It requires a widget property of type `widgets` in order to be able to store the information about the containing widgets.
+
 To configure a drop zone, the widgets property object (which can be obtained directly from the values API) needs to be passed as `property`, as the following example shows:
 
 ```typescript

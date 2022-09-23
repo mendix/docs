@@ -209,7 +209,8 @@ In Studio, object values are shown as lists instead of grids. However, it is pos
 {{% /alert %}}
 
 ### 4.1 Example
-If the data point structure from above should be used to visualize geographic coordinates, we might want to add the suffixes `° N` and `° W` to the numeric x and y values, so that the grid will look like this (using fictive values):
+
+If you wished to use data point structure detailed above to visualize geographic coordinates, you might want to add the suffixes `° N` and `° W` to the numeric **x** and **y** values so the grid will look like this (values below are purely hypothetical):
 
 | N Coordinate | W Coordinate |
 | ------------ | ------------ |
@@ -217,7 +218,7 @@ If the data point structure from above should be used to visualize geographic co
 | 42.3504° N   | -71.0468° W  |
 | 51.5126° N   | -0.1062° W   |
 
-The following code example shows an object property configuration to achieve this by using object headers and captions for each object.
+The following code example shows an object property configuration which uses object headers and captions for each object to achieve the table shown above:
 
 ```typescript
 {
@@ -266,9 +267,9 @@ The following code example shows an object property configuration to achieve thi
 }
 ```
 
-## 5 Customizing validation (Consistency checks)
+## 5 Customizing Validation Using Consistency Checks
 
-By default, the studios will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found.
+By default, the Studios will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
 
 ```typescript
 function check(values: ValuesAPI): Problem[]
@@ -287,9 +288,9 @@ type Problem = {
 }
 ```
 
-Any problem returned from this function will be shown in the errors panel in Studio Pro, and the checks panel in Studio.
+Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro, and the [Checks](/studio/checks/) pane in Studio.
 
-### 5.1 Targeting a property of a sub-object
+### 5.1 Targeting a Property of a Sub-Object
 
 A property of the type `object` contains a list of objects with properties. In this case, it is possible to specify in which property of which object a problem occurred. This can be done by specifying the property as `<property>/<index>/<sub-property>`, while index is the 1-based index of the object list. 
 

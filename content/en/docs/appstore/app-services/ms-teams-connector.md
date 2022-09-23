@@ -46,23 +46,25 @@ Follow the instructions in the [Importing Content from the App Explorer](/appsto
 
 ## 3 Usage
 
-### 3.1 Configuring Webhook URL {#configure-webhook-url}
+### 3.1 Generating the Webhook URL {#generate-webhook-url}
 
-1. Go to your Teams channel in the Microsoft Teams.
+1. In Microsoft Teams, go to your Teams channel.
 
-2. Click the ellipsis (**...**) icon of your channel to open the pop-up menu.
+2. Click the ellipsis (**...**) icon of your Teams channel to open the pop-up menu.
 
-3. Click **Connectors**.
+3. Click **Connectors** to open the **Incoming Webhook** page.
 
     {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connectors.png" >}}
 
-4. Enter the details and copy the connector URL as shown in the image below.
+4. Enter the details for your Webhook.
+
+5. Copy the connector URL as shown in the image below. Save the URL for later use.
 
      {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-connectors.png" >}}
 
-5. Click **Save** to save the changes.
+6. Click **Save** to save the changes and close the page.
 
-### 3.2 Sending Message to a Teams Channel
+### 3.2 Sending Messages to a Teams Channel
 
 #### 3.2.1 Configuring the Send Message to Webhook Activity
 
@@ -79,7 +81,7 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
     {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
-    1. Set the **webhookURL** parameter to the **Webhook URL** that was [generated](#configure-webhook-url).
+    1. Set the **webhookURL** parameter to the Webhook URL that was [generated](#generate-webhook-url).
     2. For **Message type**, select **Text** or **Card** from the drop-down list:
 
         * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
@@ -134,7 +136,7 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 
         {{% alert color="info" %}}For more information about the design of a message card, see [Design guidelines](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
-### 3.3 Sending Message Using Microsoft Credentials
+### 3.3 Sending Messages Using Microsoft Credentials
 
 Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the **Send Message** activity to send messages with Microflow credentials.
 

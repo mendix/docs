@@ -150,7 +150,7 @@ This service returns a list of `DetectFaces` object with results.
 | `ImageQualityDetectFace` | `AmazonRekognitionConnector.ImageQuality` | This entity contains the image quality results for the `DetectFaces` action. It includes the brightness and sharpness of the image. It is a specialization of the `ImageQuality` generalization entity. |
 | `LandmarkDetectFace`     | `AmazonRekognitionConnector.Landmark`     | This entity contains the landmark results for the `DetectFaces` action. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
 
-### 3.3 Detect Faces – All Attributes
+### 3.4 Detect Faces – All Attributes
 
 The Amazon `DetectFaces` service detects faces within an image that is provided as input.
 
@@ -181,7 +181,7 @@ This service returns a list of `DetectFaces` object with results.
 | `SmileDetectFace`        | `AmazonRekognitionConnector.PhysicalProperty` | This entity contains the smile results for the `DetectFaces` action. It includes a confidence and a value. It is a specialization of the `PhysicalProperty` generalization entity. |
 | `LandmarkDetectFace`     | `AmazonRekognitionConnector.Landmark`         | This entity contains the landmark results for the `DetectFaces` action. It includes its type and left (x) and top (y) coordinates. It is a specialization of the `Landmark` generalization entity. |
 
-### 3.4 Detect Moderation Labels
+### 3.5 Detect Moderation Labels
 
 The Amazon `DetectModerationLabels` service detects unsafe content in a specified image (JPEG or PNG). Use `DetectModerationLabels` to moderate images depending on your requirements. For example, you might want to filter images that contain nudity, but not images containing suggestive content.
 
@@ -200,7 +200,7 @@ This service returns a list of `DetectModerationLabel` objects and associated ob
 | `HumanLoopActivationOutput` |                | This entity shows the results of the human in the loop evaluation. It includes two attributes: (1) `HumanLoopActivationCondition` and (2) `HumanLoopArn`. The former shows the result of condition evaluations, including those conditions which activated a human review, while the latter is the Amazon Resource Name (ARN) of the `HumanLoop` created. If there is no `HumanLoopArn`, the input did not trigger a human review. |
 | `HumanActivityReason`       |                | This entity includes the conditions which activated a human review. |
 
-### 3.5 Detect Labels
+### 3.6 Detect Labels
 
 The Amazon `DetectLabels` service detects instances of real-world entities within an image (JPEG or PNG) that is provided as input. This includes objects like flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and nature. 
 
@@ -220,7 +220,7 @@ This service returns a list of `DetectLabel` objects with associated objects.
 | `BoundingBoxDetectFace` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectFaces` action. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `LabelDetectLabel`      | `AmazonRekognitionConnector.Label`       | This entity contains the label results for the `DetectLabels` action. It includes a confidence and a name. Additionally, it is used to hold information over associations about the detected label, including the name, detected instances, parent labels, and confidence level. It is a specialization of the `Label` generalization entity. |
 
-### 3.5 Detect Text
+### 3.7 Detect Text
 
 The Amazon `DetectText` service detects text in the input image and converts it into machine-readable text.
 
@@ -240,7 +240,7 @@ This service returns a `DetectText` object with results.
 | `BoundingBoxTextDetect` | `AmazonRekognitionConnector.BoundingBox` | This entity contains the bounding box results for the `DetectText` action. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `PolygonTextDetect`     | `AmazonRekognitionConnector.Polygon`     | This entity contains the polygon results for the `DetectText` action. It includes left (x) and top (y) coordinates. It is a specialization of the `Polygon` generalization entity. An array of `Point` objects, `Polygon`, is returned by `DetectText` and `DetectCustomLabels` or used to define regions of interest in Amazon Rekognition Video operations such as `CreateStreamProcessor`. `Polygon` represents a fine-grained polygon around a detected item. |
 
-### 3.5 Detect Protective Equipment
+### 3.8 Detect Protective Equipment
 
 The Amazon `DetectProtectiveEquipment` service detects Personal Protective Equipment (PPE) worn by people detected in an image. Amazon Rekognition can detect the following types of PPE:
 
@@ -269,7 +269,7 @@ This service returns a `DetectProtectiveEquipment` object with the results:
 | `BoundingBoxEquipmentDetection`   | `AmazonRekognitionConnector.BoundingBox`      | This entity contains the bounding box results for the `DetectProtectiveEquipment` action, specifically the `EquipmentDetection`. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 | `BoundingBoxPerson`               | `AmazonRekognitionConnector.BoundingBox`      | This entity contains the bounding box results for the `DetectProtectiveEquipment` action, specifically the `ProtectiveEquipmentPerson`. It includes the left (x) coordinates, top (y) coordinates, and the image's width and height. It is a specialization of the `BoundingBox` generalization entity. |
 
-### 3.5 Recognize Celebrities
+### 3.9 Recognize Celebrities
 
 The Amazon `RecognizeCelebrities` service returns an array of celebrities recognized in the input image.
 

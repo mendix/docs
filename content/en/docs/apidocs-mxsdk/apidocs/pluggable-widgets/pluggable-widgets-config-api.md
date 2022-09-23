@@ -48,16 +48,16 @@ Be advised that hiding a property which is required according to the XML will st
 
 The expected property configuration structure is as follows:
 
-- `Properties` is expected to be an array of `PropertyGroups`.
-- A `PropertyGroup` is an object that must have a `caption`
-    - It is possible to have two levels of `PropertyGroup` objects, this can be achieved by giving the top-level groups a `propertyGroups` field, containing an array of `PropertyGroup` objects.
-    - Alternatively, a property group can contain one or more `Property` objects in the `properties` field.
-- A `Property` is an object that must have a `key` that corresponds to a property `key` from the widget XML, and a `caption` field.
-    - Optionally, a `description` field can be returned with a description of the property.
-    - If the property is of type `object`, it requires a more complex configuration
-        - The `objects` array field of the `Property` object contains the sub-objects’ properties. Each sub-object will require an entry as an `ObjectProperties` object in this array
-            - The  `properties` array field of the `ObjectProperties` object contains the sub-object's properties in form of an array of `PropertyGroup` objects
-            - The object grid can be customized by using the property's `objectHeaders` and the object's `captions` array field. More details including an example can be found in the section [Customizing object grids](#customize-object-grids)
+* `Properties` is expected to be an array of `PropertyGroups`
+* A `PropertyGroup` is an object that must have a `caption`:
+    * It is possible to have two levels of `PropertyGroup` objects, which can be achieved by giving the top-level groups a `propertyGroups` field containing an array of `PropertyGroup` objects
+    * Alternatively, a property group can contain one or more `Property` objects in the `properties` field
+* A `Property` is an object that must have a `key` that corresponds to a property `key` from the widget XML, and a `caption` field:
+    * Optionally, a `description` field can be returned with a description of the property
+    * If the property is of type `object` it requires a more complex configuration
+        * The `objects` array field of the `Property` object contains the sub-objects’ properties (each sub-object will require an entry as an `ObjectProperties` object in this array)
+            * The  `properties` array field of the `ObjectProperties` object contains the sub-object's properties in form of an array of `PropertyGroup` objects
+            * The object grid can be customized by using the property's `objectHeaders` and the object's `captions` array field (for more information, see the [Customizing Object Grids](#customize-object-grids) section)
 
 ```typescript
 type Properties = PropertyGroup[];
@@ -82,7 +82,7 @@ type ObjectProperties = {
 }
 ```
 
-An example of how this structure looks as javascript object, based on the following widget XML snippet:
+Here is an example of how this structure looks as JavaScript object, based on the following widget XML snippet:
 
 ```XML
 <properties>
@@ -200,12 +200,12 @@ The default configuration would then be:
 ]
 ```
 
-## 4 Customizing object grids {#customize-object-grids}
+## 4 Customizing Object Grids {#customize-object-grids}
 
-An object grid (for objects properties) can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
+An object grid for object properties can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
 
 {{% alert color="info" %}}
-Note about Studio: In Studio, object values are shown as lists instead of grids. It is however possible to customize this list in the same way. For each object, the first caption will be displayed as value in the list. The object headers have no effect in Studio.
+In Studio, object values are shown as lists instead of grids. However, it is possible to customize this list like you can in Studio Pro. For each object, the first caption will be displayed as value in the list. The object headers have no effect in Studio.
 {{% /alert %}}
 
 ### 4.1 Example

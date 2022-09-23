@@ -115,7 +115,7 @@ To create session credentials with the **Get Session Credentials** action in you
 
 The action returns a **Credentials** object. For more information on how to use this object, see the documentation for your specific connector.
 
-### 3.2.4 Configuring the Local Setup
+#### 3.2.4 Configuring the Local Setup
 
 To run the AWS authentication connector locally, you must add the client certificate as a runtime configuration in Studio Pro. To do so, perform the following steps:
 

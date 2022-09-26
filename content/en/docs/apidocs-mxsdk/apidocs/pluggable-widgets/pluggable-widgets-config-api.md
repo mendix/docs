@@ -16,7 +16,7 @@ It is usually located in a JavaScript file using the same name as the widget’s
 
 The file is expected to be in CommonJS format, using the `exports` object to export functions.
 
-## 2 Widget Developer Console
+## 2 Widget Developer Console {#widget-dev-console} 
 
 Errors that are related to the configuration module are shown in the Widget Developer Console. This console is separate from the default console and can be found in the [View menu](/refguide/view-menu/).  
 

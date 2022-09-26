@@ -1,5 +1,6 @@
 ---
 title: "Microflows in the Mendix Metamodel"
+description: "This document explains in detail how you can create and invoke microflows."
 url: /apidocs-mxsdk/mxsdk/microflows-metamodel/
 weight: 4
 ---

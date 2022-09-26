@@ -1,6 +1,9 @@
 ---
 title: "Understanding the Mendix Metamodel"
 url: /apidocs-mxsdk/mxsdk/understanding-the-metamodel/
+description: "This set of documents describes how the Mendix Metamodel works. It covers the following topics:</br>- How the Mendix handles projects in relation to modules and documents</br>- How a Domain Model works with all its components (attributes, access rules, etc.)</br> - How pages, layouts, and page content are structured.</br> - How you can create and invoke microflows. "
+no_list: false
+simple_list: true
 weight: 1
 ---
 
@@ -51,3 +54,5 @@ All other details, such as documentation, validation rules, etc., are not availa
 All element types have both an interface and a full form. In the JavaScriptDoc you can see easily the difference in information that is available in for example [the Entity interface](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/domainmodels.ientity.html) and the [full Entity class](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html). The unit interfaces exclusively contain the interface forms of public elements.
 
 After the server has sent all unit interfaces, the Model SDK client reconstructs the project tree from the available information. However, before you can manipulate an (existing) unit/element or access information on it that's not available in its interface, you have to obtain the full unit/element. 
+
+## 5 Documents in This Cateogery

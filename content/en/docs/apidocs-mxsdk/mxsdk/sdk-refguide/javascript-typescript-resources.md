@@ -1,6 +1,7 @@
 ---
 title: "JavaScript & TypeScript Resources"
 url: /apidocs-mxsdk/mxsdk/javascript-typescript-resources/
+Description: "This document provides resources about JavaScript and TypeScript."
 weight: 2
 ---
 

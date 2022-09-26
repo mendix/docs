@@ -10,7 +10,7 @@ weight: 30
 The **Context** source is a data source of a data view. Data views with this data source get their object from the context, which can be one of two things:
 
 * A surrounding data container such as a data view or list view – in this case, the **Entity (path)** property should follow an association 
-* A page parameter – a page parameter will contain an object that is passed to the page when opening it (either another page passing that parameter or a microflow passing an object)
+* A page parameter – a page parameter contains an object that is passed to the page when opening it (either another page passing that parameter or a microflow passing an object)
 
 ## 2 Properties
 

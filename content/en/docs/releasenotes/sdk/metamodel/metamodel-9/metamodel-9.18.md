@@ -6,6 +6,8 @@ weight: 82
 
 ## 9.18.0
 
+**Release date: September 19th, 2022**
+
 ### Microflows
 
 #### MLModelCallAction (Element)

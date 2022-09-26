@@ -63,7 +63,11 @@ Virtually all certificate formats can be converted to the PKCS12 format. For mor
 * [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
 {{% alert color="warning" %}}
-If you use [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html), please use the latest patch release of **version 1.x**.
+**Do not use OpenSSL version 3.x on Windows**
+
+If you use OpenSSL on Windows and/or you get the error _'Could not open certificate container. Wrong password or corrupted file. Please try again.'_, please use the latest patch release of **version 1.x**, which can be downloaded here: [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html).
+
+Another option is to use OpenSSL from within the **Windows Subsystem for Linux** to generate the certificate, which can be installed using the following instructions: [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 {{% /alert %}}
 
 You can upload a PKCS12 file by following these steps:

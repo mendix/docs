@@ -1,7 +1,7 @@
 ---
 title: "Configuration Module API for Pluggable Widgets"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-config-api/
-description: A guide for understanding the configuration module API which influences the behaviour of pluggable widgets in Studio Pro.
+description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Studio Pro.
 tags: ["Widget", "Pluggable", "Custom", "Preview", "Structure Mode", "Visibility", "editorConfig"]
 weight: 35
 aliases:
@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-A pluggable widget's configuration module allows for several modeler experience improvements. 
+A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in structure mode.
 
 It is usually located in a JavaScript file using the same name as the widget’s XML file, ending with *.editorConfig.js*. For example, next to *TextBox.xml* would be a *TextBox.editorConfig.js*.
 
@@ -43,7 +43,7 @@ Please note that when a property is hidden for both web and desktop, its value w
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Be advised that hiding a property which is required according to the XML will still give a consistency error that it is required. We therefore discourage hiding properties that are required.<br><br>If the property needs to be required if it is visible, implement the check manually using the custom validation function.
+Be advised that hiding a property which is required according to the XML will still give a consistency error that it is required. We therefore discourage hiding properties that are required.<br><br>If a property is only required on a specific condition, it should not be marked as required in the XML. Instead of this, you should manually implement a check using the custom validation function.
 {{% /alert %}}
 
 The expected property configuration structure is as follows:
@@ -205,7 +205,7 @@ The default configuration would then be:
 An object grid for object properties can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
 
 {{% alert color="info" %}}
-In Studio, object values are shown as lists instead of grids. However, it is possible to customize this list like you can in Studio Pro. For each object, the first caption will be displayed as value in the list. The object headers have no effect in Studio.
+In Studio, object values are shown as lists instead of grids. However, it is possible to customize this list similar to what you can do in Studio Pro. For each object, the first caption will be displayed as value in the list. The object headers have no effect in Studio.
 {{% /alert %}}
 
 ### 4.1 Example
@@ -573,7 +573,7 @@ type DropZoneProps = BaseProps & {
 
 The drop zone preview type can be used to add drop zones to the widget preview. It requires a widget property of type `widgets` in order to be able to store the information about the containing widgets.
 
-To configure a drop zone, the widgets property object (which can be obtained directly from the values API) needs to be passed as `property`, as the following example shows:
+To configure a drop zone, the widgets property object (which can be obtained directly from the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)) needs to be passed as `property`, as the following example shows:
 
 ```typescript
 exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
@@ -606,7 +606,7 @@ type SelectableProps = BaseProps & {
 
 The selectable preview type can be used to make an instance of an object list selectable. If an object instance is made selectable, it will behave similar to a widget. Its properties will be shown in the `Properties` section and can also be edited in a pop-up by double-clicking the section that is visualized by the `child` properties. Note that this only works in combination with a property of type `object`.
 
-To configure a selectable, the object from the Value API needs to be passed as `object`, and the preview properties to visualize the object as `child`. 
+To configure a selectable, the object from the [Value API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values) needs to be passed as `object`, and the preview properties to visualize the object as `child`. 
 
 The following example shows how to render a container with a list of selectable objects. In this case, each object is shown as a text with its caption:
 

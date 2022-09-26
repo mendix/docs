@@ -1,5 +1,5 @@
 ---
-title: "Mendix Platform SDK"
+title: "Mendix SDKs"
 url: /apidocs-mxsdk/mxsdk/
 no_list: false
 description_list: true
@@ -8,7 +8,9 @@ tags: ["sdk", "platform sdk", "model sdk"]
 
 ## 1 Introduction and FAQ
 
-Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) can make your life easier, start with the [SDK Introduction](/apidocs-mxsdk/mxsdk/sdk-intro/) and the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). 
+Mendix SDKs include [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) and [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). 
+
+Before diving right into the details of SDKs, you can tart with the [SDK Introduction](/apidocs-mxsdk/mxsdk/sdk-intro/) and the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). 
 
 ## 2 SDK Reference Guide
 

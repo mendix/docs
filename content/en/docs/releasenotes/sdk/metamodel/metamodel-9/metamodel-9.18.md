@@ -25,8 +25,7 @@ weight: 82
 
 #### DataAttribute (Element)
 
-* We introduced the `filterable` property. Info: "(For OData services) can clients filter on this attribute?"
-* We introduced the `sortable` property. Info: "(For OData services) can clients order by this attribute?"
+* We introduced the `filterable` and `sortable` properties.
 
 ### Navigation
 

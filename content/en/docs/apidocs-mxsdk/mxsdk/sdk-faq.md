@@ -1,8 +1,8 @@
 ---
-title: "SDK FAQ"
+title: "SDK FAQ and Troubleshooting"
 url: /apidocs-mxsdk/mxsdk/sdk-faq/
 category: "Mendix Platform SDK"
-weight: 2
+weight: 3
 ---
 
 ## 1 General Questions

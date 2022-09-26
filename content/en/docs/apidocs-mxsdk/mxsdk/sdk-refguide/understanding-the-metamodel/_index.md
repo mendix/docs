@@ -6,6 +6,8 @@ weight: 1
 
 ## 1 Units
 
+This set of documents helps you understand the Mendix Metamodel that we have opened up. It is a detailed description of how all Mendix app models are structured.
+
 If you are familiar with Studio Pro you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the App Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the App Explorer of Studio Pro is a `unit`.
 
 Units come in two flavors:

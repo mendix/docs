@@ -67,11 +67,11 @@ There is a single Kafka broker for Free Apps that all your company Free Apps can
 
 ### 3.1 Managing the Mendix Event Broker {#manage-mx-broker}
 
-Technical Contacts with a license to the Mendix Event Broker can manage its features in the [Developer Portal](/developerportal/) on the **Event Broker Manager** page.
+Technical Contacts with a license to the Mendix Event Broker can manage its features in the [Developer Portal](/developerportal/) on the [Event Broker Manager](https://broker.mendix.com/) page.
 
 #### 3.1.1 Environments and Spaces
 
-When Business Events is enabled for an environment, it is placed in an Event Broker **Space** based on the environment name. This enables apps deployed under the same **Space** to publish and consume events. For example, apps in acceptance environment can only exchange events with other apps' acceptance environments. You can check the **Space** of an app's environment on the **Event Broker Manager** page. 
+When Business Events is enabled for an environment, it is placed in an Event Broker **Space** based on the environment name. This enables apps deployed under the same **Space** to publish and consume events. For example, apps in acceptance environment can only exchange events with other apps' acceptance environments. You can check the **Space** of an app's environment on the [Event Broker Manager](https://broker.mendix.com/) page. 
 
 **Spaces** are created and assigned based on the app environment name and allow isolation of your business events. The default behavior can be changed if needed. Please contact [Mendix Support](https://support.mendix.com/) if you would like to change the **Space** of a specific app environment.
 
@@ -167,7 +167,7 @@ The next stage is to add an activity for publishing into the microflow(s) that w
     * **Task Queue/Output:** These values are not currently used for Business Events and should be left unchanged.
 
 {{% alert color="info" %}}
-The *Publish Business Event* Activity will commit all event objects at the start of the publishing process as an **Outbox** entity. This is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the **Outbox** will be rolled back as well. See the [Business Event Entities](#be-entities) for more information on the **Outbox** entity.
+The *Publish Business Event* Activity will commit all event objects at the start of the publishing process as an **Outbox** entity. This is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the **Outbox** will be rolled back as well. See the [Business Event Entities](#be-entities) section for more information on the **Outbox** entity.
 {{% /alert %}}
 
 ### 5.2 Consuming Business Events {#consume-be}

@@ -12,7 +12,12 @@ aliases:
 
 Offline-first apps built with Mendix store data in the local database to provide smooth end-user experiences. Consequently, user devices store a copy of the data locally. This documentation explains techniques to ensure that local data is stored securely and other data best practices.
 
-How does local database encryption work? Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the secure storage system of the OS (IOS/Keychain and Android/Keystore). The Mendix Client reads and decrypts the database key stored in the local storage and uses it to unlock the database.
+### 1.2 Local Encryption Information
+
+This section explains how local encryption works in Mendix. To skip ahead to implementation, see the [Encrypting Local Databases](#encrypting-local-databases)
+ section below.
+
+How does local database encryption work? Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the secure storage system of the OS (iOS/Keychain and Android/Keystore). The Mendix Client reads and decrypts the database key stored in the local storage and uses it to unlock the database.
 
 ## 2 Local Data Safety
 
@@ -48,11 +53,11 @@ The app keeps the non-persistent objects only in the memory and removes them whe
 
 Suppose you have to store sensitive data on a device and cannot control the operating system your app is running on. In that case, you should enable database encryption for your app. This ensures that all data in the local database is encrypted before storing it on the device. Note that encryption will impact your app's performance. Full synchronization of all clients is required to enable it.
 
-To learn more, see [Encrypted Local Database](#encrypted-local-database)
+To learn more, see [Encrypting Local Databases](#encrypting-local-databases)
 
-## 4 Encrypted Local Database {#encrypted-local-database)
+## 4 Encrypting Local Databases {#encrypting-local-databases)
 
-Mendix 9.18 and above offer to encrypt the local database of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
+Mendix v9.18 and above allow you to encrypt the local databases of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 
 {{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 

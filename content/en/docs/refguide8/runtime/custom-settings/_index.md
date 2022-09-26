@@ -48,7 +48,7 @@ The following custom settings can be configured:
 | **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities.<br/>{{% alert color="warning" %}}If you change the value of `http.client.MaxConnectionsPerRoute`, you will need to increase this value in line with that, up to a maximum of 250.{{% /alert %}} | 20 |
 | **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup. | `12 * 60 * 60` (12 hours) (for Studio Pro 8.18.0 and below) or `355` (for Studio Pro 8.18.1 and above) |
 | **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 |
-| **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
+| **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, and `com.mendix.storage.azure`. | com.mendix.storage.localfilesystem |
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use [Apache Commons](http://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 8.18.6 and later. | false |
@@ -129,7 +129,6 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 | **com.mendix.storage.s3.SecretAccessKey** | Acts as the password to authenticate with the S3 service. |   |
 | **com.mendix.storage.s3.BucketName** | Name of the bucket where the files are stored on S3. |   |
 | **com.mendix.storage.s3.ResourceNameSuffix** | Suffix for the keys under which objects are stored. This can be used when S3 buckets are divided into different segments for different users with different credentials (for example, store objects as `"[key].customer1"` for customer1 and as `"[key].customer2"` for customer2). |   |
-| **com.mendix.storage.s3.PerformDeleteFromStorage** | Deprecated. Use **com.mendix.storage.PerformDeleteFromStorage**.<br/>Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | <a name="s3-region"></a>**com.mendix.storage.s3.Region** | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in **com.mendix.storage.s3.EndPoint**. This setting will also be used as the signing region for requests. ||
 | **com.mendix.storage.s3.EndPoint** | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (for example, IBM Cloud Object Storage). Both the endpoint (for example, `s3.example.com`) or the full URL (including the protocol) are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint, path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | **com.mendix.storage.s3.UseV2Auth** | Lets the authentication policy use `Signature Version 2` instead of the default `Signature Version 4`. Set this setting to `true` when the endpoint does not support `Signature Version 4`. | false |
@@ -178,28 +177,7 @@ These settings can be used to store files using the Microsoft Azure blob storage
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 {{% /alert %}}
 
-## 8 IBM Cloud (Bluemix) Object Storage Settings
-
-These settings can be used to store files using the IBM Cloud object storage service.
-
-Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
-
-{{% alert color="info" %}}
-Unlike other storage services, IBM Cloud does not provide server-side encryption.
-{{% /alert %}}
-
-| Name | Description | Default Value |
-| --- | --- | --- |
-| **com.mendix.core.StorageService** | Has to be set to `com.mendix.storage.swift` to select IBM Cloud as the storage service |   |
-| **com.mendix.storage.swift.Container** | Container name of the object storage service |   |
-| **com.mendix.storage.swift.Container.AutoCreate** | If enabled (value `true`) the container will be automatically created if it does not exist. | false |
-| **com.mendix.storage.swift.credentials.DomainId** | Unique identifier of the domain |   |
-| **com.mendix.storage.swift.credentials.Authurl** | Authentication URL |   |
-| **com.mendix.storage.swift.credentials.Username** | Username |   |
-| **com.mendix.storage.swift.credentials.Password** | Password |   |
-| **com.mendix.storage.swift.credentials.Region** | Region |   |
-
-## 9 Web Client Settings{#web-client-settings}
+## 8 Web Client Settings{#web-client-settings}
 
 The settings below influence the behavior of the Mendix web client.
 
@@ -213,7 +191,7 @@ The settings below influence the behavior of the Mendix web client.
 | **com.mendix.webui.StateSizeWarningThreshold** | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | **com.mendix.webui.CommittedObjectsThreshold** | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 10 Proxy Settings
+## 9 Proxy Settings
 
 The settings below allow you to use a proxy.
 

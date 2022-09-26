@@ -1,9 +1,10 @@
 ---
 title: "SAP Business Technology Platform"
+linktitle: "SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
 weight: 40
-description: "Reference documentation on deploying to SAP Business Technology Platform"
+description: "Describes how to deploy to SAP Business Technology Platform."
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -242,13 +243,13 @@ Alternatively, you can upload an MDA which has already been created from the app
 The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
 {{% alert color="info" %}}
-There is a limit of 200MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
+There is a limit of 200 MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
 {{% /alert %}}
 
 ## 5 Deploy Package{#DeployPackage}
 
 {{% alert color="warning" %}}
-SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
+SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
 {{% /alert %}}
 
 ### 5.1 Deploy to an Environment
@@ -555,9 +556,19 @@ However, the maximum length for the service name is 50 characters. If this limit
 
 ### 7.4 Runtime Tab{#runtime-tab}
 
-Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
+In the **Runtime** tab, you can **Add**, **Edit**, or **Delete** custom runtime settings and environment variables.
 
-#### 7.4.1 Supported Environment Variables
+{{% alert color="info" %}}
+New values will only be applied when you restart your app. The value which is currently applied is shown under **CURRENT VALUE**.
+{{% /alert %}}
+
+#### 7.4.1 Custom Runtime Settings
+
+You can add custom server settings which configure Mendix Runtime beyond the standard SAP deployment. See [Runtime Customization](/refguide/custom-settings/) and the [Mendix Cloud Foundry Buildpack GitHub repository](https://github.com/mendix/cf-mendix-buildpack#mendix-runtime-configuration) for information about the settings which are available.
+
+#### 7.4.2 Custom Environment Variables
+
+##### 7.4.2.1 Supported Environment Variables
 
 You can choose to add supported variables by selecting them from a drop-down list.
 
@@ -569,7 +580,7 @@ You can choose to add supported variables by selecting them from a drop-down lis
 
 The variables beginning **DT_** set up Dynatrace. Setting these variables means that the Dynatrace OneAgent is loaded into your environment. You will then receive all J2EE-related metrics from your app. See [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/) for more information.
 
-#### 7.4.2 Unsupported Environment Variables
+##### 7.4.2.2 Unsupported Environment Variables
 
 You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 

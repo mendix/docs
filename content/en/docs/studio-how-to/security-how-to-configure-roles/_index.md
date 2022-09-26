@@ -112,4 +112,4 @@ Congratulations! You have configured access for different user roles in your app
 
 You can see that the button is hidden from the **Front_Desk** role, but the container is not. You can use conditional visibility to hide it entirely. For more information, see [Conditional Visibility Section](/studio/page-editor-widgets-visibility-section/).
 
-When you preview your app, you can test different user role, while after you publish it, you can manage the end-users and assign user roles to them. For more information, see the [Managing App Users](/studio/settings-security/#managing-app-users) section in *Security, Roles & Permissions*.
+When you preview your app, you can test different user role, while after you publish it, you can manage the end-users and assign user roles to them. For more information, see the [Managing App Users](/studio/settings-security/#managing-app-users) section in *Security, Roles and Permissions*.

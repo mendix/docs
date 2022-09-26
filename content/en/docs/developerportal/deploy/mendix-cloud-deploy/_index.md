@@ -168,7 +168,7 @@ The package is deployed to the cloud.
 
 #### 2.2.3 Deploying via Studio
 
-To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
+To deploy your app from Studio, click **Publish**. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
 
 ### 2.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
@@ -204,7 +204,7 @@ With a Free App, you can deploy your app to the Mendix Cloud from Studio or Stud
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Run icon and the Publish button" >}}
 
-* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing & Publishing Your App*.
+* Instead of Studio Pro, you can also deploy your app from Studio. For more information, see the [Publishing Your App](/studio/publishing-app/#publishing-your-app) section of *Previewing and Publishing Your App*.
 
 ## 3 Status of Deployment
 
@@ -243,7 +243,7 @@ The Standard resource packs listed below can be used with both Standard and Prem
 | L21 | 8 GB | 2 | 8 GB | 2 | 40 GB | 80 GB |
 | XL21 | 16 GB | 4 | 16 GB | 4 | 80 GB | 160 GB |
 | XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
-| XXXL21 | 64 GB | 16 | 32 GB | 8 | 320 GB | 640 GB |
+| XXXL21 | 64 GB | 16 | 64 GB | 8 | 320 GB | 640 GB |
 
 The Premium resource packs listed below can only be purchased with a Premium plan.
 
@@ -254,9 +254,9 @@ The Premium resource packs listed below can only be purchased with a Premium pla
 | L21 | 8 GB | 2 | 8 GB | 2 | 40 GB | 80 GB |
 | XL21 | 16 GB | 4 | 16 GB | 4 | 80 GB | 160 GB |
 | XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
-| XXXL21 | 64 GB | 16 | 32 GB | 8 | 320 GB | 640 GB |
+| XXXL21 | 64 GB | 16 | 64 GB | 8 | 320 GB | 640 GB |
 
-The legacy cloud resource packs listed below are still being used but are not available to new customers.
+The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |

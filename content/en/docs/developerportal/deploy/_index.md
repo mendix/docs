@@ -1,9 +1,8 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
+description: "Describes the deployment section of the Developer Portal: how to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 10
-description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
-weight: 5
 no_list: false 
 description_list: true
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment", "Mendix Cloud Dedicated"]
@@ -30,7 +29,6 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 * [General](/developerportal/deploy/general/) – contains information which applies to deployments in many different environments
 * Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, for example, [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
 * [Mobile App](/developerportal/deploy/mobileapp/) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
-* [App Services](/developerportal/deploy/app-services/) – describes what can be published to the Mendix Marketplace, and how to do this
 
 ## 2 Run Locally or Preview
 
@@ -104,7 +102,7 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 
 ## 12 Mendix Applications on Industrial Edge
 
-You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shop floor. Thus enables the extensions of automation, deployment of demanding streamprocessing and learning algorithms as well as the hosting from integration code to site automation.
+You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shop floor. Thus enables the extensions of automation, deployment of demanding stream processing and learning algorithms as well as the hosting from integration code to site automation.
 
 To find out how to do this, read [Mendix Applications on Industrial Edge](/developerportal/deploy/mendix-app-on-industrial-edge/).
 

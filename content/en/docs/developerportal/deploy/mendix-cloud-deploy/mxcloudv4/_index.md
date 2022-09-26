@@ -77,9 +77,9 @@ You can also consider running your Mendix app using your own AWS account in a di
 There are certain limits and behaviors which apply to your app when running in Mendix Cloud v4. Here are a few considerations to bear in mind:
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
-* It is not possible to deploy a model (*.mda*) larger than 4GB when uncompressed or a model that contains approximately 64,000 or more files
-* You can't upload files bigger than 1GB to your app
-* You can't download files bigger than 1GB from your app
+* It is not possible to deploy a model (*.mda*) larger than 4 GB when uncompressed or a model that contains approximately 64,000 or more files
+* You can't upload files bigger than 1 GB to your app
+* You can't download files bigger than 1 GB from your app
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
 * HTTP headers sent to the Mendix cloud do not always preserve their case (for example `X-SharedSecret` can be transformed to `X-Sharedsecret`) due to the behavior of one of the Cloud Foundry routing components – this has no practical effect as HTTP headers are defined as case insensitive

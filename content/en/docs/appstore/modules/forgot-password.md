@@ -15,7 +15,7 @@ With this module, the end-user can enter their email address, and an email will 
 
 ### 1.1 Dependencies {#dependencies}
 
-* [Email with Templates](/appstore/modules/email-with-templates/)
+* [Email Module with Templates](/appstore/modules/email-with-templates/)
 * [Deep Link](/appstore/modules/deep-link/)
 * [Encryption](/appstore/modules/encryption/)
 * [Model Reflection](/appstore/modules/model-reflection/)
@@ -24,7 +24,7 @@ With this module, the end-user can enter their email address, and an email will 
 
 Once you have downloaded the required modules listed in the [Dependencies](#dependencies) section above, you can reuse the snippets and microflows from the **Use Me** folder.
 
-The configuration page allows you to create the email and deep link templates that are used by this module. You should NOT create your own templates through the configuration of the Email with Templates and Dep Link modules. By clicking **Create**, all the default settings will be there to allow you to reset the password. The only thing you need to do is configure or validate your SMTP settings. 
+The configuration page allows you to create the email and deep link templates that are used by this module. You should NOT create your own templates through the configuration of the Email Module with Templates and the Deep Link module. By clicking **Create**, all the default settings will be there to allow you to reset the password. The only thing you need to do is configure or validate your SMTP settings. 
 
 Signup and password reset are included into this module. To disable the signup functionality, remove the **Sign up** button from the login snippet and empty the content of the **CreateNewUserFromSignUp** microflow.
 

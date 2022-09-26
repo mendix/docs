@@ -3,7 +3,7 @@ title: "Support Escalation Process"
 url: /developerportal/support/escalation-management-process/
 category: "Mendix Support"
 weight: 5
-description: "This document describes the types of Mendix Support escalation and how the escalation process works."
+description: "Describes how a support request can be escalated to bring your issue to closure."
 tags: ["support", "escalation management"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

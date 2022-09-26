@@ -77,7 +77,7 @@ Often you need to have control of page history, for example to show the correct 
 
 ### 3.4 Parameters Section {#parameters}
 
-Depending on the selected page, you will see a list of its parameters. For each parameter, you can configure a variable or expression to specify which object should be passed to it. These objects will be used by [data views](/refguide/data-view/) with a page parameter data source. If only one variable of the expected type for a certain parameter is available, that variable is automatically filled in.
+Depending on the selected page, you will see a list of its parameters. For each parameter, you can configure a variable or expression to specify which object should be passed to it. These objects are used by [data views](/refguide/data-view/) with a page parameter data source. If only one variable of the expected type for a certain parameter is available, that variable is automatically filled in.
 
 ## 4 Common Section{#common}
 

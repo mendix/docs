@@ -16,7 +16,7 @@ The **Context** source is a data source of a data view. Data views with this dat
 
 ### 2.1 Entity (Path)
 
-The **Entity (path)** property specifies the entity that will be shown in the data view. If you have a top-level data view, **Entity (path)** must be an entity and the page will expect an object of this entity to be passed to it as a parameter when opened. 
+The **Entity (path)** property specifies the entity that is shown in the data view. If you have a top-level data view, **Entity (path)** must be an entity and the page expects an object of this entity to be passed to it as a parameter when opened. 
 
 If you have a nested data view, you can select one of the following:
 

@@ -22,7 +22,7 @@ In this example, an error occurs while committing an object to the database. It 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/error-event/error-event.png" >}}
 
 {{% alert color="info" %}}
-When adding an error event, you need to add an [error handler](/refguide/error-handling-in-microflows/#error-handling-options) for an activity before the error event. Link an error event and an activity which has an error handlers set on it with a [sequence flow](/refguide/sequence-flow/) and select **Set as error handler** for the sequence flow.
+When adding an error event, you need to add an [error handler](/refguide/error-handling-in-microflows/#errorhandlers) for an activity before the error event. Link an error event and an activity which has an error handlers set on it with a [sequence flow](/refguide/sequence-flow/) and select **Set as error handler** for the sequence flow.
 {{% /alert %}}
 
 ## 2 Read More

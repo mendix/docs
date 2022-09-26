@@ -31,25 +31,25 @@ Offline-first progressive web apps (PWAs) use the underlying browser APIs to sto
 
 It is a best practice to synchronize as little data as possible to the device and avoid synchronizing any confidential or privacy-related data that does not pertain to the current user.
 
-### 3.1 Ensure Domain-Model Access Rules are Configured Correctly
+### 3.1 Configuring Domain-Model Access Rules 
 
 The Mendix Client only stores objects and attributes that the current user has read access to. Incomplete or misconfigured access rules on the domain model may cause too much data to be synchronized to the device databases.
 
 To learn more about configuring access rules, see [Access Rules](/refguide/access-rules/).
 
-### 3.2 Limit Data with XPath Constraints
+### 3.2 Limiting Data with XPath Constraints
 
 In apps where you want to grant end-users working with objects access to the responsive profile, but you do not wish to grant them access to an offline-first navigation profile, it is possible to limit the amount of data by an XPath constraint using the **Configure Synchronization** screen.
 
 To learn more about customizing the synchronization behavior, see [Customizable Synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/#customizable-synchronization).
 
-### 3.3 Use Non-Persistent Entities
+### 3.3 Using Non-Persistent Entities
 
 For sensitive data that should never be stored locally, consider using non-persistent entities to store the data temporarily and use microflow calls to securely process the data on the server. 
 
 The app keeps the non-persistent objects only in the memory and removes them when they are no longer needed. However, this approach requires connectivity to the Mendix Runtime to call microflows, and thus limits the app's offline-first capabilities.
 
-### 3.4 Encrypt the Local Database
+### 3.4 Encrypting the Local Database
 
 Suppose you have to store sensitive data on a device and cannot control the operating system your app is running on. In that case, you should enable database encryption for your app. This ensures that all data in the local database is encrypted before storing it on the device. Note that encryption will impact your app's performance. Full synchronization of all clients is required to enable it.
 
@@ -91,7 +91,7 @@ Consider the [prerequisites above](#encryption-prerequisites) before enabling da
 
 Disabling database encryption will apply only to newly-installed apps. Existing app users will continue to work with an encrypted local database until they uninstall and reinstall the app by hand.   
 
-### 4.5 Native Database Encryption and Make It Native App
+### 4.5 Native Database Encryption and the Make It Native App
 
 Local database encryption also works with the Make It Native App and a custom developer app. Ensure that you upgrade the Make It Native app and your application template to v6.3.0 or higher, otherwise the app may not start.
 
@@ -101,7 +101,7 @@ Verifying the database encryption requires access to the database file stored on
 
 Once you access the database file, you can attempt to open it using any SQLite viewer. The viewer will open it immediately for unencrypted databases, whereas the same operation will fail for encrypted databases.
 
-#### 4.6.1 Locate the Database File on Android
+#### 4.6.1 Locating the Database File on Android
 
 Viewing the file system of an Android device requires [Android Studio](https://developer.android.com/studio/). Once you have that software, do the following:
 
@@ -112,7 +112,7 @@ Viewing the file system of an Android device requires [Android Studio](https://d
 1. Find the database file in this folder (often named *default* without an extension). Right-click this file, then click **Save as**. 
 1. Save the file in a folder on your computer.
 
-#### 4.6.2 Locate the Database File on iOS
+#### 4.6.2 Locating the Database File on iOS
 
 To locate the database file on iOS, do the following:
 

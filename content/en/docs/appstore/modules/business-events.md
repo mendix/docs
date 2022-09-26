@@ -11,12 +11,12 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#mendix-event-broker) or run your own broker cluster.
+The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#mendix-event-broker) or run your own broker cluster. 
 
 Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.
 
-{{% alert color="warning" %}}
-Mendix Business Events is supported for Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above.{{% /alert %}}
+{{% alert color="info" %}}
+Mendix Business Events is supported for Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above.{{% /alert %}} 
 
 ### 1.1 Typical Use Cases
 
@@ -176,7 +176,7 @@ Consumption is a continuous process that the module will start and will be resta
 
 #### 5.2.1 Create a Consumed Business Event Service
 
-In order to start consuming a business event contract, you first need to create a **Consumed Business Event Service**.
+To start consuming a business event contract, you first need to create a **Consumed Business Event Service**.
 
 1.  Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**.
 
@@ -309,8 +309,6 @@ You can configure the app running in Studio Pro to use the postgres database cre
 
     On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
 
+## 9 Read More
 
-
-* Adding subscriptions: in the Importing a contract > Add screen, or then after uploading a YAML file, drag from Data Hub pane.
-* Handler microflow is created at the same level as the consumed business event service document. > better way to organize (multiple events in same service)
-     * The moment you add a subscription, it's generated at the same level
+Check out the [Mendix Studio Pro 9.18 release blog](https://www.mendix.com/blog/mendix-release-9-18-next-level-performance/) for other information about business events.

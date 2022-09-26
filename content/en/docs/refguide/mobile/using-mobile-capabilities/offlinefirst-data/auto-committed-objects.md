@@ -9,7 +9,7 @@ tags: ["offline", "offline-first", "auto-committed", "autocommitted"]
 
 ## 1 Introduction
 
-Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see [Autocommit and Associated Objects](/refguide/committing-objects/#52-autocommit-and-associated-objects).
+Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see the [Autocommit and Associated Objects](/refguide/committing-objects/#autocommit-and-associated-objects) section of *Commit Object(s)*.
 
 ## 2 Offline-First Apps and Auto-Commit Logic
 
@@ -33,7 +33,7 @@ It is true that an offline-first app *can* create auto-committed objects on the 
 
 Auto-committed objects live until the user's session expires. When the user's session expires, the Mendix Runtime deletes any auto-committed objects created in that session. This logic works well for web applications, but is not a good fit for offline-first apps for the following reasons:
 
-* **Long-lived sessions** – offline-first progressive web apps use [long-lived-sessions](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#52-sessions) with longer session timeout by default. This causes auto-committed objects to remain on the server database as long as a session is active. Other PWA users can synchronize the auto-committed objects to their local databases. For example, a user changes and attempts to synchronize an auto-committed object with validation problems. In that case the server may fail to synchronize it.
+* **Long-lived sessions** – offline-first progressive web apps use [long-lived sessions](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#sessions) with longer session timeout by default. This causes auto-committed objects to remain on the server database as long as a session is active. Other PWA users can synchronize the auto-committed objects to their local databases. For example, a user changes and attempts to synchronize an auto-committed object with validation problems. In that case the server may fail to synchronize it.
 * **Session expiration** – native mobile apps use regular sessions that expire according to the [`SessionTimeout` runtime setting](/refguide/tricky-custom-runtime-settings/#general-settings). A session on the server may expire as the user uses the app. The server will remove any auto-committed objects, even if the end-user is still interacting with the app.This can cause unexpected behaviors. For example, suppose the user changes the auto-committed object and attempts to synchronize. The Mendix Runtime will not be able to do that, because the runtime database no longer has this object.
     * It is useful to keep in mind that a native session may expire on the server if the end-user uses the app while there is no network condition. When this happens, the Mendix Client attempts to create a new session automatically when the device sends a request to the Mendix Runtime.  
 * **Auto-committed objects as regular objects** – auto-committed objects can be synchronized to other users' local databases and treated as regular objects, which may cause the following problems:
@@ -145,4 +145,4 @@ Auto-committed objects created inside microflows that are called from a nanoflow
 
 A custom runtime setting (`com.mendix.offline.DeleteAutoCommittedObjectsAfterSync`) is available to disable deleting the auto-committed objects created during synchronization. This setting can be used in apps from Mendix Studio Pro v9.18 and above.
 
-This setting is intended for offline-first apps created in Mendix versions below v9.18 to keep the previous behavior. Disabling this setting for new applications is not recommended. For details on changing this setting, see [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings/#22-general-settings)
+This setting is intended for offline-first apps created in Mendix versions below v9.18 to keep the previous behavior. Disabling this setting for new applications is not recommended. For details on changing this setting, see [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings/#general-settings)

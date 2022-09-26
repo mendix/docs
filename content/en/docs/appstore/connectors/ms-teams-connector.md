@@ -1,17 +1,17 @@
 ---
 title: "Microsoft Teams Connector"
-url: /appstore/app-services/ms-teams-connector/
-category: "App Services"
-description: "This document describes the configuration and usage of the Microsoft Teams Connector app service, which enables sending messages and actionable message cards to a Microsoft Teams channel automatically."
-tags: ["marketplace", "marketplace component", "app service", "microsoft", "microsoft teams", "connector"]
+url: /appstore/connectors/ms-teams-connector/
+category: "Connectors"
+description: "This document describes the configuration and usage of the Microsoft Teams Connector, which enables sending messages and actionable message cards to a Microsoft Teams channel automatically."
+tags: ["marketplace", "marketplace component", "connector", "microsoft", "microsoft teams", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app sends out the message to the Microsoft Teams channel. 
+The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the connector in a microflow. Once the microflow that uses the connector is triggered, your app sends out the message to the Microsoft Teams channel. 
 
-This app service is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
+This connector is an [add-on module](/refguide/consume-add-on-modules-and-solutions/).
 
 ### 1.1 Typical Use Cases
 
@@ -32,15 +32,15 @@ This app service is an [add-on module](/refguide/consume-add-on-modules-and-solu
 ### 1.4 Prerequisites
 
 * Your organization should allow you to use Webhooks in Microsoft Teams.
-* The app service can only be used with Studio Pro 9 versions starting from [9.12.1](/releasenotes/studio-pro/9.12/).
+* The connector can only be used with Studio Pro 9 versions starting from [9.12.1](/releasenotes/studio-pro/9.12/).
 * You have installed the [Deep link](https://marketplace.mendix.com/link/component/43) module in your app.
 * You have a Microsoft Account in Azure Active Directory.
 
 ## 2 Installation
 
-Follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Microsoft Teams Connector app service into your app. After the app service is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
+Follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Microsoft Teams Connector into your app. After the connector is installed, you can see it in the **Add-ons** folder in the **App Explorer** and in the **Microsoft Teams Connector** category in the **Toolbox**.
 
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-protected-module.png" >}}
+{{< figure src="/attachments/appstore/connectors/ms-teams-connector/connector-in-protected-module.png" >}}
 
 {{% alert color="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
 
@@ -52,11 +52,11 @@ Follow the instructions in the [Importing Content from the App Explorer](/appsto
 2. Click the ellipsis (**...**) icon of your Teams channel to open the pop-up menu.
 3.  Click **Connectors** to open the **Incoming Webhook** page.
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connectors.png" >}}
+    {{< figure src="/attachments/appstore/connectors/ms-teams-connector/connectors.png" >}}
 
 4.  Enter the details for your Webhook and copy the connector URL as shown in the image below.
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-connectors.png" >}}
+    {{< figure src="/attachments/appstore/connectors/ms-teams-connector/configure-connectors.png" >}}
 
 5. Save the URL for later use.
 6. Click **Save** to save the changes and close the page.
@@ -71,7 +71,7 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
     The following representative microflow contains activities with the required attributes, the **Send Message to Webhook** activity, and a placeholder to capture the returned object.
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/connector-in-microflow.png" >}}
+    {{< figure src="/attachments/appstore/connectors/ms-teams-connector/connector-in-microflow.png" >}}
 
 2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
 
@@ -79,7 +79,7 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
     {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-to-webhook.png" >}}
+    {{< figure src="/attachments/appstore/connectors/ms-teams-connector/send-message-to-webhook.png" >}}
 
     1. Set the **Webhook URL** parameter to the Webhook URL that was [generated](#generate-webhook-url).
     2. For **Message type**, select **Text** or **Card** from the drop-down list:
@@ -94,17 +94,17 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
 
     3. For the **Message** parameter, set up the message content in the String format. The image below shows an example:
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-message.png" >}}
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/html-message.png" >}}
 
         The example above will render in the Microsoft Teams channel like this:
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/html-output.png" >}}
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/html-output.png" >}}
 
     4. Click **OK** to save the changes and close the dialog box.
 
 After the **Send Message to Webhook** activity is configured, once the microflow that uses this activity is triggered, the app sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is pre-defined:
 
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/send-message-response-entity.png" >}}
+{{< figure src="/attachments/appstore/connectors/ms-teams-connector/send-message-response-entity.png" >}}
 
 * The **Message** attribute contains the respective response message.
 * If the message is successfully sent, the value of the **SentMessage** attribute is `true`.
@@ -120,7 +120,7 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
     1. At the upper-left corner of the page, click **Select Sample** to open the drop-down list. 
     2. Below the **Legacy MesssageCard samples** category, select a sample message card.
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sample-message-cards.png" >}}
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/sample-message-cards.png" >}}
 
         {{% alert color="info" %}}Do not select any sample card above the **Legacy MessageCard samples**. They are adaptive cards, which do not work with the Microsoft Teams connector.{{% /alert %}}
 
@@ -128,11 +128,11 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 
         Below is the basic structure of a message card and the corresponding fields in JSON:
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/card-json-structure.png" >}}
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/card-json-structure.png" >}}
 
         The example above with **Add a comment action** expanded looks like this:
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/add-a-comment-expanded.png" >}}
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/add-a-comment-expanded.png" >}}
 
         {{% alert color="info" %}}For more information about the design of a message card, see [Design guidelines](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
@@ -140,7 +140,7 @@ Microsoft Teams supports [actionable message cards](https://docs.microsoft.com/e
 
 Alongside the **Send Message to Webhook** activity, you can also find the **Send Message** activity in the microflow toolbox. You can use the **Send Message** activity to send messages with Microflow credentials.
 
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/activities-in-toolbox.png" >}}
+{{< figure src="/attachments/appstore/connectors/ms-teams-connector/activities-in-toolbox.png" >}}
 
 #### 3.3.1 Registering Your Application on the Microsoft Azure Portal{#register-application-on-azure-portal}
 
@@ -159,11 +159,11 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
     4. Make a note of the URI that you entered in the step above, as you will need it later for configuration.
     5. Select **Register** to register the new registration.
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/register-an-application.png" >}}
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/register-an-application.png" >}}
 
         Azure AD assigns a unique application (client) ID to your app. An overview page for your application opens.
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/app-overview.png" >}}
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/app-overview.png" >}}
 
 6. Make a note of the **Application (client) ID** and the **Directory (tenant) ID** on the overview page.
 7. On the left-side menu, click **Certificates and secrets** under the **Manage** section.
@@ -188,12 +188,12 @@ Alongside the **Send Message to Webhook** activity, you can also find the **Send
 4. In the **App Explorer**, click **Settings** to open the **App Settings** dialog box.
 5. Go to the **Runtime** tab, and set **After startup** to the **StartupMicroflow** from the **MicrosoftTeamsConnector** module.
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/after-startup.png" >}}
+    {{< figure src="/attachments/appstore/connectors/ms-teams-connector/after-startup.png" >}}
 
 6. In the **App Explorer**, click **Navigation** to open the **Navigation** page.
 7. Configure the **Default home page** option to execute a microflow that will display your application's home page. The activity that shows the home page must be preceded by a microflow call named **Configure_HomePage_Prerequisite**, which is available in the **MicrosoftTeamsConnector** module.
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/configure-home-page-microflow.png" >}}
+    {{< figure src="/attachments/appstore/connectors/ms-teams-connector/configure-home-page-microflow.png" >}}
 
 #### 3.3.4 Obtaining the Channel Link on Microsoft Teams{#obtain-channel-link}
 
@@ -203,11 +203,11 @@ One of the input items required for the **Send Message** activity is the channel
 2. Right click **...** on the channel name.
 3. Click **Get link to channel**. 
 
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/get-channel-link.png" >}}
+{{< figure src="/attachments/appstore/connectors/ms-teams-connector/get-channel-link.png" >}}
 
 A pop-up window opens and shows containing the channel link.
 
-{{< figure src="/attachments/appstore/app-services/ms-teams-connector/channel-link.png" >}}
+{{< figure src="/attachments/appstore/connectors/ms-teams-connector/channel-link.png" >}}
 
 #### 3.3.5 Configuring the Send Message and SignInMicroflow Activities
 
@@ -220,7 +220,7 @@ A pop-up window opens and shows containing the channel link.
     1. Set the **channelLink** parameter with the [channel link that you obtained](#obtain-channel-link) from Microsoft Teams.
     2. For **Message type**, select **Text** or **Card** using the Enumeration **Message_Types** from the **MicrosoftTeamsConnector** module.
 
-        {{< figure src="/attachments/appstore/app-services/ms-teams-connector/message-type.png" >}}  
+        {{< figure src="/attachments/appstore/connectors/ms-teams-connector/message-type.png" >}}  
 
         * If you want to send a message as plain text or in HTML or markdown formatting, select **Text**.
 
@@ -241,6 +241,6 @@ After the **Send Message** activity is configured, once triggered, the activity 
 * If the message is successfully sent, the value of the **SendMessageReponse** attribute is `true`.
 * If the message could not be sent, the value of the **SendMessageReponse** attribute is `false`.  Then you should execute the **SignIn Microflow** to log in using your Microsoft credentials. The microflow below shows one of the approaches to use the **SignIn Microflow** effectively. Introduce a decision activity after **SendMessage** activity that checks the **SentMessage** attribute value. If the value is false, then execute the **SignIn Microflow** activity.
 
-    {{< figure src="/attachments/appstore/app-services/ms-teams-connector/sign-in-microflow.png" >}}
+    {{< figure src="/attachments/appstore/connectors/ms-teams-connector/sign-in-microflow.png" >}}
 
     {{% alert color="info" %}}Once you are logged in by using the **SignInMicroflow** activity, you need to call this microflow again to send the message.{{% /alert %}}

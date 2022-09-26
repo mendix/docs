@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "widget", "languageSelector", "gr
 
 ## 1 Introduction
 
-The [Language Selector](https://marketplace.mendix.com/link/component/TBD) widget allows the end-user to easily switch the language of your application.
+The [Language Selector](https://marketplace.mendix.com/link/component/202738/) widget allows the end-user to easily switch the language of your application.
 
 ### 1.1 Features
 

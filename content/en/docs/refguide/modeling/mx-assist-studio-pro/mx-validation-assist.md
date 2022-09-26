@@ -26,13 +26,13 @@ The main features of the Validation Assist are the following:
 
 ## 2 Validation Assist Overview
 
-The Validation Assist is activated be default in the page elements where data validation might be needed. These elements are the following:
+The Validation Assist is activated by default in the page elements where data validation might be needed. These elements are the following:
 
-* Button with the **Save changes** on-click event
+* a button with the **Save changes** on-click event
 
-* Button with the **Call microflow** on-click event
+* a button with the **Call microflow** on-click event
 
-* Majority of input widgets:
+* the following input widgets:
 
     * **Text box**
     * **Text area**
@@ -71,13 +71,13 @@ The dialog box consists of two sections:
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 
-For example, you have an app for a hairdresser salon, where customers can view information on types of treatments, their prices, they have a customer profile, and can schedule appointments. Your app has a validation microflow that checks the selected date and time: that date is in the future, that it is within the working hours (from 8 a.m. till 5 p.m.), and it is a weekday. 
+For example, you have an app for a hairdresser salon, where customers can view information on types of treatments, their prices, they have a customer profile and can schedule appointments. Your app has a validation microflow that checks the selected date and time: that the selected date is in the future, and that it is within the opening hours (from 8 a.m. till 5 p.m. and not on a weekend). 
 
 Your app also has a form where customers can schedule a hairdresser’s appointment. They need to fill in their name, select the type of a treatment (haircut, haircoloring, etc.) and pick the date and time. You would like the **Save** button to show an error message when any of the following conditions are *not* met:
 
-* One or several fields in the form are not filled in
-* The selected date and time is in the future, it is within the working hours (from 8 a.m. till 5 p.m.), and it is a weekday
-* The name of the customer is valid (the name has only alphabetical symbols)
+* one or several fields in the form are not filled in
+* the selected date and time is in the future and it is within the opening hours (from 8 a.m. till 5 p.m. and not on a weekend)
+* the name of the customer is valid (the name has only alphabetical symbols)
 
 To configure the **Save** button for the use case above, do the following:
 
@@ -87,7 +87,7 @@ To configure the **Save** button for the use case above, do the following:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
 
-3. In the **Generate Validation Microflow** dialog box, you can see that **Microflow** properties, such as microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in:
+3. In the **Generate Validation Microflow** dialog box, you can see that **Microflow** properties, for example, a microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
 

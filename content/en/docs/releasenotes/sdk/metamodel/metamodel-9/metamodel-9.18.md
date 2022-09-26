@@ -48,9 +48,8 @@ weight: 82
 
 #### CallWorkflowActivity (Element)
 
+* We introduced the `parameterMappings` and `executeAsync` properties.
 * We deleted the `parameterExpression` property. 
-* We introduced the `parameterMappings` property. 
-* We introduced the `executeAsync` property. 
 
 #### WorkflowCallParameterMapping (Element)
 

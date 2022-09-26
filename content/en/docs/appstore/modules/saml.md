@@ -71,9 +71,6 @@ The Mendix SAML SSO module does not support the following:
 Some SAML services, such as eHerkenning and DigID in the Netherlands, use optional features of SAML which are not yet supported by the Mendix SAML SSO module. These include:
 
 * Signature included as a query string parameter in URL (for HTTP-REDIRECT)
-* Signed metadata
-* AttributeConsumingService in Metadata
-* AttributeConsumingServiceIndex in AuthnRequest
 * restriction of RelayState to 80 characters (i.e. SAML SSO may generate RelayState values that exceed 80 characters)
 * ForceAuthn
 * ProviderName
@@ -82,6 +79,8 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 * HTTP-SOAP Logout Request
 
 If you need any of these features, contact your Mendix CSM to discuss inclusion of these features on the Mendix roadmap or customization of the SAML SSO module.
+
+If you want to connect your app to multiple SAML IDPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, use a single key pair and certificate for all SAML IDPs. The certificate can be either a self-signed certificate or a certificate issued by a Certificate Authority (CA) (see [Use a Certificate Issued by a Certificate Authority](#use-ca) for more details)
 
 ### 1.4 Dependencies{#dependencies}
 
@@ -138,7 +137,7 @@ The base URL used for the links in your SP metadata is determined by the **Appli
 
 You can choose what you want to enter for the entity ID, organization, and contact person. There are no limitations here. This should be in line with the policies of the IdP, since all this information is for their reference. 
 
-* **Allow IdP Discovery** – When using multiple IdPs, this determines whether you allow users to get a list of all available IdPs if they have not specified a specific IdP in the login request. When going to `/SSO/`, if you have only one active IdP, the module will use the active IdP by default. If you have multiple IdPs, it is required to include the IdP in the URL. This can be done by using the URL */SSO/login/[IdP Alias]*  or */SSO/login?_idp_id=[IdP_Alias]*.
+* **Allow IdP Discovery** – When using multiple IdPs, this determines whether you allow users to get a list of all available IdPs if they have not specified a specific IdP in the login request. When going to `/SSO/`, if you have only one active IdP, the module will use the active IdP by default. If you have multiple IdPs, it is required to include the IdP in the URL. This can be done by using the URL `/SSO/login/[IdP Alias]` or `/SSO/login?_idp_id=[IdP_Alias]`.
 * **Keep Log Files** – All login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This attribute configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. When keeping it 0, all records will be removed daily.
 * **Use Encryption** (key length: **No Encryption**, **1024bit Encryption**, **2048bit Encryption**; encryption method: **SHA1 / SHA256**) – This allows the encryption of any messages being sent from the SP to the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the key store. Changing the encryption requires all IdPs to re-import the new metadata file.
 
@@ -248,7 +247,7 @@ This file contains the documented properties, and example lines show the default
 
 With these settings, you can configure the behavior of this module and improve multi-tenant behavior of your application. For plain SAML authentication, it is best to leave this file unchanged. 
 
-### 4.2 In-session Authentication
+### 4.2 In-session Authentication{#in-session}
 
 {{% alert color="info" %}}
 In-session authentication at the SAML IDP is only available in the following versions of the module (depending on which Mendix version you are using)
@@ -264,16 +263,14 @@ In-session authentication is a process that takes place within a session that wa
 
 This flow can be initiated by using the URL `https://{app-url}/sso/login?action=verify`
 
-To enable in-session authentication, you need to use the `OpenConfiguration` microflow to configure two microflows in the SAML SSO module:
+To enable in-session authentication, you need to use the `OpenConfiguration` microflow to configure two microflows in the SAML SSO module. In the **Provisioning** tab of the SAML configuration, you need to do the following:
 
 * set **Custom Prepare In-Session Authentication microflow** to `CustomPrepareInSessionAuthentication`
 * set **Custom Evaluate In-Session Authentication microflow** to `CustomEvaluateInSessionAuthentication`
 
-The `CustomPrepareInSessionAuthentication` microflow sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app.
+The `CustomPrepareInSessionAuthentication` microflow sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. The microflow can use the context information that is passed via the ‘on’ query parameter.
 
-{{% todo %}}More information is required here - see original Paper document{{% /todo %}}
-
-The `CustomEvaluateInSessionAuthentication` microflow implements the logic that handles the authentication details of the in-session authentication. This microflow will be customized for each app. The SAML SSO module comes with a ‘default’ EvaluateInSessionAuthentication flow that ….(bla bla).
+The `CustomEvaluateInSessionAuthentication` microflow implements the logic that handles the authentication details of the in-session authentication. The SAML SSO module comes with an empty default `EvaluateInSessionAuthentication` flow, which can be enhanced to combine information from the original session with information received in the assertion from the in-session authentication..
 
 ### 4.3 Requesting user attributes at the SAML IDP
 
@@ -286,13 +283,20 @@ Requesting user attributes at the SAML IDP is only available in the following ve
 
 Your app using the SAML protocol can request specific attributes from the SAML IDP, such as Date of Birth or Gender. You need to clarify with your SAML IDP what attributes can be requested. You may want to request a different set of attributes during in-session login versus regular initial login. In the request you can also indicate whether you consider the attribute as mandatory or optional for your app’s logic.
 
-You can configure these attribute requests in the **Attribute Consuming Service** tab of the `OpenConfiguration` microflow.
+You can configure these attribute requests in the **Attribute Consuming Service** tab of the `OpenConfiguration` microflow. This allows you to add new attributes, edit existing attributes, or remove selected attributes.
 
-You can set up two sets of attributes, provided at different times. Those listed under 
+You can set up two sets of attributes, provided at different times. Those listed under **I want to request attribute(s) at my IDP during initial login** will be returned when the end user initially signs in. Those listed under **I want to request attribute(s) at my IDP during in-session login** will be returned during [In-session Authentication](#in-session).
+
+Although the typical use case for requesting attributes is to obtain information about the user, you can request an attribute with a specific value. In this case, you can configure the optional **Attribute value that must be returned**.
 
 ### 4.4 Configuration of SAML binding
 
-| The possibility to use artifact binding for SAML responses at the SAML IDP is only available in the following versions of the module (depending on which Mendix version you are using)<br><br>- v3.3.0/v3.3.1 and above for Mendix version 9<br>- v2.3.0 and above for Mendix version 8 |
+{{% alert color="info" %}}
+Using artifact binding for SAML responses at the SAML IDP is only available in the following versions of the module (depending on which Mendix version you are using)
+
+* v3.3.0/v3.3.1 and above for Mendix version 9
+* v2.3.0 and above for Mendix version 8
+{{% /alert %}}
 
 By default, the SAML SSO module uses XXX binding for the SAML response.
 To use the artifact binding, the following configuration needs to be done: XXX, YYY, ZZZ.
@@ -313,6 +317,8 @@ Using SAML protocols to secure the APIs of your back-end app is more challenging
 The SAML module does currently allow you to use multi-tier delegation (which makes use of the SAML ECP profile) if you need it. Your front-end app can request a token during login that has the right characteristics so it can be shared with a back-end app.  This is an advanced scenario which requires in-depth knowledge of the SAML protocol and the configuration of all integrating systems to get it working.
 
 In the SAML module, you can enable this by checking “Enable delegated authentication” on the provisioning tab. By checking this box you are able to access the authorized SAML token, the module will automatically keep the token alive. Only enable this functionality if you are actually using multi-tier delegated authentication.
+
+### 4.6 Use a Certificate Issued by a Certificate Authority{#use-ca}
 
 ## 5 Debugging the Configuration
 

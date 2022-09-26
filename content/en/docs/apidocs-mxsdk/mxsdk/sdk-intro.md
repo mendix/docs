@@ -9,7 +9,16 @@ tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 
 ## 1 Introduction
 
-The Mendix Platform SDK and Model SDK are TypeScript- & JavaScript-based SDKs. They provide you with access to the inner-workings of every Mendix app.
+The Mendix Platform SDK and Model SDK are TypeScript- & JavaScript-based SDKs, which gives you access to the inner-workings of every Mendix app. These SDKs enable you to work with your app efficiently via code, and automate any tedious or error-prone task. If you image it, there is probably a way to do it via these SDKs. 
+
+With the Platform SDK and Model SDK, you can do the following:
+
+* "Read" from your app model (for example, analyze the quality of your app model, or generate a high-level diagram to document your app)
+* "Write" to your app model (for example, create a new entity in your domain model, add an activity to an existing microflow, even generate  a whole new Mendix app based on a legacy code base)
+
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" >}} 
+
+{{% alert color="info" %}}For more information, see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing).{{% /alert %}}
 
 ### 1.1 Mendix Platform SDK
 
@@ -37,20 +46,9 @@ However, because we provide full read-write access, you can also break the model
 - Custom widgets
 - Rest services: PublishedRestService is an unsupported, experimental feature.
 
+When changing these components, make sure to use the [reverse engineering tool](https://docs.mendix.com/apidocs-mxsdk/mxsdk/generating-code-from-the-model/) to increase your chances of successfully building a script that creates valid models.
+
 {{% /alert %}}
-
-### 1.3 The Combined Power of Mendix Platform SDK and Model SDK
-
-With the Platform SDK and Model SDK, you can do the following:
-
-* "Read" from your app model (for example, analyze the quality of your app model, or generate a high-level diagram to document your app)
-* "Write" to your app model (for example, create a new entity in your domain model, add an activity to an existing microflow, even generate  a whole new Mendix app based on a legacy code base)
-
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" >}} 
-
-The combination of Platform SDK and Model SDK basically enables you to automate any tedious or error-prone task. If you imagine it, there's probably a way to do it via these SDKs.
-
-{{% alert color="info" %}}When changing these components, make sure to use the [reverse engineering tool](https://docs.mendix.com/apidocs-mxsdk/mxsdk/generating-code-from-the-model/) to increase your chances of successfully building a script that creates valid models.{{% /alert %}}
 
 ## 2 Getting Started
 
@@ -64,9 +62,3 @@ The combination of Platform SDK and Model SDK basically enables you to automate 
 ### 2.2 Detailed Resources
 
 For detailed information on getting started with the Platform SDK and Model SDK, see [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).
-
-## 3 Read More
-
-* [SDK Use Cases](sdk-use-cases)
-* [Mendix SDK Reference Documentation](/apidocs-mxsdk/mxsdk/sdk-refguide/)
-

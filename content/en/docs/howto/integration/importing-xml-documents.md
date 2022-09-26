@@ -3,6 +3,7 @@ title: "Import XML Documents"
 url: /howto/integration/importing-xml-documents/
 category: "Integration"
 weight: 3
+description: "Describes how to prepare the data structure and GUI, add an XML schema, and create XML-to-domain mapping."
 tags: ["import", "xml", "integration"]
 ---
 

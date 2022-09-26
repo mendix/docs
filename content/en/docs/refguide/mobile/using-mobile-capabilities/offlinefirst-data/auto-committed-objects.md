@@ -13,7 +13,7 @@ Auto-committed objects are Mendix objects committed to the database automaticall
 
 ## 2 Do Offline-First Apps Have an Auto-Commit Logic?
 
-Offline-first apps do not have an auto-commit logic. When you commit an object that references another (new) object in an offline-first app, the Mendix Client will only commit the original object and not the referenced object. This means the local database has an invalid reference until the app explicitly commits the referenced object.
+Offline-first apps do not have an auto-commit logic. When you commit an object that references an uncommitted object in an offline-first app, the Mendix Client will only commit the original object and not the object it references. This means the local database has an invalid reference until the app explicitly commits the referenced object.
 
 Here is an example domain model that showcases this situation:
 

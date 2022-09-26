@@ -1,8 +1,8 @@
 ---
-title: "Synchronization & Auto-Committed Objects "
+title: "Synchronization & Auto-Committed Objects"
 url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/auto-committed-objects/
 weight: 40
-description: "Describes when offline sync can create auto-committed objects and suggests solutions to solve it."
+description: "Describes when offline sync can create auto-committed objects and what to do when that occurs."
 tags: ["offline", "offline-first", "auto-committed", "autocommitted"]
 # If moving or renaming this doc file, implement a permanent redirect and let the respective team (R&D/AppDev/Frontend/Mobile Offline Team) update the URL in the product.
 ---
@@ -11,7 +11,7 @@ tags: ["offline", "offline-first", "auto-committed", "autocommitted"]
 
 Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see [Autocommit and Associated Objects](/refguide/committing-objects/#52-autocommit-and-associated-objects).
 
-## 2 Do Offline-First Apps Have an Auto-Commit logic?
+## 2 Do Offline-First Apps Have an Auto-Commit Logic?
 
 Offline-first apps do not have an auto-commit logic. When you commit an object that references another (new) object in an offline-first app, the Mendix Client will only commit the original object and not the referenced object. This means the local database has an invalid reference until the app explicitly commits the referenced object.
 
@@ -29,7 +29,7 @@ Assume a user closes the app right after the example nanoflow has run. Since the
 
 Finally, it is true that an offline-first app *can* create auto-committed objects on the runtime database. However, although auto-committed objects help ensure database consistency in web applications, creating auto-committed objects in offline-first apps is *not recommended*.
 
-## 3 Why are auto-committed objects not recommended in offline-first apps?
+## 3 Why Auto-Committed Objects Are Not Recommended in Offline-First Apps
 
 Auto-committed objects live until the user's session expires. When the user's session expires, the Mendix Runtime deletes any auto-committed objects created in that session. This logic works well for web applications, but is not a good fit for offline-first apps for the following reasons:
 
@@ -41,7 +41,7 @@ Auto-committed objects live until the user's session expires. When the user's se
   * The synchronization may fail if a user changes and synchronizes an (invalid) auto-committed object.
 * **Delete Behavior Issues** – The Mendix Runtime may delete other associated objects while deleting the auto-committed objects at the end of a session. This can happen if the association's [delete behavior](refguide/association-properties/#delete-behavior) is set to deleting associated objects.
 
-## 4 How can an offline-first app create auto-committed objects?
+## 4 How Offline-First Apps Create Auto-Committed Objects
 
 Even though an offline-first app always works against the local database, it can still execute logic on the runtime, creating auto-committed objects.
 
@@ -53,7 +53,7 @@ An offline-first app can call microflows on the runtime, creating auto-committed
 
 In the microflow above, the commit action of the `$Order` object will auto-commit the `$Customer` object.
 
-#### 4.1.1 How to prevent it?
+#### 4.1.1 Preventing Microflows from Creating Auto-Comitted Objects
 
 Explicitly commit any new objects created in microflows executed in an offline-first app.
 
@@ -74,19 +74,19 @@ Assume the `$NewCustomer` object is invalid due to a missing required attribute 
   * The commit fails due to the validation error. Synchronization creates a `System.SynchronizationError` entry for this object and continues.
 * The `$NewCustomer` object remains auto-committed.
 
-#### 4.2.1 How to prevent it?
+#### 4.2.1 Preventing Synchronization from Creating Auto-Comitted Objects
 
 Solve the root cause of the validation failure. 
 
-## 5 How does Mendix handle auto-committed objects in an offline-first app?
+## 5 How Mendix Handles Auto-Committed Objects in an Offline-First App
 
 Handling auto-committed objects depend on the application type and the Mendix version.
 
-### 5.1 Offline-first Progressive Web Apps
+### 5.1 Offline-First Progressive Web Apps
 
-#### 5.1.1 Created during synchronization
+#### 5.1.1 Created During Synchronization
 
-The Mendix runtime will delete auto-committed objects created during synchronization. It will also log a warning in the `Offline Synchronization` log node.
+The Mendix Runtime will delete auto-committed objects created during synchronization. It will also log a warning in the `Offline Synchronization` log node.
 
 The contents of the log message depend on the Mendix version:
 
@@ -114,11 +114,11 @@ Please refer to the documentation to learn more about this issue and how to solv
 https://docs.mendix.com/refguide/mobile/using-mobile-capabilities/offlinefirst-data/auto-committed-objects/
 ```
 
-#### 5.1.2 Created while executing a microflow
+#### 5.1.2 Created While Executing a Microflow
 
 Auto-committed objects created inside microflows that are called from a nanoflow will remain in the database. An error will be logged when the user's session expires unless auto-committed objects are explicitly committed or deleted.
 
-### 5.2 Native mobile apps
+### 5.2 Native Mobile Apps
 
 On Mendix 9.17 and below, Auto-committed objects remain in the database regardless of how they are created. An error will be logged when the user's session expires unless auto-committed objects are explicitly committed or deleted.
 
@@ -137,6 +137,6 @@ https://docs.mendix.com/refguide/mobile/using-mobile-capabilities/offlinefirst-d
 
 Auto-committed objects created inside microflows that are called from a nanoflow will remain on the database.
 
-## 6 Customizing the auto-commit handling behavior
+## 6 Customizing the Auto-Commit Handling Behavior
 
 A new custom runtime setting (`com.mendix.offline.DeleteAutoCommittedObjectsAfterSync`) is available to disable deleting the auto-committed objects created during synchronization. This setting is available in Mendix intended for offline-first apps created in Mendix versions earlier than 9.18 to keep the previous behavior. Disabling this setting for new applications is not recommended. For details on how to change this setting, refer to the following documentation: [Advanced Custom Settings in Mendix Runtime](refguide/tricky-custom-runtime-settings/#22-general-settings)

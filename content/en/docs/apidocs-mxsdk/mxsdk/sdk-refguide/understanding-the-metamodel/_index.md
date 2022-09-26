@@ -1,6 +1,6 @@
 ---
-title: "Understanding the Mendix Metamodel"
-url: /apidocs-mxsdk/mxsdk/understanding-the-metamodel/
+title: "Mendix Metamodel"
+url: /apidocs-mxsdk/mxsdk/mendix-metamodel/
 description: "</br>This set of documents describes how the Mendix Metamodel works. It covers the following topics:</br></br>• How the Mendix handles projects in relation to modules and documents</br>• How a Domain Model works with all its components (attributes, access rules, etc.)</br>• How pages, layouts, and page content are structured.</br>• How you can create and invoke microflows. "
 no_list: false
 simple_list: true

@@ -191,6 +191,8 @@ Upon completing these steps, you only need to send the SP metadata file to the I
 If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **\_USE ME** > **Scheduled Events** folder of the SAML module.
 {{% /alert %}}
 
+If you need to change your identity provider metadata you can find more information in the [Configuration of SAML Binding](#saml-binding) section.
+
 #### 3.2.4 User Provisioning 
 
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
@@ -289,7 +291,7 @@ You can set up two sets of attributes, provided at different times. Those listed
 
 Although the typical use case for requesting attributes is to obtain information about the user, you can request an attribute with a specific value. In this case, you can configure the optional **Attribute value that must be returned**.
 
-### 4.4 Configuration of SAML binding
+### 4.4 Configuration of SAML Binding{#saml-binding}
 
 {{% alert color="info" %}}
 Using artifact binding for SAML responses at the SAML IDP is only available in the following versions of the module (depending on which Mendix version you are using)
@@ -298,11 +300,36 @@ Using artifact binding for SAML responses at the SAML IDP is only available in t
 * v2.3.0 and above for Mendix version 8
 {{% /alert %}}
 
-By default, the SAML SSO module uses XXX binding for the SAML response.
-To use the artifact binding, the following configuration needs to be done: XXX, YYY, ZZZ.
-The configured binding will be included in the SP metadata, as indicated in section +SAML SSO - WIP product documentation: 6-URLs 
+You may need to choose a different SAML binding to match your IDP. You can configure th the SAML binding in the **Identity Provider Metadata** tab of the `OpenConfiguration` microflow. 
 
-### 4.5 Multi-tier Delegated Authentication{#delegated-auth}
+#### 4.4.1 Response Protocol Binding
+
+By default, the SAML SSO module uses `POST_BINDING` for the SAML response. In most cases (for example, when using AzureAD) you will want to stick to this default.
+
+Some IDPs, however, require your app to use the more secure `ARTIFACT_BINDING`. 
+
+To use artifact binding, select ARTIFACT_BINDING option for **Response protocol binding**.
+This configuration helps enable the Post/Artifact binding, used as the following:
+
+* `ProtocolBinding` attribute in Auth-request.
+* `AssertionConsumerService` binding in SP-MetaData.
+
+#### 4.4.2 Use AssertionConsumerService Concept
+
+Also in typical cases (e.g. with AzureAD), you don’t want to use the AssertionConsumerService concept in requests. However, some IdPs require requests to include an AssertionConsumerServiceIndex in requests, which refer to the definition of the Assertion Consumer Service in the SP-metadata.
+
+If the field is 'yes', then Auth-Request contains only the 'AssertionConsumerServiceIndex' attribute.
+If this field is 'no', then Auth-Request contains the ' AssertionConsumerServiceURL' and 'ProtocolBinding' attributes.
+
+Assertion consumer service index:
+This field is used as ‘AssertionConsumerServiceIndex’ value in both Auth-Request and also in SP-Metadata. 
+The configured binding will be included in the SP metadata, as indicated in the [URLs](#urls} section. 
+
+### 4.5 Use a Certificate Issued by a Certificate Authority{#use-ca}
+
+{{% todo %}}Copy from Paper document (#4.6){{% /todo %}}
+
+### 4.6 Multi-tier Delegated Authentication{#delegated-auth}
 
 {{% alert color="warning" %}}
 This feature is deprecated. The complexity of the necessary configurations doesn’t correspond with Mendix's ambition to provide an easy ‘low code experience’ and Mendix cannot provide support for it.
@@ -317,8 +344,6 @@ Using SAML protocols to secure the APIs of your back-end app is more challenging
 The SAML module does currently allow you to use multi-tier delegation (which makes use of the SAML ECP profile) if you need it. Your front-end app can request a token during login that has the right characteristics so it can be shared with a back-end app.  This is an advanced scenario which requires in-depth knowledge of the SAML protocol and the configuration of all integrating systems to get it working.
 
 In the SAML module, you can enable this by checking “Enable delegated authentication” on the provisioning tab. By checking this box you are able to access the authorized SAML token, the module will automatically keep the token alive. Only enable this functionality if you are actually using multi-tier delegated authentication.
-
-### 4.6 Use a Certificate Issued by a Certificate Authority{#use-ca}
 
 ## 5 Debugging the Configuration
 
@@ -340,7 +365,9 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory), and also because it is a good idea to create two unique users (for example, "JoHnDoE@CoMpAnY.CoM" and "johndoe@company.com").
 * **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
-## 6 URLs
+## 6 URLs{#urls}
+
+{{% todo %}}Update with picture and text from Paper document{{% /todo %}}
 
 * **/SSO/metadata** – This provides a point for the IdP to automatically download the metadata from this SP.
 * **/SSO/discovery** – If there are multiple active IdP configurations and discovery is enabled, this page can give a list of all the IdP configuration. It also allows the user to click the correct URL to sign in.

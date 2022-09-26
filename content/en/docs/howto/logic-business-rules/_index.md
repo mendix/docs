@@ -2,6 +2,7 @@
 title: "Logic & Business Rules"
 url: /howto/logic-business-rules/
 weight: 60
+description: "Presents a list of how-tos to translate your business logic into microflows, and build and debug them from the beginner to the expert level."
 no_list: false
 description_list: true
 tags: ["studio pro", "how-to"]

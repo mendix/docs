@@ -48,7 +48,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 The [page](/refguide/page/) that is displayed to an end-user. If the page has parameters, the [Parameters](#parameters) section allows you to specify the which objects should be passed to the page.
 
-To create a new page that **Show page** activity will show, click the **Select** button > **New**. If you have selected an **Object to pass**, Studio Pro will automatically create a data view to edit that object.
+To create a new page that **Show page** activity will show, click the **Select** button > **New**. Studio Pro will ask you whether you want to pass a variable as an argument to the new page. If you select a variable to pass, Studio Pro will automatically create a page parameter of that type and a data view to edit that object.
 
 ### 3.2 Page Title
 

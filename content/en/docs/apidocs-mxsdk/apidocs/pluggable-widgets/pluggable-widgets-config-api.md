@@ -593,7 +593,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
 })
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
+{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a drop-zone" width="600"  >}}
 
 ### 7.6 Selectable
 
@@ -647,7 +647,7 @@ type DatasourceProps = BaseProps & {
 }
 ```
 
-The datasource preview type can be used when developing a widget with a datasource. Using it will render a container with a datasource header, similar to other data widgets such as data views or list views. For example, the following will render a datasource container with a dropzone:
+The **datasource** preview type can be used when developing a widget with a data source. Using it will render a container with a data source header, similar to other data widgets such as data views or list views. For example, the following will render a data source container with a drop-zone:
 
 ```typescript
     exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
@@ -660,7 +660,7 @@ The datasource preview type can be used when developing a widget with a datasour
     })
 ```
 
-Here is a preview of a datasource component containing a dropzone with two text boxes:
+Here is a preview of a **datasource** component containing a drop-zone with two text boxes:
 
 {{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
 

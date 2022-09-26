@@ -32,7 +32,7 @@ If you need help with the SDKs, check whether your question is answered in the [
 
 Browse the reference documentation below about the Mendix Metamodel:
 
-* [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and apps in the Mendix Metamodel
+* [Mendix Metamodel](/apidocs-mxsdk/mxsdk/mendix-metamodel/) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and apps in the Mendix Metamodel
 * [JavaScript & TypeScript Resources](/apidocs-mxsdk/mxsdk/javascript-typescript-resources/) – summarizes TypeScript and provides links to useful resources for learning more
 
 ## 6 SDK How-tos

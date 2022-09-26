@@ -198,7 +198,8 @@ Use Windows PowerShell 5.1 to run Mendix cmdlets. Other versions of PowerShell a
 
 When you run the `Start-MxApp $APP_NAME` or `Start-MxApp $APP_NAME -synchronizedatabase` cmdlets, PowerShell shows an error message similar to the following:
 
-```Start-MxApp : Unable to start the app. Reason: The database does not exist. 
+```text {linenos=false}
+Start-MxApp : Unable to start the app. Reason: The database does not exist. 
 At line:1 char:1 
 + Start-MxApp MyFirstApp -synchronizedatabase 
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 

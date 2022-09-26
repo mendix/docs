@@ -46,7 +46,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Page
 
-The [page](/refguide/page/) that is displayed to an end-user. If the object to pass property is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
+The [page](/refguide/page/) that is displayed to an end-user. If the page has parameters, the [Parameters](#parameters) section allows you to specify the which objects should be passed to the page.
 
 To create a new page that **Show page** activity will show, click the **Select** button > **New**. If you have selected an **Object to pass**, Studio Pro will automatically create a data view to edit that object.
 

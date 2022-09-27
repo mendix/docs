@@ -35,7 +35,7 @@ To use Mendix Business Events, you will need the following:
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module from the Mendix Marketplace
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above
 * At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
-* An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker), or your own event broker cluster for Free Apps, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
+* An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or for local testing the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
 ## 2 Licensing {#licensing}
@@ -51,7 +51,7 @@ Licenses for the Mendix Event Broker are available for all regions, but once sel
 #### 2.1.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
 Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
-     1. On the App level, under Environments > [Services](/developerportal/deploy/environments/#service)
+     1. On the App level, under Environments > [Services](/developerportal/deploy/environments/#services)
      2. For all environments, on the [Environment Details](/developerportal/deploy/environments-details/#services) page
 
 ## 3 Mendix Event Broker {#mendix-event-broker}

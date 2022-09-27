@@ -47,7 +47,7 @@ In this section, you can find sample scripts to help you script your app deploym
 The scripts are intended to show the range of available deployment options. They are presented as examples only, and may require significant adaptation to work in your own environment.
 {{% /alert %}}
 
-### 4.1 Sample Script - Update App
+### 4.1 Sample Script - Update App {#update}
 
 The following script example demonstrates the process required to update your app. Firstly, it imports the necessary cmdlets. After that, it stops your app and updates it with files extracted from the Mendix Deployment Package. Finally, the script restarts the app with the `SynchronizeDatabase` parameter to synchronize the database without user input.
 
@@ -194,7 +194,7 @@ You ran the `Start-MxApp` cmdlet in a version of PowerShell other than 5.1.
 
 Use Windows PowerShell 5.1 to run Mendix cmdlets. Other versions of PowerShell are currently not supported.
 
-### 5.5 Unable to start the app. Reason: The database does not exist.
+### 5.5 Unable to start the app. Reason: The database does not exist
 
 When you run the `Start-MxApp $APP_NAME` or `Start-MxApp $APP_NAME -synchronizedatabase` cmdlets, PowerShell shows an error message similar to the following:
 
@@ -213,3 +213,24 @@ You tried to start the app without first creating the app database.
 #### 5.5.2 Solution
 
 Deploy your app manually before you running automated deployment scripts. For more information, see [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
+
+### 5.6 Unable to start the app. Reason: The database is not synchronized with the model
+
+When you run the `Start-MxApp $APP_NAME` cmdlet, PowerShell shows an error message similar to the following:
+
+```text {linenos=false}
+Start-MxApp : Unable to start the app. Reason: The database is not synchronized with the model.
+At line:1 char:1
++ Start-MxApp MyFirstApp
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (MyFirstApp:String) [Start-MxApp], Exception
+    + FullyQualifiedErrorId : AppProcessError,Mendix.Service.Commands.StartAppCommand
+```
+
+#### 5.6.1 Cause
+
+You tried to restart the app without using the `SynchronizeDatabase` parameter.
+
+#### 5.6.2 Solution
+
+Run the `Start-MxApp` command with the `SynchronizeDatabase` parameter. For an example, see [Sample Script - Update App](#update) above.

@@ -34,6 +34,10 @@ Page properties consist of the following sections:
 
 The list of parameters that this page expects. These parameters can be used by [data views](/refguide/data-view/) with a page parameter data source.
 
+A page parameter is an input that needs to be passed from the calling page, microflow, or nanoflow to the current page. Page parameters determine information that can be reused on the page. For example, if you want to build an **Employee_Details_Edit** page, the page will have a parameter **Employee**. Thus when this page is called an Employee object needs to be passed to it to show the corresponding Employee data.
+
+You can also use multiple page parameters in v9.18 and above. Multiple page parameters allow you to easily use multiple objects on a page that do not have associations. Using multiple page parameters, you can pass multiple arguments when opening a page, the same as with microflows and nanoflows.
+
 ### 2.3 Designer Section {#designer}
 
 {{% snippet file="/static/_includes/refguide/designer-properties.md" %}}

@@ -378,12 +378,26 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 
 ## 6 URLs{#urls}
 
-{{% todo %}}Update with picture and text from Paper document{{% /todo %}}
+The following diagram gives an overview of all endpoints that the SAML SSO module exposes and consumes:
 
-* **/SSO/metadata** – This provides a point for the IdP to automatically download the metadata from this SP.
+{{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png">}}
+
+End users can access your app through the following endpoints when using the SAML SSO module:
+
 * **/SSO/discovery** – If there are multiple active IdP configurations and discovery is enabled, this page can give a list of all the IdP configuration. It also allows the user to click the correct URL to sign in.
-* **/SSO/login/[IdP Alias]  /SSO/login?_idp_id=[IdP_Alias]** – For logging using a specific IdP, you have to open either of these two URLs and pass the IdP alias as a parameter in the URL.
+* **/SSO/login/[IdP Alias]  /SSO/login?_idp_id=[IdP_Alias]&action=verify&on={contextname}** – For logging using a specific IdP, you have to open either of these two URLs and pass the IdP alias as a parameter in the URL.
+    The (optional) parameters for this end point are as follows:
+    * idp_id – this indicates which idp will be used to sign the end user in if you connect your app using multiple SAML IDPs
+    * action=verify – indicates that in-session authentication is being requested (see [In-session Authentication](#in-session) for more information)
+    * on={contextname} – this gives context to the initiation of in-session authentication,  (see [In-session Authentication](#in-session) for more information)
 * **/SSO/login/SSO/** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message.
+
+Your SAML IDP can consume the following endpoints at your app. Typically the SP-metadata is used to communicate the URLs to your SAML IDP. As a Low-Code Developer you don’t have to consider these endpoints. This information is included here for completeness and as a reference when questions arise around integration with your SAML IDP.
+
+* **/SSO/metadata** – This provides a point for the IdP to automatically download the metadata from this SP
+* **/SSO/assertion** – This is the endpoint where the IDP submits the SAML assertion to the so-called ‘Assertion Consumer Service’
+* **/SSO/attribute** – This is the endpoint where the SAML-IDP submits requested attributes about the authenticated user
+* **/SSO/logout** – This URL will trigger a single logout
 
 ## 7 Custom Behavior
 

@@ -81,15 +81,21 @@ To add the client certificate used for creating Trust Anchor in RolesAnywhere, p
 
 2. Click **Environments** and then click **Details** on the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 
-3. Go to the **Network** tab, and add the client certificate used for creating Trust Anchor in RolesAnywhere in the **Outgoing Connections Certificates** section. Once the client certificate is loaded, it appears in list below. 
+3. Go to the **Network** tab.
+
+4. In the **Outgoing Connections Certificates** section, add the client certificate used for creating Trust Anchor in RolesAnywhere. 
+
+5. Select the certificate that you just added from the list and then click **Details**.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
 
-4. Select the certificate and click **Details**.
-
-5. Click **New** and enter a client certificate identifier in the new dialog box. The client certificate identifier will be used later as input when you create the session credentials.
+6. Click **New** and enter a client certificate identifier in the dialog box. The client certificate identifier will be used later as input when you create the session credentials.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
+
+After the configuration, the client certificate that you added should show as **Currently enabled**.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
 
 
 #### 3.2.3 Using the Get Session Credentials Action in Studio Pro

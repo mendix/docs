@@ -9,26 +9,26 @@ weight: 1
 
 ## 1 Units
 
-This set of documents helps you understand the Mendix Metamodel that we have opened up. It is a detailed description of how all Mendix app models are structured.
+We have opened up our Mendix Metamodel, which is a detailed description of how all Mendix app models are structured. This set of documents helps you understand the Mendix Metamodel.
 
 If you are familiar with Studio Pro you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the App Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the App Explorer of Studio Pro is a `unit`.
 
 Units come in two flavors:
 
-* **Structural units** – These are the *nodes* in the project tree and can be (only): the entire project (root), modules and folders. A structural unit mainly provides structure and contains very little information itself.
-* **Model units** – These are the *leafs* in the project tree: microflows, pages, etc. These can be edited in an editor of Studio Pro. Internally, a model unit is a collection of model objects which we call: *elements*.
+* Structural units – These are the nodes in the project tree and can only be: the entire project (root), modules, and folders. A structural unit mainly provides structure and contains very little information itself.
+* Model units – These are the leafs in the project tree: microflows, pages, etc. These can be edited in an editor of Studio Pro. Internally, a model unit is a collection of model objects which we call: *elements*.
 
 ## 2 Elements
 
 Each model unit consists of a tree of elements. Examples of elements are: entities in a domain model, attributes of an entity, activities and arrows in a microflow, widgets in a page, etc.
 
-Each element has an ID that's only internally used and a *type*, such as `Entity` or `Attribute`, etc. It's important to note that, in general, there is not always a 1-to-1 correspondence between things you see in Studio Pro and elements. We often need to use more elements than you'd see at first glance in Studio Pro, usually to be able to capture the variety of constructs which Mendix supports, and sometimes because it's technically more convenient.
+Each element has an ID that is only internally used and a type, such as `Entity` or `Attribute`, etc. It is important to note that, in general, there is not always a 1-to-1 correspondence between things you see in Studio Pro and elements. We often need to use more elements than you can see at first glance in Studio Pro, usually to be able to capture the variety of constructs which Mendix supports, and sometimes because it is technically more convenient.
 
-As an example: an entity can have a generalization. If it has none, you see "(none)" in Studio Pro but in the Entity element this is expressed using an element of type `NoGeneralization`. If the entity has a generalization, then this is expressed through an element of type `Generalization` which holds a reference to the generalization entity. The images that ship with the reference documentation should guide you through these constructions.
+As an example: an entity can have a generalization. If it has none, you see **(none)** in Studio Pro, but in the Entity element this is expressed using an element of type `NoGeneralization`. If the entity has a generalization, then this is expressed through an element of type `Generalization` which holds a reference to the generalization entity. The images that ship with the reference documentation should guide you through these constructions.
 
 ### 2.1 Abstract Element Types
 
-A lot of elements (or: element types) share features. For example: microflows and rules share a lot of features which are expressed on a common abstract type `MicroflowBase`. All abstract types are suffixed with `Base` and should never be created directly. However, they are useful (to know about) for analysis: for example, you can process micro flows and rules in mostly the same way.
+A lot of elements (or element types) share features. For example: microflows and rules share a lot of features which are expressed on a common abstract type `MicroflowBase`. All abstract types are suffixed with `Base` and should never be created directly. However, they are useful to know about for analysis: for example, you can process microflows and rules in mostly the same way.
 
 ## 3 Properties
 

@@ -11,7 +11,9 @@ tags: ["marketplace", "marketplace component", "business events", "data broker",
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. You can purchase a license for a [Mendix Event Broker](#mendix-event-broker) or run your own broker cluster. 
+The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. This results in much better availability for your applications, as applications are not impacted by downtime of other applications. It also simplifies your applications, as you reduce the fact that applications need to be aware of other applications, this simplifying dependency management and impact analysis when changing your software.
+
+To deliver these events reliably between your applications, a Mendix Event Broker is required. For apps running the Mendix cloud on licensed nodes, you'll need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). A limited multi-tenant Event Broker is provided for free apps in the Mendix cloud. If desired for development, you can run your own broker cluster.
 
 Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.
 
@@ -33,7 +35,7 @@ To use Mendix Business Events, you will need the following:
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) module from the Mendix Marketplace
 * Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above
 * At least two Mendix apps: one that publishes the business events and makes them available, and one that subscribes to the business events (you can have as many publishing and consuming apps as you require)
-* An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) or your own event broker cluster for local deployments, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
+* An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker), or your own event broker cluster for Free Apps, or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
 ## 2 Licensing {#licensing}
@@ -71,7 +73,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage its feat
 
 #### 3.1.1 Environments and Spaces
 
-When Business Events is enabled for an environment, it is placed in an Event Broker **Space** based on the environment name. This enables apps deployed under the same **Space** to publish and consume events. For example, apps in acceptance environment can only exchange events with other apps' acceptance environments. You can check the **Space** of an app's environment on the [Event Broker Manager](https://broker.mendix.com/) page. 
+**Spaces** define which applications will exchange events with each other. When Business Events is enabled for an environment, it is placed in an Event Broker **Space** based on the environment name. This enables apps deployed under the same **Space** to publish and consume events. For example, apps in acceptance environment can only exchange events with other apps' acceptance environments. You can check the **Space** of an app's environment on the [Event Broker Manager](https://broker.mendix.com/) page. 
 
 **Spaces** are created and assigned based on the app environment name and allow isolation of your business events. The default behavior can be changed if needed. Please contact [Mendix Support](https://support.mendix.com/) if you would like to change the **Space** of a specific app environment.
 
@@ -79,7 +81,9 @@ See [Enabling the Mendix Event Broker Service](#enable-mx-event-broker) for more
 
 #### 3.1.2 Mendix Event Broker Topics and Channels
 
-For licensed users, all events from Free Apps are published to one shared topic. Events published by apps running on licensed nodes are published to their own channels. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
+Events are placed in Channels, sometimes called Topics. Apps subscribed to a channel will receive events published to this channel.
+
+Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
 #### 3.1.3 Mendix Event Broker Error Handling
 
@@ -122,7 +126,7 @@ The following sections describe how to publish entities as business events.
 
 #### 5.1.1 Modelling Business Events
 
-Entities that are to be published as business events must inherit from the **PublishedBusinessEvent** entity that is included in the Mendix Business Events module. 
+Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events module. 
 
 1.  In your [Domain Model](/studio/domain-models/), double-click the entity you want to publish as a business event to display the entity properties.
 2.  In the **Generalization** field, click **Select** and select the **PublishedBusinessEvent** entity. 
@@ -134,7 +138,7 @@ The text with the blue background above the entity tells you that it is a specia
 
 #### 5.1.2 Creating a Published Business Event Service {#create-be}
 
-A **Published Business Event Service** is the contract defining various events, like a REST API spec.
+A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is similar to a OpenAPI or WSDL contract.
 
 1.  Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
 
@@ -154,12 +158,11 @@ When deploying an app with one or more **Published Business Event** services, ch
 
 #### 5.1.3 Using the Publish Business Event Activity
 
-The next stage is to add an activity for publishing into the microflow(s) that will publish. The following has to be done for every microflow:
+After defining your business events, and adding them to a published service, you can publish the events in your microflows whenever a noticeable event occurs. You do this using the **Publish business event** activity:
 
 1.  Open the microflow in which the business events will be published.
 2.  Create an object of the business events you want to publish.
 3.  In the **Toolbox**, search for the **Publish business event** action and drag it and place it in your microflow.
-
 4.  Double-click **Publish business event** to display the **Publish Business Event** property box.
 5.  Enter the following information:
     * **Subject**: This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
@@ -172,7 +175,9 @@ The *Publish Business Event* Activity will commit all event objects at the start
 
 ### 5.2 Consuming Business Events {#consume-be}
 
-Consumption is a continuous process that the module will start and will be restarted in case of any errors.  Once you have configured the Subscription to the Events, this will be taken care of by the system.
+To receive or consume business events, an application needs to subscribe to one or more business events and define which microflow is responsible for handle the event received. 
+
+This is done in a reliable way: if the receiving app is unavailable the event will be delivered once the app is available. If the microflow handling the event fails, it will be retried.
 
 #### 5.2.1 Create a Consumed Business Event Service
 
@@ -188,7 +193,11 @@ To start consuming a business event contract, you first need to create a **Consu
 
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
 
-##### 5.1.1.1 Automatically Created Event Handler Microflow and Entity
+##### 5.2.1.1 Automatically Created Event Handler Microflow and Entity
+
+There are two ways to subscribe to, or consume a specific business event:
+* **Add** the subscription in the **subscribed business event service**.
+* **Drag and drop** the business event from the **Data Hub pane** to your domain model
 
 When you click **Add** to add the events from the Contract into your module, Studio Pro will automatically create an entity within your domain model and an **Event Handler** microflow to manage the flow of the Event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
@@ -227,7 +236,10 @@ Use these fields to transform the payload back into a Mendix entity again. If th
 
 ## 6 Deployment {#deployment}
 
-You can either deploy locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools), or to production with the Mendix Event Broker or your own event broker.
+Business Events offers three different deployment models:
+1. Deploy locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
+2. Free apps use a free multi-tenant Event Broker
+3. Production apps use the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
 
 Business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
 
@@ -237,7 +249,13 @@ Use our [Local Setup Tool](https://github.com/mendix/event-broker-tools) for loc
 
 When you deploy your apps to the free cluster, a free event broker is provided and configured automatically. In the Mendix Free App environment, there is a limit of 1000 events per app per day.
 
-### 6.2 Production Deployment
+### 6.2 Free Apps Deployment
+
+When you deploy your apps to the free cluster, a free event broker is provided and configured automatically. In the Mendix Free App environment, there is a limit of 1000 events per app per day. 
+
+Any free app in your organization will be able to receive any event published by a free app in your organization, as all free apps share a single free channel for your company.
+
+### 6.3 Production Deployment
 
 To deploy to production, you must have a subscription to the [Mendix Event Broker](#mendix-event-broker). See [Mendix Event Broker License](#event-broker-license) for licensing information.
 

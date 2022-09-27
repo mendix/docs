@@ -327,7 +327,18 @@ The configured binding will be included in the SP metadata, as indicated in the 
 
 ### 4.5 Use a Certificate Issued by a Certificate Authority{#use-ca}
 
-{{% todo %}}Copy from Paper document (#4.6){{% /todo %}}
+By default the SAML SSO module will use self-signed certificates. It is, however, also possible to use certificates issued by a Certificate Authority (CA).
+
+SAML SSO supports 2 file formats:
+
+* a PKCS 12 file, which typically has extension  .pfx or .p12.
+* a jks file.
+
+When you upload the CA-certificate you must do the following:
+
+* set a password to be able to read the contents of the uploaded key file.
+* use an alias for the certificate — this must be an alias that is present in the uploaded file. If the aliases do not match, the SAML module will fall back to using a self-signed certificate instead.
+* the value of the configured SP EntityID must match the alias that is included in the uploaded key store.
 
 ### 4.6 Multi-tier Delegated Authentication{#delegated-auth}
 

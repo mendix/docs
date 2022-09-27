@@ -1,7 +1,6 @@
 ---
 title: "XPath hours-from-dateTime"
 url: /refguide7/xpath-hours-from-datetime/
-parent: "xpath-constraint-functions"
 ---
 
 ## 1 Overview

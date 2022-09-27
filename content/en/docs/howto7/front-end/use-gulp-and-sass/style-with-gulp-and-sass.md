@@ -1,7 +1,6 @@
 ---
 title: "Start Styling with Gulp & Sass"
 url: /howto7/front-end/style-with-gulp-and-sass/
-parent: "use-gulp-and-sass"
 weight: 2
 tags: ["gulp", "sass", "ux", "front end"]
 ---
@@ -14,7 +13,7 @@ This how-to is based on the blog post [How Do I Start Styling In Mendix (Gulp & 
 
 You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you make when styling with Sass. Gulp triggers auto-refresh by default so that your changes are immediately visible in the browser.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up the Gulp app
 * Run Gulp
@@ -52,7 +51,7 @@ If you are using Parallels on Mac, you can access your Mendix app on your Mac br
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.
 
-## 5 Development & Production
+## 5 Development and Production
 
 When running `npm run dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
 

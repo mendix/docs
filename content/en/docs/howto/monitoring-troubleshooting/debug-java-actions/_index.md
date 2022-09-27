@@ -3,6 +3,7 @@ title: "Debug Java Actions"
 url: /howto/monitoring-troubleshooting/debug-java-actions/
 category: "Monitoring & Troubleshooting"
 weight: 4
+description: "Describes how to set breakpoints and debug Java actions in Eclipse."
 tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 
@@ -10,7 +11,7 @@ tags: ["monitoring", "troubleshooting", "debug", "java action"]
 
 Mendix Studio Pro has a built-in debugger to solve errors on the microflow level. A microflow can be extended with custom Java actions, but because these actions are text-based, they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them by utilizing the debugger of Eclipse.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set breakpoints
 * Debug in Eclipse
@@ -46,18 +47,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     The application will now be started with Eclipse attached as debugger.
 
-3. As soon as the deployment process is ready, open the application in your browser and trigger the Java action:
+2. As soon as the deployment process is ready, open the application in your browser and trigger the Java action:
     * As an end-user of the application, you will see a progress bar on your application
     * As a developer, you will see the Eclipse icon flashing on the Windows task bar
 3. Open Eclipse. You should now see the "debug" perspective of Eclipse.
 4. Click **Step into** (or press F5) or **Step over** (or press F6) to move on the next step in the microflow:
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18580056.png" >}}
 
-    {{% alert color="warning" %}}
+    {{% alert color="warning" %}}With debugger options, the difference between "Step into" and "Step over" is only noticeable if you run into a function call. "Step into" means that the debugger steps into the function, and "Step over" just moves the debugger to the next line in the same Java action. With "Step Return" (pressing F7), you can instruct the debugger to leave the function; this is basically the opposite of "Step Into." Clicking "Resume" (pressing F8) instructs the debugger to continue until it reaches another breakpoint.{{% /alert %}}
 
-    With debugger options, the difference between "Step into" and "Step over" is only noticeable if you run into a function call. "Step into" means that the debugger steps into the function, and "Step over" just moves the debugger to the next line in the same Java action. With "Step Return" (pressing F7), you can instruct the debugger to leave the function; this is basically the opposite of "Step Into." Clicking "Resume" (pressing F8) instructs the debugger to continue until it reaches another breakpoint.
-
-    {{% /alert %}}
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18580057.png" >}}
 
@@ -69,6 +67,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-* [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * [Java Actions](/refguide/java-actions/)

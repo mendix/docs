@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Label (Document Template)"
 url: /refguide/dynamic-label-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide/Dynamic+label+(document+template).html
@@ -33,7 +32,7 @@ For details, see [Style](/refguide/style/).
 
 If you set the property 'Render XHTML' to true, the attribute connected to this label is assumed to contain XHTML and will be rendered as such. This is useful when you want to incorporate rich text in a document template. This property can only be true for attributes of type String.
 
-The contents MUST be valid XHTML to render without errors.
+The contents *must* be valid XHTML and cannot contain HTML entities such as `\&rdquo;`. Such HTML entities will cause rendering errors. HTML entities that are reserved to escape HTML characters are supported (for example `\&lt;`, `\&gt;`, `\&apos;`, and `\&amp;`). For other HTML entities, their unicode equivalents may be used instead (for example, instead of `\&rdquo;` you can use `\&#8221;`).
 
 Default: *False*
 

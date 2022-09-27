@@ -1,12 +1,10 @@
 ---
 title: "2.10"
 url: /releasenotes/add-ons/ats-2.10/
-parent: "ats-2"
 weight: 90
 ---
 
 ## 2.10.0
-
 
 **Release date: May 18th 2019**
 
@@ -15,7 +13,6 @@ weight: 90
 The option to receive alerts when a scheduled test is done is a feature that received a lot of requests. Starting with this release, you can opt in to receive emails for schedules either always or only when they do not pass. The emails include the result of the scheduled run; flags (if present); a breakdown of the number of passed, not-executed, and failed test cases; and additional information. You can individually choose per app if you want to receive these alerts or not.
 
 For more details, see [Schedules](/addons/ats-addon/rg-two-schedule/) in the *ATS 2 Reference Guide*.
-
 
 ### Better Integration with Browserstack
 
@@ -28,7 +25,7 @@ These are the new features on Browserstack side:
 * Individual test case executions in Browserstack (meaning, **Sessions**) now correctly display the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
 * Test case executions in Browserstack now show the result from ATS.
 
-  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
+    {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
 
 These are the new features on the ATS side:
 
@@ -38,7 +35,6 @@ These are the new features on the ATS side:
 {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="Browserstack-ATS integration" >}}
 
 This table compares the nomenclature:
-
 
 | ATS              | Browserstack |
 | ---              | ---          |

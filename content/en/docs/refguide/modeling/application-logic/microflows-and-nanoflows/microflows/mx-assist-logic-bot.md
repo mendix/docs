@@ -1,7 +1,7 @@
 ---
 title: "MxAssist Logic Bot"
 url: /refguide/mx-assist-logic-bot/
-parent: "microflows"
+weight: 2
 description: "Describes MxAssist Logic Bot in Mendix Studio Pro."
 tags: ["studio pro", "logic bot", mendix assist", "AI", "assist", "mx assist"]
 ---
@@ -33,7 +33,7 @@ In the **Mendix Assist** tab, section **Logic Bot**, you can set the following:
 
 * **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
 
-  {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/mx-assist-logic-bot/mx-assist-system-variables.png" alt="Suggestions for System Variables" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/mx-assist-logic-bot/mx-assist-system-variables.png" alt="Suggestions for System Variables" >}}
 
 For more information on preferences, see [Preferences](/refguide/preferences-dialog/).
 

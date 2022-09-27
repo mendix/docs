@@ -1,5 +1,6 @@
 ---
 title: "Use the OData Connector for SAP Solutions"
+linktitle: "Use OData Connector for SAP Solutions"
 url: /partners/sap/use-sap-odata-connector/
 category: "SAP"
 weight: 15
@@ -11,7 +12,7 @@ tags: ["SAP", "integration", "OData"]
 
 The OData Connector for SAP solutions is a specific SAP connector for integrating with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add the OData Connector for SAP solutions to your Mendix app
 * Configure the OData Connector for SAP solutions
@@ -30,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Getting the OData Connector for SAP Solutions Module
 
-To be able to use the OData Connector; first create your project. Inside, navigate to the Mendix Marketplace to download the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app's Marketplace modules.
+To be able to use the OData Connector; first create your app. Inside, navigate to the Mendix Marketplace to download the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app's Marketplace modules.
 
 For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
@@ -39,36 +40,25 @@ For more information, see [How to Use Marketplace Content in Studio Pro](/appsto
 In this example, you will display a list of products from the GWSAMPLE_BASIC OData service. You will need to create an SAP data model module for the GWSAMPLE_BASIC OData service. The module contains a pre-built domain model that you can add to your app.
 
 1. Open the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/).
-
 2. Click **SAP Catalog Service**.
-
 3. Enter your **User name** and **Password** for the ES5 SAP Service Catalog (see [Prerequisites](#prerequisites), above).
-
 4. Type *sapes5.sapdevcenter.com* as the **Server**. (Leave the protocol as `https://` and the **Port** as `443`).
-
 5. Click **Continue**.
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-connector/login-catalog.png" >}}
 
 6. Type *GWSAMPLE* in the search box and press <kbd>Enter</kbd>.
-
 7. Select **GWSAMPLE_BASIC** and click **Continue**.
-
 8. Select **GWSAMPLE_BASIC** again and click **Continue**.
-
 9. Click **Generate .mpk**.
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-connector/generate-mpk.png" >}}
 
 10. Click **Download** once the model is ready.
-
 11. Select **Save File**.
-
 12. Choose the **/resources** folder within the folder where your app is stored on your PC and click **Save**.
-
 13. Open your app in Mendix Studio Pro.
-
-14. Right-click the project in the **App Explorer** and select **Import module package…**.
+14. Right-click the app in the **App Explorer** and select **Import module package…**.
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-connector/import-module.png" >}}
 
@@ -128,8 +118,8 @@ To create a page to show the objects in a list, follow these steps:
 
     {{< figure src="/attachments/partners/sap/use-sap-odata-connector/show-get-list-result.png" >}}
 
-3. Drag a **open page button** on your homepage.
-4. Select the page you have just created to be displayed.
+5. Drag a **open page button** on your homepage.
+6. Select the page you have just created to be displayed.
 
 {{% alert color="success" %}}
 Congratulations! You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.

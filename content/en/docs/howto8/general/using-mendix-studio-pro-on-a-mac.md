@@ -17,7 +17,7 @@ To run Studio Pro on Apple Silicon Macs, such as the M1(X), an LTS version start
 
 To start making Mendix native mobile apps on your Mac, follow this how-to.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure your Windows virtual machine for Mendix Studio Pro
 * Run a Mendix app on a test device using your Windows virtual machine
@@ -34,34 +34,34 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To configure your Windows virtual machine to work with Mendix Studio Pro, follow these steps:
 
-1.  Open your Parallels **Control Center**:
+1. Open your Parallels **Control Center**:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-control-center.png" alt="parallels control center"   width="450"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-control-center.png" alt="parallels control center"   width="450"  >}}
 
 2. Click the **gear** symbol to open the **Configuration Panel**.
-3.  Navigate to the **Hardware** tab, and select **Network** from the left panel:
+3. Navigate to the **Hardware** tab, and select **Network** from the left panel:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-configuration.png" alt="network in configuration"   width="450"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-configuration.png" alt="network in configuration"   width="450"  >}}
 
 4. Make sure **Source** is set to **Shared Network**.
 5. Make sure that both the **Inbound** bandwidth and **Outbound** bandwidth show **unlimited**.
 
-	If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth, or click the **Options** tab then the **Optimization** pane and set **Resource usage** to **No limit**.
-6.  In the Parallels drop-down menu, select **Preferences**:
+    If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth, or click the **Options** tab then the **Optimization** pane and set **Resource usage** to **No limit**.
+6. In the Parallels drop-down menu, select **Preferences**:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/preferences-dropdown.png" alt="preferences in parallels"   width="400"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/preferences-dropdown.png" alt="preferences in parallels"   width="400"  >}}
 
-7.  Navigate to the **Network** tab, and select **Shared** from the left panel:
+7. Navigate to the **Network** tab, and select **Shared** from the left panel:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png" alt="network tab"   width="450"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png" alt="network tab"   width="450"  >}}
 
-8.  Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8. Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/port-setup.png" alt="plus button"   width="450"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/port-setup.png" alt="plus button"   width="450"  >}}
 
-	After adding those two ports, your **Port forwarding rules** should look like this:
+    After adding those two ports, your **Port forwarding rules** should look like this:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-ports.png" alt="finished ports"   width="450"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-ports.png" alt="finished ports"   width="450"  >}}
 
 Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac. 
 
@@ -75,11 +75,11 @@ Read the tips below to check the network drive before viewing your app on your t
 
 * Correct mapped drives will always have a letter at the start of their file location:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/mapped-drive.png" alt="mapped drive"   width="450"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/mapped-drive.png" alt="mapped drive"   width="450"  >}}
 
 * Incorrect network drives will always have **\\** at the start of their file location:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/network-drive.png" alt="network drive"   width="450"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/network-drive.png" alt="network drive"   width="450"  >}}
 
 ## 5 Viewing Your App on Your Testing Device
 
@@ -93,9 +93,9 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 2. Place your cursor over your Wi-Fi symbol in your system tray, then and click while holding <kbd>Option</kbd> to see your Mac's advanced network information. You will see your **IP Address** in this drop-down menu.
 
-3.  In your Make It Native app's **Host** field, type *{your IP address}:8080*:
+3. In your Make It Native app's **Host** field, type *{your IP address}:8080*:
 
-	{{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png" alt="ip in dev app"   width="300"  >}}
+    {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png" alt="ip in dev app"   width="300"  >}}
 
 4. Tap **Launch** to view your app.
 

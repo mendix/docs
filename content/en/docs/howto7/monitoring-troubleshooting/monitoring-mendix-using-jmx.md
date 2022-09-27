@@ -14,7 +14,7 @@ For Java applications, most monitoring tools provide a way to hook into [JMX](ht
 
 Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix runtime as well as writing custom MBeans to expose Mendix runtime information and app-specific information.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Start Mendix Runtime with JMX
 * Expose management information with an MBean
@@ -28,7 +28,7 @@ None.
 
 To enable JMX on your Mendix Runtime, you can use the following Java options in the *m2ee.yaml* for your Mendix Runtime:
 
-```
+```yaml
 javaopts: [
 
 "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx128M", "-Xms128M",
@@ -56,7 +56,7 @@ The simplest way to expose management information is by writing an MBean interfa
 
 This is an example of an interface that contains getters for some generic Mendix information, *MxStatsMBean.java*:
 
-```
+```java
 
 package jmx.actions;
 
@@ -83,7 +83,7 @@ public long getNamedUserCount();
 
 This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
 
-```
+```java
 package jmx.actions;
 
 import com.mendix.core.Core;

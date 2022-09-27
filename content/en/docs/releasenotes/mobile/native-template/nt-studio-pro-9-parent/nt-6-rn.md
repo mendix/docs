@@ -1,10 +1,113 @@
 ---
 title: "Native Template 6"
 url: /releasenotes/mobile/nt-6-rn/
-parent: "nt-studio-pro-9-parent"
 weight: 10
 description: "Native Template 6 release notes."
 ---
+
+## 6.2.27
+
+**Release date: September 19th, 2022**
+
+#### Improvements
+
+* We added support for the following fonts from the **react-native-vector-icons** library:
+   * AntDesign
+   * Entype
+   * EvilIcons
+   * Feather
+   * FontAwesome
+   * FontAwesome 5
+   * Fontisto
+   * Foundation
+   * Ionicons
+   * MaterialCommunityIcons
+   * MaterialIcons
+   * Octicons
+   * SimpleLineIcons
+   * Zocial
+
+## 6.2.26
+
+**Release date: September 8th, 2022**
+
+#### Improvements
+
+* We enabled compatibility with Android 12 and higher.
+
+## 6.2.25
+
+**Release date: August 16th, 2022**
+
+### Fixes
+
+* We updated the NDK version to match AppCenter.
+* We updated the react-native-permissions library.
+* We removed `mendix.templateVersion` from *package.json*.
+
+## 6.2.24
+
+**Release date: July 26th, 2022**
+
+### Fixes
+
+* We fixed an issue affecting iOS apps uploading to the App Store. (Ticket 160571)
+* We fixed an issue with crashes affecting Xiaomi smartphones. (Tickets 147158, 147350)
+* We fixed an issue affecting iOS apps building in AppCenter.
+
+## 6.2.23
+
+**Release date: July 18th, 2022**
+
+### Improvements
+
+* We updated the iOS minimum version to 14. (Ticket 152476)
+* We updated the version of react-native-vector-icons to 9.1.0.
+
+### Fixes
+
+* We removed the QUERY_ALL_PACKAGES permission for Android apps. (Ticket 152645)
+* We fixed an issue affecting iOS apps building in AppCenter. (Ticket 154462)
+
+## 6.2.22
+
+**Release date: June 2nd, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue. (Tickets 150964, 150934)
+
+## 6.2.21
+
+**Release date: May 31st, 2022**
+
+### Fixes
+
+* We fixed an iOS build issue for projects using Crashlytics.
+
+## 6.2.20
+
+**Release date: May 30th, 2022**
+
+### Fixes
+
+* We fixed an issue with the logout action. (Ticket 147429)
+
+## 6.2.19
+
+**Release date: May 11th, 2022**
+
+### Fixes
+
+* We fixed an issue with CocoaPods on iOS, which would fail to build when the CocoaPods service was temporarily unavailable.
+
+## 6.2.18
+
+**Release date: May 10th, 2022**
+
+### Fixes
+
+* We fixed an issue with JCenter on Android which would fail to build. JCenter has become unstable and is no longer supported, therefore we now host Android dependencies ourselves. (Tickets 148798, 148819, 148830, 148840)
 
 ## 6.2.16
 
@@ -22,7 +125,7 @@ description: "Native Template 6 release notes."
 
 * We fixed an issue where iOS custom developer apps incurred problems while building.
 
-## 6.2.13 & 6.2.14
+## 6.2.13 and 6.2.14
 
 **Release date: March 16th, 2022**
 
@@ -46,7 +149,7 @@ description: "Native Template 6 release notes."
 ### Fixes
 
 * We identified and fixed a bug introduced with Native Template v6.2.9 and Mendix Clients built with Mendix Studio Pro 9.8.0 and above which support the new mobile encryption features. The iOS apps would wrongly clear the keychain values on each restart forcing app users to re-authenticate on each app restart. iOS apps now correctly persist the user session after each restart for clients built with Mendix Studio Pro 9.8.0 and above. (Ticket 138881)
- * Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.
+* Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.
 
 ## 6.2.10
 
@@ -64,9 +167,9 @@ description: "Native Template 6 release notes."
 
 * We added support for the new native mobile encryption features introduced with Mendix Studio Pro v9.8.
 * We added support for authentication token encryption for iOS and Android.
-  * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
+    * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
 * We added support for all cookies on Android.
-  * All new app-specific cookies on Android from Native Template v6.2.9 and above will be automatically encrypted independently of the Studio Pro 9 minor version.
+    * All new app-specific cookies on Android from Native Template v6.2.9 and above will be automatically encrypted independently of the Studio Pro 9 minor version.
 
 ### Fixes
 
@@ -86,7 +189,7 @@ description: "Native Template 6 release notes."
 
 ### Improvements
 
-* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota/).
+* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Fixes
 
@@ -166,7 +269,7 @@ This is a re-release of Native Template [6.2.0](#620).
 
 ### Improvements
 
-* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link/).
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Breaking Change
 

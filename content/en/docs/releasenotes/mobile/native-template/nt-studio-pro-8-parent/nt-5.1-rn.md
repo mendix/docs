@@ -1,11 +1,17 @@
 ---
 title: "Native Template 5.1"
 url: /releasenotes/mobile/nt-5.1-rn/
-parent: "nt-studio-pro-8-parent"
 weight: 20
 description: "Native Template 5.1 release notes."
 ---
 
+## 5.1.19
+
+**Release date: May 11th, 2022**
+
+### Fixes
+
+* We fixed an issue with JCenter on Android which would fail to build. JCenter has become unstable and is no longer supported, therefore we now host Android dependencies ourselves. (Tickets 148798, 148819, 148830, 148840)
 
 ## 5.1.17
 
@@ -60,7 +66,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ### Improvements
 
-* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link/).
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) and [Set Up Deep Links in Native Mobile Apps](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Breaking Change
 

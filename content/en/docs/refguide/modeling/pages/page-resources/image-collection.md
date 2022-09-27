@@ -1,7 +1,6 @@
 ---
 title: "Image Collection"
 url: /refguide/image-collection/
-parent: "page-resources"
 weight: 5
 description: "Why and how to create an image collection"
 tags: ["Studio Pro", "Images", "Image Collection"]
@@ -13,7 +12,7 @@ If you want to use your own static images within an application, for example for
 
 For information on how to use images in your app, see [Images](/refguide/images/).
 
-Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images, using [Import & Export Objects](/howto/integration/importing-and-exporting-objects/).
+Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/).
 
 {{% alert color="warning" %}}
 Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/) for more information).
@@ -25,7 +24,6 @@ To add an image collection, do the following.
 
 1. Right-click a module in the **App Explorer**.
 2. Select **Add other > Image collection**.
-
 3. Give your image collection a name.
 
 ## 3 Image Collection Actions
@@ -69,4 +67,3 @@ It is not possible to *copy* an image, you can only *move* it. If you need to ma
 ### 3.6 Export to File
 
 The **Export to file…** button saves the selected image(s) as image files. You can select the folder where the images will be saved and they will be given the same name as they have in the image collection. If a file with the same name already exists, you will be warned.
-

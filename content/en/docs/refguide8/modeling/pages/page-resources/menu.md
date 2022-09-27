@@ -1,7 +1,6 @@
 ---
 title: "Menu"
 url: /refguide8/menu/
-parent: "page-resources"
 weight: 50
 tags: ["studio pro", "menu", "menu item", "page resource"]
 aliases:
@@ -22,9 +21,7 @@ A menu document defines a navigation menu that can be used by a [menu widget](/r
 A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
 
 {{% alert color="info" %}}
-
 If [security](/refguide8/project-security/) is enabled, the menu will only show items that the user has access to.
-
 {{% /alert %}}
 
 ## 2 Menu Item {#menu-item}
@@ -46,4 +43,3 @@ A menu item or a sub-item has the following general properties:
 
 * [Pages](/refguide8/pages/)
 * [Menu Widgets](/refguide8/menu-widgets/)
-

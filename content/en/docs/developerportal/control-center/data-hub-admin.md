@@ -54,11 +54,11 @@ On this tab, you can do the following:
 * **Add Owner** – add new owners by filling in their name and email address; new owners will be listed as the business or technical owner for registered assets
 * **Edit** – edit the details of listed owners (hover over the row to see the actions)
 * **Delete** – delete names from the list
-	* Note that if a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner, which means that the asset will not have a contact
+    * Note that if a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner, which means that the asset will not have a contact
 
 ## 4 External Users {#external-users}
 
-Mendix Admins can invite and manage external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
+Mendix Admins can invite external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/external_users.png" alt="External users" >}}
 
@@ -71,6 +71,8 @@ You can only invite users with a Mendix account. The invitation email will not b
 Once the external user receives the invitation, they log into the Data Hub Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/data-hub/data-hub-catalog/#data-hub-home) page:
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
+
+Company administrators can also **Remove** rights of users who no longer need access, and can add another user in their place.
 
 ## 5 Settings {#settings}
 

@@ -2,7 +2,7 @@
 title: "Implement Styles"
 url: /howto/front-end/styles/
 category: "Front End"
-description: "Presents details on using class names for text colors, buttons, and other style elements."
+description: "Describes details on using class names for text colors, buttons, and other style elements."
 weight: 45
 tags: ["style", "class name", "user interface", "front end", "classes"]
 ---
@@ -16,7 +16,7 @@ Class names can be entered in two locations:
 * The **Properties** panel of Studio Pro
 * The **Properties** pop-up window for the widget
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 
@@ -158,4 +158,3 @@ Many of these classes are part of Bootstrap. For more information about classes 
 ## 11 Read More
 
 * [Mendix Atlas UI](https://www.mendix.com/atlas/)
-

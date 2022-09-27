@@ -2,7 +2,7 @@
 title: "Database"
 url: /appstore/connectors/database-connector/
 category: "Connectors"
-description: "Describes the configuration and usage of the Database connector, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Database connector, which incorporates your external data directly in your Mendix app."
 tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -29,10 +29,10 @@ These are the prerequisites for using this connector:
 * The user name for logging into the database, relative to the database URL address
 * The password for logging into the database, relative to the database URL address
 * The JDBC driver libraries (*.jar* extension) for the databases you want to connect to must be placed inside the **userlib** directory of your Mendix application
-	* For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
-	* For more information, see the [Common JDBC Drivers](#links) section below
+    * For example, if you want to connect to Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
+    * For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-	* For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
+    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively), so in order to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query
 
 ## 3 Getting Started
 
@@ -40,7 +40,7 @@ Once you have imported the Database Connector into your app, you will have the *
 
 {{< figure src="/attachments/appstore/connectors/database-connector/database-connector-in-toolbox.png" >}}
 
-### 3.1 Executing Queries & Statements
+### 3.1 Executing Queries and Statements
 
 #### 3.1.1 Usage
 

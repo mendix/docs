@@ -1,8 +1,10 @@
 ---
 title: "Implement Mendix Best Practices for Development"
+linktitle: "Best Practices for Development"
 url: /howto/general/dev-best-practices/
 category: "General Info"
-weight: 7
+weight: 30
+description: "Describes Mendix best practices for developing Mendix applications."
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 #Academy are SMEs for verification, they discuss and link to this doc in training
 ---
@@ -29,7 +31,7 @@ The language that will be used to develop the application should be determined u
 
 There are some reasons why certain parts of an application may use another language. The main reason to make an exception would be within the domain model of an integration module. For example, when the source data model is in another language already.
 
-For more information, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content/).
+For more information, see [Translating Your App Content](/refguide/translate-your-app-content/).
 
 ### 2.2 App Name
 
@@ -186,7 +188,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 
 #### 3.4.7 App Microflows
 
-Your [app settings](/refguide/project-settings/) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
+Your [app settings](/refguide/app-settings/) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
 | Event Type      | Microflow Name | Sub-Microflow Prefix |
 |-----------------|----------------|----------------------|
@@ -196,11 +198,11 @@ Your [app settings](/refguide/project-settings/) provide three events that can t
 
 #### 3.4.8 Unit Test Microflows
 
-Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module/) should have the prefix **TEST_**.
+Microflows containing unit tests should have the prefix **TEST_** or **UT_** (case-insensitive). For more information about the Unit Testing module, see [Unit Testing](/appstore/modules/unit-testing/).
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Unit Test       | TEST\_                |
+| Unit Test       | TEST\_ or UT_ |
 
 #### 3.4.9 Integration Microflows
 
@@ -214,7 +216,7 @@ For integrations, you have the following types of microflow:
 
 ### 3.5 Other Document Types
 
-#### 3.5.1 Layouts & Snippets
+#### 3.5.1 Layouts and Snippets
 
 [Layouts](/refguide/layout/) and [snippets](/refguide/snippet/) should be identified with prefixes.
 
@@ -287,7 +289,7 @@ You can define the [home pages](/refguide/show-home-page/) per device and role i
 | Role based home page | Tablet  | Home_Tablet\_{Userrole}  |
 | Role based home page | Mobile  | Home_Phone\_{Userrole}   |
 
-## 4 General Guidelines & Best Practices
+## 4 General Guidelines and Best Practices
 
 ### 4.1 Domain Models
 
@@ -317,7 +319,7 @@ Split microflows up into logical, functional elements. If a microflow has more t
 
 Certain cases (such as validation checks) may require this rule to be ignored to produce an understandable result.
 
-#### 4.2.2 Documentation & Annotations {#documentation-and-annotations}
+#### 4.2.2 Documentation and Annotations {#documentation-and-annotations}
 
 All complex microflows (more than ten activities or more than two decisions) should have an [annotation](/refguide/annotations/) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 
@@ -339,7 +341,7 @@ Event triggers on input fields must be kept as simple as possible, since they ar
 
 The number of parameters for a microflow should be kept to a minimum to facilitate reusability. The more parameters a microflow has, the more difficult it is to determine what should be put into the parameters to make the microflow run correctly.
 
-#### 4.2.5 Error Handling & Logging
+#### 4.2.5 Error Handling and Logging
 
 Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
@@ -353,7 +355,7 @@ Guidelines below can help you choose a short yet meaningful name for your workfl
 * The name consists of a noun + verb (e.g. *EmployeeOnboarding*)
 * The name reflects what the process is about, what the goal of the process is
 
-### 4.4 Warnings & Studio Pro Feedback
+### 4.4 Warnings and Studio Pro Feedback
 
 No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 

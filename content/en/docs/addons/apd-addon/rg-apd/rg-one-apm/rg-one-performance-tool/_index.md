@@ -1,7 +1,6 @@
 ---
 title: "Performance Tool"
 url: /addons/apd-addon/rg-one-performance-tool/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction
@@ -10,17 +9,17 @@ Use the Performance Tool to measure individual microflows and break them up into
 
 The performance tool consists of:
 
-- [Recorder](#recorder)
-- [Filter](#filter)
-- [Options](#options)
-- [Show recorded](#show-recorded)
-- [Advanced usage](#advanced)
+* [Recorder](#recorder)
+* [Filter](#filter)
+* [Options](#options)
+* [Show recorded](#show-recorded)
+* [Advanced usage](#advanced)
 
 ## 2 Recorder {#recorder}
 
 The performance tool is a recorder that when started records all action and SQL statements and on stop gives you the option to process and store the recording. During the recording and even when recording is stopped you can filter the recorded data. This filtering removes the recorded items from memory, so there is no undo here.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder.png" >}}
 
 Enter a **Session name** and start recording.
 
@@ -36,7 +35,7 @@ The recording will automatically stop if the maximum amount of items in memory i
 
 On **Stop** you get the option to process the recorded items. You can also filter some more.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder_Stopped.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder_Stopped.png" >}}
 
 If on processing the actual data is more than allowed to store a special filter dialog appears. In this dialog you can filter further. If you use the process button in the filter dialog you overule the checked and process all the data that is in memory.
 
@@ -46,7 +45,7 @@ During processing of recorded data SQL statements are linked to actions or if th
 
 The following screenshot shows the filter options of the Performance Tool when the performance tool is  running:
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Filter_Running.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Filter_Running.png" >}}
 
 The thresholds are used to filter recorded microflows, actions or SQL statements and not store them in/remove them from memory if they have an execution duration less than the threshold.
 
@@ -59,15 +58,15 @@ When **Record SQL statements** is enabled SQL statements are recorded by the Men
 Changes to the options are applied to the Performance Tool if the button **Save, apply filter & close**
 is used.
 
-*   If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
-*   If the record SQL statements is checked while running, recording of SQL statements is started.
-*   If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold.
+* If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
+* If the record SQL statements is checked while running, recording of SQL statements is started.
+* If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold.
 
 ## 4 Options {#options}
 
 The following screenshot shows the options of the Performance Tool:
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Options.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Options.png" >}}
 
 The **Max actions to record**, **Max SQL statements to record** and **Run fixed period of time (seconds)**
  offer some protection in production environments to prevent that the Performance Tool runs and fills up memory. If any of the maximum thresholds is reached the Performance Tool is stopped. When stopped the Performance Tool stopped recording and you can still filter data and choose to cancel.
@@ -78,15 +77,15 @@ You can define a **Max Processing Delay (ms)**. When the processing delay is hig
 
 Changes to the options are applied to the Performance Tool if the button **Save** (when not running) or **Save & apply** (when running) is used.
 
-*   If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
-*   If the record SQL statements is checked while running, recording of SQL statements is started.
-*   If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold
+* If record SQL statements is unchecked while running, recording of SQL statements is cancelled.
+* If the record SQL statements is checked while running, recording of SQL statements is started.
+* If the thresholds are increased, the already recorded microflows and/or SQL statements are filtered to match the new threshold
 
 ## 5 Show Recorded {#show-recorded}
 
 You can look at what is being recorded in the **Show recorded** dialog:
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Recorded_Microflows.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-performance-tool/Recorded_Microflows.png" >}}
 
 Here the running and finished microflow grids are loaded per 10 records. Using the **Refresh & next chunk**
  button refreshes existing records that are not finished. An additional 10 records are loaded. If microflows have finished in the meantime those records move from running to finished. If filtering is applied finished running microflows can disappear. Running microflows are sorted by start date, oldest first. Finished microflows are sorted by duration, longest first.

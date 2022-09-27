@@ -2,7 +2,7 @@
 title: "Runtime Deployment"
 url: /refguide/runtime-deployment/
 category: "Mendix Runtime"
-description: "A description of how the Mendix Runtime is deployed"
+description: "Describes how the Mendix Runtime is deployed."
 weight: 30
 tags: ["runtime", "deploy", "mxbuild", "runtime server", "m2ee"]
 ---
@@ -70,4 +70,3 @@ It starts the Runtime Server by starting a Java RE and pointing it at the releva
 ### 2.11 Runtime Server
 
 This is the interpreter which runs the app. For more information see [Runtime Server](/refguide/runtime-server/).
-

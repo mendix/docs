@@ -1,7 +1,6 @@
 ---
 title: "9.1"
 url: /releasenotes/sdk/metamodel-9.1/
-parent: "metamodel-9"
 weight: 99
 ---
 
@@ -11,7 +10,7 @@ weight: 99
 
 ### DomainModels
 
-#### FloatAttributeTypeBase, FloatAttributeType & CurrencyAttributeType (Elements)
+#### FloatAttributeTypeBase, FloatAttributeType, and CurrencyAttributeType (Elements)
 
 * We deleted these elements.
 

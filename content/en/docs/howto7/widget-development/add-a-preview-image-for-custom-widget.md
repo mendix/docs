@@ -1,5 +1,6 @@
 ---
 title: "Build a Preview Image for a Custom Widget"
+linktitle: "Preview Image for Custom Widget"
 url: /howto7/widget-development/add-a-preview-image-for-custom-widget/
 category: "Widget Development"
 tags: ["image", "preview", "widget", "custom"]
@@ -9,7 +10,7 @@ tags: ["image", "preview", "widget", "custom"]
 
 This how-to will show you how to specify a preview image that will be rendered in the Modeler.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a preview image for custom widgets
 

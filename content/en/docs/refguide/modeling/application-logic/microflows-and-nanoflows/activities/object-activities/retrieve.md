@@ -1,7 +1,6 @@
 ---
 title: "Retrieve"
 url: /refguide/retrieve/
-parent: "object-activities"
 weight: 60
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -43,7 +42,17 @@ The **Source** defines the way the objects are retrieved:
 | Option | Description |
 | --- | --- |
 | By association | Retrieve the object(s) associated to an object by following an association. Note that when objects and/or their associations are changed and not committed, the data is not yet available in the database. By retrieving **By association**, the data that is not committed can be retrieved. For more information, see the [Retrieve by Association Properties](#association) section below.  |
-| From database | Retrieve objects from the database. For more information, see the [Retrieve from Database Properties](#from-database) section below. |
+| From database | Retrieve objects from the database. This can only be used for [persistable objects](/refguide/persistability/). For more information, see the [Retrieve from Database Properties](#from-database) section below. 
+
+{{% alert color="warning" %}}
+If you have changes in the memory, this action will retrieve objects from the database, and also apply the changes in the client.
+
+In this case, a change is not the entire object, but just an attribute of the object (for example, a *Name* attribute on a *Person* entity). If you retrieve the *Person* entity from the database, you will still retrieve the *Age* and *Height* attributes that are stored in the database.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.
+{{% /alert %}}
 
 ### 3.2 Retrieve by Association Properties {#association}
 

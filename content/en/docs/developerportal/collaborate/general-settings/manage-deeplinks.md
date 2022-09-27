@@ -1,7 +1,6 @@
 ---
 title: "Manage Deep Links"
 url: /developerportal/collaborate/manage-deeplinks/
-parent: "general-settings"
 weight: 2
 description: "Describes how to implement deep links to Developer Portal pages."
 tags: ["Developer Portal", "deep link"]
@@ -14,26 +13,26 @@ aliases:
 
 To go directly to the desired element of your app in the Developer Portal, you can use deep links.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Find the App ID, Story ID, and Feedback Item Number for your app
 * Create deep links for your app, story, and feedback item
 
-## 2 Getting the AppID, storyID & feedbackItemNr {#id}
+## 2 Getting the AppID, storyID, and feedbackItemNr {#id}
 
 To create a deep link, you need the app ID, story ID, or feedback item number or the desired element in the Developer Portal:
 
-*  For the app ID, select **Collaborate** > **General Settings** – you will find the ID at the bottom of the page:
+* For the app ID, select **Collaborate** > **General Settings** – you will find the ID at the bottom of the page:
 
-	{{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/app-id.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/app-id.png" >}}
 
-*  For the story ID, select **Collaborate** > **Stories** – then click the story title to show the details, the ID is below the story title:
+* For the story ID, select **Collaborate** > **Stories** – then click the story title to show the details, the ID is below the story title:
 
-	{{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/story-id.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/story-id.png" >}}
 
-*  For the feedback item number, select **Collaborate** > **Feedback** – the number is next to the feedback item title:
+* For the feedback item number, select **Collaborate** > **Feedback** – the number is next to the feedback item title:
 
-	{{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/feedback-nr.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/feedback-nr.png" >}}
 
 ## 3 Creating a Developer Portal Deep Link
 

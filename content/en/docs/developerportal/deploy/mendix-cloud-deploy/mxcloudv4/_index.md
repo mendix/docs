@@ -1,7 +1,6 @@
 ---
 title: "Mendix Cloud v4"
 url: /developerportal/deploy/mxcloudv4/
-parent: "mendix-cloud-deploy"
 weight: 50
 description: "Frequently asked questions about Mendix Cloud v4"
 tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services", "Max file size"]
@@ -35,24 +34,25 @@ For other considerations, refer to [Migrate to Mendix Cloud v4](/developerportal
 
 The primary hosting locations are as follows:
 
-*   Mendix Cloud Asia Pacific: AWS Singapore
-*   Mendix Cloud Asia Pacific: AWS Sydney
-*   Mendix Cloud Asia Pacific: AWS Tokyo
-*   Mendix Cloud Canada: AWS Canada
-*   Mendix Cloud EU: AWS Dublin
-*   Mendix Cloud EU: AWS Frankfurt
-*   Mendix Cloud UK: AWS London
-*   Mendix Cloud US: AWS North Virginia
-*   Mendix Cloud US: AWS Oregon
+* Mendix Cloud Asia Pacific: AWS Mumbai
+* Mendix Cloud Asia Pacific: AWS Singapore
+* Mendix Cloud Asia Pacific: AWS Sydney
+* Mendix Cloud Asia Pacific: AWS Tokyo
+* Mendix Cloud Canada: AWS Canada
+* Mendix Cloud EU: AWS Dublin
+* Mendix Cloud EU: AWS Frankfurt
+* Mendix Cloud UK: AWS London
+* Mendix Cloud US: AWS North Virginia
+* Mendix Cloud US: AWS Oregon
 
 Backups will always be stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable, i.e. once it has been written to our storage location, it can no longer be modified or overwritten.
 
 Data will always be stored in the same political region for the following regions:
 
-*   Data in the EU, including backups, will stay within the EU
+* Data in the EU, including backups, will stay within the EU
     * Data in the EU is not currently backed up in the UK
     * Data in the UK is backed up in the EU
-*   Data in the US, including backups, will stay within the US
+* Data in the US, including backups, will stay within the US
 
 Data in Japan is currently backed up in Japan.
 
@@ -60,7 +60,7 @@ Data in Japan is currently backed up in Japan.
 
 No, we do not. The Cloud Foundry API does not map one-to-one to our deployment options, our authorization model, or our cloud resource usage. However, deployment to the Mendix Cloud can be automated using the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/).
 
-## 5 How Do I Access the Underlying AWS Resources & How Can I Deploy in My AWS account?
+## 5 How Do I Access the Underlying AWS Resources and How Can I Deploy in My AWS account?
 
 Mendix Cloud v4 runs in Mendix's own AWS account and you cannot interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) for cloud resources.
 
@@ -77,9 +77,9 @@ You can also consider running your Mendix app using your own AWS account in a di
 There are certain limits and behaviors which apply to your app when running in Mendix Cloud v4. Here are a few considerations to bear in mind:
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
-* It is not possible to deploy a model (*.mda*) larger than 4GB when uncompressed or a model that contains approximately 64,000 or more files
-* You can't upload files bigger than 1GB to your app
-* You can't download files bigger than 1GB from your app
+* It is not possible to deploy a model (*.mda*) larger than 4 GB when uncompressed or a model that contains approximately 64,000 or more files
+* You can't upload files bigger than 1 GB to your app
+* You can't download files bigger than 1 GB from your app
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
 * HTTP headers sent to the Mendix cloud do not always preserve their case (for example `X-SharedSecret` can be transformed to `X-Sharedsecret`) due to the behavior of one of the Cloud Foundry routing components – this has no practical effect as HTTP headers are defined as case insensitive

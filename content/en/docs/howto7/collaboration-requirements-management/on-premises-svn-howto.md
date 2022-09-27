@@ -1,5 +1,6 @@
 ---
 title: "Work with an On-Premises Version Control Server"
+linktitle: "On-Premises Version Control Server"
 url: /howto7/collaboration-requirements-management/on-premises-svn-howto/
 category: "Collaboration & Requirements Management"
 weight: 60
@@ -12,7 +13,7 @@ When developing Mendix applications, changes to these applications are stored in
 
 While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure your Mendix apps to work with your own (on-premises) version control system
 

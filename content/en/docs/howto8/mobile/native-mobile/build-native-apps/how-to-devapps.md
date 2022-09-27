@@ -1,7 +1,6 @@
 ---
 title: "Create a Custom Developer App"
 url: /howto8/mobile/how-to-devapps/
-parent: "build-native-apps"
 weight: 50
 description: A tutorial for creating custom developer apps.
 tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
@@ -27,19 +26,15 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/deploying-native-app/home-screen.png" alt="Mendix Native Mobile Builder Home Screen" >}} 
 
 1. Choose *Build app for local development*
-
 1. Given you already went through the initial wizard at least once, you should be greeted with the configuration screen for *Building an app for local development*: 
 {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/how-to-devapps/build-custom-dev-app.png" alt="Mendix Native Mobile Builder Home Screen" >}} 
-
 1. Click the *Build developer app* button
-
 1. The tool will set up your GitHub repository commit your changes, configure App Center if needed with two new projects, one for iOS and one for Android and continue with building the apps.
 {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/deploying-native-app/build-release-app-build-step1.png" alt="Building" >}}
 {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/deploying-native-app/build-release-app-build-step2.png" alt="Build release app" >}}
 
 1. When the build completes, you can scan the QR code provided to install the app to your device. Currently the QR code service is only supported for Android devices.
 {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/deploying-native-app/build-release-app-build-done-both.png" alt="Build release app" >}}
-
 
 ## 4 Installing Your Custom Developer App Manually
 
@@ -90,11 +85,11 @@ Before installing, make sure you have completed the following prerequisites:
 Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
-2.  Switch to your **developer** branch:
+2. Switch to your **developer** branch:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-branch-switching.png" alt="Switch branch on Github" >}}
 
-3.  Click **Clone or Download** and then click **Download ZIP**:
+3. Click **Clone or Download** and then click **Download ZIP**:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-download-branch.png" alt="Download repository" >}}
 
@@ -102,16 +97,16 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
-    ```
+    ```shell {linenos=false}
     npm i && cd ios && pod install
     ```
 
     This will install the node module dependencies and the iOS Dependencies
-7.  In the **ios** folder, open the **NativeTemplate.xcworkspace** file:
+7. In the **ios** folder, open the **NativeTemplate.xcworkspace** file:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/ios-folder.png" alt="iOS folder structure" >}}
 
-8.  In XCode select the **Dev** target and the emulator you want to build your developer app for:
+8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" >}}
 

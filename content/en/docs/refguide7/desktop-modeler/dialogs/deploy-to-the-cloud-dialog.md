@@ -1,7 +1,6 @@
 ---
 title: "Deploy To The Cloud Dialog"
 url: /refguide7/deploy-to-the-cloud-dialog/
-parent: "dialogs"
 ---
 
 ## 1 Introduction
@@ -33,4 +32,5 @@ You can enter a custom **Description** for this deployment package. It is purely
 This field shows the **App** in the Mendix Cloud where the deployment package will be deployed. This is for information only—you cannot change the **App** here.
 
 ## 7 Licensee
+
 This field shows the **Licensee** of this licensed node.

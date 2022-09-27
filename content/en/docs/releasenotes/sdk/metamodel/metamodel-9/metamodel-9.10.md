@@ -1,7 +1,6 @@
 ---
 title: "9.10"
 url: /releasenotes/sdk/metamodel-9.10/
-parent: "metamodel-9"
 weight: 90
 ---
 
@@ -52,7 +51,7 @@ weight: 90
 * We introduced the `queueSettings` property. 
 * We deleted the `queue` property. 
 
-#### MLModelCallAction, MLModelCall & MLModelCallParameterMapping (Elements)
+#### MLModelCallAction, MLModelCall, and MLModelCallParameterMapping (Elements)
 
 * We introduced these elements.
 
@@ -64,7 +63,7 @@ weight: 90
 
 ### Queues
 
-#### QueueSettings, QueueRetry, QueueFixedRetry & QueueExponentialRetry (Elements)
+#### QueueSettings, QueueRetry, QueueFixedRetry, and QueueExponentialRetry (Elements)
 
 * We introduced these elements. 
 
@@ -74,7 +73,7 @@ weight: 90
 
 * We introduced the `useOptimizedClient` property.
 
-#### JarDeploymentSettings, JarLocationBase, UserLibJarLocation & ProtectedModuleJarLocation (Elements)
+#### JarDeploymentSettings, JarLocationBase, UserLibJarLocation, and ProtectedModuleJarLocation (Elements)
 
 * We introduced these elements.
 

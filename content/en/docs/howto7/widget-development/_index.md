@@ -15,9 +15,9 @@ Custom widget development can be difficult at the beginning. The resources below
 
 In order to create widgets, you need a good understanding of how JavaScript works. These texts can help you get started:
 
- * [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)
- * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
- * [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+* [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)
+* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+* [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 ## 3 Specific Widget Topics
 
@@ -31,13 +31,13 @@ The sections below describe the Mendix resources that can help you understand ho
 
 Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their life cycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 
- * [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
+* [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
 
 For details on the widget life cycle, reference this documentation:
 
- * [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
- * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
- * [Tutorial: Widget Life Cycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
+* [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
+* [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
+* [Tutorial: Widget Life Cycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
 ### 3.3 Widget Scaffolding
 

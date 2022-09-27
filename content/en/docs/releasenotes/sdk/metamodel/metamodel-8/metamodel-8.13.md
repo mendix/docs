@@ -1,7 +1,6 @@
 ---
 title: "8.13"
 url: /releasenotes/sdk/metamodel-8.13/
-parent: "metamodel-8"
 weight: 88
 ---
 
@@ -33,7 +32,7 @@ weight: 88
 
 ### Pages
 
-#### TemplateType, RegularPageTemplateType, EditPageTemplateType & SelectPageTemplateType (Elements)
+#### TemplateType, RegularPageTemplateType, EditPageTemplateType, and SelectPageTemplateType (Elements)
 
 * We introduced these elements.
 
@@ -59,7 +58,7 @@ weight: 88
 
 * We introduced the `badge` property.
 
-#### WorkflowTemplateType, UserTaskTemplateType, WorkflowOverviewTemplateType, CallWorkflowClientAction, OpenUserTaskClientAction, OpenWorkflowClientAction & SetTaskOutcomeClientAction (Elements)
+#### WorkflowTemplateType, UserTaskTemplateType, WorkflowOverviewTemplateType, CallWorkflowClientAction, OpenUserTaskClientAction, OpenWorkflowClientAction, and SetTaskOutcomeClientAction (Elements)
 
 * We introduced these elements.
 
@@ -74,6 +73,6 @@ weight: 88
 * We added the public `page` property.
 * We introduced the `dueDate` property.
 
-#### EnumerationValueOutcomeValue, BooleanOutcomeValue, ExclusiveSplitActivity & CallWorkflowActivity (Elements)
+#### EnumerationValueOutcomeValue, BooleanOutcomeValue, ExclusiveSplitActivity, and CallWorkflowActivity (Elements)
 
 * We introduced these elements.

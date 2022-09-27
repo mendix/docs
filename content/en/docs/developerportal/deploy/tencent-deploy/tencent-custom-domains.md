@@ -1,7 +1,6 @@
 ---
 title: "Custom Domains on Tencent"
 url: /developerportal/deploy/tencent-custom-domains/
-parent: "tencent-deploy"
 weight: 10
 description: "How to configure custom domains on the Tencent platform as well as generate, upload, and renew certificates for HTTPS connections."
 tags: ["Custom Domain","Tencent Cloud", "certificates"]
@@ -18,7 +17,7 @@ This documentation is describing certificates for *incoming* connections. For in
 {{% alert color="warning" %}} You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a custom domain for your environment
 * Upload a custom domain certificate
@@ -62,7 +61,7 @@ You then need to configure an A Record.
 
 3. Choose **add records** (添加记录) and make a record of type **A**.
 
-You can bind the IP address, which you get during onboarding to the Mendix platform, to a specific domain name, like `myapp.mxapps.cn` as in the example below. You can also bind it to a wildcard domain name like `*.mxapps.cn` or `*.mendix.mxapps.cn`. If you use a wildcard domain name, you don’t need to bind the IP for every Mendix app.
+You can bind the IP address, which you get during onboarding to the Mendix Platform, to a specific domain name, like `myapp.mxapps.cn` as in the example below. You can also bind it to a wildcard domain name like `*.mxapps.cn` or `*.mendix.mxapps.cn`. If you use a wildcard domain name, you don’t need to bind the IP for every Mendix app.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/create-a-records.png" >}}
 
@@ -97,7 +96,6 @@ Custom domain certificates (or just "certificates") are managed at the *applicat
 If you do not have an SSL/TLS certificate, you can purchase one from the Tencent cloud **SSL certificate** (SSL 证书) product or apply for a free certificate.
 
 {{< figure src="/attachments/developerportal/deploy/tencent-deploy/tencent-custom-domains/get-signed-certificate.png" >}}
-
 
 ### 4.2 Uploading the Custom Domain Certificate{#Uploading}
 

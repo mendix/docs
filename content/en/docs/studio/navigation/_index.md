@@ -23,19 +23,16 @@ You can also add a sub-item to a menu item. Mind that you cannot assign an actio
 To create a new menu item, do the following:
 
 1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**.
-
 2. Click a plus at the bottom of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
-   {{< figure src="/attachments/studio/navigation/adding-navigation-items.png" >}}
+    {{< figure src="/attachments/studio/navigation/adding-navigation-items.png" >}}
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
 
 A new menu item or a sub-item is added to the navigation.
 
 {{% alert color="info" %}}
-
 In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see the [Profiles](/refguide/navigation/#profiles) section in *Navigation* in the *Studio Pro Guide*. 
-
 {{% /alert %}}
 
 For more information on how to configure navigation in your app, see [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/).
@@ -70,11 +67,10 @@ For example, an Administrator role can have the **Admin_Dashboard** page as its 
 When adding or editing the role-specific home page, you can set the following properties:
 
 * **Role** – Defines what role has a dedicated home page.
-
 * **Type** – Defines whether a page or a microflow is opened/performed when the user opens the app. The following types are available:
 
-  * **Page** – A page is set as a home page.
-  * **Microflow** – A microflow is set as a home page, i.e. a microflow is performed when a user opens the app. A microflow can be used to execute some logic or gather specific data that should be passed to the homepage.
+    * **Page** – A page is set as a home page.
+    * **Microflow** – A microflow is set as a home page, i.e. a microflow is performed when a user opens the app. A microflow can be used to execute some logic or gather specific data that should be passed to the homepage.
 
 * **Page** – This property is only available when the **Type** is set to **Page**. Allows you to set a dedicated home page that is opened for the selected role.
 
@@ -91,17 +87,13 @@ A role-specific home page icon is displayed in a list of pages or microflows aga
 To add a role-specific home page, do the following:
 
 1. Make sure your [security](/studio/settings-security/) is enabled and configured.
-
 2. Open the navigation editor > Navigation Editor properties.
-
 3. In the **Role-Specific Home Page** section, click the **Add Role-Specific Home Page**.
-
 4. In the **Role** drop-down menu, select a role that will have a dedicated home page:
 
     {{< figure src="/attachments/studio/navigation/selecting-role.jpg" alt="Selecting a Role" >}}
 
 5. Select the **Type** of the home page: a page or a microflow.
-
 6. Depending on the selected type, choose either a page or a microflow that is be opened or performed when the user with the selected role opens the app.  
 
 The role-specific home page is set.
@@ -137,9 +129,7 @@ The available actions are described in the table below:
 | Open Link      | Triggers an action based on the link type: <ul><li>**Web** – navigates to a website </li><li>**Email** – composes an email</li><li>**Phone Call** – starts a phone call</li><li>**Text Message** - sends a text message</li></ul>**Note** When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message. |
 
 {{% alert color="info" %}}
-
 If a menu item has a sub-item, the **On Click Action** should be **Nothing**. 
-
 {{% /alert %}}
 
 ### 3.2 General {#general-section-navigation}
@@ -147,6 +137,8 @@ If a menu item has a sub-item, the **On Click Action** should be **Nothing**.
 The properties that can be configured in the **General** section are the following:
 
 * **Caption** – Allows you to fill in the name of the menu item.
+    * **Translations** – Only available if multiple languages are set up in your app in Mendix Studio Pro. This option allows you to add translations of the button caption to other languages. For more information on how to add translations, see [Translating Your App to Multiple Languages](/studio/language-support/).
+
 * **Icon** – Allows you to set the icon of the menu item.
 
 ## 4 Read More

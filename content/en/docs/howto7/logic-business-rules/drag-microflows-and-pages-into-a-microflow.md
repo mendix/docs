@@ -1,5 +1,6 @@
 ---
 title: "Drag Microflows & Pages into a Microflow"
+linktitle: "Drag App Documents into Microflow"
 url: /howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/
 category: "Logic & Business Rules"
 weight: 4
@@ -10,7 +11,7 @@ tags: ["microflow", "logic", "page"]
 
 Coming home with sore hands from using the mouse too much during the day is uncomfortable. This how-to will teach you how to use the mouse more efficiently while modeling a Mendix app.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Generate a submicroflow from selected actions
 * Drag a microflow or a page into a microflow

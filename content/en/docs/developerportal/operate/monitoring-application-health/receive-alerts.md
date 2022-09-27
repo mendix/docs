@@ -1,8 +1,6 @@
 ---
 title: "Receive Environment Status Alerts"
 url: /developerportal/operate/receive-alerts/
-parent: "monitoring-application-health"
-#menu_order: 180
 description: "Describes how to receive environment status alerts."
 tags: ["Technical Contact","Settings","Alerts","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -14,7 +12,7 @@ You can manage the email alerts for each environment without the Technical Conta
 
 You can switch the alerts on and off for each environment to which you are entitled.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Switch alerts on and off for separate environments
 
@@ -24,7 +22,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 * You need an **Application Operator**, **Business Engineer**, or **Scrum Master** role
 * In the case that a [Mendix Admin](/developerportal/control-center/#members) has defined a new team role, that role must have the team **Edit** permission for **Monitor**    
-    
+
 ## 3 Receive Alerts
 
 There are two ways to start receiving alerts:
@@ -42,9 +40,9 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/cloud-nodes.png" >}}
 
 3. Open the node by clicking **Details**.
-4.  Click **Security** in the left-hand menu.
+4. Click **Security** in the left-hand menu.
 5. Switch to the **Node Permissions** tab.
-6.  Select the check box below **Receive Alerts**. It is possible to set this permission separately for each environment. The changes will be automatically saved.
+6. Select the check box below **Receive Alerts**. It is possible to set this permission separately for each environment. The changes will be automatically saved.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/receive-alerts.png" >}}
 

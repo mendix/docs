@@ -1,7 +1,6 @@
 ---
 title: "Import a Large Excel File"
 url: /howto7/integration/import-a-large-excel-file/
-parent: "importing-excel-documents"
 tags: ["excel", "excel  importer", "marketplace", "sheet"]
 ---
 
@@ -15,7 +14,7 @@ The trick is to use XML-to-domain mapping.
 
 We will use XML-to-domain mapping to create a new import entity from an Excel sheet quickly in a semi-automated way.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Quickly import a large Excel file with a lot of columns
 
@@ -47,7 +46,7 @@ To modify your Excel sheet, follow these steps:
 3. Add one column to the left.
 4. Place the following string in cell **A1**:
 
-    ```text
+    ```text {linenos=false}
     <xs:element type="xs:string" name="
     ```
 
@@ -57,7 +56,7 @@ To modify your Excel sheet, follow these steps:
 
 6. In cell **C1**, enter the following string:
 
-    ```text
+    ```text {linenos=false}
     "/>
     ```
 
@@ -65,12 +64,11 @@ To modify your Excel sheet, follow these steps:
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/19398890.png" >}}
 
-
     Now you have to get the three different columns into one column. This is necessary because later on, you want to copy the whole column into an XSD file.
 
 8. Select cell **D1** and type in the following into the formula box:
 
-    ```text
+    ```text {linenos=false}
     =(A1&B1&C1)
     ```
 
@@ -82,8 +80,8 @@ We have used some of the basic functionalities of Excel to help us out creating 
 
 To prepare your XSD file, follow these steps:
 
-1.  Open a new file and call it *CountriesImport.xsd*.
-2.  Place this text as the header of your XSD file:
+1. Open a new file and call it *CountriesImport.xsd*.
+2. Place this text as the header of your XSD file:
 
     ```text
     <?xml version="1.0"?>
@@ -93,8 +91,8 @@ To prepare your XSD file, follow these steps:
     <xs:sequence>
     ```
 
-3.  Go back to your sheet, copy the content from column **D**, and paste it underneath the header.
-4.  Now it’s time to place the footer, which will complete the XSD file. Place this text as for footer:
+3. Go back to your sheet, copy the content from column **D**, and paste it underneath the header.
+4. Now it’s time to place the footer, which will complete the XSD file. Place this text as for footer:
 
     ```text
     </xs:sequence>
@@ -105,7 +103,7 @@ To prepare your XSD file, follow these steps:
 
     Your file should look like this: [Country Import](/attachments/howto7/integration/Excel/CountryImport.xsd).
 
-5.  Don’t forget to save it!
+5. Don’t forget to save it!
 
 ## 5 Importing into Your Application Project
 
@@ -115,17 +113,17 @@ The XSD file is ready to be imported into the Desktop Modeler. To import it, fol
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/19398893.png" >}}
 
-	{{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/create.png" >}}
+    {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/create.png" >}}
 
-3. With the new XSD schema created, it’s time to create the XML-to-domain mapping that will perform the trick for you and make your life a bit easier.
+2. With the new XSD schema created, it’s time to create the XML-to-domain mapping that will perform the trick for you and make your life a bit easier.
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/19398895.png" >}}
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/19398896.png" >}}
 
-4. Be sure to check all the attributes! After clicking **OK**, you should see a mapping entity with all your countries.
+3. Be sure to check all the attributes! After clicking **OK**, you should see a mapping entity with all your countries.
 
-5. You will now generate a real entity from it that you can use as an import table for your Excel sheet. Click **Map automatically**:
+4. You will now generate a real entity from it that you can use as an import table for your Excel sheet. Click **Map automatically**:
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/19398897.png" >}}
 
@@ -133,10 +131,10 @@ The XSD file is ready to be imported into the Desktop Modeler. To import it, fol
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/19398898.png" >}}
 
-6. Go to your domain model, set the entity’s **Persistable** property to **Yes**, and the job is done!
+5. Go to your domain model, set the entity’s **Persistable** property to **Yes**, and the job is done!
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/import-a-large-excel-file/19398899.png" >}}
 
-7. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your project.
+6. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your project.
 
 Happy modeling!

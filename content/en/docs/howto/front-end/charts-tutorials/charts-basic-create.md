@@ -1,7 +1,6 @@
 ---
 title: "Create a Basic Chart"
 url: /howto/front-end/charts-basic-create/
-parent: "charts-tutorials"
 weight: 10
 description: "How to create a basic chart and configure the display options"
 tags: ["Charts", "Widgets", "Basic Chart", "Area Chart"]
@@ -11,7 +10,7 @@ tags: ["Charts", "Widgets", "Basic Chart", "Area Chart"]
 
 The charts widget provides a basic implementation of different types of chart (for example: area, line, bar, column, and pie) in a Mendix application.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a chart with basic sample data
 

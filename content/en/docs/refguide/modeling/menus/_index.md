@@ -17,11 +17,11 @@ The top-bar of Studio Pro contains the following menus:
 * [File](#file) – allows you to manage documents and apps
 * [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro
 * [View](#view) – allows you to choose how Studio Pro and dockable panes within Studio Pro are displayed
-* [App](#project) – contains app-wide settings
+* [App](#app) – contains app-wide settings
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
-* [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendixcloud.com/index4.html), open log file directory, or view information on  the current information of Studio Pro
+* [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendixcloud.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
 ## 2 Switch-to Menu {#switch-to}
 
@@ -39,7 +39,7 @@ The **Edit** menu allows you to perform editing functions, such as cut/copy/past
 
 The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
 
-## 6 App Menu {#project}
+## 6 App Menu {#app}
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For more information on the **App** menu, see [App Menu](/refguide/app-menu/).
 
@@ -61,7 +61,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | --- | --- | --- |
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | **Help Contents** | Opens the start page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the [Mendix Forum](https://forum.mendixcloud.com/index4.html) in the default web browser. |   |
+| **Ask a Question** | Opens the Mendix Forum in the default web browser. |   |
 | **Open Log File Directory** | Opens the log files for your app locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 

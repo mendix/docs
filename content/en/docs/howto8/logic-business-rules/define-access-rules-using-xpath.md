@@ -12,7 +12,7 @@ The access rules of an entity define what a user is allowed to do with the objec
 
 In this how-to, you will prepare a data structure (including security), a GUI, and some example data for customers, orders, and a financial administrator account. After this preparation, you will define the access rules for the Order entity using XPath on the payment status. The XPath will constrain the order so it can only be seen by a financial administrator when the payment status of the order is set to "paid."
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Define access rules for an entity using XPath
 
@@ -32,7 +32,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto8/security/create-a-secure-app/)).
 
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581008.png" >}}
-    
+
 5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto8/security/create-a-secure-app/):
 
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581005.png" >}}
@@ -58,20 +58,20 @@ In the previous section, you set up a basic data structure and created some samp
 
 To define the access rules on the Order entity using XPath, follow these steps:
 
-1.  Open the **Access rules** tab for the **Order** entity:
+1. Open the **Access rules** tab for the **Order** entity:
 
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18580996.png" >}}
 
-2.  Double-click the **FinancialAdministrator** module role to open its properties and go to the **XPath constraint** tab:
+2. Double-click the **FinancialAdministrator** module role to open its properties and go to the **XPath constraint** tab:
 
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581000.png" >}}
-    
-3.  To constrain the access of the financial administrator to only "Complete" orders, add the following **XPath**:
+
+3. To constrain the access of the financial administrator to only "Complete" orders, add the following **XPath**:
 
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18580995.png" >}}
 
 4. Click **OK** and re-deploy your application.
-5.  When you sign in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
+5. When you sign in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
 
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18580994.png" >}}
 

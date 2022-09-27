@@ -1,7 +1,6 @@
 ---
 title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
-parent: "general"
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
@@ -69,7 +68,7 @@ An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a ve
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-### 3.2 SAP BTP & IBM Cloud
+### 3.2 SAP BTP and IBM Cloud
 
 To license a Mendix app on SAP BTP or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
 
@@ -105,6 +104,7 @@ The two environment variables `LICENSE_ID` and `LICENSE_KEY` need to be set to t
 cf set-env <YOUR_APP> LICENSE_ID <LicenseId>
 cf set-env <YOUR_APP> LICENSE_KEY <LicenseKey>
 ```
+
 Where `<YOUR_APP>` is the name of your app.
 
 The app needs to be restarted for the environment variables to be read and the license to become effective.
@@ -141,7 +141,7 @@ To license a Mendix app on Microsoft Windows you need to:
 
 Full instructions on how to do this can be found in [MS Windows: Activate a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/).
 
-### 3.9 Unix-like Server
+### 3.9 Unix-Like Server
 
 To license a Mendix app on Linux, or another Unix-like operating system, you need to:
 
@@ -150,7 +150,7 @@ To license a Mendix app on Linux, or another Unix-like operating system, you nee
 3. Request a license key from Mendix Support.
 4. Activate your license on the server using the m2ee command `activate_license`.
 
-More instructions on how to do this can be found in [Unix Deployment](/developerportal/deploy/unix-like/).
+More instructions on how to do this can be found in [Unix-Like Deployment](/developerportal/deploy/unix-like/).
 
 ## 4 Read More
 

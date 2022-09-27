@@ -1,7 +1,7 @@
 ---
 title: "Fine-Tune a Chart with Advanced Settings"
+linktitle: "Chart Advanced Tuning"
 url: /howto8/front-end/charts-advanced-tuning/
-parent: "charts-tutorials"
 weight: 30
 description: "Describes the settings you can use to change chart layouts and types"
 tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]
@@ -11,7 +11,7 @@ tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]
 
 The individual Charts widgets can be fine-tuned with advanced settings. The settings can affect the layout, configuration and data.
 
-**This how-to will teach you how to do the following:**  
+This how-to will teach you how to do the following:  
 
 * Change font style (layout)
 * Change chart type (data series)
@@ -53,6 +53,7 @@ To create a custom layout, follow these steps:
       }
     }
     ```
+
 10. Change the font settings till the chart shows the required font. Copy the font settings.
 
     {{% alert color="warning" %}}Please note that changes made in the editor will not persist unless they are stored in the advanced settings of the widget or in the theme.{{% /alert %}}

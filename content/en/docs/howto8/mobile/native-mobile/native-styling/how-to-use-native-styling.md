@@ -1,7 +1,6 @@
 ---
 title: "Style Your Mendix Native Mobile App"
 url: /howto8/mobile/how-to-use-native-styling/
-parent: "native-styling"
 weight: 30
 description: A how-to for styling your first Mendix Native App.
 tags: ["styling", "design", "classes", "native"]
@@ -34,9 +33,9 @@ These resources let you style your app with a wide variety of interface parts. H
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-styling/how-to-use-native-styling/button-one.png" alt="button" >}}
 
-2. Click **Run Locally** and then click **View** to see your app. The button will be blue with white text, which is its default styling.
-3. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
-4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
+1. Click **Run Locally** and then click **View** to see your app. The button will be blue with white text, which is its default styling.
+1. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
+1. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
     ```javascript
     //Brand Style
@@ -48,8 +47,8 @@ These resources let you style your app with a wide variety of interface parts. H
     };
     ```
 
-5. Save your file.
-6. Click **Run Locally** to apply your changes:
+1. Save your file.
+1. Click **Run Locally** to apply your changes:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-styling/how-to-use-native-styling/brand-primary-rosybrown.png" alt="rosybrown button" >}}
 
@@ -69,7 +68,7 @@ Classes are groups of styling properties which define how certain elements of yo
 5. Click **Run Locally** to save and refresh your app. Notice the button turned green:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-styling/how-to-use-native-styling/green-button.png" alt="green button" >}}
-    
+
     You have successfully applied an Atlas-provided class to a button widget.
 
 ## 5 Design Properties
@@ -110,7 +109,7 @@ When you have specific design requirements, you will need to build custom classe
         }
     }
     ```
-    
+
     To alter a class on your own, consult the [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide/) to understand widget structures.
 
 6. Now you will edit the code you pasted. Apply a transparent background color to customize the the default button widget:
@@ -142,7 +141,7 @@ When you have specific design requirements, you will need to build custom classe
 10. Click **Run Locally** to see that your button's background color is transparent:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-styling/how-to-use-native-styling/bordered-button.png" alt="bordered button" >}}
-    
+
     You have successfully customized a simple button widget. Using these basic principles, you can go on to customize widgets with distinct looks.
 
 ## 7 Implementing Custom Design Properties
@@ -162,14 +161,15 @@ In this section you will learn to turn the class you made into a design property
         "class": "btnBordered"
     },
     ```
-4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.
-5. Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
+
+5. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.
+6. Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-styling/how-to-use-native-styling/bordered-design-property.png" alt="bordered design property" >}}
 
-6. Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
+7. Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
 
-7. Click **Run Locally** again and view your app:
+8. Click **Run Locally** again and view your app:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-styling/how-to-use-native-styling/design-property-border-button.png" alt="design properties border" >}}
 

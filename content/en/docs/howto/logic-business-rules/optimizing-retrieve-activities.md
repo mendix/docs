@@ -3,6 +3,7 @@ title: "Optimize Retrieve Activities"
 url: /howto/logic-business-rules/optimizing-retrieve-activities/
 category: "Logic & Business Rules"
 weight: 90
+description: "Describes how to find and create objects to continue your process as well as retrieve an instance of an object."
 tags: ["microflow", "retrieve", "optimize"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
@@ -11,7 +12,7 @@ tags: ["microflow", "retrieve", "optimize"]
 
 Often in processes you need to retrieve objects in order to complete the process. But what if those objects cannot be found? Usually additional actions are required, but since the objects you retrieve and create are assigned different names, sometimes you cannot merge them back into a single flow.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Find and create objects to continue your process
 * Retrieve an instance of an object

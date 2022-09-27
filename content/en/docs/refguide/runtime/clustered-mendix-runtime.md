@@ -2,7 +2,7 @@
 title: "Clustered Mendix Runtime"
 url: /refguide/clustered-mendix-runtime/
 category: "Mendix Runtime"
-description: "Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
+description: "Introduces the cluster functionality of the Mendix Runtime, which allows you to set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
 tags: ["runtime", "cluster", "load balancer", "failover", "studio pro"]
 ---
 
@@ -26,12 +26,12 @@ The Mendix Runtime cluster requires the following infrastructure:
 
 This means that a Mendix cluster requires a load balancer to distribute the load of the clients over the available Runtime cluster nodes. It also means that all the nodes need to connect to the same Mendix database, and the files need to be stored on S3 (for details, see the [File Storage](#file-storage) section below). The number of nodes in your cluster depends on the application, the high availability requirements, and its usage.
 
-## 4 Cluster Leader & Cluster Slaves{#cluster-leader-follower}
+## 4 Cluster Leader and Cluster Slaves{#cluster-leader-follower}
 
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. These are the activities:
 
 * **Session cleanup handling** – each node expires its sessions (meaning, not being used for a configured timespan) and the cluster leader removes the sessions persisted in the database
-	* In exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader makes sure this removal still happens
+    * In exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader makes sure this removal still happens
 * **Cluster node expiration handling** – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
 * **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
 * **Unblocking blocked users**
@@ -58,7 +58,7 @@ Uploaded files should be stored in a shared file storage facility, as every Mend
 
 For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](/refguide/custom-settings/).
 
-## 7 After-Startup & Before-Shutdown Microflows {#startup-shutdown-microflows}
+## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 
 It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix cluster, this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintenance during these microflows is strongly discouraged, because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
 
@@ -96,7 +96,7 @@ Whenever the Mendix Client is restarted, all the state is discarded, as it is on
 
 The more objects that are part of the dirty state, the more data has to be transferred in the requests and responses between the Mendix Runtime and the Mendix Client. As such, this has an impact on performance. In cluster environments, it is advised to minimize the amount of dirty state to minimize the impact of the synchronization on performance.
 
-The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled via the [Optimize network calls](/refguide/project-settings/#optimize-network-calls) project setting.
+The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled via the [Optimize network calls](/refguide/app-settings/#optimize-network-calls) app setting.
 
 {{% alert color="warning" %}}
 It is important to realize that when calling external web services in Mendix to fetch external data, the responses of those actions are converted into Mendix entities. As long as they are not persisted in the Mendix database, they will be part of the dirty state and have a negative impact on the performance of the application. To reduce this impact, this behavior is likely to change in the future.
@@ -141,4 +141,3 @@ Persistent sessions also store a last-active date upon each request. To improve 
 {{% alert color="warning" %}}
 Overriding the default values for the `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of "keep alive" and results in an unexpected session logout. The best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run the clean-up action at least once during the session time out interval.
 {{% /alert %}}
-

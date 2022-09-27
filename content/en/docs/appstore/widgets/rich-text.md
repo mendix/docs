@@ -23,15 +23,15 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
 * Support spelling and grammar checker in the editor
 * Support code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
 * Support the following keyboard shortcuts in the editor:
-  * <kbd>Ctrl</kbd> + <kbd>B</kbd> – bold
-  * <kbd>Ctrl</kbd> + <kbd>I</kbd>– italicize
-  * <kbd>Ctrl</kbd> + <kbd>U</kbd> – underline
-  * <kbd>Ctrl</kbd> + <kbd>Z</kbd> – undo
-  * <kbd>Ctrl</kbd> + <kbd>Y</kbd> – redo
-  * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
-  * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
-  * <kbd>-</kbd> + <kbd>space</kbd> – starts a list
-  * <kbd>tab</kbd> – indents the content when <kbd>tab</kbd> is configured to indent from the widget XML; otherwise, move the focus to the next element
+    * <kbd>Ctrl</kbd> + <kbd>B</kbd> – bold
+    * <kbd>Ctrl</kbd> + <kbd>I</kbd>– italicize
+    * <kbd>Ctrl</kbd> + <kbd>U</kbd> – underline
+    * <kbd>Ctrl</kbd> + <kbd>Z</kbd> – undo
+    * <kbd>Ctrl</kbd> + <kbd>Y</kbd> – redo
+    * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
+    * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
+    * <kbd>-</kbd> + <kbd>space</kbd> – starts a list
+    * <kbd>tab</kbd> – indents the content when <kbd>tab</kbd> is configured to indent from the widget XML; otherwise, move the focus to the next element
 
 ## 2 Configuration
 
@@ -47,28 +47,29 @@ To configure this widget, follow these steps:
     * **Toolbar** (default) – if selected, the toolbar is always displayed
 
         {{< figure src="/attachments/appstore/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" >}}
-	
-	  * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
+
+        * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
+
         {{< figure src="/attachments/appstore/widgets/rich-text/inline-toolbar.png" alt="Example of toolbar" >}}
-	
+    
 * **Value attribute** (required) – sets a String attribute to store the rich-text content
-* **Sanitize content**	
+* **Sanitize content**
     * **Yes** (default) – if selected, untrusted strings in user's content gets removed
-    * **No** – if selected, untrusted strings in user's content is not removed	
-*  **Read-only style** – defines how the editor looks when the editor becomes read-only
-	
+    * **No** – if selected, untrusted strings in user's content is not removed
+* **Read-only style** – defines how the editor looks when the editor becomes read-only
+
     {{% alert color="info" %}}The editor becomes read-only when the **Editable** property is set to **Never** or **Condition** returns `false`.{{% /alert %}}
-	
-	 * **Rich text** – if selected, only text is shown
-	 * **Bordered** –  if selected, text is shown in a frame
-	 * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
-*  **Editable** – determines when user can edit content in the editor and when it is read-only
+
+    * **Rich text** – if selected, only text is shown
+    * **Bordered** –  if selected, text is shown in a frame
+    * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
+* **Editable** – determines when user can edit content in the editor and when it is read-only
 
     {{% alert color="info" %}}For more information, see [Editability Section](https://docs.mendix.com/refguide/common-widget-properties#editability) in the *Studio Pro 9 Guide*.{{% /alert %}}
 
 * **Show label** 
     * **Yes** – if selected, you can define the label caption
-     	 * **Label caption** – defines the label caption of the widget that is displayed on the page
+        * **Label caption** – defines the label caption of the widget that is displayed on the page
     * **No** (default) – if selected, there is no label for this widget on the page
 * **Visible** – determines if the widget is visible on the page
 
@@ -80,16 +81,16 @@ To configure this widget, follow these steps:
     * **Basic** – if selected, the editor contains buttons suitable for quick input fields
 
         {{< figure src="/attachments/appstore/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" >}}
-	
-	  * **Standard** – if selected, the editor contains buttons used for creating standards-compliant content
-	  
+
+        * **Standard** – if selected, the editor contains buttons used for creating standards-compliant content
+
         {{< figure src="/attachments/appstore/widgets/rich-text/standard-toolbar.png" alt="Example of toolbar" >}}
-	  
-	  * **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
+
+        * **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
 
         {{< figure src="/attachments/appstore/widgets/rich-text/full-toolbar.png" alt="Example of toolbar" >}}
-	  
-    * **Custom** – allows you to make your toolbar with customized options	
+
+    * **Custom** – allows you to make your toolbar with customized options
         * **Toolbar group** 
             * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
                 * **Document Group**
@@ -106,9 +107,9 @@ To configure this widget, follow these steps:
                 * **Tools group**
                 * **Others group**
             * **Advanced** – if selected, you can configure buttons for different toolbar groups
-		
+
                 {{% alert color="info" %}}All the toolbar groups that you configure will be available in the toolbar. The buttons that have the same **Toolbar ID** will be grouped together, with vertical bars ("|") separating different toolbar groups.{{% /alert %}}
-		
+
                 * **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
                     * **Button** – specifies the button to be included in the toolbar group
                     * **Toolbar ID** – specifies the ID of the toolbar group in which this button should be included
@@ -147,17 +148,17 @@ To configure this widget, follow these steps:
     * **No** – if selected, the inline spelling and grammar checker is disabled 
 * **Enable code highlight**
     * **Yes** – if selected, the **Insert Code Snippet** button below becomes available in the toolbar, which enables the user to insert a code snippet that is displayed with highlighted syntax in the editor 
-    
+
         {{< figure src="/attachments/appstore/widgets/rich-text/insert-code-snippet.png" alt="insert-code-snippet" >}}
-    
+
     * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
 * **Advanced content filtering**  
     * **Auto** (default) – if selected, the content is sanitized automatically
     * **Custom** – if selected, you can customize how content is sanitized with the following items:
         * **Allowed content** – specifies tags that are allowed, for example, `h1 h2 h3 p blockquote strong em del ins table tr th td caption`
         * **Disallowed content** – specifies tags that get removed
-    
-          {{% alert color="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
+
+        {{% alert color="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
 
 ### 2.6 Common Tab
 
@@ -184,4 +185,3 @@ Features:
     * Schemes: `http`, `https`, `ftp`, `mailto`
 
     {{% alert color="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library/). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
-

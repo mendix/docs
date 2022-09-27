@@ -1,7 +1,6 @@
 ---
 title: "Get Started with Atlas UI"
 url: /howto7/front-end/get-started-with-atlasui/
-parent: "atlas-ui"
 weight: 10
 tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 ---
@@ -10,7 +9,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 
 The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose an app template that is powered by Atlas UI. For more information on the Web Modeler, see the [Web Modeler Guide](/studio7/). 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Choose an app template
 * Edit your app in the Web Modeler

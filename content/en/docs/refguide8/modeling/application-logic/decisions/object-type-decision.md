@@ -1,7 +1,6 @@
 ---
 title: "Object Type Decision"
 url: /refguide8/object-type-decision/
-parent: "decisions"
 weight: 2
 tags: ["studio pro", "object type decision", "decisions"]
 aliases:
@@ -29,7 +28,6 @@ If you want to use the specialized type in the rest of the microflow you can use
 The object type decision properties consists of the following sections:
 
 * [Common](#common)
-
 * [Input](#input)
 
     {{< figure src="/attachments/refguide8/modeling/application-logic/decisions/object-type-decision/object-type-decision-properties.png"   width="250"  >}}
@@ -49,6 +47,3 @@ The input object contains an object of a generalized entity.
 For example, you have an entity **Student** and an entity **Professor** which have an entity **Member** as their generalization. You want to open a different page for **Professor** than for any other **Member**. The selected **Member** object is available in the parameter **SelectedMember** and is used as input to the object type decision. Note that there is no outgoing flow for **Student**. If an outgoing flow is missing, the closest generalization that has an outgoing flow is searched. In this case, this generalization is **Member**. The outgoing flow with the caption **(empty)** is followed when **SelectedMember** does not contain an object.
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/decisions/object-type-decision.png" >}}
-
-
-

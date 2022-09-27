@@ -1,9 +1,10 @@
 ---
 title: "Implement Best Practices for App Security"
+linktitle: "Best Practices for App Security"
 url: /howto/security/best-practices-security/
 category: "Security"
 weight: 20
-description: "A set of security aspects and checks to use when developing your Mendix application."
+description: "Describes the common aspects you should consider when delivering an application within the Mendix Cloud."
 tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
@@ -30,7 +31,8 @@ While the data that should be viewable and editable in which role is application
 * Attributes determined by the system (like the status of an order) should never be writeable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a **System.User** object created on the fly)
 * Do not set a default rule for read-and-write access – this forces you to think about each attribute that is added to an entity
-* Security constraints should be formed as entity access rules and visibility constraints in page components (grids, list views, data views)
+* Security constraints should be formed as entity access rules
+* Constraints on widgets in pages should not be used as a measure of security, but can filter out irrelevant data for the context of the page
 * Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable – this way you are aware of the (correct) working of an access rule
 
 ## 3 Avoiding Injection
@@ -43,12 +45,12 @@ When you are building an application, you may use [Mendix Marketplace](https://m
 
 These are the common cases and best practices:
 
-*	HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
-    *	Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
-    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
-*	Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
-    *	Use prepared statements, which will cause the database-specific connector to take care of escaping the value
-    *	Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
+    * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
+    * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
+* Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
+    * Use prepared statements, which will cause the database-specific connector to take care of escaping the value
+    * Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
 
 ## 4 Applying Access Restrictions to Unnecessary Request Handlers{#request-handlers}
 
@@ -234,12 +236,12 @@ To keep your app hygiene at a good level, perform the following steps:
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).
 
-## 13 Configuring User Roles & Access
+## 13 Configuring User Roles and Access
 
 Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
 
 * Anonymous access should be disabled if it has no function within the application
-  * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
+    * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
 * The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 

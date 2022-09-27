@@ -1,5 +1,5 @@
 ---
-title: "Building Connectors"
+title: "Build Connectors"
 url: /appstore/creating-content/connector-guide-build/
 category: "Creating Content"
 weight: 4
@@ -13,21 +13,22 @@ Welcome to the world of Mendix connectors. Mendix connectors allow you to connec
 **This how-to will teach you the following:**
 
 * What connectors are and how they work
-* How to build a connector
+* Basic steps for building and publishing connectors
 
 {{% alert color="info" %}}
-For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/). To learn more about advanced ways to build connectors, see [Wrap Services, APIS, or Databases with OData](/refguide/wrap-services-odata/).
 {{% /alert %}}
 
 ### 1.1 Prerequisites  
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read the blog post [Introducting the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
+* Read the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/)
 * Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * Read the Evaluation Guide page about [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration/)
 * Read [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/) 
 * Watch the [Build a Mendix Connector](https://www.youtube.com/watch?v=wTQJ1MiXAow) tutorial
+* Install Studio Pro
 
 ## 2 What Are Connectors?
 
@@ -35,13 +36,13 @@ Connectors can be used in your app to simplify connecting to existing third-part
 
 ### 2.1 Connecting to Other Systems
 
-These connectors are implemented as Mendix modules with a focus on connecting to other systems. The connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/consumed-rest-services/#rest), [OData](/refguide/consumed-odata-services/#external-entities), or [Data Hub](/data-hub/). 
+Connectors are implemented as Mendix modules with a focus on connecting to other systems. Connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/consumed-rest-services/#rest), [OData](/refguide/consumed-odata-services/#external-entities), or [Data Hub](/data-hub/). 
 
 They can also be used to package a Java library provided by the other system to make the connection. These Java library functions can be exposed via Java actions as custom microflow activities (see [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/)). This makes it simpler for Mendix developers without in-depth knowledge about third-party integrations to use these connectors in their business logic.
 
 #### 2.1.1 Connecting Mendix Apps to Mendix Apps  
 
-This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:<br/>  
+This chart shows the available solutions for when you want to connect Mendix apps to other Mendix apps:
 
 | Category | Solution |
 | --- | --- |
@@ -50,13 +51,17 @@ This chart shows the available solutions for when you want to connect Mendix app
 
 #### 2.1.2 Connecting Mendix Apps to Third-Party Systems  
 
-This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:<br/>
+This chart shows the available solutions for when you want to connect Mendix apps to third-party systems:
 
 | Category | Solution |
 | --- | --- |
-| Platform-supported protocols | Connect a Mendix application to one or more third party applications using platform-supported facilities: SOAP web services, REST web services or ODATA.       | 
-| eQ-supported protocols   | Use eQ supported facilities: Web services, REST, OData | 
+| Platform-supported protocols | Connect a Mendix application to one or more third party applications using platform-supported facilities: SOAP web services, REST web services or OData.       | 
+| eQube-supported protocols   | Use eQube-supported facilities: Web services, REST, OData | 
 | Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
+
+{{% alert color="info" %}}
+The [Data Hub Catalog](/data-hub/data-hub-catalog/) is a hub for shared registered assets made available in your organization. At the moment, it only supports OData.
+{{% /alert %}}
 
 ### 2.2 Getting Mendix Connectors
 
@@ -72,21 +77,19 @@ As an example, check out the [AWS IoT](/appstore/connectors/aws-iot/) connector.
 
 ## 3 Building a Mendix Connector in Studio Pro {#build-connector}
 
-Now that you know what connectors are, you can try building your own.
-
 When creating a new Mendix connector, it is advised to have an app in which you both develop and test your connector. This means that you will have a module that contains all your connector logic, along with one or more additional modules that assist in the testing and development. The logic in the additional modules are not required for the operation of the module and therefore need to be separated.
 
 ### 3.1 Setting Up Your App {#app-setup}
 
 To start setting up your app, open Studio Pro and do the following:
 
-1.  Create a [New App](/refguide/new-project/) for your connector.
-2.  Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
-    
-     {{< figure src="/attachments/appstore/creating-content/connector-guide-build/add-module.png" >}}
+1. Create a [New App](/refguide/new-app/) for your connector.
+2. Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
 
-3.  Give your module a name fitting for the type of connector you are building.
-4.  Create the basic folder structure at root level. 
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/add-module.png" >}}
+
+3. Give your module a name fitting for the type of connector you are building.
+4. Create the basic folder structure at root level. 
 
 For more information, see the [App Setup](/appstore/creating-content/connector-guide-best-practices/#app-setup) section of *Best Practices for Building Connectors*.
 
@@ -142,5 +145,7 @@ Because connectors are exported as modules and then published on the Marketplace
 
 ## 4 Read More
 
-* [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
-* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
+* Read [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
+* Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
+* See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors
+* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#3rd-party)

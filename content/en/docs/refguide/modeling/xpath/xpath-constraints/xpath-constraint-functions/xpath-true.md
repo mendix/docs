@@ -1,7 +1,6 @@
 ---
 title: "XPath True"
 url: /refguide/xpath-true/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 
@@ -15,7 +14,6 @@ To use the values `true` or `false` in XPath queries, it is necessary to either 
 
 This query returns all the customers who are classified as "gold customers":
 
-```java
+```java {linenos=false}
 //Sales.Customer[IsGoldCustomer = true()]
 ```
-

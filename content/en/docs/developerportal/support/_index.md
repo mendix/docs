@@ -1,9 +1,11 @@
 ---
 title: "Mendix Support"
 url: /developerportal/support/
-description: ""
-tags: ["Support", "SLA", "standard", "premium"]
+description: "Provides information on how to obtain support for your Mendix apps."
 weight: 30
+no_list: false 
+description_list: true
+tags: ["support", "sla", "standard", "premier", "platform"]
 aliases:
     - /howtogeneral/support/index.html
 ---
@@ -84,7 +86,7 @@ We expect your support team to be trained and certified on Studio Pro and the De
 
 ## 6 Platform Status
 
-If there is an issue with the Mendix platform that affects multiple customers, or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com/) and send updates on the progress through email if you have subscribed to this service. It is recommended that your service desk team subscribes to updates from this page.
+If there is an issue with the Mendix Platform that affects multiple customers, or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com/) and send updates on the progress through email if you have subscribed to this service. It is recommended that your service desk team subscribes to updates from this page.
 
 ## 7 Reach Out to Mendix Support
 
@@ -100,168 +102,29 @@ With our Multi-Cloud strategy, Mendix allows the apps that you build to be deplo
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or 3rd party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
-<!-- TABLE BELOW CONVERTED TO HTML SO THAT FIRST COLUMN CAN BE WIDER
-| | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional |
+| Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | SAP BTP or Tencent | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional² |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | |
 | **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | |
 | **Runtime** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | | | |
-| **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner | | |
+| **Logs/ Metrics** | Mendix | Mendix | | | Mendix Partner¹ | | |
 | **Appli&shy;cation Opera&shy;tion** | Mendix | Mendix | Mendix | Mendix | Mendix | | |
 | **Buildpack** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
-| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner | | |
-| **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner | | |
-| **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner | | |
--->
-
-<table>
-<thead>
-<tr>
-<!-- Width added to first column -->
-<th class="has-expand" width=25%><div class="expand-table"><i class="glyphicon glyphicon-fullscreen"></i></div>Stack (see <a href="#components">below</a> for more information)</th>
-<th>Public Cloud</th>
-<th>Cloud Dedi­cated</th>
-<th>Private Cloud – Con­nected</th>
-<th>Private Cloud – Stand­alone</th>
-<th>SAP BTP<br />or<br />Tencent</th>
-<th>Cloud Foundry/ Docker &amp; Kuber­netes</th>
-<th>Tradi­tional</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><strong>Appli­cation</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Platform Support­ed Marketplace content</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Commun­ity Support­ed Marketplace content</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Runtime</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Deploy­ment Pipe­line</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Logs/ Metrics</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Appli­cation Opera­tion</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Buildpack</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td>Mendix</td>
-</tr>
-
-<tr>
-<td><strong>Contain­er Platform/ OS/ Java/ Web Server</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Infra­structure</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td><strong>Database/ File Storage/ Network</strong></td>
-<td>Mendix</td>
-<td>Mendix</td>
-<td></td>
-<td></td>
-<td>Mendix Partner¹</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+| **Contain&shy;er Platform/ OS/ Java/ Web Server** | Mendix | Mendix | | | Mendix Partner¹ | | |
+| **Infra&shy;structure** | Mendix | Mendix | | | Mendix Partner¹ | | |
+| **Database/ File Storage/ Network** | Mendix | Mendix | | | Mendix Partner¹ | | |
 
 ¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD) or Tencent Support.
+
+²Traditional means deploying directly on Windows or Linux without using containerization.
 
 In the diagrams below, the following colors are used:
 
 {{< figure src="/attachments/developerportal/support/legend.png"   width="50%"  >}}
 
-### 9.1 Mendix Public & Dedicated Cloud
+### 9.1 Mendix Public and Dedicated Cloud
 
 The Mendix Public and Dedicated Clouds are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA.
 Mendix Support has access to app health, logs, graphs and monitoring.
@@ -290,7 +153,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring �
 
 {{< figure src="/attachments/developerportal/support/tencent.png"   width="40%"  >}}
 
-### 9.5 Cloud Foundry / Docker & Kubernetes / Traditional Architectures
+### 9.5 Cloud Foundry / Docker and Kubernetes / Traditional Architectures
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 Depending on the Cloud architecture a Mendix application is built using the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.
@@ -304,7 +167,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring. 
 
 These are the components of the Mendix stack described in the section above. Please read an extensive description of the [Mendix architecture](https://www.mendix.com/evaluation-guide/enterprise-capabilities/architecture-intro) in the Evaluation Guide.
 
-### 10.1 Database, File Storage & Network
+### 10.1 Database, File Storage, and Network
 
 The database component includes the database service and the creating, storing, downloading, uploading, and restoring of backups.
 The file storage component refers to the file storage service and the creating, storing, downloading, uploading, and restoring of backups.
@@ -324,11 +187,11 @@ The container runtime platform refers to the platform for managing, creating, de
 
 Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP or IBM Cloud, the selected third party can diagnose this component.
 
-### 10.4 Buildpack, m2ee & Service Console
+### 10.4 Buildpack, m2ee, and Service Console
 
 The Mendix buildpacks for [Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) and [Docker](https://github.com/mendix/docker-mendix-buildpack) are available in GitHub repositories. The documentation for the buildpacks and m2ee tools is contained within these GitHub repositories and, because they are released under an Open Source license, the code can be inspected and the functionality and options can be understood by customers who wish to use these buildpacks.
 
-If you want to run Mendix apps on a Unix-like server you will need the [m2ee tools](https://github.com/mendix/m2ee-tools), available on GitHub. Read more about installing on systems running Unix-like operating systems in [Unix Deployment](/developerportal/deploy/unix-like/).
+If you want to run Mendix apps on a Unix-like server you will need the [m2ee tools](https://github.com/mendix/m2ee-tools), available on GitHub. Read more about installing on systems running Unix-like operating systems in [Unix-Like Deployment](/developerportal/deploy/unix-like/).
 
 Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose these components. Because Mendix has no control over the context in which the buildpack or m2ee tools are run outside of the Mendix Public Cloud and Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
@@ -344,7 +207,7 @@ The application operation component is used for stopping and starting environmen
 
 Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support diagnose this components.
 
-### 10.6 Logs & Metrics
+### 10.6 Logs and Metrics
 
 The logs component takes care of viewing and downloading application log files.
 The metrics component refers to viewing application metrics.
@@ -378,10 +241,4 @@ Mendix Support needs application logs to diagnose these components. Because Mend
 This includes the implementation and configuration of features, and the data and files in the Mendix app itself.
 These components are not accessible for Mendix Support and issues in the application are out of the scope of Mendix Support, although we will gladly assist in case of questions.
 
-## 11 Main Documents in This Category
-
-* [Prepare Your App for Support](/developerportal/support/prepare-your-project/) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
-* [Submit a Support Request](/developerportal/support/submit-support-request/) – presents the details necessary for Mendix Support to process your request
-* [Make a New App Node Request](/developerportal/support/new-app-node-request-template/) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
-* [Support Ticket Priority](/developerportal/support/ticket-priority/) – describes how priority levels are determined for Mendix Support
-* [Support Escalation Process](/developerportal/support/escalation-management-process/) – describes how a support request can be escalated to bring your issue to closure
+## 11 Documents in This Category

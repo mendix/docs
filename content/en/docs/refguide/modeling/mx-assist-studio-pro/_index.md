@@ -3,13 +3,13 @@ title: "Mendix Assist"
 url: /refguide/mx-assist-studio-pro/
 category: "App Modeling"
 weight: 120
-description: "Describes Mendix Assist in Mendix Studio Pro."
+description: "Describes Mendix Assist in Studio Pro."
 tags: ["studio pro", "mendix assist", "AI", "assistant"]
 ---
 
 ## 1 Introduction 
 
-Mendix Assist refers to Mendix platform capabilities that leverage Artificial Intelligence (AI) and Machine Learning (ML) to assist developers in application development, the so-called AI-Assisted Development (AIAD). The purpose of Mendix Assist is to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
+Mendix Assist refers to Mendix Platform capabilities that leverage Artificial Intelligence (AI) and Machine Learning (ML) to assist developers in application development, the so-called AI-Assisted Development (AIAD). The purpose of Mendix Assist is to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
 
 Mendix Assist consists of different capabilities that act as a virtual co-developer bot, each specialized in a certain domain or stage of the application lifecycle development. Currently, Mendix Assist consists of the following virtual co-developer bots: 
 

@@ -1,7 +1,6 @@
 ---
 title: "1.8"
 url: /releasenotes/add-ons/apm-1.8/
-parent: "apm-1"
 weight: 98
 ---
 
@@ -60,7 +59,7 @@ The statistics tool now gathers statistics over different time periods:
 
 * The JDBC query and explain-plan functionality against MySQL has not been tested.
 * The JDBC query and explain-plan functionality for the built-in database work only after starting the database viewer in the Mendix Modeler from the advanced menu of the console.
-* The performance tool can run out of memory when recording. The protection options advised for the performance tool still expect 1GB of available memory, so for small implementations, the protection options should be stricter.
+* The performance tool can run out of memory when recording. The protection options advised for the performance tool still expect 1 GB of available memory, so for small implementations, the protection options should be stricter.
 * When the Before Shutdown microflow is not configured, and some tools are running, the shutdown of the Mendix application can hang for about a minute.
 * For Mendix versions 5 and above, the microflow names are taken from the action caption. So if the action caption is changed in the Mendix Modeler, the Call Microflow action in the performance tool does not drill down. In addition, the caption only contains the microflow name, not the module name, so if multiple microflows exist with the same name but they are in different modules, the performance tool cannot pick the right one.
 * On load-balanced environments without sticky sessions, the APM tool is randomly connected to instances, and this does not work! For 1.6.1, you need access to specific servers to use the APM tool.

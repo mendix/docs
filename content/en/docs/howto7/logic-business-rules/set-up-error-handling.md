@@ -11,7 +11,7 @@ tags: ["error", "error handling", "rollback", "microflow", "logic"]
 
 When working with microflows, it is important to realize that there are always transactions. These transactions help in achieving the correct result, and in case something goes wrong, they also help us to keep all the information in our application consistent. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up the various error handling components
 
@@ -178,7 +178,7 @@ Especially when interacting with other systems, you need to think about how you 
 | {{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/blue.png" >}} | *Transaction initiated by custom with rollback activity* – after catching the exception, a new transaction is initiated to execute the remainder of the microflow activities. |
 | {{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/green.png" >}} | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. Any changes made in this transaction will be reverted because the activities in the 'SendEmail' subflow use default error handling. |
 
- {{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/18580945.png" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/18580945.png" >}}
 
 ### 5.3 Continuing in the Parent Flow, Rollback in the Subflow
 
@@ -188,7 +188,7 @@ Especially when interacting with other systems, you need to think about how you 
 | {{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/blue.png" >}} | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. All changes in this transaction will be reverted because of the custom error handler "with rollback." As a result, the change on the customer will not be applied. |
 | {{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/green.png" >}} | *Transaction initiated after the exception was caught by the error handler* – when this transaction is initiated, after executing some actions, it will re-throw the original exception. These changes will be persisted because of the error handling on the initial sub-microflow call. |
 
- {{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/18580947.png" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/set-up-error-handling/18580947.png" >}}
 
 ### 5.4 Continuing in the Parent Flow, Continuing in the Subflow
 

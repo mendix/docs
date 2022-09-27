@@ -2,7 +2,6 @@
 title: "Scaling Your Environment in Mendix Cloud v4"
 linktitle: "Scaling in Cloud v4"
 url: /developerportal/deploy/scale-environment/
-parent: "mxcloudv4"
 weight: 20
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
@@ -24,7 +23,7 @@ The scaling options on possible cloud versions are the following:
 | Mendix Cloud v3 | Vertical scaling | This needs to be done by raising a ticket with [Mendix Support](https://support.mendix.com/) |
 | Mendix Cloud v4 | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Scale your environment in Mendix Cloud v4
 

@@ -1,7 +1,6 @@
 ---
 title: "Image Uploader"
 url: /refguide/image-uploader/
-parent: "image-and-file-widgets"
 tags: ["studio pro", "image uploader", "file widget", "widget"] 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -53,9 +52,13 @@ Default: *5*
 
 #### 2.4.2 Allowed Extensions {#allowed-extensions}
 
-You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon (for example, `txt;doc`).
+You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon (for example, `jpeg;png`).
 
 If a file with an extension that is not allowed is selected, a [system text](/refguide/system-texts/) for **File manager/dynamic image** > **Error: incorrect file extension** will be shown below the file manager.
+
+Uploaded images are read by the runtime. Mendix use the [TwelveMonkeys ImageIO](https://haraldk.github.io/TwelveMonkeys/) library which supports a wide variety of image formats.
+
+For SVG files, TwelveMonkeys ImageIO itself delegates to the Batik library—which is known to have issues with specifically formatted files. For full information on Batik's feature support, see this [Batik documentation](https://xmlgraphics.apache.org/batik/status.html).
 
 #### 2.4.3 Thumbnail Width
 

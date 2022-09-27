@@ -2,6 +2,7 @@
 title: "Metrics"
 url: /refguide/metrics/
 category: "Mendix Runtime"
+description: "Describes how to configure and report metrics in Mendix."
 tags: ["studio pro", "metrics", "micrometer"]
 ---
 
@@ -13,19 +14,19 @@ Custom metrics were introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.
 
 Mendix supports reporting metrics through [Micrometer](https://micrometer.io/docs).
 
-The Metrics can be configured and used with:
+The Metrics can be configured in the following ways:
 
-* [Metrics registries configuration](#registries-configuration): To configure the metrics supported by Mendix
-* [Application tags](#application-tags): To include tags in all the metrics in application level
-* [Microflow activities](#microflow-activities): To handle metrics in microflow activities
-* [Java API](#java-api): To handle metrics using a Java API in a Java action
-* [Logging](#logging): To log metrics to a log node
+* [Metrics registries configuration](#registries-configuration) – to configure the metrics supported by Mendix
+* [Application tags](#application-tags) – to include tags in all the metrics in application level
+* [Microflow activities](#microflow-activities) – to handle metrics in microflow activities
+* [Java API](#java-api) – to handle metrics using a Java API in a Java action
+* [Logging](#logging) – to log metrics to a log node
 
 ## 2 Metrics Registries Configuration {#registries-configuration}
 
-Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with configuration key as `Metrics.Registries`. See [Runtime Customization](/refguide/custom-settings/) for more information. The setting is in JSON format.
+Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with the custom runtime setting name `Metrics.Registries`. See [Runtime Customization](/refguide/custom-settings/#metrics-settings) for more information. The setting is in JSON format.
 
-**Configuration Key:** `Metrics.Registries`
+* Custom Runtime Setting – **Name**: `Metrics.Registries`
 
 ```json
 [
@@ -39,185 +40,185 @@ Micrometer can send metrics to multiple registries. To configure micrometer for 
     "settings": { <settings> },
     "filters": [ <list-of-filters> ]
   },
-  ...
+  …
 ]
 ```
 
-The details of each settings are listed below:
+The details of each settings are listed below.
 
-### type (mandatory)
+* `type` *(mandatory)* – the type of registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), and [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/). Depending on the type of the registry the `settings` may vary.
+* `settings` *(conditional mandatory)* – settings for the registry. Each registry has different settings depending upon the **type** specified. Follow the links below to see the settings for each type:
+    * [Prometheus](#prometheus)
+    * [jmx](#jmx)
+    * [influx](#influx)
+    * [statsd](#statsd)
+* `filters` *(optional)* – instructions on which metrics to accept or deny. See the [Filters](#filters) section, below, for more information.
 
-The type of the registry to use. Currently supported types are : `prometheus`, `jmx`, `influx`, and `statsd`. Depending on the type of the registry the `settings` may vary.
+### 2.1 Settings
 
-### settings (conditional mandatory)
+The following settings can be used, depending on the type of metrics being generated:
 
-These are settings for the registry. Each registry has different settings depending upon the **type** specified. Supported settings for each type are as follows:.
+| Setting | DataType | Manda-tory | Type | Description | Default Value | Examples |
+| --- | --- | --- | --- | --- | --- | --- |
+| `db` | *String* | No | influx | The db to send metrics to | mydb | customDb, metricDb |
+| `password` | *String* | Yes | influx | Authenticate requests with this password | - | - |
+| `uri` | *String* | No | influx | The URI for the back end | http://localhost:8086 (for Influx) | - |
+| `userName` | *String* | Yes | influx | Authenticate requests with this user | - | - |
+| `protocol` | *String* | No | influx | Protocol of the statsd connection | UDP | TCP, UDP |
+| `domain` | *String* | No | jmx | Jmx domain to publish the metrics to | metrics | "Mendix", "Employee" |
+| `enabled` | *Boolean* | No | influx / statsd | Enables / Disables the meter | true | true, false |
+| `flavor` | *StatsdFlavor* | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
+| `host` | *String* | No | statsd | The host name of the StatsD agent | localhost | - |
+| `port` | *Int* | No | statsd | The port of the StatsD agent | 8125 | - |
+| `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` | |
+| `filters` | *Json* | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
 
-#### [Prometheus](https://prometheus.io/docs/introduction/overview/)
+#### 2.1.1 Prometheus{#prometheus}
 
-  Multiple Prometheus registrations are **NOT supported**. When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
+We do not support multiple [Prometheus](https://prometheus.io/docs/introduction/overview/). When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
 
-  `step`: The step size or reporting frequency to use.
+* `step` – the step size or reporting frequency to use.
 
-##### Example 1
+Example 1
 
-  ```json
-  [
-    {
-      "type": "prometheus",
-      "settings": {
-        "step": "3m"
-      }
+```json
+[
+  {
+    "type": "prometheus",
+    "settings": {
+      "step": "3m"
     }
-  ]
-  ```
+  }
+]
+```
 
-##### Example 2
+Example 2
 
-  ```json
-  [
-    {
-      "type": "prometheus",
-      "settings": {
-        "step": "P3Y6M4DT12H30M5S"
-      }
+```json
+[
+  {
+    "type": "prometheus",
+    "settings": {
+      "step": "P3Y6M4DT12H30M5S"
     }
-  ]
-  ```
+  }
+]
+```
 
-#### [Jmx](https://www.oracle.com/java/technologies/javase/javamanagement.html)
+#### 2.1.2 Jmx{#jmx}
 
-  `step`: The step size or reporting frequency to use.
-  `domain`: The Jmx domain to which to publish the metrics.
+* `step` – The step size or reporting frequency to use.
+* `domain` – The Jmx domain to which to publish the metrics.
 
-##### Example 1
+Example 1
 
-  ```json
-  [
-    {
-      "type": "jmx",
-      "settings": {
-        "step": "3m",
-        "domain": "Mendix"
-      }
+```json
+[
+  {
+    "type": "jmx",
+    "settings": {
+      "step": "3m",
+      "domain": "Mendix"
     }
-  ]
-  ```
+  }
+]
+```
 
- ##### Example 2
+Example 2
 
-  ```json
-  [
-    {
-      "type": "jmx",
-      "settings": {
-        "step": "P3Y6M4DT12H30M5S"
-      }
+```json
+[
+  {
+    "type": "jmx",
+    "settings": {
+      "step": "P3Y6M4DT12H30M5S"
     }
-  ]
-  ```
+  }
+]
+```
 
-#### [Influx](https://www.influxdata.com/)
+#### 2.1.3 Influx{#influx}
 
-  `uri`: The URI for the Influx backend.
-  `db`: The database name to which to send the metrics.
-  `userName`: The userName for authentication.
-  `password`: The password for authentication.
-  `step`: The step size or reporting frequency to use.
-  `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
+* `uri` – the URI for the Influx back end.
+* `db` – the database name to which to send the metrics.
+* `userName` – the userName for authentication.
+* `password` – the password for authentication.
+* `step` – the step size or reporting frequency to use.
+* `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
 
-##### Example 1
+Example 1
 
-  ```json
-  [
-    {
-      "type": "influx",
-      "settings": {
-        "userName": "mendix",
-        "password": "MayBeThis**"
-      }
+```json
+[
+  {
+    "type": "influx",
+    "settings": {
+      "userName": "mendix",
+      "password": "MayBeThis**"
     }
-  ]
-  ```
+  }
+]
+```
 
-##### Example 2
+Example 2
 
-  ```json
-  [
-    {
-      "type": "influx",
-      "settings": {
-        "uri": "http://mendix.influx.com",
-        "db": "mx.metrics",
-        "userName": "mendix",
-        "password": "MayBeThis**",
-        "step": "P2Y6M4DT12H21M5S"
-      }
+```json
+[
+  {
+    "type": "influx",
+    "settings": {
+      "uri": "http://mendix.influx.com",
+      "db": "mx.metrics",
+      "userName": "mendix",
+      "password": "MayBeThis**",
+      "step": "P2Y6M4DT12H21M5S"
     }
-  ]
-  ```
+  }
+]
+```
 
-#### [StatsD](https://www.datadoghq.com/dg/monitor/ts/statsd/)
+#### 2.1.4 StatsD{#statsd}
 
-  `flavor`: Specifies the variant of the StatsD protocol to use.
-  `host`: The host name of the StatsD agent.
-  `port`: The port used by the StatsD agent.
-  `step`: The step size or reporting frequency to use.
-  `protocol`: The protocol of the connection.
-  `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
+* `flavor` – specifies the variant of the StatsD protocol to use.
+* `host` – the host name of the StatsD agent.
+* `port` – the port used by the StatsD agent.
+* `step` – the step size or reporting frequency to use.
+* `protocol` – the protocol of the connection.
+* `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
   
-##### Example 1
+Example 1
 
-  ```json
-  [
-    {
-      "type": "statsd",
-      "settings": {
-        "host": "mx.datadog.com",
-        "port": "8181",
-        "protocol": "TCP",
-        "flavor": "TELEGRAF"
-      }
+```json
+[
+  {
+    "type": "statsd",
+    "settings": {
+      "host": "mx.datadog.com",
+      "port": "8181",
+      "protocol": "TCP",
+      "flavor": "TELEGRAF"
     }
-  ]
-  ```
+  }
+]
+```
 
-##### Example 2
+Example 2
 
-  ```json
-  [
-    {
-      "type": "statsd",
-      "settings": {
-        "flavor": "SYSDIG",
-        "step": "3m"
-      }
+```json
+[
+  {
+    "type": "statsd",
+    "settings": {
+      "flavor": "SYSDIG",
+      "step": "3m"
     }
-  ]
-  ```
+  }
+]
+```
 
-#### All settings details
+### 2.2 Filters {#filters}
 
-More information about all the settings,
-
-| Setting      | DataType       | Mandatory | Type           | Description                                   | Default Value                      | Examples                                                                                                 |
-| ------------ | -------------- | ----------| -------------- | --------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------|
-| `db`         | _String_       | No        | influx         | The db to send metrics to                     | mydb                               | customDb, metricDb                                                                                       |
-| `password`   | _String_       | Yes       | influx         | Authenticate requests with this password      | -                                  | -                                                                                                        |
-| `uri`        | _String_       | No        | influx         | The URI for backend                           | http://localhost:8086 (for Influx) | -                                                                                                        |
-| `userName`   | _String_       | Yes       | influx         | Authenticate requests with this user          | -                                  | -                                                                                                        |
-| `protocol`   | _String_       | No        | influx         | Protocol of the statsd connection             | UDP                                | TCP, UDP                                                                                                 |
-| `domain`     | _String_       | No        | jmx            | Jmx domain to publish the metrics             | metrics                            | "Mendix", "Employee"                                                                                     |
-| `enabled`    | _Boolean_      | No        | influx/statsd  | Enables/Disables the meter                    | true                               | true, false                                                                                              |
-| `flavor`     | _StatsdFlavor_ | No        | statsd         | The variant of the StatsD protocol            | DATADOG                            | ETSY, TELEGRAF, SYSDIG                                                                                   |
-| `host`       | _String_       | No        | statsd         | The host name of the StatsD agent             | localhost                          | -                                                                                                        |
-| `port`       | _Int_          | No        | statsd         | The port of the StatsD agent                  | 8125                               | -                                                                                                        |
-| `step`       | _Duration_     | No        | all            | The step size (reporting frequency) to use    | 1m                                 | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |                                                                 |
-| `filters`    | _Json_         | No        | all            | Custom setting from Mendix to filter metrics  | -                                  | [See below](#filters)                                                                                    |
-
-### filters (optional) {#filters}
-
-Filters help in filtering metrics based on given criteria. Below is the syntax,
+Filters are optional, but can help in filtering metrics based on given criteria. Below is the syntax:
 
 ```json
 "filters" : [
@@ -225,21 +226,14 @@ Filters help in filtering metrics based on given criteria. Below is the syntax,
 ]
 ```
 
-#### type
+* `filter-type` – the type of filter to apply. Currently we support the following:
+    * `nameStartsWith` – matches the metric if its name begins with the given list-of-filter-values.
+* `filter-result` – the desired result of applying the filter-type to the list-of-filter-values. Supported values are:
+    * `accept` – metrics matching the criteria are passed to the registry
+    * `deny` – metrics matching the criteria are not passed to the registry
+* `list-of-filter-values` – a list of values used in the given filter type
 
-The type of filter to apply. Currently we support the following:
-
-* `nameStartsWith` : Filters the metric if it begins with the given values.
-
-#### result
-
-The result of applying the filter. If the filter matches the criteria, the result value will be applied to the metric. Supported values are: `accept` (or) `deny`.
-
-#### values
-
-A list of values to be applied in the given filter type.
-
-##### Example 1
+Example 1
 
 ```json
 [
@@ -253,9 +247,9 @@ A list of values to be applied in the given filter type.
 ]
 ```
 
-The above filter accepts metrics which starts with **"app."**, **"employee."**, or **"myapp."**
+The above filter accepts metrics which starts with `app.`, `employee.`, or `myapp.`.
 
-##### Example 2
+Example 2
 
 ```json
 [
@@ -272,19 +266,17 @@ The above filter accepts metrics which starts with **"app."**, **"employee."**, 
 ]
 ```
 
-The above filter discards metrics which starts with **"Unnamed."**, **"Invalid."**, or **"Internal."**
+The above filter discards metrics which start with `Unnamed.`, `Invalid.`, or `Internal.`.
 
-### Notes
+### 2.3 Notes
 
 {{% alert color="info" %}}
 The following should be taken into account when configuring the metrics registries.
 {{% /alert %}}
 
-1. There are also some internal metrics used by Mendix. Filters will also have an effect on them. For example metrics emitted by Mendix which start with "mx.".
-
-2. If you have a metric and another metric with the same name but with additional tags, these will be considered as different metrics. Example, Metric ("app.counter1") and ("app.counter1" with tag ("version" -> "1")) are different.
-
-3. Filters are executed on a first come, first served basis. Hence the first applied filter gets the priority. For example, If you have a below setup,
+1. Filters also affect internal metrics used by Mendix. For example, metrics emitted by Mendix which start with `mx.`.
+2. If you have two metrics with the same name but one has additional tags, these are considered as different metrics. For example, metrics `app.counter1` with tag `"version" -> "1"` and `app.counter1` with no tag are different.
+3. Filters are executed on a first come, first served basis. In other words, the first matching filter gets the priority. For example, take the filters defined below:
 
     ```json
     [
@@ -299,9 +291,11 @@ The following should be taken into account when configuring the metrics registri
     ]
     ```
 
-    This will deny metrics like **"app.others.counter"** due to the contradiction with the first `accept` filter **"app."**.
+    This example allows metrics like `app.others.counter` as they pass the first `accept` filter, `nameStartsWith "app."`. However, if you reverse the filters, `app.others.counter` would be denied, while `app.somethingelse.` would still be accepted.
 
-4. To accept only specific filters and deny all others, ensure to deny with value **""**. For example, to accept only "app."
+    {{% alert color="info" %}}Ensure that more specific filters are defined before less specific ones so that they are applied correctly.{{% /alert %}}
+
+4. To accept only specific filters and deny all others, add a deny filter with the value `""` as the last filter. For example, to accept only metrics starting with `app.`
 
     ```json
     [
@@ -320,7 +314,7 @@ The following should be taken into account when configuring the metrics registri
 
 Common tags which should be reported by every metric can be specified using the `Metrics.ApplicationTags` setting. This setting should be in JSON format.
 
-**Configuration Key:** `Metrics.ApplicationTags`
+* Custom Runtime Setting – **Name**: `Metrics.ApplicationTags`
 
 ```json
 {
@@ -330,14 +324,15 @@ Common tags which should be reported by every metric can be specified using the 
 ```
 
 ## 4 Microflow Activities {#microflow-activities}
-See the description of these activities [here](/refguide/metrics-activities/).
+
+You can use activities to provide custom metrics from your app. See [Metrics Activities](/refguide/metrics-activities/) for information about these activities .
 
 ## 5 Java API {#java-api}
 
-Micrometer metrics can be accessed through Java APIs as well inside Mendix. This can be achieved by setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
+Micrometer metrics can be accessed through [Java Runtime APIs](https://docs.mendix.com/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
-**Configuration Key:** `com.mendix.metrics.Type`
-**Configuration Value:** `micrometer`
+* Custom Runtime Setting – **Name**: `com.mendix.metrics.Type`
+* **Value**: `micrometer`
 
 ### 5.1 Current Metrics and Usage
 
@@ -348,8 +343,8 @@ To create the metrics,
 ```Java
 import com.mendix.metrics.Counter;
 import com.mendix.core.Core;
+…
 
-...
 // Create a counter
 Counter counter1 = Core.metrics().createCounter("app.strikes")
                                 .withTag("app", "myapp")
@@ -373,10 +368,10 @@ It is recommended to use a common prefix that uniquely defines your organisation
 
 ### 5.2 Deprecated usages
 
-Below are deprecated usages which will be removed in the future releases,
+The following deprecated usages will be removed in the future releases,
 
-1. `com.mendix.metrics.Type` setting `logger` and `statsd` are deprecated. You will also get a warning message to advise you to start using the `micrometer` metric type.
-2. The Java API methods `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated in `Core.metrics()`
+1. Setting `com.mendix.metrics.Type` to `logger` and `statsd` is deprecated. You will get a warning message to advise you to start using the `micrometer` metric type.
+2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated.
 
 ## 6 Logging {#logging}
 
@@ -386,8 +381,7 @@ Metering-related log messages are sent to the `Metering` log node. If a registry
 
 The Runtime Server produces various metrics. Some of these metrics are controlled by Mendix: these are prefixed with `mx`.
 
-Other metrics are produced by Micrometer, the library that is used for metrics. This library will output metrics for other
-libraries that it recognizes, such as the Jetty server that is embedded in the Runtime Server. These additional Micrometer metrics are not under our control and might change.
+Other metrics are produced by Micrometer, the library that is used for metrics. This library outputs metrics for other libraries that it recognizes, such as the Jetty server that is embedded in the Runtime Server. These additional Micrometer metrics are not under our control and might change.
 
 ### 7.1 Runtime Server Metrics
 
@@ -395,21 +389,27 @@ The Runtime Server produces the following metrics out-of-the-box:
 
 | Name | Type | Tags | Description |
 | --- | --- | --- | --- |
-| `mx.runtime.stats.handler_requests` | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that was received by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.requests{path}` | counter | | The total number of requests on a request handler (`path`) that was received by a node; deprecated, use `mx.runtime.stats.handler_requests` instead. |
-| `mx.runtime.stats.sessions.named_users` | gauge | | The current number of active, named users in the database. |
-| `mx.runtime.stats.sessions.named_user_sessions` | gauge | | The current number of sessions in the database for named users. |
-| `mx.runtime.stats.sessions.anonymous_sessions` | gauge | | The current number of sessions in the database for anonymous users. |
-| `mx.runtime.stats.connectionbus.transactions` | counter | `XASId` | The total number of transactions on the database that were created by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.selects` | counter | `XASId` | The total number of `SELECT` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.inserts` | counter | `XASId` | The total number of `INSERT` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.updates` | counter | `XASId` | The total number of `UPDATE` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.runtime.stats.connectionbus.deletes` | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
-| `mx.odata.retrieve` | counter | `entity` | The total number of OData requests that were sent for a particular type of object (`entity`). |
-| `mx.odata.publish.objects` | counter | `entity` | The total number of OData objects that were served for a particular type of object (`entity`). |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>handler_requests** | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that were received by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>requests{path}** | counter | | The total number of requests on a request handler (`path`) that were received by a node;<br/>*deprecated, use `mx.runtime.stats.handler_requests` instead*. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_users** | gauge | | The current number of active, named users in the database. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_user_sessions** | gauge | | The current number of sessions in the database for named users. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>anonymous_sessions** | gauge | | The current number of sessions in the database for anonymous users. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>transactions** | counter | `XASId` | The total number of transactions on the database that were created by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>selects** | counter | `XASId` | The total number of `SELECT` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>inserts** | counter | `XASId` | The total number of `INSERT` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>updates** | counter | `XASId` | The total number of `UPDATE` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>deletes** | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
+| **mx.<wbr>odata.<wbr>consume.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
+| **mx.<wbr>odata.<wbr>consume.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
+| **mx.<wbr>odata.<wbr>consume.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). (introduced in Studio Pro 9.13) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.12) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| **mx.<wbr>odata.<wbr>publish.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
+| **mx.<wbr>odata.<wbr>retrieve** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
 
 {{% alert color="info" %}}
-Note that the actual name may vary slightly depending on the back-end (for example, Prometheus replaces dots by underscores).
+Note that the actual name may vary slightly depending on the back end (for example, Prometheus replaces dots by underscores).
 Additionally, a suffix may be added for the unit of the metric (for example, `_bytes`).
 {{% /alert %}}
 

@@ -3,6 +3,7 @@ title: "Export XML Documents"
 url: /howto/integration/export-xml-documents/
 category: "Integration"
 weight: 4
+description: "Describes how to add an XML schema, create domain-to-XML mapping, and export logic."
 tags: ["export", "xml", "integration"]
 ---
 
@@ -10,7 +11,7 @@ tags: ["export", "xml", "integration"]
 
 In enterprise software, it is not likely that you work in a [greenfield](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can export XML documents.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add an XML schema
 * Create domain-to-XML mapping and export logic
@@ -44,12 +45,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto/integration/export-xml-documents/18581813.xsd).
 
-1.  Right-click your module in the **App Explorer** and select **Add other** > **XML schema**.
-2.  Enter *CustomersXSD* for the **Name** and click **OK**:
+1. Right-click your module in the **App Explorer** and select **Add other** > **XML schema**.
+2. Enter *CustomersXSD* for the **Name** and click **OK**:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581696.png" >}}
 
-3.  In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
+3. In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581812.png" >}}
 
@@ -60,15 +61,14 @@ Whether you plan to import documents or export documents, working with XML means
 The XML schema describes what the contents of an XML document should be. We need to create domain-to-XML mapping to define how the data in our application is transformed into a XML document.
 
 1. Right-click your module in the **App Explorer** and select **Add other** > **Export mapping**.
-
 2. Enter *ExportCustomersMapping* for the **Name**:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581849.png" >}}
 
 3. Click **OK**, and the **Select schema elements for export mapping** dialog box will automatically open. Now do the following:<br />
-    a. For **Schema source**, select **XML schema**.<br />
-    b. For the schema, select the previously added **CustomersXSD**.<br />
-    c. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
+    1. For **Schema source**, select **XML schema**.<br />
+    1. For the schema, select the previously added **CustomersXSD**.<br />
+    1. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581811.png" >}}
 
@@ -91,8 +91,8 @@ The XML schema describes what the contents of an XML document should be. We need
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581806.png" >}}
 
 7. In the mapping editor, verify the following:<br />
-    a. **Method** is set to **By association**<br />
-    b. **Association to parent** is set to **XMLDocument_Customer**<br />
+    1. **Method** is set to **By association**<br />
+    2. **Association to parent** is set to **XMLDocument_Customer**<br />
 8. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581807.png" >}}

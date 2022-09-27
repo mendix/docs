@@ -1,7 +1,6 @@
 ---
 title: "8.10"
 url: /releasenotes/sdk/metamodel-8.10/
-parent: "metamodel-8"
 weight: 91
 ---
 
@@ -21,7 +20,7 @@ weight: 91
 * We introduced the `source` property.
 * We deleted the `remoteSourceDocument` property. This information is now stored in `ODataRemoteAssociationSource`.
 
-#### EntitySource, RemoteEntitySource, MappedValue, AssociationSource & RemoteAssociationSource (Elements)
+#### EntitySource, RemoteEntitySource, MappedValue, AssociationSource, and RemoteAssociationSource (Elements)
 
 * We introduced these elements.
 
@@ -38,7 +37,7 @@ weight: 91
 
 * We introduced the `type` and `variableNames` properties.
 
-#### WorkflowCallAction, SetTaskOutcomeAction & OpenUserTaskAction (Element)
+#### WorkflowCallAction, SetTaskOutcomeAction, and OpenUserTaskAction (Element)
 
 * We introduced these elements.
 
@@ -76,7 +75,7 @@ weight: 91
 
 ### Pages
 
-#### TextBox & TextArea (Elements)
+#### TextBox and TextArea (Elements)
 
 * We introduced the `autocomplete` property.
 
@@ -86,7 +85,7 @@ weight: 91
 
 ### Workflows
 
-#### WorkflowActivity, Flow, FlowValue, NoValue TaskOutcomeValue, StartWorkflowActivity, EndWorkflowActivity, WorkflowTask, WorkflowTaskOutcome & UserTask (Elements)
+#### WorkflowActivity, Flow, FlowValue, NoValue TaskOutcomeValue, StartWorkflowActivity, EndWorkflowActivity, WorkflowTask, WorkflowTaskOutcome, and UserTask (Elements)
 
 * We introduced these elements.
 

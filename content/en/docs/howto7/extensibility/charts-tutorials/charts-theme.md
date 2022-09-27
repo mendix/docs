@@ -1,7 +1,6 @@
 ---
 title: "Use the Charts Theme"
 url: /howto7/extensibility/charts-theme/
-parent: "charts-tutorials"
 weight: 40
 description: "Hos to set up a theme which will be applied to all the charts created with charts widgets in an app"
 tags: ["Charts", "Theme", "Widget", "Desktop Modeler"]
@@ -11,7 +10,7 @@ tags: ["Charts", "Theme", "Widget", "Desktop Modeler"]
 
 The look of individual **Charts** widgets can be fine tuned with advanced settings. A theme allows developers to create global settings that apply to all charts. In this way color, language, font and many more things can be set for all the charts in an app.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Change the font style for all charts
 * Add a theme configuration
@@ -35,23 +34,16 @@ This is how the original chart looks:
 To create the required custom configuration easily, follow these steps:
 
 1. Open the app with the chart(s).
-
 1. Open a page with a chart.
-
 1. Open the chart widget settings.
-
 1. Go to the tab **Advanced**.
-
 1. Set the **Mode** to **Developer**.
 
     {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png" alt="chart widget properties" >}}
 
 1. Run the app.
-
 1. Open the page with the chart in the browser.
-
 1. Click the **Toggle Editor** button.
-
 1. In the **Layout** section add the **Custom settings**.
 
     ```json
@@ -70,7 +62,7 @@ To create the required custom configuration easily, follow these steps:
 
     {{% alert color="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
 
-12. In the desktop modeler, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
+1. In the desktop modeler, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
 
     {{% alert color="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
 
@@ -79,9 +71,7 @@ To create the required custom configuration easily, follow these steps:
 To add a theme file which will apply to all charts in the app, follow these steps:
 
 1. From the desktop modeler, go to the menu **App > Show App Directory in Explorer**.
-
 1. Open the **theme** folder.
-
 1. Create a new file: *com.mendix.charts.json*
 
     {{% alert color="info" %}}Please note that<br/>
@@ -111,7 +101,6 @@ To change the font in all charts in the app, follow these steps:
     ```
 
 1. Restart the Mendix app.
-
 1. Validate the expected result.
 
     {{< figure src="/attachments/howto7/extensibility/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="chart updated" >}}

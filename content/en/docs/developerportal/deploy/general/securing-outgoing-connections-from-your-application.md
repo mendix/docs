@@ -2,7 +2,6 @@
 title: "Secure Outgoing Connections from Your App"
 linktitle: "Secure Outgoing Connections"
 url: /developerportal/deploy/securing-outgoing-connections-from-your-application/
-parent: "general"
 weight: 10
 description: "Describes which methods are available for securing connections from your app to the outside world."
 tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
@@ -76,10 +75,10 @@ In this scenario, unencrypted TCP/UDP protocols can be used; all inter-network t
 
 The following disadvantages apply:
 
-*   DNS is not available
-*   With failover data centers, VPN becomes extremely difficult to manage
-*   Connections are added to (virtual) machines, this makes deployment to multi-tenant public-cloud environments based on containerization a challenge
-*   VPN gateways potentially add two more single points of failure
+* DNS is not available
+* With failover data centers, VPN becomes extremely difficult to manage
+* Connections are added to (virtual) machines, this makes deployment to multi-tenant public-cloud environments based on containerization a challenge
+* VPN gateways potentially add two more single points of failure
 
 {{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399048.png" >}}
 

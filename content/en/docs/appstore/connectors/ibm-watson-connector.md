@@ -2,8 +2,7 @@
 title: "IBM Watson Connector"
 url: /appstore/connectors/ibm-watson-connector/
 category: "Connectors"
-#parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications")"
-description: "A reference for the Mendix IBM Watson connectors"
+description: "Describes using connectors with Mendix that simplify the use of various IBM Watson™ services"
 tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis", "Assistant", "Speech to Text", "Text to Speech", "Tone Analyzer", "Visual Recognition", "Face Detection", "Image Classification"]
 aliases:
   - /partners/ibm/ibm-watson-connector
@@ -307,7 +306,7 @@ This action is part of the Language Translator service and returns a list of lan
 {{< figure src="/attachments/appstore/connectors/ibm-watson-connector/translation-getidentifiablelanguages.png" alt="Configuration dialog for the Translation - Get Identifiable Languages action" >}}
 
 {{% alert color="info" %}}
-Note that [Translate Language](#translate-language) cannot translate between any possible combination of languages. If translation between languages is not supported by Watson (for example, _Traditional Chinese_ to _Catalan_), the [Translate Language](#translate-language) action will throw an error. The language pairs which are supported by the [Translate Language](#translate-language) action can be identified from the results of the [Get Translation Models](#getTranslationModels) action.
+Note that [Translate Language](#translate-language) cannot translate between any possible combination of languages. If translation between languages is not supported by Watson (for example, *Traditional Chinese* to *Catalan*), the [Translate Language](#translate-language) action will throw an error. The language pairs which are supported by the [Translate Language](#translate-language) action can be identified from the results of the [Get Translation Models](#getTranslationModels) action.
 {{% /alert %}}
 
 #### 6.1.1 Apikey
@@ -454,12 +453,12 @@ This is a string containing the URL assigned to the Visual Recognition service i
 This is an object of type **VisualRecognitionImage** which contains the image which is to be classified. The image must
 
 * have a pixel density of at least 32X32 pixels per inch
-* be less that 10MB
+* be less that 10 MB
 * be in one of the following formats
-  * png
-  * jpg
-  * gif
-  * tiff
+    * png
+    * jpg
+    * gif
+    * tiff
 
 #### 7.1.4 Classifiers
 
@@ -468,7 +467,7 @@ This is a list of the classifiers which Watson should use to classify the image.
 {{% alert color="info" %}}
 To use built-in IBM classifiers such as *default*, *food*, or *explicit*, you will need to create *Classifier* object for the classifier(s) you wish to use. Set the **Classifier Id** to the classifier_id of the IBM classifier. The built-in classifiers are described in the IBM documentation [Classify an image](https://cloud.ibm.com/apidocs/visual-recognition#classify-an-image).
 
-If the Classifiers list is empty, classification will be performed using the _default_ classifier.
+If the Classifiers list is empty, classification will be performed using the *default* classifier.
 {{% /alert %}}
 
 #### 7.1.5 Variable (List of Classifier)
@@ -493,7 +492,7 @@ For example, if you want to have a classifier to identify different sorts of mam
 
 Each ZIP file must
 
-* have a maximum size of 100MB
+* have a maximum size of 100 MB
 * contain at least 10 images in jpg or png format (minimum recommended image resolution is 32X32 pixels)
 * contain less than 10,000 images
 
@@ -580,12 +579,12 @@ This is an object of type, or a specialization of, System.Image containing the i
 The image must
 
 * have a pixel density of at least 32X32 pixels per inch
-* be less that 10MB
+* be less that 10 MB
 * be in one of the following formats
-  * *.png*
-  * *.jpg*
-  * *.gif*
-  * *.tiff*
+    * *.png*
+    * *.jpg*
+    * *.gif*
+    * *.tiff*
 
 #### 7.4.4 Variable (List of Face)
 

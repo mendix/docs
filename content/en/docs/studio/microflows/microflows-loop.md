@@ -23,9 +23,9 @@ Loop properties consists of the **Data Source** section and are described below:
 
 * **Loop Over** – a variable that is a list of items you will loop through
 
-*  **Loop Variable Name** – refers to the name of the list item that is currently being worked on
+* **Loop Variable Name** – refers to the name of the list item that is currently being worked on
 
-	{{< figure src="/attachments/studio/microflows/microflows-loop/loop-properties.png" alt="Data Source Properties of a Loop"   width="350"  >}}
+    {{< figure src="/attachments/studio/microflows/microflows-loop/loop-properties.png" alt="Data Source Properties of a Loop"   width="350"  >}}
 
 ## 3 Configuring a Loop {#loop-example}
 
@@ -39,51 +39,43 @@ Make sure you have the following prerequisites:
 2. [Create an attribute](/studio/domain-models/#adding-new-attributes) of the Boolean type for this entity to indicate the status of an order and name this attribute *Processed*.
 3. [Create a microflow](/studio/microflows/#create).
 
-To start the use-case, do the following:
+To configure a loop, do the following:
 
 1. Open a microflow you want to add a loop to.
+2. First of all, you need to get the list of orders to loop over. Do the following: 
 
-2. First of all, you need to get the list of orders to loop over. Do the following: <br />
+    1. In the **Toolbox**, select **Retrieve**, drag and drop it to the microflow. 
+    2. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. (The **Range** property is set to **All** by default): 
 
-    a. In the **Toolbox**, select **Retrieve**, drag and drop it to the microflow. <br />
+        {{< figure src="/attachments/studio/microflows/microflows-loop/retrieve-properties.png" alt="Retrieve Object Properties"   width="350"  >}}
 
-    b. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. (The **Range** property is set to **All** by default): <br />
+3. As you have retrieved the list of orders you can work on, you now need to create a loop and logic for it. Do the following: 
 
-    {{< figure src="/attachments/studio/microflows/microflows-loop/retrieve-properties.png" alt="Retrieve Object Properties"   width="350"  >}}
+    1. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. 
 
-3. As you have retrieved the list of orders you can work on, you now need to create a loop and logic for it. Do the following: <br />
+        {{< figure src="/attachments/studio/microflows/microflows-loop/loop-added.png" alt="Loop is Added" >}}
 
-    a. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. <br />
+    2. In **Properties**, set **OrderList** as **Loop Over** (**Loop Variable Name** is set automatically). So, you have selected the list of objects to loop over. 
 
-    {{< figure src="/attachments/studio/microflows/microflows-loop/loop-added.png" alt="Loop is Added" >}}<br />
+        {{< figure src="/attachments/studio/microflows/microflows-loop/loop-properties-in-example.png" alt="Loop Properties in an Example"   width="350"  >}}
 
-    b. In **Properties**, set **OrderList** as **Loop Over** (**Loop Variable Name** is set automatically). So, you have selected the list of objects to loop over. <br />
+4. Now you can add the activity that will change the status of each order to *Processed*. This means that the activities you add inside the loop will be performed on each object (each order). Do the following:
 
-    {{< figure src="/attachments/studio/microflows/microflows-loop/loop-properties-in-example.png" alt="Loop Properties in an Example"   width="350"  >}}
+    1. In the **Toolbox**, select **Change Object**, drag and drop it inside the loop .
+    2. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Object** to **Order**.
+    3. When the **Change Members** option appears, click **Add New Value**.
 
-4. Now you can add the activity that will change the status of each order to *Processed*. This means that the activities you add inside the loop will be performed on each object (each order). Do the following:<br />
+        {{< figure src="/attachments/studio/microflows/microflows-loop/change-object-properties.png" alt="Change Object Properties in Loop Example" >}}
 
-    a. In the **Toolbox**, select **Change Object**, drag and drop it inside the loop .<br />
+5. In the **Change value** dialog window, do the following:
 
-    b. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Object** to **Order**.<br/>
+    1. Set **Select an Attribute or Association** to **Processed (Boolean)**.
+    2. Set the **New value** of this attribute to *true*.
 
-    c. When the **Change Members** option appears, click **Add New Value**.<br />
+        {{< figure src="/attachments/studio/microflows/microflows-loop/change-value-dialogue-example.png" alt="Example of Change Value Dialog Window" >}}
 
-    {{< figure src="/attachments/studio/microflows/microflows-loop/change-object-properties.png" alt="Change Object Properties in Loop Example" >}}
+    3. Click **Add** to save the changes. 
 
-5. In the **Change value** dialog window, do the following:<br />
-
-    a. Set **Select an Attribute or Association** to **Processed (Boolean)**.<br />
-
-    b. In the **Expressions** tab, set the **New value** of this attribute by typing in *true*. <br />
-
-    {{< figure src="/attachments/studio/microflows/microflows-loop/change-value-dialogue-example.png" alt="Example of Change Value Dialog Window" >}}
-
-    c. Click **Add** to save the changes. 
-
-This video shows the process of configuring the example above:
-
-<video width="768" height="432" controls src="/attachments/studio/microflows-loop/loop-example-video.mp4">VIDEO</video>
 As a result, you have a list of orders retrieved to your microflow, and a loop that iterates over this list. The activity inside the loop sets the status of each order to processed. 
 
 ## 4 Read More

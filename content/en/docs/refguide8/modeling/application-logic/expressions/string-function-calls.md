@@ -1,7 +1,6 @@
 ---
 title: "String Function Calls"
 url: /refguide8/string-function-calls/
-parent: "expressions"
 weight: 80
 description: "Describes the functions for converting and inspecting strings in Mendix."
 tags: ["studio pro", "string function calls", "expression", "expressions"]

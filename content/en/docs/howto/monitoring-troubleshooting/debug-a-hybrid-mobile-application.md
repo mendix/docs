@@ -3,6 +3,7 @@ title: "Debug a Hybrid Mobile Application"
 url: /howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/
 category: "Monitoring & Troubleshooting"
 weight: 5
+description: "Describes how to debug a Mendix app that is running in the Mendix Developer App on your mobile phone."
 tags: ["monitoring", "troubleshooting", "debug", "hybrid mobile"]
 ---
 
@@ -10,7 +11,7 @@ tags: ["monitoring", "troubleshooting", "debug", "hybrid mobile"]
 
 This how-to explains the steps involved in debugging a Mendix application that is running in the Mendix Developer App on your mobile phone.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Debug a mobile application
 
@@ -46,6 +47,6 @@ You can now navigate to the same address on your local browser to start the debu
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 * [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-* [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)

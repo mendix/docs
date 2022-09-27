@@ -11,7 +11,7 @@ tags: ["rest", "rest service", "version", "integration"]
 
 You can have different versions of the same REST service published at the same time.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Utilize best practices on when and how to use different versions of the same REST service published at the same time
 * Deprecate old versions
@@ -89,9 +89,9 @@ Note that this is a breaking change (because it is not backwards compatible), so
 1. Add a new attribute **DateOfBirth** to the **Pet** entity.
 2. Create a new folder called **PetStore_2_0_0**.
 3. Duplicate the new message definitions. Call it **PetStoreMessages_2_0_0** and move it to the **PetStore_2_0_0** folder. Remove any message definitions that you do not want to change.
-3. Create a new export mapping called **ExportPet_2_0_0** in the **PetStore_2_0_0** folder. Base it on the **Pet** entity, selecting the same attributes as before, but choosing **DateOfBirth** instead of **YearOfBirth**.
-3. Duplicate the **PetStore** service. Call it **PetStore_2_0_0** and move it to the **PetStore_2_0_0** folder.
-4. Update the **GET /pet** operation in the **PetStore_2_0_0** service, choosing the **ExportPet_2_0_0** export mapping.
+4. Create a new export mapping called **ExportPet_2_0_0** in the **PetStore_2_0_0** folder. Base it on the **Pet** entity, selecting the same attributes as before, but choosing **DateOfBirth** instead of **YearOfBirth**.
+5. Duplicate the **PetStore** service. Call it **PetStore_2_0_0** and move it to the **PetStore_2_0_0** folder.
+6. Update the **GET /pet** operation in the **PetStore_2_0_0** service, choosing the **ExportPet_2_0_0** export mapping.
 
 ## 4 Deprecation
 

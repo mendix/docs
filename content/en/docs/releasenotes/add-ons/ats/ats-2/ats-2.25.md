@@ -1,11 +1,19 @@
 ---
 title: "2.25"
 url: /releasenotes/add-ons/ats-2.25/
-parent: "ats-2"
 weight: 75
 ---
 
-## 2.25
+## 2.25.1
+
+**Release date: April 27th, 2022**
+
+### Fixes
+
+* We fixed a bug that occurred when modifying a test case and linking the test case to a story.
+* We fixed a typo in the generic error message.
+
+## 2.25.0
 
 **Release date: November 2nd, 2021**
 

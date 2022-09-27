@@ -59,9 +59,29 @@ To install the Mendix Operator, the cluster administrator will need permissions 
 * Create roles in the target namespace or project
 * Create role bindings in the target namespace or project
 
-The cluster should have at least 2 CPU cores and 2 GB memory *available*. This is enough to run one simple app - but does not include additional resources required by Kubernetes core components .
+The cluster should have at least 2 CPU cores and 2 GB memory *available*. This is enough to run one simple app - but does not include additional resources required by Kubernetes core components.
 
 In OpenShift, the cluster administrator must have a `system:admin` role.
+
+#### 2.2.1 CPU requirements
+
+Mendix Operator runs on CPUs with the [x86-64](https://en.wikipedia.org/wiki/X86-64) achitecture.
+
+{{% alert color="info" %}}
+
+Starting with Mendix Operator v2.5.0, container images used in *Connected Mode* also support [ARM64/AArch64](https://en.wikipedia.org/wiki/AArch64). *ARM64* support is experimental at this moment and should only be used for non-production environments.
+
+Only core *Connected mode* features support *ARM64*. The following features **do not** support *ARM64* CPUs at the moment:
+
+* [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/)
+
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+If the cluster is running nodes with multiple architectures (for example, *x86-64* and *ARM64*), the namespace where Mendix for Private Cloud is installed should use a fixed (specified) architecture. One way to do this is by configuring a [PodNodeSelector](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#podnodeselector) for that namespace, and only using nodes with a specific architecture (for example, `amd64`).
+
+The image builder doesn't build multiple architecture images at the moment.
+{{% /alert %}}
 
 ### 2.3 Unsupported Cluster Types
 
@@ -126,8 +146,6 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
 
-
-
 ## 4 Databases
 
 The following databases are supported, and provide the features listed.
@@ -161,6 +179,7 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 11
 * PostgreSQL 12
 * PostgreSQL 13
+* PostgreSQL 14
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
@@ -307,7 +326,7 @@ Mendix for Private Cloud will use the existing ingress controller.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available.
+We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available. You may need to check which of the [several versions of the NGINX Ingress Controller](https://www.nginx.com/blog/guide-to-choosing-ingress-controller-part-4-nginx-ingress-controller-options/#NGINX-vs.-Kubernetes-Community-Ingress-Controller) is installed in your cluster. We recommend the "community version".
 
 NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression, and cache static content.
 NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates. In addition, NGINX Ingress can use a [Linkerd](https://linkerd.io/) Service Mesh to encrypt network traffic between the Ingress Controller  and the Pod running a Mendix app.
@@ -381,3 +400,14 @@ Mendix for Private Cloud can create Services that are compatible with:
 
 * [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
 * AWS Classic Load Balancer
+
+### 6.4 Service Mesh Support
+
+Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
+
+* [Istio](https://istio.io/)
+* [Linkerd](https://linkerd.io)
+
+If service mesh sidecar injection is enabled, all communication between pods in the Mendix for Private Cloud namespace will happen through the service mesh.
+
+Mendix Operator v1.11.0 added support for service mesh sidecar injection, but only for app environment pods.

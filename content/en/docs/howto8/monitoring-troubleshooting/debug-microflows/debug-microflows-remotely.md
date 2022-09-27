@@ -1,7 +1,6 @@
 ---
 title: "Debug Microflows Remotely"
 url: /howto8/monitoring-troubleshooting/debug-microflows-remotely/
-parent: "debug-microflows"
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 ---
 
@@ -19,7 +18,7 @@ These instructions are for apps running in Mendix Cloud v4. If you are running a
 If you are debugging in the cloud, be aware of other app end-users. Breakpoints in the debugger will pause processes for all users of the app in this environment.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Connect the debugger in Studio Pro to your Mendix Cloud v4 environment
 

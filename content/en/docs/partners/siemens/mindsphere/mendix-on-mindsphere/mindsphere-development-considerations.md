@@ -1,7 +1,6 @@
 ---
 title: "MindSphere Development Considerations"
 url: /partners/siemens/mindsphere-development-considerations/
-parent: "mendix-on-mindsphere"
 weight: 10
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]
@@ -32,7 +31,6 @@ The **MindSphereToken** entity contains the *Access_token* attribute which needs
 To improve security of your app, it is recommended that you delete the MindSphereToken object returned by the *Access token* action, provided by the MindSphere SSO module, before showing a page or reaching the end of the microflow.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
-
 
 ### 2.1 Authorizing MindSphere REST Calls from within Scheduled Events
 
@@ -84,8 +82,8 @@ For more information on how to perform REST calls see the [Importing and Exporti
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).
 
-1.  Use `cf set-env {app_name} {environment_variable_name} {value}`
-2.  You will need to restage the app to use the new value.
+1. Use `cf set-env {app_name} {environment_variable_name} {value}`
+2. You will need to restage the app to use the new value.
     Use `cf restage {app_name}`
 
 {{% alert color="warning" %}}
@@ -96,9 +94,9 @@ If you do **not** restage your app, it will continue to run using the old values
 
 **Mendix Constants**
 
-Your project will define the default values for [constants](/refguide/constants/). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
+Your app will define the default values for [constants](/refguide/constants/). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
 
-```bash
+```bash {linenos=false}
     cf set-env MyApp MX_MyModule_MyConstant "ABC123"
 ```
 
@@ -139,7 +137,7 @@ This will use the credentials you have set up under **App Credentials** in the *
 {{% alert color="info" %}}
 **Tip:** Use the autofill feature based on a local environment variable for the *Client Secret*.
 
-Storing the *Client Secret* inside the project is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
+Storing the *Client Secret* inside the app is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/envvariables.png"   width="50%"  >}}
 
@@ -154,24 +152,20 @@ If everything is setup correctly the form is auto filled and submitted.
 Don't forget to restart Studio Pro after you change / add the environment variable.
 {{% /alert %}}
 
-
 To create the app credentials:
 
-1.  Register this application using the identical application name as that set in the constant **CockpitApplicationName**, and a valid version number which is the same as the one you set in *CockpitApplicationVersion*, below . See also, [MindSphere Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere/#launchpad) in *Siemens Mindsphere – deployment*.
-
-2.  Go to the **App Credentials** page in the *Authorization Management* tab of the MindSphere Developer Cockpit.
-
-3.  Choose your app.
-
-4.  Click **Issue access** to obtain a token.
+1. Register this application using the identical application name as that set in the constant **CockpitApplicationName**, and a valid version number which is the same as the one you set in *CockpitApplicationVersion*, below . See also, [MindSphere Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere/#launchpad) in *Siemens Mindsphere – deployment*.
+2. Go to the **App Credentials** page in the *Authorization Management* tab of the MindSphere Developer Cockpit.
+3. Choose your app.
+4. Click **Issue access** to obtain a token.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image20.png" >}}
 
-5.  Select the access level and click **Submit**
+5. Select the access level and click **Submit**
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image21.png" >}}
 
-6.  Make a note of the **Client ID** and **Client Secret**
+6. Make a note of the **Client ID** and **Client Secret**
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image22.png" >}}
 
@@ -262,7 +256,7 @@ To do this:
 
 2. Open the properties of the element to which you wish to add an icon.
 3. Set **Icon** to *(none)*.
-3. Add the class `iconMdsp {icon-name}`.
+4. Add the class `iconMdsp {icon-name}`.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/css-icon.png" alt="Add an icon as CSS" >}}
 
@@ -308,12 +302,12 @@ It is not necessary to put an access rule on every entity within the domain mode
 
 To make your Mendix app multi-tenant, do the following:
 
-1.  Make all *persistable* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.
+1. Make all *persistable* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.
     This ensures that every object is associated with the Tenant object of the user who creates it.
 
-2.  Every microflow action on this object must have the following XPath constraint:
+2. Every microflow action on this object must have the following XPath constraint:
 
-    ```java
+    ```java {linenos=false}
     [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='$currentUser']
     ```
 
@@ -321,9 +315,9 @@ To make your Mendix app multi-tenant, do the following:
 
     {{% alert color="info" %}}For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.{{% /alert %}}
 
-3.  Similarly, every data widget on a page (for example a *Data view*) which retrieves data from the database or via an association must have the following XPath constraint, which works in the same way as the microflow XPath constraint, above:
+3. Similarly, every data widget on a page (for example a *Data view*) which retrieves data from the database or via an association must have the following XPath constraint, which works in the same way as the microflow XPath constraint, above:
 
-    ```java
+    ```java {linenos=false}
     [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']
     ```
 
@@ -331,16 +325,16 @@ To make your Mendix app multi-tenant, do the following:
 
 You have some limits which are set for the user's tenant to be applied to a time series. You then want to get a list of all these so that you can display the values to the user.
 
-1.  Create the domain model with the **LimitConfig** entity being a specialization of **MindSphereSingleSignOn.TenantObject**.
+1. Create the domain model with the **LimitConfig** entity being a specialization of **MindSphereSingleSignOn.TenantObject**.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image26.png" >}}
 
-2.  Write a sub-microflow which returns a list of all limits.
-3.  Apply the XPath constraint to the **Retrieve Objects** action.
+2. Write a sub-microflow which returns a list of all limits.
+3. Apply the XPath constraint to the **Retrieve Objects** action.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/image27.png"   width="75%"  >}}
 
-4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
+4. When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
 
 ## 8 Validation {#validation}
 
@@ -360,7 +354,7 @@ In particular, this means that you cannot use entities which are specializations
 
 You can store small amounts of binary information in persistable entities. However, the database management system (DBMS) will have strict limits on the size of binary attributes and using them as a replacement for FileDocument entities can lead to performance issues.
 
-Alternatively, you can use a separate AWS S3 bucket. See [Configuring External Filestore](https://github.com/mendix/cf-mendix-buildpack#configuring-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
+Alternatively, you can use a separate AWS S3 bucket. See [Connect an External Filestore](https://github.com/mendix/cf-mendix-buildpack#connect-an-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
 ### 9.2 App Name {#appname}
 
@@ -373,7 +367,7 @@ There are few limitations on what you call your app within Mendix. However, when
 
 If you want to use the same app name in both Mendix and MindSphere, you should bear these constraints in mind when naming your Mendix app.
 
-### 9.3 Roles & Scopes
+### 9.3 Roles and Scopes
 
 MindSphere supports up to five application roles. You should take this into account when designing security within your Mendix app.
 

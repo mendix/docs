@@ -1,7 +1,6 @@
 ---
 title: "Create a Backup"
 url: /developerportal/operate/create-backup/
-parent: "backups"
 weight: 10
 description: "This page describes how to create a backup."
 tags: ["Backup","Mendix Cloud","Developer Portal"]
@@ -12,17 +11,16 @@ tags: ["Backup","Mendix Cloud","Developer Portal"]
 
 This how-to describes creating a backup of a licensed cloud node. This option is not available for Free Apps.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
-*   Create a backup of a licensed cloud node
-
+* Create a backup of a licensed cloud node
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-*   You have a licensed cloud node
-*   You have the correct [Node Permissions](/developerportal/deploy/node-permissions/)
+* You have a licensed cloud node
+* You have the correct [Node Permissions](/developerportal/deploy/node-permissions/)
 
 ## 3 Create a Backup
 
@@ -41,7 +39,6 @@ Follow these steps to create a backup archive of a licensed app:
     {{< figure src="/attachments/developerportal/operate/backups/create-backup/backupoptions.jpg" >}}
 
 You can now download a backup archive by clicking [Download Backup](/developerportal/operate/download-backup/).
-
 
 ## 4 Read More
 

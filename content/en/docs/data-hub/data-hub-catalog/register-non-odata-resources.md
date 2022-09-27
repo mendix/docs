@@ -1,5 +1,6 @@
 ---
 title: "Register Non-OData Resources in the Data Hub Catalog"
+linktitle: "Register Non-OData Resources"
 url: /data-hub/data-hub-catalog/register-non-odata-resources/
 category: "Data Hub Catalog"
 weight: 40
@@ -16,10 +17,9 @@ The Data Hub Catalog collects metadata from exposed services and currently suppo
 
 ## 2 Expose OData via a Mendix App {#use-mendix-app}
 
-To expose OData via a Mendix app, replicate and save your persistent entity data in a module. In this module, expose the persistent entities as published OData services. This will allow read-only access to the external entity data within the Mendix landscape. For more information, see [Published OData Services](/refguide/published-odata-services/). 
+To expose OData via a Mendix app, replicate and save your persistent entity data in a module. In this module, expose the persistent entities as published OData services. This will allow read-only access to the external entity data within the Mendix Landscape.
 
-An example of this approach is the [SalesForce Connector](https://marketplace.mendix.com/link/component/111393) module – it converts the SalesForce Rest API into an OData service to be used in Mendix Data Hub.
-
+For more information, see [Published OData Services](/refguide/published-odata-services/) and [Building Connectors](/appstore/creating-content/connector-guide-build/).
 
 ## 3 Expose OData via a Service Wrapper {#use-service-wrapper}
 
@@ -29,16 +29,13 @@ There are certain limitations on consumed OData services. For more information o
 
 The diagram below represents how an OData API wrapper can be used to connect a custom app data source to a Mendix Studio Pro app:
 
-
 {{< figure src="/attachments/data-hub/data-hub-catalog/register-non-odata-resources/non-odata.png" alt="Data Hub connecting to non-OData resources" >}}
 
-
 Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Data Hub Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services/).
-
 
 ### 3.1 Examples of Exposing OData with a Service Wrapper
 
 You can find the following examples of how to write an OData service in .NET: 
 
-  * [Work With OData in Web API: Create Your First OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
-  * [Write a Simple OData V4 Service](https://docs.microsoft.com/en-us/odata/webapi/getting-started)
+* [Work With OData in Web API: Create Your First OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
+* [Write a Simple OData V4 Service](https://docs.microsoft.com/en-us/odata/webapi/getting-started)

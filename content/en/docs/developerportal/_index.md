@@ -5,6 +5,7 @@ description: "Describes the sections of the Mendix Developer Portal and links to
 tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
 weight: 30
 no_list: false
+description_list: true
 cascade:
     - space: "Developer Portal Guide"
     - mendix_version: ""
@@ -27,7 +28,7 @@ To create a new app click **Create App**, which will open a page where you can c
 
 On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 A notification in the form of a red dot next to **Get Started with Mendix** will remain there for 30 days after your signup.
 {{% /alert %}}
 
@@ -41,8 +42,8 @@ You can then access the following parts of the Mendix Platform:
 * [Studio](/studio/)
 * **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
 * **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions/) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
-	* Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
-	* For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)
+    * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
+    * For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)
 * [Control Center](/developerportal/control-center/)
 * [Marketplace](/appstore/)
 * [Data Hub](/data-hub/)
@@ -76,17 +77,18 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.jpg" alt="Quick actions menu for an app" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" >}}
 
 The actions available depend on the app selected:
 
 * **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro**
-* **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
+* **Stop Watching** – disables notifications for the app
+* **Leave App** – allows you to leave the app
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 
-## 4 My Company's Apps & Buzz {#my-company-apps}
+## 4 My Company's Apps and Buzz {#my-company-apps}
 
 In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
@@ -108,14 +110,27 @@ For details on **Company Buzz**, see the [Company Buzz](/developerportal/collabo
 
 Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
 
-{{< figure src="/attachments/developerportal/developerportal-assistance.jpg" >}}
-
+* **Get Started with Mendix** – click this to check out [Mendix Basics](https://guidance.mendix.com/link/onboarding)
+* **What's New?** – click this to see our [latest features](https://www.mendix.com/releases/)
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/)
+* **Share an Idea** – click this to share your idea on Mendix Forum
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/)
 
-## 6 Guide Categories
+## 6 Notifications {#notifications}
+
+Clicking the notifications icon shows all the notifications that you have received.
+
+{{< figure src="/attachments/developerportal/notifications-icon.png" >}}
+
+To configure what types of notifications you receive, click the settings icon and configure the settings in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+
+{{< figure src="/attachments/developerportal/notification-settings-icon.png" >}}
+
+{{% alert color="info" %}}If you no longer would like to receive notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for this app, and then click **Stop Watching**.<br/>
+
+If you would like to disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.{{% /alert %}}
+
+## 7 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:
-
-

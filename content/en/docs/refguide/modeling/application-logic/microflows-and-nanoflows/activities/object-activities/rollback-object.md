@@ -1,7 +1,6 @@
 ---
 title: "Rollback Object"
 url: /refguide/rollback-object/
-parent: "object-activities"
 weight: 70
 tags: ["studio pro"]
 ---
@@ -67,7 +66,7 @@ If set to *Yes*, the object is refreshed across the client, which includes reloa
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 
 #### 3.2.3 Action Is in a Nanoflow
 
@@ -89,8 +88,8 @@ Pressing a **Cancel** button or triggering a rollback activity will initiate the
 
 * **Events**: all before and after events are executed
     * If any before-rollback event returns false, an exception can be thrown
-	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
-	* Changes made prior to the rollback will be kept
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
+    * Changes made prior to the rollback will be kept
 * **Database**: there is no database communication happening during this event unless it is specified in a before- or after-create event
 * **Result**: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 

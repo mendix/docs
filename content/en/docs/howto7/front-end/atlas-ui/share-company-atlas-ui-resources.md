@@ -1,7 +1,6 @@
 ---
 title: "Share Company Atlas UI Resources"
 url: /howto7/front-end/share-company-atlas-ui-resources/
-parent: "atlas-ui"
 weight: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
@@ -10,7 +9,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Creating company UI resources is a great way to let Mendix developers quickly create new beautiful applications with out-of-the-box company-branded themes, page templates, and building blocks. This is a great way to align multiple apps with the same UI resources, keeping your company brand as well as look and feel consistent. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Share the UI Resources module
 * Maintain the UI Resources module
@@ -87,7 +86,7 @@ The UI Resources module can be easily downloaded through the Mendix Marketplace 
 
 To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
-1.  Open the Mendix Marketplace in the Desktop Modeler and then select **UI Resources** in the left sidebar **Categories** menu:
+1. Open the Mendix Marketplace in the Desktop Modeler and then select **UI Resources** in the left sidebar **Categories** menu:
 
     {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_modeler.png" >}}
 

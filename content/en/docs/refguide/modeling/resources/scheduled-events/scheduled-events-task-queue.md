@@ -164,7 +164,7 @@ If a repeated scheduled event takes longer than the interval, an overlap would o
 ### 5.1 Daylight Saving
 
 If the chosen time zone is UTC, then an event will always execute at the specified time.
-However, if server time is chosen there may be daylight saving for the configured time zone (in the project's runtime settings).
+However, if server time is chosen there may be daylight saving for the configured time zone (in the app's runtime settings).
 If a time is chosen which is in the daylight saving time window (the time at which the clocks change, for example between 01:00 and 03:00 in Europe), then that time will not occur on one day of the year and occur
 twice on another day of the year. The scheduled event will not be affected by this and will execute exactly once on those days.
 

@@ -1,7 +1,6 @@
 ---
 title: "Import with Mapping"
 url: /refguide/import-mapping-action/
-parent: "integration-activities"
 tags: ["studio pro", "import xml", "import with mapping", "import mapping", "integration activity"]
 weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,7 +10,6 @@ weight: 30
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-
 ## 1 Introduction
 
 The **Import with mapping** activity allows you to import the data stored in an XML or JSON document into [domain model](/refguide/domain-model/) entities.
@@ -20,7 +18,7 @@ The **Import with mapping** activity allows you to import the data stored in an 
 
 An example of import with mapping properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/import-mapping-action/import-with-mapping-properties.png" alt="import with mapping properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/import-mapping-action/properties.png" alt="import with mapping properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -41,7 +39,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Variable
 
-The input variable can be the name of a string variable, a file document, an [HttpRequest](/refguide/http-request-and-response-entities/#http-request), or an [HttpRequest](/refguide/http-request-and-response-entities/#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
+The input variable can be the name of a string variable, a file document, an [HttpRequest](/refguide/http-request-and-response-entities/#http-request), or an [HttpResponse](/refguide/http-request-and-response-entities/#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
 
 ### 3.2 Mapping
 
@@ -65,7 +63,7 @@ If the selected mapping requires a parameter, you can choose it here.
 
 ### 3.7 Range
 
- If the mapping returns a list, you can select a range to determine how many objects are mapped and returned.
+If the mapping returns a list, you can select a range to determine how many objects are mapped and returned.
 
 | Range | Meaning |
 | --- | --- |
@@ -86,14 +84,12 @@ Indicates whether the resulting objects should be committed to the database, and
 ### 3.9 Validate Against Schema
 
 {{% alert color="info" %}}
-
 Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](/refguide/xml-schemas/) or a [consumed web service](/refguide/consumed-web-service/).
-
 {{% /alert %}}
 
 Determines whether the import action should validate the incoming XML against the [XML schema](/refguide/xml-schemas/).
 
-Setting this to _yes_ can impact performance!
+Setting this to *yes* can impact performance!
 
 Default: *No*
 

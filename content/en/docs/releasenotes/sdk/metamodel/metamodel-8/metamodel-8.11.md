@@ -1,7 +1,6 @@
 ---
 title: "8.11"
 url: /releasenotes/sdk/metamodel-8.11/
-parent: "metamodel-8"
 weight: 90
 ---
 
@@ -94,6 +93,6 @@ weight: 90
 * We introduced the `userSource` property.
 * We deleted the `userRole` property.
 
-#### CallMicroflowTask, UserSource & XPathBasedUserSource (Elements)
+#### CallMicroflowTask, UserSource, and XPathBasedUserSource (Elements)
 
 * We introduced these elements.

@@ -26,15 +26,12 @@ You can edit an app in Mendix Studio by opening your app in [Developer Portal](h
 
 {{< figure src="/attachments/studio7/general/edit-app.jpg" >}}
 
-If you do not see **Edit in Studio**, go to [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal and [enable Studio](/developerportal/collaborate/general-settings/#web).
-
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
 1. In Studio Pro, open the app in that you want to view in Studio.
-
-2.  Click the globe icon in the top right corner (only available if Studio is enabled).
+2. Click the globe icon in the top right corner (only available if Studio is enabled).
 
     {{< figure src="/attachments/studio7/general/globe-icon.png" >}}
 
@@ -47,10 +44,9 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 {{< figure src="/attachments/studio7/general/upgrade.png"   width="350"  >}}
 
 {{% alert color="info" %}}
-When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
+When you upgrade your app in Studio to the latest Mendix version, you will need to upgrade your app in Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. The reason for this is that once you update Studio, you need to update Studio Pro as well.
-
 {{% /alert %}}
 
 ## 4 Switching App Modes
@@ -59,11 +55,11 @@ After opening Studio,  the home page of the app opens.
 
 You can change the view of your page to different views by clicking the corresponding icons:
 
-*  Mobile
-*  Tablet
-*  Responsive (Desktop)    
+* Mobile
+* Tablet
+* Responsive (Desktop)    
 
-	{{< figure src="/attachments/studio7/general/view.png"   width="350"  >}}
+    {{< figure src="/attachments/studio7/general/view.png"   width="350"  >}}
 
 ## 5 Left Menu Bar
 
@@ -107,7 +103,7 @@ The top bar provides the following options:
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. You can click the document to open it. |
 | [Publish button](/studio7/publishing-app/) | Deploy and run the app. Update your app to deploy the latest changes you made in Studio. Once deployed, click **View** to view your app in action. For more information, see [Publishing Your App](/studio7/publishing-app/) |
 | [Checks button](/studio7/checks/) | Shows the errors and warnings currently in your app. If there are any errors in the app, you will not be able to publish your app, until you have solved them. For more information on errors, see [Consistency Errors](/studio7/consistency-errors/).<br />You can also use C shortcut to view the **Checks** panel. |
-| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](/studio7/general-versions/) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix community<li>**Check the  Documentation** – a link to the [Studio 7 Guide](/studio7/)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/)<li>**Mendix Academy** – a link to the [Mendix Academy](https://academy.mendix.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](/studio7/mx-assist/)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
+| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](/studio7/general-versions/) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendix.com) where you can ask questions and explore the knowledge offered by the entire Mendix community<li>**Check the  Documentation** – a link to the [Studio 7 Guide](/studio7/)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/)<li>**Mendix Academy** – a link to the [Mendix Academy](https://academy.mendix.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](/studio7/mx-assist/)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 

@@ -1,13 +1,15 @@
 ---
-title: "Implement a Simple CICD Pipeline with Mendix APIs"
+title: "Implement a Simple CI/CD Pipeline with Mendix APIs"
+linktitle: "CI/CD Pipeline for Mendix Cloud"
 url: /howto/integration/implement-cicd-pipeline/
 category: "Integration"
+description: "Describes how you can use the available Mendix APIs with any mainline orchestrators to build a simple CI/CD pipeline."
 tags: ["cicd", "continuous", "integration", "delivery", "deployment", "automation", "testing"]
 ---
 
 ## 1 Introduction
 
-This how-to describes how you can use the available Mendix APIs with any mainline orchestrators (Jenkins, Visual Studio Team Services, etc.) to build a simple CICD pipeline.
+This how-to describes how you can use the available Mendix APIs with any mainline orchestrators (Jenkins, Visual Studio Team Services, etc.) to build a simple CI/CD pipeline.
 
 This is not meant to be a step-by-step guide. It will simply show you which APIs to use and provide some examples on how to use them. The tool used in the examples is [postman](https://www.getpostman.com/).
 
@@ -15,7 +17,7 @@ This is not meant to be a step-by-step guide. It will simply show you which APIs
 
 Before starting this how-to, make sure you are familiar with the following:
 
-* CICD
+* CI/CD
 * Using REST services
 * [Unit Testing](/appstore/modules/unit-testing/) (only if used in your application)
 * [Application Test Suite](/addons/ats-addon/) (only if used in your application)
@@ -92,7 +94,7 @@ Before proceeding to the next steps (although you might not have any, if all you
 
 ### 3.4 Running Tests
 
-After deploying the package to the environment and starting it, you are ready to run tests. This is not a mandatory step in a CICD pipeline, but it is usually part of it.
+After deploying the package to the environment and starting it, you are ready to run tests. This is not a mandatory step in a CI/CD pipeline, but it is usually part of it.
 
 The sections below show you how to execute unit and ATS (UI) tests remotely. There can also be other tests (for example, load tests), but these are not covered in this how-to.
 
@@ -108,16 +110,13 @@ When the tests are completed (check the status for when completed is `true`), yo
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/11UnitTestsStatus.png" >}}
 
-
 {{% alert color="info" %}}
-
 You can also (manually) create a web service that exposes the standard unit structure from the data available in the Unit Testing module.
-
 {{% /alert %}}
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api/#api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/#ats-and-ci-cd).
+ATS has its own [API for CI/CD](/addons/ats-addon/rg-two-cicd-api/#api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd/#ats-and-ci-cd).
 
 ### 3.5 Next Steps
 

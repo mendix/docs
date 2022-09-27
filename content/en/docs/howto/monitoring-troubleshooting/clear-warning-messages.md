@@ -3,6 +3,7 @@ title: "Clear Warning Messages"
 url: /howto/monitoring-troubleshooting/clear-warning-messages/
 category: "Monitoring & Troubleshooting"
 weight: 1
+description: "Describes how to eliminate design-time warnings by viewing and clearing warning messages."
 tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 ---
 
@@ -10,7 +11,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * View warning messages
 * Clear warning messages
@@ -175,8 +176,8 @@ Variable ‘Variable’ is never used.
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Configure Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 * [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-* [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 
-Several warnings relate to improper security. For more information on this, see [App Security](/refguide/project-security/) in the *Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [App Security](/refguide/app-security/) in the *Studio Pro Guide*.

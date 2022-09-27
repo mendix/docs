@@ -1,7 +1,6 @@
 ---
 title: "Input Reference Set Selector"
 url: /refguide8/input-reference-set-selector/
-parent: "input-widgets"
 weight: 90
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -87,7 +86,7 @@ The select page property determines which page is displayed when the input refer
 
 If an input reference set selector is never editable, a select page is not required.
 
-See the [Show a Page](/refguide8/on-click-event/#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](/refguide8/layout/#layout-type).
+See the [Show a Page](/refguide8/on-click-event/#show-page) section of *On Click Event and Events Section*. Note that select pages must have a [pop-up layout](/refguide8/layout/#layout-type).
 
 {{% alert color="info" %}}
 You can generate a new page to show by right-clicking the widget and selecting **Generate select page…**.

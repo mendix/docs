@@ -17,7 +17,7 @@ For more information and general help on version control, see the following docu
 * [Version Control](/refguide8/version-control/)
 * [Using Version Control in Studio Pro](/refguide8/using-version-control-in-studio-pro/)
 
-## 2 Errors & Fixes
+## 2 Errors and Fixes
 
 Below is a list of known errors and the steps to fix them.
 
@@ -47,11 +47,11 @@ Follow these steps:
 
 Follow these steps:
 
-1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
+1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-	{{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
-	
-	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
+    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
+
+    Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
 2. Go to the parent directory (folder) of your app (this is the folder with the **<folder_name>** from the error message).
 3. Right-click to open the folder's context menu and select **TortoiseSVN** > **Clean up**.
@@ -67,11 +67,11 @@ Follow these steps to remove your user settings and restart Studio Pro.
 
 Follow these steps:
 
-1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
+1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-	{{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
-	
-	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
+    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
+
+    Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
 2. Open the project folder via Studio Pro by selecting **Project** > **Show Project Directory in Explorer**.
 3. Right-click the white background of the project folder.
@@ -105,7 +105,7 @@ In this example, we will focus on merging a branch into the main line. On the ma
 
 [//]: # "modeler-merge-marker has not yet been renamed for Studio Pro"
 
-```
+```text
 modeler-merge-marker
 .mendix-cache
 ResolveIgnoreConflict.mpr.lock
@@ -116,7 +116,7 @@ node_modules
 
 On the branch, the list looks like this:
 
-```
+```text
 modeler-merge-marker
 .mendix-cache
 ResolveIgnoreConflict.mpr.lock
@@ -141,27 +141,26 @@ A conflict is reported on the project *folder*. This usually means that there is
 
 To resolve a conflict on the `svn:ignore` property, perform these steps:
 
-1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
+1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-	{{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
-	
-	Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
+    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
+
+    Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
 2. Open the project directory in Windows File Explorer
-3.  Right-click the white background and choose **TortoiseSVN** > **Edit Conflicts**. The following pop-up window will be shown (resize the window to display all the information):
+3. Right-click the white background and choose **TortoiseSVN** > **Edit Conflicts**. The following pop-up window will be shown (resize the window to display all the information):
 
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/editconflictsdialog.png" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/editconflictsdialog.png" >}}
 
 4. Copy all the lines starting with `modeler-merge-marker` to the clipboard. 
 5. Click **Manually edit property**.
 6. Double-click the `svn:ignore` line in the grid.
 7. Paste the previously copied lines via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
-8.  Remove the special lines that start with `<<<<<<<`, `=======`, and `>>>>>>>`. For this example, we end up with the following combined ignore list:
+8. Remove the special lines that start with `<<<<<<<`, `=======`, and `>>>>>>>`. For this example, we end up with the following combined ignore list:
 
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/combinedignorelist.png" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/combinedignorelist.png" >}}
 
-	{{% alert color="info" %}}This includes both the lines from the main line and from the branch. The order is not important.
-	{{% /alert %}}
+    {{% alert color="info" %}}This includes both the lines from the main line and from the branch. The order is not important.{{% /alert %}}
 
 9. Click **OK** and then **OK** again to confirm the change.
 10. Right-click the white background of the project directory and choose **TortoiseSVN** > **Edit Conflicts** again.
@@ -174,8 +173,8 @@ You have resolved the conflict and can commit from Studio Pro.
 If you get this error, try the following options:
 
 * In the [Developer Portal](/developerportal/collaborate/team/), check whether the user has access to the app:
-	* If they do not have access, invite them to the app
-	* If they do have access, remove them from the app and add them back – this will re-sync the access rules
+    * If they do not have access, invite them to the app
+    * If they do have access, remove them from the app and add them back – this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network – this protocol is [required](/refguide8/system-requirements/) by Studio Pro for [version control](/refguide8/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall
 
 ## 3 Other Problems

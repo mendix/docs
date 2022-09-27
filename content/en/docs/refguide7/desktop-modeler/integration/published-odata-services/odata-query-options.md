@@ -1,7 +1,6 @@
 ---
 title: "OData Query Options"
 url: /refguide7/odata-query-options/
-parent: "published-odata-services"
 tags: ["OData", "filter", "count", "sort", "select", "page"]
 ---
 
@@ -59,7 +58,6 @@ We support the following comparison operators:
 | lt | less than | `/Employees?$filter=Age lt 15` |
 | ge | greater than or equal to | `/Employees?$filter=Age ge 15` |
 | le | less than or equal to | `/Employees?$filter=Age le 15` |
-
 
 ### 4.3 Arithmetic Operators
 

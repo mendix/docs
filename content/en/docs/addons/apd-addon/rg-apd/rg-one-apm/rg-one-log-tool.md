@@ -1,7 +1,6 @@
 ---
 title: "Log Tool"
 url: /addons/apd-addon/rg-one-log-tool/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction
@@ -16,13 +15,13 @@ Logging consists of a log node, a level, and the logging message itself. For the
 
 The **Logs** tab shows the stored logs in the database.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-log-tool/Overview.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-log-tool/Overview.png" >}}
 
 You can start and stop the log tool via the "play" button in the header.
 
 Double-clicking a log message shows its details.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-log-tool/View_Message.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-log-tool/View_Message.png" >}}
 
 If the message has a WARNING, ERROR, or CRITICAL level, the extra button **Exclude in TrapTool** is shown. This configures an exclusion in the trap tool and allows you to run the log tool for a period of time to collect the WARNING, ERROR, or CRITICAL messages that are occurring and make sure the trap tool does not store huge amounts of irrelevant data when started.
 

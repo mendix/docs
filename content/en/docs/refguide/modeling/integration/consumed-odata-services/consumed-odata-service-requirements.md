@@ -1,7 +1,6 @@
 ---
 title: "Consumed OData Service Requirements"
 url: /refguide/consumed-odata-service-requirements/
-parent: "consumed-odata-services"
 weight: 20
 description: "Requirements on OData services consumed in Mendix."
 tags: ["studio pro"]
@@ -107,29 +106,10 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume the resource as an external entity.
 
-## 4 Data Hub License
+## 4 Data Hub License Limitations {#license-limitations}
 
-### 4.1 Limitations {#license-limitations}
+There are two types of licenses for Mendix Data Hub: Data Hub Free and Data Hub Premium. 
 
-Mendix Data Hub is a separately licensed product. 
+All Mendix users have access to the Data Hub Free edition. With this, you can retrieve or edit 1000 objects per application per day for each runtime instance when deployed. 
 
-Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error occurs when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the time zone of the Mendix Runtime scheduler (which can be defined in the [Scheduled Event Time Zone](/refguide/project-settings/#scheduled) of the **App Settings**).
-
-With a Data Hub license, apps are not limited in retrieving OData objects.
-
-{{% alert color="info" %}}
-Apps running in development environments (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without Data Hub license limitations.
-{{% /alert %}}
-
-Contact your [Mendix Admin](/developerportal/control-center/#company) to find out what type of Data Hub license your organization has.
-
-### 4.1 Limitation Errors
-
-For each call, the app instance logs how many objects it has retrieved and how many are left within the license limitation. Once the limit of a 1000 objects has been reached, two different statements are logged.
-
-* On the `info` level, the following statement is logged when the limit is reached: `"Exceeded the daily limit. Retrieved $delta objects, which would increase the counter to $newCount (of max $max per day)."`
-* On the `error` level, the following statement is logged when the limit is reached: `"The limit of $max objects has been reached."`
-
-{{% alert color="warning" %}}
-It is up to the application to communicate to its end-users that the daily limit has been reached. If this is not done, the end-user gets a message that an error occurred.
-{{% /alert %}}
+See the [Limitations](/data-hub/#dh-free-limitations) section of the *Data Hub Guide* for Data Hub Free license limitations and limitation errors.

@@ -1,7 +1,6 @@
 ---
 title: "8.8"
 url: /releasenotes/sdk/metamodel-8.8/
-parent: "metamodel-8"
 weight: 93
 ---
 
@@ -45,6 +44,6 @@ weight: 93
 
 * We introduced this ModelUnit.
 
-#### WorkflowActivityOutcome, WorkflowActivity, Flow, StartWorkflowActivity, EndWorkflowActivity & UserTask (Elements)
+#### WorkflowActivityOutcome, WorkflowActivity, Flow, StartWorkflowActivity, EndWorkflowActivity, and UserTask (Elements)
 
 * We introduced these elements.

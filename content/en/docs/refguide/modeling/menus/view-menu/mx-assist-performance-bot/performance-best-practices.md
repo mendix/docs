@@ -2,7 +2,6 @@
 title: "Performance Best Practices"
 url: /refguide/performance-best-practices/
 description: "Describes Mendix best practices on optimizing an app performance."
-parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors <mxp001-mxpnnn> below are all mapped, so they should not be removed or changed.
@@ -18,9 +17,9 @@ This document outlines performance issues and Mendix best practices for optimizi
 
 In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
 
-- Retrieve and change object activities in microflows
-- In UI widgets (for example, data views, custom widgets)
-- When an object is passed from the UI as a parameter to a microflow (for example, a button triggering a microflow).
+* Retrieve and change object activities in microflows
+* In UI widgets (for example, data views, custom widgets)
+* When an object is passed from the UI as a parameter to a microflow (for example, a button triggering a microflow).
 
 There are two different performance issues with calculated attributes that you can easily fix:
 
@@ -41,9 +40,7 @@ To fix the issue, do the following:
 2. Wherever the attribute is about to be committed to the database, calculate the value using the relevant microflow.
 
 {{% alert color="info" %}}
-
 You will also need to migrate any existing data, since when the attribute is changed to be stored, the database will only contain the default value for that data type.
-
 {{% /alert %}}
 
 ### 2.2 Remove Unused Calculated Attributes [MXP002] {#unused-calculated-attributes}
@@ -60,9 +57,9 @@ To fix the issue, delete the unused calculated attribute.
 
 [Sort bars](/refguide/sort-bar/) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
 
-- Data grid
-- Template grid
-- Reference set selector
+* Data grid
+* Template grid
+* Reference set selector
 
 Each sort item in the sort bar is sequentially utilized to order the data in the widget. Adding an [index](/refguide/indexes/) on the attributes used in sort items can make the sorting process faster, subsequently improve the performance of the page. 
 
@@ -82,13 +79,13 @@ To fix the issue, add an index on attributes which are used as sort items in sor
 
 Committing lists of objects has the following benefits compared to individual commits:
 
-- The prepared statement of creating or modifying records in the database is explicitly reused by the JDBC driver and has the following benefits:
-    - The execution plan is cached
-    - The driver cares for a minimum of network overhead
-- For each database action that changes data the following actions are taken and added overhead:
-    - A savepoint is created before the action and released afterwards
-    - Auto-committed objects are retrieved from the database
-    - Auto-committed objects are stored to the database (if relevant)
+* The prepared statement of creating or modifying records in the database is explicitly reused by the JDBC driver and has the following benefits:
+    * The execution plan is cached
+    * The driver cares for a minimum of network overhead
+* For each database action that changes data the following actions are taken and added overhead:
+    * A savepoint is created before the action and released afterwards
+    * Auto-committed objects are retrieved from the database
+    * Auto-committed objects are stored to the database (if relevant)
 
 ### 4.1 Steps to Fix for Create or Change Object Activities [MXP004]
 
@@ -107,13 +104,13 @@ Nanoflows are executed directly on an end-user's device or browser. This makes t
 
 You can identify convertible microflows using the following criteria:
 
-- Microflows that have one or more of the following categories:
-    - Microflow has logic meant for offline applications.
-    - Microflow has logic for online applications but does not involve any database related actions like a committing **Create object**, **Commit**, **Retrieve**, and **Rollback** activities. 
-    - Microflow has at-most one database related action. (Not the best practice)
-- Microflows that contain nanoflow-compatible activities. For information on activities supported by nanoflows, see [Activities](/refguide/activities/). 
-- Microflow expressions do not contain the following variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`. These variables are not supported by nanoflows.
-- As nanoflows are executed in the context of the current user, ensure that the microflow has only operations for which the current user is authorized. Otherwise the converted nanoflow will fail.
+* Microflows that have one or more of the following categories:
+    * Microflow has logic meant for offline applications.
+    * Microflow has logic for online applications but does not involve any database related actions like a committing **Create object**, **Commit**, **Retrieve**, and **Rollback** activities. 
+    * Microflow has at-most one database related action. (Not the best practice)
+* Microflows that contain nanoflow-compatible activities. For information on activities supported by nanoflows, see [Activities](/refguide/activities/). 
+* Microflow expressions do not contain the following variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`. These variables are not supported by nanoflows.
+* As nanoflows are executed in the context of the current user, ensure that the microflow has only operations for which the current user is authorized. Otherwise the converted nanoflow will fail.
 
 ### 5.1 Steps to Fix
 
@@ -130,9 +127,9 @@ To fix the issue, do the following:
 
 Note that XPath expressions can be used in three different places:
 
-- Access rules and entities
-- Source/Filter for lists and grids on pages
-- Retrieve actions in both microflows and Java actions
+* Access rules and entities
+* Source/Filter for lists and grids on pages
+* Retrieve actions in both microflows and Java actions
 
 ### 6.1 Steps to Fix
 
@@ -142,9 +139,7 @@ To fix the issue, do the following:
 2. Add an index per each attribute used in the XPath expression only for scenarios where read-intensive operations are predominantly performed on the underlying entities.
 
 {{% alert color="info" %}}
-
 This optimization may not be very beneficial for data types like Boolean and enumerations due to a limited number of possible values of these types. It is not recommended to add indexes for such types.
-
 {{% /alert %}}
 
 ## 7 Avoid Caching Non-Persistable Entities [MXP008] {#mxp008}
@@ -153,10 +148,10 @@ A non-persistable object is an object that is considered temporary and only exis
 
 You can use the following guidelines to decide whether caching is needed:
 
-- Data does not change very often
-- Data is read very often
-- The volume of data is limited (usually less than 10 000 records)
-- The impact of using stale data is accepted
+* Data does not change very often
+* Data is read very often
+* The volume of data is limited (usually less than 10 000 records)
+* The impact of using stale data is accepted
 
 ### 7.1 Steps to Fix
 
@@ -194,7 +189,7 @@ To fix the issue, we recommend revisiting your security rules and avoid letting 
 
 A list view is used on a page that is nested for two or more levels, for example, a list view is in list view and the second list view is in a data view. 
 When you use two or more levels of nesting, page performance may be affected due to the increased number of requests and transferred data volume.
-    
+
 ### 10.1 Steps to Fix
 
 To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.
@@ -225,3 +220,16 @@ This may impact app performance.
 ### 13.1 Steps to Fix
 
 Refactor the microflow so that the Create/Update/Delete activities are closer the end event of the microflow.
+
+## 14 Order XPath Parts Around AND: Cheapest and Most-Specific Parts First [MXP015] {#mxp015}
+
+An XPath expression that has more expensive or less-specific parts to the left of `and`, or to the left of a sequence of predicate parts (like `[part 1][part 2]`), may impact app performance.
+
+Depending on the data volume (100,000 items or more) and app usage, the functions `not()`, `contains(unlimited-string-attribute)` and `not(association)` are best placed to the right of the `and` keyword.
+
+Additionally, for data volume of millions of items, placing more specific XPath steps first can mean less overall work for the database.
+By "specific" we mean how many association steps are involved. For example, an XPath part that uses an association is more specific than an XPath part that directly accesses an attribute.
+
+### 14.1 Steps to Fix
+
+Rearrange the parts of the XPath, so that the cheapest and most-specific parts are to the left of each `and`. Similarly, if using separate predicates like `[part 1][part 2]`, you can rearrange the predicates to have optimal ordering.

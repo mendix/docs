@@ -1,7 +1,6 @@
 ---
 title: "OQL Order by Clause"
 url: /refguide7/oql-order-by-clause/
-parent: "oql"
 ---
 
 The ORDER BY clause specifies the sort order used on columns returned in a SELECT statement. Multiple columns can be specified. Columns are ordered in the sequence of the items in the ORDER BY clause.
@@ -9,7 +8,7 @@ This clause can include items that do not appear in the SELECT clause, except wh
 
 The syntax is as following:
 
-```
+```sql
 ORDER BY
     {
         order_by_expression [ ASC | DESC ]
@@ -27,14 +26,14 @@ Specifies that the results must be ordered descending, from the highest to the l
 
 This query retrieves all customers and returns the first names sorted on the last name, ascending:
 
-```
+```sql
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 ```
 
 This query retrieves all customers and returns the first and last name sorted on the last name, descending:
 
-```
+```sql
 SELECT FirstName + ' ' + LastName FROM Sales.Customer
 ORDER BY LastName DESC
 ```

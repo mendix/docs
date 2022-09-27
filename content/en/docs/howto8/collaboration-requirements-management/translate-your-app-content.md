@@ -10,7 +10,7 @@ tags: ["studio pro", "translate app", "batch translate", "translate"]
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add a new language to your app
 * Change the working language
@@ -32,18 +32,18 @@ To create your app, do the following:
 1. Create a new app using the **Blank App** template. If given the option, leave the default language as **English, United States**.
 2. Open the app in Studio Pro (images here are from Studio Pro version 8.10).
 3. Create a domain model in MyFirstModule with two entities:
-	* **Order** with the integer attribute **OrderNumber**
-	* **Product** with the string attribute **ProductName**
-		{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/domain-model.png" alt="Domain model for How To" >}}
+    * **Order** with the integer attribute **OrderNumber**
+    * **Product** with the string attribute **ProductName**
+        {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/domain-model.png" alt="Domain model for How To" >}}
 4. Right-click one of the entities and select **Generate overview pages…**.
 5. Ensure both entities are selected and click **OK**.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/generate-pages.png" alt="Options selected for Generate Pages" >}}
-	This will generate some pages containing text for you to translate.
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/generate-pages.png" alt="Options selected for Generate Pages" >}}
+    This will generate some pages containing text for you to translate.
 6. Open the page **Product_NewEdit** and add a new **Button** widget.
 7. Label the new button **Order**. This button will be used to allow the end-user to order the product they are viewing. Ignore any warnings about the setup of this button.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/order-button.png" alt="Product New Edit page with an Order button" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/order-button.png" alt="Product New Edit page with an Order button" >}}
 8. Open the page **Home_Web** and put some text into the title and subtitle.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/home-page-text.png" alt="Product New Edit page with an Order button" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/home-page-text.png" alt="Product New Edit page with an Order button" >}}
 
 You now have an app with some translatable texts.
 
@@ -57,9 +57,9 @@ To add an additional language, do the following:
 
 1. Select the menu item **Language > Language settings…**.
 2. Click the **Add** button and select a second language. In this example we will be using *Russian, Russia*, but you can use any language you like.
-	{{% alert color="info" %}}It is recommended that you **don't** choose *Dutch, Netherlands* as this already contains translations for many of the translatable texts.{{% /alert %}}
+    {{% alert color="info" %}}It is recommended that you **don't** choose *Dutch, Netherlands* as this already contains translations for many of the translatable texts.{{% /alert %}}
 3. Click **OK** to confirm.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/language-settings.png" alt="Language settings tab in the project settings dialog" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/language-settings.png" alt="Language settings tab in the project settings dialog" >}}
 
 You will see that the default language is still *English, United States* which is what you want the end-user to see if they do not choose Russian as their language.
 
@@ -71,7 +71,7 @@ To change your current language to Russian, do the following:
 
 1. Click the language indicator in the status bar.
 2. Click **Russian, Russia** to make that your current language.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/change-language.png" alt="Change the current language" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/change-language.png" alt="Change the current language" >}}
 
 {{% alert color="info" %}}
 If you do further development later on, you will need to remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.
@@ -83,9 +83,9 @@ Now that your current language is Russian, you can translate some of the texts i
 
 1. Open the **Home_Web** page in Studio Pro.
 
-	You will see that untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
+    You will see that untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
 2. Enter your translation for the two text items on the page
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/home-page-russian.png" alt="Home page with translated text" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/home-page-russian.png" alt="Home page with translated text" >}}
 
 You have now added a translation for these two pieces of text.
 
@@ -101,22 +101,22 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 1. Select the menu option **Language > Batch Translate…**.
 2. Select *English, United States* as the **Source language** and *Russian, Russia* as the **Destination language**.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-languages.png" alt="Select English and Russian as source and destination languages" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-languages.png" alt="Select English and Russian as source and destination languages" >}}
 3. Click **OK**.
 
-	You initially want to work just on your module, rather than everything.
+    You initially want to work just on your module, rather than everything.
 4. Click **Select…** next to **Documents/modules**. This will currently be set to *(all)*.
 5. Check only the module **MyFirstModule** to restrict batch translation to this module.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" >}}
 6. Click **OK**.
 
-	You can now see all the translatable texts in your module. The individual translations you made in the previous section are shown in the *Russian, Russia* column. The **#** column shows the number of times each text appears in the selected module(s).
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" >}}
+    You can now see all the translatable texts in your module. The individual translations you made in the previous section are shown in the *Russian, Russia* column. The **#** column shows the number of times each text appears in the selected module(s).
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" >}}
 7. Enter translations in the destination language (**Russian, Russia**) column for a few terms: **Cancel**, **Delete**, and **Edit** for example.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-cancel-delete-edit.png" alt="Translate Cancel, Delete, and Edit into Russian" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-cancel-delete-edit.png" alt="Translate Cancel, Delete, and Edit into Russian" >}}
 8. Click **Translate** to save the current translations.
 9. **Close** the batch translate dialog and look at the page **Product_NewEdit**. You will see that these terms now have Russian translations.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Russian" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Russian" >}}
 
 ### 6.2 Dealing With More Complex Translations
 
@@ -127,10 +127,10 @@ Follow the steps below to see how to deal with this situation.
 1. Follow steps **1** through **6** in the previous section to again see a list of texts in your module which can be translated from *English, United States* to *Russian, Russia*.
 2. Type *Order* in the **Source text contains** field.
 3. Click the translatable text `Order`. You can see that there are three places that this text is used, and they are listed at the bottom of the dialog box.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" >}}
-	One of the locations of the text `Order` is an action button on the **Product_NewEdit** page. This was the button we added above whose purpose is to allow the end-user to order the product.
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" >}}
+    One of the locations of the text `Order` is an action button on the **Product_NewEdit** page. This was the button we added above whose purpose is to allow the end-user to order the product.
 4. Double-click on the **Action button …** object to confirm that this is the button we were planning to use to order the product.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" >}}
 
 The text `Order` is being used to refer to the Order entity, but also the command to order a product. In Russian these are two different words.
 
@@ -139,13 +139,13 @@ To solve this issue, you can do the following:
 1. Close the **Batch translate** dialog. Remember to click **Translate** to save any translations you have made.
 2. Go to the page **Product_NewEdit**.
 3. Edit the text on the button to reflect the verb *to order*. In Russian this is `заказать`.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" >}}
 4. Reopen the **Language > Batch Translate…** dialog and search for *Order* in the module *MyFirstModule*.
 
-	You will see that the translations for *Order* have now been split between the one with the translation `заказать` and the one with no translation.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " >}}
+    You will see that the translations for *Order* have now been split between the one with the translation `заказать` and the one with no translation.
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " >}}
 5. Now you can change the remaining entries for *Order* to `Заказ`, the Russian for *an order*.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " >}}
 6. Click **Translate** to save the translation and **OK** to close the **Batch translate…** dialog.
 
 You can now check that the correct translation has been applied to the other instances of *Order*. For example on the **Order_Overview** page.
@@ -159,13 +159,13 @@ To use batch replace, do the following.
 1. Ensure that your current language is the language you want to review. Batch replace works on the currently selected language.
 2. Select the menu item **Language > Batch replace…**.
 
-	You will see all the translations which are in the current language dictionary. You can limit these to a module and search them for specific words as before. You can also see where each text is used, so you can view it in context.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Russian." >}}
+    You will see all the translations which are in the current language dictionary. You can limit these to a module and search them for specific words as before. You can also see where each text is used, so you can view it in context.
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Russian." >}}
 
-	You can see that you have been inconsistent with use of capital letters. So you need to make it more consistent.
+    You can see that you have been inconsistent with use of capital letters. So you need to make it more consistent.
 
 3. Ensure all text starts with a capital letter by typing the new text in the **Replace with** column.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-capitals.png" alt="All texts which have been translated into Russian." >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/batch-replace-russian-capitals.png" alt="All texts which have been translated into Russian." >}}
 
 4. Click **Replace** to update the translation dictionary.
 
@@ -176,14 +176,14 @@ Having translated your app, you may want to translate it into another, related, 
 To copy our Russian translations into a Belarusian dictionary you can do the following:
 
 1. Add *Belarusian, Belarus* as an app language.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/language-settings-belarusian.png" alt="Belarusian added to the app" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/language-settings-belarusian.png" alt="Belarusian added to the app" >}}
 2. Open the menu option **Language > Language Operations…**.
 3. Select **MyFirstModule**. You can see that there are 11 translations in the Russian dictionary.
 4. Click **Copy** for the **Operation**.
 5. Select *Russian, Russia* as the **Source language**.
 6. Select *Belarusian, Belarus* as the **Destination language**.
 7. Click **Apply**.
-	{{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/language-operations-copy.png" alt="Copy all Russian translations in MyFirstModule to the Belarusian dictionary" >}}
+    {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/language-operations-copy.png" alt="Copy all Russian translations in MyFirstModule to the Belarusian dictionary" >}}
 
 Your Russian texts are copied to the Belarusian dictionary and you can now review them using batch replace or batch translate to change any cases where the Russian and Belarusian languages diverge.
 

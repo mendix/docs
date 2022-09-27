@@ -7,11 +7,26 @@ description: "Release notes for deployment to SAP Business Technology Platform"
 tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
 ---
 
-These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) (SAP BTP — formerly SAP Cloud Platform). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) (SAP BTP).
+
+SAP Business Technology Platform deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
 
 For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2022
+
+### August 4th, 2022
+
+#### Improvements
+
+* You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
+    * this replaces the previous method of adding custom settings using User-Provided Variables.
+
+### June 20th, 2022
+
+#### Improvements
+
+* We released new versions of the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) and [UI Package for SAP Fiori themed apps](https://marketplace.mendix.com/link/component/107625) modules in the Mendix Marketplace. These modules allow you to use Mendix version 9.6.11 and above to make Fiori-styled apps which work alongside the Atlas Core theme.
 
 ### March 2nd, 2022
 
@@ -57,7 +72,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Fix
 
-* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
+* We resolved an issue where the PostgreSQL, Hyperscaler Option service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
 
 ### June 16th, 2021
 

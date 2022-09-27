@@ -1,5 +1,6 @@
 ---
 title: "Create Your First Two Overview & Detail Pages"
+linktitle: "Create Overview & Detail Pages"
 url: /howto8/front-end/create-your-first-two-overview-and-detail-pages/
 category: "Front End"
 weight: 25
@@ -10,7 +11,7 @@ tags: ["front end"]
 
 This how-to explains how you can create overview and detail pages in Mendix. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create overview and detail pages
 * Configure navigation and security
@@ -19,11 +20,11 @@ This how-to explains how you can create overview and detail pages in Mendix.
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-*  Set up a basic data structure by reading [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/):
-   
+* Set up a basic data structure by reading [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/):
+
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
 
-## 3 Creating Overview & Detail Pages Automatically
+## 3 Creating Overview and Detail Pages Automatically
 
 To create the overview and detail pages for your data structure, follow these steps:
 
@@ -37,7 +38,7 @@ And there you go! For each entity, an overview page and a detail page is generat
 Mendix can do even more of the work for you if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer** and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
 {{% /alert %}}
 
-## 4 Creating Overview & Detail Pages Manually
+## 4 Creating Overview and Detail Pages Manually
 
 For a better understanding of Mendix Studio Pro, this section describes the manual steps for creating these pages.
 
@@ -48,21 +49,21 @@ To create a new overview page and add it to your app, follow these steps:
 1. Right-click the module and select **Add** > **Page**.
 2. Click **Responsive**.
 3. Enter *CustomerOverview* in **Page name**.
-4. Select _Sidebar_Full_Responsive_ as the navigation layout.
-5.  Click **Blank**, then select the **Blank** page template** and click **OK**:
+4. Select *Sidebar_Full_Responsive* as the navigation layout.
+5. Click **Blank**, then select the **Blank** page template**and click**OK**:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581337.png" >}}
 
-6.  Click **Data Grid** in the menu bar of the page builder to select the data grid widget:
+6. Click **Data Grid** in the menu bar of the page builder to select the data grid widget:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581335.png" >}}
 
-7.  Click inside the page editor to create the data grid widget:
+7. Click inside the page editor to create the data grid widget:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581334.png" >}}
 
-8.  Right-click the data grid and select **Select Entity**.
-9.  Select the **Customer** entity in the **Select Data Source** pop-up window and click **Select**:
+8. Right-click the data grid and select **Select Entity**.
+9. Select the **Customer** entity in the **Select Data Source** pop-up window and click **Select**:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581345.png" >}}
 
@@ -78,13 +79,13 @@ You should now have an overview page with a data grid like this:
 
 To create a new detail page manually, follow these steps:
 
-1.  Right-click **New** on the data grid on the overview page and select **Generate page**.
-2.  Select **PopupLayout** as the **Navigation layout**.
-3.  Select **Form horizontal** and then click **OK**:
+1. Right-click **New** on the data grid on the overview page and select **Generate page**.
+2. Select **PopupLayout** as the **Navigation layout**.
+3. Select **Form horizontal** and then click **OK**:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581327.png" >}} 
 
-4.  Right-click **New** on the data grid on the overview page again and select **Go to page**:
+4. Right-click **New** on the data grid on the overview page again and select **Go to page**:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581326.png" >}}
 
@@ -92,7 +93,7 @@ To create a new detail page manually, follow these steps:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581325.png" >}}
 
-## 5 Navigation & Security
+## 5 Navigation and Security
 
 Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/).
 

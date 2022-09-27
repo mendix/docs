@@ -1,7 +1,6 @@
 ---
 title: "Run a Mendix Docker Image"
 url: /developerportal/deploy/run-mendix-docker-image/
-parent: "docker-deploy"
 weight: 10
 description: "Describes running a Mendix Docker image."
 tags: ["Docker", "Cloud", "container", "CI/CD"]
@@ -14,7 +13,7 @@ Docker is an open source container technology that is used broadly in the market
 
 This how-to explains how to run a Mendix Docker image created using the Mendix Docker Buildpack. A Mendix Docker image is uniquely created for each release of a project using this buildpack. To run the Docker image, you need access to a Docker orchestration platform. See [System Requirements](/refguide/system-requirements/) for official supported orchestration platforms. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Check for compatibility
 * Run the Mendix Docker image
@@ -27,14 +26,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Compatibility
 
-Mendix is compatible with the above Docker hosts as long as there are compatible database services like PostgreSQL, RDS, or Azure SQL. External file store support can be set up with Amazon S3, Swift, or Azure Blob store.
+Mendix is compatible with the above Docker hosts as long as there are compatible database services like PostgreSQL, RDS, or Azure SQL. External file store support can be set up with Amazon S3 or Azure Blob store.
 
 ## 4 Running the Mendix Docker Image
 
 To start the container, you must provide the container with the password in order to create an administrative account for your Mendix application's `ADMIN_PASSWORD`
 and `DATABASE_ENDPOINT`, as you can see in this example:
 
-```
+```shell
 docker run -it \
   -e ADMIN_PASSWORD=Password1! \
   -e DATABASE_ENDPOINT=postgres://username:password@host:port/mendix \
@@ -43,7 +42,7 @@ docker run -it \
 
 This is an example for Microsoft SQL Server:
 
-```
+```powershell
 docker run -it \
   -e ADMIN_PASSWORD=Password1! \
   -e DATABASE_ENDPOINT=sqlserver://username:password@host:port/mendix \

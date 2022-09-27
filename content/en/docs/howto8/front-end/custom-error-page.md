@@ -22,7 +22,7 @@ If you do not create these files, the default "green monsters" will be used inst
 
 {{< figure src="/attachments/howto8/front-end/custom-error-page/monsters.png" >}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a custom error page
 
@@ -36,21 +36,20 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Create a Custom Error Page
 
 1. Open the local folder of your app.
-
-2.  Go to **theme**:
+2. Go to **theme**:
 
     {{< figure src="/attachments/howto8/front-end/custom-error-page/theme.png" >}}
 
-3.  Create a new folder named *error_page*:
+3. Create a new folder named *error_page*:
 
     {{< figure src="/attachments/howto8/front-end/custom-error-page/error-page.png" >}}
 
-4.  In the **error_page** folder, place your *offline.html* file:
+4. In the **error_page** folder, place your *offline.html* file:
 
     {{< figure src="/attachments/howto8/front-end/custom-error-page/offline.png" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
-    
+
     {{% alert color="info" %}}In these *.html* files, you can only refer to external resources or resources under the absolute path `/error_page/`; the `/error_page/` path is the only one that will be available when the application is stopped.{{% /alert %}}
 
 5. Commit the changes in Studio Pro.

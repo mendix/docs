@@ -1,7 +1,6 @@
 ---
 title: "Apps"
 url: /addons/apd-addon/rg-two-apps/
-parent: "rg-two-apm"
 ---
 
 ## 1 Apps Overview
@@ -18,7 +17,7 @@ In order to find a specific application faster, it is possible to mark it as a f
 
 In case an application is not visible in this overview, click **Can’t find your App?** in the upper-right corner.
 
-## 2 Tour Guides & Videos
+## 2 Tour Guides and Videos
 
 APM has several tour guides and videos to help navigate through APM to perform certain tasks. These can be accessed by clicking the documentation icon next to your profile image and selecting the **Tour** option.
 
@@ -34,7 +33,7 @@ When starting a tour, a tool tip will appear throughout the APM application with
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-two-apm/rg-two-apps/TourStep.png" >}}
 
-## 3 Profile Menu & User Settings
+## 3 Profile Menu and User Settings
 
 In the profile menu, you can see links to your Mendix Profile and also the user settings for APM.
 
@@ -68,4 +67,3 @@ The APM manager runs automatic cleanups. These remove monitoring data automatica
 Data can be preserved using the push-pin button. This prevents automatic cleanup.
 
 Environments are automatically deleted if they are not used for a year.
-

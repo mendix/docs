@@ -1,7 +1,6 @@
 ---
 title: "8.5"
 url: /releasenotes/sdk/metamodel-8.5/
-parent: "metamodel-8"
 weight: 96
 ---
 
@@ -61,7 +60,7 @@ weight: 96
 
 ### CustomWidgets
 
-#### CustomWidgetDatabaseSource & CustomWidgetXPathSource (Elements)
+#### CustomWidgetDatabaseSource and CustomWidgetXPathSource (Elements)
 
 * We introduced these elements.
 

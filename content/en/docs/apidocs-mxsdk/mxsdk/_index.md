@@ -1,9 +1,12 @@
 ---
 title: "Mendix Platform SDK"
 url: /apidocs-mxsdk/mxsdk/
+no_list: false
+description_list: true
+tags: ["sdk", "platform sdk", "model sdk"]
 ---
 
-## 1 Introduction & FAQ
+## 1 Introduction and FAQ
 
 Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) can make your life easier, you should learn about the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Start with the [SDK Introduction](/apidocs-mxsdk/mxsdk/sdk-intro/) and the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). 
 
@@ -21,7 +24,7 @@ Follow these step-by-step guides to learn everything you need about using the SD
 * [Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
 * [Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/) – guides you in the process of creating and saving your personal access token, which is required to authenticate your script
 * [Create Your First Script](/apidocs-mxsdk/mxsdk/creating-your-first-script/) – teaches you how to write a script that will use the Mendix Platform SDK
-* [Use Mendix Pltatform SDK](/apidocs-mxsdk/mxsdk/using-platform-sdk/) – guides you on how to use the Platform SDK to create, open, and delete Mendix apps as well as how to make changes to your app
+* [Use Mendix Platform SDK](/apidocs-mxsdk/mxsdk/using-platform-sdk/) – guides you on how to use the Platform SDK to create, open, and delete Mendix apps as well as how to make changes to your app
 * [Create the Domain Model](/apidocs-mxsdk/mxsdk/creating-the-domain-model/) – guides you in the process of creating a more extensive domain model
 * [Manipulate Existing Models](/apidocs-mxsdk/mxsdk/manipulating-existing-models/) – teaches you how to change things in the model, close the server connection, and find and load units and elements
 * [Generate Code from the Model](/apidocs-mxsdk/mxsdk/generating-code-from-the-model/) – explains how to write code to alter your model
@@ -41,3 +44,5 @@ For more information, check the [Mendix Model SDK Release Notes](/releasenotes/s
 ## 7 Need Help?
 
 If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/). 
+
+## 8 Documents in This Category

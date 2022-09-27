@@ -1,7 +1,7 @@
 ---
 title: "Build a Preview Image for a Custom Widget"
+linktitle: "Preview Image for Custom Widget"
 url: /howto8/extensibility/add-a-preview-image-for-custom-widget/
-parent: "widget-development"
 tags: ["image", "preview", "widget", "custom"]
 ---
 
@@ -9,7 +9,7 @@ tags: ["image", "preview", "widget", "custom"]
 
 This how-to will show you how to specify a preview image that will be rendered in Studio Pro.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Configure a preview image for custom widgets
 
@@ -31,4 +31,3 @@ After packaging your custom widget, the image provided will be rendered in Studi
 {{< figure src="/attachments/howto8/extensibility/widget-development/add-a-preview-image-for-custom-widget/02_Preview.png" >}}
 
 Please note that older versions of Studio Pro ignore this image and render a grey rectangle as usual.
-

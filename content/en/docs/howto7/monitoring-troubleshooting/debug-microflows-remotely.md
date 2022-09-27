@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 
 It is possible to debug applications that are already in the cloud (either in an acceptance or production environment).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Connect your debugger to your cloud environment
 
@@ -37,6 +37,7 @@ Debugging in production is not recommended. However, if you are debugging in the
 {{% /alert %}}
 
 <a name="EnablingDebuggingintheCloud"></a>
+
 ### 3.1 Enabling Debugging in the Cloud
 
 1. Open your browser, go to the [Developer Portal](http://sprintr.home.mendix.com), and log in with your Mendix ID.

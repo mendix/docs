@@ -24,7 +24,6 @@ This API enables retrieving information (branches, commits) of application model
 
 For details, see [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/).
 
-
 ## 4 Build API {#build-api}
 
 To create and manage deployment packages using the Mendix build server, you will need information from the [Team Server API](#team-server-api) as input for these API calls.
@@ -61,7 +60,7 @@ Use this API to build on top of the [feedback management](/developerportal/colla
 
 For details, see [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
 
-## 10 Model SDK & Platform SDK
+## 10 Model SDK and Platform SDK
 
 Use these SDKs to gain access to the inner-workings of a Mendix app.
 

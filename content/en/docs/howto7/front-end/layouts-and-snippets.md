@@ -10,7 +10,7 @@ tags: ["front end"]
 
 This document will cover the basics of how to create pages using layouts and snippets.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create and style layouts
 * Create snippets
@@ -33,6 +33,7 @@ While modeling the pages, you select a layout when a page is created.
 Layouts are used to structure the user interface. They allow us to define a default page structure, which can be reused as a template for pages. With this structure, you can design the way the application is presented to the end-user. The best practice is to predefine the UI structure before you start modeling the app. There was a blank layout, although this is a basic setup for layouts and there are some predefined layout structures available.
 
 These are some available predefined layout structures:
+
 * DesktopLayout
     * For presenting a header with a logo and menu bar
     * Content placeholder used
@@ -88,17 +89,17 @@ Be careful with how you design these layouts. For example, in the mobile apps, y
 
 These are some layout examples:
 
-*  Basic layout for responsive/desktop pages:
+* Basic layout for responsive/desktop pages:
 
-	{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-desktop.png" >}}
+    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-desktop.png" >}}
 
 * Basic layout for mobile pages:
 
-	{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-mobile.png" >}}
+    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-mobile.png" >}}
 
 * Master layout with added menu:
 
-	{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/master.png" >}}
+    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/master.png" >}}
 
 {{% alert color="info" %}}
 
@@ -135,7 +136,7 @@ The simple menu bar widget shows a configured menu in the form of a horizontal b
 The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the **Navigation** document or a **Menu** page resource: 
 
 * **Project** > **Navigation** – when selected, the menu items are taken from one of the menus defined in this document; use this for the main menu of your application
-* **Add Other** > **Menu ** – when selected, the menu items are taken from this page resource; use this menu for auxiliary menus
+* **Add Other** > **Menu** – when selected, the menu items are taken from this page resource; use this menu for auxiliary menus
 
 When you have selected the project navigation as source, the device profile must be determined for the correct navigation menu:
 

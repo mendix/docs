@@ -1,7 +1,6 @@
 ---
 title: "List View"
 url: /refguide/list-view/
-parent: "data-widgets"
 weight: 40
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,6 +13,12 @@ A list view shows a list of objects. For example, you can display a list of all 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-example-profile.png" >}} 
 
 Each object is shown using a template. This template is defined by placing widgets inside the list view's drop-zone. The list of objects shown is determined by a [data source](#data-source).
+
+{{% alert color="warning" %}}
+The list view provides its own scrolling behavior in native apps. Consequently, you cannot place a list view inside a scroll view in native apps. Furthermore, you cannot place input widgets below a list view in native apps.
+
+To address this issue, you can use the repeater widget from [Native Mobile Resources](/appstore/modules/native-mobile-resources/) instead.
+{{% /alert %}}
 
 ## 2 Properties
 
@@ -99,11 +104,9 @@ Its common behavior is to update the contents of the list view by synchronizing 
 If the entity that is connected to the list view has specializations, you can optionally specify templates for each specialization. For each row in the list view the most specific template is shown. The different templates can be selected by clicking the extra header that appears when a specialization template is added.
 
 {{% alert color="info" %}}
-
 Let us say you have an entity Vehicle and two specializations thereof: Bicycle and Car. And there is a specialization of Car called SportsCar. You create a list view that is connected to Vehicle. With the templates property of the list view you specify what template to show for arbitrary Vehicles. For the specializations Bicycle and Car you create separate templates to show them.
 
 Now if there is a row of type Bicycle the template specific for bicycles will be shown. A row of type Car will be shown in the template for Car. A row of type SportsCar is shown in the template for Car. There is no template specific for sports cars (in this example) and Car is the 'closest' generalization for which there is a template.
-
 {{% /alert %}}
 
 ### 2.6 Visibility Section {#visibility}
@@ -115,7 +118,7 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 To perform actions on a list view, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
 
 * **Go to entity** – opens a domain model and highlights an an entity that is used as the data source
-* **Go to data source** **microflow **– this action is only displayed when a microflow is set as the data source and opens this microflow 
+* **Go to data source** **microflow**– this action is only displayed when a microflow is set as the data source and opens this microflow 
 * **Go to data source nanoflow** – this action is only displayed when a nanoflow is set as the data source and opens this nanoflow
 
 ## 4 Read More

@@ -2,8 +2,9 @@
 title: "Text to Speech"
 url: /appstore/app-services/text-to-speech/
 category: "App Services"
-description: " "
+description: "This document describes the configuration and usage of the Text to Speech app service, which enables converting text into voice in your web apps."
 tags: ["text to speech", "service", "app store", "marketplace", "component", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
@@ -53,8 +54,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Text to Speech** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Text to Speech** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 #### 2.1.2 Starting a Subscription
@@ -64,8 +65,8 @@ A trial gives everyone in your company one-month access to the app service. The 
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [Company Subscriptions](https://docs.mendix.com/appstore/general/app-store-overview#company-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Text to Speech** to open the [service management dashboard](https://docs.mendix.com/appstore/general/app-store-overview#service-management-dashboard).
+6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
+7. Click **Text to Speech** to open the service management dashboard.
 8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
 
 ### 2.2 Installing the Component in Your App
@@ -140,8 +141,8 @@ The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an inp
 The core widget required is the **AudioPlayer** widget. You can make the following settings for the **AudioPlayer** widget:
 
 * **General** tab
-	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
-	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
+    * **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
+    * **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
 
 ### 3.6 Supported Languages {#supported-languages}
 
@@ -185,11 +186,11 @@ The core widget required is the **AudioPlayer** widget. You can make the followi
 
 If you deploy your app locally or as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
 
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings/) dialog box.
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText LicenseToken**.
 4. Fill in the **Value** with the license token that you obtained.
-5.  Click **OK** to save the settings.
+5. Click **OK** to save the settings.
 
     {{< figure src="/attachments/appstore/app-services/text-to-speech/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
 
@@ -217,24 +218,24 @@ If you deploy your app in your own environment, you need to configure the licens
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up the text-to-speech conversion:
 
-1.  Create a nanoflow as follows:
+1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateSpeechSynthesizer*.
-    
+
     2. Add the **CreateSpeechSynthesizer** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
-    
-    3.  Double-click the **CreateSpeechSynthesizer** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
-       
+
+    3. Double-click the **CreateSpeechSynthesizer** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+
         {{< figure src="/attachments/appstore/app-services/text-to-speech/call-createspeechsynthesizer-microflow.png" alt="call-createspeechsynthesizer-microflow" >}}
-      
+
         In this example, the **languageCode** is set to `''`, then the default language option `en-US` is used. You can also set it to a different [language code](#supported-languages). For more information about the parameters, see [CreateSpeechSynthesizer](#createspeechsynthesizer)
 
-    4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
-    
+    4. Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
+
         {{< figure src="/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer-nanoflow.png" alt="createspeechsynthesizer" >}}
-    
-2.  Create a microflow as follows:
+
+2. Create a microflow as follows:
     1. Name the microflow *GetSupportedVoices*. 
-    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
+    2. Right-click the working area and select **Add** > **Parameter** from the pop-up menu. 
     3. Double-click the parameter to open the **Parameter** dialog box.
     4. Set **Data type** to **Object** and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.
     5. For **Name**, enter *speechSynthesizer*.
@@ -244,40 +245,40 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     9. Set the **Source** to **By association**.
     10. Set **Association** to **$speechSynthesizer/SpeechSynthesizer_SupportedVoices**.
     11. Click **OK** to save the settings.
-    12.  Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
-      
-         {{< figure src="/attachments/appstore/app-services/text-to-speech/getsupportedvoices-microflow.png" alt="getsupportedvoices-microflow" >}}
-   
+    12. Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
+
+        {{< figure src="/attachments/appstore/app-services/text-to-speech/getsupportedvoices-microflow.png" alt="getsupportedvoices-microflow" >}}
+
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
-   1.  Double-click the **Data view** widget to open the **Edit Data View** dialog box.
-   2.  For **Data source**, select **Nanoflow**.
-   3.  **Select** the **CreateSpeechSynthsizer** nanoflow for **Nanoflow**.
-   4.  Click **OK** to save the settings.
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Nanoflow**.
+    3. **Select** the **CreateSpeechSynthsizer** nanoflow for **Nanoflow**.
+    4. Click **OK** to save the settings.
 5. Inside the **Data view** widget, add a **Text area** widget.
 6. Change the settings of the **Text area** widget as follows:
-   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-   2. Set **Data source** to **SpeechSynthesizer_Voice/Voice/SpeechSynthesizer_Voice/SpeechSynthesizer/Text**.
-   3. Click **OK** to save the settings.
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. Set **Data source** to **SpeechSynthesizer_Voice/Voice/SpeechSynthesizer_Voice/SpeechSynthesizer/Text**.
+    3. Click **OK** to save the settings.
 7. Inside the **Data view** widget, add a **Reference selector** widget below the **Text area** widget.
 8. Change the settings of the **Reference selector** widget as follows:
-   1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
-   2. Go to the **Selectable objects** tab.
-   3. Set **Source** to **Microflow**.
-   4. Set the **Microflow** as **GetSupportedVoices**.
-   5. Go to the **General** tab.
-   6. Set **Data source** to **TextToSpeech.SpeechSynthesizer_Voice/TextToSpeech.Voice/TextToSpeech.Voice.Description**.
-   7. For **Label caption**, enter *Language*.
-   8. Click **OK** to save the settings.
+    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
+    2. Go to the **Selectable objects** tab.
+    3. Set **Source** to **Microflow**.
+    4. Set the **Microflow** as **GetSupportedVoices**.
+    5. Go to the **General** tab.
+    6. Set **Data source** to **TextToSpeech.SpeechSynthesizer_Voice/TextToSpeech.Voice/TextToSpeech.Voice.Description**.
+    7. For **Label caption**, enter *Language*.
+    8. Click **OK** to save the settings.
 9. Inside the **Data view** widget, add an [Audio player](#audioplayer) widget below the **Reference selector** widget.
-10.  Change the settings of the **Audio player** widget as follows:
-     1.  Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
-     2.  On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
-     3.  Set **Controls** to **true**.
+10. Change the settings of the **Audio player** widget as follows:
+    1. Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
+    2. On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
+    3. Set **Controls** to **true**.
 
-         {{< figure src="/attachments/appstore/app-services/text-to-speech/audioplayer-datasource.png" alt="audioplayer-datasource" >}}
+        {{< figure src="/attachments/appstore/app-services/text-to-speech/audioplayer-datasource.png" alt="audioplayer-datasource" >}}
 
-     4. Click **OK** to save the settings.
+    4. Click **OK** to save the settings.
 11. Inside the **Data view** widget, add a **Button** widget below the **Audio player** widget .
 12. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
@@ -292,13 +293,13 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 ### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and then do as follows:
 
-   * If you have a trial, click [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-   * If you have a subscription, click [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
+    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
+    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
 3. Find **Text to Speech** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 

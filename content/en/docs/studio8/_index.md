@@ -7,6 +7,7 @@ cascade:
     - space: "Studio 8 Guide"
     - mendix_version: "8"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
         priority: 0.4
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

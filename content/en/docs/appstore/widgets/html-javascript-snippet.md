@@ -31,12 +31,13 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
     * **JavaScript**
     * **JavaScript with jQuery** – this option will make sure your code can leverage jQuery v3.3.1, for example:
 
-        ```
+        ```javascript
         //for example, this code snippet will set the color of all your paragraph tags on the page to red.
         $('p').css('color', 'red')
         // or
         jQuery('p').css('color', 'red')
         ```
+
 * **Contents** – the HTML or Javascript to embe
 * **External File** – the path to the HTML or JavaScript file you want to add
     * The root is the **theme** folder

@@ -1,7 +1,6 @@
 ---
 title: "Upgrade Steps"
 url: /addons/apd-addon/ig-one-upgrade-steps/
-parent: "ig-one"
 weight: 4
 ---
 
@@ -31,8 +30,8 @@ Clean deployment before startup so that no old jar stays in your deployment fold
 
 Now start following the installation procedure steps after the backup. Most of the steps do not have to be repeated, because they are preserved. The following steps need attention:
 
-*   Optionally revert overwritten widgets, because they are overwritten on the import of the module
-*   Copy the language, because the newly imported module has only *english-us* in it
+* Optionally revert overwritten widgets, because they are overwritten on the import of the module
+* Copy the language, because the newly imported module has only *english-us* in it
 
 When upgrading from below 1.7.0 to a version above, you need a new license.
 

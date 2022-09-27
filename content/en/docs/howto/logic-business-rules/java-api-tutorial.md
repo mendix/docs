@@ -3,6 +3,7 @@ title: "Use the Java API"
 url: /howto/logic-business-rules/java-api-tutorial/
 category: "Logic & Business Rules"
 weight: 130
+description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
 tags: ["microflow", "logic", "java", "API"]
 ---
 
@@ -14,7 +15,7 @@ To avoid cluttering the tutorial, only the relevant code will be shown, not the 
 
 When you look at these examples, often an IContext will be used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you're working will determine if you have these rights and can perform that action.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Execute microflows and commit objects
 * Copy FileDocuments

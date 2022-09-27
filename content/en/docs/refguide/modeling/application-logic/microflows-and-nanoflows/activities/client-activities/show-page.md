@@ -1,7 +1,6 @@
 ---
 title: "Show Page"
 url: /refguide/show-page/
-parent: "client-activities"
 weight: 50
 tags: ["studio pro", "show page", "client activity"]
 aliases:
@@ -15,7 +14,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline native or hybrid app. For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+This action is ignored and does not work when a microflow is called from an offline native or hybrid app. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -24,7 +23,7 @@ With this activity, you can show a selected page to an end-user. Mendix apps run
 
 You can directly drag a page from the **App Explorer** into your microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-from-project-explorer.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-page/show-page-from-app-explorer.png" >}}
 
 ## 2 Properties
 
@@ -69,8 +68,8 @@ This option is only available for native mobile.
 
 Often you need to have control of page history, for example to show the correct page when a user presses the hardware back button on Android. These types of actions generally will only close a single page in the current stack. **Close Pages** provides more control over this behavior. We define relevant terms as follows:
 
-* **source page**: The page you are navigating _from_
-* **target page**: The page you are navigating _to_
+* **source page**: The page you are navigating *from*
+* **target page**: The page you are navigating *to*
 
 | Value | Description |
 | --- | --- |

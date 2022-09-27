@@ -14,7 +14,7 @@ In Mendix, you don't need to reinvent the wheel. You can save time by importing 
 Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Import and export the following Desktop Modeler objects:
     * projects
@@ -47,8 +47,8 @@ To import a complete Mendix project package, follow these steps:
     * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, or **Locally on disk**
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your project in **Project directory**
-   
-3.  Click **OK**, and your project will be loaded in the Desktop Modeler.
+
+3. Click **OK**, and your project will be loaded in the Desktop Modeler.
 
 ### 2.2 Importing Module Packages
 
@@ -68,8 +68,7 @@ To import module packages, follow these steps:
 
     {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582112.png" >}}
 
-    {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
-    {{% /alert %}}
+    {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.{{% /alert %}}
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your project.
 
@@ -122,15 +121,13 @@ To import module objects, follow these steps:
 
     The **Import Document from File** dialog box will appear.
 
-2.  Select your Mendix package file containing the document you want to import, and click **Open**.
+2. Select your Mendix package file containing the document you want to import, and click **Open**.
 
-    {{% alert color="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the object or **Cancel**.
-    {{% /alert %}}
+    {{% alert color="info" %}}If a document with the same name already exists, you will see the **Warning** pop-up window. In that case, you can either select **Rename** to rename the object or **Cancel**.{{% /alert %}}
 
 3. Click **OK** to import the object into your module:
 
-    {{% alert color="info" %}}You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any objects imported.
-    {{% /alert %}}
+    {{% alert color="info" %}}You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any objects imported.{{% /alert %}}
 
 ### 2.4 Importing Widgets
 
@@ -148,8 +145,7 @@ To import widgets, follow these steps:
 
     {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582106.png" >}}
 
-    {{% alert color="info" %}}You can also press **F4** to synchronize your project directory.
-    {{% /alert %}}
+    {{% alert color="info" %}}You can also press **F4** to synchronize your project directory.{{% /alert %}}
 
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu.
 
@@ -193,8 +189,7 @@ To export a module, follow these steps:
 
     Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your project directory. If you don't want to include these files, you can uncheck the boxes.
 
-    {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.
-    {{% /alert %}}
+    {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.{{% /alert %}}
 
 ### 3.3 Exporting Widgets
 
@@ -209,7 +204,7 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
     {{< figure src="/attachments/howto7/integration/importing-and-exporting-objects/18582092.png" >}}
 
     The **Export Page to File** dialog box will open.
-    
+
 2. Enter the **Name** for your package and click **Save**.
 
 ## 4 Read More
@@ -225,4 +220,3 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [Modules](/refguide7/modules/)
 * [Project](/refguide7/project/)
 * [Common Widgets](/refguide7/common-widgets/)
-

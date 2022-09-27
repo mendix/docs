@@ -85,11 +85,11 @@ To add the client certificate used for creating Trust Anchor in RolesAnywhere, p
 
 4. In the **Outgoing Connections Certificates** section, add the client certificate used for creating Trust Anchor in RolesAnywhere. 
 
-5. Select the certificate that you just added from the list and then click **Details**.
+5. From the list, select the client certificate that you just added and then click **Details**.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
 
-6. Click **New** and enter a client certificate identifier in the dialog box. The client certificate identifier will be used later as input when you create the session credentials.
+6. Click **New** to open a dialog box, and then enter a client certificate identifier. The client certificate identifier will be used later as input when you create the session credentials.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
 
@@ -126,7 +126,7 @@ The action returns a **Credentials** object. For more information on how to use 
 
 #### 3.2.4 Configuring the Local Setup
 
-To run Studio Pro locally, you must add the client certificate as a runtime configuration in Studio Pro. To do so, perform the following steps:
+To run the AWS Authentication connector locally using Studio Pro, you must add the client certificate as a runtime configuration in Studio Pro. To do so, perform the following steps:
 
 1. In Studio Pro, open the **App Settings** dialog box, and then go to the **Configurations** tab.
 

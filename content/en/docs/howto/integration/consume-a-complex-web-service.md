@@ -3,6 +3,7 @@ title: "Consume a Complex Web Service"
 url: /howto/integration/consume-a-complex-web-service/
 category: "Integration"
 weight: 8
+description: "Describes how to import a web service both directly and using the wizard as well as how to configure a web service call."
 tags: ["web service", "integration", "consume"]
 ---
 

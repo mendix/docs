@@ -1,26 +1,26 @@
 ---
-title: "AWS Authentication Module"
+title: "AWS Authentication"
 url: /appstore/connectors/aws-authentication/
-description: "Describes the configuration and usage of the AWS Authentication module from the Mendix Marketplace. This is required to authenticate AWS connectors such as the AWS S3 Connector"
+description: "Describes the configuration and usage of the AWS Authentication connector from the Mendix Marketplace. This is required to authenticate AWS connectors such as the Amazon S3 connector"
 tags: ["marketplace", "marketplace component", "aws", "authentication"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-When using AWS connectors, you need to authenticate to the services being connected to. This is done using the [AWS Authentication Module](https://marketplace.mendix.com/link/component/120333) available from the Mendix Marketplace.
+When using AWS connectors, you need to authenticate to the services being connected to. This is done using the [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector available from the Mendix Marketplace.
 
 ### 1.1 Typical Use Cases
 
-You want to use the [AWS S3 Connector](/appstore/connectors/aws-s3-connector/). You can only connect to your S3 bucket when you have the correct credentials. These are provided by the AWS Authentication Module.
+You want to use the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector. You can only connect to your S3 bucket when you have the correct credentials. These are provided by the AWS Authentication connector.
 
 ## 2 Configuration
 
-The following actions need to be taken to use the AWS Authentication Module in your app.
+The following actions need to be taken to use the AWS Authentication connector in your app.
 
 1. Open your app in Studio Pro
 
-2. Download the [AWS Authentication Module](https://marketplace.mendix.com/link/component/120333) from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+2. Download the [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 
 ## 3 Obtaining Credentials from AWS
 
@@ -44,9 +44,9 @@ Once you have created the credentials, you cannot retrieve your **Secret Access 
 You can only set up two access keys for each user.
 {{% /alert %}}
 
-## 4 Using the AWS Authentication Module
+## 4 Using the AWS Authentication Connector
 
-You can now use the AWS Authentication Module in your app by using the `Get Static Credentials` microflow action, available in the **Toolbox**.
+You can now use the AWS Authentication connector in your app by using the `Get Static Credentials` microflow action, available in the **Toolbox**.
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/get-static-credentials.png" >}}
 

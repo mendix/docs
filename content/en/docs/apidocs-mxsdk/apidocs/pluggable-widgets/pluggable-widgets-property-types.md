@@ -212,7 +212,7 @@ The `key` of a selected element will be passed to the client component. `key` sh
 When the property is defined as follows:
 
 ```xml
-	<property key="myEnumeration" type="enumeration" defaultValue="red">
+	<property key="myEnumeration" type="enumeration" defaultValue="blue">
 		<caption>My enumeration</caption>
 		<description>My enumeration setting</description>
 		<enumerationValues>

@@ -28,11 +28,7 @@ The **Consumed OData Service** document contains the following information:
 
     {{% alert color="info" %}}In the **Data Hub** pane, consumed services have an **Update** icon (a blue arrow) if they have an update available.{{% /alert %}}
 
-### 2.1 Connection Tab
-
-The **Connection** tab displays the connection values for the consumed OData service:
-
-### 2.2 Service URL {#service-url}
+### 2.1 Service URL {#service-url}
 
 The **Service URL** displays the URL of the service endpoint:
 
@@ -41,13 +37,13 @@ The **Service URL** displays the URL of the service endpoint:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/constant.png" >}}
 
-### 2.3 Timeout
+### 2.2 Timeout
 
 **Timeout** is the response time for fetching the data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/refguide/error-handling-in-microflows/).
 
 Default value: *300 seconds*
 
-### 2.4 Proxy Configuration
+### 2.3 Proxy Configuration
 
 **Proxy configuration** allows you to configure whether to use a proxy for the request:
 
@@ -59,7 +55,7 @@ Default value: *300 seconds*
 In most cases, this setting can be ignored, and the default **Use app settings** can be used.
 {{% /alert %}}
 
-### 2.5 Authentication
+### 2.4 Authentication
 
 The **Use HTTP authentication** check box specifies if basic authentication should be used. If checked, you have to specify the following details:
 
@@ -68,7 +64,7 @@ The **Use HTTP authentication** check box specifies if basic authentication shou
 
 Besides basic authentication, you can use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
-### 2.6 HTTP Headers {#http-headers}
+### 2.5 HTTP Headers {#http-headers}
 
 You can specify additional HTTP request headers to be passed to the endpoint in this list by clicking **Add**, **Edit**, or **Delete** for custom HTTP headers for authentication. Each custom header is a pair with a key and a value.
 
@@ -82,7 +78,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security/#http-header-validation) in the *Data Hub Guide*.
 {{% /alert %}}
 
-### 2.7 Error Handling Microflow
+### 2.6 Error Handling Microflow
 
 When a call to the OData service fails, users will see a generic error message. Create an error handling microflow to change this message.
 
@@ -98,24 +94,18 @@ Note for developers of java actions: the message returned by the error handling 
 The *error handling microflow* feature was introduced in Studio Pro 9.6.0.
 {{% /alert %}}
 
-## 3 Metadata Tab {#metadata}
+### 3.1 Metadata
 
-In the **Metadata** tab, you can select a metadata file or use metadata obtained through a URL:
+When you create a consumed OData service, the metadata editor allows you to open an OData contract from a file or URL. When you have already consumed a contract, you can click the **Update** button to update the existing contract with a new version from file or URL.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/metadata-tab.jpg" alt="Metadata Tab" >}}
-
-### 3.1 Metadata Editor
-
-The metadata editor allows you to open OData contracts from a file or URL. When you already consumed a contract, you can use this editor to update your existing contract with a new version from file or URL.
-
-To open the **Metadata Editor**, click **Edit**. In the editor, you can specify a URL or file for the metadata:
+To open the **Metadata Editor**, click **Update**. In the editor, you can specify a URL or file for the metadata:
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/metadata-editor.jpg" alt="Metadata Editor" >}}
 
 The following settings are available:
 
 * **Import from** – select **URL** or **File** for the location of the metadata:
-    * **URL** – click **Edit** to specify the URL for the metadata
+    * **URL** – specify the URL for the metadata
     * **File** – click **Browse** to select an XML metadata file
 
 When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used.
@@ -126,7 +116,7 @@ This information is not stored, so if you download the metadata from the same se
 
 When you import the metadata, you can add external entities from the consumed OData service in the [Data Hub Pane](/refguide/data-hub-pane/).
 
-### 3.2 Consumed OData Service Properties
+### 3.2 Properties
 
 Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 

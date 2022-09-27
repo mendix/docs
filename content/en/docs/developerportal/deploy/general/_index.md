@@ -38,7 +38,6 @@ For many of the platforms to which Mendix can be deployed, the following pages i
 
 * Environments
 * Mobile App
-* App Services
 
 ### 3.1 Environments
 
@@ -60,10 +59,5 @@ On this page, you can manage and publish your app in mobile app stores.
 
 Mendix supports Android and iOS.
 
-For more details, see [Mobile App](/developerportal/deploy/mobileapp/).  
+For more details, see [Mobile App](/developerportal/deploy/mobileapp/).
 
-### 3.3 App Services
-
-The **App Services** page lets you publish your app service, application, or widget to the Mendix Marketplace.
-
-For more details, see [App Services](/developerportal/deploy/app-services/).  

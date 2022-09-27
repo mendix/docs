@@ -3,6 +3,7 @@ title: "Optimize Retrieve Activities"
 url: /howto/logic-business-rules/optimizing-retrieve-activities/
 category: "Logic & Business Rules"
 weight: 90
+description: "Describes how to find and create objects to continue your process as well as retrieve an instance of an object."
 tags: ["microflow", "retrieve", "optimize"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---

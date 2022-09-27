@@ -32,7 +32,7 @@ disableKinds = ["taxonomy","taxonomyTerm","term"]
 [services]
     [services.googleAnalytics]
         # Marketing Google Tag ID
-        id = 'GTM-QJG4'
+        id = 'UA-163813-1'
 
 # Language configuration
 

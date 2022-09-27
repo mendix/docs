@@ -2,6 +2,7 @@
 title: "Integration"
 url: /howto/integration/
 weight: 70
+description: "Presents a list of how-tos about integrating Mendix applications with other systems and services."
 no_list: false
 description_list: true
 tags: ["studio pro"]

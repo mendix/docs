@@ -1,7 +1,7 @@
 ---
 title: "Mendix Support"
 url: /developerportal/support/
-description: ""
+description: "Provides information on how to obtain support for your Mendix apps."
 weight: 30
 no_list: false 
 description_list: true

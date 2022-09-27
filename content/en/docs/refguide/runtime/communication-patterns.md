@@ -3,6 +3,7 @@ title: "Communication Patterns in the Mendix Runtime"
 linktitle: "Communication Patterns"
 url: /refguide/communication-patterns/
 category: "Mendix Runtime"
+description: "Outlines the communication patterns used by the Mendix Runtime environment for some typical application use cases."
 tags: ["studio pro", "Mendix Runtime", "Communications", "Runtime Server", "Mendix Client"]
 ---
 

@@ -68,6 +68,11 @@ This section provides some details on specific log nodes used by the Mendix nati
 
 The following log nodes are used by Mendix when writing log messages:
 
+
+{{% alert color="warning" %}}
+Please note that starting from mendix `9.18.1` and above, log messages will be filtered based on the log levels set in the application cloud portal.
+{{% /alert %}}
+
 | Log Node | Description |
 | --- | --- |
 | Client_AppCenter| Logs messages related to the state and phases of over-the-air updates by AppCenter. |
@@ -86,9 +91,9 @@ The following log nodes are used by Mendix when writing log messages:
 
 ## 5 Sending Log Messages To Runtime {#sending-client-log-nodes-to-runtime}
 
-The native client stores log messages locally on the device. When the **Enable sending logs to runtime** checkbox is selected, the native client will attempt to send log messages in batches of **100** messages or after 1 hour from the time since these log messages occurred. 
+The native client stores log messages locally on the device. When the **Enable sending logs to runtime** checkbox is selected, the native client will attempt to send log messages whenever they reach `1000` messages or after 1 hour from the last sending attempt.
+When the app goes to background native client will save buffered log message to the file system and will restore them once the app is back active, and in case log messages reaches the limit and there is no network connectivity when the native client attempt to send these log messages, it will start to discard older messages so that it won't overflow with a lot of logs. An additional `info` log message will be added with the number of discarded logs and the timestamps during which these log messages got ignored.
 
-Therefore these client log nodes will not appear directly in the cloud portal logs overview before they are sent. If there is network connectivity, once the log messages have been successfully sent to the runtime these log messages will be cleared from the device.
 
 ## 6 Extending Logging
 

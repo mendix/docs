@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 ## 1 Introduction
 
-[AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, the [Amazon Rekognition](/appstore/connectors/amazon-rekognition) connector, the Amazon SNS connector, and the Amazon SQS connector.
+[AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector and the [Amazon Rekognition](/appstore/connectors/amazon-rekognition) connector.
 
 There are two types of credentials that can be used through the AWS Authentication connector:
 
@@ -81,13 +81,16 @@ To add the client certificate used for creating Trust Anchor in RolesAnywhere, p
 
 2. Click **Environments** and then click **Details** on the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 
-3. Go to the **Network** tab, and add the client certificate used for creating Trust Anchor in RolesAnywhere in the **Outgoing Connections Certificates** section.
+3. Go to the **Network** tab, and add the client certificate used for creating Trust Anchor in RolesAnywhere in the **Outgoing Connections Certificates** section. Once the client certificate is loaded, it appears in list below. 
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
 
-4. Go to the **Runtime** tab and add an identifier to the certificate. The client certificate identifier will be used later as input while creating the session credentials.
+4. Select the certificate and click **Details**.
+
+5. Click **New** and enter a client certificate identifier in the new dialog box. The client certificate identifier will be used later as input when you create the session credentials.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
+
 
 #### 3.2.3 Using the Get Session Credentials Action in Studio Pro
 
@@ -117,7 +120,7 @@ The action returns a **Credentials** object. For more information on how to use 
 
 #### 3.2.4 Configuring the Local Setup
 
-To run the AWS authentication connector locally, you must add the client certificate as a runtime configuration in Studio Pro. To do so, perform the following steps:
+To run Studio Pro locally, you must add the client certificate as a runtime configuration in Studio Pro. To do so, perform the following steps:
 
 1. In Studio Pro, open the **App Settings** dialog box, and then go to the **Configurations** tab.
 

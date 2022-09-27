@@ -19,7 +19,7 @@ With these how-to's, you can learn how to translate your business logic into mic
 
 * [Create a Custom Save Button](/howto8/logic-business-rules/create-a-custom-save-button/) – explains how to create a custom save button by utilizing microflows
 
-* [Extract & Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/) – shows you how to break down a large microflow into more manageable parts
+* [Extract and Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/) – shows you how to break down a large microflow into more manageable parts
 
 * [Work with Lists in a Microflow](/howto8/logic-business-rules/working-with-lists-in-a-microflow/) – teaches you how to iterate over a retrieved list of objects
 

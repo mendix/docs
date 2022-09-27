@@ -167,4 +167,4 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 * [Optimize Retrieve Activities](/howto8/logic-business-rules/optimizing-retrieve-activities/)
 * [Set Up Error Handling](/howto8/logic-business-rules/set-up-error-handling/)
 * [Optimize Microflow Aggregates](/howto8/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)

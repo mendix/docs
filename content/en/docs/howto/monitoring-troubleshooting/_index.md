@@ -1,5 +1,5 @@
 ---
-title: "Monitoring & Troubleshooting"
+title: "Monitoring and Troubleshooting"
 url: /howto/monitoring-troubleshooting/
 weight: 110
 tags: ["monitoring", "troubleshooting"]

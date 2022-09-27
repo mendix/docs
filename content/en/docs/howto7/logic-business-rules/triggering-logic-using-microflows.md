@@ -150,4 +150,4 @@ There are two more advanced settings:
 * [Optimizing Retrieve Activities](/howto7/logic-business-rules/optimizing-retrieve-activities/)
 * [Error Handling](/howto7/logic-business-rules/set-up-error-handling/)
 * [Optimizing Microflow Aggregates](/howto7/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)

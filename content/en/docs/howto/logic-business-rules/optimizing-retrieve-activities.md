@@ -51,4 +51,4 @@ However, there is the risk of creating an infinite loop if the retrieve applies 
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
 * [Configure Error Handling](/howto/logic-business-rules/set-up-error-handling/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

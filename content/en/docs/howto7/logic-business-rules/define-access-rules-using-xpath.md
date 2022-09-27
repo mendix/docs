@@ -27,7 +27,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
     {{< figure src="/attachments/howto7/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
     For more information on creating a domain model, see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer/).
-2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)).
+2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)).
 3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/)).
 4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto7/security/create-a-secure-app/)).
 

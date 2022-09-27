@@ -127,7 +127,7 @@ This section describes how to access the user management screen(s) from the Admi
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/account-overview.png" >}}
 
 {{% alert color="info" %}}
-If you created your app using an older version of Mendix, the Administration module might not be available to you. Please consult [How to Import & Export Objects](/howto8/integration/importing-and-exporting-objects/) to import the Administration module into your app and redeploy.
+If you created your app using an older version of Mendix, the Administration module might not be available to you. Please consult [How to Import and Export Objects](/howto8/integration/importing-and-exporting-objects/) to import the Administration module into your app and redeploy.
 {{% /alert %}}
 
 ### 3.3 Managing User Accounts

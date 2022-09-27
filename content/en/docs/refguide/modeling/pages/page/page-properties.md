@@ -30,7 +30,7 @@ Page properties consist of the following sections:
 
 ### 2.2 Data Section {#data}
 
-#### 2.2.1 Parameters
+#### 2.2.1 Parameters {#parameters}
 
 The list of parameters that this page expects. These parameters can be used by [data views](/refguide/data-view/) with a page parameter data source.
 

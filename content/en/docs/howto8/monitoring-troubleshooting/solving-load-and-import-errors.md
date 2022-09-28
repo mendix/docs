@@ -1,5 +1,5 @@
 ---
-title: "Solve Load & Import Errors"
+title: "Solve Load and Import Errors"
 url: /howto8/monitoring-troubleshooting/solving-load-and-import-errors/
 category: "Monitoring and Troubleshooting"
 weight: 11

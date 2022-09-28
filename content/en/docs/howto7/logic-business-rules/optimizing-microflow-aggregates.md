@@ -28,4 +28,4 @@ If you do want to use the list but you also want the optimized query, do two sep
 * [How to Optimize Retrieve Activities](/howto7/logic-business-rules/optimizing-retrieve-activities/)
 * [How to Configure Error Handling](/howto7/logic-business-rules/set-up-error-handling/)
 * [How to Optimize Microflow Aggregates](/howto7/logic-business-rules/optimizing-microflow-aggregates/)
-* [How to Extract & Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
+* [How to Extract and Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)

@@ -1,5 +1,5 @@
 ---
-title: "Use Layouts & Snippets"
+title: "Use Layouts and Snippets"
 url: /howto8/front-end/layouts-and-snippets/
 category: "Front End"
 weight: 30

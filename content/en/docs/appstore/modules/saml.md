@@ -142,9 +142,14 @@ You can choose what you want to enter for the **Entity Id**, **Organization**, a
 
 * **Allow IdP Discovery** – When using multiple IdPs, this determines whether you allow users to get a list of all available IdPs if they have not specified a specific IdP in the login request. When going to `/SSO/`, if you have only one active IdP, the module will use the active IdP by default. If you have multiple IdPs, it is required to include the IdP in the URL. This can be done by using the URL `/SSO/login/[IdP Alias]` or `/SSO/login?_idp_id=[IdP_Alias]`.
 * **Keep Log Files** – All login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This attribute configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. When keeping it 0, all records will be removed daily.
-* **Use Encryption** (key length: **No Encryption**, **1024bit Encryption**, **2048bit Encryption**; encryption method: **SHA1 / SHA256**) – This allows the encryption of any messages being sent from the SP to the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the key store. Changing the encryption requires all IdPs to re-import the new metadata file.
+* **Use Encryption** – This allows the encryption of any messages being sent from the SP to the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the key store. Changing the encryption requires all IdPs to re-import the new metadata file.
 
-If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom entity Id, and shown as the **Key store alias**. See [Managing the Key Store](#keystore), below, for more key store options.
+    If you choose to use encryption, you will need to select the appropriate values:
+
+    * **Encryption method** – `SHA1 - RSA` or `SHA256 - RSA`
+    * **Encryption key length** – 1024 or 2048 bits
+
+    If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom entity Id, and shown as the **Key store alias**. See [Managing the Key Store](#keystore), below, for more key store options.
 
 Accessing the metadata for the SP can be done either by clicking **Download SP Metadata** to download the XML file or by opening `http://<Application Root URL>/SSO/metadata` for your app's URL.
 
@@ -182,13 +187,17 @@ Upon completing these steps, you only need to send the SP metadata file to the I
 
 #### 3.2.2 General
 
+The following settings apply to this IdP configuration:
+
 * **Alias** – The alias will be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (besides that it is required). But you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
 * **Log SAML Requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
 #### 3.2.3 Identity Provider Metadata
 
+The following settings are for the IdP metadata:
+
 * **IdP Metadata Location** – The module is capable of re-importing all IdP metadata files on a daily basis. You can also choose to import the metadata from a file.
-    * **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
+* **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
 {{% alert color="info" %}}
 If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **\_USE ME** > **Scheduled Events** folder of the SAML module.
@@ -197,6 +206,8 @@ If you want to automatically synchronize the IdP metadata, make sure the **SE_Sy
 If you need to change your identity provider metadata you can find more information in the [Configuration of SAML Binding](#saml-binding) section.
 
 #### 3.2.4 User Provisioning 
+
+The following settings control user provisioning:
 
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
@@ -230,10 +241,12 @@ These settings are only available in the following versions of the module (depen
     2. You can also implement your own custom microflow and then select that in the Custom microflow field to override the Mendix custom microflows. For this:
         * the custom microflow name must begin with the string “Custom”, (for example, `CustomMyUserProvisioning`)
         * to see the latest custom microflows in the dropdown, refresh the modules in the *Model Reflection* of your application whenever you add/remove any custom microflow — see [Mx Model Reflection](/appstore/modules/model-reflection/) for information on how to do this
-* **Enable delegated authentication** *(deprecated)* - See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
-* **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+* **Enable mobile authentication Token** – If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+* **Enable delegated authentication** *(deprecated) – See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
 
 #### 3.2.4 Authentication Context
+
+The following settings set the authentication context:
 
 * **Preferred Entity Descriptor** – The IdP metadata can contain references to many different IdPs or SPs. This option allows you to select which of the IdPs ought to be used when a user tries to login using this IdP configuration.
 * **IdP Authentication Properties** – When sending out requests, this option has to be configured according to the specification of the IdP server: **Authentication context comparison**.
@@ -273,7 +286,7 @@ To enable in-session authentication, you need to use the `OpenConfiguration` mic
 * set **Custom Prepare In-Session Authentication microflow** to `CustomPrepareInSessionAuthentication`
 * set **Custom Evaluate In-Session Authentication microflow** to `CustomEvaluateInSessionAuthentication`
 
-The `CustomPrepareInSessionAuthentication` microflow sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. The microflow can use the context information that is passed via the ‘on’ query parameter.
+The `CustomPrepareInSessionAuthentication` microflow sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. The microflow can use the context information that is passed via the `on` query parameter.
 
 The `CustomEvaluateInSessionAuthentication` microflow implements the logic that handles the authentication details of the in-session authentication. The SAML SSO module comes with an empty default `EvaluateInSessionAuthentication` flow, which can be enhanced to combine information from the original session with information received in the assertion from the in-session authentication..
 
@@ -286,7 +299,7 @@ Requesting user attributes at the SAML IdP is only available in the following ve
 * v2.3.0 and above for Mendix version 8
 {{% /alert %}}
 
-Your app using the SAML protocol can request specific attributes from the SAML IdP, such as Date of Birth or Gender. You need to clarify with your SAML IdP what attributes can be requested. You may want to request a different set of attributes during in-session login versus regular initial login. In the request you can also indicate whether you consider the attribute as mandatory or optional for your app’s logic.
+Your app using the SAML protocol can request specific attributes from the SAML IdP, such as Date of Birth or Gender. You need to clarify with your SAML IdP what attributes can be requested. In the request you can also indicate whether you consider the attribute as mandatory or optional for your app’s logic.
 
 You can configure these attribute requests in the **Attribute Consuming Service** tab of the `OpenConfiguration` microflow. This allows you to add new attributes, edit existing attributes, or remove selected attributes.
 
@@ -321,11 +334,12 @@ This configuration helps enable the Post/Artifact binding, used as the following
 
 Also in typical cases (e.g. with AzureAD), you don’t want to use the AssertionConsumerService concept in requests. However, some IdPs require requests to include an AssertionConsumerServiceIndex in requests, which refer to the definition of the Assertion Consumer Service in the SP-metadata.
 
-If the field is 'yes', then Auth-Request contains only the 'AssertionConsumerServiceIndex' attribute.
-If this field is 'no', then Auth-Request contains the ' AssertionConsumerServiceURL' and 'ProtocolBinding' attributes.
+If **Use AssertionConsumerService Concept** is set to `Yes…` then Auth-Request contains only the '`AssertionConsumerServiceIndex`' attribute.
 
-Assertion consumer service index:
-This field is used as ‘AssertionConsumerServiceIndex’ value in both Auth-Request and also in SP-Metadata. 
+If **Use AssertionConsumerService Concept** is set to `No…` then Auth-Request contains the `AssertionConsumerServiceURL` and `ProtocolBinding` attributes.
+
+Set **Assertion consumer service index** to the value you want to use for `AssertionConsumerServiceIndex` in both the Auth-Request and also in the SP-Metadata. 
+
 The configured binding will be included in the SP metadata, as indicated in the [URLs](#urls} section. 
 
 ### 4.5 Use a Certificate Issued by a Certificate Authority{#use-ca}
@@ -339,7 +353,7 @@ SAML SSO supports 2 file formats:
 
 When you upload the CA-certificate you must do the following:
 
-* set a password to be able to read the contents of the uploaded key file.
+* set a password to be able to read the contents of the uploaded key store.
 * use an alias for the certificate — this must be an alias that is present in the uploaded file. If the aliases do not match, the SAML module will fall back to using a self-signed certificate instead.
 * the value of the configured SP EntityID must match the alias that is included in the uploaded key store.
 
@@ -379,6 +393,14 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory), and also because it is a good idea to create two unique users (for example, "JoHnDoE@CoMpAnY.CoM" and "johndoe@company.com").
 * **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
+### 5.2 Troubleshooting an Endless Redirect Loop in Mendix Version 9
+
+When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
+
+To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time.
+
+If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
+
 ## 6 URLs{#urls}
 
 The following diagram gives an overview of all endpoints that the SAML SSO module exposes and consumes:
@@ -390,9 +412,9 @@ End users can access your app through the following endpoints when using the SAM
 * **/SSO/discovery** – If there are multiple active IdP configurations and discovery is enabled, this page can give a list of all the IdP configuration. It also allows the user to click the correct URL to sign in.
 * **/SSO/login/[IdP Alias]  /SSO/login?_idp_id=[IdP_Alias]&action=verify&on={contextname}** – For logging using a specific IdP, you have to open either of these two URLs and pass the IdP alias as a parameter in the URL.
     The (optional) parameters for this end point are as follows:
-    * idp_id – this indicates which idp will be used to sign the end user in if you connect your app using multiple SAML IdPs
-    * action=verify – indicates that in-session authentication is being requested (see [In-session Authentication](#in-session) for more information)
-    * on={contextname} – this gives context to the initiation of in-session authentication,  (see [In-session Authentication](#in-session) for more information)
+    * **idp_id** – this indicates which idp will be used to sign the end user in if you connect your app using multiple SAML IdPs
+    * **action=verify** – indicates that in-session authentication is being requested (see [In-session Authentication](#in-session) for more information)
+    * **on={contextname}** – this gives context to the initiation of in-session authentication,  (see [In-session Authentication](#in-session) for more information)
 * **/SSO/login/SSO/** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message.
 
 Your SAML IdP can consume the following endpoints at your app. Typically the SP-metadata is used to communicate the URLs to your SAML IdP. As a Low-Code Developer you don’t have to consider these endpoints. This information is included here for completeness and as a reference when questions arise around integration with your SAML IdP.
@@ -426,8 +448,7 @@ If you are using a custom URL, see [How Do I Get my SAML Metadata or CommunityCo
 
 ## 9 Read More
 
-* [SSO Using SAML](https://academy.mendix.com/link/module/115/lecture/938)
+* Academy lecture [SSO Using SAML](https://academy.mendix.com/link/module/115/lecture/938)
 
     {{% alert color="info" %}}You must log into the Mendix Platform to see the lecture above.{{% /alert %}}
 
-    {{% alert color="warning" %}}When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded. To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}

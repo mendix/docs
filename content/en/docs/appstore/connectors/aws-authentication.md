@@ -114,7 +114,7 @@ To create session credentials with the **Get Session Credentials** action in you
     | **Role ARN**                      | Arn of the AWS role to assume                                |
     | **Profile ARN**                   | Arn of the Profile created at IAM RolesAnywhere              |
     | **Trust Anchor ARN**              | Arn of the Trust Anchor created at IAM RolesAnywhere         |
-    | **Client Certificate Identifier** | Identifier mentioned (as Client Certificate Pin) in the **Outgoing Certificates** section in **Runtime** tab in the Mendix Cloud environment |
+    | **Client Certificate Identifier** | Identifier mentioned (as Client Certificate Pin) in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
     | **Duration**                      | Duration for which the session token should be valid         |
     | **Session Name**                  | An identifier for the assumed role session                   |
 
@@ -132,7 +132,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 2. Create a new configuration or edit an existing configuration.
 
-3. Go to the **Custom** tab for the configuration, and add runtime settings **ClientCertificates** and **ClientCertificatePassword**.
+3. Go to the **Custom** tab for the configuration, and add runtime settings **ClientCertificates** and **ClientCertificatePasswords**.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 

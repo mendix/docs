@@ -33,8 +33,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a local repository of the app
 * Have your app *hosted in the Mendix Cloud*
+* Identify which version of the Atlas module you are using
 
 ## 3 Creating a Custom Error Page
+
+{{% alert color="info" %}}
+If you are using Atlas 2, consider [upgrading](/refguide/moving-from-atlas-2-to-3/). If you cannot, follow the instructions below but create the **error_page** folder in your **theme** folder directly.
+{{% /alert %}}
+
+If you are using Atlas 3, do the following:
 
 1. Open the local folder of your app.
 2. Go to **theme**:

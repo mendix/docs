@@ -32,7 +32,7 @@ This connector is an [add-on module](/refguide/consume-add-on-modules-and-soluti
 ### 1.4 Prerequisites
 
 * Your organization should allow you to use Webhooks in Microsoft Teams.
-* The connector can only be used with Studio Pro 9 versions starting from [9.12.1](/releasenotes/studio-pro/9.12/).
+* The connector can only be used with Studio Pro 9 versions starting from [9.16.0](/releasenotes/studio-pro/9.16/#9160).
 * You have installed the [Deep link](https://marketplace.mendix.com/link/component/43) module in your app.
 * You have a Microsoft Account in Azure Active Directory.
 

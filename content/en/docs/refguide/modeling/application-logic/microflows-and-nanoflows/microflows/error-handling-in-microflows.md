@@ -136,7 +136,7 @@ Because you are switching transactions, merging back to the original process is 
 
 ### 4.3 Error Handling – Custom without Rollback
 
-A sub-microflow with error handling set to **Custom without rollback** will always create a sub-transaction. All actions within the parent microflow are persisted, and what happens inside the sub-microflow is determined by how the error is handled. If a flow was created to handle the error, this would only have affect on the sub-microflow. This means that if custom error handling is specified in the sub-microflow, only the changes in the sub-microflow are reverted in case of an error (changes in the parent microflow are not reverted). See the following example:
+A sub-microflow with error handling set to **Custom without rollback** will always create a sub-transaction. All actions within the parent microflow are persisted, and what happens inside the sub-microflow is determined by how the error is handled. If no custom error handling is specified inside the sub-microflow, the changes in the sub-microflow are reverted in case of an error. See the following example:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/custom-without-rollback-microflow.png" width="400px">}}
 

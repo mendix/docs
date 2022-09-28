@@ -26,7 +26,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
    * You can use @ to mention someone in the text of story description or epic objective. The mentioned person will get a notification once the text is saved.
    * Story and epic details now appear in a dialog box instead of a side pane.
    * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/collaborate/epics/#story-details) dialog box or the [epic details](/developerportal/collaborate/epics/#epic-details) dialog box.
-* We added an error page in case you access Epics with no projects enabled.
+* We added an error page in case you access Epics with no apps enabled.
 * We improved some empty states in the story details dialog box, epics details dialog box, archived sprint details dialog box, and archived story details dialog box.
 * We added a **Project Buzz** button on the [Board](/developerportal/collaborate/epics/#board) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.
 * We made it possible for you to link commits from Studio Pro to stories in Epics.

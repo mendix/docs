@@ -35,7 +35,11 @@ How well a model is trained depends on the input you provide for the training. T
 
 After you upload the sample documents and mark the locations of the important fields in the sample documents, you can publish the model. During the publishing process, the model gets trained internally and the training project gets saved. After the publishing process is completed successfully, the model is published.
 
-#### 1.1.3 Extracting Data
+#### 1.1.3 Editing the Model
+
+You can edit your published model after making a copy of it. You can follow similar steps like uploading new samples documents, adding or deleting markers and finally publishing the model. During the publishing process, the model gets trained internally and the training project gets saved. If you are adding a new *Table* as part of training your model, it is imperative that you train using at least three to five samples with varying number of rows in the table.
+
+#### 1.1.4 Extracting Data
 
 Once a model is published, you can download the JSON structure of this model, and then create the Import Mapping using this JSON structure. Then you can use the Import Mapping in an activity in a microflow to extract data from the documents that are fed to the activity. The documents that you feed to the activity should have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
 
@@ -242,7 +246,59 @@ If you still need to [mark text fields in sample images](#mark-text-fields), you
 
 {{% alert color="info" %}} If you want to **Delete** a model irrespective of its status, click **...** under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
 
-### 4.2 Creating an Import Mapping{#mapping-file}
+### 4.3 Editing Document Model {#editing-model}
+
+There may arise a need where you may want to add or remove fields from your published model. The model editing can be done by first making a copy of an already **Published** model. As part of model editing, you can add newer fields (Text, Table) as well as remove previously marked fields. You can follow below steps to Edit a published *Document Model*.
+
+    1. Log in to the [Document Model Training](#document-model-training) application with your Mendix account.
+    2. Click **Environment** to show the **Existing Models** list.
+    3. Select your trained model. Make sure that the **Status** of the model is **Published**.
+    4. Click **...** in the **Actions** column of the published model and then click **Duplicate**.
+
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-duplicate-model.png" >}}
+        <img width="452" alt="ids-duplicate-model" src="https://user-images.githubusercontent.com/90612240/192792137-c642ddbe-613d-4e67-a555-93a3df0b487e.png">
+
+        
+    5. You will be provided with a pop-up to provide a *new* name for your model. Provide a new Model Name and Click *Create Model*.
+    
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-edit-model-rename.png" >}}
+        <img width="452" alt="ids-edit-model-rename" src="https://user-images.githubusercontent.com/90612240/192792232-d87ffd84-d107-4c95-8714-36e751d83147.png">
+
+    
+    6. You will be then navigated to a screen where you can upload sample images for training your new model.
+    7. Upload sample images and click on *Next*. Please upload at least 3 to 5 images if you intend to train your model for extracting *Table* data.
+    
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-edit-model-add-samples.png" >}}
+        <img width="452" alt="ids-edit-model-add-samples" src="https://user-images.githubusercontent.com/90612240/192792320-9ad4383e-cb14-4da4-ad4f-01bc035c8f1f.png">
+
+    
+    8. After sample images upload, you will proceed to add Markers into the new samples. You can also see the number of *Old Markers* listed on this screen. Click on the *Add Marker* hyperlink against the uploaded image.
+    9. Follow the steps mentioned in 4.1.2.2 and 4.1.2.3 for adding Text and Table markers respectively into the sample image.
+    
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-edit-model-add-markers-1.png" >}}
+        <img width="452" alt="ids-edit-model-add-markers-1" src="https://user-images.githubusercontent.com/90612240/192792403-ffccdecf-e967-4128-9402-ae62752a06c9.png">
+
+    
+    10. Once the markers are added for a sample image, the *Status* for that sample image will change from *Not Marked* to *Marked*
+    
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-edit-model-add-markers-2.png" >}}
+        <img width="452" alt="ids-edit-model-add-markers-2" src="https://user-images.githubusercontent.com/90612240/192792479-808ff5e6-fda7-424c-89ff-95c7eb35430b.png">
+
+    
+    11. Make sure all the uploaded sample images have a Status of *Marked* before you proceed to Publish your new model.
+    
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-edit-model-publish.png" >}}
+        <img width="452" alt="ids-edit-model-publish" src="https://user-images.githubusercontent.com/90612240/192792566-eb6724d4-6566-466d-9af4-af02e56aff11.png">
+
+
+    12. Click on the *Publish* button at the bottom and your new Document Model should appear in your *Existing Models* List with *Published* status.
+    
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-edit-model-published.png" >}}
+        <img width="452" alt="ids-edit-model-published" src="https://user-images.githubusercontent.com/90612240/192792812-d05b61fe-15d9-4a4a-a0ea-147ff7ebd482.png">
+
+    
+        
+### 4.3 Creating an Import Mapping{#mapping-file}
 
 You need to use an [import mapping](/refguide/mapping-documents/#import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers/).
 
@@ -284,7 +340,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/schema-source-json-structure.png" alt="schema-source-json-structure" >}}
     5. Click **OK** to save the changes and close the dialog box.
 
-### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}
+### 4.4 Extracting the Data with the Trained Document Model {#extraction-activity}
 
 1. In the **Toolbox**, drag the **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
@@ -307,7 +363,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 {{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
-### 4.4 Checking Statistics on the Usage Dashboard
+### 4.5 Checking Statistics on the Usage Dashboard
 
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 

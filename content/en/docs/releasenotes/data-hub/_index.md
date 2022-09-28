@@ -11,6 +11,19 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### September 29th, 2022
+
+### Fixes
+
+* Some potential vulnerabilities have been addressed
+* Authentication page in the registration form will now show validation errors, if there are any
+* Re-creating a previously deleted environment through API is now possible and will no longer return a `409` response.
+* Submitting an API request with an invalid JSON body will no longer trigger a `500` response, but a `400` Bad Request instead.
+
+### Improvements
+
+* We added a mini-survey on search functionality
+
 ### September 22nd, 2022
 
 #### Improvements

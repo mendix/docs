@@ -343,7 +343,7 @@ The number of parameters for a microflow should be kept to a minimum to facilita
 
 #### 4.2.5 Error Handling and Logging
 
-Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
+Use microflow [error handling](/refguide/error-handling-in-microflows/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging/). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 

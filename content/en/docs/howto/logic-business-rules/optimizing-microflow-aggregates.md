@@ -29,6 +29,6 @@ When an average is calculated within an optimized SQL query, the rounding mode c
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/)
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Configure Error Handling](/howto/logic-business-rules/set-up-error-handling/)
+* [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract & Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

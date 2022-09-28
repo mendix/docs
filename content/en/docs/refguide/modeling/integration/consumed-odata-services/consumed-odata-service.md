@@ -39,7 +39,7 @@ The **Service URL** displays the URL of the service endpoint:
 
 ### 2.2 Timeout
 
-**Timeout** is the response time for fetching the data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/howto/logic-business-rules/set-up-error-handling/).
+**Timeout** is the response time for fetching the data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/refguide/error-handling-in-microflows/).
 
 Default value: *300 seconds*
 

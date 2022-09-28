@@ -13,6 +13,10 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### September 27th, 2022
+
+* We have added a number of Tekton pipelines that can be used to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. For more information, see [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/).
+
 ### August 26th, 2022
 
 #### Mendix Operator v2.7.0{#2.7.0}

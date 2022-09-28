@@ -79,7 +79,7 @@ When inside a [nanoflow](/refguide/nanoflows/), the rollback object action reloa
 ## 5 What Does Rollback Do?
 
 {{% alert color="info" %}}
-A rollback action in a microflow or nanoflow is not the same as the rollback option on an [Error Event](/refguide/error-event/#errors-in-microflows) in a microflow.
+A rollback action in a microflow or nanoflow is not the same as the rollback option on an [Error Event](/refguide/error-event/) in a microflow.
 
 A rollback from an error event does not trigger any rollback events, and does not reflect whether changes to objects have been committed.
 {{% /alert %}}

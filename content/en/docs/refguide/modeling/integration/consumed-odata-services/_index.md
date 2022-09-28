@@ -50,7 +50,7 @@ This means that the consumed service has to be **Updated** to the new contract. 
 
 #### 2.2.1 Limitations {#consumed-odata-service-limitations}
 
-When you update a consumed OData service with a new version from Mendix Data Hub, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
+When you update a [consumed OData service](/refguide/consumed-odata-service) with a new version from Mendix Data Hub, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
 
 ## 3 Runtime Considerations
 

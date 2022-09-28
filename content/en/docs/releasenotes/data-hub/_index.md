@@ -13,16 +13,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### September 29th, 2022
 
-### Fixes
+#### Improvements
 
-* Some potential vulnerabilities have been addressed
-* Authentication page in the registration form will now show validation errors, if there are any
-* Re-creating a previously deleted environment through API is now possible and will no longer return a `409` response.
+* We added a mini-survey on the search functionality to the search results page. Let us know how we're doing!
+
+#### Fixes
+
+* We have addressed potential security vulnerabilities.
+* The **Authentication** page in the registration form will now show validation errors, if there are any.
+* Restoring a previously deleted environment through the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) is now possible and will no longer return a `409` response.
 * Submitting an API request with an invalid JSON body will no longer trigger a `500` response, but a `400` Bad Request instead.
-
-### Improvements
-
-* We added a mini-survey on search functionality
 
 ### September 22nd, 2022
 

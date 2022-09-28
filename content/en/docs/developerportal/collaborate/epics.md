@@ -105,7 +105,7 @@ Clicking the story card opens the [story details dialog box](#story-details).
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the story. Clicking the  ellipsis icon opens a pop-up menu that allows you to clone, [archive](#archive), and delete the story. You need to confirm your action after you click each menu item.
+On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the story. Clicking the  ellipsis icon opens a pop-up menu that allows you to clone, [archive](#archive), and delete the story. You need to confirm your action after you click a menu item.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-details-page-icons.png" >}}
 

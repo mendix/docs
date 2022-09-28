@@ -10,7 +10,11 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
+Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow. 
+
+When you commit your changes in Studio Pro, you can link your commit to stories in Epics.
+
+{{< figure src="/attachments/developerportal/collaborate/epics/commit-message.png" >}}
 
 {{% alert color="info" %}}
 You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app, since that will make data migration difficult later.
@@ -48,7 +52,7 @@ If you work in the Kanban workflow, the **Board** page gives an overview of all 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
 
-You can create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box below, you can search stories based on story titles.
+Clicking **Project Buzz** on the upper-right corner of the page brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. You can create an epic or a story by clicking **Create Epic** or **Create Story**. In the search box below, you can search stories based on story titles.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
@@ -95,25 +99,25 @@ To [archive](#archive) or delete a story, click the **...** icon on the upper-ri
 
 To move a card within a swimlane or across swimlanes, drag the card to the new location.
 
-Clicking the story card opens the [story details page](#story-details).
+Clicking the story card opens the [story details dialog box](#story-details).
 
-#### 2.1.3 Story Details Page {#story-details}
+#### 2.1.3 Story Details Dialog Box {#story-details}
 
-When you click the card of a story, the story details page opens.
+When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, there are three icons. You can click these icons to clone, [archive](#archive), and delete the story. You need to confirm your action after you click each icon.
+On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the story. Clicking the  ellipsis icon opens a pop-up menu that allows you to clone, [archive](#archive), and delete the story. You need to confirm your action after you click a menu item.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-details-page-icons.png" >}}
 
 {{% alert color="info" %}}The clone icon allows you to start creating a copy of the story – the title will be pre-filled as *Copy - [original story title]*, and all the other details will be pre-filled with the values from the original story.{{% /alert %}}
 
-The story details page shows the following items:
+The story details dialog box shows the following items:
 
 * **Description** – This is the description of the story.
 
     * You can edit the description of the story by clicking **Edit Description** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
-    * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
+    * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list. Once you save the story, the system will send a notification to the tagged person.
 * **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** page and the **Planning** page.
 * **Tasks** – You can add a task by clicking **+ Add Task**. You can move the tasks by dragging them around.
@@ -124,7 +128,7 @@ The story details page shows the following items:
 * **Attached Files** – You can add attached files by clicking **+** below **Attached Files**. 
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}To save any change on the story details page, click **Save Story** at the bottom of the page.{{% /alert %}}
+{{% alert color="info" %}}To save any change on the story details dialog box, click **Save Story** at the bottom of the page.{{% /alert %}}
 
 ### 2.2 The Planning Page
 
@@ -177,21 +181,21 @@ You can create an epic by clicking **Create Epic** on the upper-right corner of 
 
 Clicking a row opens the [epic details](#epic-details) page.
 
-#### 2.3.1 Epic Details Page {#epic-details}
+#### 2.3.1 Epic Details Dialog Box {#epic-details}
 
-If you click the row of an epic, the epic details page opens. 
+If you click the row of an epic, the epic details dialog box opens. 
 
-On the upper-right corner, there is an ellipsis (**...**) icon. You can click this icon to delete the epic. You need to confirm your action after you click the icon.
+On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the  ellipsis icon opens a pop-up menu that allows you to delete the epic. You need to confirm your action after you click **Delete**.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic-details-page-ellipsis.png" >}}
 
-The epic details page shows the following items:
+The epic details dialog box shows the following items:
 
 * **Objective** – This is the description of the epic.
 
     * You can edit the objective of the epic by clicking **Edit Objective** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
-    * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list.
+    * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
 
 * **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
 * **Tags** – You can add or remove tags. To create a new tag, type the new tag in the text box and then click **Create new "[tag name]"**.
@@ -200,7 +204,7 @@ The epic details page shows the following items:
 * **Stories** – This lists all the open stories that are linked to this epic.
 * **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
 
-{{% alert color="info" %}}To save any change on the epic details page, click **Save Epic** at the bottom of the page.{{% /alert %}}
+{{% alert color="info" %}}To save any change on the epic details dialog box, click **Save Epic** at the bottom of the page.{{% /alert %}}
 
 ### 2.4 The Archive Page {#archive}
 
@@ -221,7 +225,7 @@ All the archived stories are shown on the **Archive** page. You can see the foll
 
 You can search stories based on story titles in the search box.
 
-#### 2.4.1 Archived Sprint Details Page {#archived-sprint-details}
+#### 2.4.1 Archived Sprint Details Dialog Box {#archived-sprint-details}
 
 When you click the sprint icon in a row of an archived story on the **Archived** page, you can see the following details of this sprint:
 

@@ -229,7 +229,7 @@ This variable can be accessed from any microflow action in the [scope](/refguide
 
 #### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
-If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide/error-event/#errorhandlers).
+If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide/error-handling-in-microflows/#errorhandlers).
 
 {{% alert color="warning" %}}
 You should always add an error handler for a [call REST service](/refguide/call-rest-action/) action.

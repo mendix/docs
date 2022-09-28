@@ -38,7 +38,7 @@ The *Studio 7 Guide* is divided into the following categories:
 * [Navigation Document](/studio7/navigation/)
 * [Microflows](/studio7/microflows/)
 * [Data Filters](/studio7/filters/)
-* [Previewing & Publishing Your App](/studio7/publishing-app/)
+* [Previewing and Publishing Your App](/studio7/publishing-app/)
 * [Checks](/studio7/checks/)
 * [Consistency Errors](/studio7/consistency-errors/)
 * [Theme Customizer](/studio7/theme-customizer/)

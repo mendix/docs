@@ -1,5 +1,5 @@
 ---
-title: "Mendix Runtime & Java"
+title: "Mendix Runtime and Java"
 url: /refguide/runtime-java/
 category: "Mendix Runtime"
 tags: ["runtime", "java"]
@@ -65,6 +65,6 @@ The green part (apps) is basically the JVM in which the Mendix application is ru
 
 ## 3 Read More
 
-* [Non-Persistable Objects & Garbage Collecting](/refguide/transient-objects-garbage-collecting/)
+* [Non-Persistable Objects and Garbage Collecting](/refguide/transient-objects-garbage-collecting/)
 * [Java Memory Usage](/refguide/java-memory-usage/)
-* [Common Runtime & Java Errors](/refguide/runtime-java-errors/)
+* [Common Runtime and Java Errors](/refguide/runtime-java-errors/)

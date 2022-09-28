@@ -1,5 +1,5 @@
 ---
-title: "Monitoring & Troubleshooting"
+title: "Monitoring and Troubleshooting"
 url: /howto8/monitoring-troubleshooting/
 weight: 110
 tags: ["monitoring", "troubleshooting"]
@@ -21,4 +21,4 @@ Stay updated on the health of your app and reference these documents troubleshoo
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/) – explains how to start Mendix Runtime with JMX as well as expose management information and app-specific statistics with an MBean
 * [Solve Load and Import Errors](/howto8/monitoring-troubleshooting/solving-load-and-import-errors/) – helps you to solve problems that may occur when opening an app
 * [Manage App Performance](/howto8/monitoring-troubleshooting/manage-app-performance/) – teaches you how to manage app performance by using New Relic
-* [Detect & Resolve Performance Issues](/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/) – gives you an overview of possible performance issues with root causes and resolutions
+* [Detect and Resolve Performance Issues](/howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/) – gives you an overview of possible performance issues with root causes and resolutions

@@ -16,7 +16,7 @@ If you want to use your own static images within an application, for example for
 
 For information on how to use images in your app, see [Images](/refguide8/images/).
 
-Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images, using [Import & Export Objects](/howto8/integration/importing-and-exporting-objects/).
+Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images, using [Import and Export Objects](/howto8/integration/importing-and-exporting-objects/).
 
 {{% alert color="warning" %}}
 Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [How to Work with Images and Files](/howto8/data-models/working-with-images-and-files/) for more information).

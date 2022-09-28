@@ -229,7 +229,7 @@ Upload your Mendix app to the Play Console by following the instructions on Goog
 
 ### 7.5 Create, Review, and Roll Out a Release
 
-Follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
+Follow the steps in Google's [Prepare and roll out a release](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
 ## 8 Read More
 

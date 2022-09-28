@@ -1,6 +1,6 @@
 ---
-title: "Configure Merge & Change Object Activities"
-linktitle: "Create Merge & Configure Change Object"
+title: "Configure Merge and Change Object Activities"
+linktitle: "Create Merge and Configure Change Object"
 url: /studio7/microflows-how-to-merge-and-change-object/
 category: "Microflows"
 weight: 70
@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 This how-to describes the following use case: 
 
-In [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow](/studio7/microflows-how-to-configure-decision-p1/) you have configured the decision to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So you have four flows after the decision: 
+In [Configure a Decision Step 1: Build the Domain Model and Configure a Microflow](/studio7/microflows-how-to-configure-decision-p1/) you have configured the decision to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So you have four flows after the decision: 
 
 * Showing a page for bronze  grade customers
 * Showing a page for silver grade customers
@@ -34,7 +34,7 @@ In this how-to, you will merge flows for bronze, silver, and gold customer grade
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* Create the microflow with the decision: [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow](/studio7/microflows-how-to-configure-decision-p1/)
+* Create the microflow with the decision: [Configure a Decision Step 1: Build the Domain Model and Configure a Microflow](/studio7/microflows-how-to-configure-decision-p1/)
 
 ## 3 Creating a Merge
 
@@ -109,4 +109,4 @@ Congratulations! Now you have the microflow that works the following way:
     1. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
 
-Now you can preview or publish your app. For more information, see [Previewing & Publishing Your App](/studio7/publishing-app/).
+Now you can preview or publish your app. For more information, see [Previewing and Publishing Your App](/studio7/publishing-app/).

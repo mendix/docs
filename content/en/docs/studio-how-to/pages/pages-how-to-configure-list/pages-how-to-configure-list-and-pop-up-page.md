@@ -1,6 +1,6 @@
 ---
 title: "Configure a List and a Pop-Up Page with List Item Details"
-linktitle: "Configure List & Pop-Up Page"
+linktitle: "Configure List and Pop-Up Page"
 url: /studio-how-to/pages-how-to-configure-list-and-pop-up-page/
 description: "Describes how to configure a list of items and show their details on a pop-up page in Mendix Studio."
 weight: 10
@@ -121,7 +121,7 @@ The button now allows Sales Representatives to add new items to the list:
 
 Congratulations! You have configured the list showing opportunity contacts by name. The button inside the list opens the pop-up page with list item details. The **New** button above the list allows users to add a new item to the list.
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio/publishing-app/).
 
 Make sure that you have added the page with the list in your navigation bar. For more information on how to configure navigation in your app, see [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/). You can also work on the page details, for example, show more details in the list then the contact's name. 
 

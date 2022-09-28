@@ -1,5 +1,5 @@
 ---
-title: "Date & Time Handling"
+title: "Date and Time Handling"
 url: /refguide/date-and-time-handling/
 category: "Mendix Runtime"
 tags: ["studio pro"]

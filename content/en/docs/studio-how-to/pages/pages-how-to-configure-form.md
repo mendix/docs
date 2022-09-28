@@ -1,6 +1,6 @@
 ---
 title: "Configure a Form and Show Items Related to It"
-linktitle: "Configure Form & Show Form Items"
+linktitle: "Configure Form and Show Form Items"
 url: /studio-how-to/pages-how-to-configure-form/
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
@@ -134,8 +134,8 @@ Congratulations! You have the page that displays details of the selected report 
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/configured-page.png" alt="Configured Page"   width="80%"  >}}
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio/publishing-app/).
 
-You can also work on the page details, for example, add a dynamic image to the inspection report list to display a unique company logo next to its name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files/). 
+You can also work on the page details, for example, add a dynamic image to the inspection report list to display a unique company logo next to its name. For more information on dynamic images, see [Images and Files](/studio/page-editor-widgets-images-and-files/). 
 
 You can also add new functionality. For example, you can enable inspectors to attach images to their reports. For more information, see [How to Enable End-Users to Attach Images](/studio-how-to/pages-how-to-attach-images/).

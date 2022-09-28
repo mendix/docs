@@ -9,7 +9,7 @@ tags: ["studio pro", "navigation"]
 
 ## 1 Introduction
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **App** node in the **App Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [Menus & Navigation](/refguide/menu-widgets/). 
+This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **App** node in the **App Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [Menus and Navigation](/refguide/menu-widgets/). 
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/app/navigation/navigation-profile-properties.png" >}}
 
@@ -119,7 +119,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 
 ### 4.4 Menu
 
-Each device type contains a default menu. You can use these menus in [Menus & Navigation](/refguide/menu-widgets/). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](/refguide/menu/).
+Each device type contains a default menu. You can use these menus in [Menus and Navigation](/refguide/menu-widgets/). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](/refguide/menu/).
 
 {{% alert color="warning" %}}
 If [security](/refguide/app-security/) is enabled, the menu will only show the items to which the user has access.
@@ -133,7 +133,7 @@ Allows for changing the [profile type](/refguide/navigation/).
 
 #### 4.5.2 Delete
 
-This deletes the profile. If [Menus & Navigation](/refguide/menu-widgets/) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
+This deletes the profile. If [Menus and Navigation](/refguide/menu-widgets/) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
 #### 4.5.2 Synchronization Configuration {#customize}
 

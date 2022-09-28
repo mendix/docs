@@ -102,5 +102,5 @@ For Git, connecting to a third-party Git version control repository is in Beta. 
 Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
 Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
 
-* code for Java & JavaScript actions
+* code for Java and JavaScript actions
 * HTML/CSS for theming

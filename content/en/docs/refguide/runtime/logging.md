@@ -2,6 +2,7 @@
 title: "Logging"
 url: /refguide/logging/
 category: "Mendix Runtime"
+description: "Describes what the various log levels of the runtime will show as output."
 tags: ["studio pro"]
 ---
 

@@ -43,7 +43,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Studio expression editor | Released for GA on [May 19th, 2021](/releasenotes/studio/9.0-9.6/#expression-editor) |
 | End-user services – App Switcher | Released for GA on [Jan 14th, 2022](/appstore/modules/app-switcher/) |
 | Studio workflow templates | Released for GA |
-| End-user services – notifications | GA: TBD |
+| End-user services – notifications | Currently in  Public Beta<br />GA: TBD |
 | End-user services – branding | Currently in Private Beta<br/>GA: TBD |
 
 ## 5 Control Center
@@ -52,7 +52,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/#oct1) |
 | Dashboards with insights on platform employees and app activity | Released for GA in April 2022 |
-| Overview of cloud environments | Currently in Public Beta<br/>GA: Jun 2022 |
+| Overview of cloud environments | Released for GA on [Jun 9th, 2022](/releasenotes/developer-portal/#june-9th-2022) |
 | Self-service subscription management | GA: Jul 2022 |
 
 ## 6 Next-Level Front-End
@@ -95,29 +95,28 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | Feature | Expected Release |
 | --- | --- |
 | External entity create, update, and delete (AKA write) | Released for GA on [May 24th, 2022](/releasenotes/studio-pro/9.13/#new-features) |
-| Connector Kit 2.0 (OData publish with microflows and Marketplace integration) | GA:  Aug 2022 |
-| Business events and event broker | Public Beta: Jul 2022 |
+| Connector Kit 2.0 (OData publish with microflows and Marketplace integration) | Released for GA on [Aug 31st, 2022](/releasenotes/studio-pro/9.17/#new-features) |
+| Business events and event broker | GA: Sep 2022 |
 
 ## 10 Intelligent Automation
 
 | Feature | Component | Expected Release |
 | --- | --- | --- |
-| Smart app services integrated in workflows | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
-| Smart app services integrated in workflows | Intelligent Document Service | Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118388) |
-| Smart app services integrated in workflows | Receipt Processing |Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118390)|
-| Smart app services integrated in workflows | Invoice Processing |Released for GA on [Mar 9th, 2022](https://marketplace.mendix.com/link/component/118389)|
-| Smart app services integrated in workflows | MS Teams Connector |Released for GA on [May 2nd, 2022](https://marketplace.mendix.com/link/component/118391)|
+| Smart app services | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
+| Smart app services | Intelligent Document Service | Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118388) |
+| Smart app services | Receipt Processing |Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118390)|
+| Smart app services | Invoice Processing |Released for GA on [Mar 9th, 2022](https://marketplace.mendix.com/link/component/118389)|
+| Smart app services | MS Teams Connector |Released for GA on [May 2nd, 2022](https://marketplace.mendix.com/link/component/118391)|
 | Workflow | | Released for GA on [Jan 25th, 2022](/releasenotes/studio-pro/9.10/#new-features) |
-| Smart app services integrated in workflows | Speech to Text | Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118408) (except in China) |
-| Smart app services integrated in workflows | Text to Speech |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118409) (except in China)|
-| Smart app services integrated in workflows | Text Analytics |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118412) (except in China)|
-| Smart app services integrated in workflows | Translation |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118411)  (except in China)|
-| Smart app services integrated in workflows | General Purpose OCR | GA: Jul 2022 |
+| Smart app services | Speech to Text | Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118408) (except in China) |
+| Smart app services | Text to Speech |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118409) (except in China)|
+| Smart app services | Text Analytics |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118412) (except in China)|
+| Smart app services | Translation |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118411)  (except in China)|
 
 ## 11 Hybrid Cloud Automation
 
 | Feature | Expected Release |
 | --- | --- |
-| New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA in August 2021 |
+| New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA in Aug, 2021 |
 | Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA on [Sep 2nd, 2021](/releasenotes/developer-portal/mendix-for-private-cloud/#20210902) |
-| Mendix for Private Cloud – built-in CI/CD | GA: Jul 2022 |
+| Mendix for Private Cloud – built-in CI/CD | GA: Nov 2022 |

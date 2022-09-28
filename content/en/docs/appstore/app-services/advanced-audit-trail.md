@@ -69,7 +69,11 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
 1. Set up your application roles to include the right [module roles](#module-roles).
 2. Configure the right [constant values](#constants) for the right snapshots.
-3.  Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module.
+3.  Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
+
+    {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/example.png" >}}
+
+    In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module. 
 
     You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
 

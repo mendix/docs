@@ -2,6 +2,7 @@
 title: "Troubleshooting"
 url: /refguide/troubleshooting/
 category: "Java Programming"
+description: "Lists the problematic JAR files and the known workarounds."
 tags: ["studio pro"]
 # See Jira issue IDS-807, compatibility list might need update
 ---

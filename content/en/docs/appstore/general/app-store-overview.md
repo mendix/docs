@@ -136,8 +136,8 @@ On this page, click **Actions** for a component to access the following options:
 
 * **Edit Draft** – click this to go to the component's draft page, where you can continue editing the component details
 * **Submit draft** – if your component is ready to be submitted and has no errors, you can proceed with the submission for review
-* **Withdraw** – click this towithdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
-* **Delete** – click this to  delete the draft
+* **Withdraw** – click this to withdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
+* **Delete** – click this to delete the draft
 
 {{< figure src="/attachments/appstore/general/app-store-overview/my-draft-menu-options.png" >}}
 

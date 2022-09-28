@@ -2,6 +2,7 @@
 title: "Monitoring & Troubleshooting"
 url: /howto/monitoring-troubleshooting/
 weight: 110
+description: "Presents a list of how-tos about monitoring or troubleshooting Mendix applications."
 tags: ["monitoring", "troubleshooting"]
 no_list: false
 description_list: true

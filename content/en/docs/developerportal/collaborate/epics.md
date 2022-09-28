@@ -12,10 +12,6 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 
 Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow. 
 
-When you commit your changes in Studio Pro, you can link your commit to stories in Epics.
-
-{{< figure src="/attachments/developerportal/collaborate/epics/commit-message.png" >}}
-
 {{% alert color="info" %}}
 You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app, since that will make data migration difficult later.
 {{% /alert %}}
@@ -47,6 +43,8 @@ Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive
 If you work in the Scrum workflow, the **Board** page gives an overview of your current Sprint. At the top of the page, it shows the name of the Sprint, when it ends, how many stories and points it has. Below, it shows the goal of the current Sprint.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/sprint-goal.png" >}}
+
+{{% alert color="info" %}}When you commit your changes in Studio Pro, you can link your commit to stories of the current Sprint in Epics in the [Commit](/refguide/commit-dialog/) dialog box in Studio Pro.{{% /alert %}}
 
 If you work in the Kanban workflow, the **Board** page gives an overview of all the stories that your team is currently working on. At the top of the page, it shows the number of stories, and the total points.
 

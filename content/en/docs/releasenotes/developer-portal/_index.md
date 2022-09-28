@@ -21,15 +21,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We have replaced our the widget used in story description in Epics with a new one, which should fix all the bug you might have been experiencing so far. As a result of this change:
-   * The widget styling has changed slightly
-   * It is now possible to @mention someone in the description and the mentioned person will get a notification
-   * We have changed the story/epic side panel into a popup
-   * We have added a way to easily copy the link to a story or an epic on the top right of the popup
-* We have added an error page in case Epics is accessed while no projects are enabled
-* We have improved some empty states on the story details page, epics details page, sprint details page and archived story page
-* We added a "Project Buzz" button on the Board page. Clicking that button takes you back to the home page of the relevant project in the Developer Portal.
-* It is now possible to link commits from Studio Pro to stories in Epics
+* We replaced the widget used in story description in Epics with a new one, which fixes the bug you might have been experiencing. The replacement also comes with the following changes:
+   * The widget styling is slightly different now.
+   * You can use @ to mention someone in the description, and the mentioned person will get a notification once the description is saved.
+   * Story and epic details now appear in a dialog box.
+   * You can copy the link to a story or an epic on the upper-right corner of the story or epic details dialog box.
+* We added an error page in case you access Epics with no projects enabled.
+* We improved some empty states on the story details dialog box, epics details dialog box, sprint details dialog box and archived story dialog box
+* We added a **Project Buzz** button on the **Board** page. Clicking it brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app in the Developer Portal.
+* You can now link your commits from Studio Pro to stories in Epics.
 
 ### September 15th, 2022
 

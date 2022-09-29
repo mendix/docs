@@ -11,6 +11,37 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### September 29th, 2022
+
+#### Improvements
+
+* We added a mini-survey on the search functionality to the search results page. Let us know how we're doing!
+
+#### Fixes
+
+* We have addressed potential security vulnerabilities.
+* The **Authentication** page in the registration form will now show validation errors, if there are any.
+* Restoring a previously deleted environment through the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) is now possible and will no longer return a `409` response.
+* Submitting an API request with an invalid JSON body will no longer trigger a `500` response, but a `400` Bad Request instead.
+
+### September 22nd, 2022
+
+#### Improvements
+
+* You can now filter by content you own in the Catalog. Click **Filter** to add filters, and select the **Owned by me** check box in the **Ownership** section.
+
+### September 15th, 2022
+
+#### Improvements
+
+* We added an **Authentication** details page on the data source registration form.
+* We added a filter to the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis/) to view the resources owned by a user.
+* We updated the Data Hub Catalog UI to support pagination in the search results.
+
+#### Fixes
+
+* We fixed a bug where a 404 page was shown after clicking the Data Hub Catalog call-to-action in a notification email.
+
 ### September 8th, 2022
 
 #### Improvements

@@ -3,6 +3,7 @@ title: "Set Up the Navigation Structure"
 url: /howto/general/setting-up-the-navigation-structure/
 category: "General Info"
 weight: 15
+description: "Describes how to configure the navigation structure in Studio Pro."
 tags: ["studio pro", "navigation", "menu", "how to"]
 ---
 ## 1 Introduction
@@ -88,7 +89,7 @@ To make the best nanoflow home pages, keep the following information in mind:
 * An error in the home page nanoflow can lead to an unusable app state — to avoid this, use error handling for activities that can fail, such as microflow calls
 * To improve user experience for long-running nanoflows, show a page as early as possible and then continue executing the rest while showing the progress on that page
 
-## 6 Creating Menu Items
+## 6 Creating Menu Items {#menu-items}
 
 You can create menu items for your navigation. Do the following:
 

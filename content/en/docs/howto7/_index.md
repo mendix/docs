@@ -10,6 +10,7 @@ cascade:
     - space: "Mendix 7 How-tos"
     - mendix_version: "7"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
         priority: 0.2
 ---

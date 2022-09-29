@@ -3,7 +3,7 @@ title: "Collaborative Development"
 url: /refguide/collaborative-development/
 category: "Version Control"
 weight: 40
-description: "Describes the process of collaborative development between the Mendix Studio Pro and the Mendix Studio"
+description: "Describes the process of collaborative development between Mendix Studio Pro and Mendix Studio."
 tags: ["studio pro", "studio", "collaborative development", "sync"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

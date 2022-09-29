@@ -17,6 +17,36 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### September 28th, 2022
+
+#### New Features
+
+* We replaced the widget used in story description in [Epics](/developerportal/collaborate/epics/) with a new one, which fixes the bug you might have been experiencing. This replacement also comes with the following changes:
+   * You can use @ to mention someone in the text of story description or epic objective. The mentioned person will get a notification once the text is saved.
+   * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/collaborate/epics/#story-details) dialog box or the [epic details](/developerportal/collaborate/epics/#epic-details) dialog box.
+   * Story and epic details now appear in a dialog box instead of a side pane.
+   * The widget styling is now slightly different.
+* We added a **Project Buzz** button on the [Board](/developerportal/collaborate/epics/#board) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.
+* We added an error page in case you access Epics with no apps enabled.
+* We made it possible for you to link commits from Studio Pro to stories in Epics.
+
+#### Improvements
+
+* We improved some empty states in the story details dialog box, epics details dialog box, archived sprint details dialog box, and archived story details dialog box in Epics.
+
+### September 15th, 2022
+
+#### New Features
+* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
+* We introduced the [Billing Accounts](/developerportal/control-center/#billing-accounts) page in Control Center where Mendix Admin can update the payment card information for their company at any time.
+
+#### Fixes
+
+* We fixed an issue where users were not able to delete an app, if other users were still members of this app.
+* We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
+
+## 2022
+
 ### August 25th, 2022
 
 #### Fixes

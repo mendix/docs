@@ -3,9 +3,8 @@ title: "Monitoring Environments in Mendix for Private Cloud"
 linktitle: "Monitor Environments"
 url: /developerportal/deploy/private-cloud-monitor/
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
-weight: 31
+weight: 50
 tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -102,10 +101,10 @@ Run the following commands in a Bash console, (replace `{namespace}` with the na
 
 ```shell
 NAMESPACE={namespace}
-helm upgrade --install loki grafana/loki-stack --version='^2.5.1' --namespace=${NAMESPACE} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
+helm upgrade --install loki grafana/loki-stack --version='^2.8.0' --namespace=${NAMESPACE} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
 --set prometheus.enabled=true,prometheus.server.persistentVolume.enabled=true,prometheus.server.persistentVolume.size=50Gi,prometheus.server.retention=7d \
 --set loki.persistence.enabled=true,loki.persistence.size=10Gi,loki.config.chunk_store_config.max_look_back_period=168h,loki.config.table_manager.retention_deletes_enabled=true,loki.config.table_manager.retention_period=168h \
---set promtail.enabled=true,promtail.securityContext.privileged=true \
+--set promtail.enabled=true,promtail.containerSecurityContext.privileged=true,promtail.containerSecurityContext.allowPrivilegeEscalation=true \
 --set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false
 ```
 
@@ -193,10 +192,10 @@ Run the following commands in a Bash console: replace `{uid}` with the UID chose
 ```shell
 PROJECT={project}
 GRAFANA_UID={uid}
-helm upgrade --install loki grafana/loki-stack --version='^2.5.1' --namespace=${PROJECT} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
+helm upgrade --install loki grafana/loki-stack --version='^2.8.0' --namespace=${PROJECT} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
 --set prometheus.enabled=true,prometheus.server.persistentVolume.enabled=true,prometheus.server.persistentVolume.size=50Gi,prometheus.server.retention=7d \
 --set loki.persistence.enabled=true,loki.persistence.size=10Gi,loki.config.chunk_store_config.max_look_back_period=168h,loki.config.table_manager.retention_deletes_enabled=true,loki.config.table_manager.retention_period=168h \
---set promtail.enabled=true,promtail.securityContext.privileged=true \
+--set promtail.enabled=true,promtail.containerSecurityContext.privileged=true,promtail.containerSecurityContext.allowPrivilegeEscalation=true \
 --set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false \
 --set grafana.securityContext.runAsUser=${GRAFANA_UID},grafana.securityContext.runAsGroup=0,grafana.securityContext.fsGroup=${GRAFANA_UID} \
 --set prometheus.server.securityContext.runAsUser=${GRAFANA_UID},prometheus.server.securityContext.runAsGroup=0,prometheus.server.securityContext.fsGroup=${GRAFANA_UID} \
@@ -245,8 +244,8 @@ allowHostPID: false
 allowHostPorts: false
 allowPrivilegeEscalation: true
 allowPrivilegedContainer: true
-allowedCapabilities: null
-defaultAddCapabilities: null
+allowedCapabilities: []
+defaultAddCapabilities: []
 fsGroup:
   type: RunAsAny
 groups: []
@@ -257,9 +256,11 @@ requiredDropCapabilities:
 runAsUser:
   type: RunAsAny
 seLinuxContext:
-  type: RunAsAny
+  type: MustRunAs
 supplementalGroups:
   type: RunAsAny
+forbiddenSysctls:
+- '*'
 users:
 - system:serviceaccount:${PROJECT}:loki-promtail
 volumes:
@@ -384,22 +385,13 @@ In addition, this dashboard will display Mendix app and Runtime logs.
 and which addons are installed, some labels or metrics might be missing or have a different name.
 The reference dashboards are compatible with Prometheus installed as described in [Installing Monitoring Tools](#install-grafana-loki), above.{{% /alert %}}
 
-{{% alert color="warning" %}}
-Mendix for Private Cloud uses a `m2ee-metrics` sidecar that collects metrics from the [admin port](/refguide/monitoring-mendix-runtime/) and translates them into a format supported by Prometheus.
-This approach works with all Mendix versions, starting from Mendix 7.23.
-
-Mendix 9.6 introduces native [Prometheus metrics](/refguide/metrics/). 
-The Mendix Runtime Prometheus metrics are not yet supported by Mendix for Private Cloud.
-The reference dashboard provided in this document will not be compatible with the native Mendix 9.6 metrics.
-{{% /alert %}}
-
 ### 4.1 Import the Dashboard{#import-dashboard}
 
 To install the reference dashboard, download the dashboard JSON to a local file using the links below.
 There are two dashboards available at the moment. If necessary you can install both at the same time:
 
-* [compatibility mode dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_compatibility-1.1.0.json) for metrics generated in compatibility mode
-* [native dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_native-1.0.0.json) for metrics generated in native mode
+* [compatibility mode dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_compatibility-1.1.1.json) for metrics generated in compatibility mode
+* [native dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_native-1.1.0.json) for metrics generated in native mode
 
 [Import](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) the downloaded JSON into Grafana:
 

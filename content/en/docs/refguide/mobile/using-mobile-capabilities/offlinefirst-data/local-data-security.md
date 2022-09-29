@@ -14,7 +14,7 @@ Offline-first apps built with Mendix store data in the local database to provide
 
 ### 1.2 Local Encryption Information
 
-This section explains how local encryption works in Mendix. To skip ahead to implementation, see the [Encrypting Local Databases](#encrypting-local-databases)
+This section explains how local encryption works in Mendix. To skip ahead to implementation, see the [Encrypting Local Databases](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-local-databases)
  section below.
 
 How does local database encryption work? Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the secure storage system of the OS (iOS/Keychain and Android/Keystore). The Mendix Client reads and decrypts the database key stored in the local storage and uses it to unlock the database.
@@ -53,9 +53,9 @@ The app keeps the non-persistent objects only in the memory and removes them whe
 
 Suppose you have to store sensitive data on a device and cannot control the operating system your app is running on. In that case, you should enable database encryption for your app. This ensures that all data in the local database is encrypted before storing it on the device. Note that encryption will impact your app's performance. Full synchronization of all clients is required to enable it.
 
-To learn more, see [Encrypting Local Databases](#encrypting-local-databases)
+To learn more, see [Encrypting Local Databases](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-local-databases)
 
-## 4 Encrypting Local Databases{#encrypting-local-databases)
+## 4 Encrypting Local Databases {#encrypting-local-databases)
 
 Mendix v9.18 and above allow you to encrypt the local databases of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 
@@ -85,7 +85,7 @@ Encrypting the existing database is not possible. Therefore, the Mendix Client n
 
 Enabling database encryption and deploying a new version of the Mendix app to the cloud does not affect the existing devices. This setting takes effect once users update their apps, either through OTA or an app update. After the app is updated on the device, it will sign out the current user and start with an empty database. This step may cause unsynchronized data to be lost. 
 
-Consider the [prerequisites above](#encryption-prerequisites) before enabling database encryption, especially for existing apps
+Consider the [prerequisites above](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encryption-prerequisites) before enabling database encryption, especially for existing apps
 
 ### 4.4 Disabling Database Encryption
 

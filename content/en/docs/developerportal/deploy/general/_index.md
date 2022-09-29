@@ -3,7 +3,7 @@ title: "General"
 url: /developerportal/deploy/general/
 category: "Deployment"
 weight: 10
-description: "An overview of the DEPLOY section of the Developer Portal."
+description: "Presents an overview of the DEPLOY section of the Developer Portal."
 tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "IBM", "SAP", "On-premises", "Kubernetes"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

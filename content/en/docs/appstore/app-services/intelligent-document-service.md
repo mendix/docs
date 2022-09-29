@@ -48,6 +48,7 @@ Once a model is published, you can download the JSON structure of this model, an
 * Extract data from images ( in JPG, JPEG, BMP, and PNG formats) in bulk and map data to an entity
 * Extract data from a single-page PDF document
 * Train a model using sample images by marking specific areas in images
+* Edit a published model
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ### 1.3 Limitation

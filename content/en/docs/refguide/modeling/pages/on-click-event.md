@@ -228,12 +228,12 @@ The **Create object** event creates a new object. The following properties are s
 
 ### 3.7 Save Changes {#save-changes}
 
-The **Save changes** event commits all changes made to the objects in *Editable* data views on the page. The following properties are specific for this event:
+The **Save changes** event commits all changes made to the objects in *Editable* widgets on the page. If a non-editable widget displays an object and it is modified by, for example, a microflow, the object is not committed. For information on editability, see the [Editability](/refguide/common-widget-properties/#editability) section in *Properties Common in the Page Editor*. 
+
+The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
 * **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
-
-If a non-Editable data view displays an object and it's modified by e.g. a microflow the object is not committed.
 
 This event cannot be used on pages that change [external entities](/refguide/external-entities/). Use the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
 

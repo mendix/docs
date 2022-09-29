@@ -37,7 +37,7 @@ After you upload the sample documents and mark the locations of the important fi
 
 #### 1.1.3 Editing the Model
 
-You can edit your published model after making a copy of it. You can perform steps similar to the procedure of uploading new samples documents, adding or deleting markers, and finally publishing the model. During the publishing process, the model gets trained internally and the training project gets saved. If you are adding a new table as part of training your model, then you must train the model using at least three to five samples with varying number of rows in the table.
+You can edit a published model after making a copy of it. Then you need to upload samples documents, add or delete markers, and finally publish the new model. During the publishing process, the model gets trained internally and the training project gets saved. If you add a new table as part of training your model, then you must train the model with at least three to five samples with varying number of rows in the table.
 
 #### 1.1.4 Extracting Data
 
@@ -249,7 +249,7 @@ If you still need to [mark text fields in sample images](#mark-text-fields), you
 
 ### 4.2 Editing a Published Document Model {#editing-model}
 
-Sometimes you may want to add or remove fields from your published model. Then you can edit the published model. You can first make a copy of the published model, and then edit the copy by adding newer fields (text, table) or removing  previously marked fields. 
+Sometimes you may want to add or remove fields from a published model. Then you can edit the published model. You can first make a copy of the published model, and then edit the new model by adding new markers or removing previously made markers. Finally, you can publish your new model.
 
 Perform the following steps:
 
@@ -265,15 +265,15 @@ Perform the following steps:
 
     The **Rename Model** dialog box opens. 
 
-5. Enter a model name for the new copy and then click **Create Model**.
+5. Enter a model name for the new model and then click **Create Model**.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-rename.png" >}}
 
-    Then **Import File** page opens. 
+    The **Import File** page opens. 
 
-6. Upload sample images.
+6. Upload sample images. You can use new sample images or the same sample images that you previously used for the original published model.
 
-    {{% alert color="info" %}}If you want to train your model for extracting table data, upload at least three to four sample mages.{{% /alert %}}
+    {{% alert color="info" %}}If you want to train the model for extracting table data, upload at least three to five sample mages.{{% /alert %}}
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-add-samples.png" >}}
 
@@ -283,17 +283,17 @@ Perform the following steps:
 
 8. For each sample image that you uploaded, do the follows:
 
-    1. Click **Add Marker**.
+    1. Click **Add Marker** in the **Action** column.
 
-    2. Follow the instructions in [Marking Text Fields in a Sample Image](#mark-text-fields) and [Marking Tables in Sample Images](#mark-tables) to adding text and table markers in the sample image.
+    2. Follow the instructions in [Marking Text Fields in a Sample Image](#mark-text-fields) and [Marking Tables in Sample Images](#mark-tables) to mark new text fields and tables in the sample image.
 
-       Once the markers are added for a sample image, the **Status** for that sample image is changed from **Not Marked** to **Marked**.
+       Once the markers are added for a sample image, the **Status** for the sample image is changed from **Not Marked** to **Marked**.
 
 8. Make sure all the uploaded sample images have the **Status** of **Marked**, before you proceed to publish your new model.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-publish.png" >}}
     
-9. At the bottom of the page, click **Publish**. Your new document model should appear in the **Existing Models** list as **Published**.
+9. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-published.png" >}}
 

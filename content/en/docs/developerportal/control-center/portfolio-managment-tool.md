@@ -27,7 +27,7 @@ When you start the portfolio management tool, click a portfolio to get an overvi
 The **Portfolio Overview** page gives you an overview of all the projects in this portfolio. You can search for a project in the search bar. Clicking a project name shows the details of that project.
 
 {{% alert type="info" %}}
-When you view the project details, you can only **Post Note**. You cannot change any other info. To change other info, you need [edit the project](#edit-archive-delete-project).
+When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
 {{% /alert %}}
 
 ### 2.1 Different Views
@@ -86,7 +86,7 @@ Only [Portfolio Managers](#access-management) can create a new project.
     3. Enter the **Numbers of Users** who you expect will use the app.
     4. Select **Complexity** and **Exposure** of the project. For more information about complexity and exposure, see the [Complexity Matrix](https://www.mendix.com/resources/digital-execution-manual/) in *Digital Execution Manual*.
 
-8.  Click **Estimated Monetary Value** to show all the fields in this section. In this section, you can solidify your business case and drive internal adoption. It can also helps you map the realized value upon completion.
+8.  Click **Estimated Monetary Value** to show all the fields in this section. In this section, you can solidify your business case and drive internal adoption. It can also help you map the realized value upon completion.
 
     1. Select the **Type of Value**, which is the type of the value that is created by the project.
 
@@ -159,7 +159,7 @@ The table below shows the permissions of Portfolio Managers and Users:
 {{% alert color="info" %}}Only [Portfolio Managers](#access-management) can add new users.{{% /alert %}}
 
 1. Go to **Access Management**.
-2. In the upper-right corner, click **Add New Users**.
+2. On the upper-right corner, click **Add New Users**.
 3.  In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company.
 
     {{% alert type="info" %}}For users outside your company, their names and profile pictures will not be displayed.{{% /alert %}}

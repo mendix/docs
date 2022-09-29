@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### September 29th, 2022
+
+#### Mendix Operator v2.8.0{#2.8.0}
+
+* We have now reduced the security permissions required by Mx4PC pods. This means that pods do not need elevated permissions on the Kubernetes cluster.
+* We have limited the Mendix app emptyDir size to 4 MiB. 
+* To improve the security score of all Mendix for Private Cloud images, we upgraded the dependencies to address CVEs.
+    * This update allows us to address CVE-2022-1996, CVE-2020-27191 and CVE-2022-29526. These CVEs do not affect previously released versions of Mendix for Private Cloud.
+    * This internal library change does not change the behavior of any Mendix for Private Cloud components.
+
 ### September 27th, 2022
 
 * We have added a number of Tekton pipelines that can be used to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. For more information, see [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/).
@@ -142,7 +152,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
 
-* We have added a new field to set the kubernetes ingress class as an annotation in the installer.
+* We have added a new field to set the Kubernetes ingress class as an annotation in the installer.
 * We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster/#customize-registry-imagenametemplate).
 
 #### Portal Improvements

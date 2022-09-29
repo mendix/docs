@@ -17,8 +17,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.8.0{#2.8.0}
 
-* We have now reduced the security permissions required by Mx4PC pods. This means that pods do not need elevated permissions on the Kubernetes cluster.
-* We have limited the Mendix app emptyDir size to 4 MiB. 
+* We have now reduced the security permissions required by Mendix for Private Cloud pods. This means that pods do not need elevated permissions on the Kubernetes cluster.
+* We have limited the Mendix app emptyDir size to 4 MiB in order to limit the consumption of memory by Mendix for Private Cloud pods.
 * To improve the security score of all Mendix for Private Cloud images, we upgraded the dependencies to address CVEs.
     * This update allows us to address CVE-2022-1996, CVE-2020-27191 and CVE-2022-29526. These CVEs do not affect previously released versions of Mendix for Private Cloud.
     * This internal library change does not change the behavior of any Mendix for Private Cloud components.

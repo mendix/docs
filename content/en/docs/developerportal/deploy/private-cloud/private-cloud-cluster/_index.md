@@ -187,6 +187,8 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
 
+    {{% alert color="info" %}}We recommend running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
+
 #### 4.3.1 Base Installation{#base-installation}
 
 If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.

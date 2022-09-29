@@ -247,7 +247,7 @@ If you still need to [mark text fields in sample images](#mark-text-fields), you
 
 {{% alert color="info" %}} If you want to **Delete** a model irrespective of its status, click **...** under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
 
-### 4.3 Editing a Published Document Model {#editing-model}
+### 4.2 Editing a Published Document Model {#editing-model}
 
 Sometimes you may want to add or remove fields from your published model. Then you can edit the published model. You can first make a copy of the published model, and then edit the copy by adding newer fields (text, table) or removing  previously marked fields. 
 
@@ -295,7 +295,7 @@ Perform the following steps:
     
 9. At the bottom of the page, click **Publish**. Your new document model should appear in the **Existing Models** list as **Published**.
 
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-edit-model-published.png" >}}
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-published.png" >}}
 
 ### 4.3 Creating an Import Mapping{#mapping-file}
 

@@ -4,7 +4,7 @@ linktitle: "Publish from GitHub to Marketplace"
 url: /appstore/creating-content/set-up-repo/
 category: "Creating Content"
 weight: 10
-description: "Describes the best practices in how to set up a GitHub repository to publish an Marketplace item."
+description: "Describes the best practices for setting up a GitHub repository to publish an Marketplace item."
 tags: ["studio pro", "GitHub", "repository", "repo"]
 aliases:
   - /howto/collaboration-requirements-management/set-up-repo/

@@ -385,7 +385,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
 };
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="400"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="400"  >}}
 
 ### 7.2 Container
 
@@ -417,7 +417,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
     });
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
 
 ### 7.3 Row Layout {#row-layout}
 
@@ -454,7 +454,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
     });
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  >}}
 
 ##### 7.3.1.2 Grow
 
@@ -501,7 +501,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
     });
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
 
 ##### 7.3.1.3 Example
 
@@ -534,7 +534,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
     });
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  >}}
 
 ### 7.4 Text
 
@@ -593,7 +593,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
 })
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
 
 ### 7.6 Selectable
 
@@ -635,7 +635,7 @@ export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean) {
 }
 ```
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  >}}
 
 ### 7.7 Datasource
 
@@ -662,5 +662,5 @@ The datasource preview type can be used when developing a widget with a datasour
 
 Here is a preview of a datasource component containing a dropzone with two text boxes:
 
-{{< figure src="attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
 

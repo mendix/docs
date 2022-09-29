@@ -55,7 +55,7 @@ Suppose you have to store sensitive data on a device and cannot control the oper
 
 To learn more, see [Encrypting Local Databases](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-local-databases)
 
-## 4 Encrypting Local Databases {#encrypting-local-databases)
+## 4 Encrypting Local Databases {#encrypting-local-databases}
 
 Mendix v9.18 and above allow you to encrypt the local databases of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 

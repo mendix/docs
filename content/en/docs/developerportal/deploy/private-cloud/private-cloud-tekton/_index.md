@@ -41,7 +41,7 @@ To follow these instructions you will need:
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
-* The Mendix Tekton pipelines, obtainable through [Mendix support](https://support.mendix.com)
+* The Mendix Tekton pipelines – these can be requested through [Mendix support](https://support.mendix.com) and your CSM will get in contact to arrange access
 * Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
 
 If you have any issues when following these instructions, see the [Troubleshooting](#troubleshooting) section to see if there is a solution.

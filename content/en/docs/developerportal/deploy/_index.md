@@ -52,7 +52,7 @@ From within Mendix Studio Pro, you can view the cloud nodes you have available i
 
 For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
-### 3.1 Mendix Cloud Dedicated
+### 3.1 Mendix Cloud Dedicated {#mendix-cloud-dedicated}
 
 Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). This works in exactly the same way as the Mendix Cloud, but runs on your own virtual private cloud and will only host your company's apps.
 

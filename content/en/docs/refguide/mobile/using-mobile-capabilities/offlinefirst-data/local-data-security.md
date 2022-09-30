@@ -69,7 +69,7 @@ Before enabling local database encryption, ensure that these prerequisites are m
 * Upgrade your Native Template to v6.3.0 (or a higher version) 
 * Upgrade Make It Native to the latest version
 
-{{% alert color="alert" %}}
+{{% alert color="info" %}}
 Local database encryption works in Native Template v6.3.0 and higher. If this setting is enabled using an older version of the native template, the app will not start. Thus, be careful about the template version when using over-the-air updates to enable database encryption.
 {{% /alert %}}
 

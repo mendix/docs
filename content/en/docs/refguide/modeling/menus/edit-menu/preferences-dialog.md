@@ -109,7 +109,13 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 7.1 Dark Mode Preview {#dark-mode}
+### 7.1 Browser Sign In
+
+The **Use your default browser to sign in** option allows you to use your default browser to sign into Studio Pro. If there is an active Mendix session in your browser, you will be signed in with this session.
+
+Default: *enabled*
+
+### 7.2 Dark Mode Preview {#dark-mode}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
@@ -119,7 +125,7 @@ Not all screens of Studio Pro support the dark mode yet.
 
 Default: *disabled*
 
-### 7.2 New Merge Algorithm with Fine-Grained Conflict Resolution
+### 7.3 New Merge Algorithm with Fine-Grained Conflict Resolution
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
 

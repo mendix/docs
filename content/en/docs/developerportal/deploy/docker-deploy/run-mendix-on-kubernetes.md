@@ -8,7 +8,9 @@ tags: ["Kubernetes", "cloud", "deployment"]
 
 ## 1 Introduction
 
-This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/). Kubernetes is the standard Docker orchestration platform supported by Mendix. If possible, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/).
+This how-to takes you through the process of deploying your Mendix app to [Kubernetes](https://kubernetes.io/).
+
+Kubernetes is the standard Docker orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). If possible, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. 
 
 {{% alert color="warning" %}}
 Do not use these instructions if you are using Mendix for Private Cloud — many of the steps here are not needed. For deploying using Mendix for Private Cloud, follow the instructions in the [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation.
@@ -16,38 +18,41 @@ Do not use these instructions if you are using Mendix for Private Cloud — many
 
 A Mendix application needs, as a minimum, a database to run. In this example you provision a PostgreSQL database within the Kubernetes cluster. In production scenarios, the database is usually provided as a service by the cloud provider, like AWS RDS or Azure SQL. For supported databases see [Mendix System Requirements](/refguide/system-requirements/). 
 
-If the application makes use of FileDocument or FileImage entities, a storage service needs to be attached as well. See [Mendix System Requirements](/refguide/system-requirements/) for supported external storage services. In this how-to you use a node-bound storage volume as an example. For more information, see [Architecture Overview](#architecture), below.
+If the application makes use of persistable FileDocument or FileImage entities, a persistent volume (PV) storage service needs to be attached as well. See [Mendix System Requirements](/refguide/system-requirements/) for supported external storage services. In this how-to you use a node-bound storage volume as an example. For more information, see [Architecture Overview](#architecture), below.
 
 This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
 
 For more details on Kubernetes, see the [Kubernetes Documentation](https://kubernetes.io/docs/home/) site.
+
+{{% todo %}}Are these configuration files really available? Better just to copy and paste?{{% /todo %}}
 
 All the configuration files used in this how-to are also available on GitHub.
 
 This how-to will teach you how to do the following:
 
 * Deploy and run a Mendix app on Kubernetes using Minikube
-* Separate the database deployment from your app
+* Separate the database deployment from your app 
 * Attach persistence storage to the app container
 
 ## 2 Prerequisites
 
-To follow this how-to, having a basic knowledge of Docker and Kubernetes is recommended. For more information to get started, see [Docker Overview](https://docs.docker.com/engine/docker-overview/) and [Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/). Although all the commands and examples will be executable as provided, some experience will help to understand the how-to better.
+To follow this how-to, you should have a basic knowledge of Docker and Kubernetes. For more information, see [Docker Overview](https://docs.docker.com/engine/docker-overview/) and [Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/). Although you do not need more knowledge to execute all the commands provided, some experience will help you to understand the how-to better.
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install kubectl
+* Install kubectl using the instructions provided in [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl)
     * The kubectl CLI is the default tool to access and manage your Kubernetes cluster
-    * Install kubectl based on the instructions provided in [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl)
-* Install Minikube
-    * With Minikube, a local cluster can be created that is convenient for exploring Kubernetes (if you have an account for one of the cloud providers and you choose to use that, this step can be skipped)
-    * Install Minikube based on the instructions provided in [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+* Install Minikube using the instructions provided in [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+    * Minikube allows you to create a local cluster that is convenient for exploring Kubernetes (if you have an account for one of the cloud providers and you choose to use that, this step can be skipped)
+* Build your image in Minikube, using the steps in the [Docker](/developerportal/deploy/docker-deploy/) page.
 
-The how-to is based on working with a Unix-like system. The commands for Windows may be slightly different.
+This how-to uses commands for a Unix-like system. The commands for Windows may be slightly different.
 
 ## 3 Architecture Overview{#architecture}
 
-This section explains the components needed for Mendix app deployment. This architecture overview shows all the components in the deployment:
+Before you start, here is some background information on the components needed to deploy a Mendix app on Kubernetes.
+
+This architecture overview shows all the components in the deployment:
 
 {{< figure src="/attachments/developerportal/deploy/docker-deploy/run-mendix-on-kubernetes/kubernetes.png" >}}
 
@@ -61,28 +66,25 @@ The deployment of your Mendix app needs the following Kubernetes components:
 
 The database is deployed as a **deployment**. Deployment covers control over the pods and the ReplicaSets for these pods. **Pods** are not bound to a specific node in the cluster unless set with selector labels. A deployment can scale pods on one or mode nodes, and it recovers pods when they crash.
 
-The Mendix application is deployed using a **StatefulSet**. The StatefulSet generally provides the same control options as a deployment, but it will provide a stable index number to the pod as well as network ID and storage. The StatefulSet is used for the application to get the unique pod index number to identify which of the instances is allowed to run scheduled events.
+The Mendix application is deployed using a **StatefulSet**. The StatefulSet generally provides the same control options as a deployment, but it will provide a stable index number for the pod as well as a network ID and storage. The StatefulSet is used to provide the application with a unique pod index number that identifies which of the instances is allowed to run scheduled events.
 
-Data storage should be externalized as much as possible, given how pods can be created, destroyed, or moved around. Destroying a pod will also destroy any data stored inside the containers started by the pod. When scaling the app, all instances should be able to retrieve the same data. This how-to uses node-bound **volume** mounts, but please check the list of available [clustered storage](https://kubernetes.io/docs/concepts/storage/volumes/) options.
+Data storage should be externalized as much as possible, because pods can be created, destroyed, or moved around. Destroying a pod will also destroy any data stored inside the containers started by the pod. When scaling the app, all instances should be able to retrieve the same data. This how-to uses node-bound **volume** mounts, but please check the list of available [clustered storage](https://kubernetes.io/docs/concepts/storage/volumes/) options.
 
-To access your Mendix applications inside a pod from outside of the Kubernetes, a **service** must be created exposing the port. Services deal with pod discovery and pod lifecycles, so the consumer of a particular service doesn't need to know where a pod is or what IP is needed to access it.
+To access your Mendix applications inside a pod from outside of the Kubernetes, a **service** must be created to expose the port. Services deal with pod discovery and pod lifecycles, so the consumer of a particular service doesn't need to know where a pod is or what IP is needed to access it.
 
 ## 4 Deploying the Components
 
 ### 4.1 Deploying the PostgreSQL Database
 
-Once Minikube is running you'll need to configure your local environment to use the Docker daemon using the following command:
+Once Minikube is running you must configure your local environment to use the Docker daemon using the following command:
 
 ```bash {linenos=false}
 minikube docker-env
 ```
-
-You'll need to build your image in Minikube if you haven't done so yet. See [Docker](/developerportal/deploy/docker-deploy/) for the steps to do this.
-
-The first step is deploying our database. For Minikube, an external folder to persist the data outside of the database pod is used.
+You must first deploy your database. Minikube uses an external folder to persist the data outside of the database pod.
 
 {{% alert color="info" %}}
-For simplicity and compatibility with `minikube`, we mount a folder from the `minikube node`. This approach is not recommended for production.
+For simplicity and compatibility with Minikube, we mount a folder from the `minikube node`. This approach is not recommended for production.
 {{% /alert %}}
 
 Here is the definition of the `postgres-deployment.yaml` database component:
@@ -155,11 +157,9 @@ The database is now created. To verify the installation, check out the logs:
 kubectl logs $(kubectl get pods -lapp=postgres -o name)
 ```
 
-This is the expected output:
+The output should be similar to the following:
 
-```text {linenos=false}
-2017-09-14 08:34:37.538 UTC [1] LOG:  database system is ready to accept connections
-```
+`2017-09-14 08:34:37.538 UTC [1] LOG:  database system is ready to accept connections`
 
 The host and port values will be needed to deploy the application. To get these we execute the following command:
 
@@ -167,29 +167,164 @@ The host and port values will be needed to deploy the application. To get these 
 kubectl get service postgres-service
 ```
 
-Windows users need to execute these inline commands first to get the pod name
+If you are using Windows, you need to execute these inline commands first to get the pod name:
 
 ```bash {linenos=false}
 kubectl get pods -lapp=postgres -o name
 ```
 
-and use the pod name to retrieve the logs:
+then use the pod name to retrieve the logs:
 
 ```bash {linenos=false}
 kubectl logs <name>
 ```
 
-### 4.2 Deploying the Application{#deploy}
+### 4.2 Adding a Persistent Volume
 
-With the database running, we can deploy our application. We'll be using a sample Docker container with a Mendix app published in [hub.docker.com](https://hub.docker.com/r/mendix/sample-app-kubernetes/). To create a new Docker container for your Mendix app, see the description on the [docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack).
+The Docker Buildpack stores files in /opt/mendix/build/data/files. If you do not have any persistent storage, then these files will disappear if the pod is destroyed. If you mount a Persistent Volume (PV) into this path, any uploaded files will be stored in that PV.
 
-Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secrets file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
+To do this, create the `buildpack-openshift.yaml` with the content below:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mxapp
+  labels:
+    app: mxbuildpack
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mxbuildpack
+  template:
+    metadata:
+      labels:
+        app: mxbuildpack
+    spec:
+      containers:
+      - name: mxapp
+        image: path/mendixapp:appwithfiles
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ADMIN_PASSWORD
+          value: "Password1!"
+        - name: DATABASE_ENDPOINT
+          value: "postgres://mendix:mendix@postgres-service:5432/db0"
+        volumeMounts:
+        - name: files
+          mountPath: /opt/mendix/build/data/files
+          subPath: files
+      volumes:
+        - name: files
+          persistentVolumeClaim:
+            claimName: mxapp
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mxapp
+  labels:
+    app: mxbuildpack
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ebs
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+    service: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: postgres
+  template:
+    metadata:
+      labels:
+        service: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:13
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: db0
+        - name: POSTGRES_USER
+          value: mendix
+        - name: POSTGRES_PASSWORD
+          value: mendix
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
+      volumes:
+      - name: pg-data
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5432
+  selector:
+    service: postgres
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mendix-app-service
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: mxbuildpack
+  type: ClusterIP
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: mxbuildpack
+spec:
+  to:
+    kind: Service
+    name: mendix-app-service
+    weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+```
+
+{{% alert color="info" %}}
+The CF Buildpack will try to set file permissions in the volume before it starts the app, so it should have permissions to do that.
+{{% /alert %}}
+
+### 4.3 Deploying the Application{#deploy}
+
+With the database running, we can deploy our application. You will use a sample Docker container with a Mendix app published in [hub.docker.com](https://hub.docker.com/r/mendix/sample-app-kubernetes/). To create a new Docker container for your Mendix app, see the description on the [docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack).
+
+Before deploying the app, you need to create some secrets so that sensitive information for the application doesn't need to be in the *yaml* file. The secrets file is applied once to the cluster, and the values will be kept there. For information on all the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
 
 {{% alert color="info" %}}
 The Secret values in the secrets file must be base64 encoded.
 {{% /alert %}}
 
-`mendix-app-secrets.yaml`:
+Create a file `mendix-app-secrets.yaml` with the following contents:
 
 ```yml
 apiVersion: v1
@@ -204,7 +339,7 @@ data:
   license-id: YOUR_LICENSE_ID
 ```
 
-YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255.255:5432/db0` (for example, `postgres://mendix:mendix@172.17.0.3:5432/db0`). You can find the correct IP address and port for your database endpoint using the command:
+`YOUR-DATABASE-ENDPOINT` is in the form `postgres://mendix:mendix@255.255.255.255:5432/db0` (for example, `postgres://mendix:mendix@172.17.0.3:5432/db0`). You can find the correct IP address and port for your database endpoint using the following command:
 
 ```bash {linenos=false}
 kubectl get ep postgres-service
@@ -212,7 +347,7 @@ kubectl get ep postgres-service
 
 See [Run a Mendix Docker Image](/developerportal/deploy/run-mendix-docker-image/) for expected value formats.
 
-To create the secrets in Kubernetes we execute the following command:
+Create the secrets in Kubernetes by executing the following command:
 
 ```bash {linenos=false}
 kubectl create -f mendix-app-secrets.yaml
@@ -286,10 +421,10 @@ Once you have created the Docker image, push it to the Docker hub using the foll
 docker push <hub-user>/<repo-name>:<tag>
 ```
 
-Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in *mendix-app.yaml*. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
+Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in `mendix-app.yaml`. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
 
 {{% alert color="info" %}}
-In this example, we use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.
+In this example, you use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.
 {{% /alert %}}
 
 Deploy the application to Kubernetes:
@@ -298,15 +433,15 @@ Deploy the application to Kubernetes:
 kubectl create -f mendix-app.yaml
 ```
 
-#### 4.2.1 Some Notes on Scaling{#scaling}
+#### 4.3.1 Some Notes on Scaling{#scaling}
 
-The Mendix 7 Runtime is stateless, meaning that a client can talk to any server instance. However, scheduled events and database migrations should be handled by only one instance. For this, we use a container index count. The pod with index 0 will always trigger the schedule events and deal with database updates in case of an upgrade version.
+The Mendix runtime is stateless, meaning that a client can talk to any server instance. However, scheduled events and database migrations should be handled by only one instance. This is done using a container index count. The pod with index 0 will always trigger the schedule events and deal with database updates in case of an upgrade version.
 
-To get a container index on Kubernetes, a StatefulSet can be used, which will append the instance index to the container's hostname. A deployment does not do this.
+Setting `kind: StatefulSet` rather than `kind: Deployment` appends a container instance index to the container's hostname.
 
 It should be noted that using a StatefulSet versus a deployment involves some difference in behavior. For example, a pod won't move to a different node when it crashes, and when the node is not reachable, the pod is not recreated on another system.
 
-### 4.3 Making the App Available
+### 4.4 Making the App Available
 
 To make the app available from the browser, it needs to be accessible outside of the cluster. For this, we use a service of the LoadBalancer or NodePort type. For Minikube we can use both, which exposes the app via an IP address.
 

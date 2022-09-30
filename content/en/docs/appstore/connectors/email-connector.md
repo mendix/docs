@@ -17,20 +17,13 @@ The Email Connector includes the following features:
 
 * Configuration of multiple accounts
     * Supports basic authentication
-    * Supports OAuth 2.0 to configure Microsoft Azure AD accounts
+    * Supports [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
 * Send emails with digital signatures and encryption
 * Set up email templates
-* Actions that can be performed after receiving emails:
-    * Delete from server
-    * Move to a folder (for example, an archive)
-* Subscribe to incoming email
-    * Supports the IMAP and IMAPS protocol only
-    * A microflow can be configured to execute for new incoming email
-* Unsubscribe from incoming email
-    * Removes the subscription (if it exists)
 * Supported protocols:
     * POP3 and POP3S
     * IMAP and IMAPS
+    * SMTP 
 
 ### 1.2 Prerequisites
 
@@ -224,13 +217,13 @@ The subscription to new emails will only work if email account is configured wit
 
 When modeling your app in Studio Pro, use the **UnsubscribeFromIncomingEmail** Java action. When used with account parameter, the user (for the provided account) will be unsubscribed from incoming email.
 
-The input paramater includes the following:
+The input parameter includes the following:
 
 * **Email account** – email account consisting of incoming email configuration
 
 ### 4.7 Creating an Account Using Microsoft Azure OAuth 2.0 {#create-oauth}
 
-You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Only one OAuth 2.0 provider can be configured per app.
+You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 
 Click **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
 

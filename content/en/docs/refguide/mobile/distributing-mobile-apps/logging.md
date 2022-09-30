@@ -4,6 +4,8 @@ url: /refguide/mobile/distributing-mobile-apps/logging/
 weight: 39
 description: "Describes using logging in native mobile apps"
 tags: ["native", "logging", "troubleshooting"]
+aliases:
+    - /refguide/mobile/logging/
 ---
 ## 1 Introduction
 

@@ -12,7 +12,7 @@ In Mendix Studio, you will be prompted to upgrade to the latest **Mendix version
 
 The **Mendix Studio version** is a build number of the Studio user interface. 
 
-The **Mendix version** is the version of the  you are editing. **Mendix version** correlates to **Mendix Studio Pro version**, but is broader, as the Mendix version is the version of the whole platform including Mendix Studio Pro and Mendix Runtime. 
+The **Mendix version** is the version of the app you are editing. **Mendix version** correlates to **Mendix Studio Pro version**, but is broader, as the Mendix version is the version of the whole platform including Mendix Studio Pro and Mendix Runtime. 
 
 The **Mendix Studio version** and the **Mendix version** can be viewed by clicking the **More Options** icon > **About** in the upper-right corner of Studio.
 

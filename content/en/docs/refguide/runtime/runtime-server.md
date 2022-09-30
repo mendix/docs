@@ -2,7 +2,7 @@
 title: "Runtime Server"
 url: /refguide/runtime-server/
 category: "Mendix Runtime"
-description: "A description of the Runtime Server and how it functions"
+description: "Describes the Runtime Server and how it functions."
 weight: 10
 tags: ["runtime", "runtime server", "stateless", "database", "java", "microflows"]
 ---

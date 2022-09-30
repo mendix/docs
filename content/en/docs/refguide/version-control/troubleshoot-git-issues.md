@@ -2,7 +2,7 @@
 title: "Solve Known Git Issues"
 url: /howto/collaboration-requirements-management/troubleshoot-git-issues/
 weight: 70
-description: "This document describes a list of problems and fixes for Git version control issues."
+description: "Describes a list of problems and fixes for Git version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Git"]
 ---
 

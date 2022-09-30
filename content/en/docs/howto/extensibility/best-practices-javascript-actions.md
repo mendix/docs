@@ -4,7 +4,7 @@ linktitle: "JavaScript Actions Best Practices"
 url: /howto/extensibility/best-practices-javascript-actions/
 category: "Extensibility"
 weight: 60
-description: "This set of best practices will help you get the most out of your JavaScript actions."
+description: "Describes how to create high-quality JavaScript actions, use common implementation patterns, design better APIs, and use JavaScript actions in nanoflows."
 tags: ["JavaScript", "API", "nanoflow"]
 ---
 

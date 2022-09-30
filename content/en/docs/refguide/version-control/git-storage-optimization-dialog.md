@@ -24,7 +24,7 @@ Make sure that you are not performing any commands through Git command line on t
 
 To optimize Git repository storage manually, do the following:
 
-1. Open the **Version Control** menu > **Optimize Repository Storage...**. (For more information on the menu option, see the [Optimize Storage Repository](/refguide/version-control-menu/#optimize-repository) section in Version Control Menu).
+1. Open the **Version Control** menu > **Optimize Repository Storage...**. (For more information on the menu option, see the [Optimize Storage Repository](/refguide/version-control-menu/#optimize-storage) section in Version Control Menu).
 2. In the **Optimize Repository Storage** pop-up window, press **Optimize** button.
 
 The optimization process starts. The status of the running process is displayed in the progress bar of the pop-up window and the at the bottom right of Studio Pro. The operation might take some time. You can close the pop-up window and continue working on the app as usual, however, while optimization is in progress, most of version control commands, such as committing and updating, are disabled. 

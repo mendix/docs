@@ -11,7 +11,7 @@ tags: ["studio pro", "consumed business event", "published business event"]
 Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/modules/business-events/) module, applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
 {{% alert color="warning" %}}
-You must have the Mendix Business Events module installed for it to work properly. If it is not installed, you will be prompted to download it and add it to your app.
+You must have the [Mendix Business Events](/appstore/modules/business-events/) module installed for it to work properly. If it is not installed, you will be prompted to download it and add it to your app.
 {{% /alert %}}
 
 ### 2 Published Business Event Service

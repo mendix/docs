@@ -10,7 +10,7 @@ tags: ["CI/CD", "Tekton", "Private Cloud", "Environment"]
 {{% alert color="info" %}}
 The Tekton pipelines for Mendix are available to all customers using licensed Operators in Mendix for Private Cloud.
 
-Please make a request through [Mendix support](https://support.mendix.com) and your Customer Success Manager (CSM) will get in contact to arrange for access to these pipelines.
+Please make a request to your Customer Success Manager (CSM) to arrange for access to these pipelines.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -41,7 +41,7 @@ To follow these instructions you will need:
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
-* The Mendix Tekton pipelines – these can be requested through [Mendix support](https://support.mendix.com) and your CSM will get in contact to arrange access
+* The Mendix Tekton pipelines – these can be requested through your CSM
 * Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
 
 If you have any issues when following these instructions, see the [Troubleshooting](#troubleshooting) section to see if there is a solution.
@@ -131,7 +131,7 @@ To install Tekton and Tekton Triggers on OpenShift when your environment has acc
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
-2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request through [Mendix support](https://support.mendix.com) for your CSM to get in contact so they can arrange for access to these pipelines.
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.

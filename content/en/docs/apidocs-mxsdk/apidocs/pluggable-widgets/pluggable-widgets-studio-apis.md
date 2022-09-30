@@ -11,9 +11,9 @@ aliases:
 
 ## 1 Introduction
 
-This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode.
+This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode. To learn about creating a custom preview in structure mode, add custom consistency checks, or conditionally hide widget properties, read the [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/).
 
-In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
+Lastly, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
 ## 2 Values API {#values}
 
@@ -33,7 +33,7 @@ Here is an example of such an object:
 Static property types are exposed with their configured value as a JavaScript value:
 
 | Plugin Widget Type | JavaScript Type |
-| ------------------ | ----------------|
+| ------------------ | --------------- |
 | `string`           | `string`        |
 | `boolean`          | `boolean`       |
 | `integer`          | `number`        |
@@ -287,6 +287,7 @@ export function getPreviewCss() {
 
 ## 4 Read More
 
+* [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
 * [How to Build a Pluggable Native Widget](/howto/extensibility/build-native-widget/)

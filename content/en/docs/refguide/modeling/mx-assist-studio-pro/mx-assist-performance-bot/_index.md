@@ -1,7 +1,7 @@
 ---
 title: "MxAssist Performance Bot"
 url: /refguide/mx-assist-performance-bot/
-weight: 50
+weight: 30
 description: "Describes MxAssist Performance Bot in Mendix Studio Pro."
 tags: ["studio pro", "performance bot", mendix assist", "AI", "assist", "mx assist"]
 ---
@@ -26,7 +26,7 @@ MxAssist Performance Bot is enabled by default and is designed as a pane. To acc
 
 The pane gives you information on each anti-pattern and contains MxAssist Performance Bot settings and configurations:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/performance-bot-pane.png" alt="Performance Bot Pane" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/performance-bot-pane.png" alt="Performance Bot Pane" >}}
 
 ### 2.1 Options and Configuration {#options}
 
@@ -38,11 +38,11 @@ At the top of the **MxAssist Performance Bot** pane you can see the following op
 
     * The **App Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/app-model.png" alt="App Model" >}}
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/app-model.png" alt="App Model" >}}
 
     * The **Best Practice** tab lists the available best practice. You can choose your preferred best practices and inspect your model against it: 
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/best-practice.png" alt="Best Practice" >}}
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/best-practice.png" alt="Best Practice" >}}
 
 You can use both app model and best practice configuration together. 
 
@@ -58,11 +58,11 @@ Each anti-pattern line in the pane provides you with the following information:
 * **Document** – the document containing the element
 * **Module** – the module containing the document 
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/anti-pattern-overview.jpg" alt="Anti-Pattern Overview" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/anti-pattern-overview.jpg" alt="Anti-Pattern Overview" >}}
 
 Right-clicking the message line of an anti-pattern in the pane opens the drop-down menu:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/drop-down-menu.jpg" alt="Drop-Down Menu" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/drop-down-menu.jpg" alt="Drop-Down Menu" >}}
 
 The following actions are available in the drop-down menu:
 
@@ -86,7 +86,7 @@ The **Inspect now** option will be disabled if there are consistency errors in t
 
 The bot will detect performance anti-patterns and list them in the pane under the associated anti-pattern type. To learn more about each anti-pattern type, click the anti-pattern code link. Click the plus icon next to the anti-pattern type to see the detected cases of this type:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/viewing-anti-pattern.jpg" alt="Viewing Anti-Pattern" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/viewing-anti-pattern.jpg" alt="Viewing Anti-Pattern" >}}
 
 To view the element or the document where the anti-pattern is located, double-click the message line or right-click the message line and choose **Go to Cause** or **Go to Usage** in the drop-down menu.
 
@@ -99,28 +99,28 @@ There are two ways to view the recommendations:
 1. Right-click an anti-pattern message on the pane and select **View MxAssist Performance Recommendation** in the drop-down menu. 
 2. Click an indicator in the visual editor to view the detected issue:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/indicator-in-editor.jpg" alt="Indicator in the Editor" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/indicator-in-editor.jpg" alt="Indicator in the Editor" >}}
 
 The recommendation contains the description of the identified issue, potential impact from it, the way to fix it, and a link to a more detailed guidance on fixing the issue: 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/performance-recommendation.jpg" alt="Performance Recommendation" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/performance-recommendation.jpg" alt="Performance Recommendation" >}}
 
 ### 3.3. Auto-Fixing the Anti-Pattern {#auto-fixing}
 
 The third level of assistance is **auto-fixing** where the bot can automatically implement the best practice and fix the issue in just one click. To avoid undesirable changes, auto-fixing is only available when the bot can safely refactor the code without creating an error or making other undesirable change in the model. Each performance issue has an icon in the pane that indicates whether it is auto-fixable. If the icon has the “A” letter, the issue can be auto-fixed:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/auto-fixable.png" alt="Auto-Fixable Icon"   width="45"  >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/auto-fixable.png" alt="Auto-Fixable Icon"   width="45"  >}}
 
 To auto-fix the issue, follow the steps below:
 
 1. Right-click the message line in the pane and select **View MxAssist Performance Recommendation** in the drop-down menu or click the corresponding indicator in the editor to open the recommendation.
 2. In the **MxAssist Performance Recommendation** pop-up window, click the available action button, for example, **Fix the Commit**: 
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/mx-assist-performance-bot/fix-performance-issue.jpg" alt="Fix Performance Issue" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-performance-bot/fix-performance-issue.jpg" alt="Fix Performance Issue" >}}
 
 After the issue is auto-fixed, a pop-up window listing the changes appears. You can click **Show the fix** to view the changed document and element. 
 
-## 4 Using Performance Bot from the command line
+## 4 Performance Bot from the Command Line
 
 Performance Bot may also be executed from the command line, via the [mx Command-Line Tool](/refguide/mx-command-line-tool/#check).
 

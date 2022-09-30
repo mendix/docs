@@ -70,7 +70,7 @@ The following log nodes are used by Mendix when writing log messages:
 
 
 {{% alert color="warning" %}}
-Please note that starting from mendix `9.18.1` and above, log messages will be filtered based on the log levels set in the application cloud portal.
+From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
 {{% /alert %}}
 
 | Log Node | Description |
@@ -91,9 +91,11 @@ Please note that starting from mendix `9.18.1` and above, log messages will be f
 
 ## 5 Sending Log Messages To Runtime {#sending-client-log-nodes-to-runtime}
 
-The native client stores log messages locally on the device. When the **Enable sending logs to runtime** checkbox is selected, the native client will attempt to send log messages whenever they reach `1000` messages or after 1 hour from the last sending attempt.
-When the app goes to background native client will save buffered log message to the file system and will restore them once the app is back active, and in case log messages reaches the limit and there is no network connectivity when the native client attempt to send these log messages, it will start to discard older messages so that it won't overflow with a lot of logs. An additional `info` log message will be added with the number of discarded logs and the timestamps during which these log messages got ignored.
+The native client stores log messages locally on the device. When **Enable sending logs to runtime** is selected, the native client will attempt to send log messages whenever a quota of 1,000 messages has been reached or after 1 hour from the last sending attempt.
 
+When the app goes to background, the native client will save buffered log message on the file system and will restore them once the app is active again. This is in case log messages reach the limit but there is no network connectivity when the native client would attempt to send these log messages. 
+
+In this scenario, it will discard older messages so that it will not overflow with too many logs. An additional `info` log message will be added with the number of discarded logs and the timestamps of when these log messages were ignored.
 
 ## 6 Extending Logging
 

@@ -10,7 +10,7 @@ tags: ["Kubernetes", "cloud", "deployment"]
 
 This how-to takes you through the process of deploying your Mendix app to [Kubernetes](https://kubernetes.io/).
 
-Kubernetes is the standard Docker orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). If possible, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. 
+Kubernetes is the standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). If possible, we suggest you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. 
 
 {{% alert color="warning" %}}
 Do not use these instructions if you are using Mendix for Private Cloud — many of the steps here are not needed. For deploying using Mendix for Private Cloud, follow the instructions in the [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation.
@@ -23,10 +23,6 @@ If the application makes use of persistable FileDocument or FileImage entities, 
 This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
 
 For more details on Kubernetes, see the [Kubernetes Documentation](https://kubernetes.io/docs/home/) site.
-
-{{% todo %}}Are these configuration files really available? Better just to copy and paste?{{% /todo %}}
-
-All the configuration files used in this how-to are also available on GitHub.
 
 This how-to will teach you how to do the following:
 
@@ -183,132 +179,7 @@ kubectl logs <name>
 
 The Docker Buildpack stores files in /opt/mendix/build/data/files. If you do not have any persistent storage, then these files will disappear if the pod is destroyed. If you mount a Persistent Volume (PV) into this path, any uploaded files will be stored in that PV.
 
-To do this, create the `buildpack-openshift.yaml` with the content below:
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mxapp
-  labels:
-    app: mxbuildpack
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: mxbuildpack
-  template:
-    metadata:
-      labels:
-        app: mxbuildpack
-    spec:
-      containers:
-      - name: mxapp
-        image: path/mendixapp:appwithfiles
-        ports:
-        - containerPort: 8080
-        env:
-        - name: ADMIN_PASSWORD
-          value: "Password1!"
-        - name: DATABASE_ENDPOINT
-          value: "postgres://mendix:mendix@postgres-service:5432/db0"
-        volumeMounts:
-        - name: files
-          mountPath: /opt/mendix/build/data/files
-          subPath: files
-      volumes:
-        - name: files
-          persistentVolumeClaim:
-            claimName: mxapp
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: mxapp
-  labels:
-    app: mxbuildpack
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
-  storageClassName: ebs
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: postgres
-  labels:
-    service: postgres
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      service: postgres
-  template:
-    metadata:
-      labels:
-        service: postgres
-    spec:
-      containers:
-      - name: postgres
-        image: postgres:13
-        ports:
-        - containerPort: 5432
-        env:
-        - name: POSTGRES_DB
-          value: db0
-        - name: POSTGRES_USER
-          value: mendix
-        - name: POSTGRES_PASSWORD
-          value: mendix
-        - name: PGDATA
-          value: /var/lib/postgresql/data/pgdata
-      volumes:
-      - name: pg-data
-        emptyDir: {}
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: postgres-service
-spec:
-  type: ClusterIP
-  ports:
-    - port: 5432
-  selector:
-    service: postgres
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: mendix-app-service
-spec:
-  ports:
-  - port: 8080
-    targetPort: 8080
-    protocol: TCP
-  selector:
-    app: mxbuildpack
-  type: ClusterIP
----
-kind: Route
-apiVersion: route.openshift.io/v1
-metadata:
-  name: mxbuildpack
-spec:
-  to:
-    kind: Service
-    name: mendix-app-service
-    weight: 100
-  port:
-    targetPort: 8080
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: Redirect
-  wildcardPolicy: None
-```
+To do this, you need to ensure that the `volumeMounts` parameter in the `mendixapp.yaml` file points to `/opt/mendix/build/data/files`. This is already set up in the sample file in [Deploying the Application](#deploy), below
 
 {{% alert color="info" %}}
 The CF Buildpack will try to set file permissions in the volume before it starts the app, so it should have permissions to do that.
@@ -382,7 +253,8 @@ spec:
           ports:
             - containerPort: 8080 
           volumeMounts:
-            - mountPath: "/build/data/files"
+            - mountPath: "/opt/mendix/build/data/files"
+              subPath: files
               name: mendix-data
           env:
             - name: ADMIN_PASSWORD
@@ -418,7 +290,7 @@ Create a Docker image of your Mendix app using the instructions in the [Mendix D
 Once you have created the Docker image, push it to the Docker hub using the following command:
 
 ```bash {linenos=false}
-docker push <hub-user>/<repo-name>:<tag>
+docker push <hub-user>/<repo-name>:<tag> 
 ```
 
 Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in `mendix-app.yaml`. For the example above, this is again `mendix/sample-app-kubernetes:v3`.

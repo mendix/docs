@@ -53,7 +53,7 @@ For encryption of SAML messages the following options are supported:
 
 For easy configurability, the SAML module offers the following:
 
-* a SAML administration screen that allows you to configure one or multiple SAML IdP’s. IdP discovery is supported by an endpoint that returns all configured IdP’s
+* a SAML administration screen that allows you to configure one or multiple SAML IdP’s. IdP discovery is supported by an endpoint that returns a page listing all configured IdPs so the end user can select the IdP where they have an account.
 * various options as per the SAML 2.0 specification and as indicated on this page
 
 #### 1.2.2 Other Features
@@ -316,7 +316,7 @@ Using artifact binding for SAML responses at the SAML IdP is only available in t
 * v2.3.0 and above for Mendix version 8
 {{% /alert %}}
 
-You may need to choose a different SAML binding to match your IdP. You can configure th the SAML binding in the **Identity Provider Metadata** tab of the `OpenConfiguration` microflow. 
+You may need to choose a different SAML binding to match your IdP. You can configure the SAML binding in the **Identity Provider Metadata** tab of the `OpenConfiguration` microflow. 
 
 #### 4.4.1 Response Protocol Binding
 

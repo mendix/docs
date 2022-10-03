@@ -91,7 +91,7 @@ To show an element only to a certain user role, do the following:
 
 Well done! Now the **Edit** button will only be shown to **Administrator** and **Sales_Manager** user roles only.
 
-## 3 Viewing Fields With Conditional Visibility
+## 5 Viewing Fields With Conditional Visibility
 
 To easily find which elements on your page have conditional visibility, you can highlight them. To show widgets with conditional visibility, do the following:
 

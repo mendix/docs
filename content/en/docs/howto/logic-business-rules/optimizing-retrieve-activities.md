@@ -3,6 +3,7 @@ title: "Optimize Retrieve Activities"
 url: /howto/logic-business-rules/optimizing-retrieve-activities/
 category: "Logic and Business Rules"
 weight: 90
+description: "Describes how to find and create objects to continue your process as well as retrieve an instance of an object."
 tags: ["microflow", "retrieve", "optimize"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
@@ -49,6 +50,6 @@ However, there is the risk of creating an infinite loop if the retrieve applies 
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/)
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Configure Error Handling](/howto/logic-business-rules/set-up-error-handling/)
+* [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

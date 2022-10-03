@@ -70,12 +70,12 @@ The **Details** button in the inspection report list should open a page with the
 
 3. In the **Select Page** dialog box, click the plus icon in the top right corner.
 4. In the **Create new page** dialog box, set the **Title** to **Reports_Details**, and set the **Layout** to **Atlas_Default**. 
-5. The **Pre-fill page contents based on the InspectionReport entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
+5. Check that the **Autofill Contents** option is on, this way the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/create-new-page.png" alt="Create New Page"   width="550"  >}}
 
 6. Click **Create**.
-7. The page with a form (a data view) is created. Open data view properties and make sure that the data source was automatically set to **Context** and **Entity** was set to **InspectionReport**:
+7. The page with a form (a data view) is created. Open data view properties and make sure that the data source was automatically set to **Context** (**InspectionReport** parameter) and **Entity** was set to **InspectionReport**:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-view-source.png"   width="250"  >}} 
 
@@ -114,8 +114,8 @@ Follow the steps below:
 
 9. Click the **Page** property.
 10. In the **Select Page** dialog box, click the plus icon in the top right corner.
-11. In the **Create new page** dialog box, set the **Title** to **Checklist_Details** and the **Layout** to **PopupLayout**. 
-12. The **Pre-fill page contents based on the Checklist entity** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: 
+11. In the **Create new page** dialog box, set the **Title** to **Manage_Checklist** and the **Layout** to **PopupLayout**. 
+12. The **Autofill Contents** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: 
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/manage-checklist.png"   width="550"  >}}
 

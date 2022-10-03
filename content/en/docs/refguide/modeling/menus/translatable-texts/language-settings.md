@@ -9,7 +9,7 @@ tags: ["studio pro", "translation", "languages", "translatable text", "add langu
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/01_app_settings.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px">}}
 
 You can reach this tab in two ways:
 
@@ -31,7 +31,7 @@ The initial default language is *English, United States*.
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px">}}
 
 Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
@@ -39,7 +39,7 @@ Most languages will be added with an empty dictionary, although some translation
 
 You can set each language in your app to have additional settings.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" alt="Edit Language" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" >}}
 
 ### 4.1 Check Completeness
 
@@ -59,7 +59,7 @@ Type a format string in the relevant box and you will see an example of how a da
 
 Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" alt="Date edit dialog" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" >}}
 
 ## 5 List of Supported Languages {#supported-languages}
 
@@ -92,6 +92,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Bengali | India | bn_IN | 9.3.0 |
 | Bulgarian | Bulgaria | bg_BG | 9.0.5 |
 | Catalan | Spain | ca_ES | 9.0.5 |
+| Chinese (Mandarin) | China | zho_CN | 9.18.0 |
 | Chinese (Simplified) | China | zh_CN | 9.0.5 |
 | Chinese (Simplified) | Singapore | zh_SG | 9.0.5 |
 | Chinese (Traditional) | Hong Kong, China | zh_HK | 9.0.5 |
@@ -194,6 +195,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Swahili | Tanzania | sw_TZ | 9.2.0 |
 | Swahili | Uganda | sw_UG | 9.2.0 |
 | Tagalog | Philippines | tl_PH | 9.2.0 |
+| Tamazight | Morocco | tzm_MA | 9.18.0 |
 | Tamil | India | ta_IN | 9.3.0 |
 | Tamil | Sri Lanka | ta_LK | 9.3.0 |
 | Tamil | Singapore | ta_SG | 9.3.0 |

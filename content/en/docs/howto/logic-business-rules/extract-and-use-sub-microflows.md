@@ -3,6 +3,7 @@ title: "Extract and Use Sub-Microflows"
 url: /howto/logic-business-rules/extract-and-use-sub-microflows/
 category: "Logic and Business Rules"
 weight: 50
+description: "Describes how to break down a large microflow into more manageable parts."
 tags: ["microflow", "sub-microflow", "extract"]
 ---
 

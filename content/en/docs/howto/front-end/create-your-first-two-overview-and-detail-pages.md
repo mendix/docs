@@ -4,6 +4,7 @@ linktitle: "Create Overview and Detail Pages"
 url: /howto/front-end/create-your-first-two-overview-and-detail-pages/
 category: "Front End"
 weight: 25
+description: "Describes how to create overview and detail pages, and how to configure navigation and security."
 tags: ["front end"]
 ---
 

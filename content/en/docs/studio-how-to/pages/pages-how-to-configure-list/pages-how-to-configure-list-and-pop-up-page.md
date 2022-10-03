@@ -86,7 +86,7 @@ Follow the steps below:
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/plus-icon.jpg" >}}
 
     7. In the **Create new page** dialog box, set the **Title** to *OpportunityContact_NewEdit* and the **Layout** to **PopupLayout**.
-    8. The **Pre-fill page contents based on the OpportunityContact entity** option is on and the page template (*Forms*) is selected automatically for you. Choose **Forms Horizontal**:
+    8. The **Autofill Contents** option is on and the page template (*Forms*) is selected automatically for you. Choose **Forms Horizontal**:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/create-page.jpg" >}}
 
@@ -104,14 +104,23 @@ You can add a button that will open the  **OpportunityContact_NewEdit**  pop-up 
 
 Do the following:
 
-1. Open the **Toolbox** > **Widgets**.
-2. Search for the **Create Object** button and drag and drop it above the list view.
-3. Open the button's properties. The **Create Object** property is enabled by default for this button. Click the **Entity** property.
-4. In the **Select Entity** dialog box, select the **OpportunityContact** entity and click **Select**.
-5. Click the **Page** property.
+1. Open the page with the list of opportunity contacts.
+
+2. Open the **Toolbox** > **Widgets**.
+
+3. Search for the **Open Page** button and drag and drop it above the list view.
+
+4. Open the button's properties and click the **Entity** property.
+
+5. In the **Select Entity** dialog box, select the **OpportunityContact** entity and click **Select**.
+
+6. Click the **Page** property.
+
 6. In the **Select Page** dialog box, select **OpportunityContact_NewEdit** and click **Select**.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-button-properties.jpg" >}}
+
+8. Click the **Parameters** property and set it to **Create Object**.
 
 7. To adjust button's place on the page, set the **Spacing Left** to **Large** and **Spacing Top** to **Medium**.
 

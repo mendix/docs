@@ -123,7 +123,7 @@ PWAs use a web app manifest that provides information to the browser about the a
 
 For more information on the available properties in the web app manifest, read this [short introduction](https://web.dev/add-manifest/) or view [the full reference at MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
-### 5.2 Sessions
+### 5.2 Sessions {#sessions}
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 

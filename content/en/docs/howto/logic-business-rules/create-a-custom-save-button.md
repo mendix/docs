@@ -3,6 +3,7 @@ title: "Create a Custom Save Button"
 url: /howto/logic-business-rules/create-a-custom-save-button/
 category: "Logic and Business Rules"
 weight: 40
+description: "Describes how to create a custom save button by utilizing microflows."
 tags: ["microflow", "logic", "save button", "how-to"]
 ---
 ## 1 Introduction
@@ -88,7 +89,6 @@ Congratulations! You have created a microflow and customized the **Save** button
 
 * [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
 * [Work With Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Configure Error Handling](/howto/logic-business-rules/set-up-error-handling/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
 * [Microflow Activities](/refguide/activities/)

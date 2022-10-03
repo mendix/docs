@@ -7,7 +7,7 @@ After finding your unit or element you have to obtain it in its fully-loaded for
 
 Each element (whether in interface or full form) has an `isLoaded` property and `load` and `asLoaded` functions. The [`isLoaded`](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/istructure.html#isloaded) property indicates whether this element is fully loaded already. In practice you should never need to test its value, but simply make sure that you always `load` a unit/element first.
 
-The [`load`](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/iabstractelement.html#load) interface loads the element or unit fully. This process is asynchronous, so the fully-loaded object will be passed to the callback passed to the `load` function. In javascript terms, the fully-loaded object is actually the very same instance as the interface, but it is passed into the callback as parameter nonetheless, for convenience. The parameter is upcast to the full, non-interface type so that type system (for example, that of TypeScript or your smart IDE) allows access to all members. `load` always fetches the complete unit, even if you only called it on a specific element. Load always returns units from the local cache if they have already been loaded before.
+The [`load`](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/iabstractelement.html#load) interface loads the element or unit fully. This process is asynchronous. In JavaScript terms, the fully-loaded object is actually the very same instance as the interface, but it is returned from the the `load` method nonetheless, for convenience. The parameter is upcast to the full, non-interface type so that type system (for example, that of TypeScript or your smart IDE) allows access to all members. `load` always fetches the complete unit, even if you only called it on a specific element. Load always returns units from the local cache if they have already been loaded before.
 
 Since a unit might already have been loaded before, you are also allowed to use `asLoaded` on an element/unit without arguments in which case it just acts as an upcast from the interface type to the full type. But beware: if the unit that contains that element was not loaded before, an exception will be thrown.
 
@@ -22,26 +22,23 @@ const model = workingCopy.model();
 const domainModel = model.allDomainModels()[0];
 const entity1Interface = domainModel.entities[0];
 
-console.log(entity1Interface.isLoaded); // ==> false
+console.log(entity1Interface.isLoaded); // ==> prints false
 
-entity1Interface.load((entity1) => {
-    // entity1 is now the fully-loaded entitiy of type domainmodels.Entity
-    console.log(entity1.isLoaded); // ==> true
-    console.log(entity1Interface === entity1); // ==> true
+const entity1 = await entity1Interface.load();
 
-    // loading the entity actually loaded the complete domain model unit:
-    console.log(domainModel.isLoaded); // prints true
-    // ... so we can cast it as a fully loaded domainModel:
-    const fullDomainModel = domainModel.asLoaded();
+// entity1 is now the fully-loaded entitiy of type domainmodels.Entity
+console.log(entity1.isLoaded); // ==> prints true
+console.log(entity1Interface === entity1); // ==> prints true
 
-    // In fully-loaded units, all sub elements also have the fully-loaded types,
-    // while in interfaces all sub objects are interfaces as well.
-    const entity2: domainmodels.Entity = fullDomainModel.entities[1];
-});
+// loading the entity actually loaded the complete domain model unit:
+console.log(domainModel.isLoaded); // prints true
+// ... so we can cast it as a fully loaded domainModel:
+const fullDomainModel = domainModel.asLoaded();
+
+// In fully-loaded units, all sub elements also have the fully-loaded types,
+// while in interfaces all sub objects are interfaces as well.
+const entity2: domainmodels.Entity = fullDomainModel.entities[1];
+console.log(entity2.isLoaded); // prints true
 ```
-
-{{% alert color="info" %}}
-You can also load units or elements using the convenience method `loadAsPromise`, which is available in the Mendix Platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
-{{% /alert %}}
 
 Continue with [How to Generate Code from the Model](/apidocs-mxsdk/mxsdk/generating-code-from-the-model/).

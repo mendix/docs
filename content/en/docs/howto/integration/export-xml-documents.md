@@ -3,6 +3,7 @@ title: "Export XML Documents"
 url: /howto/integration/export-xml-documents/
 category: "Integration"
 weight: 4
+description: "Describes how to add an XML schema, create domain-to-XML mapping, and export logic."
 tags: ["export", "xml", "integration"]
 ---
 

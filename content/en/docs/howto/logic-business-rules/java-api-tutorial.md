@@ -3,6 +3,7 @@ title: "Use the Java API"
 url: /howto/logic-business-rules/java-api-tutorial/
 category: "Logic and Business Rules"
 weight: 130
+description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
 tags: ["microflow", "logic", "java", "API"]
 ---
 
@@ -128,5 +129,4 @@ After this, all `Attachments` belonging to one `GenericObject` have been copied 
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Set Up Error Handling](/howto/logic-business-rules/set-up-error-handling/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)

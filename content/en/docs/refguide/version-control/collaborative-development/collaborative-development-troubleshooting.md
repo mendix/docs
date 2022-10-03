@@ -2,7 +2,7 @@
 title: "Troubleshooting Collaborative Development"
 url: /refguide/collaborative-development-troubleshooting/
 linktitle: "Troubleshoot Collaborative Development"
-description: "Describes troubleshooting for collaborative development between the Mendix Studio Pro and the Mendix Studio"
+description: "Describes troubleshooting for collaborative development between Mendix Studio Pro and Mendix Studio."
 tags: ["studio pro", "studio", "collaborative development", "troubleshooting", "troubleshoot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

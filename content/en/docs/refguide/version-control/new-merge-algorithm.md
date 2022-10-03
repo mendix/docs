@@ -4,6 +4,7 @@ linktitle: "Merge Algorithm and Conflict Resolution"
 url: /refguide/new-merge-algorithm/
 category: "Version Control"
 weight: 30
+description: "Introduces a new merge algorithm and describes how to enable it to resolve conflicts."
 tags: ["merge", "algorithm", "conflict", "resolution"]
 ---
 

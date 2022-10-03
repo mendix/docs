@@ -1,6 +1,6 @@
 ---
 title: "Cloud Version and Region in the Mendix Cloud"
-linktitle: "Mendix Cloud Version & Region"
+linktitle: "Mendix Cloud Version and Region"
 url: /developerportal/deploy/cloud-version-region/
 weight: 24
 description: "How to view the Mendix Cloud Version and Region for your app."

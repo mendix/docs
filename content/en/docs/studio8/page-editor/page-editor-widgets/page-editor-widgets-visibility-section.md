@@ -51,7 +51,7 @@ For example, you would like to show a special offer price only for customers wit
 The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget visible to all users that are linked to one of the selected user roles.
 
 {{% alert color="info" %}}
-You can only configure role-based conditional visibility when security is enabled. For more information, see [Security, Roles & Permissions](/studio8/settings-security/).
+You can only configure role-based conditional visibility when security is enabled. For more information, see [Security, Roles, and Permissions](/studio8/settings-security/).
 {{% /alert %}}
 
 ### 2.4 Roles
@@ -114,4 +114,4 @@ Role-based conditional visibility is disabled for the widget.
 ## 4 Read More
 
 * [Widgets](/studio8/page-editor-widgets/)
-* [Security, Roles & Permissions](/studio8/settings-security/)
+* [Security, Roles, and Permissions](/studio8/settings-security/)

@@ -131,10 +131,10 @@ Backup Details | Cloud Version | Description
 **Created by**/ <br /> **Type** | v3 <br /> v4 | The name of the person who created the backup. Automated system backups are named **Nightly**
 **ID**/ <br /> **Snapshot id** | v3 <br /> v4 | Unique identifier for the backup *snapshot*
 **Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup
-**Expires on** | v3 & v4 | The date on which the backup will be removed from the system
-**Model version** | v3 & v4 | The version of the deployment package used during backup creation
+**Expires on** | v3 and v4 | The date on which the backup will be removed from the system
+**Model version** | v3 and v4 | The version of the deployment package used during backup creation
 **Snapshot Size Uncompressed (MB)** | v4 | The size of database dump and files of the snapshot in MB
-**Comment** | v3 & v4 | A specific comment added to the backup
+**Comment** | v3 and v4 | A specific comment added to the backup
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
 

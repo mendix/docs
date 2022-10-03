@@ -99,6 +99,6 @@ Now that you've created a menu structure it's time to start using it on pages.
 ## 6 Read More
 
 * [Atlas UI](/howto7/front-end/atlas-ui/)
-* [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
+* [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
 * [How to Use Layouts and Snippets](/howto7/front-end/layouts-and-snippets/)
 * [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

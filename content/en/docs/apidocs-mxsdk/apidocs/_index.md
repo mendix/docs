@@ -64,7 +64,7 @@ For details, see [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
 
 Use these SDKs to gain access to the inner-workings of a Mendix app.
 
-For details, see [Model SDK & Platform SDK](/apidocs-mxsdk/apidocs/model-platform-sdk/).
+For details, see [Model SDK and Platform SDK](/apidocs-mxsdk/apidocs/model-platform-sdk/).
 
 ## 11 Permissions API
 

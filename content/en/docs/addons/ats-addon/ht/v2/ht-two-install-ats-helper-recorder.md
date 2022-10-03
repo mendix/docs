@@ -1,5 +1,5 @@
 ---
-title: "Install ATS Helper & ATS Recorder"
+title: "Install ATS Helper and ATS Recorder"
 url: /addons/ats-addon/ht-two-install-ats-helper-recorder/
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
 tags: ["ATS", "testing"]

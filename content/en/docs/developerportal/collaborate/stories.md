@@ -77,7 +77,7 @@ Click **New Label** to create a new label for your app:
 
 Click **More** to access the following options:
 
-* **Import / Export** – opens the **Import / Export** page; for details, see the [Importing & Exporting to Excel](#import-export) section below
+* **Import / Export** – opens the **Import / Export** page; for details, see the [Importing and Exporting to Excel](#import-export) section below
 * **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
 

@@ -86,7 +86,7 @@ When you enable security for your app, several roles and permissions are added a
 3. Set the role's name to **HR** and click **Create**.
 4. Repeat steps 2 and 3 to create **Manager** and **Facilities** roles.
 
-Now all necessary roles are created for your app. For more information about security, see [Security, Roles & Permissions](/studio/settings-security/). 
+Now all necessary roles are created for your app. For more information about security, see [Security, Roles, and Permissions](/studio/settings-security/). 
 
 ## 6 Triggering the Workflow from a Page
 
@@ -281,7 +281,7 @@ The Admin role is able to manage users.
 
 To test your workflow, you need to switch between different user roles. Follow the steps below:
 
-1. Click  the **Preview** button. (For more information on how to preview your app, see [Previewing & Publishing Your App](/studio/publishing-app/).)
+1. Click  the **Preview** button. (For more information on how to preview your app, see [Previewing and Publishing Your App](/studio/publishing-app/).)
 2. Click the user icon on the right and select a user role:
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-manually/user-roles.png" alt="Demo User Role" >}}

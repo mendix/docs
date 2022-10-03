@@ -1,5 +1,5 @@
 ---
-title: "OAuth & Scopes"
+title: "OAuth and Scopes"
 url: /developerportal/community-tools/oauth-scopes/
 category: "Community Tools"
 weight: 2

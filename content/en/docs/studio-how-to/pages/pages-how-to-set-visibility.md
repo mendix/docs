@@ -106,4 +106,4 @@ Widgets with conditional visibility are highlighted:
 
 Congratulations! You set several conditions for your widgets and you learnt how to view these widgets on a page to find them easily.
 
-You can now preview your app and test the conditions that you have set: when the Billing address is being shown and which user roles can see the **Edit** button. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
+You can now preview your app and test the conditions that you have set: when the Billing address is being shown and which user roles can see the **Edit** button. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio/publishing-app/).

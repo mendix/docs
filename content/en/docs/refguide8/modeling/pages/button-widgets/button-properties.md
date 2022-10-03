@@ -139,7 +139,7 @@ Default: *true*
 The **Items** section is only shown for drop-down buttons. 
 {{% /alert %}}
 
-When an end-user clicks a drop-down button, a pop-up window with a list of items opens. Each item performs an event when an end-user clicks this item. Different items can perform different events. For more information on events that can be assigned, see [On Click Event & Events Section](/refguide8/on-click-event/).
+When an end-user clicks a drop-down button, a pop-up window with a list of items opens. Each item performs an event when an end-user clicks this item. Different items can perform different events. For more information on events that can be assigned, see [On Click Event and Events Section](/refguide8/on-click-event/).
 
 {{% alert color="info" %}}
 
@@ -152,7 +152,7 @@ When an end-user clicks a drop-down button, a pop-up window with a list of items
 Each item has the following properties:
 
 * **Caption** – defines a caption of the item
-* **Action** – defines an on-click event performed when the item is clicked (for more information on-click events, see [On Click Event & Events Section](/refguide8/on-click-event/))
+* **Action** – defines an on-click event performed when the item is clicked (for more information on-click events, see [On Click Event and Events Section](/refguide8/on-click-event/))
 
     {{< figure src="/attachments/refguide8/modeling/pages/button-widgets/button-properties/items-properties.png" alt="Properties of Items" >}}
 
@@ -181,4 +181,4 @@ To add items to a drop-down buttons, do the following:
 * [Page](/refguide8/page/)
 * [Button Widgets](/refguide8/button-widgets/)
 * [Properties Common in the Page Editor](/refguide8/common-widget-properties/)
-* [On Click Event & Events Section](/refguide8/on-click-event/)
+* [On Click Event and Events Section](/refguide8/on-click-event/)

@@ -108,7 +108,7 @@ There are different versions of the module, depending on which version of Mendix
     * **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
     * **HybridAppLoginTimeOutInMinutes** – If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and have the `com.mendix.webui.HybridAppLoginTimeOut` [custom runtime setting](/refguide/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the `HybridAppLoginTimeOutInMinutes` constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set.
     
-        Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](#additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+        Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your [IdP Configuration](#additional-functionality) as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
         * If you use the default login handler in your hybrid app, you must change the `com.mendix.webui.HybridAppLoginTimeOut` custom runtime setting to change the validity of the authentication token used by the hybrid mobile app.
         * If you use the SAML module in your hybrid app, you must change the `SAML20.HybridAppLoginTimeOutInMinutes` constant to change the validity of the authentication token used by the hybrid mobile app.
@@ -241,8 +241,13 @@ These settings are only available in the following versions of the module (depen
     2. You can also implement your own custom microflow and then select that in the Custom microflow field to override the Mendix custom microflows. For this:
         * the custom microflow name must begin with the string “Custom”, (for example, `CustomMyUserProvisioning`)
         * to see the latest custom microflows in the dropdown, refresh the modules in the *Model Reflection* of your application whenever you add/remove any custom microflow — see [Mx Model Reflection](/appstore/modules/model-reflection/) for information on how to do this
+<<<<<<< HEAD
+* **Enable delegated authentication** *(deprecated)* - See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
+* **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+=======
 * **Enable mobile authentication Token** – If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 * **Enable delegated authentication** *(deprecated) – See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
+>>>>>>> development
 
 #### 3.2.4 Authentication Context
 

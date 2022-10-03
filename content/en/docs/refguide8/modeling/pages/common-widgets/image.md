@@ -49,7 +49,7 @@ Image properties consist of the following sections:
 
 ### 2.3 Events Section {#events}
 
-For information on the Events section and its properties, see [On Click Event & Events Section](/refguide8/on-click-event/). 
+For information on the Events section and its properties, see [On Click Event and Events Section](/refguide8/on-click-event/). 
 
 ### 2.4 General Section {#general}
 

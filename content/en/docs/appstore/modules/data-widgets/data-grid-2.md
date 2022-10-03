@@ -218,7 +218,7 @@ Here is an example of dropzones for filters in Structure mode:
 
 ### 7.1 Date Filter
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look & feel" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look and feel" >}}
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 

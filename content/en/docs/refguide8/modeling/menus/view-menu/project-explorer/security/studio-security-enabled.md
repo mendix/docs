@@ -12,7 +12,7 @@ tags: ["studio pro", "security", "studio"]
 
 ## 1 Introduction 
 
-This document describes the process of model changes that are applied automatically when security is enabled in Mendix Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio8/settings-security/) in the *Studio Guide*. 
+This document describes the process of model changes that are applied automatically when security is enabled in Mendix Studio. For more information on security settings in Studio, see [Security, Roles, and Permissions](/studio8/settings-security/) in the *Studio Guide*. 
 
 Users can enable security from Studio. While the Studio user simply clicks the **Enable Security** button, as a result, security is set to **Production** for the project and a number of checks and changes (if necessary) are performed automatically. 
 
@@ -143,6 +143,6 @@ Studio Pro security settings are compatible with Studio (that means that roles a
 
 ## 9 Read More
 
-* [Security, Roles & Permissions](/studio8/settings-security/) 
+* [Security, Roles, and Permissions](/studio8/settings-security/) 
 * [Project Security](/refguide8/project-security/)
 * [Module Security](/refguide8/module-security/)

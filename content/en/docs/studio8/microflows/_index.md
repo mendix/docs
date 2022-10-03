@@ -213,4 +213,4 @@ When configuring the activities of microflows you will notice icons above or und
 * [Decision](/studio8/microflows-decision/) – explains what a decision is and describes its properties
 * [Loop](/studio8/microflows-loop/) – explains what a loop is and describes its properties
 * [Microflow Expressions](/studio8/microflows-expressions/) – explains how to use microflow expressions
-* [Set & Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/) – explains how to set or/and change a value for microflow activities
+* [Set and Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/) – explains how to set or/and change a value for microflow activities

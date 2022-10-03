@@ -1,5 +1,5 @@
 ---
-title: "Images & Files"
+title: "Images and Files"
 url: /studio/page-editor-widgets-images-and-files/
 description: "Describes image and file widgets in Mendix Studio."
 weight: 30

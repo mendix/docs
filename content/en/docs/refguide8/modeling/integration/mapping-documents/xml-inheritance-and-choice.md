@@ -1,5 +1,5 @@
 ---
-title: "XML Inheritance & Choice"
+title: "XML Inheritance and Choice"
 url: /refguide8/xml-inheritance-and-choice/
 tags: ["studio pro"]
 ---

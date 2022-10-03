@@ -17,7 +17,7 @@ The longer an organization exists, the larger its installed base of legacy softw
 
 Some of the possibilities:
 
-* Bootstrap new apps & modify existing apps
+* Bootstrap new apps and modify existing apps
 * Automatically generate CRUD pages for your entities
 * Transform legacy business logic to microflows
 

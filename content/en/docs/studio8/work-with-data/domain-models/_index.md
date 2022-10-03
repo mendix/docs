@@ -25,7 +25,7 @@ Let us say you have a collection of CDs like the one in the table below:
 | Title                           | Artist                   |
 | ------------------------------- | ------------------------ |
 | How to Dismantle an Atomic Bomb | U2                       |
-| Exodus                          | Bob Marley & The Wailers |
+| Exodus                          | Bob Marley and The Wailers |
 
 The rows in the table are CDs. So, a *CD* is an *entity*. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is an *object* of the *CD* entity. That means that an *object* is a single instance of an entity. Characteristics like the "Title" and "Artist" are *attributes*.
 

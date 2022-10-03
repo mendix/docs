@@ -43,6 +43,8 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 
+If the nightly backup fails, it will retry 3 times in total.
+
 ### 2.2 Notes on Retention
 
 The Monthly backup is from the *first* Sunday in the month. If the first nightly backup takes place after the first Sunday in the month, then there will be no monthly backup retained for that month. In this case, you can download a copy of a nightly or weekly backup if you need to retain a backup for longer than three months.

@@ -140,8 +140,8 @@ The base URL used for the links in your SP metadata is determined by the **Appli
 
 You can choose what you want to enter for the **Entity Id**, **Organization**, and **Contact person**. There are no limitations. These should be in line with the policies of the IdP, since all this information is for their reference. 
 
-* **Allow IdP Discovery** – When using multiple IdPs, this determines whether you allow users to get a list of all available IdPs if they have not specified a specific IdP in the login request. When going to `/SSO/`, if you have only one active IdP, the module will use the active IdP by default. If you have multiple IdPs, it is required to include the IdP in the URL. This can be done by using the URL `/SSO/login/[IdP Alias]` or `/SSO/login?_idp_id=[IdP_Alias]`.
-* **Keep Log Files** – All login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This attribute configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. When keeping it 0, all records will be removed daily.
+
+* **Log available days** – If **Log SAML Requests** is checked in the IdP configuration, all login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This setting configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. If it is set to 0, all records will be removed daily.
 * **Use Encryption** – This allows the encryption of any messages being sent from the SP to the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the key store. Changing the encryption requires all IdPs to re-import the new metadata file.
 
     If you choose to use encryption, you will need to select the appropriate values:
@@ -351,10 +351,12 @@ SAML SSO supports 2 file formats:
 * a PKCS 12 file, which typically has extension  .pfx or .p12.
 * a jks file.
 
-When you upload the CA-certificate you must do the following:
+To use a CA-certificate, upload it as your key store file as described in [Managing the Key Store](/appstore/modules/saml/#keystore).
 
-* set a password to be able to read the contents of the uploaded key store.
-* use an alias for the certificate — this must be an alias that is present in the uploaded file. If the aliases do not match, the SAML module will fall back to using a self-signed certificate instead.
+Remember to do the following:
+
+* set the certificate password in the `KeystorePassword` constant of your app to be able to read the contents of the uploaded key store.
+* use an alias for the certificate — this must be the name parameter that is provided when creating the certificate you are uploading. If the values do not match, the SAML module will fall back to using a self-signed certificate instead.
 * the value of the configured SP EntityID must match the alias that is included in the uploaded key store.
 
 ### 4.6 Multi-tier Delegated Authentication{#delegated-auth}

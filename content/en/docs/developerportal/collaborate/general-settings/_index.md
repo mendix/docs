@@ -33,6 +33,7 @@ The **General Settings** page contains the following tabs:
 * **API Keys** *
 * **Stories** *
 * **Webhooks** *
+* **History** *
 
 {{% alert color="info" %}}
 Tabs with an asterisk (*) are only available for users with the **App Settings** permission.
@@ -172,7 +173,15 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
 {{% /alert %}}
 
-## 8 Read More
+## 8 History {#history}
+
+The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
+
+{{< figure src="/attachments/developerportal/collaborate/stories/history.jpg"   width="550"  >}}
+
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
+
+## 9 Read More
 
 * [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

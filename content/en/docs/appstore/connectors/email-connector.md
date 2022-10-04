@@ -85,8 +85,6 @@ To manually configure the account, you have to enter **protocol**, **server host
 
 You can set up the following additional account settings:
 
-{{< figure src="/attachments/appstore/connectors/email-connector/other-account-settings.png" >}}
-
 * **Subscribe to incoming emails** – user can select this option to get notified about the new incoming emails for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
 
 {{% alert color="warning" %}}
@@ -98,8 +96,6 @@ This is only supported for IMAP protocols, and some servers may not support it a
     * When this setting is not selected, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**
     * When this setting is selected, checked then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration
 * **Timeout** – the connection timeout for send email/receive emails operations. This can be set in the **Email Account** object.
-
-Click **Show Error Logs** to view the error logs for when emails are processed.
 
 ## 4 Usage
 
@@ -158,17 +154,11 @@ Refer to sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, *
 
 ### 4.4 Signed and Encrypted Emails
 
-You can choose to configure a digital signature and email encryption when the module is running.
-
-In Studio Pro, these settings are found in the domain model of the Email Connector:
-
-{{< figure src="/attachments/appstore/connectors/email-connector/sign-encrypt-domain-model.png" >}}
+You can choose to configure a digital signature and email encryption when the module is running. 
 
 #### 4.4.1 Digital Signing
 
 Digitally signed emails support only PKCS#12 certificates.
-
-{{< figure src="/attachments/appstore/connectors/email-connector/digital-signature.png" >}}
 
 #### 4.4.2 Email Encryption
 
@@ -178,8 +168,6 @@ Encryption for emails using the Email Connector module includes the following:
 * Supports **Simple** and **No** (anonymous) authentication method
 * Supports SSL/TLS and non-SSL connection types
 * While encrypting email, the recipient's public certificate will be searched for on the Base DN
-
-{{< figure src="/attachments/appstore/connectors/email-connector/email-encryption.png" >}}
 
 ### 4.5 Subscribing to Incoming Email
 
@@ -262,14 +250,7 @@ To add attachments to the email message, do the following:
 
 2. Set the **Attachment_EmailMessage** association.
 
-## 5 Key Microflows
-
-* **Sample_ASU_SubscribeForEmailNotification** – an after startup microflow which will subscribe to email notification based on account settings
-* **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
-* **SE_Cleanup** – a microflow that can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
-* **SE_SendQueuedEmails** - a microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**
-
-## 6 Troubleshooting
+## 5 Troubleshooting
 
 * If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
      1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  

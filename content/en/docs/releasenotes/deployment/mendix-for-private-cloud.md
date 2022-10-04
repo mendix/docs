@@ -13,6 +13,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### October 6th, 2022
+
+#### Portal Improvements
+
+* We now allow sorting of namespace in the namespace selection list of Create environment flow.
+* We now allow the newly created environment to always run in Production mode. With this setting, the DTAP mode is set to P and the Purpose field has been removed.
+* We have made the Subscription field non mandatory. Hence, the app will be considered a trial app if no subscription secret is provided.
+* We now allow to retrieve till 100 branches for a project while creating the deployment packages in the portal.
+
 ### September 29th, 2022
 
 #### Mendix Operator v2.8.0{#2.8.0}

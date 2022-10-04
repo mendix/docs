@@ -92,10 +92,10 @@ If you are running your app outside of the Mendix Cloud, make sure you have [ext
 
 There are different versions of the module, depending on which version of Mendix you are using. These versions may change, see the versions available in the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 
-* Mendix version 7 – SAML module version 1.16.5
-* Mendix version 8 – SAML module version 2.2.1
-* Mendix version 9 (upgraded from version 8) – SAML module version 3.2.0
-* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.2.1
+* Mendix version 7 – SAML module version 1.17.1
+* Mendix version 8 – SAML module version 2.3.1
+* Mendix version 9 (upgraded from version 8) – SAML module version 3.3.2
+* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.3
 
 ## 2 Installation
 

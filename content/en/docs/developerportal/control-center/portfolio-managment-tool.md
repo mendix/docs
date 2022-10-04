@@ -25,23 +25,21 @@ Mendix Admins can access all portfolios within their company. When a Mendix Admi
 
 ## 2 Projects Overview Page
 
-When you start the Portfolio Management app, click a portfolio to get an overview of all the projects in this portfolio.
+When you start the Portfolio Management app, click a portfolio to open the **Project Overview** page, which gives an overview of all the projects in this portfolio.
+
+On the top, you can search for a project in the search bar. Clicking **Create New Project** allows you to [create a new project](#create-new-project).
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/projects-overview.png" >}}
 
-The **Project Overview** page gives you an overview of all the projects in this portfolio. You can search for a project in the search bar. Clicking a project name opens a side pane that shows project details.
-
-{{% alert type="info" %}}
-When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
-{{% /alert %}}
-
-The **Create New Project** button on the upper-right corner allows you to [create a new project](#create-new-project).
-
 ### 2.1 Different Views
 
-The **Project Overview** page offers three views: **Kanban view**, **List view**, and **WSJF Prioritization**.
+The **Project Overview** page offers three views. To switch between the views, click the drop-down list on the upper-right corner of the **Projects Overview** page, and then select one of the following views:
 
-To switch between the views, click the drop-down list on the right-upper part of the page and select the view that you want to use.
+* **Kanban view**
+
+* **List view**
+
+* **WSJF Prioritization**
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/switch-view.png" >}}
 
@@ -58,6 +56,10 @@ You can move the project to a different column by hovering over the project card
 Each project card shows the following information:
 
 * Project name (①) –  Clicking it opens a side panel that shows the details of the project.
+
+  {{% alert type="info" %}}
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  {{% /alert %}}
 
 * Ellipsis icon (**...**) (②) – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
 
@@ -89,6 +91,10 @@ The list shows the following information:
 
 * **Project name** – Clicking it opens a side panel that shows the details of the project.
 
+  {{% alert type="info" %}}
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  {{% /alert %}}
+
 * **Department** – This is the department to which the project belongs.
 
 * **Stage** – This shows in which stage the project is currently.
@@ -118,6 +124,10 @@ In the WSJF prioritization view, all the projects are ranked by their WSJS score
 The list shows the following information:
 
 * **Project** –  Clicking it opens a side panel that shows the details of the project.
+
+  {{% alert type="info" %}}
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  {{% /alert %}}
 
 * **Stage** – This shows in which stage the project is currently.
 

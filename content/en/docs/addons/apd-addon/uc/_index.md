@@ -2,7 +2,7 @@
 title: "APM Use Cases"
 url: /addons/apd-addon/uc/
 category: "APD"
-description: "Presents useful APD/APM use cases according to the APD/APM version."
+description: "Presents useful APD/APM use cases for each APD/APM version."
 ---
 
 ## 1 Introduction

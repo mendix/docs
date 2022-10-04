@@ -3,7 +3,7 @@ title: "ATS How-tos"
 url: /addons/ats-addon/ht/
 category: "ATS"
 weight: 3
-description: "Presents a list of ATS how-tos according to the ATS versions."
+description: "Presents a list of ATS how-tos for each ATS version."
 ---
 
 ## 1 Introduction

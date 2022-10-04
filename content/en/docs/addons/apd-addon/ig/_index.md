@@ -2,7 +2,7 @@
 title: "APD Installation Guides"
 url: /addons/apd-addon/ig/
 category: "APD"
-description: "Presents a list of APD/APM installation guides according to the APD/APM version."
+description: "Presents a list of APD/APM installation guides for each APD/APM version."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

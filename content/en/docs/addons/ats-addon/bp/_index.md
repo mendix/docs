@@ -3,7 +3,7 @@ title: "ATS Best Practices"
 url: /addons/ats-addon/bp/
 category: "ATS"
 weight: 4
-description: "Presents ATS best practices according to the ATS version."
+description: "Presents ATS best practices for each ATS version."
 ---
 
 ## 1 Introduction

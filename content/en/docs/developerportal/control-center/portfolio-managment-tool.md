@@ -35,6 +35,8 @@ The **Project Overview** page gives you an overview of all the projects in this 
 When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
 {{% /alert %}}
 
+The **Create New Project** button on the upper-right corner allows you to [create a new project](#create-new-project).
+
 ### 2.1 Different Views
 
 The **Project Overview** page offers three views: **Kanban view**, **List view**, and **WSJF Prioritization**.
@@ -55,45 +57,90 @@ You can move the project to a different column by hovering over the project card
 
 Each project card shows the following information:
 
-* Project name (①) – Clicking it shows the details of the project in a side panel.
-* Ellipsis icon (②) – Clicking it enables you to edit, archive, or delete the project.
+* Project name (①) –  Clicking it opens a side panel that shows the details of the project.
+
+* Ellipsis icon (**...**) (②) – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
+
+  {{% alert type="info" %}}
+  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  {{% /alert %}}
+
 * Tags for the project (③) – These are the tags used to classify the project, for example, you can use tags to indicate the types of projects.
+
 * Department (④) – This is the department to which the project belongs.
+
 * Calendar icon (⑤) – Hovering over it shows the following defined dates of the project lifecycle:
+
   * Intake – This is the time for the project acceptance based on business requirements.
   * Start Date – This is the time when the first actions are taken to start implementation.
   * Go-Live date – This is the time when the app is expected to be up and running.
 
 * Icon of the linked app (⑥) – Hovering over it shows the existing Mendix app that is linked with the project.
+
 * Avatar of the project owner (⑦) – Hovering over it shows the name of the project owner.
 
 #### 2.1.2 List View
 
-In the list view, projects are categorized in a list.
+In the list view, projects are shown in a list.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/list-view.png" >}}
 
-Each row shows the following information:
+The list shows the following information:
 
-* **Project name** – Clicking it shows the details of the project in a side panel.
+* **Project name** – Clicking it opens a side panel that shows the details of the project.
+
 * **Department** – This is the department to which the project belongs.
-* **Stage** – This shows the stage where the project currently is.
+
+* **Stage** – This shows in which stage the project is currently.
+
 * **Intake** – This shows the time for the project acceptance based on business requirements.
+
 * **Start Date** – This shows the time when the first actions are taken to start implementation.
+
 * **Go-Live date** – This shows the time when the app is expected to be up and running.
+
 * **Linked App** – This shows the existing Mendix app that is linked with the project.
+
 * **Owner** – This shows the name of the project owner.
+
+* Ellipsis (**...**) icon – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
+
+  {{% alert type="info" %}}
+  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  {{% /alert %}}
 
 #### 2.1.3 WSJF Prioritization
 
+{{% alert color="info" %}}Weighted Shortest Job First (WSJF) is a model that can help you prioritize a list of initiatives. Each initiative's score is calculated as the the cost of delay (CoD) divided by the job size or the duration of the job. Then the initiatives with the highest scores should be prioritized. For more information, see [Weighted Shorted Job First](https://www.scaledagileframework.com/wsjf/).{{% /alert %}}
 
+In the WSJF prioritization view, all the projects are ranked by their WSJS scores in the list. The ranking helps you prioritize your projects. 
 
+The list shows the following information:
 
+* **Project** –  Clicking it opens a side panel that shows the details of the project.
 
-### 2.3 Creating a New Project
+* **Stage** – This shows in which stage the project is currently.
+
+* **Business Value** – This indicates how much business value this project generates
+
+* **Time Criticality** – This indicates how time-critical this project is
+
+* **Risk Reduction** – This indicates how much risk this project reduces
+
+* **Size** – The is the job size of the project.
+
+* **Scores** – This is the WSJF score of the project.
+
+* Ellipsis (**...**) icon – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
+
+  {{% alert type="info" %}}
+  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  {{% /alert %}}
+
+### 2.3 Creating a New Project {#create-new-project}
 
 {{% alert type="info" %}}
-Only [Portfolio Managers](#access-management) can create a new project.
+Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
 1. Go to **Projects Overview**.
@@ -104,7 +151,7 @@ Only [Portfolio Managers](#access-management) can create a new project.
 
 4. Select the **Stage**, **Department**, **Country** the project.
 
-   {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Stage**, **Department**, **Country** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+   {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Stage**, **Department**, **Country** on the **Portfolio Settings** page. For more information on custom settings, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
 
 5. Set the **Owner** to a user who owns this portfolio.
 
@@ -118,7 +165,7 @@ Only [Portfolio Managers](#access-management) can create a new project.
 
     1.  Select the **Use Case** of the project.
 
-        {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Use Case** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+        {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Use Case** on the **Portfolio Settings** page. For more information on custom setting, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
 
     2. Select the **App Size** from the operational point of view.
     3. Enter the **Numbers of Users** who you expect will use the app.
@@ -128,7 +175,7 @@ Only [Portfolio Managers](#access-management) can create a new project.
 
     1. Select the **Type of Value**, which is the type of the value that is created by the project.
 
-       {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Type of Value** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+       {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Type of Value** on the **Portfolio Settings** page. For more information on custom setting, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
     
     2. For **Frequency**, select whether the value is **Once-off** or **Recurring**.
     
@@ -146,38 +193,51 @@ Only [Portfolio Managers](#access-management) can create a new project.
 
 You can find your new project on the **Projects Overview** page.
 
-### 2.4 Editing, Archiving, and Deleting a Project{#edit-archive-delete-project}
+### 2.4 Archiving a Project {#archive-project}
 
-In the Kanban board, click the **...** icon on the upper-right corner of the project card, and then select **Edit**, **Archive**, or **Delete**.
+After a project is finished or the project is not relevant for the current time being, you can archive a project. When you archive the project,
 
-{{< figure src="/attachments/developerportal/control-center/portfolio-management/edit-project-kanban-board.png" >}}
+In the **Projects Overview** page, you can archive a project no matter which view you use. 
 
-In the list view, click the **...** icon at the end of the row, and then select **Edit**, **Archive**, or **Delete**.
+To archive a project, perform the following steps:
 
-{{< figure src="/attachments/developerportal/control-center/portfolio-management/edit-project-list-view.png" >}}
+1. Click the ellipsis icon (**...**) for that project and then select **Archive**.
 
-{{% alert color="info" %}}All the archived projects can be found on the [Archived Projects](#archived-projects) page.{{% /alert %}}
+2. In the dialog box that opens, select the reason why the project is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
+
+   {{< figure src="/attachments/developerportal/control-center/portfolio-management/archive-dialog-box.png" >}}
+
+A pop-up window opens and tells you that the project is successfully archived. Once the project is archived, you can find it on the [Archived Projects](#archived-projects) page.
 
 ## 3 Archived Projects Page{#archived-projects}
 
-After a project is finished or the project is not relevant for the current time being, you can archive a project. When you archive the project, you can give the project a status such as, **Completed**, **Canceled**, **On Hold** or **Other Reason**, as well as a reason for archiving it.
-
-The **Archived Projects** page show all the projects that are archived. You can search for a project in the search bar.
-
-Each project shows the following information:
-
-- Reason for archiving the project
-- Additional notes on the archive
-- Who archived the project
-- When the project was archived
-
-Clicking a project name shows the details of that project.
-
-### 3.1 Restoring and Deleting an Archived Project
-
-Click the **...** icon at the end of the row and then select **Restore** or **Delete**.
+The **Archived Projects** page show all the projects that are archived in a list. You can search for a project in the search bar. 
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/archived-projects.png" >}}
+
+The list shows the following information:
+
+* **Project** – Clicking it opens a side panel that shows the details of the archived project, such as the reason why the project was archived, additional notes, who archived the project, and when.
+
+* Who archived the project
+
+* When the project was archived
+
+* **Department** – This is the department to which the project belongs.
+
+* **Stage** – This shows in which stage the project is currently.
+
+* **Archive reason** – This is the reason why the project was archived.
+
+* **Archive date** – This shows the date when the project was archived.
+
+* **Archived by** –  This is the name of the person who archived the project.
+
+* Ellipsis (**...**) icon – Clicking it enables you to restore or delete the archived project.
+
+  {{% alert type="info" %}}
+  Only Portfolio Managers can delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  {{% /alert %}}
 
 ## 4 Access Management Page {#access-management}
 
@@ -189,14 +249,14 @@ The table below shows the permissions of Portfolio Managers and Users:
 
 | Action                            | Portfolio Manager                                            | User                                                         |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Invite new users                  | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
-| Remove user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
-| Update user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
+| Invite new users                  | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
+| Remove user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
+| Update user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
 | View user access information      | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
-| Manage portfolio settings         | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
-| Create new projects               | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
-| Edit existing projects            | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
-| Delete projects                   | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
+| Manage portfolio settings         | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
+| Create new projects               | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
+| Edit existing projects            | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
+| Delete projects                   | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
 | View project details              | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
 | Create notes                      | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
 | Edit notes                        | Own notes                                                    | Own notes                                                    |

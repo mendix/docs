@@ -76,12 +76,12 @@ However, you can also solve this error by creating a microflow that will create 
 
 3. Click **Select Microflow** and click **New Microflow** in the pop-up window.
 4. Name the microflow *ACT_Open_HomePage*.
-5. The created microflow is opened. In the **Toolbox** > **Object Activities**, select **Create Object**, drag and drop it to the microflow.
+5. The created microflow is opened. In the **Toolbox** > **Object Activities**, select **Create Object**, drag it onto the microflow.
 6. Open the **Create object** activity properties, and set **Entity** to **Customer**.
 
     {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-navigation/create-object-properties.png" alt="Create Object Activity Properties"   width="350"  >}}
 
-7. In the **Toolbox** > **Client Activities**, select **Show Page** activity, drag and drop it to the microflow.
+7. In the **Toolbox** > **Client Activities**, select **Show Page** activity, drag it onto the microflow.
 8. Open the **Show Page** activity properties and do the following:<br />
 
     1. Set **Page** to **Customer_Details**, which you have set as homepage in the navigation.<br />

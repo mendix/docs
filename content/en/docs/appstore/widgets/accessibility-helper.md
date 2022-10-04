@@ -22,9 +22,9 @@ The [Accessibility Helper](https://marketplace.mendix.com/link/component/114803/
 
 The widget acts like a container and alters the elements inside it. In order to change elements, HTML attributes act in ways described in the sections below.
 
-### 2.1 Drag and Drop Widgets Inside Accessibility Helper
+### 2.1 Drag Widgets Inside Accessibility Helper
 
-Since Accessibility Helper is a containment widget it will try to change the widgets inside it. Thus the user must drag and drop the widgets they want to change inside Accessibility Helper.
+Since Accessibility Helper is a containment widget it will try to change the widgets inside it. Thus the user must drag the widgets they want to change inside Accessibility Helper.
 
 ### 2.2 Specify the Target Selector
 

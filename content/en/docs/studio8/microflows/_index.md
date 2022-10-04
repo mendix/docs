@@ -108,7 +108,7 @@ To add a new activity or event to the microflow, do the following:
 1. Open the microflow you want to add the event or activity to.
 2. Open the **Toolbox** tab.
 3. Select the event or activity in the **General**, **Object Activities** or **Client Activities** section.
-4. Drag and drop the event or activity in the microflow. 
+4. Drag the event or activity onto the microflow. 
 
 ## 8 Toolbox {#microflows-toolbox}
 

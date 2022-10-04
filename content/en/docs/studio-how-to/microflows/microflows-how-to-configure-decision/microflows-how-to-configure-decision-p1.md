@@ -68,8 +68,8 @@ The attribute is created.
 To configure the decision with the attribute or parameter of the enumeration type, follow these steps:
 
 1. [Create a new microflow](/studio/microflows/) and name it, for example, *Show_grade_specific_page*.
-2. In the **Toolbox** tab, select **Decision**, drag and drop it to the microflow.
-3. You need to pass a parameter to configure the decision correctly.  In the **Toolbox**, select **Parameter** and drag and drop it to the microflow.
+2. In the **Toolbox** tab, select **Decision**, drag it onto the microflow.
+3. You need to pass a parameter to configure the decision correctly.  In the **Toolbox**, select **Parameter** and drag it onto the microflow.
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-not-set-parameter.png" >}}
 
@@ -103,7 +103,7 @@ To configure the decision with the attribute or parameter of the enumeration typ
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/possible-cases.png" >}} 
 
-8. To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag and drop it to the flow labelled **Bronze** in the microflow. 
+8. To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag it to the flow labelled **Bronze** in the microflow. 
 9. Open the properties for the **Show Page** activity and do the following:
 
     1. Click the **Select a page** field.
@@ -159,8 +159,8 @@ The attribute for the **Customer** entity is created.
 To configure the decision with the attribute of the Boolean type, follow these steps:
 
 1. [Create a new microflow](/studio/microflows/) and name it, for example *Customer_status_check*.
-2. In the **Toolbox** tab, select the decision, drag and drop it to the microflow. 
-3. You need to pass a parameter to configure the decision. In the **Toolbox** tab, select **Parameter**, and drag and drop it to the microflow.
+2. In the **Toolbox** tab, select the decision, drag it onto the microflow. 
+3. You need to pass a parameter to configure the decision. In the **Toolbox** tab, select **Parameter**, and drag it onto the microflow.
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-not-set-parameter.png" >}}
 
@@ -189,7 +189,7 @@ To configure the decision with the attribute of the Boolean type, follow these s
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/show-message-properties-true-flow.png" >}} 
 
-10. In the **Toolbox** tab, select the **Close Page** activity, drag and drop it to the microflow.
+10. In the **Toolbox** tab, select the **Close Page** activity, drag it onto the microflow.
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-blocked-completed.png" >}}
 

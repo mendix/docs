@@ -93,7 +93,7 @@ To display checklist details in a table, you can add a data grid. It is importan
 Follow the steps below:
 
 1. Open **Toolbox** > **Data Containers**.
-2. Drag and drop **Data Grid** *inside* the data view:
+2. Drag **Data Grid** *inside* the data view:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/data-grid-inside-data-view.png"   width="550"  >}}
 

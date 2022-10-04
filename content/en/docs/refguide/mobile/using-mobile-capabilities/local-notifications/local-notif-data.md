@@ -33,7 +33,7 @@ Before starting this guide, make sure you have completed the following prerequis
 To make your two entities, do the following:
 
 1. Navigate to your domain model.
-2. Drag and drop a new entity onto your domain model: 
+2. Drag a new entity onto your domain model: 
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/new-entity.png" alt="new entity"   width="500"  >}}
 
@@ -53,7 +53,7 @@ To make your two entities, do the following:
 To set up a notification nanoflow, do the following:
 
 1. Create a nanoflow named *DS_Notification*. <br />
-2. Drag and drop a create object activity onto your nanoflow.
+2. Drag a create object activity onto your nanoflow.
 3. Double-click your create object activity.
 4. Click **Entity** > **Select**.
 5. Click **Notification**, then click **Select**.
@@ -65,7 +65,7 @@ To set up a notification nanoflow, do the following:
 To set up your microflow, do the following:
 
 1. Create a microflow named *DS_TestEntity*.
-2. Drag and drop a create object activity onto your microflow.
+2. Drag a create object activity onto your microflow.
 3. Double-click your create object activity.
 4. Click **Entity** > **Select**.
 5. Click **NativeMobile.TestEntity**.
@@ -99,7 +99,7 @@ To make this microflow run after startup, do the following:
 To make your page, do the following: 
 
 1. Crete a new blank native page named *DetailTestEntity*.
-2. Drag and drop a data view widget onto your new page.
+2. Drag a data view widget onto your new page.
 3. Double-click your data view widget.
 4. In **Data Source**, click **Entity (path)** > **Select**.
 5. Click **TestEntity**.
@@ -127,7 +127,7 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 7. Click **Entity Object** drop-down and click **$FirstTestEntityObject**.
 8. In **Variable name** field type **GUIDForFirstObject**.
 9. Click **OK**.
-10. Drag and drop four create variable activities onto your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively:
+10. Drag four create variable activities onto your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/title1-activity.png" alt="title1"   width="400"  >}}
 
@@ -141,7 +141,7 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-nano-with-four-strings.png" alt="actionname"   width="500"  >}}
 
-11. Drag and drop a JavaScript action call activity onto your nanoflow. 
+11. Drag a JavaScript action call activity onto your nanoflow. 
 12. Double-click the action call.
 13. Click **JavaScript action** > **Select**.
 14. Type *DisplayNotification* into the search field, click the corresponding JavaScript action, and click **Select**.
@@ -150,21 +150,21 @@ Next you will learn how to pass data to pages after you have tapped a notificati
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/first-guid-action.png" alt="first guid action"   width="500"  >}}
 
 16. Click **OK**.
-17. Drag and drop this nanoflow onto your app's **Home_Native** page to create a button which calls it, and name the button *Pass GUID to Notification*:
+17. Drag this nanoflow onto your app's **Home_Native** page to create a button which calls it, and name the button *Pass GUID to Notification*:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/pass-guid-button.png" alt="guid button"   width="500"  >}}
 
 Good job! When a user taps a notification from the **Pass GUID to Notification** button, they will now be brought to the **DetailTestEntity** page. Next you will create a nanoflow which receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page.
 
 1. Make a new nanoflow named *ON_tapNotification*.
-2. Drag and drop a parameter onto your nanoflow. 
+2. Drag a parameter onto your nanoflow. 
 3. Click **Data Type** > **Select**. Click **Notification**, then click **Select**.
 4. Fill **Name** in as *notificationEntity*.
 5. Click **OK**:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/notif-entity.png" alt="guid button" >}}
 
-6. Drag and drop a JavaScript action call onto your nanoflow.
+6. Drag a JavaScript action call onto your nanoflow.
 7. Double-click the JavaScript action call, then click **Select**. 
 8. Type *GetObjectByGuid* into the search field, click that action, then click **Select**. 
 9. Click **TestEntity** and then click **Select**.
@@ -209,7 +209,7 @@ Next you are going to create a show page action for **ON_tapNotification**.
 
 Now you will set up a data view on your home page.
 
-1. Drag and drop a **Data View** widget on your **Home_Native** page.
+1. Drag a **Data View** widget on your **Home_Native** page.
 2. Double-click your data view.
 3. Select **Data source** > **Type** > **Nanoflow**.
 4. Click **Nanoflow** > **Select** and choose **DS_Notification**.

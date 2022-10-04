@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 Since you know how to send a simple local notification, you can now set the badge number by following these steps:
 
 1. Open **ACT_CreateAndSendNotification**.
-2. Drag and drop a **Create variable** activity to the right of the three string variables you made:
+2. Drag a **Create variable** activity to the right of the three string variables you made:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/new-variable-badge.png" alt="new create variable"   width="500"  >}}
 
@@ -38,7 +38,7 @@ Since you know how to send a simple local notification, you can now set the badg
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/badge-1.png" alt="badge number"   width="400"  >}}
 
 6. Click **OK**.
-7. Drag and drop a **Set badge number** JavaScript action to the right of your merge activity:
+7. Drag a **Set badge number** JavaScript action to the right of your merge activity:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/set-badge-act.png" alt="drag set badge number" >}}
 
@@ -65,7 +65,7 @@ To make your badge disappear after your user opens your app, follow the instruct
 3. Select **On load** > **Call a nanoflow**.
 4. Click **New** and make a new nanoflow: *ACT_ClearBadge*.
 5. Go to **ACT_ClearBadge**.
-6. Drag and drop a **Set badge number** activity onto your nanoflow:
+6. Drag a **Set badge number** activity onto your nanoflow:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/clear-set-badge.png" alt="set badge activity" >}}
 
@@ -76,7 +76,7 @@ To make your badge disappear after your user opens your app, follow the instruct
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/clear-badge-settings.png" alt="return value"   width="400"  >}}
 
-11. Drag and drop a **Log message** activity onto your microflow.
+11. Drag a **Log message** activity onto your microflow.
 12. Double-click your **Log message** activity, write *Your notification has been cleared* into **Template**, and click **OK**:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/clear-text-log.png" alt="clear text"   width="500"  >}}

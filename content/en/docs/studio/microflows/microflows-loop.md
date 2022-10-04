@@ -44,14 +44,14 @@ To configure a loop, do the following:
 1. Open a microflow you want to add a loop to.
 2. First of all, you need to get the list of orders to loop over. Do the following: 
 
-    1. In the **Toolbox**, select **Retrieve**, drag and drop it to the microflow. 
+    1. In the **Toolbox**, select **Retrieve**, drag it onto the microflow. 
     2. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. (The **Range** property is set to **All** by default): 
 
         {{< figure src="/attachments/studio/microflows/microflows-loop/retrieve-properties.png" alt="Retrieve Object Properties"   width="350"  >}}
 
 3. As you have retrieved the list of orders you can work on, you now need to create a loop and logic for it. Do the following: 
 
-    1. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. 
+    1. In the **Toolbox**, select **Loop**, drag it onto the microflow. 
 
         {{< figure src="/attachments/studio/microflows/microflows-loop/loop-added.png" alt="Loop is Added" >}}
 
@@ -61,7 +61,7 @@ To configure a loop, do the following:
 
 4. Now you can add the activity that will change the status of each order to *Processed*. This means that the activities you add inside the loop will be performed on each object (each order). Do the following:
 
-    1. In the **Toolbox**, select **Change Object**, drag and drop it inside the loop .
+    1. In the **Toolbox**, select **Change Object**, drag it into the loop .
     2. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Object** to **Order**.
     3. When the **Change Members** option appears, click **Add New Value**.
 

@@ -257,7 +257,7 @@ The **Snippet** widget is not displayed if your  does not contain any snippets.
 
 To call a snippet and add it to your page, do the following:
 
-1. In the **Toolbox** > **Widgets**, find the **Snippet** widget and drag and drop it on your page. 
+1. In the **Toolbox** > **Widgets**, find the **Snippet** widget and drag it onto your page. 
 2. Open properties and click the **Snippet** property.
 3. In the **Select Snippet** dialog box, select a snippet you would like to use on your page and click **Select**. 
 

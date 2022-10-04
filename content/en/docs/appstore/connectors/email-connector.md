@@ -9,11 +9,11 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails.
+The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails.
 
 ### 1.1 Features
 
-The Email Connector includes the following features:
+The Email connector includes the following features:
 
 * Configuration of multiple accounts
     * Supports basic authentication

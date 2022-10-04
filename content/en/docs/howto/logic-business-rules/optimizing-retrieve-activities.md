@@ -20,17 +20,17 @@ A common example is shown below in which creating an order needs to be associate
 
 Preventing creating the same object multiple times at different places causes a lot of unnecessary maintenance. One solution for this is to copy the logic (partially) into a sub-microflow (as shown in the example), but this does not make it easier to read.
 
-{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581014.png" >}}
+{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/example-solution-one.png" >}}
 
 You can easily work around this by using a sub-microflow at a different place. To avoid making exceptions in your microflow for the default behavior, do not put the standard logic in a sub-microflow that is difficult to read (because of one exception earlier in the process). Since we got to this point because of an exception, it makes the most sense to solve this problem by altering the exception so that it fits in our standard flow.
 
 The easiest way to implement this is to move all the logic for acquiring the customer's address into one sub-microflow. By doing so, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
 
-{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581013.png" >}}
+{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/example-solution-two.png" >}}
 
 As we can see from the following example, the **GetCustomerPrimaryAddress** sub-microflow contains the same logic as in the original example, except that there is only one result from this sub-microflow: the required address.
 
-{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581012.png" >}}
+{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/get-address-sub-microflow.png" >}}
 
 ## 3 Retrieving an Instance of an Object
 
@@ -38,7 +38,7 @@ Sometimes you only need to have a specific instance of an object. Building a sub
 
 However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the create activity. So, always be sure to print a log message so that you can easily identify any problems in your design.
 
-{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581011.png" >}}
+{{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/retrieve-one-object-instance.png" >}}
 
 ## 4 Read More
 

@@ -97,7 +97,7 @@ Follow the steps below:
 
     6. In the **Select Page** dialog box, click the plus icon in the top right corner to add a new page. 
 
-    12. In the **Create new page** dialog box, do the following:
+    12. In the **Create Page** dialog box, do the following:
 
         1. Set the **Title** to *Attach Images*.
         2. Set the **Layout** to *PopupLayout*.

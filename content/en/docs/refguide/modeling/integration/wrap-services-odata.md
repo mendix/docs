@@ -115,10 +115,6 @@ In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count
 
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
-{{% alert color="info" %}}
-Selecting a different key is only available for published OData services that use OData version 4.
-{{% /alert %}}
-
 Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration).
 
 Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
@@ -131,10 +127,14 @@ Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select wh
 Select a combination of attribute with the following constraints: 
 
 * Unique – The combination of key attributes should be unique, so each key points to exactly one entity.
-* Required – If one of the key attribute values is empty, you cannot find an entity with it anymore.
-* Stable over time – The attribute values used for the key should not change for an entity, so that you can find it again later.
+* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
+* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
 
-When exposing an entity as a published OData resource for the first time, Studio Pro chooses a unique and required attribute as the key. If there is no attribute that has a unique constraint or a required constraint, then it will select the first attribute with a supported type. You can set these constraints using [validation rules](/refguide/validation-rules/)
+When exposing an entity as a published OData resource for the first time, Studio Pro chooses a unique and required attribute as the key. If there is no attribute that has a unique constraint or a required constraint, then it will select the first attribute with a supported type. You can set these constraints using [validation rules](/refguide/validation-rules/).
+
+{{% alert color="info" %}}
+Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
+{{% /alert %}}
 
 ### 5.1 Selecting an Attribute as a Key {#select-key}
 
@@ -142,7 +142,7 @@ To select a different attribute as a key, do the following:
 
 1. Open the **Published OData Resource**. 
 2. In the **Key** section, click **Edit** located next to the **Key** property.
-3. In the **Key Selection** dialog box, move the desired key attributes to the right side. 
+3. In the **Key Selection** dialog box, move the key attributes to the right side. 
 
 ## 6 Testing {#testing}
 

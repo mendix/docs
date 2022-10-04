@@ -9,99 +9,124 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) app offers you powerful functionality for project portfolio management. It enables Mendix Admins and Portfolio Managers to manage their portfolio of Mendix project initiatives and maximize the value in line with their business strategy by providing visibility and tools for value assessment, effort estimation, planning and tracking. With this app, you can manage project initiatives throughout the whole lifecycle – from the start as an idea until the release as a product. The Portfolio Management app empowers you to manage projects within your company and outside your company. It is available to all Mendix Cloud customers.
+The [Portfolio Management](https://portfolio.mendix.com) app has powerful functionality for project portfolio management.
+
+You can use Portfolio Management app to launch and manage your initiatives. You can invite people within and outside your company to work on the projects in your portfolio and develop the initiatives into Mendix apps that can be released into the market.
+
+The Portfolio Management app empowers you to manage the projects and maximize their value in line with your business strategy by offering visibility and tools for value assessment, effort estimation, planing, and tracking,
+
+The Portfolio Management app is available to all Mendix Cloud customers.
 
 {{% alert type="info" %}}
-Mendix Admins can access all portfolios within their company. When a Mendix Admin starts the portfolio management tool for the first time and if their company has no portfolio, the system will automatically create a portfolio for the company.
+Mendix Admins can access all portfolios within their company. When a Mendix Admin starts the Portfolio Management app for the first time and if their company has no portfolio, the system will automatically create a portfolio for the company.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/landing-page.png" >}}
 
-## 2 Projects Overview
+## 2 Projects Overview Page
 
-When you start the Portfolio Management app, click a portfolio to get an overview of all the project initiatives in this portfolio.
+When you start the Portfolio Management app, click a portfolio to get an overview of all the projects in this portfolio.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/projects-overview.png" >}}
 
-The **Portfolio Overview** page gives you an overview of all the project initiatives in this portfolio. You can search for a project in the search bar. Clicking a project initiative name shows the details of the project initiative.
+The **Project Overview** page gives you an overview of all the projects in this portfolio. You can search for a project in the search bar. Clicking a project name opens a side pane that shows project details.
 
 {{% alert type="info" %}}
-When you view the project initiative details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project initiative](#edit-archive-delete-project-initiative).
+When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
 {{% /alert %}}
 
 ### 2.1 Different Views
 
-You can view project initiatives in a Kanban board or a list view.
+The **Project Overview** page offers three views: **Kanban view**, **List view**, and **WSJF Prioritization**.
 
-To switch between the views, click the view icon on the right-upper part of the page:
+To switch between the views, click the drop-down list on the right-upper part of the page and select the view that you want to use.
 
-{{< figure src="/attachments/developerportal/control-center/portfolio-management/view-icon.png" >}}
+{{< figure src="/attachments/developerportal/control-center/portfolio-management/switch-view.png" >}}
 
-#### 2.1.1 Kanban Board
+#### 2.1.1 Kanban View
 
-In the Kanban board, you can select a filter from the **Filters** drop-down list on the upper-right part to filter project initiatives.
+In Kanban view, you can select a filter from the **Filters** drop-down list on the top to filter projects.
 
-All the project initiatives are categorized in different columns. Each column represents a different stage. You can move the project initiative to a different column by hovering over the project initiative card, and then click the **>** or **<** icon on the left or right side of the project initiative card.
+All the projects are categorized in different columns. Each column represents a different stage. 
+
+You can move the project to a different column by hovering over the project card, and then clicking the **>** or **<** icon on the left or right side of the project card.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/project-card.png" >}}
 
-Each project initiative card shows the following information:
+Each project card shows the following information:
 
-* Name of the project initiative (①) – Clicking it shows the details of the project initiative in a side panel.
-* Ellipsis icon (②) – Clicking it enables you to edit, archive, or delete the project initiative.
-* Tags for the project initiative (③) – You can use tags to classify your project initiatives, for example by types.
-* Department (④) – This is the department the project initiative belongs to.
-* Calendar icon (⑤) – Hovering it shows the following defined dates of the project initiative lifecycle:
-  * Intake - This is the time of the project acceptance based on business requirements.
-  * Start Date - This is the time when the first actions are taken to start implementation.
-  * Go-Live date - This is the time when the app is expected to be up and running.
+* Project name (①) – Clicking it shows the details of the project in a side panel.
+* Ellipsis icon (②) – Clicking it enables you to edit, archive, or delete the project.
+* Tags for the project (③) – These are the tags used to classify the project, for example, you can use tags to indicate the types of projects.
+* Department (④) – This is the department to which the project belongs.
+* Calendar icon (⑤) – Hovering over it shows the following defined dates of the project lifecycle:
+  * Intake – This is the time for the project acceptance based on business requirements.
+  * Start Date – This is the time when the first actions are taken to start implementation.
+  * Go-Live date – This is the time when the app is expected to be up and running.
 
-* Icon of the linked app (⑥) – Hovering it shows the existing Mendix app that is linked with the project initiative.
-* Avatar of the project initiative owner (⑦) – Hovering it shows the name of the project initiative owner.
+* Icon of the linked app (⑥) – Hovering over it shows the existing Mendix app that is linked with the project.
+* Avatar of the project owner (⑦) – Hovering over it shows the name of the project owner.
 
 #### 2.1.2 List View
 
-In the list view, project initiatives are categorized in a list.
+In the list view, projects are categorized in a list.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/list-view.png" >}}
 
-### 2.3 Creating a New Project Initiative
+Each row shows the following information:
+
+* **Project name** – Clicking it shows the details of the project in a side panel.
+* **Department** – This is the department to which the project belongs.
+* **Stage** – This shows the stage where the project currently is.
+* **Intake** – This shows the time for the project acceptance based on business requirements.
+* **Start Date** – This shows the time when the first actions are taken to start implementation.
+* **Go-Live date** – This shows the time when the app is expected to be up and running.
+* **Linked App** – This shows the existing Mendix app that is linked with the project.
+* **Owner** – This shows the name of the project owner.
+
+#### 2.1.3 WSJF Prioritization
+
+
+
+
+
+### 2.3 Creating a New Project
 
 {{% alert type="info" %}}
-Only [Portfolio Managers](#access-management) can create a new project initiative.
+Only [Portfolio Managers](#access-management) can create a new project.
 {{% /alert %}}
 
 1. Go to **Projects Overview**.
 
 2. Click **Create New Project**.
 
-3. Enter the **Project Name** and the **Description** of the project initiative.
+3. Enter the **Project Name** and the **Description** of the project.
 
-4. Select the **Stage**, **Department**, **Country** the project initiative.
+4. Select the **Stage**, **Department**, **Country** the project.
 
    {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Stage**, **Department**, **Country** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
 
 5. Set the **Owner** to a user who owns this portfolio.
 
-6.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project initiative as follows:
+6.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project as follows:
     1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
-    2.  Select the app that you want to link to the project initiative.
+    2.  Select the app that you want to link to the project.
 
         {{% alert type="info" %}}To see more information about a linked app, click the app name after it is linked.{{% /alert %}}
 
-7.  Click **Scope Estimation** to show all the fields in this section. In this section, you can define the effort and risk profile of the project initiative as follows:
+7.  Click **Scope Estimation** to show all the fields in this section. In this section, you can define the effort and risk profile of the project as follows:
 
-    1.  Select the **Use Case** of the project initiative.
+    1.  Select the **Use Case** of the project.
 
         {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Use Case** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
 
     2. Select the **App Size** from the operational point of view.
     3. Enter the **Numbers of Users** who you expect will use the app.
-    4. Select **Complexity** and **Exposure** of the project initiative. For more information about complexity and exposure, see the [Complexity Matrix](https://www.mendix.com/resources/digital-execution-manual/) in *Digital Execution Manual*.
+    4. Select **Complexity** and **Exposure** of the project. For more information about complexity and exposure, see the [Complexity Matrix](https://www.mendix.com/resources/digital-execution-manual/) in *Digital Execution Manual*.
 
 8.  Click **Estimated Monetary Value** to show all the fields in this section. In this section, you can solidify your business case and drive internal adoption. It can also help you map the realized value upon completion.
 
-    1. Select the **Type of Value**, which is the type of the value that is created by the project initiative.
+    1. Select the **Type of Value**, which is the type of the value that is created by the project.
 
        {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Type of Value** on the **Portfolio Settings** page. For more information, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
     
@@ -109,9 +134,9 @@ Only [Portfolio Managers](#access-management) can create a new project initiativ
     
     3. For **Value**, enter the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
     
-    4. For **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project initiative.
+    4. For **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project.
     
-    5. If the project initiative creates more than one type of value, click **Add Value** to add more value. After you enter all values, system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
+    5. If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
 
 9. Click **Planning** to show all the fields in this section. In this section, you can enter **Intake Date**, **Start Date** and the **Go-Live Date**.
 
@@ -119,11 +144,11 @@ Only [Portfolio Managers](#access-management) can create a new project initiativ
 
 11. Click **Create Project**.
 
-You can find your new project initiative on the **Projects Overview** page.
+You can find your new project on the **Projects Overview** page.
 
-### 2.4 Editing, Archiving, and Deleting a Project Initiative{#edit-archive-delete-project-initiative}
+### 2.4 Editing, Archiving, and Deleting a Project{#edit-archive-delete-project}
 
-In the Kanban board, click the **...** icon on the upper-right corner of the project initiative card, and then select **Edit**, **Archive**, or **Delete**.
+In the Kanban board, click the **...** icon on the upper-right corner of the project card, and then select **Edit**, **Archive**, or **Delete**.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/edit-project-kanban-board.png" >}}
 
@@ -131,22 +156,22 @@ In the list view, click the **...** icon at the end of the row, and then select 
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/edit-project-list-view.png" >}}
 
-{{% alert color="info" %}}All the archived project initiatives can be found on the [Archived Projects](#archived-project initiatives) page.{{% /alert %}}
+{{% alert color="info" %}}All the archived projects can be found on the [Archived Projects](#archived-projects) page.{{% /alert %}}
 
-## 3 Archived Projects {#archived-project-initiatives}
+## 3 Archived Projects Page{#archived-projects}
 
-After a project initiative is finished or the project initiative is not relevant for the current time being, you can archive a project initiative. When you archive the project initiative, you can give the project initiative a status such as, **Completed**, **Canceled**, **On Hold** or **Other Reason**, as well as a reason for archiving it.
+After a project is finished or the project is not relevant for the current time being, you can archive a project. When you archive the project, you can give the project a status such as, **Completed**, **Canceled**, **On Hold** or **Other Reason**, as well as a reason for archiving it.
 
-The **Archived Projects** page show all the project initiatives that are archived. You can search for a project initiative in the search bar.
+The **Archived Projects** page show all the projects that are archived. You can search for a project in the search bar.
 
-Each project initiative shows the following information:
+Each project shows the following information:
 
-- Reason for archiving the project initiative
+- Reason for archiving the project
 - Additional notes on the archive
-- Who archived the project initiative
-- When the project initiative was archived
+- Who archived the project
+- When the project was archived
 
-Clicking a project initiative name shows the details of that project initiative.
+Clicking a project name shows the details of that project.
 
 ### 3.1 Restoring and Deleting an Archived Project
 
@@ -154,7 +179,7 @@ Click the **...** icon at the end of the row and then select **Restore** or **De
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/archived-projects.png" >}}
 
-## 4 Access Management {#access-management}
+## 4 Access Management Page {#access-management}
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/access-management.png" >}}
 
@@ -188,7 +213,7 @@ The table below shows the permissions of Portfolio Managers and Users:
 
     {{% alert type="info" %}}For users outside your company, their names and profile pictures will not be displayed.{{% /alert %}}
 
-4. Select an **Access Role** for the user – **Portfolio Manager** or **User**. This determines the user's access level to all the project initiatives in this portfolio.
+4. Select an **Access Role** for the user – **Portfolio Manager** or **User**. This determines the user's access level to all the projects in this portfolio.
 5. Click **Add to List**.
 6. Repeat steps 2 and 4 until you add all the users.
 7. Click **Send Invites**.
@@ -209,7 +234,7 @@ To update the permissions and the role of a user, click the edit icon.
 
 To delete a user, click the delete icon.
 
-## 5 Portfolio Settings {#portfolio-settings}
+## 5 Portfolio Settings Page{#portfolio-settings}
 
 The **Portfolio Settings** page is only available for Portfolio Managers. On this page, Portfolio Managers can customize the following items that are used in a portfolio:
 

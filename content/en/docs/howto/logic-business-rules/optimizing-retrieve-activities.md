@@ -10,41 +10,38 @@ tags: ["microflow", "retrieve", "optimize"]
 
 ## 1 Introduction
 
-Often in processes you need to retrieve objects in order to complete the process. But what if those objects cannot be found? Usually additional actions are required, but since the objects you retrieve and create are assigned different names, sometimes you cannot merge them back into a single flow.
+Often in processes you need to retrieve objects in order to complete the process. Sometimes objects cannot be found and you need to take additional actions. Moreover, sometimes the objects you retrieve and the objects you create are assigned different names, and you cannot merge them back into a single flow.
 
-This how-to will teach you how to do the following:
-
-* Find and create objects to continue your process
-* Retrieve an instance of an object
+This document presents an example of optimizing retrieve activities during the process of finding and creating objects. It also gives an example of retrieving an instance of an object.
 
 ## 2 Finding and Creating Objects to Continue Your Process
 
-A common example is shown below in which creating an order needs to be associated with the customer and its primary address. This example ends up in three different flows and cannot be merged back into the main flow, because that causes the **OtherAddress** or **NewPrimaryAddress** to be unreachable. 
+A common example is shown below in which creating an order needs to be associated with the customer and their address. This example ends up with three different flows, and they cannot be merged back into the main flow because that causes the entities **OtherAddress** and **NewPrimaryAddress** to be unreachable. 
 
-Creating the same objects multiple times on different places causes a lot of unnecessary maintenance. One solution for this is to copy the logic (partially) into a sub-microflow (as shown in the example), but this does not make it easier to read.
+Preventing creating the same object multiple times at different places causes a lot of unnecessary maintenance. One solution for this is to copy the logic (partially) into a sub-microflow (as shown in the example), but this does not make it easier to read.
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581014.png" >}}
 
-You can easily work around this by using a sub-microflow at a different place. In order to avoid making exceptions in your microflow for the default behavior, do not put the standard logic in a sub-microflow that is difficult to read (because of one exception earlier in the process). Since we got to this point because of an exception, it makes the most sense to solve this problem by altering the exception and changing it so that it fits in our standard flow.
+You can easily work around this by using a sub-microflow at a different place. To avoid making exceptions in your microflow for the default behavior, do not put the standard logic in a sub-microflow that is difficult to read (because of one exception earlier in the process). Since we got to this point because of an exception, it makes the most sense to solve this problem by altering the exception so that it fits in our standard flow.
 
-The easiest way to implement this is to move all the logic for acquiring the primary address into a sub-microflow. In this way, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
+The easiest way to implement this is to move all the logic for acquiring the customer's address into one sub-microflow. By doing so, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581013.png" >}}
 
-The **GetCustomerPrimaryAddress** sub-microflow contains the same logic as in the original example, except that in this way, there is only one result: the correct primary address.
+As we can see from the following example, the **GetCustomerPrimaryAddress** sub-microflow contains the same logic as in the original example, except that there is only one result from this sub-microflow: the required address.
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581012.png" >}}
 
 ## 3 Retrieving an Instance of an Object
 
-Sometimes you need to have a specific instance of an object, and building a sub-flow for just one retrieve-and-create action seems like too much work. An alternative solution is to build your own loop, which allows you to have one main flow but still be able to find and create objects during this process.
+Sometimes you only need to have a specific instance of an object. Building a sub-flow for just one retrieve-and-create action seems to be too much. An alternative solution is to build your own loop, which allows you to have one main flow but still be able to find and create objects during this process.
 
-However, there is the risk of creating an infinite loop if the retrieve applies a constraint that is not set correctly during the create. So, always be sure to print a log message so that you can easily identify any problems in your design.
+However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the create activity. So, always be sure to print a log message so that you can easily identify any problems in your design.
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/18581011.png" >}}
 
 ## 4 Read More
 
-* [Retrieve Activities](https://docs.mendix.com/refguide/retrieve/)
+* [Retrieve Activities](/refguide/retrieve/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
 

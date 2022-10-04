@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Guide"
 url: /data-hub/
-description: "This guide describes Mendix Data Hub for finding and sharing enterprise data assets."
+description: "Describes Mendix Data Hub for finding and sharing enterprise data assets."
 weight: 40
 no_list: false
 description_list: true

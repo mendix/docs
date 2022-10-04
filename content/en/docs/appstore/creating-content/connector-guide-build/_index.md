@@ -3,6 +3,7 @@ title: "Build Connectors"
 url: /appstore/creating-content/connector-guide-build/
 category: "Creating Content"
 weight: 4
+description: "Introduces the concept of connectors, how they work, and the basic steps for building and publishing connectors."
 tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "how to"]
 ---
 

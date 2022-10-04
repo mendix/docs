@@ -47,17 +47,15 @@ The app will open the corresponding page depending on the grade of a customer, f
     4. In the **Select enumeration** dialog box, click the plus icon in the top right corner to create an enumeration.
     5. In the **Create new enumeration** dialog box, click **Add Item** (*Grade* is filled out automatically for the **Name**).
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item.png" >}} 
-
     6. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically).
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item-bronze.png" >}}
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-add-item-bronze.png" width="550" >}}
 
     7. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.
 
     8. Click **Create** to close the dialog boxs and create the attribute.
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-bronze-silver-gold.png" >}}
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-enumeration-bronze-silver-gold.png" width="550" >}}
 
 The attribute is created.
 
@@ -67,11 +65,13 @@ The attribute is created.
 
 To configure the decision with the attribute or parameter of the enumeration type, follow these steps:
 
-1. [Create a new microflow](/studio/microflows/) and name it, for example, *Show_grade_specific_page*.
+1. [Create a new microflow](/studio/microflows/) and name it, for example, *ACT_Customer_ShowGradeSpecificPage*.
+
 2. In the **Toolbox** tab, select **Decision**, drag and drop it to the microflow.
+
 3. You need to pass a parameter to configure the decision correctly.  In the **Toolbox**, select **Parameter** and drag and drop it to the microflow.
 
-    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-not-set-parameter.png" >}}
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-not-set-parameter.png" width="350">}}
 
 4. In this example, logic you are adding should apply to the single customer that is selected in a page. Hence, you need to add the customer as a parameter. Change the following properties of the **Parameter**:
 
@@ -80,10 +80,11 @@ To configure the decision with the attribute or parameter of the enumeration typ
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/parameter-properties.png" >}}
 
-5. In the **Properties** of the decision, click the **Configure condition** field.
-6. In the **Configure condition** dialog box, you need to select an attribute that the condition will be based on: select the `$Customer/Grade` from the drop-down list (click <kbd>CTRL</kbd> + <kbd>Space</kbd> to see the list of suggestions), and click **Save**. 
+5. In the **Properties** of the decision, click the **Configure** field.
 
-    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/configure-condition-grade.png" >}}
+6. In the **Configure condition** dialog box, select `$Customer/Grade` from the list of suggestions (<kbd>CTRL</kbd> + <kbd>Space</kbd>), and click **Save**. 
+
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/configure-condition-grade.png" width="550">}}
 
     Caption **Grade?** is added automatically to the decision according to the attribute name to indicate which condition the decision is based on. 
 
@@ -96,28 +97,37 @@ To configure the decision with the attribute or parameter of the enumeration typ
     2. Set **Bronze** in the **Select Value** drop-down menu.
     3. Click the **Go back** icon to return to decision properties.
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/go-back-button.png" >}} 
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/go-back-button.png" width="300">}} 
 
     4. Click **Add New Case** in the **Cases** section.
     5. Repeat steps b-d to add all possible cases: **Silver**, **Gold**, and **Empty** (a case when the customer's grade is not set). 
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/possible-cases.png" >}} 
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/possible-cases.png" width="300" >}} 
 
 8. To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag and drop it to the flow labelled **Bronze** in the microflow. 
-9. Open the properties for the **Show Page** activity and do the following:
 
-    1. Click the **Select a page** field.
-    2. In the **Select Page** dialog box, click the plus icon in the top right corner, and [create a page](/studio/page-editor/) for customer grade **Bronze**. 
-        Note that after you create a page, it will be added to the **Select field** automatically.
+9. Open the properties for the **Show Page** activity and click the **Page** property.
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/show-page-select-page.png" >}} 
+10. In the **Select Page** dialog box, click the plus icon in the top right corner.
 
-    3. In **Data Source** > **Object to Pass**, set **Customer** to get the data on customers and their grade. 
+11. In the **Create Page** dialog box, do the following:
 
-10. Repeat steps 8-9 for customers of Silver and Gold grades, creating the order form pages for silver and gold customers respectively.
-11. For the customers with no grade indicated you will show an error message. To do so, select **Show Message** in the **Toolbox**, and add it to the flow labelled **(empty)** in the microflow: 
+    1. Set the **Title** to **Order_Form_Bronze_Customers**, and set the **Layout** to **Atlas_Default**. 
 
-    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-empty-flow-show-message.png" >}}
+    2. Check that the **Autofill Contents** option is on, this way the page template (Forms) is selected automatically for you. Choose **Forms Vertical**.
+    3. Set **Entity** to **Customer**.
+
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/create-page.png" width="600">}} 
+
+    3. Click **Create**.
+
+In the **Show Page** activity properties, a variable is configured for you automatically in the **Parameters** section.
+
+10. Repeat steps 8-11 for customers of Silver and Gold grades, creating the order form pages for silver and gold customers named **Order_Form_Silver_Customers** and **Order_Form_Gold_Customers** respectively.
+
+11. For the customers with no grade indicated you would like to show an error message. To do so, select **Show Message** in the **Toolbox**, and add it to the flow labelled **(empty)** in the microflow: 
+
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-empty-flow-show-message.png" width="500">}}
 
 12. In the **Properties** tab for the **Show message** activity, do the following:
 
@@ -148,7 +158,6 @@ As you will verify customers by their statuses, you need to create a correspondi
     2. Set the [Type](/studio/domain-models-attributes/) to **Boolean**. 
     3. Click **Create**. 
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/new-attribute-create-dialog.png" >}}
 
 The attribute for the **Customer** entity is created.
 
@@ -158,11 +167,11 @@ The attribute for the **Customer** entity is created.
 
 To configure the decision with the attribute of the Boolean type, follow these steps:
 
-1. [Create a new microflow](/studio/microflows/) and name it, for example *Customer_status_check*.
+1. [Create a new microflow](/studio/microflows/) and name it, for example *ACT_Customer_StatusCheck*.
 2. In the **Toolbox** tab, select the decision, drag and drop it to the microflow. 
 3. You need to pass a parameter to configure the decision. In the **Toolbox** tab, select **Parameter**, and drag and drop it to the microflow.
 
-    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-not-set-parameter.png" >}}
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-not-set-parameter.png" width="350">}}
 
 4. In this example, logic you are adding should apply to the status of the customer. Hence, you need to add the Customer as the parameter. In the **Properties** tab for the **Parameter**, do the following:
 
@@ -174,7 +183,7 @@ To configure the decision with the attribute of the Boolean type, follow these s
 5. Click the decision, and in the **Properties** tab, click the **Configure condition** field.
 6. In the **Configure condition** dialog box, you need to select the attribute that the condition will be based on: select `$Customer/Blocked` from the drop-down list (click <kbd>CTRL</kbd> + <kbd>Space</kbd> to see the list of suggestions), and click **Save**.
 
-    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/configure-condition-pop-up.png" >}}
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/configure-condition-blocked.png" width="550">}}
 
 7. Cases **true** and **false** are set automatically for properties of the decision, and the corresponding flows are added to the microflow. Caption **Blocked?** is added automatically according to the attribute name. 
 
@@ -187,7 +196,7 @@ To configure the decision with the attribute of the Boolean type, follow these s
     2. Fill out the **Template** that will be shown to end-users when this message pops up (In this example: *Sorry, you can't proceed with the order*). 
     3. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.
 
-        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/show-message-properties-true-flow.png" >}} 
+        {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/show-message-properties-true-flow.png" width="300">}} 
 
 10. In the **Toolbox** tab, select the **Close Page** activity, drag and drop it to the microflow.
 

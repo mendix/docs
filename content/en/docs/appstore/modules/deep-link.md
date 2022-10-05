@@ -122,11 +122,11 @@ If you try to visit a deep link in your browser and find out you need to log in 
 
 To solve this problem, you can use one of the following solutions:
 
-* Use a custom login page by performing the steps as follows:
+* Use a custom login page instead of the default login page. To do so, perform the steps as follows:
 
   1. Set the `LoginLocation` constant to `“../..?cont=”`. This directs the user to the custom login page. If you use a page URL for the login page, then adjust the constant accordingly, for example, to `“../../p/login?cont=”`.
 
-  2. Add the following JavaScript using [HTML/JavaScript Snippet](https://docs.mendix.com/appstore/widgets/html-javascript-snippet/) from the Marketplace to your custom login page:
+  2. Add the following JavaScript using the [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget from the Marketplace to your custom login page:
 
      ```javascript
      window.mx.afterLoginAction = () => {
@@ -138,4 +138,4 @@ To solve this problem, you can use one of the following solutions:
      }
      ```
 
-* As an alternative to using a custom login page, you can also upgrade your Deep Link module to version 9.0.5 or higher and upgrade your Studio Pro to version [9.12.6](/releasenotes/studio-pro/9.12/#9126) or higher. This problem is fixed in these versions.
+* As an alternative to using a custom login page, you can upgrade your Deep Link module to version 9.0.5 or higher and upgrade your Studio Pro to version [9.12.6](/releasenotes/studio-pro/9.12/#9126) or higher. This problem is fixed in these versions.

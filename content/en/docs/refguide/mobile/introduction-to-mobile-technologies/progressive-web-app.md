@@ -21,7 +21,7 @@ Progressive web apps have three main characteristics:
 As PWAs are basically web apps with additional features, Mendix offers these features as a part of web navigation profiles. Based on what is needed, you can create a fully offline-capable PWA, or a web application that requires an internet connection but still uses PWA features.
 
 {{% alert color="warning" %}}
-PWAs require the app to use a recent version of Atlas 2 or Atlas 3.
+PWAs require the app to use a recent version of Atlas 2 or newer.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

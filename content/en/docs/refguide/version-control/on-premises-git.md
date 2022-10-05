@@ -3,6 +3,7 @@ title: "Working with Git On-Premises Version Control Server"
 linktitle: "Git On-Premises Version Control Server"
 url: /refguide/on-premises-git/
 weight: 60
+description: "Introduces how to work with Git on-premises version control server."
 tags: ["on-premises", "git", "version control"]
 aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/
@@ -46,6 +47,8 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.
 
 ### 4.1 Preparing Your Repository {#preparing-your-repo}
+
+Mendix supports multiple Git service providers that are listed below. For more information on a specific provider and requirements for it, see [System Requirements](/refguide/system-requirements/). 
 
 Studio Pro is able to use the following Git server providers:
 

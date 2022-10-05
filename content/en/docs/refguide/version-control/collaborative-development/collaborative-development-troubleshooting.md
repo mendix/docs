@@ -2,7 +2,7 @@
 title: "Troubleshooting Collaborative Development"
 url: /refguide/collaborative-development-troubleshooting/
 linktitle: "Troubleshoot Collaborative Development"
-description: "Describes troubleshooting for collaborative development between the Mendix Studio Pro and the Mendix Studio"
+description: "Describes troubleshooting for collaborative development between Mendix Studio Pro and Mendix Studio."
 tags: ["studio pro", "studio", "collaborative development", "troubleshooting", "troubleshoot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -43,14 +43,14 @@ You can choose one of the following:
 
 1. **Cancel Merge** (recommended) – you can cancel the process and try to synchronize with Studio first. Do the following:<br/>
     1. Open the Studio enabled development line.<br/>
-    1. The warning described in the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section will be displayed.<br/>
+    1. The warning described in the [Studio Pro and Studio Are Out of Sync](#out-of-sync) section will be displayed.<br/>
 
         {{< figure src="/attachments/refguide/version-control/collaborative-development/collaborative-development-troubleshooting/changes-are-out-of-sync.png" >}}<br/>
 
     1. Click **Merge** to synchronize the changes with Studio.<br/>
     1. Open the previous branch and do the merge again. 
 
-2. **Merge Anyway** – the merge will continue without changes from Studio. In this case only the changes from Studio Pro will be included. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section.
+2. **Merge Anyway** – the merge will continue without changes from Studio. In this case only the changes from Studio Pro will be included. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro and Studio Are Out of Sync](#out-of-sync) section.
 
 ## 5 The Repository Service Is Unavailable
 
@@ -65,7 +65,7 @@ If there are network or service issues, Studio Pro will not be able to contact t
 You can do one of the following:
 
 1. **Cancel** (recommended) – the operation will be cancelled, you can try again later, when the network problems are solved.
-2. **Proceed** – the update process will continue, but the changes from Studio will not be retrieved. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section.
+2. **Proceed** – the update process will continue, but the changes from Studio will not be retrieved. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro and Studio Are Out of Sync](#out-of-sync) section.
 
 ## 6 Another Operation Is in Progress
 
@@ -76,7 +76,7 @@ When your team members initiate a blocking operation (commit/update/merge a Stud
 You can do one of the following:
 
 1. **Cancel** (recommended) – the operation will be cancelled. We recommend you to do an update in a few minutes so that you get the latest changes and your working copy and Studio will be in sync.
-2. **Proceed** – the update process will continue, but the changes from Studio will not be retrieved. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro & Studio Are Out of Sync](#out-of-sync) section.
+2. **Proceed** – the update process will continue, but the changes from Studio will not be retrieved. Studio Pro and Studio will be out of sync, and you will need to resolve this issue later. See the [Studio Pro and Studio Are Out of Sync](#out-of-sync) section.
 
 ## 7 Read More
 

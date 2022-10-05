@@ -1,5 +1,5 @@
 ---
-title: "HttpRequest & HttpResponse System Entities"
+title: "HttpRequest and HttpResponse System Entities"
 url: /refguide/http-request-and-response-entities/
 weight: 45
 tags: ["studio pro"]

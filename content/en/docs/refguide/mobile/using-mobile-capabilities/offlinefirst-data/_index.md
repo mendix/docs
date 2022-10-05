@@ -58,3 +58,4 @@ Session management in offline-first apps uses the same system mentioned above, b
 
 * [Offline Synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) – describes how and when synchronization occurs, and how to resolve sync errors.
 * [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/) – describes how to make secure, high-performing offline-first apps.
+* [Offline Data Security](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/) - describes best practices to increase security of the data stored on the device

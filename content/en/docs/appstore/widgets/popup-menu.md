@@ -44,7 +44,7 @@ Other main properties of the widget are as follows:
 
 * **Open on** – determines whether hovering or clicking the trigger widgets displays the menu
     * Default: **Click**
-* **Menu position**  – determines the location of a visible menu relative to the trigger area with widgets
+* **Menu position**  – determines the location of a visible menu relative to the trigger area
     * Default: **Bottom**
 * **Custom visualization** – determines whether menu items can be composed of text or widgets
     * Default: **No**

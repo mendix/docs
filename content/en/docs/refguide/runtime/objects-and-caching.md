@@ -1,8 +1,8 @@
 ---
-title: "Objects & Caching"
+title: "Objects and Caching"
 url: /refguide/objects-and-caching/
 category: "Mendix Runtime"
-description: "This page describes how objects interact with each other within a runtime request."
+description: "Describes how objects interact with each other within a runtime request."
 tags: ["runtime", "MendixObject", "caching", "context", "session", "request", "microflow", "studio pro"]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Find, Find Advanced & Find Usages"
+title: "Find, Find Advanced and Find Usages"
 url: /refguide/find-and-find-advanced/
 description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pro."
 weight: 10

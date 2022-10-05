@@ -1,5 +1,5 @@
 ---
-title: "On Click Event & Events Section"
+title: "On Click Event and Events Section"
 url: /refguide/on-click-event/
 weight: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
@@ -80,14 +80,26 @@ No action is taken. This option is useful for setting up a page without defining
 The **Show a page** event opens the specified page. Select the page which opens using the options below:
 
 * **Page** – a [page](/refguide/page/) that should open.
-
-* **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
-
-    This option is activated by checking the **Override page title** check box in the **Edit** dialog box:
-
-    {{< figure src="/attachments/refguide/modeling/pages/on-click-event/page-title-property.png" alt="Page Title Property" >}}
+  
+* **Page settings** – opens a dialog box enabling you to configure the page in more detail (including the page title).
 
 * **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
+
+#### 3.2.1 Page Settings {#page-settings}
+
+**Page settings** opens a dialog box enabling you to configure the page in more detail:
+
+* **Page** – a [page](/refguide/page/) that should open.
+  
+* **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
+
+  This option is activated by checking the **Override page title** check box.
+
+* **Page arguments** – a list of parameters of the selected page and the objects that will be passed to each of them.
+
+#### 3.2.1.1 Page Arguments
+
+**Page arguments** are automatically configured based on the parameters of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a page is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
 ### 3.3 Call a Microflow {#call-microflow}
 
@@ -225,10 +237,13 @@ The **Create object** event creates a new object. The following properties are s
 
 * **Entity (path)** – specifies which entity to create. It is also possible to choose an association (if available) from the context object. If an entity is configured, a new instance of the entity will be created. If an entity through association from the context object is configured, a new instance of the entity will be created and an object associated with the context will be created.
 * **On {event} page** – specifies which [page](/refguide/page/) should be shown to allow the end-user to enter values for the new created object. This page must accept a context parameter object (for example, a data view) with the same entity or a sub-type of the created entity. **{event}** specifies which event is being used to trigger this action (**click**, for example).
+* **Page settings** - opens a dialog box enabling you to configure the page in more detail. See the [Page Settings](#page-settings) section in **Show a page** for more information. 
 
 ### 3.7 Save Changes {#save-changes}
 
-The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
+The **Save changes** event commits all changes made to the objects in *Editable* widgets on the page. If a non-editable widget displays an object and it is modified by, for example, a microflow, the object is not committed. For information on editability, see the [Editability](/refguide/common-widget-properties/#editability) section in *Properties Common in the Page Editor*. 
+
+The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
 * **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
@@ -279,13 +294,13 @@ The following properties are specific for this event:
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
-For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 
 ### 3.15 Show User Task Page {#show-user-task-page}
 
 **Show user task page** opens an overview page set for the [user task](/refguide/user-task/) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
-For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 
 ### 3.16  Complete User Task {#complete-task}
 

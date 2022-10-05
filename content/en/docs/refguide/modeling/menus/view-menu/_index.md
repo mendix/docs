@@ -49,7 +49,11 @@ If you have several panes grouped together in tabs, you can change the position 
 
 Menu items of the **View** menu are described in sections below.
 
-### 3.1 Changes
+### 3.1 App Explorer
+
+The [App Explorer](/refguide/app-explorer/) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](/refguide/preferences-dialog/). 
+
+### 3.2 Changes
 
 For version control-enabled apps (meaning, those with [Team Server](/developerportal/collaborate/team-server/) or other SVN servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
@@ -57,79 +61,81 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 <video width="640" height="360" controls src="/attachments/refguide/view-menu/changes.mp4">VIDEO</video>
 
-### 3.2 Connector {#connector}
+### 3.3 Connector {#connector}
 
 The **Connector** pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
 
-### 3.3 Data Hub {#data-hub}
-
-The [Data Hub pane](/refguide/data-hub-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
-
-### 3.3 Console {#console}
+### 3.4 Console {#console}
 
 The **Console** pane displays the output of the [Mendix Runtime](/refguide/runtime/) while running an application.
 
-### 3.4 Documentation
+### 3.5 Data Hub {#data-hub}
+
+The [Data Hub pane](/refguide/data-hub-pane/) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) to your app via this pane and see entities and data sources already consumed in your app. 
+
+### 3.6 Documentation
 
 The **Documentation** pane displays the documentation for the currently selected element (if applicable).
 
-### 3.5 Error List
+### 3.7 Error List
 
 The [Errors pane](/refguide/errors-pane/) displays the [errors](/refguide/consistency-errors/), warnings, and deprecations that exist in your app.
 
-### 3.6 Find Results
+### 3.8 Find Results
 
 This pane displays the results of the latest find action. You can search for text, usages of an element (for example, an attribute), and unused items.
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.7 App Explorer
+### 3.8 Page Explorer
 
-The [App Explorer](/refguide/app-explorer/) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](/refguide/preferences-dialog/).
+[Page Explorer](/refguide/page-explorer/) gives a quick overview of the page layout and allows you to view and edit nested containers in the [Design mode](/refguide/page/#design-mode).
 
-### 3.8 Properties
+### 3.9 Properties
 
 The **Properties** pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
 
-### 3.9 Stories
+### 3.10 Stories
 
 For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
 
-### 3.10 Toolbox {#toolbox}
+### 3.11 Toolbox {#toolbox}
 
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide/data-widgets/)) by dragging them from the **Toolbox** onto your page.
 
 The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes at the lower-right corner of the **Toolbox**. 
 
-### 3.11 Debug Windows
+### 3.12 Widget Developer Console
+
+### 3.13 Debug Windows
 
 For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/).
 
-#### 3.11.1 Breakpoints
+#### 3.13.1 Breakpoints
 
 The **Breakpoints** pane shows all the breakpoints in your app. You can enable and disable breakpoints from here.
 
-#### 3.11.2 Debugger {#debugger}
+#### 3.13.2 Debugger {#debugger}
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.11.3 Variables {#variables}
+#### 3.13.3 Variables {#variables}
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
-### 3.12 Full Screen {#full-screen}
+### 3.14 Full Screen {#full-screen}
 
 The **Full Screen** mode hides the title bar and makes the window fill the entire screen. 
 
 Shortcut key: <kbd>F11</kbd>
 
-### 3.13 Distraction Free Mode {#distraction-free}
+### 3.15 Distraction Free Mode {#distraction-free}
 
 The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes.
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 
-### 3.14 Reset Layout {#reset-layout}
+### 3.16 Reset Layout {#reset-layout}
 
 Resets the layout of dockable window panes to factory defaults.
 

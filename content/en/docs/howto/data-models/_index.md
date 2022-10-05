@@ -2,6 +2,7 @@
 title: "Data Models"
 url: /howto/data-models/
 weight: 50
+description: "Presents a list of how-tos on creating data layers and setting up data validation."
 no_list: false
 description_list: true
 tags: ["studio pro"]

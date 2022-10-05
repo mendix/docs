@@ -3,6 +3,7 @@ title: "Build JavaScript Actions"
 url: /howto/extensibility/build-javascript-actions/
 category: "Extensibility"
 weight: 40
+description: "Presents a series of how-tos to build JavaScript actions step by step."
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 

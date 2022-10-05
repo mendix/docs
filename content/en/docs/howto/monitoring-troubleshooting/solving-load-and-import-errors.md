@@ -1,8 +1,9 @@
 ---
-title: "Solve Load & Import Errors"
+title: "Solve Load and Import Errors"
 url: /howto/monitoring-troubleshooting/solving-load-and-import-errors/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 11
+description: "Describes how to solve problems that may occur when opening an app."
 tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
     - /howto/solving-load-and-import-errors.html

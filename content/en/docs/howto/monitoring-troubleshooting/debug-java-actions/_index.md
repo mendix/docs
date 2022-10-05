@@ -1,8 +1,9 @@
 ---
 title: "Debug Java Actions"
 url: /howto/monitoring-troubleshooting/debug-java-actions/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 4
+description: "Describes how to set breakpoints and debug Java actions in Eclipse."
 tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 

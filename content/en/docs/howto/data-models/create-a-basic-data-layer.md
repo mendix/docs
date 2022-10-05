@@ -3,6 +3,7 @@ title: "Create a Basic Data Layer"
 url: /howto/data-models/create-a-basic-data-layer/
 category: "Data Models"
 weight: 1
+description: "Describes how to create entities and attributes, add enumerations, create associations, and configure the delete behavior for associations with Studio Pro."
 tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 ---
 
@@ -135,6 +136,6 @@ Delete behavior includes objects which are in memory. This means that delete cas
 
 ## 8 Read More
 
-* [Work with Images & Files](/howto/data-models/working-with-images-and-files/)
+* [Work with Images and Files](/howto/data-models/working-with-images-and-files/)
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)

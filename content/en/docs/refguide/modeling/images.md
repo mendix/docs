@@ -3,6 +3,7 @@ title: "Images"
 url: /refguide/images/
 category: "App Modeling"
 weight: 70
+description: "Introduces the image functionality in Studio Pro."
 tags: ["Images", "Image Collections", "png", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -16,7 +17,7 @@ The **System** module contains some images that are used by the standard compone
 {{% alert color="info" %}}
 This sort of image is called a **static** image as it is always the same. For example, the icon you put on a save button will always look the same whatever object you are saving.
 
-If you want different images to appear for different objects (for example, a picture of a product) these images should be stored as images in the database. See [How To Work with Images & Files](/howto/data-models/working-with-images-and-files/) for more information.
+If you want different images to appear for different objects (for example, a picture of a product) these images should be stored as images in the database. See [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/) for more information.
 {{% /alert %}}
 
 ## 2 Supported Formats

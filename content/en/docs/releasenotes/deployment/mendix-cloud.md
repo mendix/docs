@@ -33,8 +33,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We updated our alert template to make the alert names more descriptive and transparent. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
+### August 8th, 2022
+
+#### Improvements
+
+* We added the AWS Mumbai region as a new deployment target in Mendix Cloud Asia Pacific.
 
 ### July 21st, 2022
+
+#### Improvements
 
 * We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
 
@@ -362,7 +369,7 @@ This information is eventually stored within Mendix and gives us an aggregated v
 
 **What is the information sent back?**
 
-Usage information in this context is the username, project id, app environment name, and date & time of logon. 
+Usage information in this context is the username, project id, app environment name, and date and time of logon. 
 Note that **the username is scrambled using a hashing algorithm**, ensuring that the actual username cannot be discovered. 
 
 **Who is a user?**
@@ -593,7 +600,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 #### Improvements and Fixes
 
 * We have changed the way that the *unused java heap* metric is calculated to make the data more accurate.
-    * This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, & 103225).
+    * This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, and 103225).
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
@@ -608,8 +615,8 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Fixes
 
-* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, & 98313)
-* We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 & 100271)
+* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, and 98313)
+* We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
 * We made some changes to the Mendix Cloud v3 [Trends](/developerportal/operate/trends/) graphs.
 
 ### June 16th, 2020

@@ -58,6 +58,14 @@ The **Type** option allows you to quickly change the type of one input element t
 
 ### 3.2 Data Source Section {#input-elements-data-source}
 
+The **Data Source** section defines the data context for the widget. 
+
+#### 3.2.1 Data Source
+
+Data source section shows the data source of a data container the input elements is placed in, for example, a text box is inside a data view with a page parameter. You cannot edit this property at the input widget level, but you can change it in the data container properties. 
+
+#### 3.2.2 Attribute
+
 **Input Elements** need to be linked to an attribute to show data and to allow end-users to edit it. Different input elements require different [types of attributes](/studio/domain-models-attributes/). You can find the correspondence between the input elements and attribute types in the table below:
 
 | Input Element      | Allowed Attribute Type                                       |

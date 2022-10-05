@@ -85,4 +85,4 @@ To sort items in the list by date and time starting from the latest one, follow 
 
 4. Click **Add**.
 
-Congratulations! You have added a filter and sorting order to your list. You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio8/publishing-app/).
+Congratulations! You have added a filter and sorting order to your list. You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio8/publishing-app/).

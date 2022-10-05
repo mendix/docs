@@ -100,9 +100,9 @@ Links to available API documentation such as WSDLs for published web services ar
 * [Clustered Mendix Runtime](/refguide8/clustered-mendix-runtime/) – describes the behavior and impact of running Mendix Runtime as a cluster
 * [Runtime Customization](/refguide8/custom-settings/) – presents advanced options for customizing Runtime server settings
 * [Data Storage](/refguide8/data-storage/) – presents information on data storage configuration options, such as the following:
-* [Date & Time Handling](/refguide8/datetime-handling-faq/) – presents details on how to configure Runtime Server operations for the user's date and time
+* [Date and Time Handling](/refguide8/datetime-handling-faq/) – presents details on how to configure Runtime Server operations for the user's date and time
 * [Logging](/refguide8/logging/) – discusses the various log levels for Runtime
 * [Monitoring Mendix Runtime](/refguide8/monitoring-mendix-runtime/) – describes the Mendix Runtime monitoring actions that are supported (such as [state statistics](/refguide8/monitoring-mendix-runtime/#state) and [thread stack traces](/refguide8/monitoring-mendix-runtime/#thread)).
-* [Objects & Caching](/refguide8/objects-and-caching/) – presents details on what happens when objects are loaded from the database, cached, retrieved, changed, and committed
-* [Mendix Runtime & Java](/refguide8/runtime-java/) – explains some of the basic concepts of Java in Mendix
+* [Objects and Caching](/refguide8/objects-and-caching/) – presents details on what happens when objects are loaded from the database, cached, retrieved, changed, and committed
+* [Mendix Runtime and Java](/refguide8/runtime-java/) – explains some of the basic concepts of Java in Mendix
 * [Communication Patterns in the Mendix Runtime](/refguide8/communication-patterns/) – outlines the communication patterns used by the Mendix runtime

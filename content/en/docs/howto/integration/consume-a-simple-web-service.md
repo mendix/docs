@@ -3,6 +3,7 @@ title: "Consume a Simple Web Service"
 url: /howto/integration/consume-a-simple-web-service/
 category: "Integration"
 weight: 7
+description: "Describes how to import a WSDL and create logic to call the web service."
 tags: ["integration", "wsdl", "web service", "consume"]
 ---
 
@@ -25,10 +26,7 @@ To import a WSDL, follow these steps:
 
 1. Right-click your module in the **App Explorer** and select **Add other** > **Consumed web service**.
 2. Enter a name for the new consumed web service (for example, **TemperatureConverter**) and click **OK**.
-3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**:
-
-    {{< figure src="/attachments/howto/integration/consume-a-simple-web-service/wsdl-source.png" >}}
-
+3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
 4. The **Select Ports** dialog box is displayed for selecting a web service port:
 
     {{< figure src="/attachments/howto/integration/consume-a-simple-web-service/18582065.png" >}}

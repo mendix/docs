@@ -3,7 +3,7 @@ title: "Set Up an SSO (BYOIDP)"
 url: /developerportal/control-center/set-up-sso-byoidp/
 category: "Control Center"
 weight: 10
-description: "Describes how you can use your company IdP to authenticate to Mendix"
+description: "Describes how you can use your company IdP to authenticate to Mendix."
 tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single Sign-on"]
 ---
 

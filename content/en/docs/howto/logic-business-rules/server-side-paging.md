@@ -1,9 +1,9 @@
 ---
 title: "Set Up Server-Side Paging and Sorting for a Microflow Data Source"
-linktitle: "Server-Side Paging & Sorting"
+linktitle: "Server-Side Paging and Sorting"
 url: /howto/logic-business-rules/server-side-paging/
-category: "Logic & Business Rules"
-description: "This how-to will teach you how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it."
+category: "Logic and Business Rules"
+description: "Describes how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it."
 tags: [ "microflow", "Data Grid", "rest service", "server-side" ]
 ---
 

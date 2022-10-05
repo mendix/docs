@@ -38,4 +38,4 @@ A menu item or a sub-item has the following general properties:
 ## 3 Read More
 
 * [Pages](/refguide/pages/)
-* [Menus & Navigation](/refguide/menu-widgets/)
+* [Menus and Navigation](/refguide/menu-widgets/)

@@ -2,6 +2,7 @@
 title: "Mobile"
 url: /refguide/mobile/
 weight: 50
+description: "Gives an overview of mobile app development with Mendix."
 no_list: true
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -47,9 +48,9 @@ Building apps with Mendix gives you access to several mobile capabilities:
 
 * [Offline-First Data](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 * [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): native apps can define a custom URL scheme (for instance, `my-app://`) that allows other apps to access pages and functionalities of the app
-* [Location & Maps](/refguide/mobile/using-mobile-capabilities/location-&-maps/): native apps can access the user location and display native maps inside the application
+* [Location and Maps](/refguide/mobile/using-mobile-capabilities/location-and-maps/): native apps can access the user location and display native maps inside the application
 * [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): native apps can present a notification to the user that is triggered by the runtime even if the app is not running
-* [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-&-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
+* [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-and-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
 * [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
 * [Content Security Policy](/refguide/mobile/using-mobile-capabilities/csp/): by employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context
 

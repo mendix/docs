@@ -13,13 +13,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### October 6th, 2022
 
-### Fixes
+#### Improvements
 
-* We fixed the registration of a new version of an existing service on the Registration Form
+* Mendix Admins can now enable and disable sample data sets in the Catalog. To do so, go to the **Data Hub** page of the Control Center, click the **Settings** tab, and toggle **Sample Data Sources are hidden**. 
 
-### Improvements
+#### Fixes
 
-* Company Data Hub admins can now disable/hide sample data sets
+* We fixed an error that was preventing the registration a new version of an existing service on the Registration form. 
 
 ### September 29th, 2022
 

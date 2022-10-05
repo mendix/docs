@@ -115,3 +115,12 @@ When using the Deep Link module in Mendix 9 and above, you might get stuck in an
 This is because for Mendix 9, the [default value for SameSite cookies](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) has been changed to `"Strict"` meaning that session cookies cannot be forwarded.
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
+
+## 4.2 Deep Link Redirect Fails After Login {#deep-link-redirect-fails}
+
+If you visit a deep link and find out you need to log in first, it may occur that after you log in, you are redirected to the home page instead of the deep link that you hoped to visit. This happens if you use the default login page with the Deep Link module from version 6.0.0 to version 9.0.4. 
+
+To solve this problem, you can use one of the following solutions:
+
+* Upgrade your Deep Link module to version 9.0.5 or higher and also upgrade your Studio Pro to version [9.12.6](/releasenotes/studio-pro/9.12/#9126) or higher.
+* Alternatively, you can

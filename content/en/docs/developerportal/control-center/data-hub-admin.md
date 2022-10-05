@@ -92,4 +92,4 @@ When the discoverable value is explicitly declared on the registration form or i
 
 ### 5.2 Sample Data Sources
 
-Admins can enable or disable the option to hide sample data sources in the Catalog.
+Mendix Admins can enable or disable the option to hide sample data sources in the Catalog.

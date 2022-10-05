@@ -273,9 +273,9 @@ Once you have entered the details you can apply two validation checks by clickin
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" >}}
 
-+{{% alert color="info" %}}
-+Multiple database plans cant be created at the same time. The configuration tools needs to be run multiple time in order to apply the database plans.
-+{{% /alert %}}
+{{% alert color="info" %}}
+You cannot create multiple database plans at the same time. Run the configuration tool multiple time to apply several database plans.
+{{% /alert %}}
 
 The following **Database Types** are supported:
 
@@ -352,9 +352,9 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 Storage plans are “blueprints” that specify how to request/decomission a new database or blob storage and pass its credentials to an environment.
 {{% /alert %}}
 
-+{{% alert color="info" %}}
-+Multiple storage plans cant be created at the same time. The configuration tools needs to be run multiple time in order to apply the storage plans.
-+{{% /alert %}}
+{{% alert color="info" %}}
+You cannot create multiple storage plans at the same time. Run the configuration tool multiple time to apply several storage plans.
+{{% /alert %}}
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
 

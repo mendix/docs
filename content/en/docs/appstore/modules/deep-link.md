@@ -118,9 +118,24 @@ To avoid this issue, make sure your IdP (identity provider) and your app are in 
 
 ## 4.2 Deep Link Redirect Fails After Login {#deep-link-redirect-fails}
 
-If you visit a deep link and find out you need to log in first, it may occur that after you log in, you are redirected to the home page instead of the deep link that you hoped to visit. This happens if you use the default login page with the Deep Link module from version 6.0.0 to version 9.0.4. 
+If you try to visit a deep link in your browser and find out you need to log in first, it may occur that after you log in, you are redirected to the home page instead of the deep link that you hoped to visit. This happens if the app uses the default login page with the Deep Link module from version 6.0.0 to version 9.0.4. 
 
 To solve this problem, you can use one of the following solutions:
 
-* Upgrade your Deep Link module to version 9.0.5 or higher and also upgrade your Studio Pro to version [9.12.6](/releasenotes/studio-pro/9.12/#9126) or higher.
-* Alternatively, you can
+* Use a custom login page by performing the steps as follows:
+
+  1. Set the `LoginLocation` constant to `“../..?cont=”`. This directs the user to the custom login page. If you use a page URL for the login page, then adjust the constant accordingly, for example, to `“../../p/login?cont=”`.
+
+  2. Add the following JavaScript using [HTML/JavaScript Snippet](https://docs.mendix.com/appstore/widgets/html-javascript-snippet/) from the Marketplace to your custom login page:
+
+     ```javascript
+     window.mx.afterLoginAction = () => {
+       if ( window.location.search.startsWith('?cont=') ) {
+          window.location = window.mx.homeUrl+decodeURIComponent(window.location.search.substring(6))
+       } else {
+          window.mx.redirect(window.mx.homeUrl);
+       }
+     }
+     ```
+
+* As an alternative to using a custom login page, you can also upgrade your Deep Link module to version 9.0.5 or higher and upgrade your Studio Pro to version [9.12.6](/releasenotes/studio-pro/9.12/#9126) or higher. This problem is fixed in these versions.

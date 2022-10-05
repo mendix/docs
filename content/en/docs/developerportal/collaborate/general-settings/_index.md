@@ -177,7 +177,7 @@ For details on the technical configuration of webhooks, see [Webhooks](/apidocs-
 
 The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
-{{< figure src="/attachments/developerportal/collaborate/stories/history.jpg"   width="550"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/history.jpg"   width="550"  >}}
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 

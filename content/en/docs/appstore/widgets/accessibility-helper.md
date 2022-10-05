@@ -26,7 +26,7 @@ The widget acts like a container and alters the elements inside it. In order to 
 
 Since Accessibility Helper is a containment widget it will try to change the widgets inside it. Thus the user must drag the widgets they want to change inside Accessibility Helper.
 
-### 2.2 Specify the Target Selector
+### 2.2 Specifying the Target Selector
 
 Target selector is a basic CSS selector, and more information can be found in Mozilla's [documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
 

@@ -76,11 +76,11 @@ Company administrators can also **Remove** rights of users who no longer need ac
 
 ## 5 Settings {#settings}
 
+### 5.1 Discoverability Status
+
 Mendix Admins can change the default discoverability status of the published data sources of the company. When OData resources are published, the discoverable status defaults to the value set here. 
 
-The default value of this setting is **On**:
-
-{{< figure src="/attachments/developerportal/control-center/data-hub-admin/Admin-Settings.PNG" alt="Settings" >}}
+The default value of this setting is **On**.
 
 {{% alert color="info" %}}
 This setting does not work in retrospect, it will only apply to the  OData resources published after changing the setting.
@@ -89,3 +89,7 @@ This setting does not work in retrospect, it will only apply to the  OData resou
 {{% alert color="info" %}}
 When the discoverable value is explicitly declared on the registration form or in the API field, it will take precedence over this company **Settings** value.
 {{% /alert %}}
+
+### 5.2 Sample Data Sources
+
+Admins can enable or disable the option to hide sample data sources in the Catalog.

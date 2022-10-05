@@ -167,8 +167,8 @@ When a user visits a Mendix application, she is automatically redirected to the 
 
 For more information on navigation profiles, see the following for reference:
 
-* [Navigation in Mendix 7.4 & Above](/refguide7/navigation/)
-* [Navigation in Mendix Versions 7.2 & 7.3](/refguide7/navigation-in-72-and-73/)
+* [Navigation in Mendix 7.4 and Above](/refguide7/navigation/)
+* [Navigation in Mendix Versions 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
 * [Navigation Before Mendix Version 7.2](/refguide7/navigation-before-72/)
 * [Solving Issues with Navigation Profile Conversion to 7.4](/refguide7/navigation-conversion-to-74/)
 
@@ -213,5 +213,5 @@ In addition, a snippet can define an entity that serves as a context for the wid
 * [Atlas UI](/howto7/front-end/atlas-ui/)
 * [How to Use Layouts and Snippets](/howto7/front-end/layouts-and-snippets/)
 * [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/)
-* [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
+* [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
 * [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

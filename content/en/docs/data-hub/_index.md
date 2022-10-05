@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Guide"
 url: /data-hub/
-description: "This guide describes Mendix Data Hub for finding and sharing enterprise data assets."
+description: "Describes Mendix Data Hub for finding and sharing enterprise data assets."
 weight: 40
 no_list: false
 description_list: true
@@ -16,6 +16,13 @@ aliases:
 ## 1 Introduction
 
 [Mendix Data Hub](https://hub.mendix.com), available in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above, helps you integrate app development with the data available from the many applications in an organization. Data Hub enables reliable data sources to be located centrally from one point and for users to connect to them through it. 
+
+The [Mendix Data Hub](/data-hub/) includes two main features:
+
+* [External entities](/refguide/external-entities/) in Mendix Studio Pro version [8.14](/releasenotes/studio-pro/8.14/#data-hub) and above, purple entities in the Domain Model that represent data provided through [published OData Services](/refguide/published-odata-services/)
+* The [Data Hub Catalog](https://hub.mendix.com), documented in our [Data Hub Catalog](/data-hub/data-hub-catalog/) guide, a metadata hub for managing shared registered assets made available through OData services
+
+Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
 Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/), and learn more about licensing in the [Data Hub License](/data-hub/#data-hub-licences) section of the *Data Hub Guide*.
 

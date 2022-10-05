@@ -19,7 +19,7 @@ This how-to will teach you how to do the following:
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* [Step 1: Build the Domain Model & Configure a Microflow](/studio-how-to8/microflows-how-to-configure-decision-p1/)
+* [Step 1: Build the Domain Model and Configure a Microflow](/studio-how-to8/microflows-how-to-configure-decision-p1/)
 
 ## 3 Embedding the Microflow to Pages   
 
@@ -114,4 +114,4 @@ To embed the microflow with a decision (the attribute of the Boolean type), do t
 
 Congratulations! Now when the end-user clicks **Place order**, only customers who are not blocked will be able to proceed. If a customer is blocked, they will get an error message. 
 
-You can preview and/or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](/studio8/publishing-app/).
+You can preview and/or publish your app. For more information on how to preview and publish an app, see [Previewing and Publishing Your App](/studio8/publishing-app/).

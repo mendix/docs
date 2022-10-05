@@ -1,6 +1,6 @@
 ---
-title: "Step 1: Build the Domain Model & Configure a Microflow"
-linktitle: "1. Build Domain Model & Configure Microflow"
+title: "Step 1: Build the Domain Model and Configure a Microflow"
+linktitle: "1. Build Domain Model and Configure Microflow"
 url: /studio-how-to/microflows-how-to-configure-decision-p1/
 description: "This how-to describes the process of configuring a decision in Mendix Studio."
 weight: 10
@@ -81,7 +81,7 @@ To configure the decision with the attribute or parameter of the enumeration typ
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/parameter-properties.png" >}}
 
 5. In the **Properties** of the decision, click the **Configure condition** field.
-6. In the **Configure condition** pop-up window, you need to select an attribute that the condition will be based on. So, click the **Variables/Attributes** tab, select the **Grade Customer_grade** condition, and click **Save**. 
+6. In the **Configure condition** dialog box, you need to select an attribute that the condition will be based on: select the `$Customer/Grade` from the drop-down list (click <kbd>CTRL</kbd> + <kbd>Space</kbd> to see the list of suggestions), and click **Save**. 
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/configure-condition-grade.png" >}}
 
@@ -172,7 +172,7 @@ To configure the decision with the attribute of the Boolean type, follow these s
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/parameter-properties.png" >}}
 
 5. Click the decision, and in the **Properties** tab, click the **Configure condition** field.
-6. In the **Configure condition** pop-up window, you need to select the attribute that the condition will be based on. So, in the **Configure condition** pop-up window, click  the **Variables/Attributes** tab, select **Blocked Boolean** attribute of the **Customer**, and click **Save**.
+6. In the **Configure condition** dialog box, you need to select the attribute that the condition will be based on: select `$Customer/Blocked` from the drop-down list (click <kbd>CTRL</kbd> + <kbd>Space</kbd> to see the list of suggestions), and click **Save**.
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/configure-condition-pop-up.png" >}}
 

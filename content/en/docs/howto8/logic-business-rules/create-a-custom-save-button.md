@@ -1,7 +1,7 @@
 ---
 title: "Create a Custom Save Button"
 url: /howto8/logic-business-rules/create-a-custom-save-button/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 3
 tags: ["microflow", "logic", "save button", "how-to"]
 ---
@@ -19,7 +19,7 @@ This how-to will teach you how to do the following:
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/))
-* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/))
+* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/))
 
 ## 3 Replacing the Default Save Button with a Custom One
@@ -99,5 +99,5 @@ Congratulations! You have created a microflow and customized the **Save** button
 * [Work With Lists in a Microflow](/howto8/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Configure Error Handling](/howto8/logic-business-rules/set-up-error-handling/)
 * [Optimize Microflow Aggregates](/howto8/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)
 * [Microflow Activities](/refguide8/activities/)

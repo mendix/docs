@@ -97,6 +97,6 @@ Changes will not be saved until all required fields are filled in.
 
 Congratulations! You have configured fields as read-only and required for the form with employee details.
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio8/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio8/publishing-app/).
 
 You can also add new functionality to your app, for example, enable employees attach images for their business trip reports. For more information, see [How to Enable End-Users to Attach Images](/studio-how-to8/pages-how-to-attach-images/).

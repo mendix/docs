@@ -1,5 +1,5 @@
 ---
-title: "Implement SSO on a Hybrid App with Mendix & SAML"
+title: "Implement SSO on a Hybrid App with Mendix and SAML"
 linktitle: "SSO on Hybrid App with SAML"
 url: /howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/
 category: "Mobile Development"

@@ -12,10 +12,6 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 
 Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow. 
 
-When you commit your changes in Studio Pro, you can link your commit to stories in Epics.
-
-{{< figure src="/attachments/developerportal/collaborate/epics/commit-message.png" >}}
-
 {{% alert color="info" %}}
 You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app, since that will make data migration difficult later.
 {{% /alert %}}
@@ -44,9 +40,11 @@ Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive
 
 ### 2.1 The Board Page {#board}
 
-If you work in the Scrum workflow, the **Board** page gives an overview of your current sprint. At the top of the page, it shows the name of the sprint, when it ends, how many stories and points it has. Below, it shows the goal of the current sprint.
+If you work in the Scrum workflow, the **Board** page gives an overview of your current Sprint. At the top of the page, it shows the name of the Sprint, when it ends, how many stories and points it has. Below, it shows the goal of the current Sprint.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/sprint-goal.png" >}}
+
+{{% alert color="info" %}}When you commit your changes in Studio Pro, you can link your commit to stories of the current Sprint in Epics in the [Commit](/refguide/commit-dialog/) dialog box in Studio Pro.{{% /alert %}}
 
 If you work in the Kanban workflow, the **Board** page gives an overview of all the stories that your team is currently working on. At the top of the page, it shows the number of stories, and the total points.
 
@@ -136,7 +134,7 @@ On the **Planning** page, you can switch between a Scrum workflow and a Kanban w
 
 {{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" >}}
 
-If you use the Scrum workflow, the **Planning** page shows the following categories: **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog**. The goal for the current sprint is shown on the top of all categories. When there is no active sprint, you can start a new sprint by clicking **Start Sprint** on the upper-right corner. Once the sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a sprint by clicking **End Sprint** on the upper-right corner. When you end a sprint, the system shows you how many stories are completed in this sprint, all the completed stories are [archived](#archive) automatically, and you will decide where the unfinished stories should go. 
+If you use the Scrum workflow, the **Planning** page shows the following categories: **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog**. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** on the upper-right corner. Once the Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories are completed in this Sprint, all the completed stories are [archived](#archive) automatically, and you will decide where the unfinished stories should go. 
 
 If you use the Kanban workflow, the **Planning** page shows the following categories: **To Do**, **Refinement**, and **Backlog**. 
 
@@ -208,7 +206,7 @@ The epic details dialog box shows the following items:
 
 ### 2.4 The Archive Page {#archive}
 
-Every time you complete a sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
+Every time you complete a Sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
 
 * Clicking the **...** icon on the upper-right corner of the story card or the swimlane on the **Board** page, and then selecting **Archive**
 * Clicking the **...** icon at the end of a row on the **Planning** page, and then selecting **Archive**
@@ -217,7 +215,7 @@ All the archived stories are shown on the **Archive** page. You can see the foll
 
 * Unique story ID – Clicking it shows the story details.
 * Story title – Clicking it shows the story details.
-* Which sprint the story belongs to – Clicking it shows the [archived sprint details](#archived-sprint-details).
+* Which Sprint the story belongs to – Clicking it shows the [archived Sprint details](#archived-sprint-details).
 * Linked epic – Clicking it shows the epic details.
 * Archive date and time – Clicking it shows the story details.
 
@@ -227,13 +225,13 @@ You can search stories based on story titles in the search box.
 
 #### 2.4.1 Archived Sprint Details Dialog Box {#archived-sprint-details}
 
-When you click the sprint icon in a row of an archived story on the **Archived** page, you can see the following details of this sprint:
+When you click the Sprint icon in a row of an archived story on the **Archived** page, you can see the following details of this Sprint:
 
 * Sprint name
-* When this sprint was archived
-* When this sprint started and ended
+* When this Sprint was archived
+* When this Sprint started and ended
 * Sprint goal
-* Whether the sprint goal was reached
-* Who archived the sprint, shown under **Archived by**
+* Whether the Sprint goal was reached
+* Who archived the Sprint, shown under **Archived by**
 * Stories that were completed, shown under **Completed Stories**
 * Stories that were not completed, shown under **Incomplete Stories**

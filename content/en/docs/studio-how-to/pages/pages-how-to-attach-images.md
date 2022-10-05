@@ -74,31 +74,35 @@ To solve this, you can add a button which will open a pop-up page where your end
 Follow the steps below:
 
 1. Open the **New Report** page where employees submit a new report. 
-2. Open the **Toolbox** and search for **Create Object** button.
+
+2. Open the **Toolbox** and search for the **Open Page** button.
+
 3. Drag and drop the button above **Save** and **Cancel** buttons:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/new-button.png"   width="450"  >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/open-page-button.png"   width="450"  >}}
 
-4. Open button properties > the **Caption** property and rename it from *New* to *Attach Images*.
-5. Click the **Icon** property. 
-6. In the **Select icon** dialog box, search for the *picture* icon and select it.
-7. In the button properties, click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
+4. Open button properties and do the following:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/button-style-change.png"   width="150"  >}}
+    1. Select the **Caption** property and rename it to *Attach Images*.
 
-8. In the button properties, click the **Entity** property.
-9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**: 
+    2. Click the **Icon** property. 
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/image-report-association.png"   width="400"  >}}
+    3. In the **Select icon** dialog box, search for the *picture* icon, and click **Select**.
 
-10. In the button properties, click **Page**.
-11. In the **Select Page** dialog box, click the plus icon in the top right corner.
-12. In the **Create new page** dialog box, do the following:
+    4. Click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
 
-    1. Set the **Title** to *Attach Images*.
-    2. Set the **Layout** to *PopupLayout*.
+        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/button-style-change.png"   width="150"  >}}
 
-    3. The **Pre-fill page contents based on the Receipt entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Vertical** and click **Create**.
+    5. In the button properties, click the **Page** property.
+
+    6. In the **Select Page** dialog box, click the plus icon in the top right corner to add a new page. 
+
+    12. In the **Create new page** dialog box, do the following:
+
+        1. Set the **Title** to *Attach Images*.
+        2. Set the **Layout** to *PopupLayout*.
+        3. Set **Entity** to **Receipt**.
+        4. The **Autofill Contents** option is on, so contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/create-new-page-images.png"   width="500"  >}}
 
@@ -106,9 +110,13 @@ Follow the steps below:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/attach-images-page.png"   width="500"  >}}
 
-    As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
+14. As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
 
-14. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view. 
+15. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view on the **Attach Images** page. 
+
+16. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
+    
+17. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**: 
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
 
@@ -126,7 +134,7 @@ After users attach the images, it would be nice to display their attachments and
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**:
+    2. In the **Select Entity** dialog box, unselect **Generate contents of the list view**, choose the **Receipt** entity over **Receipt_Report** association, and click **Select**:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/image-report-association.png"   width="400"  >}}
 
@@ -164,4 +172,4 @@ Great job! Now you have the image list that shows attached images and your users
 
 Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
 
-[Preview your app](/studio/publishing-app/) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images & Files](/studio/page-editor-widgets-images-and-files/).
+[Preview your app](/studio/publishing-app/) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images and Files](/studio/page-editor-widgets-images-and-files/).

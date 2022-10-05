@@ -1,6 +1,6 @@
 ---
 title: "Secure Your App and Configure Access to Its Functionality"
-linktitle: "Secure App & Configure Access"
+linktitle: "Secure App and Configure Access"
 url: /studio-how-to8/security-how-to-configure-roles/
 description: "Describes how to configure security in Mendix Studio."
 weight: 40
@@ -45,7 +45,7 @@ There are the following pages in this app:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio8/page-editor/). 
-* Familiarize yourself with information about security, roles, and permissions in Studio. For more information, see [Security, Roles & Permissions](/studio8/settings-security/).
+* Familiarize yourself with information about security, roles, and permissions in Studio. For more information, see [Security, Roles, and Permissions](/studio8/settings-security/).
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio8/domain-models/).
 
 ## 3 Enabling Security
@@ -112,4 +112,4 @@ Congratulations! You have configured access for different user roles in your app
 
 You can see that the button is hidden from the **Front_Desk** role, but the container is not. You can use conditional visibility to hide it entirely. For more information, see [Conditional Visibility Section](/studio8/page-editor-widgets-visibility-section/).
 
-When you preview your app, you can test different user role, while after you publish it, you can manage the end-users and assign user roles to them. For more information, see the [Managing App Users](/studio8/settings-security/#managing-app-users) section in *Security, Roles & Permissions*.
+When you preview your app, you can test different user role, while after you publish it, you can manage the end-users and assign user roles to them. For more information, see the [Managing App Users](/studio8/settings-security/#managing-app-users) section in *Security, Roles, and Permissions*.

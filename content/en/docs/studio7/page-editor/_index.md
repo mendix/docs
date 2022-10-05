@@ -169,4 +169,4 @@ The **Properties** tab displays the properties of the currently selected element
 
 ## 7 Read More
 
-* [Data View & List View Properties](/studio7/page-editor-data-view-list-view/)
+* [Data View and List View Properties](/studio7/page-editor-data-view-list-view/)

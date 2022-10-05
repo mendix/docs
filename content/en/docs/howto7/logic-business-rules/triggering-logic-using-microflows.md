@@ -1,7 +1,7 @@
 ---
 title: "Trigger Logic Using Microflows"
 url: /howto7/logic-business-rules/triggering-logic-using-microflows/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 2
 tags: ["microflow", "logic"]
 ---
@@ -150,4 +150,4 @@ There are two more advanced settings:
 * [Optimizing Retrieve Activities](/howto7/logic-business-rules/optimizing-retrieve-activities/)
 * [Error Handling](/howto7/logic-business-rules/set-up-error-handling/)
 * [Optimizing Microflow Aggregates](/howto7/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)

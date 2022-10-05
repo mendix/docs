@@ -1,5 +1,5 @@
 ---
-title: "Explore Connectors & Adapters"
+title: "Explore Connectors and Adapters"
 url: /howto8/extensibility/explore-connectors-and-adapters/
 category: "Extensibility"
 weight: 70

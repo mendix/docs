@@ -92,6 +92,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Bengali | India | bn_IN | 9.3.0 |
 | Bulgarian | Bulgaria | bg_BG | 9.0.5 |
 | Catalan | Spain | ca_ES | 9.0.5 |
+| Chinese (Mandarin) | China | zho_CN | 9.18.0 |
 | Chinese (Simplified) | China | zh_CN | 9.0.5 |
 | Chinese (Simplified) | Singapore | zh_SG | 9.0.5 |
 | Chinese (Traditional) | Hong Kong, China | zh_HK | 9.0.5 |
@@ -194,6 +195,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Swahili | Tanzania | sw_TZ | 9.2.0 |
 | Swahili | Uganda | sw_UG | 9.2.0 |
 | Tagalog | Philippines | tl_PH | 9.2.0 |
+| Tamazight | Morocco | tzm_MA | 9.18.0 |
 | Tamil | India | ta_IN | 9.3.0 |
 | Tamil | Sri Lanka | ta_LK | 9.3.0 |
 | Tamil | Singapore | ta_SG | 9.3.0 |

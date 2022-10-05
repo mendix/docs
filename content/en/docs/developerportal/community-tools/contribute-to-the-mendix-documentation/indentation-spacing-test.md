@@ -1,5 +1,5 @@
 ---
-title: "Indentation & Spacing Test"
+title: "Indentation and Spacing Test"
 url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
 description: "Various test cases for rendering of indents and spaces"

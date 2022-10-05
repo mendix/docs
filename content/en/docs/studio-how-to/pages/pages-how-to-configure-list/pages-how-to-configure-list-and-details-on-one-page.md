@@ -1,6 +1,6 @@
 ---
 title: "Configure a List and View List Item Details on One Page"
-linktitle: "Configure List & View Details on 1 Page"
+linktitle: "Configure List and View Details on 1 Page"
 url: /studio-how-to/pages-how-to-configure-list-and-details-on-one-page/
 description: "Describes how to configure a list of items in Mendix Studio."
 weight: 20
@@ -37,26 +37,33 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
 
-1. Open your home page and navigate to the **Toolbox** > **Widgets**.
-2. Search for **Open Page** button and drag and drop it to the page.
+1. Open your home page. 
+
+2. Navigate to the **Toolbox** > **Widgets** and search for **Open Page** button and drag and drop it to the page.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/open-page-button.png" alt="Open Page"   width="250"  >}}
 
-3. Open the button properties and follow the steps below:
+5. Open the button properties and follow the steps below:
 
     1. Set **Page** as an on-click action and click the **Page** property.
 
-        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/button-properties.png" alt="Button Properties"   width="250"  >}}
-
     2. In the **Select Page** dialog box, click the plus icon in the top right corner.
-    3. In the **Create new page** dialog box, fill in the page title. 
-    4. Select the page template by clicking **Master Detail** in the side bar and choose **Master Detail**:
+
+    3. In the **Create Page** dialog box, set the page title to *OpportunityContact*.
+    
+    4. Deselect the **Autofill Contents** option and select the page template by clicking **Master Detail** in the side bar and choose **Master Detail**:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/create-master-detail.png"   width="550"  >}}
 
     5. Click **Create**.
+    
+    6. Go back to the home page and open the **Page** button properties.
+    
+    7. Set **Parameters** to **Create Object**:
+    
+        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/button-properties.png" alt="Button Properties"   width="250"  >}}
 
-The page is created. In the responsive (Desktop) view, a list is displayed on the left and list item details are displayed on the right:
+You have created a new page. In the responsive (Desktop) view, a list is displayed on the left and list item details are displayed on the right:
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/master-details.png" >}} 
 
@@ -64,11 +71,21 @@ The page is created. In the responsive (Desktop) view, a list is displayed on th
 
 The page is created, now you need to configure it. First of all, you need to connect data to the list. Do the following:
 
-1. Select the list view and click the **Entity** option in its properties:
+1. Open the **OpportunityContact** page that you created in the section above and click **Parameters** > **New Parameter** In the top-left corner.
+
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/new-parameter.png" alt="New Parameter"  >}}
+
+2. In page parameter properties, click **Entity**:
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/parameter-properties.png" alt="Page Parameter Properties"  >}}
+
+3. In **Select Entity** dialog box, choose the **OpportunityContact** entity and click **Select**. The page now has an *OpportunityContact* object as its context through the page parameter. 
+
+1. On the page, select the list view and click the **Entity** option in its properties:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/list-view-entity.png" alt="List View Properties"   width="250"  >}}
 
-2. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity. 
+5. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity. 
+
 3. To display the name of each report per company, do the following:
 
     1. Select the **Name** text in the list view and open the **Properties** tab.
@@ -81,7 +98,7 @@ The page is created, now you need to configure it. First of all, you need to con
 
     3. In the **Select Attribute** dialog box, choose **Name** and click **Select**. 
 
-4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image that does not correspond to opportunity contacts you are displaying.
+4. Delete the image from the list and the column where this image is placed, as now the image displays a user image that does not correspond to opportunity contacts you are displaying.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/list-with-no-image.png"   width="300"  >}}
 
@@ -125,7 +142,7 @@ To displayed all the details that a contact has, do the following:
 
 9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/job-title-text-box.png" >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/job-title-text-box.png" width="350">}}
 
 10. Open text box properties and click **Data Source** > **Attribute**. 
 11. In the **Select Attribute** dialog box, choose **JobTitle** and click **Select**.
@@ -137,9 +154,9 @@ Congratulations! You have a page that displays a list of opportunity contacts an
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/configured-page.png" alt="Configured Page" >}}
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio/publishing-app/).
 
-You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files/).
+You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images and Files](/studio/page-editor-widgets-images-and-files/).
 
 ## 6 Read More
 

@@ -13,16 +13,24 @@ tags: ["Deploy", "Private Cloud", "Backup", "Velero", "Kubernetes"]
 
 ## 2 Prerequisites
 
-[text]
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-* [text]
+* Install Velero 1.9 or later. For more information, see [Velero documentation](https://velero.io/docs/).
+* Create a recovery cluster.
+    {{% alert color="info" %}}The process of creating a recovery cluster may vary depending on the platform that you use to host your private cloud. For more information, refer to the documentation supplied by your cloud provider.{{% /alert %}}
 
-## 3 [text]
+## 3 Creating a Velero Backup
 
 [text]
 
 1. [text]
 
-## 4 Read More
+## 4 Restoring a Velero Backup
+
+[text]
+
+1. [text]
+
+## 6 Read More
 
 * [text]

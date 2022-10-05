@@ -32,7 +32,7 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your app has the following [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/). 
+* Your app has the following [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/). 
 
 * Dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to do the following:
 
@@ -392,4 +392,4 @@ Great job! You have deployed your app locally and tested your workflow from the 
 
 ## 10 Read More
 
-* [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/)
+* [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/)

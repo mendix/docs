@@ -1,7 +1,7 @@
 ---
-title: "Jump"
+title: "Jump Activity"
 url: /refguide/jump-activity/
-weight: 35
+weight: 60
 tags: ["workflow", "workflows", "jump", "Studio Pro"]
 ---
 
@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "jump", "Studio Pro"]
 
 The **Jump** activity allows you to jump to other activities in the workflow. This is useful when, for example, you are approving a request and need more details that are provided in one of the previous user tasks:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/jump-activity/jump-activity.jpg" alt="Jump Example" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/jump-activity/jump-activity.jpg" alt="Jump Example" width="400">}}
 
 ## 2 Properties
 

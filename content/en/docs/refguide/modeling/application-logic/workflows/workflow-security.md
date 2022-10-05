@@ -1,9 +1,9 @@
 ---
 title: "Configuring Security for a Workflow Process"
 url: /refguide/workflow-security/
-linktitle: "Configuring Workflow Security"
+linktitle: "Configure Workflow Security"
 description: "Describes how to configure security for a workflow in Mendix Studio Pro."
-weight: 50
+weight: 30
 tags: ["studio pro", "workflow", "task", "security", "workflow security"]
 ---
 
@@ -66,7 +66,6 @@ If the user does not see the user task, check the following:
 
 
 
- 
 
 
 

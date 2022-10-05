@@ -18,8 +18,9 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Portal Improvements
 
 * We now allow sorting of namespaces in the namespace selection list of the Create environment flow.
-* We now allow a newly-created environment to always run in Production mode. With this setting, the DTAP mode is set to `P` and the Purpose field has been removed.
-* We have made the Subscription secret field optional – if no subscription secret is provided the app will be considered a trial app.
+* Newly-created environments will always run in Production mode (the DTAP mode is set to `P`) – you can no longer choose the purpose of your environment.
+   * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
+* We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
 * We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
 
 ### September 29th, 2022

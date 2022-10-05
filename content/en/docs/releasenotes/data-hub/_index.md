@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### October 6th, 2022
+
+### Fixes
+
+* We fixed the registration of a new version of an existing service on the Registration Form
+
+### Improvements
+
+* Company Data Hub admins can now disable/hide sample data sets
+
 ### September 29th, 2022
 
 #### Improvements

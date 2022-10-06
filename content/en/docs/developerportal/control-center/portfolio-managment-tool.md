@@ -123,7 +123,7 @@ In the WSJF prioritization view, all the projects are ranked by their WSJS score
 
 The list shows the following information:
 
-* **Project** –  Clicking it opens a side panel that shows the details of the project.
+* **Project** – Clicking it opens a side panel that shows the details of the project.
 
   {{% alert type="info" %}}
   When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).

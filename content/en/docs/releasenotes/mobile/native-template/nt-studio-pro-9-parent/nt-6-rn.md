@@ -5,6 +5,22 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.3.1
+
+**Release date: October 6th, 2022**
+
+#### Fixes
+
+* We removed default permissions for read and write external storage for Android.
+
+## 6.3.0
+
+**Release date: September 20th, 2022**
+
+#### Features
+
+* We improved our app security allowing apps to use new Database encryption capability of Studio Pro 9.18.
+
 ## 6.2.27
 
 **Release date: September 19th, 2022**

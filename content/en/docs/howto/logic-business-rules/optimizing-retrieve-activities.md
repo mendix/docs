@@ -10,9 +10,9 @@ tags: ["microflow", "retrieve", "optimize"]
 
 ## 1 Introduction
 
-Often in processes you need to retrieve objects in order to complete the process. Sometimes objects cannot be found and you need to take additional actions. And sometimes the objects you retrieve and the objects you create are assigned different names, and you cannot merge them back into a single flow.
+Often in processes you need to retrieve objects in order to complete the process. But what if those objects cannot be found? Usually you need to take additional actions. But sometimes the objects you retrieve and the objects you create are assigned different names, and you cannot merge them back into a single flow.
 
-This document presents an example of optimizing retrieve activities during the process of finding and creating objects. It also gives an example of retrieving an instance of an object.
+This document presents an example for optimizing retrieve activities during the process of finding and creating objects. It also gives an example for retrieving a specific instance of an object.
 
 ## 2 Finding and Creating Objects to Continue Your Process 
 
@@ -22,7 +22,7 @@ A common example is shown below in which creating an order needs to be associate
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/example-create-order.png" width="500px">}}
 
-One solution for this is to include the logic (partially) in a sub-microflow (as shown in the following example). However, this is not easy to read, and preventing creating the same object multiple times at different places also causes a lot of unnecessary maintenance.
+One solution for this is to include the logic (partially) in a sub-microflow (as shown in the following example). However, this is not easy to read. And preventing creating the same object multiple times at different places also causes a lot of unnecessary maintenance.
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/example-solution-one.png" >}}
 
@@ -40,9 +40,9 @@ As we can see in the example below, the **GetCustomerPrimaryAddress** sub-microf
 
 ## 3 Retrieving an Instance of an Object
 
-Sometimes you only need to have a specific instance of an object. Building a sub-flow for just one retrieve-and-create action is too much. An alternative way is to build your own loop, which allows you to have one main flow but still be able to find and create objects during this process.
+Sometimes you only need to retrieve a specific instance of an object. Building a sub-flow for just one retrieve-and-create action is too much work. An alternative way is to build your own loop, which allows you to have one main flow but still be able to find and create objects during this process.
 
-However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the creating activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
+However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the create activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-retrieve-activities/retrieve-one-object-instance.png" >}}
 
@@ -50,4 +50,3 @@ However, there is the risk of creating an infinite loop if the retrieve activity
 
 * [Retrieve Activities](/refguide/retrieve/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
-

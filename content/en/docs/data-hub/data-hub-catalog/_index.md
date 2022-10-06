@@ -17,11 +17,7 @@ If you deploy your Mendix apps in an alternative environment, like on-prem or pr
 
 ## 2 Data Hub Catalog Home {#data-hub-home}
 
-From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub.
-
-{{< figure src="/attachments/data-hub/share-data/data-hub-home.png" alt="Data Hub screen" >}}
-
-You can navigate to the following tabs:
+From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can carry out the major functions of Data Hub. You can navigate to the following tabs:
 
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 * **Catalog** – [search](/data-hub/data-hub-catalog/search/) for registered assets in the search pane and see details of the metadata of selected asset

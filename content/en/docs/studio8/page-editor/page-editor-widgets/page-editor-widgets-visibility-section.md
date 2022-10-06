@@ -1,7 +1,6 @@
 ---
 title: "Conditional Visibility Section"
 url: /studio8/page-editor-widgets-visibility-section/
-parent: "page-editor-widgets"
 description: "Describes the Conditional Visibility section in widgets properties in Mendix Studio."
 weight: 30
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
@@ -32,15 +31,11 @@ You can enable conditional visibility based on the selected attribute value and/
 **Attribute-Based** visibility allows you to show widgets only when they match a certain value of the selected attribute. 
 
 {{% alert color="info" %}}
-
 The attribute must be of the Boolean or enumeration type. 
-
 {{% /alert %}}
 
 {{% alert color="info" %}}
-
 You can only configure attribute-based conditional visibility when a widget is placed in a data container: a data view or a list view.
-
 {{% /alert %}}
 
 ### 2.2 Attribute Values
@@ -56,9 +51,7 @@ For example, you would like to show a special offer price only for customers wit
 The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget visible to all users that are linked to one of the selected user roles.
 
 {{% alert color="info" %}}
-
-You can only configure role-based conditional visibility when security is enabled. For more information, see [Security, Roles & Permissions](/studio8/settings-security/).
-
+You can only configure role-based conditional visibility when security is enabled. For more information, see [Security, Roles, and Permissions](/studio8/settings-security/).
 {{% /alert %}}
 
 ### 2.4 Roles
@@ -74,13 +67,11 @@ The **Roles** property is only shown when the [Role-Based](#role-based) property
 To configure attribute-based visibility, do the following:
 
 1. Select a widget you would like to make visible only for certain attribute values and go to its properties.
-
 2. In **Conditional Visibility** section, click the **Attribute-Based** property:
 
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-based-property.png"   width="300"  >}}
 
 3. In the **Select Attribute** dialog box, select an attribute of the Boolean or enumeration type and click **Select**.
-
 4. The **Attribute Values** property is now displayed in properties. Untick the values that does not meet the conditions you would like to set:
 
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/attribute-values.png"   width="300"  >}} 
@@ -92,9 +83,7 @@ Attribute-based conditional visibility is set for the widget.
 To disable attribute-based visibility, follow the steps below:
 
 1. Select a widget you would like to disable attribute-based visibility and go to its properties.
-
 2. In **Conditional Visibility** section, click the **Attribute-Based** property.
-
 3. In the **Select Attribute** dialog box, click **Clear**:
 
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/clear-attribute-based-visibility.png"   width="400"  >}}
@@ -106,13 +95,10 @@ The attribute-based conditional visibility is cleared for the widget.
 To configure role-based conditional visibility, do the following:
 
 1. Select a widget you would like to make visible only for certain user roles and go to its properties.
-
 2. In **Conditional Visibility** section, toggle the **Role-Based** property.
-
 3. A list of roles available in your app is displayed in the **Roles** property. Untick the roles who would like to hide the widget from:
 
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-visibility-section/role-based-example.png"   width="300"  >}} 
-    
 
 Role-based conditional visibility is set for the widget.
 
@@ -128,4 +114,4 @@ Role-based conditional visibility is disabled for the widget.
 ## 4 Read More
 
 * [Widgets](/studio8/page-editor-widgets/)
-* [Security, Roles & Permissions](/studio8/settings-security/)
+* [Security, Roles, and Permissions](/studio8/settings-security/)

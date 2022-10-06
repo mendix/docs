@@ -1,7 +1,6 @@
 ---
-title: "Parse & Format Date Function Calls"
+title: "Parse and Format Date Function Calls"
 url: /refguide/parse-and-format-date-function-calls/
-parent: "expressions"
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
 tags: ["studio pro", "expressions", "parsing", "formatting"]
@@ -50,16 +49,16 @@ The examples below illustrate which value the expression returns:
 * If you use the following input:
 
     ```java {linenos=false}
-    parseDateTime('2015-05-21', 'yyyy-MM-dd')
+    parseDateTime('2022-04-30T22:00:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')
     ```
 
     the output is:
 
     ```java {linenos=false}
-    May 21st, 2015 12:00 AM.
+    Apr 30 2022 22:00:00
     ```
 
-    The time is 00:00 because it is not specified.
+    The time will be 00:00, if it is not specified.
     
 * If you use the following input:
 

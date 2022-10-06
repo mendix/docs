@@ -1,7 +1,6 @@
 ---
 title: "Annotation Flow"
 url: /refguide7/annotation-flow/
-parent: "common-elements"
 ---
 
 An annotation flow is a connection that can be used to link an annotation to a flow object(s).

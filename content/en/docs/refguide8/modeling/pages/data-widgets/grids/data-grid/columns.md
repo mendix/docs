@@ -1,7 +1,6 @@
 ---
 title: "Grid Columns"
 url: /refguide8/columns/
-parent: "data-grid"
 tags: ["studio pro", "column", "grid column", "data grid"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -16,7 +15,7 @@ Grid columns allow you to set properties for a [data grid](/refguide8/data-grid/
 
 ## 2 Properties
 
- An example of grid column properties is represented in the image below: 
+An example of grid column properties is represented in the image below: 
 
 {{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/data-grid/columns/column-properties.png"   width="250"  >}}
 
@@ -99,9 +98,7 @@ The values in a column can be aggregated in several ways. The aggregate function
 | Count | Show the count of the values. |
 
 {{% alert color="warning" %}}
-
 Note that all objects will be taken into account, and not just the ones on the current page.
-
 {{% /alert %}}
 
 #### 2.4.4 Aggregate Caption
@@ -109,9 +106,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Language Menu](/refguide8/translatable-texts/).
 
 {{% alert color="info" %}}
-
 'Total' could be an aggregate caption for a column that shows the sum of the values.
-
 {{% /alert %}}
 
 #### 2.4.5 Show Tooltip

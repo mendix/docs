@@ -1,7 +1,6 @@
 ---
 title: "Any Chart Cheat Sheet"
 url: /refguide8/charts-any-cheat-sheet/
-parent: "chart-widgets"
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 weight: 50
 tags: ["Any Chart", "Examples", "Charts", "Widget", "studio pro"]

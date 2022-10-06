@@ -1,7 +1,6 @@
 ---
 title: "Published REST Service"
 url: /refguide/published-rest-service/
-parent: "published-rest-services"
 weight: 10
 description: "Configuration options for a published REST service"
 tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to", "studio pro"]
@@ -34,7 +33,8 @@ Location shows URL on which a service can be reached.
 By default, location is built up by appending service name and "v1" to the "rest/" prefix. Service name will be stripped off of any invalid URL characters; like spaces and special characters.
 
 Example:
-```
+
+```text {linenos=false}
 http//localhost:8080/rest/my_service_name/v1
 ```
 
@@ -64,7 +64,7 @@ The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documen
 
 To save a service's [OpenAPI (Swagger) documentation](/refguide/open-api/) somewhere on your machine, simply right-click the service in the **App Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
-When the app is running, this file is available under */rest-doc/servicename/swagger.json*.
+When the app is running, this file is available under */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service, for instance *rest/myservice/v1*.
 
 ## 3 Security
 
@@ -77,17 +77,17 @@ Select whether clients need to authenticate or not.
 If authentication is required, you can select which authentication methods you would like to support
 
 * Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
-*  Select **Active session** to allow access from JavaScript inside your current application
-  * Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
-  * [Offline-first](/refguide/offline-first/) apps cannot use active session authentication, because they do not have sessions that stay active while the app is running
-  * To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
+* Select **Active session** to allow access from JavaScript inside your current application
+* Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
+* [Offline-first](/refguide/offline-first/) apps cannot use active session authentication, because they do not have sessions that stay active while the app is running
+* To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-  ```javascript
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
-  xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
-  xmlHttp.send(null);
-  ```
+    ```javascript
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
+    xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+    xmlHttp.send(null);
+    ```
 
 * Select **Custom** to authenticate using a microflow. This microflow is called every time a user want to access a resource.
 

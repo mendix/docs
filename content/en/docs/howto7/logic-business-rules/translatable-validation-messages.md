@@ -1,7 +1,7 @@
 ---
 title: "Use Translatable Validation Messages"
 url: /howto7/logic-business-rules/translatable-validation-messages/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 14
 tags: ["validation", "microflow", "translate"]
 ---
@@ -51,4 +51,3 @@ The GetI18NText microflow validates and acquires the text like this. This is don
 The text is replaced by this microflow, the input is the translated text, the variable (parameter) text you want to add to the text, and the token nr to indicate the position (as in, {1}, {2}, {3})
 
 {{< figure src="/attachments/howto7/logic-business-rules/translatable-validation-messages/model4.jpg" >}}
-

@@ -32,9 +32,9 @@ You can edit an app in Mendix Studio by opening your app in [Developer Portal](h
 You can also open your app in Studio via Studio Pro. Do the following:
 
 1. In Studio Pro, open the app in that you want to view in Studio.
-2.  Click the globe icon in the top right corner (only available if Studio is enabled).
+2. Click the globe icon in the top right corner (only available if Studio is enabled).
 
-	{{< figure src="/attachments/studio8/general/globe-icon.png" alt="Globe Icon" >}}
+    {{< figure src="/attachments/studio8/general/globe-icon.png" alt="Globe Icon" >}}
 
 The app opens in Studio.
 
@@ -44,13 +44,12 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 
 {{< figure src="/attachments/studio8/general/upgrade.png" alt="Upgrade"   width="350"  >}}
 
-You may also see an orange top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](/studio8/general-versions/).
+You may also see an orange top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges and Mendix Versions](/studio8/general-versions/).
 
 {{% alert color="info" %}}
-When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
+When you upgrade your app in Studio to the latest Mendix version, you will need to upgrade your app in Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. 
-
 {{% /alert %}}
 
 ## 4 Switching App Modes
@@ -112,7 +111,7 @@ The top menu bar items are described in the table below:
 | Undo/Redo actions | There buttons undo or redo the last action. You can also use <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> shortcuts correspondingly. |
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
 | [Preview button](/studio8/publishing-app/) | Shows you what your app will look like after it is published |
-| [Publish button](/studio8/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](/studio8/publishing-app/) |
+| [Publish button](/studio8/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing and Publishing Your App](/studio8/publishing-app/) |
 | [Checks button](/studio8/checks/) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](/studio8/consistency-errors/).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
 | Help icon | Opens the **Help & Learning** side menu, where you can find just-in-time help – videos and how-to's that will provide you explanations and instructions in the context of your current task. For example, when working in the domain model, you will see videos and how-to's on the domain model, entities, and attributes as a recommended topic for you. However, you can also browse through the categories and other topics that cover all the main features in Studio. |
 | Ellipsis icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](/studio8/general-versions/) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendix.com/) where you can ask questions and explore the knowledge offered by the entire Mendix community<li>**Check the  Documentation** – a link to the [Studio Guide](/studio8/)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/)<li>**Mendix Academy** – a link to the [Mendix Academy](https://academy.mendix.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](/studio8/mx-assist/)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
@@ -144,5 +143,4 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Main Documents in This Category
 
-* [Studio Ranges & Mendix Versions](/studio8/general-versions/) – explains how Studio version correlates to the Mendix version
-
+* [Studio Ranges and Mendix Versions](/studio8/general-versions/) – explains how Studio version correlates to the Mendix version

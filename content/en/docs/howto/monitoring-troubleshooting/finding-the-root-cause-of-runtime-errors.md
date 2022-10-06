@@ -1,8 +1,9 @@
 ---
 title: "Find the Root Cause of Runtime Errors"
 url: /howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 8
+description: "Describes how to find the root cause of runtime errors via Studio Pro and via the application logs."
 tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 ---
 
@@ -37,14 +38,12 @@ With these three pieces of information, you should be able to find the cause of 
 If the application is deployed from the service console or in the cloud, the information is available in the application logs. 
 
 {{% alert color="info" %}}
-
 You need to have the timestamp of when the error occurred. The logs can contain a lot of information, and this timestamp will make searching through them much easier. Once you navigate to the log file, you can search for the error.
-
 {{% /alert %}}
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580022.png" >}}
 
-Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR – ` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
+Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR –` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
 
 1. The microflow and action where the error occurred.
 2. The type of error that occurred.
@@ -59,7 +58,7 @@ With these three pieces of information, you should be able to find the cause of 
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-* [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
 * [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)

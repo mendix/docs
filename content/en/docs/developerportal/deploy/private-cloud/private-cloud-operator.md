@@ -1,11 +1,10 @@
 ---
 title: "Using Command Line to Deploy a Mendix App to a Private Cloud Cluster"
+linktitle: "Use CLI to Deploy"
 url: /developerportal/deploy/private-cloud-operator/
-parent: "private-cloud"
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 weight: 30
 tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -102,7 +101,7 @@ spec:
         return 403;
       }
   ingressClassName: alb # Optional, can be omitted : specify the Ingress class
-  ingressPath: "/" # Optional, can be omitted : specify the Ingress path
+  ingressPath: "/" # Optional, can be omitted : specify the Ingress path. Anything other than "/" or "/*" will be ignored as Mendix applications don't support path based routing
   ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
@@ -177,10 +176,10 @@ You need to make the following changes:
 * **ingressPathType** – specify a custom Ingress class name; this overrides the [default ingress pathType](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
-* **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
-    {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security/). {{% /alert %}}
+    {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
 
     If you have an offline Runtime license, for example for a standalone cluster, you can configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
 
@@ -215,6 +214,7 @@ and {constant-name} is the name of the constant. The constant name will also be 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/constant-name.png" >}}
 
 Set the constant values in the **microflowConstants** value in **runtime**. For example:
+
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
@@ -265,13 +265,13 @@ You can do this in one of two ways:
 
 #### 3.3.1 Processing the CR in the CLI
 
- To submit the CR via a CLI you will need a file containing the YML you created in [Editing the CR](#edit-cr), above.
+To submit the CR via a CLI you will need a file containing the YML you created in [Editing the CR](#edit-cr), above.
 
 ##### 3.3.1.1 Kubectl in the CLI
 
 To build and deploy your app using AWS-EKS or other Kubernetes platform execute the following command:
 
-```shell
+```shell {linenos=false}
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
@@ -279,29 +279,26 @@ kubectl apply -f {File containing the CR} -n {namespace where app is being deplo
 
 To build and deploy your app using the OpenShift CLI, do the following:
 
-1.  Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/private-cloud-cluster/#openshift-signin) section of *Creating a Private Cloud Cluster*.
-2.  Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
-3.  Paste the following command into your command line terminal:
+1. Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/private-cloud-cluster/#openshift-signin) section of *Creating a Private Cloud Cluster*.
+2. Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
+3. Paste the following command into your command line terminal:
 
-```shell
-oc apply -f {File containing the CR}
+```shell {linenos=false}
+oc apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
 #### 3.3.2 Process the CR in the OpenShift Console{#openshift-console}
 
 To build and deploy your app using the OpenShift Console, do the following:
 
-1.  Sign in to the OpenShift Console.
+1. Sign in to the OpenShift Console.
+2. Go to your project.
+3. Click the **Add** button, and select **Import YAML**.
 
-1.  Go to your project.
-
-2.  Click the **Add** button, and select **Import YAML**.
-    
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image1.png" >}}
 
-3.  In the **Import YAML** page, enter/paste the YML you prepared in [Editing the CR}(#edit-cr), above.
-
-4.  Click the **Create** button.
+4. In the **Import YAML** page, enter/paste the YML you prepared in [Editing the CR}(#edit-cr), above.
+5. Click the **Create** button.
     
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" >}}
 
@@ -314,7 +311,7 @@ The YAML window will report the status of the app build. Note that it can take u
 The following statuses will be reported:
 
 * **appState** – The status of your app (Started or Stopped)
-  * This will also return the **appURL** which you can use to reach your app
+    * This will also return the **appURL** which you can use to reach your app
 * **buildStatus** – Ready
 * **databaseStatus** – Ready
 * **mendixAppState** – Ready
@@ -345,6 +342,7 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
 For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings/#general) in `customConfiguration` to the app's URL. For example: 
+
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp

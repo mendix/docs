@@ -3,7 +3,7 @@ title: "Curate Registered Assets"
 url: /data-hub/data-hub-catalog/curate/
 category: "Data Hub Catalog"
 weight: 45
-description: "Curating and enhancing findability of data assets in Data Hub"
+description: "Describes how to curate and enhance findability of data assets in Data Hub."
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---
 
@@ -52,8 +52,8 @@ When a data source is selected in the **Search Results**, the following options 
 
 * **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
-   * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
-   * **Validate** – indicates that the data source and datasets have been validated
+    * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
+    * **Validate** – indicates that the data source and datasets have been validated
 * **Delete Data Source** – allows Owners to delete their own data sources, while Curators or Admins can delete any data sources in the company
 
 When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
@@ -67,7 +67,7 @@ You can curate Application Details from the **Application Details** screen as fo
 1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
 2. The **Application Metadata** screen is displayed:
 
-   {{< figure src="/attachments/data-hub/data-hub-catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
+    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/application-metadata-screen.png" alt="app metadata screen" >}}
 
 ### 4.1 Changing Owners of an App {#changing-owners}
 
@@ -87,7 +87,7 @@ If you, as a **Technical Owner**, curate the application and change the technica
 Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 {{% /alert %}}
 
-#### 4.1.1 Changing the Business & Technical Owners of an App {#changing-owner}
+#### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
@@ -117,7 +117,7 @@ You can change the icon that is displayed for the app and the data source by upl
 
 {{< figure src="/attachments/data-hub/data-hub-catalog/curate/app-icon-several-services.png" alt="custom contact create" >}}
 
- {{% /alert %}}
+{{% /alert %}}
 
 Currently, by default, the application icon is determined by the application type when the data source is registered. For example, for Mendix apps the Mendix Icon is displayed which identifies the technology of the source app.
 
@@ -126,12 +126,10 @@ Currently, by default, the application icon is determined by the application typ
 When you want to upload a custom icon or image, the following apply:
 
 * The accepted file types are *.png*, *.jpg*, and *.jpeg*
-
 * The maximum accepted file size is 50 KB
-
 * The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and files, and select the area you want to display during the upload operation.
 
-   {{% alert color="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
+    {{% alert color="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
 
 * Custom icons that are uploaded will be saved to the **Icon Library** and can be used for other apps.
 
@@ -142,7 +140,6 @@ To **upload a different icon** for the app follow these steps:
     {{< figure src="/attachments/data-hub/data-hub-catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  >}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
-
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**.
 
     {{% alert color="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
@@ -186,7 +183,6 @@ To edit the asset metadata, follow these steps:
     {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-description.png" alt="edit description" >}}
 
 3. Add a catalog description. This will be stored with the service details in the Catalog.
-
 4. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
 
 ### 5.2 Adding or Editing Tags to a Service {#tags}
@@ -194,7 +190,6 @@ To edit the asset metadata, follow these steps:
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
 1. In the **Search Details** screen of a selected service, click **Edit** > **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
-
 2. To add tags, click the empty **Tag** input area:
 
     {{< figure src="/attachments/data-hub/data-hub-catalog/curate/service-metadata-tags.png" alt="tags" >}}
@@ -209,7 +204,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-## 6 Discoverable & Validated {#discoverability}
+## 6 Discoverable and Validated {#discoverability}
 
 The discoverable and validated properties of registered assets can be set from the Curate bar for the selected asset.
 
@@ -227,7 +222,6 @@ When a data source is set to non-**Discoverable**, the data source, and the data
 To change the discoverability of a service, follow these steps:
 
 1. In the Data Hub Catalog, select the service to display the **Search Details**.
-
 2. If you have curation rights, the **Curation Bar** is displayed. Click the drop-down **Edit** menu and then the **Discoverable** toggle to turn it on or off. 
 
 A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and the data source details.

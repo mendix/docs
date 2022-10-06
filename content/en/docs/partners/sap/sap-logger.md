@@ -9,7 +9,7 @@ tags: ["SAP", "Kibana", "Log", "json"]
 
 ## 1 Introduction
 
-The SAP Logging Connector allows a Mendix app to output logs in a format supported by the Kibana dashboard provided by the _SAP Business Technology Platform Application Logging_ service. Without this connector, logs sent to Kibana will not have the correct structure and log level.
+The SAP Logging Connector allows a Mendix app to output logs in a format supported by the Kibana dashboard provided by the *SAP Business Technology Platform Application Logging* service. Without this connector, logs sent to Kibana will not have the correct structure and log level.
 
 By using this connector, logs will be output in a JSON format with the following fields:
 
@@ -48,7 +48,7 @@ To initialize the connector, do the following:
 5. Double-click the **RegisterSubscriber** action make sure that **Log level** is set to the constant *SapLogLevel*:
 
     {{< figure src="/attachments/partners/sap/sap-logger/logger_edit_action.png" alt="log level is set to SapLogLevel" >}}
-	
+    
 6. Edit the constant **SapLogLevel** to select the minimum log level which you want to send to the *SAP Business Technology Platform Application Logging service*. The supported log levels (case-insensitive) are `Debug`, `Trace`, `Info`, `Warning`, `Error`, and `Critical`.
 
     {{< figure src="/attachments/partners/sap/sap-logger/edit_log_level_constant.png" alt="SapLogLevel is set to Info" >}}

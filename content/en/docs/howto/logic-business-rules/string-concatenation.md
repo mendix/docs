@@ -1,8 +1,9 @@
 ---
 title: "Configure String Concatenation"
 url: /howto/logic-business-rules/string-concatenation/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 110
+description: "Describes three examples as well as best practices on configuring string concatenation."
 tags: ["microflow", "logic", "string", "concatenation"]
 ---
 
@@ -37,7 +38,7 @@ This example contains a single expression which can become difficult to read if 
 When looking at the example below it is important to note a couple of things. The white space is only added after a field if it is populated. If a person only has a first and last name, you don't want to end up with two white spaces between the two words.  
 Also the entire expression is surrounded with a trim, in case we only have a single field populated all unnecessary white spaces will be removed from the outcome of this expression.
 
-```
+```text
 trim(
 ( if $ContactPerson/Firstname != empty and $ContactPerson/Firstname != ''
 then $ContactPerson/Firstname + ' ' else '' ) +
@@ -50,6 +51,7 @@ then  getCaption( $ContactPerson/Suffix )
 else '')
 )
 ```
+
 Reference this microflow:
 
 {{< figure src="/attachments/howto/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" >}}
@@ -60,9 +62,10 @@ The most flexible solution is to break the string concatenate down into separate
 
 In this example we went even one step further in the stability of the expression. By adding an additional trim to the attribute we prevent adding additional white spaces that might have been added by the user. Using the microflow below we are absolutely sure never to get any white spaces or null values in our text.
 
-```
+```text {linenos=false}
 trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
+
 Reference this microflow:
 
 {{< figure src="/attachments/howto/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg" >}}

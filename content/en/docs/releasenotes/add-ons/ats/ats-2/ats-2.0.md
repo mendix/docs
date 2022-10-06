@@ -1,7 +1,6 @@
 ---
 title: "2.0"
 url: /releasenotes/add-ons/ats-2.0/
-parent: "ats-2"
 weight: 100
 ---
 
@@ -116,11 +115,11 @@ The following terminology has changed:
 * "package" --&gt; "folder"
 * "project" --&gt; "app"
 * data types:
-  * "integer" --&gt; "number"
-  * "string" --&gt; "text"
-  * "enumeration" --&gt; "drop-down"
-  * "web element" --&gt; "page element"
-  * "undefined" --&gt; "any"
+    * "integer" --&gt; "number"
+    * "string" --&gt; "text"
+    * "enumeration" --&gt; "drop-down"
+    * "web element" --&gt; "page element"
+    * "undefined" --&gt; "any"
 * "test run" --&gt; "job"
 
 There are new statuses and results in the test runner:

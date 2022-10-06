@@ -1,7 +1,6 @@
 ---
 title: "Call Web Service"
 url: /refguide7/call-web-service/
-parent: "integration-activities"
 ---
 
 {{% alert color="warning" %}}

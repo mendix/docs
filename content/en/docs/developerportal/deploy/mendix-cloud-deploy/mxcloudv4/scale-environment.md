@@ -2,7 +2,6 @@
 title: "Scaling Your Environment in Mendix Cloud v4"
 linktitle: "Scaling in Cloud v4"
 url: /developerportal/deploy/scale-environment/
-parent: "mxcloudv4"
 weight: 20
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]

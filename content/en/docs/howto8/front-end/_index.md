@@ -17,9 +17,8 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Use Navigation Layouts](/howto8/front-end/use-navigation-layouts/) – explains how to choose, design, and configure your navigation layouts.
 * [Configure Your Theme](/howto8/front-end/configuring-your-theme/) – explains how to configure the styling of your page in Studio Pro and Studio
 * [Use the Charts Widgets](/howto8/front-end/charts-tutorials/) – these how-to's will help you create and fine-tune your chart widgets
-* [Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/) – introduces how to create overview and detail pages as well as configure navigation and security
-* [Use Layouts & Snippets](/howto8/front-end/layouts-and-snippets/) – covers the basics of creating pages using style layouts and snippets
+* [Create Your First Two Overview and Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/) – introduces how to create overview and detail pages as well as configure navigation and security
+* [Use Layouts and Snippets](/howto8/front-end/layouts-and-snippets/) – covers the basics of creating pages using style layouts and snippets
 * [Implement Styles](/howto8/front-end/styles/) – explains how to use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 * [Create Custom Error Pages](/howto8/front-end/custom-error-page/) – explains how to create a professional looking error page that will appear when your app is down
 * [Style Google Maps](/howto8/front-end/style-google-maps/) – shows how you can enhance your app's map overviews with improved styling
-

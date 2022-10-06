@@ -23,36 +23,36 @@ This how-to will teach you how to do the following:
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
-*  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
-   {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580399.png" >}} 
+* Download [Selenium Client and WebDriver](http://www.seleniumhq.org/download/):
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580399.png" >}} 
 * Open the [Company Expenses app](https://marketplace.mendix.com/link/component/240/Mendix/Company-Expenses) in the Modeler and run it locally
 
 ## 3 Creating a Java Project
 
 In this chapter you will install the TestNG plug-in and create a Java project in Eclipse including the TestNG and Selenium libraries:
 
-1.  Open Eclipse and select **Help** > **Eclipse Marketplace...**:
-  
+1. Open Eclipse and select **Help** > **Eclipse Marketplace...**:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580411.png" >}}
 
 2. In the **Find** section of the **Eclipse Marketplace** dialog box, enter *TestNG* and click **Go**. "TestNG for Eclipse" will be shown in the search results. 
-3.  Click **Install** to install the TestNG plug-in for Eclipse:
-  
+3. Click **Install** to install the TestNG plug-in for Eclipse:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580410.png" >}}
 
-4.  Click **Confirm** to confirm the features:
-  
+4. Click **Confirm** to confirm the features:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580408.png" >}}
 
-5.  Review the licenses and click **Finish**. The plug-in will be installed:
-  
+5. Review the licenses and click **Finish**. The plug-in will be installed:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580407.png" >}}
 6. Restart Eclipse for changes to take effect.
-7.  Click the **New** icon:
-  
+7. Click the **New** icon:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580406.png" >}}
 
-8.  Select **Java Project** and click **Next**:
+8. Select **Java Project** and click **Next**:
 
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580404.png" >}}
 
@@ -77,21 +77,21 @@ You are now done setting up your project!
 To create a new TestNG file, follow these steps:
 
 1. Right-click the **src** folder and select **New** > **Other...**:
-2.  Select **TestNG class** and then click **Next**:
+2. Select **TestNG class** and then click **Next**:
 
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580398.png" >}}
 
 3. Click **Browse...** to select a source folder, select **MyFirstTestNGProject** > **src**, and click **OK**.
-4.  Enter the following information:
+4. Enter the following information:
     * **Package name**: *myfirsttestngpackage*
     * **Class name**: *MyFirstTestNGFile*
     * **@BeforeTest**: true
     * **@AfterTest**: true
-    
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580393.png" >}}
 
-5.  Click **Finish**. The template for your first TestNG file will be created automatically:
-  
+5. Click **Finish**. The template for your first TestNG file will be created automatically:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580392.png" >}}
 
     The `@Test` annotation is used to state that the method under it is a test case. In this case, the method `f` is a test case. The `@BeforeTest` annotation is used to state that the method under it will be executed before the first test case. The `@AfterTest` annotation is used to state that the method under it will be executed after the last test case.
@@ -106,19 +106,19 @@ To create a variable to be used for the WebDriver, follow these steps:
 
 1. Search for the following:
 
-    ```java
+    ```java {linenos=false}
     public class MyFirstTestNGFile {
     ```
 
 2. Add the code below on the next line. This will create a `driver` variable of the WebDriver type:
 
-    ```java
+    ```java {linenos=false}
     public WebDriver driver;
     ```
 
 3. Press Ctrl+Shift+O to organize the imports. This will import the missing statements and remove the unused import statements. The following statement will be imported:
 
-    ```java
+    ```java {linenos=false}
     import org.openqa.selenium.WebDriver;
     ```
 
@@ -126,7 +126,7 @@ To create a variable to be used for the WebDriver, follow these steps:
 
 The `@BeforeTest` annotation is used to state that the method under it will be executed before the first test case. Before the first test case, open the Firefox browser by following these steps:
 
-1.  Change the following code:
+1. Change the following code:
 
     ```java
     @BeforeTest
@@ -145,9 +145,9 @@ The `@BeforeTest` annotation is used to state that the method under it will be e
 
     This creates a new instance of the Firefox driver and opens the Firefox browser.
 
-2.  Press **CTRL+SHIFT+O**. The following statement will be imported:
+2. Press **CTRL+SHIFT+O**. The following statement will be imported:
 
-    ```java
+    ```java {linenos=false}
     import org.openqa.selenium.firefox.FirefoxDriver;
     ```
 
@@ -199,9 +199,9 @@ Now that you are on the login window, you will want to log in. To add the second
 
 1. Open Firefox and go to `http://localhost:8080/index.html`.
 2. Use the developer tools to inspect the element.
-3. Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps. The CSS selector _#usernameInput_ is unique. There is one matching node:
+3. Click the **User name** input field. The ID of the this field is *usernameInput*. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be *#usernameInput*. The same principle is used for the other steps. The CSS selector *#usernameInput* is unique. There is one matching node:
 
-	{{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580373.png" >}}
+    {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580373.png" >}}
 
 4. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
 
@@ -210,7 +210,7 @@ Now that you are on the login window, you will want to log in. To add the second
     **Password** input field | `#passwordInput`
     **Sign in** button | `#loginButton`
 
-5.  Add a new test method called `login`. Use the following code:
+5. Add a new test method called `login`. Use the following code:
 
     ```java
     @Test(priority=2)
@@ -223,28 +223,28 @@ Now that you are on the login window, you will want to log in. To add the second
 
 This test method contains the following test steps:
 
-1. Enter _MxAdmin_ as the user name.
-2. Enter _1_ as the password.
+1. Enter *MxAdmin* as the user name.
+2. Enter *1* as the password.
 3. Click the login button.
 
 ### 5.6 Add the Third Test Method
 
 Now that you are logged in, you will want to navigate to the **Expenses** tab. To add the third test method, follow these steps:
 
-1.  Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
-  
+1. Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580390.png" >}}
 
-2.  Select the **Expenses** tab:
-  
+2. Select the **Expenses** tab:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580389.png" >}}
 
     The name of the **Expenses** tab is **tabPage4**. Every element will automatically get the CSS class `mx-name-[Name]`, so the expenses tab will get the CSS class `mx-name-tabPage4` when the app is running.
 
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580388.png" >}}
-    
+
 3. Go back to **Eclipse**.
-4.  Add a new test method called `openExpensesTab`. Use the following code:
+4. Add a new test method called `openExpensesTab`. Use the following code:
 
     ```java
     @Test(priority=3)
@@ -261,8 +261,8 @@ Now that you are logged in, you will want to navigate to the **Expenses** tab. T
 Now that you are on the **Expenses** tab, you will want to create a new expense. To add the fourth test method, follow these steps:
 
 1. Open the Modeler and then open the **Desktop_AdminMenu** page.
-2.  Select the **New Expense** button:
-  
+2. Select the **New Expense** button:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580387.png" >}}
 
     The name of the **New Expense** button is `newButton3`, so the button will have the `mx-name-newButton3` CSS class:
@@ -270,7 +270,7 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580386.png" >}}
 
 3. Open the **Desktop_Expense_NewEdit_Admin** page.
-4.  Find the names of the following elements (as you did in step 3):
+4. Find the names of the following elements (as you did in step 3):
 
     | Element | Name |
     | --- | --- |
@@ -278,13 +278,10 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
     | Description dropdown | `referenceSelector1` |
     | Save button | `saveButton1` |
 
-    {{% alert color="info" %}}
+    {{% alert color="info" %}}The name of an element in your app may be different than the name shown in the Name column. In step 7, use the name of the element of your app.{{% /alert %}}
 
-    The name of an element in your app may be different than the name shown in the Name column. In step 7, use the name of the element of your app.
-
-    {{% /alert %}}
 5. Go back to **Eclipse**.
-6.  Add a new test method called `createExpense`. Use the following code:
+6. Add a new test method called `createExpense`. Use the following code:
 
     ```java
     @Test(priority=4)
@@ -301,7 +298,7 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
 
     1. Click **New Expense**.
     2. Clear the **Amount** field.
-    3. Enter _15.00_ in the **Amount** field.
+    3. Enter *15.00* in the **Amount** field.
     4. Select the second option from the **Description** drop-down menu.
     5. Click **Save**.
 
@@ -318,13 +315,13 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
 After you have created an expense, you will want to sign out. To add the fifth test method, follow these steps:
 
 1. Open Modeler and then open the **Desktop_MyInfo** snippet.
-2.  Find the name of the following element:
+2. Find the name of the following element:
 
     | Element | Name |
     | --- | --- |
     | Sign out button | `signOutButton1` |
 
-3.  Add a new test method called `signOut`. Use the following code:
+3. Add a new test method called `signOut`. Use the following code:
 
     ```java
     @Test(priority=5)
@@ -340,8 +337,8 @@ After you have created an expense, you will want to sign out. To add the fifth t
 You are now ready to run the test. To run the test, follow these steps:
 
 1. Right-click the **MyFirstTestNGProject** folder.
-2.  Select **Run as** > **TestNG Test**:
-  
+2. Select **Run as** > **TestNG Test**:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580385.png" >}}
 
     The results of the test will be shown in the console window and in the TestNG results window:
@@ -354,8 +351,8 @@ You are now ready to run the test. To run the test, follow these steps:
 
 TestNG generates reports in the HTML format. To test the report, follow these steps:
 
-1.  Right-click the **MyFirstTestNGProject** folder and select **Refresh**. A test-output folder will be created:
-  
+1. Right-click the **MyFirstTestNGProject** folder and select **Refresh**. A test-output folder will be created:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580382.png" >}}
 
 2. Open the **test-output** folder.
@@ -377,13 +374,13 @@ TestNG generates reports in the HTML format. To test the report, follow these st
 When you run your test as you did in [Run the Test](#RuntheTest), a test suite is created automatically. This test suite contains all testNG files that can be found in the project. But what if you only want to run specific tests? Than you need to create a test suite yourself.
 
 1. Right-click the **src** folder and select **New** > **Other**.
-2.  Open the **XML** folder and select **XML File**:
+2. Open the **XML** folder and select **XML File**:
 
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580377.png" >}} 
 
 3. Click **Next**.
-4. Change the file name to _MyFirstTestSuite.xml_.
-5.  Click **Finish** to create the XML file:
+4. Change the file name to *MyFirstTestSuite.xml*.
+5. Click **Finish** to create the XML file:
 
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580376.png" >}}
 
@@ -391,7 +388,7 @@ When you run your test as you did in [Run the Test](#RuntheTest), a test suite i
 
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580375.png" >}}
 
-7.  Change the following code:
+7. Change the following code:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -413,7 +410,7 @@ When you run your test as you did in [Run the Test](#RuntheTest), a test suite i
 
     This will create the new test suite `MyFirstTestSuite`. The test suite contain one test: `Test1`. The test contain one testNG file, `myfirsttestngpackage.MyFirstTestNGFile`.
 
-10. Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **1 TestNG Suite**.
+8. Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **1 TestNG Suite**.
 
 Well done! You created your first TestNG Suite!
 
@@ -423,7 +420,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
 
 1. Download the ChromeDriver here: [https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 2. Download the IEDriver here: [http://selenium-release.storage.googleapis.com/index.html](http://selenium-release.storage.googleapis.com/index.html).
-3.  In Eclipse, open **MyFirstTestNGFile** and change the following code:
+3. In Eclipse, open **MyFirstTestNGFile** and change the following code:
 
     ```java
     @BeforeTest
@@ -456,7 +453,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
 
     In this section, *chromedriver.exe* is stored in the *C://Selenium* folder. Be sure to use the right path in this code.
 
-4.  Press Ctrl+Shift+O, and the following statements will be imported:
+4. Press Ctrl+Shift+O, and the following statements will be imported:
 
     ```java
     import org.openqa.selenium.chrome.ChromeDriver;
@@ -464,7 +461,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
     import org.testng.annotations.Parameters;
     ```
 
-5.  Open **MyFirstTestSuite** and change the following code
+5. Open **MyFirstTestSuite** and change the following code
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -506,8 +503,8 @@ The test you created is now run on Firefox only. If you want to make sure the fu
 
     The first test (called `ChromeTest`) has the browser parameter `chrome`. This parameter will be used in the `@BeforeTest` method in MyFirstTestNGFile.
 
-6.  Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **TestNG Suite**:
-  
+6. Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **TestNG Suite**:
+
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580372.png" >}}
 
 Well done! You created your first automated cross-browser test with TestNG!

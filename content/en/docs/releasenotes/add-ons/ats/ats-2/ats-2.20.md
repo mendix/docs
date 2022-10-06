@@ -1,7 +1,6 @@
 ---
 title: "2.20"
 url: /releasenotes/add-ons/ats-2.20/
-parent: "ats-2"
 weight: 80
 ---
 
@@ -44,7 +43,7 @@ We hope this makes it easier to start using ATS on new apps.
 This feature is only available for licensed Mendix apps and only if the user **smartdigitalfactory@clevr.nl** is invited to the app.
 {{% /alert %}}
 
-#### Configure a Default Selenium Hub & Environment
+#### Configure a Default Selenium Hub and Environment
 
 When starting a new test case/suite, it was always required to select an environment and a Selenium hub for that execution. 
 

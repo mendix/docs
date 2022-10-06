@@ -1,7 +1,6 @@
 ---
 title: "Entities"
 url: /refguide8/entities/
-parent: "domain-model"
 weight: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -26,13 +25,13 @@ For example, you have a collection of CDs like the one in the table below:
 | Title | Artist |
 | --- | --- |
 | How to Dismantle an Atomic Bomb | U2 |
-| Exodus | Bob Marley & The Wailers |
+| Exodus | Bob Marley and The Wailers |
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
 {{% alert color="info" %}}
 You can also use data sources from other applications in your project  through the [Data Hub](/refguide8/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model:
- {{< figure src="/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png" alt="Virtual Entity Example" >}} 
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png" alt="Virtual Entity Example" >}} 
 
 For further information see [External Entities](/refguide8/external-entities/).
 {{% /alert %}}
@@ -173,11 +172,11 @@ You can also edit an entity by opening the entity properties dialog box.
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
-*   [Attributes](/refguide8/attributes/)
-*   [Associations](/refguide8/associations/)
-*   [Validation Rules](/refguide8/validation-rules/)
-*   [Event Handlers](/refguide8/event-handlers/)
-*   [Indexes](/refguide8/indexes/)
-*   [Access Rules](/refguide8/access-rules/)
+* [Attributes](/refguide8/attributes/)
+* [Associations](/refguide8/associations/)
+* [Validation Rules](/refguide8/validation-rules/)
+* [Event Handlers](/refguide8/event-handlers/)
+* [Indexes](/refguide8/indexes/)
+* [Access Rules](/refguide8/access-rules/)
 
 See the detailed pages for each of these tabs for more information.

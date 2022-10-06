@@ -34,7 +34,7 @@ This how-to was written based on Modeler version 5.20. All the images, names, an
 
     {{< figure src="/attachments/howto7/integration/expose-a-web-service/8945665.png" >}}
 
-2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/).
+2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/).
 3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/).
 4. Run the application and add some data to expose in the web service.
 
@@ -70,13 +70,13 @@ To create a published web service, follow these steps:
 To create the functionality to expose, follow these steps:
 
 1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Create Your First Microflow: Hello World!](/howto7/logic-business-rules/create-your-first-microflow-hello-world/)).
-2.  To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
+2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     {{< figure src="/attachments/howto7/integration/expose-a-web-service/18581709.png" >}}
 
-	Reference this microflow:
-	
-	{{< figure src="/attachments/howto7/integration/expose-a-web-service/model.jpg" >}}
+    Reference this microflow:
+
+    {{< figure src="/attachments/howto7/integration/expose-a-web-service/model.jpg" >}}
 
 ## <a name="6"></a>6 Publishing a Microflow
 

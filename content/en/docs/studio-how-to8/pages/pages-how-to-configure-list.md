@@ -1,5 +1,6 @@
 ---
 title: "Configure a List and View List Item Details"
+linktitle: "Configure List and View List Item Details"
 url: /studio-how-to8/pages-how-to-configure-list/
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
@@ -41,27 +42,23 @@ Before starting this how-to, make sure you have completed the following prerequi
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
 
 1. Open your home page and navigate to the **Toolbox** > **Widgets**.
-
 2. Search for **Open Page** button and drag and drop it to the page.
 
-	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/open-page-button.png" alt="Open Page"   width="250"  >}}
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/open-page-button.png" alt="Open Page"   width="250"  >}}
 
 3. Open the button properties and follow the steps below:
 
     1. Set **Page** as an on-click action and click the **Page** property.
 
-    	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/button-properties.png" alt="Button Properties"   width="250"  >}}
+        {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/button-properties.png" alt="Button Properties"   width="250"  >}}
 
-    2.  In the **Select Page** dialog box, click **New Page**.
-
-    3.  In the **Create new page** dialog box, fill in the page title. 
-
+    2. In the **Select Page** dialog box, click **New Page**.
+    3. In the **Create new page** dialog box, fill in the page title. 
     4. Select the page template by clicking **Master Detail** in the side bar and choose **Master Detail**:
 
-    	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/create-master-detail.png"   width="550"  >}}
+        {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/create-master-detail.png"   width="550"  >}}
 
     5. Click **Create**.
-
 
 The page is created. In the responsive (Desktop) view, a list is displayed on the left and list item details are displayed on the right:
 
@@ -73,23 +70,23 @@ The page is created, now you need to configure it. First of all, you need to con
 
 1. Select the list view and click the **Entity** option in its properties:
 
-	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/list-view-entity.png" alt="List View Properties"   width="250"  >}}
+    {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/list-view-entity.png" alt="List View Properties"   width="250"  >}}
 
 2. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity. 
-
 3. To display the name of each report per company, do the following:
 
     1. Select the **Name** text in the list view and open the **Properties** tab.
 
-    	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/text.png"   width="300"  >}}
+        {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/text.png"   width="300"  >}}
 
     2. In the **Content** property, delete *Name* and click **Add attribute**:
 
-    	{{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/text-content.png"   width="250"  >}}
+        {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/text-content.png"   width="250"  >}}
 
     3. In the **Select Attribute** dialog box, choose **Name** and click **Select**. 
 
 4. Delete the image from the list and the column where this image is placed, as now the image displays a a user image that does not correspond to opportunity contacts you are displaying.
+
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/list-with-no-image.png"   width="300"  >}}
 
 5. As the goal of the new page is to merely display data, delete the **New** button above the list view together with the container it is placed in:
@@ -115,21 +112,17 @@ To displayed all the details that a contact has, do the following:
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/data-view-buttons.png" >}}
 
 2. Double-click the *User Details* text widget (which is displayed as a data view heading) and rename it to *Opportunity Contact Details*. 
-
 3. Open the **Toolbox** and search for **Radio Buttons**, drag and drop it *inside* the data view above the **Name** text box.
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/radio-buttons.png" >}}
 
 4. Open radio buttons properties and click **Data Source** > **Attribute**.
-
 5. In the **Select Attribute** dialog box, choose **Title** and click **Select**:
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/title.png"   width="350"  >}}
 
 6. Select the **Name** text box and click **Data Source** > **Attribute** in its properties. 
-
 7. In the **Select Attribute** dialog box, choose **Name** and click **Select**.
-
 8. Repeat steps 6 and 7 to set the **Phone** attribute for the **Phonenumber** text box, the **Email** attribute for the **Email** text box, **DateCreated**  for the **Birthday** text box, and **EstimatedValue** for the **Bio** text box. 
 
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/attributes-replaced.png" >}}
@@ -139,19 +132,15 @@ To displayed all the details that a contact has, do the following:
     {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/job-title-text-box.png" >}}
 
 10. Open text box properties and click **Data Source** > **Attribute**. 
-
 11. In the **Select Attribute** dialog box, choose **JobTitle** and click **Select**.
-
 12. To add the information on the opportunity contact's status, open the **Toolbox**, search for for **Radio Buttons**, drag and drop it inside the data view below the **Estimated Value** text box.
-
 13. Open the radio buttons properties and click **Data Source** > **Attribute**.
-
 14. In the **Select Attribute** dialog box, choose **Status** and click **Select**.
 
 Congratulations! You have a page that displays a list of opportunity contacts and the details of the selected contact:
 
 {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/configured-page.png" alt="Configured Page" >}}
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio8/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio8/publishing-app/).
 
-You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images & Files](/studio8/page-editor-widgets-images-and-files/).
+You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images and Files](/studio8/page-editor-widgets-images-and-files/).

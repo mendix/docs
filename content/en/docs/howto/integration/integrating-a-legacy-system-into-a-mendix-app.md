@@ -1,8 +1,10 @@
 ---
 title: "Integrate a Legacy System into a Mendix App"
+linktitle: "Integrate Legacy System"
 url: /howto/integration/integrating-a-legacy-system-into-a-mendix-app/
 category: "Integration"
 weight: 1
+description: "Describes how to assess potential options for integrating an existing system with a Mendix app and how to integrate with a legacy system using REST."
 tags: ["legacy", "legacy system", "integration"]
 ---
 
@@ -20,7 +22,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Know how to create domain models (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
-* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
+* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](/howto/logic-business-rules/trigger-microflow-from-menu-item/))
 * Understand the concepts behind REST and web services (for more information, see [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/))
     * Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial; for instructions on how to accomplish this, refer to the configuration of your non-Mendix Platform
@@ -39,11 +41,9 @@ In this section, you will learn how to retrieve data from a legacy system using 
 For this how-to, we will use the publicly available Google Books API (for details, see [Google Books APIs Getting Started](https://developers.google.com/books/docs/v1/getting_started)). We will construct our example around this data model. Each legacy system will have a different JSON structure based on internal data models. This example will return a collection of books using a given author search parameter. To use this API, users must collect an API key (as outlined in [Google Books APIs Acquiring and Using an API Key](https://developers.google.com/books/docs/v1/using?csw=1#APIKey)). The response structure of this particular API is as follows:
 
 1. The API we will use has a JSON structure.
-2.  Construct the appropriate data model for this JSON.
+2. Construct the appropriate data model for this JSON.
 
-    {{% alert color="warning" %}}Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](/refguide/json-structures/).
-
-    {{% /alert %}}
+    {{% alert color="warning" %}}Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](/refguide/json-structures/).{{% /alert %}}
 3. Create a non-persistable search entity called **BookSearch** that allows the user to enter an author and title. This should be linked to a second object:
 
     {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582034.png" >}}
@@ -58,23 +58,23 @@ For this how-to, we will use the publicly available Google Books API (for detail
 
     The microflow activities for this flow are the following:
 
-    a. Creates a new response object.<br>
-    b. Makes the REST call to the API using the following target:<br>
+    1. Creates a new response object.<br>
+    2. Makes the REST call to the API using the following target:<br>
 
-    {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582035.png" >}}<br>
+        {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582035.png" >}}<br>
 
-    c. Calls a sub microflow that retrieves all the items associated with the response. Each item then has all the associated volumes retrieved:
+    3. Calls a sub microflow that retrieves all the items associated with the response. Each item then has all the associated volumes retrieved:
 
-    {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582031.png" >}}<br>
+        {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582031.png" >}}<br>
 
-    d. Iterates through the **VolumeList** and makes a new **BookResult** object to display the search results:
+    4. Iterates through the **VolumeList** and makes a new **BookResult** object to display the search results:
 
-    {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582037.png" >}}<br>
+        {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582037.png" >}}<br>
 
-    e. Retrieves the author list **Over Association** for each volume. <br>
-    f. Iterates through the list of author names and uses a **Change** activity to add the author name. This is done to accommodate this situation:
+    5. Retrieves the author list **Over Association** for each volume. <br>
+    6. Iterates through the list of author names and uses a **Change** activity to add the author name. This is done to accommodate this situation:
 
-    {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582036.png" >}}
+        {{< figure src="/attachments/howto/integration/integrating-a-legacy-system-into-a-mendix-app/18582036.png" >}}
 
 6. When a user signs into the application and enters a search term, the results are successfully populated via the REST calls.
 

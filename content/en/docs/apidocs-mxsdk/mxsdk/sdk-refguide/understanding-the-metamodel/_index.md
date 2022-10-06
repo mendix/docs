@@ -1,7 +1,6 @@
 ---
 title: "Understanding the Mendix Metamodel"
 url: /apidocs-mxsdk/mxsdk/understanding-the-metamodel/
-parent: "sdk-refguide"
 weight: 1
 ---
 
@@ -11,14 +10,14 @@ If you are familiar with Studio Pro you know that a Mendix model is just a colle
 
 Units come in two flavors:
 
-* **Structural units** – These are the _nodes_ in the project tree and can be (only): the entire project (root), modules and folders. A structural unit mainly provides structure and contains very little information itself.
-* **Model units** – These are the _leafs_ in the project tree: microflows, pages, etc. These can be edited in an editor of Studio Pro. Internally, a model unit is a collection of model objects which we call: _elements_.
+* **Structural units** – These are the *nodes* in the project tree and can be (only): the entire project (root), modules and folders. A structural unit mainly provides structure and contains very little information itself.
+* **Model units** – These are the *leafs* in the project tree: microflows, pages, etc. These can be edited in an editor of Studio Pro. Internally, a model unit is a collection of model objects which we call: *elements*.
 
 ## 2 Elements
 
 Each model unit consists of a tree of elements. Examples of elements are: entities in a domain model, attributes of an entity, activities and arrows in a microflow, widgets in a page, etc.
 
-Each element has an ID that's only internally used and a _type_, such as `Entity` or `Attribute`, etc. It's important to note that, in general, there is not always a 1-to-1 correspondence between things you see in Studio Pro and elements. We often need to use more elements than you'd see at first glance in Studio Pro, usually to be able to capture the variety of constructs which Mendix supports, and sometimes because it's technically more convenient.
+Each element has an ID that's only internally used and a *type*, such as `Entity` or `Attribute`, etc. It's important to note that, in general, there is not always a 1-to-1 correspondence between things you see in Studio Pro and elements. We often need to use more elements than you'd see at first glance in Studio Pro, usually to be able to capture the variety of constructs which Mendix supports, and sometimes because it's technically more convenient.
 
 As an example: an entity can have a generalization. If it has none, you see "(none)" in Studio Pro but in the Entity element this is expressed using an element of type `NoGeneralization`. If the entity has a generalization, then this is expressed through an element of type `Generalization` which holds a reference to the generalization entity. The images that ship with the reference documentation should guide you through these constructions.
 
@@ -32,11 +31,11 @@ Almost all elements have one or more properties, or rather: their values. The pr
 
 ### 3.1 References
 
-References are a particular type of property. References can either be **by id** or **by name**. By-id references are used to point to elements in the _same_ model unit. By-name references are used to point to elements in _any_ model unit, by fully-qualified name.
+References are a particular type of property. References can either be **by id** or **by name**. By-id references are used to point to elements in the *same* model unit. By-name references are used to point to elements in *any* model unit, by fully-qualified name.
 
 ## 4 Interfaces
 
-When you open a model using the Model SDK, not the entire model is downloaded: models can be very large, and in general it's not necessary to "know" the entire model to be able to work with it - even analysis can typically be done on a unit-per-unit basis. So, to save on bandwidth and memory consumption, we initially only send back the _interfaces_ of all units. The interface of a unit consists of the part of the unit which we define to be _public_ and this is typically very small in comparison to the full unit contents. All pieces of information which can be referred to by _other_ model units will be public, such as names.
+When you open a model using the Model SDK, not the entire model is downloaded: models can be very large, and in general it's not necessary to "know" the entire model to be able to work with it - even analysis can typically be done on a unit-per-unit basis. So, to save on bandwidth and memory consumption, we initially only send back the *interfaces* of all units. The interface of a unit consists of the part of the unit which we define to be *public* and this is typically very small in comparison to the full unit contents. All pieces of information which can be referred to by *other* model units will be public, such as names.
 
 As an example, for a domain model the following things are public and therefore part of the unit interface:
 

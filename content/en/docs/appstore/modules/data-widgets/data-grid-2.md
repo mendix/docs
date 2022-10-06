@@ -1,7 +1,6 @@
 ---
 title: "Data Grid 2"
 url: /appstore/modules/data-grid-2/
-parent: "data-widgets"
 description: "Describes the configuration and usage of the Data Grid 2 widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -219,7 +218,7 @@ Here is an example of dropzones for filters in Structure mode:
 
 ### 7.1 Date Filter
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look & feel" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look and feel" >}}
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
@@ -303,7 +302,6 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 #### 7.2.2 Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
-
 
 ### 7.3 Number Filter
 

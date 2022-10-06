@@ -1,7 +1,6 @@
 ---
 title: "ATS 1 Best Practices"
 url: /addons/ats-addon/bp-one/
-parent: "bp"
 weight: 20
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Find the Root Cause of Runtime Errors"
 url: /howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 8
 tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 ---
@@ -44,7 +44,7 @@ You need to have the timestamp of when the error occurred. The logs can contain 
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580022.png" >}}
 
-Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR – ` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
+Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR –` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
 
 1. The microflow and action where the error occurred.
 2. The type of error that occurred.

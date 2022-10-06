@@ -1,7 +1,6 @@
 ---
 title: "Compatibility"
 url: /addons/ats-addon/ov-compatibility/
-parent: "ov"
 weight: 2
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Menu Bar"
 url: /refguide/menu-bar/
-parent: "menu-widgets"
 weight: 1
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -61,5 +60,5 @@ Only available when the [menu source](#menu-source) is set to **Menu document**.
 ## 3 Read More
 
 * [Page](/refguide/page/)
-* [Menus & Navigation](/refguide/menu-widgets/)
+* [Menus and Navigation](/refguide/menu-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

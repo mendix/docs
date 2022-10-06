@@ -1,7 +1,6 @@
 ---
 title: "Object Activities"
 url: /refguide/object-activities/
-parent: "activities"
 weight: 10
 tags: ["studio pro", "microflow", "object"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
@@ -24,6 +23,10 @@ The following are the object activities you can use in your microflow or nanoflo
 * [Delete object(s)](/refguide/deleting-objects/) *(only in microflows)* – activity deletes one or more objects
 * [Retrieve](/refguide/retrieve/) – gets one or more objects of an entity
 * [Rollback object](/refguide/rollback-object/) – undoes uncommitted changes made to an object
+
+{{% alert color="info" %}}
+Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.
+{{% /alert %}}
 
 ## 2 Read More
 

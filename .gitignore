@@ -7,6 +7,9 @@ hugo.exe
 /htmltest.exe
 /.hugo_build.lock
 
+# For Mac users
+.DS_Store
+
 # Legacy for users who still have leftovers from previous Docs Stack
 /_site/
 /.vscode/

@@ -1,7 +1,6 @@
 ---
 title: "Deployment Options"
 url: /addons/ats-addon/ov-deployment/
-parent: "ov"
 weight: 3
 ---
 
@@ -9,7 +8,7 @@ weight: 3
 
 This document describes the supported deployment scenarios for the Application Test Suite (ATS).
 
-Every customer situation is different. We want to make sure there's a convenient deployment option for ATS in all scenarios. The main determinant is where your app is running — either in the cloud or on-premises. The second determinant is the Selenium component, which either can run in the cloud or be hosted on-premises by the customer. For each scenario, we need to ensure secure and reliable communication between the components.
+Every customer situation is different. We want to make sure there's a convenient deployment option for ATS in all scenarios. The main determinant is where your app is running, either in the cloud or on-premises. The second determinant is the Selenium component, which either can run in the cloud or be hosted on-premises by the customer. For each scenario, we need to ensure secure and reliable communication between the components.
 
 All in all, there are four different supported deployment scenarios. This document describes and compares them.
 
@@ -274,18 +273,19 @@ Before you start, make sure that your server has internet access to download the
         - SCREEN_WIDTH=1920
         - SCREEN_DEPTH=24
     ```
+
 5. Start up the Selenium grid with this command:
 
-    ```sh
+    ```shell
     docker-compose up -d
     ```
+
 6. You now have a grid running on `http://myserver:4444/wd/hub`. Attached to this grid are two nodes: one for Chrome and one for Firefox. You can easiliy scale by starting new nodes with a simple command. This example will start up a second node for both Firefox and Chrome:
 
-    ```sh
+    ```shell
     docker-compose scale firefoxnode=2 chromenode=2
     ```
 
 #### 6.4.2 Firewall Configuration
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.
-

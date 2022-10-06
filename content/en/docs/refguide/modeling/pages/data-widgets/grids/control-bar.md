@@ -1,7 +1,6 @@
 ---
 title: "Control Bar"
 url: /refguide/control-bar/
-parent: "grids"
 weight: 30
 tags: ["studio pro", "control bar", "add button", "deselect all button", "export to csv button", "grid action button", "grid new button", "remove button", "search button", "select button", "select all button", "data grid", "template grid", "reference set selector", "control bar buttons"]
 aliases:
@@ -80,7 +79,7 @@ You can use an existing page or you can generate the appropriate page by either:
 
 Both these options allow you to create a page which has the correct format for use by the add button. You can, of course, edit the page to meet your own requirements once it has been generated.
 
-See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
+See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event and Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
 
 ### 2.3 Create Button {#create-button}
 
@@ -118,11 +117,9 @@ The **Selection type** property determines whether the **Select all** button sho
 | Select all  | Clicking this button selects all objects.                    |
 
 {{% alert color="warning" %}}
-
 Due to technical limitations, a button with the **Select all** selection type cannot be combined with [Remove](#remove-button), [Delete](#grid-action-button), or [Select](#select-button) buttons. 
 
 An **Edit** button always behaves as if the selection type is **Select page**, regardless of the actual settings of the **Select all** button that had been used to select objects.
-
 {{% /alert %}}
 
 ### 2.8 Deselect All Button {#deselect-all-button}
@@ -134,11 +131,9 @@ The **Deselect all** button lets the user deselect all rows in the grid or a ref
 The **Export to Excel** button allows end-users to export the contents of the grid or the reference set selector to an Excel file. 
 
 {{% alert color="info" %}}
-
 The Excel export function is only available in list widgets that have the [XPath data source](/refguide/xpath-source/). 
 
 Constraints you are using for search fields and sorting will also be exported.
-
 {{% /alert %}}
 
 #### 2.9.1 Maximum Number of Rows
@@ -153,9 +148,7 @@ The **Date export format** property defines the format dates will be exported. T
 * **Text** – date values are exported exactly as shown in the data grid
 
 {{% alert color="warning" %}}
-
 When selecting **Date value**, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
-
 {{% /alert %}}
 
 ### 2.10 Export to CSV Button {#export-to-csv-button}
@@ -163,11 +156,9 @@ When selecting **Date value**, dates will be shown only in the time zone of your
 The **Export to CSV** button allows end-users to export the contents of the grid or the reference set selector to a CSV file. 
 
 {{% alert color="info" %}}
-
 The export to CSV function is only available in list widgets that have the [XPath data source](/refguide/xpath-source/). 
 
 Constraints you are using for search fields and sorting will also be exported.
-
 {{% /alert %}}
 
 #### 2.10.1 Decimal Separator

@@ -1,9 +1,9 @@
 ---
 title: "SAP"
 url: /partners/sap/
-description: "Documentation for users who need material on consuming SAP services."
-tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
+description: "Presents a list of reference documents for users who need material on consuming SAP services."
 weight: 20
+tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

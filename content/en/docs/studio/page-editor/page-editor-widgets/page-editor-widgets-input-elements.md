@@ -1,7 +1,6 @@
 ---
 title: "Input Elements"
 url: /studio/page-editor-widgets-input-elements/
-parent: "page-editor-widgets"
 description: "Describes input elements in Mendix Studio."
 weight: 20
 tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
@@ -31,9 +30,7 @@ You can find the description of input elements available in Studio in the table 
 | Radio Buttons | Radio buttons are used to allow users select the option from a number of preset ones. For example, users can select from several possible locations for picking an order up. |
 
 {{% alert color="info" %}}
-
 Apart from the standard input elements, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](/studio/page-editor-widgets/#widgets-by-origin) section in *Widgets*.
-
 {{% /alert %}}
 
 ## 3 Properties
@@ -60,6 +57,14 @@ The **Type** option allows you to quickly change the type of one input element t
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/input-widget-type.jpg" alt="Type Option" >}}
 
 ### 3.2 Data Source Section {#input-elements-data-source}
+
+The **Data Source** section defines the data context for the widget. 
+
+#### 3.2.1 Data Source
+
+Data source section shows the data source of a data container the input elements is placed in, for example, a text box is inside a data view with a page parameter. You cannot edit this property at the input widget level, but you can change it in the data container properties. 
+
+#### 3.2.2 Attribute
 
 **Input Elements** need to be linked to an attribute to show data and to allow end-users to edit it. Different input elements require different [types of attributes](/studio/domain-models-attributes/). You can find the correspondence between the input elements and attribute types in the table below:
 
@@ -90,13 +95,10 @@ This property only appears if **Show Label** is enabled. Specify the name that w
 Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: 
 
 * **Editable** – The value displayed by the widget is editable.
-
 * **Read-Only** – The value is in read-only mode.
-
 * **Conditional** – The widget is editable only if specified conditions are met based on an attribute value or based on an expression. 
 
-	{{% alert color="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
-
+    {{% alert color="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
 ##### 3.3.3.1 Condition Based on {#condition}
 
@@ -133,7 +135,7 @@ Specific properties of the input elements are described in the table below:
 
 The **Format** section is specific for the **Date Picker** widget only. 
 
- The **Format** section properties are described in the table below:
+The **Format** section properties are described in the table below:
 
 | Property       | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
@@ -145,7 +147,6 @@ The **Format** section is specific for the **Date Picker** widget only.
 In **Input Validation**, you can specify whether the widget's value should be validated. You can set a validation type for an input widget and specify an end-user message in case validation fails. For example, you can mark the **Full name** field as required for new customers and you can add a message saying: "Please specify your name to proceed".
 
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-input-elements/Validation-type-required.png"   width="350"  >}}
-
 
 The **Input Validation** section properties are described in the table below:
 

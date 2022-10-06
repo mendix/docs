@@ -1,14 +1,13 @@
 ---
-title: "Images, Videos & Files"
+title: "Images, Videos and Files"
 url: /refguide/image-and-file-widgets/
-parent: "pages"
 weight: 35
 tags: ["studio pro", "file widgets", "widget"]
 ---
 
 ## 1 Introduction
 
-Images, videos & files allow end-users to upload, download, and display files, images, and videos. 
+Images, videos and files allow end-users to upload, download, and display files, images, and videos. 
 
 * [Static Image](/refguide/image/) – displays static image:
 
@@ -25,7 +24,6 @@ Images, videos & files allow end-users to upload, download, and display files, i
 * [Image uploader](/refguide/image-uploader/) – allows end-users to upload images to the server:
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader-example.png" alt="Image Uploader Example" >}}
-
 
 ## 2 Performing Basic Functions
 

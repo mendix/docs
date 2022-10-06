@@ -1,7 +1,6 @@
 ---
 title: "Consumed Web Services"
 url: /refguide7/consumed-web-services/
-parent: "integration"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -72,13 +71,13 @@ If you are behind a firewall, you might need to use a proxy to call a webservice
 
 Mendix supports consuming web service data according to the following protocols:
 
-*   SOAP 1.1
-*   SOAP 1.2
-*   MTOM/XOP
-*   WS-MetadataExchange v1.1
-*   WS-Policy v1.2
-*   WS-Policy v1.5
-*   WS-PolicyAttachment 1.5
-*   WS-ReliableMessaging 1.1
+* SOAP 1.1
+* SOAP 1.2
+* MTOM/XOP
+* WS-MetadataExchange v1.1
+* WS-Policy v1.2
+* WS-Policy v1.5
+* WS-PolicyAttachment 1.5
+* WS-ReliableMessaging 1.1
 
 To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to 'Transport' with clientCredentialType 'Basic' in the file 'web.config'. The user credentials can be configured in the Modeler as [described here](/refguide7/call-web-service-action/) (see 'Use HTTP authentication').

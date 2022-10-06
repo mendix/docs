@@ -1,7 +1,7 @@
 ---
-title: "Navigation in Mendix Versions 7.2 & 7.3"
+title: "Navigation in Mendix Versions 7.2 and 7.3"
+linktitle: "Navigation in 7.2 and 7.3"
 url: /refguide7/navigation-in-72-and-73/
-parent: "project"
 description: "Describes the concept of navigation in apps and the properties of a profile for Mendix versions 7.2 and 7.3."
 ---
 
@@ -65,7 +65,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 | --- | --- |
 | Android.*Mobile&#124;iPhone&#124;iPod&#124;BlackBerry | Phone |
 | Android&#124;iPad | Tablet |
-| _(other)_ | Responsive |
+| *(other)* | Responsive |
 
 To configure the regular expressions used to match phone or tablet users, see [Custom Settings](/refguide7/custom-settings/).
 

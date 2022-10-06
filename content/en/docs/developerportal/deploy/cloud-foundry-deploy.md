@@ -3,7 +3,7 @@ title: "Cloud Foundry"
 url: /developerportal/deploy/cloud-foundry-deploy/
 category: "Deployment"
 weight: 50
-description: "How to deploy a Mendix App on a Cloud Foundry environment which does not have Mendix support in the Developer Portal"
+description: "Describes how to deploy to a Cloud Foundry environment which does not have Mendix support in the Developer Portal."
 tags: ["Cloud Foundry", "Deploy", "Bind"]
 aliases:
     - /deployment/cloud-foundry/index.html
@@ -63,36 +63,36 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To deploy a Mendix app to Cloud Foundry, you have to configure the settings in Studio Pro.
 
-1.  Open Studio Pro, choose the menu option **Run > Edit Cloud Foundry Settings**:
+1. Open Studio Pro, choose the menu option **Run > Edit Cloud Foundry Settings**:
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-settings.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-settings.png" >}}
 
-2.  Enter the following in the credentials of the **Edit Cloud Foundry Settings** window:
+2. Enter the following in the credentials of the **Edit Cloud Foundry Settings** window:
 
-	* **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. Examples are:
-		* `https://api.ng.bluemix.net` for IBM region US South
-		* `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
-	* **User name** is the name of your account on the platform
-	* **Password** is the password which authenticates your account
+    * **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. Examples are:
+        * `https://api.ng.bluemix.net` for IBM region US South
+        * `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
+    * **User name** is the name of your account on the platform
+    * **Password** is the password which authenticates your account
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-settings-window.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-settings-window.png" >}}
 
-3.  Click **Next**. You will be logged onto the platform.
+3. Click **Next**. You will be logged onto the platform.
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-settings-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-settings-details.png" >}}
 
-4.  Enter the following details, which will be constrained by the platform account you are using:
+4. Enter the following details, which will be constrained by the platform account you are using:
 
-	* **Organization**
-	* **Space**
-	* **App** – *Create new app*
-	* **Domain** – depending on the platform there may be a choice of domain name
-	* **App name** – the name of your app. The windows indicates what the full URL will be by appending the domain name.
-	* **Buildpack** – depending on the platform, you may be able to customize the buildpack.
+    * **Organization**
+    * **Space**
+    * **App** – *Create new app*
+    * **Domain** – depending on the platform there may be a choice of domain name
+    * **App name** – the name of your app. The windows indicates what the full URL will be by appending the domain name.
+    * **Buildpack** – depending on the platform, you may be able to customize the buildpack.
 
-5.  Click **Next**. The Cloud Foundry *App* will be created on the platform. Note that this is currently just the environment for the app and will not contain the Mendix app until you have deployed it.
+5. Click **Next**. The Cloud Foundry *App* will be created on the platform. Note that this is currently just the environment for the app and will not contain the Mendix app until you have deployed it.
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-configure-app.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/edit-cf-configure-app.png" >}}
 
 {{% alert color="warning" %}}
 Your Cloud Foundry environment needs to be configured with the resources needed by the Mendix app. You cannot run your app until it has the resources it needs. 
@@ -128,23 +128,23 @@ To add a database service to your app, follow these steps:
 
 1. Navigate to the space where you created your app. The environment for the app you created is there, but it isn't running yet. This is because it doesn't have any services attached to it.
 2. Find the list of services which you can add. This may be in a **Service Marketplace** or you may need to **Add Service** to get a list of services you can add. Note that services are provided to spaces, not to individual apps.
-3.  Select a database which is supported by Mendix. Supported databases include PostgreSQL, DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL (PostgreSQL as a service)
+3. Select a database which is supported by Mendix. Supported databases include PostgreSQL, DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL (PostgreSQL as a service)
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/marketplaces.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/marketplaces.png" >}}
 
-4.  Select the plan that fits your needs. Each database will have different plans with, for example, different memory, space, and clustering. These will each have different costs associated with them, but there will usually be a development version which you can use for free. 
+4. Select the plan that fits your needs. Each database will have different plans with, for example, different memory, space, and clustering. These will each have different costs associated with them, but there will usually be a development version which you can use for free. 
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/db-service-plans.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/db-service-plans.png" >}}
 
-5.  Configure the database by setting the following:
+5. Configure the database by setting the following:
 
-	* **Name** – the name which you want to give the database. It is recommended that this includes the name of the app to which you are going to bind it. Then you can easily select the correct database if you have deployed several in the same space.
-	* **Space**  – the space to which you want to add the instance
-	* **App**  – this is the app to which you want to bind this database. That is, the app which is going to store its data in this database.
+    * **Name** – the name which you want to give the database. It is recommended that this includes the name of the app to which you are going to bind it. Then you can easily select the correct database if you have deployed several in the same space.
+    * **Space**  – the space to which you want to add the instance
+    * **App**  – this is the app to which you want to bind this database. That is, the app which is going to store its data in this database.
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/db-configure.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/db-configure.png" >}}
 
-	{{% alert color="info" %}}Different consoles may use slightly different names for these configuration items.{{% /alert %}}
+    {{% alert color="info" %}}Different consoles may use slightly different names for these configuration items.{{% /alert %}}
 
 Once you have configured the database, you can deploy your app, provided there are no other requirements for the platform you have selected (you may, for example, need to bind a route to your app if it is not created automatically).
 
@@ -166,7 +166,7 @@ You may need to configure your file store by using environment variables. See th
 2. Open the app you want to deploy to Cloud Foundry.
 3. Choose the menu option **Run > Run on Cloud Foundry**:
 
-	{{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/run-on-cf.png" >}} 
+    {{< figure src="/attachments/developerportal/deploy/cloud-foundry-deploy/run-on-cf.png" >}} 
 
 The Mendix app will now be deployed to the configured Cloud Foundry app and started automatically
 

@@ -1,7 +1,6 @@
 ---
 title: "Download File"
 url: /refguide/download-file/
-parent: "client-activities"
 weight: 20
 tags: ["studio pro", "download file", "client activities"]
 aliases:
@@ -15,7 +14,7 @@ This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -57,9 +56,7 @@ File document specifies the file to be downloaded. The file data is stored in an
 | False | File is downloaded to the location specified by the end-user. |
 
 {{% alert color="info" %}}
-
 On mobile devices files are always shown in a browser window.
-
 {{% /alert %}}
 
 Many browsers implement pop-up window blockers preventing them from being opened non-interactively, such as through a microflow. For mobile devices, this means that triggering downloads from a microflow is only possible after disabling the pop-up window blocker. You could consider using a **File Manager** widget to let the user initiate the download manually.

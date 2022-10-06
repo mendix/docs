@@ -16,16 +16,16 @@ Expressions can be used to create or change an object or a variable based on log
 
 The **Expression** tab is available for the following activities in a microflow:
 
-*  End Event
-*  [Decision](/studio8/microflows-decision/)
-*  Create Object
-*  Change Object
-*  Create Variable 
-*  Change Variable
+* End Event
+* [Decision](/studio8/microflows-decision/)
+* Create Object
+* Change Object
+* Create Variable 
+* Change Variable
 
 {{< figure src="/attachments/studio8/microflows/microflows-expressions/expression-tab.png" >}}
 
-For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/).
+For more information on setting and changing values for microflow activities, see [Set and Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/).
 
 ## 2 Writing an Expression
 
@@ -54,12 +54,10 @@ To write an expression using suggestions, do the following:
 
 1. Browse through the list of suggestions and select the element for your expression with a mouse or a keyboard.
 2. Select an element from the list.
-4. Click **Add** when the expression is completed.
+3. Click **Add** when the expression is completed.
 
 {{% alert color="info" %}}
-
 To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
-
 {{% /alert %}}
 
 ### 2.2 Writing an Expression Manually {#manually}
@@ -115,5 +113,5 @@ You can use the following Boolean expressions:
 ## 4 Read More
 
 * [Microflows](/studio8/microflows/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/)
+* [Set and Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/)
 * [Expressions](/refguide8/expressions/)

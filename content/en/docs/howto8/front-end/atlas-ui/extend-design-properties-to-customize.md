@@ -1,7 +1,7 @@
 ---
 title: "Extend Design Properties to Customize Your Studio Experience"
+linktitle: "Extend Design Properties"
 url: /howto8/front-end/extend-design-properties-to-customize/
-parent: "atlas-ui"
 weight: 60
 tags: ["Atlas", "UI", "UX", "user experience", "Studio", "customize", "custom"]
 ---
@@ -43,6 +43,6 @@ When you use a new class as a design property, make sure that this class exists.
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)
-* [Create Custom Preview Images for Building Blocks & Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
+* [Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)
 * [Share Company Atlas UI Resources](/howto8/front-end/share-company-atlas-ui-resources/)

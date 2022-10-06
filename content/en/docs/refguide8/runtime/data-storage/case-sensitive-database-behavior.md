@@ -1,7 +1,6 @@
 ---
 title: "Case-Sensitive Database Behavior"
 url: /refguide8/case-sensitive-database-behavior/
-parent: "data-storage"
 tags: ["studio pro", "strings", "sort", "case", "query", "constraint"]
 weight: 20
 ---
@@ -45,7 +44,7 @@ As of version [8.14.0](/releasenotes/studio-pro/8.14/), sorting and comparing ar
 
 Does not support sorting on string attributes of unlimited length.
 
-### 2.4 MARIADB & MYSQL
+### 2.4 MARIADB and MYSQL
 
 All operations depend on the configured collation.
 The default collation is `utf8_general_ci` when the `utf8` character set is used, or `latin1_swedish_ci` when the `latin1` character set is used.
@@ -81,7 +80,7 @@ This table presents the default case sensitivity by different database types:
 | HSQLDB            | I              | I           | I                    |
 | POSTGRESQL        | S              | S           | I                    |
 | DB2               | S              | S¹          | I³                    |
-| MARIADB & MYSQL   | C              | C           | C                    |
+| MARIADB and MYSQL   | C              | C           | C                    |
 | ORACLE            | C¹             | C           | I                    |
 | SAP HANA          | S¹             | S¹          | I²                    |
 | SQL SERVER        | C              | C           | C                    |

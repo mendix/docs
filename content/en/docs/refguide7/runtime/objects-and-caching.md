@@ -1,5 +1,5 @@
 ---
-title: "Objects & Caching"
+title: "Objects and Caching"
 url: /refguide7/objects-and-caching/
 category: "Mendix Runtime"
 description: "This page describes how objects interact with each other within a runtime request."
@@ -36,8 +36,8 @@ The objects are tracked in a request scope. A request scope is always smaller th
 
 Some actions will read an object from the request scope first. If it is not available there, they will be read from the database. These are the actions:
 
- * Retrieve by path/retrieve by association (`Core.retrieveByPath([..])`)
- * Retrieve by ID/retrieve by list of IDs (`Core.retrieveId([..])` and `Core.retrieveIdList([..])`)
+* Retrieve by path/retrieve by association (`Core.retrieveByPath([..])`)
+* Retrieve by ID/retrieve by list of IDs (`Core.retrieveId([..])` and `Core.retrieveIdList([..])`)
 
 This means that if the object to be retrieved is tracked by the request scope (as it is either changed, new, or non-persistable), then calling these actions/APIs will return the object from the request scope.
 
@@ -59,7 +59,8 @@ There is no clear way to identify this, so to ensure you have the latest version
 
 This behavior impacts microflows in a similar way. Therefore, the best practice here is to reload an object as soon as you have committed changes to another reference of (potentially) the same object.
 
-### 6.3 Impact of Using Non-persistable entities & Changed Entities in Microflows and Java Actions
+### 6.3 Impact of Using Non-persistable entities and Changed Entities in Microflows and Java Actions
+
 When a user calls a microflow from the client, a copy of the state is sent with the request to the runtime. This copy stays at the runtime and is updated by the runtime during processing of this request. After the request has finished processing, it will return to the client, which will update its client state with the information returned by the response.
 
 On the server side, this state can only be accessed by that request handling action. This means that it is no longer possible to query the state of a non-persistable entity when it is updated by another request, other than via the client (as the other request needed to return this non-persistable entity to the client, which in turn sends this with a subsequent request to the server). 

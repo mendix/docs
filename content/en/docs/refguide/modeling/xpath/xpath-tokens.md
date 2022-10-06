@@ -1,7 +1,6 @@
 ---
 title: "XPath Tokens"
 url: /refguide/xpath-tokens/
-parent: "xpath"
 tags: ["studio pro"]
 ---
 
@@ -16,9 +15,8 @@ The following tokens are used in XPath queries:
 | `[ ]` | A constraint is always written between brackets. For example, `//Sales.Customer[TotalAmount > 1000]`. The [attribute](/refguide/attributes/) being constrained is `TotalAmount`, and the constraint is `> 1000`. Therefore, only customers who have spent more than € 1000 will be retrieved. |
 | `( )` | Constraints can be grouped by parentheses. For more information, see [XPath Constraints](/refguide/xpath-constraints/). |
 
-System variables are tokens whose values can be used in XPath expressions. For a complete overview of these tokens, see [XPath Keywords & System Variables](/refguide/xpath-keywords-and-system-variables/).
+System variables are tokens whose values can be used in XPath expressions. For a complete overview of these tokens, see [XPath Keywords and System Variables](/refguide/xpath-keywords-and-system-variables/).
 
 {{% alert color="info" %}}
 It is not possible to add mathematical expressions in an XPath outside of tokens. Mathematical expressions should be calculated outside of the XPath expression.
 {{% /alert %}}
-

@@ -1,5 +1,5 @@
 ---
-title: "Security, Roles & Permissions"
+title: "Security, Roles, and Permissions"
 url: /studio/settings-security/
 category: "Settings"
 description: "Describes security and roles and permissions in Mendix Studio."
@@ -22,7 +22,7 @@ Whether security is enabled for your app by default, depends on whether the secu
 1. Your app security is **off** in Studio Pro. In this case, you can either enable it via **App Settings**>**Roles and Permissions** >the **Enable Security** button, or you will be prompted to enable security, when you try to [publish the app](/studio/publishing-app/). 
 
     {{< figure src="/attachments/studio/settings/settings-security/security-pop-up.png" alt="Secure Your App Pop-up Window"   width="300"  >}}
-    
+
     {{% alert color="info" %}}When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled/).{{% /alert %}}
 
 2. Security is set to the **Production** level in Studio Pro and settings are compatible with Studio. In this case, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
@@ -32,8 +32,6 @@ Whether security is enabled for your app by default, depends on whether the secu
 3. Security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio. In this case, you can only view, but not edit **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled/#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     {{< figure src="/attachments/studio/settings/settings-security/security-read-only.png" >}}
-
-
 
 ## 3 Roles and Permissions {#roles-and-permissions}
 
@@ -84,12 +82,11 @@ As a result, you will get a matrix specific for each role.
 To create a new app role, do the following:
 
 1. Open **Roles and Permissions** > the **Roles** tab.
-
-2.  Click **Add Role** in the right corner.
+2. Click **Add Role** in the right corner.
 
     {{< figure src="/attachments/studio/settings/settings-security/add-role-button.png" >}}
 
-3.  Specify the name of the new role in the **Create Role** dialog box and click **Create**.
+3. Specify the name of the new role in the **Create Role** dialog box and click **Create**.
 
     {{< figure src="/attachments/studio/settings/settings-security/create-role-dialog.png" alt="Create Role Dialog Box" >}}
 
@@ -99,13 +96,12 @@ The new role is created.
 
 To edit an existing role, do the following:
 
-1.  Open **Roles and Permissions** > the **Roles** tab.
-
-2.  Click the **More Options** (ellipsis) icon and select **Edit**.
+1. Open **Roles and Permissions** > the **Roles** tab.
+2. Click the **More Options** (ellipsis) icon and select **Edit**.
 
     {{< figure src="/attachments/studio/settings/settings-security/edit-role-option.png" >}}
 
-3.  In the **Edit Role** pop-up dialog perform the changes, and click **Save**.
+3. In the **Edit Role** pop-up dialog perform the changes, and click **Save**.
 
     {{< figure src="/attachments/studio/settings/settings-security/edit-role-dialog.png" >}}    
 
@@ -115,39 +111,36 @@ The role has been edited.
 
 To delete an existing role, do the following:
 
-1.  Open **Roles and Permissions** > the **Roles** tab.
-
-2.  Click the **More Options** icon and select **Delete**.
+1. Open **Roles and Permissions** > the **Roles** tab.
+2. Click the **More Options** icon and select **Delete**.
 
     {{< figure src="/attachments/studio/settings/settings-security/delete-role-option.png" >}}
 
-3.  Confirm the deletion in the pop-up dialog.
+3. Confirm the deletion in the pop-up dialog.
 
     {{< figure src="/attachments/studio/settings/settings-security/delete-role-dialog.png" >}}
 
 The role has been deleted.
 
 {{% alert color="info" %}}
-
 You cannot delete or edit the Administrator role.
-
 {{% /alert %}}
 
 ### 3.4 Setting Access to Specific Pages/Microflows/Workflows
 
 There are two ways to change access for specific pages/microflows/workflows in your app:
 
-1.  To set access via **Roles and Permissions**, do the following:
-	2.  Open **Roles and Permissions** > **Page**/**Microflow/Workflows Access** tab.
-	3.   Find the user role in the column and tick the box next to a page/microflow/workflow to open access for it, or untick – to restrict access. For example, you can restrict a page access for the User role:
+1. To set access via **Roles and Permissions**, do the following:
+    1. Open **Roles and Permissions** > **Page**/**Microflow/Workflows Access** tab.
+    1. Find the user role in the column and tick the box next to a page/microflow/workflow to open access for it, or untick – to restrict access. For example, you can restrict a page access for the User role:
 
-    {{< figure src="/attachments/studio/settings/settings-security/page-access-example.png" >}}
+        {{< figure src="/attachments/studio/settings/settings-security/page-access-example.png" >}}
 
-2.  To set access for a page/microflow via properties of this page/microflow/workflows, do the following: 
-	3.  Open the page/microflow/workflow. 
-	4.  Go to **Properties** > the **Permissions** section and tick/untick **Allowed Roles** to grant/restrict access. 
+2. To set access for a page/microflow via properties of this page/microflow/workflows, do the following: 
+    1. Open the page/microflow/workflow. 
+    1. Go to **Properties** > the **Permissions** section and tick/untick **Allowed Roles** to grant/restrict access. 
 
-	{{< figure src="/attachments/studio/settings/settings-security/permissions-section.png"   width="300"  >}}
+        {{< figure src="/attachments/studio/settings/settings-security/permissions-section.png"   width="300"  >}}
 
 ## 4 Demo Users {#demo-users}
 
@@ -158,12 +151,11 @@ Demo users are a demonstration of each user role existing in your app. You can u
 You can test how your app looks like for different roles the following way:
 
 1. [Preview your app](/studio/publishing-app/).
-
 2. Click a user icon in the right side of the screen:
 
     {{< figure src="/attachments/studio/settings/settings-security/user-icon.png"   width="400"  >}}
 
-4. In the displayed menu bar, select a demo user and the app will be viewed from the perspective of the corresponding role.
+3. In the displayed menu bar, select a demo user and the app will be viewed from the perspective of the corresponding role.
 
     {{< figure src="/attachments/studio/settings/settings-security/select-user.png" >}}
 

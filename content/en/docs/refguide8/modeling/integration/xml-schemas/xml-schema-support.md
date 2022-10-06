@@ -1,7 +1,6 @@
 ---
 title: "XML Schema Support"
 url: /refguide8/xml-schema-support/
-parent: "xml-schemas"
 tags: ["studio pro"]
 ---
 
@@ -85,7 +84,7 @@ The following image shows how the XML schema of the previous example is translat
 
 Complex types can specify attributes that can occur within the XML tag. These attributes always have a simple type and can occur at most once. Attributes are fully supported in both mapping types. Attributes are translated to value elements in the mapping and can therefore be mapped to an attribute of an entity.
 
-## 4 Simple Types & Complex Types with Simple Content
+## 4 Simple Types and Complex Types with Simple Content
 
 Mendix fully supports elements with primitive content, as in, simple types or complex types with simple content. However, Mendix currently does not take restrictions of simple types into account, such as limiting a string to a finite set of possibilities or limiting the range of an integer. In those cases, all possible values of the base type (for example, string) are allowed.
 

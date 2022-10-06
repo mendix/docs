@@ -1,7 +1,6 @@
 ---
 title: "GitHub-Flavored Markdown"
 url: /refguide/gfm-syntax/
-parent: "published-rest-service"
 weight: 70
 description: "Link to GitHub Guide to Mastering Markdown"
 tags: ["published REST", "GitHub", "Markdown", "studio pro"]
@@ -15,4 +14,3 @@ This is especially useful in case you want to include JSON example payload in yo
 {{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/gfm-syntax/snippet.png" >}}
 
 For more information, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-Markdown).
-

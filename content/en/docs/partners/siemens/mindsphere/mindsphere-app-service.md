@@ -1,7 +1,6 @@
 ---
 title: "MindSphere IIoT for Makers"
 url: /partners/siemens/mindsphere-app-service/
-parent: "mindsphere"
 weight: 5
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "App Service", "IIoT"]
@@ -80,13 +79,11 @@ There are two ways to use the Mendix App Service.
 To access your IoT data using the OData technology provided by the Mendix Data Hub, you first have to publish your asset information to Mendix Data Hub. To do this, you create a **contract** within the MindSphere **Asset Manager**. Do the following to manage your contracts:
 
 1. Go to the **Asset Manager** in the MindSphere Launchpad.
-
 1. On the home page you find a card showing the numbers of already existing contracts.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_card.png" alt="asset-manager" >}}
 
 1. Click **View contracts**.
-
 1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_first.png" alt="asset-manager" >}}
@@ -100,32 +97,90 @@ To access your IoT data using the OData technology provided by the Mendix Data H
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step1.png" alt="asset-manager" >}}
 
 1. Confirm your selection by clicking **Next**.
-
 1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step2.png" alt="asset-manager" >}}
 
 1. Confirm your meta information by clicking **Next**.
-
 1. In the last step you can specify the following:
     * Save your contract (always enabled).
     * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
-    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix project; it is therefore preselected
+    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix app; it is therefore preselected
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step3.png" alt="asset-manager" >}}
 
 1. Click the **Submit** button to finalize the creation of your contract.
 
+### 2.4 Linking to Data Lake Manager
+
+Once you have the name of your MindSphere account, you can use this to link your account to the required assets. You will be able to sign in to this account using your Mendix account credentials (user ID and password).
+
+#### 2.4.1 Creating New Resources
+
+To set up new assets, follow the [Workflow for uploading objects](https://documentation.mindsphere.io/MindSphere/apps/Integrated-Data-Lake/introduction.html) instructions in the MindSphere Integrated Data Lake Manager documentation.
+
+Full information can be found in the [MindSphere Integrated Data Lake Manager](https://documentation.mindsphere.io/MindSphere/apps/Integrated-Data-Lake/introduction.html) documentation on the MindSphere site.
+
+#### 2.4.2 Availability of Data Lake Resources (folders)
+
+There are two ways to use the Mendix App Service.
+
+* You can make REST calls to the standard MindSphere end points for your tenant. Instructions for doing this are in [Using MindSphere IIoT for Makers Through REST Calls](#using-rest).
+
+    In this case your assets are now set up and you can continue by [Creating Binding Keys](#binding-keys).
+
+* You can publish your resources through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities/) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane/) in Studio Pro.
+
+    The instructions for doing this are below, and instructions for using the external entities are in [Using MindSphere IIoT for Makers Through Mendix Data Hub](#using-data-hub).
+
+#### 2.4.3 Publishing Resources to Data Hub
+
+To access your data from Data Lake storage using the OData technology provided by Mendix Data Hub, you first have to publish your asset information to Mendix Data Hub. To do this, you create a **contract** within the MindSphere **Integrated Data Lake Manager**. Do the following to manage your contracts:
+
+1. Go to the **Integrated Data Lake Manager** in the MindSphere Launchpad.
+1. On the left hand side, you find the tile **oData Contract**. Click on the tile to open contracts view.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_tile.png" alt="data-lake-manager" >}}
+
+1. You will now see a list of your already existing contracts or an indication that no contracts are created yet.
+
+    * If no contracts are available, click **Create contract** to start your first one.
+    
+        {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_empty.png" alt="data-lake-manager" >}}
+    
+    * If you have already some contracts, click **Add contracts** to add another one.
+
+        {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_add.png" alt="data-lake-manager" >}}
+
+1. In the **Meta Information** section of the wizard, you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_metadata.png" alt="data-lake-manager" >}}
+
+1. In the **Folder Selection** section, select the folder(s) to be published in the contract. In the right panel, the selected folders are listed.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_folder_selection.png" alt="data-lake-manager" >}}
+
+1. In the summary section, you can choose the following:
+    * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
+    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix app; it is therefore preselected
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_summary.png" alt="data-lake-manager" >}}
+
+1. By default, the contract is saved in the OData Contract Registry(ODCR) within MindSphere.
+
+1. Click **Submit** to finalize the creation of your contract.
+
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_list.png" alt="data-lake-manager" >}}
+
 {{% alert color="info" %}}
-   In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api/#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api/#company-account).
+In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api/#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api/#company-account).
 
-   Published contracts are only visible in Mendix DataHub for users that belong to the same company.
+Published contracts are only visible in Mendix DataHub for users that belong to the same company.
 
-   In MindSphere you can invite users with different email domains to your MindSphere tenant. In this case, only the users with the same email domain as the person who published the first contract to Mendix DataHub will see the contracts there.
+In MindSphere you can invite users with different email domains to your MindSphere tenant. In this case, only the users with the same email domain as the person who published the first contract to Mendix DataHub will see the contracts there.
 
-   Ensure that only users who have an email account within your company domain create contracts on Mendix DataHub.
-
-   {{% /alert %}}
+Ensure that only users who have an email account within your company domain create contracts on Mendix DataHub.
+{{% /alert %}}
 
 Now your assets will appear in the Data Hub Pane of Studio Pro, and you can continue with [Creating Binding Keys](#binding-keys).
 
@@ -134,13 +189,9 @@ Now your assets will appear in the Data Hub Pane of Studio Pro, and you can cont
 To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an clientID and a clientSecret. You need to create these in the Mendix Marketplace once the MindSphere tenant has been provisioned. This can be done as follows:
 
 1. Open the **Service Management Dashboard** of the [Mendix Marketplace](https://marketplace.mendix.com/) using the link provided in your confirmation email.
-
 2. Choose the **Product** *MindSphere IoT*.
-
 3. Click **Create Binding Keys**.
-
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
-
 5. Click **Create Keys**.
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/create-keys.png" alt="Binding" >}}
@@ -219,7 +270,7 @@ However, authentication will only be successful if the correct credentials are p
 
 ### 6.1 Authenticating During Development
 
-When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your project settings.
+When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your app settings.
 
 For security, the values of these constants should not be included when you deploy the app.
 
@@ -236,7 +287,7 @@ If you want to use the [Siemens MindSphere Web Components Widgets](https://marke
 To enable this, you will have to do two things:
 
 1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
-2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/project-settings/#after-startup) microflow(s) which are run when the app is started.
+2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/app-settings/#after-startup) microflow(s) which are run when the app is started.
 
 ## 8 Data Hub Limitations{#dh-limitations}
 

@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Landscape"
 url: /data-hub/data-hub-landscape/
-description: "Using the Data Hub Landscape to explore the connections with registered assets"
+description: "Describes how to the Data Hub Landscape to explore the connections with registered assets."
 tags: ["data hub catalog", "data hub", "external entities", "landscape", "published odata service"]
 weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -17,7 +17,6 @@ In the Landscape, you will see, at a glance, the network of deployments of the a
 * The dependencies between consuming and publishing apps
 * All the services published from an app (deployed to a specific environment) and the datasets that are exposed in the service
 * Details of the selected nodes
-
 
 This visual display of registered assets will enable you to:
 
@@ -35,7 +34,7 @@ A registered OData service includes the precise definition of the app and the da
 
 The Landscape depiction of a service and its network will be such that it will show the "flow" of data from the bottom of the display towards the top according to the following principles:
 
-*  An app publishing a service will be positioned below the service
+* An app publishing a service will be positioned below the service
 * Services that are consumed by an app will always be shown below it
 * Applications that consume a selected service will always be positioned above it
 
@@ -80,7 +79,7 @@ The relationships and dependencies between apps, published services, and consumi
 * **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**.
 * **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the OData service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
 
-  The app **StudioExperienceMob6Aug** consumes one dataset through **Published_OData_MS 1.0.0**, which is published from **LEGO - Machine Safety Data** in the production environment.
+    The app **StudioExperienceMob6Aug** consumes one dataset through **Published_OData_MS 1.0.0**, which is published from **LEGO - Machine Safety Data** in the production environment.
 
 The network of dependencies that is shown will position the selected asset at the center of the network.
 
@@ -93,7 +92,7 @@ In the case when an app publishing a service also consumes from the same service
 Clicking a node will display details of the node in the **Metadata** pane. You can see further details for the node in the asset details screen by clicking the **Catalog** tab.
 
 ### 2.6 Consumed Datasets
+
 If you click the **Entity** icon on the consume line, the names of the datasets that are being consumed from the service will be shown in the right panel.
 
 {{< figure src="/attachments/data-hub/data-hub-landscape/consume-arrow-entities-list.png" alt="arrow convention" >}}
-

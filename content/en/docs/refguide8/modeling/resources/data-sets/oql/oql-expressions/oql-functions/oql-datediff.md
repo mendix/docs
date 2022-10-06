@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEDIFF"
 url: /refguide8/oql-datediff/
-parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
@@ -13,7 +12,7 @@ The DATEDIFF function returns the difference between two given date/time values.
 
 The syntax is as follows:
 
-```
+```sql {linenos=false}
 DATEDIFF ( unit , startdate_expression, enddate_expression )
 ```
 

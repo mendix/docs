@@ -1,8 +1,9 @@
 ---
-title: "Solve Load & Import Errors"
+title: "Solve Load and Import Errors"
 url: /howto/monitoring-troubleshooting/solving-load-and-import-errors/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 11
+description: "Describes how to solve problems that may occur when opening an app."
 tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
     - /howto/solving-load-and-import-errors.html
@@ -43,7 +44,7 @@ If the latest change on your branch line was committed by someone other than you
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as a [app package](/howto/integration/importing-and-exporting-objects/) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as an app package (.mpk) file, then it is possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
 ### 3.3 Did You Create the App Yourself?
 
@@ -57,12 +58,12 @@ The most likely cause for these kinds of errors is a faulty script that was run 
 
 ## 5 Read More
 
-*   [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
-*   [Debug a Hybrid Mobile Application](/howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
-*   [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
-*   [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-*   [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-*   [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
-*   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
-*   [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-*   [Monitoring Mendix using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
+* [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
+* [Debug a Hybrid Mobile Application](/howto/monitoring-troubleshooting/debug-a-hybrid-mobile-application/)
+* [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/)
+* [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+* [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
+* [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
+* [Monitoring Mendix using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)

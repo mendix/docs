@@ -37,9 +37,9 @@ A series' data can be retrieved from the database, by a microflow, or from a RES
 2. Select the either **Static** or **Dynamic** for the **Series**.
 3. Select a **Data entity** for the chart values.
 4. Select the **Data source**:
-	* If the **Data source** selected is **Database**, optionally change the **XPath constraint**
-	* If the **Data source** selected is **Microflow,** select a **Microflow** that returns the series values
-	* If the **Data source** selected is **REST endpoint**, enter the **REST URL**
+    * If the **Data source** selected is **Database**, optionally change the **XPath constraint**
+    * If the **Data source** selected is **Microflow,** select a **Microflow** that returns the series values
+    * If the **Data source** selected is **REST endpoint**, enter the **REST URL**
 5. If you set a **Dynamic** series, this will retrieve all the chart series in one configuration. Add configurations for them on the **Dynamic series** tab.
 
 {{% alert color="info" %}}
@@ -65,12 +65,12 @@ Unlike the chart types above, the **Pie chart** requires no series.
 These are the properties for configuring Pie chart data:
 
 * **Data source** tab
-	* **Entity** (required) – the entity from which the data values will be retrieved
+    * **Entity** (required) – the entity from which the data values will be retrieved
 * **Data points** tab
-	* **Name attribute** (required) – the attribute that contains the data point captions
-	* **Value attribute** (required) – the attribute that contains the data point values
-	* **Color attribute** (required) – the attribute that contains the data point colors
-	* **Sort attribute** – the attribute to use for sorting the X-axis data
+    * **Name attribute** (required) – the attribute that contains the data point captions
+    * **Value attribute** (required) – the attribute that contains the data point values
+    * **Color attribute** (required) – the attribute that contains the data point colors
+    * **Sort attribute** – the attribute to use for sorting the X-axis data
 
 ### 2.6 Time Series Chart {#time-series}
 
@@ -100,7 +100,7 @@ The available advanced options and their usage are described below.
 
 The layout options control the general appearance of a chart. Common options include `title`, `showlegend`, `xaxis`,  and `yaxis`. 
 
-```
+```json
 {
   "showlegend": true,
   "legend": {
@@ -114,7 +114,7 @@ The layout options control the general appearance of a chart. Common options inc
 
 Configuration options control the appearance of a chart beyond the layout options. Common options include `displayModeBar` and `doubleClick`.
 
-```
+```json
 {
   "displayModeBar": true,
   "doubleClick": true,
@@ -128,7 +128,7 @@ For more details, see the [Addvanced Configuration Settings](https://raw.githubu
 
 On the [Pie chart](#pie-chart), the data options control the appearance of the pie circle beyond the general layout options. Options include `hole`, `name`, and `marker`.
 
-```
+```json
 {
   "hole": 0.5
 }
@@ -148,7 +148,7 @@ The settings above can also be added in a global context via the **theme** folde
 
 Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON should be in the following format:
 
-```
+```json
 {
   "layout": {
     // Add shared layout options here (for all charts)

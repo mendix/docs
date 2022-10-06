@@ -1,7 +1,6 @@
 ---
 title: "Rollback Object"
 url: /refguide7/rollback-object/
-parent: "object-activities"
 ---
 
 ## 1 Introduction
@@ -44,4 +43,4 @@ When inside a [nanoflow](/refguide7/nanoflows/), the Rollback object action relo
 
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No

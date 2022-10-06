@@ -1,7 +1,6 @@
 ---
-title: "Parse & Format Float Function Calls"
+title: "Parse and Format Float Function Calls"
 url: /refguide7/parse-and-format-float-function-calls/
-parent: "expressions"
 ---
 
 {{% alert color="warning" %}}
@@ -18,11 +17,11 @@ Parses a String value to a Float value. Takes optional parameters for format and
 
 ### Input parameters
 
-*   value to parse
+* value to parse
     Type: String
-*   pattern to match on (optional)
+* pattern to match on (optional)
     Type: String
-*   default value (optional)
+* default value (optional)
     Type: Float
 
 ### Output
@@ -62,15 +61,16 @@ returns:
 ```java
 3.33
 ```
+
 ## formatFloat
 
 Converts a Float value to a String value, according to a specified format.
 
 ### Input parameters
 
-*   value to convert
+* value to convert
     Type: Float
-*   format that the result should be in
+* format that the result should be in
     Type: String
 
 ### Output

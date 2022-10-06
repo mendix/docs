@@ -3,7 +3,7 @@ title: "Submit a Support Request"
 url: /developerportal/support/submit-support-request/
 category: "Mendix Support"
 weight: 2
-description: "Describes submitting a request with Mendix Support."
+description: "Describes the details necessary for Mendix Support to process your request."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor request-priority below is mapped, so it should not be removed or changed.
@@ -19,7 +19,7 @@ For critical production incidents, please contact Mendix Support by [phone](http
 
 ## 2 Checking Useful Links Before Submitting a Request
 
-Before submitting a new Menix Support request, check these resources to make sure your question has not already been answered:
+Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix Documentation](https://docs.mendix.com/)
@@ -36,57 +36,57 @@ This is the basic information required for a ticket:
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-* The affected app (for more information, see [How to Prepare Your App for Support](/developerportal/support/prepare-your-project/))
+* The affected app (for more information, see [How to Prepare Your App for Support](/developerportal/support/prepare-your-app/))
 
 To submit a request with Mendix Support, follow these steps:
 
 1. Click **Submit a request** in the upper-right corner of the portal.
-2.  Select an issue from the drop-down menu:
+2. Select an issue from the drop-down menu:
 
-	{{< figure src="/attachments/developerportal/support/submit-support-request/issue.png" >}}
+    {{< figure src="/attachments/developerportal/support/submit-support-request/issue.png" >}}
 
-	You can select from the following issues:
+    You can select from the following issues:
 
-	* **Request for Information** – general questions about Mendix
-	* **Incident** – if your app is down, or you are experiencing another platform issue
-	* **Standard Change: Request New Licensed Node** – please use the [Request New App Node](https://newnode.mendix.com) app unless you are requesting an SAP Subscription Secret
-	* **Standard Change: Change On-Prem Licensed Node** – request a new license key for an *existing* app (for example, if you have new hardware configuration)
-	* **Standard Change: Off-Board Licensed Node** – remove a licensed node or app that you no longer need (applies to all platforms) by creating a request [here](https://offboard.mendix.com/index.html)
-	* **Standard Change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container that require downtime (for example, changing memory or database size) can be requested [here](https://resize.mendix.com/index.html)
-	* **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
-	* **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
+    * **Request for Information** – general questions about Mendix
+    * **Incident** – if your app is down, or you are experiencing another platform issue
+    * **Standard Change: Request New Licensed Node** – please use the [Request New App Node](https://newnode.mendix.com) app unless you are requesting an SAP Subscription Secret
+    * **Standard Change: Change On-Prem Licensed Node** – request a new license key for an *existing* app (for example, if you have new hardware configuration)
+    * **Standard Change: Off-Board Licensed Node** – remove a licensed node or app that you no longer need (applies to all platforms) by creating a request [here](https://offboard.mendix.com/index.html)
+    * **Standard Change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container that require downtime (for example, changing memory or database size) can be requested [here](https://resize.mendix.com/index.html)
+    * **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
+    * **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
 
         {{% alert color="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
 
-	* **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
-	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
-	* **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/addons/apd-addon/))
-	* **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication/) (for example, when you get a new phone)
-	* **Standard Change** – other changes which can be made on the platform, but for which you do not have access
-	* **Non-Standard Change** – any other changes not covered by other issues above
+    * **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
+    * **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
+    * **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/addons/apd-addon/))
+    * **Standard Change: Reset Google authenticator** – reset the Google authenticator if you are using it for [2FA](/developerportal/deploy/two-factor-authentication/) (for example, when you get a new phone)
+    * **Standard Change** – other changes which can be made on the platform, but for which you do not have access
+    * **Non-Standard Change** – any other changes not covered by other issues above
 
 3. Fill in the fields for the issue type you selected, including [Priority](#request-priority).
-4.  When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
-	* **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
-		* **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model/), [widgets](/refguide/data-widgets/), or [logic](/refguide/application-logic/))
-		* **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
-		* **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs/))
-		* **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
-		* **App - Security** - issues/questions regarding the security of your Mendix app
-		* **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
-	* **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
-		* **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
-		* **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
-		* **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/collaborate/stories/) or start a Sprint)
-		* **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
-		* **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
-		* **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
-		* **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
-		* **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
-		* **Developer Platform - Studio** - issues/questions regarding [Mendix Studio](/studio/) (for example, when you have difficulties opening Mendix Studio)
-		* **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
-		* **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
-	* **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
+4. When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
+    * **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
+        * **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model/), [widgets](/refguide/data-widgets/), or [logic](/refguide/application-logic/))
+        * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
+        * **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs/))
+        * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
+        * **App - Security** - issues/questions regarding the security of your Mendix app
+        * **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
+    * **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
+        * **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
+        * **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
+        * **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/collaborate/stories/) or start a Sprint)
+        * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
+        * **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
+        * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
+        * **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
+        * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/) (for example, when you have difficulties deactivating applications from the Control Center) 
+        * **Developer Platform - Studio** - issues/questions regarding [Mendix Studio](/studio/) (for example, when you have difficulties opening Mendix Studio)
+        * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
+        * **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
+    * **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
 
 5. Make sure all your attachments have finished uploading before clicking **Next**.
 
@@ -94,7 +94,7 @@ The Mendix Support Portal will first suggest relevant documentation for you to r
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/recommendations.png" >}}
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.	
+If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.    
 
 ## 4 Request Priority {#request-priority}
 
@@ -125,39 +125,39 @@ The [ticket priority](/developerportal/support/ticket-priority/) that Mendix Sup
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/204371729-pic5.png" >}}
 
-## 5 Providing Attachments & Additional Information
+## 5 Providing Attachments and Additional Information
 
 Depending on the type of request, providing attachments and additional information may be helpful. The scenarios below list what additional information should be provided.
 
 ### 5.1 Attachments
 
-You can add large attachments such as project files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
+You can add large attachments such as app files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
 
 {{% alert color="info" %}}
 Attachments added to Mendix Support requests will be automatically deleted after 365 days.
 {{% /alert %}}
 
-### 5.2 Cloud Problems & Deployment Issues
+### 5.2 Cloud Problems and Deployment Issues
 
 * Log file (*.txt*)
 * Date and time of the incident
 
-### 5.3 Team Server Problems & Project Issues
+### 5.3 Team Server Problems and App Issues
 
 * [App ID](/developerportal/settings/general-settings/)
 
-### 5.4 Studio & Studio Pro Problems
+### 5.4 Studio and Studio Pro Problems
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
-* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog/))
+* Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps
 
-### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
+### 5.5 Marketplace Content Problems and Module, Widget, and Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
-* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog/))
+* Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps
 
 {{% alert color="info" %}}
@@ -183,22 +183,22 @@ On the **All requests** tab, you can click **Follow** for an app to be informed 
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/follow.png" >}}
 
-## 7 Viewing & Updating Tickets
+## 7 Viewing and Updating Tickets
 
 From the overview, you can easily open a specific request, or you can search for a request by using the **Search** option. Once you have opened a ticket, you can add comments to the ticket assignee or add new attachments.
 
 The ticket can have the following statuses:
 
 * **Open** – the ticket is in the Mendix Support department
-*  **Pending** – the ticket is awaiting your reply
-	* You will receive one reminder email before the Mendix Support Portal automatically closes the ticket
-	* If you reply, the ticket will be automatically set to **Open** again
+* **Pending** – the ticket is awaiting your reply
+    * You will receive one reminder email before the Mendix Support Portal automatically closes the ticket
+    * If you reply, the ticket will be automatically set to **Open** again
 * **On-hold** – the ticket has been forwarded to the Mendix second-line support
-	* You will be informed on the R&D status and the planned version once a response has been received from the second-line
+    * You will be informed on the R&D status and the planned version once a response has been received from the second-line
 * **Solved** – the ticket has been solved
-	* If you reply, the ticket will be automatically opened again
-	* You can close the ticket yourself by checking the box **Please consider this request solved**
-	* The ticket will be closed for comments automatically after a set number of days, after which you can create a follow-up ticket
+    * If you reply, the ticket will be automatically opened again
+    * You can close the ticket yourself by checking the box **Please consider this request solved**
+    * The ticket will be closed for comments automatically after a set number of days, after which you can create a follow-up ticket
 
 {{< figure src="/attachments/developerportal/support/submit-support-request/request.png" >}}
 

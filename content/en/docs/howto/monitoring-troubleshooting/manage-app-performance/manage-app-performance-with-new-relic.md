@@ -1,7 +1,6 @@
 ---
 title: "Manage App Performance with New Relic"
 url: /howto/monitoring-troubleshooting/manage-app-performance-with-new-relic/
-parent: "manage-app-performance"
 weight: 2
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
@@ -46,7 +45,7 @@ The following steps are only relevant for on-premises deployments (if you are de
 
 3. Download the Java agent archive and save your license key:
 
-     {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" >}}
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" >}}
 
 4. Add your license key to the *newrelic.yml* file from the downloaded archive as described here: [https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files).
 
@@ -56,7 +55,7 @@ The following steps are only relevant for on-premises deployments (if you are de
 
 Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 
-### 3.2.2 On-PremiseS Linux & Windows Service Console
+### 3.2.2 On-PremiseS Linux and Windows Service Console
 
 To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaagent>javaagent.jar". For example:
 
@@ -71,10 +70,9 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 ### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
 1. Open your Mendix application, and click **Settings** in the **App Explorer**.
-
 2. Open a configuration:
 
-     {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
 
 3. In the **Extra JVM parameters** field on the **Server** tab, add: `-javaagent:<path-to-javaagent>javaagent.jar`:
 
@@ -101,4 +99,4 @@ For more information on New Relic, see the [New Relic documentation](https://doc
 * [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
-* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub
+* [Telemetry Configuration](https://github.com/mendix/cf-mendix-buildpack#telemetry-configuration) in the *cf-mendix-buildpack* repo on GitHub

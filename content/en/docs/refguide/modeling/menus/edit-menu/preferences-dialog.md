@@ -1,7 +1,6 @@
 ---
 title: "Preferences"
 url: /refguide/preferences-dialog/
-parent: "edit-menu"
 weight: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
@@ -12,7 +11,7 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 {{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" >}}
 
-## 2 General Tab
+## 2 General Tab {#general}
 
 ### 2.1 Interface {#interface}
 
@@ -67,7 +66,6 @@ The **Logic Bot** tab contains the following settings:
 
 The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
 
-
 ## 4 Model Tab
 
 ### 4.1 When Prompted by a Widget to Automatically Fill Its Contents, Select 'Yes' by Default
@@ -89,11 +87,33 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 5.2 Enable Private Version Control with Subversion {#enable}
+### 5.2 Subversion 
+#### 5.2.1 Enable Private Version Control with Subversion {#enable}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
-### 5.3 Enable Private Version Control with Git 
+### 5.3 Git 
+#### 5.3.1 Name
+Specify your name for Git to use it in commit messages and make them more informative.
+
+#### 5.3.2 Email
+
+Specify your email for Git to use it in commit messages and make them more informative.
+
+#### 5.3.3 Enable Automatic Repository Optimization {#optimization}
+Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+
+#### 5.3.4 Number of Commits
+
+This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
+
+#### 5.3.5 Enable Private Version Control with Git (Beta)
+
+{{% alert color="info" %}}
+
+This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+
+{{% /alert %}}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
@@ -111,7 +131,13 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 7.1 Dark Mode Preview {#dark-mode}
+### 7.1 Browser Sign In
+
+The **Use your default browser to sign in** option allows you to use your default browser to sign into Studio Pro. If there is an active Mendix session in your browser, you will be signed in with this session.
+
+Default: *enabled*
+
+### 7.2 Dark Mode Preview {#dark-mode}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
@@ -121,31 +147,13 @@ Not all screens of Studio Pro support the dark mode yet.
 
 Default: *disabled*
 
-### 7.2 New Version of My App Screen 
-
-With this option, you can enable the new version of **My Apps** screen. Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
-
-Default: *enabled*
-
 ### 7.3 New Merge Algorithm with Fine-Grained Conflict Resolution
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
 
 Default: *enabled*
 
-### 7.4 Team Server Git {#git}
-
-With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
-
-{{% alert color="warning" %}}
-This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). 
-{{% /alert %}}
-
-After applying this setting, you need to restart Studio Pro.
-
-Default: *disabled*
-
 ## 8 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
-* [How to Work with an On-Premises Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto/)
+* [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)

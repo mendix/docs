@@ -1,7 +1,6 @@
 ---
 title: "Attribute Type Migration"
 url: /refguide8/attributes-type-migration/
-parent: "data-storage"
 weight: 10
 tags: ["studio pro"]
 ---

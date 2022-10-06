@@ -1,7 +1,6 @@
 ---
 title: "Dashboard"
 url: /addons/apd-addon/rg-three-dashboard/
-parent: "rg-three-apd"
 ---
 
 The dashboard of an environment shows real-time information regarding the following:
@@ -12,4 +11,4 @@ The dashboard of an environment shows real-time information regarding the follow
 * The number of actions per second
 * Recent logs and traps
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-dashboard/dashboard.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-dashboard/dashboard.png" >}}

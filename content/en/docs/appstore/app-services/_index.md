@@ -2,9 +2,10 @@
 title: "App Services"
 url: /appstore/app-services/
 description: "Presents details on the app services available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "app service"]
-no_list: false
 weight: 30
+no_list: false
+description_list: true
+tags: ["marketplace", "marketplace component", "app service"]
 ---
 
 ## 1 Introduction
@@ -19,4 +20,4 @@ App services like [3D Viewer](/appstore/app-services/3d-viewer/) start with a fr
 
 For details on participating in the Mendix Vendor program, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/).
 
-## 2 Main Documents in This Category
+## 2 Documents in This Category

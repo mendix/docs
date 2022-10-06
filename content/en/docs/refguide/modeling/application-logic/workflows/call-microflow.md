@@ -1,7 +1,6 @@
 ---
 title: "Call Microflow"
 url: /refguide/call-microflow/
-parent: "workflows"
 weight: 50
 tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 ---

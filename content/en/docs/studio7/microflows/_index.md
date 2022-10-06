@@ -15,14 +15,14 @@ Microflows is a visual way of expressing what traditionally ends up in textual p
 
 You need to use microflows for the following cases:
 
-*  To change/extend the standard behavior of buttons
+* To change/extend the standard behavior of buttons
 * To add custom logic to your application
 * To integrate with other systems, databases, web services, etc.
 
 Examples of using microflows can be the following:
 
-*  You check the values that a user has entered, and you either show the user an error message or  another page
-*  You're creating a to-do list and you want to use custom logic when the status of the item on the list has changed
+* You check the values that a user has entered, and you either show the user an error message or  another page
+* You're creating a to-do list and you want to use custom logic when the status of the item on the list has changed
 
 To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
@@ -49,13 +49,13 @@ Before you start configuring microflows, familiarize yourself with the concepts 
 To create a new microflow and to start building a microflow, do the following:
 
 1. Click the **Microflow** icon in the left menu bar. 
-2.  Click **New** on the **Microflows** side panel.
+2. Click **New** on the **Microflows** side panel.
 
     {{< figure src="/attachments/studio7/microflows/new-microflow.png" alt="Adding New Microflow"   width="350"  >}}
 
-3.  Fill out the name of the microflow in the pop-up dialog and click **Create**.
+3. Fill out the name of the microflow in the pop-up dialog and click **Create**.
 
-    {{< figure src="/attachments/studio7/microflows/new-microflow-dialog.png" alt="Create New Microflow Dialog" >}}    
+    {{< figure src="/attachments/studio7/microflows/new-microflow-dialog.png" alt="Create New Microflow Dialog" >}}
 
 The new microflow is created, you can now start adding logic to it by adding events or activities. 
 
@@ -162,4 +162,4 @@ When configuring the activities of the microflows you will notice icons above or
 * [General Info](/studio7/general/)
 * [Decision](/studio7/microflows-decision/)
 * [Microflow Expressions](/studio7/microflows-expressions/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/)
+* [Set and Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/)

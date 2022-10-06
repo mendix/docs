@@ -1,8 +1,7 @@
 ---
 title: "Changes Pane"
 url: /refguide/changes-pane/
-parent: view-menu
-weight: 10
+weight: 20
 description: "Describes the Changes pane in Mendix Studio Pro."
 tags: ["Studio Pro", "changes", "changes pane"]
 ---
@@ -43,10 +42,10 @@ The top level of the **Changes** pane is a grid listing changed documents, for e
 The grid contains information on the following items:
 
 * **Status** – shows the type of changes applied to the document. The status can be one of the following:
-  * **Added** – a new document was created; indicated with a green circle
-  * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated with a yellow circle
-  * **Deleted** – a document was deleted; indicated with a red circle with a minus
-  * **Conflicted** – a document contains conflicting changes; indicated with a red circle with an exclamation mark
+    * **Added** – a new document was created; indicated with a green circle
+    * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated with a yellow circle
+    * **Deleted** – a document was deleted; indicated with a red circle with a minus
+    * **Conflicted** – a document contains conflicting changes; indicated with a red circle with an exclamation mark
 * **Item** – indicates a name of the changes document
 * **Module** – a module where the changed document is
 * **Details** – can contain details on the status, for example, when you have conflicting changes 
@@ -144,7 +143,7 @@ The left and right panes will contain the same information as in [Zoomed-In Leve
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/new-merge-algorithm-resolve-mode.png" alt="Example of conflicts resolution format of changes pane" >}}
 
-##  5 Read More
+## 5 Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/)
 * [Version Control](/refguide/version-control/) 

@@ -2,7 +2,7 @@
 title: "Email Service"
 url: /appstore/app-services/email-service/
 category: "App Services"
-description: "This document describes the configuration and usage of the Email Service app service, which enables sending HTML and plain text emails with attachments in your web apps."
+description: "Describes the configuration and usage of the Email Service app service, which enables sending HTML and plain text emails with attachments in your web apps."
 tags: ["marketplace", "marketplace component", "app service", "email"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -54,7 +54,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
 7. Click **Email Service** to open the service management dashboard.
-8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
     {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
 
@@ -67,7 +67,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
 6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
 7. Click **Email Service** to open the service management dashboard.
-8.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
+8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
 
     {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
 
@@ -79,7 +79,7 @@ To download and install the Email Service app service in your app, follow the in
 
 Before you deploy an app, you should configure the binding keys in your app as follows:
 
-1.  In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
+1. In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
 
     {{< figure src="/attachments/appstore/app-services/email-service/configure-username-secretkey.png" >}}
 
@@ -95,7 +95,9 @@ You can use the Email Service in a microflow to send HTML or plain text messages
 
 You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/).
 
-{{% alert type="info" %}}Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back.{{% /alert %}}
+{{% alert type="info" %}}
+Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back.
+{{% /alert %}}
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
@@ -109,17 +111,17 @@ To configure the **Send email** activity, double-click the activity and specify 
     * **From** – Defines the sender's email
     * **To**  – Defines the recipients of the email
     * **Subject**  – Defines the subject of the email
-*  **Optional Fields**
+* **Optional Fields**
 
     {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
 
     * **Cc** – Defines the recipients on the CC list of the email
     * **Bcc** – Defines the recipients on the BCC list of the email
     * **Content type** – Defines whether the email is a **Text** or **HTML** message
-    *  **Body** – Defines the body of the email
+    * **Body** – Defines the body of the email
 
         {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
-  
+
     * **Attachment** – Defines the attachment to the email
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
@@ -145,7 +147,7 @@ In the last step of the microflow, you can add the variable for the generated HT
 This is a representative microflow that sends emails with file attachments. The file attachments should have the file types that are [supported](#unsupported-file-types).
 
 {{< figure src="/attachments/appstore/app-services/email-service/microflow.png" >}}
-	
+
 The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497/) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
 
 {{< figure src="/attachments/appstore/app-services/email-service/system-filedocument-model.png" >}}
@@ -163,7 +165,7 @@ The following file types are not supported as attachments:
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
 1. Log into the Marketplace.
-2.  Go to **My Marketplace** and then do as follows:
+2. Go to **My Marketplace** and then do as follows:
 
     * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
     * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
@@ -176,71 +178,68 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 If you are the Technical Contact, you can configure the sender's email addresses or domain on Communication Services Console:
 
 1. Go to [Communication Services Console](https://communication-appservices.mendixcloud.com/).
-2.  Log in with your Mendix account.
+2. Log in with your Mendix account.
 
     {{< figure src="/attachments/appstore/app-services/email-service/email-identities.png" >}}
 
 3. Select the environment where you want to configure the sender's email address(es) or domain.
 
-4.  Choose your **Verification Type**:
+4. Choose your **Verification Type**:
 
     * If you choose **Email ID** as the **Verification Type**, perform the following steps:
 
-        1.  For **Email ID**, enter the sender's email address(es). 
+        1. For **Email ID**, enter the sender's email address(es). 
+        2. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        3. To verify the sender's email address(es), perform the following steps:
 
-        2.  Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
-
-        3.  To verify the sender's email address(es), perform the following steps:
-
-            1.  Click **View Details/Edit** to open the **Email Identity** dialog box.
+            1. Click **View Details/Edit** to open the **Email Identity** dialog box.
 
                 {{< figure src="/attachments/appstore/app-services/email-service/view-details-edit-email-itentity.png" >}}
 
-            2.  Enter the sender's email address(es).
-            
+            2. Enter the sender's email address(es).
+
                 {{% alert type="info" %}}With a paid subscription, you can configure at most five email addresses. With a trial subscription, you can configure at most one email address.{{% /alert %}}
-            
+
                 {{< figure src="/attachments/appstore/app-services/email-service/email-verification.png" >}}
-            
-            3.  Click **Verify** to verify the email address(es). A window opens and tells you that the verification process is in progress.
-            
+
+            3. Click **Verify** to verify the email address(es). A window opens and tells you that the verification process is in progress.
+
                 {{< figure src="/attachments/appstore/app-services/email-service/email-verification-in-progress.png" >}}
-            
+
                 The system sends an email from `verify-email@notify.mendix.com` to your configured email address. 
-            
-            4.  Click the link in the email to complete the process. Until the verification process is completed, you should continue to see a message saying the verification is pending.
-            
+
+            4. Click the link in the email to complete the process. Until the verification process is completed, you should continue to see a message saying the verification is pending.
+
                 {{< figure src="/attachments/appstore/app-services/email-service/email-verification-pending.png" >}}
-      
+
     * If you choose **Domain** as the **Verification Type**, perform the following steps:
-    
+
         1. For **Domain**, enter the domain address.
         2. For **Email ID**, enter the sender's email address(es). 
         3. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
-        4.  Click **Save** to verify domain address.
-        
+        4. Click **Save** to verify domain address.
+
             {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
-        
-        5.  If you have a paid subscription, you can add up to five email addresses for the same domain as follows:
-            1.  Click **View Details/Edit** to open the **Domain based Email Identities** dialog box.
-            
+
+        5. If you have a paid subscription, you can add up to five email addresses for the same domain as follows:
+            1. Click **View Details/Edit** to open the **Domain based Email Identities** dialog box.
+
                 {{< figure src="/attachments/appstore/app-services/email-service/domain-based-email-identities.png" >}}
-            
+
             2. Enter the sender's email addresses.
-            3.  Click **Verify** to verify the email address(es). 
-        
+            3. Click **Verify** to verify the email address(es). 
                 {{% alert type="info" %}}You can view, add, or delete the email addresses associated with the domain in the **Domain based Email Identities** dialog box.{{% /alert %}}
-   
+
                 A window opens and tells you that the verification process is in progress.
 
                 {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-in-progress.png" >}}
-   
+
                 Until the verification process is completed, you should continue to see a message saying the verification is pending.
-   
+
                 {{< figure src="/attachments/appstore/app-services/email-service/domain-verification-pending.png" >}}
-   
+
         The Domain Keys Identified Mail (DKIM) settings for your domain and domain verification records become available. You can use these records for email security purposes.
-   
+
         {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
 
 ## 6 Increasing the Deliverability of Your Emails

@@ -14,7 +14,7 @@ We want to create a large network of Mendix apps, so let's start integrating!
 
 ## 2 Main Documents in This Category
 
-* [Import & Export Objects](/howto8/integration/importing-and-exporting-objects/) – presents how to to import and export projects, modules, widgets, and module documents
+* [Import and Export Objects](/howto8/integration/importing-and-exporting-objects/) – presents how to to import and export projects, modules, widgets, and module documents
 * [Import XML Documents](/howto8/integration/importing-xml-documents/) – teaches you how to prepare the data structure and GUI, add an XML schema, and create XML-to-domain mapping
 * [Export XML Documents](/howto8/integration/export-xml-documents/) – shows you how to add an XML schema and create domain-to-XML mapping and export logic
 * [Import Excel Documents](/howto8/integration/importing-excel-documents/) – illustrates setting up import templates and importing data into your application via the Excel Importer
@@ -27,4 +27,3 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Expose a Web Service](/howto8/integration/expose-a-web-service/) – details creating a web service and publishing a microflow as a web service operation
 * [Expose Data to BI Tools Using OData](/howto8/integration/exposing-data-to-bi-tools-using-odata/) – presents details on creating a published OData service with resources, adding an OData server to Tableau and Excel, combining resources in Tableau, and creating custom queries
 * [Configure Selenium Support](/howto8/integration/selenium-support/) – shows you how to use naming conventions and avoid pitfalls that will help you in using Selenium
-

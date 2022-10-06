@@ -28,17 +28,17 @@ For an example scenario, a domain model contains two related entities called Cus
 To show the total order amount, there are two options:
 
 * First option: create a calculated attribute in the Customer entity to compute the total order amount
-	* The drawback of this option is that the calculated attributes bring down the performance of overview pages
+    * The drawback of this option is that the calculated attributes bring down the performance of overview pages
 * Second option: create a persistable attribute in the Customer entity that stores the total order amount in the database – this is called denormalization
-	* The drawback of this option is that the redundant data needs to be kept in sync (but this is easy with Mendix [event handlers](/refguide8/event-handlers/))
+    * The drawback of this option is that the redundant data needs to be kept in sync (but this is easy with Mendix [event handlers](/refguide8/event-handlers/))
 
 To enable denormalization, follow these steps:
 
-1.  Create a domain model that looks like this:
+1. Create a domain model that looks like this:
 
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582169.png" >}}
 
-2.  Double-click the **Customer** entity to open the properties editor:
+2. Double-click the **Customer** entity to open the properties editor:
 
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582168.png" >}}
 
@@ -53,7 +53,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 1. Open the domain model and double-click the Order entity to open its properties editor.
 2. On the **Event handlers** tab, click **New** to add a new event handler.
-3.  On the **New Event Handler** dialog box, do the following:
+3. On the **New Event Handler** dialog box, do the following:
     * Select **After** as the **Moment**
     * Select **Commit** as the **Event**
     * Select **Yes** for **Pass the event object**
@@ -63,7 +63,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 4. On the microflow selector, click **New** and enter a name for the new microflow (for example, *Order_AfterCommit*).
 5. Click **OK** to create the new microflow, and then click **OK** again to save the event handler.
-6.  Open the new microflow, which should look like this:
+6. Open the new microflow, which should look like this:
 
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582165.png" >}}
 
@@ -71,15 +71,15 @@ Now the application is ready to store redundant data, but you still need to keep
 
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582150.png" >}}
 
-7.  Open the **Toolbox**, which should be docked in the lower-right corner of Studio Pro. If you can't find the **Toolbox** there, you can open it from the **View** menu:
+7. Open the **Toolbox**, which should be docked in the lower-right corner of Studio Pro. If you can't find the **Toolbox** there, you can open it from the **View** menu:
 
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582163.png" >}}
 
-8.  Drag a **Retrieve** activity from the toolbox to the line between the start and end event on the microflow, which will insert a new retrieve activity:
+8. Drag a **Retrieve** activity from the toolbox to the line between the start and end event on the microflow, which will insert a new retrieve activity:
 
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582164.png" >}}
 
-9.  Double-click the new activity to open its properties on the **Retrieve Objects** dialog box and do the following:
+9. Double-click the new activity to open its properties on the **Retrieve Objects** dialog box and do the following:
     * Select **By association** as **Source**
     * Click **Select...** to open the **Association** selector
 
@@ -108,7 +108,7 @@ Now the application is ready to store redundant data, but you still need to keep
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582158.png" >}}
 
     As you can see below, the **XPath constraint** and **Output** sections of the **Retrieve Objects** dialog box are configured automatically:
-    
+
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582156.png" >}}
 
 14. Click **OK** to save the activity. Your microflow should now look like this:
@@ -126,7 +126,7 @@ Now the application is ready to store redundant data, but you still need to keep
 16. Click **OK** to save the activity. Your microflow should now look like this:
 
     {{< figure src="/attachments/howto8/data-models/denormalize-data-to-improve-performance/18582152.png" >}}
-    
+
 17. Insert a change activity, double-click it to open its properties on the **Change Object** dialog box, and do the following:
     * Select **Customer** as the **Input > Object**
     * Select **Yes** as the **Commit** action
@@ -144,7 +144,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Read More
 
-* [Work with Images & Files](/howto8/data-models/working-with-images-and-files/)
+* [Work with Images and Files](/howto8/data-models/working-with-images-and-files/)
 * [Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/)
 * [Set Up Data Validation](/howto8/data-models/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
@@ -152,4 +152,3 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Attributes](/refguide8/attributes/)
 * [Event Handlers](/refguide8/event-handlers/)
-

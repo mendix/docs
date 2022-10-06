@@ -3,6 +3,7 @@ title: "Create Custom Error Pages"
 url: /howto/front-end/custom-error-page/
 category: "Front End"
 weight: 55
+description: "Describes how to create a custom error page for a more tailored user experience."
 tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 ---
 
@@ -32,29 +33,35 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a local repository of the app
 * Have your app *hosted in the Mendix Cloud*
+* Identify which version of the Atlas module you are using
 
 ## 3 Creating a Custom Error Page
 
-1. Open the local folder of your app.
+{{% alert color="info" %}}
+If you are using Atlas 2, consider [upgrading](/refguide/moving-from-atlas-2-to-3/). If you cannot, follow the instructions below but create the **error_page** folder in your **theme** folder directly.
+{{% /alert %}}
 
-2.  Go to **theme**:
+If you are using Atlas 3, do the following:
+
+1. Open the local folder of your app.
+2. Go to **theme**:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/theme.png" >}}
 
-3.  Go to **web**:
+3. Go to **web**:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/web.png" >}}
 
-4.  Create a new folder named *error_page*:
+4. Create a new folder named *error_page*:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/error-page.png" >}}
 
-5.  In the **error_page** folder, place your *offline.html* file:
+5. In the **error_page** folder, place your *offline.html* file:
 
     {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
-    
+
     {{% alert color="info" %}}In these *.html* files, you can only refer to external resources or resources under the absolute path `/error_page/`; the `/error_page/` path is the only one that will be available when the application is stopped.{{% /alert %}}
 
 6. Commit the changes in Studio Pro.

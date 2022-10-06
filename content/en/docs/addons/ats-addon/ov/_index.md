@@ -3,6 +3,7 @@ title: "ATS Overview"
 url: /addons/ats-addon/ov/
 category: "ATS"
 weight: 1
+description: "Presents general information on ATS."
 ---
 
 ## 1 Introduction
@@ -16,4 +17,3 @@ This section presents general information on ATS.
 * [Deployment Options](/addons/ats-addon/ov-deployment/)
 * [Maintenance](/addons/ats-addon/ov-maintenance/)
 * [Function API](/addons/ats-addon/ov-function-api/)
-

@@ -1,8 +1,9 @@
 ---
 title: "Trigger a Microflow From a Menu Item"
 url: /howto/logic-business-rules/trigger-microflow-from-menu-item/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 30
+description: "Describes how to create a simple microflow that will define the logic of your application."
 tags: ["how-to", "microflow", "create microflow"]
 ---
 
@@ -29,8 +30,7 @@ Microflows can be triggered in many different ways. For this how-to, you will us
 
 To create a menu item, follow these steps:
 
-1.  Open the **Navigation** editor.
-
+1. Open the **Navigation** editor.
 2. In the **Responsive** tab > the **Menu** section, click **New Item**:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/new-menu-item.jpg" >}}
@@ -48,7 +48,6 @@ To create a menu item, follow these steps:
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/new-microflow.png" >}}
 
 6. Enter *HelloWorld* for the **Name** of the new microflow.
-
 7. Save the new menu item by clicking **OK**.
 
 You have created the menu item that will trigger the **Hello World** microflow. 
@@ -59,7 +58,7 @@ The new microflow is now empty and needs to be configured to show the message to
 
 To edit the new microflow, follow these steps:
 
-1.  Open the **Hello World** microflow by right-clicking the new menu item created in the [Creating a Menu Item](#creating-menu-item) section above and selecting **Go to target** from the context menu:
+1. Open the **Hello World** microflow by right-clicking the new menu item created in the [Creating a Menu Item](#creating-menu-item) section above and selecting **Go to target** from the context menu:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/go-to-target.png" >}}
 
@@ -67,22 +66,20 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/created-microflow.png" >}}
 
-2.  Open the **Toolbox** and search for the **Show message** activity:
-    
+2. Open the **Toolbox** and search for the **Show message** activity:
+
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/toolbox.png" >}}
 
-3.  Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
+3. Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/show-message-activity.png" >}}
 
 4. Double-click the message activity to open the **Show Message** properties.
-
-5.  Enter *Hello World* for the **Template** value and click **OK**:
+5. Enter *Hello World* for the **Template** value and click **OK**:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/show-message-properties.png" >}}
 
 6. Click the play button (**Run Locally**) and then **View App** to see the application in your default browser.
-
 7. Click the **Hello World** menu item in the menu bar to see the message:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/hello-world-message.png" >}}
@@ -96,6 +93,6 @@ Congratulations! You have created the menu item that triggers the microflow and 
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Optimize the Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Configure Error Handling](/howto/logic-business-rules/set-up-error-handling/)
+* [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

@@ -1,7 +1,6 @@
 ---
 title: "Share Company Atlas UI Resources"
 url: /howto8/front-end/share-company-atlas-ui-resources/
-parent: "atlas-ui"
 weight: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
@@ -50,7 +49,7 @@ A UI Resources module is a great way to keep all the UI resources centralized in
 
 Let’s start with creating a new Mendix application in the Mendix Developer Portal or directly in Mendix Studio Pro:
 
-1.  Select the **Blank App** and open the new app in Studio Pro:
+1. Select the **Blank App** and open the new app in Studio Pro:
 
     {{< figure src="/attachments/howto8/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_createnewapp.png" >}}
 
@@ -87,7 +86,7 @@ The UI Resources module can be easily downloaded through the Mendix Marketplace 
 
 To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
-1.  Open the Mendix Marketplace in Studio Pro and then select **UI Resources** in the left sidebar **Categories** menu:
+1. Open the Mendix Marketplace in Studio Pro and then select **UI Resources** in the left sidebar **Categories** menu:
 
     {{< figure src="/attachments/howto8/front-end/atlas-ui/share-company-atlas-ui-resources/sharing.png" >}}
 
@@ -103,6 +102,6 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)
-* [Create Custom Preview Images for Building Blocks & Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
+* [Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)

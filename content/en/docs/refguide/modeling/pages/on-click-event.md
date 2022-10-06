@@ -1,7 +1,6 @@
 ---
-title: "On Click Event & Events Section"
+title: "On Click Event and Events Section"
 url: /refguide/on-click-event/
-parent: "pages"
 weight: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
 aliases:
@@ -81,24 +80,34 @@ No action is taken. This option is useful for setting up a page without defining
 The **Show a page** event opens the specified page. Select the page which opens using the options below:
 
 * **Page** – a [page](/refguide/page/) that should open.
-
-* **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
-
-    This option is activated by checking the **Override page title** check box in the **Edit** dialog box:
-
-    {{< figure src="/attachments/refguide/modeling/pages/on-click-event/page-title-property.png" alt="Page Title Property" >}}
+  
+* **Page settings** – opens a dialog box enabling you to configure the page in more detail (including the page title).
 
 * **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
+
+#### 3.2.1 Page Settings {#page-settings}
+
+**Page settings** opens a dialog box enabling you to configure the page in more detail:
+
+* **Page** – a [page](/refguide/page/) that should open.
+  
+* **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
+
+  This option is activated by checking the **Override page title** check box.
+
+* **Page arguments** – a list of parameters of the selected page and the objects that will be passed to each of them.
+
+#### 3.2.1.1 Page Arguments
+
+**Page arguments** are automatically configured based on the parameters of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a page is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
 ### 3.3 Call a Microflow {#call-microflow}
 
 The **Call a microflow** event executes the specified microflow.
 
 {{% alert color="info" %}}
-
 When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input elements) will be overwritten by the results of the microflow.
 Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
-
 {{%/alert %}}
 
 The following settings are specific for this event:
@@ -121,20 +130,17 @@ This duplicates the [Microflow](#microflow) specified above.
 
 **Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
-If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or  selection, and defaults to selection. This can be configured via the drop-down in the microflow settings page.
+If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or selection, and defaults to selection. This can be configured via the drop-down menu in the microflow settings page. A grid with single selection always passes all rows to the microflow.
 
 ##### 3.3.2.3 Microflow Call Type
 
 **Microflow call type** specifies whether the microflow is executed synchronously or asynchronously.
 
 * **Synchronous** *(default)* – The client waits until the microflow is done executing
-
 * **Asynchronous**
 
     * The client executes the microflow but does not wait for the result
-
     * The client checks the server every ten seconds to see whether the microflow is done executing
-
     * Only set the call type to asynchronous if you experience problems — sometimes, if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
 
 ##### 3.3.2.4 Show Progress Bar
@@ -187,7 +193,7 @@ For buttons which call a microflow from inside a grid, **Maintain selection afte
 
 ##### 3.3.2.11 Abort on Validation Errors {#abort-on-validation-errors}
 
-For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed _before_ executing the microflow. If the validations fail, the microflow will not be executed.
+For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed *before* executing the microflow. If the validations fail, the microflow will not be executed.
 
 | Value | Description |
 | --- | --- |
@@ -207,8 +213,8 @@ The **Open link** event triggers an action based on a link type, some of which a
 
 * **Link Type** – the type of action triggered when pressing the button. For information on available link types, see the [Link Types](#on-click-link-type) section below. 
 * **Address** – usage of the address property depends on the chosen link type and whether you want to use a literal or to use the value of an attribute.
-  * **Use literal value**  – allows you to enter a fixed address.
-  * **Use attribute** – allows you to select an attribute which contains the value to be used as the address. In this case, the widget must have an entity as its context (for example, it is inside a data view).
+    * **Use literal value**  – allows you to enter a fixed address.
+    * **Use attribute** – allows you to select an attribute which contains the value to be used as the address. In this case, the widget must have an entity as its context (for example, it is inside a data view).
 
 #### 3.5.1 Link Types {#on-click-link-type}
 
@@ -222,9 +228,7 @@ The table below described link types available for the **Open link** on click ev
 | Text  | Specifies a number to which to send a text message   | `+1-202-555-0112`                         |
 
 {{% alert color="info" %}}
-
 When you Specify  **Email**, **Call**, or **Text** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
-
 {{%/alert %}}
 
 ### 3.6 Create Object {#create-object}
@@ -233,13 +237,16 @@ The **Create object** event creates a new object. The following properties are s
 
 * **Entity (path)** – specifies which entity to create. It is also possible to choose an association (if available) from the context object. If an entity is configured, a new instance of the entity will be created. If an entity through association from the context object is configured, a new instance of the entity will be created and an object associated with the context will be created.
 * **On {event} page** – specifies which [page](/refguide/page/) should be shown to allow the end-user to enter values for the new created object. This page must accept a context parameter object (for example, a data view) with the same entity or a sub-type of the created entity. **{event}** specifies which event is being used to trigger this action (**click**, for example).
+* **Page settings** - opens a dialog box enabling you to configure the page in more detail. See the [Page Settings](#page-settings) section in **Show a page** for more information. 
 
 ### 3.7 Save Changes {#save-changes}
 
-The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
+The **Save changes** event commits all changes made to the objects in *Editable* widgets on the page. If a non-editable widget displays an object and it is modified by, for example, a microflow, the object is not committed. For information on editability, see the [Editability](/refguide/common-widget-properties/#editability) section in *Properties Common in the Page Editor*. 
+
+The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](/refguide/offline-first/#synchronization).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
 
 This event cannot be used on pages that change [external entities](/refguide/external-entities/). Use the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
 
@@ -263,7 +270,7 @@ Set the **Close page** property to indicate whether the current page should be c
 
 ### 3.11 Synchronize {#synchronize}
 
-The **Synchronize** event [synchronizes](/refguide/offline-first/#synchronization) the data stored locally on your device with the server database.
+The **Synchronize** event [synchronizes](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) the data stored locally on your device with the server database.
 
 ### 3.12 Sign Out {#sign-out}
 
@@ -287,13 +294,13 @@ The following properties are specific for this event:
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 
-For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 
 ### 3.15 Show User Task Page {#show-user-task-page}
 
 **Show user task page** opens an overview page set for the [user task](/refguide/user-task/) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
-For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 
 ### 3.16  Complete User Task {#complete-task}
 
@@ -304,11 +311,8 @@ An element calling this event should be placed in a data container connected to 
 The following properties are specific for this event:
 
 * **User task** – The [user task](/refguide/user-task/) that should be marked as completed.
-
 * **Outcome** – Lists the outcomes of the selected [user task](/refguide/user-task/) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
-
 * **Close page** – Specifies whether the current page should be closed.
-
 * **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
 
 ## 4 Read More

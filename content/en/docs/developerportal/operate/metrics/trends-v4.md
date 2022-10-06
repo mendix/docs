@@ -1,7 +1,6 @@
 ---
 title: "Trends in Mendix Cloud v4"
 url: /developerportal/operate/trends-v4/
-parent: "metrics"
 weight: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
@@ -25,9 +24,7 @@ If you don't know which Mendix Cloud version you are using, you can find out by 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert color="info" %}}
-
 Only the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) is allowed to grant node permissions.
-
 {{% /alert %}}
 
 Assign permission by following these steps:
@@ -371,6 +368,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 If you see large values here which do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries, for example ones which require sorting within the app.
 <a name="Trends-dbdf"></a>
+
 ### 5.8 Database Node Disk Usage (in Bytes){#Trends-dbdfabs}
 
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.

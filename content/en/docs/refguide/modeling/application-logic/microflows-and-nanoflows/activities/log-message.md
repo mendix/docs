@@ -1,7 +1,6 @@
 ---
 title: "Log Message"
 url: /refguide/log-message/
-parent: "activities"
 weight: 70
 tags: ["studio pro", "logging activity", "logging activities", "log message"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -36,7 +35,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.3 Log Level
+### 3.1 Log Level
 
 The log level defines the severity of the log message. In the [Studio Pro Console pane](/refguide/view-menu/#console), messages have a different color and an icon for some log levels.
 
@@ -58,9 +57,7 @@ This property is only available in microflows.
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be *Email module*. Use your own log node names as this avoids confusion with messages from the Mendix runtime which are written to the Mendix log nodes. The Mendix log nodes are listed in the [Default Mendix Log Nodes](/refguide/logging/#mendix-nodes) section of *Logging*.
 
 {{% alert color="info" %}}
-It is advised to use a [constant](/refguide/constants/) for the log node name. This prevents errors when entering the node name and makes it easier to change the log node name afterwards.
-
-You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide/project-settings/#after-startup).
+You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide/app-settings/#after-startup).
 {{% /alert %}}
 
 ### 3.3 Template

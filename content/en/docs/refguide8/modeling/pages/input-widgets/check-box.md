@@ -1,7 +1,6 @@
 ---
 title: "Check Box"
 url: /refguide8/check-box/
-parent: "input-widgets"
 weight: 40
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -87,5 +86,5 @@ This differs from the [On change](#on-change) property in that the event will al
 
 ## 3 Read More
 
-*   [Data view](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data view](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

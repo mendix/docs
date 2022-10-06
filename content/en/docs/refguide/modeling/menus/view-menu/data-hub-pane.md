@@ -1,8 +1,7 @@
 ---
 title: "Data Hub Pane"
 url: /refguide/data-hub-pane/
-parent: view-menu
-weight: 15
+weight: 30
 description: "Describes the Data Hub pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
@@ -13,16 +12,16 @@ tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 [Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/). In Studio Pro, this is possible using the integrated functionality of Data Hub Catalog through the **Data Hub** pane.
 
 {{% alert color="info" %}}
-You need a license to use Data Hub in Studio Pro. For further information see [Data Hub License](/refguide/consumed-odata-service-requirements/#license-limitations).
+See the [Data Hub Licenses](/data-hub/#data-hub-licences) section of the *Data Hub Guide* to learn about licensing.
 {{% /alert %}}
 
 You can search in the Data Hub Catalog through the **Data Hub** pane to discover data sources that you can use in your app. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
-{{% alert color="info" %}}
-In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
-{{% /alert %}}
-
 To display the **Data Hub** pane, click **View** > **Data Hub**.
+
+{{% alert color="info" %}}
+In the Data Hub Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
+{{% /alert %}}
 
 ## 2 Data Hub Pane Overview
 
@@ -52,6 +51,7 @@ You can drag the entity from the search results into your domain model and it wi
 {{% alert color="info" %}}Services that are set to **not-Discoverable** in the Catalog are not be included in the search results for *any* user including owners of the service. To consume entities from these services owners must ensure that they are [Discoverable](/data-hub/data-hub-catalog/curate/#discoverability).{{% /alert %}}
 
 ### 3.1 Wildcard Search
+
 You can perform a wildcard search by entering `*` in the search field.
 
 {{% alert color="info" %}}
@@ -59,6 +59,7 @@ The search strings must be a minimum of three alphanumeric characters. Punctuati
 {{% /alert %}}
 
 ### 3.2 Filtering Environments {#filter}
+
 By default, the search is performed on assets in the **Production** environment. To include all other environments such as test, acceptance, and also the Mendix free app environment, **Sandbox** in the search, click the **Filter** icon and check **Show development environments**:
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/filter-icon.png" alt="Filter Icon"   width="300"  >}}
@@ -76,24 +77,20 @@ The information that is displayed in the **Data Hub** pane either when you enter
 The search results and **User in your App** section show the following information at a service level:
 
 * **Service name**
-
-*  **Application icon** for the service (for example, Mendix, SAP, Siemens Teamcenter, or custom icons)
-
+* **Application icon** for the service (for example, Mendix, SAP, Siemens Teamcenter, or custom icons)
 * **Service version**
+* **Environment name** for non-production environments
 
-*  **Environment name** for non-production environments
-
-	{{% alert color="info" %}}Only the names of non-production environments are displayed. Services in the **Production** do not show an environment name. {{% /alert %}}
+    {{% alert color="info" %}}Only the names of non-production environments are displayed. Services in the **Production** do not show an environment name. {{% /alert %}}
 
 * **Green check-mark** if the service or entity is consumed in the app. If you right-click a consumed service, you can do the following:
 
     * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide/consumed-odata-service/) document
-    
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
-  
-* **Gray shield icon** shows if the service or entity is validated in the Catalog
 
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
+
+* **Gray shield icon** shows if the service or entity is validated in the Catalog
 * **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Data Hub Pane update" >}}

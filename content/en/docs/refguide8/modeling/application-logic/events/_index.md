@@ -1,7 +1,6 @@
 ---
 title: "Events"
 url: /refguide8/events/
-parent: "application-logic"
 weight: 90
 tags: ["studio pro", "event", "events"]
 ---
@@ -21,11 +20,7 @@ For example, they are used to start or end your microflow, to break an iteration
 You can add the following events to your flow:
 
 * [Start Event](/refguide8/start-event/) – indicates the beginning of your microflow or nanoflow 
-
 * [End Event](/refguide8/end-event/) – defines where the flow stops
-
 * [Error Event](/refguide8/error-event/) – defines where the microflow will stop and throw an error
-
 * [Continue Event](/refguide8/continue-event/) – used in loops to stop the current iteration and start the iteration of the next object
-
 * [Break Event](/refguide8/break-event/) – used in loops to exit the loop and continue with the rest of the flow

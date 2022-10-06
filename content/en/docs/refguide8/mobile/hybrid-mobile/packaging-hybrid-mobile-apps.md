@@ -1,7 +1,6 @@
 ---
 title: "Packaging Hybrid Mobile Apps"
 url: /refguide8/packaging-hybrid-mobile-apps/
-parent: "hybrid-mobile"
 tags: ["studio pro"]
 ---
 

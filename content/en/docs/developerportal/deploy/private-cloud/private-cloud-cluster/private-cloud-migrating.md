@@ -1,7 +1,6 @@
 ---
 title: "Hosting Your Own Registry"
 url: /developerportal/deploy/private-cloud-migrating/
-parent: "private-cloud-cluster"
 description: "Describes how to migrate Mendix images to a private cloud registry"
 weight: 10
 tags: ["Private Cloud", "Registry", "Migrate", "Image", "Export", "Import"]
@@ -35,22 +34,17 @@ To export the Mendix components you want to migrate to your own registry, you ne
 Follow these steps to export the Mendix components and store them on your local machine:
 
 1. Start the Configuration Tool using the command `mxpc-cli registry-migration` to initiate registry migration mode.
-
 2. Select **Migration Type** to be *Export*.
-
 3. Select the **Main Components** and **Storage Provisioners** you want to export.
-
 4. Enter the version numbers of any Mendix Runtimes which you want to export. You can use wildcards and create a list of versions separated by commas. For example `8.12.*, 7.23.6.*` will export all patch versions of the Mendix 8.12 runtime and the published build of the Mendix 7.23.6 runtime.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-migrating/export.png" >}}
 
 5. Click the **Clear cache** button, which will trigger the deletion of local image cache, otherwise the cache is reused when redownloading the same images.   
-
 6. Click the **Check for updates** button, which is used to verify that the hash of your downloaded images matches with the latest remote images.  
-
 7. Click **Export components**.
 
-    The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message *The images for the selected components were exported successfully in tarballs*.
+    The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message*The images for the selected components were exported successfully in tarballs*.
 
 ## 5 Import Mendix Components Into Your Own Registry
 
@@ -59,9 +53,7 @@ Once you have the Mendix components saved on your local machine, you can import 
 Perform the following steps.
 
 1. If you are not continuing from the previous section, ensure that the Configuration Tool is started in registry migration mode. Use the command `mxpc-cli registry-migration` if it is not already running.
-
 2. Select **Migration Type** to be *Import*.
-
 3. Enter the following **Repository Details**:
 
     * Registry User – the username used for authorized access to the registry
@@ -70,7 +62,6 @@ Perform the following steps.
     * Repository – the name you have given to your repository
 
 4. Click **Update Credentials**. 
-
 5. Select the **Main Components** and **Storage Provisioners** you want to import into your own registry.
 
     {{% alert color="info" %}}You can only choose components which you exported in the previous section, [Export Mendix Components](#export).<br/><br/>
@@ -80,7 +71,7 @@ Perform the following steps.
 
 6. Click **Import components**.
 
-    The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix.
+    The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and Linux.
 
 ## 6 Create and Configure Mendix for Private Cloud Cluster and Namespace
 
@@ -102,11 +93,15 @@ With the `--registry` flag set, follow the instructions in the [Base Installatio
 
 With the `--registry` flag set, follow the instructions in the [Configure Namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace) section of *Creating a Private Cloud Cluster*.
 
-When you get to the stage [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply), the YAML file which you create will contain the location of your own registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and U*ix). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
+When you get to the stage [Review and Apply](/developerportal/deploy/private-cloud-cluster/#review-apply), the YAML file which you create will contain the location of your own registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and Linux). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
 
 Click **Apply Configuration** to apply the configuration to your namespace, as normal.
 
 ### 6.3 Upgrade Cluster{#upgrade-cluster}
+
+{{% alert color="info" %}}
+Make sure that you are in the right kubernetes context before upgrading the namespace.
+{{% /alert %}}
 
 If you have already installed and configured a namespace, but would like to upgrade it to the current Mendix for Private Cloud version, 
 follow the instructions in the [Upgrade cluster](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster) section of *Upgrading Private Cloud*.

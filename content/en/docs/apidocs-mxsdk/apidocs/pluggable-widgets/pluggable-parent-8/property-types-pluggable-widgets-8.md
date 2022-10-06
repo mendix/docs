@@ -1,7 +1,6 @@
 ---
 title: "Pluggable Widget Property Types"
 url: /apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/
-parent: "pluggable-parent-8"
 weight: 20
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
@@ -31,23 +30,23 @@ This defines the prop `key` in the client component props which are supplied to 
 This defines a property's type. A `type` must be one of the following: 
 
 * Static Types
-	* [string](#string)
-	* [boolean](#boolean)
-	* [integer](#integer)
-	* [decimal](#decimal)
-	* [enumeration](#enumeration)
+    * [string](#string)
+    * [boolean](#boolean)
+    * [integer](#integer)
+    * [decimal](#decimal)
+    * [enumeration](#enumeration)
 * Component Types
-	* [icon](#icon)
-	* [image](#image)
-	* [widgets](#widgets)
+    * [icon](#icon)
+    * [image](#image)
+    * [widgets](#widgets)
 * Dynamic Types
-	* [expression](#expression)
-	* [textTemplate](#texttemplate)
-	* [action](#action)
-	* [attribute](#attribute)
-	* [object](#object)
-	* [file](#file)
-	* [datasource](#datasource)
+    * [expression](#expression)
+    * [textTemplate](#texttemplate)
+    * [action](#action)
+    * [attribute](#attribute)
+    * [object](#object)
+    * [file](#file)
+    * [datasource](#datasource)
 
 ### 1.2 XML Elements
 
@@ -70,9 +69,8 @@ The string property type is represented as a simple text input in Studio Pro. It
 | `type`         | Yes      | String         | Must be `string`                                             |
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | No       | String         | Default value for the property                              |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
-
 
 #### 2.1.2 Studio Pro UI
 
@@ -242,6 +240,7 @@ This property type was introduced in Mendix 8.1.
 | `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
 | `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 3.1.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -280,6 +279,7 @@ GIF images are not supported in native mobile apps on Android devices.
 | `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
 | `key`      | Yes      | String         | See [key](#key) |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+
 #### 3.2.2 Studio Pro UI
 
 When the component is defined as follows:
@@ -331,7 +331,7 @@ When the component is defined without the `dataSource` attribute as follows:
 </property>
 ```
 
-then the Studio Pro UI for the component appears like this:
+Then the Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/widgets.png" alt="studio pro ui" >}}
 
@@ -346,7 +346,7 @@ When the component is defined with the `dataSource` attribute, assuming `myDataS
 </property>
 ```
 
-then the Studio Pro UI for the component appears like this:
+Then the Studio Pro UI for the component appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/property-types-pluggable-widgets-8/widgets_with_ds.png" alt="studio pro ui" >}}
 
@@ -414,21 +414,19 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 Support for the `dataSource` attribute was introduced in Mendix 8.14.
 {{% /alert %}}
 
-
 #### 4.2.1 XML Attributes
 
 | Attribute    | Required | Attribute Type | Description                                                                                                                                                          |
 | ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`       | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
 | `key`        | Yes      | String         | See [key](#key) |
-| `multiline`  | No       | Boolean        | `true` to enable multiline input in the Studio, `false` otherwise                                                                                                   |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise                                                                                                   |
 | `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 
-
 #### 4.2.2 XML Elements
 
-`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings/#languages-tab) in Studio Pro.
+`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/app-settings/#languages-tab) in Studio Pro.
 
 #### 4.2.3 Studio Pro UI
 

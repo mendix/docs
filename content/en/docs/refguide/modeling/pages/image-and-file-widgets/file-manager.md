@@ -1,7 +1,6 @@
 ---
 title: "File Manager"
 url: /refguide/file-manager/
-parent: "image-and-file-widgets"
 tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -107,6 +106,6 @@ Default: *False*
 ## 3 Read More
 
 * [Page](/refguide/page/)
-* [Images, Videos & Files](/refguide/image-and-file-widgets/)
+* [Images, Videos, and Files](/refguide/image-and-file-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)
 * [System Texts](/refguide/system-texts/)

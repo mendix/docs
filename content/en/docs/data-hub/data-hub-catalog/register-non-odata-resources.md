@@ -1,9 +1,10 @@
 ---
 title: "Register Non-OData Resources in the Data Hub Catalog"
+linktitle: "Register Non-OData Resources"
 url: /data-hub/data-hub-catalog/register-non-odata-resources/
 category: "Data Hub Catalog"
 weight: 40
-description: "How to convert non-OData resources into OData and then registered them in the Data Hub Catalog."
+description: "Describes how to convert non-OData resources into OData and then register them in the Data Hub Catalog."
 tags: ["Data Hub", "Data Hub Catalog", "registration", "OData", "register data"]
 ---
 
@@ -28,16 +29,13 @@ There are certain limitations on consumed OData services. For more information o
 
 The diagram below represents how an OData API wrapper can be used to connect a custom app data source to a Mendix Studio Pro app:
 
-
 {{< figure src="/attachments/data-hub/data-hub-catalog/register-non-odata-resources/non-odata.png" alt="Data Hub connecting to non-OData resources" >}}
 
-
 Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Data Hub Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services/).
-
 
 ### 3.1 Examples of Exposing OData with a Service Wrapper
 
 You can find the following examples of how to write an OData service in .NET: 
 
-  * [Work With OData in Web API: Create Your First OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
-  * [Write a Simple OData V4 Service](https://docs.microsoft.com/en-us/odata/webapi/getting-started)
+* [Work With OData in Web API: Create Your First OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
+* [Write a Simple OData V4 Service](https://docs.microsoft.com/en-us/odata/webapi/getting-started)

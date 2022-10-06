@@ -1,7 +1,6 @@
 ---
 title: "AppDynamics for the Mendix Cloud"
 url: /developerportal/operate/appdynamics-metrics/
-parent: "metrics"
 weight: 10
 description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with AppDynamics."
 tags: ["AppDynamics", "Mendix Cloud", "v4", "monitoring", "analysis"]
@@ -43,7 +42,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
     1. APPDYNAMICS_MACHINE_AGENT_ENABLED
 
-        Set to `true` to enable specific Mendix metrics. If this is not set, or set to `false` AppDynamics will only receive the general AppDynamics metrics, provided by the AppDynamics Java Agent.
+        Set to `true` to enable metrics specific to Mendix. If this is not set, or set to `false` AppDynamics will only receive the general AppDynamics metrics, provided by the AppDynamics Java Agent.
 
         *Default: `false`*
 
@@ -62,9 +61,9 @@ To send your runtime information to AppDynamics, you need to set it up using env
     4. APPDYNAMICS_CONTROLLER_HOST_NAME
 
         The hostname or the IP address of the AppDynamics Controller without the *scheme* (protocol). This is the same host that you use to access the AppDynamics browser-based user interface. Example values are `192.168.1.22` or `myhost` or `myhost.example.com`.
-        
+
         For an on-premises Controller, use the value for Application Server Host Name that was configured when the Controller was installed.
-        
+
         For the AppDynamics SaaS Controller service, see the welcome email from AppDynamics.
 
     5. APPDYNAMICS_AGENT_APPLICATION_NAME
@@ -85,7 +84,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         This is how you will identify which node the metrics are coming from.
 
-        The value of the CF_INSTANCE_ID variable will be appended to the node name. For example, if APPDYNAMICS_AGENT_NODE_NAME is set to  `node` and the node has multiple instances, the AppDynamics agent will be configured as `node_0`, `node_1`, … for the different instances.
+        The value of the CF_INSTANCE_ID variable will be appended to the node name. For example, if APPDYNAMICS_AGENT_NODE_NAME is set to  `node` and the node has multiple instances, the AppDynamics agent will be configured as `node-0`, `node-1`, … for the different instances.
 
         *Default: `"node"`*
 
@@ -95,11 +94,11 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
         *Default: Environment ID of the app*
 
-For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring)(https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring#OverviewofApplicationMonitoring-Nodes) in the AppDynamics documentation.
+    For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring)(https://docs.appdynamics.com/22.1/en/application-monitoring/overview-of-application-monitoring#OverviewofApplicationMonitoring-Nodes) in the AppDynamics documentation.
 
-5.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+5. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-	{{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to AppDynamics.{{% /alert %}}
+    {{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to AppDynamics.{{% /alert %}}
 
 ## 4 Additional Information{#additional-info}
 

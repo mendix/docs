@@ -1,7 +1,6 @@
 ---
 title: "Validation Feedback"
 url: /refguide8/validation-feedback/
-parent: "client-activities"
 weight: 70
 tags: ["studio pro", "validation feedback", "client activities"]
 aliases:
@@ -60,9 +59,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 **Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2, etc.
 
 {{% alert color="warning" %}}
-
 Nanoflows do not support text templates in validation feedback. Only a static message text can be provided.
-
 {{% /alert %}}
 
 ### 3.4 Parameters

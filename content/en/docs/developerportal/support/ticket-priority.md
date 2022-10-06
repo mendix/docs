@@ -3,7 +3,7 @@ title: "Support Ticket Priority"
 url: /developerportal/support/ticket-priority/
 category: "Mendix Support"
 weight: 4
-description: "Presents details on how Mendix Support prioritizes tickets."
+description: "Describes how priority levels are determined for Mendix Support."
 tags: ["support", "request", "impact", "urgency"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

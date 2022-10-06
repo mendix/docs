@@ -1,5 +1,6 @@
 ---
 title: "Show Fields Only When Certain Conditions Are Met"
+linktitle: "Show Fields on Conditions"
 url: /studio-how-to8/pages-how-to-set-visibility/
 category: "Pages"
 description: "Describes how to set conditional visibility in Mendix Studio."
@@ -81,7 +82,7 @@ Good job! If you [preview your app](/studio8/publishing-app/), you will see that
 
 ## 4 Showing an Element to Certain User Roles Only
 
- You have a list of products with the **Edit** button. You have three user roles in your app: **Administrators**, **Sales_Managers**, and **Customers**, and you would like to show this button only to Administrators and Sales managers only, hiding it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](/studio-how-to8/security-how-to-configure-roles/).
+You have a list of products with the **Edit** button. You have three user roles in your app: **Administrators**, **Sales_Managers**, and **Customers**, and you would like to show this button only to Administrators and Sales managers only, hiding it from customers. For more information, on how to create user roles, see [How to Secure Your App and Configure Access to Its Functionality](/studio-how-to8/security-how-to-configure-roles/).
 
 To show an element only to a certain user role, do the following:
 
@@ -115,4 +116,4 @@ Widgets with conditional visibility are highlighted:
 
 Congratulations! You set several conditions for your widgets and you learnt how to view these widgets on a page to find them easily.
 
-You can now preview your app and test the conditions that you have set: when the Billing address is being shown and which user roles can see the **Edit** button. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio8/publishing-app/).
+You can now preview your app and test the conditions that you have set: when the Billing address is being shown and which user roles can see the **Edit** button. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio8/publishing-app/).

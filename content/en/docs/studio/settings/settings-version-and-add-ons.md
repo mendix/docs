@@ -1,5 +1,5 @@
 ---
-title: "Mendix Version & Add-Ons"
+title: "Mendix Version and Add-Ons"
 url: /studio/settings-version-and-add-ons/
 category: "Settings"
 description: "Describes the Mendix Version and Add-On's screen in Mendix Studio."
@@ -13,7 +13,7 @@ The **Mendix Version & Add-Ons** screen provide information on the Mendix versio
 
 {{< figure src="/attachments/studio/settings/settings-version-and-add-ons/version-and-add-ons-screen.png" alt="Mendix Version &Add-Ons Screen" >}}
 
-The Mendix version is the core version of your app that contains main features and functionality. For more information on Mendix and Studio versions, see [Studio Ranges & Mendix Versions](/studio/general-versions/).
+The Mendix version is the core version of your app that contains main features and functionality. For more information on Mendix and Studio versions, see [Studio Ranges and Mendix Versions](/studio/general-versions/).
 
 Your Mendix app consists of *modules* that divide functionality of your app into separate parts. For example, you have a default MyFirstModule where you can start building your own functionality. On the **Mendix Version & Add-Ons** screen, you can see *add-on modules* that contain specific platform capabilities used in the app. An add-on module provides additional content to certain features, such as security or workflows. For example, the Mendix SSO module allows your end-users to sign into the app with their Mendix credentials; this module provides content for security. 
 
@@ -47,4 +47,4 @@ Modules can be dependent on each other: one module might need other modules to f
 
 ## 4 Read More
 
-* [Studio Ranges & Mendix Versions](/studio/general-versions/)
+* [Studio Ranges and Mendix Versions](/studio/general-versions/)

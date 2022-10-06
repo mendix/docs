@@ -21,10 +21,10 @@ Errors need to be solved before your app can be published. A consistency error c
 * Integration
 * Security
 
-##  2 Read More
+## 2 Read More
 
 * [Page Editor Consistency Errors](/refguide7/consistency-errors-pages/)
 * [Navigation Consistency Errors](/refguide7/consistency-errors-navigation/)
 * [Pages](/refguide7/pages/)
 * [Microflows](/refguide7/microflows/) 
-* [Navigation in Mendix 7.4 & Above](/refguide7/navigation/)
+* [Navigation in Mendix 7.4 and Above](/refguide7/navigation/)

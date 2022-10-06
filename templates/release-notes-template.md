@@ -17,11 +17,17 @@ title: "Enter the title of the document"
 
 #### {Major new feature specifically named in heading}
 
+#### Other New Features (if necessary with above specific headings)
+
 ### Improvements
 
 [//]: #	"Include links/references to Idea Forum ideas when available."
 
+#### Performance Improvements
+
 #### {Major improvement specifically named in heading}
+
+#### Other Improvements
 
 ### Fixes
 

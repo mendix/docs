@@ -31,19 +31,21 @@ On the top, you can search for a project in the search bar. Clicking **Create Ne
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/projects-overview.png" >}}
 
-### 2.1 Different Views
+### 2.1 Changing Views
 
-The **Project Overview** page offers three views. To switch between the views, click the drop-down list on the upper-right corner of the **Projects Overview** page, and then select one of the following views:
+The **Project Overview** page offers multiple views. To change the view, click the drop-down list on the upper-right corner of the **Projects Overview** page, and then select one of the following views:
 
-* **Kanban view**
+* [Kanban view](#kanban-view)
 
-* **List view**
+* [List view](#list-view)
 
-* **WSJF Prioritization**
+* [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice)
+
+  {{% alert color="info" %}}You can see either **WSFJ Prioritization** or **RICE Prioritization** here, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. You can switch the prioritization model on this page.{{% /alert %}}
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/switch-view.png" >}}
 
-#### 2.1.1 Kanban View
+#### 2.1.1 Kanban View {#kanban-view}
 
 In Kanban view, you can select a filter from the **Filters** drop-down list on the top to filter projects.
 
@@ -73,15 +75,15 @@ Each project card shows the following information:
 
 * Calendar icon (⑤) – Hovering over it shows the following defined dates of the project lifecycle:
 
-  * Intake – This is the time for the project acceptance based on business requirements.
-  * Start Date – This is the time when the first actions are taken to start implementation.
-  * Go-Live date – This is the time when the app is expected to be up and running.
+  * **Intake** – This is the time for the project acceptance based on business requirements.
+  * **Start Date** – This is the time when the first actions are taken to start implementation.
+  * **Go-Live Date** – This is the time when the app is expected to be up and running.
 
 * Icon of the linked app (⑥) – Hovering over it shows the existing Mendix app that is linked with the project.
 
 * Avatar of the project owner (⑦) – Hovering over it shows the name of the project owner.
 
-#### 2.1.2 List View
+#### 2.1.2 List View {#list-view}
 
 In the list view, projects are shown in a list.
 
@@ -103,7 +105,7 @@ The list shows the following information:
 
 * **Start Date** – This shows the time when the first actions are taken to start implementation.
 
-* **Go-Live date** – This shows the time when the app is expected to be up and running.
+* **Go-Live Date** – This shows the time when the app is expected to be up and running.
 
 * **Linked App** – This shows the existing Mendix app that is linked with the project.
 
@@ -115,11 +117,11 @@ The list shows the following information:
   Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
-#### 2.1.3 WSJF Prioritization
+#### 2.1.3 WSJF Prioritization {#wsjf}
 
 {{% alert color="info" %}}Weighted Shortest Job First (WSJF) is a model that can help you prioritize a list of initiatives. Each initiative's score is calculated as the the cost of delay (CoD) divided by the job size or the duration of the job. Then the initiatives with the highest scores should be prioritized. For more information, see [Weighted Shorted Job First](https://www.scaledagileframework.com/wsjf/).{{% /alert %}}
 
-In the WSJF prioritization view, all the projects are ranked by their WSJS scores in the list. The ranking helps you prioritize your projects. 
+In the WSJF prioritization view, all the projects are by default ranked by their WSJS scores in the list. Clicking the header of any column sorts the list using the values in  that column.
 
 The list shows the following information:
 
@@ -139,7 +141,49 @@ The list shows the following information:
 
 * **Size** – The is the job size of the project.
 
-* **Scores** – This is the WSJF score of the project.
+* **Score** – This is the WSJF score of the project.
+
+* Ellipsis (**...**) icon – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
+
+  {{% alert type="info" %}}
+  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  {{% /alert %}}
+
+#### 2.1.4 RICE Prioritization {#rice}
+
+{{% todo %}}Add a short introduction to RICE prioritization{{% /todo %}}
+
+In the RICE prioritization view, all the projects are by default ranked by their RICE scores in the list. Clicking the header of any column sorts the list using the values in  that column.
+
+The list shows the following information:
+
+* **Project** – Clicking it opens a side panel that shows the details of the project.
+
+  {{% alert type="info" %}}
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  {{% /alert %}}
+
+* **Stage** – This shows in which stage the project is currently.
+
+* **Reach** – 
+
+* **Impact** – 
+
+* **Confidence** – 
+
+* **Effort** –
+
+* **Scores** –
+
+* Calendar icon (⑤) – Hovering over it shows the following defined dates of the project lifecycle:
+
+  * **Intake** – This is the time for the project acceptance based on business requirements.
+  * **Start Date** – This is the time when the first actions are taken to start implementation.
+  * **Go-Live Date** – This is the time when the app is expected to be up and running.
+
+* Icon of the linked app (⑥) – Hovering over it shows the existing Mendix app that is linked with the project.
+
+* Avatar of the project owner (⑦) – Hovering over it shows the name of the project owner.
 
 * Ellipsis (**...**) icon – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
 
@@ -153,61 +197,72 @@ The list shows the following information:
 Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-1. Go to **Projects Overview**.
+1. Go to the **Projects Overview** page.
 
 2. Click **Create New Project**.
 
-3. Enter the **Project Name** and the **Description** of the project.
+3. Enter the **Project Name** and the **Stage** in which the project is. 
 
-4. Select the **Stage**, **Department**, **Country** the project.
+4. Click **Create Project**. The **Project** is created and shown in the **Projects Overview** page. A side panel opens on the right side where you can enter the details of the new project.
 
-   {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Stage**, **Department**, **Country** on the **Portfolio Settings** page. For more information on custom settings, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+5. Select **Tags** for the project. You can select existing tags or creating new tags.
 
-5. Set the **Owner** to a user who owns this portfolio.
+6. Enter the **Description** of the project.
 
-6.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project as follows:
-    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
-    2.  Select the app that you want to link to the project.
+7. If there is an existing app that you want to change or if development is already in progress, you can link the app to this project as follows:
 
-        {{% alert type="info" %}}To see more information about a linked app, click the app name after it is linked.{{% /alert %}}
+   1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
-7.  Click **Scope Estimation** to show all the fields in this section. In this section, you can define the effort and risk profile of the project as follows:
+   2. Select the app that you want to link to the project.
 
-    1.  Select the **Use Case** of the project.
+      {{% alert type="info" %}}To see more information about a linked app, click the app name after it is linked.{{% /alert %}}
 
-        {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Use Case** on the **Portfolio Settings** page. For more information on custom setting, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+8. Set the **Owner** for the project.
 
-    2. Select the **App Size** from the operational point of view.
-    3. Enter the **Numbers of Users** who you expect will use the app.
-    4. Select **Complexity** and **Exposure** of the project. For more information about complexity and exposure, see the [Complexity Matrix](https://www.mendix.com/resources/digital-execution-manual/) in *Digital Execution Manual*.
+9. Select the **Stage**, **Department**, **Country**, and **Use Case** for the project.
 
-8.  Click **Estimated Monetary Value** to show all the fields in this section. In this section, you can solidify your business case and drive internal adoption. It can also help you map the realized value upon completion.
+   {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the **Portfolio Settings** page. For more information on custom settings, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
 
-    1. Select the **Type of Value**, which is the type of the value that is created by the project.
+10. If you want to add attachments, click **+** to add them.
 
-       {{% alert type="info" %}}A Portfolio Manager can customize the possible options for **Type of Value** on the **Portfolio Settings** page. For more information on custom setting, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
-    
-    2. For **Frequency**, select whether the value is **Once-off** or **Recurring**.
-    
-    3. For **Value**, enter the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
-    
-    4. For **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project.
-    
-    5. If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
+    {{% alert color="info" %}}Once an attachment is added, all the users can open and download it.{{% /alert %}}
 
-9. Click **Planning** to show all the fields in this section. In this section, you can enter **Intake Date**, **Start Date** and the **Go-Live Date**.
+11. Click **Planning** to show all the fields in this section. Set the following dates in this section:
 
-10. If you want to add a note, click **Notes**, add a note, and then click **Post Note**.
+    * **Intake** – This is the time for the project acceptance based on business requirements.
+    * **Start Date** – This is the time when the first actions are taken to start implementation.
+    * **Go-Live date** – This is the time when the app is expected to be up and running.
 
-11. Click **Create Project**.
+12. Click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
-You can find your new project on the **Projects Overview** page.
+    {{% alert color="info" %}}The name of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model** here, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. For information about the meaning of all the fields in this section, see [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice).{{% /alert %}}
+
+13. Click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
+
+    * **Type of Value** – This is the type of the value that is created by the project.
+
+      {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the **Portfolio Settings** page. For more information on custom setting, see the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+
+    * **Frequency **– This indicates whether the value is **Once-off** or **Recurring**.
+    * **Value** –  This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
+
+    *  **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
+
+      If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
+
+14. If you want to add a note, click **Notes**, add a note, and then click **Post Note**.
+
+15. Click **Save**.
+
+All the details are saved for the new project.
 
 ### 2.4 Archiving a Project {#archive-project}
 
-After a project is finished or the project is not relevant for the current time being, you can archive a project. When you archive the project,
+{{% alert type="info" %}}
+Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
+{{% /alert %}}
 
-In the **Projects Overview** page, you can archive a project no matter which view you use. 
+After a project is finished or the project is not relevant for the current time being, you can archive a project on the **Projects Overview** page. 
 
 To archive a project, perform the following steps:
 
@@ -308,6 +363,14 @@ To delete a user, click the delete icon.
 
 The **Portfolio Settings** page is only available for Portfolio Managers. On this page, Portfolio Managers can customize the following items that are used in a portfolio:
 
+* **Prioritization Model**
+
+* **Currency**
+
+* **Departments**
+
+* **Countries**
+
 * **Stages**
 
   * You can click the **^** icon or the **v** icon to move a stage upwards or downwards.
@@ -319,10 +382,6 @@ The **Portfolio Settings** page is only available for Portfolio Managers. On thi
 * **Expected Value - Types**
 
 * **Main Details - Departments**
-
-* **Main Details - Currency**
-
-* **Main Details - Countries**
 
 To delete or edit an existing item, hover over the row to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
 

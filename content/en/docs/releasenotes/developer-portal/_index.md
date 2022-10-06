@@ -567,7 +567,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 
 #### Improvements
 
-* We tweaked the styling of the **Stories** > **Project History** page.
+* We tweaked the styling of the **Stories** > [Project History](/developerportal/collaborate/stories/#history) page.
 * We made [moving a story](/developerportal/collaborate/stories/#move-stories) to another app more intuitive.
 * We removed the Model page, which contained tips on how to get started creating your apps.
 

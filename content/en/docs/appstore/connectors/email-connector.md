@@ -154,7 +154,7 @@ Refer to sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, *
 
 ### 4.4 Signed and Encrypted Emails
 
-You can choose to configure a digital signature and email encryption when the module is running. 
+You can choose to configure a digital signature and email encryption when the module is running. Digital signatures help the receiver verify that you are the sender. Encryption scrambles the message and can only be deciphered with the correct key.  
 
 #### 4.4.1 Digital Signing
 
@@ -213,21 +213,7 @@ You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0
 
 Click **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
 
-#### 4.7.1 Registering Your App on the Azure Portal
-
-To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
-
-While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details)
-
-#### 4.7.2 Enable Permissions in the Azure Portal
-
-This module contains functionality of sending and receiving emails, so during the OAuth process the module will ask for permissions for sending and receiving email.
-
-On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
-
-{{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
-
-#### 4.7.3 OAuth Provider Configuration Details {#oauth-config-details}
+#### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
 To configure OAuth provider, the following details are required:
 
@@ -236,27 +222,45 @@ To configure OAuth provider, the following details are required:
 * **Callback operation path** – enter any string, based on which the callback URL will be auto-generated
 * **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as callback/redirect URI
 
+#### 4.7.2 Settings in the Microsoft Azure Portal
+
+To register your app in the Azure Portal, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory) While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details).
+
+This connector contains functionality of sending and receiving emails, so during the OAuth process the connector will ask for permissions for sending and receiving email.
+
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+{{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
+
 ### 4.8 Queuing Emails
 
 Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending. On the third attempt, any messages that are still failing will move from the **Queued** folder to the **Failed** folder.
 
-### 4.9 Attachments
+## 5 FAQs
 
-To add attachments to the email message, do the following:
+* Can I add OAuth 2.0 authentication to an app that is configured with basic authentication?
 
-1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable to the places where the **FileDocument** entity is required. 
-
-    If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity. 
-
-2. Set the **Attachment_EmailMessage** association.
-
-## 5 Troubleshooting
-
-* If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
+If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
      1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
      2. For the desired email account, set the **isOAuthUsed** attribute from **EmailAccount** entity to **True**.
           * Associate the existing email account with newly created OAuth provider.
           * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
-* If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
-* If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
+
+* How do I add attachments?
+
+To add attachments to the email message, do the following:
+
+1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable to the places where the **FileDocument** entity is required. 
+     If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity. 
+2. Set the **Attachment_EmailMessage** association.
+
+## 6 Troubleshooting
+
+### 6.1 Sending or Receiving Email
 * If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
+
+### 6.2 Page Styling
+* If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
+
+### 6.3 Known Errors
+* If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.

@@ -183,7 +183,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
     {{< figure src="/attachments/howto7/mobile/debug-a-mobile-app/apple-12.png" alt="apple-12" >}}
 
-12. Return to the **Certificates, Identifiers & Profiles** page.
+12. Return to the **Certificates, Identifiers  Profiles** page.
 13. Navigate to the **App IDs** page, located under **Identifiers**.
 14. Click the `+` button to create a new **App ID**.
 15. Enter an **App ID Description** and **Explicit App ID** and select the necessary Apple services your app will need, then click **Continue**.

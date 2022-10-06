@@ -1,5 +1,5 @@
 ---
-title: "Data View & List View"
+title: "Data View and List View"
 url: /studio/page-editor-data-view-list-view/
 description: "Describes the data view and list view in the page editor of Mendix Studio."
 weight: 10

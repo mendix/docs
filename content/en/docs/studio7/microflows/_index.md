@@ -162,4 +162,4 @@ When configuring the activities of the microflows you will notice icons above or
 * [General Info](/studio7/general/)
 * [Decision](/studio7/microflows-decision/)
 * [Microflow Expressions](/studio7/microflows-expressions/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/)
+* [Set and Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/)

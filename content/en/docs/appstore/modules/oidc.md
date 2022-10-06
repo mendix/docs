@@ -339,12 +339,29 @@ To parse of SAM access tokens you need to have done the following:
 
 #### 7.3.2 Parsing Access Tokens Using a Custom Microflow
 
-If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has the access token as the parameter.
+If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
+
+You can find a sample microflow for parsing access tokens, `ACT_TokenCustomATPRetrieve Roles` in the **SAM** folder of the OIDC module.
+
+Your custom microflow should do the following
+
+1. Retrieve the access token of the account.
+1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.
+1. Convert these roles to a list of `System.UserRole` objects.
+    Your token will contain one of the following:
+
+    * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
+    * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
+
+1. Invoke the `BCO_Account_ProcessRolesToken` in the **SAM** folder of the OIDC module to associate the current user with the correct user roles in your app.
 
 Once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
-
+   
+1. Login as an administrator, for example `Demo_administrator`.
 1. Refresh the module containing your microflow as described in [Installing MxModelReflection](#mxmodelreflection).
-2. Check **Enable Access Token Parsing** and select your microflow (for example, *CustomATP_xxx*) as the **custom AccessToken processing microflow**.
+1. Go to OIDC Config 
+1. In the **OpenID Provider** tab, select an existing client configuration and click **Edit**
+1. Check **Enable Access Token Parsing** and select your microflow (for example, *CustomATP_xxx*) as the **custom AccessToken processing microflow**.
 
 {{% alert color="info" %}}
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
@@ -405,3 +422,11 @@ Content - {"error":"invalid_client","error_description":"client authentication f
 ### 8.3 Custom Microflow Implementation Should Be Required to Process Access_Token Roles
 
 If you get the error message “Custom microflow implementation should be required to process Access_token roles” in the Mendix Studio Pro console logs, this indicates you have not completely implemented your custom microflow for parsing access tokens (`CustomATP_…`). See the section on [Access Token Parsing](#access-token-parsing).
+
+### 8.4 End-Users of App Deployed On Premises Do Not Return to the App After Sign In
+
+If you have deployed your app on premises but did not configure a return URL for your app properly, the end-users of your app are redirected to your IDP for login, but will not be redirected back to your app.
+
+To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
+
+{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" >}}

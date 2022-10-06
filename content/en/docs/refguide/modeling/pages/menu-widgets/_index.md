@@ -1,5 +1,5 @@
 ---
-title: "Menus & Navigation"
+title: "Menus and Navigation"
 url: /refguide/menu-widgets/
 weight: 45
 tags: ["studio pro", "menu widgets", "navigation", "widget"]

@@ -23,7 +23,7 @@ The **Expression** tab is available for the following activities in a microflow:
 
 {{< figure src="/attachments/studio7/microflows/microflows-expressions/expression-tab.png" >}}
 
-For more information on setting and changing values for microflow activities, see [How to Set & Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/).
+For more information on setting and changing values for microflow activities, see [How to Set and Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/).
 
 ## 2 Writing an Expression
 
@@ -107,4 +107,4 @@ A list of the operators you can use in expressions in Studio can be found below:
 ## 5 Read More
 
 * [Microflows](/studio7/microflows/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/)
+* [Set and Change a Value for Different Activities in the Microflows](/studio7/microflows-setting-and-changing-value/)

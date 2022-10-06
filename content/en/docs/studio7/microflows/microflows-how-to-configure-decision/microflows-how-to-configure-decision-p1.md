@@ -1,6 +1,6 @@
 ---
-title: "Step 1: Build the Domain Model & Configure a Microflow"
-linktitle: "1. Build Domain Model & Configure Microflow"
+title: "Step 1: Build the Domain Model and Configure a Microflow"
+linktitle: "1. Build Domain Model and Configure Microflow"
 url: /studio7/microflows-how-to-configure-decision-p1/
 description: "This how-to describes the process of configuring a decision in Mendix Studio."
 weight: 10

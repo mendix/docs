@@ -1,7 +1,7 @@
 ---
 title: "Debug Microflows"
 url: /howto8/monitoring-troubleshooting/debug-microflows/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 2
 tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 ---
@@ -20,7 +20,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/)
-* Read [How to Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)
+* Read [How to Create Your First Two Overview and Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 3 Debugging Overview
 

@@ -87,7 +87,7 @@ Google Chrome and Microsoft Edge (Chromium edition) fully support running offlin
 
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 
-| Device & Browser         | Result                                                                                                                                                         |
+| Device and Browser         | Result                                                                                                                                                         |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Desktop browser          | Responsive Web profile is loaded                                                                                                                               |
 | Android - Chrome browser | Phone Web Offline profile is loaded                                                                                                                            |

@@ -1,7 +1,7 @@
 ---
 title: "Share the Development Database"
 url: /howto7/collaboration-requirements-management/sharing-the-development-database/
-category: "Collaboration & Requirements Management"
+category: "Collaboration and Requirements Management"
 weight: 40
 tags: []
 ---

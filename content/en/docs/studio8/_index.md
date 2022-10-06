@@ -40,7 +40,7 @@ The *Studio 8 Guide* is divided into the following categories:
 * [Domain Model](/studio8/domain-models/)
 * [Navigation Document](/studio8/navigation/)
 * [Microflows](/studio8/microflows/)
-* [Previewing & Publishing Your App](/studio8/publishing-app/)
+* [Previewing and Publishing Your App](/studio8/publishing-app/)
 * [Checks](/studio8/checks/)
 * [Theme Customizer](/studio8/theme-customizer/)
 * [Settings](/studio8/settings/)

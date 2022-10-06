@@ -1,6 +1,6 @@
 ---
 title: "Configure a List and View List Item Details"
-linktitle: "Configure List & View List Item Details"
+linktitle: "Configure List and View List Item Details"
 url: /studio-how-to8/pages-how-to-configure-list/
 category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
@@ -141,6 +141,6 @@ Congratulations! You have a page that displays a list of opportunity contacts an
 
 {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-configure-list/configured-page.png" alt="Configured Page" >}}
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio8/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio8/publishing-app/).
 
-You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images & Files](/studio8/page-editor-widgets-images-and-files/).
+You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images and Files](/studio8/page-editor-widgets-images-and-files/).

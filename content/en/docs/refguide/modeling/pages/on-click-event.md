@@ -1,5 +1,5 @@
 ---
-title: "On Click Event & Events Section"
+title: "On Click Event and Events Section"
 url: /refguide/on-click-event/
 weight: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]

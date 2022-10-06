@@ -1,5 +1,5 @@
 ---
-title: "Logic & Business Rules"
+title: "Logic and Business Rules"
 url: /howto7/logic-business-rules/
 weight: 40
 ---
@@ -17,8 +17,8 @@ With these how-to's, you can learn how to translate your business logic into mic
 * [Create Your First Microflow: Hello World!](/howto7/logic-business-rules/create-your-first-microflow-hello-world/)
 * [Trigger Logic Using Microflows](/howto7/logic-business-rules/triggering-logic-using-microflows/)
 * [Create a Custom Save Button](/howto7/logic-business-rules/create-a-custom-save-button/)
-* [Drag Microflows & Pages into a Microflow](/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/)
-* [Extract & Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
+* [Drag Microflows and Pages into a Microflow](/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/)
+* [Extract and Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
 * [Work with Lists in a Microflow](/howto7/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Optimize Microflow Aggregates](/howto7/logic-business-rules/optimizing-microflow-aggregates/)
 * [Set Up Error Handling](/howto7/logic-business-rules/set-up-error-handling/)

@@ -2,7 +2,7 @@
 title: "Extend Your Application with Custom Java"
 linktitle: "Extend App with Custom Java"
 url: /howto/logic-business-rules/extending-your-application-with-custom-java/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 120
 description: "Describes how to extend your application with custom Java code."
 tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClassVersionError"]
@@ -166,4 +166,4 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

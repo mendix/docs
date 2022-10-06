@@ -1,7 +1,7 @@
 ---
-title: "Mendix Solution Vendor & Startup Programs"
+title: "Mendix Solution Vendor and Startup Programs"
 url: /appstore/creating-content/sol-vendor-programs/
-linktitle: "Solution Vendor & Startup Programs"
+linktitle: "Solution Vendor and Startup Programs"
 weight: 10
 description: "Mendix supports solution developers through the Solution Vendor and Startup Programs"
 tags: [ "solutions", "vendors", "solution vendor", "startup", "adaptive solutions", "prescriptive solutions" ]

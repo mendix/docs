@@ -17,6 +17,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### October 6th, 2022
+
+#### Improvements
+
+* You can now see your app history under the [General Settings](/developerportal/collaborate/general-settings/#history) page. Previously this was located under the **Stories** page.
+
+#### Fixes
+
+* We fixed an issue which could occur when you try to accept feedback items with a long description.
+* We fixed an issue where the feedback description was not always scrollable.
+
 ### September 28th, 2022
 
 #### New Features

@@ -28,6 +28,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We fixed an issue which could occur when you try to accept feedback items with a long description.
 * We fixed an issue where the feedback description was not always scrollable.
 
+#### Deprecations
+
+* All [Mendix Feedback](/appstore/widgets/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+
 ### September 28th, 2022
 
 #### New Features

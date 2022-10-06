@@ -15,7 +15,7 @@ For information on how to use images in your app, see [Images](/refguide/images/
 Remember that, if you want to use the same set of custom images in several apps, you can export and import complete image collections, with their images. For more information, see [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/).
 
 {{% alert color="warning" %}}
-Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/) for more information).
+Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/) for more information).
 {{% /alert %}}
 
 ## 2 Adding an Image Collection

@@ -48,7 +48,7 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 
 {{< figure src="/attachments/studio/general/upgrade.png" alt="Upgrade"   width="350"  >}}
 
-You may also see a top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](/studio/general-versions/).
+You may also see a top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges and Mendix Versions](/studio/general-versions/).
 
 {{% alert color="info" %}}
 When you upgrade your app in Studio to the latest Mendix version, you will need to upgrade your app in Studio Pro to the same version as well. 
@@ -116,7 +116,7 @@ The top menu bar items are described in the table below:
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
 | [Language drop-down list](/studio/language-support/) | If you have several languages enabled in Studio Pro, you can see a language drop-down list with languages that you can translate your app to. |
 | [Preview button](/studio/publishing-app/) | Shows you what your app will look like after it is published. |
-| [Publish button](/studio/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](/studio/publishing-app/) |
+| [Publish button](/studio/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing and Publishing Your App](/studio/publishing-app/) |
 | [Checks button](/studio/checks/) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](/studio/consistency-errors/).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
 | Help icon | Opens the **Help & Learning** side menu, where you can find just-in-time help – videos and how-to's that will provide you explanations and instructions in the context of your current task. For example, when working in the domain model, you will see videos and how-to's on the domain model, entities, and attributes as a recommended topic for you. However, you can also browse through the categories and other topics that cover all the main features in Studio. |
 | **More Options** icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](/studio/general-versions/) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](/studio/mx-assist/)</li><li>**Open App Buzz** – takes you to the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) in the Developer Portal</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
@@ -148,5 +148,5 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Main Documents in This Category
 
-* [Studio Ranges & Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
+* [Studio Ranges and Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
 * [Translating Your App to Multiple Languages](/studio/language-support/) – describes how to translate you app to multiple languages

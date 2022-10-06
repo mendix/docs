@@ -121,7 +121,7 @@ You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#tr
 
 #### 3.6.1 Triggering a Workflow from a Page {#trigger-page}
 
-To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event & Events Section](/refguide/on-click-event/).
+To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event and Events Section](/refguide/on-click-event/).
 
 Do the following:
 
@@ -186,7 +186,7 @@ You can add workflow-related activities to your microflows. For more information
 
 ## 7 Workflow-Specific On-Click Events on Pages
 
-You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event & Events Section](/refguide/on-click-event/).
+You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event and Events Section](/refguide/on-click-event/).
 
 ## 8 Workflow Commons Module
 

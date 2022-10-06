@@ -419,7 +419,7 @@ This can be caused by one of the following reasons:
 The OPC UA Client example implementation is a sample app based on the [Prosys OPC UA Server](https://www.prosysopc.com/) and provides basic browsing functionality, this is not intended to replace a UA Client. It implements the following functionality:
 
 * Configure one or more OPC UA Server connections (using the Client)
-* View & browse nodes on the Server
+* View and browse nodes on the Server
 * Example Consumer implementation
 
 You can use the **OpcUaClient_ExampleImplementation** module (link) as a template to start the consumption of your OPC UA Server information.

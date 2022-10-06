@@ -1,9 +1,9 @@
 ---
-title: "Hybrid App Base & Template"
+title: "Hybrid App Base and Template"
 url: /releasenotes/mobile/hybrid-app/
 category: "Mobile"
 weight: 30
-description: "Mendix Hybrid App Base & Hybrid App Template release notes."
+description: "Mendix Hybrid App Base and Hybrid App Template release notes."
 ---
 
 If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.

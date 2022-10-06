@@ -96,7 +96,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | External entity create, update, and delete (AKA write) | Released for GA on [May 24th, 2022](/releasenotes/studio-pro/9.13/#new-features) |
 | Connector Kit 2.0 (OData publish with microflows and Marketplace integration) | Released for GA on [Aug 31st, 2022](/releasenotes/studio-pro/9.17/#new-features) |
-| Business events and event broker | GA: Sep 2022 |
+| Business events and event broker | Released for GA on [September 30th, 2022](/releasenotes/studio-pro/9.18/#other-new-features) |
 
 ## 10 Intelligent Automation
 
@@ -119,4 +119,4 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- |
 | New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA in Aug, 2021 |
 | Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA on [Sep 2nd, 2021](/releasenotes/developer-portal/mendix-for-private-cloud/#20210902) |
-| Mendix for Private Cloud – built-in CI/CD | GA: Nov 2022 |
+| Mendix for Private Cloud – built-in CI/CD | Released for GA on [Sep 27th, 2022](/releasenotes/developer-portal/mendix-for-private-cloud/#tekton) |

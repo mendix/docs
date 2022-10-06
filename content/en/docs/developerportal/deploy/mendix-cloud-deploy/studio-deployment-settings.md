@@ -43,6 +43,6 @@ You can see whether an environment is the target for Studio and Studio Pro from 
 
 ## 3 Read More
 
-* [Previewing & Publishing Your App](/studio/publishing-app/)
+* [Previewing and Publishing Your App](/studio/publishing-app/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [Environments](/developerportal/deploy/environments/)

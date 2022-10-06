@@ -9,11 +9,7 @@ tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
 
 ## 1 Introduction
 
-{{% alert color="warning" %}}
-These instructions are for apps which are deployed to Mendix Cloud V3 only. Apps deployed to Mendix Cloud V4 will not benefit from following these instructions.
-{{% /alert %}}
-
-Usually. the database of a Mendix application in the Mendix Cloud will grow over time, as shown in this chart:
+Usually, the database of a Mendix application in the Mendix Cloud will grow over time, as shown in this chart:
 
 {{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" >}}
 

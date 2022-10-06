@@ -17,6 +17,21 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### October 6th, 2022
+
+#### Improvements
+
+* You can now see your app history under the [General Settings](/developerportal/collaborate/general-settings/#history) page. Previously this was located under the **Stories** page.
+
+#### Fixes
+
+* We fixed an issue which could occur when you try to accept feedback items with a long description.
+* We fixed an issue where the feedback description was not always scrollable.
+
+#### Deprecations
+
+* All [Mendix Feedback](/appstore/widgets/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+
 ### September 28th, 2022
 
 #### New Features
@@ -567,7 +582,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 
 #### Improvements
 
-* We tweaked the styling of the **Stories** > [Project History](/developerportal/collaborate/stories/#history) page.
+* We tweaked the styling of the **Stories** > **Project History** page.
 * We made [moving a story](/developerportal/collaborate/stories/#move-stories) to another app more intuitive.
 * We removed the Model page, which contained tips on how to get started creating your apps.
 

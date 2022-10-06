@@ -1,5 +1,5 @@
 ---
-title: "Adding a Workflow to an Existing App with Workflow Commons"
+title: "Adding a Workflow to an Existing App: Using Workflow Commons"
 linktitle: "Add Workflow to Existing App"
 url: /refguide/workflow-setting-up-app/
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
@@ -45,7 +45,7 @@ While Workflow Commons does provide useful documents out-of-the-box, you might h
 
 We recommend the following best practices when working with workflows:
 
-* When creating a user task, add a short description of the target users to the caption of the task. An example could be **HR: Schedule onboarding training** in an employee onboarding workflow.
+* When creating a user task, add a short description of the target users to the caption of the task. An example could be *HR: Schedule onboarding training* in an employee onboarding workflow.
 * When creating a microflow for a system task, prefix it with **WF\_**, so everyone knows it is being used in a workflow.
 
 ## 6 Read More

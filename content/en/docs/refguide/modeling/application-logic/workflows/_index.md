@@ -12,7 +12,7 @@ Workflow is a visual language in Mendix Studio and Studio Pro that allows you to
 
 ## 2 Workflow Elements
 
-A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow. For more information, see [Workflow Elements](/refguide/workflow-elements). 
+A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow. For more information, see [Workflow Elements](/refguide/workflow-elements/). 
 
 ## 3 Performing Basic Functions
 

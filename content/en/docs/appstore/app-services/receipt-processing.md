@@ -136,7 +136,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 ### 4.2 Extracting the Data with the Trained Document Model {#extraction-activity}
 
-1. In the **Toolbox**, drag the **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
+1. In the **Toolbox**, drag the **Receipt Processing** activity from the **Document Data Capture Service** category onto your microflow.
 2. Create a list of documents that inherit from `System.FileDocument`. Documents from where data is extracted should be passed as a list, as shown in the microflow.
 
     {{< figure src="/attachments/appstore/app-services/receipt-processing/receipt-processing-microflow.png" alt="receipt-processing-microflow" >}}

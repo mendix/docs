@@ -69,7 +69,7 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/toolbox.png" >}}
 
-3. Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
+3. Drag the **Show message** activity from the **Toolbox** onto the flow between the start event and end event, which will insert a show message activity:
 
     {{< figure src="/attachments/howto8/logic-business-rules/trigger-microflow-from-menu-item/show-message-activity.png" >}}
 

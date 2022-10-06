@@ -69,7 +69,7 @@ To use the MQTT Connector, make sure the broker connection is already set up, or
 To publish data to the MQTT broker, follow these steps:
 
 1. Search for *Publish MQTT* in the **Toolbox**.
-2. Drag the *Publish MQTT* event into your microflow.
+2. Drag the *Publish MQTT* event onto your microflow.
 3. Edit the event to include the following details:
     * **Topic** – topic to which the payload is published
     * **Payload** – string message to be published
@@ -83,7 +83,7 @@ To publish data to the MQTT broker, follow these steps:
 To subscribe to the MQTT broker, follow these steps:
 
 1. Search for *Subscribe MQTT* in the **Toolbox**.
-2. Drag the *Subscribe MQTT* event into your microflow.
+2. Drag the *Subscribe MQTT* event onto your microflow.
 3. Edit the event to include the following details:
     * **Topic** – topic to subscribe to
     * **OnMessageMicroflow** – microflow to be executed when a message is received on subscribed topic
@@ -94,6 +94,6 @@ To subscribe to the MQTT broker, follow these steps:
 To unsubscribe from the MQTT broker, follow these steps:
 
 1. Search for *Unsubscribe MQTT* in the **Toolbox**.
-2. Drag the *Unsubscribe MQTT* event into your microflow.
+2. Drag the *Unsubscribe MQTT* event onto your microflow.
 3. Edit the event to include the following details:
     * **Topic** – topic to unsubscribe from

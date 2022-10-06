@@ -55,7 +55,7 @@ Import the [IBM Watson Connector Suite](https://marketplace.mendix.com/link/comp
 
 {{< figure src="/attachments/appstore/connectors/ibm-watson-connector/connectorlist.png" alt="The list of IBM Watson connector actions available in Mendix microflows" >}}
 
-To use these actions, just drag them into your microflow. Each of the connectors is described in the following sections:
+To use these actions, just drag them onto your microflow. Each of the connectors is described in the following sections:
 
 * [Watson Assistant](#WatsonAssistant)
 * [Speech to Text](#SpeechToText)

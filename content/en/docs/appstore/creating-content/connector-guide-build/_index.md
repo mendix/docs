@@ -67,7 +67,7 @@ The [Data Hub Catalog](/data-hub/data-hub-catalog/) is a hub for shared register
 
 Many existing Mendix [Connectors](/appstore/connectors/) can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the [Getting Started](/appstore/general/share-app-store-content/#get-started) section of *Share Marketplace Content*.
 
-Because connectors expose data via custom microflow activities, you can find them in the Studio Pro [Toolbox](/refguide/view-menu/#toolbox) to implement when building your application logic. Then, you can drag them where you want to use the connector functionality.
+Because connectors expose data via custom microflow activities, you can find them in the Studio Pro [Toolbox](/refguide/view-menu/#toolbox) to implement when building your application logic. Then, you can drag them to where you want to use the connector functionality.
 
 ### 2.3 Deploying Connectors
 

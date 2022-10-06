@@ -44,7 +44,7 @@ Once you have imported the Database Connector into your app, you will have the *
 
 #### 3.1.1 Usage
 
-To use any of **Execute parameterized query**, **Execute parameterized statement**, **Execute query** or **Execute statement**, in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+To use any of **Execute parameterized query**, **Execute parameterized statement**, **Execute query** or **Execute statement**, in your Mendix application, drag them onto your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
 The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for the other DML commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
 

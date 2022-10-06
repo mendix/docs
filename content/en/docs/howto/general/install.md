@@ -72,7 +72,7 @@ The prerequisites are the following:
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist2019.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win)
-* [Microsoft Edge WebView2 Evergreen Runtime (x64) (Bootstrapper version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+* [Microsoft Edge WebView2 Evergreen Runtime (x64) (Evergreen Bootstrapper version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 

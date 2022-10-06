@@ -15,7 +15,8 @@ tags: ["Deploy", "Private Cloud", "Backup", "Velero", "Kubernetes"]
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Velero 1.9 or later. For more information, see [Velero documentation](https://velero.io/docs/).
+* Ensure that the [Mendix Operator](/developerportal/deploy/private-cloud-technical-appendix-01/) for your private cloud cluster is in version 2.7.0 or abover.
+* Install Velero version 1.9 or above. For more information, see [Velero documentation](https://velero.io/docs/).
 * Create a recovery cluster.
     {{% alert color="info" %}}The process of creating a recovery cluster may vary depending on the platform that you use to host your private cloud. For more information, refer to the documentation supplied by your cloud provider.{{% /alert %}}
 

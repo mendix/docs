@@ -23,7 +23,7 @@ Before adding the Workflow Commons module to your app, make sure you have comple
 
 ## 2 Workflow Commons Components {#components}
 
-Workflow Commons provides you with useful pages, page templates, snippets, and microflows that can save you development time. For more information on components, see the [Components](/appstore/modules/workflow-commons/#components) section in *Workflow Common*s. 
+Workflow Commons provides you with useful pages, page templates, snippets, and microflows that can save you development time. For more information on components, see the [Components](/appstore/modules/workflow-commons/#components) section in *Workflow Commons*. 
 
 ## 3 Setting Up User Assignment and Security
 
@@ -50,4 +50,5 @@ We recommend the following best practices when working with workflows:
 
 ## 6 Read More
 
+* [Workflow Commons](/appstore/modules/workflow-commons/)
 * [Workflows](/refguide/workflows/)

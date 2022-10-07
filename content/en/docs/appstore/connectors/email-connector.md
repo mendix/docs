@@ -20,10 +20,11 @@ The Email connector includes the following features:
     * Supports [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
 * Send emails with digital signatures and encryption
 * Set up email templates
-* Supported protocols:
-    * POP3 and POP3S
-    * IMAP and IMAPS
-    * SMTP 
+
+The Email connectors supports the following protocols:
+* POP3 and POP3S
+* IMAP and IMAPS
+* SMTP 
 
 ### 1.2 Prerequisites
 
@@ -81,7 +82,7 @@ In Studio Pro, you can use the `GetAutoConfig` Java action to get the all suppor
 
 To manually configure the account, you have to enter **protocol**, **server host** and **server port** for send and receive email configuration. Refer email server documentation to get this information.
 
-### 3.2 Account Settings {#other-account-settings}
+### 3.2 Additional Account Settings {#other-account-settings}
 
 You can set up the following additional account settings:
 
@@ -238,7 +239,7 @@ Emails can be queued for sending at a later time. You can send the messages in t
 
 ## 5 FAQs
 
-* Can I add OAuth 2.0 authentication to an app that is configured with basic authentication?
+### 5.1 How do I add OAuth 2.0 authentication to an app that is configured with basic authentication?
 
 If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
      1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
@@ -246,7 +247,7 @@ If you already have an email account configured using basic authentication in yo
           * Associate the existing email account with newly created OAuth provider.
           * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 
-* How do I add attachments?
+### 5.2 How do I add attachments?
 
 To add attachments to the email message, do the following:
 
@@ -263,4 +264,4 @@ To add attachments to the email message, do the following:
 * If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
 
 ### 6.3 Known Errors
-* If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
+* If you already have the [included widgets](#included-widgets) in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.

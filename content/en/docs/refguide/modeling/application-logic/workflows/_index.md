@@ -12,48 +12,7 @@ Workflow is a visual language in Mendix Studio and Studio Pro that allows you to
 
 ## 2 Workflow Elements
 
-A workflow is composed of elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following categories are used:
-
-* [Parameters](#parameters)
-* [General](#general)
-* [User tasks](#user-tasks)
-* [System actions](#system)
-
-### 2.1 Workflow Parameters {#parameters}
-
-A [workflow parameter](/refguide/workflow-parameters/) is input data for your workflow. The **WorkflowContext** parameter is a business-related data that travels through the workflow:
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-context.png" alt="Workflow Context Example" >}}
-
-### 2.2 General {#general}
-
-Elements in the general category help you control the workflow path, for example, add parallel paths or end them. 
-
-The elements of this category are described in the table below:
-
-| Graphic                                                     | Element                           | Description                                                  |
-| ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/start-event.png" alt="Start Event" >}}    | Start event                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](/refguide/on-click-event/#call-workflow) on-click event on pages or by the [Workflow call](/refguide/workflow-call/) action in microflows. <br />Click the start event to open [workflow properties](/refguide/workflow-properties/). |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/annotation.png" alt="Annotation" >}} | Annotation | An annotation is an element that can be used to put comments to a flow. For example, you can add a comment for your team that one of the user tasks needs to be changed later. <br />You can add annotations to the workflow or to individual activities. To add the annotation to the workflow, drag and drop the annotation in the editor's working area. To add the annotation to the activity, drag and drop it inside the activity. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/decision.png" alt="Decision" >}}             | [Decision](/refguide/decision-in-workflows/) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/parallel-split.png" alt="Parallel Split" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/jump.png" alt="Jump Activity" >}}            | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/end-event.png" alt="End event" >}}        | End event                      | Ends the path of the workflow                                |
-
-{{% alert color="info" %}}
-You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](/refguide/microflow/#expose-as-workflow-action) section in *Microflow Properties*.
-{{% /alert %}}
-
-### 2.3 User Tasks {#user-tasks}
-
-[User task](/refguide/user-task/) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task.png" alt="User Task" >}}
-
-### 2.4 System Actions {#system}
-
-[Call microflow](/refguide/call-microflow/) activity calls a selected microflow. 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-microflow.png" alt="Call Microflow" >}}
+A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow. For more information, see [Workflow Elements](/refguide/workflow-elements/). 
 
 ## 3 Performing Basic Functions
 
@@ -147,7 +106,7 @@ Do the following:
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500">}}
 
 7. Click **OK**.
 
@@ -192,9 +151,9 @@ You can trigger workflows or user tasks from pages via specific on-click events 
 
 The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in the Developer Portal. These templates already contain the **Workflows Commons** module.
 
-For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/).
+For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/).
 
 ## 9 Read More
 
-* [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/)
+* [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/)
 * [Jumping to Different Activities in a Workflow](/refguide/jump-to/)

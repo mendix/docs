@@ -1,7 +1,7 @@
 ---
 title: "Decision in Workflows"
 url: /refguide/decision-in-workflows/
-weight: 20
+weight: 40
 tags: ["workflow", "workflows", "decision", "Studio Pro"]
 ---
 
@@ -9,7 +9,7 @@ tags: ["workflow", "workflows", "decision", "Studio Pro"]
 
 A decision is an element that makes a choice based on a condition and follows one and only one of the outgoing paths. For example, you need to use a decision to follow different paths when a new hire works remotely or when they work from the office:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/decision-in-workflows/decision-example.jpg" alt="Decision Example" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/decision-in-workflows/decision-example.jpg" alt="Decision Example" width="300">}}
 
 ## 2 Properties
 
@@ -25,11 +25,11 @@ Decision properties consist of the following sections:
 
 ### 2.2 General Section {#general}
 
-#### 2.2.2 Caption
+#### 2.2.1 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-#### 2.2.3 Condition
+#### 2.2.2 Condition
 
 **Condition** is configured based on an [expression](/refguide/expressions/). The expression should result in a Boolean or an enumeration.
 

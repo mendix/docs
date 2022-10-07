@@ -124,7 +124,7 @@ Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select wh
 * **String**
 * **AutoNumber** 
 
-Select a combination of attribute with the following constraints: 
+Select a combination of attributes with the following constraints: 
 
 * Unique – The combination of key attributes should be unique, so each key points to exactly one entity.
 * Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
@@ -136,9 +136,9 @@ When exposing an entity as a published OData resource for the first time, Studio
 Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
 {{% /alert %}}
 
-### 5.1 Selecting an Attribute as a Key {#select-key}
+### 5.1 Selecting Attributes as a Key {#select-key}
 
-To select a different attribute as a key, do the following:
+To select different attributes as a key, do the following:
 
 1. Open the **Published OData Resource**. 
 2. In the **Key** section, click **Edit** located next to the **Key** property.

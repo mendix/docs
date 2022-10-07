@@ -9,7 +9,7 @@ tags: ["Deploy", "Private Cloud", "Backup", "Velero", "Kubernetes"]
 
 ## 1 Introduction
 
-[text]
+[Velero](https://velero.io/docs/) is a tool that you can use to back up your Kubernetes namespaces. It does not back up your database or S3 resources, so it cannot serve as your main backup method, but it can supplement the default [backup process](/developerportal/operate/backups/) for your Mendix app.
 
 ## 2 Prerequisites
 
@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a Velero Backup
 
-[text]
+To create a backup with Velero, follow these steps:
 
 1. Stop the Mendix Operator and Mendix agent by scaling them to 0:
     ```text {linenos=table}
@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     ```text {linenos=false}
     velero create backup mendix-velero-bkp
     ``` 
-    The above command creates a backup of all your namespaces with the name *mendix-velero-bkp-{<timestamp>}*. If you only want to back up a specific namespace, use the `include-namespace` flag.
+    {{% alert color="info" %}}The above command creates a backup of all your namespaces with the name *mendix-velero-bkp*. If you only want to back up a specific namespace, use the `include-namespace` flag.{{% /alert %}}
 3. Verify that the backup is complete by entering the following command:
     ```text {linenos=false}
     velero backup describe mendix-velero-bkp
@@ -42,10 +42,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 4 Restoring a Velero Backup
 
-[text]
+To restore a backup that you created with Velero, follow these steps:
 
-1. [text]
-
-## 6 Read More
-
-* [text]
+1. Restore the backup by entering the following command:
+    ```text {linenos=false}
+    velero restore create --from-backup {<backup name>}
+    ```
+    {{% alert color="info" %}}If you only want to restore a specific namespace, use the `--status-include-resources flag`, for example, `--status-include-resources=storageinstances.privatecloud.mendix.com`.{{% /alert %}}
+2. After the app has started and created the database, [restore a backup](/developerportal/operate/restore-backup/) of your database and S3 files.

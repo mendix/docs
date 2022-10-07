@@ -15,11 +15,11 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register exposed OData services in the Data Hub Catalog. We support all OData versions.
+There are three ways to register [published OData services](/refguide/published-odata-services/) in the Data Hub Catalog. We support all OData versions.
 
 **This how-to will teach you how to register a service in the following ways:**
 
-* [Through the Mendix Cloud](#mendix-cloud)
+* [Through the Mendix Cloud](#mendix-cloud), done automatically when you deploy a [published OData service](/refguide/published-odata-services/) to the Mendix Cloud
 * [Through the Data Hub Catalog Registration API](#registration-api)
 * [Through the Data Hub Catalog UI form](#registration-form)
 

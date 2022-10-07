@@ -26,7 +26,7 @@ From the Data Hub Catalog [Home](https://hub.mendix.com) screen, you can carry o
 
 From the **Home** screen, you can do the following:
 
-* **Search** – search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**
+* **Search** – search in the Data Hub Catalog using the **Search** box or by clicking the suggested **Tags**
 * **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub (for more details, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/))
 
 * **Popular Data Sources** – click on the most popular data sources
@@ -44,7 +44,7 @@ The functionality of the Data Hub reflects the process of sharing data in an org
 
 Users can find shared datasets by searching the Data Hub Catalog. The [search](/data-hub/data-hub-catalog/search/) features include results that are project-relevant in order of most popular services, and results can be refined by using filters. Full details of the registered services are displayed to help in deciding on the suitability of the data associated with a registered dataset.
 
-Use the Data Hub to find suitable data sources to integrate into your other enterprise applications clicking [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details) in the Data Hub Catalog.
+Use the Data Hub to find suitable data sources to integrate into your other enterprise applications by clicking [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details).
 
 The Data Hub Catalog search functionality is integrated into Mendix Studio Pro through the [Data Hub pane](/refguide/data-hub-pane/) for finding registered services and datasets to use when developing apps.
 

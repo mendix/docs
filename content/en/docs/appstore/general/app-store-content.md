@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [Marketplace Overview](/appstore/general/app-store-overview/)
 
-## 3 Installing Marketplace Content{#install}
+## 3 Installing Marketplace Content {#install}
 
 There are three ways to install a Marketplace component:
 
@@ -45,32 +45,45 @@ There are three ways to install a Marketplace component:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
-3. Click the Marketplace icon in the top menu bar to open it in Studio Pro:
+3. There are two ways to open the Marketplace in Studio Pro;
+    * Click the **View** menu in the top-bar and select **Marketplace**
+    * Click the Marketplace icon on the right side of the top-bars
 
     {{< figure src="/attachments/appstore/general/app-store-content/toolbar.png" alt="Marketplace icon" >}}
     ![](app-store-content/toolbar.png)
 
-    The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
-
-4. Use the **Search** bar to find the component that you want to download.
-
-    {{% alert color="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issues.{{% /alert %}}
-
+    The **Marketplace** pane opens.
+   
     {{< figure src="/attachments/appstore/general/app-store-content/marketplace.png" alt="Search result for rating" >}}
     ![](app-store-content/marketplace.png)
 
-5. Click the component (or the **Read more** button on the right side) to show the details of the component.
+4. You can explore Marketplace content in the following ways:
+    * Use **Search in the Marketplace** to find the component that you want to download
+    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/general/app-store-overview/#home/)
+    * Filter for **All Content**, **My Company Content**, or **Platform Supported Content**
+
+	[**STILL NECESSARY?**]
+	
+    {{% alert color="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issues.{{% /alert %}}
+
+5. Select a component from the pane to see its details:
+
+    {{< figure src="/attachments/appstore/general/app-store-content/component-details.png" alt="Details of Blank App example component" >}}
+    ![](app-store-content/component-details.png)
+    
+    The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details/) in the online Mendix Marketplace.
+    
 6. Check the **Mendix Version** on the **Overview** tab. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
 
     * Click **Download** to download the latest version of the component
 
         {{< figure src="/attachments/appstore/general/app-store-content/item-details.png" alt="Details of Rating widget" >}}
-    ![](app-store-content/item-details.png)
+    	![](app-store-content/item-details.png)
 
     * To download an older version, go to the **All Versions** tab and **Download** the right version.
 
         {{< figure src="/attachments/appstore/general/app-store-content/versions.png" alt="All Versions tab" >}}
-    ![](app-store-content/versions.png)
+    	![](app-store-content/versions.png)
 
 7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toolbox**.
 8. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
@@ -234,7 +247,7 @@ After you [install](#install) a module in your app, you can use it.
 
 A module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 
-#### 4.2.1 Updating a Module to a Newer Version{#update-module}
+#### 4.2.1 Updating a Module to a Newer Version {#update-module}
 
 To update a module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
 

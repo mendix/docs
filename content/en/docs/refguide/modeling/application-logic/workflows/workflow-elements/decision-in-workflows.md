@@ -25,11 +25,11 @@ Decision properties consist of the following sections:
 
 ### 2.2 General Section {#general}
 
-#### 2.2.2 Caption
+#### 2.2.1 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-#### 2.2.3 Condition
+#### 2.2.2 Condition
 
 **Condition** is configured based on an [expression](/refguide/expressions/). The expression should result in a Boolean or an enumeration.
 

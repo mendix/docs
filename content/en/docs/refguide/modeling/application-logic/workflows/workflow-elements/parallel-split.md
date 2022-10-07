@@ -31,7 +31,7 @@ Parallel split properties consist of the following sections:
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-### 2.2 Paths Section {#paths}
+### 2.3 Paths Section {#paths}
 
 The **Paths** property allows you to add as many paths as there are parallel processes. 
 

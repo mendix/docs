@@ -2,7 +2,7 @@
 title: "Jumping to Different Activities in a Workflow"
 url: /refguide/jump-to/
 linktitle: "Jump to Different Activities"
-weight: 80
+weight: 55
 tags: ["workflow", "workflows", "jump-to", "ad hoc jump-to"]
 ---
 ## 1 Introduction

@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To make your two entities, do the following:
 
 1. Navigate to your domain model.
-2. Drag a new entity onto your domain model: 
+2. Drag a new entity into your domain model: 
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-data/new-entity.png" alt="new entity"   width="500"  >}}
 
@@ -54,7 +54,7 @@ To make your two entities, do the following:
 To set up a notification nanoflow, do the following:
 
 1. Create a nanoflow named *DS_Notification*. <br />
-2. Drag a create object activity onto your nanoflow.
+2. Drag a create object activity into your nanoflow.
 3. Double-click your create object activity.
 4. Click **Entity** > **Select**.
 5. Click **Notification**, then click **Select**.
@@ -66,7 +66,7 @@ To set up a notification nanoflow, do the following:
 To set up your microflow, do the following:
 
 1. Create a microflow named *DS_TestEntity*.
-2. Drag a create object activity onto your microflow.
+2. Drag a create object activity into your microflow.
 3. Double-click your create object activity.
 4. Click **Entity** > **Select**.
 5. Click **NativeMobile.TestEntity**.
@@ -159,14 +159,14 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 Good job! When a user taps a notification from the **Pass GUID to Notification** button, they will now be brought to the **DetailTestEntity** page. Next you will create a nanoflow which receives **notificationEntity** as a parameter, retrieves an object via this parameter, and passes the object to a page.
 
 1. Make a new nanoflow named *ON_tapNotification*.
-2. Drag a parameter onto your nanoflow. 
+2. Drag a parameter into your nanoflow. 
 3. Click **Data Type** > **Select**. Click **Notification**, then click **Select**.
 4. Fill **Name** in as *notificationEntity*.
 5. Click **OK**:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-data/notif-entity.png" alt="guid button" >}}
 
-6. Drag a JavaScript action call onto your nanoflow.
+6. Drag a JavaScript action call into your nanoflow.
 7. Double-click the JavaScript action call, then click **Select**. 
 8. Type *GetObjectByGuid* into the search field, click that action, then click **Select**. 
 9. Click **TestEntity** and then click **Select**.

@@ -43,14 +43,14 @@ To start the use-case, do the following:
 1. Open a microflow you want to add a loop to.
 2. First of all, you need to get the list of orders to loop over. Do the following: <br />
 
-    1. In the **Toolbox**, select **Retrieve**, drag it onto the microflow. <br />
+    1. In the **Toolbox**, select **Retrieve**, drag it into the microflow. <br />
     1. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. (The **Range** property is set to **All** by default): <br />
 
         {{< figure src="/attachments/studio8/microflows/microflows-loop/retrieve-properties.png" alt="Retrieve Object Properties"   width="350"  >}}
 
 3. As you have retrieved the list of orders you can work on, you now need to create a loop and logic for it. Do the following: <br />
 
-    1. In the **Toolbox**, select **Loop**, drag it onto the microflow. <br />
+    1. In the **Toolbox**, select **Loop**, drag it into the microflow. <br />
 
         {{< figure src="/attachments/studio8/microflows/microflows-loop/loop-added.png" alt="Loop is Added" >}}<br />
 

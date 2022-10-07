@@ -12,7 +12,7 @@ tags: ["studio", "consistency errors", "checks", "errors", "microflow"]
 
 In this document, we explain how to solve the most common consistency errors that can occur when configuring microflows in Mendix Studio. For more information on microflows, see [Microflows](/studio/microflows/).
 
-An example of a consistency error is when you drag a **Create Object** activity onto the microflow, but do not specify what entity should be used as a data source to create the object. 
+An example of a consistency error is when you drag a **Create Object** activity into the microflow, but do not specify what entity should be used as a data source to create the object. 
 
 {{< figure src="/attachments/studio/checks/consistency-errors/consistency-errors-microflows/microflow-error-example.png" alt="Microflow Error Example" >}}
 

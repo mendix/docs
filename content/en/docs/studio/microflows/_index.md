@@ -131,7 +131,7 @@ To add a new activity or event to the microflow, do the following:
 1. Open the microflow you want to add the event or activity to.
 2. Open the **Toolbox** tab.
 3. Select the event or activity in the **General**, **Object Activities** or **Client Activities** section.
-4. Drag the event or activity onto the microflow. 
+4. Drag the event or activity into the microflow. 
 
 ### 3.7 Disabling an Activity {#disable}
 
@@ -150,7 +150,7 @@ The activity is excluded from the flow. You can re-enable the activity back in t
 
 ## 4 Toolbox Elements {#microflows-toolbox}
 
-The **Toolbox** tab contains elements that you can drag onto to a microflow. Below is a categorized overview of all elements. The following sections are used:
+The **Toolbox** tab contains elements that you can drag into a microflow. Below is a categorized overview of all elements. The following sections are used:
 
 * [General](#microflow-general-section)
 * [Object Activities](#microflow-object-activities)

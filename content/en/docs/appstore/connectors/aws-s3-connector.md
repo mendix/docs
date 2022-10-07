@@ -63,7 +63,7 @@ To use these Java Actions you must do the following:
 
 3. Have an [error handler](/refguide/error-handling-in-microflows/) defined for the Java action to deal with any errors.
 
-The Java Actions you can use are listed below. You can drag them onto your microflows from the **Toolbox**.
+The Java Actions you can use are listed below. You can drag them into your microflows from the **Toolbox**.
 
 {{< figure src="/attachments/appstore/connectors/aws-s3-connector/s3-connector-actions.png" >}}
 

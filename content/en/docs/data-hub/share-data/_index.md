@@ -38,7 +38,7 @@ Follow these steps to create a simple app in Mendix Studio Pro.
 
 1. In Studio Pro, click **New App** to create a new app using the **Blank** app template. Fill in the **App Name** as *{yourname}CustomerServiceApp* and select **Create app**. 
 2. In the App Explorer, double-click the **Domain Model** in **MyFirstModule**. 
-3. In the **Toolbox**, select **Entity** and drag it to the domain model.
+3. In the **Toolbox**, select **Entity** and drag it into the domain model.
 4. Double-click the entity to open its properties and set its **Name** to *Customer*.
 5. In the **Attributes** tab, click **New** and do the following:
     1. In the **Add Attribute** dialog box, set **Name** to *CustomerID* and set to **Type** to *Autonumber*.

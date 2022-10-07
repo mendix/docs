@@ -101,7 +101,7 @@ Do the following:
 
 1. Open a microflow that will trigger a workflow.
 2. Make sure the microflow has a necessary parameter with the workflow context.
-3. In the **Toolbox**, find **Call workflow** activity and drag it to the microflow.
+3. In the **Toolbox**, find **Call workflow** activity and drag it into the microflow.
 4. Double-click the activity to open its properties.
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:

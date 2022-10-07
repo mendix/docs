@@ -94,7 +94,7 @@ From Studio Pro:
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/deploying-native-app/wizard-splashscreens.png" alt="Wizard Splash screen"   width="350"  >}}
 
 1. Click **Next Step** when ready.
-1. Drag your custom fonts onto the field if you already have a selection of fonts you would like to use, or continue if you do not need to add custom fonts. You can add custom fonts later if you wish:
+1. Drag your custom fonts into the field if you already have a selection of fonts you would like to use, or continue if you do not need to add custom fonts. You can add custom fonts later if you wish:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/deploying-native-app/wizard-fonts.png" alt="Wizard Fonts"   width="350"  >}}
 

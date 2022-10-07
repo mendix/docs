@@ -78,7 +78,7 @@ To cancel all scheduled notifications, do the following:
 3. Double-click your new cancel notification action.
 4. Select  **Use return value** > **No**.
 5. Click **OK**.
-6. Drag this nanoflow to your home screen and name its button *Cancel all*.
+6. Drag this nanoflow onto your home screen and name its button *Cancel all*.
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-schedule-cancel/cancel-button.png" alt="cancel button"   width="300"  >}}
 

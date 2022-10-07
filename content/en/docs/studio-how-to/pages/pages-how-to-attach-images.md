@@ -65,7 +65,7 @@ Good job! You have created the image entity and an association from it to the **
 
 ## 4 Adding an Image Uploader
 
-An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
+An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag the image uploader into your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/form-example.png"   width="600"  >}}
 

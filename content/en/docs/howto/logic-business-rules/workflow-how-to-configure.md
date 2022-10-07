@@ -227,7 +227,7 @@ Good job! Now when the HR specialist clicks the button, the workflow will start:
 
 The manager of a new employee will get a task to specify devices for the new hire and indicate whether the new hire is working from home or in the office. For this functionality you need to add activities to the workflow. Follow the steps below: 
 
-1. Navigate to the **Toolbox** pane, find a **User task** activity, and drag it to the workflow editor.
+1. Navigate to the **Toolbox** pane, find a **User task** activity, and drag it into the workflow editor.
 2. Select the **User task** activity and open the **Properties** pane. 
 3. To be able to differentiate this user task from other ones, set the **Name** property to **Specify_Device_and_Location**. 
 4. Set the **Caption** property to **Manager: Specify Device and Location** to easily see who this task should be assigned to:

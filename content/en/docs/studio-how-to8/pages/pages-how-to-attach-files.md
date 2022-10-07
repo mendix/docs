@@ -66,7 +66,7 @@ Good job! You have created the file entity and an association from it to the **E
 
 ## 4 Adding a File Manager
 
-A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag the file manager to your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
+A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag the file manager into your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
 
 {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-attach-files/employee-profile-form.png" alt="Employee Profile Page"   width="600"  >}}
 
@@ -145,7 +145,7 @@ After your end-users attach the files, it would be nice to display files in a li
         {{< figure src="/attachments/studio-how-to8/pages/pages-how-to-attach-files/select-attribute.png" alt="Select Attribute"   width="400"  >}}
 
 7. Delete the **Details** button in the list view.
-8. Open the **Toolbox** and search for a **File Downloader**, drag it to the column where the **Details** button was placed. 
+8. Open the **Toolbox** and search for a **File Downloader**, drag it into the column where the **Details** button was placed. 
 9. Open the **File Downloader** (**File Manager**) properties > **Label** property and delete the *File* text from it.
 
 Great job! Now you have the list that shows attached files and your users can download files from this list:

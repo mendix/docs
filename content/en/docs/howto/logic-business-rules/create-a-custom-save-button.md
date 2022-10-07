@@ -63,7 +63,7 @@ You need to recreate the default Save behavior to customize it afterwards. Do th
 
     {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/commit-object-properties.png" >}}
 
-6. Open the **Toolbox**, find the **Close page** activity there, and drag it to the flow after the **Commit object(s)** activity:
+6. Open the **Toolbox**, find the **Close page** activity there, and drag it into the flow after the **Commit object(s)** activity:
 
     {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/close-page-activity.png" >}}
 

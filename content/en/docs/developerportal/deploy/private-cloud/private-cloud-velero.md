@@ -24,10 +24,21 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 [text]
 
-1. Stop the operator and agent by scaling them to 0.
-2. Use the `velero create backup` command. Optionally, specify the namespace.
-3. Verify that the backup is complete by using the `velero describe` command.
-4. Restart the operator and agent.
+1. Stop the Mendix Operator and Mendix agent by scaling them to 0:
+    ```text {linenos=table}
+    kubectl scale deployment mendix-agent --replicas=0
+    k scale deployment mendix-operator --replicas=0
+    ```
+2. Create the backup by entering the following command:
+    ```text {linenos=false}
+    velero create backup mendix-velero-bkp
+    ``` 
+    The above command creates a backup of all your namespaces with the name *mendix-velero-bkp-{<timestamp>}*. If you only want to back up a specific namespace, use the `include-namespace` flag.
+3. Verify that the backup is complete by entering the following command:
+    ```text {linenos=false}
+    velero backup describe mendix-velero-bkp
+    ```
+4. Restart the Mendix Operator and Mendix agent.
 
 ## 4 Restoring a Velero Backup
 

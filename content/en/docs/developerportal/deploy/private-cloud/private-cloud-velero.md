@@ -24,7 +24,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 [text]
 
-1. [text]
+1. Stop the operator and agent by scaling them to 0.
+2. Use the `velero create backup` command. Optionally, specify the namespace.
+3. Verify that the backup is complete by using the `velero describe` command.
+4. Restart the operator and agent.
 
 ## 4 Restoring a Velero Backup
 

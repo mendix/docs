@@ -16,10 +16,9 @@ The [Email](https://marketplace.mendix.com/link/component/120739) connector allo
 The Email connector includes the following features:
 
 * Configuration of multiple accounts
-    * Supports basic authentication
-    * Supports [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
-* Send emails with digital signatures and encryption
-* Set up email templates
+    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
+* Digital signatures and encryption
+* Email templates
 
 The Email connector supports the following protocols:
 * POP3 and POP3S
@@ -208,7 +207,7 @@ The input parameter includes the following:
 
 * **Email account** – email account consisting of incoming email configuration
 
-### 4.7 Creating an Account Using Microsoft Azure OAuth 2.0 {#create-oauth}
+### 4.7 Configuring Azure OAuth 2.0 {#create-oauth}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 

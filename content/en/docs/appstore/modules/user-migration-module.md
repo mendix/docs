@@ -2,7 +2,7 @@
 title: "User Migration"
 url: /appstore/modules/user-migration-module/
 category: "Modules"
-description: "How to migrate users to a different specialization of System.User using the User Migration module"
+description: "Describes how to migrate users to a different specialization of System.User using the User Migration module."
 tags: ["marketplace", "marketplace component", "User Migration", "System.User", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

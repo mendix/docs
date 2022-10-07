@@ -1,7 +1,7 @@
 ---
 title: "Workflow Parameters"
 url: /refguide/workflow-parameters/
-weight: 05
+weight: 20
 tags: ["workflow", "workflows", "parameters", "workflow parameters"]
 ---
 
@@ -11,7 +11,7 @@ A parameter is a special kind of variable that is used as input for the workflow
 
 In the workflow editor, you can see the **WorkflowContext** parameter in the upper-left corner. In the picture below, the object is shown in *blue* and the parameter name is shown in *black*.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-parameters/workflow-parameters.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-parameters/workflow-parameters.png" >}}
 
 The **WorkflowContext** parameter is a business-related data that travels through the workflow. 
 

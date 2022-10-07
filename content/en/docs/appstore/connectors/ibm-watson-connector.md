@@ -2,7 +2,7 @@
 title: "IBM Watson Connector"
 url: /appstore/connectors/ibm-watson-connector/
 category: "Connectors"
-description: "Describes using connectors with Mendix that simplify the use of various IBM Watson™ services"
+description: "Describes using connectors with Mendix that simplify the use of various IBM Watson™ services."
 tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis", "Assistant", "Speech to Text", "Text to Speech", "Tone Analyzer", "Visual Recognition", "Face Detection", "Image Classification"]
 aliases:
   - /partners/ibm/ibm-watson-connector

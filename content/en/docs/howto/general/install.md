@@ -7,7 +7,7 @@ description: "Describes how to install Mendix Studio Pro."
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
-{{< figure src="/attachments/howto/general/install/download.png" link="https://marketplace.mendix.com/link/studiopro/" >}}
+{{% modelerdownloadlink %}}
 
 ## 1 Introduction
 

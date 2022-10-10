@@ -111,8 +111,7 @@ To invite new app users to your app, click **Invite Users** for that environment
 2. Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as app users automatically.
 3. Click **Add to invitee list**.
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
-5. Click **Next**.
-6. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
+5. Click **Next** to send the invitation.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 

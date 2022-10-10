@@ -25,7 +25,7 @@ Currently, business events can only be deployed to the [Mendix Cloud](/developer
 
 Business events help you automate the resulting actions when something happens in your organization. The following are examples of when business events can be useful:
 
-* A person uploads a payment-receipt in one app, while another app then needs to process the outgoing payment in the company's ledger. 
+* Uploading a payment-receipt in one app, while another app processes the outgoing payment in the company's ledger
 * Making an appointment with a service provider in an appointment app, then needing it to be added to the scheduling app of the service provider
 * Customers placing an order in a webshop, and other apps need to take follow-up actions like scheduling shipment, sending the invoice, and reordering inventory stock
 

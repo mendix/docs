@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * The kubectl CLI is the default tool to access and manage your Kubernetes cluster
 * Install Minikube using the instructions provided in [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
     * Minikube allows you to create a local cluster that is convenient for exploring Kubernetes (if you have an account for one of the cloud providers and you choose to use that, this step can be skipped)
-* Build your image in Minikube, using the steps in the [Docker](/developerportal/deploy/docker-deploy/) page.
+* Build your image in Minikube, using the steps in the [Docker](/developerportal/deploy/docker-deploy/) page and replacing Docker commands such as `docker build`  with Minikube equivalents such as `minikube image build`.
 
 This how-to uses commands for a Unix-like system. The commands for Windows may be slightly different.
 
@@ -290,7 +290,7 @@ Create a Docker image of your Mendix app using the instructions in the [Mendix D
 Once you have created the Docker image, push it to the Docker hub using the following command:
 
 ```bash {linenos=false}
-docker push <hub-user>/<repo-name>:<tag> 
+minikube image push <hub-user>/<repo-name>:<tag>
 ```
 
 Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in `mendix-app.yaml`. For the example above, this is again `mendix/sample-app-kubernetes:v3`.

@@ -99,7 +99,7 @@ The list shows the following information:
 
 * **Department** – This is the department to which the project belongs.
 
-* **Stage** – This shows in which stage the project is currently.
+* **Stage** – This shows which stage the project is currently in.
 
 * **Intake** – This shows the time for the project acceptance based on business requirements.
 
@@ -119,7 +119,7 @@ The list shows the following information:
 
 #### 2.1.3 WSJF Prioritization {#wsjf}
 
-{{% alert color="info" %}}Weighted Shortest Job First (WSJF) is a model that can help you prioritize a list of initiatives. Each initiative's score is calculated as the the cost of delay (CoD) divided by the job size or the duration of the job. Then the initiatives with the highest scores should be prioritized. For more information, see [Weighted Shorted Job First](https://www.scaledagileframework.com/wsjf/).{{% /alert %}}
+{{% alert color="info" %}}Weighted Shortest Job First (WSJF) is a model that can help you prioritize a list of initiatives. Each initiative's score is calculated as the the cost of delay (CoD) divided by the job size or the duration of the job. The WSJF model can help you sequence your initiatives. For more information, see [Weighted Shorted Job First](https://www.scaledagileframework.com/wsjf/).{{% /alert %}}
 
 In the WSJF prioritization view, all the projects are by default ranked by their WSJS scores in the list. Clicking the header of any column sorts the list using the values in  that column.
 
@@ -131,7 +131,7 @@ The list shows the following information:
   When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
   {{% /alert %}}
 
-* **Stage** – This shows in which stage the project is currently.
+* **Stage** – This shows which stage the project is currently in.
 
 * **Business Value** – This indicates how much business value this project generates
 
@@ -151,7 +151,7 @@ The list shows the following information:
 
 #### 2.1.4 RICE Prioritization {#rice}
 
-{{% todo %}}Add a short introduction to RICE prioritization{{% /todo %}}
+{{% alert color="info" %}}Reach Impact Confident Effort (RICE) is a prioritization framework for quantifying the potential value of initiatives. You get each initiative's score by multiplying the Reach, Impact, and Confidence estimates, and then dividing the product by the Effort estimate. The RICE framework can help you sequence your intiatives. For more information, see [Rice: Simple Prioritization for Product managers](https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/).{{% /alert %}}
 
 In the RICE prioritization view, all the projects are by default ranked by their RICE scores in the list. Clicking the header of any column sorts the list using the values in  that column.
 
@@ -163,27 +163,27 @@ The list shows the following information:
   When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
   {{% /alert %}}
 
-* **Stage** – This shows in which stage the project is currently.
+* **Stage** – This shows which stage the project is currently in.
 
-* **Reach** – 
+* **Reach** – This is the estimated number of people the project will affect.
 
-* **Impact** – 
+* **Impact** – This is the estimated amount of impact that the project will have on individual users.
 
-* **Confidence** – 
+* **Confidence** – This indicates how confident you are about your Impact and Reach estimates.
 
-* **Effort** –
+* **Effort** – This is the estimated total amount of time that the project will require from all members of your team: product, design, and development.
 
-* **Scores** –
+* **Score** – This is the RICE score of the project.
 
-* Calendar icon (⑤) – Hovering over it shows the following defined dates of the project lifecycle:
+* Calendar icon – Hovering over it shows the following defined dates of the project lifecycle:
 
   * **Intake** – This is the time for the project acceptance based on business requirements.
   * **Start Date** – This is the time when the first actions are taken to start implementation.
   * **Go-Live Date** – This is the time when the app is expected to be up and running.
 
-* Icon of the linked app (⑥) – Hovering over it shows the existing Mendix app that is linked with the project.
+* Icon of the linked app – Hovering over it shows the existing Mendix app that is linked with the project.
 
-* Avatar of the project owner (⑦) – Hovering over it shows the name of the project owner.
+* Avatar of the project owner – Hovering over it shows the name of the project owner.
 
 * Ellipsis (**...**) icon – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
 
@@ -290,7 +290,7 @@ The list shows the following information:
 
 * **Department** – This is the department to which the project belongs.
 
-* **Stage** – This shows in which stage the project is currently.
+* **Stage** – This shows which stage the project is currently in.
 
 * **Archive reason** – This is the reason why the project was archived.
 

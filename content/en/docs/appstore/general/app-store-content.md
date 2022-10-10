@@ -84,12 +84,22 @@ There are three ways to install a Marketplace component:
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-### 3.2 Importing Content from the App Explorer {#import}
+### 3.2 Importing Content into App Explorer {#import}
 
 {{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)), and [app services](/appstore/app-services/).{{% /alert %}}
 
+To import content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
+
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. **Search** the component and open the component page.
+2. **Search** for the component you want to download and open the component page.
+
+**START - REMOVE SCREENSHOTS BELOW?**
+
+Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
+Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+
+
+
 3. Check the **Usage** information on the right side. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
 
     * Click **Download** to download the latest version of the component

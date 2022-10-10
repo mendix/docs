@@ -12,7 +12,7 @@ In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to
 {{% alert color="warning" %}}
 Please note the following current limitations regarding native client logs:
 
-* Crash logs are not supported currently
+* Crash logs that happen outside mendix native client will not be collected and sent to the runtime.
 {{% /alert %}}
 
 ## 2 Enabling Native App Logging
@@ -70,7 +70,8 @@ The following log nodes are used by Mendix when writing log messages:
 
 
 {{% alert color="warning" %}}
-From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
+- From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
+- Enabling `trace` log level may cause too many logs to be sent to [Mendix Runtime](/refguide/runtime/), so it should not be kept enabled for a long time frames.
 {{% /alert %}}
 
 | Log Node | Description |
@@ -96,6 +97,8 @@ The native client stores logs on the device's memory. When **Enable sending logs
 When the app goes to the background or closes, the native client will save buffered log messages on the file system and will restore them once the app is active again.
 
 In this scenario, it will discard older messages so that it will not overflow with too many logs. An additional `info` log message will be added with the number of discarded logs and the timestamps of when these log messages were ignored.
+
+The body of the log message consists of the timestamp in which the message was logged (this is different from the timestamp that is normally shown in the cloud portal as that one refers to the timestamps the log messages were collected), a unique session Id so that the log messages can be grouped by device/origin, and the main content of the log message itself.
 
 ## 6 Extending Logging
 

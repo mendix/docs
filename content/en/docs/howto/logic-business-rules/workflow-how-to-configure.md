@@ -214,7 +214,7 @@ The page access is restricted to the HR user role:
 To add a button that will initiate the workflow, do the following:
 
 1. Open the **Toolbox** and search for a **Call workflow** button.
-2. Drag and drop the button inside the list view in an empty column.
+2. Drag the button into the list view in an empty column.
 3. Open properties and click the ellipsis icon in the **Workflow** property.
 4. In the **Select Workflow** dialog box, select **Employee_Onboarding** workflow and click **OK**.
 5. Set **Caption** of the button to **Start Onboarding**.
@@ -227,7 +227,7 @@ Good job! Now when the HR specialist clicks the button, the workflow will start:
 
 The manager of a new employee will get a task to specify devices for the new hire and indicate whether the new hire is working from home or in the office. For this functionality you need to add activities to the workflow. Follow the steps below: 
 
-1. Navigate to the **Toolbox** pane, find a **User task** activity, and drag and drop it to the workflow editor.
+1. Navigate to the **Toolbox** pane, find a **User task** activity, and drag it into the workflow editor.
 2. Select the **User task** activity and open the **Properties** pane. 
 3. To be able to differentiate this user task from other ones, set the **Name** property to **Specify_Device_and_Location**. 
 4. Set the **Caption** property to **Manager: Specify Device and Location** to easily see who this task should be assigned to:
@@ -282,7 +282,7 @@ Depending on whether the new hire is working from the office or home, there are 
 
 Do the following:
 
-1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Device and Location** user task.
+1. Open the workflow editor > **Toolbox** and drag the **Decision** activity after the **Manager: Specify Device and Location** user task.
 2. Decision means that the workflow path can split and follow one of the outcomes depending on the condition of the decision. For more information, see [Decision in Workflows](/refguide/decision-in-workflows/). Open the decision properties and do the following:
 
     1. Set the **Caption** to **WFH?**.
@@ -295,7 +295,7 @@ Do the following:
 
     {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/decision-outcomes.png" alt="Decision Outcomes" >}}
 
-4. Now you need to configure what happens in both scenarios: when the new hire works from the home (true) and when the new hire works from office (false). Open the **Toolbox**, drag and drop a **User task** activity to the **false** path, and do the following:
+4. Now you need to configure what happens in both scenarios: when the new hire works from the home (true) and when the new hire works from office (false). Open the **Toolbox**, drag a **User task** activity to the **false** path, and do the following:
 
     1. Name the user task **Prepare_Desk** and set its title to **Facilities: Prepare Desk** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section:
 
@@ -315,7 +315,7 @@ Do the following:
 
 7. To restrict access to the page to the Facilities role only, follow the step 12 of the [Selecting a Device for the New Hire](#select-device) section.
 8. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
-9. Open the **Toolbox**, drag and drop a **User task** activity to the **true** path, and do the following:
+9. Open the **Toolbox**, drag a **User task** activity to the **true** path, and do the following:
 
     1. Name the user task **Ship_Devices** and set its title to **Facilities: Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
     2. Configure the task to be assigned to the Facilities role only referring to steps 5 and 6 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression. 
@@ -333,7 +333,7 @@ You can extend workflow logic by calling a microflow. If the new employee works 
 
 To call a microflow in your workflow, do the following:
 
-1. Open the workflow editor > **Toolbox** and drag and drop the **Call microflow** activity after the **Facilities: Prepare Desk** user task:
+1. Open the workflow editor > **Toolbox** and drag the **Call microflow** activity after the **Facilities: Prepare Desk** user task:
 
     {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/call-microflow.png" alt="Call Microflow" >}}
 

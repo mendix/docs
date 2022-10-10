@@ -156,7 +156,7 @@ The microflow parameter expects an object *Customer*, and since this object is n
 
 To fix it, do the following:
 
-1. Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
+1. Open the *Customers* page and drag a data container onto it. For example, you can drag and drop a list view.
 2. Set the data source of the list view to *Database* and set **Entity** to *Customer*.
 
     {{< figure src="/attachments/studio8/checks/consistency-errors/consistency-errors-pages/list-view-data-source.png" >}}
@@ -191,7 +191,7 @@ The most common errors for [input elements](/studio8/page-editor-widgets-input-e
 
 | Error Code | Message in the Checks Panel                                  | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > **Data Source** and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > **Data Source** and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag the input element inside the data view or the list view</li></ul> |
 | CE0545     | Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open the widget's properties > **Data Source** and select an attribute in the **Attribute** field. |
 
 ## 7 Image Widget Consistency Errors
@@ -207,7 +207,7 @@ Errors for static and dynamic images are described in the table below.
 | Error Code | Message in the Checks Panel                                  | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0436     | No image selected.                                           | You have added a static image widget on a page, but the image itself is not selected. | Open image properties > the **General** section and click **Select Image**. You can either select a default image or upload your own one. |
-|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag and drop a dynamic image inside it. |
+|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag a dynamic image inside it. |
 | CE0489     | Select an entity for the data source of this image viewer.   | You have added a dynamic image to a page, the dynamic image is placed inside a data view or a list view, but an entity for the image is not specified. | Open image properties > the **General** section and select an entity in the **Entity** field. |
 
 ## 8 On Click Action Consistency Errors 

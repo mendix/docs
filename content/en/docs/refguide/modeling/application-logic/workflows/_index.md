@@ -62,7 +62,7 @@ The **WorkflowInstance** entity that was generated when the workflow was created
 To add an element to a workflow, do the following:
 
 1. Open the **Toolbox**.
-2. Select an element you would like to add and drag and drop this element in the working area.
+2. Select an element you would like to add and drag this element into the working area.
 
 The selected element is added.
 
@@ -86,7 +86,7 @@ Do the following:
 
 1. Open a page from where you would like to trigger a workflow.
 2. Make sure you have a data container with the workflow context on your page. 
-3. Drag and drop a widget that has on-click event in its properties (for example, a button) inside the data container with the workflow context. 
+3. Drag a widget that has on-click event in its properties (for example, a button) into the data container with the workflow context. 
 4. Open button's properties > **Events** section. 
 5. Set **On-click** property to **Call workflow**. 
 6. Set **Workflow** to the workflow you would like to trigger.
@@ -101,7 +101,7 @@ Do the following:
 
 1. Open a microflow that will trigger a workflow.
 2. Make sure the microflow has a necessary parameter with the workflow context.
-3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
+3. In the **Toolbox**, find **Call workflow** activity and drag it into the microflow.
 4. Double-click the activity to open its properties.
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:

@@ -81,7 +81,7 @@ To call the REST service in a microflow, follow these steps:
 
 1. Create a new microflow.
 2. Add an **Input** object as an input parameter.
-3. From the **Toolbox**, drag a **Call REST service** activity onto the microflow and double-click it.
+3. From the **Toolbox**, drag a **Call REST service** activity into the microflow and double-click it.
 4. Edit the location to `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`.
 
     {{< figure src="/attachments/howto7/integration/consume-a-rest-service/location.png" >}}
@@ -93,7 +93,7 @@ To call the REST service in a microflow, follow these steps:
     {{< figure src="/attachments/howto7/integration/consume-a-rest-service/response.png" >}}
 
 8. Click **OK**.
-9. From the **Toolbox**, drag a **Change object** activity onto the microflow and double-click it.
+9. From the **Toolbox**, drag a **Change object** activity into the microflow and double-click it.
 10. For the **Variable**, select **Input (MyFirstModule.Input)**.
 11. For **Refresh in client**, select **Yes**. This makes sure that the summary gets shown on the screen.
 12. Click **New**.

@@ -63,7 +63,7 @@ Follow these instructions to set up your NFC app:
     1. Change the button's caption to *Read NFC Tag*.
     1. Save the page.
     1. Open **ACT_ReadNFCTag**.
-    1. Drag and drop the **HasNFCSupport** JavaScript action onto this nanoflow.
+    1. Drag the **HasNFCSupport** JavaScript action onto this nanoflow.
     1. Save your nanoflow.
 1. Click **Publish** to deploy to the Free App environment. 
 

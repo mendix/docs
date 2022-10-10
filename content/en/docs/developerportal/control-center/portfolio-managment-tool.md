@@ -57,10 +57,10 @@ You can move the project to a different column by hovering over the project card
 
 Each project card shows the following information:
 
-* Project name (①) –  Clicking it opens a side panel that shows the details of the project.
+* Project name (①) –  Clicking it opens a [side pane](#view-project) that shows the details of the project.
 
   {{% alert type="info" %}}
-  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
   {{% /alert %}}
 
 * Ellipsis icon (**...**) (②) – Clicking it enables you to edit, [archive](#archive-project), or delete the project.
@@ -91,10 +91,10 @@ In the list view, projects are shown in a list.
 
 The list shows the following information:
 
-* **Project name** – Clicking it opens a side panel that shows the details of the project.
+* **Project name** – Clicking it opens a [side pane](#view-project) that shows the details of the project.
 
   {{% alert type="info" %}}
-  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
   {{% /alert %}}
 
 * **Department** – This is the department to which the project belongs.
@@ -125,10 +125,10 @@ In the WSJF prioritization view, all the projects are by default ranked by their
 
 The list shows the following information:
 
-* **Project** – Clicking it opens a side panel that shows the details of the project.
+* **Project** – Clicking it opens a [side pane](#view-project) that shows the details of the project.
 
   {{% alert type="info" %}}
-  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
   {{% /alert %}}
 
 * **Stage** – This shows which stage the project is currently in.
@@ -157,10 +157,10 @@ In the RICE prioritization view, all the projects are by default ranked by their
 
 The list shows the following information:
 
-* **Project** – Clicking it opens a side panel that shows the details of the project.
+* **Project** – Clicking it opens a [side pane](#view-project) that shows the details of the project.
 
   {{% alert type="info" %}}
-  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-archive-delete-project).
+  When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
   {{% /alert %}}
 
 * **Stage** – This shows which stage the project is currently in.
@@ -203,7 +203,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 3. Enter the **Project Name** and the **Stage** in which the project is. 
 
-4. Click **Create Project**. The **Project** is created and shown in the **Projects Overview** page. A side panel opens on the right side where you can enter the details of the new project.
+4. Click **Create Project**. The **Project** is created and shown in the **Projects Overview** page. A [side pane](#view-project) opens on the right side where you can enter the details of the new project.
 
 5. Select **Tags** for the project. You can select existing tags or creating new tags.
 
@@ -256,10 +256,26 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 All the details are saved for the new project.
 
-### 2.4 Archiving a Project {#archive-project}
+### 2.4 Viewing Project Details {#view-project}
+
+On the **Project Overview** page, if you click a project, a [side pane](#view-project) opens on the right side to show the project details.
+
+On the upper-right corner of the pane, there is a link icon, an ellipsis icon (**…**), and a close icon. Clicking the link icon copies the link to the project. Clicking the ellipsis icon opens a pop-up menu that allows you to [edit, delete](#edit-delete-project), or [archive](#archive-project) the project. Clicking the close icon closes the side pane.
+
+The rest of the side pane shows the project details.
+
+### 2.5 Editing or Deleting a Project {#edit-delete-project}
 
 {{% alert type="info" %}}
-Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
+Only Portfolio Managers can edit or delete an existing project. For more information on roles and permissions, see [Access Management](#access-management).
+{{% /alert %}}
+
+To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. You can also click ellipsis icon (**...**) in the [side pane](#view-project) with the project details, and select the action there.
+
+### 2.6 Archiving a Project {#archive-project}
+
+{{% alert type="info" %}}
+Only Portfolio Managers can archive a new project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
 After a project is finished or the project is not relevant for the current time being, you can archive a project on the **Projects Overview** page. 
@@ -282,7 +298,7 @@ The **Archived Projects** page show all the projects that are archived in a list
 
 The list shows the following information:
 
-* **Project** – Clicking it opens a side panel that shows the details of the archived project, such as the reason why the project was archived, additional notes, who archived the project, and when.
+* **Project** – Clicking it opens a [side pane](#view-project) that shows the details of the archived project, such as the reason why the project was archived, additional notes, who archived the project, and when.
 
 * Who archived the project
 
@@ -301,7 +317,7 @@ The list shows the following information:
 * Ellipsis (**...**) icon – Clicking it enables you to restore or delete the archived project.
 
   {{% alert type="info" %}}
-  Only Portfolio Managers can delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  Only Portfolio Managers can restore or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
 ## 4 Access Management Page {#access-management}

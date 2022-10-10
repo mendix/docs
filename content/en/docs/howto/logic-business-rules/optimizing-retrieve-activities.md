@@ -10,7 +10,7 @@ tags: ["microflow", "retrieve", "optimize"]
 
 ## 1 Introduction
 
-Often in processes you need to retrieve objects in order to complete the process. But what if those objects cannot be found? Usually you need to take additional actions. But sometimes the objects you retrieve and the objects you create are assigned different names, and you cannot merge them back into a single flow.
+Often in processes you need to retrieve objects in order to complete the process. Sometimes those objects cannot be found and you need to take additional actions. Moreover, the objects you retrieve and the objects you create are assigned different names, and you cannot merge them back into a single flow.
 
 This document presents an example for optimizing retrieve activities during the process of finding and creating objects. It also gives an example for retrieving a specific instance of an object.
 
@@ -28,7 +28,7 @@ One solution for this is to include the logic (partially) in a sub-microflow (as
 
 ### 2.2 Optimizing the Retrieve Activities 
 
-You can easily work around the above issue by using a sub-microflow at a different place. To avoid making exceptions in your microflow for the default behavior, do not put the standard logic in a sub-microflow that is difficult to read (because of one exception earlier in the process). Since we got to this point because of an exception, it makes the most sense to solve this problem by altering the exception so that it fits in our standard flow.
+You can easily work around the above issue by using a sub-microflow at a different place. To avoid making exceptions in your microflow for the default behavior, do not put the standard logic into a sub-microflow that is difficult to read (because of one exception earlier in the process). Since we got to this point because of an exception, it makes the most sense to solve this problem by altering the exception so that it fits in our standard flow.
 
 The easiest way to implement this is to move all the logic for acquiring the customer's address into one sub-microflow (the **GetCustomerPrimaryAddress** sub-microflow). By doing so, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
 

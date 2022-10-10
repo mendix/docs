@@ -62,10 +62,6 @@ There are three ways to install a Marketplace component:
     * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/general/app-store-overview/#home/)
     * Filter for **All Content**, **My Company Content**, or **Platform Supported Content**
 
-    [**STILL NECESSARY?**]
-
-    {{% alert color="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issues.{{% /alert %}}
-
 5. Select a component from the pane to see its details:
 
     {{< figure src="/attachments/appstore/general/app-store-content/component-details.png" alt="Details of Blank App example component" >}}
@@ -75,24 +71,18 @@ There are three ways to install a Marketplace component:
 
 6. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 7. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
-8. --->If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toolbox**.
-9. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
-    1. In the **Import Module** dialog box, select one of these options:
-
-        * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
-
-        * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
-
+    * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
+    * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
+        1. Select one of these options:
+            * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
+            * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
             {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
-
-    2. Click **Import**.
-    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
-10. If you download an app, the **Download Marketplace App** dialog box opens. Perform the following steps:
-    1. Select where the app should be stored: **New Mendix Team Server**, **Existing Mendix Team Server**, or **Locally on disk**. More settings become available.
-    2. Change settings if needed.
-    3. Click **OK**.
-
-    After the app is downloaded, the app opens automatically in Studio Pro.
+        2. Click **Import**.
+        3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
+    * If you download an app, the **Download Marketplace App** dialog box opens, where you should perform the following steps:
+        1. Select where the app should be stored: **New Mendix Team Server**, **Existing Mendix Team Server**, or **Locally on disk**. 
+        2. Configure the necessary settings based on your storage choice.
+        3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
 ### 3.2 Importing Content from the App Explorer {#import}
 

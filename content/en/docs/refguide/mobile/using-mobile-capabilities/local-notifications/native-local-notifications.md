@@ -52,7 +52,7 @@ Follow the instructions below to set up your first local notification:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/name-nano.png" alt="app settings"   width="400"  >}}
 
-9. In **ACT_CreateAndSendNotification**, drag three **Create variable** activities onto your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
+9. In **ACT_CreateAndSendNotification**, drag three **Create variable** activities into your nanoflow and set them as string variables titled *Title*, *Subtitle*, and *Body*:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/create-string-variables.png" alt="app settings"   width="500"  >}}
 
@@ -70,7 +70,7 @@ Follow the instructions below to set up your first local notification:
 
 Now you will set up the final logic necessary for your app to display a notification. A user must give permission for an app to send notifications. You will include a **Request notification permission** activity in your nanoflow to account for this, and include a few other activities.
 
-1. Drag a **Has notification permission** activity onto your nanoflow:
+1. Drag a **Has notification permission** activity into your nanoflow:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/has-notif.png" alt="app settings"   width="500"  >}}
 
@@ -78,7 +78,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/set-haspermission-variable.png" alt="app settings"   width="500"  >}}
 
-3. Drag a decision after your **Has notification permission** activity onto your nanoflow:
+3. Drag a decision after your **Has notification permission** activity into your nanoflow:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/new-decision.png" alt="app settings"   width="500"  >}}
 
@@ -90,7 +90,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/expression-variable.png" alt="app settings"   width="500"  >}}
 
-6. Drag a **Request notification permission** activity onto your nanoflow:
+6. Drag a **Request notification permission** activity into your nanoflow:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/request-notif.png" alt="app settings"   width="500"  >}}
 
@@ -113,7 +113,7 @@ Now you will set up the final logic necessary for your app to display a notifica
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/decision-1-config-new.png" alt="app settings"   width="400"  >}}
 
 13. Navigate back to your nanoflow.
-14. Drag a **Show message** activity onto your nanoflow and connect it like this: 
+14. Drag a **Show message** activity into your nanoflow and connect it like this: 
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/native-local-notifications/show-message.png" alt="app settings"   width="400"  >}}
 

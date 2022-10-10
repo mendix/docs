@@ -89,7 +89,7 @@ To create the microflow for this retrieve, follow these steps:
     * **Username** - `@MyFirstModule.ES5_Username`
     * **Password** - `@MyFirstModule.ES5_Password`
     * (You do not have to use the return variable)
-8. Drag the **Get List** action onto your microflow.
+8. Drag the **Get List** action into your microflow.
 9. Fill in the required fields of the Get List connector. For this example, you should use these settings:
     * **Response type** – `GWSAMPLE_BASIC.Product`
     * **Destination** – `empty`

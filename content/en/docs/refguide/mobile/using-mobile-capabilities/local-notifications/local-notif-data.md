@@ -127,7 +127,7 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 7. Click **Entity Object** drop-down and click **$FirstTestEntityObject**.
 8. In **Variable name** field type **GUIDForFirstObject**.
 9. Click **OK**.
-10. Drag four create variable activities onto your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively:
+10. Drag four create variable activities into your nanoflow: *Title*, *Subtitle*, *Body*, and *ActionName*. Give them the values *'title1'*, *'subtitle1'*, *'body1'*, and *'OpenPageWithParams'* respectively:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/title1-activity.png" alt="title1"   width="400"  >}}
 
@@ -141,7 +141,7 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-nano-with-four-strings.png" alt="actionname"   width="500"  >}}
 
-11. Drag a JavaScript action call activity onto your nanoflow. 
+11. Drag a JavaScript action call activity into your nanoflow. 
 12. Double-click the action call.
 13. Click **JavaScript action** > **Select**.
 14. Type *DisplayNotification* into the search field, click the corresponding JavaScript action, and click **Select**.
@@ -179,7 +179,7 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-activity.png" alt="guid activity"   width="500"  >}}
 
-15. Drop a **Change object** activity onto your nanoflow:
+15. Drop a **Change object** activity into your nanoflow:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/new-change-object.png" alt="change object"   width="500"  >}}
 
@@ -195,7 +195,7 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
 Next you are going to create a show page action for **ON_tapNotification**.
 
-1. Drag a **Show Page** activity onto your nanoflow:
+1. Drag a **Show Page** activity into your nanoflow:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/add-show-page.png" alt="new show page"   width="500"  >}}
 

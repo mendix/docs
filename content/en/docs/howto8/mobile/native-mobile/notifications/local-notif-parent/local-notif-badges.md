@@ -65,7 +65,7 @@ To make your badge disappear after your user opens your app, follow the instruct
 3. Select **On load** > **Call a nanoflow**.
 4. Click **New** and make a new nanoflow: *ACT_ClearBadge*.
 5. Go to **ACT_ClearBadge**.
-6. Drag a **Set badge number** activity onto your nanoflow:
+6. Drag a **Set badge number** activity into your nanoflow:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/clear-set-badge.png" alt="set badge activity" >}}
 
@@ -76,7 +76,7 @@ To make your badge disappear after your user opens your app, follow the instruct
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/clear-badge-settings.png" alt="return value"   width="400"  >}}
 
-11. Drag a **Log message** activity onto your microflow.
+11. Drag a **Log message** activity into your microflow.
 12. Double-click your **Log message** activity, write *Your notification has been cleared* into **Template**, and click **OK**:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/clear-text-log.png" alt="clear text"   width="500"  >}}

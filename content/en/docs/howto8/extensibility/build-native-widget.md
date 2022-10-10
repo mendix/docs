@@ -567,7 +567,7 @@ Verify that the new content property works:
 5. Click **New** and a new nanoflow *ACT_ShowMessage*.
 6. Double-click the button and change the **Caption** to *Show message*.
 7. Navigate to **ACT_ShowMessage**.
-8. Drag a **Show message** activity onto your nanoflow.
+8. Drag a **Show message** activity into your nanoflow.
 9. Double-click the activity and add the text *Hello World!* to the **Template**, then click **OK**.
 10. Rerun the app locally.
 11. With the Make It Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.

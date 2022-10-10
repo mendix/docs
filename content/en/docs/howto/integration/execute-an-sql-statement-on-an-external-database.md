@@ -57,7 +57,7 @@ To use an **Execute statement** action in a microflow, follow these steps:
 
 1. Find the **Execute statement** in the **Toolbox**.
 
-2. Drag the **Execute statement** action onto your microflow: 
+2. Drag the **Execute statement** action into your microflow: 
 
     {{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
 

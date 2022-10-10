@@ -38,7 +38,7 @@ The JDBC driver jars, for the databases you want to connect to, must be placed i
 ## 4 Using Execute Statement Action in a Microflow
 
 1. Look for the Database connector in the Toolbox.
-2. Drag the 'Execute statement' action onto your microflow.
+2. Drag the 'Execute statement' action into your microflow.
 
     {{< figure src="/attachments/howto7/integration/execute-an-sql-statement-on-an-external-database/19399122.png" >}}
 

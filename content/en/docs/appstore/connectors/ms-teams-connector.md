@@ -67,7 +67,7 @@ Follow the instructions in the [Importing Content from the App Explorer](/appsto
 
 You can use the **Send Message to Webhook** activity in a microflow to send messages to a Teams channel:
 
-1. From the toolbox, drag the **Send Message to Webhook** activity onto your microflow.
+1. From the toolbox, drag the **Send Message to Webhook** activity into your microflow.
 
     The following representative microflow contains activities with the required attributes, the **Send Message to Webhook** activity, and a placeholder to capture the returned object.
 
@@ -211,7 +211,7 @@ A pop-up window opens and shows containing the channel link.
 
 #### 3.3.5 Configuring the Send Message and SignInMicroflow Activities
 
-1. From the microflow toolbox, drag the **Send Message** activity onto your microflow.
+1. From the microflow toolbox, drag the **Send Message** activity into your microflow.
 2. Double-click the **Send Message** activity to open the **Send Message** dialog box.
 3. Specify the following settings with expression syntax:
 

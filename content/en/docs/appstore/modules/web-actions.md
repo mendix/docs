@@ -27,7 +27,7 @@ To take a picture, follow these steps:
 
     {{< figure src="/attachments/appstore/modules/web-actions/entity.png" alt="Example entity" >}}
 
-2. Drag the **Take picture** action from the Studio Pro toolbar onto your nanoflow like in the example below. For that you need to pass an object for the action:
+2. Drag the **Take picture** action from the Studio Pro toolbar into your nanoflow like in the example below. For that you need to pass an object for the action:
 
     {{< figure src="/attachments/appstore/modules/web-actions/nanoflow.png" alt="Example nanoflow" >}}
 

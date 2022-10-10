@@ -14,7 +14,7 @@ These are some examples of OQL queries:
 
 * `SELECT Name FROM Sales.Customer` –  retrieves the names of all customers
 * `SELECT FirstName FROM Sales.Customer WHERE Name = 'Jansen'`  –  retrieves the first name of all customers with name "Jansen"
-* `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1`  –  retrieves the average of the total prices of all paid orders (`Order` needs to be encapsulated in quotes because it is a reserved word, meaning it can be used for `ORDER BY`)
+* `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1`  –  retrieves the average of the total prices of all paid orders (`Order` needs to be wrapped in quotes, see the [Reserved Words](#reserved-oql-words) section below)
 
 {{% alert color="info" %}}
 OQL queries do not take security into account out-of-the-box. This means that you can use OQL to manually define custom security expressions. In some cases, handling security yourself using OQL—instead of using the out-of-the-box security of XPath—may result in faster queries.
@@ -29,8 +29,84 @@ An OQL query can use these components:
 | Query Part | OQL | Purpose |
 | --- | --- | --- |
 | [Select clause](/refguide/oql-select-clause/) (required)  | `SELECT AVG(TotalPrice)` | Determines which attributes of the object being queried are retrieved. Any functions that need to be performed on the retrieved data should also be defined here.  |
-| [From clause](/refguide/oql-from-clause/) (required)  | `FROM Sales.Order`  | Designates the source entity from which the data will be retrieved.  |
+| [From clause](/refguide/oql-from-clause/) (required)  | `FROM Sales."Order"`  | Designates the source entity from which the data will be retrieved.  |
 | [Where clause](/refguide/oql-where-clause/) (optional) | `WHERE IsPaid = 1` | Constrains the data being retrieved.  |
 | [Group by clause](/refguide/oql-group-by-clause/) (optional) | `GROUP BY Department` | Groups rows on the values of the specified attributes.  |
 | [Order by clause](/refguide/oql-order-by-clause/) (optional) | `ORDER BY Date` | Sorts rows on the specified attributes.  |
 | [Limit clause](/refguide/oql-limit-clause/) (optional) | `LIMIT 50 OFFSET 30` | Limits rows to a subset of the total amount.  |
+
+## 3 Reserved Words {#reserved-oql-words}
+
+Words with a specific purpose in OQL are reserved. Ff you use reserved words in an OQL query, they must be wrapped in double quotes `" "`. For example, in the OQL query `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1`, `Order` needs to be wrapped in quotes because it is a reserved word, as it can be used for `ORDER BY`.
+
+Here is a list of all OQL reserved words:
+
+* `SELECT`
+* `DISTINCT`
+* `FROM`
+* `JOIN`
+* `WHERE`
+* `GROUP`
+* `BY`
+* `HAVING`
+* `UNION`
+* `ALL`
+* `AS`
+* `ON`
+* `NOT`
+* `INNER`
+* `OUTER`
+* `LEFT`
+* `RIGHT`
+* `FULL`
+* `ORDER`
+* `ASC`
+* `DESC`
+* `LIMIT`
+* `OFFSET`
+* `LIKE`
+* `IN`
+* `IS`
+* `EXISTS`
+* `CASE`
+* `WHEN`
+* `THEN`
+* `ELSE`
+* `END`
+* `AND`
+* `OR`
+* `NULL`
+* `TRUE`
+* `FALSE`
+* `SUM`
+* `COUNT`
+* `AVG`
+* `MIN`
+* `MAX`
+* `CAST`
+* `COALESCE`
+* `DATEPART`
+* `DATEDIFF`
+* `ROUND`
+* `RANGEBEGIN`
+* `RANGEEND`
+* `LENGTH`
+* `NEXTVALUE`
+* `BOOLEAN`
+* `DATETIME`
+* `DECIMAL`
+* `FLOAT`
+* `INTEGER`
+* `LONG`
+* `STRING`
+* `YEAR`
+* `QUARTER`
+* `MONTH`
+* `DAYOFYEAR`
+* `DAY`
+* `WEEK`
+* `WEEKDAY`
+* `HOUR`
+* `MINUTE`
+* `SECOND`
+* `MILLISECOND`

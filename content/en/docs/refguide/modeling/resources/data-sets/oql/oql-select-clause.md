@@ -31,7 +31,7 @@ SELECT [ DISTINCT ]
 
 ### 2.3 entity_name.*and from_alias.*
 
-`entity_name.*` and `from_alias.*` specify that all attributes of the specified entity or expression of the `FROM` clause should be returned. `entity_name` can be optionally put in double quotes. Double quotes are mandatory if the entity name is a reserved OQL word (like `Order` or `Group`).
+`entity_name.*` and `from_alias.*` specify that all attributes of the specified entity or expression of the `FROM` clause should be returned. `entity_name` can be optionally put in double quotes. If the entity name is a reserved OQL word (like `Order` or `Group`), double quotes are mandatory. For more information, see the [Reserved Words](/refguide/oql/#reserved-oql-words) section in *OQL*.
 
 ```sql {linenos=false}
 SELECT Sales.Customer.* FROM Sales.Customer

@@ -91,7 +91,7 @@ From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the l
 
 ## 5 Sending Log Messages To Runtime {#sending-client-log-nodes-to-runtime}
 
-The native client stores log messages locally on the device. When **Enable sending logs to runtime** is selected, the native client will attempt to send log messages whenever a quota of 1,000 messages has been reached or after 1 hour from the last sending attempt.
+The native client stores logs on the device's memory. When **Enable sending logs to runtime** is selected, the native client will attempt to send logs whenever a quota of 1,000 logs has been reached or after 1 hour from the last sending attempt.
 
 When the app goes to background, the native client will save buffered log message on the file system and will restore them once the app is active again. This is in case log messages reach the limit but there is no network connectivity when the native client would attempt to send these log messages. 
 

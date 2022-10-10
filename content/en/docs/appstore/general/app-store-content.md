@@ -53,7 +53,7 @@ There are three ways to install a Marketplace component:
     ![](app-store-content/toolbar.png)
 
     The **Marketplace** pane opens.
-   
+
     {{< figure src="/attachments/appstore/general/app-store-content/marketplace.png" alt="Search result for rating" >}}
     ![](app-store-content/marketplace.png)
 
@@ -62,31 +62,21 @@ There are three ways to install a Marketplace component:
     * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/general/app-store-overview/#home/)
     * Filter for **All Content**, **My Company Content**, or **Platform Supported Content**
 
-	[**STILL NECESSARY?**]
-	
+    [**STILL NECESSARY?**]
+
     {{% alert color="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issues.{{% /alert %}}
 
 5. Select a component from the pane to see its details:
 
     {{< figure src="/attachments/appstore/general/app-store-content/component-details.png" alt="Details of Blank App example component" >}}
     ![](app-store-content/component-details.png)
-    
+
     The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details/) in the online Mendix Marketplace.
-    
-6. Check the **Mendix Version** on the **Overview** tab. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
 
-    * Click **Download** to download the latest version of the component
-
-        {{< figure src="/attachments/appstore/general/app-store-content/item-details.png" alt="Details of Rating widget" >}}
-    	![](app-store-content/item-details.png)
-
-    * To download an older version, go to the **All Versions** tab and **Download** the right version.
-
-        {{< figure src="/attachments/appstore/general/app-store-content/versions.png" alt="All Versions tab" >}}
-    	![](app-store-content/versions.png)
-
-7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toolbox**.
-8. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
+6. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
+7. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+8. --->If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toolbox**.
+9. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
     1. In the **Import Module** dialog box, select one of these options:
 
         * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
@@ -97,7 +87,7 @@ There are three ways to install a Marketplace component:
 
     2. Click **Import**.
     3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
-9. If you download an app, the **Download Marketplace App** dialog box opens. Perform the following steps:
+10. If you download an app, the **Download Marketplace App** dialog box opens. Perform the following steps:
     1. Select where the app should be stored: **New Mendix Team Server**, **Existing Mendix Team Server**, or **Locally on disk**. More settings become available.
     2. Change settings if needed.
     3. Click **OK**.

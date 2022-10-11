@@ -107,41 +107,32 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
     * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
 
         {{% alert color="warning" %}}If you have made any changes to the existing module, selecting the **Replace existing module** option will replace all the changes that you made (for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced). Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
-        
+    
 7. Click **Import**. 
 8. Wait until a pop-up window states that the module was successfully imported. Click **OK**. 
 
 You can find the imported module or connector in the **App Explorer**.
 
-### 3.3 -->>>START: Manually Adding Content into the App Directory {#add}
+### 3.3 Manually Adding Content into the App Directory {#add}
 
 {{% alert color="info" %}}This procedure only works for [widgets](/appstore/widgets/) and [add-on modules](/refguide/module-settings/#module-type).{{% /alert %}}
 
+To manually add content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
+
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. **Search** the component to find the component.
-3. Open the component page.
-4. Check the **Usage** information on the right side. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
-
-    * Click **Download** to download the latest version of the component
-
-        {{< figure src="/attachments/appstore/general/app-store-content/marketplace-rating-version-requirement.png" alt="All Versions tab" >}}
-    ![](app-store-content/marketplace-rating-version-requirement.png)
-
-    * To download an older version, go to the **Releases** tab and **Download** the right version
-
-        {{< figure src="/attachments/appstore/general/app-store-content/marketplace-rating-all-releases-download.png" alt="marketplace-rating-all-releases-download" >}}
-    ![](app-store-content/marketplace-rating-all-releases-download.png)
-
+2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details).
+3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
+4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
 5. Open Studio Pro and sign in with your Mendix credentials.
-6. Open the app in which you want to install the component from the Marketplace.
-7. On the menu bar, go to **App** > **Show App Directory in Explorer**. The app directory opens.
+6. Open the app in which you want to install the Marketplace component.
+7. On the menu bar, click **App** > **Show App Directory in Explorer**. The app directory opens.
 8. Add the component into the app directory as follows:
     * If it is a widget, add it into the **widgets** folder
-    * If it is an *.mxmodule* file, add it into the **modules** folder – you need to create this folder if it is not present
-9. In Studio Pro, go to **App** > **Synchronize App Directory** on the menu bar.
+    * If it is an *.mxmodule* file, add it into the **modules** folder (you need to create this folder if it does not already exist)
+9. On the menu bar, click **App** > **Synchronize App Directory**.
 10. Wait until the synchronization is finished.
 
-You can find the added widget in the **Toolbox** and you can find the added *.mxmodule* in the **App Explorer**.
+You can find the added widget in the **Toolbox** or the added *.mxmodule* in the **App Explorer**.
 
 ## 4 Using Content in Studio Pro
 

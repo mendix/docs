@@ -74,9 +74,9 @@ There are three ways to install a Marketplace component:
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
     * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
         1. Select one of these options:
-            * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
+            * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes are created in your app
             * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
-            {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+            {{% alert color="warning" %}}If you have made any changes to the existing module, selecting the **Replace existing module** option will replace all the changes that you made (for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced). Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
         2. Click **Import**.
         3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
     * If you download an app, the **Download Marketplace App** dialog box opens, where you should perform the following steps:
@@ -91,46 +91,29 @@ There are three ways to install a Marketplace component:
 To import content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. **Search** for the component you want to download and open the component page.
-
-**START - REMOVE SCREENSHOTS BELOW?**
-
-Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
-Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
-
-
-
-3. Check the **Usage** information on the right side. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
-
-    * Click **Download** to download the latest version of the component
-
-        {{< figure src="/attachments/appstore/general/app-store-content/marketplace-version-requirement-download.png" alt="marketplace-version-requirement-download" >}}
-    ![](app-store-content/marketplace-version-requirement-download.png)
-
-    * To download an older version, go to the **Releases** tab and **Download** the right version.
-
-        {{< figure src="/attachments/appstore/general/app-store-content/releases-download.png" alt="releases-download" >}}
-    ![](app-store-content/releases-download.png)
-
-4. In the **App Explorer**, right-click the app, click **Import module package**, and then select the component that you downloaded.
+2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details).
+3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
+4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+5. In the **App Explorer**, right-click the app, then click **Import module package**, and  select the component  you downloaded:
 
     {{< figure src="/attachments/appstore/general/app-store-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" >}}
     ![](app-store-content/import-module-in-app-explorer.png)
 
     The **Import Module** dialog box opens. 
 
-5. In the **Import Module** dialog box, select one of these options:
-    * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
+6. In the **Import Module** dialog box, select one of these options:
+
+    * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes are created in your app
     * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
 
-        {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
-
-6. Click **Import**. 
-7. Wait until a pop-up window states that the module was successfully imported. Click **OK**. 
+        {{% alert color="warning" %}}If you have made any changes to the existing module, selecting the **Replace existing module** option will replace all the changes that you made (for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced). Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+        
+7. Click **Import**. 
+8. Wait until a pop-up window states that the module was successfully imported. Click **OK**. 
 
 You can find the imported module or connector in the **App Explorer**.
 
-### 3.3 Manually Adding Content into the App Directory {#add}
+### 3.3 -->>>START: Manually Adding Content into the App Directory {#add}
 
 {{% alert color="info" %}}This procedure only works for [widgets](/appstore/widgets/) and [add-on modules](/refguide/module-settings/#module-type).{{% /alert %}}
 

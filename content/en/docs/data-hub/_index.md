@@ -22,9 +22,9 @@ The [Mendix Data Hub](/data-hub/) includes two main features:
 * [External entities](/refguide/external-entities/) in Mendix Studio Pro version [8.14](/releasenotes/studio-pro/8.14/#data-hub) and above, purple entities in the Domain Model that represent data provided through [published OData Services](/refguide/published-odata-services/)
 * The [Data Hub Catalog](https://hub.mendix.com), documented in our [Data Hub Catalog](/data-hub/data-hub-catalog/) guide, a metadata hub for managing shared registered assets made available through OData services
 
-Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
+Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for users on the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
-Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/), and learn more about licensing in the [Data Hub License](/data-hub/#data-hub-licences) section of the *Data Hub Guide*.
+Try building an app by following [How to Share Data Between Apps](/data-hub/share-data/).
 
 ## 2 Overview of Mendix Data Hub
 
@@ -76,39 +76,4 @@ Curators are assigned by the a [Mendix Admin](#admin) and can enrich the metadat
 
 ## 4 Data Hub Licenses {#data-hub-licences}
 
-There are two types of licenses for Mendix Data Hub: Data Hub Free and Data Hub Premium.
-
-Contact your [Mendix Admin](/developerportal/control-center/#company) to find out what type of Data Hub license your organization has.
-
-### 4.1 Data Hub Free Edition {#dh-free}
-
-All Mendix users have access to the Data Hub Free edition. With this, you can discover datasets provided by apps in your organization through OData REST services. You can retrieve or edit up to a 1000 objects per application per day for each runtime instance when deployed.
-
-#### 4.1.1 Limitations {#dh-free-limitations}
-
-If users with a Data Hub Free license retrieve or edit more than 1000 objects per application per day for each runtime instance when deployed, you will get a [limitation error](#limitation-errors) when your applications tries to retrieve more data. The number of consumed objects per day is reset at midnight in the time zone of the Mendix Runtime scheduler (which can be defined in the [Scheduled Event Time Zone](/refguide/app-settings/#scheduled) of the **App Settings**).
-
-{{% alert color="info" %}}
-Apps running in development environments do not have this limitation.
-{{% /alert %}}
-
-#### 4.1.2 Limitation Errors {#limitation-errors}
-
-Once the limit of a 1000 objects has been reached, two different statements are logged.
-
-* On the `info` level, the following statement is logged when the limit is reached: `"Exceeded the daily limit. Retrieved $delta objects, which would increase the counter to $newCount (of max $max per day)."`
-* On the `error` level, the following statement is logged when the limit is reached: `"The limit of $max objects has been reached."`
-
-{{% alert color="warning" %}}
-It is up to the application to communicate to its end-users that the daily limit has been reached. If this is not done, the end-user gets a message that an error occurred.
-{{% /alert %}}
-
-### 4.2 Data Hub Premium Edition {#dh-premium}
-
-With the Data Hub Premium license, apps are not limited. Apps can retrieve and edit an unlimited number of objects using [external entities](/refguide/external-entities/).
-
-### 4.3 Data Hub for Private Cloud or On-Premises {#dh-pc}
-
-Licensed users of Mendix for [Private Cloud](/developerportal/deploy/private-cloud/) can use a Data Hub license to work with external entities. To learn more about working with Data Hub external entities on a private cloud, on-premises setup, or for local deployments, see [External Entities without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
-
-## 5 Guide Categories
+Mendix Data Hub is included for free in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above. A separate license is not required.

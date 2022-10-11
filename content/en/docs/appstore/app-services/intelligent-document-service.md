@@ -249,7 +249,7 @@ If you still need to [mark text fields in sample images](#mark-text-fields), you
 
 ### 4.2 Editing a Published Document Model {#editing-model}
 
-Sometimes you may want to add or remove fields from a published model. Then you can edit the published model. You can first make a copy of the published model, and then edit the new model by adding new markers or removing previously made markers. Finally, you can publish your new model.
+Sometimes you may want to add or remove text fields or tables from a published model. Then you can edit the published model. You can first make a copy of the published model, and then edit the new model by adding new markers or removing previously made markers. Finally, you can publish your new model.
 
 Perform the following steps:
 

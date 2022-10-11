@@ -91,7 +91,9 @@ To prepare your XSD file, follow these steps:
     <xs:sequence>
     ```
 
-3. Go back to your sheet, copy the content from column **D**, and paste it underneath the header.
+3. Go back to your sheet, copy the content from column **D**, and paste it underneath the header.  
+   {{% alert type="info" %}}Sometimes the content copied from Excel contains extra double quotes.  To eliminate these, paste the Excel content into Word, and then copy it from Word and paste it into the XSD file.{{%/alert%}}
+
 4. Now it’s time to place the footer, which will complete the XSD file. Place this text as for footer:
 
     ```xsd

@@ -54,7 +54,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 ### 3.1 Selecting Attributes as the Key
 
-You can select which attributes you would like to use as a key. Choose a combination of attributes that are never empty, do not change and together uniquely identify the object. An autonumber attribute is a good choice for a key.
+You can select which attributes you would like to use as a key. Choose a combination of attributes that are never empty, do not change, and together uniquely identify the object. An autonumber attribute is a good choice for a key.
 
 {{% alert color="info" %}}
 Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/). Selecting multiple attributes as a key was introduced in Studio Pro [9.19.0](/releasenotes/studio-pro/9.19/).

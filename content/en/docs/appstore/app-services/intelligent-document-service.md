@@ -245,7 +245,7 @@ If you still need to [mark text fields in sample images](#mark-text-fields), you
 
 4. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
 
-{{% alert color="info" %}} If you want to **Delete** a model irrespective of its status, click **...** under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
+{{% alert color="info" %}}If you want to **Delete** a model irrespective of its status, click the ellipsis icon (**...**) under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
 
 ### 4.2 Editing a Published Document Model {#editing-model}
 
@@ -253,49 +253,47 @@ Sometimes you may want to add or remove fields from a published model. Then you 
 
 Perform the following steps:
 
-1. Log in to the [Document Model Training](#document-model-training) application with your Mendix account.
+1. Log in to the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application with your Mendix account.
 
 2. Click **Environment** to show the **Existing Models** list.
 
-3. Select the published model that you want to edit. The **Status** of the model should be **Published**.
+3. Find the published model that you want to edit. The **Status** of the model should be **Published**.
 
-4. Click **...** in the **Actions** column of the model and then click **Duplicate**.
+4. Click the ellipsis icon (**...**) in the **Actions** column of the model and then click **Duplicate**.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/duplicate-model.png" >}}
 
-    The **Rename Model** dialog box opens. 
+5. In the **Duplicate Model** dialog box, click **Duplicate**. The **Rename Model** dialog box opens. 
 
-5. Enter a model name for the new model and then click **Create Model**.
+6. Enter a model name for the new model and then click **Create Model**.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-rename.png" >}}
 
     The **Import File** page opens. 
 
-6. Upload sample images. You can use new sample images or the same sample images that you previously used for the original published model.
+7. Upload sample images. You can use new sample images or the same sample images that you previously used for the original published model.
 
     {{% alert color="info" %}}If you want to train the model for extracting table data, upload at least three to five sample mages.{{% /alert %}}
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-add-samples.png" >}}
 
-7. After all sample images are uploaded, click **Next**. The **Edit Markers & ID's** page opens. All the sample images that you uploaded have the **Status** of **Not Marked**. You can also see the number of the old markers on this page.
+8. After all sample images are uploaded, click **Next**. The **Edit Markers & ID's** page opens. All the sample images that you uploaded have the **Status** of **Not Marked**. You can also see the number of the old markers on this page.
 
     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-add-markers.png" >}}
 
-8. For each sample image that you uploaded, do the follows:
+9. For each sample image that you uploaded, perform the following steps:
 
-    1. Click **Add Marker** in the **Action** column.
+    1.  Click **Add Marker** in the **Action** column. The **Mark Document** dialog box opens. In the **Choose fields to mark** pane, you can delete a previously made mark from the duplicated model, or mark a new text field or table in the sample image:
+        * To delete a previously made mark, in the **Markers from duplicated model** list, click the delete icon for that mark.
+        * To mark new text fields or tables in the sample image, follow the instructions in [Marking Text Fields in a Sample Image](#mark-text-fields) or [Marking Tables in Sample Images](#mark-tables).
+    2. To save the markers, click **Done**. The **Mark Document** dialog box closes. The **Status** for the sample image on the **Edit Markers & ID's** page is changed from **Not Marked** to **Marked**.
+    3.  Repeat the steps above until all the uploaded sample images have the **Status** of **Marked**.
 
-    2. Follow the instructions in [Marking Text Fields in a Sample Image](#mark-text-fields) and [Marking Tables in Sample Images](#mark-tables) to mark new text fields and tables in the sample image.
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-publish.png" >}}
 
-       Once the markers are added for a sample image, the **Status** for the sample image is changed from **Not Marked** to **Marked**.
+11. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
 
-8. Make sure all the uploaded sample images have the **Status** of **Marked**, before you proceed to publish your new model.
-
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-publish.png" >}}
-    
-9. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
-
-    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-published.png" >}}
+     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-published.png" >}}
 
 ### 4.3 Creating an Import Mapping{#mapping-file}
 
@@ -305,7 +303,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     1. Log in to the [Document Model Training](#document-model-training) application with your Mendix account.
     2. Click **Environment** to show the **Existing Models** list.
     3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model](#extraction-activity).
-    4. Click **...** in the **Actions** column of the published model and then click **Download JSON Structure**.
+    4. Click the ellipsis icon (**...**) in the **Actions** column of the published model and then click **Download JSON Structure**.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" >}}
 

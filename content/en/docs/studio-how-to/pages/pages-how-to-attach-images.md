@@ -44,7 +44,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 First of all, to be able to attach and upload images you need to add a special type of entity to your domain model: an image entity. Do the following:
 
 1. Open your domain model and open the **Toolbox** tab.
-2. Select the **Image Entity** and drag and drop it to your domain model.
+2. Select the **Image Entity** and drag it into your domain model.
 3. In the **Create New Image Entity** dialog box, set **Name** to *Receipt* and click **Create**.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/create-new-image-entity.png"   width="400"  >}}
@@ -65,7 +65,7 @@ Good job! You have created the image entity and an association from it to the **
 
 ## 4 Adding an Image Uploader
 
-An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag and drop the image uploader to your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
+An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an image entity as its data source. If you just drag the image uploader into your report form, it will not work correctly, because your current data view has the **Report** entity as its data source, which is not an image entity:
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/form-example.png"   width="600"  >}}
 
@@ -74,31 +74,35 @@ To solve this, you can add a button which will open a pop-up page where your end
 Follow the steps below:
 
 1. Open the **New Report** page where employees submit a new report. 
-2. Open the **Toolbox** and search for **Create Object** button.
-3. Drag and drop the button above **Save** and **Cancel** buttons:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/new-button.png"   width="450"  >}}
+2. Open the **Toolbox** and search for the **Open Page** button.
 
-4. Open button properties > the **Caption** property and rename it from *New* to *Attach Images*.
-5. Click the **Icon** property. 
-6. In the **Select icon** dialog box, search for the *picture* icon and select it.
-7. In the button properties, click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
+3. Drag the button above **Save** and **Cancel** buttons:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/button-style-change.png"   width="150"  >}}
+    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/open-page-button.png"   width="450"  >}}
 
-8. In the button properties, click the **Entity** property.
-9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**: 
+4. Open button properties and do the following:
 
-    {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/image-report-association.png"   width="400"  >}}
+    1. Select the **Caption** property and rename it to *Attach Images*.
 
-10. In the button properties, click **Page**.
-11. In the **Select Page** dialog box, click the plus icon in the top right corner.
-12. In the **Create new page** dialog box, do the following:
+    2. Click the **Icon** property. 
 
-    1. Set the **Title** to *Attach Images*.
-    2. Set the **Layout** to *PopupLayout*.
+    3. In the **Select icon** dialog box, search for the *picture* icon, and click **Select**.
 
-    3. The **Pre-fill page contents based on the Receipt entity** option is on, so the page template (Forms) is selected automatically for you. Choose **Form Vertical** and click **Create**.
+    4. Click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
+
+        {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/button-style-change.png"   width="150"  >}}
+
+    5. In the button properties, click the **Page** property.
+
+    6. In the **Select Page** dialog box, click the plus icon in the top right corner to add a new page. 
+
+    12. In the **Create new page** dialog box, do the following:
+
+        1. Set the **Title** to *Attach Images*.
+        2. Set the **Layout** to *PopupLayout*.
+        3. Set **Entity** to **Receipt**.
+        4. The **Autofill Contents** option is on, so contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/create-new-page-images.png"   width="500"  >}}
 
@@ -106,9 +110,13 @@ Follow the steps below:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/attach-images-page.png"   width="500"  >}}
 
-    As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
+14. As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
 
-14. Open the **Toolbox**, search for an **Image Uploader**, drag and drop it inside the data view. 
+15. Open the **Toolbox**, search for an **Image Uploader**, drag it inside the data view on the **Attach Images** page. 
+
+16. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
+    
+17. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**: 
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
 
@@ -119,14 +127,14 @@ You have created a pop-up page that will allow employees to attach images to the
 After users attach the images, it would be nice to display their attachments and give them an opportunity to delete the ones they do not need. To do so, you need to add a list with dynamic images:
 
 1. Open the **New Report** page.
-2. In the **Building Blocks**, search for **List with image** and drag and drop it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
+2. In the **Building Blocks**, search for **List with image** and drag it under the **Attach Images** button (*inside* the data view). A list view with widgets inside it is added to your page:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/list-4.png" >}}
 
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**:
+    2. In the **Select Entity** dialog box, unselect **Generate contents of the list view**, choose the **Receipt** entity over **Receipt_Report** association, and click **Select**:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/image-report-association.png"   width="400"  >}}
 
@@ -164,4 +172,4 @@ Great job! Now you have the image list that shows attached images and your users
 
 Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
 
-[Preview your app](/studio/publishing-app/) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images & Files](/studio/page-editor-widgets-images-and-files/).
+[Preview your app](/studio/publishing-app/) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images and Files](/studio/page-editor-widgets-images-and-files/).

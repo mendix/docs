@@ -1,7 +1,7 @@
 ---
 title: "Siemens"
 url: /partners/siemens/
-description: "Reference content for Siemens integrations."
+description: " Presents reference content for Siemens integrations."
 notoc: true
 weight: 10
 no_list: false 

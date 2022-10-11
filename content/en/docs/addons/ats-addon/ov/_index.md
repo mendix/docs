@@ -3,6 +3,7 @@ title: "ATS Overview"
 url: /addons/ats-addon/ov/
 category: "ATS"
 weight: 1
+description: "Presents general information on ATS."
 ---
 
 ## 1 Introduction

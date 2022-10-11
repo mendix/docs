@@ -1,5 +1,5 @@
 ---
-title: "Work with Images & Files"
+title: "Work with Images and Files"
 url: /howto8/data-models/working-with-images-and-files/
 category: "Data Models"
 weight: 4

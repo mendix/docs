@@ -1,7 +1,7 @@
 ---
 title: "Trigger a Microflow From a Menu Item"
 url: /howto/logic-business-rules/trigger-microflow-from-menu-item/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 30
 description: "Describes how to create a simple microflow that will define the logic of your application."
 tags: ["how-to", "microflow", "create microflow"]
@@ -70,7 +70,7 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/toolbox.png" >}}
 
-3. Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
+3. Drag the **Show message** activity from the **Toolbox** into the flow between the start event and end event, which will insert a show message activity:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/show-message-activity.png" >}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Pane"
 url: /refguide/data-hub-pane/
-weight: 15
+weight: 30
 description: "Describes the Data Hub pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
 
@@ -25,7 +25,7 @@ In the Data Hub Catalog, registered published services are referred to as *data 
 
 ## 2 Data Hub Pane Overview
 
-The **Data Hub** pane is used to search the Data Hub Catalog for entities that can be dragged to the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
+The **Data Hub** pane is used to search the Data Hub Catalog for entities that can be dragged into the domain model and used in your app and also display the external entities and the associated services that are consumed in your current model.
 
 The following functionality is available in the pane:
 

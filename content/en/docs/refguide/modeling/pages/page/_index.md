@@ -72,7 +72,7 @@ In **Structure mode**, there are several ways to add an element on a page:
 1. Through the **Toolbox**:
 
     1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
-    2. Select an element you would like to add and drag and drop this element on your page.
+    2. Select an element you would like to add and drag this element onto your page.
 
 2. Through the menu at the top of the page:
 
@@ -97,7 +97,7 @@ In **Structure mode**, there are several ways to add an element on a page:
 In **Design mode**, you can add elements though the Toolbox. Do the following:
 
 1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
-2. Select an element you would like to add and drag and drop this element on your page.
+2. Select an element you would like to add and drag this element onto your page.
 
 ### 2.5 Viewing Element Properties {#view-properties}
 
@@ -141,6 +141,8 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
+Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combination with Structure Mode or Design Mode, which shows a tree view of your page structure and contains the same editing capabilities.
+
 ### 3.1 Structure Mode {#structure-mode}
 
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
@@ -162,7 +164,11 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 ### 3.2 Design Mode {#design-mode}
 
-In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
+In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements. 
+
+{{% alert color="info" %}}
+It is recommended to use it in combination with the [Page Explorer](/refguide/page-explorer/), which allows to see and select structural elements that are hidden in Design mode due to styling.
+{{% /alert %}}
 
 For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
@@ -184,3 +190,4 @@ It has the following features which are not available in **Structure mode**:
 
 * [Pages](/refguide/pages/)
 * [Page Properties](/refguide/page-properties/)
+* [Page Explorer](/refguide/page-explorer/)

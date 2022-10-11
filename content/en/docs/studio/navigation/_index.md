@@ -58,7 +58,7 @@ A home page icon is displayed in a list of pages or microflows against a page or
 
 ### 2.2 Role-Specific Home Page {#role-specific-home-page}
 
-A role-specific home page is a home page that that overrides the [default home page](#default-home-page) and is opened only for users with the specified role. You can set a separate home page per each role in your app. For more information on roles and how to create them, see [Security, Roles & Permissions](/studio/settings-security/).
+A role-specific home page is a home page that that overrides the [default home page](#default-home-page) and is opened only for users with the specified role. You can set a separate home page per each role in your app. For more information on roles and how to create them, see [Security, Roles, and Permissions](/studio/settings-security/).
 
 For example, an Administrator role can have the **Admin_Dashboard** page as its home page, while other users will have the default home page opened when they open the app:
 

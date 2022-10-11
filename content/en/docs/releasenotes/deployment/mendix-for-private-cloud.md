@@ -13,7 +13,25 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### September 27th, 2022
+### October 6th, 2022
+
+#### Portal Improvements
+
+* We now allow sorting of namespaces in the namespace selection list of the Create environment flow.
+* Newly-created environments will always run in Production mode (the DTAP mode is set to `P`) – you can no longer choose the purpose of your environment.
+   * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
+* We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
+* We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
+
+### September 29th, 2022
+
+#### Mendix Operator v2.8.0{#2.8.0}
+
+* We have now reduced the security permissions required by Mendix for Private Cloud pods. This means that pods do not need elevated permissions on the Kubernetes cluster.
+* We have limited the Mendix app emptyDir size to 4 MiB to prevent memory-backed emptyDirs from consuming more memory than required.
+* You may see some other minor changes to the Mendix Operator. These do not add or change any functionality at present, but are in preparation for supporting external storage secrets in a future release.
+
+### September 27th, 2022{#tekton}
 
 * We have added a number of Tekton pipelines that can be used to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. For more information, see [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/).
 
@@ -142,7 +160,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
 
-* We have added a new field to set the kubernetes ingress class as an annotation in the installer.
+* We have added a new field to set the Kubernetes ingress class as an annotation in the installer.
 * We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster/#customize-registry-imagenametemplate).
 
 #### Portal Improvements

@@ -87,7 +87,7 @@ Google Chrome and Microsoft Edge (Chromium edition) fully support running offlin
 
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 
-| Device & Browser         | Result                                                                                                                                                         |
+| Device and Browser         | Result                                                                                                                                                         |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Desktop browser          | Responsive Web profile is loaded                                                                                                                               |
 | Android - Chrome browser | Phone Web Offline profile is loaded                                                                                                                            |
@@ -123,7 +123,7 @@ PWAs use a web app manifest that provides information to the browser about the a
 
 For more information on the available properties in the web app manifest, read this [short introduction](https://web.dev/add-manifest/) or view [the full reference at MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
-### 5.2 Sessions
+### 5.2 Sessions {#sessions}
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 

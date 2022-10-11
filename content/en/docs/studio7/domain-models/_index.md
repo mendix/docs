@@ -21,7 +21,7 @@ Let us say you have a collection of CDs like the one in the table below.
 | Title                           | Artist                   |
 | ------------------------------- | ------------------------ |
 | How to Dismantle an Atomic Bomb | U2                       |
-| Exodus                          | Bob Marley & The Wailers |
+| Exodus                          | Bob Marley and The Wailers |
 
 The rows in the table are CDs. The type of the two rows is "CD" and this is the entity name. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is called an object of the "CD" entity. Characteristics like the "Title" and "Artist" are called attributes.
 {{% /alert %}}
@@ -59,7 +59,7 @@ You can add new entities in the **Toolbox**.
 To add an entity, do the following:
 
 1. Open the **Toolbox** tab of the domain model.
-2. Drag and drop **New Entity** to the working area.
+2. Drag **New Entity** into the working area.
 3. Fill out the name for it and click **Create**:
 
     {{< figure src="/attachments/studio7/domain-models/create-new-entity-dialog.png" >}}

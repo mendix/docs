@@ -25,7 +25,7 @@ Let us say you have a collection of CDs like the one in the table below:
 | Title                           | Artist                   |
 | ------------------------------- | ------------------------ |
 | How to Dismantle an Atomic Bomb | U2                       |
-| Exodus                          | Bob Marley & The Wailers |
+| Exodus                          | Bob Marley and The Wailers |
 
 The rows in the table are CDs. So, a *CD* is an *entity*. A specific CD like "How to Dismantle an Atomic Bomb" of the band U2 is an *object* of the *CD* entity. That means that an *object* is a single instance of an entity. Characteristics like the "Title" and "Artist" are *attributes*.
 
@@ -103,7 +103,7 @@ You can add new entities in the **Toolbox**.
 To add an entity, do the following:
 
 1. Open the **Toolbox** tab of the domain model.
-2. Choose the entity type you would like to add, and drag and drop it the working area.
+2. Choose the entity type you would like to add, and drag it into the working area.
 3. Fill out the name for the entity and click **Create**:
 
     {{< figure src="/attachments/studio8/work-with-data/domain-models/create-new-entity-dialog.png" >}}

@@ -1,7 +1,7 @@
 ---
 title: "Data Hub Catalog"
 url: /data-hub/data-hub-catalog/
-description: "Introduces the processes and properties of Data Hub Catalog."
+description: "Describes the processes and properties of Data Hub Catalog."
 weight: 30
 no_list: false
 description_list: true

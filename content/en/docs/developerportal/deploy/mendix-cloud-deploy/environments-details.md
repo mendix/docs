@@ -331,7 +331,7 @@ If you have issues which appear to be related to a content security policy, you 
 
 ### 4.3 Outgoing Connections Whitelisting (Mendix Cloud Dedicated){#connection-whitelist}
 
-If you are deploying your apps to [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-capabilities/mendix-cloud-overview#mendix-cloud-vpc), all outgoing IP addresses are allowed by default.
+If you are deploying your apps to [Mendix Cloud Dedicated](/developerportal/deploy/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
 
 If you clear the **Allow all outgoing connections** check box, you can define which IP addresses and ports can be used for outgoing connections.
 
@@ -531,3 +531,15 @@ For example, you may wish to use tags when logging with Datadog. For more inform
 ## 9 Services Tab {#services}
 
 You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
+
+Here, the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
+
+### 9.1 Available Services
+
+The custom services that are currently available for each environment are as follows:
+
+* **Event Broker service** – required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps
+
+### 9.2 Enabling Custom Services
+
+Technical Contacts need enable and disable custom services for individual environments of each app. The service must first been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).

@@ -1,6 +1,6 @@
 ---
-title: "Set & Change a Value for Different Activities"
-linktitle: "Set & Change Value"
+title: "Set and Change a Value for Different Activities"
+linktitle: "Set and Change Value"
 url: /studio8/microflows-setting-and-changing-value/
 category: "Microflows"
 weight: 50

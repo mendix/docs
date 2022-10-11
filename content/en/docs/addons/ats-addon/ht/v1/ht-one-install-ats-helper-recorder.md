@@ -1,6 +1,6 @@
 ---
 title: "Install the ATS Helper and the ATS Recorder"
-linktitle: "Install ATS Helper & Recorder"
+linktitle: "Install ATS Helper and Recorder"
 url: /addons/ats-addon/ht-one-install-ats-helper-recorder/
 weight: 2
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
@@ -42,7 +42,7 @@ To install the ATS Helper, follow these steps:
    
     {{< figure src="/attachments/addons/ats-addon/ht/v1/ht-one-install-ats-helper-recorder/ats-information-screen.png" >}}
 
-2. Drag the ATS Helper to your bookmark bar to link it there:
+2. Drag the ATS Helper into your bookmark bar to link it there:
 
     {{< figure src="/attachments/addons/ats-addon/ht/v1/ht-one-install-ats-helper-recorder/drag-drop-ats-helper.png" >}}
 

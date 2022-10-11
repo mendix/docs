@@ -16,12 +16,26 @@ This document presents the system requirements for the various parts of the Mend
 
 Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
-The following frameworks are automatically installed (if necessary):
+The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
-* Microsoft .NET 6.0.0 and all applicable Windows security patches
-* Microsoft Visual C++ 2010 SP1 Redistributable Package
-* Microsoft Visual C++ 2015 Redistributable Package
-* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically) if you do not have any JDK 11 installed) 
+* Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
+{{% todo %}}Do we still need C++ 2010 for any versions of Mx9?{{% /todo %}}
+* Microsoft Visual C++ 2015 Redistributable Package (x64)
+* Microsoft Visual C++ 2019 Redistributable Package (x64)
+* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
+    * AdoptOpenJDK 11 (x64) – for Mendix versions below 9.14.0
+    * Adoptium Temurin JDK 11 (x64) – for Mendix versions from 9.14.0 and below 9.18.0
+    * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
+    
+    Oracle JDK 11 can also be used if this is already installed.
+{{% todo %}}Are the following needed for all versions of Mx9?{{% /todo %}}
+* Git for Windows (x64)
+* Mendix Native Mobile Builder
+* Microsoft Edge WebView2 Evergreen Runtime (x64)
+
+If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
+
+* .NET 6 Desktop Runtime (arm64)
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -164,18 +178,18 @@ Mendix tries to support the most recent and patched database server versions fro
 Current support:
 
 * [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2017, 2019
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2017, 2019 (please note that support for 2017 is deprecated and will be removed in Studio Pro version 9.20.0, and MTS versions 9.18.2, 9.12.9, and 9.6.15)
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19
-* PostgreSQL: 10, 11, 12, 13, 14
+* PostgreSQL: 10, 11, 12, 13, 14 (please note that support for 10 is deprecated and will be removed in Studio Pro version 9.20.0 and MTS versions 9.18.2, 9.12.8, and 9.6.15)
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows — *Support for DB2 is deprecated and [will be removed in Mendix version 10](/releasenotes/studio-pro/9.12/#deprecations)*
+* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
 
-If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a *microservices* architecture.
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [Integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
 
 For more information on why data cannot be shared between apps see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}

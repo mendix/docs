@@ -1,6 +1,6 @@
 ---
 title: "Configure a List and a Pop-Up Page with List Item Details"
-linktitle: "Configure List & Pop-Up Page"
+linktitle: "Configure List and Pop-Up Page"
 url: /studio-how-to/pages-how-to-configure-list-and-pop-up-page/
 description: "Describes how to configure a list of items and show their details on a pop-up page in Mendix Studio."
 weight: 10
@@ -42,14 +42,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 You would like to add an opportunity contact list to an existing blank page. Do the following:
 
 1. Open the page and navigate to the **Toolbox** > **Widgets**.
-2. Search for **List view** and drag and drop it on the desired location on the page.
+2. Search for **List view** and drag it to the desired location on the page.
 3. Now you need to connect data to the list. Open list view properties and select the **Entity** property:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/entity-property.jpg" >}}
 
 4. In the **Select Entity** dialog box, select **OpportunityContact** and confirm your choice by clicking **Select**. Now the list is connected to the **OpportunityContact** entity.
 5. To configure the list to display the name of each opportunity contact, open the **Toolbox** > **Widgets**.
-6. Search for **Text** and drag and drop it inside the list view:
+6. Search for **Text** and drag it into the list view:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/text-inside-list-view.jpg" >}}
 
@@ -71,7 +71,7 @@ Now you need to create a page that shows list item details. When Sales Represent
 Follow the steps below:
 
 1. Open the **Toolbox** > **Widgets**.
-2. Search for the **Open Page** button and drag and drop it inside the list view.
+2. Search for the **Open Page** button and drag it into the list view.
 3. Open the button's properties and do the following:
     1. Change the **Render Mode** property to **Link**.
     2. Set the **Icon** property to **Menu right**.
@@ -86,7 +86,7 @@ Follow the steps below:
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/plus-icon.jpg" >}}
 
     7. In the **Create new page** dialog box, set the **Title** to *OpportunityContact_NewEdit* and the **Layout** to **PopupLayout**.
-    8. The **Pre-fill page contents based on the OpportunityContact entity** option is on and the page template (*Forms*) is selected automatically for you. Choose **Forms Horizontal**:
+    8. The **Autofill Contents** option is on and the page template (*Forms*) is selected automatically for you. Choose **Forms Horizontal**:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/create-page.jpg" >}}
 
@@ -104,14 +104,23 @@ You can add a button that will open the  **OpportunityContact_NewEdit**  pop-up 
 
 Do the following:
 
-1. Open the **Toolbox** > **Widgets**.
-2. Search for the **Create Object** button and drag and drop it above the list view.
-3. Open the button's properties. The **Create Object** property is enabled by default for this button. Click the **Entity** property.
-4. In the **Select Entity** dialog box, select the **OpportunityContact** entity and click **Select**.
-5. Click the **Page** property.
+1. Open the page with the list of opportunity contacts.
+
+2. Open the **Toolbox** > **Widgets**.
+
+3. Search for the **Open Page** button and drag it above the list view.
+
+4. Open the button's properties and click the **Entity** property.
+
+5. In the **Select Entity** dialog box, select the **OpportunityContact** entity and click **Select**.
+
+6. Click the **Page** property.
+
 6. In the **Select Page** dialog box, select **OpportunityContact_NewEdit** and click **Select**.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-button-properties.jpg" >}}
+
+8. Click the **Parameters** property and set it to **Create Object**.
 
 7. To adjust button's place on the page, set the **Spacing Left** to **Large** and **Spacing Top** to **Medium**.
 
@@ -121,7 +130,7 @@ The button now allows Sales Representatives to add new items to the list:
 
 Congratulations! You have configured the list showing opportunity contacts by name. The button inside the list opens the pop-up page with list item details. The **New** button above the list allows users to add a new item to the list.
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio/publishing-app/).
 
 Make sure that you have added the page with the list in your navigation bar. For more information on how to configure navigation in your app, see [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure/). You can also work on the page details, for example, show more details in the list then the contact's name. 
 

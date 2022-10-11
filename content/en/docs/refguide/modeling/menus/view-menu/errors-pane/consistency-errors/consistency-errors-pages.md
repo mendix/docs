@@ -50,7 +50,8 @@ The table below describes the most common errors you can come across when config
 |            | No microflow configured for the data source of this data view. Select a microflow or change the data source | A microflow is selected as a data source, but no microflow is specified. | Do one of the following: <ul><li>Open the data view's properties > **Data Source** and select a microflow in the **Microflow** field</li><li>Change the type of the data source</li></ul> |
 |            | No nanoflow configured for the data source of this data view. Select a nanoflow or change the data source | A nanoflow is selected as a data source, but no nanoflow is specified. | Do one of the following: <ul><li>Open the data view's properties > **Data Source** and select a nanoflow in the **Nanoflow** field</li><li>Change the type of the data source</li></ul> |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | A **Listen to widget** is configured as a data source for a data view, but the list view widget specified does not exist anymore on the same page. | Do one of the following: <ul><li>Create a list view on the same page, configure it, and select it as the list widget for the data view</li><li>Change the type of the data source</li></ul> |
-| CE0558     | All data views receiving an object from the page parameter must have the same entity. | You have several data views on one page that have different entities as their data sources. | Do one of the following: <ul><li>Select the same entity for all data views using the page context</li><li>Change the data source for them</li></ul> |
+| CE0558     | All data views receiving an object from the page parameter must have the same entity. | You have several data views on one page that have different entities as their data sources. (This error was removed in Mendix 9.18.) | Do one of the following: <ul><li>Select the same entity for all data views using the page context</li><li>Change the data source for them</li></ul> |
+| CE8115     | The selected entity X should match the entity Y of the page parameter {Name of the page parameter}. | You have changed the data type of a page parameter which was selected as the entity of the **Context** data source for a data view. | Do one of the following: <ul><li>Select the entity of the **Context** data source again</li><li>Change the data type of the page parameter back to match the entity of the data view</li></ul>
 
 ## 4 Context Not Available Consistency Errors
 
@@ -58,8 +59,11 @@ The errors that you can get when a page is expecting a context that is unavailab
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE1568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is called from another page, which does not have this object available. For a more detailed example, see the [Error Fix Example for CE1568](#error-example-1). | Make sure that the object is passed to the page that has a configured data view on it. For more information, see the [Error Fix Example for CE1568](#error-example-1). |
-| CE1569     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see the [Error Fix Example for CE1569](#error-example-2) section. | Make sure that the button is placed in a data container which passes the correct type of object to the page. For more information, see the [Error Fix Example for CE1569](#error-example-2) section. |
+| CE1568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a page parameter that expects an object of a particular type to be passed to it. This error occurs when the page is called from another page, which does not have this object available. For a more detailed example, see the [Error Fix Example for CE1568](#error-example-1). | Make sure that the object is passed to the page that has a configured data view on it. For more information, see the [Error Fix Example for CE1568](#error-example-1). |
+| CE1569 <br />This error was removed in [Studio Pro 9.18](/releasenotes/studio-pro/9.18/) | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see the [Error Fix Example for CE1569](#error-example-2) section. | Make sure that the button is placed in a data container which passes the correct type of object to the page. For more information, see the [Error Fix Example for CE1569](#error-example-2) section. |
+| CE7410    | The selected page {Name of the page} should accept a parameter of type {type of object}. | You have a widget (for example, the create button of a data grid) that opens a page which must use the available object. However, the selected page does not have any parameters. | Do one of the following: <ul><li>Select a page which has a page parameter of the correct type</li><li>Change the parameters of the page</li></ul> |
+| CE7411     | The selected page {Name of the page} should accept a parameter of type X, but expects a parameter of type Y instead. | You have a widget (for example, the create button of a data grid) that opens a page which must use the available object. However, the parameter of the selected page expects an object of a different type. | Do one of the following: <ul><li>Select a page which has a page parameter of the correct type</li><li>Change the type of the available object (if possible)</li><li>Change the parameters of the page</li></ul> |
+| CE7412     | The selected page {Name of the page} should accept a parameter of type X, but expects parameters of type A, B, and C instead. | You have a widget (for example, the create button of a data grid) that opens a page which must use the available object. However, none of the parameters of the selected page expect an object of that type. | Do one of the following: <ul><li>Select a page which has a page parameter of the correct type</li><li>Change the type of the available object (if possible)</li><li>Change the parameters of the page</li></ul> |
 
 ### 4.1 Error Fix Example for CE1568 {#error-example-1}
 
@@ -108,15 +112,19 @@ Now when a user clicks this button, the **Customer Details** page will open, and
 
 ### 4.2 Error Fix Example for CE1569 {#error-example-2}
 
-If a widget opens a page and this widget is inside a data container of entity X, but the referred page expects entity Y, you will get a consistency error. 
+{{% alert color="info" %}}
+This error was removed in Mendix Studio Pro 9.18 due to changes regarding page parameters.
+{{% /alert %}}
 
-For example, you have a **Details** button on the **Engineers** page that opens the **Tasks** page. 
+If a widget opens a page and this widget is inside a data container of entity X, but the referred page expects entity Y, you will get a consistency error.
+
+For example, you have a **Details** button on the **Engineers** page that opens the **Tasks** page:
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/engineers-page.png" alt="A Button on Engineers Page" >}}
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
 
-The Tasks page has a data view on it, but the data view's data source is set to entity *SmartTask* in **Properties** > **Data Source**. 
+The Tasks page has a data view on it, but the data view's data source is set to entity *SmartTask* in **Properties** > **Data Source**.
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*.
 
@@ -126,7 +134,7 @@ To fix this error you can do one of the following:
 
 * Place the **Details** button in a data container that will pass the correct type of data to the page:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png"   width="350"  >}}
+  {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/details-button.png"   width="350"  >}}
 
 * Select another page for the button that will not expect any object to be passed to it, or will expect the object of type *Engineer*
 * Change the data source of the data view on the **Tasks** page to entity *Engineer*
@@ -158,7 +166,7 @@ The microflow parameter expects an argument *Customer*, and since this argument 
 
 To fix it, do the following:
 
-1. Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
+1. Open the *Customers* page and drag a data container onto it. For example, you can drag and drop a list view.
 2. Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
@@ -252,7 +260,7 @@ You have changed the association multiplicity and fixed the error.
 
 ## 7 Images, Videos and Files Consistency Errors
 
-Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](/refguide/image-and-file-widgets/). 
+Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos, and Files](/refguide/image-and-file-widgets/). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

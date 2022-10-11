@@ -53,6 +53,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/#oct1) |
 | Dashboards with insights on platform employees and app activity | Released for GA in Apr 2022 |
 | Overview of cloud environments | Released for GA on [Jun 9th, 2022](/releasenotes/developer-portal/#june-9th-2022) |
+| Self-service subscription management | GA: Jul 2022 |
 
 ## 6 Next-Level Front-End
 

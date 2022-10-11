@@ -34,7 +34,7 @@ To create a backup with Velero, follow these steps:
 1. Stop the Mendix Operator and Mendix agent by scaling them to 0:
     ```text {linenos=table}
     kubectl scale deployment mendix-agent --replicas=0
-    kubernetes scale deployment mendix-operator --replicas=0
+    kubectl scale deployment mendix-operator --replicas=0
     ```
 2. Create the backup by entering the following command:
     ```text {linenos=false}
@@ -60,7 +60,7 @@ To restore a backup that you created with Velero, follow these steps:
     velero restore create --from-backup mendix-velero-bkp --status-include-resources=storageinstances.privatecloud.mendix.com,storageplans.privatecloud.mendix.com,builds.privatecloud.mendix.com,mendixapps.privatecloud.mendix.com
     ```
     {{% alert color="info" %}}If you only want to restore a specific Kubernetes resource, such as the Mendix app storage instances, use the `--status-include-resources flag`, for example, `--status-include-resources=storageinstances.privatecloud.mendix.com`.{{% /alert %}}
-2. After the app has started and created the database, [restore a backup](/developerportal/operate/restore-backup/) of your database and S3 files.
+2. After the app has started and created the database, [restore a backup](/developerportal/deploy/private-cloud-data-transfer/) of your database and S3 files.
 3. Optional: After restoring the backup, add finalizers to `StorageInstances` by entering the following command:
 
     ```text {linenos=false}

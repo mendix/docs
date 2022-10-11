@@ -2,7 +2,7 @@
 title: "Team"
 url: /developerportal/collaborate/team/
 category: "Collaboration"
-weight: 4
+weight: 5
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

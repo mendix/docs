@@ -30,7 +30,9 @@ Before starting this guide, make sure you have completed the following prerequis
 * For information on device requirements, see [System Requirements](/refguide/system-requirements/)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-  {{% alert color="warning" %}}Android devices running MIUI (Xiaomi/Redmi devices) are not supported as test devices for Mendix. They can run a production version of your Mendix app, but not the development version based on the Make it Native App or a custom developer app.{{% /alert %}}
+{{% alert color="warning" %}}
+Android devices running MIUI (Xiaomi/Redmi devices) are not supported as Mendix test devices. They can run a production version of your Mendix app, but not the development version based on the [Make It Native App](/releasenotes/mobile/make-it-native-9/) or a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
+{{% /alert %}}
 
 ## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
 

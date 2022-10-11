@@ -59,7 +59,7 @@ To restore a backup that you created with Velero, follow these steps:
     ```text {linenos=false}
     velero restore create --from-backup mendix-velero-bkp --status-include-resources=storageinstances.privatecloud.mendix.com,storageplans.privatecloud.mendix.com,builds.privatecloud.mendix.com,mendixapps.privatecloud.mendix.com
     ```
-    {{% alert color="info" %}}If you only want to restore a specific Kubernetes resource, such as the Mendix app storage instances, use the `--status-include-resources flag`, for example, `--status-include-resources=storageinstances.privatecloud.mendix.com`.{{% /alert %}}
+    {{% alert color="warning" %}}As a best practice, it is recommended to restore all resources, as in the above example. Restoring only specific resources can result in unpredictable behavior. However, if you only want to restore a specific Kubernetes resource, use the `--status-include-resources flag`, for example, `--status-include-resources=storageinstances.privatecloud.mendix.com`.{{% /alert %}}
 2. After the app has started and created the database, [restore a backup](/developerportal/deploy/private-cloud-data-transfer/) of your database and S3 files.
 3. Optional: After restoring the backup, add finalizers to `StorageInstances` by entering the following command:
 

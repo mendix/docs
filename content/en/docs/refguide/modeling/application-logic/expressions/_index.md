@@ -232,7 +232,7 @@ See [To String](/refguide/to-string/) for details.
 
 See [Parse Integer](/refguide/parse-integer/) for details.
 
-## 19 Parse & Format Decimal Function Calls
+## 19 Parse & Format Decimal Function Calls(#expressions-formatter-functions)
 
 * [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string

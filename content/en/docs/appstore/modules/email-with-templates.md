@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "email module with templates", "t
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+This module is deprecated. Check out the [Email Connector](/appstore/connectors/email-connector/) module as an alternative.
+{{% /alert %}}
+
 ## 1 Introduction
 
 [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
@@ -14,10 +18,6 @@ tags: ["marketplace", "marketplace component", "email module with templates", "t
 For a deep-dive look into using this module, check out this video:
 
 {{< vidyard "GwE17mzGma5NAvDnXrVdFA" >}}
-
-{{% alert color="info" %}}
-This module will be deprecated in the coming months. Check out the [Email Connector](/appstore/connectors/email-connector/) module for an alternative.
-{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 

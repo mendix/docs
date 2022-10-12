@@ -50,12 +50,10 @@ There are three ways to install a Marketplace component:
     * Click the Marketplace icon on the right side of the top-bars
 
     {{< figure src="/attachments/appstore/general/app-store-content/toolbar.png" alt="Marketplace icon" >}}
-    ![](app-store-content/toolbar.png)
 
     The **Marketplace** pane opens.
 
     {{< figure src="/attachments/appstore/general/app-store-content/marketplace.png" alt="Search result for rating" >}}
-    ![](app-store-content/marketplace.png)
 
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download
@@ -65,7 +63,6 @@ There are three ways to install a Marketplace component:
 5. Select a component from the pane to see its details:
 
     {{< figure src="/attachments/appstore/general/app-store-content/component-details.png" alt="Details of Blank App example component" >}}
-    ![](app-store-content/component-details.png)
 
     The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details/) in the online Mendix Marketplace.
 
@@ -97,7 +94,6 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 5. In the **App Explorer**, right-click the app, then click **Import module package**, and  select the component  you downloaded:
 
     {{< figure src="/attachments/appstore/general/app-store-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" >}}
-    ![](app-store-content/import-module-in-app-explorer.png)
 
     The **Import Module** dialog box opens. 
 
@@ -139,69 +135,61 @@ You can find the added widget in the **Toolbox** or the added *.mxmodule* in the
 After you download a component, you can use the component in your app. For detailed information on how a component works, check the **Documentation** tab on the page of the component in the Marketplace.
 
 {{< figure src="/attachments/appstore/general/app-store-content/widget-documentation.png" alt="Documentation tab" >}}
-![](app-store-content/widget-documentation.png)
 
 ### 4.1 Using a Widget  {#widget}
 
-#### 4.1.1 Adding a Widget to a Page
+#### 4.1.1 Adding the Widget to a Page
 
 After you [install](#install) the widget from the Marketplace in your app, there are two ways to add the widget from the Marketplace via Studio Pro:
 
 * Add a widget from the **Toolbox**
 * Add a widget using the **Add widget** option
 
-##### 4.1.1.1 Adding a Widget from the Toolbox 
+##### 4.1.1.1 From the Toolbox 
 
 1. Open the page where you want to add the widget.
 2. In the **Toolbox**, search for the name of the widget (for example, *Rating* to find the widget):
 
     {{< figure src="/attachments/appstore/general/app-store-content/toolbox-rating.png" alt="Rating widget found in the toolbox" >}}
-    ![](app-store-content/toolbox-rating.png)
 
 3. Drag the widget to the place on the page where you want it to be.
 
-##### 4.1.1.2 Adding a Widget from the Toolbar
+##### 4.1.1.2 From the Toolbar
 
 1. Click **Add widget** on the toolbar on the page where you want to add the widget. The **Select Widget** dialog box opens.
 
     {{< figure src="/attachments/appstore/general/app-store-content/add-widget.png" alt="Add widget" >}}
-    ![](app-store-content/add-widget.png)
 
 2. In the **Filter** bar, enter the name of the widget, for example *Rating*, to find the widget.
 
     {{< figure src="/attachments/appstore/general/app-store-content/select-widget.png" alt="Rating widget highlighted in Select Widget dialog box" >}}
-    ![](app-store-content/select-widget.png)
 
 3. Click the widget and then click **Select**. 
 4. In the page, click where you want to drop the widget. The widget is added to the location where the mouse pointer is.
 
     {{< figure src="/attachments/appstore/general/app-store-content/widget-dropped-in-page.png" alt="Rating widget in the page" >}}
-    ![](app-store-content/widget-dropped-in-page.png)
 
-#### 4.1.2 Updating a Widget to a Newer Version
+#### 4.1.2 Updating the Widget to a Newer Version
 
-To update a widget in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app.
+To update the widget in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app.
 
-#### 4.1.3 Configuring a Widget
+#### 4.1.3 Configuring the Widget
 
-After you place a widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, we use the Ratings widget as an example.
+After you place the widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, we use the Ratings widget as an example.
 
 To configure the widget, follow these steps:
 
 1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
 
     {{< figure src="/attachments/appstore/general/app-store-content/widget-errors.png" alt="Errors pane" >}}
-    ![](app-store-content/widget-errors.png)
 
 2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens and the **Attribute** field shows **(none)** – this means that no attribute is assigned, which causes the error.
 
     {{< figure src="/attachments/appstore/general/app-store-content/edit-rating.png" alt="Edit Rating dialog box" >}}
-    ![](app-store-content/edit-rating.png)
 
 3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. This is the attribute of an entity that we already created.
 
     {{< figure src="/attachments/appstore/general/app-store-content/select-attribute.png" alt="ProductRating selected in Select Attribute dialog box" >}}
-    ![](app-store-content/select-attribute.png)
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane disappears.
 
@@ -211,16 +199,15 @@ After you [install](#install) a module in your app, you can use it.
 
 A module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 
-#### 4.2.1 Updating a Module to a Newer Version {#update-module}
+#### 4.2.1 Updating the Module to a Newer Version {#update-module}
 
-To update a module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
+To update the module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
 
 {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
 {{< figure src="/attachments/appstore/general/app-store-content/import-module.png" alt="Import Module dialog box" >}}
-    ![](app-store-content/import-module.png)
 
-#### 4.2.2 Configuring a Module
+#### 4.2.2 Configuring the Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Email Module with Templates](/appstore/modules/email-with-templates/), you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module and [Encryption](/appstore/modules/encryption/) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
@@ -240,14 +227,16 @@ Downloading a theme is very similar to downloading a widget. Like a widget, a th
 
 ### 5.1 Deleting a Widget
 
+To remove a widget from your app, follow these steps:
+
 1. In Studio Pro, go to **App** > **Show App Directory in Explorer** on the menu bar to open the app directory.
 2. Go to the **widgets** folder.
 3. Remove the *.mpk* file for the widget.
 4. In Studio Pro, go to **App** > **Synchronize App Directory**.
 
-The widget is removed from your app.
-
 ### 5.2 Deleting a Module
+
+To remove a module and user data from your app, follow these steps:
 
 1. In the **App Explorer**, find the module that you want to delete.
 2. Right-click the module and select **Delete** from the pop-up menu. A warning pop-up window opens.
@@ -256,16 +245,14 @@ The widget is removed from your app.
 
 3. When you are sure that you want to delete the module and existing user data, click **Delete module and user data**.
 
-The module and user data are removed from your app.
-
 ### 5.3 Deleting a Theme
+
+To remove a theme from your app, follow these steps:
 
 1. In Studio Pro, go to **App** > **Show App Directory in Explorer** on the menu bar to open the app directory.
 2. Go to the **theme** folder.
 3. Remove the ZIP file for the theme.
 4. In Studio Pro, go to **App** > **Synchronize App Directory**.
-
-The theme is removed from your app.
 
 ## 6 Read More
 

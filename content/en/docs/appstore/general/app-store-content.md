@@ -153,16 +153,16 @@ After you [install](#install) the widget from the Marketplace in your app, there
 ##### 4.1.1.1 Adding a Widget from the Toolbox 
 
 1. Open the page where you want to add the widget.
-2. In the **Toolbox**, **search** the name of the widget, for example *Rating to find the widget.
+2. In the **Toolbox**, search for the name of the widget (for example, *Rating* to find the widget):
 
     {{< figure src="/attachments/appstore/general/app-store-content/toolbox-rating.png" alt="Rating widget found in the toolbox" >}}
     ![](app-store-content/toolbox-rating.png)
 
 3. Drag the widget to the place on the page where you want it to be.
 
-##### 4.1.1.2 Adding a Widget Using the Add Widget Option
+##### 4.1.1.2 Adding a Widget from the Toolbar
 
-1. Click **Add widget** on the top on the page where you want to add the widget. The **Select Widget** dialog box opens.
+1. Click **Add widget** on the toolbar on the page where you want to add the widget. The **Select Widget** dialog box opens.
 
     {{< figure src="/attachments/appstore/general/app-store-content/add-widget.png" alt="Add widget" >}}
     ![](app-store-content/add-widget.png)

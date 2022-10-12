@@ -32,7 +32,7 @@ To install and use the PCLM, you need the following prerequisites:
 
 ## 3 Installing the PCLM server
 
-You install the PCLM server by applying a manifest using `kubectl` or `oc. This manifest can be created for you by the mx-pclm-cli tool.
+You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool.
 
 ### 3.1 Creating the Manifest
 

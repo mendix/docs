@@ -69,7 +69,7 @@ The prerequisites are the following:
     * For Mendix Studio Pro version 9.18.0 and above – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
     * For Mendix Studio Pro versions above 9.14.0 but below 9.18.0 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
     * For Mendix Studio Pro versions below 9.14.0 – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
-* [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist2019.x64.exe)
+* [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win)
 * [Microsoft Edge WebView2 Evergreen Runtime (x64) (Evergreen Bootstrapper version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
@@ -98,6 +98,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `Visual C++ Redistributable for Visual Studio 2019 (x64)` (for example `VC_redist.x64.exe`) executable to `vcredist2019_x64.exe`
     * The `latest` executable to `mendix_native_mobile_builder.exe`
     * The `Git-{version}-64-bit.exe` executable to `git_for_windows_installer.exe`
+    * `Microsoft Edge WebView2 Evergreen Runtime` installer  `MicrosoftEdgeWebview2Setup.exe` shouldn't be renamed, keep it as is.
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
 If during installation the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs, try the following:

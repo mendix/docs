@@ -87,66 +87,55 @@ This pane displays the results of the latest find action. You can search for tex
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.9 Marketplace
-
-
-
-### 3.10 MxAssist Performance Bot
-
-
-
-
-### 3.11 Page Explorer
+### 3.8 Page Explorer
 
 [Page Explorer](/refguide/page-explorer/) gives a quick overview of the page layout and allows you to view and edit nested containers in the [Design mode](/refguide/page/#design-mode).
 
-### 3.12 Properties
+### 3.9 Properties
 
 The **Properties** pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
 
-### 3.13 Stories
+### 3.10 Stories
 
 For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
 
-### 3.14 Toolbox {#toolbox}
+### 3.11 Toolbox {#toolbox}
 
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide/data-widgets/)) by dragging them from the **Toolbox** onto your page.
 
 The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes at the lower-right corner of the **Toolbox**. 
 
-### 3.15 Widget Developer Console
+### 3.12 Widget Developer Console
 
-
-
-### 3.16 Debug Windows
+### 3.13 Debug Windows
 
 For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/).
 
-#### 3.16.1 Breakpoints
+#### 3.13.1 Breakpoints
 
 The **Breakpoints** pane shows all the breakpoints in your app. You can enable and disable breakpoints from here.
 
-#### 3.16.2 Debugger {#debugger}
+#### 3.13.2 Debugger {#debugger}
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.16.3 Variables {#variables}
+#### 3.13.3 Variables {#variables}
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
-### 3.17 Full Screen {#full-screen}
+### 3.14 Full Screen {#full-screen}
 
 The **Full Screen** mode hides the title bar and makes the window fill the entire screen. 
 
 Shortcut key: <kbd>F11</kbd>
 
-### 3.18 Distraction Free Mode {#distraction-free}
+### 3.15 Distraction Free Mode {#distraction-free}
 
 The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes.
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 
-### 3.19 Reset Layout {#reset-layout}
+### 3.16 Reset Layout {#reset-layout}
 
 Resets the layout of dockable window panes to factory defaults.
 

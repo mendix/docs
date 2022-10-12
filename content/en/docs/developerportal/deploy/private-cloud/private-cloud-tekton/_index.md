@@ -114,13 +114,17 @@ If Tekton is already installed in your namespace, you can skip to [Pipeline Inst
 
 ### 5.1 Installing on Connected Kubernetes
 
-To install Tekton with Tekton Triggers you need to apply 3 yaml manifests (main objects would be installed in `tekton-pipelines` namespace):
+To install Tekton with Tekton Triggers, apply the following yaml manifests:
 
 ```bash {linenos=false}
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/release.yaml
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/interceptors.yaml
 ```
+
+{{% alert color="info" %}}
+The manifests target the `tekton-pipelines` namespace.
+{{% /alert %}}
 
 ### 5.2 Installing on Connected OpenShift
 

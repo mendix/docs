@@ -65,7 +65,7 @@ virtual business card overlaying your physical card:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/render-only-businesscard.png" alt="Business card"   width="400"  >}}
 
-Next, add a picture of yourself to your virtual business card. Drag and drop another **Square (AR)** widget into
+Next, add a picture of yourself to your virtual business card. Drag another **Square (AR)** widget into
 **ImageTracker (AR)** and add a picture of yourself to this. In our case we have used a square image with transparent
 edges to make it appear round: 
 

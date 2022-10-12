@@ -1,7 +1,7 @@
 ---
 title: "User Task"
 url: /refguide/user-task/
-weight: 15
+weight: 30
 tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---
 
@@ -11,11 +11,11 @@ User task allows you to assign a workflow task to a certain user or a group of u
 
 For example, you can add filters and assign a task to users with the Manager role:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task/user-task.jpg" alt="User Task Example" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200">}}
 
 When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task/task-inbox.jpg" alt="Task Inbox" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-inbox.jpg" alt="Task Inbox" >}}
 
 ## 2 Properties
 
@@ -69,13 +69,13 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task/parameter-example.jpg" alt="Parameter Example" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" >}}
 
     {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/user-task/task-description-example.jpg" alt="Task Description Example" >}} 
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" >}} 
 
 ##### 2.2.3.2 Performing Other Actions on Parameters
 

@@ -35,7 +35,11 @@ How well a model is trained depends on the input you provide for the training. T
 
 After you upload the sample documents and mark the locations of the important fields in the sample documents, you can publish the model. During the publishing process, the model gets trained internally and the training project gets saved. After the publishing process is completed successfully, the model is published.
 
-#### 1.1.3 Extracting Data
+#### 1.1.3 Editing the Model
+
+You can edit a published model after making a copy of it. Then you need to upload samples documents, add or delete markers, and finally publish the new model. During the publishing process, the model gets trained internally and the training project gets saved. If you add a new table as part of training your model, then you must train the model with at least three to five samples with varying number of rows in the table.
+
+#### 1.1.4 Extracting Data
 
 Once a model is published, you can download the JSON structure of this model, and then create the Import Mapping using this JSON structure. Then you can use the Import Mapping in an activity in a microflow to extract data from the documents that are fed to the activity. The documents that you feed to the activity should have the same or similar structure as the sample documents that were used to train the model. You can set up a microflow to store the extracted data as objects for other use.
 
@@ -44,6 +48,7 @@ Once a model is published, you can download the JSON structure of this model, an
 * Extract data from images ( in JPG, JPEG, BMP, and PNG formats) in bulk and map data to an entity
 * Extract data from a single-page PDF document
 * Train a model using sample images by marking specific areas in images
+* Edit a published model
 * Support [Mendix SSO](/appstore/modules/mendix-sso/)
 
 ### 1.3 Limitation
@@ -240,9 +245,57 @@ If you still need to [mark text fields in sample images](#mark-text-fields), you
 
 4. Click **Refresh** to see the status of the model. The model is ready to use once its **Status** changes to **Published**.
 
-{{% alert color="info" %}} If you want to **Delete** a model irrespective of its status, click **...** under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
+{{% alert color="info" %}}If you want to **Delete** a model irrespective of its status, click the ellipsis icon (**...**) under the **Actions** column, select **Delete**, and then click **Delete** in the confirmation window.{{% /alert %}}
 
-### 4.2 Creating an Import Mapping{#mapping-file}
+### 4.2 Editing a Published Document Model {#editing-model}
+
+Sometimes you may want to add or remove text fields or tables from a published model. Then you can edit the published model. You can first make a copy of the published model, and then edit the new model by adding new markers or removing previously made markers. Finally, you can publish your new model.
+
+Perform the following steps:
+
+1. Log in to the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application with your Mendix account.
+
+2. Click **Environment** to show the **Existing Models** list.
+
+3. Find the published model that you want to edit. The **Status** of the model should be **Published**.
+
+4. Click the ellipsis icon (**...**) in the **Actions** column of the model and then click **Duplicate**.
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/duplicate-model.png" >}}
+
+5. In the **Duplicate Model** dialog box, click **Duplicate**. The **Rename Model** dialog box opens. 
+
+6. Enter a model name for the new model and then click **Create Model**.
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-rename.png" >}}
+
+    The **Import File** page opens. 
+
+7. Upload sample images. You can use new sample images or the same sample images that you previously used for the original published model.
+
+    {{% alert color="info" %}}If you want to train the model for extracting table data, upload at least three to five sample mages.{{% /alert %}}
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-add-samples.png" >}}
+
+8. After all sample images are uploaded, click **Next**. The **Edit Markers & ID's** page opens. All the sample images that you uploaded have the **Status** of **Not Marked**. You can also see the number of the old markers on this page.
+
+    {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-add-markers.png" >}}
+
+9. For each sample image that you uploaded, perform the following steps:
+
+    1.  Click **Add Marker** in the **Action** column. The **Mark Document** dialog box opens. In the **Choose fields to mark** pane, you can delete a previously made mark from the duplicated model, or mark a new text field or table in the sample image:
+        * To delete a previously made mark, in the **Markers from duplicated model** list, click the delete icon for that mark.
+        * To mark new text fields or tables in the sample image, follow the instructions in [Marking Text Fields in a Sample Image](#mark-text-fields) or [Marking Tables in Sample Images](#mark-tables).
+    2. To save the markers, click **Done**. The **Mark Document** dialog box closes. The **Status** for the sample image on the **Edit Markers & ID's** page is changed from **Not Marked** to **Marked**.
+    3.  Repeat the steps above until all the uploaded sample images have the **Status** of **Marked**.
+
+        {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-publish.png" >}}
+
+11. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
+
+     {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-published.png" >}}
+
+### 4.3 Creating an Import Mapping{#mapping-file}
 
 You need to use an [import mapping](/refguide/mapping-documents/#import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers/).
 
@@ -250,7 +303,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
     1. Log in to the [Document Model Training](#document-model-training) application with your Mendix account.
     2. Click **Environment** to show the **Existing Models** list.
     3. Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model](#extraction-activity).
-    4. Click **...** in the **Actions** column of the published model and then click **Download JSON Structure**.
+    4. Click the ellipsis icon (**...**) in the **Actions** column of the published model and then click **Download JSON Structure**.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/ids-download-json-structure.png" >}}
 
@@ -284,7 +337,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/schema-source-json-structure.png" alt="schema-source-json-structure" >}}
     5. Click **OK** to save the changes and close the dialog box.
 
-### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}
+### 4.4 Extracting the Data with the Trained Document Model {#extraction-activity}
 
 1. In the **Toolbox**, drag the **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
@@ -307,7 +360,7 @@ You need to use an [import mapping](/refguide/mapping-documents/#import-mappings
 
 {{% alert color="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers/) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
-### 4.4 Checking Statistics on the Usage Dashboard
+### 4.5 Checking Statistics on the Usage Dashboard
 
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 

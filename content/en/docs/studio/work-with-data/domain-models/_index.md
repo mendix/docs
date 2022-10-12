@@ -107,7 +107,7 @@ You can add new entities in the **Toolbox**.
 To add an entity, do the following:
 
 1. Open the **Toolbox** tab of the domain model.
-2. Choose the entity type you would like to add, and drag and drop it the working area.
+2. Choose the entity type you would like to add, and drag it into the working area.
 3. Fill out the name for the entity and click **Create**:
 
     {{< figure src="/attachments/studio/work-with-data/domain-models/create-new-entity-dialog.png" >}}

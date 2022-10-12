@@ -90,18 +90,18 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 {{% todo %}}Are these renames correct for every Mx9 version?{{% /todo %}}
 5. Rename the following dependencies:
-    * The `Microsoft .NET Desktop Runtime 6.0.x` executable (`dotnet.exe`) to `windowsdesktop-runtime-6.0.3-win-x64.exe` 
-    * The `Java Development Kit 11 (x64)` *msi* (for example `OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi`) to one of the following - depending on the Mendix Studio Pro version:
-        * `adoptiumjdk_11_x64.msi` – for versions 9.14.0 and above
-        * `adoptopenjdk_11_x64.msi` – for versions 9.13.x and below
+    * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0.3-win-x64.exe*
+    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to one of the following, depending on the Studio Pro version:
+        * *adoptiumjdk_11_x64.msi* – for versions 9.14.0 and above
+        * *adoptopenjdk_11_x64.msi* – for versions 9.13.x and below
+    * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to *vcredist2019_x64.exe*
+    * The `latest` executable to *mendix_native_mobile_builder.exe*
+    * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
+    * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
 
-    * The `Visual C++ Redistributable for Visual Studio 2019 (x64)` (for example `VC_redist.x64.exe`) executable to `vcredist2019_x64.exe`
-    * The `latest` executable to `mendix_native_mobile_builder.exe`
-    * The `Git-{version}-64-bit.exe` executable to `git_for_windows_installer.exe`
-    * `Microsoft Edge WebView2 Evergreen Runtime` installer  `MicrosoftEdgeWebview2Setup.exe` shouldn't be renamed, keep it as is.
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
-If during installation the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs, try the following:
+If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installation, try the following:
 
 * Abort the installation process
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges

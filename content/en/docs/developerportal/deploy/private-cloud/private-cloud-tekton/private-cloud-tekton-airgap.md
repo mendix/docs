@@ -179,7 +179,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
-2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines. To get access to the helm charts, contact your CSM.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.

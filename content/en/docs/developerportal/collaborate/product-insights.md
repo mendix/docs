@@ -9,13 +9,21 @@ tags: ["Product Insights", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-**Product Insights** allows you to design mini surveys, enabling you to gain valuable feedback from the user group that you want to reach. It also helps you understand the survey results, with data visualization tools. Finally, it allows you to export your survey results to an XLSX file.
+Mendix enables you to set up mini surveys for your Mendix apps. You can set up mini surveys for a specific user group that you want to reach, collect their feedback, and gain valuable product insights.
 
-However, to get the mini survey up and running, developers of the app needs to implement your design using the [Product Insight](/appstore/modules/product-insight) module in Studio Pro.
+Product Insights in the Developer Portal enables you to design the mini survey, and displays the survey results to you with data visualization tools. In Product Insights, you can choose the app for which you want to set up the survey, and define the user group which will receive the survey, where the survey should appear in the app, when the survey should be up and running, and what questions will be asked in the survey.
+
+Then the developer of the app should [implement this survey](#implement-survey) in Studio Pro. The implementation takes about ten minutes.
+
+After the survey is up and running, you can view the data that the survey has collected in Product Insights, and export the data to an XLSX file.
 
 ## 2 Adding a New Project
 
-To start designing a mini survey for an app, you need to enable **Product Insights** for this app. To do so, perform the following steps:
+Before you set up a mini survey for an app, you need to make sure Product Insights is enabled for this app.
+
+If you open Product Insights for the app, and see the app under **My projects**, then Product Insights is enabled for the app. In this case, you can click the app and start setting up the mini survey.
+
+If the app is not under My Projects, then enable Product Insights for the app as follows:
 
 1. Go to the [General Settings](/developerportal/collaborate/general-settings/#2-general) page for this app.
 2. On the **General** tab, copy the **App ID**. 
@@ -26,7 +34,7 @@ To start designing a mini survey for an app, you need to enable **Product Insigh
 
 5. Click **Add project**.
 
-You should be able to see the app that you just added appears under **My Projects**.
+You should be able to see the app that you just added appears under **My projects**.
 
 ## 3 Designing a Mini Survey
 

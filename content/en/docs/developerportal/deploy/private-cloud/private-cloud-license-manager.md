@@ -174,7 +174,7 @@ If a license has previously been imported, you will be told that it is `[Duplica
 
 ## 7 Applying Licenses to Your Operator and Apps
 
-To use the licenses, you have to add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#4-installing-and-configuring-the-mendix-operator) in the *Mendix Cloud Cluster* documentation.
+To use the licenses, you have to add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Mendix Cloud Cluster* documentation.
 Assume that the operator is running in the namespace `<operator-ns>`.
 
 ### 7.1 Storing Operator User Credentials

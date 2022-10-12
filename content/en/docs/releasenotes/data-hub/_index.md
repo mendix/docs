@@ -9,13 +9,13 @@ weight: 30
 
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
+## 2022
+
 ### October 13th, 2022
 
 #### Fixes
 
-* Fixed a bug where the re-deployment of an Endpoint resulted in an error incorrectly reporting it to be a duplicate Endpoint being created when in fact it is a re-deployment (update) and not a new (create) deployment.
-
-## 2022
+* We fixed a bug where the redeployment of an endpoint resulted in an error. The error mistakenly reported the redeployed endpoint as a duplicate rather than an update.
 
 ### October 6th, 2022
 

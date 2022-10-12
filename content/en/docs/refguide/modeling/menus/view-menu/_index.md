@@ -107,6 +107,8 @@ The **Toolbox** has a tile view showing larger icons and a list view showing a l
 
 ### 3.12 Widget Developer Console
 
+This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and Structure mode preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the new configuration module (for more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*). 
+
 ### 3.13 Debug Windows
 
 For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/).

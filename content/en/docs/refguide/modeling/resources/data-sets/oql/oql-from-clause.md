@@ -28,7 +28,7 @@ FROM
 
 ### 2.1 entity_name
 
-`entity_name` specifies the entity from which data must be retrieved. The entity name can be optionally encapsulated in double quotes. If the entity name is a reserved OQL word (like `Order` or `Group`), double quotes are mandatory.
+`entity_name` specifies the entity from which data must be retrieved. The entity name can be optionally encapsulated in double quotes. If the entity name is a reserved OQL word (like `Order` or `Group`), double quotes are mandatory. For more information, see the [Reserved Words](/refguide/oql/#reserved-oql-words) section in *OQL*.
 
 ### 2.2 ( sub_oql_query )
 
@@ -124,6 +124,6 @@ SELECT
   Customer/Name as Name,
   Customer/<anyotherattribute> as <anyotherattribute>
 FROM MyModule.Customer
-  LEFT OUTER JOIN Customer/MyModule.Customer_Order/MyModule.Order as Order
-WHERE Order/ID IS NULL
+  LEFT OUTER JOIN Customer/MyModule.Customer_Order/MyModule."Order" as "Order"
+WHERE "Order"/ID IS NULL
 ```

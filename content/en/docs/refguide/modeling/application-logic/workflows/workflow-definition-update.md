@@ -1,6 +1,7 @@
 ---
 title: "Updating Your Workflow Definition"
 url: /refguide/workflow-definition-update/
+linktitle: "Update Your Workflow Definition"
 weight: 60
 tags: ["workflow", "workflows", "versions", "update"]
 ---
@@ -65,6 +66,6 @@ The **WorkflowVersion** instance also refers to all **WorkflowTaskDefinition** i
 
 For more information, see the the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 
-## 3 Read More
+## 5 Read More
 
 * [Workflows](/refguide/workflows/)

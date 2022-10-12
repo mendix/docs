@@ -9,21 +9,21 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "encrypt
 
 ## 1 Introduction
 
-The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails.
+The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server, and adds new features like sending signed and encrypted emails.
 
 ### 1.1 Features
 
-The Email Connector includes the following features:
+The Email connector includes the following features:
 
 * Configuration of multiple accounts
-    * Supports basic authentication
-    * Supports [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
-* Send emails with digital signatures and encryption
-* Set up email templates
-* Supported protocols:
-    * POP3 and POP3S
-    * IMAP and IMAPS
-    * SMTP 
+    * Supports basic authentication and [creating an account with OAuth 2.0](#create-oauth) to configure Microsoft Azure AD accounts
+* Digital signatures and encryption
+* Email templates
+
+The Email connector supports the following protocols:
+* POP3 and POP3S
+* IMAP and IMAPS
+* SMTP 
 
 ### 1.2 Prerequisites
 
@@ -81,11 +81,9 @@ In Studio Pro, you can use the `GetAutoConfig` Java action to get the all suppor
 
 To manually configure the account, you have to enter **protocol**, **server host** and **server port** for send and receive email configuration. Refer email server documentation to get this information.
 
-### 3.2 Account Settings {#other-account-settings}
+### 3.2 Additional Account Settings {#other-account-settings}
 
 You can set up the following additional account settings:
-
-{{< figure src="/attachments/appstore/connectors/email-connector/other-account-settings.png" >}}
 
 * **Subscribe to incoming emails** – user can select this option to get notified about the new incoming emails for modeling use `SubscribeToIncomingEmail` Java action. Read more about this in the section below.
 
@@ -98,8 +96,6 @@ This is only supported for IMAP protocols, and some servers may not support it a
     * When this setting is not selected, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** configuration based on the selected **Fetch strategy**
     * When this setting is selected, checked then module will fetch all the emails (in order of oldest to newest) from that folder in batch size as mentioned in **Email Batch Size** configuration
 * **Timeout** – the connection timeout for send email/receive emails operations. This can be set in the **Email Account** object.
-
-Click **Show Error Logs** to view the error logs for when emails are processed.
 
 ## 4 Usage
 
@@ -147,30 +143,22 @@ In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** u
 
 #### 4.3.1 Sending an Email with a Template
 
-When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action.
-
-The input parameters are the following:
+When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action. The input parameters are the following:
 
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email account** – email account consisting of outgoing email configuration
 * **Email template** – email template from which email message object is created and sent
 * **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
 
-You can refer to sample microflow **Sample_ACT_SendEmailWithTemplate**.
+Refer to sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
 
 ### 4.4 Signed and Encrypted Emails
 
-You can choose to configure a digital signature and email encryption when the module is running.
-
-In Studio Pro, these settings are found in the domain model of the Email Connector:
-
-{{< figure src="/attachments/appstore/connectors/email-connector/sign-encrypt-domain-model.png" >}}
+You can choose to configure a digital signature and email encryption when the module is running. Digital signatures help the receiver verify that you are the sender. Encryption scrambles the message and can only be deciphered with the correct key.  
 
 #### 4.4.1 Digital Signing
 
 Digitally signed emails support only PKCS#12 certificates.
-
-{{< figure src="/attachments/appstore/connectors/email-connector/digital-signature.png" >}}
 
 #### 4.4.2 Email Encryption
 
@@ -180,8 +168,6 @@ Encryption for emails using the Email Connector module includes the following:
 * Supports **Simple** and **No** (anonymous) authentication method
 * Supports SSL/TLS and non-SSL connection types
 * While encrypting email, the recipient's public certificate will be searched for on the Base DN
-
-{{< figure src="/attachments/appstore/connectors/email-connector/email-encryption.png" >}}
 
 ### 4.5 Subscribing to Incoming Email
 
@@ -221,27 +207,13 @@ The input parameter includes the following:
 
 * **Email account** – email account consisting of incoming email configuration
 
-### 4.7 Creating an Account Using Microsoft Azure OAuth 2.0 {#create-oauth}
+### 4.7 Configuring Azure OAuth 2.0 {#create-oauth}
 
 You can configure your account to authenticate with Microsoft Azure AD OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 
 Click **Add Account** button to add a new account, and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
 
-#### 4.7.1 Registering Your App on the Azure Portal
-
-To register your app, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
-
-While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details)
-
-#### 4.7.2 Enable Permissions in the Azure Portal
-
-This module contains functionality of sending and receiving emails, so during the OAuth process the module will ask for permissions for sending and receiving email.
-
-On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
-
-{{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
-
-#### 4.7.3 OAuth Provider Configuration Details {#oauth-config-details}
+#### 4.7.1 OAuth Provider Configuration Details {#oauth-config-details}
 
 To configure OAuth provider, the following details are required:
 
@@ -250,34 +222,41 @@ To configure OAuth provider, the following details are required:
 * **Callback operation path** – enter any string, based on which the callback URL will be auto-generated
 * **Callback URL** – the URL where the OAuth provider will redirect with the authorization code, and configured on Azure portal as callback/redirect URI
 
+#### 4.7.2 Settings in the Microsoft Azure Portal
+
+To register your app in the Azure Portal, follow Microsoft's [Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory) While registering, set the redirect/callback URI as **Callback URL** mentioned while configuring [OAuth Provider Configuration Details](#oauth-config-details).
+
+This connector contains functionality of sending and receiving emails, so during the OAuth process the connector will ask for permissions for sending and receiving email.
+
+On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+{{< figure src="/attachments/appstore/connectors/email-connector/app_permissions.png" >}}
+
 ### 4.8 Queuing Emails
 
 Emails can be queued for sending at a later time. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector will automatically try resending. On the third attempt, any messages that are still failing will move from the **Queued** folder to the **Failed** folder.
 
-### 4.9 Attachments
+## 5 Troubleshooting
 
-To add attachments to the email message, do the following:
+### 5.1 Sending or Receiving Email
+* If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
 
-1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable to the places where the **FileDocument** entity is required. 
-
-    If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity. 
-
-2. Set the **Attachment_EmailMessage** association.
-
-## 5 Key Microflows
-
-* **Sample_ASU_SubscribeForEmailNotification** – an after startup microflow which will subscribe to email notification based on account settings
-* **Sample_ACT_SendEmailWithTemplate** – a microflow that helps you set up send email using the template
-* **SE_Cleanup** – a microflow that can be added to a schedule event and deletes email sent logs and sent emails of the past 30 days. The **EmailLogRetention** constant defines the amount of days to preserve messages.
-* **SE_SendQueuedEmails** - a microflow can be added to a schedule event which will send emails which are marked as **QueuedForSending**
-
-## 6 Troubleshooting
-
+### 5.2 Adding OAuth 2.0 Configuration to an App with Basic Authentication
 * If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
      1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
      2. For the desired email account, set the **isOAuthUsed** attribute from **EmailAccount** entity to **True**.
           * Associate the existing email account with newly created OAuth provider.
           * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
-* If you already have the [Included Widgets](#included-widgets) widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
+
+### 5.3 Adding Attachments
+* To add attachments to the email message, do the following:
+
+1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable to the places where the **FileDocument** entity is required. 
+     If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity. 
+2. Set the **Attachment_EmailMessage** association.
+
+### 5.2 Page Styling
 * If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
-* If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
+
+### 5.3 Known Errors
+* If you already have the [included widgets](#included-widgets) in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.

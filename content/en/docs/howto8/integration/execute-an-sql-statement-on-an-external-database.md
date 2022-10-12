@@ -58,7 +58,7 @@ To use an ExecuteStatement action in a microflow, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399122.png" >}}
 
-2. Drag the **Execute statement** action to your microflow: 
+2. Drag the **Execute statement** action into your microflow: 
 
     {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
 

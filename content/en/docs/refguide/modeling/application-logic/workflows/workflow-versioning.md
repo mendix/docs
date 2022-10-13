@@ -1,7 +1,7 @@
 ---
 title: "Workflow Versioning and Conflict Resolution"
 url: /refguide/workflow-versioning/
-weight: 70
+weight: 60
 tags: ["workflow", "workflows", "versions", "update"]
 ---
 
@@ -27,13 +27,29 @@ After deploying a new app version, the Workflow Engine detects which workflows a
 
 If a workflow instance has already been incompatible in a previous app version, deploying a new app version reruns the Workflow Versioning Conflict Detection. When this new app version introduces a change that resolves a conflict for the workflow instance, this workflow instance will be automatically upgraded to the latest app version and the workflow execution continues. When the same (or a different set of) conflicts are detected, the workflow instance remains incompatible (though with an updated description in the **Reason** attribute when applicable).
 
+### 3.1 Successful Upgrades to the Latest Workflow Definition 
 
-## 4 Workflow Versioning Conflict Types
+Any of the following changes are interpreted as non-conflicting:
+
+* Adding activities in the paths that have not been executed by the current workflow yet
+* Removing activities in the path that is being executed by the current workflow
+* Reordering activities in  the path that is being executed by the current workflow
+* Changing properties of activities or outcomes:
+  * Changing names, captions, and titles
+  * Changing a referenced microflow in the **Call microflow** activity, or a referenced workflow in the **Workflow call** activity
+  * Changing a referenced page in a user task
+  * Changing user assignment or user assignment option in a user task
+  * Changing due dates of a user task
+* Adding outcomes in a **Decision**, **Call microflow** or **User task** activities
+* Changing the context entity, referenced microflows, referenced pages, or referenced workflows
+
+
+### 3.2 Workflow Versioning Conflict Types
 
 The Workflow Versioning Conflict Detection system detects different types of conflicts. This section lists conflict types, explains the impact, and provides option to solve conflicts. When one or more of these conflict types is detected, a workflow instance becomes incompatible and the **Reason** field mentions the conflict types that are found in the workflow instance.
 
 
-### 4.1 Context Entity Replaced
+#### 3.2.1 Context Entity Replaced
 
 When an app developer changes the **Workflow Context** entity of a workflow, existing instances still run on the old **Workflow Context** entity. This entity may not be compatible with the new **Workflow Context** entity.
 
@@ -43,7 +59,7 @@ You can do one of the following:
 * The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
 
 
-### 4.2 Context Object Not Found
+#### 3.2.2 Context Object Not Found
 
 When the workflow starts, a **Workflow Context** object is assigned to the workflow. When this context object is deleted, the workflow instance cannot continue executing the workflow.
 
@@ -56,7 +72,7 @@ You can do the following:
 * The Administrator can abort the workflow.
 
 
-### 4.3 Workflow Definition Deleted
+#### 3.2.3 Workflow Definition Deleted
 
 When an app developer deletes a workflow or excludes a workflow from an app and deploys that change, workflow instances cannot continue executing the workflow as the **Workflow Definition** information is not available anymore.
 
@@ -66,7 +82,7 @@ You can do one of the following:
 * The app developer can revert the change (or include the workflow to the app again) and deploy it.
 
 
-### 4.4 Current Activity Removed
+#### 3.2.4 Current Activity Removed
 
 When an app developer removes certain activities from a workflow and deploys that change, workflow instances that were executing deleted activities can no longer continue executing the workflow as the Workflow Engine cannot determine what activity to continue with.
 
@@ -78,7 +94,7 @@ You can do one of the following:
 * The app developer can revert the change (which adds the activities back) and deploy this version.
 
 
-### 4.5 Parallel Split Branch Removed
+#### 3.2.5 Parallel Split Branch Removed
 
 When an app developer removes a branch from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that branch cannot continue execution. 
 
@@ -93,7 +109,7 @@ You can do one of the following:
 * The app developer can revert the change (which adds the branch back) and deploy it.
 
 
-### 4.6 Current Activity Moved out of Branch
+#### 3.2.6 Current Activity Moved out of Branch
 
 When an app developer moves activities out of a branch of a **Parallel Split**, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split**.
 
@@ -104,7 +120,7 @@ You can do one of the following:
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 
-### 4.7 Parallel Split Introduced in Executing Path
+#### 3.2.7 Parallel Split Introduced in Executing Path
 
 When an app developer adds a **Parallel Split** with one or more branches and moves some activities inside a branch of that **Parallel Split**, workflow instances executing the moved activities cannot complete the parallel split.
 
@@ -115,7 +131,7 @@ You can do one of the following:
 * The app developer can revert the change (which moves the activities out of the **Parallel Split**) and deploy this version.
 
 
-### 4.8 Parallel Branch Introduced
+#### 3.2.8 Parallel Branch Introduced
 
 When an app developer adds a branch to a **Parallel Split** and deploys this change, workflow instances currently executing activities inside this **Parallel Split** cannot complete the parallel split.
 
@@ -127,7 +143,7 @@ You can do one of the following:
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 
-### 4.9 Selected Outcome Replaced
+#### 3.2.9 Selected Outcome Replaced
 
 When an app developer adds a new outcome to a user task, a microflow, or a decision and moves one or more activities to the new outcome, workflow instances that have executed or are executing these activities will now effectively move to another outcome than originally selected. 
 
@@ -139,7 +155,7 @@ You can do one of the following:
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 
-### 4.10 Activities Introduced in the Executed Path
+#### 3.2.10 Activities Introduced in the Executed Path
 
 When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
 
@@ -151,7 +167,7 @@ You can do one of the following:
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 
-### 4.11 Executed Activities Moved to a Re-executable Position
+#### 3.2.11 Executed Activities Moved to a Re-executable Position
 
 When an app developer moves activities within a workflow, workflow instances that have executed or are executing the moved activities may have to re-execute these activities. In this case user tasks or microflows may have to be re-executed. If actions are non-idempotent, changes may happen more than once (for example, object creation or sending data to external systems).
 
@@ -163,7 +179,7 @@ You can do one of the following:
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 
-### 4.12 Conflict Mitigation Matrix
+#### 3.2.12 Conflict Mitigation Matrix
 
 Conflicts with the possible mitigations listed above can be summarized in the following matrix:
 

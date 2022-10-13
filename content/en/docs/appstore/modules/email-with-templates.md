@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "email module with templates", "t
 ---
 
 {{% alert color="info" %}}
-This module is deprecated. Check out the [Email Connector](/appstore/connectors/email-connector/) module as an alternative.
+This module is deprecated. Check out the [Email connector](/appstore/connectors/email-connector/) as an alternative.
 {{% /alert %}}
 
 ## 1 Introduction

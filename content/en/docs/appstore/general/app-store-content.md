@@ -219,10 +219,6 @@ Downloading an app or layout will create a new app structure in the location tha
 You cannot create a new app in an existing repository that is not empty.
 {{% /alert %}}
 
-### 4.4 Using a Theme
-
-Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the app structure – in the **theme** folder of your app. A theme downloaded from the Marketplace will immediately be set as the active theme for your app. You can find out which theme is active for your app in the app **Settings**.
-
 ## 5 Deleting Marketplace Content from Your App
 
 ### 5.1 Deleting a Widget
@@ -244,15 +240,6 @@ To remove a module and user data from your app, follow these steps:
     {{% alert color="warning" %}} Once you delete a module, all your user data will be lost – even if you later install the module again. If you want to replace the existing module with a different version, do not delete the module – [update the module](#update-module) instead.{{% /alert %}}
 
 3. When you are sure that you want to delete the module and existing user data, click **Delete module and user data**.
-
-### 5.3 Deleting a Theme
-
-To remove a theme from your app, follow these steps:
-
-1. In Studio Pro, go to **App** > **Show App Directory in Explorer** on the menu bar to open the app directory.
-2. Go to the **theme** folder.
-3. Remove the ZIP file for the theme.
-4. In Studio Pro, go to **App** > **Synchronize App Directory**.
 
 ## 6 Read More
 

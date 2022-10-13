@@ -7,13 +7,13 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "incoming email",
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+This module is deprecated. Check out the [Email connector](/appstore/connectors/email-connector/) as an alternative.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/1042/) module enables your app to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers. In order for Mendix to act on incoming email, you can implement this module and model all the actions around it.
-
-{{% alert color="info" %}}
-This module will be deprecated in the coming months. Check out the [Email Connector](/appstore/connectors/email-connector/) module for an alternative.
-{{% /alert %}}
 
 ### 1.1 Typical Usage Scenario
 

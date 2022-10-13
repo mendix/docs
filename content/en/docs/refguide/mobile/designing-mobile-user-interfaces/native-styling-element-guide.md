@@ -1807,6 +1807,28 @@ The widget’s style properties are as follows:
 | `loadMoreButtonContainer` | Applies a view style to the load more button container. All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `loadMoreButtonCaption` | Applies a text style to the load more button caption. All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 
+### 11.33.1 Gallery Filtering
+
+In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
+
+The widget’s style properties are as follows:
+
+```xml
+<container/>
+<textInputContainer/>
+<textInputOnFocusContainer/>
+<textInput/>
+<textInputClearIcon/>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `textInputContainer` | Applies a view style to the container of the text input. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `textInputContainerOnFocus` | Applies a view style to the container of the text input when the text box is focused. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `textInput` | Applies a view style to the text input. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `textInputClearIcon` | Applies style to the text clear button in the text box. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+
 ## 13 Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)

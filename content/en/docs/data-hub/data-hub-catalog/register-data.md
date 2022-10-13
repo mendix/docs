@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
-If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-service/), then congratulations! Your service is already registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
+If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 

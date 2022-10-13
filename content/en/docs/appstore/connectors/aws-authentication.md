@@ -1,7 +1,7 @@
 ---
 title: "AWS Authentication"
 url: /appstore/connectors/aws-authentication/
-description: "Describes the configuration and usage of the AWS Authentication connector from the Mendix Marketplace. This is required to authenticate AWS connectors such as the Amazon S3 connector"
+description: "Describes the configuration and usage of the AWS Authentication connector from the Mendix Marketplace. This is required to authenticate AWS connectors such as the Amazon S3 connector."
 tags: ["marketplace", "marketplace component", "aws", "authentication"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -57,7 +57,7 @@ You can only set up two access keys for each user.
 To create static credentials with the **Get Static Credentials** action in your app, perform the following steps:
 
 1. Open your app in Studio Pro.
-2. Drag the **Get Static Credentials** action from the **Toolbox** to a microflow.
+2. Drag the **Get Static Credentials** action from the **Toolbox** into a microflow.
 3. Double-click the **Get Static Credentials** action and fill in **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#obtain-iam-credentials). You can decide how to provide them securely in your app.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
@@ -104,7 +104,7 @@ To create session credentials with the **Get Session Credentials** action in you
 
 1. Open your app in Studio Pro.
 
-2. Drag the **Get Session Credentials** action from the **Toolbox** to a microflow.
+2. Drag the **Get Session Credentials** action from the **Toolbox** into a microflow.
 
 3. Double-click the **Get Session Credentials** action and configure the parameters as shown in the table below:
 

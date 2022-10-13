@@ -385,7 +385,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
 };
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="400"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  >}}
 
 ### 7.2 Container
 

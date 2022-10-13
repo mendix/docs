@@ -52,7 +52,7 @@ In a clustered environment there are some tasks (for example, cleaning up expire
 
 4. Click **Close** on both screens to return to the Service Console.
 
-More information on the cluster leader and slave roles can be found in the [Cluster Leader & Cluster Slaves](/refguide/clustered-mendix-runtime/#cluster-leader-follower) section of *Clustered Mendix Runtime*.
+More information on the cluster leader and slave roles can be found in the [Cluster Leader and Cluster Slaves](/refguide/clustered-mendix-runtime/#cluster-leader-follower) section of *Clustered Mendix Runtime*.
 
 ## 4 Configuring the Azure Load Balancer
 

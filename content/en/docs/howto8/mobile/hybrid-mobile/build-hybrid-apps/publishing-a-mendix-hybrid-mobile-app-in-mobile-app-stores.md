@@ -145,7 +145,7 @@ To install the iOS app on your mobile test device, follow these steps:
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/appletrust.png" alt="trust dialog" >}}
 
 2. Open iTunes and connect your iOS mobile test device to your computer.
-3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your mobile test device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile test device.
+3. Select the *.ipa* package file that you downloaded earlier, and drag it into your mobile test device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile test device.
 4. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so. 
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
@@ -229,7 +229,7 @@ Upload your Mendix app to the Play Console by following the instructions on Goog
 
 ### 7.5 Create, Review, and Roll Out a Release
 
-Follow the steps in Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
+Follow the steps in Google's [Prepare and roll out a release](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
 ## 8 Read More
 

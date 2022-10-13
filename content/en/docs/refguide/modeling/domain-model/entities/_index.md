@@ -21,7 +21,7 @@ For example, you have a collection of CDs like the one in the table below:
 | Title | Artist |
 | --- | --- |
 | How to Dismantle an Atomic Bomb | U2 |
-| Exodus | Bob Marley & The Wailers |
+| Exodus | Bob Marley and The Wailers |
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 

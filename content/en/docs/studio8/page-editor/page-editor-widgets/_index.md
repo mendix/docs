@@ -52,7 +52,7 @@ Widget categories are described in the table below:
 | [Structure](/studio8/page-editor-widgets-structure/)               | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. |
 | [Input Elements](/studio8/page-editor-widgets-input-elements/)     | Contains elements that can be used for inputting data.       |
 | [Text](/studio8/page-editor-widgets-text/)                         | Contains text display widgets.                               |
-| [Images & Files](/studio8/page-editor-widgets-images-and-files/) | Contains widgets that help you display images, upload or/and download files and images. |
+| [Images and Files](/studio8/page-editor-widgets-images-and-files/) | Contains widgets that help you display images, upload or/and download files and images. |
 | [Buttons](/studio8/page-editor-widgets-buttons/)                   | Contains a variety of buttons for placing on a page.         |
 | [Menus](/refguide8/menu-widgets/)                          | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
 | Add-ons                                                  | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the Marketplace profile they will be shown in the add-ons. |
@@ -91,7 +91,7 @@ To add an Marketplace widget, do the following:
 
     {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/app-store-download.png" >}}
 
-The widget is now added to your app, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](/studio8/settings/).
+The widget is now added to your app, you can simply drag it onto the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](/studio8/settings/).
 
 {{% alert color="info" %}}
 Some similar widgets are packaged together: downloading one of these widgets will cause a number of other widgets to be downloaded as well. For example, downloading a line chart will give you all chart widgets.

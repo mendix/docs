@@ -1,6 +1,6 @@
 ---
-title: "Configure Merge & Change Object Activities"
-linktitle: "Create Merge & Configure Change Object"
+title: "Configure Merge and Change Object Activities"
+linktitle: "Create Merge and Configure Change Object"
 url: /studio-how-to/microflows-how-to-merge-and-change-object/
 category: "Microflows"
 weight: 70
@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 
 This how-to describes the following use case: 
 
-In [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow](/studio-how-to/microflows-how-to-configure-decision-p1/) you have configured the decision to open a specific page depending on the customer's grade. In case the customer's grade is not set, the error message is shown. So you have four flows after the decision: 
+In [Configure a Decision Step 1: Build the Domain Model and Configure a Microflow](/studio-how-to/microflows-how-to-configure-decision-p1/) you have configured the decision to open a specific page depending on the customer's grade. In case the customer's grade is not set, the error message is shown. So you have four flows after the decision: 
 
 * Showing a page for bronze  grade customers
 * Showing a page for silver grade customers
@@ -35,7 +35,7 @@ In this how-to, you will merge flows for bronze, silver, and gold customer grade
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* Create a microflow with a decision: [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow](/studio-how-to/microflows-how-to-configure-decision-p1/)
+* Create a microflow with a decision: [Configure a Decision Step 1: Build the Domain Model and Configure a Microflow](/studio-how-to/microflows-how-to-configure-decision-p1/)
 
 ## 3 Creating a Merge
 
@@ -45,7 +45,7 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/microflow-without-merge.png" >}}
 
-2. Open the **Toolbox** tab > the **General** section, drag and drop the **Merge** activity before the end event of the flow labelled **Bronze**:
+2. Open the **Toolbox** tab > the **General** section, drag the **Merge** activity before the end event of the flow labelled **Bronze**:
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/adding-merge.png" >}}
 
@@ -81,7 +81,7 @@ Do the following:
     3. Click **Create**.
 
 2. Now you will configure a new activity in the microflow. Open the microflow named *Show_grade_specific_page*.
-3. In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag and drop it after the merge in the microflow.
+3. In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag it after the merge in the microflow.
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-merge-and-change-object/change-object-added.png" >}}
 
@@ -107,4 +107,4 @@ Congratulations! Now you have the microflow that checks if the customer has a gr
 * If the customer does not have a grade, the error message pops up.
 * If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
 
-Now you can preview or publish your app. For more information on how to preview and publish an app, see [Previewing & Publishing Your App](/studio/publishing-app/).
+Now you can preview or publish your app. For more information on how to preview and publish an app, see [Previewing and Publishing Your App](/studio/publishing-app/).

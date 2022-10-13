@@ -33,6 +33,7 @@ The **General Settings** page contains the following tabs:
 * **API Keys** *
 * **Stories** *
 * **Webhooks** *
+* **History** *
 
 {{% alert color="info" %}}
 Tabs with an asterisk (*) are only available for users with the **App Settings** permission.
@@ -110,8 +111,7 @@ To invite new app users to your app, click **Invite Users** for that environment
 2. Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as app users automatically.
 3. Click **Add to invitee list**.
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
-5. Click **Next**.
-6. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
+5. Click **Next** to send the invitation.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 
@@ -172,7 +172,15 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
 {{% /alert %}}
 
-## 8 Read More
+## 8 History {#history}
 
-* [Leave & Delete an App](/developerportal/collaborate/leave-delete-app/)
+The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/history.jpg"   width="550"  >}}
+
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
+
+## 9 Read More
+
+* [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

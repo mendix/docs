@@ -20,7 +20,7 @@ The [Calendar](https://marketplace.mendix.com/link/component/107954/) widget can
 
 ## 2 Basic Configuration
 
-Drag and drop the widget inside a data view which provides a calendar entity (containing calendar config attributes) as context. Next, use the configuration properties described in the following sections.
+Drag the widget into a data view which provides a calendar entity (containing calendar config attributes) as context. Next, use the configuration properties described in the following sections.
 
 ### 2.1 Data Source Tab
 

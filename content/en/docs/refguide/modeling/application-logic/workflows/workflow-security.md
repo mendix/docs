@@ -1,9 +1,9 @@
 ---
 title: "Configuring Security for a Workflow Process"
 url: /refguide/workflow-security/
-linktitle: "Configuring Workflow Security"
+linktitle: "Configure Workflow Security"
 description: "Describes how to configure security for a workflow in Mendix Studio Pro."
-weight: 50
+weight: 30
 tags: ["studio pro", "workflow", "task", "security", "workflow security"]
 ---
 
@@ -31,7 +31,7 @@ The combination of entity access and page access makes sure that only dedicated 
 
 For more information on the page access, see the [Page Access](/refguide/module-security/#page-access) section in *Module Security*.
 
-### 4 Configuring User Assignment {#user-assignment}
+## 4 Configuring User Assignment {#user-assignment}
 
 The **System.WorkflowUserTask** entity is used in the inbox and task pages and has two similar XPath constraints for User and Administrator roles. To view these constraints, open the **System** module > domain model > **System.WorkflowUserTask** entity properties > **Access rules** tab > **XPath constraint** tab):
 
@@ -66,7 +66,6 @@ If the user does not see the user task, check the following:
 
 
 
- 
 
 
 

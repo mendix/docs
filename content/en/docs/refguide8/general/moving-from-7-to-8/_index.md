@@ -85,7 +85,7 @@ To upgrade to Mendix 7, follow these steps:
 
 Review your app in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
 
-In particular, it is easier to fix deprecations in Java actions (see [Java Version, Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
+In particular, it is easier to fix deprecations in Java actions (see [Java Version, Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float and Currency](#float-currency) below for instructions).
 
 ### 4.4 Save Version 7 Project
 
@@ -105,7 +105,7 @@ Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update y
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
-If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Elements of Type Float & Currency](#float-currency) below for more information.
+If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Elements of Type Float and Currency](#float-currency) below for more information.
 
 ### 4.7 Upgrade All Widgets
 

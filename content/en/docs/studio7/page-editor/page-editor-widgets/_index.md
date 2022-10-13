@@ -48,7 +48,7 @@ Widget categories are described in the table below:
 
 | Widget Category                                      | Description                                                  | Link to More Detailed Documentation                          |
 | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Data Containers                                      | Contains a data view (the starting point for showing the contents of one object),  list view (the starting point for showing the contents of list of objects), and a data grid (shows a list of objects in a table format). | [Data View & List View Properties](/studio7/page-editor-data-view-list-view/)<br />[Data Grid Properties](/studio7/page-editor-data-grid/) |
+| Data Containers                                      | Contains a data view (the starting point for showing the contents of one object),  list view (the starting point for showing the contents of list of objects), and a data grid (shows a list of objects in a table format). | [Data View and List View Properties](/studio7/page-editor-data-view-list-view/)<br />[Data Grid Properties](/studio7/page-editor-data-grid/) |
 | [Structure](/studio7/page-editor-widgets-structure/)           | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. | [Structure Widgets](/studio7/page-editor-widgets-structure/)           |
 | [Input Elements](/studio7/page-editor-widgets-input-elements/) | Contains elements that can be used for inputting data.       | [Input Element Widgets](/studio7/page-editor-widgets-input-elements/)  |
 | [Text](/studio7/page-editor-widgets-text/)                     | Contains text display widgets.                               | [Text Widgets](/studio7/page-editor-widgets-text/)                     |
@@ -91,7 +91,7 @@ To add a Marketplace widget, do the following:
 
     {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/app-store-download.png" >}}
 
-The widget is now added to your app, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](/studio7/settings/).
+The widget is now added to your app, you can simply drag it onto the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](/studio7/settings/).
 
 {{% alert color="info" %}}
 Some similar widgets are packaged together: downloading one of these widgets will cause a number of other widgets to be downloaded as well. For example, downloading a line chart will give you all chart widgets.

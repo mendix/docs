@@ -1,5 +1,5 @@
 ---
-title: "LTS, MTS & Monthly Releases"
+title: "LTS, MTS, and Monthly Releases"
 url: /releasenotes/studio-pro/lts-mts/
 category: "Studio Pro"
 weight: 1

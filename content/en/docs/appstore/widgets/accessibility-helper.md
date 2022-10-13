@@ -22,15 +22,15 @@ The [Accessibility Helper](https://marketplace.mendix.com/link/component/114803/
 
 The widget acts like a container and alters the elements inside it. In order to change elements, HTML attributes act in ways described in the sections below.
 
-### 2.1 Drag and Drop Widgets Inside Accessibility Helper
+### 2.1 Dragging Widgets into Accessibility Helper
 
-Since Accessibility Helper is a containment widget it will try to change the widgets inside it. Thus the user must drag and drop the widgets they want to change inside Accessibility Helper.
+Since Accessibility Helper is a containment widget it will try to change the widgets inside it. Thus the user must drag the widgets they want to change into Accessibility Helper.
 
-### 2.2 Specify the Target Selector
+### 2.2 Specifying the Target Selector
 
 Target selector is a basic CSS selector, and more information can be found in Mozilla's [documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
 
-### 2.3 Add New Accessibility Properties
+### 2.3 Adding New Accessibility Properties
 
 Every HTML attribute consists of a `name` and a `value`. The user can add any attribute by filling the HTML attributes list. However, the following attribute names are not allowed since they will interfere with Mendix's core mechanism: `class`, `style`, `widgetid`, and `data-mendix-id`.
 

@@ -64,5 +64,5 @@ You can further customize widgets by changing their design properties. Colors, t
 * [Migrate Existing Apps to Atlas UI](/howto7/front-end/migrate-existing-projects-to-atlasui/)
 * [Create Company Atlas UI Resources](/howto7/front-end/create-company-atlas-ui-resources/)
 * [Share Company Atlas UI Resources](/howto7/front-end/share-company-atlas-ui-resources/)
-* [Create Custom Preview Images for Building Blocks & Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
+* [Create Custom Preview Images for Building Blocks and Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [Extend Design Properties to Customize the Web Modeler Experience](/howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/)

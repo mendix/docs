@@ -138,11 +138,11 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
 ## 8 Read More
 
-* [Work with Images & Files](/howto7/data-models/working-with-images-and-files/)
+* [Work with Images and Files](/howto7/data-models/working-with-images-and-files/)
 * [Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto7/data-models/setting-up-data-validation/)
 * [Work with Object Events](/howto7/data-models/working-with-object-events/)
 * [Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Stories](/developerportal/collaborate/stories/)
 * [Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath/)
-* [Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)

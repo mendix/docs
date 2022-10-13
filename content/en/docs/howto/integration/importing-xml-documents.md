@@ -22,8 +22,8 @@ This how-to will teach you how to do the following:
 Before you continue, make sure that you know how to create:
 
 * Domain models (see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
-* A custom file document (see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/))
-* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
+* A custom file document (see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/))
+* Overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Menu items (see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
 
 ## 3 Preparing the Data Structure and GUI
@@ -83,7 +83,7 @@ To create the XML-to-domain mapping, follow these steps:
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581655.png" >}}
 
 6. Open the connector (from the lower-right side of Studio Pro or from the **View** menu).
-7. Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
+7. Drag the entity **Customer** from the connector into the place-holder in the mapping editor:
 
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581681.png" >}}  
 

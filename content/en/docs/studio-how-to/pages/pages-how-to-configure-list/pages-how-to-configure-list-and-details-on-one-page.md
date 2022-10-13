@@ -1,6 +1,6 @@
 ---
 title: "Configure a List and View List Item Details on One Page"
-linktitle: "Configure List & View Details on 1 Page"
+linktitle: "Configure List and View Details on 1 Page"
 url: /studio-how-to/pages-how-to-configure-list-and-details-on-one-page/
 description: "Describes how to configure a list of items in Mendix Studio."
 weight: 20
@@ -39,7 +39,7 @@ You would like to open a page with opportunity contact list and its details from
 
 1. Open your home page. 
 
-2. Navigate to the **Toolbox** > **Widgets** and search for **Open Page** button and drag and drop it to the page.
+2. Navigate to the **Toolbox** > **Widgets** and search for **Open Page** button and drag it onto the page.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/open-page-button.png" alt="Open Page"   width="250"  >}}
 
@@ -125,7 +125,7 @@ To displayed all the details that a contact has, do the following:
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/data-view-buttons.png" >}}
 
 2. Double-click the *User Details* text widget (which is displayed as a data view heading) and rename it to *Opportunity Contact Details*. 
-3. Open the **Toolbox** and search for **Radio Buttons**, drag and drop it *inside* the data view above the **Name** text box.
+3. Open the **Toolbox** and search for **Radio Buttons**, drag it *inside* the data view above the **Name** text box.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/radio-buttons.png" >}}
 
@@ -140,13 +140,13 @@ To displayed all the details that a contact has, do the following:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/attributes-replaced.png" >}}
 
-9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag and drop it inside the data view below the **Name** text box:
+9. You lack information on the contact's job title and status. To add the job title information, open the **Toolbox**, search for a **Text Box**, drag it inside the data view below the **Name** text box:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/job-title-text-box.png" width="350">}}
 
 10. Open text box properties and click **Data Source** > **Attribute**. 
 11. In the **Select Attribute** dialog box, choose **JobTitle** and click **Select**.
-12. To add the information on the opportunity contact's status, open the **Toolbox**, search for for **Radio Buttons**, drag and drop it inside the data view below the **Estimated Value** text box.
+12. To add the information on the opportunity contact's status, open the **Toolbox**, search for for **Radio Buttons**, drag it inside the data view below the **Estimated Value** text box.
 13. Open the radio buttons properties and click **Data Source** > **Attribute**.
 14. In the **Select Attribute** dialog box, choose **Status** and click **Select**.
 
@@ -154,9 +154,9 @@ Congratulations! You have a page that displays a list of opportunity contacts an
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/configured-page.png" alt="Configured Page" >}}
 
-You can now preview your app and test your page. For more information on how to preview your page, see [Previewing & Publishing Your App](/studio/publishing-app/).
+You can now preview your app and test your page. For more information on how to preview your page, see [Previewing and Publishing Your App](/studio/publishing-app/).
 
-You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images & Files](/studio/page-editor-widgets-images-and-files/).
+You can also work on the page details, for example, add a dynamic image to the list to display a profile picture of an opportunity contact next to their name. For more information on dynamic images, see [Images and Files](/studio/page-editor-widgets-images-and-files/).
 
 ## 6 Read More
 

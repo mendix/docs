@@ -19,7 +19,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
-* Read [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* Read [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 3 Debugging Overview
 

@@ -2,6 +2,7 @@
 title: "AQM"
 url: /addons/aqm-addon/
 weight: 30
+description: "Introduces Mendix Application Quality Monitor, which is a cloud service developed by Mendix and the Software Improvement Group (SIG), and the implemented checks for best practices."
 ---
 
 ## 1 Introduction

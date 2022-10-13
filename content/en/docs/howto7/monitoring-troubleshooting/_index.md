@@ -1,5 +1,5 @@
 ---
-title: "Monitoring & Troubleshooting"
+title: "Monitoring and Troubleshooting"
 url: /howto7/monitoring-troubleshooting/
 weight: 110
 tags: ["monitoring", "troubleshooting"]
@@ -21,5 +21,5 @@ Stay updated on the health of your app and reference these documents troubleshoo
 * [Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Set Log Levels](/howto7/monitoring-troubleshooting/log-levels/)
 * [Monitor Mendix Using JMX](/howto7/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
-* [Solve Load & Import Errors](/howto7/monitoring-troubleshooting/solving-load-and-import-errors/)
+* [Solve Load and Import Errors](/howto7/monitoring-troubleshooting/solving-load-and-import-errors/)
 * [Manage Application Performance with New Relic](/howto7/monitoring-troubleshooting/manage-application-performance-with-new-relic/)

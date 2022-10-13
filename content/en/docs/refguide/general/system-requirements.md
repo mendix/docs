@@ -178,18 +178,18 @@ Mendix tries to support the most recent and patched database server versions fro
 Current support:
 
 * [MariaDB](/refguide/mysql/): 10.2, 10.3, 10.4, 10.5, 10.6
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2017, 2019
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2017, 2019 (please note that support for 2017 is deprecated and will be removed in Studio Pro version 9.20.0, and MTS versions 9.18.2, 9.12.9, and 9.6.15)
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0
 * [Oracle Database](/refguide/oracle/): 19
-* PostgreSQL: 10, 11, 12, 13, 14
+* PostgreSQL: 10, 11, 12, 13, 14 (please note that support for 10 is deprecated and will be removed in Studio Pro version 9.20.0 and MTS versions 9.18.2, 9.12.8, and 9.6.15)
 * [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows — *Support for DB2 is deprecated and [will be removed in Mendix version 10](/releasenotes/studio-pro/9.12/#deprecations)*
+* [IBM DB2](/refguide/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro version 10)
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
 
-If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a *microservices* architecture.
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [Integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
 
 For more information on why data cannot be shared between apps see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}

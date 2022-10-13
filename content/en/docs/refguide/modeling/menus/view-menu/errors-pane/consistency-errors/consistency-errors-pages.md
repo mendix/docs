@@ -166,7 +166,7 @@ The microflow parameter expects an argument *Customer*, and since this argument 
 
 To fix it, do the following:
 
-1. Open the *Customers* page and drag and drop a data container on it. For example, you can drag and drop a list view.
+1. Open the *Customers* page and drag a data container onto it. For example, you can drag and drop a list view.
 2. Set the data source type of the list view to *Database* and set **Entity (path)** to *Customer*.
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-source-list-view.png" >}}
@@ -260,7 +260,7 @@ You have changed the association multiplicity and fixed the error.
 
 ## 7 Images, Videos and Files Consistency Errors
 
-Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](/refguide/image-and-file-widgets/). 
+Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos, and Files](/refguide/image-and-file-widgets/). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

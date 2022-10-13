@@ -5,11 +5,27 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.3.1
+
+**Release date: October 6th, 2022**
+
+### Fixes
+
+* We removed the default permissions for read and write external storage for Android.
+
+## 6.3.0
+
+**Release date: September 20th, 2022**
+
+### Improvements
+
+* We improved our app security allowing apps to use new Database encryption capability of Studio Pro 9.18.
+
 ## 6.2.27
 
 **Release date: September 19th, 2022**
 
-#### Improvements
+### Improvements
 
 * We added support for the following fonts from the **react-native-vector-icons** library:
    * AntDesign
@@ -31,7 +47,7 @@ description: "Native Template 6 release notes."
 
 **Release date: September 8th, 2022**
 
-#### Improvements
+### Improvements
 
 * We enabled compatibility with Android 12 and higher.
 

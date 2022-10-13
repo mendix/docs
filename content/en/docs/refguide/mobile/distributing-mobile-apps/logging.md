@@ -1,5 +1,5 @@
 ---
-title: "Logging In Native Apps"
+title: "Logging in Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/logging/
 weight: 39
 description: "Describes using logging in native mobile apps"

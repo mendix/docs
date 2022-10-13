@@ -68,13 +68,13 @@ The string property type is represented as a simple text input in Studio Pro. It
 
 #### 2.1.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                                                              |
-| -------------- | -------- | -------------- |--------------------------------------------------------------------------|
-| `type`         | Yes      | String         | Must be `string`                                                         |
-| `key`          | Yes      | String         | See [key](#key)                                                          |
-| `defaultValue` | No       | String         | Default value for the property                                           |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise            |
-| `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default    |
+| Attribute      | Required | Attribute Type | Description                                                           |
+|----------------|----------|----------------|-----------------------------------------------------------------------|
+| `type`         | Yes      | String         | Must be `string`                                                      |
+| `key`          | Yes      | String         | See [key](#key)                                                       |
+| `defaultValue` | No       | String         | Default value for the property                                        |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise         |
+| `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 
 #### 2.1.2 Studio Pro UI
 
@@ -137,11 +137,11 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 
 #### 2.3.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                     |
-| -------------- | -------- | -------------- |---------------------------------|
-| `type`         | Yes      | String         | Must be `integer`               |
-| `key`          | Yes      | String         | See [key](#key)                 |
-| `defaultValue` | Yes      | Integer        | Default value for the property  |
+| Attribute      | Required | Attribute Type | Description                    |
+|----------------|----------|----------------|--------------------------------|
+| `type`         | Yes      | String         | Must be `integer`              |
+| `key`          | Yes      | String         | See [key](#key)                |
+| `defaultValue` | Yes      | Integer        | Default value for the property |
 
 #### 2.3.2 Studio Pro UI
 
@@ -165,7 +165,7 @@ Properties of type decimal are represented as a number input in Studio Pro. They
 #### 2.4.1 XML Attributes
 
 | Attribute      | Required | Attribute Type | Description                    |
-| -------------- | -------- | -------------- |--------------------------------|
+|----------------|----------|----------------|--------------------------------|
 | `type`         | Yes      | String         | Must be `decimal`              |
 | `key`          | Yes      | String         | See [key](#key)                |
 | `defaultValue` | Yes      | Integer        | Default value for the property |
@@ -192,7 +192,7 @@ The enumeration property type allows a user to select one out of multiple option
 #### 2.5.1 XML Attributes
 
 | Attribute      | Required | Attribute Type | Description                    |
-| -------------- | -------- | -------------- |--------------------------------|
+|----------------|----------|----------------|--------------------------------|
 | `type`         | Yes      | String         | Must be `enumeration`          |
 | `key`          | Yes      | String         | See [key](#key)                |
 | `defaultValue` | Yes      | Integer        | Default value for the property |
@@ -236,7 +236,7 @@ Properties of type icon allows a user to configure an icon similar to one used b
 #### 3.1.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                           |
-| ---------- | -------- | -------------- |-----------------------------------------------------------------------|
+|------------|----------|----------------|-----------------------------------------------------------------------|
 | `type`     | Yes      | String         | Must be `icon`                                                        |
 | `key`      | Yes      | String         | See [key](#key)                                                       |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
@@ -267,7 +267,7 @@ GIF images are not supported in native mobile apps on Android devices.
 #### 3.2.1 XML Attributes
 
 | Attribute  | Required | Attribute Type | Description                                                           |
-| ---------- | -------- | -------------- |-----------------------------------------------------------------------|
+|------------|----------|----------------|-----------------------------------------------------------------------|
 | `type`     | Yes      | String         | Must be `image`                                                       |
 | `key`      | Yes      | String         | See [key](#key)                                                       |
 | `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
@@ -298,7 +298,7 @@ Some widgets are not yet supported inside pluggable widgets. Placing unsupported
 #### 3.3.1 XML Attributes
 
 | Attribute    | Required | Attribute Type | Description                                                                                    |
-| ------------ | -------- | -------------- |------------------------------------------------------------------------------------------------|
+|--------------|----------|----------------|------------------------------------------------------------------------------------------------|
 | `type`       | Yes      | String         | Must be `widgets`                                                                              |
 | `key`        | Yes      | String         | See [key](#key)                                                                                |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this `widgets` property |
@@ -346,25 +346,40 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.1.1 XML Attributes
 
-| Attribute      | Required | Attribute Type      | Description                                                                                                                                                          |
-| -------------- | -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`         | Yes      | String              | Must be `expression`                                                                                                                                                 |
-| `key`          | Yes      | String              | See [key](#key) |
-| `defaultValue` | No       | String (Expression) | Default value for the property                                                                                                                                      |
-| `required`     | No       | Boolean             | Whether the property must be specified by the user, `true` by default                                                                                                |
+| Attribute      | Required | Attribute Type      | Description                                                                                     |
+|----------------|----------|---------------------|-------------------------------------------------------------------------------------------------|
+| `type`         | Yes      | String              | Must be `expression`                                                                            |
+| `key`          | Yes      | String              | See [key](#key)                                                                                 |
+| `defaultValue` | No       | String (Expression) | Default value for the property                                                                  |
+| `required`     | No       | Boolean             | Whether the property must be specified by the user, `true` by default                           |
 | `dataSource`   | No       | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this expression property |
 
-#### 4.1.2 XML Elements
+#### 4.1.2 XML Elements{#expression-xml-elements}
 
-`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define allowed return types for the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
+`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
-| Supported Return Types | Corresponding Types Client Components Receive |
-| -------------------- | --------------------------------------------- |
-| `Boolean`              | `DynamicValue<boolean>`                    |
-| `DateTime`           | `DynamicValue<Date>`                         |
-| `Decimal`             | `DynamicValue<BigJS>`                       |
-| `Integer`              | `DynamicValue<BigJS>`                      |
-| `String`               | `DynamicValue<string>`                     |
+An expression's return type can be defined in a pre-determined way, or you can use `assignableTo` attribute in the XML element to set the return type to be always the same with the widget's another attribute property.
+
+For the first option, you will need to use `<returnType type="[Type]" />` where `[Type]` should be replaced with one of the supported return types from the table below.
+
+Similarly, if you want your expression to follow the configured type of an attribute you will need to use the `<returnType assignableTo="[Property Path]" />` where `[Property Path]` should be replaced with the key of the target attribute property. 
+
+| Supported Return Types | Corresponding Types Client Components Receive                                           |
+|------------------------|-----------------------------------------------------------------------------------------|
+| `Boolean`              | `DynamicValue<boolean>`                                                                 |
+| `DateTime`             | `DynamicValue<Date>`                                                                    |
+| `Decimal`              | `DynamicValue<BigJS>`                                                                   |
+| `Integer`              | `DynamicValue<BigJS>`                                                                   |
+| `String`               | `DynamicValue<string>`                                                                  |
+| `[Property Path]`      | `DynamicValue<T>` where `T` will depend on the configured types of the target attribute |
+
+{{% alert color="info" %}}
+Expressions can only have one return type element.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+`assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
+{{% /alert %}}
 
 #### 4.1.3 Studio Pro UI
 
@@ -392,12 +407,12 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.2.1 XML Attributes
 
-| Attribute    | Required | Attribute Type | Description                                                                                                                                                          |
-| ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`       | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
-| `key`        | Yes      | String         | See [key](#key) |
-| `multiline`  | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise                                                                                                   |
-| `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+| Attribute    | Required | Attribute Type | Description                                                                                        |
+|--------------|----------|----------------|----------------------------------------------------------------------------------------------------|
+| `type`       | Yes      | String         | Must be `textTemplate`                                                                             |
+| `key`        | Yes      | String         | See [key](#key)                                                                                    |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise                                      |
+| `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                              |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 
 #### 4.2.2 XML Elements
@@ -434,10 +449,10 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.3.1 XML Attributes
 
-| Attribute  | Required   | Attribute Type | Description                                                                                                                                                          |
-| ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`       | Yes      | String         | Must be `action`                                                                                                                                                     |
-| `key`        | Yes      | String         | See [key](#key) |
+| Attribute    | Required | Attribute Type | Description                                                                             |
+|--------------|----------|----------------|-----------------------------------------------------------------------------------------|
+| `type`       | Yes      | String         | Must be `action`                                                                        |
+| `key`        | Yes      | String         | See [key](#key)                                                                         |
 | `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action property |
 
 #### 4.3.2 Studio Pro UI
@@ -466,7 +481,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 #### 4.4.1 XML Attributes
 
 | Attribute    | Required | Attribute Type | Description                                                                                                                      |
-| ------------ | -------- | -------------- |----------------------------------------------------------------------------------------------------------------------------------|
+|--------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `type`       | Yes      | String         | Must be `attribute`                                                                                                              |
 | `key`        | Yes      | String         | See [key](#key)                                                                                                                  |
 | `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
@@ -480,7 +495,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 `<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
 
 | Supported Attribute Types | Corresponding Types Client Components Receive |
-| ------------------------- | --------------------------------------------- |
+|---------------------------|-----------------------------------------------|
 | `AutoNumber`              | `EditableValue<string>`                       |
 | `Binary`                  | `EditableValue<string>`                       |
 | `Boolean`                 | `EditableValue<boolean>`                      |
@@ -535,7 +550,7 @@ The ability to link association properties to a data source was introduced in Me
 #### 4.5.1 XML Attributes {#xml-attributes}
 
 | Attribute           | Required | Attribute Type | Description                                                                                                                      |
-|---------------------| -------- | -------------- |----------------------------------------------------------------------------------------------------------------------------------|
+|---------------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `type`              | Yes      | String         | Must be `association`                                                                                                            |
 | `key`               | Yes      | String         | See [key](#key)                                                                                                                  |
 | `onChange`          | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
@@ -585,11 +600,11 @@ The object property type allows to create an arbitrary list of properties.
 
 #### 4.6.1 XML Attributes
 
-| Attribute | Required | Attribute Type | Description                                                                                                                                                          |
-| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `object`                                                                                                                                                     |
-| `key`      | Yes      | String         | See [key](#key) |
-| `isList`   | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
+| Attribute  | Required | Attribute Type | Description                                                                          |
+|------------|----------|----------------|--------------------------------------------------------------------------------------|
+| `type`     | Yes      | String         | Must be `object`                                                                     |
+| `key`      | Yes      | String         | See [key](#key)                                                                      |
+| `isList`   | Yes      | Boolean        | Must be `true`                                                                       |
 | `required` | No       | Boolean        | This decides if the user is required to specify items in the list, `true` by default |
 
 #### 4.6.2 XML Elements
@@ -629,10 +644,10 @@ The file property type allows a user to configure a file from an object that is 
 
 #### 4.7.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description |
-| ---------- | -------- | -------------- | ----------- |
-| `type`     | Yes      | String         | Must be `file` |
-| `key`      | Yes      | String         | See [key](#key)  |
+| Attribute | Required | Attribute Type | Description     |
+|-----------|----------|----------------|-----------------|
+| `type`    | Yes      | String         | Must be `file`  |
+| `key`     | Yes      | String         | See [key](#key) |
 
 #### 4.7.2 Studio Pro UI
 
@@ -666,12 +681,12 @@ Only list datasources are supported, therefore specifying `isList="true"` is req
 
 #### 4.8.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                      |
-| ---------- | -------- | -------------- |----------------------------------------------------------------------------------|
-| `type`     | Yes      | String         | Must be `datasource`                                                             |
-| `key`      | Yes      | String         | See [key](#key)                                                                  |
-| `isList`   | Yes      | Boolean        | Must be `true`                                                                   |
-| `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default  |
+| Attribute  | Required | Attribute Type | Description                                                                     |
+|------------|----------|----------------|---------------------------------------------------------------------------------|
+| `type`     | Yes      | String         | Must be `datasource`                                                            |
+| `key`      | Yes      | String         | See [key](#key)                                                                 |
+| `isList`   | Yes      | Boolean        | Must be `true`                                                                  |
+| `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default |
 
 #### 4.8.2 Studio Pro UI
 

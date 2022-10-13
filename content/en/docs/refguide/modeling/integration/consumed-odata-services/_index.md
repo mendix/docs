@@ -14,11 +14,6 @@ Mendix Data Hub enables integration of available data sources from different sou
 
 For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](/refguide/consumed-odata-service/).
 
-{{% alert color="info" %}}
-For more information on the limits of a Data Hub license, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
-Contact your [Mendix Admin](/developerportal/control-center/#company) to find out what type of Data Hub license your organization has.
-{{% /alert %}}
-
 For details on the features that a published OData service must support and how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](/refguide/consumed-odata-service-requirements/).
 
 ## 2 OData Services and External Entities {#external-entities}

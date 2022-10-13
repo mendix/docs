@@ -206,9 +206,7 @@ You can find more information about managing binding keys in the [My Subscriptio
 
 ## 4 Using MindSphere IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 
-The easiest way to get your data from MindSphere is to use Mendix Data Hub. To do this you will need a [Data Hub license](/refguide/consumed-odata-service-requirements/#license-limitations).
-
-See [Data Hub Limitations](#dh-limitations) for information on restrictions and workarounds when using Mendix Data Hub.
+The easiest way to get your data from MindSphere is to use [Mendix Data Hub](/data-hub/).
 
 ### 4.1 Adding External Entities to the Domain Model
 

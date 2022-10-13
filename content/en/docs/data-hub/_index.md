@@ -74,6 +74,6 @@ The Data Hub Curator curates registered services in the Data Hub Catalog to ensu
 
 Curators are assigned by the a [Mendix Admin](#admin) and can enrich the metadata of registered services and datasets – for example descriptions, tags, contact information, and discoverability
 
-## 4 Data Hub Licenses {#data-hub-licences}
+## 4 Data Hub License {#data-hub-licences}
 
 Mendix Data Hub is included for free in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above. A separate license is not required.

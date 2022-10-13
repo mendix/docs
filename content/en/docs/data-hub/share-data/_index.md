@@ -22,9 +22,6 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * Change data in the original app and see it updated in the new or consuming app
 * See the network of shared data in the Data Hub Landscape
 
-{{% alert color="info" %}}
-For more information on the limits of a Data Hub license, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements/#license-limitations) section of *Consumed OData Service Requirements*.
-{{% /alert %}}
 
 ## 2 Prerequisites
 

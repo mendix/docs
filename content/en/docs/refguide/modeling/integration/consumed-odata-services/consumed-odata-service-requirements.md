@@ -104,11 +104,3 @@ An OData v3 association can only be used if it has two ends.
 An OData v4 navigation property can only be used as an association if it has a partner.
 
 When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume the resource as an external entity.
-
-## 4 Data Hub License Limitations {#license-limitations}
-
-There are two types of licenses for Mendix Data Hub: Data Hub Free and Data Hub Premium. 
-
-All Mendix users have access to the Data Hub Free edition. With this, you can retrieve or edit 1000 objects per application per day for each runtime instance when deployed. 
-
-See the [Limitations](/data-hub/#dh-free-limitations) section of the *Data Hub Guide* for Data Hub Free license limitations and limitation errors.

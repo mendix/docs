@@ -17,7 +17,7 @@ The [Mendix Data Hub](/data-hub/) includes two main features:
 * [External entities](/refguide/external-entities/) in Mendix Studio Pro version [8.14](/releasenotes/studio-pro/8.14/#data-hub) and above, purple entities in the Domain Model that represent data provided through [published OData Services](/refguide/published-odata-services/)
 * The [Data Hub Catalog](https://hub.mendix.com), documented in our [Data Hub Catalog](/data-hub/data-hub-catalog/) guide, a metadata hub for managing shared registered assets made available through OData services
 
-Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
+Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
 For an overview of how Data Hub components work together, and general information about using Data Hub without the Mendix Cloud, check out the [Data Hub Architecture](https://www.mendix.com/evaluation-guide/app-capabilities/integration/data-hub-architecture/) page in the Evaluation Guide.
 
@@ -114,10 +114,6 @@ During runtime, after you have deployed your app to a development server, the ex
 
 {{% alert color="info" %}}
 Publishing and consuming services need to have network access to each other, but do not necessarily need to be on cloud or network. {{% /alert %}}
-
-### 3.1 Licensing 
-
-A [Data Hub License](/data-hub/#data-hub-licences) is necessary for using Mendix Data Hub during runtime. A [Data Hub Free Edition](/data-hub/#dh-free) license limits use to 1000 OData objects per day for each runtime instance. For further details on limitations during runtime, see the [Limitations](/data-hub/#dh-free-limitations) section of the *Data Hub Guide*.
 
 ## Read More
 

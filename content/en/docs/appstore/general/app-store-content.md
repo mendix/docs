@@ -116,7 +116,7 @@ You can find the imported module or connector in the **App Explorer**.
 To manually add content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details).
+2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details/).
 3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
 5. Open Studio Pro and sign in with your Mendix credentials.

@@ -2,8 +2,7 @@
 title: "Troubleshooting Version Control and Team Server Issues"
 url: /refguide/troubleshoot-version-control-issues/
 linktitle: "Troubleshoot Version Control and Team Server Issues"
-category: "Collaboration"
-weight: 18
+weight: 10
 description: "Presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]
 aliases:

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "incoming email",
 ---
 
 {{% alert color="info" %}}
-This module is deprecated. Check out the [Email Connector](/appstore/connectors/email-connector/) module for an alternative.
+This module is deprecated. Check out the [Email connector](/appstore/connectors/email-connector/) as an alternative.
 {{% /alert %}}
 
 ## 1 Introduction

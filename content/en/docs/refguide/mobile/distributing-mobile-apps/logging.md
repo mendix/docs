@@ -90,7 +90,7 @@ The following log nodes are used by Mendix when writing log messages:
 | Client_Startup | Logs messages related to client startup phase. |
 | Client_Synchronization | Logs messages related to the full synchronization action and its phases. |
 
-## 5 Sending Log Messages To Runtime {#sending-client-log-nodes-to-runtime}
+## 5 Sending Log Messages to Runtime {#sending-client-log-nodes-to-runtime}
 
 The native client stores logs on the device's memory. When **Enable sending logs to runtime** is selected, the native client will attempt to send logs whenever a quota of 1,000 logs has been reached or after 1 hour from the last sending attempt.
 

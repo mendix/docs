@@ -37,10 +37,6 @@ You can paginate through search results with an offset, which allows you to limi
 
 The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) can be used to register applications, environments, and services or data sources. See an example API call at [Register an Application](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#register-application).
 
-<div class="row">
-  <img class="my-icon" src="/icons/space-rocket-flying.png"><a href="/releasenotes/"><h4 class="card-title-w-50">Download the Postman Collection</h4></a>
-</div>
-
 The API includes the following:
 
 * `POST` methods for registering new assets where a UUID is generated and returned for the asset in the response body

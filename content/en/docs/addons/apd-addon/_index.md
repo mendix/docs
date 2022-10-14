@@ -2,6 +2,7 @@
 title: "APD"
 url: /addons/apd-addon/
 weight: 20
+description: "Presents all the documentation for versions 1 and 2 of Application Performance Monitor (APM) and version 3 of Application Performance Diagnostics (APD)."
 no_list: false
 description_list: true
 tags: ["apd", "application test monitor", "application performance diagnostics"]

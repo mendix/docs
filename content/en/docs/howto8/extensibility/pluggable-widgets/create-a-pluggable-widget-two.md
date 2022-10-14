@@ -140,7 +140,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 
     Before moving forward, go back to your app's **Home** page, double-click your validation button, and name it *Show validation feedback*.
 
-2. Open your *Validation_Microflow* and drop a **Validation feedback** activity onto your microflow: 
+2. Open your *Validation_Microflow* and drop a **Validation feedback** activity into your microflow: 
 
     {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-two/addingvalidation.png" alt="validation feedback client activity"   width="500"  >}}
 

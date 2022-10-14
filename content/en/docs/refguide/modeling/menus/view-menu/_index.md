@@ -3,7 +3,7 @@ title: "View Menu"
 url: /refguide/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
-tags: ["Studio Pro", "view menu", "top bar"]
+tags: ["view menu", "pane", "connector", "console", "find results", "widget developer console", "documentation pane", "full screen", "distraction free", "reset layout"]
 ---
 
 ## 1 Introduction
@@ -87,55 +87,61 @@ This pane displays the results of the latest find action. You can search for tex
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.8 Page Explorer
+### 3.9 MxAssist Performance Bot
+
+For details on this intelligent virtual co-developer bot, see [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/).
+
+### 3.10 Page Explorer
 
 [Page Explorer](/refguide/page-explorer/) gives a quick overview of the page layout and allows you to view and edit nested containers in the [Design mode](/refguide/page/#design-mode).
 
-### 3.9 Properties
+### 3.11 Properties
 
 The **Properties** pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
 
-### 3.10 Stories
+### 3.12 Stories
 
 For [Team Server](/developerportal/collaborate/team-server/) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories/) of the current [Sprint](/developerportal/collaborate/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
 
-### 3.11 Toolbox {#toolbox}
+### 3.13 Toolbox {#toolbox}
 
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide/data-widgets/)) by dragging them from the **Toolbox** onto your page.
 
 The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes at the lower-right corner of the **Toolbox**. 
 
-### 3.12 Widget Developer Console
+### 3.14 Widget Developer Console
 
-### 3.13 Debug Windows
+This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and Structure mode preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the new configuration module (for more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*). 
+
+### 3.15 Debug Windows
 
 For more information on debugging, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/).
 
-#### 3.13.1 Breakpoints
+#### 3.15.1 Breakpoints
 
 The **Breakpoints** pane shows all the breakpoints in your app. You can enable and disable breakpoints from here.
 
-#### 3.13.2 Debugger {#debugger}
+#### 3.15.2 Debugger {#debugger}
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.13.3 Variables {#variables}
+#### 3.15.3 Variables {#variables}
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
-### 3.14 Full Screen {#full-screen}
+### 3.16 Full Screen {#full-screen}
 
 The **Full Screen** mode hides the title bar and makes the window fill the entire screen. 
 
 Shortcut key: <kbd>F11</kbd>
 
-### 3.15 Distraction Free Mode {#distraction-free}
+### 3.17 Distraction Free Mode {#distraction-free}
 
 The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes.
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 
-### 3.16 Reset Layout {#reset-layout}
+### 3.18 Reset Layout {#reset-layout}
 
 Resets the layout of dockable window panes to factory defaults.
 

@@ -3,7 +3,7 @@ title: "Backups"
 url: /developerportal/operate/backups/
 category: "Operations"
 weight: 40
-description: "This page describes the Backups page of the Developer Portal."
+description: "Describes the Backups page of the Developer Portal."
 tags: ["Operate", "App", "Developer Portal", "Backup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -78,9 +78,7 @@ Uploading a **Files Only** archive resulta in a backup item with an exclamation 
 #### 3.2.2 Uploading Data in Mendix Cloud v3
 
 {{% alert color="warning" %}}
-Our Mendix Cloud V3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
+Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% alert color="warning" %}}
 In **Mendix Cloud v3**, this does not add a backup to the backup list but directly update the application with the newly uploaded data.
 

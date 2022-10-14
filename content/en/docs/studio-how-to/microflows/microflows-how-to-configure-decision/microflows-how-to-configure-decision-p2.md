@@ -33,13 +33,23 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 2. In **Toolbox**>**Widgets** >**Buttons** find **Open Page**, drag and drop it on the page.
 
+<<<<<<< HEAD
 3. This button should allow users to create a new customer. Open the **Properties** tab for the created button and do the following:
+=======
+3. Drag **Data View** onto the page.
+4. In the **Properties** tab for the data view, do the following:
+>>>>>>> development
 
     1. Click the page **Page** property.
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/create-button-properties.png" width="300">}} 
 
+<<<<<<< HEAD
     2. In the **Select Page** dialog box, click the plus icon in the top right corner.
+=======
+5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag it inside the data view container (it is named **New** by default).
+6. You are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:
+>>>>>>> development
 
     3. In the **Create Page** dialog box, do the following:
 
@@ -57,7 +67,13 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
     The page with customer details is generated.
 
+<<<<<<< HEAD
 4. Return to the **Customers** page, and in the **Toolbox** > **Building Blocks** > **Lists** select **List single line**, drag and drop it on the page. 
+=======
+7. Return to the **Customer_details** page, and in **Toolbox**>**Widgets** >**Data Containers**, find **List View**, drag it onto the page.
+8. Open **Properties** for the list view and set **Customer** as **Data Source**>**Entity**.
+9. In the **Toolbox** > **Building Blocks** > **Lists** select **List 4**, drag it into the list view. 
+>>>>>>> development
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/list-view.png" >}} 
 
@@ -88,7 +104,24 @@ You can now [preview your app](/studio/publishing-app/) or publish it.
 
 ### 3.2 Embedding the Microflow Having a Decision with the Attribute of the Boolean Type 
 
+<<<<<<< HEAD
 In the [previous section](#embedding-decision-enumeration), you have created the **New_Customer** page. The user is able to fill in all customer's details on this page, including customer's status (whether the customer is blocked):
+=======
+To embed the microflow with a decision (the attribute of the Boolean type), do the following:
+
+1. You need to add an option to mark a customer as blocked. To do this, open the **New_customer** page created in the previous section. For more information, see [Embedding the Microflow Having a Decision with Attribute of the Enumeration Type](#embedding-decision-enumeration).
+2. In **Toolbox** > **Widgets** > **Input Elements** select **Radio Buttons**, drag this widget into the **Data view** container.
+3. In the **Properties** for the radio buttons, click **Data Source** > **Attribute** and select **Blocked Boolean**. This is how it should look like on your page: 
+
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/new-customer-page-blocked-attribute.png" >}}
+
+4. Now you will add the microflow to pages. Open the page **Order_form_for_bronze_customers.**
+5. In **Toolbox** > **Widgets** > **Data Containers**, find **Data View**. 
+
+    {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/data-view.png" >}}
+
+6. Drag **Data View** onto the page.
+>>>>>>> development
 
 {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/new-customer-page.png" width="500" >}}
 

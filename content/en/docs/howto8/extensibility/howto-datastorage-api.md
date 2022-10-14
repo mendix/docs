@@ -66,7 +66,7 @@ Here’s an example domain model with two entities: Department and Employee.
 
 {{< figure src="/attachments/howto8/extensibility/howto-datastorage-api/image011.png" >}}
 
-You can drag the Java action created above from the toolbox onto a microflow. In this example, you want to retrieve all Employee objects and return a list of these objects.
+You can drag the Java action created above from the toolbox into a microflow. In this example, you want to retrieve all Employee objects and return a list of these objects.
 
 {{< figure src="/attachments/howto8/extensibility/howto-datastorage-api/image013.png" >}}
 

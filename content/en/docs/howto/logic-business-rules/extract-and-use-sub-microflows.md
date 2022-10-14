@@ -73,7 +73,7 @@ You can use an existing microflow as a sub-microflow. For example, after creatin
 To reuse an existing microflow, follow these steps:
 
 1. In the App Explorer, find the microflow that you want to reuse as a sub-microflow.
-2. Drag and drop it onto the working area of another microflow, as in the following figure:
+2. Drag it onto the working area of another microflow, as in the following figure:
 
 {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" alt="Dragging a microflow onto the working area of another microflow" >}}
 

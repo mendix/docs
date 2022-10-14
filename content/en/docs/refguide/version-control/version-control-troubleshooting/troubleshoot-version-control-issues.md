@@ -25,7 +25,7 @@ Below is a list of known errors and the steps to fix them.
 
 ### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" >}}
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" >}}
 
 This error means that Studio Pro has problems reaching the version control server because of a proxy server.
 

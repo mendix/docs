@@ -31,7 +31,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
 1. Create a black page that will display the existing customers and name it *Customers*. For more information on creating pages, see the [Creating a New Page](/studio/page-editor/) section in *Pages*.
 
-2. In **Toolbox**>**Widgets** >**Buttons** find **Open Page**, drag and drop it on the page.
+2. In **Toolbox**>**Widgets** >**Buttons** find **Open Page**, drag it onto the page.
 
 3. This button should allow users to create a new customer. Open the **Properties** tab for the created button and do the following:
 
@@ -57,7 +57,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
 
     The page with customer details is generated.
 
-4. Return to the **Customers** page, and in the **Toolbox** > **Building Blocks** > **Lists** select **List single line**, drag and drop it on the page. 
+4. Return to the **Customers** page, and in the **Toolbox** > **Building Blocks** > **Lists** select **List single line**, drag it onto the page. 
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/list-view.png" >}} 
 
@@ -77,7 +77,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     
 8. Select the button (displayed as an arrow) in the list view, open its properties and do the following: 
 
-    1. Set **Events**>**On Click Action** to **Microflow**.
+    1. Set **Events **> **On Click Action** to **Microflow**.
     2. Click the **Microflow** property and choose the **ACT_Customer_ShowGradeSpecificPage** microflow in the **Select Microflow** dialog box.
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/details-button-microflow.png" >}} 
@@ -96,7 +96,7 @@ Now you need to embed the microflow with a decision (the attribute of the Boolea
 
 1. Open the **New_Customers** page.
 
-2. In the **Toolbox**, find the **Call Microflow** button, and drag and drop it next to the **Cancel** button.
+2. In the **Toolbox**, find the **Call Microflow** button, and drag it next to the **Cancel** button.
 
 3. Open **Call Microflow** button properties and do the following:
 

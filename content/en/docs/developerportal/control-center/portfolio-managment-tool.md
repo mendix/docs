@@ -209,7 +209,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 9. Select the **Stage**, **Department**, **Country**, and **Use Case** for the project.
 
-   {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+   {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 10. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
@@ -227,7 +227,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
     * **Type of Value** – This is the type of the value that is created by the project.
 
-      {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) section.{{% /alert %}}
+      {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
     * **Frequency**– This indicates whether the value is **Once-off** or **Recurring**.
     * **Value** –  This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.

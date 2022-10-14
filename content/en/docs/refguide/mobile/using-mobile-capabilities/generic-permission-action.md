@@ -1,5 +1,5 @@
 ---
-title: "Build a Generic Permission JavaScript Action"
+title: "App Permissions"
 url: /refguide/mobile/using-mobile-capabilities/generic-permission-action/
 weight: 85
 description: "This guide will teach you to use request generic permission actions for native mobile apps."

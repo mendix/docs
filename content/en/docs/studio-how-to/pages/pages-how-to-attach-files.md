@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 First of all, to be able to attach and/or download files you need to add a special type of entity to your domain model: a [file entity](/studio/domain-models/#entity-types). Do the following:
 
 1. Open your domain model and open the **Toolbox** tab.
-2. Select the **File Entity** and drag and drop it to your domain model.
+2. Select the **File Entity** and drag it into your domain model.
 3. In the **Create New File Entity** dialog box, set **Name** to *Document* and click **Create**.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-file-entity.png" alt="Create File Entity"   width="450"  >}}
@@ -66,7 +66,7 @@ Good job! You have created the file entity and an association from it to the **E
 
 ## 4 Adding a File Manager
 
-A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag and drop the file manager to your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
+A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag the file manager into your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/employee-profile-form.png" alt="Employee Profile Page"   width="600"  >}}
 
@@ -78,7 +78,7 @@ Follow the steps below:
 
 2. Open the **Toolbox** and search for the **Open Page** button.
 
-3. Drag and drop the button above **Save** and **Cancel** buttons:
+3. Drag the button above **Save** and **Cancel** buttons:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/open-page-button.png" alt="Open Page Button"   width="350"  >}}
 
@@ -116,7 +116,7 @@ Follow the steps below:
         
         6. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
         
-        7. Open the **Toolbox**, search for a **File Uploader**, drag and drop it inside the data view on the **Attach File** page. 
+        7. Open the **Toolbox**, search for a **File Uploader**, drag it inside the data view on the **Attach File** page. 
         
         8. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
         
@@ -134,7 +134,7 @@ After your end-users attach the files, it would be nice to display files in a li
 
 1. Open the **Employee_Profile** page.
 
-2. In the **Toolbox**, search for **List View** and drag and drop it under the **Attach File** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). 
+2. In the **Toolbox**, search for **List View** and drag it under the **Attach File** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). 
 
 3. Select the list view, open its properties, and do the following:
 
@@ -145,7 +145,7 @@ After your end-users attach the files, it would be nice to display files in a li
 
 4. Delete the **Size** text widget from the list view. 
 
-5. Open the **Toolbox** and search for a **File Downloader**, drag and drop it to the column where the **Details** button was placed. 
+5. Open the **Toolbox** and search for a **File Downloader**, drag it to the column where the **Details** button was placed. 
 
 6. Open the **File Downloader** (**File Manager**) properties  and do the following: 
 

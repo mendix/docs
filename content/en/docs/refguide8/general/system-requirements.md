@@ -123,7 +123,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](/refguide8/mysql/) 8.0
 * [Oracle Database](/refguide8/oracle/) 19
-* PostgreSQL 9.6, 10, 11, 12, 13, 14
+* PostgreSQL 10, 11, 12, 13, 14 (please note that support for 10 is deprecated and will be removed in Studio Pro version 8.18.22)
 * [SAP HANA](/refguide8/saphana/) 2.00.040.00.1545918182
 
 {{% alert color="warning" %}}

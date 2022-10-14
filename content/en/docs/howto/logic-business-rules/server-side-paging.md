@@ -46,7 +46,7 @@ Once successful, your app should have the following elements:
 Now you can start calling the REST service from your microflow data source. To create a microflow data source which returns a list of characters, do the following:
 
 1. Right-click your module, click **Add Microflow**, and create a new microflow named *Call_REST*.
-2. From the **Toolbox**, drag a **Call REST service** activity onto the microflow.
+2. From the **Toolbox**, drag a **Call REST service** activity into the microflow.
 3. Double-click your **Call REST service** activity.
 4. Click the **Location** > **Edit** button: 
 
@@ -66,7 +66,7 @@ Now you can start calling the REST service from your microflow data source. To c
 
     {{< figure src="/attachments/howto/logic-business-rules/server-side-paging/call-rest-response.png" alt="variable result"   width="500"  >}}
 
-10. From the **Toolbox** drag the **Retrieve** activity onto the microflow and double-click it.
+10. From the **Toolbox** drag the **Retrieve** activity into the microflow and double-click it.
 11. Click **Association** > **Select**, click **Expand All**, and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
 12. Click **OK** to accept this association.
 13. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
@@ -77,7 +77,7 @@ Now you can start calling the REST service from your microflow data source. To c
 
 In previous section you created a microflow which return a list of characters. Next you will use this microflow as a data source for a data grid:
 
-1. From the **Toolbox**, drag and drop a **Data grid** onto a page.
+1. From the **Toolbox**, drag a **Data grid** onto a page.
 2. Double-click the blue header of the newly-placed data grid.
 3. Click the **Data source** tab:
 

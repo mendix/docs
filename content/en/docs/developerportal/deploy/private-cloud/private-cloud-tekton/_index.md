@@ -114,17 +114,24 @@ If Tekton is already installed in your namespace, you can skip to [Pipeline Inst
 
 ### 5.1 Installing on Connected Kubernetes
 
-To install Tekton with Tekton Triggers you need to apply 3 yaml manifests:
+To install Tekton with Tekton Triggers, apply the following yaml manifests:
 
 ```bash {linenos=false}
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.26.0/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/interceptors.yaml
 ```
+
+{{% alert color="info" %}}
+The manifests target the `tekton-pipelines` namespace.
+{{% /alert %}}
 
 ### 5.2 Installing on Connected OpenShift
 
-To install Tekton and Tekton Triggers on OpenShift when your environment has access to the internet, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation.
+To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift Pipelines, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation. 
+Main objects would be installed in `openshift-pipelines` namespace. 
+
+At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
 
 ## 6 Pipeline Installation for Connected Environments{#pipelines-installation}
 
@@ -295,8 +302,8 @@ If you have a private registry with authentication, you need to follow [these in
 For OpenShift you need to provide an SSL certificate file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
 
 ```bash {linenos=false}
-oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}'
-oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]'
+oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}' -n $YOUR_NAMESPACE_WITH_PIPELINES
+oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]' -n $YOUR_NAMESPACE_WITH_PIPELINES
 ```
 
 ## 9 Triggering Pipelines

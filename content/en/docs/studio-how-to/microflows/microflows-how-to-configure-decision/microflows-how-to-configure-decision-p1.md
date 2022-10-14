@@ -198,7 +198,7 @@ To configure the decision with the attribute of the Boolean type, follow these s
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/show-message-properties-true-flow.png" width="250">}} 
 
-10. In the **Toolbox** tab, select the **Close Page** activity, drag and drop it to the microflow.
+10. In the **Toolbox** tab, select the **Close Page** activity, drag it into the microflow.
 
     {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/microflow-blocked-completed.png" >}}
 

@@ -83,14 +83,6 @@ Warning Threshold | Memory utilization is between 90% and 95%. |
 Critical Threshold | memory utilization is higher than 95%.
 First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
-Application Server Memory | |
-:---|:---|
-Description | Track the amount of free RAM on the application server. The *flapping status* indicates how frequently the memory level drops and then recovers to acceptable value. |
-Example message | WARNING: 140 MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
-Warning Threshold | Free RAM between 50 MB and 150 MB |
-Critical Threshold | Free RAM less than 50 MB |
-First actions to take | Review the flapping status to see how often this has occurred. Review your app's memory use to see if it can use less RAM. You may need to upgrade the app node memory so you don't reach the warning alert limit. |
-
 Critical Logs | |
 :---|:---|
 Description | The CRITICAL log level is reserved for issuing messages in rare cases where the application may not be able to function reliably anymore. For example, there is a chance of data corruption when the application continues to be running. Internal JVM errors are logged to this level. Out of memory errors (which are JVM errors) must be treated as harmful for the stability and integrity of your Mendix application process.
@@ -118,9 +110,9 @@ First actions to take | Check if there is a sudden increase or a slow increase o
 Database Freeable Memory | |
 :---|:---|
 Description | Track the amount of freeable memory for the database belonging to the application.
-Example message | Database has less than 10% freeable memory.
+Example message | Database has less than 35% freeable memory.
 Warning Threshold | Not used.
-Critical Threshold | Database has less than 20% freeable memory.
+Critical Threshold | Database has less than 10% freeable memory.
 First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by either stopping a runaway process or ordering more memory.
 
 Database IOPS Burst Balance | |
@@ -166,7 +158,7 @@ First actions to take | Check the log files and application metrics for a possib
 ## 4 Cloud v3 Alerting Categories and Thresholds
 
 {{% alert color="warning" %}}
-Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
+Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
 Mendix Cloud v3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud v4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.

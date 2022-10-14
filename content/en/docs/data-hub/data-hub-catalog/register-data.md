@@ -2,7 +2,7 @@
 title: "Register OData Resources in the Data Hub Catalog"
 linktitle: "Register OData Resources"
 url: /data-hub/data-hub-catalog/register-data/
-description: "How to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form"
+description: "Describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
 category: "Data Hub Catalog"
 weight: 35
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
@@ -15,11 +15,11 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register exposed OData services in the Data Hub Catalog. We support all OData versions.
+There are three ways to register [published OData services](/refguide/published-odata-services/) in the Data Hub Catalog. We support all OData versions.
 
 **This how-to will teach you how to register a service in the following ways:**
 
-* [Through the Mendix Cloud](#mendix-cloud)
+* [Through the Mendix Cloud](#mendix-cloud), done automatically when you deploy a [published OData service](/refguide/published-odata-services/) to the Mendix Cloud
 * [Through the Data Hub Catalog Registration API](#registration-api)
 * [Through the Data Hub Catalog UI form](#registration-form)
 
@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
-If you have an exposed OData service that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog.
+If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 

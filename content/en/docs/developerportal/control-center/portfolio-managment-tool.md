@@ -41,6 +41,8 @@ The **Project Overview** page offers multiple views. You can [change your view](
 
 To change your view on the **Projects Overview** page, click the drop-down list on the upper-right corner, and then select one of the following views:
 
+{{< figure src="/attachments/developerportal/control-center/portfolio-management/switch-view.png" >}}
+
 * [Kanban view](#kanban-view)
 
 * [List view](#list-view)
@@ -49,39 +51,39 @@ To change your view on the **Projects Overview** page, click the drop-down list 
 
   {{% alert color="info" %}}You can see either **WSFJ Prioritization** or **RICE Prioritization** here, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-{{< figure src="/attachments/developerportal/control-center/portfolio-management/switch-view.png" >}}
-
 #### 2.1.1 Kanban View {#kanban-view}
 
-In Kanban view, you can select a filter from the **Filters** drop-down list on the top to filter projects.
+In Kanban view, all the projects are categorized in different columns. Each column represents a different stage.
 
-All the projects are categorized in different columns. Each column represents a different stage. You can move the project to a different stage by hovering over the project card, and then clicking the **>** or **<** icon on the left or right side of the card.
+To move the project to a different stage, hover over the project card, and then click the **>** or **<** icon on the left or right side of the card. 
+
+To filter projects, you can select a filter from the **Filters** drop-down list on the top of the page.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/project-card.png" >}}
 
 Each project card shows the following information:
 
-* Project name (①) –  Clicking it opens a [side pane](#view-project) that shows the details of the project.
+* Project name (①) –  Clicking it opens a [side pane](#view-project) that shows project details.
 
 * Ellipsis icon (**...**) (②) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
-  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
-* Tags for the project (③) – These are the tags used to classify the project, for example, tags can be used to indicate the types of projects.
+* Tags for the project (③) – These are the tags used to classify the project. Tags can be used, for example, to indicate the types of projects.
 
 * Department (④) – This is the department to which the project belongs.
 
-* Calendar icon (⑤) – Hovering over it shows the following defined dates of the project lifecycle:
+* Calendar icon (⑤) – Hovering over the icon shows the following defined dates of the project lifecycle:
 
   * **Intake** – This is the time when the project is accepted based on business requirements.
   * **Start Date** – This is the time when the first actions are taken to start implementation.
   * **Go-Live Date** – This is the time when the app is expected to be up and running.
 
-* Icon of the linked app (⑥) – Hovering over it shows the existing Mendix app that is linked with the project.
+* Icon of the linked app (⑥) – Hovering over the icon shows the existing Mendix app that is linked with the project.
 
-* Avatar of the project owner (⑦) – Hovering over it shows the name of the project owner.
+* Avatar of the project owner (⑦) – Hovering over the avatar shows the name of the project owner.
 
 #### 2.1.2 List View {#list-view}
 
@@ -91,7 +93,7 @@ In the list view, projects are shown in a list.
 
 The list contains the following information:
 
-* **Project name** – Clicking it opens a [side pane](#view-project) that shows the details of the project.
+* **Project name** – Clicking it opens a [side pane](#view-project) that shows project details.
 
 * **Department** – This is the department to which the project belongs.
 
@@ -107,21 +109,21 @@ The list contains the following information:
 
 * **Owner** – This shows the name of the project owner.
 
-* Ellipsis icon (**...**) (②) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis icon (**...**) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
-  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
 #### 2.1.3 WSJF Prioritization {#wsjf}
 
-{{% alert color="info" %}}Weighted Shortest Job First (WSJF) is a model that can help you prioritize a list of projects. Each project's score is calculated as the the cost of delay (CoD) divided by the job size or the duration of the job.  For more information, see [Weighted Shorted Job First](https://www.scaledagileframework.com/wsjf/).{{% /alert %}}
+{{% alert color="info" %}}Weighted Shortest Job First (WSJF) is a model that can help you prioritize a list of projects. Each project's score is calculated as the the cost of delay (CoD) divided by the job size or the duration of the job. For more information, see [Weighted Shorted Job First](https://www.scaledagileframework.com/wsjf/).{{% /alert %}}
 
 In the WSJF prioritization view, all the projects are sequenced by their WSJS scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 
 The list contains the following information:
 
-* **Project** – Clicking it opens a [side pane](#view-project) that shows the details of the project.
+* **Project** – Clicking it opens a [side pane](#view-project) that shows project details.
 
 * **Stage** – This shows which stage the project is currently in.
 
@@ -135,10 +137,10 @@ The list contains the following information:
 
 * **Score** – This is the WSJF score of the project.
 
-* Ellipsis icon (**...**) (②) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis icon (**...**) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
-  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
 #### 2.1.4 RICE Prioritization {#rice}
@@ -149,7 +151,7 @@ In the RICE prioritization view, all the projects are sequenced by their RICE sc
 
 The list contains the following information:
 
-* **Project** – Clicking it opens a [side pane](#view-project) that shows the details of the project.
+* **Project** – Clicking it opens a [side pane](#view-project) that shows project details.
 
 * **Stage** – This shows which stage the project is currently in.
 
@@ -163,20 +165,20 @@ The list contains the following information:
 
 * **Score** – This is the RICE score of the project.
 
-* Calendar icon – Hovering over it shows the following defined dates of the project lifecycle:
+* Calendar icon – Hovering over the icon shows the following defined dates of the project lifecycle:
 
   * **Intake** – This is the time when the project is accepted based on business requirements.
   * **Start Date** – This is the time when the first actions are taken to start implementation.
   * **Go-Live Date** – This is the time when the app is expected to be up and running.
 
-* Icon of the linked app – Hovering over it shows the existing Mendix app that is linked with the project.
+* Icon of the linked app – Hovering over the icon shows the existing Mendix app that is linked with the project.
 
-* Avatar of the project owner – Hovering over it shows the name of the project owner.
+* Avatar of the project owner – Hovering over the avatar shows the name of the project owner.
 
-* Ellipsis icon (**...**) (②) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis icon (**...**) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
-  Only Portfolio Managers can edit and delete a project. For more information on roles and permissions, see [Access Management](#access-management).
+  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
 ### 2.3 Creating a New Project {#create-new-project}
@@ -230,7 +232,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
       {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
     * **Frequency**– This indicates whether the value is **Once-off** or **Recurring**.
-    * **Value** –  This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
+    * **Value** – This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
 
     *  **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
 
@@ -242,14 +244,14 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 ### 2.4 Viewing Project Details {#view-project}
 
-On the **Project Overview** page, if you click a project, a side pane opens on the right side to show the project details.
+On the **Project Overview** page, if you click a project, a side pane opens on the right side to show project details.
 
 On the upper-right corner of the pane, there is a link icon, an ellipsis icon (**…**), and a close icon. Clicking the link icon copies the link to the project. Clicking the ellipsis icon opens a pop-up menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project. Clicking the close icon closes the side pane.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/side-pane.png" >}}
 
 {{% alert type="info" %}}
-When you view the project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
+When you view project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
 {{% /alert %}}
 
 ### 2.5 Editing or Deleting a Project {#edit-delete-project}
@@ -258,19 +260,19 @@ When you view the project details, you can only **Post Note**. You cannot change
 Only Portfolio Managers can edit or delete an existing project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click ellipsis icon (**...**) in the [side pane](#view-project) where you view the project details, and then select **Edit** or **Delete**.
+To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
 
 ### 2.6 Archiving a Project {#archive-project}
 
 {{% alert type="info" %}}
-Only Portfolio Managers can archive a new project. For more information on roles and permissions, see [Access Management](#access-management).
+Only Portfolio Managers can archive a project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
 When a project is finished or the project is not relevant for the current time being, you can archive a project.
 
 To archive a project, perform the following steps:
 
-1. On the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Archive**. Alternatively, you can also click ellipsis icon (**...**) in the [side pane](#view-project) where you view the project details, and then select **Archive**.
+1. On the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Archive**. Alternatively, you can also click ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Archive**.
 
 2. In the dialog box that opens, select the reason why the project is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
 
@@ -296,7 +298,7 @@ The list shows the following information:
 
 * **Archived date** – This shows the date when the project was archived.
 
-* **Archived by** –  This is the name of the person who archived the project.
+* **Archived by** – This is the name of the person who archived the project.
 
 * Ellipsis (**...**) icon – Clicking it enables you to restore or delete the archived project.
 
@@ -360,7 +362,7 @@ To update the permissions and the role of a user, click the edit icon. To delete
 
 {{% alert color="info" %}}The **Portfolio Settings** page is only available for Portfolio Managers.{{% /alert %}}
 
-On the  **Portfolio Settings** page, Portfolio Managers can customize the options for the following items:
+On the **Portfolio Settings** page, Portfolio Managers can customize the options for the following items:
 
 * **Prioritization Model**
 

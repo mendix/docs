@@ -62,7 +62,7 @@ This defines a property's type. A `type` must be one of the following:
 
 Static types are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
 
-### 2.1 String{#string}
+### 2.1 String {#string}
 
 The string property type is represented as a simple text input in Studio Pro. It is passed as a `string` prop to a client component.
 
@@ -104,7 +104,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/string-multiline.png" >}}
 
-### 2.2 Boolean{#boolean}
+### 2.2 Boolean {#boolean}
 
 Properties of type Boolean are represented as a toggle in Studio Pro. They are passed as `boolean` props to a client component.
 
@@ -131,7 +131,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/boolean.png" >}}
 
-### 2.3 Integer{#integer}
+### 2.3 Integer {#integer}
 
 Integer is represented as a number input in Studio Pro. It is passed as a `number` prop to a client component.
 
@@ -158,7 +158,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/integer.png" >}}
 
-### 2.4 Decimal{#decimal}
+### 2.4 Decimal {#decimal}
 
 Properties of type decimal are represented as a number input in Studio Pro. They are passed as a `Big` prop to a client component.
 
@@ -185,7 +185,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/decimal.png" alt="decimal" >}}
 
-### 2.5 Enumeration{#enumeration}
+### 2.5 Enumeration {#enumeration}
 
 The enumeration property type allows a user to select one out of multiple options defined in the XML. The `key` of a selected enumeration element is passed as `string` prop to a client component.
 
@@ -336,7 +336,7 @@ then the Studio Pro UI for the component appears like this:
 
 ## 4 Dynamic Types
 
-### 4.1 Expression{#expression}
+### 4.1 Expression {#expression}
 
 The expression property allows a user to configure an [expression](/refguide/expressions/).
 
@@ -354,7 +354,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `required`     | No       | Boolean             | Whether the property must be specified by the user, `true` by default                           |
 | `dataSource`   | No       | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this expression property |
 
-#### 4.1.2 XML Elements{#expression-xml-elements}
+#### 4.1.2 XML Elements
 
 `<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
@@ -397,7 +397,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/expression.png" >}}
 
-### 4.2 TextTemplate{#texttemplate}
+### 4.2 TextTemplate {#texttemplate}
 
 The TextTemplate property allows a user to configure a translatable text template similar to the [Caption](/refguide/text/#caption) of a text widget.
 
@@ -439,7 +439,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/text.png" >}}
 
-### 4.3 Action{#action}
+### 4.3 Action {#action}
 
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
@@ -470,7 +470,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/action.png" >}}
 
-### 4.4 Attribute{#attribute}
+### 4.4 Attribute {#attribute}
 
 The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. 
 
@@ -594,7 +594,7 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/association.png" >}}
 
-### 4.6 Object{#object}
+### 4.6 Object {#object}
 
 The object property type allows to create an arbitrary list of properties.
 

@@ -369,7 +369,7 @@ An expression's return type can be defined in a pre-determined way using the `ty
 Please note that one of the two attributes from the table **must** be used.
 {{% /alert %}}
 
-##### 4.1.2.1 Pre-Determined Return Types
+##### 4.1.2.1 Fixed Return Type
 
 You can set a pre-determined return type for your expression property with one of the supported types from the table.
 
@@ -385,9 +385,9 @@ You can set a pre-determined return type for your expression property with one o
 The `type` attribute was required in Mendix [9.19](/releasenotes/studio-pro/9.19/) and earlier.
 {{% /alert %}}
 
-##### 4.1.2.2 Attribute Dependent Return Type
+##### 4.1.2.2 Return Type Assignable To An Attribute
 
-If you want your expression to follow the configured type of an attribute you will need to use the key of the target attribute property.
+You can use `assignableTo` to specify that the return type of the expression property should depend on the attribute property with the given property path. This means that the value of the expression will be assignable to the attribute configured for that attribute property (using `setValue`).
 
 | Supported Options | Corresponding Types Client Components Receive                                           |
 |-------------------|-----------------------------------------------------------------------------------------|

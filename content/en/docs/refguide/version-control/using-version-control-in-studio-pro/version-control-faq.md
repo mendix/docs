@@ -2,7 +2,7 @@
 title: "Version Control FAQ"
 url: /refguide/version-control-faq/
 category: "Version Control"
-weight: 15
+weight: 40
 description: "Presents and explains several frequently asked questions about version control."
 tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 ---

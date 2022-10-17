@@ -1,7 +1,8 @@
 ---
-title: "Solve Known Git Issues"
+title: "Solving Known Git Issues"
 url: /howto/collaboration-requirements-management/troubleshoot-git-issues/
-weight: 30
+linktitle: "Known Git Issues"
+weight: 20
 description: "Describes a list of problems and fixes for Git version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Git"]
 ---

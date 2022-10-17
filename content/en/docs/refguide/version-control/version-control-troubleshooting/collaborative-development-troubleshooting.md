@@ -30,7 +30,7 @@ You can do one of the following:
 
     1. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
 
-    {{< figure src="/attachments/refguide/version-control/collaborative-development/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
+    {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/collaborative-development-troubleshooting/automatically-created-branch.png" >}}
 
 2. **Resolve Later** –  the changes can be merged later. In the meantime, changes from Studio and the Team Server development line will not be kept in sync. In this case, the dialog will appear again when committing/updating/merging changes. 
 

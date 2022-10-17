@@ -393,6 +393,28 @@ You can use `assignableTo` to specify that the return type of the expression pro
 |-------------------|-----------------------------------------------------------------------------------------|
 | `[Property Path]` | `DynamicValue<T>` where `T` will depend on the configured types of the target attribute |
 
+For example, when properties are defined as follows:
+
+```xml
+<property key="myAttribute" type="attribute">
+	<caption>My string</caption>
+	<description>My string setting</description>
+    <attributeTypes>
+        <attributeType name="String" />
+        <attributeType name="Boolean" />
+    </attributeTypes>
+</property>
+```
+```xml
+<property key="myExpression" type="expression">
+	<caption>My string</caption>
+	<description>My string setting</description>
+    <returnType assignableTo="myAttribute" />
+</property>
+```
+
+The client component will receive the prop (for the expression property) with the value `DynamicValue<string | boolean>`.
+
 {{% alert color="info" %}}
 The `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
 {{% /alert %}}

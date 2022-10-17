@@ -47,7 +47,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 #### 2.3.2 Parameters {#parameters}
 
-Parameters are attributes or expressions whose values will be displayed as part of the text defined in the caption setting. To view **Parameters**, do one of the following:
+Parameters are attributes or expressions whose values will be displayed as part of the text defined in the **Caption** setting. To view **Parameters**, do one of the following:
 
 * Double-click the **Caption** setting in properties
 * Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:

@@ -598,10 +598,6 @@ export interface ListExpressionValue<T extends AttributeValue> {
 
 The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
 
-{{% alert color="info" %}}
-You can also configure the return type of an expression property to be the same as how an attribute property belonging to the widget is configured. (See [Expression Property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression-xml-elements).)
-{{% /alert %}}
-
 In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue.get` with the item (assuming widget properties are configured as follows with an expression of type `boolean`):
 
 ```ts

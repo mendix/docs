@@ -42,7 +42,7 @@ For different security levels different settings are available. Find the list of
 | Setting Name                        | Security Off | Prototype/Demo Security                                      | Production Security                                          |
 | ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Check security](#check-security)   | N/A          | N/A                                                          | Available, see the [Check Security](#check-security) section. |
-| [Strict Page URL Checking](#strict-page-url-checking) | N/A | N/A | Available, see the [Strict Page URL Checking](#strict-page-url-checking) section. |
+| [Strict page URL checking](#strict-page-url-checking) | N/A | N/A | Available, see the [Strict Page URL Checking](#strict-page-url-checking) section. |
 | [App status](#app-status)   | N/A          | Available, see the [App Status](#app-status) section. | Available, see the [App Status](#app-status) section. |
 | [Module status](#module-status)     | N/A          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
 | [User roles](#user-roles)           | N/A          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |

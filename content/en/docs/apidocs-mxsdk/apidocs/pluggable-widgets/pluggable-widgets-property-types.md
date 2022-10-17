@@ -358,11 +358,11 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 `<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
-An expression's return type can be defined in a pre-determined way, or you can use `assignableTo` attribute in the XML element to set the return type to be always the same with the widget's another attribute property.
+An expression's return type can be defined in a pre-determined way using `type` attribute, or you set the return type to be always the same with the widget's another attribute property using `assignableTo` attribute in the `<returnType />` element.
 
-For the first option, you will need to use `<returnType type="[Type]" />` where `[Type]` should be replaced with one of the supported return types from the table below.
+##### 4.1.2.1 Pre-Determined Return Types
 
-Similarly, if you want your expression to follow the configured type of an attribute you will need to use the `<returnType assignableTo="[Property Path]" />` where `[Property Path]` should be replaced with the key of the target attribute property. 
+You can set a pre-determined return type for your expression property with one of the supported types from the table.
 
 | Supported Return Types | Corresponding Types Client Components Receive                                           |
 |------------------------|-----------------------------------------------------------------------------------------|
@@ -371,7 +371,14 @@ Similarly, if you want your expression to follow the configured type of an attri
 | `Decimal`              | `DynamicValue<BigJS>`                                                                   |
 | `Integer`              | `DynamicValue<BigJS>`                                                                   |
 | `String`               | `DynamicValue<string>`                                                                  |
-| `[Property Path]`      | `DynamicValue<T>` where `T` will depend on the configured types of the target attribute |
+
+##### 4.1.2.2 Attribute Dependent Return Type
+
+If you want your expression to follow the configured type of an attribute you will need to use the key of the target attribute property.
+
+| Supported Options | Corresponding Types Client Components Receive                                           |
+|-------------------|-----------------------------------------------------------------------------------------|
+| `[Property Path]` | `DynamicValue<T>` where `T` will depend on the configured types of the target attribute |
 
 {{% alert color="info" %}}
 Expressions can only have one return type element.

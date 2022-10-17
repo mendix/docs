@@ -69,7 +69,7 @@ The **Details** button in the inspection report list should open a page with the
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/button-properties.png" alt="Button Properties"   width="250"  >}}
 
 3. In the **Select Page** dialog box, click the plus icon in the top right corner.
-4. In the **Create new page** dialog box, set the **Title** to **Reports_Details**, and set the **Layout** to **Atlas_Default**. 
+4. In the **Create Page** dialog box, set the **Title** to **Reports_Details**, and set the **Layout** to **Atlas_Default**. 
 5. Check that the **Autofill Contents** option is on, this way the page template (Forms) is selected automatically for you. Choose **Forms Vertical**:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/create-new-page.png" alt="Create New Page"   width="550"  >}}
@@ -114,7 +114,7 @@ Follow the steps below:
 
 9. Click the **Page** property.
 10. In the **Select Page** dialog box, click the plus icon in the top right corner.
-11. In the **Create new page** dialog box, set the **Title** to **Manage_Checklist** and the **Layout** to **PopupLayout**. 
+11. In the **Create Page** dialog box, set the **Title** to **Manage_Checklist** and the **Layout** to **PopupLayout**. 
 12. The **Autofill Contents** option is on, so the page template (*Forms*) is selected automatically for you. Choose **Forms Vertical**: 
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-form/manage-checklist.png"   width="550"  >}}

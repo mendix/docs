@@ -104,9 +104,12 @@
     }
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: $primary;
+.btn {
     border-radius: 0.25rem;
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: $primary;
+    }
 }

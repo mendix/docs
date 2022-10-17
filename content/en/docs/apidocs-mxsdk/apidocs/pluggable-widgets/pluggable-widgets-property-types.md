@@ -372,6 +372,10 @@ You can set a pre-determined return type for your expression property with one o
 | `Integer`              | `DynamicValue<BigJS>`                                                                   |
 | `String`               | `DynamicValue<string>`                                                                  |
 
+{{% alert color="info" %}}
+The `type` attribute was required in Mendix [9.19](/releasenotes/studio-pro/9.19/) and earlier.
+{{% /alert %}}
+
 ##### 4.1.2.2 Attribute Dependent Return Type
 
 If you want your expression to follow the configured type of an attribute you will need to use the key of the target attribute property.
@@ -381,7 +385,7 @@ If you want your expression to follow the configured type of an attribute you wi
 | `[Property Path]` | `DynamicValue<T>` where `T` will depend on the configured types of the target attribute |
 
 {{% alert color="info" %}}
-`assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
+The `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
 {{% /alert %}}
 
 #### 4.1.3 Studio Pro UI

@@ -65,7 +65,7 @@ Each project card shows the following information:
 
 * Project name (①) –  Clicking it opens a [side pane](#view-project) that shows project details.
 
-* Ellipsis icon (**...**) (②) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis icon (**...**) (②) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
@@ -81,13 +81,13 @@ Each project card shows the following information:
   * **Start Date** – This is the time when the first actions are taken to start implementation.
   * **Go-Live Date** – This is the time when the app is expected to be up and running.
 
-* Icon of the linked app (⑥) – Hovering over the icon shows the existing Mendix app that is linked with the project.
+* Icon of the linked app (⑥) – Clicking the icon shows the information about the Mendix app that is linked with the project.
 
 * Avatar of the project owner (⑦) – Hovering over the avatar shows the name of the project owner.
 
 #### 2.1.2 List View {#list-view}
 
-In the list view, projects are shown in a list.
+In the list view, projects are shown in a list.  Clicking the header of a column sequences the projects using the values in that column.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/list-view.png" >}}
 
@@ -105,11 +105,11 @@ The list contains the following information:
 
 * **Go-Live Date** – This shows the time when the app is expected to be up and running.
 
-* **Linked App** – This shows the existing Mendix app that is linked with the project.
+* **Linked App** – Clicking the icon shows the information about the Mendix app that is linked with the project.
 
 * **Owner** – This shows the name of the project owner.
 
-* Ellipsis icon (**...**) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
@@ -137,7 +137,7 @@ The list contains the following information:
 
 * **Score** – This is the WSJF score of the project.
 
-* Ellipsis icon (**...**) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
@@ -171,11 +171,11 @@ The list contains the following information:
   * **Start Date** – This is the time when the first actions are taken to start implementation.
   * **Go-Live Date** – This is the time when the app is expected to be up and running.
 
-* Icon of the linked app – Hovering over the icon shows the existing Mendix app that is linked with the project.
+* Icon of the linked app – Clicking the icon shows the information about the Mendix app that is linked with the project.
 
 * Avatar of the project owner – Hovering over the avatar shows the name of the project owner.
 
-* Ellipsis icon (**...**) – Clicking it enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
@@ -193,19 +193,19 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 3. Enter the **Project Name** and the **Stage** in which the project is. 
 
-4. Click **Create Project**. The **Project** is created and shown in the **Projects Overview** page. A side pane opens on the right side where you can add the details of the new project.
+4. Click **Create Project**. The **Project** is created and appears on the **Projects Overview** page. A side pane opens on the right side of the page where you can add the details of the new project.
 
 5. Select **Tags** for the project. You can select existing tags or create new tags.
 
 6. Enter the **Description** of the project.
 
-7. If there is an existing app that you want to change or if development is already in progress, you can link the app to this project:
+7.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project:
 
-   1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
+    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
-   2. Select the app that you want to link to the project.
+    2. Select the app that you want to link to the project.
 
-      {{% alert type="info" %}}To see more information about a linked app, click the app name after it is linked.{{% /alert %}}
+    If you woud like to see more information about a linked app, click the app name after it is linked.
 
 8. Set the **Owner** for the project.
 
@@ -231,14 +231,14 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
       {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-    * **Frequency**– This indicates whether the value is **Once-off** or **Recurring**.
+    * **Frequency** – This indicates whether the value is **Once-off** or **Recurring**.
     * **Value** – This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
 
     *  **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
 
       If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
 
-14. If you want to add a note, click **Notes**, add a note, and then click **Post Note**.
+14. If you want to add a note, click **Notes**, and then click **Post Note** after you add the note.
 
 15. Click **Save**. All the details are saved for the new project.
 
@@ -246,7 +246,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 On the **Project Overview** page, if you click a project, a side pane opens on the right side to show project details.
 
-On the upper-right corner of the pane, there is a link icon, an ellipsis icon (**…**), and a close icon. Clicking the link icon copies the link to the project. Clicking the ellipsis icon opens a pop-up menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project. Clicking the close icon closes the side pane.
+On the upper-right corner of the pane, there is a link icon, an ellipsis icon (**…**), and a close (**x**) icon. Clicking the link icon copies the link to the project. Clicking the ellipsis icon opens a pop-up menu that allows you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project. Clicking the close icon closes the side pane.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/side-pane.png" >}}
 
@@ -260,19 +260,19 @@ When you view project details, you can only **Post Note**. You cannot change any
 Only Portfolio Managers can edit or delete an existing project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
+To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
 
 ### 2.6 Archiving a Project {#archive-project}
+
+When a project is finished or the project is not relevant for the current time being, you can archive a project.
 
 {{% alert type="info" %}}
 Only Portfolio Managers can archive a project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-When a project is finished or the project is not relevant for the current time being, you can archive a project.
-
 To archive a project, perform the following steps:
 
-1. On the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Archive**. Alternatively, you can also click ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Archive**.
+1. On the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Archive**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Archive**.
 
 2. In the dialog box that opens, select the reason why the project is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
 
@@ -282,13 +282,13 @@ A pop-up window opens and tells you that the project is successfully archived. O
 
 ## 3 Archived Projects Page{#archived-projects}
 
-The **Archived Projects** page show all the projects that are archived. You can search for a project in the search bar. 
+The **Archived Projects** page shows all the projects that are archived. You can search for a project in the search bar. 
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/archived-projects.png" >}}
 
-The list shows the following information:
+The list contains the following information:
 
-* **Project Name** – Clicking it opens a [side pane](#view-project) that shows the details of the archived project, such as the reason why the project was archived, additional notes, who archived the project, and when.
+* **Project Name** – Clicking it opens a [side pane](#side-pane) that shows the details of the archived project as well as why the project was archived, additional notes, who archived the project, and when.
 
 * **Department** – This is the department to which the project belongs.
 
@@ -300,7 +300,7 @@ The list shows the following information:
 
 * **Archived by** – This is the name of the person who archived the project.
 
-* Ellipsis (**...**) icon – Clicking it enables you to restore or delete the archived project.
+* Ellipsis (**...**) icon – Clicking the icon opens a pop-up menu that enables you to restore or delete the archived project.
 
   {{% alert type="info" %}}
   Only Portfolio Managers can restore or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
@@ -338,7 +338,7 @@ The table below shows the permissions of Portfolio Managers and Users:
 
 1. Go to **Access Management**.
 2. On the upper-right corner, click **Add New Users**.
-3.  In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures will not be displayed.
+3.  In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company. For users outside your company, their names and profile pictures are not displayed.
 
 4. Select an **Access Role** for the user – **Portfolio Manager** or **User**. This determines the user's access level to all the projects in this portfolio.
 5. Click **Add to List**.
@@ -348,7 +348,7 @@ The table below shows the permissions of Portfolio Managers and Users:
 You can find the users that you just added on the **Access Management** page. Their **Status** should be as follows:
 
 * For users outside your company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** on the **Access Management** page is **Pending**. After they accept the invitation, their **Status** will change to **Active**.
-* For users within your company who do not have a Mendix account, their **Status** on the **Access Management** page is also **Pending**. After they make a Mendix account, their **Status** will become **Active**.
+* For users within your company who do not have a Mendix account, their **Status** on the **Access Management** page is **Pending**. After they make a Mendix account, their **Status** will become **Active**.
 
 ### 4.2 Editing and Deleting a User
 
@@ -384,9 +384,9 @@ On the **Portfolio Settings** page, Portfolio Managers can customize the options
 
 * **Main Details - Departments**
 
-To add an option, click **Add Stage**, **Add Use Case**, **Add Value Type**, **Add Department**, or **Add Country** below the corresponding list.
+To add an option, click **Add Department**, **Add Country**, **Add Stage**, **Add Use Case**, or **Add Value Type** below the corresponding list.
 
-To delete or edit an existing item, hover over the row to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
+To delete or edit an existing option, hover over the option to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/delete-edit-stage.png" >}}
 

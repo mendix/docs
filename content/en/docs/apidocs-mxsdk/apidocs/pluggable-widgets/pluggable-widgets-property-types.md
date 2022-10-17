@@ -358,7 +358,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 `<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
-An expression's return type can be defined in a pre-determined way using the `type` attribute or you can set it to be always the same with the widget's another attribute property using `assignableTo` attribute in the `<returnType />` element.
+The return type of the expression must be defined using either the `type` or the `assignableTo` attribute. It is not allowed to specify both.
 
 | Attribute      | Required | Attribute Type | Description                                                                                                      |
 |----------------|----------|----------------|------------------------------------------------------------------------------------------------------------------|

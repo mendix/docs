@@ -381,10 +381,6 @@ If you want your expression to follow the configured type of an attribute you wi
 | `[Property Path]` | `DynamicValue<T>` where `T` will depend on the configured types of the target attribute |
 
 {{% alert color="info" %}}
-Expressions can only have one return type element.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
 {{% /alert %}}
 

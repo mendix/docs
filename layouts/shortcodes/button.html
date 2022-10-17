@@ -1,0 +1,5 @@
+{{ $color := .Get "color" | default "info" }}
+{{ $link := .Get "href" }}
+{{ $text := .Get "text" | default "Download" }}
+{{ $title := .Get "title" }}
+<a class="btn btn-{{ $color }}" href="{{ $link }}" title="{{ $title }}" target="_blank">{{ $text }}</a>

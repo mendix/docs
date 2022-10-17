@@ -42,7 +42,7 @@ For different security levels different settings are available. Find the list of
 | Setting Name                        | Security Off | Prototype/Demo Security                                      | Production Security                                          |
 | ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Check security](#check-security)   | N/A          | N/A                                                          | Available, see the [Check Security](#check-security) section. |
-| [Strict page URL checking](#strict-page-url-checking) | N/A | N/A | Available, see the [Strict page URL checking](#strict-page-url-checking) section. |
+| [Strict Page URL Checking](#strict-page-url-checking) | N/A | N/A | Available, see the [Strict Page URL Checking](#strict-page-url-checking) section. |
 | [App status](#app-status)   | N/A          | Available, see the [App Status](#app-status) section. | Available, see the [App Status](#app-status) section. |
 | [Module status](#module-status)     | N/A          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
 | [User roles](#user-roles)           | N/A          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
@@ -57,11 +57,9 @@ If the security level is set to **Production**, you can specify whether the cons
 
 When **Check Security** is enabled, for each user role Studio Pro checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, Studio Pro checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other consistency errors.
 
-### 2.3 Strict page URL checking {#strict-page-url-checking}
+### 2.3 Strict Page URL Checking {#strict-page-url-checking}
 
-*Introduced in 9.8*
-
-When **Strict page URL checking** is enabled, pages that are **only** accessible through a page URL will also produce consistency errors for security problems. By default, this is enabled in new projects. It will also be the default in Mendix 10 where this option will be removed.
+When **Strict page URL checking** is enabled, pages that are only accessible through a page URL will also produce consistency errors for security problems. By default, this is enabled in new apps. 
 
 ### 2.4 App Status {#app-status}
 

@@ -29,7 +29,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [Marketplace Overview](/appstore/general/app-store-overview/)
+* Familiarize yourself with the [Marketplace Overview](/appstore/app-store-overview/)
 
 ## 3 Installing Marketplace Content {#install}
 
@@ -57,14 +57,14 @@ There are three ways to install a Marketplace component:
 
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download
-    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/general/app-store-overview/#home/)
+    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/app-store-overview/#home/)
     * Filter for **All Content**, **My Company Content**, or **Platform Supported Content**
 
 5. Select a component from the pane to see its details:
 
     {{< figure src="/attachments/appstore/general/app-store-content/component-details.png" alt="Details of Blank App example component" >}}
 
-    The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details/) in the online Mendix Marketplace.
+    The details presented here correspond to what you see on the [component details page](/appstore/app-store-overview/#details/) in the online Mendix Marketplace.
 
 6. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 7. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
@@ -88,7 +88,7 @@ There are three ways to install a Marketplace component:
 To import content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details).
+2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/app-store-overview/#details).
 3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
 5. In the **App Explorer**, right-click the app, then click **Import module package**, and  select the component  you downloaded:
@@ -116,7 +116,7 @@ You can find the imported module or connector in the **App Explorer**.
 To manually add content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
-2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/general/app-store-overview/#details/).
+2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/app-store-overview/#details/).
 3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
 5. Open Studio Pro and sign in with your Mendix credentials.

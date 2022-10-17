@@ -575,7 +575,7 @@ For production deployment, select **Production**. If you select **Production**, 
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
-##### 6.1.3.8 Change Subscription Secret{#change-subscription-secret}
+##### 6.1.3.8 Change Subscription Secret
 
 If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 

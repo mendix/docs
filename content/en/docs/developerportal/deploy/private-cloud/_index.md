@@ -150,7 +150,7 @@ You can also request for both the Operator and Runtime license within the same r
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
-If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#change-subscription-secret)
+If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
 If your app is **Standalone**, then you will have to apply the subscription secret by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
 

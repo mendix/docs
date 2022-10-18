@@ -85,7 +85,7 @@ Follow the steps below:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/plus-icon.jpg" >}}
 
-    7. In the **Create new page** dialog box, set the **Title** to *OpportunityContact_NewEdit* and the **Layout** to **PopupLayout**.
+    7. In the **Create Page** dialog box, set the **Title** to *OpportunityContact_NewEdit* and the **Layout** to **PopupLayout**.
     8. The **Autofill Contents** option is on and the page template (*Forms*) is selected automatically for you. Choose **Forms Horizontal**:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/create-page.jpg" >}}

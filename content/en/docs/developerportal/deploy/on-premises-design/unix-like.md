@@ -20,13 +20,9 @@ Mendix can be installed on-premises on systems running Unix-like operating syste
 * Java Runtime Environment
 * Web server
 
-The following operating systems are currently supported:
+For a list of the operating systems which are currently supported, see [Operating System](/refguide/system-requirements/#server-os) in *System Requirements*.
 
-* Debian GNU/Linux 9 (Stretch)
-* Debian GNU/Linux 8 (Jessie)
-* Red Hat Enterprise Linux (RHEL) 7, CentOS 7
-
-Installation on other Unix-like operating systems is possible, but has not been tested and cannot be supported by Mendix.
+Installation on other Unix-like operating systems is possible, but these have not been tested and cannot be supported by Mendix.
 
 ## 2 Technical Documentation
 

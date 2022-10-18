@@ -17,6 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### October 17th, 2022
+
+#### Improvements
+
+* We updated our alert template to remove the *Application Server Memory* alert.
+* We added the *Database Freeable Memory* alert with the critical threshold set to 10%.
+
 ### September 15th, 2022
 
 #### Improvements

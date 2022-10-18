@@ -94,11 +94,11 @@ This section summarizes the shortcut keys available in Studio Pro. It is broken 
 
 These keys are available in multiple places within Studio Pro and work generically.
 
-#### 7.1.1 Panes
+#### 7.1.1 Panes and Editors
 
-These keys are active within the [Dockable Panes](#panes) of Studio Pro.
+These keys are active within the [Dockable Panes](#panes) and editors, such as the Domain Model, Pages, Workflows, Microflow, and Nanoflows.
 
-##### 7.1.1.1 All Panes
+##### 7.1.1.1 All Panes and Editors
 
 You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
@@ -108,15 +108,14 @@ There are alternative ways to navigate between tabs within panes:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Switch to tab at selected tab position in active pane. |
+| <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Switch to tab at selected tab position in the current window. |
 | <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Switch to next/previous tab in active pane. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>Tab</kbd> | Open pane navigation dialog. |
 
 Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
-##### 7.1.1.2 Editor Panes Only
+##### 7.1.1.2 Editors Only
 
-The following key combinations work in the editor panes for the Domain Model, Pages, Workflows, Microflow, and Nanoflows.
+The following key combinations work in the editors for the Domain Model, Pages, Workflows, Microflow, and Nanoflows.
 
 | Key | Description |
 | --- | --- |
@@ -125,8 +124,17 @@ The following key combinations work in the editor panes for the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>X</kbd> | Move the selected element to the clipboard. |
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the last undone action in an editor pane. |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
+| <kbd>Alt</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>Tab</kbd> | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
 | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
+
+##### 7.1.1.3 Panes Only
+
+The following key combinations work in the panes of Studio Pro:
+
+| Key                                                    | Description                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)&nbsp;+<kbd>F7</kbd> | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
 
 #### 7.1.2 Dialog Boxes
 

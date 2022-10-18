@@ -209,11 +209,11 @@ To update the module in your app to a newer version, go to the Marketplace to do
 
 #### 4.2.2 Configuring the Module
 
-Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Email Module with Templates](/appstore/modules/email-with-templates/), you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module and [Encryption](/appstore/modules/encryption/) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
+Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
-### 4.3  Using a Starter App or Template
+### 4.3  Using a Starter App
 
-Downloading a starter app or template creates a new app structure in the location that you enter. After you click **Download**, a window will appear where you can specify how the app should be created.
+Downloading a starter app (via **Create New App**) creates a new app structure in the storage location that you select. After you click **Download**, a window will appear where you can specify how the app should be created.
 
 {{% alert color="info" %}}
 You cannot create a new app in an existing repository that is not empty.

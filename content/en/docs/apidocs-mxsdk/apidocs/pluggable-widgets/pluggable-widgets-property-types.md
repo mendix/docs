@@ -367,7 +367,7 @@ The return type of the expression must be defined using either the `type` or the
 
 ##### 4.1.2.1 Fixed Return Type
 
-You can set a pre-determined return type for your expression property with one of the supported types from the table.
+You can set a fixed return type for your expression property with one of the supported types from below.
 
 | Supported Return Types | Corresponding Types Client Components Receive                                           |
 |------------------------|-----------------------------------------------------------------------------------------|
@@ -385,9 +385,7 @@ The `type` attribute was required in Mendix [9.19](/releasenotes/studio-pro/9.19
 
 You can use `assignableTo` to specify that the return type of the expression property should depend on the attribute property with the given property path. This means that the value of the expression will be assignable to the attribute configured for that attribute property (using `setValue`).
 
-| Supported Options | Corresponding Types Client Components Receive                                           |
-|-------------------|-----------------------------------------------------------------------------------------|
-| `[Property Path]` | `DynamicValue<T>` where `T` will depend on the configured types of the target attribute |
+The client component will receive a `DynamicValue<T>` where `T` depends on the possible types of the target attribute. If the attribute property allows for more than one type, the type of the actual value depends on the attribute that has been configured.
 
 For example, when properties are defined as follows:
 
@@ -409,7 +407,9 @@ For example, when properties are defined as follows:
 </property>
 ```
 
-The client component will receive the prop (for the expression property) with the value `DynamicValue<string | boolean>`.
+The client component will receive a `myExpression` prop of type `DynamicValue<string | boolean>`.
+
+This is a union type of all possible value types for the expression. The actual type of the value depends on the attribute configured for the `myAttribute` property. For an attribute of type `String`, the value will be a `string`; otherwise, it will be a `boolean`.
 
 {{% alert color="info" %}}
 The `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).

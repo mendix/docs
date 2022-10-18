@@ -365,10 +365,6 @@ The return type of the expression must be defined using either the `type` or the
 | `type`         | No       | String         | A fixed return type, which must be one of the supported fixed return types                                       |
 | `assignableTo` | No       | Property Path  | Specifies the path to an [`attribute`](#attribute) property which will determine the return type when configured |
 
-{{% alert color="warning" %}}
-Please note that one of the two attributes from the table **must** be used.
-{{% /alert %}}
-
 ##### 4.1.2.1 Fixed Return Type
 
 You can set a pre-determined return type for your expression property with one of the supported types from the table.

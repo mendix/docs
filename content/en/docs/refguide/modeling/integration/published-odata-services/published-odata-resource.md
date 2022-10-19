@@ -52,7 +52,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
-### 3.1 Selecting Attributes as the Key
+### 3.1 Selecting Attributes as the Key {#select-attributes}
 
 You can select which attributes you would like to use as a key. Choose a combination of attributes that are never empty, do not change, and together uniquely identify the object. An autonumber attribute is a good choice for a key.
 

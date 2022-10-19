@@ -15,11 +15,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* You will now get a notification about which services automatically registered in the Catalog. Did you know that services are automatically registered when deploying a published OData service? To learn more, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
+* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
 
 ### Fixes
 
-* We fixed a bug where HTML tags were appearing on toast notifications. `<html>Nobody wants to see that!</html>`
+* We fixed a bug where HTML tags were appearing on toast notifications. 
 
 ### October 13th, 2022
 

@@ -11,6 +11,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### October 20th, 2022
+
+#### Improvements
+
+* Users will now be shown which Data Sources were automatically registered in the Catalog
+* Security improvements
+
+### Fixes
+
+* We fixed a bug where HTML tags were showing on toasters
+
 ### October 13th, 2022
 
 #### Improvements

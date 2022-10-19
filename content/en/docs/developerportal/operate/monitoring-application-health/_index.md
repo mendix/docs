@@ -113,7 +113,7 @@ Description | Track the amount of freeable memory for the database belonging to 
 Example message | Database has 35% freeable memory.
 Warning Threshold | Not used.
 Critical Threshold | Database has 10% freeable memory.
-First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries.
+First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or by ordering more memory.
 
 Database IOPS Burst Balance | |
 :---|:---|

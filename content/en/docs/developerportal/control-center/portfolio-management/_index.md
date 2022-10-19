@@ -2,7 +2,7 @@
 title: "Portfolio Management"
 url: /developerportal/control-center/portfolio-management/
 category: "Control Center"
-menu_order: 9
+weight: 5
 description: "Describes the Portfolio Management app in Control Center."
 tags: ["Portfolio Management"]
 ---

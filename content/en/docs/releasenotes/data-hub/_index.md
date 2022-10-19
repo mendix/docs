@@ -19,7 +19,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Fixes
 
-* We fixed a bug where HTML tags were appearing on toast notifications. <html>Nobody wants to see that!</html>
+* We fixed a bug where HTML tags were appearing on toast notifications. `<html>Nobody wants to see that!</html>`
 
 ### October 13th, 2022
 

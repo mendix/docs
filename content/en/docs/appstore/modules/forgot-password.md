@@ -17,7 +17,7 @@ There are three versions of the Forgot Password module, depending on whether you
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |
-| 9.12.5 and above | 5.x.x |
+| 9.12.7 and above | 5.x.x |
 | 8.18.x | 4.x.x |
 | 7.23.x | 3.6.x and above |
 

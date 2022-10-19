@@ -117,7 +117,7 @@ The list contains the following information:
 
 #### 2.1.3 WSJF Prioritization {#wsjf}
 
-{{% alert color="info" %}}Weighted Shortest Job First (WSJF) is a model that can help you prioritize a list of projects. Each project's score is calculated as the the cost of delay (CoD) divided by the job size or the duration of the job. For more information, see [Weighted Shorted Job First](https://www.scaledagileframework.com/wsjf/).{{% /alert %}}
+{{% alert color="info" %}} For more information about WSJF, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section in *Prioritization Models in Portfolio Management*.{{% /alert %}}
 
 In the WSJF prioritization view, all the projects are sequenced by their WSJS scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 
@@ -145,7 +145,7 @@ The list contains the following information:
 
 #### 2.1.4 RICE Prioritization {#rice}
 
-{{% alert color="info" %}}Reach Impact Confident Effort (RICE) is a prioritization framework for quantifying the potential value of projects. You get each project's score by multiplying the Reach, Impact, and Confidence estimates, and then dividing the product by the Effort estimate. For more information, see [Rice: Simple Prioritization for Product managers](https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/).{{% /alert %}}
+{{% alert color="info" %}} For more information about WSJF, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models in Portfolio Management*.{{% /alert %}}
 
 In the RICE prioritization view, all the projects are sequenced by their RICE scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 

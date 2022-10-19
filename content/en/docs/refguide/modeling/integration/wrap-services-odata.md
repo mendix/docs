@@ -144,6 +144,8 @@ To select different attributes as a key, do the following:
 2. In the **Key** section, click **Edit** located next to the **Key** property.
 3. In the **Key Selection** dialog box, move the key attributes to the right side. 
 
+A key icon represents attributes that are part of the key.
+
 ## 6 Testing {#testing}
 
 You can use tools like Postman or Visual Studio Code to test your published OData services. These tools can help you call the OData service and validate its output.

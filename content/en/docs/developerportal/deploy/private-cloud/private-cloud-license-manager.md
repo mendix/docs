@@ -40,24 +40,33 @@ The `installer-gen` option of mx-pclm-cli is used to create a yaml manifest file
 Use the following command:
 
 ```bash {linenos=false}
-mx-pclm-cli installer-gen --db-type <postgres> \
+mx-pclm-cli installer-gen --db-type <db-type> \
     --db-hostname <hostname> \ 
     --db-name <db-name> \
     --db-user <db-user> \
     --db-password <db-pass> \
     --db-port <port> \ 
+    --db-strict-tls <tls-boolean> \
+    --ssl-cert-file <ssl-root-certificate> \
+    --env <environment-type> \
+    --image-repo <docker-repo> \
+    --image-tag <docker-tag> \
     --out-file <out-file>
 ```
 
 Where you need to supply the following parameters
 
-* `<namespace>` – the namespace in which the PCLM server will run
-* `<db-type>` – the sort of database, either `postgres` or `sqlserver`
+* `<db-type>` – the sort of database, either `postgres` *(default)* or `sqlserver`
 * `<hostname>` – the hostname of the database service
 * `<db-name>` – the name of the database where you want to hold the PCLM data
 * `<db-user>` – a database user with the rights described in the prerequisites section
 * `<db-pass>` – the password for the database user
-* `<port>` – the port used to access the database
+* `<port>` – the port used to access the database, default: *5432*
+* `<tls-boolean>` – whether the database uses strict TLS, `true` or `false` *(default)*
+* `<ssl-root-certificate>` – the location of the SSL Root certificate file, if `<tls-boolean>` is `true`
+* `<environment-type>` – the type of environment, `prod` *(default)* or `dev`
+* `<docker-repo>` – location of the image repo, default: `private-cloud.registry.mendix.com/privatecloud-license-manager`
+* `<docker-tag>` – the docker image tag, default: `master`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
 ### 3.2 Applying the Manifest
@@ -109,6 +118,26 @@ Where:
 * `<default-password>` – is the default password which is set for the `administrator` user – you can obtain this from [Mendix Support](https://support.mendix.com)
 * `<new-password>` – is the new password for the `administrator` user
 
+#### 5.1.1 Authenticating Using a Config File
+
+To avoid supplying the `<admin-user>`, `<admin-password>`, and `<pclm-http-url>` on every call, these can be set up once in a config file. The PCLM command line, mx-pclm-cli, will then pick up these values and use them for all commands.
+
+The default location for the config file is `$HOME/.pclm/config`. Alternatively, you can use the flag `-c` (`--config-file`) on the mx-pclm-cli commands to specify an alternative location for the config file.
+
+The format of the config file is:
+
+```yaml
+admin_user: <admin-user>
+admin_pass: <admin-password>
+server_url: <pclm-http-url>
+```
+
+Where:
+
+* `<admin-user>` – is a user of type *admin* which can update users, default: `administrator`
+* `<admin-password>` – is the password for the chosen *admin* user
+* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
+
 ### 5.2 Additional Users
 
 You will want to set up *operator* users and (optionally) additional *admin* users. To do this, use the following command:
@@ -121,9 +150,9 @@ mx-pclm-cli user create \
 
 Where:
 
-* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
-* `<admin-user>` – is a user of type *admin* which can update users – by default `administrator`
-* `<admin-password>` – is the password for the chosen *admin* user
+* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
+* `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
+* `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 * `<new-user>` – is the name of the new user you are creating
 * `<password>` – is the password for the new user
 * `<user-type>` – is the type of user you are creating, either `admin` or `operator`
@@ -145,9 +174,9 @@ mx-pclm-cli license import
 
 Where:
 
-* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
-* `<admin-user>` – is a user of type *admin* which can update users – by default `administrator`
-* `<admin-password>` – is the password for the chosen *admin* user
+* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
+* `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
+* `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 * `<bundle-zip-file-path>` – is the location of your license bundle file
 
 You will get a report of the results of your import operation:
@@ -256,9 +285,9 @@ mx-pclm-cli license list-usage -s <pclm-http-url> \
 
 Where:
 
-* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
-* `<admin-user>` – is a user of type *admin* which can update users – by default `administrator`
-* `<admin-password>` – is the password for the chosen *admin* user
+* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
+* `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
+* `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 
 ### 7.4 Auditing Licenses
 
@@ -277,9 +306,9 @@ Where:
 
 * `<days>` – is the number of past days to report (default 365)
 * `<file-name>` – is the name of the file where a zipped version of the report is saved — if this is omitted, the report will be output to the console
-* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
-* `<admin-user>` – is a user of type *admin* which can update users – by default `administrator`
-* `<admin-password>` – is the password for the chosen *admin* user
+* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
+* `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
+* `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 
 The report is presented as a CSV file containing a summary of the licenses at various times over the specified period.
 

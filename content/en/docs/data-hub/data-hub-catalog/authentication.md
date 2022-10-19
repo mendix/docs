@@ -17,7 +17,6 @@ When publishing data in the Data Hub Catalog, publishers of a data source can le
 
 The following methods are supported by the Data Hub Catalog:
 
-
 * Basic authentication (Username and Password)
 * Active session - Mendix data source
 * Mendix SSO - Mendix data source

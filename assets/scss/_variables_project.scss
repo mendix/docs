@@ -32,7 +32,7 @@ $light: #D3F3EE !default;
 
 $dark: #0A1325 !default; // MX Midnight 100 (MxDock color)
 $blue: #0CABF9 !default; // MX Blue
-$orange: #BA5A31 !default;
+$orange: #E39600 !default; // MX colors.light.brand.yellow.7 (from PDS Figma colors board)
 $gray-light: #F3F3F4 !default; // NK - added for design proposal
 $gray-100: #F8F8F8 !default; // NK - changed to better align to Figma Docs mockup
 $gray-200: #E7E7E9 !default; // NK - changed to better align to Figma Docs mockup
@@ -45,6 +45,24 @@ $gray-700: #6C717C !default; // MX Midnight 60
 $gray-800: #3B4251 !default; // MX Midnight 80 
 $gray-900: #0A1325 !default; // MX Midnight 100 
 $black: #000 !default;
+
+// NK - copied from themes\docsy\assets\vendor\bootstrap\scss\_variables.scss to add extra theme color, 
+// as workaround for button color, instead of rewriting all of inherited Bootstrap button classes
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "orange":     $orange
+  ),
+  $theme-colors
+);
 
 $code-color: darken($secondary, 20%) !default;
 

@@ -381,6 +381,8 @@ A new list
 
 {{% button color="warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
 
+{{% button color="orange" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Orange" title="What do you think of this button?" %}}
+
 {{% button color="light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
 
 {{% button color="dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
@@ -394,6 +396,8 @@ A new list
 {{% button color="outline-danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
 
 {{% button color="outline-warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+
+{{% button color="outline-orange" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Orange" title="What do you think of this button?" %}}
 
 {{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
 

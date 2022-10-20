@@ -58,7 +58,7 @@ There are three ways to install a Marketplace component:
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download
     * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/general/app-store-overview/#home)
-    * Filter for **All Content**, **My Company Content**, or **Platform Supported Content**
+    * Filter for **All Content**, **My Company Content**, or **Platform-Supported Content**
 
 5. Select a component from the pane to see its details:
 

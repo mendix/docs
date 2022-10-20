@@ -8,7 +8,9 @@ tags: ["studio pro", "text", "text widget", "common widget"]
 
 ## 1 Introduction
 
-The text widget displays a text which can optionally contain parameters. A parameter can be an attribute of a context object or an [expression](/refguide/expressions/) which also has access to the surrounding context objects and their attributes. When used with parameters, every parameter annotation in the text is replaced with the value of its corresponding attribute or expression. For example, if you want to build a page that shows some detailed information about books, you can configure a [data grid](/refguide/data-grid/) to retrieve the whole list of `Book` objects from the database. Then, you can place a text widget inside a [data view](/refguide/data-view/) that is configured to listen to this data grid. (See more in [Listen to Widget Source](/refguide/listen-to-grid-source/).) Finally, you can add parameters for your text widget to display information about the selected book from the data grid.
+The text widget displays a text which can optionally contain parameters. A parameter can be an attribute of a context object or an [expression](/refguide/expressions/) which also has access to the surrounding context objects and their attributes. When used with parameters, every parameter annotation in the text is replaced with the value of its corresponding attribute or expression. 
+
+For example, if you want to build a page that shows some detailed information about books, you can configure a [data grid](/refguide/data-grid/) to retrieve the whole list of **Book** objects from the database. Then, you can place a text widget inside a [data view](/refguide/data-view/) that is configured to listen to this data grid (for more information, see [Listen to Widget Source](/refguide/listen-to-grid-source/). Finally, you can add parameters for your text widget to display information about the selected book from the data grid.
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/text.png" alt="Text Widget" >}}
 
@@ -60,12 +62,11 @@ Parameters have the following settings:
 * **Value** – an attribute or an expression value to be displayed
 * **Format** – a format in which the value will be displayed (only for attributes)
 
-{{% alert color="info" %}}
-You can use the formatter functions in the expression editor when using expressions.
-See [this list](/refguide/expressions/#expressions-formatter-functions) for more information.
-{{% /alert %}}
-
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png" alt="Parameter Settings" >}}
+
+{{% alert color="info" %}}
+You can use the formatter functions in the expression editor when using expressions. For more information, see [this list](/refguide/expressions/#expressions-formatter-functions).
+{{% /alert %}}
 
 ##### 2.3.2.1 Adding New Parameters
 
@@ -82,7 +83,7 @@ To use parameters, do the following:
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example" >}}
 
-6. In the **Fallback text** setting, write the text you would like to display when no context object is available from the surrounding data widget.
+6. In the **Fallback text** setting, write the text you would like to display when no context object is available from the surrounding data widget:
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/fallback-text-example.png" alt="Fallback Text Example" >}}
 
@@ -101,10 +102,10 @@ In addition to adding new parameters, you can perform the following actions on p
 
 The render mode determines how the text will be displayed. 
 
-| Value                 | Description                                                                                                                                                         |
-|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Text  *(default)*     | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML).                                                                     |
-| Paragraph             | The text will be rendered as a separate paragraph (`<p>` tag in HTML).                                                                                              |
+| Value | Description  |
+|-------|----------|
+| Text  *(default)* | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML).  |
+| Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML).  |
 | Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
 ### 2.4 Visibility Section {#visibility}

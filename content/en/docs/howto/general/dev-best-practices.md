@@ -335,7 +335,9 @@ If you decide to color code the different activities in your app, be sure to ali
 
 #### 4.2.4 Complexity
 
-Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
+Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary. An example of what is not recommended and what is recommended is shown below. If necessary, the microflow expression in the following example can also be written as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, we still recommended the low-code approach below, which makes it easier to understand what is happening.
+
+{{< figure src="/attachments/howto/general/dev-best-practices/example-microflow-complexity.png" >}}
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 

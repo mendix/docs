@@ -288,7 +288,7 @@ The **Archived Projects** page shows all the projects that are archived. You can
 
 The list contains the following information:
 
-* **Project Name** – Clicking it opens a [side pane](#side-pane) that shows the details of the archived project as well as why the project was archived, additional notes, who archived the project, and when.
+* **Project Name** – Clicking it opens a [side pane](#view-project) that shows the details of the archived project as well as why the project was archived, additional notes, who archived the project, and when.
 
 * **Department** – This is the department to which the project belongs.
 

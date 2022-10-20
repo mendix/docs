@@ -49,139 +49,9 @@ Any of the following changes are interpreted as non-conflicting:
 The Workflow Versioning Conflict Detection system detects different types of conflicts. This section lists conflict types, explains the impact, and provides option to solve conflicts. When one or more of these conflict types is detected, a workflow instance becomes incompatible and the **Reason** field mentions the conflict types that are found in the workflow instance.
 
 
-#### 3.2.1 Context Entity Replaced
+#### 3.2.1 Conflict Mitigation Matrix
 
-When an app developer changes the **Workflow Context** entity of a workflow, existing instances still run on the old **Workflow Context** entity. This entity may not be compatible with the new **Workflow Context** entity.
-
-You can do one of the following: 
-
-* The Administrator can abort the workflow.
-* The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
-
-
-#### 3.2.2 Context Object Not Found
-
-When the workflow starts, a **Workflow Context** object is assigned to the workflow. When this context object is deleted, the workflow instance cannot continue executing the workflow.
-
-{{% alert color="info" %}}
-This conflict may occur even without deploying a new app version.
-{{% /alert %}}
-
-You can do the following:
-
-* The Administrator can abort the workflow.
-
-
-#### 3.2.3 Workflow Definition Deleted
-
-When an app developer deletes a workflow or excludes a workflow from an app and deploys that change, workflow instances cannot continue executing the workflow as the **Workflow Definition** information is not available anymore.
-
-You can do one of the following: 
-
-* The Administrator can abort the workflow.
-* The app developer can revert the change (or include the workflow to the app again) and deploy it.
-
-
-#### 3.2.4 Current Activity Removed
-
-When an app developer removes certain activities from a workflow and deploys that change, workflow instances that were executing deleted activities can no longer continue executing the workflow as the Workflow Engine cannot determine what activity to continue with.
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The Administrator can apply jumping to different activities.
-* The app developer can revert the change (which adds the activities back) and deploy this version.
-
-
-#### 3.2.5 Parallel Split Branch Removed
-
-When an app developer removes a branch from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that branch cannot continue execution. 
-
-{{% alert color="info" %}}
-This conflict happens in most cases in combination with a Current Activity Removed conflict.
-{{% /alert %}}
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The app developer can revert the change (which adds the branch back) and deploy it.
-
-
-#### 3.2.6 Current Activity Moved out of Branch
-
-When an app developer moves activities out of a branch of a **Parallel Split**, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split**.
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The app developer can revert the change (which moves the activity back) and deploy this version.
-
-
-#### 3.2.7 Parallel Split Introduced in Executing Path
-
-When an app developer adds a **Parallel Split** with one or more branches and moves some activities inside a branch of that **Parallel Split**, workflow instances executing the moved activities cannot complete the parallel split.
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The app developer can revert the change (which moves the activities out of the **Parallel Split**) and deploy this version.
-
-
-#### 3.2.8 Parallel Branch Introduced
-
-When an app developer adds a branch to a **Parallel Split** and deploys this change, workflow instances currently executing activities inside this **Parallel Split** cannot complete the parallel split.
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The Administrator can use *Mark-as-Resolved* to fix this issue (the first activity of the newly added branch will be added to the executing activities of the workflow instance).
-* The app developer can revert the change (which moves the activity back) and deploy this version.
-
-
-#### 3.2.9 Selected Outcome Replaced
-
-When an app developer adds a new outcome to a user task, a microflow, or a decision and moves one or more activities to the new outcome, workflow instances that have executed or are executing these activities will now effectively move to another outcome than originally selected. 
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
-* The app developer can revert the change (which moves the activity back) and deploy this version.
-
-
-#### 3.2.10 Activities Introduced in the Executed Path
-
-When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
-* The app developer can revert the change (which moves the activity back) and deploy this version.
-
-
-#### 3.2.11 Executed Activities Moved to a Re-executable Position
-
-When an app developer moves activities within a workflow, workflow instances that have executed or are executing the moved activities may have to re-execute these activities. In this case user tasks or microflows may have to be re-executed. If actions are non-idempotent, changes may happen more than once (for example, object creation or sending data to external systems).
-
-You can do one of the following:
-
-* The Administrator can abort the workflow.
-* The Administrator can restart the workflow.
-* The Administrator can use *Mark-as-Resolved* to fix this issue.
-* The app developer can revert the change (which moves the activity back) and deploy this version.
-
-
-#### 3.2.12 Conflict Mitigation Matrix
-
-Conflicts with the possible mitigations listed above can be summarized in the following matrix:
+Conflicts with the possible mitigations listed above can be summarized in the following matrix (you can see details for each conflict in the sections below):
 
 | **Conflict Type/Mitigation**                        | **Abort**                                                    | **Restart**                                                  | **Mark-As-Resolved**                                         | **Jump To Different Activities**                             |
 | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -199,4 +69,136 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Selected Outcome Replaced                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Activities Introduced in Executed Path              | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Executed Activities Moved to Re-executable Position | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
+
+
+#### 3.2.2 Context Entity Replaced
+
+When an app developer changes the **Workflow Context** entity of a workflow, existing instances still run on the old **Workflow Context** entity. This entity may not be compatible with the new **Workflow Context** entity.
+
+You can do one of the following: 
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
+
+To prevent this issue, you need to make sure that context objects cannot be deleted while they are still being used in running workflow instances.
+
+
+#### 3.2.3 Context Object Not Found
+
+When the workflow starts, a **Workflow Context** object is assigned to the workflow. When this context object is deleted, the workflow instance cannot continue executing the workflow.
+
+{{% alert color="info" %}}
+This conflict may occur even without deploying a new app version.
+{{% /alert %}}
+
+You can do the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+
+
+#### 3.2.4 Workflow Definition Deleted
+
+When an app developer deletes a workflow or excludes a workflow from an app and deploys that change, workflow instances cannot continue executing the workflow as the **Workflow Definition** information is not available anymore.
+
+You can do one of the following: 
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The app developer can revert the change (or include the workflow to the app again) and deploy it.
+
+
+#### 3.2.5 Current Activity Removed
+
+When an app developer removes certain activities from a workflow and deploys that change, workflow instances that were executing deleted activities can no longer continue executing the workflow as the Workflow Engine cannot determine what activity to continue with.
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can apply jumping to different activities. The Workflow Commons module has pages where the Administrator can decide which activity in the workflow to continue from (which activity to jump to). As a developer, you can also use microflow activities [Generate jump-to options](/refguide/generate-jump-to-options/) and [Apply jump-to option](/refguide/apply-jump-to-option/) to build custom pages and logic to migrate running workflow instances.
+* The app developer can revert the change (which adds the activities back) and deploy this version.
+
+
+#### 3.2.6 Parallel Split Branch Removed
+
+When an app developer removes a branch from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that branch cannot continue execution. 
+
+{{% alert color="info" %}}
+This conflict happens in most cases in combination with a Current Activity Removed conflict.
+{{% /alert %}}
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The app developer can revert the change (which adds the branch back) and deploy it.
+
+
+#### 3.2.7 Current Activity Moved out of Branch
+
+When an app developer moves activities out of a branch of a **Parallel Split**, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split**.
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The app developer can revert the change (which moves the activity back) and deploy this version.
+
+
+#### 3.2.8 Parallel Split Introduced in Executing Path
+
+When an app developer adds a **Parallel Split** with one or more branches and moves some activities inside a branch of that **Parallel Split**, workflow instances executing the moved activities cannot complete the parallel split.
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The app developer can revert the change (which moves the activities out of the **Parallel Split**) and deploy this version.
+
+
+#### 3.2.9 Parallel Branch Introduced
+
+When an app developer adds a branch to a **Parallel Split** and deploys this change, workflow instances currently executing activities inside this **Parallel Split** cannot complete the parallel split.
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use *Mark-as-Resolved* to fix this issue (the first activity of the newly added branch will be added to the executing activities of the workflow instance).
+* The app developer can revert the change (which moves the activity back) and deploy this version.
+
+
+#### 3.2.10 Selected Outcome Replaced
+
+When an app developer adds a new outcome to a user task, a microflow, or a decision and moves one or more activities to the new outcome, workflow instances that have executed or are executing these activities will now effectively move to another outcome than originally selected. 
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The app developer can revert the change (which moves the activity back) and deploy this version.
+
+
+#### 3.2.11 Activities Introduced in the Executed Path
+
+When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The app developer can revert the change (which moves the activity back) and deploy this version.
+
+
+#### 3.2.12 Executed Activities Moved to a Re-executable Position
+
+When an app developer moves activities within a workflow, workflow instances that have executed or are executing the moved activities may have to re-execute these activities. In this case user tasks or microflows may have to be re-executed. If actions are non-idempotent, changes may happen more than once (for example, object creation or sending data to external systems).
+
+You can do one of the following:
+
+* The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The workflow can be restarted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The Administrator can use *Mark-as-Resolved* to fix this issue.
+* The app developer can revert the change (which moves the activity back) and deploy this version.
 

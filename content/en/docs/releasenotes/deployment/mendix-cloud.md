@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fix
 
-* We fixed an issue with validation of white spaces in intermediatte certificate chain for custom domains. (Ticket 15376, 163961, 165121, 165756, 167669, 168416)
+* We fixed an issue with validation of white spaces in intermediate certificate chains for custom domains. (Tickets 15376, 163961, 165121, 165756, 167669, and 168416)
 
 ### October 17th, 2022
 

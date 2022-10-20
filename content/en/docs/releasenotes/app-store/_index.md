@@ -11,6 +11,10 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### October 25th, 2022
+
+* [**ADD NOTE FOR MARKETPLACE UPDATE IN SP**]
+
 ### August 27th, 2022
 
 #### Improvements

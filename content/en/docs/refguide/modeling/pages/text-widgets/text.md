@@ -8,7 +8,7 @@ tags: ["studio pro", "text", "text widget", "common widget"]
 
 ## 1 Introduction
 
-The text widget displays a text which can optionally contain parameters. A parameter can be an attribute of a context object or an [expression](/refguide/expressions/) which also has access to the surrounding context objects and their attributes. When used with parameters, every parameter annotation in the text is replaced with the value of its corresponding attribute or expression. 
+The text widget displays a text which can optionally contain parameters. A parameter can be an attribute of a context object or an [expression](/refguide/expressions/) which also has access to the surrounding context objects and their attributes. When used with parameters, every parameter annotation in the text (which may appear as {0}, {1}, or {2} for example) is replaced with the value of its corresponding attribute or expression. 
 
 For example, if you want to build a page that shows some detailed information about books, you can configure a [data grid](/refguide/data-grid/) to retrieve the whole list of **Book** objects from the database. Then, you can place a text widget inside a [data view](/refguide/data-view/) that is configured to listen to this data grid (for more information, see [Listen to Widget Source](/refguide/listen-to-grid-source/). Finally, you can add parameters for your text widget to display information about the selected book from the data grid.
 

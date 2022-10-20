@@ -13,6 +13,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### October 25th, 2022
 
+#### New Features
+
 We are excited to bring new changes to the Mendix Marketplace and improve access to Marketplace content in Studio Pro for our community. The new revamp of the Marketplace in Studio Pro presents a better UI with easier navigation, better search functionality, a faster content-discovery experience, and more control over category and filters. We have also included new filter that helps you select **Platform-supported content**. 
 
 The new view helps you to browse through Marketplace components and view component details more quickly, just as you can in the online Marketplace. 

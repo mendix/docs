@@ -11,6 +11,26 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### October 20th, 2022
+
+#### Improvements
+
+* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
+
+### Fixes
+
+* We fixed a bug where HTML tags were appearing on toast notifications. 
+
+### October 13th, 2022
+
+#### Improvements
+
+* Based on your feedback, we have renamed instances of **Delete data source** in the UI to **Remove data source**. Removing a data source will not delete it from your model.
+
+#### Fixes
+
+* We fixed a bug where the redeployment of an endpoint resulted in an error. The error mistakenly reported the redeployed endpoint as a duplicate rather than an update.
+
 ### October 6th, 2022
 
 #### Improvements

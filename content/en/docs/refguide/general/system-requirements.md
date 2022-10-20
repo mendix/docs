@@ -19,7 +19,6 @@ Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versio
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
-{{% todo %}}Do we still need C++ 2010 for any versions of Mx9?{{% /todo %}}
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
@@ -28,7 +27,6 @@ The following frameworks are required. They will be installed automatically by t
     * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
     
     Oracle JDK 11 can also be used if this is already installed.
-{{% todo %}}Are the following needed for all versions of Mx9?{{% /todo %}}
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -150,12 +148,13 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ## 7 Server
 
-### 7.1 Operating System
+### 7.1 Operating System {#server-os}
 
 * Microsoft Windows Server 2008 SP2 and above
-* Debian 8 (Jessie) and above
-* Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
-* CentOS 6, CentOS 7
+* The following Unix-like operating systems:
+    * Debian 8 (Jessie) and above
+    * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
+    * CentOS 6, CentOS 7
 
 ### 7.2 Web Server
 

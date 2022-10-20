@@ -88,7 +88,7 @@ In addition to the licenses for your apps, you will also need to license the Men
 
 #### 3.4.1 Mendix for Private Cloud Connected
 
-You can add the subscription secret as part of creating an environment on Mendix for Private Cloud. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license. For more information see the [Change Subscription Secret](/developerportal/deploy/private-cloud-deploy/#change-subscription-secret) section of *Deploying a Mendix App to a Private Cloud Cluster*.
+You can add the subscription secret as part of creating an environment on Mendix for Private Cloud. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license. For more information see the [Change Subscription Secret](/developerportal/deploy/private-cloud-deploy/#license-mendix) section of *Deploying a Mendix App to a Private Cloud Cluster*.
 
 #### 3.4.2 Mendix for Private Cloud Standalone
 

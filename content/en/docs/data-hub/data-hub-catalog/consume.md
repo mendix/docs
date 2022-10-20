@@ -17,7 +17,7 @@ For details on the security of the data that the shared datasets connect to, and
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources and use the [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details) button obtain the OData service URI which can be used in other enterprise applications.
+You can use the Catalog or the [Data Hub pane](/refguide/data-hub-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/data-hub/data-hub-catalog/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 

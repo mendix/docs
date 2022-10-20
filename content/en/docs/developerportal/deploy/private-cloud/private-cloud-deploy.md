@@ -290,7 +290,7 @@ When the Operator is running in trial mode, it will stop managing an environment
 The word **Licensed** shows that the Operator managing that environment is licensed.
 
 {{% alert color="info" %}}
-The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
+The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#license-mendix)) removes trial restrictions from a Mendix App itself.
 
 You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
 {{% /alert %}}
@@ -422,21 +422,19 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 If any of these garbage collection steps fail, you will no longer see the environment in the Developer Portal, and will have to [delete the storage instances](#delete-storage) manually.
 {{% /alert %}}
 
-##### 5.1.3.7 Change Purpose
+##### 5.1.3.7 License Mendix{#license-mendix}
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as an unlicensed.
+If you need to enter or change the subscription secret, then you can do that here.
 
-For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
+Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
+
+#### 5.1.4 Security
+
+Your environment will be created as a Production environment.
 
 {{% alert color="warning" %}}
 Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
-
-##### 5.1.3.8 Change Subscription Secret{#change-subscription-secret}
-
-If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
-
-Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
 ### 5.2 Model Options Tab
 
@@ -504,7 +502,7 @@ If you choose a custom TLS configuration, you will need to enter the following i
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/enable-tls.png" >}}
 
-* Use existing TLS secret or add new tls private key and certificate?
+* Use existing TLS secret or add new TLS private key and certificate?
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/choose-secret.png" >}}
 

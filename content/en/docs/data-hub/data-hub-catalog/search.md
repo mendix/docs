@@ -338,7 +338,7 @@ You can perform the following actions from this screen:
 
 * **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
 * **Share Data Source** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
-* [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer.
+* [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer. You can upload this in the Catalog to register it manually.
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
 #### 3.5.2 Details for a Selected Dataset {#entity-details}

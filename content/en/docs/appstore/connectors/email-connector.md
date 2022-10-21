@@ -32,6 +32,7 @@ Before you use the Email Connector, do the following:
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module.
 2. Download and [configure](/appstore/modules/encryption/#configuration) the [Encryption](https://marketplace.mendix.com/link/component/1011) module.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email Module with Templates](/appstore/modules/email-with-templates/)).
+4. Check for and remove orphaned JAR files from any old modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
 
 {{% alert color="warning" %}}
 Certain functionalities of the Email Connector will not work correctly if the **Mx Model Reflection** module is not configured, or if you have not removed older email modules.

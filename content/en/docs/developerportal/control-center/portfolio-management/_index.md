@@ -127,13 +127,13 @@ The list contains the following information:
 
 * **Stage** – This shows which stage the project is currently in.
 
-* **Business Value** – This indicates how much business value this project generates.
+* **Business Value** – This indicates how much business value this project generates. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Time Criticality** – This indicates how time-critical this project is.
+* **Time Criticality** – This indicates how time-critical this project is. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Risk Reduction** – This indicates how much risk this project reduces.
+* **Risk Reduction** – This indicates how much risk this project reduces.  You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Size** – The is the job size of the project.
+* **Size** – The is the job size of the project. You can select **XS**, **S**, **M**, **L**, or **XL**.
 
 * **Score** – This is the WSJF score of the project.
 
@@ -155,13 +155,13 @@ The list contains the following information:
 
 * **Stage** – This shows which stage the project is currently in.
 
-* **Reach** – This is the estimated number of people the project will affect.
+* **Reach** – This is the estimated number of people the project will affect. You must enter an integer in this field.
 
-* **Impact** – This is the estimated amount of impact that the project will have on individual users.
+* **Impact** – This is the estimated amount of impact that the project will have on individual users. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Confidence** – This indicates how confident you are about your Impact and Reach estimates.
+* **Confidence** – This indicates how confident you are about your Impact and Reach estimates. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Effort** – This is the estimated total amount of time that the project will require from all members of your team: product, design, and development.
+* **Effort** – This is the estimated total amount of time that the project will require from all members of your team: product, design, and development. You must enter an integer in this field.
 
 * **Score** – This is the RICE score of the project.
 
@@ -223,7 +223,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 12. Click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
-    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. For information about the meaning of all the fields in this section, see [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice).{{% /alert %}}
+    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For information about the meaning of all the fields in this section, see [WSJF](/developerportal/control-center/prioritization-models/#wsjf) or [RICE](/developerportal/control-center/prioritization-models/#rice).{{% /alert %}}
 
 13. Click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
 

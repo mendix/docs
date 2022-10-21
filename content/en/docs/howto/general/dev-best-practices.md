@@ -341,7 +341,7 @@ The example below shows a low-code approach that we recommend because it present
 
 {{< figure src="/attachments/howto/general/dev-best-practices/recommended-microflow.png" width="700px">}}
 
-The example below shows an approach that we do not recommend. We can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is better.
+The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
 
 {{< figure src="/attachments/howto/general/dev-best-practices/not-recommended-microflow.png" width="450px">}}
 

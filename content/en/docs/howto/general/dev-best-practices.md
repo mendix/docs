@@ -337,11 +337,11 @@ If you decide to color code the different activities in your app, be sure to ali
 
 Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary. 
 
-The example below shows a low-code approach we recommend because it presents a clear picture of what is happening in the microflow:
+The example below shows a low-code approach that we recommend because it presents a clear picture of what is happening in the microflow:
 
 {{< figure src="/attachments/howto/general/dev-best-practices/recommended-microflow.png" width="700px">}}
 
-The example below shows an approach we do not recommend. We can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is better.
+The example below shows an approach that we do not recommend. We can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is better.
 
 {{< figure src="/attachments/howto/general/dev-best-practices/not-recommended-microflow.png" width="450px">}}
 

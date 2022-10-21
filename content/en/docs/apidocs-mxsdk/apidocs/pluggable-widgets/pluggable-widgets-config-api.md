@@ -599,6 +599,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
 
 ```typescript
 type SelectableProps = BaseProps & {
+    type: "Selectable";
     object: object; // object property instance from the Value API
     child: StructurePreviewProps; // any type of preview property to visualize the object instance
 }

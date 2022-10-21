@@ -22,7 +22,7 @@ Below are some typical use cases :
 
 ### 1.2 Prerequisites
 
-The Amazon Rekognition connector requires the installation of [Amazon Authentication version 2](/appstore/connectors/aws-authentication/) from the Marketplace.
+The Amazon Rekognition connector requires the installation of [Amazon Authentication version 2.1](/appstore/connectors/aws-authentication/) from the Marketplace.
 
 ## 2 Configuration
 

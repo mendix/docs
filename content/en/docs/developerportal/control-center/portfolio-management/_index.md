@@ -131,7 +131,7 @@ The list contains the following information:
 
 * **Time Criticality** – This indicates how time-critical this project is. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Risk Reduction** – This indicates how much risk this project reduces.  You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* **Risk Reduction** – This indicates how much risk this project reduces. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
 * **Size** – The is the job size of the project. You can select **XS**, **S**, **M**, **L**, or **XL**.
 
@@ -155,9 +155,9 @@ The list contains the following information:
 
 * **Stage** – This shows which stage the project is currently in.
 
-* **Reach** – This is the estimated number of people the project will affect. You must enter an integer in this field.
+* **Reach** – This is the estimated number of relevant users that the project may affect within a time period. You must enter an integer in this field.
 
-* **Impact** – This is the estimated amount of impact that the project will have on individual users. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* **Impact** – This is the estimated amount of impact that the project may have on individual users. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
 * **Confidence** – This indicates how confident you are about your Impact and Reach estimates. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 

@@ -36,7 +36,7 @@ weight: 81
 
 #### QueryOptions (Element)
 
-* We introduced the `topSupported` property for indicating whether this resource supports the `$top parameter.
+* We introduced the `topSupported` property for indicating whether this resource supports the `$top` parameter.
 * We introduced the `skipSupported` property for indicating whether this resource supports the `$skip` parameter.
 
 #### PublishedODataMicroflow (Element)

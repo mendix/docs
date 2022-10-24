@@ -27,7 +27,7 @@ On the upper-left corner, you can see the name of the app that currently opens i
 
 ### 2.2 Survey Overview Page {#survey-overview}
 
-When you [open an app](open-app) that already has existing surveys in Product Insights, the **Survey Overview** page opens.
+When you [open an app](#open-app) that already has existing surveys in Product Insights, the **Survey Overview** page opens.
 
 #### 2.2.1 Active Tab {#active}
 
@@ -77,7 +77,7 @@ On the **Settings** tab, you can enable the test mode. Enabling this mode will m
 
 {{% alert color="info" %}}If a team member is not authenticated through Mendix SSO, the test mode does not work for them.{{% /alert %}} 
 
-### 2.3 Product Insights Settings Page
+### 2.3 Product Insights Settings Page {#product-insights-settings}
 
 When you click the settings icon on the [Survey Overview](#survey-overview) page, the **Product Insights Settings** page opens.
 
@@ -107,7 +107,7 @@ The **Implementation** tab is available for mini surveys with the status of **Dr
 
 On this tab, you can find information about how to implement the mini survey in Studio Pro. For a more step-by-step procedure, see the [Implement the Mini Survey in Studio Pro](#implement-survey) section.
 
-#### 2.4.3 Responses Tab
+#### 2.4.3 Responses Tab {#responses}
 
 The **Responses** tab is available for mini surveys with the status of **Running** and **Evaluating Responses**. 
 
@@ -129,9 +129,9 @@ To open an app in Product Insights, open the app in the Developer Portal and the
 
 ### 3.2 Adding a New Project in Project Insights in the Developer Portal{#add-new-project}
 
-1. Go to the [General Settings](/developerportal/collaborate/general-settings) page in the Developer Portal for this app.
+1. Go to the [General Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal for this app.
 
-2. On the [General](/developerportal/collaborate/general-settings/#2-general) tab, copy the **App ID**. 
+2. On the **General** tab, copy the **App ID**. 
 
 3. Go to **Project Insights**. {{% todo %}}Check how to go to Project Insights from here.{{% /todo %}}
 
@@ -147,7 +147,7 @@ The app should appear on the **My projects** page. {{% todo %}}Check if the My p
 
 1. [Open the app in Project Insights](#open-app) in the Developer Portal.
 
-2. On the **My projects** page, click the app for which you want to create the mini survey. (If you cannot find the app on the **My projects** page, [add the app first](#aa-new-project).){{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
+2. On the **My projects** page, click the app for which you want to create the mini survey. (If you cannot find the app on the **My projects** page, [add the app first](#add-new-project).){{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
 
    Depending on if there are existing surveys for this app, you see one of the following scenarios:
 
@@ -192,7 +192,7 @@ To edit a mini survey, perform the following steps:
 
 2. On the **My projects** page, click the app for which you want to edit the mini survey. The [Survey Overview](#survey-overview) page opens.{{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
 
-3. On the **Active** tab, click the mini survey. Depending on the [status](#status) of the mini survey, you can edit different parts of the mini survey:
+3. On the **Active** tab, click the mini survey. Depending on the [status](#survey-status) of the mini survey, you can edit different parts of the mini survey:
 
 * If a mini survey has the status of **Draft**, you can still edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
 * If a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.

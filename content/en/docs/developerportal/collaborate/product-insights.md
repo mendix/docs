@@ -219,7 +219,7 @@ To edit a mini survey, perform the following steps:
 
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the [Product Insights](#needs-url) module into your app.
 
-3. [Configure the Product Insights module](/appstore/modules/product-insights/#configuration) in Studio Pro.
+3. [Configure the Product Insights module](/appstore/modules/product-insights/#configuration) to implement the mini survey in Studio Pro.
 
 ## 5 Viewing and Exporting Responses of a Mini Survey
 

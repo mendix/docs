@@ -30,7 +30,7 @@ The Validation Assist is activated by default in the page elements where data va
 
 * a button with the **Save changes** on-click event
 * a button with the **Call microflow** on-click event
-* an empty button
+* a button with no on-click event set for it
 * the following input widgets:
 
     * **Text box**

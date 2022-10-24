@@ -17,7 +17,7 @@ Open the **Navigation Document** by clicking the corresponding icon in the left 
 {{< figure src="/attachments/studio7/navigation/navigation-icon.png"   width="300"  >}}
 
 {{% alert color="info" %}}
-In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide7/navigation/#profiles) in *Navigation in Mendix 7.4 & Above* in the *Studio Pro Guide*. 
+In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide7/navigation/#profiles) in *Navigation in Mendix 7.4 and Above* in the *Studio Pro Guide*. 
 {{% /alert %}}
 
 ## 2 Properties of Menu Items {#properties-of-menu-items}

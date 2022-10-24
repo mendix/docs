@@ -3,12 +3,13 @@ title: "Create Automated Tests with TestNG"
 url: /howto/testing/create-automated-tests-with-testng/
 category: "Testing"
 weight: 50
+description: "Describes how to create TestNG test files, run automated tests with TestNG, and generate reports with TestNG."
 tags: ["test", "testing", "testng"]
 ---
 
 ## 1 Introduction
 
-Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](/howto/testing/testing-web-services-using-soapui/), unit tests with the [Unit Testing](/howto/testing/testing-microflows-using-the-unittesting-module/) module, and UI tests with [Selenium IDE](/howto/testing/testing-mendix-applications-using-selenium-ide/). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
+Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](/howto/testing/testing-web-services-using-soapui/), unit tests with the [Unit Testing](/refguide/testing-microflows-with-unit-testing-module/) module, and UI tests with [Selenium IDE](/howto/testing/testing-mendix-applications-using-selenium-ide/). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
 
 TestNG is a Java testing framework that can be used to drive Selenium. In this how-to you will learn how to create an automated test with TestNG.
 
@@ -23,7 +24,7 @@ This how-to will teach you how to do the following:
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
-* Download the [Selenium Client & WebDriver](http://www.seleniumhq.org/download/) for Java
+* Download the [Selenium Client and WebDriver](http://www.seleniumhq.org/download/) for Java
 
 {{% alert color="warning" %}}
 This how-to uses the Company Expenses app template starting in the [Add the Third Test Method](#third) section for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
@@ -496,4 +497,3 @@ Happy testing!
 ## 10 Read More
 
 * [Test Mendix Applications Using Selenium IDE](/howto/testing/testing-mendix-applications-using-selenium-ide/)
-* [Test Microflows Using the Unit Testing Module](/howto/testing/testing-microflows-using-the-unittesting-module/)

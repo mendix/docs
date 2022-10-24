@@ -93,6 +93,6 @@ weight: 90
 * We introduced the `userSource` property.
 * We deleted the `userRole` property.
 
-#### CallMicroflowTask, UserSource & XPathBasedUserSource (Elements)
+#### CallMicroflowTask, UserSource, and XPathBasedUserSource (Elements)
 
 * We introduced these elements.

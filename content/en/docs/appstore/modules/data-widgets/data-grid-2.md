@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 
 ## 1 Introduction
 
-[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag and drop data-grid-specific widgets inside the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
+[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
 
 Here is an example of a data grid using filters:
 
@@ -218,7 +218,7 @@ Here is an example of dropzones for filters in Structure mode:
 
 ### 7.1 Date Filter
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look & feel" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look and feel" >}}
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 

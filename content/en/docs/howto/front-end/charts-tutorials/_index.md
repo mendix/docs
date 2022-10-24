@@ -3,7 +3,7 @@ title: "Use the Charts Widgets"
 url: /howto/front-end/charts-tutorials/
 category: "Front End"
 weight: 20
-description: "These how-to's will guide you in using charts in Mendix apps."
+description: "Presents a list of how-tos to guide you to create and fine-tune your chart widgets in Studio Pro."
 tags: ["build", "app", "studio", "studio pro", "charts", "extensibility"]
 ---
 

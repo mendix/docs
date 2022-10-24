@@ -10,7 +10,7 @@ weight: 99
 
 ### DomainModels
 
-#### FloatAttributeTypeBase, FloatAttributeType & CurrencyAttributeType (Elements)
+#### FloatAttributeTypeBase, FloatAttributeType, and CurrencyAttributeType (Elements)
 
 * We deleted these elements.
 

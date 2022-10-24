@@ -3,7 +3,7 @@ title: "Curate Registered Assets"
 url: /data-hub/data-hub-catalog/curate/
 category: "Data Hub Catalog"
 weight: 45
-description: "Curating and enhancing findability of data assets in Data Hub"
+description: "Describes how to curate and enhance findability of data assets in Data Hub."
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---
 
@@ -54,7 +54,7 @@ When a data source is selected in the **Search Results**, the following options 
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
     * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
     * **Validate** – indicates that the data source and datasets have been validated
-* **Delete Data Source** – allows Owners to delete their own data sources, while Curators or Admins can delete any data sources in the company
+* **Remove Data Source** – allows Owners to remove their own data sources, while Curators or Admins can remove any data sources in the company
 
 When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
 
@@ -87,7 +87,7 @@ If you, as a **Technical Owner**, curate the application and change the technica
 Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 {{% /alert %}}
 
-#### 4.1.1 Changing the Business & Technical Owners of an App {#changing-owner}
+#### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
@@ -204,7 +204,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-## 6 Discoverable & Validated {#discoverability}
+## 6 Discoverable and Validated {#discoverability}
 
 The discoverable and validated properties of registered assets can be set from the Curate bar for the selected asset.
 
@@ -238,4 +238,4 @@ Owners of a data source can delete their own data sources. Anyone with curation 
 
 Deleting something from Catalog only removes the metadata registration. It does not affect the publishing application or any of the applications that are consuming the data source.
 
-To delete a data source, go to the [Curation Bar](#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+To delete a data source, go to the [Curation Bar](#curation-bar) for the data source and click **Edit**, then click **Remove Data Source**.

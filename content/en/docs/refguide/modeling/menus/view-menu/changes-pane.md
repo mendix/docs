@@ -1,7 +1,7 @@
 ---
 title: "Changes Pane"
 url: /refguide/changes-pane/
-weight: 10
+weight: 20
 description: "Describes the Changes pane in Mendix Studio Pro."
 tags: ["Studio Pro", "changes", "changes pane"]
 ---

@@ -25,7 +25,7 @@ The **Expression** tab is available for the following activities in a microflow:
 
 {{< figure src="/attachments/studio8/microflows/microflows-expressions/expression-tab.png" >}}
 
-For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/).
+For more information on setting and changing values for microflow activities, see [Set and Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/).
 
 ## 2 Writing an Expression
 
@@ -113,5 +113,5 @@ You can use the following Boolean expressions:
 ## 4 Read More
 
 * [Microflows](/studio8/microflows/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/)
+* [Set and Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/)
 * [Expressions](/refguide8/expressions/)

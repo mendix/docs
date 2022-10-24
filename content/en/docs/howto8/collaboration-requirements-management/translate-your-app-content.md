@@ -207,7 +207,7 @@ But what if you have several apps and want to add Russian to all of them? You mi
 
 Mendix allows you to export a translation to an Excel file, either for the whole app or just selected modules. You can then import this translation to another app and have your translation available to you.
 
-For more information, see [Exporting & Importing Text](/refguide8/batch-translate/#export-import) in the *Batch Translate* reference guide.
+For more information, see [Exporting and Importing Text](/refguide8/batch-translate/#export-import) in the *Batch Translate* reference guide.
 
 ## 10 Read More
 

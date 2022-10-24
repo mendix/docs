@@ -295,7 +295,7 @@ This section details publishing a signed Android app to the Google Play store. T
 
 Before submitting your app to an app store, you will have to complete Google's [signup steps](https://play.google.com/apps/publish/signup/). Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html) before publishing your app. Beyond the launch checklist information, check Google's [Preparing your app for release](https://developer.android.com/studio/publish/preparing) for information on edge cases to resolve before publishing. 
 
-Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
+Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare and roll out a release](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 
 ### 6.2 Distributing for iOS {#ios-distributing}
 
@@ -345,7 +345,7 @@ To install the *ipa* on your device, follow these steps:
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/appletrust.png" alt="trust dialog"   width="400"  >}}
 
 2. Open iTunes and connect your iOS device to your computer.
-3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
+3. Select the *.ipa* package file that you downloaded earlier, and drag it into your device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your device.
 4. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so.
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.

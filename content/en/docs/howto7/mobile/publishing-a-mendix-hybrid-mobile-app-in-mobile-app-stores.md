@@ -122,7 +122,7 @@ To install the iOS app on your test device, follow these steps:
     {{< figure src="/attachments/howto7/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/appletrust.png" alt="trust dialog" >}}
 
 2. Open iTunes and connect your iOS device to your computer.
-3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your mobile device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile device.
+3. Select the *.ipa* package file that you downloaded earlier, and drag it into your mobile device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile device.
 4. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so. You can also open an *.ipa* file directly with iTunes by double-clicking it.
 5. Your app should show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.
@@ -197,12 +197,12 @@ Using your new app, ensure all pages, buttons, and functionality work the way yo
 
 To upload your Mendix app to the Play Console, follow the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
 
-### 6.5 Create, Review & Roll Out a Release
+### 6.5 Create, Review and Roll Out a Release
 
-1. To create a release of your Mendix app and roll it out, follow the instructions on the [Step 1: Create a release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
+1. To create a release of your Mendix app and roll it out, follow the instructions on the [Step 1: Create a release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's *Prepare and roll out a release* page.
 2. To test your app on a real device, complete the steps in Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) page.
-3. To prepare your app's release, complete the steps on the [Step 2: Prepare your app's release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
-4. To review and roll out a release of your Mendix app and roll it out, follow the instructions on the [Step 3: Review and roll out your release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
+3. To prepare your app's release, complete the steps on the [Step 2: Prepare your app's release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's *Prepare and roll out a release* page.
+4. To review and roll out a release of your Mendix app and roll it out, follow the instructions on the [Step 3: Review and roll out your release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's *Prepare and roll out a release* page.
 
 ## 7 Examples
 

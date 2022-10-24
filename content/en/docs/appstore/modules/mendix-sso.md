@@ -37,7 +37,7 @@ You can use this module when you want your application's end-users to sign in wi
 
 Your app has to be deployed on the Mendix Cloud in order to use this module.
 
-## 2 Installation & Configuration
+## 2 Installation and Configuration
 
 For instructions, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) in the *Developer Portal Guide*.
 

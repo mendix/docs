@@ -29,7 +29,7 @@ The Mendix Marketplace contains numerous adaptive solutions, for example:
 
 Each solution is useable as is, but it can also be adapted to become even more suitable for the customer.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion & Retail" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion and Retail" >}}
 
 ## 3 Architect a Solution for Adaptation
 
@@ -47,7 +47,7 @@ Identifying these main functional parts enables you to define API boundaries bet
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/adaptive-solution-composition.png" alt="Adaptive Solution Composition" >}}
 
-### 3.2 Progressive & Emergent Architecture
+### 3.2 Progressive and Emergent Architecture
 
 The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the different parts described above (meaning, the immutable core compared with customizable modules or something which needs to be customer-specific). This is a level of knowledge that you will only reach once you are serving a large number of customers.
 

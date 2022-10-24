@@ -26,13 +26,13 @@ weight: 98
 
 ### Microflows
 
-#### JavaActionCallAction & MicroflowCallAction (Elements)
+#### JavaActionCallAction and MicroflowCallAction (Elements)
 
 * We introduced the `outputVariableNameRuntime` property.
 
 ### Rest
 
-#### PublishedODataService & PublishedRestService (ModelUnits)
+#### PublishedODataService and PublishedRestService (ModelUnits)
 
 * We introduced the `authenticationTypesRuntime` property for **Authentication types supported by this service**.
 

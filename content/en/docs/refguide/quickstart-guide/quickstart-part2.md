@@ -113,9 +113,9 @@ Nanoflows also interact with the database on the user's mobile device, which is 
 
 As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 
-1. Drag and drop a **Create object** action from the **Toolbox** onto the nanoflow. 
+1. Drag a **Create object** action from the **Toolbox** into the nanoflow. 
 1. Double-click the create object action and select the entity type as **Picture**, then click **OK**. 
-1. Drag and drop a **Take Picture** action from the **Toolbox** onto the nanoflow after the create object activity:
+1. Drag a **Take Picture** action from the **Toolbox** into the nanoflow after the create object activity:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/add-activities.png" width="450px" alt="Take picture action">}}
 

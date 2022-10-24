@@ -30,7 +30,7 @@ The Mendix Runtime cluster requires the following infrastructure:
 
 This means that a Mendix cluster requires a load balancer to distribute the load of the clients over the available Runtime cluster nodes. It also means that all the nodes need to connect to the same Mendix database, and the files need to be stored on S3 (for details, see the [File Storage](#file-storage) section below). The number of nodes in your cluster depends on the application, the high availability requirements, and its usage.
 
-## 4 Cluster Leader & Cluster Slaves
+## 4 Cluster Leader and Cluster Slaves
 
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. These are the activities:
 
@@ -62,7 +62,7 @@ Uploaded files should be stored in a shared file storage facility, as every Mend
 
 For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](/refguide8/custom-settings/).
 
-## 7 After-Startup & Before-Shutdown Microflows {#startup-shutdown-microflows}
+## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 
 It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix cluster, this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintenance during these microflows is strongly discouraged, because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
 

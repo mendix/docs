@@ -3,8 +3,7 @@ title: "Published OData Services"
 url: /refguide8/published-odata-services/
 tags: ["studio pro"]
 aliases:
-    - /refguide8/consumed-odata-services.html
-    - /refguide8/consumed-odata-services
+    - /refguide8/published-odata-services.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -70,7 +69,7 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
 
-##### 3.2.2.1 Username & Password {#username-password}
+##### 3.2.2.1 Username and Password {#username-password}
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 

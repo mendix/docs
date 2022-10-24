@@ -17,7 +17,7 @@ For more information and general help on version control, see the following docu
 * [Version Control](/refguide8/version-control/)
 * [Using Version Control in Studio Pro](/refguide8/using-version-control-in-studio-pro/)
 
-## 2 Errors & Fixes
+## 2 Errors and Fixes
 
 Below is a list of known errors and the steps to fix them.
 

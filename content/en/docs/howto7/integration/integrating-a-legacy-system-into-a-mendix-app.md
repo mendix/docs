@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Know how to create domain models (for details, see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer/))
-* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/))
+* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](/howto7/logic-business-rules/create-your-first-microflow-hello-world/))
 * Understand the concepts behind REST and web services (for more information, see [Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/) and [How to Consume a Complex Web Service](/howto7/integration/consume-a-complex-web-service/))
     * Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial; for instructions on how to accomplish this, refer to the configuration of your non-Mendix Platform

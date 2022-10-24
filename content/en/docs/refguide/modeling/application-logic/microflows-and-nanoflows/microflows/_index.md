@@ -121,5 +121,5 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-* [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-* [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)

@@ -4,7 +4,7 @@ linktitle: "Industrial Edge Apps"
 url: /developerportal/deploy/mendix-app-on-industrial-edge/
 category: "Deployment"
 weight: 49
-description: "Describes how to bring a Mendix app to the Industrial Edge"
+description: "Describes how to deploy to the Industrial Edge."
 tags: ["Mendix app", "Industrial Edge", "edge", "docker image", "Mendix Buildpack"]
 ---
 

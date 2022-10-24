@@ -8,7 +8,7 @@ tags: ["studio pro", "security", "studio"]
 
 ## 1 Introduction 
 
-This document describes the process of model changes that are applied automatically when security is enabled in Mendix Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio/settings-security/) in the *Studio Guide*. 
+This document describes the process of model changes that are applied automatically when security is enabled in Mendix Studio. For more information on security settings in Studio, see [Security, Roles, and Permissions](/studio/settings-security/) in the *Studio Guide*. 
 
 Users can enable security from Studio. While the Studio user simply clicks the **Enable Security** button, as a result, security is set to **Production** for the app and a number of checks and changes (if necessary) are performed automatically. 
 
@@ -24,7 +24,7 @@ When security is enabled, a number of checks and changes are done at several lev
 6. Studio does checks and changes (if necessary) at the [App Security](/refguide/app-security/) level (for more information on this process, see the [App Security Level Set Up](#app-security-level) section).
 
 {{% alert color="info" %}}
-If security has already been set to **Prototype/demo** or **Production** in Studio Pro, these settings may be incompatible (too advanced) with Studio roles and permissions settings. In this case, you will not be able to edit roles and permissions in Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio/settings-security/) in the *Studio Guide*. 
+If security has already been set to **Prototype/demo** or **Production** in Studio Pro, these settings may be incompatible (too advanced) with Studio roles and permissions settings. In this case, you will not be able to edit roles and permissions in Studio. For more information on security settings in Studio, see [Security, Roles and Permissions](/studio/settings-security/) in the *Studio Guide*. 
 {{% /alert %}}
 
 ## 3 Modules Set Up {#module-set-up}
@@ -137,6 +137,6 @@ Studio Pro security settings are compatible with Studio (that means that roles a
 
 ## 9 Read More
 
-* [Security, Roles & Permissions](/studio/settings-security/) 
+* [Security, Roles, and Permissions](/studio/settings-security/) 
 * [App Security](/refguide/app-security/)
 * [Module Security](/refguide/module-security/)

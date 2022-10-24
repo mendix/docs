@@ -3,6 +3,7 @@ title: "Integration"
 url: /refguide/integration/
 category: "App Modeling"
 weight: 110
+description: "Introduces the services that Mendix uses for application integration, for instance, OData, REST, and SOAP/Web Services. Mendix can also import and export data from XML and JSON."
 tags: ["studio pro"]
 ---
 
@@ -20,7 +21,7 @@ For a [call web service](/refguide/call-web-service-action/) activity and suppor
 
 ## 2 Other Documents in This Section
 
-* [HttpRequest & HttpResponse System Entities](/refguide/http-request-and-response-entities/)
+* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/)
 * [JSON Structures](/refguide/json-structures/)
 * [Message Definitions](/refguide/message-definitions/)
 * [Published OData Services](/refguide/published-odata-services/)

@@ -153,7 +153,7 @@ This means that a MindSphere user who is given the **Admin Role** for the app wi
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-example-app/image6.png" alt="Relationship of MindSphere App user roles with Mendix App user roles" >}}
 
-For more information see the MindSphere documentation [Roles & Scopes for Applications](https://developer.mindsphere.io/concepts/concept-roles-scopes.html#available-roles-of-mindsphere-apis).
+For more information see the MindSphere documentation [Roles and Scopes for Applications](https://developer.mindsphere.io/concepts/concept-roles-scopes.html#available-roles-of-mindsphere-apis).
 
 ## 5 Run the app locally
 

@@ -2,8 +2,9 @@
 title: "Front End"
 url: /howto/front-end/
 weight: 30
-no_list: false 
-description_list: true 
+description: "Presents a list of how-tos to create great user experiences and a user-friendly graphical user interface (GUI) for your app."
+no_list: false
+description_list: true
 tags: ["studio pro"]
 ---
 

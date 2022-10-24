@@ -7,7 +7,7 @@ url: /refguide/using-a-proxy-to-call-a-webservice/
 
 In some cases, you're stuck behind a firewall, and thus unable to call a webservice directly. This document shows you how to configure the JVM to use a proxy to call such services.
 
-## 2 Proxy Host & Proxy Port
+## 2 Proxy Host and Proxy Port
 
 There are two JVM parameters (system properties) that specify which proxy server to use. These are http.proxyHost and http.proxyPort
 You can specify these in your .m2eerc under JVM parameters:
@@ -27,7 +27,7 @@ or directly (when calling from, for instance, eclipse):
 
 ```
 
-## 3 Proxy User & Password
+## 3 Proxy User and Password
 
 Some proxies require authentication. To specify the user and password, simply pass two JVM parameters:
 

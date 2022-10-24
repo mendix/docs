@@ -26,7 +26,7 @@ This module keeps keep track of what changes are made in your Mendix application
 
 The two sections below describe the two options for configuring this module.
 
-### 2.1 Associations & Events
+### 2.1 Associations and Events
 
 For this configuration option, add a reference set association from your entity to the **Log** entity or an association from the **Log** entity to the entity that needs to be audited. Add an after-create, before-commit, and before-delete event to your entity that is identical to the events on the **AudittrailSuperClass**. The Java actions will automatically create the log item and all the required log lines based on the changes.
 

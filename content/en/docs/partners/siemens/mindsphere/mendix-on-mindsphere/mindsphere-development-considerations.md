@@ -367,13 +367,13 @@ There are few limitations on what you call your app within Mendix. However, when
 
 If you want to use the same app name in both Mendix and MindSphere, you should bear these constraints in mind when naming your Mendix app.
 
-### 9.3 Roles & Scopes
+### 9.3 Roles and Scopes
 
 MindSphere supports up to five application roles. You should take this into account when designing security within your Mendix app.
 
 To use these scopes, you must create identically-named scopes for each MindSphere application role. These scopes will map to identically-name user roles in your Mendix app.
 
-There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](/partners/siemens/mindsphere-module-details/) section of *MindSphere Module Details*.
+There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles and Scopes](/partners/siemens/mindsphere-module-details/) section of *MindSphere Module Details*.
 
 ### 9.4 Logout from MindSphere
 

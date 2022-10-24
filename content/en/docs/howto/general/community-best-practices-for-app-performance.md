@@ -4,6 +4,7 @@ linktitle: "Best Practices for App Performance"
 url: /howto/general/community-best-practices-for-app-performance/
 category: "General Info"
 weight: 35
+description: "Describes some best practices to apply during development to get a better performing app. This document is created by and for the Mendix community."
 tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
@@ -103,7 +104,7 @@ For OQL, many of the same best practices apply as for XPath.
 * Minimize the number of roles per user.
 * Minimize the number of rules per entity.
 
-## 10 Web Services & XML Best Practices
+## 10 Web Services and XML Best Practices
 
 * Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.

@@ -164,14 +164,14 @@ To provide more clarity for Studio and Studio Pro users you can specify a toolbo
 
 When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. It is possible to specify different categories for Studio and Studio Pro. When only the Studio Pro category is specified, then that category is also used in Studio.
 
-A category can by provided through `studioCategory` and `studioProCategory` tags:
+A category can be provided through `studioCategory` and `studioProCategory` tags:
 
 ```xml
    <studioProCategory>Open Street Maps</studioProCategory>
    <studioCategory>Maps</studioCategory>
 ```
 
-In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatiacally in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
+In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatically in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
 
 {{% alert color="info" %}}
 The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.
@@ -298,4 +298,5 @@ Here is how a caption and description look in Studio Pro:
 * [Declaring Native Dependencies for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
 * [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/)
+* [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/)
 * Pluggable Widget API information for [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)

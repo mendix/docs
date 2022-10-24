@@ -45,7 +45,7 @@ The following errors might be returned by the service. In general, 4xx errors in
 
 On errors (4xx and 5xx responses), the response can contain an errorCode. This is a request-specific code that describes the error in a machine-readable form. The API documentation describes possible error codes per request.
 
-#### 3.1.1 Authentication & Authorization Error Codes
+#### 3.1.1 Authentication and Authorization Error Codes
 
 The following error codes can be returned on authentication and authorization errors.
 

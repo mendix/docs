@@ -18,7 +18,7 @@ This how-to will teach you how to do the following:
 * Find the App ID, Story ID, and Feedback Item Number for your app
 * Create deep links for your app, story, and feedback item
 
-## 2 Getting the AppID, storyID & feedbackItemNr {#id}
+## 2 Getting the AppID, storyID, and feedbackItemNr {#id}
 
 To create a deep link, you need the app ID, story ID, or feedback item number or the desired element in the Developer Portal:
 

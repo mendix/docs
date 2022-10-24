@@ -3,6 +3,7 @@ title: "Set Up Data Validation"
 url: /howto/data-models/setting-up-data-validation/
 category: "Data Models"
 weight: 2
+description: "Describes how to set up both required and advanced data validation with Studio Pro."
 tags: ["studio pro"]
 ---
 
@@ -63,7 +64,7 @@ As long as this Microflow returns a Boolean value, you are free to add any logic
 
 ## 5 Advanced Validation with a Custom 'Save' Button
 
-Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/). Your detail page should look similar to this:
+Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/). Your detail page should look similar to this:
 
 {{< figure src="/attachments/howto/data-models/setting-up-data-validation/18582143.png" >}}
 
@@ -120,7 +121,7 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 
 ## 7 Read More
 
-* [Work with Images & Files](/howto/data-models/working-with-images-and-files/)
+* [Work with Images and Files](/howto/data-models/working-with-images-and-files/)
 * [Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)

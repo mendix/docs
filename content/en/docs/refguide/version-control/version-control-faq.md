@@ -3,7 +3,8 @@ title: "Version Control FAQ"
 url: /refguide/version-control-faq/
 category: "Version Control"
 weight: 15
-tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn"]
+description: "Presents and explains several frequently asked questions about version control."
+tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 ---
 
 ## 1 Introduction
@@ -22,7 +23,7 @@ Mendix 7 and 8 only have support for Team Server SVN, and as long as these major
 
 Storage space is unlimited for apps connected to a commercial license. 1 GB of free storage is provided for your company account for apps not (yet) connected to a commercial license.
 
-## 4 What Happens with My Valuable & Confidential Data?
+## 4 What Happens with My Valuable and Confidential Data?
 
 Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for troubleshooting. Your data is backed up for one year, and the backups are retained for one year after app deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/) ticket.
 
@@ -91,5 +92,5 @@ For Git, connecting to a third-party Git version control repository is in Beta. 
 Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
 Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
 
-* code for Java & JavaScript actions
+* code for Java and JavaScript actions
 * HTML/CSS for theming

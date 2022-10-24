@@ -20,13 +20,13 @@ SAP HANA is case sensitive when doing string comparisons and checks. This is imp
 
 For example, `contains('OneTwo', 'one')` will return `false`.
 
-## 4 Behavior of Unlimited & Very Long Strings
+## 4 Behavior of Unlimited and Very Long Strings
 
 ### 4.1 Comparison Functions
 
 SAP HANA does not support unlimited strings or strings with a specified length greater than 5000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. However, it does support functions including `contains()`, `starts-with()`, and `ends-with()`.
 
-### 4.2 Sorting, Grouping & Aggregating
+### 4.2 Sorting, Grouping, and Aggregating
 
 It is not possible to sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 5000 characters. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.  
 

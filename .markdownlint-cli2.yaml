@@ -205,7 +205,7 @@ config:
     style: "asterisk"
 
   # MD051/link-fragments - Link fragments should be valid
-  MD051: true
+  MD051: false
 
   # MD052/reference-links-images - Reference links and images should use a label that is defined
   MD052: false

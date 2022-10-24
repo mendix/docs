@@ -4,6 +4,7 @@ linktitle: "Execute SQL on External Database"
 url: /howto/integration/execute-an-sql-statement-on-an-external-database/
 category: "Integration"
 weight: 17
+description: "Describes how to execute an SQL statement on relational external databases using Database Connector."
 tags: ["database connector", SQL", "database", "external database", "integration"]
 ---
 
@@ -56,7 +57,7 @@ To use an **Execute statement** action in a microflow, follow these steps:
 
 1. Find the **Execute statement** in the **Toolbox**.
 
-2. Drag the **Execute statement** action to your microflow: 
+2. Drag the **Execute statement** action into your microflow: 
 
     {{< figure src="/attachments/howto/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
 

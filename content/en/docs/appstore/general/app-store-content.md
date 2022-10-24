@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 There are three ways to install a Marketplace component:
 
-* [Download]( #downloading) the component from the Marketplace within Studio Pro – this works for all types of Marketplace components, except [app services](/appstore/app-services/)
+* [Download](#downloading) the component from the Marketplace within Studio Pro – this works for all types of Marketplace components, except [app services](/appstore/app-services/)
 * [Import](#import) the component from the **App Explorer** – this works for [connectors](/appstore/connectors/), [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)), and [app services](/appstore/app-services/)
 * [Manually add](#add) the component into the app directory – this only works for [widgets](/appstore/widgets/) and [add-on modules](/refguide/module-settings/#module-type)
 
@@ -227,7 +227,7 @@ To update a module in your app to a newer version, go to the Marketplace to down
 
 #### 4.2.2 Configuring a Module
 
-Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the Email with Templates module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module and [Encryption](/appstore/modules/encryption/) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
+Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Email Module with Templates](/appstore/modules/email-with-templates/), you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module and [Encryption](/appstore/modules/encryption/) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
 ### 4.3  Using an App or Layout {#project-layout}
 

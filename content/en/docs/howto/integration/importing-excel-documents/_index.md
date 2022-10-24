@@ -16,13 +16,13 @@ Adding large amounts of data to your application (for example, reference data or
 Before starting this how-to, make sure you know how to do the following:
 
 * Create domain models (see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
-* Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
+* Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items (see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
 * Create microflows (see [How to Trigger a Microflow From a Menu Item](/howto/logic-business-rules/trigger-microflow-from-menu-item/)
 * Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 * Secure your applications (see [How to Create a Secure App](/howto/security/create-a-secure-app/))
 
-## 3 Preparing the Data Structure, GUI & Modules
+## 3 Preparing the Data Structure, GUI and Modules
 
 Before you can start importing data into your application, you first need to set up the data structure and GUI by following these these steps:
 
@@ -32,7 +32,7 @@ Before you can start importing data into your application, you first need to set
 
     Create an enumeration for the **OrderStatus** attribute with the values of **Open**, **Processing**, and **Complete**.
 
-    Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/)).
+    Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/)).
 2. Create **Overview** and **Detail** pages to manage objects of the **Customer** and **Order** types.
 3. Create menu items to access the **Order** and the **Customer** overview pages.
 4. Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix Marketplace (available by clicking the shopping-cart icon in the upper right of Studio Pro).
@@ -200,7 +200,7 @@ Follow these steps to create the import template via the Excel file:
 
     {{% alert color="info" %}}Remember that you have to set a key attribute for the **Customer** object as well as the **Order** object.{{% /alert %}}
 
-## 8 Exporting & Importing a Template
+## 8 Exporting and Importing a Template
 
 Once you have completed an Excel template, you can export the template (for example, from a test environment) and import it (for example, into an acceptance environment). When exporting and importing a template, the exact template will be uploaded, which means that columns are generated, the Mendix object is selected, the attributes are connected, and the parse microflows are selected.
 

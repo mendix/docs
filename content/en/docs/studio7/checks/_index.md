@@ -59,5 +59,5 @@ The information displayed in the table of the **Checks** panel is represented be
 ## 4 Read More
 
 * [Consistency Errors](/studio7/consistency-errors/)
-* [Previewing & Publishing Your App](/studio7/publishing-app/)
+* [Previewing and Publishing Your App](/studio7/publishing-app/)
 * [General Info](/studio7/general/)

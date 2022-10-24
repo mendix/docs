@@ -3,6 +3,7 @@ title: "Pages"
 url: /refguide/pages/
 category: "App Modeling"
 weight: 30
+description: "Presents an overview of the features of pages and relevant page resources in Studio Pro."
 tags: ["Pages", "Widgets", "Studio Pro", "page structure"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document also has a redirect from opening-pages (which has been deleted)
@@ -20,7 +21,7 @@ Every page is based on a page [layout](/refguide/layout/) and a page template. A
 
 {{< figure src="/attachments/refguide/modeling/pages/page-structure.png" >}}
 
-Pages can be linked, so that one page can open another page. If this second page contains a [data widget](/refguide/data-widgets/) with a page parameter data source, then an object or objects can be passed from the current page to the new page. For information on opening pages, and triggering other sorts of event, see [On Click Event & Events Section](/refguide/on-click-event/).
+Pages can be linked, so that one page can open another page. If this second page contains a [data widget](/refguide/data-widgets/) with a page parameter data source, then an object or objects can be passed from the current page to the new page. For information on opening pages, and triggering other sorts of event, see [On Click Event and Events Section](/refguide/on-click-event/).
 
 Pages are opened either in the current pane of the browser or in a pop-up, child, window. Where the page is opened depends on its [layout type](/refguide/layout/#layout-type). Mendix performs navigation as efficiently as possible. If a new page uses the same layout as the old one, only the data on the page will refresh rather than the whole page being built from scratch.
 
@@ -50,9 +51,9 @@ Widgets are grouped into the following categories:
 * [Text widgets](/refguide/text-widgets/) are used to display textual information to the end-user
 * [Structure  widgets](/refguide/structure-widgets/) can contain other widgets 
 * [Input elements](/refguide/input-widgets/) make it possible to show and edit the values of attributes and associations
-* [Images, videos & files](/refguide/image-and-file-widgets/) allow you to work with files, images, and videos 
+* [Images, Videos, and Files](/refguide/image-and-file-widgets/) allow you to work with files, images, and videos 
 * [Buttons](/refguide/button-widgets/) are buttons that trigger actions
-* [Menus & navigation](/refguide/menu-widgets/) allow the user to navigate through the application
+* [Menus and navigation](/refguide/menu-widgets/) allow the user to navigate through the application
 * [Reports](/refguide/report-widgets/) aggregate data and show it in the form of a table or a chart
 * [Authentication](/refguide/authentication-widgets/) allow you to add the user verification process such as password and login id text boxes.
 * Add-ons can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript

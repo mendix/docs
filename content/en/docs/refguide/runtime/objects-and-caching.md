@@ -1,8 +1,8 @@
 ---
-title: "Objects & Caching"
+title: "Objects and Caching"
 url: /refguide/objects-and-caching/
 category: "Mendix Runtime"
-description: "This page describes how objects interact with each other within a runtime request."
+description: "Describes how objects interact with each other within a runtime request."
 tags: ["runtime", "MendixObject", "caching", "context", "session", "request", "microflow", "studio pro"]
 ---
 
@@ -59,7 +59,7 @@ There is no clear way to identify this, so to ensure you have the latest version
 
 This behavior impacts microflows in a similar way. Therefore, the best practice here is to reload an object as soon as you have committed changes to another reference of (potentially) the same object.
 
-### 6.3 Impact of Using Non-Persistable Entities & Changed Entities in Microflows and Java Actions
+### 6.3 Impact of Using Non-Persistable Entities and Changed Entities in Microflows and Java Actions
 
 When a user calls a microflow from the client, a copy of the state is sent with the request to the runtime. This copy stays at the runtime and is updated by the runtime during processing of this request. After the request has finished processing, it will return to the client, which will update its client state with the information returned by the response.
 

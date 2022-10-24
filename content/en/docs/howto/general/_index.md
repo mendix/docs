@@ -1,10 +1,10 @@
 ---
 title: "General Info"
 url: /howto/general/
-description: "These introductory how-to's describe Mendix Studio Pro basics and best practices."
+description: "Presents introductory how-tos about Mendix Studio Pro basics and best practices."
 weight: 10
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 tags: ["studio pro", "how-to", "general"]
 ---
 

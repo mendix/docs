@@ -179,6 +179,8 @@ When minor and major updates to a consumed service are detected in Data Hub the 
 
 The **Update** option is available when a new version of a published OData service is issued, and deployed to the same endpoint as the previous version. Studio Pro will recognize that the contract at the endpoint is different to the one currently consumed in the project. After updating Studio Pro will have the same contract as the one that is available on the endpoint.
 
+See the [Limitations](/refguide8/consumed-odata-services/#consumed-odata-service-limitations) section of *Consumed OData Services* to read about known update limitations.
+
 ##### 4.3.1.1 Project Pane
 
 In the **Project** pane this will be shown as follows:

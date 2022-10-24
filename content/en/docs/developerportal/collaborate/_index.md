@@ -3,8 +3,8 @@ title: "Collaboration"
 url: /developerportal/collaborate/
 description: "Describes the collaboration tools available in the Mendix Developer Portal."
 weight: 5
-no_list: false 
-description_list: true 
+no_list: false
+description_list: true
 tags: ["developer portal", "sprint", "story", "stories", "buzz", "team", "app"]
 aliases:
     - /developerportal/develop/

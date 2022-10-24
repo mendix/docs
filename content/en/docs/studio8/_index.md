@@ -7,6 +7,7 @@ cascade:
     - space: "Studio 8 Guide"
     - mendix_version: "8"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
         priority: 0.4
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -39,7 +40,7 @@ The *Studio 8 Guide* is divided into the following categories:
 * [Domain Model](/studio8/domain-models/)
 * [Navigation Document](/studio8/navigation/)
 * [Microflows](/studio8/microflows/)
-* [Previewing & Publishing Your App](/studio8/publishing-app/)
+* [Previewing and Publishing Your App](/studio8/publishing-app/)
 * [Checks](/studio8/checks/)
 * [Theme Customizer](/studio8/theme-customizer/)
 * [Settings](/studio8/settings/)

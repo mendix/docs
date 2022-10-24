@@ -17,7 +17,7 @@ aliases:
 
 The **General Settings** page presents an overview of your app.
 
-On the top of page, you can see the image of the app, the app name, and the company that owns the app. 
+On the top of page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle which enables or disables notifications for this app.
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/general-information.png"  >}}
 
@@ -33,6 +33,7 @@ The **General Settings** page contains the following tabs:
 * **API Keys** *
 * **Stories** *
 * **Webhooks** *
+* **History** *
 
 {{% alert color="info" %}}
 Tabs with an asterisk (*) are only available for users with the **App Settings** permission.
@@ -55,7 +56,7 @@ In this tab, you can find the following items:
 Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/collaborate/leave-delete-app/).
 {{% /alert %}}
 
-## 3 Cloud Settings
+## 3 Cloud Settings {#cloud-settings}
 
 On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
@@ -85,9 +86,9 @@ You can also manage app users from Studio, by clicking **Manage Users** on the *
 On the tab, you can only see the environments that satisfy these requirements:
 
 * [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented:
-    * In Studio, SSO is automatically implemented for your app by enabling security for your app – for details, see the [Security Overview](/studio/settings-security/#overview) section of *Security, Roles & Permissions*
+    * In Studio, SSO is automatically implemented for your app by enabling security for your app – for details, see the [Security Overview](/studio/settings-security/#overview) section of *Security, Roles and Permissions*
     * In Studio Pro, SSO can be implemented via the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
-* If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security/#managing-app-users) section of *Security, Roles & Permissions* )
+* If you manage user roles from Studio, your app should be published (for more information see the [Managing App Users](/studio/settings-security/#managing-app-users) section of *Security, Roles and Permissions* )
 * Your user role allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
 
 ### 4.1 Manage Users {#manage-users}
@@ -110,8 +111,7 @@ To invite new app users to your app, click **Invite Users** for that environment
 2. Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/collaborate/team/). This may be useful, because people invited to join your team are not added as app users automatically.
 3. Click **Add to invitee list**.
 4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro or [Roles and Permissions](/studio/settings-security/#roles-and-permissions) in Mendix Studio. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
-5. Click **Next**.
-6. Add a personal message to your invitation, and finally click **Next** then **Send Invitations** to send it.
+5. Click **Next** to send the invitation.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
 
@@ -144,9 +144,9 @@ On the **Project Management** tab, you can select a planning tool for the app. B
 
 {{% alert color="info" %}}It is not yet possible to migrate the data from Stories into Epics, so we recommend you to use Epics for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.{{% /alert %}}
 
-## 7 Managing Webhooks {#webhooks}
+## 7 Webhooks {#webhooks}
 
-Click the **Manage Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
+Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can manage webhooks.
@@ -172,7 +172,15 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints/) in the *API Documentation*.
 {{% /alert %}}
 
-## 8 Read More
+## 8 History {#history}
 
-* [Leave & Delete an App](/developerportal/collaborate/leave-delete-app/)
+The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
+
+{{< figure src="/attachments/developerportal/collaborate/general-settings/history.jpg"   width="550"  >}}
+
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
+
+## 9 Read More
+
+* [Leave and Delete an App](/developerportal/collaborate/leave-delete-app/)
 * [Manage Deep Links](/developerportal/collaborate/manage-deeplinks/)

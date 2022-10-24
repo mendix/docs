@@ -21,11 +21,11 @@ This how-to will teach you how to do the following:
 Before you continue, make sure that you know how to create:
 
 * Domain models (see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer/))
-* A custom file document (see [How to Work with Images & Files](/howto7/data-models/working-with-images-and-files/))
-* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/))
+* A custom file document (see [How to Work with Images and Files](/howto7/data-models/working-with-images-and-files/))
+* Overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/))
 * Menu items (see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/))
 
-## 3 Preparing the Data Structure & GUI
+## 3 Preparing the Data Structure and GUI
 
 The XML document used in this how-to contains customers. To be able to see the imported data, you first need to set up the data structure and GUI to maintain the customer data. Then, you need to facilitate the uploading and downloading of XML documents. Finally, you will create the actual import logic and the corresponding import mapping.
 
@@ -82,7 +82,7 @@ To create the XML-to-domain mapping, follow these steps:
     {{< figure src="/attachments/howto7/integration/importing-xml-documents/18581655.png" >}}
 
 6. Open the connector (from the lower-right side of the Modeler or from the **View** menu).
-7. Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
+7. Drag the entity **Customer** from the connector into the place-holder in the mapping editor:
 
     {{< figure src="/attachments/howto7/integration/importing-xml-documents/18581681.png" >}}  
 

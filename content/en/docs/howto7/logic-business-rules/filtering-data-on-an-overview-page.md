@@ -2,7 +2,7 @@
 title: "Filter Data on an Overview Page Using XPath"
 linktitle: "Filter Data Using XPath"
 url: /howto7/logic-business-rules/filtering-data-on-an-overview-page/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 tags: ["filter", "xpath"]
 ---
 
@@ -22,14 +22,14 @@ This how-to will teach you how to do the following:
 * Filter a list using the search bar
 * Filter a list using XPath
 
-## 2 Prerequisites – Preparing the Data Structure, GUI & Example Data
+## 2 Prerequisites – Preparing the Data Structure, GUI and Example Data
 
 To see the results of this how-to, it is necessary that you set up a test project with test data.
 
 Before you continue, make sure that you know how to create the following:
 
 * Domain models (for more information, see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer/))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/))
+* Overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/))
 * Menu items (for more information, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/))
 
 1. Create the following domain model:

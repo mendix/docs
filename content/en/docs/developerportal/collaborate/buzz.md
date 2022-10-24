@@ -14,7 +14,7 @@ Located in the Developer Portal, Buzz lets you see Mendix app activity in your c
 
 ### 1.1 Company Buzz {#company-buzz}
 
-The **Company Buzz is** is accessible via the top bar in the Developer Portal:
+The **Company Buzz** is accessible via the top bar in the Developer Portal:
 
 {{< figure src="/attachments/developerportal/collaborate/buzz/company-buzz.png" >}}
 
@@ -24,7 +24,7 @@ Below the company name is a list of apps for which you are a team member. Clicki
 
 ### 1.2 App Buzz {#app-buzz}
 
-App Buzz is Buzz for a specific app:
+App **Buzz** is for a specific app:
 
 {{< figure src="/attachments/developerportal/collaborate/buzz/app-buzz.jpg" >}}
 

@@ -19,7 +19,8 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* You can now add custom Mendix Runtime variables under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
+* You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
+    * this replaces the previous method of adding custom settings using User-Provided Variables.
 
 ### June 20th, 2022
 
@@ -71,7 +72,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Fix
 
-* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
+* We resolved an issue where the PostgreSQL, Hyperscaler Option service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
 
 ### June 16th, 2021
 

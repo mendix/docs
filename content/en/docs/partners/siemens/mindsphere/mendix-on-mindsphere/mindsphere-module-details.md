@@ -109,7 +109,7 @@ If the same user logs in using a different tenant, Mendix will treat this as a d
 
 For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *MindSphere Development Considerations*.
 
-### 2.3 Roles & Scopes{#rolesscopes}
+### 2.3 Roles and Scopes{#rolesscopes}
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 

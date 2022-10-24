@@ -38,7 +38,7 @@ Scrum Masters can edit and create new team roles on the [Team](/developerportal/
 
 ## 4 Technical Contact {#technical-contact}
 
-When you view the [General Settings](/developerportal/settings/general-settings/) for a specific app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app.
+Every app can have one Technical Contact. When you view the [General Settings](/developerportal/settings/general-settings/) for a specific app, you will see the **Technical Contact** of the app. This is the user you can contact with questions related to the app. 
 
 {{< figure src="/attachments/developerportal/collaborate/team/app-roles/technical-contact.png" >}}
 
@@ -72,7 +72,7 @@ When a Mendix app is on premises, it is running on the customer's own infrastruc
 To change the Technical Contact, you need to be a **Technical Contact**.
 
 {{% alert color="info" %}}
-It is currently not possible to select more than one Technical Contact in the Mendix Cloud. However, for on-premises installations, it is possible to select more than one Technical Contact. Contact [Mendix Support](https://support.mendix.com) with your request.
+It is currently not possible to have more than one Technical Contact for an app.
 {{% /alert %}}
 
 If you are the current Technical Contact for an app, make another team member the Technical Contact by following these steps:

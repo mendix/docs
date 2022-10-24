@@ -4,6 +4,7 @@ linktitle: "Best Practices for Development"
 url: /howto/general/dev-best-practices/
 category: "General Info"
 weight: 30
+description: "Describes Mendix best practices for developing Mendix applications."
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 #Academy are SMEs for verification, they discuss and link to this doc in training
 ---
@@ -215,7 +216,7 @@ For integrations, you have the following types of microflow:
 
 ### 3.5 Other Document Types
 
-#### 3.5.1 Layouts & Snippets
+#### 3.5.1 Layouts and Snippets
 
 [Layouts](/refguide/layout/) and [snippets](/refguide/snippet/) should be identified with prefixes.
 
@@ -288,7 +289,7 @@ You can define the [home pages](/refguide/show-home-page/) per device and role i
 | Role based home page | Tablet  | Home_Tablet\_{Userrole}  |
 | Role based home page | Mobile  | Home_Phone\_{Userrole}   |
 
-## 4 General Guidelines & Best Practices
+## 4 General Guidelines and Best Practices
 
 ### 4.1 Domain Models
 
@@ -318,7 +319,7 @@ Split microflows up into logical, functional elements. If a microflow has more t
 
 Certain cases (such as validation checks) may require this rule to be ignored to produce an understandable result.
 
-#### 4.2.2 Documentation & Annotations {#documentation-and-annotations}
+#### 4.2.2 Documentation and Annotations {#documentation-and-annotations}
 
 All complex microflows (more than ten activities or more than two decisions) should have an [annotation](/refguide/annotations/) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 
@@ -334,15 +335,23 @@ If you decide to color code the different activities in your app, be sure to ali
 
 #### 4.2.4 Complexity
 
-Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
+Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary. 
+
+The example below shows a low-code approach that we recommend because it presents a clear picture of what is happening in the microflow:
+
+{{< figure src="/attachments/howto/general/dev-best-practices/recommended-microflow.png" width="700px">}}
+
+The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
+
+{{< figure src="/attachments/howto/general/dev-best-practices/not-recommended-microflow.png" width="450px">}}
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 
 The number of parameters for a microflow should be kept to a minimum to facilitate reusability. The more parameters a microflow has, the more difficult it is to determine what should be put into the parameters to make the microflow run correctly.
 
-#### 4.2.5 Error Handling & Logging
+#### 4.2.5 Error Handling and Logging
 
-Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
+Use microflow [error handling](/refguide/error-handling-in-microflows/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging/). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
@@ -354,7 +363,7 @@ Guidelines below can help you choose a short yet meaningful name for your workfl
 * The name consists of a noun + verb (e.g. *EmployeeOnboarding*)
 * The name reflects what the process is about, what the goal of the process is
 
-### 4.4 Warnings & Studio Pro Feedback
+### 4.4 Warnings and Studio Pro Feedback
 
 No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 

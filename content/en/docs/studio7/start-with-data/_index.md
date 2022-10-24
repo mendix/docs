@@ -20,7 +20,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 3. Choose **App from a spreadsheet** to create an app with the spreadsheet import functionality.
 4. Make sure that the spreadsheet meets the following requirements:<br/>
 
-    1. The size of your file does not exceed 1MB. <br/>
+    1. The size of your file does not exceed 1 MB. <br/>
     1. The number of worksheets does not exceed 50.<br/>
     1. The number of columns per worksheet does not exceed 100.<br/>
     1. A column name does not exceed 100 characters.<br/>
@@ -47,7 +47,7 @@ Download this Excel spreadsheet example to check how data is normalized there: [
 
 ## 4 Starting an App From a Spreadsheet {#importing-spreadsheet}
 
-When you create your app, a page where you can upload your spreadsheet is opened. Drag and drop your spreadsheet on the page or browse your files and choose the one you would like to import.
+When you create your app, a page where you can upload your spreadsheet is opened. Drag your spreadsheet onto the page or browse your files and choose the one you would like to import.
 
 {{< figure src="/attachments/studio7/start-with-data/drag-and-drop.png"   width="500"  >}}
 

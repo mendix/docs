@@ -59,8 +59,8 @@ The consequences of deactivating and deleting an app are as below:
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| Project members can access the app project in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Project members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
 #### 3.1.2 App Details Page {#app-details}
@@ -165,29 +165,7 @@ You can set a **Cover image** to be the background header of your company page. 
 
 {{< figure src="/attachments/developerportal/control-center/brand.jpg" >}}
 
-## 8 Marketplace Content {#marketplace-content}
-
-The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
-
-{{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
-
-The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).
-
-The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
-
-The list has the following columns:
-
-* **Product Name** – This shows the component name. Clicking the name opens the Marketplace page of this component.
-
-* **Content Type** – This shows the type of the component.
-
-  {{% alert color="info" %}}Currently, you can only configure the visibility of widgets. Therefore, you can only find widgets in this list.{{% /alert %}}
-
-* **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
-
-* **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
-
-## 9 Onboarding {#onboarding}
+## 8 Onboarding {#onboarding}
 
 On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
 
@@ -201,7 +179,7 @@ On the **Onboarding Email** tab, you can customize the onboarding email that use
 
 {{< figure src="/attachments/developerportal/control-center/onboarding-email.png" >}}
 
-## 10 Security {#security}
+## 9 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
@@ -211,7 +189,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 {{< figure src="/attachments/developerportal/control-center/security.jpg" >}}
 
-## 11 Cloud {#cloud}
+## 10 Cloud {#cloud}
 
 {{% alert color="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
@@ -235,10 +213,46 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
+## 11 Billing Accounts {#billing-accounts}
+
+Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
+
+{{< figure src="/attachments/developerportal/control-center/billing-accounts-page.png" alt="billing accounts page" >}}
+
+The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
+
+You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
+
+{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the marketplace in the past. These cards are not shown here. Only the last credit card which is registered as the credit card for your company's billing account is shown here. This card will also be used for the renewal of the existing subscriptions.{{% /alert %}}
+
+If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
+
 ## 12 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 13 Documents in This Category
+## 13 Marketplace Content {#marketplace-content}
+
+The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
+
+{{< figure src="/attachments/developerportal/control-center/marketplace-content.png" >}}
+
+The list shows all the Marketplace components for which you have the curation options. This list includes all the public Marketplace components that can be used in Studio and all the private Marketplace components of your company. You can configure whether any of these components is visible in Studio to your company's users (whether components appear in the **Toolbox** in Studio).
+
+The search box above the list enables you to search for a Marketplace component. The drop-down list on the right side allows you to filter for public or private Marketplace components.
+
+The list has the following columns:
+
+* **Product Name** – This shows the component name. Clicking the name opens the Marketplace page of this component.
+
+* **Content Type** – This shows the type of the component.
+
+  {{% alert color="info" %}}Currently, you can only configure the visibility of widgets. Therefore, you can only find widgets in this list.{{% /alert %}}
+
+* **Content Last Updated** – This shows the date when a component was last updated. The most recently updated component is shown on top.
+
+* **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
+
+## 14 Documents in This Category

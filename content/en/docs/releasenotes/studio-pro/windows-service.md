@@ -10,6 +10,18 @@ aliases:
 
 To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click the **Related Downloads** button.
 
+## 4.7
+
+**Release date: August 26th, 2022**
+
+* We fixed an exception which occurred when updating an app where files with a path exceeding 260 characters are overwritten. (Ticket 142021)
+* We now require Microsoft .NET Framework version 4.6.2 instead of 4.5.2.
+* We removed the license id check in the Service Console itself, because this check is already done by the server.
+* We updated the DotNetZip library from version 1.13.3 to 1.16.0.
+* We updated the Newtonsoft Json.NET library from version 12.0.2 to 13.0.1.
+* We updated the Tulpep.ActiveDirectoryObjectPicker library from version 2.3.133 to 3.0.11.
+* We replaced an old version of Ookii.Dialogs source code with the Ookii.Dialogs.Wpf 5.0.1 library.
+
 ## 4.6
 
 ### 4.6.1 {#4_6_1}

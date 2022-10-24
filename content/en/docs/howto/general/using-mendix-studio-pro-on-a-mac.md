@@ -3,7 +3,7 @@ title: "Configure Parallels"
 url: /howto/general/using-mendix-studio-pro-on-a-mac/
 category: "General Info"
 weight: 10
-description: "This how-to will help you to start making Mendix apps on your Mac device."
+description: "Describes how to start making Mendix apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
 
@@ -33,6 +33,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Parallels Desktop Pro Edition](https://www.parallels.com/products/desktop/pro/), install Windows when prompted by Parallels, and create a Windows virtual machine (Parallels Desktop Pro Edition is necessary for Mendix's network features to work)
 * Install Mendix Studio Pro on your Windows virtual machine
+
+{{% alert color="warning" %}}
+When using Studio Pro v9.18 or above, please use the default browser installed in the Windows VM (not the macOS browser) as the default browser for the Parallels VM. Using the Windows VM browser ensures your ability to sign in.
+{{% /alert %}}
 
 ## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
 

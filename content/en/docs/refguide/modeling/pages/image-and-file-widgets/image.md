@@ -45,7 +45,7 @@ Static image properties consist of the following sections:
 
 ### 2.3 Events Section {#events}
 
-For information on the Events section and its properties, see [On Click Event & Events Section](/refguide/on-click-event/). 
+For information on the Events section and its properties, see [On Click Event and Events Section](/refguide/on-click-event/). 
 
 ### 2.4 General Section {#general}
 
@@ -115,5 +115,5 @@ The **Static image** widget is converted to the dynamic image and you can config
 ## 4 Read More
 
 * [Page](/refguide/page/)
-* [Images, Videos & Files](/refguide/image-and-file-widgets/)
+* [Images, Videos, and Files](/refguide/image-and-file-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

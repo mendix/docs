@@ -115,7 +115,7 @@ Most menu items also have shortcut keys assigned to them that can be used in all
 
 ##### 7.1.1.2 Editors Only
 
-The following key combinations work in the editors for the Domain Model, Pages, Workflows, Microflow, and Nanoflows.
+The following key combinations work in the editors, such as the Domain Model, Pages, Workflows, Microflow, or Navigation editor.
 
 | Key | Description |
 | --- | --- |

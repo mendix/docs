@@ -204,6 +204,12 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
+### 5.3 Adding Authentication to a Service {#authentication}
+
+Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. Add this later if not configured during the registration step.
+
+For a description of supported authentication methods, see the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog*.
+
 ## 6 Discoverable and Validated {#discoverability}
 
 The discoverable and validated properties of registered assets can be set from the Curate bar for the selected asset.

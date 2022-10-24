@@ -1,5 +1,5 @@
 ---
-title: "Prioritization Models Supported by the Portfolio Management App"
+title: "Prioritization Models Supported by Portfolio Management"
 linktitle: "Prioritization Models"
 url: /developerportal/control-center/prioritization-models/
 parent: "portfolio-management"

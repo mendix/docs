@@ -9,7 +9,7 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) app has powerful project portfolio management capabilities. It empowers you to maximize the project value in line with your business strategy by offering visibility and tools for value assessment, effort estimation, planing, and tracking.
+The [Portfolio Management](https://portfolio.mendix.com) app provides powerful capabilities for project portfolio management. It empowers you to maximize project value in line with your business strategy by offering visibility and tools for value assessment, effort estimation, planing, and tracking.
 
 With Portfolio Management app, you launch and manage your projects – a project is what you manage as you work along the project development lifecycle, and an app can be the result of one project, or multiple projects – if the app is complex and big. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
 
@@ -53,15 +53,13 @@ To change your view on the **Projects Overview** page, click the drop-down list 
 
 #### 2.1.1 Kanban View {#kanban-view}
 
-In Kanban view, all the projects are categorized in different columns. Each column represents a different stage.
-
-To move the project to a different stage, hover over the project card, and then click the **>** or **<** icon on the left or right side of the card. 
+In Kanban view, all the projects are represented by project cards, and are categorized in different columns. A column indicates a the stage that a project is currently in. To move a project to a different stage, hover over the project card, and then click the **>** or **<** icon on the left or right side of the card. 
 
 To filter projects, you can select a filter from the **Filters** drop-down list on the top of the page.
 
-{{< figure src="/attachments/developerportal/control-center/portfolio-management/project-card.png" >}}
-
 Each project card shows the following information:
+
+{{< figure src="/attachments/developerportal/control-center/portfolio-management/project-card.png" >}}
 
 * Project name (①) –  Clicking it opens a [side pane](#view-project) that shows project details.
 
@@ -117,8 +115,6 @@ The list contains the following information:
 
 #### 2.1.3 WSJF Prioritization {#wsjf}
 
-{{% alert color="info" %}} For more information about WSJF, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section in *Prioritization Models in Portfolio Management*.{{% /alert %}}
-
 In the WSJF prioritization view, all the projects are sequenced by their WSJS scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 
 The list contains the following information:
@@ -133,7 +129,7 @@ The list contains the following information:
 
 * **Risk Reduction** – This indicates how much risk this project reduces. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Size** – The is the job size of the project. You can select **XS**, **S**, **M**, **L**, or **XL**.
+* **Size** – The is the job size of the project. You can select **XL**, **L**, **M**, **S**, or **XS**.
 
 * **Score** – This is the WSJF score of the project.
 
@@ -143,9 +139,9 @@ The list contains the following information:
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
-#### 2.1.4 RICE Prioritization {#rice}
+For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management App*.
 
-{{% alert color="info" %}} For more information about WSJF, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models in Portfolio Management*.{{% /alert %}}
+#### 2.1.4 RICE Prioritization {#rice}
 
 In the RICE prioritization view, all the projects are sequenced by their RICE scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 
@@ -157,9 +153,9 @@ The list contains the following information:
 
 * **Reach** – This is the estimated number of relevant users that the project may affect within a time period. You must enter an integer in this field.
 
-* **Impact** – This is the estimated amount of impact that the project may have on individual users. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* **Impact** – This is the estimated amount of impact that the project may have on individual users. You can select **Massive**, **High**, **Medium**, **Low**, or **Minimal**.
 
-* **Confidence** – This indicates how confident you are about your Impact and Reach estimates. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* **Confidence** – This indicates how confident you are about your Impact and Reach estimates. You can select **High**, **Medium**, or **Low**.
 
 * **Effort** – This is the estimated total amount of time that the project will require from all members of your team: product, design, and development. You must enter an integer in this field.
 
@@ -180,6 +176,8 @@ The list contains the following information:
   {{% alert type="info" %}}
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
+
+For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management App*.
 
 ### 2.3 Creating a New Project {#create-new-project}
 
@@ -223,7 +221,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 12. Click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
-    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For information about the meaning of all the fields in this section, see [WSJF](/developerportal/control-center/prioritization-models/#wsjf) or [RICE](/developerportal/control-center/prioritization-models/#rice).{{% /alert %}}
+    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about these models and the components of each model, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section or the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management App.*{{% /alert %}}
 
 13. Click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
 
@@ -251,8 +249,10 @@ On the upper-right corner of the pane, there is a link icon, an ellipsis icon (*
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/side-pane.png" >}}
 
 {{% alert type="info" %}}
-When you view project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
+Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
+
+When you view project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
 
 ### 2.5 Editing or Deleting a Project {#edit-delete-project}
 
@@ -290,6 +290,8 @@ The list contains the following information:
 
 * **Project Name** – Clicking it opens a [side pane](#view-project) that shows the details of the archived project as well as why the project was archived, additional notes, who archived the project, and when.
 
+  {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Note**. You cannot edit any other information.{{% /alert %}}
+
 * **Department** – This is the department to which the project belongs.
 
 * **Stage** – This shows which stage the project is currently in.
@@ -312,7 +314,7 @@ The **Access Management** page shows all the users who have access to this portf
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/access-management.png" >}}
 
-The access roles are either Portfolio Managers or Users. Mendix Admins are Portfolio Mangers by default. Portfolio Managers can give other users access to the portfolio and define their access roles. 
+The access roles are either Portfolio Managers or Users. Portfolio Managers can give other users access to the portfolio and define their access roles.  Mendix Admins are by default Portfolio Managers.
 
 The table below shows the permissions of Portfolio Managers and Users:
 

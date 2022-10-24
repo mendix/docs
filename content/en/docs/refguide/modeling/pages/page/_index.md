@@ -126,13 +126,16 @@ To delete an element from a page, select this element and press <kbd>Delete</kbd
 
 There are two different ways to edit your page:
 
-* [Structure Mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
+* [Structure Mode](#structure-mode), which clearly shows the relationship between page elements, together with additional information about each element
 * [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
-You can switch to the WYSIWYG editor from the default editor by clicking the **Design mode** button in the page editor.
-You can return to the structural editor by clicking **Structure mode**.
+You can toggle between the modes by clicking the **Design mode** or **Structure mode** button on the right of the top bar.
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" >}}
+
+By default, pages open in **Structure mode**, but if you prefer **Design Mode**, this can be set as default in the preferences (**Edit > Preferences > Work Environment > Default Page Editor**).
+
+{{< figure src="/attachments/refguide/modeling/pages/page/default-mode.png" alt="Default page editor mode" >}}
 
 Both modes allow you to edit your page by doing the following:
 
@@ -148,13 +151,13 @@ Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combi
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
 * You can zoom a page in or out using the **Zoom** drop-down menu in the upper-right corner of a page
-* Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
+* Widgets are shown with additional information easily visible – for example, data sources for data grids and the width assigned to columns
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/structure-mode-info.png" alt="Frequently-used widgets" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/structure-mode-info.png" alt="Structure mode info" >}}
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
 * Right-click a drop-zone allows you to insert a widget into it
-* There is a menu at the top of the page of data containers – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
+* The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two will open a dialog that lets you choose from all widgets / building block)
 
     {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets" >}}
 

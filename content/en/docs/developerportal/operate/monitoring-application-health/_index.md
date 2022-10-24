@@ -229,7 +229,7 @@ Description | Track the amount of disk space used for storage of the application
 Example message | Disk usage 83% (warning=80, critical=90).
 Warning Threshold | More than 80% of available disk space is in use.
 Critical Threshold | More than 90% of available disk space is in use.
-First actions to take | Review trends for *Application node disk usage in %* and *Application node disk usage (in bytes)* and inspect the usage value of the application files partition (usually /srv/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old files, or upgrading cloud resource pack (e.g. ordering more storage).
+First actions to take | Review trends for *Application node disk usage in %* and *Application node disk usage (in bytes)* and inspect the usage value of the application files partition (usually /srv/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old files, or upgrading the cloud resource pack (for example, by ordering more storage).
 
 Database Server Disk Usage | |
 :---|:---|
@@ -237,7 +237,7 @@ Description | Track the amount of disk space used for the database belonging to 
 Example message | Disk usage 92% (warning=80, critical=90).
 Warning Threshold | More than 80% of available disk space is in use.
 Critical Threshold | More than 90% of available disk space is in use.
-First actions to take | Review trends for *Database node disk usage in %* and *Database node disk usage (in bytes)* and inspect the usage value of the database partition (usually /var/lib/postgresql/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or upgrading cloud resource pack (e.g. ordering more storage).
+First actions to take | Review trends for *Database node disk usage in %* and *Database node disk usage (in bytes)* and inspect the usage value of the database partition (usually /var/lib/postgresql/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or upgrading the cloud resource pack (for example, by ordering more storage).
 
 Web Server | |
 :---|:---|

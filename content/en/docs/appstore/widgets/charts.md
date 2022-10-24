@@ -12,8 +12,7 @@ tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", 
 The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
 {{% alert color="info" %}}
-The documentatino on this page assume that you are using widget of **version 3.0.0** or higher.
-Charts documentation for previous versions is moved to [Legacy widget docs](#legacy-widget-docs) section.
+This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy widget docs](#legacy-widget-docs) section below.
 {{% /alert %}}
 
 These are the available charts:
@@ -143,9 +142,9 @@ Please, find more details in [Custom Configurations](#custom-configurations) in 
 
 ## 5 Chart-Specific Settings
 
-### 5.1 Area chart
+### 5.1 Area Chart
 
-#### 5.1.1 Edit Series Item dialog
+#### 5.1.1 Edit Series Item Dialog
 
 ##### 5.1.1.1 Appearance
 
@@ -161,13 +160,13 @@ Please, find more details in [Custom Configurations](#custom-configurations) in 
 
 #### 5.2.1 General
 
-##### 5.2.1.1 Bar format
+##### 5.2.1.1 Bar Format
 
 This setting controls bar format. In the **group** format, bars go one below the other. In the **stacked** format bars are stacked on top of one another, forming one line.
 
 {{< figure src="/attachments/appstore/widgets/charts/bar-chart-formats.png" width="450px" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." >}}
 
-#### 5.2.2 Edit Series Item dialog
+#### 5.2.2 Edit Series Item Dialog
 
 ##### 5.2.2.1 Appearance
 
@@ -175,7 +174,7 @@ This setting controls bar format. In the **group** format, bars go one below the
 
 ### 5.3 Bubble Chart
 
-#### 5.3.1 Edit Series Item dialog
+#### 5.3.1 Edit Series Item Dialog
 
 ##### 5.3.1.1 General
 
@@ -191,13 +190,13 @@ This setting controls bar format. In the **group** format, bars go one below the
 
 #### 5.4.1 General
 
-##### 5.4.1.1 Column format
+##### 5.4.1.1 Column Format
 
 This setting controls a chart's format. In the **group** format, columns go one after another. In the **stacked** format columns from each series will be stacked on top of each other. 
 
 {{< figure src="/attachments/appstore/widgets/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left chart columns go one after another. On the right chart pairs of columns stacked on each other, each pair go one after another." title="Two format types of column chart, where group format is present on the left and stack format is present on the right." >}}
 
-#### 5.4.2 Edit Series Item dialog
+#### 5.4.2 Edit Series Item Dialog
 
 ##### 5.4.2.1 Appearance
 
@@ -281,21 +280,21 @@ This property allows for an expression that when evaluated will return a unique 
 This property is required. 
 {{% /alert%}}
 
-##### 5.7.1.2 Value attribute
+##### 5.7.1.2 Value Attribute
 
 The attribute used to retrieve value for an item in the series.
 
-##### 5.7.1.3 Sort attribute
+##### 5.7.1.3 Sort Attribute
 
 The attribute used to sort items in the series.
 
-##### 5.7.1.4 Slice color
+##### 5.7.1.4 Slice Color
 
 Text template used to get color value for an item. Can use attributes as parameters.
 
 #### 5.7.2 General
 
-##### 5.7.2.1 Hole radius
+##### 5.7.2.1 Hole Radius
 
 A percentage between 0 an 100 indicating the radius of the hole in the pice chart relative to the chart itself. Defaults to 0.
 
@@ -303,11 +302,11 @@ A percentage between 0 an 100 indicating the radius of the hole in the pice char
 
 #### 5.8.1 General
 
-##### 5.8.1.1 Show range slider
+##### 5.8.1.1 Show range Slider
 
 If set to **Yes** then show additional range control at the bottom of chart.
 
-#### 5.8.2 Edit Series Item dialog
+#### 5.8.2 Edit Series Item Dialog
 
 ##### 5.8.2.1 Appearance
 
@@ -320,7 +319,7 @@ If set to **Yes** then show additional range control at the bottom of chart.
 * **Fill area** – If set to **Yes** then fill area between data point and x-axis.
 * **Area fill color** – The color used to fill area for this data series.
 
-## 6 Chart customization {#customization}
+## 6 Chart Customization {#customization}
 
 ### 6.1 Custom Series Settings
 
@@ -336,7 +335,7 @@ To navigate to a series' custom settings, do the following:
 
     {{< figure src="/attachments/appstore/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." >}}
 
-### 6.2 Custom layout {#custom-layout}
+### 6.2 Custom Layout {#custom-layout}
 
 This property allows you to save your custom **Layout** settings for this widget.
 
@@ -354,7 +353,7 @@ This object will be merged with default settings and passed to the underlying [P
 
 {{< figure src="/attachments/appstore/widgets/charts/custom-config.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
 
-## Legacy widget docs {#legacy-widget-docs}
+## Legacy widget Docs {#legacy-widget-docs}
 
 {{% alert color="warning" %}}
 This widget is experiencing rendering issues in Studio's page editor and Studio Pro's design mode. The behavior is under investigation.

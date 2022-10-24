@@ -41,7 +41,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.3.
 
 ### 2.1 Obtaining a License Token {#obtain-license-token}
 
-Translation is a premium Mendix product that requires AWS authentications. To successfully use this app service in your app, first you need to obtaining AWS credentials. For more information, see AWS official documentations.
+Translation is a premium Mendix product that requires AWS authentication. To use this app service in your app, first you must obtain AWS credentials. For more information, see [AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
 
 ### 2.2 Installing the Component in Your App
 

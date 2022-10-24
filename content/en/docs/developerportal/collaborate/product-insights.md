@@ -13,7 +13,7 @@ With Product Insights in Developer Portal and the [Product Insights](needs-url) 
 
 You start with setting up the mini survey with Product Insights in the Developer Portal. After that, based on your requirements, the developer of the app can [implement the mini survey in Studio Pro](#implement-survey). After the mini survey is up and running, you can view the data that the survey has collected in Product Insights in Developer Portal, and export the data to an XLSX file.
 
-## 2 Using Product Insights in Developer Portal
+## 2 Setting up a Mini Survey in Product Insights in Developer Portal
 
 ### 2.1 Opening an App in Project Insights {#open-app}
 
@@ -91,7 +91,7 @@ To edit a mini survey, perform the following steps:
 * If a mini survey has the status of **Draft**, you can still edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
 * If a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.
 
-## 3 Implementing the Mini Survey in Studio Pro {#implement-survey}
+## 3 Implementing a Mini Survey in Studio Pro {#implement-survey}
 
 {{% alert color="info" %}}Make sure that you implement the survey in Studio Pro before the start time of the mini survey. Otherwise, even if the mini survey has the [Status](#survey-status) of **Running** on the **Survey Overview** page, users do not actually receive the mini survey. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.{{% /alert %}}
 
@@ -135,7 +135,7 @@ To edit a mini survey, perform the following steps:
 
 10. In **App Explorer**, double-click **Security**, and add the **ProductInsights_Survey.Use**r user role to all the system roles which might use the mini survey in the **App Security** dialog box.
 
-## 4 Viewing and Exporting Responses
+## 4 Viewing and Exporting Responses of a Mini Survey
 
 When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how much responses that have been collected.
 

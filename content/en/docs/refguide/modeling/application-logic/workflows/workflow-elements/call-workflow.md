@@ -42,13 +42,11 @@ The workflow that is called by this element.
 
 #### 2.2.3 Parameter Mapping
 
-This property indicates parameters of the selected workflow, parameters pass data to the element. The **Type** column shows the context object of the selected workflow.
+This property indicates parameters of the selected workflow, parameters pass data to the **Call workflow**. 
+
+To change the parameter, either double-click the parameter from the list or select the parameter row and click the **Edit parameter value** button. You can define how the context entity of the calling workflow is mapped (related) to the context entity of the called workflow. The context object of the called workflow can be selected by either using the calling  workflow context object or by using an expression: you can select a context object that is associated to the calling workflow's context object. The **Type** column shows the context object of the selected workflow. 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-parameter-example.jpg" alt="Call Workflow Parameter Example" >}}
-
-The context object of the called workflow can be selected by either using the calling  workflow context object or by using an expression: you can select a context object that is associated to the calling workflow's context object.
-
-To change the parameter, either double-click the parameter from the list or select the parameter row and click the **Edit parameter value** button.
 
 ## 3 State Changes
 
@@ -70,6 +68,8 @@ The following cases when the state of the calling workflow changes affect the st
 * A failed workflow is retried (the running called workflow is aborted and a new called workflow is triggered)
 
 All other state changes of the calling workflow do not affect the called workflow.
+
+You can use the [Change workflow state](/refguide/change-workflow-state/) microflow activity to extend this behavior, for example, you can implement logic that when the calling workflow is paused, the called workflow is paused as well.
 
 ## 4 Read More
 

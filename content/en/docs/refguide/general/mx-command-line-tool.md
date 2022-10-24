@@ -214,6 +214,48 @@ Return codes are described in the table below:
 | --- | --- |
 | 0 | The command ran successfully. |
 
-### 3.5 Undocumented Options
+### 3.5 mx merge Command [version 9.17+]
+
+The mx merge command performs a tree-way merge of 2 MPR files having a common base commit.
+
+The input is 3 MPR files: base, mine and theirs
+
+#### 3.5.1 Usage
+
+Use the following command pattern for `mx show-version`:
+
+`mx merge [OPTIONS] BASE MINE THEIRS`
+
+The `OPTIONS` are described in the table below:
+
+| Option | Shortcut | Result |
+| --- | --- | --- |
+| `--help` | `-h` | Displays the help text and exits. |
+
+`BASE` - common base commit
+
+`MINE` - the version to merge into. This mpr will contain the results of the merge
+
+`THEIRS` - the version to merge changes from
+
+#### 3.5.2 Conflicts
+
+If there are conflicts during the merge, you have to resolve those by opening the project in StudioPro.
+
+#### 3.5.3 Examples
+
+`mx merge C:\MyApp\MyApp.mpr C:\MyApp-main\MyApp.mpr C:\MyApp-FeatureBranch\MyApp.mpr`
+
+#### 3.5.4 Return Codes
+
+| Return Code | Description |
+| --- | --- |
+| 0 | Merge successful. No conflicts. `MINE` mpr contains the result of the merge. |
+| 1 | Invalid command. Check input parameters. |
+| 2 | Conflicts detected. Open 'MINE' mpr in Studio Pro to resolve them. |
+| 3 | Exception. An error occured during the merge. Error details will be printed to the command line output. |
+| 4 | Unsupported version. |
+
+### 3.6 Undocumented Options
 
 The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options can be used only at your own risk.

@@ -22,7 +22,7 @@ If you start typing in any empty container, Studio Pro will automatically genera
 
 An example of text properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/text-properties.png" alt="Text Properties" width="300" >}}
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/text-properties.png" alt="Text Properties" width="150" >}}
 
 Text properties consist of the following sections:
 
@@ -81,7 +81,7 @@ To use parameters, do the following:
 4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
 5. In the **Caption** setting, write the text you would like to display and type the **Index** of the parameter you would like to include within braces. In the example below, to include the title of the book, amount of pages it has and the year it was published, you need to use indexes {1} for the *Title* attribute, {2} for the *NrOfPages* attribute and {3} for the *DatePublished* attribute:  
 
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example"   width="350" >}}
 
 6. In the **Fallback text** setting, write the text you would like to display when no context object is available from the surrounding data widget:
 

@@ -96,7 +96,7 @@ These keys are available in multiple places within Studio Pro and work generical
 
 #### 7.1.1 Panes and Editors
 
-These keys are active within the [Dockable Panes](#panes) and editors, such as the Domain Model, Pages, Workflows, Microflow, and Nanoflows.
+These keys are active within the [Dockable Panes](#panes) and editors, such as the Domain Model, Pages, Workflows, Microflows, or the Navigation editor.
 
 ##### 7.1.1.1 All Panes and Editors
 

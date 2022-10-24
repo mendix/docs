@@ -139,7 +139,7 @@ The list contains the following information:
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
-For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management App*.
+For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management*.
 
 #### 2.1.4 RICE Prioritization {#rice}
 
@@ -177,7 +177,7 @@ The list contains the following information:
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
-For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management App*.
+For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.
 
 ### 2.3 Creating a New Project {#create-new-project}
 
@@ -221,7 +221,7 @@ Only Portfolio Managers can create a new project. For more information on roles 
 
 12. Click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
-    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about these models and the components of each model, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section or the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management App.*{{% /alert %}}
+    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about these models and the components of each model, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section or the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*{{% /alert %}}
 
 13. Click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
 

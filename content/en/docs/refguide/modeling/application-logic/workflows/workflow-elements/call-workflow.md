@@ -11,7 +11,7 @@ To improve the maintainability of a workflow, you can split a larger process int
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-example.jpg" alt="Call Workflow Example" >}}
 
-You can drag this activity into the working area and a new workflow will be created.  The calling workflow waits for the called workflow to finish before continuing with the rest of the activities. 
+The calling workflow waits for the called workflow to finish before continuing with the rest of the activities. 
 
 It is also possible to nest **Call Workflow** activities, i.e. to use **Call workflow** in the called workflow.
 

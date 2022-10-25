@@ -10,15 +10,17 @@ tags: ["Deploy", "Private Cloud", "Secrets", "Secret Stores", "Vault", "Kubernet
 
 [text]
 
-## 2 Prerequisites
+## 2 Configure Kubernetes
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+To implement an external secret store, you must first configure the required settings in Kubernetes by following these steps:
 
-* A k8s ServiceAccount (used for authentication), it needs to match the environment’s internal name (MendixApp CR name) and a few provider-specific annotations
-* - [A SecretProviderClass](https://secrets-store-csi-driver.sigs.k8s.io/getting-started/usage.html#create-your-own-secretproviderclass-object) – this is the mapping rules configuration that specifies what should be mounted and where. The format is vendor-specific, but one thing is in common – Mx4PC expects keys to have specific names, there’s a [table listing all keys](https://paper.dropbox.com/doc/Research-to-support-Secrets-Store-CSI-Driver-in-Mendix-Operator.--Brbm2tME4jdxV3zWYTqBdkr6Ag-KvC23pXzgowSeAVOd8Qeh) and what Mx4PC expects to find in each one. Just like the ServiceAccount, it needs to match the environment’s internal name.
-* Permissions to read secrets specified in the SecretProviderClass (this is very provider-specific, but typically involves allowing the k8s ServiceAccount to access specific keys – in the Vault or AWS console)
-* All the core preparations – the actual secret storage (Vault, AWS SM), a k8s Secret provider such as [the one for AWS](https://paper.dropbox.com/doc/How-to-AWS-Secrets-Manager-CSI-Secrets-Store--Bra7qAbjMeURsK7WxZjWj~l2Ag-EfMEAVkxwbHMgFLfr4YhL)
-* at the moment the storage provisioners don’t support CSI Secrets Storage. Any new environment would require a database and blob file storage (S3 bucket) to be created separately, Mx4PC just uses credentials from the secrets as an alternative to environment variables.
+1. Prepare a Kubernetes `ServiceAccount` to be used for authentication. 
+    The `ServiceAccount` name must match the [Mendix App CR](/deploy/private-cloud-technical-appendix-01/) name (that, is, the internal name of the app environment). Your secret store provider may have other requirements - for more information, refer to documentation supplied by the secret store provider.
+2. Configure the [SecretProviderClass](https://secrets-store-csi-driver.sigs.k8s.io/getting-started/usage.html#create-your-own-secretproviderclass-object)
+     The `SecretProviderClass` is the mapping rules configuration that specifies what should be mounted and where. The format is vendor-specific, but one thing is in common – Mx4PC expects keys to have specific names, there’s a [table listing all keys](https://paper.dropbox.com/doc/Research-to-support-Secrets-Store-CSI-Driver-in-Mendix-Operator.--Brbm2tME4jdxV3zWYTqBdkr6Ag-KvC23pXzgowSeAVOd8Qeh) and what Mx4PC expects to find in each one. Just like the ServiceAccount, it needs to match the environment’s internal name.
+3. Permissions to read secrets specified in the SecretProviderClass (this is very provider-specific, but typically involves allowing the k8s ServiceAccount to access specific keys – in the Vault or AWS console)
+4. All the core preparations – the actual secret storage (Vault, AWS SM), a k8s Secret provider such as [the one for AWS](https://paper.dropbox.com/doc/How-to-AWS-Secrets-Manager-CSI-Secrets-Store--Bra7qAbjMeURsK7WxZjWj~l2Ag-EfMEAVkxwbHMgFLfr4YhL)
+5. at the moment the storage provisioners don’t support CSI Secrets Storage. Any new environment would require a database and blob file storage (S3 bucket) to be created separately, Mx4PC just uses credentials from the secrets as an alternative to environment variables.
 
 ## 3 [text]
 

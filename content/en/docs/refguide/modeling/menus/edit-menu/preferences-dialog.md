@@ -123,7 +123,13 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-## 7 New Features Tab {#new-features}
+## 7 Work Environment Tab
+
+### 7.1 Default Page Editor {#default-page-editor}
+
+This option sets the default page editor mode that your page opens in: **Structure mode** or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
+
+## 8 New Features Tab {#new-features}
 
 The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
 
@@ -131,13 +137,13 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 7.1 Browser Sign In
+### 8.1 Browser Sign In
 
 The **Use your default browser to sign in** option allows you to use your default browser to sign into Studio Pro. If there is an active Mendix session in your browser, you will be signed in with this session.
 
 Default: *enabled*
 
-### 7.2 Dark Mode Preview {#dark-mode}
+### 8.2 Dark Mode Preview {#dark-mode}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
@@ -147,13 +153,13 @@ Not all screens of Studio Pro support the dark mode yet.
 
 Default: *disabled*
 
-### 7.3 New Merge Algorithm with Fine-Grained Conflict Resolution
+### 8.3 New Merge Algorithm with Fine-Grained Conflict Resolution
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
 
 Default: *enabled*
 
-## 8 Read More
+## 9 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
 * [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)

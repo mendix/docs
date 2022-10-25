@@ -155,8 +155,8 @@ An API key can be one of the following types:
      * **Toaster Placement** – Set on which corner of the page the mini survey appears.
 
    * **Questions** – Set up to three questions per mini survey.
-5. At the button of the page, click Preview to get a preview that shows how the mini survey looks once it is live.
-6. If he preview looks good, click **Mark as Ready** to complete the creation of the survey. The survey details page opens and shows the **Survey ID**.
+5. Click **Preview** to see how the mini survey looks once it is live.
+6. If the preview looks good, click **Mark as Ready** to complete the creation of the survey. The survey details page opens and shows the **Survey ID**.
 7. Copy the **Survey ID** and save it for later use. You will need it when you implement the mini survey. 
 
 Now you can proceed to [implement the mini survey](#implement-survey).
@@ -173,10 +173,12 @@ To edit a mini survey, perform the following steps:
 
 4. Go to the **Settings** tab.
 
-   Depending on the [status](#survey-status) of the mini survey, you can edit different parts of the survey:
+5. Depending on the [status](#survey-status) of the mini survey, you can edit different parts of the survey:
 
-* If a mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
-* If a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.
+   * If a mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
+
+   * If a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.
+
 
 ### 3.3 Implementing a Mini Survey {#implement-survey}
 

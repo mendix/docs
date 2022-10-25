@@ -212,7 +212,7 @@ To edit a mini survey, perform the following steps:
 * If a mini survey has the status of **Draft**, you can still edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
 * If a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.
 
-### 3.3 Generating an API Key {#generate-api-key}
+### 3.3 Generating an API Key in Project Insights in the Developer Portal {#generate-api-key}
 
 1. Open the app in the Developer Portal.
 2. Click **Product Insights**. The **My projects** page opens.
@@ -245,10 +245,15 @@ To edit a mini survey, perform the following steps:
 
 2. [Configure the Product Insights module](/appstore/modules/product-insights/#configuration) to implement the mini survey in Studio Pro.
 
-### 3.5 Viewing and Exporting Responses of a Mini Survey in Product Insights in the Developer Portal
+### 3.5 Viewing and Exporting Responses of a Mini Survey {#view-export-responses}
 
 When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how much responses that have been collected.
 
-To check the responses that have been collected, open the [survey details page](#survey-details). The responses are shown on the [Responses](#responses) tab.
+To check the responses that have been collected, do as follows:
 
-To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the survey details page.
+1. Open the app in the Developer Portal.
+2. Click **Product Insights**. The **My projects** page opens.
+3. On the **My projects** page, click the app for which the mini survey was made. The [Survey Overview](#survey-overview) page opens.{{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
+4. On the **Active** tab, click the mini survey to open the [survey details](#survey-details) page.
+5. Go to the **Responses** tab to see all the responses that have been collected.
+6. To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the page.

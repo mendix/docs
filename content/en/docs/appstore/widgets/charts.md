@@ -40,24 +40,24 @@ You do not need to put a chart into a data view to feed data into a widget. When
 
 {{< figure src="/attachments/appstore/widgets/charts/series-item-example.png" width="450px">}}
 
-In this dialog box you will find next properties:
+In this dialog box you will find these properties:
 
 * **Data set**
-    * **Single** – This represents controls for a single set of dates. This is good option to start, as you can have multiple **Single** series. 
-    * **Multiple** – This is useful if you have a more complex data model or you have a microflow which could be used as data source for your chart. In this case you have to specify which attribute to use as **Series name**, otherwise your widget will be unable to visualize your data correctly.
-* **Data source** – This property controls type and source of your data set. If you click **Edit** you will be presented with a **Data source edit** dialog box where you the data series retrieval location.
-* **Group by** – The attribute used to split items into groups (visible only when **Data set** is set to **Multiple**).
+    * **Single** – This represents controls for a single set of dates. This is good option to start with, as you can have multiple **Single** series. 
+    * **Multiple** – This is useful if you have a more complex data model or a microflow which could be used as data source for your chart. In this case you must specify which attribute to use as the **Series name**, otherwise your widget will be unable to visualize your data correctly.
+* **Data source** – This property controls your data set's type and source. If you click **Edit** you will see a **Data source edit** dialog box where you specify the data series retrieval location.
+* **Group by** – This is the attribute used to split items into groups (visible only when **Data set** is set to **Multiple**).
 * **Series name** – This property controls the legend of a data series.
-* **X axis attribute** – The attribute used to get value for X axis (visible only when **Data source** is set).
-* **Y axis attribute** – The attribute used to get value for Y axis (visible only when **Data source** is set).
-* **Aggregation function** – Defines how data is aggregated when multiple Y values are available for a single X value.
-* **Tooltip hover text** – The text template used to customize message shown to user when series is hovered with cursor.
+* **X axis attribute** – This is the attribute used to get a value for the X axis (visible only when **Data source** is set).
+* **Y axis attribute** – This is the attribute used to get a value for the Y axis (visible only when **Data source** is set).
+* **Aggregation function** – This attribute defines how data is aggregated when multiple Y values are available for a single X value.
+* **Tooltip hover text** – This is the text template used to customize the message shown to user upon a cursor hovering over the series.
 
-Beside the **General** tab, you will find three more tabs in the **Edit Series** dialog box:
+Beside the **General** tab you will find 3 more tabs in the **Edit Series** dialog box:
 
-* **Appearance** – This lists properties that allow you to modify styling for current data series. In most cases there will be color properties.
+* **Appearance** – This lists properties which allow you to modify styling for the current data series. In most cases there will be color properties.
 * **Events** – This lists possible event triggers.
-* **Advanced** – Uses one field which will hold a JSON object with advanced configuration for this data series.
+* **Advanced** – This uses one field which will hold a JSON object with advanced configuration for this data series.
 
 ### 2.2 General
 

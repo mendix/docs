@@ -11,17 +11,17 @@ tags: ["marketplace", "marketplace component", "product insights", "mini survey"
 
 After you already have [created a mini survey](/developerportal/collaborate/product-insights/) in Product Insights in the Developer Portal, you should use the [Product Insights](#needs-url) module to implement your mini survey in Studio Pro.
 
-{{% alert color="info" %}}The mini survey that you implement in Studio Pro should have been already created in Product Insights in the Developer Portal. If not, you should [create your mini survey](/developerportal/collaborate/product-insights/#create-survey) in the Developer Portal first, and then configure the mini survey in Studio Pro using the Product Insights module. {{% /alert %}}
-
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Product Insights module into your app.
 
-## 3 Configuration {#configuration}
+## 3 Configuring the Product Insights Module to Implement the Mini Survey {#configuration}
+
+{{% alert color="info" %}}The mini survey that you implement in Studio Pro should have been already created in Product Insights in the Developer Portal. If not, you should [create your mini survey](/developerportal/collaborate/product-insights/#create-survey) in the Developer Portal first, and then configure the mini survey in Studio Pro using the Product Insights module. {{% /alert %}}
 
 1. In **App Explorer**, go to **Marketplace modules** > **ProductInsights_Survey** > **_SETUP**.
 
-2. Open the **Set API Key** folder, set the constant **APIKEY_PRODUCTINSIGHTS** to the API key that you generated, and then save the changes.
+2. Open the **Set API Key** folder, set the constant **APIKEY_PRODUCTINSIGHTS** to the [API key](/developerportal/collaborate/product-insights/#generate-api-key) that you generated, and then save the changes.
 
 3. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the survey to appear.
 

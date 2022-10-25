@@ -64,7 +64,11 @@ The **Logic Bot** tab contains the following settings:
 
 #### 3.2 Performance Bot
 
-The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
+The **Performance Bot** tab contains the following settings:
+
+The **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors.
+
+The **Automatically run an inspection after opening an app** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) will try to automatically execute an inspection when an app is opened by Studio Pro. If the app contains errors, then the inspection will not execute.
 
 ## 4 Model Tab
 

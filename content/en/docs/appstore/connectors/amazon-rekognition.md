@@ -22,7 +22,7 @@ Amazon Rekognition allows your app to analyze images by using machine learning. 
 
 ### 1.2 Prerequisites
 
-The Amazon Rekognition connector requires the installation of [Amazon Authentication version 2.1](/appstore/connectors/aws-authentication/) from the Marketplace.
+The Amazon DynamoDB connector requires the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
 
 ## 2 Configuration
 

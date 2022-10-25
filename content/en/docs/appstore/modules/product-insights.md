@@ -17,7 +17,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
 ## 3 Configuring the Product Insights Module to Implement the Mini Survey {#configuration}
 
-{{% alert color="info" %}}The mini survey that you implement in Studio Pro should have been already created in Product Insights in the Developer Portal. If not, you should [create your mini survey](/developerportal/collaborate/product-insights/#create-survey) in the Developer Portal first, and then configure the mini survey in Studio Pro using the Product Insights module. {{% /alert %}}
+{{% alert color="info" %}}The mini survey that you implement in Studio Pro should have been already created in Product Insights in the Developer Portal. If not, you should [create your mini survey in the Developer Portal](/developerportal/collaborate/product-insights/#create-survey) first, and then follow the procedure below. {{% /alert %}}
 
 1. In **App Explorer**, go to **Marketplace modules** > **ProductInsights_Survey** > **_SETUP**.
 
@@ -39,4 +39,4 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
 7. In **App Explorer**, double-click **Security**, and add the **ProductInsights_Survey.Use**r user role to all the system roles which might use the mini survey in the **App Security** dialog box.
 
-You have now implemented the mini survey in Studio Pro. Once the start time of the mini survey is reached, the mini survey will start running, and all the target users will receive the mini survey automatically.
+You have now implemented the mini survey in Studio Pro. Once the start time of the mini survey is reached, the mini survey will start running, and all the target users will receive the mini survey automatically. You can [view the responses](/developerportal/collaborate/product-insights/#view-export-responses) that have been collected in Product Insights in  the Developer Portal.

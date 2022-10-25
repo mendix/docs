@@ -11,13 +11,13 @@ tags: ["Product Insights", "Sprint", "Developer Portal"]
 
 With Product Insights in the Developer Portal and the [Product Insights](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini surveys for a target user group which you would like to reach to collect their feedback, and gain valuable product insights.
 
-The document describes all the pages in Product Insights in the Developer Portal, and the procedure on how to run a mini survey: you start with creating the mini survey with Product Insights in the Developer Portal, and after that, you should implement the mini survey using the Product Insights module in Studio Pro. After the mini survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
+This document describes all the pages in Product Insights in the Developer Portal, and offers you the procedure on how to run a mini survey: you start with creating the mini survey with Product Insights in the Developer Portal, and after that, you should implement the mini survey using the Product Insights module in Studio Pro. After the mini survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
 
 ## 2 Pages in Product Insights in the Developer Portal 
 
 ### 2.1 Survey Overview Page {#survey-overview}
 
-After you open an app in Product Insights, if the app already has existing mini surveys, the **Survey Overview** page opens.
+When you open an app in Product Insights, if the app already has existing mini surveys, the **Survey Overview** page opens.
 
 On the upper-left corner of the page, you can see the name of the app that currently opens in Product Insights. Click the name opens a drop-down list that allows you to open a different app in Project Insights.
 
@@ -128,7 +128,7 @@ The API key can be one of the following types:
 
 ## 3 Running a Mini Survey
 
-### 3.1 Creating a Mini Survey in Project Insights in the Developer Portal {#create-survey}
+### 3.1 Creating a Mini Survey {#create-survey}
 
 1. Open the app in the Developer Portal.
 
@@ -163,11 +163,11 @@ The API key can be one of the following types:
 
    * **Preview** – If you click **Preview**, you can get a preview that shows how the mini survey looks once it is live.
 
-   * **Save Draft** – If you click **Save Draft**, the mini survey is saved as a [draft](#survey-status). The **Survey Overview** page opens and shows that the mini survey has the **Status** of **Draft**. If you click mini survey, you can continue to edit it.
+   * **Save Draft** – If you click **Save Draft**, the mini survey is saved as a [draft](#survey-status). The **Survey Overview** page opens, with the draft mini survey shown in the list. If you click mini survey, you can continue to edit it.
 
-   * **Mark as Ready** – If you click **Mark as Ready**, the survey is finalized and it is [ready to implement](#survey-status). The [survey details](#survey-details) page opens. Save the **Survey ID** because you need it when you implement the mini survey in Studio Pro. Then you can proceed to [implement the mini survey in Studio Pro](#implement-survey)。
+   * **Mark as Ready** – If you click **Mark as Ready**, the survey is finalized and it is [ready to implement](#survey-status). The [survey details](#survey-details) page opens. Before you proceed to [implement the mini survey in Studio Pro](#implement-survey), save the **Survey ID**.
 
-### 3.2 Editing a Mini Survey in Project Insights in the Developer Portal{#edit-survey}
+### 3.2 Editing a Mini Survey {#edit-survey}
 
 To edit a mini survey, perform the following steps:
 
@@ -180,39 +180,45 @@ To edit a mini survey, perform the following steps:
 * If a mini survey has the status of **Draft**, you can still edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
 * If a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.
 
-### 3.3 Generating an API Key in Project Insights in the Developer Portal {#generate-api-key}
+### 3.3 Implementing a Mini Survey {#implement-survey}
+
+Make sure that you implement the survey in Studio Pro before the start time of the mini survey. Otherwise, even if the mini survey has the [Status](#survey-status) of **Running** on the **Survey Overview** page, users do not actually receive the mini survey. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
+
+#### 3.3.1 Generating an API Key {#generate-api-key}
 
 1. Open the app in the Developer Portal.
+
 2. Click **Product Insights**. The [Survey Overview](#survey-overview) page opens.
-4.  Click the settings icon on the [Survey Overview](#survey-overview) page.
 
-    {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
+3. Click the settings icon on the [Survey Overview](#survey-overview) page.
 
-    The [Product Insights Settings](#product-insights-settings) page opens:
+   {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
-    * If there is an already active API key, you can see it on this page. In this case, you can use the existing API key directly.
+   The [Product Insights Settings](#product-insights-settings) page opens:
 
-        There are two types of API keys. You should use the correct type of the API key:
+   * If there is an already active API key, you can see it on this page. In this case, you can use the existing API key directly.
 
-        * **Development** – This should only be used in local test environments.
-        * **Production** – This should only be used in production environments. 
-    
-    *  If there is no active API key that you can use directly, generate one as follows:
+     There are two types of API keys. You should use the correct type of the API key:
 
-        1. Click **Generate API Key**.
-        2. Choose whether the API key is a **Development Key** or **Product Key**.
-        3. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the API key generated.
-        
+     * **Development** – This should only be used in local test environments.
+     * **Production** – This should only be used in production environments. 
 
-### 3.4 Implementing a Mini Survey in Studio Pro {#implement-survey}
+   * If there is no active API key that you can use directly, generate one as follows:
 
-{{% alert color="info" %}}Make sure that you implement the survey in Studio Pro before the start time of the mini survey. Otherwise, even if the mini survey has the [Status](#survey-status) of **Running** on the **Survey Overview** page, users do not actually receive the mini survey. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.{{% /alert %}}
+     1. Click **Generate API Key**.
+     2. Choose whether the API key is a **Development Key** or **Product Key**.
+     3. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the API key generated.
 
-1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the [Product Insights](#needs-url) module into your app.
+#### 3.3.2 Installing the Product Insights Module in Your App
 
-2. [Configure the Product Insights module](/appstore/modules/product-insights/#configuration) to implement the mini survey in Studio Pro.
+1. Open your app in Studio Pro.
+2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the [Product Insights](#needs-url) module into your app.
 
-### 3.5 Viewing and Exporting Responses of a Mini Survey {#view-export-responses}
+#### 3.3.3 Configuring the Product Insights Module
+
+Follow the instruction in the [Configuration](/appstore/modules/product-insights/#configuration) section in *Product Insights* to complete the implementation of the mini survey in Studio Pro.
+
+### 3.4 Viewing and Exporting Responses of a Mini Survey {#view-export-responses}
 
 When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how much responses that have been collected.
 

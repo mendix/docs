@@ -64,16 +64,16 @@ Beside the **General** tab you will find 3 more tabs in the **Edit Series** dial
 #### 2.2.1 Enable Developer Mode
 
 {{% alert color="warning" %}}
-All changes made in developer editor are temporary. To save your progress you should copy settings from the **Custom settings** area to **Chart settings** in Studio Pro.
+All changes made in the developer editor are temporary. To save your progress, copy the settings from the **Custom settings** area to the **Chart settings** in Studio Pro.
 {{% /alert %}}
 
 When set to **Yes** this property enables **Developer mode** for the selected chart. After enabling **Developer mode** you will see a **Toggle Editor** button. When clicked, this button opens the **Chart settings** panel:
 
 {{< figure src="/attachments/appstore/widgets/charts/toggle-editor-button.png" width="350px" alt="Toggle Editor button in top right corner of the chart widget." >}}
 
-This developer mode panel is a "live" settings editor, which means that all your changes will be instantly applied to the current chart.
+This developer mode panel is a live settings editor, meaning that your changes will be instantly applied to the current chart.
 
-At the top of the panel you should see drop-down list which controls which shows which settings group is currently selected. By default each chart has a **Layout** group and **Configuration** group—these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series.
+At the top of the panel there is a drop-down list which shows the currently selected settings group. By default each chart has a **Layout** group and **Configuration** group—these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series:
 
 {{< figure src="/attachments/appstore/widgets/charts/charts-dev-panel.png" width="350px" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." >}}
 
@@ -88,11 +88,11 @@ For more information on saving custom settings for a chart, see the [Chart custo
 
 {{< figure src="/attachments/appstore/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." >}}
 
-This setting controls the visibility of a chart's legend block (highlighted with a red square). If set to **no**, then the legend block is hidden.
+This setting controls the visibility of a chart's legend block (highlighted in the picture above). If set to **no**, then the legend block is hidden.
 
-#### 2.2.4 Y Axis Label and X Axis Label
+#### 2.2.4 X Axis Label and Y Axis Label
 
-These two properties control labels for each axis respectively.
+These two properties control labels for the X and Y axis respectively.
 
 #### 2.2.5 Grid Lines
 

@@ -8,11 +8,11 @@ tags: ["marketplace", "marketplace component", "amazon", "rekognition", "connect
 
 ## 1 Introduction
 
-[Amazon Rekognition](#needs-url) offers pre-trained and customizable computer vision (CV) capabilities to extract information and insights from your images. It enables you to extract information from images, such as the location of faces in an image.
+The [Amazon Rekognition connector]([#needs-url]) provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
 ### 1.1 Typical Use Cases
 
-Below are some typical use cases : 
+Amazon Rekognition allows your app to analyze images by using machine learning. You can use it to address use cases such as the following:
 
 * Identify where the faces are located in an image
 * Compare faces from two different images

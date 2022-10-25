@@ -71,7 +71,7 @@ The following cases when the state of the calling workflow changes affect the st
 
 All other state changes of the calling workflow do not affect the called workflow.
 
-You can use the [Workflow state change](/refguide/workflow-properties/#workflow-state-change/) property to extend the behavior described above and, for example, configure a behavior that when the calling workflow is paused, the called workflow is paused as well.
+You can use the [Workflow state change](/refguide/workflow-properties/#workflow-state-change) property to extend the behavior described above and, for example, configure a behavior that when the calling workflow is paused, the called workflow is paused as well.
 
 ## 4 Read More
 

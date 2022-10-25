@@ -131,7 +131,7 @@ There are two different ways to edit your page:
 
 You can toggle between the modes by clicking the **Design mode** or **Structure mode** button on the right of the top bar.
 
-{{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" width="250" >}}
 
 By default, pages open in **Structure mode**, but if you prefer **Design mode**, this can be set as default in the **Preferences** (**Edit > Preferences > Work Environment > Default Page Editor**). For more information, see the [Default Page Editor](/refguide/preferences-dialog/#default-page-editor) section in *Preferences*.
 
@@ -157,11 +157,11 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 * Right-click a drop-zone allows you to insert a widget into it
 * The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two open a dialog box that lets you choose an element from a list of widgets/building blocks)
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets"  width="300" >}}
 
 * Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button (available for Web page templates and layouts only).
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/show-styles.png" alt="Show styles button" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/show-styles.png" alt="Show styles button" width="400" >}}
 
 ### 3.2 Design Mode {#design-mode}
 

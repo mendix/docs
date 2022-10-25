@@ -13,21 +13,25 @@ With Product Insights in the Developer Portal and the [Product Insights](/appsto
 
 You start with creating the mini survey with Product Insights in the Developer Portal. After that, you should implement the mini survey using the Product Insights module in Studio Pro. After the mini survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
 
+The document first describes all the pages in Product Insights in the Developer Portal, and then offers the procedure on how to run a mini survey.
+
 ## 2 Pages in Product Insights in the Developer Portal 
 
 ### 2.1 My Projects Page
 
-When you open Product Insights in the Developer Portal, the **My projects** page opens.
-
-On the **My projects** page, you can see all the apps for which Product Insights are enabled. You can click an app to start creating a mini survey for that app. If your app does not appear on this page, you can [add the app](#add-new-project). {{% todo %}}Check if this is still applicable for the final product.{{% /todo %}}
-
-On the upper-left corner of the page, you can see the name of the app that currently opens in Product Insights. Click the name opens a drop-down list that allows you to switch to a different app in Project Insights.
+When you open app app in Product Insights in the Developer Portal, the **My projects** page opens. On the upper-left corner of the page, you can see the name of the app that currently opens in Product Insights. Click the name opens a drop-down list that allows you to open a different app in Project Insights.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/app-drop-down-list.png" >}}
 
+The **My projects** page shows all the apps for which Product Insights are enabled. If your app does not appear on this page, it is not enabled for Product Insights. To enable it, copy its App ID on the [General](/developerportal/collaborate/general-settings/#general) tab of the **General Settings** page in the Developer Portal, then paste the App ID in the text box on the **My projects** page, as shown in the image below, and then click **Add Project**.{{% todo %}}Check if this is still applicable for the final product.{{% /todo %}}
+
+{{< figure src="/attachments/developerportal/collaborate/product-insights/add-new-project.png" >}}
+
 ### 2.2 Survey Overview Page {#survey-overview}
 
-When you [open an app](#open-app) in Product Insights, if the app already has existing mini surveys, the **Survey Overview** page opens. This page has three tabs: the **Active** tab, the **Archived** tab, and the **Settings** tab.
+When you click an app on the **My projects** page, if the app already has existing mini surveys, the **Survey Overview** page opens.
+
+This page has three tabs: the **Active** tab, the **Archived** tab, and the **Settings** tab.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/survey-overview.png" >}}
 
@@ -130,44 +134,40 @@ This tab shows the test data that has been collected from testers when they use 
 
 {{% alert color="info" %}}You can get a development API key on the [Product Insights Settings](#product-insights-settings) page.<br/>You can enable the test mode on the [Settings](#settings) tab of the **Survey Overview** page.{{% /alert %}}
 
-## 3 Setting up a Mini Survey
+## 3 Running a Mini Survey
 
-### 3.1 Opening an App in Project Insights in the Developer Portal{#open-app}
+### 3.1 Creating a Mini Survey in Project Insights in the Developer Portal {#create-survey}
 
-To open an app in Product Insights, open the app in the Developer Portal and then click **Product Insights**.
+1. Open the app in the Developer Portal.
 
-{{% todo %}}Check how to open an app in the final product.{{% /todo %}}
+2. Click **Product Insights**. The **My projects** page opens.
 
-### 3.2 Adding a New Project in Project Insights in the Developer Portal{#add-new-project}
+   {{% todo %}}Check how to open an app in the final product.{{% /todo %}}
 
-1. Go to the [General Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal for this app.
+3. On the **My projects** page, click the app for which you want to create the mini survey.
+4. If you cannot find the app on the **My projects** page, add the app as follows:
 
-2. On the **General** tab, copy the **App ID**. 
+   1. Go to the [General Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal for this app.
+   2. On the **General** tab, copy the **App ID**. 
+   3. Go to **Project Insights**. {{% todo %}}Check how to go to Project Insights from here.{{% /todo %}}
+   4.  Paste the app ID in the text box, as shown in the image below.
 
-3. Go to **Project Insights**. {{% todo %}}Check how to go to Project Insights from here.{{% /todo %}}
+       {{< figure src="/attachments/developerportal/collaborate/product-insights/add-new-project.png" >}}
 
-4. Paste the app ID in the text box, as shown in the screenshot below.
+   5. Click **Add project**. 
 
-   {{< figure src="/attachments/developerportal/collaborate/product-insights/add-new-project.png" >}}
+   The app should appear on the **My projects** page. {{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
 
-5. Click **Add project**.
+   {{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
 
-The app should appear on the **My projects** page. {{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
-
-### 3.3 Creating a Mini Survey in Project Insights in the Developer Portal {#create-survey}
-
-1. [Open the app in Project Insights](#open-app) in the Developer Portal.
-
-2. On the **My projects** page, click the app for which you want to create the mini survey. (If you cannot find the app on the **My projects** page, [add the app first](#add-new-project).){{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
-
-   Depending on if there are existing surveys for this app, you see one of the following scenarios:
+5. Depending on if there are existing surveys for this app, you see one of the following scenarios:
 
    * If there are already existing mini surveys for this app, the [Survey Overview](#survey-overview) page opens. The page lists all the existing mini surveys, and also shows the **Create New Survey** button.
    * If there are no existing mini surveys for this app, you only see the **Create New Survey** button.
 
-3. Click **Create New Survey**. The **Create New Survey** page opens.
+6. Click **Create New Survey**. The **Create New Survey** page opens.
 
-4. Enter the following information for your mini survey:
+7. Enter the following information for your mini survey:
 
    * **Background**
 
@@ -187,7 +187,7 @@ The app should appear on the **My projects** page. {{% todo %}}Check if the My p
 
    * **Questions** – You can set up to three questions per mini survey.
 
-5. After you fill in all the information, you can perform one of the following actions by clicking the corresponding button at the bottom of the page:
+8. After you fill in all the information, you can perform one of the following actions by clicking the corresponding button at the bottom of the page:
 
    * **Preview** – If you click **Preview**, you can get a preview that shows how the mini survey looks once it is live.
 
@@ -195,44 +195,50 @@ The app should appear on the **My projects** page. {{% todo %}}Check if the My p
 
    * **Mark as Ready** – If you click **Mark as Ready**, the survey is finalized and it is [ready to implement](#survey-status). The [survey details](#survey-details) page opens. Save the **Survey ID** because you need it when you implement the mini survey in Studio Pro. Then you can proceed to [implement the mini survey in Studio Pro](#implement-survey)。
 
-### 3.4 Editing a Mini Survey in Project Insights in the Developer Portal{#edit-survey}
+### 3.2 Editing a Mini Survey in Project Insights in the Developer Portal{#edit-survey}
 
 To edit a mini survey, perform the following steps:
 
-1. [Open the app in Project Insights](#open-app) in the Developer Portal.
+1. Open the app in the Developer Portal.
 
-2. On the **My projects** page, click the app for which you want to edit the mini survey. The [Survey Overview](#survey-overview) page opens.{{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
+2. Click **Product Insights**. The **My projects** page opens.
 
-3. On the **Active** tab, click the mini survey. Depending on the [status](#survey-status) of the mini survey, you can edit different parts of the mini survey:
+   {{% todo %}}Check how to open an app in the final product.{{% /todo %}}
+
+3. On the **My projects** page, click the app for which you want to edit the mini survey. The [Survey Overview](#survey-overview) page opens.{{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
+
+4. On the **Active** tab, click the mini survey. Depending on the [status](#survey-status) of the mini survey, you can edit different parts of the mini survey:
 
 * If a mini survey has the status of **Draft**, you can still edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
 * If a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.
 
-## 4 Implementing a Mini Survey in Studio Pro {#implement-survey}
+### 3.3 Implementing a Mini Survey in Studio Pro {#implement-survey}
 
 {{% alert color="info" %}}Make sure that you implement the survey in Studio Pro before the start time of the mini survey. Otherwise, even if the mini survey has the [Status](#survey-status) of **Running** on the **Survey Overview** page, users do not actually receive the mini survey. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.{{% /alert %}}
 
 1. Generate an API key as follows:
 
-   1. [Open the app in Project Insights](#open-app) in the Developer Portal.
+   1. Open the app in the Developer Portal.
 
-   2. On the **My projects** page, click the app for which you want to implement the mini survey. The [Survey Overview](#survey-overview) page opens.{{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
+   2. Click **Product Insights**. The **My projects** page opens.
 
-   3. Click the settings icon on the [Survey Overview](#survey-overview) page, the [Product Insights Settings](#product-insights-settings) page opens.
+   3. On the **My projects** page, click the app for which you want to implement the mini survey. The [Survey Overview](#survey-overview) page opens.{{% todo %}}Check if the My projects page still exists in the final product.{{% /todo %}}
+
+   4. Click the settings icon on the [Survey Overview](#survey-overview) page, the [Product Insights Settings](#product-insights-settings) page opens.
 
       {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
-   4. Click **General API Key**.
+   5. Click **General API Key**.
 
-   5. Choose whether the API key is a **Development Key** or **Product Key**. 
+   6. Choose whether the API key is a **Development Key** or **Product Key**. 
 
-   6. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the API key generated.
+   7. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the API key generated.
 
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the [Product Insights](#needs-url) module into your app.
 
 3. [Configure the Product Insights module](/appstore/modules/product-insights/#configuration) to implement the mini survey in Studio Pro.
 
-## 5 Viewing and Exporting Responses of a Mini Survey
+### 3.4 Viewing and Exporting Responses of a Mini Survey
 
 When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how much responses that have been collected.
 

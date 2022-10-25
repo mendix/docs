@@ -1,10 +1,10 @@
 ---
-title: "CI/CD for Mendix for Private Cloud using Tekton"
+title: "CI/CD for Mendix for Standalone Private Cloud using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 40
-tags: ["CI/CD", "Tekton", "Private Cloud", "Environment"]
+tags: ["CI/CD", "Tekton", "Private Cloud", "Environment", "Standalone"]
 ---
 
 {{% alert color="info" %}}
@@ -15,7 +15,7 @@ Please make a request to your Customer Success Manager (CSM) to arrange for acce
 
 ## 1 Introduction
 
-Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. This document explains how to install:
+Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Standalone Private Cloud apps. This document explains how to install:
 
 * Tekton
 * Pipelines containing the appropriate tasks and steps to manage apps and environments
@@ -37,7 +37,7 @@ All commands used in this document should be executed in a Bash (or bash-compati
 To follow these instructions you will need:
 
 * Administrator access to a Kubernetes/OpenShift cluster
-* The [cluster registered in the Mendix Developer Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
+* The standalone [cluster registered in the Mendix Developer Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
@@ -108,11 +108,11 @@ If your cluster is air-gapped and does not have access to the internet, you will
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
 
-## 5 Tekton Installation for Connected Environments{#tekton-installation}
+## 5 Tekton Installation for not air-gapped (regular) Environments{#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for Connected Environments](#pipelines-installation).
 
-### 5.1 Installing on Connected Kubernetes
+### 5.1 Installing on not air-gapped Kubernetes
 
 To install Tekton with Tekton Triggers, apply the following yaml manifests:
 
@@ -126,14 +126,14 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 The manifests target the `tekton-pipelines` namespace.
 {{% /alert %}}
 
-### 5.2 Installing on Connected OpenShift
+### 5.2 Installing on not air-gapped OpenShift
 
 To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift Pipelines, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation. 
 Main objects would be installed in `openshift-pipelines` namespace. 
 
 At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
 
-## 6 Pipeline Installation for Connected Environments{#pipelines-installation}
+## 6 Pipeline Installation for not air-gapped Environments{#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
@@ -173,7 +173,11 @@ To use your own PVC add `--set pvcName=$your-pvc-name` to each command during in
 You can specify a secret access token which the trigger will use to validate received payloads.
 
 To enable validation you need to specify the *accessToken* parameter `--set accessToken=SomeLongSecureToken42` (replacing `SomeLongSecureToken42` with your secret) during installation of the triggers.
-All your HTTP requests to Tekton triggers should then have a similar header `X-GitLab-Token: SomeLongSecureToken42`. This also works using [any HTTP client](#auth-other-clients) to activate the trigger.
+All your HTTP requests to Tekton triggers should then have a similar header `X-GitLab-Token: SomeLongSecureToken42`.
+
+Despite the `X-GitLab-Token` header name, this authentication works outside of GitLab,
+and all HTTP requests to the trigger will work with that header.
+More details on how to activate a trigger using any HTTP client are [here](#auth-other-clients).   
 
 #### 7.2.1 GitLab configuration
 
@@ -210,14 +214,15 @@ cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
     --set name=$SOME_UNIQUE_NAME \
     --set pipelineName=build-pipeline \
-    --set triggerType=generic | kubectl apply -f - -n $YOUR_NAMESPACE
+    --set triggerType=generic | kubectl apply -f - -n $NAMESPACE_WITH_PIPELINES
 ```
 
-| Parameter | Explanation |
-| --- | --- |
-| `name` | All created Kubernetes objects will have this suffix |
+| Parameter | Explanation                                                                                            |
+| --- |--------------------------------------------------------------------------------------------------------|
+| `name` | All created Kubernetes objects will have this suffix                                                   |
 | `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
-| `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section) |
+| `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section)           |
+| `$NAMESPACE_WITH_PIPELINES` | Namespace from section 6.                                                                              |
 
 You can use one Generic Trigger with several environments. To use it with several environments you just need to pass the correct parameters in the HTTP request body.
 
@@ -237,7 +242,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
     --set gitlabwebhook.mendixEnvironmentInternalName=app \
     --set gitlabwebhook.protocol=ssh \
     --set gitlabwebhook.scheduledEventsMode=auto \
-    --set gitlabwebhook.constantsMode=auto | kubectl apply -f - -n $YOUR_NAMESPACE
+    --set gitlabwebhook.constantsMode=auto | kubectl apply -f - -n $NAMESPACE_WITH_PIPELINES
 ```
 
 | Parameter | Explanation |
@@ -250,6 +255,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `gitlabwebhook.protocol` | Git protocol. Available options: `http` or `ssh` |
 | `gitlabwebhook. scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
 | `gitlabwebhook.constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
+| `$NAMESPACE_WITH_PIPELINES` | Namespace from section 6.                                                                              |
 
 To use GitLab triggers on several environments, you need to create a new trigger for every environment and provide the correct parameters during installation of the trigger.
 

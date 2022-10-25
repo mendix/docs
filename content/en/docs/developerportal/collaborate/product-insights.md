@@ -9,34 +9,36 @@ tags: ["Product Insights", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-With Product Insights in the Developer Portal and the [Product Insights](needs-url) module in the Marketplace, you can set up mini surveys for a target user group which you would like to reach to collect their feedback, which enables you to gain valuable product insights.
+With Product Insights in the Developer Portal and the [Product Insights](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini surveys for a target user group which you would like to reach to collect their feedback, and gain valuable product insights.
 
-You start with creating the mini survey with Product Insights in the Developer Portal. After that, you should implement the mini survey in Studio Pro. After the mini survey is up and running, you can view the data that the survey has collected in Product Insights in the Developer Portal, and export the data to an XLSX file.
+You start with creating the mini survey with Product Insights in the Developer Portal. After that, you should implement the mini survey using the Product Insights module in Studio Pro. After the mini survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
 
 ## 2 Pages in Product Insights in the Developer Portal 
 
 ### 2.1 My Projects Page
 
-When you open Product Insights in the Developer Portal, **My projects** page opens.
+When you open Product Insights in the Developer Portal, the **My projects** page opens.
 
-On the **My projects**page, you can see all the apps for which Product Insights are enabled. You can click an app to start setting up a mini survey for that app. If your app does not appear here, you can [add the app](#add-new-project). {{% todo %}}Check if this is still applicable for the final product.{{% /todo %}}
+On the **My projects** page, you can see all the apps for which Product Insights are enabled. You can click an app to start creating a mini survey for that app. If your app does not appear on this page, you can [add the app](#add-new-project). {{% todo %}}Check if this is still applicable for the final product.{{% /todo %}}
 
-On the upper-left corner, you can see the name of the app that currently opens in Product Insights. Click the name opens a drop-down list that allows you to open another app in Project Insights.
+On the upper-left corner of the page, you can see the name of the app that currently opens in Product Insights. Click the name opens a drop-down list that allows you to switch to a different app in Project Insights.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/app-drop-down-list.png" >}}
 
 ### 2.2 Survey Overview Page {#survey-overview}
 
-When you [open an app](#open-app) that already has existing surveys in Product Insights, the **Survey Overview** page opens.
+When you [open an app](#open-app) in Product Insights, if the app already has existing mini surveys, the **Survey Overview** page opens. This page has three tabs: the **Active** tab, the **Archived** tab, and the **Settings** tab.
+
+{{< figure src="/attachments/developerportal/collaborate/product-insights/survey-overview.png" >}}
 
 #### 2.2.1 Active Tab {#active}
 
 The **Active** tab shows all the mini surveys that are active for this app.
 
-The tab shows a list with the following columns:
+The list on this tab contains the following information:
 
-* **Survey ID** – This shows the unique ID of the mini survey. This ID is needed when the mini survey is implemented in Studio Pro. You can also find the survey ID on the [survey details](#survey-details) page.
-* **Name** – This shows the name of the mini survey.
+* **Survey ID** – This is the unique ID of the mini survey. This ID is needed when the mini survey is implemented in Studio Pro. You can also find the survey ID on the [survey details](#survey-details) page.
+* **Name** – This is the name of the mini survey.
 * **Responses** – This shows the number of the responses that have been collected for the mini survey.
 * **Status** – For more information, see the [Status of Mini Surveys](#survey-status) section.
 * **Start & End Dates** – This shows the start and end dates of the mini survey.
@@ -50,28 +52,28 @@ The mini survey can have different statuses. You can check its status on the [Su
 
 Along its lifecycle, a mini survey can have the following statuses:
 
-* **Draft** – A mini survey with the status of **Draft** is not finalized. You can still edit the survey and need to mark it as ready after you finalize it. Once you mark a survey as ready, its status change to **Ready to Implement**.
-* **Ready to Implement** – A mini survey with the status of **Ready to Implement** is finalized, but its start time is not reached yet. Once the start time is reached, its status change to **Running**.
+* **Draft** – A mini survey with the status of **Draft** is not finalized. You can still edit the survey and when you finalize it, you need to mark it as ready. Once you mark a survey as ready, its status changes to **Ready to Implement**.
+* **Ready to Implement** – A mini survey with the status of **Ready to Implement** is finalized, but its start time is not reached yet. Once the start time is reached, its status changes to **Running**.
 * **Running** – A mini survey with the status of **Running** is currently running. Once the survey past its end time, its status changes to **Evaluate Responses.**
 * **Evaluate Responses** – A mini survey with the status of **Evaluate Responses** has ended.
 
-{{% alert color="info" %}}When a survey has the status of **Draft**, you can still edit everything in the survey. <br/>When a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
+{{% alert color="info" %}}When a mini survey has the status of **Draft**, you can still edit everything in the survey. <br/>When a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
 
 #### 2.2.2 Archived Tab {#archived}
 
 The **Archived** tab shows all the mini surveys that you are archived for this app. 
 
-The tab shows a list with the following columns:
+The list on this tab contains the following information:
 
-* **Survey ID** – This shows the unique ID of the mini survey. This ID is needed when the mini survey is implemented in Studio Pro. You can also find the survey ID on the [survey details](#survey-details) page.
-* **Name** – This shows the name of the mini survey.
+* **Survey ID** – This is the unique ID of the mini survey. The survey ID is needed when the mini survey is implemented in Studio Pro. You can also find the survey ID on the [survey details](#survey-details) page.
+* **Name** – This is the name of the mini survey.
 * **Responses** – This shows the number of the responses that have been collected for the mini survey.
 * **Start & End Dates** – This shows the start and end dates of the mini survey.
 * **Created on** – This shows when the mini survey was created.
 
 Clicking a row shows the [details](#survey-details) of the mini survey in that row.
 
-#### 2.2.3 Settings Tab
+#### 2.2.3 Settings Tab {#settings}
 
 On the **Settings** tab, you can enable the test mode. Enabling this mode will mark the team members of this app as testers. Their responses will not be saved and they will see the survey every time it is triggered.
 
@@ -83,11 +85,18 @@ When you click the settings icon on the [Survey Overview](#survey-overview) page
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
-Here you can view the existing API key, or generate an API key if there is not any. The API key is needed when you implement the mini survey in Studio Pro. You need only one API key for all the mini surveys.
+Here you can view the existing API key, or generate an API key if there is not any. This API key is needed when you implement the mini survey in Studio Pro. You need only one API key for all mini surveys.
+
+The API key can be one of the following types:
+
+* Development API key: This key should only be used in local test environments.
+* Production API key: This key should only be used in production environments.
 
 ### 2.4 Survey Details Page {#survey-details}
 
 When you click a row in the list on the [Active](#active) or [Archived](#archived) tab of the **Survey Overview** page, the survey details page opens.
+
+{{< figure src="/attachments/developerportal/collaborate/product-insights/survey-details.png" >}}
 
 On the upper-right corner, you can find the following buttons:
 
@@ -95,7 +104,7 @@ On the upper-right corner, you can find the following buttons:
 * **Archive Survey** – Clicking **Archive Survey** archives the survey. Once a survey is archived, you can find it on the [Archived](#archived) tab of the **Survey Overview** page.
 * **Export Responses** – Clicking **Export Responses** exports the responses that have been collected to an XLSX file.
 
-The survey details page can contain the **Settings** tab, the **Implementation** tab and the **Responses** tab – depending on the [status](#survey-status) of the mini survey, you may not see all three tabs.
+The survey details page can contain the **Settings** tab, the **Implementation** tab, the **Responses** tab, and the **Test data** tab – depending on the [status](#survey-status) of the mini survey, you may not see all three tabs.
 
 #### 2.4.1 Settings Tab {#survey-details-settings}
 
@@ -115,9 +124,11 @@ On this tab, you can view all the responses that have been collected for the min
 
 #### 2.4.4 Test Data Tab
 
-The **Test Data** tab is available for mini surveys with the status of **Ready for Implement** and **Running**.
+The **Test data** tab is available for mini surveys with the status of **Ready for Implement** and **Running**.
 
-On this tab, you can view all the test data. {{% todo %}}What are you looking at exactly here?{{% /todo %}}
+This tab shows the test data that has been collected from testers when they use a development API key in the test mode.
+
+{{% alert color="info" %}}You can get a development API key on the [Product Insights Settings](#product-insights-settings) page.<br/>You can enable the test mode on the [Settings](#settings) tab of the **Survey Overview** page.{{% /alert %}}
 
 ## 3 Setting up a Mini Survey
 

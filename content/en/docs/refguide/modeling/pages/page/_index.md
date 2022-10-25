@@ -155,7 +155,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
 * Right-click a drop-zone allows you to insert a widget into it
-* The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two will open a dialog that lets you choose from all widgets / building block)
+* The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two open a dialog box that lets you choose an element from a list of widgets/building blocks)
 
     {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets" >}}
 

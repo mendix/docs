@@ -127,7 +127,7 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 ### 7.1 Default Page Editor {#default-page-editor}
 
-This option sets the default page editor mode that your page opens in: **Structure mode** or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes/) section in *Page*.
+This option sets the default page editor mode that your page opens in: **Structure mode** or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
 
 ## 8 New Features Tab {#new-features}
 

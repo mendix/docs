@@ -150,9 +150,9 @@ Please, find more details in [Custom Configurations](#custom-configurations) in 
 
 * **Interpolation** – Determines the line shape. Could be  **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
-	* **Line** – draw series as simple line.
-	* **Line with markers** – draw line with markers on top of each dot.
-	* **Custom** – custom line style for series.
+	* **Line** – Draws a series as simple line.
+	* **Line with markers** – Draws a line with markers on top of each dot.
+	* **Custom** – Makes a custom line style for series.
 * **Line color** – The color used to fill line for this data series.
 * **Area fill color** – The color used to fill area for this data series.
 
@@ -162,7 +162,7 @@ Please, find more details in [Custom Configurations](#custom-configurations) in 
 
 ##### 5.2.1.1 Bar Format
 
-This setting controls bar format. In the **group** format, bars go one below the other. In the **stacked** format bars are stacked on top of one another, forming one line.
+This setting controls the bar format. In the **group** format, bars go one below the other. In the **stacked** format, bars are stacked on top of one another forming one line.
 
 {{< figure src="/attachments/appstore/widgets/charts/bar-chart-formats.png" width="450px" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." >}}
 
@@ -240,15 +240,15 @@ If set to **Yes** then show scale on the right side of the chart.
 
 Allow to specify list of colors to use in the heat map. Each item define color for value in percentage. At least two values needs to be specified, for 0% and 100%, else the default colors are used.
 
-##### 5.5.4.2 Smooth color
+##### 5.5.4.2 Smooth Color
 
 If set to **Yes** then show scale as smooth gradient between two colors.
 
-##### 5.5.4.3 Show values
+##### 5.5.4.3 Show Values
 
 If set to **Yes** then show value for each dot on chart.
 
-##### 5.5.4.4 Font value color
+##### 5.5.4.4 Font Value Color
 
 The font color to display values for each dot.
 
@@ -258,11 +258,11 @@ The font color to display values for each dot.
 
 ##### 5.6.1.1 Appearance
 
-* **Interpolation** – Determines the line shape. Could be  **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
+* **Interpolation** – This determines the line shape: **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
-	* **Line** – draw series as simple line.
-	* **Line with markers** – draw line with markers on top of each dot.
-	* **Custom** – custom line style for series.
+	* **Line** – Draws a series as a simple line.
+	* **Line with markers** – Draws a line with markers on top of each dot.
+	* **Custom** – A custom line style for a series.
 * **Line color** – The color used to fill line for this data series.
 * **Area fill color** – The color used to fill area for this data series.
 
@@ -302,7 +302,7 @@ A percentage between 0 an 100 indicating the radius of the hole in the pice char
 
 #### 5.8.1 General
 
-##### 5.8.1.1 Show range Slider
+##### 5.8.1.1 Show Range Slider
 
 If set to **Yes** then show additional range control at the bottom of chart.
 
@@ -312,9 +312,9 @@ If set to **Yes** then show additional range control at the bottom of chart.
 
 * **Interpolation** – Determines the line shape. Could be  **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
-	* **Line** – draw series as simple line.
-	* **Line with markers** – draw line with markers on top of each dot.
-	* **Custom** – custom line style for series.
+	* **Line** – Draws a series as a simple line.
+	* **Line with markers** – Draws a line with markers on top of each dot.
+	* **Custom** – Makes a custom line style for a series.
 * **Line color** – The color used to fill line for this data series.
 * **Fill area** – If set to **Yes** then fill area between data point and x-axis.
 * **Area fill color** – The color used to fill area for this data series.

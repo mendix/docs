@@ -37,11 +37,11 @@ The `OPTIONS` are described in the table below:
 | -------- | -------- | --------------------------------- |
 | `--help` | `-h`     | Displays the help text and exits. |
 
-`BASE` – common base commit
+`BASE` is common base commit.
 
-`MINE` – the version to merge into; this MPR contains the results of the merge
+`MINE` is the version to merge into; this MPR contains the results of the merge.
 
-`THEIRS` – the version to merge changes from
+`THEIRS` is the version to merge changes from.
 
 #### 3.2.2 Conflicts
 

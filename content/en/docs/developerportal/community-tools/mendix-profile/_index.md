@@ -276,11 +276,16 @@ In this section, you can merge your accounts and select your profile visibility.
 
 #### 10.7.1 Merging Your Accounts {#merging}
 
-With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your points, certifications, and achievements to support you as you clim the leaderboards or on your way to the Expert certification.
+Do you want to transfer information from your old Mendix Account to a new one? You can do it directly from your Advanced Settings. After sharing some information with us, your earned points, achievements, credits, certifications, and academy progress will be automatically transferred.
 
-Before merging, make sure your profile is public and that you logged in with the right email address. Enter the email address you want to have merged into the logged-in account, then send the merge request.
+If you still has access to your old/source account, you can approve the merge yourself. A confirmation email will be sent to the old/source account when the merge is requested. Clicking the link in the email will bring the user to their advanced settings where they can approve the merge. Be sure you’re logged in with your 'old' account to see the merge request.
 
-We’ll take things from there!
+Please note: it is not possible to separate accounts after they've been merged. Please double-check if your old and new account information is valid and in the correct order.
+
+**How can I merge my accounts?**
+1) From your new account enter the email address of your old account below and send us the request.
+2) Approve the request from your old account settings if you still have access. Or wait for approval from Mendix Support.
+3) Your account data will be moved to your new account.
 
 {{% alert color="info" %}}
 Once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access. Adding your new account to the relevant apps before the merge is recommended.{{% /alert %}}

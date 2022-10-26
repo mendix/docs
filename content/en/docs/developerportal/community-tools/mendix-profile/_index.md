@@ -276,19 +276,19 @@ In this section, you can merge your accounts and select your profile visibility.
 
 #### 10.7.1 Merging Your Accounts {#merging}
 
-Do you want to transfer information from your old Mendix Account to a new one? You can do it directly from your Advanced Settings. After sharing some information with us, your earned points, achievements, credits, certifications, and academy progress will be automatically transferred.
+Do you want to transfer information from your old Mendix account to a new one? You can do this directly from your **Advanced Settings**. After sharing some information with us, your earned points, achievements, credits, certifications, and Academy progress is automatically transferred.
 
-If you still has access to your old/source account, you can approve the merge yourself. A confirmation email will be sent to the old/source account when the merge is requested. Clicking the link in the email will bring the user to their advanced settings where they can approve the merge. Be sure you’re logged in with your 'old' account to see the merge request.
+To merge your accounts, follow these steps:
 
-Please note: it is not possible to separate accounts after they've been merged. Please double-check if your old and new account information is valid and in the correct order.
+1. Prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this, because once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access.
+2. From your new account, enter the email address of your old account to send us the request.
+3. If you still have access to your old account, you can approve the merge yourself after clicking the link in the confirmation email that is sent to your old account when the merge is requested. Be sure you are logged in with your old account to see the merge request. Otherwise, you can wait for merge approval from Mendix Support.
 
-**How can I merge my accounts?**
-1) From your new account enter the email address of your old account below and send us the request.
-2) Approve the request from your old account settings if you still have access. Or wait for approval from Mendix Support.
-3) Your account data will be moved to your new account.
+Your account data is then moved to your new account.
 
-{{% alert color="info" %}}
-Once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access. Adding your new account to the relevant apps before the merge is recommended.{{% /alert %}}
+{{% alert color="warning" %}}
+It is not possible to separate accounts after they have been merged. Double-check that your old and new account information is valid and in the correct order.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).

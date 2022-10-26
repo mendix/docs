@@ -155,15 +155,11 @@ It is not possible to remove yourself as a Mendix Admin.
 
 ## 7 Company Brand
 
-{{% alert color="warning" %}}
-Features on this page are available to try out, but you will not see changes implemented yet.
-{{% /alert %}}
+On this page, you can add and edit a **Company Logo** that will appear across the platform where it is used – for example, it will be displayed on your published Marketplace content and available for usage in your [Company Onboarding](/#onboarding).
 
-On this page, you can add and edit a **Logo** that will appear on your company page. (Please note your company page will be available in a future iteration of Control Center.)
+You can **Upload** a **Cover image** which will be the background header of your company page.
 
-You can set a **Cover image** to be the background header of your company page. If you do not set an image by clicking **Upload**, the **Primary** color as set in the **Brand colors** section will be used.
-
-{{< figure src="/attachments/developerportal/control-center/brand.jpg" >}}
+{{< figure src="/attachments/developerportal/control-center/company-brand.png" >}}
 
 ## 8 Onboarding {#onboarding}
 

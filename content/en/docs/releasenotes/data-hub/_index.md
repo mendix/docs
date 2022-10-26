@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### October 27th, 2022
+
+#### Improvements
+
+* We are now clearly indicating with a label when a data source is a sample.
+
 ### October 20th, 2022
 
 #### Improvements

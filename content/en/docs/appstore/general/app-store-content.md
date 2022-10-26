@@ -201,11 +201,19 @@ A module downloaded from the Marketplace has a light blue icon to differentiate 
 
 #### 4.2.1 Updating the Module to a Newer Version {#update-module}
 
-To update the module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
+To update the module in your app to a newer version, do as follows:
 
-{{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+1. Before downloading the newer version, remove all the Java libraries that are only used by this module from the **userlib** folder in your app directory. Java libraries are accompanied by a blank *[Module].RequiredLib* file. This will help you identify by which module the Java libraries are used.
 
-{{< figure src="/attachments/appstore/general/app-store-content/import-module.png" alt="Import Module dialog box" >}}
+   Doing this prevents you from ending up with having conflicting Java libraries which cause unexpected issues. 
+
+2. Go to the Marketplace to download the right version and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
+
+   {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+
+   {{< figure src="/attachments/appstore/general/app-store-content/import-module.png" alt="Import Module dialog box" >}}
+
+3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 
 #### 4.2.2 Configuring the Module
 

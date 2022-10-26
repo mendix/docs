@@ -201,9 +201,13 @@ A module downloaded from the Marketplace has a light blue icon to differentiate 
 
 #### 4.2.1 Updating the Module to a Newer Version {#update-module}
 
-To update the module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
+To update the module in your app to a newer version, do as follows:
 
-{{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
+1. Clean up obsolete Java libraries from the `userlib` folder in your app directory. This will prevent you from ending up with conflicting Java libraries which cause unexpected issues. 
+
+2. Go to the Marketplace to download the right version and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
+
+   {{% alert color="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
 {{< figure src="/attachments/appstore/general/app-store-content/import-module.png" alt="Import Module dialog box" >}}
 

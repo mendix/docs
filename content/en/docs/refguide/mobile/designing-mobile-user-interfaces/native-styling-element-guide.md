@@ -1805,9 +1805,9 @@ The widget’s style properties are as follows:
 | `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
 | `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
 | `loadMoreButtonPressableContainer` | rippleColor | Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only) |
-| `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (boolean) (Android only) |
+| `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (Boolean) (Android only) |
 | `loadMoreButtonPressableContainer` | radius | Defines the radius of the ripple effect. (number) (Android only) |
-| `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (boolean) (Android only) |
+| `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
 | `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
 ### 11.33.1 Gallery Filtering

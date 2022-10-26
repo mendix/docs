@@ -43,7 +43,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
-### 2.1 Firewall Settings
+### 2.1 Firewall Settings {#firewall-settings}
 
 Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to whitelist them:
 
@@ -56,6 +56,7 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8080: runtime port
 * 8083: mobile packager
 * 8090: admin port
+* 8100: sign-in port (for version 9.18 and above)
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 

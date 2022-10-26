@@ -155,9 +155,9 @@ It is not possible to remove yourself as a Mendix Admin.
 
 ## 7 Company Brand
 
-On this page, you can add and edit a **Company Logo** that will appear across the platform where it is used – for example, it will be displayed on your published Marketplace content and available for usage in your [Company Onboarding](#onboarding).
+On this page, you can add and edit a **Company Logo** that will appear across the platform where it is used – for instance, it will be displayed on your published Marketplace content and available for usage in your [Company Onboarding](#onboarding).
 
-You can **Upload** a **Cover image** which will be the background header of your company page.
+You can upload a **Cover image** which will be the background header of your company page.
 
 {{< figure src="/attachments/developerportal/control-center/company-brand.png" >}}
 

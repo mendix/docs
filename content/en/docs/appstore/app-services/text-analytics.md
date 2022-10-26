@@ -18,8 +18,8 @@ Here is an overview of what the Text Analytics contains:
 | Item                                        | Name                                                         |
 | ------------------------------------------- | ------------------------------------------------------------ |
 | [Predefined entities](#predefined-entities) | Detector, Language, Response, DominantLanguageDetector, DominantLanguage, SentimentDetector, Sentiment, SentimentScore, EntityDetector, Entity, PiiEntityDetector, PiiEntity, KeyPhraseDetector, KeyPhrase, SyntaxDetector, SyntaxToken |
-| [Constants](#constants)                     | LicenseToken, TokenEndpoint                                  |
-| [Microflows](#microflows)                   | CreateDominantLanguageDetector, CreateEntityDetector, CreateKeyPhraseDetector, CreatePiiEntityDetector, CreateSentimentDetector, CreateSyntaxDetector |
+| [Constants](#constants)                     | AWS_Default_Region                                  |
+| [Microflows](#microflows)                   | CreateDominantLanguageDetector, CreateEntityDetector, CreateKeyPhraseDetector, CreatePiiEntityDetector, CreateSentimentDetector, CreateSyntaxDetector, DetectDominantLanguage_MF, DetectEntities_MF, DetectKeyPhrases_MF, DetectPiiEntities_MF, DetectSentiment_MF, DetectSyntax_MF, GetSupportedLanguages |
 | [Nanoflows](#nanoflows)                     | DetectDominantLanguage, DetectEntities, DetectKeyPhrases, DetectPiiEntities, DetectSentiment, DetectSyntax |
 | [Enumerations](#enumerations)               | EntityType, PartOfSpeechTag, PiiEntityType, SentimentType    |
 
@@ -46,38 +46,17 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-### 2.1 Obtaining a License Token {#obtain-license-token}
+### 2.1 Obtaining a AWS credentials {#obtain-aws-credentials}
 
-Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
-
-#### 2.1.1 Starting a Trial
-
-A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 1500 minutes. To start a trial, perform the following steps:
-
-1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page in the marketplace.
-2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-3. Select the check box to agree to the **Terms & Conditions**.
-4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Text Analytics** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
-
-#### 2.1.2 Starting a Subscription
-
-1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page in the marketplace.
-2. Click **Subscribe** to start a subscription.
-3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Text Analytics** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
+Translation is a premium Mendix product that requires AWS authentication. To use this app service in your app, first you must obtain AWS credentials. For more information, see [AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
 
 ### 2.2 Installing the Component in Your App
 
 1. To download and install the Text Analytics app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
-2. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+
+2. To download and install the AWS Authentication Connector in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer**.
+
+3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Configuration
 
@@ -189,87 +168,125 @@ The **Response** entity is a conceptual entity that incorporates all the informa
 
 ### 3.2 Constants {#constants}
 
-#### 3.2.1 LicenseToken
+#### 3.2.1 AWS_Default_Region
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Text Analytics is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
-
-#### 3.2.2 TokenEndpoint
-
-The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the app service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **AWS_Default_Region** constant provides a default AWS region configuration for an app that uses this app service. AWS Regions are separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a region closest to them in order to host their cloud infrastructure there. The closer your region is to you, the better, so that you can reduce network latency as much as possible for your end-users.
 
 ### 3.3 Microflows {#microflows}
 
 #### 3.3.1 CreateDominantLanguageDetector
 
-The **CreateDominantLanguageDetector** microflow takes **text** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
+The **CreateDominantLanguageDetector** microflow takes **text** (String) and **credentials** (Object) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector.png" alt="createdominantlanguagedetector" >}}
 
 #### 3.3.2 CreateEntityDetector
 
-The **CreateEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateEntityDetector as a return object from the back-end service.
+The **CreateEntityDetector** microflow takes **text** (String), **languageCode** (String) and **credentials** (Object) as input parameters to create CreateEntityDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createentitydetector.png" alt="createentitydetector" >}}
 
 #### 3.3.3 CreateKeyPhraseDetector
 
-The **CreateKeyPhraseDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateKeyPhraseDetector as a return object from the back-end service.
+The **CreateKeyPhraseDetector** microflow takes **text** (String), **languageCode** (String) and **credentials** (Object) as input parameters to create CreateKeyPhraseDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createkeyphrasedetector.png" alt="createkeyphrasedetector" >}}
 
 #### 3.3.4 CreatePiiEntityDetector
 
-The **CreatePiiEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreatePiiEntityDetector as a return object from the back-end service.
+The **CreatePiiEntityDetector** microflow takes **text** (String), **languageCode** (String) and **credentials** (Object) as input parameters to create CreatePiiEntityDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createpiientitydetector.png" alt="createpiientitydetector" >}}
 
 #### 3.3.5 CreateSentimentDetector
 
-The **CreateSentimentDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSentimentDetector as a return object from the back-end service.
+The **CreateSentimentDetector** microflow takes **text** (String), **languageCode** (String) and **credentials** (Object) as input parameters to create CreateSentimentDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createsentimentdetector.png" alt="createsentimentdetector" >}}
 
 #### 3.3.6 CreateSyntaxDetector
 
-The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSyntaxDetector as a return object from the back-end service.
+The **CreateSyntaxDetector** microflow takes **text** (String), **languageCode** (String) and **credentials** (Object) as input parameters to create CreateSyntaxDetector as a return object from the back-end service.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/createsyntaxdetector.png" alt="createsyntaxdetector" >}}
+
+#### 3.3.7 DetectDominantLanguage_MF
+
+The **DetectDominantLanguage_MF** microflow takes the **languageDetector** (Object) and **credentials** (Object) as an input parameter to get a list of dominant languages.
+
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectdominantlanguage.png" alt="detectdominantlanguage" >}}
+
+#### 3.3.8 DetectEntities_MF
+
+The **DetectEntities_MF** microflow takes the **entityDetector** (Object) and **credentials** (Object) as an input parameter to get a list of entities.
+
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectentities.png" alt="detectentities" >}}
+
+#### 3.3.9 DetectKeyPhrases_MF
+
+The **DetectKeyPhrases_MF** microflow takes the **keyPhrasesDetector** (Object) and **credentials** (Object) as an input parameter to get a list of key phrases.
+
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectkeyphrases.png" alt="detectkeyphrases" >}}
+
+#### 3.3.10 DetectPiiEntities_MF
+
+The **DetectPiiEntities_MF** microflow takes the **piiEntitiesDetector** (Object) and **credentials** (Object) as an input parameter to get a list of PII entities.
+
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectpiientities.png" alt="detectpiientities" >}}
+
+#### 3.3.11 DetectSentiment_MF
+
+The **DetectSentiment_MF** microflow takes the **sentimentDetector** (Object) and **credentials** (Object) as an input parameter to get a sentiment object.
+
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectsentiment.png" alt="detectsentiment" >}}
+
+#### 3.3.12 DetectSyntax_MF
+
+The **DetectSyntax_MF** microflow takes the **syntaxDetector** (Object) and **credentials** (Object) as an input parameter to get a list of syntax tokens.
+
+{{< figure src="/attachments/appstore/app-services/text-analytics/detectsyntax.png" alt="detectsyntax" >}}
+
+#### 3.3.13 GetSupportedLanguages
+
+The **GetSupportedLanguages** microflow takes the **detector** (Object) and **credentials** (Object) as an input parameter to get a list of supported languages.
+
+{{< figure src="/attachments/appstore/app-services/text-analytics/getsupportedlanguages.png" alt="getsupportedlanguages" >}}
 
 ### 3.4 Nanoflows {#nanoflows}
 
 #### 3.4.1 DetectDominantLanguage
 
-The **DetectDominantLanguage** nanoflow takes the **languageDetector** object as an input parameter to get a list of dominant languages.
+The **DetectDominantLanguage** nanoflow takes the **languageDetector** (Object) and **credentials** (Object) as an input parameter to get a list of dominant languages.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/detectdominantlanguage.png" alt="detectdominantlanguage" >}}
 
 #### 3.4.2 DetectEntities
 
-The **DetectEntities** nanoflow takes the **entityDetector** object as an input parameter to get a list of entities.
+The **DetectEntities** nanoflow takes the **entityDetector** (Object) and **credentials** (Object) as an input parameter to get a list of entities.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/detectentities.png" alt="detectentities" >}}
 
 #### 3.4.3 DetectKeyPhrases
 
-The **DetectKeyPhrases** nanoflow takes the **keyPhrasesDetector** object as an input parameter to get a list of key phrases.
+The **DetectKeyPhrases** nanoflow takes the **keyPhrasesDetector** (Object) and **credentials** (Object) as an input parameter to get a list of key phrases.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/detectkeyphrases.png" alt="detectkeyphrases" >}}
 
 #### 3.4.4 DetectPiiEntities
 
-The **DetectPiiEntities** nanoflow takes the **piiEntitiesDetector** object as an input parameter to get a list of PII entities.
+The **DetectPiiEntities** nanoflow takes the **piiEntitiesDetector** (Object) and **credentials** (Object) as an input parameter to get a list of PII entities.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/detectpiientities.png" alt="detectpiientities" >}}
 
-#### 3.4.5 DetectPiiEntities
+#### 3.4.5 DetectSentiment
 
-The **DetectSentiment** nanoflow takes the **sentimentDetector** object as an input parameter to get a sentiment object.
+The **DetectSentiment** nanoflow takes the **sentimentDetector** (Object) and **credentials** (Object) as an input parameter to get a sentiment object.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/detectsentiment.png" alt="detectsentiment" >}}
 
 #### 3.4.6 DetectSyntax
 
-The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input parameter to get a list of syntax tokens.
+The **DetectSyntax** nanoflow takes the **syntaxDetector** (Object) and **credentials** (Object) as an input parameter to get a list of syntax tokens.
 
 {{< figure src="/attachments/appstore/app-services/text-analytics/detectsyntax.png" alt="detectsyntax" >}}
 
@@ -371,33 +388,44 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 | Chinese (simplified)  | zh    |
 | Chinese (traditional) | zh-TW |
 
-### 3.7 Configuring the License Token {#configure-license-token}
+### 3.7 Configuring the AWS credentials {#configure-aws-credentials}
 
 #### 3.7.1 For an App Deployed Locally or as a Mendix Free App
 
-If you deploy your app locally or as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
+If you deploy your app locally or as a Mendix Free App, configure the AWS credentials in Studio Pro. Perform the following steps:
 
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
-2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
-4. Fill in the **Value** with the license token that you [obtained](#obtain-license-token).
-5. Click **OK** to save the settings.
+1. Create a microflow as follows:
+    1. Name the microflow *GetCredential*. 
+    2. Right-click the working area and select **Add** > **Activity** from the pop-up menu.
+    3. Double-click the activity to open the **Action Activity** dialog box.
+    4. Select **Get Static Credentials** action from **AWS Authentication** category as target object.
+    5. Under **Input** section, fill **Access key ID**, and **Secret access key** as AWS credentials respectivly.
+    6. Under **Output** section, update **Object name** as *Credentials*.
+    7. Click **OK** to save the changes.
+    8. Right-click the credentials action to *Set $Credentials as return value*.
 
-    {{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
+2. Default AWS region configuration:
+    1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
+    2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+    3. On the **Constants** tab, create a new constant with the predefined constant **Translation.AWS_Default_Region**.
+    4. Fill in the **Value** with the AWS region that you obtained.
+    5. Click **OK** to save the settings.
 
-6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
+    {{< figure src="/attachments/appstore/app-services/text-analytics/awsregion-inmendix.png" alt="awsregion-inmendix" >}}
+
+3. This is the microflow could help you to pass credentials object in calling all the service actions. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
 #### 3.7.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details/).
+If you deploy your app in the Mendix Cloud, configure the AWS region in the Developer Portal.
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-{{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
+{{< figure src="/attachments/appstore/app-services/translation/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
 
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
+If you have already deployed your app, change the existing **AWS_Default_Region** constant value on the **Model Options** tab and restart the app.
 
-{{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
+{{< figure src="/attachments/appstore/app-services/translation/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
 
 #### 3.7.3 For an App Deployed in Your Own Environment
 
@@ -458,7 +486,7 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
     2. Set **Data source** to **ConfidenceScore** from **Template grid**.
     3. For **Label caption**, enter *Score*.
     4. Click **OK** to save the settings.
-14. Make sure you have [configured the license token](#configure-license-token).
+14. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 15. Run your app locally. You can perform language detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-language-detection.png" alt="runlocally-language-detection" >}}
@@ -485,11 +513,9 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     4. Set **Data type** to **Object** and select **Detector** entity from **TextAnalytics** module as target object.
     5. For **Name**, enter *detector*.
     6. Click **OK** to save the changes.
-    7. Double-click the end event to open the **End Event** dialog box.
-    8. Set **Type** to **List**.
-    9. For **Entity**, select **Language** entity from **TextAnalytics** module.
-    10. In the text box, enter *$detector/TextAnalytics.Detector_SupportedLanguages/TextAnalytics.Language*.
-    11. Click **OK** to save the settings. 
+    7. Add the **GetCredential** microflow from the sample module to the microflow. 
+    8. Add the **GetSupportedLanguages** microflow from the **Translation** > **USE_ME** folder to the microflow.
+    9. Right-click the action activity named GetSupportedLanguages and select **Set $language as return value** in the pop-up menu. 
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/getdetectorsupportedlanguages-microflow.png" alt="getdetectorsupportedlanguages-microflow" >}}
 
@@ -533,7 +559,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     2. Set **Entity (path)** to **TextAnalytics.Sentiment_SentimentScore/TextAnalytics.SentimentScore**.
     3. Click **OK** to save the settings.  
     4. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
-15. Make sure you have [configured the license token](#configure-license-token).
+15. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 16. Run your app locally. You can perform sentiment detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-sentiment-detection.png" alt="runlocally-sentiment-detection" >}}
@@ -590,7 +616,7 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the license token](#configure-license-token).
+12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 13. Run your app locally. You can perform key phrase detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-keyphrase-detection.png" alt="runlocally-keyphrase-detection" >}}
@@ -647,7 +673,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the license token](#configure-license-token).
+12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 13. Run your app locally. You can perform entity detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-entities-detection.png" alt="runlocally-entities-detection" >}}
@@ -704,7 +730,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the license token](#configure-license-token).
+12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 13. Run your app locally. You can perform PII entity detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-pii-entities-detection.png" alt="runlocally-pii-entities-detection" >}}
@@ -761,7 +787,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the license token](#configure-license-token).
+12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 13. Run your app locally. You can perform syntax detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-syntax-detection.png" alt="runlocally-syntax-detection" >}}

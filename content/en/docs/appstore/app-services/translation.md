@@ -212,6 +212,8 @@ If you deploy your app locally or as a Mendix Free App, configure the AWS creden
     4. Fill in the **Value** with the AWS region that you obtained.
     5. Click **OK** to save the settings.
 
+    {{< figure src="/attachments/appstore/app-services/translation/awsregion-inmendix.png" alt="awsregion-inmendix" >}}
+
 3. This is the microflow could help you to pass credentials object in calling all the service actions. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud

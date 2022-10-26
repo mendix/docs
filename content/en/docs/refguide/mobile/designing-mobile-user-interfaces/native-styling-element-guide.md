@@ -1784,28 +1784,31 @@ The widget’s style properties are as follows:
 
 ```xml
 <container/>
-<dynamicItemClasses>
-	<dynamic_item_class_name>
-		<listItem/>
-	</dynamic_item_class_name>
-</dynamicItemClasses>
+<emptyPlaceholder/>
+<firstItem/>
+<lastItem/>
+<list/>
 <listItem/>
-<listStyle/>
-<pagination/>
+<loadMoreButtonContainer/>
+<loadMoreButtonPressableContainer/>
+<loadMoreButtonCaption/>
 ```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `dynamicItemClasses` > `dynamic_item_class_name` | object | The dynamic item classes property allows you to specify one or more styling objects like the class property, but based on an expression. This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the class property. |
-| `dynamicItemClasses` > `dynamic_item_class_name` > `listItem` | Applies a view style to all items belonging to a given dynamic style class. Same properties as `listItem` | |
-| `emptyPlaceholder` | Applies a view style to the empty placeholder. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `firstItem` | Applies a view style to the first item of the list. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `lastItem` | Applies a view style to the last item of the list. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `list` | Applies a view style to the list container. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `listItem` | Applies a view style to each item container in the list. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `loadMoreButtonContainer` | Applies a view style to the load more button container. All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `loadMoreButtonCaption` | Applies a text style to the load more button caption. All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the empty placeholder. |
+| `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the first item of the list. |
+| `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the last item of the list. |
+| `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the list container. |
+| `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to each item container in the list. |
+| `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | rippleColor | Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only) |
+| `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (boolean) (Android only) |
+| `loadMoreButtonPressableContainer` | radius | Defines the radius of the ripple effect. (number) (Android only) |
+| `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (boolean) (Android only) |
+| `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
 
 ### 11.33.1 Gallery Filtering
 
@@ -1814,20 +1817,18 @@ In order to enable filtering within the gallery items you need to select the des
 The widget’s style properties are as follows:
 
 ```xml
-<container/>
 <textInputContainer/>
-<textInputOnFocusContainer/>
+<textInputContainerFocused/>
 <textInput/>
 <textInputClearIcon/>
 ```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `textInputContainer` | Applies a view style to the container of the text input. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `textInputContainerOnFocus` | Applies a view style to the container of the text input when the text box is focused. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `textInput` | Applies a view style to the text input. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `textInputClearIcon` | Applies style to the text clear button in the text box. All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `textInputContainer` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input. |
+| `textInputContainerFocused` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input when the text box is focused. |
+| `textInput` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the text input. |
+| `textInputClearIcon` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies style to the text clear button in the text box. |
 
 ## 13 Read More
 

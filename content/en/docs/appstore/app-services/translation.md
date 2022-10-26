@@ -209,14 +209,14 @@ If you deploy your app locally or as a Mendix Free App, configure the AWS creden
     1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
     2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
     3. On the **Constants** tab, create a new constant with the predefined constant **Translation.AWS_Default_Region**.
-    4. Fill in the **Value** with the license token that you obtained.
+    4. Fill in the **Value** with the AWS region that you obtained.
     5. Click **OK** to save the settings.
 
 3. This is the microflow could help you to pass credentials object in calling all the service actions. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal.
+If you deploy your app in the Mendix Cloud, configure the AWS region in the Developer Portal.
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
@@ -228,7 +228,7 @@ If you have already deployed your app, change the existing **AWS_Default_Region*
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/).
+If you deploy your app in your own environment, you need to configure the AWS region in your own environment. For more information, see [Deployment](/developerportal/deploy/).
 
 ## 4 Usage
 
@@ -329,7 +329,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
-20. Make sure you have [configured the license token](#configure-license-token).
+20. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 21. Run your app locally. You can perform text translation directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/translation/runlocally-translation.png" alt="runlocally-translation" >}}

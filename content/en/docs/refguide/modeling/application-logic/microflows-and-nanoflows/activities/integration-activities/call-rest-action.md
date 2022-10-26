@@ -126,7 +126,7 @@ The **User name** property defines the user name that will be used to authentica
 
 The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](/refguide/expressions/). The microflow expression should result in a string.
 
-### 5.4 Custom HTTP Headers
+### 5.4 Custom HTTP Headers {#custom-http-headers}
 
 These headers are added to the HTTP request header. Each custom header is a pair with a key and a value (a microflow expression).
 

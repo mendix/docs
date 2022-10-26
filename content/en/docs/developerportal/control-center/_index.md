@@ -153,7 +153,7 @@ To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over t
 It is not possible to remove yourself as a Mendix Admin.
 {{% /alert %}}
 
-## 7 Company Brand
+## 7 Company Brand {#company-brand}
 
 On this page, you can add and edit a **Company Logo** that will appear across the platform where it is used – for instance, it will be displayed on your published Marketplace content and available for usage in your [Company Onboarding](#onboarding).
 

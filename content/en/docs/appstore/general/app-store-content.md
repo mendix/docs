@@ -203,7 +203,7 @@ A module downloaded from the Marketplace has a light blue icon to differentiate 
 
 To update the module in your app to a newer version, do as follows:
 
-1. Clean up obsolete Java libraries from the **userlib** folder in your app directory. This will prevent you from ending up with conflicting Java libraries which cause unexpected issues. 
+1. Remove obsolete Java libraries from the **userlib** folder in your app directory. This will prevent you from ending up with conflicting Java libraries which cause unexpected issues. 
 
 2. Go to the Marketplace to download the right version and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
 

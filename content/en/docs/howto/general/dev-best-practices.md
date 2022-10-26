@@ -113,7 +113,7 @@ Every app consists of processes. Structure your documents for these processes in
 
 Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 
-### 3.4 Microflows
+### 3.4 Microflows {#microflow-naming-conventions}
 
 Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}\_{Operation}**. For example,  **ACT_Vendor_StartWorkflow**.
 
@@ -309,7 +309,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 [Event handlers](/refguide/event-handlers/) on domain entities must be used with a lot of caution. They can quickly result in complex and possibly unexpected behavior when several of them are applied to a single entity. It is often best to make the execution of microflows more explicit by using sub-microflows that are called manually, for example, just before committing an object.
 
-### 4.2 Microflows
+### 4.2 Microflows {#microflow-dev-best-practices}
 
 #### 4.2.1 Size {#size}
 

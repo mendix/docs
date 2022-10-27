@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### October 27th, 2022
+
+#### Improvements
+
+* Sample data sources are now clearly indicated with a label.
+
 ### October 20th, 2022
 
 #### Improvements

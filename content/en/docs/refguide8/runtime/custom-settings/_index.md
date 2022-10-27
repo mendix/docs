@@ -78,6 +78,7 @@ The settings below influence the behavior of the log files. These settings can o
 | **DatabaseName** | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
 | **DatabaseJdbcUrl** | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | **DatabaseUseSsl** | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
+| **DatabaseUseIntegratedSecurity** | This setting defines whether integrated security should be used for SQL Server. If true, user name and password will not be used. | false |
 | **LogMinDurationQuery** | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. |   |
 | **OracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
 | **DataStorage.EnableDiagnostics** | This setting can be used to generate a uniqueness constraint violation report. | false |

@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", 
 The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
 {{% alert color="info" %}}
-This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy widget docs](#legacy-widget-docs) section below.
+This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy Chart Widget Documentation](#legacy-widget-docs) section below.
 {{% /alert %}}
 
 These are the available charts:
@@ -83,17 +83,17 @@ To see available options and useful examples, see Plotly's [JavaScript Figure Re
 
 For more information on saving custom settings for a chart, see the [Chart customization ](#customization).
 
-#### 2.2.3 Show Legend
+#### 2.2.2 Show Legend
 
 {{< figure src="/attachments/appstore/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." >}}
 
 This setting controls the visibility of a chart's legend block (highlighted in the picture above). If set to **no**, then the legend block is hidden.
 
-#### 2.2.4 X Axis Label and Y Axis Label
+#### 2.2.3 X Axis Label and Y Axis Label
 
 These two properties control labels for the X and Y axis respectively.
 
-#### 2.2.5 Grid Lines
+#### 2.2.4 Grid Lines
 
 This property controls horizontal and vertical rulers of the chart:
 
@@ -351,13 +351,13 @@ This object will be merged with default settings and passed to the underlying [P
 
 {{< figure src="/attachments/appstore/widgets/charts/custom-config.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." >}}
 
-## Legacy widget Docs {#legacy-widget-docs}
+## 7 Legacy Chart Widget Documentation {#legacy-widget-docs}
 
 {{% alert color="warning" %}}
 This widget is experiencing rendering issues in Studio's page editor and Studio Pro's design mode. The behavior is under investigation.
 {{% /alert %}}
 
-### 1 Introduction
+### 7.1 Introduction
 
 The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
@@ -372,9 +372,9 @@ These are the available charts:
 * Heat chart
 * Bubble chart
 
-### 2 Basic Configuration
+### 7.2 Basic Configuration
 
-#### 2.1 Line Chart {#line-chart}
+#### 7.2.1 Line Chart {#line-chart}
 
 A **Line chart** (scatter chart) should have one or more series, each displaying commonly grouped data points.
 
@@ -393,19 +393,19 @@ A series' data can be retrieved from the database, by a microflow, or from a RES
 The line chart's X-axis provides support for dates, and thus the line chart can be configured as a [time series chart](#time-series).
 {{% /alert %}}
 
-#### 2.2 Area Chart
+#### 7.2.2 Area Chart
 
 The **Area chart** has data properties identical to those of the [Line chart](#line-chart).
 
-#### 2.3 Column Chart {#column-chart}
+#### 7.2.3 Column Chart {#column-chart}
 
 The **Column chart** has data properties identical to those of the [Line chart](#line-chart). However, there is no support for the **Date and time** data type.
 
-#### 2.4 Bar Chart
+#### 7.2.4 Bar Chart
 
 The **Bar chart** has data properties identical to those of the [Column chart](#column-chart). 
 
-#### 2.5 Pie Chart {#pie-chart}
+#### 7.2.5 Pie Chart {#pie-chart}
 
 Unlike the chart types above, the **Pie chart** requires no series. 
 
@@ -419,11 +419,11 @@ These are the properties for configuring Pie chart data:
     * **Color attribute** (required) – the attribute that contains the data point colors
     * **Sort attribute** – the attribute to use for sorting the X-axis data
 
-#### 2.6 Time Series Chart {#time-series}
+#### 7.2.6 Time Series Chart {#time-series}
 
 The **Time series chart** is a specialised version of the [Line chart](#line-chart), focusing on the X-axis dates. Therefore, it has data properties identical to those of the line chart.
 
-#### 2.7 Heat Map
+#### 7.2.7 Heat Map
 
 The **Heat map** should be configured with required horizontal, vertical, and data attributes.
 
@@ -431,11 +431,11 @@ The sample domain model could be either of the two configurations below:
 
 {{< figure src="/attachments/appstore/widgets/charts/heat-map.png" >}}
 
-#### 2.8 Bubble chart
+#### 7.2.8 Bubble chart
 
 The **Bubble chart** has data properties identical to those of the the [Line chart](#line-chart). However, the **Bubble size data** attribute is required, as it contains and determines the size of the bubble.
 
-### 3 Advanced Configuration
+### 7.3 Advanced Configuration
 
 The charts in this widget are based on the [mendixlabs/charts](https://github.com/mendixlabs/charts/issues) library. As such, the widget provides support for advanced users to extend or overwrite the basic settings by adding the chart properties as JSON.
 
@@ -443,7 +443,7 @@ To enable this feature, go to the **Mode** option in the **Advanced** properties
 
 The available advanced options and their usage are described below.
 
-#### 3.1 Layout Options for All Charts
+#### 7.3.1 Layout Options for All Charts
 
 The layout options control the general appearance of a chart. Common options include `title`, `showlegend`, `xaxis`,  and `yaxis`. 
 
@@ -457,7 +457,7 @@ The layout options control the general appearance of a chart. Common options inc
 }
 ```
 
-#### 3.2 Configurations Options for All Charts
+#### 7.3.2 Configurations Options for All Charts
 
 Configuration options control the appearance of a chart beyond the layout options. Common options include `displayModeBar` and `doubleClick`.
 
@@ -471,7 +471,7 @@ Configuration options control the appearance of a chart beyond the layout option
 
 For more details, see the [Addvanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
 
-#### 3.3 Data Options for the Pie Chart
+#### 7.3.3 Data Options for the Pie Chart
 
 On the [Pie chart](#pie-chart), the data options control the appearance of the pie circle beyond the general layout options. Options include `hole`, `name`, and `marker`.
 
@@ -483,13 +483,13 @@ On the [Pie chart](#pie-chart), the data options control the appearance of the p
 
 For more details, see the [Addvanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
 
-#### 3.4 Series Options for the Line and Column Charts
+#### 7.3.4 Series Options for the Line and Column Charts
 
 The series options control the appearance of a specific series on the [Line chart](#line-chart) and [Column chart](#column-chart). Options include `line color` and `line shape`.
 
 For the full Plotly API reference, see [JavaScript Figure Reference](https://plot.ly/javascript/reference/).
 
-#### 3.5 Theme-Based Advanced Configuration
+#### 7.3.5 Theme-Based Advanced Configuration
 
 The settings above can also be added in a global context via the **theme** folder of your Mendix app root directory.
 
@@ -544,7 +544,7 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
 {{% /alert %}}
 
-### 4 Read More
+### 8 Read More
 
 * [Charts Configuration](/refguide/charts-configuration/)
 * [How to Fine-Tune a Chart with Advanced Settings](/howto/front-end/charts-advanced-tuning/)

@@ -4,7 +4,7 @@ linktitle: "Best Practices for App Security"
 url: /howto/security/best-practices-security/
 category: "Security"
 weight: 20
-description: "A set of security aspects and checks to use when developing your Mendix application."
+description: "Describes the common aspects you should consider when delivering an application within the Mendix Cloud."
 tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
@@ -236,7 +236,7 @@ To keep your app hygiene at a good level, perform the following steps:
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).
 
-## 13 Configuring User Roles & Access
+## 13 Configuring User Roles and Access
 
 Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
 

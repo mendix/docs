@@ -3,17 +3,20 @@ title: "Docker"
 url: /developerportal/deploy/docker-deploy/
 category: "Deployment"
 weight: 60
-description: "Describes how to build a new Docker image using the Mendix buildpack."
-tags: ["Docker", "Cloud", "container", "CI/CD"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
+description: "Describes how to deploy using a Docker image."
+tags: ["Docker", "Cloud", "container", "push image", "build image"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-This page explains how to build a Docker image from your Mendix Project. Each release of a project will result in a unique Docker image that can be pushed through the different stages of your application pipeline.
+Docker is an open source container technology. With Mendix, you can use it for simple deployments, particularly when running local or development versions of your app. However, it lacks some scaling and integration features.
 
-**You will learn how to do the following:**
+We suggest that, if you are planning to deploy to your own cloud platform at scale, a better solution for production apps is to use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). This provides you with structured and tested solutions for integrating with your own cloud infrastructure using comprehensive, automated, native functions, avoiding the need to without create your own processes from scratch.
+
+This page explains how to build a Docker image from your Mendix App. Every time you make changes to your app, you must create a new  Docker image that can be pushed through the different stages of your application pipeline.
+
+This how-to will teach you how to do the following:
 
 * Build the image
 * Push the image

@@ -1,5 +1,5 @@
 ---
-title: "Parse & Format Float Function Calls"
+title: "Parse and Format Float Function Calls"
 url: /refguide7/parse-and-format-float-function-calls/
 ---
 

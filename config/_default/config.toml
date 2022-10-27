@@ -31,7 +31,8 @@ disableKinds = ["taxonomy","taxonomyTerm","term"]
 
 [services]
     [services.googleAnalytics]
-        # Do we put this here, or use something provided by marketing?
+        # Marketing Google Tag ID
+        id = 'UA-163813-1'
 
 # Language configuration
 
@@ -155,11 +156,10 @@ disableKinds = ["taxonomy","taxonomyTerm","term"]
     # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
     # add "hide_feedback: true" to the page's front matter.
     [params.ui.feedback]
-        enable = false
+        enable = true
         # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-        yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
-        no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
-
+        yes = 'Glad to hear it! Thank you for your response.'
+        no = 'Sorry to hear that. Please <a href="https://github.com/mendix/docs/issues/new">tell us how we can improve</a>.'
     # Adds a reading time to the top of each doc.
     # If you want this feature, but occasionally need to remove the Reading time from a single page, 
     # add "hide_readingtime: true" to the page's front matter

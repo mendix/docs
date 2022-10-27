@@ -2,7 +2,7 @@
 title: "Text to Speech"
 url: /appstore/app-services/text-to-speech/
 category: "App Services"
-description: "This document describes the configuration and usage of the Text to Speech app service, which enables converting text into voice in your web apps."
+description: "Describes the configuration and usage of the Text to Speech app service, which enables converting text into voice in your web apps."
 tags: ["text to speech", "service", "app store", "marketplace", "component", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -235,7 +235,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 2. Create a microflow as follows:
     1. Name the microflow *GetSupportedVoices*. 
-    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
+    2. Right-click the working area and select **Add** > **Parameter** from the pop-up menu. 
     3. Double-click the parameter to open the **Parameter** dialog box.
     4. Set **Data type** to **Object** and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.
     5. For **Name**, enter *speechSynthesizer*.

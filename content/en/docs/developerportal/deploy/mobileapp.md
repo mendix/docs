@@ -3,7 +3,7 @@ title: "Mobile App"
 url: /developerportal/deploy/mobileapp/
 category: "Deployment"
 weight: 90
-description: "Describes the Mobile App page in the Mendix Developer Portal."
+description: "Describes how to deploy to iOS or Android via the Apple App Store and Google Play Store."
 tags: ["Developer Portal", "Mobile", "Mobile App", "Deploy"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -79,7 +79,7 @@ You can specify additional Cordova settings and plugins by adding an XML snippet
 
 For an overview of available elements and settings, refer to [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
 
-## 3 iOS & Android
+## 3 iOS and Android
 
 In these tabs, you will see an overview of all the images that will be used in the app store. The images are divided into two categories:
 

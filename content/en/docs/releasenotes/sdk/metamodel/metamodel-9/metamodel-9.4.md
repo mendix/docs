@@ -27,7 +27,7 @@ weight: 96
 * We introduced the `nativeHomePage` and `otaEnabled` properties.
 * We deleted the `homePage` property.
 
-#### NativeHomePageBase & NativeHomePage (Elements)
+#### NativeHomePageBase and NativeHomePage (Elements)
 
 * We introduced these elements.
 

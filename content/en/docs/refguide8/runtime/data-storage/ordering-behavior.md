@@ -31,11 +31,11 @@ In SQL, `NULL` is a special marker used to indicate that a data value does not e
 
 If you specify the `ORDER BY` clause, a `NULL` value always comes first before any non-`NULL` value, irrespective of the sort order.
 
-#### 3.1.2 MARIADB, MYSQL, SAP HANA & SQLSERVER
+#### 3.1.2 MARIADB, MYSQL, SAP HANA and SQLSERVER
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as less than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes before any non-`NULL` value. Using the `DESC` order, the `NULL` comes last.
 
-#### 3.1.3 DB2, ORACLE & POSTGRESQL
+#### 3.1.3 DB2, ORACLE and POSTGRESQL
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as more than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes after any non-`NULL` value. Using the `DESC` order, the `NULL` comes first.
 

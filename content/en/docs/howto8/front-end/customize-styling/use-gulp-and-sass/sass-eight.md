@@ -1,5 +1,5 @@
 ---
-title: "Set Up Gulp & Sass"
+title: "Set Up Gulp and Sass"
 url: /howto8/front-end/sass-eight/
 weight: 1
 tags: ["gulp", "sass", "ux", "front end"]
@@ -120,7 +120,7 @@ When you create a new Sass file, follow this naming guideline: *\_{namefilehere}
 
 {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/name-example.png" >}}
 
-### 4.2 Importing New Sub-Folders & Files
+### 4.2 Importing New Sub-Folders and Files
 
 Before you can see any changes in your app with your new Sass, you need to import the folders and files first. If you open *custom.scss*, you will see this:
 
@@ -227,5 +227,5 @@ Other issues might occur with SVN and possible rewriting of *Gulpfile.js*. To fi
 
 ## 8 Read More
 
-* [How to Start Styling with Gulp & Sass](/howto8/front-end/style-with-gulp-and-sass/)
+* [How to Start Styling with Gulp and Sass](/howto8/front-end/style-with-gulp-and-sass/)
 * [How to Use Calypso](/howto8/front-end/calypso/)

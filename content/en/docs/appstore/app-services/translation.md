@@ -2,7 +2,7 @@
 title: "Translation"
 url: /appstore/app-services/translation/
 category: "App Services"
-description: "This document describes the configuration and usage of the Translation app service, which enables performing text translation in your web apps."
+description: "Describes the configuration and usage of the Translation app service, which enables performing text translation in your web apps."
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -261,7 +261,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 2. Create a microflow as follows:
     1. Name the microflow *GetTranslatorSupportedLanguages*. 
-    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu.
+    2. Right-click the working area and select **Add** > **Parameter** from the pop-up menu.
     3. Double-click the parameter to open the **Parameter** dialog box.
     4. Set **Data type** to **Object** and select **Translator** entity from **Translation** module as target object.
     5. For **Name**, enter *translator*.

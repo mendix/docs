@@ -1,9 +1,8 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
+description: "Describes the deployment section of the Developer Portal: how to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 10
-description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
-weight: 5
 no_list: false 
 description_list: true
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment", "Mendix Cloud Dedicated"]
@@ -30,7 +29,6 @@ This section of the *Developer Portal Guide* contains step-by-step instructions,
 * [General](/developerportal/deploy/general/) – contains information which applies to deployments in many different environments
 * Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, for example, [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
 * [Mobile App](/developerportal/deploy/mobileapp/) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
-* [App Services](/developerportal/deploy/app-services/) – describes what can be published to the Mendix Marketplace, and how to do this
 
 ## 2 Run Locally or Preview
 
@@ -44,7 +42,7 @@ To speed up the development process, most changes you make within Studio Pro wil
 
 In *Studio*, you can click **Preview** in the upper-right corner of Studio to see a preview of your app in the browser. 
 
-For more information see [Previewing & Publishing Your App](/studio/publishing-app/).
+For more information see [Previewing and Publishing Your App](/studio/publishing-app/).
 
 ## 3 Mendix Cloud
 
@@ -54,7 +52,7 @@ From within Mendix Studio Pro, you can view the cloud nodes you have available i
 
 For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
-### 3.1 Mendix Cloud Dedicated
+### 3.1 Mendix Cloud Dedicated {#mendix-cloud-dedicated}
 
 Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). This works in exactly the same way as the Mendix Cloud, but runs on your own virtual private cloud and will only host your company's apps.
 
@@ -86,7 +84,7 @@ The instructions for doing this are in [Private Cloud](/developerportal/deploy/p
 
 From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](/developerportal/deploy/cloud-foundry-deploy/) and the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 
-## 9 Docker & Kubernetes
+## 9 Docker and Kubernetes
 
 Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
 
@@ -104,7 +102,7 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 
 ## 12 Mendix Applications on Industrial Edge
 
-You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shop floor. Thus enables the extensions of automation, deployment of demanding streamprocessing and learning algorithms as well as the hosting from integration code to site automation.
+You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shop floor. Thus enables the extensions of automation, deployment of demanding stream processing and learning algorithms as well as the hosting from integration code to site automation.
 
 To find out how to do this, read [Mendix Applications on Industrial Edge](/developerportal/deploy/mendix-app-on-industrial-edge/).
 

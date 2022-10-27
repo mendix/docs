@@ -15,7 +15,7 @@ weight: 95
 * We deleted the `template` property. Use `TypedTemplate` instead.
 * We introduced the `typedTemplate` property.
 
-#### TypedTemplate, TypedTemplateArgument & PrimitiveTypedTemplateArgument (Elements)
+#### TypedTemplate, TypedTemplateArgument, and PrimitiveTypedTemplateArgument (Elements)
 
 * We introduced these elements.
 

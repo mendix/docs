@@ -4,6 +4,7 @@ linktitle: "Best Practices for App Performance"
 url: /howto/general/community-best-practices-for-app-performance/
 category: "General Info"
 weight: 35
+description: "Describes some best practices to apply during development to get a better performing app. This document is created by and for the Mendix community."
 tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
@@ -56,7 +57,7 @@ Indexes is a topic with a long history of best practices from the database world
 * Indexes can be used best for equal searches, ranges searches for dates and numbers, and leading/`startsWith` searches on strings.
 * Index scans can be done to match more difficult clauses like `contains` or `endsWith`. These are still faster then full table scans.
 
-## 4 Microflow Best Practices
+## 4 Microflow Best Practices {#microflow-community-best-practices}
 
 * Minimize the work in loops:
     * Do commits after the loop in a list commit. 
@@ -103,7 +104,7 @@ For OQL, many of the same best practices apply as for XPath.
 * Minimize the number of roles per user.
 * Minimize the number of rules per entity.
 
-## 10 Web Services & XML Best Practices
+## 10 Web Services and XML Best Practices
 
 * Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.

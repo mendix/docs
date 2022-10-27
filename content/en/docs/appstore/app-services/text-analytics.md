@@ -2,7 +2,7 @@
 title: "Text Analytics"
 url: /appstore/app-services/text-analytics/
 category: "App Services"
-description: "This document describes the configuration and usage of the Text Analystics app service, which enables performing text analytics in your web apps。"
+description: "Describes the configuration and usage of the Text Analystics app service, which enables performing text analytics in your web apps."
 tags: ["text analytics", "service", "app store", "marketplace", "component", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -480,7 +480,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
 
 2. Create a microflow as follows:
     1. Name the microflow *GetDetectorSupportedLanguages*. 
-    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
+    2. Right-click the working area and select **Add** > **Parameter** from the pop-up menu. 
     3. Double-click the parameter to open the **Parameter** dialog box.
     4. Set **Data type** to **Object** and select **Detector** entity from **TextAnalytics** module as target object.
     5. For **Name**, enter *detector*.

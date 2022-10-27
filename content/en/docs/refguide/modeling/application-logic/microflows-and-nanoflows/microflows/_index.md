@@ -15,9 +15,8 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
 
-{{% alert color="info" %}}
-For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/).
-{{% /alert %}}
+For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/howto/general/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/howto/general/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/howto/general/community-best-practices-for-app-performance/#microflow-community-best-practices).
+
 
 ## 2 Microflow Notation
 
@@ -121,5 +120,5 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-* [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-* [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)

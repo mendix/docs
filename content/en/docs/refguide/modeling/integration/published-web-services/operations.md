@@ -64,9 +64,9 @@ The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a param
 
 The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 
-### 3.7 Exposed Attributes & Associations
+### 3.7 Exposed Attributes and Associations
 
-If you click 'Select...' in the parameter tab, you can select individual members of the entity that is being passed as a parameter. The toolbar buttons are available to help you quickly perform operations that would otherwise be laborious.
+If you click **Select** in the parameter tab, you can select individual members of the entity that is being passed as a parameter. The toolbar buttons are available to help you quickly perform operations that would otherwise be laborious.
 
 | Collapse all | Collapses the entire tree, so that only the root node remains visible |
 | --- | --- |

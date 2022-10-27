@@ -72,7 +72,7 @@ In **Structure mode**, there are several ways to add an element on a page:
 1. Through the **Toolbox**:
 
     1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
-    2. Select an element you would like to add and drag and drop this element on your page.
+    2. Select an element you would like to add and drag this element onto your page.
 
 2. Through the menu at the top of the page:
 
@@ -97,7 +97,7 @@ In **Structure mode**, there are several ways to add an element on a page:
 In **Design mode**, you can add elements though the Toolbox. Do the following:
 
 1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
-2. Select an element you would like to add and drag and drop this element on your page.
+2. Select an element you would like to add and drag this element onto your page.
 
 ### 2.5 Viewing Element Properties {#view-properties}
 
@@ -126,13 +126,14 @@ To delete an element from a page, select this element and press <kbd>Delete</kbd
 
 There are two different ways to edit your page:
 
-* [Structure Mode](#structure-mode), the default editor which clearly shows the relationship between page elements, together with additional information about each element
+* [Structure Mode](#structure-mode), which clearly shows the relationship between page elements, together with additional information about each element
 * [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
-You can switch to the WYSIWYG editor from the default editor by clicking the **Design mode** button in the page editor.
-You can return to the structural editor by clicking **Structure mode**.
+You can toggle between the modes by clicking the **Design mode** or **Structure mode** button on the right of the top bar.
 
-{{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" width="250" >}}
+
+By default, pages open in **Structure mode**, but if you prefer **Design mode**, this can be set as default in the **Preferences** (**Edit > Preferences > Work Environment > Default Page Editor**). For more information, see the [Default Page Editor](/refguide/preferences-dialog/#default-page-editor) section in *Preferences*.
 
 Both modes allow you to edit your page by doing the following:
 
@@ -141,28 +142,34 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
+Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combination with Structure Mode or Design Mode, which shows a tree view of your page structure and contains the same editing capabilities.
+
 ### 3.1 Structure Mode {#structure-mode}
 
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
 * You can zoom a page in or out using the **Zoom** drop-down menu in the upper-right corner of a page
-* Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
+* Widgets are shown with additional information easily visible – for example, data sources for data grids and the width assigned to columns
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/structure-mode-info.png" alt="Frequently-used widgets" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/structure-mode-info.png" alt="Structure mode info" >}}
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
 * Right-click a drop-zone allows you to insert a widget into it
-* There is a menu at the top of the page of data containers – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
+* The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two open a dialog box that lets you choose an element from a list of widgets/building blocks)
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets"  width="300" >}}
 
 * Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button (available for Web page templates and layouts only).
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/show-styles.png" alt="Show styles button" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/show-styles.png" alt="Show styles button" width="400" >}}
 
 ### 3.2 Design Mode {#design-mode}
 
-In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
+In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements. 
+
+{{% alert color="info" %}}
+It is recommended to use it in combination with the [Page Explorer](/refguide/page-explorer/), which allows to see and select structural elements that are hidden in Design mode due to styling.
+{{% /alert %}}
 
 For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
@@ -184,3 +191,4 @@ It has the following features which are not available in **Structure mode**:
 
 * [Pages](/refguide/pages/)
 * [Page Properties](/refguide/page-properties/)
+* [Page Explorer](/refguide/page-explorer/)

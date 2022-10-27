@@ -6,7 +6,7 @@ description_list: true
 tags: ["sdk", "platform sdk", "model sdk"]
 ---
 
-## 1 Introduction & FAQ
+## 1 Introduction and FAQ
 
 Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) can make your life easier, you should learn about the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Start with the [SDK Introduction](/apidocs-mxsdk/mxsdk/sdk-intro/) and the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). 
 
@@ -15,7 +15,7 @@ Before the [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/late
 Browse the reference documentation below about the Mendix Metamodel:
 
 * [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and apps in the Mendix Metamodel
-* [JavaScript & TypeScript Resources](/apidocs-mxsdk/mxsdk/javascript-typescript-resources/) – summarizes TypeScript and provides links to useful resources for learning more
+* [JavaScript and TypeScript Resources](/apidocs-mxsdk/mxsdk/javascript-typescript-resources/) – summarizes TypeScript and provides links to useful resources for learning more
 
 ## 3 SDK How-tos
 

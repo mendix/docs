@@ -11,9 +11,9 @@ aliases:
 
 ## 1 Introduction
 
-This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode.
+This guide explains the APIs offered by Mendix Studio and Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Mendix Studio or Studio Pro's Design mode. To learn about creating a custom preview in structure mode, add custom consistency checks, or conditionally hide widget properties, read the [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/).
 
-In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
+Lastly, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
 ## 2 Values API {#values}
 
@@ -33,7 +33,7 @@ Here is an example of such an object:
 Static property types are exposed with their configured value as a JavaScript value:
 
 | Plugin Widget Type | JavaScript Type |
-| ------------------ | ----------------|
+| ------------------ | --------------- |
 | `string`           | `string`        |
 | `boolean`          | `boolean`       |
 | `integer`          | `number`        |
@@ -168,7 +168,7 @@ It is possible to require the following modules:
 The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
 * `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability` system property, or if it is inside a read-only data view)
-* `className` (`string`): the classes from the system, which will include manually configured classes through the `class` property in Studio Pro, and the classes resulting from configured design properties
+* `class` (`string`): the classes from the system, which will include manually configured classes through the `class` property in Studio Pro, and the classes resulting from configured design properties
 * `style` (`string`): a string representation of the styles as entered in the `style` property in Studio Pro
 
 Assuming a pluggable widget with the string properties `content` and `style`, the following shows a simple preview component:
@@ -177,11 +177,11 @@ Assuming a pluggable widget with the string properties `content` and `style`, th
 type Props = {
     content: string;
     style: string;
-    className: string;
+    class: string;
 }
 
 export const preview: React.FC<Props> = (props) => (
-    <div className={`my-pw-container ${props.className}`} style={props.style}>
+    <div className={`my-pw-container ${props.class}`} style={props.style}>
         {props.content}
     </div>
 );
@@ -287,6 +287,7 @@ export function getPreviewCss() {
 
 ## 4 Read More
 
+* [Configuration Module API for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
 * [How to Build a Pluggable Native Widget](/howto/extensibility/build-native-widget/)

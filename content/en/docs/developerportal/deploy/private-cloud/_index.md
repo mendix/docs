@@ -2,7 +2,7 @@
 title: "Private Cloud"
 url: /developerportal/deploy/private-cloud/
 category: "Deployment"
-description: "Describes the processes for deploying a Mendix app in the Private Cloud"
+description: "Describes how to deploy to a Private Cloud."
 weight: 48
 tags: ["Deployment", "Private Cloud", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -69,7 +69,7 @@ The table below shows the differences between the capabilities for apps deployed
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
-| Mendix app/deployment package deployment | Mendix Developer Portal, Studio Pro, & Studio | Mendix Developer Portal & Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
+| Mendix app/deployment package deployment | Mendix Developer Portal, Studio Pro, and Studio | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
 | Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used | Services supplied by the database server and file storage used |
 | Monitoring | Mendix Developer Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
 | App logs | Mendix Developer Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
@@ -150,7 +150,7 @@ You can also request for both the Operator and Runtime license within the same r
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
-If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#change-subscription-secret)
+If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
 If your app is **Standalone**, then you will have to apply the subscription secret by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
 

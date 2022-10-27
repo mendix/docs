@@ -3,6 +3,7 @@ title: "Migrate Your Mendix Database"
 url: /howto/data-models/migrating-your-mendix-database/
 category: "Data Models"
 weight: 10
+description: "Describes how to migrate a non-PostgreSQL database to a PostgreSQL database, export a PostgreSQL database, and perform other actions for database migration."
 tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
 

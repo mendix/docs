@@ -21,7 +21,7 @@ The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget 
 
 ## 2 Configuration
 
-Drag and drop the widget onto a page. Place one or more widgets inside the Pop-Up Menu widget's trigger area to appoint which widgets trigger the menu. After that, use the configuration properties included in the **General** tab.
+Drag the widget onto a page. Place one or more widgets inside the Pop-Up Menu widget's trigger area to appoint which widgets trigger the menu. After that, use the configuration properties included in the **General** tab.
 
 The **Menu items** property allows you to configure actions and dividers that are part of the menu. Click **New** to create a new item. On the **Edit Menu Items Item** dialog box, configure the tabs and properties described below.
 
@@ -44,7 +44,7 @@ Other main properties of the widget are as follows:
 
 * **Open on** – determines whether hovering or clicking the trigger widgets displays the menu
     * Default: **Click**
-* **Menu position**  – determines the location of a visible menu relative to the trigger area with widgets
+* **Menu position**  – determines the location of a visible menu relative to the trigger area
     * Default: **Bottom**
 * **Custom visualization** – determines whether menu items can be composed of text or widgets
     * Default: **No**

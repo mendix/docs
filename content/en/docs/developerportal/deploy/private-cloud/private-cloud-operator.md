@@ -5,7 +5,6 @@ url: /developerportal/deploy/private-cloud-operator/
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 weight: 30
 tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -102,7 +101,7 @@ spec:
         return 403;
       }
   ingressClassName: alb # Optional, can be omitted : specify the Ingress class
-  ingressPath: "/" # Optional, can be omitted : specify the Ingress path
+  ingressPath: "/" # Optional, can be omitted : specify the Ingress path. Anything other than "/" or "/*" will be ignored as Mendix applications don't support path based routing
   ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
@@ -177,7 +176,7 @@ You need to make the following changes:
 * **ingressPathType** – specify a custom Ingress class name; this overrides the [default ingress pathType](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
-* **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
@@ -285,7 +284,7 @@ To build and deploy your app using the OpenShift CLI, do the following:
 3. Paste the following command into your command line terminal:
 
 ```shell {linenos=false}
-oc apply -f {File containing the CR}
+oc apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
 #### 3.3.2 Process the CR in the OpenShift Console{#openshift-console}

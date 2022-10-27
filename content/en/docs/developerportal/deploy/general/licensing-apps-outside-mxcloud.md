@@ -68,7 +68,7 @@ An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a ve
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-### 3.2 SAP BTP & IBM Cloud
+### 3.2 SAP BTP and IBM Cloud
 
 To license a Mendix app on SAP BTP or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
 
@@ -88,7 +88,7 @@ In addition to the licenses for your apps, you will also need to license the Men
 
 #### 3.4.1 Mendix for Private Cloud Connected
 
-You can add the subscription secret as part of creating an environment on Mendix for Private Cloud. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license. For more information see the [Change Subscription Secret](/developerportal/deploy/private-cloud-deploy/#change-subscription-secret) section of *Deploying a Mendix App to a Private Cloud Cluster*.
+You can add the subscription secret as part of creating an environment on Mendix for Private Cloud. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license. For more information see the [Change Subscription Secret](/developerportal/deploy/private-cloud-deploy/#license-mendix) section of *Deploying a Mendix App to a Private Cloud Cluster*.
 
 #### 3.4.2 Mendix for Private Cloud Standalone
 
@@ -129,7 +129,7 @@ To activate a license on your app running on Kubernetes you need the license cre
 
 Two additional environment variables, `LICENSE_ID` and `LICENSE_KEY`, need to be set to the values of the *LicenseId* and *LicenseKey* provided by Mendix Support. This is done by adding them to the deployment command for your app.
 
-Full instructions on how to do this, and how to supply the keys using a *Secrets* file can be found in the [Deploying the Application](/developerportal/deploy/run-mendix-on-kubernetes/#deploy) section of *Run Mendix on Kubernetes*.
+Full instructions on how to do this, and how to supply the keys using a *Secrets* file can be found in the [Deploying the Application](/developerportal/deploy/run-mendix-on-kubernetes/#deploy) section of *Use Docker with Minikube*.
 
 ### 3.8 Windows Server
 

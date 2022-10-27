@@ -17,7 +17,44 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### October 20th, 2022
+
+#### Fix
+
+* We fixed an issue with validation of white spaces in intermediate certificate chains for custom domains. (Tickets 15376, 163961, 165121, 165756, 167669, and 168416)
+
+### October 17th, 2022
+
+#### Improvements
+
+* We updated our alert template to remove the *Application Server Memory* alert.
+* We added the *Database Freeable Memory* alert with the critical threshold set to 10%.
+
+### September 15th, 2022
+
+#### Improvements
+
+* We have improved the maintenance banner message at application and environment level to show more information about the maintenance.
+
+#### Fix
+
+* We improved the performance of the Developer Portal when selecting which revision to use to build a deployment package from an MDA. (Ticket 163959)
+
+### September 13th, 2022
+
+#### Improvements
+
+* We updated our alert template to make the alert names more descriptive and transparent. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
+
+### August 8th, 2022
+
+#### Improvements
+
+* We added the AWS Mumbai region as a new deployment target in Mendix Cloud Asia Pacific.
+
 ### July 21st, 2022
+
+#### Improvements
 
 * We have introduced support for runtime application logs to be sent from Mendix Cloud V4 to [Splunk Cloud Platform](/developerportal/operate/splunk-metrics/).
 
@@ -312,7 +349,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
 #### Fix/Improvement
 
-* We implemented a new `upload` API which allows you to upload large (>300MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
+* We implemented a new `upload` API which allows you to upload large (>300 MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2/). (Tickets 117609 and 117622)
 
 ### March 30th, 2021
 
@@ -345,7 +382,7 @@ This information is eventually stored within Mendix and gives us an aggregated v
 
 **What is the information sent back?**
 
-Usage information in this context is the username, project id, app environment name, and date & time of logon. 
+Usage information in this context is the username, project id, app environment name, and date and time of logon. 
 Note that **the username is scrambled using a hashing algorithm**, ensuring that the actual username cannot be discovered. 
 
 **Who is a user?**
@@ -573,10 +610,10 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 ### July 2nd, 2020
 
-#### Improvements & Fixes
+#### Improvements and Fixes
 
 * We have changed the way that the *unused java heap* metric is calculated to make the data more accurate.
-    * This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, & 103225).
+    * This also fixes the issue where this metric could have a negative value (tickets: 92998, 93241, 93725, 94560, 99308, 99979, 100086, 101004, 101429, 102260, and 103225).
 
 This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
@@ -591,8 +628,8 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Fixes
 
-* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, & 98313)
-* We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 & 100271)
+* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, and 98313)
+* We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
 * We made some changes to the Mendix Cloud v3 [Trends](/developerportal/operate/trends/) graphs.
 
 ### June 16th, 2020
@@ -684,7 +721,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 ### November 7th, 2019{#20201107}
 
-#### Improvements & Fixes
+#### Improvements and Fixes
 
 * We have improved the stability and performance of Mendix Cloud Deployment and Operations.
 
@@ -867,7 +904,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements{#tls}
 
-**TLS v1.0 & v1.1 Disabled for Mendix Cloud v4**
+**TLS v1.0 and v1.1 Disabled for Mendix Cloud v4**
 
 * We have implemented a change on our Mendix Cloud v4 infrastructure so that incoming connections that do not support TLS v1.2 or higher will stop working. This effectively means that TLS v1.0 and v1.1 are disabled, and Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html) again.
 
@@ -1045,7 +1082,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
+* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30 GB) to their environments. It has been tested with the archives (~90 GBs) on Mendix Cloud v4.
 * We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
 ### April 9th, 2018
@@ -1102,7 +1139,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
+* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1 GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
 
 ### February 22nd, 2018
 

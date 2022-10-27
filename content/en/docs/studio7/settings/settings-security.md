@@ -1,5 +1,5 @@
 ---
-title: "Security, Roles & Permissions"
+title: "Security, Roles, and Permissions"
 url: /studio7/settings-security/
 category: "Settings"
 description: "Describes security and roles and permissions in Mendix Studio."
@@ -18,7 +18,7 @@ Security is a way of controlling access to your app. For example, you can decide
 
 Whether security is enabled for your app by default, depends on app's type and version. You can come across the following cases:
 
-1. If your app has been created in the Developer Portal with Mendix version 7.23.3 or above, you can enable security in Studio and view and edit [roles and permissions](#roles-and-permissions). For more information on versions, see [Studio Ranges & Mendix Versions](/studio7/general-versions/)
+1. If your app has been created in the Developer Portal with Mendix version 7.23.3 or above, you can enable security in Studio and view and edit [roles and permissions](#roles-and-permissions). For more information on versions, see [Studio Ranges and Mendix Versions](/studio7/general-versions/)
 2. If your app has been created in the Developer Portal with Mendix version below 7.23.3, or has been labelled as private content, or has been customized by your team specifically for your company, the security state depends on Studio Pro:<br/>
     1. If security is off in Studio Pro, then you can enable security in Studio. In this case, when you try to [publish the app](/studio7/publishing-app/), you will be prompted to enable security. <br/>
 

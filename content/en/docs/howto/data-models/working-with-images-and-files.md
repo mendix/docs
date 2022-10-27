@@ -1,8 +1,9 @@
 ---
-title: "Work with Images & Files"
+title: "Work with Images and Files"
 url: /howto/data-models/working-with-images-and-files/
 category: "Data Models"
 weight: 4
+description: "Describes how to start working with images and files by configuring inheritance and generalization with Studio Pro."
 tags: ["studio pro"]
 ---
 

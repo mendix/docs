@@ -68,13 +68,13 @@ The string property type is represented as a simple text input in Studio Pro. It
 
 #### 2.1.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                                                  |
-| -------------- | -------- | -------------- | ------------------------------------------------------------ |
-| `type`         | Yes      | String         | Must be `string`                                             |
-| `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | No       | String         | Default value for the property                              |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise |
-| `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
+| Attribute      | Required | Attribute Type | Description                                                              |
+| -------------- | -------- | -------------- |--------------------------------------------------------------------------|
+| `type`         | Yes      | String         | Must be `string`                                                         |
+| `key`          | Yes      | String         | See [key](#key)                                                          |
+| `defaultValue` | No       | String         | Default value for the property                                           |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise            |
+| `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default    |
 
 #### 2.1.2 Studio Pro UI
 
@@ -137,11 +137,11 @@ Integer is represented as a number input in Studio Pro. It is passed as a `numbe
 
 #### 2.3.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
-| -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`         | Yes      | String         | Must be `integer`                                                                                                                                                    |
-| `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
+| Attribute      | Required | Attribute Type | Description                     |
+| -------------- | -------- | -------------- |---------------------------------|
+| `type`         | Yes      | String         | Must be `integer`               |
+| `key`          | Yes      | String         | See [key](#key)                 |
+| `defaultValue` | Yes      | Integer        | Default value for the property  |
 
 #### 2.3.2 Studio Pro UI
 
@@ -164,11 +164,11 @@ Properties of type decimal are represented as a number input in Studio Pro. They
 
 #### 2.4.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
-| -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`         | Yes      | String         | Must be `decimal`                                                                                                                                                    |
-| `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
+| Attribute      | Required | Attribute Type | Description                    |
+| -------------- | -------- | -------------- |--------------------------------|
+| `type`         | Yes      | String         | Must be `decimal`              |
+| `key`          | Yes      | String         | See [key](#key)                |
+| `defaultValue` | Yes      | Integer        | Default value for the property |
 
 #### 2.4.2 Studio Pro UI
 
@@ -191,11 +191,11 @@ The enumeration property type allows a user to select one out of multiple option
 
 #### 2.5.1 XML Attributes
 
-| Attribute      | Required | Attribute Type | Description                                                                                                                                                          |
-| -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`         | Yes      | String         | Must be `enumeration`                                                                                                                                                |
-| `key`          | Yes      | String         | See [key](#key) |
-| `defaultValue` | Yes      | Integer        | Default value for the property                                                                                                                                      |
+| Attribute      | Required | Attribute Type | Description                    |
+| -------------- | -------- | -------------- |--------------------------------|
+| `type`         | Yes      | String         | Must be `enumeration`          |
+| `key`          | Yes      | String         | See [key](#key)                |
+| `defaultValue` | Yes      | Integer        | Default value for the property |
 
 #### 2.5.2 XML Elements
 
@@ -212,7 +212,7 @@ The `key` of a selected element will be passed to the client component. `key` sh
 When the property is defined as follows:
 
 ```xml
-	<property key="myEnumeration" type="enumeration" defaultValue="red">
+	<property key="myEnumeration" type="enumeration" defaultValue="blue">
 		<caption>My enumeration</caption>
 		<description>My enumeration setting</description>
 		<enumerationValues>
@@ -235,11 +235,11 @@ Properties of type icon allows a user to configure an icon similar to one used b
 
 #### 3.1.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
-| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `icon`                                                                                                                                                       |
-| `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+| Attribute  | Required | Attribute Type | Description                                                           |
+| ---------- | -------- | -------------- |-----------------------------------------------------------------------|
+| `type`     | Yes      | String         | Must be `icon`                                                        |
+| `key`      | Yes      | String         | See [key](#key)                                                       |
+| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 
 #### 3.1.2 Studio Pro UI
 
@@ -266,11 +266,11 @@ GIF images are not supported in native mobile apps on Android devices.
 
 #### 3.2.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                                                                                                          |
-| ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `image`                                                                                                                                                      |
-| `key`      | Yes      | String         | See [key](#key) |
-| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
+| Attribute  | Required | Attribute Type | Description                                                           |
+| ---------- | -------- | -------------- |-----------------------------------------------------------------------|
+| `type`     | Yes      | String         | Must be `image`                                                       |
+| `key`      | Yes      | String         | See [key](#key)                                                       |
+| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 
 #### 3.2.2 Studio Pro UI
 
@@ -297,12 +297,12 @@ Some widgets are not yet supported inside pluggable widgets. Placing unsupported
 
 #### 3.3.1 XML Attributes
 
-| Attribute    | Required | Attribute Type | Description |
-| ------------ | -------- | -------------- | ----------- |
-| `type`       | Yes      | String         | Must be `widgets` |
-| `key`        | Yes      | String         | See [key](#key) |
-| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this widget's property |
-| `required`   | No       | Boolean        | Whether a user must provide at least one widget, `true` by default |
+| Attribute    | Required | Attribute Type | Description                                                                                    |
+| ------------ | -------- | -------------- |------------------------------------------------------------------------------------------------|
+| `type`       | Yes      | String         | Must be `widgets`                                                                              |
+| `key`        | Yes      | String         | See [key](#key)                                                                                |
+| `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this `widgets` property |
+| `required`   | No       | Boolean        | Whether a user must provide at least one widget, `true` by default                             |
 
 #### 3.3.2 Studio Pro UI
 
@@ -465,13 +465,13 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.4.1 XML Attributes
 
-| Attribute    | Required | Attribute Type | Description                                                  |
-| ------------ | -------- | -------------- | ------------------------------------------------------------ |
-| `type`       | Yes      | String         | Must be `attribute`                                          |
-| `key`        | Yes      | String         | See [key](#key) |
-| `onChange`   | No       | Property Path  | The path to an Action property that will be executed by the Mendix Platform when the value is changed by the widget |
-| `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default |
-| `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property |
+| Attribute    | Required | Attribute Type | Description                                                                                                                      |
+| ------------ | -------- | -------------- |----------------------------------------------------------------------------------------------------------------------------------|
+| `type`       | Yes      | String         | Must be `attribute`                                                                                                              |
+| `key`        | Yes      | String         | See [key](#key)                                                                                                                  |
+| `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
+| `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property                                   |
 
 #### 4.4.2 XML Elements
 
@@ -516,30 +516,39 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/attribute.png" >}}
 
-### 4.5 Association{#association}
-
-The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
-
-The client will receive an `ModifiableValue<T>` where `T` depends on the configured `<associationType>`. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
+### 4.5 Association {#association}
 
 {{% alert color="info" %}}
 This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
 {{% /alert %}}
 
-#### 4.5.1 XML Attributes
+The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
 
-| Attribute           | Required | Attribute Type | Description                                                                                                        |
-|---------------------| -------- | -------------- |--------------------------------------------------------------------------------------------------------------------|
-| `type`              | Yes      | String         | Must be `association`                                                                                              |
-| `key`               | Yes      | String         | See [key](#key)                                                                                                    |
-| `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                           |
-| `selectableObjects` | Yes      | Property Path  | The path to a Datasource property that will provide selectable objects for the association                         | 
+If a `dataSource` attribute is not specified the client will receive a `ReferenceValue` for references (singular references), a `ReferenceSetValue` for reference sets (multiple references), or a union of them. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
+
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListReferenceValue` or `ListReferenceSetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listassociationvalue) depending on the configuration of the property. For more information, see the [Datasource](#datasource) section below.
+
+{{% alert color="info" %}}
+The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
+{{% /alert %}}
+
+#### 4.5.1 XML Attributes {#xml-attributes}
+
+| Attribute           | Required | Attribute Type | Description                                                                                                                      |
+|---------------------| -------- | -------------- |----------------------------------------------------------------------------------------------------------------------------------|
+| `type`              | Yes      | String         | Must be `association`                                                                                                            |
+| `key`               | Yes      | String         | See [key](#key)                                                                                                                  |
+| `onChange`          | No       | Property Path  | The path to an [`action`](#action) property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
+| `selectableObjects` | Yes      | Property Path  | Specifies the path to a [`datasource`](#datasource) property that will provide selectable objects for the association            |
+| `dataSource`        | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this association property                                 |
+
 
 #### 4.5.2 XML Elements
 
 `<associationTypes>` (required) — This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in the Studios.
 
-`<associationType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
+`<associationType>` (required one or more) — this element defines the allowed association type in the `name` attribute.
 
 | Supported Attribute Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|
@@ -643,7 +652,11 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.8 Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate), and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
+
+{{% alert color="info" %}}
+The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
+{{% /alert %}}
 
 If no data source has been configured by the user, any properties that are linked to the datasource property are automatically omitted from the props passed to the client component (even if they are marked as required).
 
@@ -653,12 +666,12 @@ Only list datasources are supported, therefore specifying `isList="true"` is req
 
 #### 4.8.1 XML Attributes
 
-| Attribute  | Required | Attribute Type | Description |
-| ---------- | -------- | -------------- | ----------- |
-| `type`     | Yes      | String         | Must be `datasource` |
-| `key`      | Yes      | String         | See [key](#key) |
-| `isList`   | Yes      | Boolean        | Must be `true` |
-| `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default |
+| Attribute  | Required | Attribute Type | Description                                                                      |
+| ---------- | -------- | -------------- |----------------------------------------------------------------------------------|
+| `type`     | Yes      | String         | Must be `datasource`                                                             |
+| `key`      | Yes      | String         | See [key](#key)                                                                  |
+| `isList`   | Yes      | Boolean        | Must be `true`                                                                   |
+| `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default  |
 
 #### 4.8.2 Studio Pro UI
 

@@ -1,7 +1,7 @@
 ---
 title: "Solving Known Version Control Issues"
 url: /howto7/collaboration-requirements-management/troubleshoot-version-control-issues/
-category: "Collaboration & Requirements Management"
+category: "Collaboration and Requirements Management"
 weight: 7
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "modeler"]
@@ -17,7 +17,7 @@ For more information and general help on version control, see the following docu
 * [Version Control](/refguide7/version-control/)
 * [Using Version Control in the Desktop Modeler](/refguide7/using-version-control-in-the-dm/)
 
-## 2 Known Problems & Fixes
+## 2 Known Problems and Fixes
 
 Below is a list of known problems and steps to fix them.
 

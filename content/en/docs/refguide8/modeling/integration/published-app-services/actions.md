@@ -64,7 +64,7 @@ This defines the name of the parameter in the app service action call. This is i
 * *password*
 * *appservicelocation* (case insensitive)
 
-### 3.5 Exposed Attributes & Associations
+### 3.5 Exposed Attributes and Associations
 
 {{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843922.png" >}}
 

@@ -97,7 +97,7 @@ For OQL, many of the same best practices apply as for XPath.
 * Minimize the number of roles per user.
 * Minimize the number of rules per entity.
 
-## 10 Web Services & XML Best Practices
+## 10 Web Services and XML Best Practices
 
 * Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.

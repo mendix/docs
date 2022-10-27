@@ -58,6 +58,6 @@ You can only switch to the old Mendix UI Framework following the instructions ab
 
 * [How to Get Started with Atlas UI](/howto7/front-end/get-started-with-atlasui/)
 * [How to Create Company Atlas UI Resources](/howto7/front-end/create-company-atlas-ui-resources/)
-* [How to Create Custom Preview Images for Building Blocks & Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
+* [How to Create Custom Preview Images for Building Blocks and Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [How to Migrate Existing Apps to Atlas UI](/howto7/front-end/migrate-existing-projects-to-atlasui/)
 * [How to Share Company Atlas UI Resources](/howto7/front-end/share-company-atlas-ui-resources/)

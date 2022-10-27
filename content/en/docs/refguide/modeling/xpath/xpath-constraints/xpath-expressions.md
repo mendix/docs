@@ -16,41 +16,62 @@ There are three types of expressions usable for constraints:
 
 ## 2 Comparisons
 
-A comparison expression consists of two attributes or values separated by a comparison [operator](/refguide/xpath-operators/) like `=`, `<=,` and `>`.
+A comparison expression consists of two attributes or values separated by a comparison [operator](/refguide/xpath-operators/) like `=`, `<=`, or `>`.
 
 ### 2.1 Examples
 
-For example, this query retrieves all customers whose name is "Jansen":
+For example, the following query retrieves all customers whose name is "Jansen":
 
 ```java {linenos=false}
 //Sales.Customer[Name = 'Jansen']
 ```
 
-This query retrieves all the orders for which the total price is less than 50.00 euros:
+The following query retrieves all the orders for which the total price is less than 50.00 euros:
 
 ```java {linenos=false}
 //Sales.Order[TotalPrice < 50.00]
 ```
 
-This query retrieves all customers who have at least one unpaid order:
+The following query retrieves all customers who have at least one unpaid order:
 
 ```java {linenos=false}
 //Sales.Customer[Sales.Customer_Order/Sales.Order/HasPayed = false()]
 ```
 
-This query retrieves all the customers who have the same name as the city they live in:
+The following query retrieves all customers with an order that has a status different from `Delivered`.
+Note that it does not retrieve customers with no orders.
+
+```java {linenos=false}
+//Sales.Customer[Sales.Customer_Order/Sales.Order/Status != 'Delivered']
+```
+
+The following query retrieves all customers with an order that has a status that is empty.
+As with the example above, it does not retrieve customers with no orders.
+
+```java {linenos=false}
+//Sales.Customer[Sales.Customer_Order/Sales.Order/Status = empty]
+```
+
+The following query retrieves all customers that do not have an order that has a status equal to `Delivered`.
+Unlike the previous three queries, it also retrieves customers with no orders.
+
+```java {linenos=false}
+//Sales.Customer[not(Sales.Customer_Order/Sales.Order/Status = 'Delivered')]
+```
+
+The following query retrieves all the customers who have the same name as the city they live in:
 
 ```java {linenos=false}
 //Sales.Customer[Name = City]
 ```
 
-This query retrieves the customer who placed the order with the given unique identification number:
+The following query retrieves the customer who placed the order with the given unique identification number:
 
 ```java {linenos=false}
 //Sales.Customer[Sales.Customer_Order = 124123512341]
 ```
 
-The same result can be retrieved by doing the following query:
+The following query retrieves the same customer as the previous query:
 
 ```java {linenos=false}
 //Sales.Customer[Sales.Customer_Order/Sales.Order/ID = 124123512341]
@@ -82,7 +103,7 @@ If both sides are plain values and have different types, one side will be conver
 
 For example, when comparing `[%CurrentDateTime%]` (Date and time) to `12345678` (Long), the Long will be converted to a Date and time.
 
-Conversions are done the following way:
+Conversions work in the following way:
 
 * An attempt to convert a Boolean to a Date and time will result in an error.
 * A Decimal or Integer/Long is converted to a Date and time by interpreting it as the number of seconds since the Unix Epoch, January 1, 1970, 00:00 UTC.

@@ -19,6 +19,6 @@ Workflows represent a long-lived process. Their main difference from microflows 
 
 Explore the documentation for details on microflow, nanoflow, and workflow definitions, properties, and usages.
 
-* [Microflows & Nanoflows](/refguide/microflows-and-nanoflows/)
+* [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/)
 * [Workflows](/refguide/workflows/)
 * [Expressions](/refguide/expressions/)

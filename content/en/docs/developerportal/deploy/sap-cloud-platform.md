@@ -1,9 +1,10 @@
 ---
 title: "SAP Business Technology Platform"
+linktitle: "SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
 weight: 40
-description: "Reference documentation on deploying to SAP Business Technology Platform"
+description: "Describes how to deploy to SAP Business Technology Platform."
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -96,7 +97,7 @@ You will now be asked to provide the final details for the SAP BTP development e
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
 
-If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP BTP](#databases), below, for important information on selecting the correct database for your app.
+If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL, Hyperscaler Option and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP BTP](#databases), below, for important information on selecting the correct database for your app.
 
 If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
 
@@ -242,13 +243,13 @@ Alternatively, you can upload an MDA which has already been created from the app
 The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
 {{% alert color="info" %}}
-There is a limit of 200MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
+There is a limit of 200 MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
 {{% /alert %}}
 
 ## 5 Deploy Package{#DeployPackage}
 
 {{% alert color="warning" %}}
-SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
+SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
 {{% /alert %}}
 
 ### 5.1 Deploy to an Environment
@@ -448,7 +449,7 @@ There are a number of services which your Mendix app requires. **If you unbind a
 
 * destination
 * xsuaa
-* database (PostgreSQL or SAP HANA schema)
+* database (PostgreSQL, Hyperscaler Option or SAP HANA schema)
 * connectivity
 
 Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP BTP cockpit will *not* be reflected in the Mendix Developer Portal.
@@ -474,15 +475,11 @@ To connect a service in the section **Available Services**
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
 {{% alert color="info" %}}
-If you use the **PostgreSQL on SAP BTP** service on SAP BTP, Mendix can create a JSON file for you. See [Running Mendix on PostgreSQL](#sap-hyperscaler) in this document for more information.
+If you use the **PostgreSQL, Hyperscaler Option** service on SAP BTP, Mendix can create a JSON file for you. See [Running Mendix on PostgreSQL, Hyperscaler Option](#sap-hyperscaler) in this document for more information.
 {{% /alert %}}
 
 {{% alert color="info" %}}
 If you use the **Application Autoscaler** service on SAP BTP, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/) for more information.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-If you use the **PostgreSQL on Amazon (AWS)** service on SAP BTP, Mendix can create a JSON file for you. See [PostgreSQL on Amazon (AWS) for SAP Business Technology Platform](/partners/sap/sap-postgresql-on-aws/) for more information.
 {{% /alert %}}
 
 To upload the JSON **File** for service binding, follow these steps:
@@ -559,9 +556,19 @@ However, the maximum length for the service name is 50 characters. If this limit
 
 ### 7.4 Runtime Tab{#runtime-tab}
 
-Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
+In the **Runtime** tab, you can **Add**, **Edit**, or **Delete** custom runtime settings and environment variables.
 
-#### 7.4.1 Supported Environment Variables
+{{% alert color="info" %}}
+New values will only be applied when you restart your app. The value which is currently applied is shown under **CURRENT VALUE**.
+{{% /alert %}}
+
+#### 7.4.1 Custom Runtime Settings
+
+You can add custom server settings which configure Mendix Runtime beyond the standard SAP deployment. See [Runtime Customization](/refguide/custom-settings/) and the [Mendix Cloud Foundry Buildpack GitHub repository](https://github.com/mendix/cf-mendix-buildpack#mendix-runtime-configuration) for information about the settings which are available.
+
+#### 7.4.2 Custom Environment Variables
+
+##### 7.4.2.1 Supported Environment Variables
 
 You can choose to add supported variables by selecting them from a drop-down list.
 
@@ -573,7 +580,7 @@ You can choose to add supported variables by selecting them from a drop-down lis
 
 The variables beginning **DT_** set up Dynatrace. Setting these variables means that the Dynatrace OneAgent is loaded into your environment. You will then receive all J2EE-related metrics from your app. See [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/) for more information.
 
-#### 7.4.2 Unsupported Environment Variables
+##### 7.4.2.2 Unsupported Environment Variables
 
 You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 
@@ -585,29 +592,25 @@ Only use unsupported environment variables if you know exactly what you are doin
 
 ## 8 Databases in SAP BTP{#databases}
 
-Mendix needs access to a relational database back end and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL or SAP HANA.
+Mendix needs access to a relational database back end and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL, Hyperscaler Option or SAP HANA.
 
-### 8.1 Running Mendix on PostgreSQL
+### 8.1 Running Mendix on PostgreSQL, Hyperscaler Option{#sap-hyperscaler}
 
-{{% alert color="warning" %}}
-SAP have deprecated the use of PostgreSQL databases bound via the marketplace. This means that SAP accounts created recently will not be able to directly bind PostgreSQL databases and you will have to use [PostgreSQL on SAP BTP](#sap-hyperscaler), [SAP HANA](#sap-hana), or [AWS RDS PostgreSQL](#aws-rds) databases.
+{{% alert color="info" %}}
+SAP have removed some of the PostgreSQL databases available in their marketplace. If you need a PostgreSQL database, you will have to use PostgreSQL, Hyperscaler Option as your database. This requires some extra configuration which is described below. Alternatively, you can use [SAP HANA](#sap-hana).
 {{% /alert %}}
 
-When you create your environment on SAP BTP, you can still select a PostgreSQL database. You can use either the **PostgreSQL on SAP BTP** database or the **AWS RDS PostgreSQL** database.
-
-#### 8.1.1 Running Mendix on PostgreSQL on SAP BTP{#sap-hyperscaler}
-
-One option is to use the **PostgreSQL on SAP BTP** database.
+Select the **postgresql-db** (PostgreSQL, Hyperscaler Option) database service.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-service.png" >}}
 
 You will need to upload a file which contains the configuration for this database – click **Browse…** to select your configuration file. You can use the [SAP Hyperscaler PostgreSQL Configurator](#postgresql-configurator) to help you create the configuration file and find more information in the *Parameters* section of [PostgreSQL on SAP Business Technology Platform, Hyperscaler Option](https://help.sap.com/viewer/b3fe3621fa4a4ed28d7bbe3d6d88f036/Cloud/en-US/0630e03aa45d479eaf806c564dc2447a.html) in the *SAP Help Portal*.
 
-During the creation of the environment, the selected PostgreSQL service will be added to your space and, when you deploy your app, the app will be bound to the PostgreSQL service.
+During the creation of the environment, the selected PostgreSQL, Hyperscaler Option service will be added to your space and, when you deploy your app, the app will be bound to it.
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
-##### 8.1.1.1 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
+#### 8.1.1 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
 
 To get help to create the configuration file, click the **Configurator** button.
 
@@ -619,25 +622,15 @@ On the new page which is displayed you can set the required values for your **SA
 There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
 {{% /alert %}}
 
-Click **Upload Configuration To Service** to automatically apply the generated configuration to the PostgreSQL database service.
-Alternatively, click **Download Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL database.
-
-#### 8.1.2 Running Mendix on AWS RDS PostgreSQL{#aws-rds}
-
-It is also possible to set up a PostgreSQL database on Amazon Web Services (AWS) to hold the data for your app. Instructions for doing this to support an app deployed to SAP BTP are available on the SAP Help Portal here: [PostgreSQL on Amazon](https://help.sap.com/viewer/b392039670364098a722cad3071c7af9/Cloud/en-US).
-
-To use this database for your Mendix app, you will need to choose **AWS RDS PostgreSQL** when specifying your environment on SAP BTP.
-
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/aws-rds.png" >}}
-
-You will also need to set up the configuration of your AWS RDS PostgreSQL file. See [PostgreSQL on Amazon (AWS) for SAP Business Technology Platform](/partners/sap/sap-postgresql-on-aws/) for more information.
+Click **Upload Configuration To Service** to automatically apply the generated configuration to the PostgreSQL, Hyperscaler Option database service.
+Alternatively, click **Download Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL, Hyperscaler Option database.
 
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
 {{% alert color="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
 
-There are also some differences in the way that Mendix can be used with SAP HANA compared to PostgreSQL databases – see [SAP HANA – Known Issues](/refguide/saphana/).
+There are also some differences in the way that Mendix can be used with SAP HANA compared to a PostgreSQL, Hyperscaler Option database – see [SAP HANA – Known Issues](/refguide/saphana/).
 {{% /alert %}}
 
 #### 8.2.1 SAP HANA Configuration for Full Accounts
@@ -655,7 +648,7 @@ Please bear the following in mind when using SAP HANA as your Mendix database:
 
 * Do *not* attempt to add the SAP HANA *service* to your app. It is the SAP HANA *schema* which needs to be bound to your app.
 
-* Do *not* use the *Services* tab or the *SAP BTP Marketplace* to add **both a PostgreSQL database and an SAP HANA schema** to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
+* Do *not* use the *Services* tab or the *SAP BTP Marketplace* to add both a PostgreSQL, Hyperscaler Option database and an SAP HANA schema to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
 {{% /alert %}}
 
 If you have issues with your app running on SAP HANA, you will need to use the SAP BTP cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.

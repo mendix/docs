@@ -1,5 +1,5 @@
 ---
-title: "Start Styling with Gulp & Sass"
+title: "Start Styling with Gulp and Sass"
 url: /howto8/front-end/style-with-gulp-and-sass/
 weight: 2
 tags: ["gulp", "sass", "ux", "front end"]
@@ -26,7 +26,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [How to Set Up Gulp & Sass](/howto8/front-end/sass-eight/)
+* Complete [How to Set Up Gulp and Sass](/howto8/front-end/sass-eight/)
 
 ## 3 Setting Up the Gulp Project
 
@@ -55,7 +55,7 @@ If you are using Parallels on Mac, you can access your Mendix project on your Ma
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.
 
-## 5 Development & Production
+## 5 Development and Production
 
 When running `npm run dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
 

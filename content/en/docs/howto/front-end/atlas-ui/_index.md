@@ -3,6 +3,7 @@ title: "UI Design"
 url: /howto/front-end/atlas-ui/
 category: "Front End"
 weight: 5
+description: "Presents a list of how-tos to guide you to create customized applications using Atlas UI."
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 

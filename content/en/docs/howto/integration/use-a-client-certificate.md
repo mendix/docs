@@ -2,6 +2,7 @@
 title: "Use a Client Certificate"
 url: /howto/integration/use-a-client-certificate/
 category: "Integration"
+description: "Describes how to configure your app to authenticate using a client certificate."
 tags: ["integration", "web service", "client certificate"]
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.

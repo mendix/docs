@@ -23,7 +23,7 @@ This how-to will teach you how to do the following:
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
-* Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
+* Download [Selenium Client and WebDriver](http://www.seleniumhq.org/download/):
     {{< figure src="/attachments/howto7/testing/create-automated-tests-with-testng/18580399.png" >}} 
 * Open the [Company Expenses app](https://marketplace.mendix.com/link/component/240/Mendix/Company-Expenses) in the Modeler and run it locally
 

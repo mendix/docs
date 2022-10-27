@@ -1,5 +1,5 @@
 ---
-title: "Images, Videos & Files"
+title: "Images, Videos and Files"
 url: /refguide/image-and-file-widgets/
 weight: 35
 tags: ["studio pro", "file widgets", "widget"]
@@ -7,7 +7,7 @@ tags: ["studio pro", "file widgets", "widget"]
 
 ## 1 Introduction
 
-Images, videos & files allow end-users to upload, download, and display files, images, and videos. 
+Images, videos and files allow end-users to upload, download, and display files, images, and videos. 
 
 * [Static Image](/refguide/image/) – displays static image:
 

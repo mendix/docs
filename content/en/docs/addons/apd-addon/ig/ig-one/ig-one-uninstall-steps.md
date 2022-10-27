@@ -47,7 +47,7 @@ Delete the APM Tools item that calls "APMAgent/USE_ME/IVK_OpenConsole" from navi
 
 {{< figure src="/attachments/addons/apd-addon/ig/ig-one/ig-one-uninstall-steps/Delete_From_Navigation.png" >}}
 
-## 7 Optional: Revert After Startup & Before Shutdown
+## 7 Optional: Revert After Startup and Before Shutdown
 
 Remove the microflow call action to APMAgent\USE_ME\AfterStartup from an after startup microflow. This feature is runtime configurable and by default none of the tools are started.
 Remove the microflow call action to APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.

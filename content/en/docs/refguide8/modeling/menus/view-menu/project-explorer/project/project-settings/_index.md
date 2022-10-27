@@ -164,9 +164,7 @@ This table presents the results of rounding the input to one digit with the give
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
 {{% alert color="warning" %}}
-
 In production, this only works with licenses based on concurrent users.
-
 {{% /alert %}}
 
 Default: *Yes*

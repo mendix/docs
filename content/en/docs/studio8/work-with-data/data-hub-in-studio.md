@@ -20,10 +20,6 @@ For example, you have an *Employee Onboarding app* containing information on wha
 
 For more information on how to use data in your app, see the [Selecting External Entities on Pages](#select-external-entities) section.
 
-{{% alert color="info" %}}
-You can access Data Hub if your organization has a Data Hub license. 
-{{% /alert %}}
-
 ## 2 Selecting External Entities on Pages {#select-external-entities}
 
 The entities which are available through the Data Hub Catalog are called *external entities* as they are coming from an external source (*a source app*). 

@@ -2,6 +2,7 @@
 title: "Data Storage"
 url: /refguide/data-storage/
 category: "Mendix Runtime"
+description: "Introduces data storage, which is the data foundation of the Mendix Runtime."
 tags: ["studio pro", "Databases"]
 ---
 

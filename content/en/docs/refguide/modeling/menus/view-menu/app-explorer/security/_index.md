@@ -53,7 +53,7 @@ Let us say you have an app with two modules: System and ProjectManagement (PM). 
 
 {{% /alert %}}
 
-## 5 Entity Access vs. Page Access
+## 5 Entity Access vs. Page Access {#entity-vs-page-access}
 
 Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior; for example, "an employee can only see orders created by the department he is a part of".
 
@@ -61,4 +61,4 @@ Per page you can specify who can open it from navigation. The menu bar is optimi
 
 A combination of entity access and a page access is necessary because entities can also be accessed from microflows and custom widgets. Furthermore, you can express more advanced security through entity access.
 
-See [Entity Access](/refguide/module-security/).
+See [Entity Access](/refguide/module-security/#entity-access).

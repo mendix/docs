@@ -24,7 +24,7 @@ Your profile header displays a quick overview of information about you. Your Men
 
 You can change these details in the [Settings](#settings).
 
-## 3 Overview & Stats
+## 3 Overview and Stats
 
 Your profile opens to the **Overview** tab, which shows you at a quick glance how you are doing on the platform. You can see the following:
 
@@ -228,7 +228,9 @@ Here you can connect your social accounts for **Twitter** and **LinkedIn**.
 
 ### 10.4 Security {#security}
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center/#security) can change this.
+By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
+
+You can update your password via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen.
 
 ### 10.5 API Keys {#api-key}
 
@@ -274,14 +276,19 @@ In this section, you can merge your accounts and select your profile visibility.
 
 #### 10.7.1 Merging Your Accounts {#merging}
 
-With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your points, certifications, and achievements to support you as you clim the leaderboards or on your way to the Expert certification.
+Do you want to transfer information from your old Mendix account to a new one? You can do this directly from your **Advanced Settings**. After sharing some information with us, your earned points, achievements, credits, certifications, and Academy progress is automatically transferred.
 
-Before merging, make sure your profile is public and that you logged in with the right email address. Enter the email address you want to have merged into the logged-in account, then send the merge request.
+To merge your accounts, follow these steps:
 
-We’ll take things from there!
+1. Prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this, because once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access.
+2. From your new account, enter the email address of your old account to send us the request.
+3. If you still have access to your old account, you can approve the merge yourself after clicking the link in the confirmation email that is sent to your old account when the merge is requested. Be sure you are logged in with your old account to see the merge request. Otherwise, you can wait for merge approval from Mendix Support.
 
-{{% alert color="info" %}}
-Once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access. Adding your new account to the relevant apps before the merge is recommended.{{% /alert %}}
+Your account data is then moved to your new account.
+
+{{% alert color="warning" %}}
+It is not possible to separate accounts after they have been merged. Double-check that your old and new account information is valid and in the correct order.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
@@ -322,4 +329,4 @@ Abusing the Mendix Forum, point system, or other community tools is not allowed.
 
 ## 12 Main Document in This Category
 
-* [OAuth & Scopes](/developerportal/community-tools/oauth-scopes/) – provides introductory information on how OAuth and scopes work, as well as details on scopes generated in the Developer Portal
+* [OAuth and Scopes](/developerportal/community-tools/oauth-scopes/) – provides introductory information on how OAuth and scopes work, as well as details on scopes generated in the Developer Portal

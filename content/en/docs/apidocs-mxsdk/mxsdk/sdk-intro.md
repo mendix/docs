@@ -9,7 +9,7 @@ tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 
 ## 1 Introduction
 
-The Mendix Platform SDK is a TypeScript- & JavaScript-based  SDK that, through the Model SDK, provides access to the inner-workings of every Mendix app. 
+The Mendix Platform SDK is a TypeScript- and JavaScript-based  SDK that, through the Model SDK, provides access to the inner-workings of every Mendix app. 
 
 With the Platform SDK and Model SDK, you can do the following:
 

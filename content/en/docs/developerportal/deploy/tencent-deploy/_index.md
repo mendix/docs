@@ -194,7 +194,7 @@ The **成员** tab displays a list of current members (if any).
 
 5. The next time the user signs in to ATM, they will be added to the namespace.
 
-##### 3.3.2.2 Editing & Removing Members
+##### 3.3.2.2 Editing and Removing Members
 
 You can remove existing members.
 
@@ -248,7 +248,7 @@ Follow the instructions below to create a deployment package from the Team Serve
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+There is a limit of 200 MB on the size of a deployment package which can be deployed on the Tencent Cloud.
 {{% /alert %}}
 
 1. On the **环境概览** page for your app in the ATM, click **从 Team Server 创建包**.
@@ -283,31 +283,31 @@ When deploying your app for the first time, there will be no environment to depl
 
 1. Go to the **环境概览** page for your app in the ATM.
 
-1. Click **创建环境**.
+2.  Click **创建环境**.
 
     If there are no clusters available to you, you will have to create one or get access to an existing one before you can continue. You will be taken to the Cluster Manager page. See [Cluster and Namespace Management](#cluster-namespace), above, for information on the three ways you can get a cluster, then start this section again.
 
-1. Choose the deployment package you want to use to create the environment and click **下一步**.
+3.  Choose the deployment package you want to use to create the environment and click **下一步**.
 
     A **内部名称** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
-1. Enter **环境名称**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+4. Enter **环境名称**, the name for the environment. The environment name can only contain lowercase (latin) letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
 
-1. Use the drop-down **选择命名空间** to select an existing namespace. You will see all namespaces of which you are a member.
+5. Use the drop-down **选择命名空间** to select an existing namespace. You will see all namespaces of which you are a member.
 
-1. Select the **目的**.
+6.  Select the **目的**.
    
     1. For development of the app, for example acceptance testing, choose **开发环境**.
 
-    2. For production deployment, select **生产环境**. If you select **生产环境**, then you will be asked for the **订阅密钥** which you received when you purchased Tencent resources.
+    2.  For production deployment, select **生产环境**. If you select **生产环境**, then you will be asked for the **订阅密钥** which you received when you purchased Tencent resources.
 
         {{% alert color="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
-1. Click **下一步**.
+7. Click **下一步**.
 
-1. Select **核心资源**.
+8.  Select **核心资源**.
 
     For core resources, there are two sets of values. The **请求** value is the amount of core resources which are initially requested. The **限制** value is the maximum amount of resource that the environment can use.
 
@@ -322,11 +322,11 @@ When deploying your app for the first time, there will be no environment to depl
 
     Alternatively, you can choose **自定义**, and enter your own requirements for **CPU** and **内存**. Ensure that these values are the same or greater than the values for a 小 environment, otherwise you may run into problems running your app.
 
-1. Select a **数据库计划** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
+9. Select a **数据库计划** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
-1. Select a **存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
+10. Select a **存储计划** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
 
-1. Click **创建环境**.
+11. Click **创建环境**.
 
 You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
 
@@ -578,7 +578,7 @@ For production deployment, select **生产环境**. If you select **生产环境
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
-##### 6.1.3.8 Change Subscription Secret{#change-subscription-secret}
+##### 6.1.3.8 Change Subscription Secret
 
 {{% todo %}}What does "edit subscription secret" look like?{{% /todo %}}
 

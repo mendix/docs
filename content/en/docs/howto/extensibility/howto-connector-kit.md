@@ -2,7 +2,7 @@
 title: "Build Microflow Actions with Java"
 url: /howto/extensibility/howto-connector-kit/
 category: "Extensibility"
-description: "Describes creating custom Microflow actions using Java."
+description: "Describes how to create custom microflow actions using Java."
 weight: 80
 tags: ["java", "connector kit", "microflow action", "parameter type", "generic actions", "type parameters", "mappings", "java action"]
 #To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
@@ -161,7 +161,7 @@ The `executeAction` method is where all the magic happens:
 
 Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
-## 4 Using Import & Export Mappings
+## 4 Using Import and Export Mappings
 
 Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particularly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
 

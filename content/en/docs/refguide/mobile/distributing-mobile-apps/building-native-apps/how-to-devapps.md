@@ -1,5 +1,5 @@
 ---
-title: "Create a Custom Developer App"
+title: "Creating a Custom Developer App"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/
 weight: 40
 description: A tutorial for creating custom developer apps.
@@ -55,7 +55,7 @@ For Android the output of the build is an *APK* file. *APK* files can be directl
 
 With your emulator running, install your app in your emulator by doing the following:
 
-1. Drag and drop the *APK* onto the emulator's window.
+1. Drag the *APK* onto the emulator's window.
 2. Wait for the installation to be done.
 3. Open the app from the launcher.
 
@@ -66,8 +66,8 @@ There are various ways install an app on a device. Installing using a USB is det
 1. Connect your device to your machine via USB.
 2. Enable file transfer on your device (differs per device).
 3. Open **This PC** in File Explorer; your device should be listed as an external device.
-4. Drag and drop your *APK* onto your device.
-5. Wait for it to finish transfering.
+4. Drag your *APK* onto your device.
+5. Wait for it to finish transferring.
 6. Open your device's file manager.
 7. Navigate to the root of the file system.
 8. Tap the *APK* to install.

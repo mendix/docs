@@ -4,7 +4,6 @@ url: /developerportal/deploy/private-cloud-cluster/
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 weight: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -39,7 +38,7 @@ Should you consider using a connected environment, the following URLs should be 
 | `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
 | `https://subscription-api.mendix.com` | Service to verify call-home licence |
 
-## 3 Creating a Cluster & Namespace
+## 3 Creating a Cluster and Namespace
 
 ### 3.1 Creating a Cluster{#create-cluster}
 
@@ -79,7 +78,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png" >}}
 
-### 3.2 Adding a Namespace
+### 3.2 Adding a Namespace{#add-namespace}
 
 You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
 
@@ -95,7 +94,7 @@ To add a namespace, do the following:
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to [create environments and deploy your app from the Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to [control your deployments through the Mendix Operator using the CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 
@@ -103,7 +102,7 @@ To add a namespace, do the following:
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
-## 4. Installing and Configuring the Mendix Operator
+## 4. Installing and Configuring the Mendix Operator{#install-operator}
 
 Before you can use the Mendix Operator in your namespace you need to install it and configure the services your app will use. Mendix provides you with a **Configuration Tool** which guides you through the process.
 
@@ -187,6 +186,8 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
     You will see the configuration options on the screen and will be guided through filling in the information needed.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
+
+    {{% alert color="info" %}}We recommend running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
 
 #### 4.3.1 Base Installation{#base-installation}
 
@@ -272,6 +273,10 @@ Once you have entered the details you can apply two validation checks by clickin
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" >}}
 
+{{% alert color="info" %}}
+You cannot create multiple database plans at the same time. Run the configuration tool multiple time to apply several database plans.
+{{% /alert %}}
+
 The following **Database Types** are supported:
 
 * PostgreSQL
@@ -345,6 +350,10 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 
 {{% alert color="info" %}}
 Storage plans are “blueprints” that specify how to request/decomission a new database or blob storage and pass its credentials to an environment.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+You cannot create multiple storage plans at the same time. Run the configuration tool multiple time to apply several storage plans.
 {{% /alert %}}
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
@@ -635,9 +644,20 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 
 **S3 (existing bucket and account)** will connect to an existing S3 bucket with the provided IAM user access key and secret keys. All apps (environments) will use the same S3 bucket and an IAM user account. You will need to provide all the information relating to your Amazon S3 storage such as plan name, endpoint, access key, and secret key.
 
-To keep data from different apps separate, Mendix for Private Cloud will generate a unique bucket prefix for each environment.
+If the Autogenerate Prefix option is selected, Mendix for Private Cloud will generate a unique bucket prefix for each environment to keep data from different apps separate.
+
 This prefix is specified in the `<environment name>-file` secret.
-If you would like a new environment to reuse/inherit data from an existing environment, you can edit the `<environment name>-file` secret and specify the old (existing) prefix in the `com.mendix.storage.s3.BucketName` key.
+
+If you want a new environment to reuse/inherit data from an existing environment, you can deselect the Autogenerate Prefix and provide the existing prefix you want to use.
+
+{{% alert color="info" %}}
+To use the Autogenerate Prefix option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Be sure to follow the naming guidelines for prefixes as described in the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
+{{% /alert %}}
+
 
 The associated IAM user account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
 
@@ -804,6 +824,10 @@ For more information about how to use this field, see the [http proxy documentat
 
 {{% alert color="info" %}}
 To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.7.0 or later.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In Operator version 2.7.0 and above, the build pod will trust certificates from the custom TLS trust secret.
 {{% /alert %}}
 
 To use encryption and avoid [MITM attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack), communication with all external services should be done over TLS.
@@ -1437,7 +1461,17 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 5.6 Autoscaling
+### 5.6 Customize Service Account
+
+The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
+
+To achieve this, you need to add the annotation `privatecloud.mendix.com/environment-account: true` (for security reasons, any account matching an environment name but without this annotation cannot be attached to environments).
+
+{{% alert color="info" %}}
+The service account can be customized for Private Cloud Operator version 2.7.0 and above.
+{{% /alert %}}
+
+### 5.7 Autoscaling
 
 Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
 
@@ -1477,7 +1511,7 @@ Use `--cpu-percent` to specify the target CPU usage, and `--min` `--max` to spec
 To configure additional horizontal pod autoscaling, run the following command:
 
 ```shell {linenos=false}
-kubectl -n {namespace} edit horizontalpodautoscaling {envname}
+kubectl -n {namespace} edit horizontalpodautoscaler {envname}
 ```
 
 Replace `{namespace}` with the namespace name, and `{envname}` with the MendixApp CR name (the environment internal name).
@@ -1600,7 +1634,8 @@ You can also see an activity log containing the following information for all na
 * When a user accepts the invitation as a namespace member
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
-* When enviroment configurations are added, updated or removed
+* When enviroment configurations are added, updated, or removed
+* When Runtime Metrics configurations are added, updated, or deleted
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
 
@@ -1698,7 +1733,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 6.2.2.2 Editing & Removing Members
+##### 6.2.2.2 Editing and Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 

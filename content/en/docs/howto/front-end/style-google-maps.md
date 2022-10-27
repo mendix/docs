@@ -3,6 +3,7 @@ title: "Style Google Maps"
 url: /howto/front-end/style-google-maps/
 category: "Front End"
 weight: 60
+description: "Describes how to configure the new style feature of the Google Maps widget to match your application style."
 tags: ["studio pro"]
 ---
 

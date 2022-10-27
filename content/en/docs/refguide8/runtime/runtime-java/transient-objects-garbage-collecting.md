@@ -1,5 +1,5 @@
 ---
-title: "Non-Persistable Objects & Garbage Collecting"
+title: "Non-Persistable Objects and Garbage Collecting"
 url: /refguide8/transient-objects-garbage-collecting/
 weight: 1
 description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."

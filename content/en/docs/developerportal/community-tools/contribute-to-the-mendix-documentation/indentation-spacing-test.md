@@ -1,10 +1,9 @@
 ---
-title: "Indentation & Spacing Test"
+title: "Indentation and Spacing Test"
 url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
 description: "Various test cases for rendering of indents and spaces"
-banner: "This is a draft and will not be rendered in the production website. 
-Use this page to test how spacing and indents will render with various elements and shortcodes."
+banner: "This is a draft and will not be rendered in the production website. Use this page to test how spacing and indents will render with various elements and shortcodes."
 ---
 
 ## Heading 2
@@ -371,3 +370,31 @@ A new list
     1. Subitem 3
     1. Subitem 4
 1. Item 3
+
+## Test Buttons
+
+{{% button color="info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
+
+{{% button color="success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
+
+{{% button color="danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+
+{{% button color="warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+
+{{% button color="light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
+
+{{% button color="dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+
+{{% button color="link" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Link" title="What do you think of this button?" %}}
+
+{{% button color="outline-info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
+
+{{% button color="outline-success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
+
+{{% button color="outline-danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+
+{{% button color="outline-warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+
+{{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
+
+{{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}

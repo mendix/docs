@@ -1,5 +1,5 @@
 ---
-title: "Security, Roles & Permissions"
+title: "Security, Roles, and Permissions"
 url: /studio/settings-security/
 category: "Settings"
 description: "Describes security and roles and permissions in Mendix Studio."

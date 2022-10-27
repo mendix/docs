@@ -18,7 +18,7 @@ The **Import with mapping** activity allows you to import the data stored in an 
 
 An example of import with mapping properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/import-mapping-action/import-with-mapping-properties.png" alt="import with mapping properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/import-mapping-action/properties.png" alt="import with mapping properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

@@ -13,4 +13,4 @@ This category includes the following release notes:
 * [Native Builder](/releasenotes/mobile/native-builder/)
 * [Native Template](/releasenotes/mobile/native-template/)
 * [Mendix Mobile App](/releasenotes/mobile/mendix-mobile-app/)
-* [Hybrid App Base & Template](/releasenotes/mobile/hybrid-app/)
+* [Hybrid App Base and Template](/releasenotes/mobile/hybrid-app/)

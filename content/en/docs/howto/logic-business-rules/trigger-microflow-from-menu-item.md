@@ -1,8 +1,9 @@
 ---
 title: "Trigger a Microflow From a Menu Item"
 url: /howto/logic-business-rules/trigger-microflow-from-menu-item/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 30
+description: "Describes how to create a simple microflow that will define the logic of your application."
 tags: ["how-to", "microflow", "create microflow"]
 ---
 
@@ -69,7 +70,7 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/toolbox.png" >}}
 
-3. Drag the **Show message** activity from the **Toolbox** to the flow between the start event and end event, which will insert a show message activity:
+3. Drag the **Show message** activity from the **Toolbox** into the flow between the start event and end event, which will insert a show message activity:
 
     {{< figure src="/attachments/howto/logic-business-rules/trigger-microflow-from-menu-item/show-message-activity.png" >}}
 
@@ -92,6 +93,6 @@ Congratulations! You have created the menu item that triggers the microflow and 
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Optimize the Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Configure Error Handling](/howto/logic-business-rules/set-up-error-handling/)
+* [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

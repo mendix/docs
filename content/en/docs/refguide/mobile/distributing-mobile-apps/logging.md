@@ -1,9 +1,11 @@
 ---
-title: "Logging In Native Apps"
+title: "Logging in Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/logging/
 weight: 39
 description: "Describes using logging in native mobile apps"
 tags: ["native", "logging", "troubleshooting"]
+aliases:
+    - /refguide/mobile/logging/
 ---
 ## 1 Introduction
 
@@ -12,9 +14,7 @@ In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to
 {{% alert color="warning" %}}
 Please note the following current limitations regarding native client logs:
 
-* Only the following log levels are supported currently: **Information**, **Warning**, **Critical**, and **Error**
-* Crash logs are not supported currently
-* Native client logs will not appear directly in the cloud portal logs overview before they are sent to [Mendix Runtime](/refguide/runtime/), for more information see [Sending Log Messages To Runtime](#sending-client-log-nodes-to-runtime)
+* Crash logs that happen outside the Mendix Native Client will not be collected and sent to the Mendix Runtime.
 {{% /alert %}}
 
 ## 2 Enabling Native App Logging
@@ -30,8 +30,7 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 ## 3 Log Levels
 
 {{% alert color="warning" %}}
-
-* Please note that at the moment only `information, warning, critical, and error` log levels are supported (support for other log levels will be added in the future)
+Please note the following:
 * `Crash` logs are not supported currently
 {{% /alert %}}
 
@@ -71,13 +70,19 @@ This section provides some details on specific log nodes used by the Mendix nati
 
 The following log nodes are used by Mendix when writing log messages:
 
+
+{{% alert color="warning" %}}
+* From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
+* Enabling the `trace` log level may cause too many logs to be sent to the [Mendix Runtime](/refguide/runtime/), so it should not be kept enabled for long periods of time.
+{{% /alert %}}
+
 | Log Node | Description |
 | --- | --- |
 | Client_AppCenter| Logs messages related to the state and phases of over-the-air updates by AppCenter. |
 | Client_Auth | Logs messages related to the different authentication states and user actions.|
 | Client | The default log node when no log node is provided. |
 | Client_Database | Logs messages related to different read/write operations on the local database. |
-| Client_FileSystem | Logs messages related to different read/write operations on the local file system (for example downloading a file and storing it in the file system, moving a file, or removing a file.)|
+| Client_FileSystem | Logs messages related to different read/write operations on the local file system (for example downloading a file and storing it in the file system, moving a file, or removing a file).|
 | Client_Nanoflow | Logs messages related to nanoflows being executed.|  
 | Client_NanoflowDebugger | Logs messages related to different steps and available variables while debugging a nanoflow. |
 | Client_Navigation | Logs messages related to the navigation behavior in the app. |
@@ -87,8 +92,31 @@ The following log nodes are used by Mendix when writing log messages:
 | Client_Startup | Logs messages related to client startup phase. |
 | Client_Synchronization | Logs messages related to the full synchronization action and its phases. |
 
-## 5 Sending Log Messages To Runtime {#sending-client-log-nodes-to-runtime}
+## 5 Sending Log Messages to Runtime {#sending-client-log-nodes-to-runtime}
 
-The native client stores log messages locally on the device. When the **Enable sending logs to runtime** checkbox is selected, the native client will attempt to send log messages in batches of **100** messages or after 1 hour from the time since these log messages occurred. 
+The native client stores logs on the device's memory. When **Enable sending logs to runtime** is selected, the native client will attempt to send logs whenever a quota of 1,000 logs has been reached or after 1 hour from the last sending attempt.
 
-Therefore these client log nodes will not appear directly in the cloud portal logs overview before they are sent. If there is network connectivity, once the log messages have been successfully sent to the runtime these log messages will be cleared from the device.
+When the app goes to the background or closes, the native client will save buffered log messages on the file system and will restore them once the app is active again.
+
+In this scenario, it will discard older messages so that it will not overflow with too many logs. An additional `info` log message will be added with the number of discarded logs and the timestamps of when these log messages were ignored.
+
+The body of the log message consists of the timestamp in which the message was logged (which differs from the timestamp that is normally shown in the Cloud Portal as that one refers to the timestamps the log messages were collected), a unique session id so that the log messages can be grouped by device or origin, and the main content of the log message itself. 
+
+## 6 Extending Logging
+
+It is possible to add a custom log handler to react to all log messages, including errors, as they arise. This can be used to integrate with your own custom logging and error handling infrastructure, such as Google Crashlytics.
+
+The following JavaScript code demonstrates how to add and remove a custom log handler. This JavaScript code must be executed on the mobile client, for instance via a JavaScript action or a pluggable widget:
+
+```javascript
+import { addLogListener } from "mendix/logging";
+
+// Start handling logs
+const removeListener = addLogListener((logLevel, logNode, ...args) => {
+    const message = args.map(arg => arg instanceof Error ? arg.message : String(arg)).join(", ");
+    alert(`Incoming ${logLevel} log from ${logNode}: ${message}`);
+});
+
+// To remove the listener, call the returned function
+removeListener();
+```

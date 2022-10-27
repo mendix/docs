@@ -77,17 +77,18 @@ Using the drop-down menu, you can choose to sort the apps in the following ways:
 
 By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.jpg" alt="Quick actions menu for an app" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" >}}
 
 The actions available depend on the app selected:
 
 * **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro**
+* **Stop Watching** – disables notifications for the app
 * **Leave App** – allows you to leave the app
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 
-## 4 My Company's Apps & Buzz {#my-company-apps}
+## 4 My Company's Apps and Buzz {#my-company-apps}
 
 In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
@@ -109,8 +110,6 @@ For details on **Company Buzz**, see the [Company Buzz](/developerportal/collabo
 
 Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
 
-{{< figure src="/attachments/developerportal/developerportal-assistance.jpg" >}}
-
 * **Get Started with Mendix** – click this to check out [Mendix Basics](https://guidance.mendix.com/link/onboarding)
 * **What's New?** – click this to see our [latest features](https://www.mendix.com/releases/)
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/)
@@ -128,7 +127,9 @@ To configure what types of notifications you receive, click the settings icon an
 
 {{< figure src="/attachments/developerportal/notification-settings-icon.png" >}}
 
-{{% alert color="info" %}}If you no longer would like to receive notifications when new feedback is submitted for a specific app, go to the [Team](/developerportal/collaborate/team/) page for this app, and then change your role to a role that does not have the permission **Can edit 'Stories, Documents and Feedback'**.{{% /alert %}}
+{{% alert color="info" %}}If you no longer would like to receive notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for this app, and then click **Stop Watching**.<br/>
+
+If you would like to disable notifications for multiple apps on one page, you can also use the **Stop Watching** option on the [My Apps](#my-apps) page.{{% /alert %}}
 
 ## 7 Guide Categories
 

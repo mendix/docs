@@ -45,7 +45,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 * We improved the capability configurations by adding an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
 * We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.
-* We removed support for the deprecated Fabric & Crashlytics module.
+* We removed support for the deprecated Fabric and Crashlytics module.
 
 ## 5.1.13
 

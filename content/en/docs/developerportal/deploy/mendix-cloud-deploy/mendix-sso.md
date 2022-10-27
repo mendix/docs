@@ -73,10 +73,10 @@ You can deactivate Mendix SSO in two simple steps. This will remove the end-user
 
 To deactivate Mendix SSO, follow these two steps:
 
-1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your app to *login.html* — this removes the single sign-on button from your sign in screen:
+1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme/web** or **theme** folder of your app to *login.html* — this removes the single sign-on button from your sign in screen:
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
 
-    2. Go to the **theme** folder.
+    2. Go to the **theme/web** folder (for Mendix versions below 9.0.0 this will be the **theme** folder).
     3. Rename *login.html* to *login-with-sso.html*.
     4. Rename *login-without-sso.html* to *login.html*.
     
@@ -157,7 +157,7 @@ To enable Mendix SSO in your app, follow these steps:
 5. Change the page that Mendix uses to log you in (`login.html`) to allow logging in using SSO. To do this, perform the following steps:
 
     1. Go to **App** > **Show App Directory in Explorer** in Studio Pro to open the app directory in your file explorer.
-    2. Go to the **theme** folder.
+    2. Go to the **theme/web** folder (for Mendix versions below 9.0.0 this will be the **theme** folder).
     3. Rename *login.html* to  *login-without-sso.html*.
     4. Rename *login-with-mendixsso-button.html* or *login-with-mendixsso-automatically.html* to *login.html*. The differences between two versions of the file which you can use to replace `login.html` are as follows:
         * `login-with-mendixsso-button.html` – adds a button to the standard sign in page which the end user can click to initiate the single sign-on process — this gives the end user the possibility to sign in using a user name and password if desired

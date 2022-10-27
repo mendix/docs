@@ -13,4 +13,3 @@ The following guides are available here:
 
 * [Get Started with AR](/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-simple-cube/)
 * [Create an AR Business Card](/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-business-card/)
-* [AR Widget Overview](/refguide/mobile/using-mobile-capabilities/augmented-reality/ar-widgets/)

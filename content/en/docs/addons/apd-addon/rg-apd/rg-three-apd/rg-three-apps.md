@@ -17,7 +17,7 @@ In order to find a specific application faster, it is possible to mark it as a f
 
 In case an application is not visible in this overview, click **Can’t find your App?** in the upper-right corner.
 
-## 2 Tour Guides & Videos
+## 2 Tour Guides and Videos
 
 APD has several tour guides and videos to help you navigate through APD to perform certain tasks. These can be accessed by clicking the documentation icon next to your profile image and selecting **Tour**:
 
@@ -33,7 +33,7 @@ When starting a tour, a tooltip will appear throughout the APD application with 
 
 {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-three-apd/rg-three-apps/TourStep.png" >}}
 
-## 3 Profile Menu & User Settings
+## 3 Profile Menu and User Settings
 
 In the profile menu, you can see links to your [Mendix Profile](/developerportal/community-tools/mendix-profile/) and also the user settings for APD:
 

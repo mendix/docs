@@ -4,7 +4,7 @@ linktitle: "Data Storage APIs for Reusable Microflows"
 url: /howto/extensibility/howto-datastorage-api/
 category: "Extensibility"
 weight: 90
-description: "Describes creating custom microflow actions using Data Storage APIs."
+description: "Describes how to create custom microflow actions using Data Storage APIs."
 tags: ["java", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
 ---
 
@@ -66,7 +66,7 @@ Here’s an example domain model with two entities: Department and Employee.
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image011.png" >}}
 
-You can drag the Java action created above from the toolbox onto a microflow. In this example, you want to retrieve all Employee objects and return a list of these objects.
+You can drag the Java action created above from the toolbox into a microflow. In this example, you want to retrieve all Employee objects and return a list of these objects.
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image013.png" >}}
 

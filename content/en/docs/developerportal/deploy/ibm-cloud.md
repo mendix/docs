@@ -3,7 +3,7 @@ title: "IBM Cloud"
 url: /developerportal/deploy/ibm-cloud/
 category: "Deployment"
 weight: 65
-description: "Describes how to deploy a Mendix app to the IBM Cloud"
+description: "Describes how to deploy to the IBM Cloud."
 tags: ["IBM", "IBM Cloud", "Deployment", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

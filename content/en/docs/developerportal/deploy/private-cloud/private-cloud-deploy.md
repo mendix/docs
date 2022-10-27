@@ -5,7 +5,6 @@ url: /developerportal/deploy/private-cloud-deploy/
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 weight: 20
 tags: ["Deploy", "Private Cloud", "Environment"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -22,7 +21,7 @@ Within your namespace you can run one, or several, Mendix apps. You can see the 
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/mx4pc-containerized-architecture.png" >}}
 
-Because you can run several Mendix apps in the same namespace, each environment will have an **Environment UUID** added when the app is deployed to ensure that it is unique in the project. You should not use the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
+Because you can run several Mendix apps in the same namespace, each environment will have an **Internal Name** (UUID) added when the app is deployed to ensure that it is unique in the project. You should not use the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
 
 ## 2 Prerequisites for Deploying an App
 
@@ -88,28 +87,27 @@ When deploying your app for the first time, there will be no environments availa
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image5.png" >}}
 
+{{% alert color="warning" %}}
+All environments are defined as production environments, which means that [security in the app must be set to `Production`](/refguide/app-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
+{{% /alert %}}
+
 1. Click **Create Environment**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/selectDeploymentpackage.png" >}}
 
 2. Select the deployment package from the list of deployment packages and click **Next**.
 
-3. A **UUID** will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
+3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-    {{% alert color="info" %}}You can change the UUID if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
+    {{% alert color="info" %}}You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
 
-4. Enter **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production.
+4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, whatever you call them.
 
 5. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
-6. Select the **Purpose**.
-
-    1. For development of the app, for example acceptance testing, choose **Development**.
-    2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. These restrictions on unlicensed/test apps are very similar to those listed in the [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
-
-        {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
+6. Enter a **Subscription Secret** if you want your app to run as a licensed app. Without a license, your app will be subjected to restrictions very similar to those listed in the [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
 
 7. Click **Next**.
 
@@ -292,7 +290,7 @@ When the Operator is running in trial mode, it will stop managing an environment
 The word **Licensed** shows that the Operator managing that environment is licensed.
 
 {{% alert color="info" %}}
-The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#change-subscription-secret)) removes trial restrictions from a Mendix App itself.
+The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#license-mendix)) removes trial restrictions from a Mendix App itself.
 
 You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
 {{% /alert %}}
@@ -424,21 +422,19 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 If any of these garbage collection steps fail, you will no longer see the environment in the Developer Portal, and will have to [delete the storage instances](#delete-storage) manually.
 {{% /alert %}}
 
-##### 5.1.3.7 Change Purpose
+##### 5.1.3.7 License Mendix{#license-mendix}
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as an unlicensed.
+If you need to enter or change the subscription secret, then you can do that here.
 
-For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section in *Mendix Cloud*.
+Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
+
+#### 5.1.4 Security
+
+Your environment will be created as a Production environment.
 
 {{% alert color="warning" %}}
 Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
-
-##### 5.1.3.8 Change Subscription Secret{#change-subscription-secret}
-
-If you select Production as the **purpose** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
-
-Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
 ### 5.2 Model Options Tab
 
@@ -506,7 +502,7 @@ If you choose a custom TLS configuration, you will need to enter the following i
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/enable-tls.png" >}}
 
-* Use existing TLS secret or add new tls private key and certificate?
+* Use existing TLS secret or add new TLS private key and certificate?
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/choose-secret.png" >}}
 
@@ -522,7 +518,7 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 ### 5.7 Debugger
 
-On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/#private-cloud).
+On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/#private-cloud).
 
 ## 6 Current Limitations{#limitations}
 
@@ -538,7 +534,7 @@ Delete all environments before you delete an app. If you delete an app which has
 
 ### 6.3 Deployment Package Size
 
-Mendix for Private Cloud has a limit of 512MB on the size of a deployment package.
+Mendix for Private Cloud has a limit of 512 MB on the size of a deployment package.
 
 ## 7 Troubleshooting
 

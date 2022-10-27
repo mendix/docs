@@ -20,7 +20,7 @@ The **Increment Counter** activity can be used to increment a metrics counter by
 
 An example of increment counter properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-increment-counter/increment-counter-properties.png" alt="Increment Counter Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-increment-counter/properties.png" alt="Increment Counter Properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

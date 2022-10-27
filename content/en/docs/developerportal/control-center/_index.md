@@ -59,8 +59,8 @@ The consequences of deactivating and deleting an app are as below:
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Project code repository stays persistent                     | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Project members can access the project code repository       | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| App project stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
-| Project members can access the app project in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| App stays persistent                                 | {{< figure src="/attachments/developerportal/control-center/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
+| Project members can access the app in the Developer Portal | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 | Cloud environment stays persistent                           | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/cross-mark.svg" >}} |
 
 #### 3.1.2 App Details Page {#app-details}
@@ -213,13 +213,27 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 11 Data Hub {#data-hub}
+## 11 Billing Accounts {#billing-accounts}
+
+Before the licenses are renewed for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
+
+{{< figure src="/attachments/developerportal/control-center/billing-accounts-page.png" alt="billing accounts page" >}}
+
+The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
+
+You can find **Payment Method** at the bottom of the page. Depending on the payment method, you see either an invoice or the credit card data.
+
+{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the marketplace in the past. These cards are not shown here. Only the last credit card which is registered as the credit card for your company's billing account is shown here. This card will also be used for the renewal of the existing subscriptions.{{% /alert %}}
+
+If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and then click **Update Details**.
+
+## 12 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](/developerportal/control-center/data-hub-admin/).
 
-## 12 Marketplace Content {#marketplace-content}
+## 13 Marketplace Content {#marketplace-content}
 
 The **Marketplace Content** page offers a dashboard where you can manage the visibility of public and [private Marketplace components](/appstore/general/app-store-overview/#company-content) in Studio for your company's users. Currently, you can only configure the visibility of widgets. 
 
@@ -241,4 +255,4 @@ The list has the following columns:
 
 * **Studio Visibility** – You can toggle the button to configure whether the component is visible in Studio's **Toolbox** to your company's users. 
 
-## 13 Documents in This Category
+## 14 Documents in This Category

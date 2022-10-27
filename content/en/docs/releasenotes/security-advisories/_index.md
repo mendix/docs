@@ -21,6 +21,7 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| CVE-2022-37011 | 7.4 |  [Authentication Bypass Vulnerability in Mendix SAML](https://cert-portal.siemens.com/productcert/pdf/ssa-638652.pdf) | See the SSA description for remediation details. |
 | <a name="34466"></a>CVE-2022-34466 | 6.5 | [Expression Injection Vulnerability in Mendix Applications](https://cert-portal.siemens.com/productcert/pdf/ssa-492173.pdf) | See the SSA description for remediation details. |
 | <a name="31257"></a>CVE-2022-31257 | 4.9 | [Improper Access Control Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-433782.pdf) | See the SSA description for remediation details. |
 | CVE-2022-34467 | 6.5 | [XML Entity Expansion Injection Vulnerability in Mendix Excel Importer Module](https://cert-portal.siemens.com/productcert/pdf/ssa-610768.pdf) | See the SSA description for remediation details. |

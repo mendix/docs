@@ -9,7 +9,7 @@ tags: ["Mendix Cloud", "cloud", "v3", "Disk Space"]
 ---
 
 {{% alert color="warning" %}}
-Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
+Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
 {{% /alert %}}
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ Each Mendix environment consists of an application server (app-node) and a datab
 All Mendix Cloud environments are running on an **'S'** container by default.
 An **'S'** container consists of:
 
-* 10GB disk space
+* 10 GB disk space
 * 1 GB Mx RAM
 * 1 GB DB RAM
 

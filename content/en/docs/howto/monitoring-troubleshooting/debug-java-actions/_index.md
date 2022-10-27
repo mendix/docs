@@ -1,8 +1,9 @@
 ---
 title: "Debug Java Actions"
 url: /howto/monitoring-troubleshooting/debug-java-actions/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 4
+description: "Describes how to set breakpoints and debug Java actions in Eclipse."
 tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 
@@ -66,6 +67,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto/monitoring-troubleshooting/log-levels/)
-* [Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows/)
-* [Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely/)
+* [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
+* [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * [Java Actions](/refguide/java-actions/)

@@ -81,7 +81,7 @@ These steps cover downloading content from the Marketplace available in Studio P
 3. Click the Marketplace icon in the top menu bar to open it in Studio Pro. The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
 4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issue.
 5. Click the component (or the **Read more** button on the right side) to show the details of the component.
-6. Continue from [step 6](step-six) above.
+6. Continue from [step 6](#step-six) above.
 
 ### 2.2 Importing Content from App Explorer {#import}
 

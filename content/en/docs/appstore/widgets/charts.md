@@ -83,7 +83,6 @@ To see available options and useful examples, see Plotly's [JavaScript Figure Re
 
 For more information on saving custom settings for a chart, see the [Chart customization ](#customization).
 
-
 #### 2.2.3 Show Legend
 
 {{< figure src="/attachments/appstore/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." >}}
@@ -103,17 +102,17 @@ This property controls horizontal and vertical rulers of the chart:
 * **Vertical** – Only a vertical ruler is visible.
 * **Both** – Both types of rulers are visible.
 
-### 3 Dimensions
+## 3 Dimensions
 
-#### 3.1 Width Unit
+### 3.1 Width Unit
 
 This property controls the unit measuring the widget (it can be **percentage** or **pixels**).
 
-#### 3.2 Width
+### 3.2 Width
 
 This property controls width of the widget.
 
-#### 3.3 Height Unit
+### 3.3 Height Unit
 
 This property controls the unit for measuring widget height:
 
@@ -121,24 +120,23 @@ This property controls the unit for measuring widget height:
 * **Pixels** – This uses pixels as height unit (a good option for most cases).
 * **Percentage of parent** – Height is measured relative to a parent **height** property (only works when parent has **height** CSS property).
 
-#### 3.4 Height
+### 3.4 Height
 
 This property controls height of the widget.
 
-### 4 Advanced
+## 4 Advanced
 
-#### 4.1 Enable Theme Folder Config
+### 4.1 Enable Theme Folder Config
 
 If set to **Yes** this widget will try to load global chart settings specified in the *theme/web/com.mendix.charts.json* file. Before using this feature make sure this file is present in your app.
 
-#### 4.2 Custom Layout
+### 4.2 Custom Layout
 
 Please, find more details in [Custom Layout](#custom-layout) in customization section.
 
-#### 4.3 Custom Configurations
+### 4.3 Custom Configurations
 
 Please, find more details in [Custom Configurations](#custom-configurations) in customization section.
-
 
 ## 5 Chart-Specific Settings
 

@@ -70,7 +70,7 @@ The settings below influence the behavior of the log files. These settings can o
 | ClientQueryTimeout | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. |   |
 | DatabaseJdbcUrl | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). This feature is not supported for PostgreSQL databases. |   |
 | DatabaseUseSsl | For PostgreSQL databases, defines whether the connection will be made using SSL. | false |
-| DatabaseUseIntegratedSecurity | This setting defines whether integrated security should be used for SQL Server. If true, user name and password will not be used. | false |
+| DatabaseUseIntegratedSecurity | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. | false |
 | LogMinDurationQuery | Defines whether database queries are logged via the ConnectionBus_Queries log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the ConnectionBus_Queries log node to TRACE to show more information about the form or the microflow which leads to this query. |   |
 | OracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS. |   |
 | ReadCommittedSnapshot | Defines whether the READ_COMMITTED_SNAPSHOT option of Microsoft SQL Server must be enabled or not. For more information, see the [Transaction Locking and Row Versioning Guide](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15). The value can be true or false. | true |
@@ -109,7 +109,7 @@ Before the data copy process starts, the source database will also be brought in
 | SourceDatabasePassword | The password for the connection to the source database. |   |
 | SourceDatabaseType | The type of the source database.
 Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
-| SourceDatabaseUseIntegratedSecurity | This setting defines whether integrated security should be used for SQL Server. If true, user name and password will not be used. | false |
+| SourceDatabaseUseIntegratedSecurity | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. | false |
 | SourceDatabaseUseSsl | For PostgreSQL databases, defines whether the connection to the source database will be made using SSL. | false |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |

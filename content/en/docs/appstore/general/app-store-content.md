@@ -58,8 +58,7 @@ There are three ways to install a Marketplace component, which are described in 
 
     The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details) in the online Mendix Marketplace.
 
-6. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
-7. <a name="step-seven"></a>Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+6. <a name="step-seven"></a>Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
     * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
         1. Select one of these options:
@@ -82,8 +81,7 @@ These steps cover downloading content from the Marketplace available in Studio P
 3. Click the Marketplace icon in the top menu bar to open it in Studio Pro. The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
 4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](/appstore/general/app-store-overview/) due to synchronization issue.
 5. Click the component (or the **Read more** button on the right side) to show the details of the component.
-6. Check the **Mendix Version** on the **Overview** tab. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use. 
-7. Continue from [step 7](step-seven) above.
+6. Continue from [step 7](step-seven) above.
 
 ### 2.2 Importing Content from App Explorer {#import}
 

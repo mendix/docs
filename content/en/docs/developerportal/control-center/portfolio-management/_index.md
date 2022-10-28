@@ -9,9 +9,9 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) app provides powerful capabilities for project portfolio management. It empowers you to maximize project value in line with your business strategy by offering visibility and tools for value assessment, effort estimation, planing, and tracking.
+The [Portfolio Management](https://portfolio.mendix.com) app helps companies maximize project value throughout the app lifecycle. This application allows you to plan, track progress, estimate, and assess the value of different projects.
 
-With Portfolio Management app, you launch and manage your projects – a project is what you manage as you work along the project development lifecycle, and an app can be the result of one project, or multiple projects – if the app is complex and big. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+{{% todo %}}Add information where to find portfolio management in the navigation within the mx platform{{%  /todo  %}}
 
 The Portfolio Management app is available to all Mendix Cloud customers. Mendix Admins can access all portfolios within their company. 
 
@@ -27,17 +27,115 @@ When a Mendix Admin starts the Portfolio Management app for the first time and i
 
 Click a portfolio to open the **Project Overview** page, which gives an overview of all the projects in this portfolio.
 
-On the top, you can search for a project in the search bar. Clicking **Create New Project** allows you to [create a new project](#create-new-project).
-
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/projects-overview.png" >}}
 
 {{% alert type="info" %}}
 For the Public Beta version, it is only possible to have one portfolio board for an organization. We aim to provide the capability to create multiple portfolio boards in later versions. Stay tuned.
 {{% /alert %}}
 
-The **Project Overview** page offers multiple views. You can [change your view](#change-view).
+On the top of the page, you can search for a project in the search bar.
 
-### 2.1 Changing Your View {#change-view}
+On the upper-right corner, you can use the **Filters** to filter projects. The drop-box next to the **Filters** allows you to [change your view](#change-view). Clicking the **Create New Project** button allows you to [create a new project](#create-new-project).
+
+### 2.1 Creating a New Project {#create-new-project}
+
+{{% alert type="info" %}}
+Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
+{{% /alert %}}
+
+In the Portfolio Management app, a project is what you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+
+To create a new project, do as follows:
+
+1. Go to the **Projects Overview** page.
+
+2. Click **Create New Project**.
+
+3. Enter the **Project Name** and the **Stage** in which the project is. 
+
+4. Click **Create Project**. The **Project** is created and appears on the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
+
+5. Select **Tags** for the project. You can use tags to classify your projects, for example by departments or types. You can select existing tags, or create new tags. 
+
+   {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
+
+6. Enter the **Description** of the project.
+
+7. If there is an existing app that you want to change or if development is already in progress, you can link the app to this project:
+
+   1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
+
+   2. Select the app that you want to link to the project.
+
+   If you woud like to see more information about a linked app, click the app name after it is linked.
+
+8. Set the **Owner** for the project.
+
+9. Select the **Stage**, **Department**, **Country**, and **Use Case** for the project.
+
+   {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+
+10. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
+
+11. Click **Planning** to show all the fields in this section. Set the following dates in this section:
+
+    * **Intake** – This is the time when the project is accepted based on business requirements.
+    * **Start Date** – This is the time when the first actions are taken to start implementation.
+    * **Go-Live date** – This is the time when the app is expected to be up and running.
+
+12. Click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
+
+    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about these models and the components of each model, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section or the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*{{% /alert %}}
+
+13. Click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
+
+    * **Type of Value** – This is the type of the value that is created by the project.
+
+      {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+
+    * **Frequency** – This indicates whether the value is **Once-off** or **Recurring**.
+
+    * **Value** – This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
+
+    * **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
+
+      If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
+
+14. If you want to add a note, click **Notes**, and then click **Post Note** after you add the note.
+
+15. Click **Save**. All the details are saved for the new project.
+
+#### 2.1.1 Managing Tags {#manage-tags}
+
+While you are in the process of [creating a new project](#create-new-project) or [editing a project](#edit-delete-project), you can manage tags as follows:
+
+On the **Edit Project** side pane, click the settings icon next to the **Tags** text box.
+
+{{< figure src="/attachments/developerportal/control-center/portfolio-management/manage-tags.png" >}}
+
+The **Manage Tags** dialog box opens.
+
+{{< figure src="/attachments/developerportal/control-center/portfolio-management/manage-tags-dialog-box.png" >}}
+
+To create a new tag, do as follows:
+
+1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new label.
+2. Enter the name for the new tag in the text box.
+3. If you want to change the color of the new label, click the colored circle and select a different color.
+4. Click the check mark icon to save the new tag.
+
+To edit an existing tag, do as follows:
+
+1. To change the tag name, click the name of the tag. After the name becomes editable. Edit the name in the text box, and then click outside the text box to save the change.
+2. To change the tag color, click the colored circle, and select a different color.
+
+To delete an existing tag, do as follows:
+
+1. Hover over the row where the tag is listed, a delete icon (red trashcan) appears at the end of the row.
+2. Click the delete icon. The **Confirmation** dialog box opens.
+3. Click **Delete Tag**.
+
+### 2.2 Changing Your View {#change-view}
 
 To change your view on the **Projects Overview** page, click the drop-down list on the upper-right corner, and then select one of the following views:
 
@@ -51,9 +149,11 @@ To change your view on the **Projects Overview** page, click the drop-down list 
 
   {{% alert color="info" %}}You can see either **WSFJ Prioritization** or **RICE Prioritization** here, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-#### 2.1.1 Kanban View {#kanban-view}
+#### 2.2.1 Kanban View {#kanban-view}
 
 In Kanban view, all the projects are represented by project cards, and are categorized in different columns. A column indicates a the stage that a project is currently in. To move a project to a different stage, hover over the project card, and then click the **>** or **<** icon on the left or right side of the card. 
+
+{{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 To filter projects, you can select a filter from the **Filters** drop-down list on the top of the page.
 
@@ -83,7 +183,7 @@ Each project card shows the following information:
 
 * Avatar of the project owner (⑦) – Hovering over the avatar shows the name of the project owner.
 
-#### 2.1.2 List View {#list-view}
+#### 2.2.2 List View {#list-view}
 
 In the list view, projects are shown in a list.  Clicking the header of a column sequences the projects using the values in that column.
 
@@ -96,6 +196,8 @@ The list contains the following information:
 * **Department** – This is the department to which the project belongs.
 
 * **Stage** – This shows which stage the project is currently in.
+
+  {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 * **Intake** – This is the time when the project is accepted based on business requirements.
 
@@ -122,6 +224,8 @@ The list contains the following information:
 * **Project** – Clicking it opens a [side pane](#view-project) that shows project details.
 
 * **Stage** – This shows which stage the project is currently in.
+
+  {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 * **Business Value** – This indicates how much business value this project generates. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
@@ -151,6 +255,8 @@ The list contains the following information:
 
 * **Stage** – This shows which stage the project is currently in.
 
+  {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+
 * **Reach** – This is the estimated number of relevant users that the project may affect within a time period. You must enter an integer in this field.
 
 * **Impact** – This is the estimated amount of impact that the project may have on individual users. You can select **Massive**, **High**, **Medium**, **Low**, or **Minimal**.
@@ -179,68 +285,7 @@ The list contains the following information:
 
 For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.
 
-### 2.3 Creating a New Project {#create-new-project}
-
-{{% alert type="info" %}}
-Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
-{{% /alert %}}
-
-1. Go to the **Projects Overview** page.
-
-2. Click **Create New Project**.
-
-3. Enter the **Project Name** and the **Stage** in which the project is. 
-
-4. Click **Create Project**. The **Project** is created and appears on the **Projects Overview** page. A side pane opens on the right side of the page where you can add the details of the new project.
-
-5. Select **Tags** for the project. You can select existing tags or create new tags.
-
-6. Enter the **Description** of the project.
-
-7.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project:
-
-    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
-
-    2. Select the app that you want to link to the project.
-
-    If you woud like to see more information about a linked app, click the app name after it is linked.
-
-8. Set the **Owner** for the project.
-
-9. Select the **Stage**, **Department**, **Country**, and **Use Case** for the project.
-
-   {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
-
-10. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
-
-11. Click **Planning** to show all the fields in this section. Set the following dates in this section:
-
-    * **Intake** – This is the time when the project is accepted based on business requirements.
-    * **Start Date** – This is the time when the first actions are taken to start implementation.
-    * **Go-Live date** – This is the time when the app is expected to be up and running.
-
-12. Click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
-
-    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about these models and the components of each model, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section or the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*{{% /alert %}}
-
-13. Click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
-
-    * **Type of Value** – This is the type of the value that is created by the project.
-
-      {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
-
-    * **Frequency** – This indicates whether the value is **Once-off** or **Recurring**.
-    * **Value** – This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
-
-    *  **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
-
-      If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
-
-14. If you want to add a note, click **Notes**, and then click **Post Note** after you add the note.
-
-15. Click **Save**. All the details are saved for the new project.
-
-### 2.4 Viewing Project Details {#view-project}
+### 2.3 Viewing Project Details {#view-project}
 
 On the **Project Overview** page, if you click a project, a side pane opens on the right side to show project details.
 
@@ -254,7 +299,7 @@ Only Portfolio Managers can edit, archive, or delete a project. For more informa
 
 When you view project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
 
-### 2.5 Editing or Deleting a Project {#edit-delete-project}
+### 2.4 Editing or Deleting a Project {#edit-delete-project}
 
 {{% alert type="info" %}}
 Only Portfolio Managers can edit or delete an existing project. For more information on roles and permissions, see [Access Management](#access-management).
@@ -262,7 +307,7 @@ Only Portfolio Managers can edit or delete an existing project. For more informa
 
 To edit or delete a project, go to the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Edit** or **Delete**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Edit** or **Delete**.
 
-### 2.6 Archiving a Project {#archive-project}
+### 2.5 Archiving a Project {#archive-project}
 
 When a project is finished or the project is not relevant for the current time being, you can archive a project.
 
@@ -288,7 +333,7 @@ The **Archived Projects** page shows all the projects that are archived. You can
 
 The list contains the following information:
 
-* **Project Name** – Clicking it opens a [side pane](#view-project) that shows the details of the archived project as well as why the project was archived, additional notes, who archived the project, and when.
+* **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional notes, who archived the project, and when.
 
   {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Note**. You cannot edit any other information.{{% /alert %}}
 
@@ -302,11 +347,16 @@ The list contains the following information:
 
 * **Archived by** – This is the name of the person who archived the project.
 
-* Ellipsis (**...**) icon – Clicking the icon opens a pop-up menu that enables you to restore or delete the archived project.
+* Ellipsis (**...**) icon – Clicking the icon opens a pop-up menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project.
 
   {{% alert type="info" %}}
   Only Portfolio Managers can restore or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
+### 3.1 Restoring or Deleting an Archived Project {#restore-delete-archived-project}
+
+To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis icon (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the **Projects Overview** page.
+
+Alternatively, to delete an archived project, you can also click the ellipsis icon (**...**) in the side pane where you view the archived project details, and then select **Delete**.
 
 ## 4 Access Management Page {#access-management}
 
@@ -314,15 +364,15 @@ The **Access Management** page shows all the users who have access to this portf
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/access-management.png" >}}
 
-The access roles are either Portfolio Managers or Users. Portfolio Managers can give other users access to the portfolio and define their access roles.  Mendix Admins are by default Portfolio Managers.
+There are two access roles: Portfolio Managers or Users. Mendix Admins are by default Portfolio Managers.
 
 The table below shows the permissions of Portfolio Managers and Users:
 
 | Action                            | Portfolio Manager                                            | User                                                         |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Invite new users                  | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
-| Remove user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
-| Update user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
+| Remove user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}A Portfolio Manager cannot remove the permissions and role of another Portfolio Manager if the latter is a Mendix Admin.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
+| Update user permissions and roles | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}}{{% alert type="info" %}}A Portfolio Manager cannot update the permissions and role of another Portfolio Manager if the latter is a Mendix Admin.{{% /alert %}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
 | View user access information      | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} |
 | Manage portfolio settings         | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
 | Create new projects               | {{< figure src="/attachments/developerportal/control-center/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/control-center/portfolio-management/cross-mark.svg" >}} |
@@ -347,10 +397,11 @@ The table below shows the permissions of Portfolio Managers and Users:
 6. Repeat steps 2 and 4 until you add all the users.
 7. Click **Send Invites**.
 
-You can find the users that you just added on the **Access Management** page. Their **Status** should be as follows:
+The users that you added now appear on the **Access Management** page. 
 
-* For users outside your company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** on the **Access Management** page is **Pending**. After they accept the invitation, their **Status** will change to **Active**.
-* For users within your company who do not have a Mendix account, their **Status** on the **Access Management** page is **Pending**. After they make a Mendix account, their **Status** will become **Active**.
+For users outside your company, they will receive an invitation email. Once they accept the invitation, their **Status** will change from **Pending** to **Active**. 
+
+For users in your company, if they have a Mendix account, their **Status** will be **Active** immediately; and if they do not have an Mendix account, their **Status** will change from **Pending** to **Active** after they create a Mendix account.
 
 ### 4.2 Editing and Deleting a User
 

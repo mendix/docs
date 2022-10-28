@@ -116,7 +116,7 @@ The following settings are specific for this event:
 
 The [microflow](/refguide/microflow/) that should be executed.
 
-#### 3.3.2 Microflow Settings
+#### 3.3.2 Microflow Settings {#microflow-settings}
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 

@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### October 20th, 2022
+
+#### Fixes
+
+* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Private Beta).
+
 ### October 6th, 2022
 
 #### Improvements

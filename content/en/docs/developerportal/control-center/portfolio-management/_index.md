@@ -358,7 +358,7 @@ The list contains the following information:
 Only Portfolio Managers can restore or delete an archived project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis icon (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the [Projects Overview](#project-overview) page.
+To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis icon (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the [Projects Overview](#projects-overview) page.
 
 Alternatively, to delete an archived project, you can also click the ellipsis icon (**...**) in the side pane where you view the archived project details, and then select **Delete**.
 

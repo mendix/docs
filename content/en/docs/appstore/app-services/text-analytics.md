@@ -48,7 +48,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ### 2.1 Obtaining a AWS credentials {#obtain-aws-credentials}
 
-Translation is a premium Mendix product that requires AWS authentication. To use this app service in your app, first you must obtain AWS credentials. For more information, see [AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
+Text Analytics is a premium Mendix product that requires AWS authentication. To use this app service in your app, first you must obtain AWS credentials. For more information, see [AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
 
 ### 2.2 Installing the Component in Your App
 
@@ -407,7 +407,7 @@ If you deploy your app locally or as a Mendix Free App, configure the AWS creden
 2. Default AWS region configuration:
     1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
     2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-    3. On the **Constants** tab, create a new constant with the predefined constant **Translation.AWS_Default_Region**.
+    3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.AWS_Default_Region**.
     4. Fill in the **Value** with the AWS region that you obtained.
     5. Click **OK** to save the settings.
 
@@ -417,19 +417,19 @@ If you deploy your app locally or as a Mendix Free App, configure the AWS creden
 
 #### 3.7.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the AWS region in the Developer Portal.
+If you deploy your app in the Mendix Cloud, configure the AWS region in the [Developer Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-{{< figure src="/attachments/appstore/app-services/translation/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
+{{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
 
 If you have already deployed your app, change the existing **AWS_Default_Region** constant value on the **Model Options** tab and restart the app.
 
-{{< figure src="/attachments/appstore/app-services/translation/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
+{{< figure src="/attachments/appstore/app-services/text-analytics/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
 
 #### 3.7.3 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/).
+If you deploy your app in your own environment, you need to configure the AWS region in your own environment. For more information, see [Deployment](/developerportal/deploy/).
 
 ## 4 Usage
 
@@ -439,12 +439,13 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateDominantLanguageDetector*.
-    2. Add the **CreateDominantLanguageDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-    3. Double-click the **CreateDominantLanguageDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    3. Add the **CreateDominantLanguageDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    4. Double-click the **CreateDominantLanguageDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createdominantlanguagedetector-microflow.png" alt="call-createdominantlanguagedetector-microflow" >}}
 
-    4. Right-click the microflow activity you just added and select **Set $detector as return value** in the pop-up menu.
+    5. Right-click the microflow activity you just added and select **Set $detector as return value** in the pop-up menu.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/createdominantlanguagedetector-nanoflow.png" alt="createdominantlanguagedetector-nanoflow" >}}
 
@@ -460,34 +461,40 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
     2. For **Data source**, select the **InputText** attribute from **Data view**.
     3. For **Label caption**, enter *Text*.
     4. Click **OK** to save the settings. 
-6. Inside the **Data view**, add a **Button** widget below the **Text area** widget.
-7. Change the settings of the **Button** widget as follows:
+6. Inside the **Data view** widget, Add a new **Data view** widget below the **Text area** widget.
+7. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Microflow**.
+    3. **Select** the **GetCredential** microflow for **Microflow**.
+    4. Click **OK** to save the settings. 
+8. Inside the GetCredential **Data view** widget, add a **Button** widget.
+9. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Detect Dominant Language*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, select the **DetectDominantLanguage** nanoflow from the **TextAnalytics** > **USE_ME** folder.
     5. Click **OK** to save the settings. 
-8. Inside the **Data view**, add a **Template grid** widget below the **Button** widget.
-9. Change the settings of the **Template grid** widget as follows:
+10. Inside the **Data view**, add a **Template grid** widget below the **Button** widget.
+11. Change the settings of the **Template grid** widget as follows:
     1. Double-click the **Template grid** widget to open the **Edit Template Grid** dialog box.
     2. Go to the **Data source** tab.
     3. Set **Type** to **Association**.
     4. Set **Entity (path)** to **TextAnalytics.DominantLanguageDetector_DominantLanguages/TextAnalytics.DominantLanguage**.
     5. Click **OK** to save the settings. 
-10. Inside the **Template grid** widget, add a **Text box** widget.
-11. Change the settings of the **Text box** widget as follows:
+12. Inside the **Template grid** widget, add a **Text box** widget.
+13. Change the settings of the **Text box** widget as follows:
     1. Double-click the **Text area** widget to open the **Edit Text box** dialog box.
     2. Set **Data source** to **DominantLanguage_Language/Language/Name**.
     3. For **Label caption**, enter *Language*.
     4. Click **OK** to save the settings.
-12. Inside the **Template grid** widget, add a second **Text box** widget below the **Text box** widget that you just created.
-13. Change the settings of the **Text area** widget as follows:
+14. Inside the **Template grid** widget, add a second **Text box** widget below the **Text box** widget that you just created.
+15. Change the settings of the **Text area** widget as follows:
     1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
     2. Set **Data source** to **ConfidenceScore** from **Template grid**.
     3. For **Label caption**, enter *Score*.
     4. Click **OK** to save the settings.
-14. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
-15. Run your app locally. You can perform language detection directly in the browser:
+16. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
+17. Run your app locally. You can perform language detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-language-detection.png" alt="runlocally-language-detection" >}}
 
@@ -497,12 +504,13 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateSentimentDetector*. 
-    2. Add the **CreateSentimentDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-    3. Double-click the **CreateSentimentDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    3. Add the **CreateSentimentDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    4. Double-click the **CreateSentimentDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createsentimentdetector-microflow.png" alt="call-createsentimentdetector-microflow" >}}
 
-    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+    5. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/createsentimentdetector-nanoflow.png" alt="createsentimentdetector-nanoflow" >}}
 
@@ -514,7 +522,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     5. For **Name**, enter *detector*.
     6. Click **OK** to save the changes.
     7. Add the **GetCredential** microflow from the sample module to the microflow. 
-    8. Add the **GetSupportedLanguages** microflow from the **Translation** > **USE_ME** folder to the microflow.
+    8. Add the **GetSupportedLanguages** microflow from the **TextAnalytics** > **USE_ME** folder to the microflow.
     9. Right-click the action activity named GetSupportedLanguages and select **Set $language as return value** in the pop-up menu. 
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/getdetectorsupportedlanguages-microflow.png" alt="getdetectorsupportedlanguages-microflow" >}}
@@ -539,28 +547,34 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
     2. For **Data source**, select the **InputText** attribute from **Data view**.
     3. For **Label caption**, enter *Text*.
+    4. Click **OK** to save the settings.
+9. Inside the **Data view** widget, Add a new **Data view** widget below the **Text area** widget.
+10. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Microflow**.
+    3. **Select** the **GetCredential** microflow for **Microflow**.
     4. Click **OK** to save the settings. 
-9. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-10. Change the settings of the **Button** widget as follows:
+11. Inside the GetCredential **Data view** widget, add a **Button** widget.
+12. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For Caption, enter *Detect Sentiment*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, select the **DetectSentiment** nanoflow from the **TextAnalytics** > **USE_ME** folder.
     5. Click **OK** to save the settings. 
-11. Inside the **Data view** widget, add another **Data view** below the **Button** widget.
-12. Change the settings of the **Data view** widget as follows:
+13. Inside the **Data view** widget, add another **Data view** below the **Button** widget.
+14. Change the settings of the **Data view** widget as follows:
     1. Double-click the **Data view** widget to open the **Data view** dialog box.
     2. Set **Entity (path)** to **TextAnalytics.SentimentDetector_Sentiment/TextAnalytics.Sentiment**.
     3. Click **OK** to save the settings. 
     4. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
-13. Inside the **Data view** widget that you just created, add another **Data view**.
-14. Change the settings of the second **Data view** widget as follows:
+15. Inside the **Data view** widget that you just created, add another **Data view**.
+16. Change the settings of the second **Data view** widget as follows:
     1. Double-click the **Data view** widget to open the **Data view** dialog box.
     2. Set **Entity (path)** to **TextAnalytics.Sentiment_SentimentScore/TextAnalytics.SentimentScore**.
     3. Click **OK** to save the settings.  
     4. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
-15. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
-16. Run your app locally. You can perform sentiment detection directly in the browser:
+17. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
+18. Run your app locally. You can perform sentiment detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-sentiment-detection.png" alt="runlocally-sentiment-detection" >}}
 
@@ -570,12 +584,13 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateKeyPhraseDetector*.    
-    2. Add the **CreateKeyPhraseDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-    3. Double-click the **CreateKeyPhraseDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    3. Add the **CreateKeyPhraseDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    4. Double-click the **CreateKeyPhraseDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createkeyphrasedetector-microflow.png" alt="call-createkeyphrasedetector-microflow" >}}
 
-    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+    5. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/createkeyphrasedetector-nanoflow.png" alt="createkeyphrasedetector-nanoflow" >}}
 
@@ -600,15 +615,21 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     2. For **Data source**, select the **InputText** attribute from **Data view**.
     3. For **Label caption**, enter *Text*.
     4. Click **OK** to save the settings.
-8. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-9. Change the settings of the **Button** widget as follows:
+8. Inside the **Data view** widget, Add a new **Data view** widget below the **Text area** widget.
+9. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Microflow**.
+    3. **Select** the **GetCredential** microflow for **Microflow**.
+    4. Click **OK** to save the settings. 
+10. Inside the GetCredential **Data view** widget, add a **Button** widget.
+11. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** to open the **Action Button** dialog box.
     2. For Caption, enter *Detect Key Phrases*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, select the **DetectKeyPhrases** nanoflow from the **TextAnalytics** > **USE_ME** folder.
     5. Click **OK** to save the settings.
-10. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
-11. Change the settings of the **Data grid** widget as follows:
+12. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
+13. Change the settings of the **Data grid** widget as follows:
     1. Double-click the **Data grid** widget to open the **Edit Data Grid** dialog box.
     2. Go to the **Data source** tab.
     3. For the **Type** of the **Data source**, select **Association**.
@@ -616,8 +637,8 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
-13. Run your app locally. You can perform key phrase detection directly in the browser:
+14. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
+15. Run your app locally. You can perform key phrase detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-keyphrase-detection.png" alt="runlocally-keyphrase-detection" >}}
 
@@ -627,12 +648,13 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateEntityDetector*.
-    2. Add the **CreateEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-    3. Double-click the **CreateEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    3. Add the **CreateEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    4. Double-click the **CreateEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createentitydetector-microflow.png" alt="call-createentitydetector-microflow" >}}
 
-    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+    5. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/createentitydetector-nanoflow.png" alt="createentitydetector-nanoflow" >}}
 
@@ -657,15 +679,21 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
     2. For **Data source**, select the **InputText** attribute from **Data view**.
     3. For **Label caption**, enter *Text*.
     4. Click **OK** to save the settings. 
-8. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-9. Change the settings of the **Button** widget as follows:
+8. Inside the **Data view** widget, Add a new **Data view** widget below the **Text area** widget.
+9. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Microflow**.
+    3. **Select** the **GetCredential** microflow for **Microflow**.
+    4. Click **OK** to save the settings. 
+10. Inside the GetCredential **Data view** widget, add a **Button** widget.
+11. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For Caption, enter *Detect Entities*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, select the **DetectEntities** nanoflow from the **TextAnalytics** > **USE_ME** folder.
     5. Click **OK** to save the settings.
-10. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
-11. Change the settings of the **Data grid** widget as follows:
+12. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
+13. Change the settings of the **Data grid** widget as follows:
     1. Double-click the **Data grid** widget to open the **Edit Data Grid** dialog box.
     2. Go to the **Data source** tab.
     3. For the **Type** of the **Data source**, select **Association**.
@@ -673,8 +701,8 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
-13. Run your app locally. You can perform entity detection directly in the browser:
+14. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
+15. Run your app locally. You can perform entity detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-entities-detection.png" alt="runlocally-entities-detection" >}}
 
@@ -684,12 +712,13 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreatePiiEntityDetector*.
-    2. Add the **CreatePiiEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-    3. Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    3. Add the **CreatePiiEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    4. Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createpiientitydetector-microflow.png" alt="call-createpiientitydetector-microflow" >}}
 
-    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+    5. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/createpiientitydetector-nanoflow.png" alt="createpiientitydetector-nanoflow" >}}
 
@@ -714,15 +743,21 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     2. For **Data source**, select the **InputText** attribute from **Data view**.
     3. For **Label caption**, enter *Text*.
     4. Click **OK** to save the settings. 
-8. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-9. Change the settings of the **Button** widget as follows:
+8. Inside the **Data view** widget, Add a new **Data view** widget below the **Text area** widget.
+9. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Microflow**.
+    3. **Select** the **GetCredential** microflow for **Microflow**.
+    4. Click **OK** to save the settings. 
+10. Inside the GetCredential **Data view** widget, add a **Button** widget.
+11. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For Caption, enter *Detect PII Entities*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, select the **DetectPiiEntities** nanoflow from the **TextAnalytics** > **USE_ME** folder.
     5. Click **OK** to save the settings.
-10. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
-11. Change the settings of the **Data grid** widget as follows:
+12. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
+13. Change the settings of the **Data grid** widget as follows:
     1. Double-click the **Data grid** widget to open the **Edit Data Grid** dialog box.
     2. Go to the **Data source** tab.
     3. For the **Type** of the **Data source**, select **Association**.
@@ -730,8 +765,8 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
-13. Run your app locally. You can perform PII entity detection directly in the browser:
+14. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
+15. Run your app locally. You can perform PII entity detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-pii-entities-detection.png" alt="runlocally-pii-entities-detection" >}}
 
@@ -741,12 +776,13 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateSyntaxDetector*.
-    2. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-    3. Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    3. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    4. Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/call-createsyntaxdetector-microflow.png" alt="call-createsyntaxdetector-microflow" >}}
 
-    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+    5. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
         {{< figure src="/attachments/appstore/app-services/text-analytics/createsyntaxdetector-nanoflow.png" alt="createsyntaxdetector-nanoflow" >}}
 
@@ -771,15 +807,21 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
     2. For **Data source**, select the **InputText** attribute from **Data view**.
     3. For **Label caption**, enter *Text*.
     4. Click **OK** to save the settings.   
-8. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-9. Change the settings of the **Button** widget as follows:
+8. Inside the **Data view** widget, Add a new **Data view** widget below the **Text area** widget.
+9. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Microflow**.
+    3. **Select** the **GetCredential** microflow for **Microflow**.
+    4. Click **OK** to save the settings. 
+10. Inside the GetCredential **Data view** widget, add a **Button** widget.
+11. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For Caption, enter *Detect Syntax*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, select the **DetectSyntax** nanoflow from the **TextAnalytics** > **USE_ME** folder.
     5. Click **OK** to save the settings. 
-10. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
-11. Change the settings of the **Data grid** widget as follows:
+12. Inside the **Data view** widget, add a **Data grid** widget below the **Button** widget.
+13. Change the settings of the **Data grid** widget as follows:
     1. Double-click the **Data grid** widget to open the **Edit Data Grid** dialog box.
     2. Go to the **Data source** tab.
     3. For the **Type** of the **Data source**, select **Association**.
@@ -787,8 +829,8 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
     5. Click **OK** to save the settings.
     6. When the **Question** dialog box asks if you want to automatically fill the contents of the data view, click **Yes**.
     7. If needed, drag a column in the data grid to move it to a different place.
-12. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
-13. Run your app locally. You can perform syntax detection directly in the browser:
+14. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
+15. Run your app locally. You can perform syntax detection directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/text-analytics/runlocally-syntax-detection.png" alt="runlocally-syntax-detection" >}}
 

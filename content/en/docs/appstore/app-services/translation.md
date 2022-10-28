@@ -218,7 +218,7 @@ If you deploy your app locally or as a Mendix Free App, configure the AWS creden
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the AWS region in the Developer Portal.
+If you deploy your app in the Mendix Cloud, configure the AWS region in the [Developer Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
@@ -324,7 +324,7 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     2. For **Data source**, select **Microflow**.
     3. **Select** the **GetCredential** microflow for **Microflow**.
     4. Click **OK** to save the settings. 
-18. Inside the GetCredential **Data view** widget, add a **Button** widget below the **Text area** widget.
+18. Inside the GetCredential **Data view** widget, add a **Button** widget.
 19. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Translate*.

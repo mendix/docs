@@ -8,14 +8,17 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 ## 1 Introduction
 
-[AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector and the Amazon Rekognition connector.
+The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector and the Amazon Rekognition connector.
 
-There are two types of credentials that can be used through the AWS Authentication connector:
+The following types of credentials can be used through the AWS Authentication connector:
 
-- Static credentials
-- Session credentials
+| Credential type | Action |
+| --- | --- |
+| Signature version 4 headers | **GetSigV4Headers** |
+| Session credentials | **Get Session Credentials** |
+| Static credentials | **Get Static Credentials** |
 
-Delivered with the connector, the **Get Static Credentials** action and the **Get Session Credentials Credentials** action can help you generate static and session credentials, respectively. The actions both return a Credentials object, which can be used for authentication for other compatible AWS connectors.
+Delivered with the connector, the above actions can help you generate the type of credentials that you require. The actions  return a Credentials object, which can be used for authentication for other compatible AWS connectors.
 
 ### 1.1 Typical Use Cases
 
@@ -35,13 +38,13 @@ Static credentials use a mechanism with an access key and a secret.
 
 To create IAM Credentials using the AWS console, perform the following steps:
 
-1. In the [AWS Console](https://console.aws.amazon.com/console/home), choose the **IAM** service and select the **Users** tab.
+1. In the [AWS Console](https://console.aws.amazon.com/console/home), click **IAM** > **Users**.
 
-2. Either create or choose a user which has the required permissions. The permissions given to this user are beyond the scope of this document, but should be the minimum access required to perform the functions of your AWS connector(s).
+2. Either create or choose a user which has the required permissions. The permissions given to this user are beyond the scope of this document, but should be the minimum access required to perform the functions of your AWS connectors.
 
 3. For the chosen user, switch to the **Security credentials** tab.
 
-4. Either create an access key by clicking **Create access key** or use an existing access key ID.
+4. Either create an access key by clicking **Create access key**, or use an existing access key ID.
 
 5. Make a note of the **Secret Access Key** associated with the access key ID.
 
@@ -71,7 +74,7 @@ Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Rol
 
 #### 3.2.1 Setting up IAM Roles Anywhere on AWS
 
-For the setup of IAM Roles Anywhere, see [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html). Make sure that the user that you create or choose has the required permissions. The permissions given to this user are beyond the scope of this document, but should be the minimum access required to perform the functions of your AWS connector(s).
+For the setup of IAM Roles Anywhere, see [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html). Make sure that the user that you create or choose has the required permissions. The permissions given to this user are beyond the scope of this document, but should be the minimum access required to perform the functions of your AWS connectors.
 
 #### 3.2.2  Adding the Client Certificate in the Mendix Deployment Portal
 
@@ -79,11 +82,14 @@ To add the client certificate used for creating Trust Anchor in RolesAnywhere, p
 
 1. Log in to the Developer Portal, and select your app.
 
-2. Click **Environments** and then click **Details** on the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
+2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 
 3. Go to the **Network** tab.
 
-4. In the **Outgoing Connections Certificates** section, add the client certificate used for creating Trust Anchor in RolesAnywhere. 
+4. In the **Outgoing Connections Certificates** section, add the client certificate used for creating Trust Anchor in RolesAnywhere.
+    {{% alert color="info" %}}
+    The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12.
+    {{% /alert %}}
 
 5. From the list, select the client certificate that you just added and then click **Details**.
 
@@ -132,16 +138,18 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 2. Create a new configuration or edit an existing configuration.
 
-3. Go to the **Custom** tab for the configuration, and add runtime settings **ClientCertificates** and **ClientCertificatePasswords**.
+3. Go to the **Custom** tab for the configuration, and add the **ClientCertificates** and **ClientCertificatePasswords** runtime settings.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 
    {{% alert color="info" %}}Fore more information, see [Runtime Customisation](/refguide/custom-settings/).{{% /alert %}}
 
-4. Click **OK** to save all the changes.
+4. Click **OK**.
 
 5. Go to the microflow that uses the **Get Session Credentials** action, and double-click the **Get Session Credentials** action to open the **Get Session Credentials** dialog box.
 
 6. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/client-certificate-id.png" >}}
+
+   

@@ -1,13 +1,13 @@
 ---
-title: "Data Hub"
+title: "Data Hub Catalog"
 url: /releasenotes/data-hub/
-description: "Release notes for updates to the Mendix Data Hub"
+description: "Release notes for updates to the Mendix Data Hub Catalog"
 tags: ["data hub", "data hub catalog", "data hub Landscape"]
 weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
+These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 ## 2022
 

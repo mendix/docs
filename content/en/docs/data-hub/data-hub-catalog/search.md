@@ -404,7 +404,7 @@ See the [Curation Bar](#curation-bar) section below for changing **Discoverabili
 The following discoverability values can be set:
 
 * **Discoverable** – all users in your company can see and consume the asset in the Data Hub Catalog and Studio Pro 
-* **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the Data Hub Admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.
+* **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the company admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.
 
 #### 3.6.5 Validated
 

@@ -16,7 +16,7 @@ The [Portfolio Management](/developerportal/control-center/portfolio-management/
 
 ## 2 WSJF {#wsjf}
 
-Weighted Shortest Job First (WSJF) score is calculated as the cost of delay (CoD) divided by the job size of a project, and the CoD is the sum of the project's business value, time criticality, and risk reduction. If a project can deliver the most CoD with the smallest job size, it has the highest WSJF score, and provides the best economic return.
+Weighted Shortest Job First (WSJF) score is calculated as the cost of delay (CoD) divided by the job size of a project. The CoD is the sum of the project's business value, time criticality, and risk reduction. If a project can deliver the most CoD with the smallest job size, it has the highest WSJF score, and provides the best change of return.
 
 ### 2.1 Calculating CoD
 
@@ -24,7 +24,7 @@ You can calculate the CoD by adding up the following three primary components:
 
 * Business Value – This indicates how much business value this project generates. For example, if the project can generate great revenue to your business or lead to a potential high penalty or other negative effects if it gets delayed, it has high business value. You define the business value based on a relative estimation instead of using actual monetary values. In the Portfolio Management app, you can select **Highest**, **High**, **Medium**, **Low**, or **Lowest** to rate the business value of a project.
 * Time Criticality – This indicates how time-critical this project is. For example, if a project's business value decreases sharply over time or has a fixed deadline, it is very time-critical. In the Portfolio Management app, you can select **Highest**, **High**, **Medium**, **Low**, or **Lowest** to rate the time criticality of a project. The score should still be a relative estimation, instead of an absolute estimation.
-* Risk Reduction – This indicates how much risk this project reduces. For example, if a project can help secure your business in the market greatly, then it can get a high score. Similar to Business Value and Time Criticality, the Risk Reduction score is also a relative estimation. In the Portfolio Management app, you can set it to **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* Risk Reduction – This indicates how much this project will help mitigate or reduce future risks. For example, moving a project to the cloud might not generate direct revenue, but it will prevent data loss risk. In the Portfolio Management app, you can select **Highest**, **High**, **Medium**, **Low**, or **Lowest** to rate the risk reduction of a project.
 
 ### 2.2 Calculating Job Size
 
@@ -34,7 +34,7 @@ If the job size of a project is too big, we recommend you to split it into multi
 
 ## 3 RICE {#rice}
 
-You get the Reach Impact Confident Effort (RICE) score of a project by multiplying the Reach, Impact, and Confidence estimates and then dividing the product by the Effort estimate.
+You get the Reach Impact Confident Effort (RICE) score of a project by multiplying the Reach, Impact, and Confidence estimates and then dividing the product by the Effort estimate. A project with a higher RICE score has a better chance of return.
 
 * Reach – This is the estimated number of relevant users that the project may affect within a time period. You can define by yourself who the users are and how the reach is defined. You must enter an integer for the Reach value.
 

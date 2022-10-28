@@ -15,7 +15,7 @@ The [Portfolio Management](https://portfolio.mendix.com) app helps companies max
 
 The Portfolio Management app is available to all Mendix Cloud customers. Mendix Admins can access all portfolios within their company. 
 
-## 2 Projects Overview Page
+## 2 Projects Overview Page {#projects-overview}
 
 When you start the Portfolio Management app, you see all the portfolios of your company. 
 
@@ -35,7 +35,7 @@ For the Public Beta version, it is only possible to have one portfolio board for
 
 On the top of the page, you can search for a project in the search bar.
 
-On the upper-right corner, you can use the **Filters** to filter projects. The drop-box next to the **Filters** allows you to [change your view](#change-view). Clicking the **Create New Project** button allows you to [create a new project](#create-new-project).
+On the upper-right corner, you can use the **Filters** to filter projects. Using the drop-down list next to the **Filters**, you can [change your view](#change-view). Clicking the **Create New Project** button allows you to [create a new project](#create-new-project).
 
 ### 2.1 Creating a New Project {#create-new-project}
 
@@ -43,7 +43,7 @@ On the upper-right corner, you can use the **Filters** to filter projects. The d
 Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-In the Portfolio Management app, a project is what you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+In the Portfolio Management app, the term "Project" refers to a software project that you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
 
 To create a new project, do as follows:
 
@@ -53,7 +53,7 @@ To create a new project, do as follows:
 
 3. Enter the **Project Name** and the **Stage** in which the project is. 
 
-4. Click **Create Project**. The **Project** is created and appears on the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
+4. Click **Create Project**. The project is created and appears on the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
 
 5. Select **Tags** for the project. You can use tags to classify your projects, for example by departments or types. You can select existing tags, or create new tags. 
 
@@ -109,7 +109,7 @@ To create a new project, do as follows:
 
 While you are in the process of [creating a new project](#create-new-project) or [editing a project](#edit-delete-project), you can manage tags as follows:
 
-On the **Edit Project** side pane, click the settings icon next to the **Tags** text box.
+In the **Edit Project** side pane, click the settings icon next to the **Tags** text box.
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/manage-tags.png" >}}
 
@@ -119,9 +119,9 @@ The **Manage Tags** dialog box opens.
 
 To create a new tag, do as follows:
 
-1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new label.
-2. Enter the name for the new tag in the text box.
-3. If you want to change the color of the new label, click the colored circle and select a different color.
+1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
+2. In the text box, enter the name for the new tag.
+3. If you want to change the color of the new tag, click the colored circle and select a different color.
 4. Click the check mark icon to save the new tag.
 
 To edit an existing tag, do as follows:
@@ -227,11 +227,11 @@ The list contains the following information:
 
   {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-* **Business Value** – This indicates how much business value this project generates. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* **Business Value** – This indicates how much business value this project will generate. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
 * **Time Criticality** – This indicates how time-critical this project is. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
-* **Risk Reduction** – This indicates how much risk this project reduces. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
+* **Risk Reduction** – This indicates how much this project will help mitigate or reduce future risks. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
 
 * **Size** – The is the job size of the project. You can select **XL**, **L**, **M**, **S**, or **XS**.
 
@@ -354,7 +354,11 @@ The list contains the following information:
   {{% /alert %}}
 ### 3.1 Restoring or Deleting an Archived Project {#restore-delete-archived-project}
 
-To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis icon (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the **Projects Overview** page.
+{{% alert type="info" %}}
+Only Portfolio Managers can restore or delete an archived project. For more information on roles and permissions, see [Access Management](#access-management).
+{{% /alert %}}
+
+To restore or delete an archived project, go to the **Archived Projects** page, click the ellipsis icon (**...**) for that project, and then select **Restore** or **Delete**. After you restore an archived project, it goes back to the [Projects Overview](#project-overview) page.
 
 Alternatively, to delete an archived project, you can also click the ellipsis icon (**...**) in the side pane where you view the archived project details, and then select **Delete**.
 
@@ -401,7 +405,7 @@ The users that you added now appear on the **Access Management** page.
 
 For users outside your company, they will receive an invitation email. Once they accept the invitation, their **Status** will change from **Pending** to **Active**. 
 
-For users in your company, if they have a Mendix account, their **Status** will be **Active** immediately; and if they do not have an Mendix account, their **Status** will change from **Pending** to **Active** after they create a Mendix account.
+For users within your company, if they have a Mendix account, their **Status** will be **Active** immediately; and if they do not have an Mendix account, their **Status** will change from **Pending** to **Active** after they create a Mendix account.
 
 ### 4.2 Editing and Deleting a User
 

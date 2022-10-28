@@ -11,8 +11,6 @@ tags: ["studio pro"]
 
 Integration with other applications (other Mendix apps, or applications built with different technology) can be done using REST, OData, SOAP/Web Services, or Business Events. Mendix can import and export data from XML and JSON.
 
-Integration between Mendix applications is done best with REST services (for details, see [Published REST Service](/refguide/published-rest-services/) and [Call REST Service](/refguide/call-rest-action/)). 
-
 ### 2 REST Services
 
 Representational state transfer (REST) is an approach to consuming or exposing resources. It has gained popularity because of its simplicity, because no extensive schemas or contracts are needed to transfer data between endpoints. It uses the following:
@@ -27,20 +25,33 @@ To publish REST services, see:
 
 * [Published REST Services](/refguide/published-rest-services/), an overview in the Studio Pro guide
 * [Publish a REST Service](/howto/integration/publish-rest-service) for step-by-step instructions
+* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/), an overview of these system entities in your domain model
 
 To consume REST services, see:
 
 * [Consumed REST Services](/refguide/consumed-rest-services/), an overview in the Studio Pro guide
 * [Call REST Service](/refguide/call-rest-action/), a description of the microflow action
 * [Consume a REST Service](/howto/integration/consume-rest-service/) for step-by-step instructions
+* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/), an overview of these system entities in your domain model
 
 ### 3 OData Services
 
-OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide filtering, sorting, and pagination on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see Expose Data to BI Tools Using OData), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance.
+OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide filtering, sorting, and pagination on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see Expose Data to BI Tools Using OData), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. 
+
+Published OData services are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
 
 To publish OData services, see:
 
+* [Published OData Services](/refguide/publish-odata-services/), an overview in the Studio Pro guide
+* [Expose Data to BI Tools Using OData](/howto/integration/exposing-data-to-bi-tools-using-odata/), step-by-step instructions for a specific use case
+
 To consume OData services, see:
+
+* [Consumed OData Services](/refguide/consumed-odata-services/), an overview in the Studio Pro guide
+
+To wrap services, APIs, or databases in OData, see:
+
+* [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/).
 
 ### 4 Web Services
 
@@ -48,7 +59,15 @@ You can publish your own web services in a Mendix application. Published web ser
 
 To publish web services, see:
 
+* [Published Web Services](/refguide/published-web-services/), an overview in the Studio Pro guide
+* [Expose a Web Service](/howto/integration/expose-a-web-service/) for step-by-step instructions
+
 To consume web services, see:
+
+* [Consumed Web Services](/refguide/consumed-web-services/), an overview in the Studio Pro guide
+* [Call Web Service](/refguide/call-web-service-action/), a description of the microflow action
+* [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/) for step-by-step instructions
+* [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/) for step-by-step instructions
 
 ### 5 Business Event Services
 
@@ -58,20 +77,15 @@ The key difference between business events and traditional communication between
 
 To publish and consume business event services, see:
 
+* [Business Events Services](/refguide/business-event-services/), an overview in the Studio Pro guide
+* [Mendix Business Events](/appstore/modules/mendix-business-events/), detailed instructions about the required business events module
 
+### 6 XML and JSON
 
+Mendix can import and export data from and to JSON and XML. To learn more, see the following:
 
-{{% alert color="info" %}}
-For a [call REST service](/refguide/call-rest-action/) activity and JSON support in [mapping documents](/refguide/mapping-documents/), see [Consumed REST Services](/refguide/consumed-rest-services/).
-{{% /alert %}}{{% alert color="info" %}}
-For a [call web service](/refguide/call-web-service-action/) activity and support for SOAP web services/XML, see [Consumed Web Services](/refguide/consumed-web-services/).
-{{% /alert %}}
-
-## 2 Other Documents in This Section
-
-* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/)
-* [JSON Structures](/refguide/json-structures/)
-* [Message Definitions](/refguide/message-definitions/)
-* [Published OData Services](/refguide/published-odata-services/)
-* [XML Schemas](/refguide/xml-schemas/)
-* [Business Events Services](/refguide/business-event-services/)
+* [JSON Structures](/refguide/json-structures/), an overview in the Studio Pro guide
+* [Message Definitions](/refguide/message-definitions/), an overview in the Studio Pro guide
+* [XML Schemas](/refguide/xml-schemas/), an overview in the Studio Pro guide
+* [Import XML Documents](/howto/integration/importing-xml-documents/) for step-by-step instructions
+* [Export XML Documents](/howto/integration/export-xml-documents/) for step-by-step instructions

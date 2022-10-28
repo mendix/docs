@@ -15,6 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
+* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) in *Register OData Resources in the Data Hub Catalog*.
 * Sample data sources are now clearly indicated with a label.
 
 ### October 20th, 2022

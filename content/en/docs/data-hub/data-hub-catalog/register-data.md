@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/).
 * You have a Mendix account.
-* You have an exposed OData service that you are ready to register, or follow sections 3 and 4 in [this how-to](https://docs.mendix.com/data-hub/share-data/) to create one.
+* You have an exposed OData service that you are ready to register, or follow sections 3 and 4 in [Share Data Between Apps](/data-hub/share-data/) to create one.
 
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
@@ -44,7 +44,7 @@ If you are not using the Mendix Cloud to deploy your Mendix application, there a
 
 The Data Hub Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. You need to provide details about both the application and environment where the service is deployed in order to register your service.
 
-For detailed information on working outside of the Mendix Cloud, see [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
+For detailed information on working with external entities and the Catalog without the Mendix Cloud (for on-prem or local deployment), see [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
 
 ### 4.1 Registering a Service Through the Data Hub Catalog Registration API {#registration-api}
 
@@ -331,11 +331,11 @@ Publishers of a data source can let consuming developers know what they will nee
 
 The following methods are supported by the Data Hub Catalog:
 
-* Basic authentication – Authenticates from a username and password
-* Active session – For Mendix data sources, authenticates from the open and active browser session
-* Mendix SSO – For Mendix data sources, authenticates from single sign-on using the [Mendix SSO](/appstore/modules/mendix-sso/) module
-* OAuth – Authenticates with [OAuth](https://oauth.net/)
-* OpenID Connect – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
-* Other – Specify other ways to authenticate
+* **Basic authentication** – Authenticates from a username and password
+* **Active session** – For Mendix data sources, authenticates from the open and active browser session
+* **Mendix SSO** – For Mendix data sources, authenticates from single sign-on using the [Mendix SSO](/appstore/modules/mendix-sso/) module
+* **OAuth** – Authenticates with [OAuth](https://oauth.net/)
+* **OpenID Connect** – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
+* Other – Specify other ways to authenticate, including custom modules
 
 Fill in as many details as you can to ensure that consuming developers can easily authentication themselves to consume your service.

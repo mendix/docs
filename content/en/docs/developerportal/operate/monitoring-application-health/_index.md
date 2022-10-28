@@ -105,7 +105,7 @@ Description | Track the amount of disk space used for the database belonging to 
 Example message | Database has less than 5% free space.
 Warning Threshold | Database has less than 25% and more than 10% free space available. 
 Critical Threshold | Database has less than 10% free space available.
-First actions to take | Check if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or ordering more storage.
+First actions to take | Check if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or upgrading the cloud resource pack (for example, by ordering more storage).
 
 Database Freeable Memory | |
 :---|:---|
@@ -113,7 +113,7 @@ Description | Track the amount of freeable memory for the database belonging to 
 Example message | Database has 35% freeable memory.
 Warning Threshold | Not used.
 Critical Threshold | Database has 10% freeable memory.
-First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or by ordering more memory.
+First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
 
 Database IOPS Burst Balance | |
 :---|:---|
@@ -229,7 +229,7 @@ Description | Track the amount of disk space used for storage of the application
 Example message | Disk usage 83% (warning=80, critical=90).
 Warning Threshold | More than 80% of available disk space is in use.
 Critical Threshold | More than 90% of available disk space is in use.
-First actions to take | Review trends for *Application node disk usage in %* and *Application node disk usage (in bytes)* and inspect the usage value of the application files partition (usually /srv/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old files, or ordering more storage.
+First actions to take | Review trends for *Application node disk usage in %* and *Application node disk usage (in bytes)* and inspect the usage value of the application files partition (usually /srv/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old files, or upgrading the cloud resource pack (for example, by ordering more storage).
 
 Database Server Disk Usage | |
 :---|:---|
@@ -237,7 +237,7 @@ Description | Track the amount of disk space used for the database belonging to 
 Example message | Disk usage 92% (warning=80, critical=90).
 Warning Threshold | More than 80% of available disk space is in use.
 Critical Threshold | More than 90% of available disk space is in use.
-First actions to take | Review trends for *Database node disk usage in %* and *Database node disk usage (in bytes)* and inspect the usage value of the database partition (usually /var/lib/postgresql/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or ordering more storage.
+First actions to take | Review trends for *Database node disk usage in %* and *Database node disk usage (in bytes)* and inspect the usage value of the database partition (usually /var/lib/postgresql/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or upgrading the cloud resource pack (for example, by ordering more storage).
 
 Web Server | |
 :---|:---|

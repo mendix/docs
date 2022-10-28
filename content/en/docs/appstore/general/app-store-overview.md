@@ -2,7 +2,7 @@
 title: "Marketplace Overview"
 url: /appstore/general/app-store-overview/
 category: "General Info"
-weight: 10
+weight: 1
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."
 tags: ["marketplace",  "widget", "connector", "module", "partner"]
 aliases:

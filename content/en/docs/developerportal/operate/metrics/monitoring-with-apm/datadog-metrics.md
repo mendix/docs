@@ -187,7 +187,7 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 ### 4.6 System Metrics{#system-metrics}
 
-System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DATADOG_ENABLE_CHECKS** to *true*.
+System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DD_ENABLE_CHECKS** to *true*.
 
 *Default value: false*
 

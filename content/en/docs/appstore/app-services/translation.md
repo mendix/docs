@@ -222,11 +222,11 @@ If you deploy your app in the Mendix Cloud, configure the AWS region in the [Dev
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-{{< figure src="/attachments/appstore/app-services/translation/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
+{{< figure src="/attachments/appstore/app-services/translation/awsregion-cloudportal.png" alt="awsregion-cloudportal" >}}
 
 If you have already deployed your app, change the existing **AWS_Default_Region** constant value on the **Model Options** tab and restart the app.
 
-{{< figure src="/attachments/appstore/app-services/translation/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
+{{< figure src="/attachments/appstore/app-services/translation/awsregion-envdetails.png" alt="awsregion-envdetails" >}}
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 

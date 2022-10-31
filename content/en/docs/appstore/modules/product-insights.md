@@ -27,7 +27,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
 4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini survey to appear.
 
-5. Open the **Trigger Survey** folder, and copy the **TriggerSurvey** nanoflow to your own module.
+5. Open the **Show Survey** folder, and copy the **TriggerSurvey** nanoflow to your own module.
 
 6. Set up the **TriggerSurvey** nanoflow as follows:
 

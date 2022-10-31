@@ -123,8 +123,8 @@ Here you can view the existing API key, or generate an API key if there is not a
 
 An API key can be one of the following types:
 
-* Development: A development key should only be used in local test environments.
-* Production: A production key should only be used in production environments.
+* Development: A development key should be used in non-production environments for testing purposes.
+* Production: A production key should be used in production environments.
 
 ## 3 Running a Mini Survey
 
@@ -196,8 +196,8 @@ Before the start time of the mini survey is reached, you should implement the su
 
     *  If there is already an active API key, it is shown on the list. In this case, check the **Type** of the API key to see if it is suitable for you to use:
 
-       * **Development** – The development key should only be used in local test environments.
-       * **Production** – The production key should only be used in production environments. 
+       * **Development**: A development key should be used in non-production environments for testing purposes.
+       * **Production**: A production key should be used in production environments. 
     
        If it is suitable to use, click **View** to show the API key, then copy it, and save it for later use.
 

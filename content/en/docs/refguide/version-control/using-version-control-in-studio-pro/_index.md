@@ -1,6 +1,7 @@
 ---
 title: "Using Version Control in Studio Pro"
 url: /refguide/using-version-control-in-studio-pro/
+linktitle: "Using Version Control"
 category: "Version Control"
 weight: 10
 description: "Describes how to work with version control and how to resolve some issues which may arise."

@@ -1,5 +1,5 @@
 ---
-title: "Mendix Portable Portal app"
+title: "Mendix Portable Portal App"
 url: /developerportal/mendix-portable-portal
 description: "Describes the features of the Mendix Portable Portal app."
 tags: ["mendix", "developer portal", "Portable Portal", "mobile"]
@@ -41,34 +41,54 @@ If this is the first time that you select apps on the **App Selection** page, yo
 
 ## 4 My Apps Page {#my-apps}
 
-The **My Apps** page by default shows the first app that you selected from the [App Selection](#app-selection) page. The name of this app is shown on top of the screen. If you click the app name, then you get the option to open a different app that you selected, or go back to the **App Selection** page where you can change the selection of the apps.
+The **My Apps** page by default shows the last app that you selected from the [App Selection](#app-selection) page. The name of this app is shown on top of the screen. If you click the app name, then you get the option to open a different app that you selected, or go back to the **App Selection** page where you can change the selection of the apps.
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/my-apps.png" >}}
 
 The **My Apps** page contains two tabs: the **Cloud** tab and the **Stories** tab. The descriptions of these two tabs are in the following sections.
 
-### 4.1 Cloud Tab
+### 4.1 Cloud Tab {#cloud}
 
 ### 4.2 Stories Tab
 
+{{< figure src="/attachments/developerportal/mendix-portable-portal/stories.png" >}}
 
+The **Stories** tab shows the currently active Sprint (in the example shown in the image above, the active Sprint is **Get Started**) and the backlog.
+
+When you tap the name of the currently active Sprint on the **Stories** tab, you can see the stories in the **To-do**, **Running**, and **Done** lists for your active Sprint. You can swipe right or left to check out the next or the previous list. 
+
+{{< figure src="/attachments/developerportal/mendix-portable-portal/active-sprint.png" >}}
+
+To move a story from one list to another list, tap and hold the story until it becomes moveable, as shown in the image below, and then drag the story to the new list.
+
+{{< figure src="/attachments/developerportal/mendix-portable-portal/move-story.png" >}}
+
+When you tap **Backlog** on the **Stories** tab, you can see all the stories in the backlog. Tapping **Add Story** on the upper-right corner allows you to add a story to the backlog.
+
+{{< figure src="/attachments/developerportal/mendix-portable-portal/backlog-stories.png" >}}
+
+Tapping a story in the active Sprint or the backlog opens the **Story Details** page of that story. The **Story Details** page displays the story name, the story ID, the number of points, the story description, the labels, the assignee, the status of the story, the list of sub-tasks, and the comments made on this story. On the **Story Details** page, you can also change the assignee and the status of the story, add, check off, or delete sub-tasks, and leave comments.
+
+{{< figure src="/attachments/developerportal/mendix-portable-portal/story-details.png" >}}
+
+Tapping **Edit** on the upper-right corner of the **Story Details** page opens the **Edit Story** page where you can change the story name and description, select whether the story is for a feature or a bug, change the assignee, change the points, and add labels.
+
+{{< figure src="/attachments/developerportal/mendix-portable-portal/edit-story.png" >}}
 
 ## 5 Community Page
 
-On the **Community** page, you can see the following sections:
+The **Community** page shows community content in the sections below:
 
-{{% todo %}}Check the descriptions below{{% /todo %}}
+* **Forum Questions** – This section shows latest questions from the [Mendix Forum](/developerportal/community-tools/mendix-forum/).
+* **Events** – This sections shows the upcoming Mendix events.
+* **Blogs** – This sections shows latest community blog articles.
+* **Mendix Youtube** – This section shows the Mendix Youtube videos.
 
-* Forum Questions – This section shows questions from the [Mendix Forum](/developerportal/community-tools/mendix-forum/).
-* Events – This sections shows the upcoming Mendix events.
-* Blogs – This sections shows latest Mendix blog articles.
-* Mendix Youtube – This section shows the Mendix Youtube Videos.
-
-In each section, you can swipe right or left to check out the next or the previous item.
+In each section, you can swipe right or left to check out the next or the previous item. Clicking **Show all** displays all the item within one section. If you click an item, its details will open in the web browser.
 
 ## 6 Notifications Page
 
-The **Notifications** page shows all the [notifications] that you receive from the Developer Portal as well as the notifications for your operations on the Portable Portal app itself.
+The **Notifications** page shows all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the notifications for your operations on the [Cloud](#cloud) tab of the Portable Portal app.
 
 ## 7 Settings Page
 

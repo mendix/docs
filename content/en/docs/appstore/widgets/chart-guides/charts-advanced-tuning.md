@@ -1,7 +1,7 @@
 ---
 title: "Fine-Tune a Chart with Advanced Settings"
 linktitle: "Chart Advanced Tuning"
-url: /howto/front-end/charts-advanced-tuning/
+url: /appstore/widgets/chart-advanced-tuning/
 weight: 30
 description: "Describes the settings you can use to change chart layouts and types"
 tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]

@@ -11,6 +11,16 @@ tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", 
 
 The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
+For more examples of what Charts widgets can do, see the following documents:
+
+* [Create a Basic Chart](/appstore/front-end/charts-basic-create/)
+* [Use Any Chart](/appstore/front-end/charts-any-usage/)
+* [Fine-Tune a Chart with Advanced Settings](/appstore/front-end/charts-advanced-tuning/)
+* [Use the Charts Theme](/appstore/front-end/charts-theme/)
+* [Create a Dynamic Series Chart](/appstore/front-end/charts-dynamic-series/)
+* [Use a Chart with a REST Data Source](/appstore/front-end/charts-basic-rest/)
+* [Use the Plotly Images REST Service Endpoint](/appstore/front-end/charts-plotly-images-rest/)
+
 {{% alert color="info" %}}
 This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy Chart Widget Documentation](#legacy-widget-docs) section below.
 {{% /alert %}}
@@ -547,9 +557,4 @@ Use this with caution, as the configs set up here shall be applied to every inst
 ### 8 Read More
 
 * [Charts Configuration](/refguide/charts-configuration/)
-* [How to Fine-Tune a Chart with Advanced Settings](/howto/front-end/charts-advanced-tuning/)
-* [How to Create a Basic Chart](/howto/front-end/charts-basic-create/)
-* [How to Use a Chart with a REST Data Source](/howto/front-end/charts-basic-rest/)
-* [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/)
-* [How to Use the Charts Theme](/howto/front-end/charts-theme/)
 

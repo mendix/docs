@@ -13,32 +13,65 @@ The Mendix Portable Portal app provides you with mobile capabilities for Develop
 
 ## 2 Installation
 
-1. Go to the [settings](https://sprintr.home.mendix.com/link/profilesettings) of your Mendix Profile.
+1. Go to this page which provides you with the guidance on how to download the Mendix Portable Portal app: https://mxmobilecc.mendixcloud.com/.
 
-2. Go to the [API Keys](/developerportal/community-tools/mendix-profile/#api-key) page, create a new API key, and copy it for later use.
+2. Sign in with your Mendix account.
 
-3. Go to this page to download the Mendix Portable Portal app: https://mxmobilecc.mendixcloud.com/.
+3. Follow the instructions on the page, and then click **Download App**.
 
-4. In the text box in step 3, enter your API key that you copied.
+4. Select whether you use an iOS or Android device. The page shows the corresponding QR code for the device.
 
-5. Click **Download App**.
+5. Scan the QR code to download the app.
 
-6. Select whether you uses iOS or Android.
+   {{% alert color="info" %}}For iOS users, you will be first directed to install TestFlight in App Store. Install TestFlight and open it. From TestFlight, you will be propped to install the Mendix Portable Portal app.{{% /alert %}}
 
-7. Scan the QR code to download the app.
+## 3 Starting the App
 
-   {{% alert color="info" %}}For the Beta version of Portable Portal, iOS users will be directed to install TestFlight first. From TestFlight, users will be prompted to install Portable Portal.{{% /alert %}}
+After you install the Portable Portal app, open it and sign in with your Mendix account. You will see the [App Selection](#app-selection) page.
 
-## 3 App Selection
+## 3 App Selection Page {#app-selection}
 
-## 4 My Apps
+{{< figure src="/attachments/developerportal/mendix-portable-portal/app-selection.png" >}}
 
-### 4.1 Cloud
+The **App Selection** page shows all the apps that you can accesson the Developer Portal. You should select the apps that you want to mange using the Portal Portal app.
 
-### 4.2 Stories
+To select an app, tap the app. You can select multiple apps. Then click **Continue**. The [My Apps](#my-apps) page opens.
 
-## 5 Community
+If this is the first time that you select apps on the **App Selection** page, you are then prompted to select if you allow the app to send you notifications. We do recommend you select **Allow** since sending notifications is one of the main features of this app.
 
-## 6 Notifications
+## 4 My Apps Page {#my-apps}
 
-## 7 Settings
+The **My Apps** page by default shows the first app that you selected from the [App Selection](#app-selection) page. The name of this app is shown on top of the screen. If you click the app name, then you get the option to open a different app that you selected, or go back to the **App Selection** page where you can change the selection of the apps.
+
+{{< figure src="/attachments/developerportal/mendix-portable-portal/my-apps.png" >}}
+
+The **My Apps** page contains two tabs: the **Cloud** tab and the **Stories** tab. The descriptions of these two tabs are in the following sections.
+
+### 4.1 Cloud Tab
+
+### 4.2 Stories Tab
+
+
+
+## 5 Community Page
+
+On the **Community** page, you can see the following sections:
+
+{{% todo %}}Check the descriptions below{{% /todo %}}
+
+* Forum Questions – This section shows questions from the [Mendix Forum](/developerportal/community-tools/mendix-forum/).
+* Events – This sections shows the upcoming Mendix events.
+* Blogs – This sections shows latest Mendix blog articles.
+* Mendix Youtube – This section shows the Mendix Youtube Videos.
+
+In each section, you can swipe right or left to check out the next or the previous item.
+
+## 6 Notifications Page
+
+The **Notifications** page shows all the [notifications] that you receive from the Developer Portal as well as the notifications for your operations on the Portable Portal app itself.
+
+## 7 Settings Page
+
+On the **Settings** page, you can see your profile picture, your company information, and your email.
+
+You can also log out from the Portable Portal app on this page.

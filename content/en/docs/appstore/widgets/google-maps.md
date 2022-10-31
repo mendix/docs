@@ -79,7 +79,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 
 Before you start this styling guide, please make sure you have completed the following prerequisite:
 
-* Have the latest version of the [Google Maps](/link/component/48911/) widget in your app
+* Have the latest version of the [Google Maps](https://marketplace.mendix.com/link/component/48911/) widget in your app
 
 {{% alert color="warning" %}}
 These instructions are for the Google Maps widget which you can download from the Marketplace. The Google Maps widget within the Atlas UI template has different options.

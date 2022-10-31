@@ -58,7 +58,7 @@ There are three ways to install a Marketplace component, which are described in 
 
     The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details) in the online Mendix Marketplace.
 
-6. <a name="step-six"></a>Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+6. <a name="step-six"></a>Click **Download** to download the latest version of the component (for widgets, version compatibility is not applicable). Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
     * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
         1. Select one of these options:

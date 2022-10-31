@@ -86,13 +86,53 @@ This creates the following resources:
 * `mendix-pclm`  – a secret containing the credentials to access the Database
 * `mx-private-cloud-mx-privatecloud-license-manager` – the service name of the PCLM server
 
-## 4 Reaching the PCLM Server
+## 4 Reaching the HTTP REST API of the PCLM Server
 
-You will now be able to communicate with the PCLM Server through an HTTP REST endpoint.
+You will now be able to communicate with the PCLM Server through an HTTP REST endpoint. The endpoint will be different depending on whether you are using a Kubernetes Service or Kubernetes Ingress.
+
+### 4.1 Using the Kubernetes Service
 
 If PCLM is installed in the same Kubernetes cluster as the Private Cloud environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM Server was installed.
 
-If the PCLM server is installed in a separate cluster, you have to create an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster or a [Route](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/routes.html) for your OpenShift cluster in order to allow those HTTP connections. Given the many possible Ingress controllers which depend on the Cloud provider, you will need to follow the instructions for your Ingress controller and Cloud.
+You can confirm that you can connect to the PCLM server using the following URLs:
+
+* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/health` should return `HTTP 200 OK`
+* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics
+
+### 4.2 Using Kubernetes Ingress
+
+If the PCLM server is installed in a separate cluster, you have to create an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster or a [Route](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/routes.html) for your OpenShift cluster in order to allow those HTTP connections.
+
+You must also define a host domain in the DNS service (for example, AWS Route53).
+
+The configuration to connect to the server running in the namespace `my-pclm-1` will look similar to this:
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pclm-ingress
+  namespace: my-pclm-1 
+spec:
+  rules:
+    - host: pclm.<domain> # e.g. pclm.mydomain.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mx-privatecloud-license-manager
+                port:
+                  number: 80
+```
+
+Given the many possible Ingress controllers which depend on the Cloud provider, you will need to follow the instructions for your Ingress controller and Cloud.
+
+You can confirm that you can connect to the PCLM server using the following URLs:
+
+* `http<s>://pclm.<domain>/health` should return `HTTP 200 OK`
+* `https<s>://pclm.<domain>/metrics` should return `HTTP 200 OK` together with the collected server metrics
 
 ## 5 Setting Up Users
 
@@ -210,7 +250,7 @@ Assume that the operator is running in the namespace `<operator-ns>`.
 
 The credentials you have created for an operator type user need to be stored in the repository. To do this, create the following .yaml file:
 
-```yaml {linenos=false}
+```yaml
 apiVersion: v1
 kind: Secret
 type: Opaque
@@ -242,7 +282,7 @@ Where:
 
 You need to patch the Mendix Operator with the location and credentials for accessing the PCLM server. To do this, create the following .yaml file:
 
-```yaml {linenos=false}
+```yaml
 spec:
   licenseManager:
     credentialsSecretName: <secret-name>
@@ -275,6 +315,12 @@ If you do not have any unused licenses, new app environments will not be license
 
 The Mendix Operator will also pick up a Mendix Operator license if one has been imported into the PCLM server.
 
+### 7.4 Verifying That the Licenses Are Applied
+
+There are multiple ways to verify whether the licenses (both Operator and MendixApp) are applied and where.
+
+#### 7.4.1 Using the PCLM CLI
+
 You can see which licenses are currently used by which environments and operators, as well as unused licenses, using the following command.
 
 ```bash {linenos=false}
@@ -289,7 +335,50 @@ Where:
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 
-### 7.4 Auditing Licenses
+Which would reply with something similar to this:
+
+| LICENSE-ID | NAMESPACE | APP-ID | TYPE | CREATED-AT |
+| --- | --- | --- | --- | --- |
+| `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator | yyyy-mm-dd hh:mm:ss |
+| `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  | yyyy-mm-dd hh:mm:ss |
+
+#### 7.4.2 From Mendix Application Custom Resources Installed in the Namespace
+
+This way of checking is more advanced, and should be used only for debugging.
+
+##### 7.4.2.1 Checking the Operator License
+
+Use the following command to verify whether the Operator license was applied correctly:
+
+`<oc|kubectl> -n <namespace> get MendixApp <app_id> -o yaml`
+
+In the section `status.licenseStatus` you should see something similar to the following:
+
+```yaml {linenos=false}
+status:
+  licenseStatus:
+    licenseID: 1ca080f8-c54e-4e24-b09c-14353505a65d
+    mode: Licensed
+```
+
+##### 7.4.2.2 Checking the Runtime License
+
+Use the following command to verify whether the Runtime license was applied correctly:
+
+`<oc|kubectl> -n <namespace> get Runtime <app_id> -o yaml`
+
+In the section `spec.resources.runtimeLicense` you should see something similar to the following:
+
+```yaml {linenos=false}
+spec:
+  resources:
+    runtimeLicense:
+      id: c823eeb1-7eb2-471c-a818-7be132c9cdb1
+      key: <base64-encoded-license-key>
+      type: offline
+```
+
+### 7.5 Auditing Licenses
 
 You can retrieve an audit report showing a history of which apps had which licenses, and which license(s) were applied to which operator(s) using the following command:
 

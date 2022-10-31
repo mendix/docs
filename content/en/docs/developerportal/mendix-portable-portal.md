@@ -77,7 +77,7 @@ Tapping **Edit** on the upper-right corner of the **Story Details** page opens t
 
 ## 5 Community Page
 
-The **Community** page shows community content in the sections below:
+The **Community** page shows community content. The page has the following sections:
 
 * **Forum Questions** – This section shows latest questions from the [Mendix Forum](/developerportal/community-tools/mendix-forum/).
 * **Events** – This sections shows the upcoming Mendix events.
@@ -88,10 +88,10 @@ In each section, you can swipe right or left to check out the next or the previo
 
 ## 6 Notifications Page
 
-The **Notifications** page shows all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the notifications for your operations on the [Cloud](#cloud) tab of the Portable Portal app.
+The **Notifications** page lists all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the notifications for your operations on the [Cloud](#cloud) tab of the Portable Portal app.
 
 ## 7 Settings Page
 
-On the **Settings** page, you can see your profile picture, your company information, and your email.
+The **Settings** page displays your profile picture, your company information, and your email address.
 
 You can also log out from the Portable Portal app on this page.

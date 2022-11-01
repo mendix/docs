@@ -15,21 +15,21 @@ The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.htm
 * [Registration API](#registration) — register and update data sources to the organization's Mendix Data Hub
 * [Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
-{{% alert color="warning" %}}
-The Data Hub API v2 is now deprecated and will be removed. You should update your calls to this API and use the latest [Search](#search) and [Registration](#registration) API URLs.
-{{% /alert %}}
-
 {{% alert color="info" %}}
 The interactive features of the OpenAPI interface are not operational, so the **Try it out** feature does not work.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-Note that curation rights apply to some API activities. 
-{{% /alert %}}
+### 1.1 Authentication and Access Rights
+
+To view authentication instructions for each API, open the OpenAPI spec and click **Authorize** on the upper right of the screen. Supported authentication methods are documented there. As mentioned above, the **Try it out** feature does not work.
+
+Curation rights apply to some API activities.
 
 ## 2 Search API {#search}
 
-The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search/#search-api) section of *How to Search in the Data Hub Catalog*. 
+The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria.
+
+For step-by-step instructions and an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search/#search-api) section of *How to Search in the Data Hub Catalog*. 
 
 You can paginate through search results with an offset, which allows you to limit the number of results and specify how many to skip. 
 
@@ -48,3 +48,6 @@ The API includes the following:
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/data-hub/data-hub-catalog/register-data/#transform-api) section of *How to Register OData Resources in the Data Hub Catalog*.
 
 V4 compatibility for the **Transform API** is accessible via the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
+
+
+

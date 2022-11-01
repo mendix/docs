@@ -460,13 +460,10 @@ Mendix Cloud uses runtime settings to configure the included systems for logs, b
 * `DatabaseType`
 * `DatabaseUserName`
 * `DatabaseUseSsl`
-* `DTAPMode`
-* `EnableSessionFingerprinting`
 * `JavaKeyStorePassword`
 * `LogFileName`
 * `MaxLogFileCount`
 * `MaxLogFileSize`
-* `MicroflowConstants`
 * `MyScheduledEvents`
 * `OracleServiceName`
 * `ScheduledEventExecution`

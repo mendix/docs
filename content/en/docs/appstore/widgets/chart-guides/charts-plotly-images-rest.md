@@ -4,6 +4,8 @@ linktitle: "Plotly Images REST Endpoint"
 url: /appstore/widgets/charts-plotly-images-rest/
 weight: 70
 tags: ["Charts", "Plotly", "REST", "Studio Pro", "Widget"]
+aliases:
+    - /howto/front-end/charts-plotly-images-rest/
 ---
 
 ## 1 Introduction

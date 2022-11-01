@@ -4,6 +4,8 @@ url: /appstore/widgets/charts-basic-create/
 weight: 10
 description: "How to create a basic chart and configure the display options"
 tags: ["Charts", "Widgets", "Basic Chart", "Area Chart"]
+aliases:
+    - /howto/front-end/charts-basic-create/
 ---
 
 ## 1 Introduction

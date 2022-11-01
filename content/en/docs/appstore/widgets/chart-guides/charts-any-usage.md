@@ -4,6 +4,8 @@ url: /appstore/widgets/charts-any-usage/
 weight: 20
 description: "How to use the Any Chart widget to create advanced charts"
 tags: ["Any Chart", "Advanced Charts", "Charts", "Studio Pro", "Widgets"]
+aliases:
+    - /howto/front-end/charts-any-usage/
 ---
 
 ## 1 Introduction

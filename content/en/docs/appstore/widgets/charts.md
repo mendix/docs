@@ -15,7 +15,7 @@ For more examples of what Charts widgets can do, see the following documents:
 
 * [Create a Basic Chart](/appstore/widgets/charts-basic-create/)
 * [Use Any Chart](/appstore/widgets/charts-any-usage/)
-* [Fine-Tune a Chart with Advanced Settings](/appstore/widgets/charts-advanced-tuning/)
+* [Fine-Tune a Chart with Advanced Settings](/appstore/widgets/chart-advanced-tuning/)
 * [Use the Charts Theme](/appstore/widgets/charts-theme/)
 * [Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/)
 * [Use a Chart with a REST Data Source](/appstore/widgets/charts-basic-rest/)

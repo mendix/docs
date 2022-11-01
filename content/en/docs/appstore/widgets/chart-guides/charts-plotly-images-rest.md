@@ -33,10 +33,10 @@ To set up the domain model for use with the plotly REST service endpoint, follow
 
 1. **Image** should be a specialization of the **System.Image** entity, so set **Generalization** to *System.Image*.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-image-entity.png" alt="image entity" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-image-entity.png" alt="image entity" >}}
 1. **DataSource** should be non-persistable with **Data** and **Layout** string attributes.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-data-source-entity.png" alt="DataSource entity" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-data-source-entity.png" alt="DataSource entity" >}}
 
 ## 4 Calling the 'Plotly API Images' REST Endpoint
 
@@ -48,7 +48,7 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
 
 1. In the **Data view**, place input elements with source attribute as **Data** and **Layout**.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-data-view.png" alt="Data view" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-data-view.png" alt="Data view" >}}
 
 1. In the footer of the *Data view*, add a **Call microflow button**.
 
@@ -56,26 +56,26 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
 
 1. Rename the button *Call Plotly REST Service*.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-button.png" alt="Configured microflow" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-button.png" alt="Configured microflow" >}}
 
 1. Right click the button, select to **Go to on click microflow...**.
 
 1. Build the microflow as shown below.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-microflow.png" alt="Configured microflow" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-microflow.png" alt="Configured microflow" >}}
 
 1. The **Call REST service** activity is configured as follows:
 
     * In the tab **General**, the **Location** should be set to *https://api.plot.ly/v2/images*
 
-        {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-location.png" alt="Location" >}}  
+        {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-location.png" alt="Location" >}}  
     * Select the **HTTP Method** as *POST*
 
-        {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-method.png" alt="HTTP Method" >}}
+        {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-method.png" alt="HTTP Method" >}}
 
     * In the tab **HTTP Headers**, Enter your plotly user name and API key (more information on plotly authentication can be found here: [plotly Authentication](https://api.plot.ly/v2/#authentication))
 
-        {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-authorization.png" alt="Authorization" >}}
+        {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-authorization.png" alt="Authorization" >}}
 
         {{% alert color="warning" %}}Custom HTTP headers 'Content-Type' and 'Plotly-Client-Platform' must be provided{{% /alert %}}
 
@@ -92,7 +92,7 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
         }
         ```
 
-        {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-request.png" alt="Request tab" >}}
+        {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-request.png" alt="Request tab" >}}
 
         For more request parameter details, see the documentation here: [Plotly REST API, v2](https://api.plot.ly/v2/images#fields).
 
@@ -100,7 +100,7 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
 
     * In the tab **Response**, set **Response handling** to *Store in a file document*
 
-        {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-response.png" alt="Response tab" >}}
+        {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-response.png" alt="Response tab" >}}
 
     * Set **Output > Type** to the **Image** entity
 
@@ -118,7 +118,7 @@ To save images generated by the REST service, follow these steps:
 
 1. Place a **Data view** in the page and populate it as shown below:
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-display-image.png" alt="Display image page" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-display-image.png" alt="Display image page" >}}
 
 1. Run the app.
 
@@ -126,11 +126,11 @@ To save images generated by the REST service, follow these steps:
 
 1. Fill in the **Data** and **Layout** fields. An example is shown in the image below.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-fill-data.png" alt="Fill in data" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-fill-data.png" alt="Fill in data" >}}
 
 1. Click the **Call Plotly REST Service** button.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-plotly-images-rest/charts-call-rest-image-save.png" alt="Save image" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-plotly-images-rest/charts-call-rest-image-save.png" alt="Save image" >}}
     
 1. Click the **Save** button to save the image which is displayed.
 

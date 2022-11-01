@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 This is how the original chart looks:
 
-{{< figure src="/attachments/howto/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="chart" >}}
+{{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="chart" >}}
 
 ### 3.1 Creating an Advanced Custom Configuration
 
@@ -40,7 +40,7 @@ To create the required custom configuration easily, follow these steps:
 1. Go to the tab **Advanced**.
 1. Set the **Mode** to **Developer**.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png" alt="chart widget properties" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png" alt="chart widget properties" >}}
 
 1. Run the app.
 1. Open the page with the chart in the browser.
@@ -59,7 +59,7 @@ To create the required custom configuration easily, follow these steps:
 
 1. Change the font settings, till the chart shows the required font.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="chart editor" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="chart editor" >}}
 
     {{% alert color="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
 
@@ -103,7 +103,7 @@ To change the font in all charts in the app, follow these steps:
 1. Restart the Mendix app.
 1. Validate the expected result.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="chart updated" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="chart updated" >}}
 
 ## 4 Read More
 

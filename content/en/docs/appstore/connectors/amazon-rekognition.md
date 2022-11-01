@@ -30,6 +30,10 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
+{{% todo %}}Fill in the name of the section where you can find the connector, and add a microflow configuration example.{{% /todo %}}
+
+After you install the connector, you can find it in the **App Explorer**, in the XXX section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a microflow.
+
 ### 3.1 Constants
 
 All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
@@ -43,7 +47,7 @@ All activities are exported as microflow activities that can directly be added t
 | `AWSRekognitionConnector.RoleARN`                 | The RoleARN of the IAM Role that has access to the Rekognition service. |
 | `AWSRekognitionConnector.AWS_TrustAnchorARN`      | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
 
-### 3.2 Domain Model
+### 3.2 Domain Model {#domain-model}
 
 The entities in the table below describe all generalizations. These are (re-)used by the different models for the specific microflow activities or for storing connection details.
 
@@ -94,7 +98,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `eu_west_2`      | eu-west-2      |
 | `us_gov_west_1`  | us-gov-west-1  |
 
-### 3.4 Activities
+### 3.4 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 

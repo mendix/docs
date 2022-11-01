@@ -13,13 +13,13 @@ The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enabl
 
 For more examples of what Charts widgets can do, see the following documents:
 
-* [Create a Basic Chart](/appstore/front-end/charts-basic-create/)
-* [Use Any Chart](/appstore/front-end/charts-any-usage/)
-* [Fine-Tune a Chart with Advanced Settings](/appstore/front-end/charts-advanced-tuning/)
-* [Use the Charts Theme](/appstore/front-end/charts-theme/)
-* [Create a Dynamic Series Chart](/appstore/front-end/charts-dynamic-series/)
-* [Use a Chart with a REST Data Source](/appstore/front-end/charts-basic-rest/)
-* [Use the Plotly Images REST Service Endpoint](/appstore/front-end/charts-plotly-images-rest/)
+* [Create a Basic Chart](/appstore/widgets/charts-basic-create/)
+* [Use Any Chart](/appstore/widgets/charts-any-usage/)
+* [Fine-Tune a Chart with Advanced Settings](/appstore/widgets/charts-advanced-tuning/)
+* [Use the Charts Theme](/appstore/widgets/charts-theme/)
+* [Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/)
+* [Use a Chart with a REST Data Source](/appstore/widgets/charts-basic-rest/)
+* [Use the Plotly Images REST Service Endpoint](/appstore/widgets/charts-plotly-images-rest/)
 
 {{% alert color="info" %}}
 This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy Chart Widget Documentation](#legacy-widget-docs) section below.

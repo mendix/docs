@@ -102,6 +102,6 @@ To view the chart, follow these steps:
 
 ## 6 Read More
 
-* [Create a Basic Chart](/howto/front-end/charts-basic-create/)
-* [Fine-Tune a Chart with Advance Settings](/howto/front-end/charts-advanced-tuning/)
-* [Use Any Chart](/howto/front-end/charts-any-usage/)
+* [Create a Basic Chart](/appstore/widgets/charts-basic-create/)
+* [Fine-Tune a Chart with Advance Settings](/appstore/widgets/chart-advanced-tuning/)
+* [Use Any Chart](/appstore/widgets/charts-any-usage/)

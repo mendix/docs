@@ -7,7 +7,7 @@ description: "Describes how to install Mendix Studio Pro."
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
-{{% button color="info" href="https://marketplace.mendix.com/link/studiopro/" text="Download in Marketplace" title="Download Studio Pro from the Marketplace" %}}
+{{% button color="info" href="https://marketplace.mendix.com/link/studiopro/" text="Go to Marketplace" title="Download Studio Pro from the Marketplace" %}}
 
 ## 1 Introduction
 

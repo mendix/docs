@@ -36,7 +36,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.1 Constants
 
-All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
+Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
 
 | Name                                              | Value                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -48,6 +48,8 @@ All activities are exported as microflow activities that can directly be added t
 | `AWSRekognitionConnector.AWS_TrustAnchorARN`      | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
 
 ### 3.2 Domain Model {#domain-model}
+
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
 The entities in the table below describe all generalizations. These are (re-)used by the different models for the specific microflow activities or for storing connection details.
 

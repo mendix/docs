@@ -88,7 +88,7 @@ If you want to connect your app to multiple SAML IdPs, you cannot use different 
 If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
 {{% /alert %}}
 
-* [MxModelReflection](/appstore/modules/model-reflection/)
+* [Mx Model Reflection](/appstore/modules/model-reflection/)
 
 There are different versions of the module, depending on which version of Mendix you are using. These versions may change, see the versions available in the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 

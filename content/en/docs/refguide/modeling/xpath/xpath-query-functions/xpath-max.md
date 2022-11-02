@@ -18,12 +18,12 @@ The query must specify an attribute that has a numeric type.
 
 This query returns the highest total price found in any object:
 
-```java
+```java {linenos=false}
 max(//Sales.Order/TotalPrice)
 ```
 
 This query returns the highest total price of an order placed by a customer named "Jansen":
 
-```java
+```java {linenos=false}
 max(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```

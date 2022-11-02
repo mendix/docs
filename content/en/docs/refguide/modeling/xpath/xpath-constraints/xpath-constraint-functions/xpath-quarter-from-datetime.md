@@ -12,6 +12,6 @@ The `quarter-from-dateTime()` function extracts the quarter corresponding to a *
 
 This query returns all the logs where `DateAttribute` is in quarter 4 (for example, "2011-12-30").
 
-```java
+```java {linenos=false}
 //Logging.Log[quarter-from-dateTime(DateAttribute) = 4]
 ```

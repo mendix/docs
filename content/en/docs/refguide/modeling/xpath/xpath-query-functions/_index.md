@@ -12,7 +12,7 @@ The following XPath query aggregate functions are available:
 * [min](/refguide/xpath-min/)
 * [sum](/refguide/xpath-sum/)
 
-These functions must contain full queries as their arguments. However, the `avg`, `max`, `min`, and `sum` functions must specify a column in the query to aggregate.
+These functions must contain full queries as their arguments. Moreover, the `avg`, `max`, `min`, and `sum` functions must specify a column in the query to aggregate.
 
 {{% alert color="warning" %}}
 These functions are for use in Java code only.

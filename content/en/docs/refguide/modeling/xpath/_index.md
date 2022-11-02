@@ -23,7 +23,7 @@ Examples of XPath queries are:
     Retrieve the average of the total prices of all paid orders.
 
 {{% alert color="warning" %}}
-In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
+In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
 ## 2 XPath Elements
@@ -35,13 +35,15 @@ A common Mendix XPath query consists of a several elements.
 | Aggregate function (optional) | Entity to retrieve (required) | Constraint (optional) | Attribute to retrieve (optional) |
 | avg | //Sales.Order | [IsPaid = true()] | /TotalPrice |
 
-Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes '//' and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. E.g. //Sales.Customer would return all objects of entity 'Customer' in the module 'Sales'.
+Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes '//' and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. E.g. //Sales.Order would return all objects of entity 'Order' in the module 'Sales'.
 
 Element C of a query is optional and contains one or more constraints to restrict the data being retrieved.
 
 Consider the following query:
 
-`//Sales.Customer[Name='Jansen']`
+```java {linenos=false}
+//Sales.Customer[Name='Jansen']
+```
 
 The constraint is clearly visible between brackets and restricts the objects retrieved to those for which the attribute 'Name' equals 'Jansen'. Objects with any other name than Jansen are excluded from the list.
 The number of possible constraints on a single query is unlimited. For more information on how to add and manipulate these constraints, see [XPath Constraints](/refguide/xpath-constraints/).
@@ -60,7 +62,7 @@ For details, see [XPath Operators](/refguide/xpath-operators/).
 
 ## 5 Functions
 
-The following XPath functions are available:
+See below some frequently used XPath functions:
 
 * [XPath functions](/refguide/xpath-query-functions/):
     * [avg](/refguide/xpath-avg/)
@@ -85,3 +87,8 @@ This video was done with [Studio Pro 8](/refguide8/), but the concepts remain ap
 {{% /alert %}}
 
 {{% youtube sdabUY-w4ZU %}}
+
+## 7 Read More
+
+* [Filter Data on an Overview Page Using XPath](/howto/logic-business-rules/filtering-data-on-an-overview-page/)
+* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)

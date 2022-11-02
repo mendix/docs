@@ -18,12 +18,12 @@ The query must specify an attribute that has a numeric type.
 
 This query returns the sum of the total prices of all placed orders:
 
-```java
+```java {linenos=false}
 sum(//Sales.Order/TotalPrice)
 ```
 
 This query returns the sum of the total prices of all the orders placed by a customer named "Jansen":
 
-```java
+```java {linenos=false}
 sum(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```

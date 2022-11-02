@@ -15,9 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* Added multiple authentication functionality to Registration Form
-* Ownership update notifications, conditions and content are updated
-* Endpoint notifications are now being grouped depending on their contents 
+* Notifications for newly registered resources are now grouped, helping to de-clutter your Catalog experience.
 
 ### October 27th, 2022
 

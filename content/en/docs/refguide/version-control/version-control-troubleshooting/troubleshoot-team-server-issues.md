@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting Team Server Issues"
-url: /refguide/troubleshoot-version-control-issues/
+url: /refguide/troubleshoot-team-server-issues/
 linktitle: "Team Server Issues"
 weight: 30
 description: "Presents a list of problems and fixes for Team Server issues."

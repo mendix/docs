@@ -49,6 +49,14 @@ In **Documentation**, you can describe the intention of the access rule. This he
 
 ### 2.2 Rule Applies to the Following Module Roles Section {#module-roles}
 
+{{% alert color="info" %}}
+To apply an access rule to an entity, you need to have at least one of the following Access rights selected:
+
+* Allow creating new objects
+* Allow deleting existing objects
+* An Entity Member (attribute or association) with `Read` or `Read, Write` rights
+{{% /alert %}}
+
 #### 2.2.1 Roles
 
 All module roles are listed, and those to which this access rule applies are checked. All users that have at least one of the checked module roles get the access rights that the rule defines.

@@ -90,7 +90,7 @@ If you are migrating from the community edition of the module ([OpenIDConnect Si
 
 Once the Mx Model Reflection module has been imported into your app, you need to configure it.
 
-1. In the **App Explore**r, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
+1. In the **App Explorer**, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
     {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" >}}
 

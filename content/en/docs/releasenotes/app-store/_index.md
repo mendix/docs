@@ -23,6 +23,9 @@ Finally, we introduced UI changes for pagination and points of entry to the Mark
 
 For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
+{{% alert color="warning" %}}
+If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
+
 ### August 27th, 2022
 
 #### Improvements

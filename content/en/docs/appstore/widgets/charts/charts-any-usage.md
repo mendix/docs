@@ -1,9 +1,11 @@
 ---
 title: "Use Any Chart"
-url: /howto/front-end/charts-any-usage/
+url: /appstore/widgets/charts-any-usage/
 weight: 20
 description: "How to use the Any Chart widget to create advanced charts"
 tags: ["Any Chart", "Advanced Charts", "Charts", "Studio Pro", "Widgets"]
+aliases:
+    - /howto/front-end/charts-any-usage/
 ---
 
 ## 1 Introduction
@@ -62,11 +64,11 @@ To create a line chart with the **Any Chart** widget, follow these steps:
     [ { "x": [ 1, 2 ], "y": [ 1, 2 ] } ]
     ```
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/any-chart-configuration.png" alt="Any Chart Configuration" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/any-chart-configuration.png" alt="Any Chart Configuration" >}}
 
 7. Run the app to preview the chart.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/charts-any-sample.png" alt="Any Chart result" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/charts-any-sample.png" alt="Any Chart result" >}}
 
 ## 5 Exporting Data
 
@@ -74,16 +76,16 @@ To generate JSON data for the Charts widget, follow these steps:
 
 1. Add a **Data** string (unlimited length) attribute to the Chart (context) entity.
 2. In the widget, set the **Source attribute** field in the **Data** tab.
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/any-chart-configuration-attribute.png" alt="Select data attribute" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/any-chart-configuration-attribute.png" alt="Select data attribute" >}}
 3. Create a **JSON Structure** and use the **Sample data** as the snippet.
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/any-chart-json-structure-line-chart-data.png" alt="Create export mapping" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/any-chart-json-structure-line-chart-data.png" alt="Create export mapping" >}}
 4. Create an **Export Mapping** with the **JSON Structure**.
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/any-chart-line-chart-export-mapping-select.png" alt="Select data structure" >}}
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/any-chart-line-chart-export-mapping.png" alt="Map objects" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/any-chart-line-chart-export-mapping-select.png" alt="Select data structure" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/any-chart-line-chart-export-mapping.png" alt="Map objects" >}}
 5. Create a microflow that retrieves the data.
 6. Use the **Export Mapping** to generate a **String Variable**. Store the value in the object attribute that is selected as **Source attribute**.
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/any-chart-export-microflow.png" alt="Export microflow" >}}
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-any-usage/any-chart-export-microflow-structure.png" alt="Export microflow" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/any-chart-export-microflow.png" alt="Export microflow" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-any-usage/any-chart-export-microflow-structure.png" alt="Export microflow" >}}
 
 If need be, the layout can also be generated in the same way as the data. In most cases, a **Static** layout will suffice.
 
@@ -103,7 +105,7 @@ To fine tune a Charts widget configuration, follow these steps:
 2. Run the app, and open the page containing the chart.
 3. Click the **Toggle Editor** button on the top right of the chart to fine-tune your settings.
 
-    {{< figure src="/attachments/howto/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="chart editor" >}}
+    {{< figure src="/attachments/appstore/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="chart editor" >}}
 
 4. In the editor, select either **Data** or **Layout** from the drop-down menu.
 5. Edit Static or Data settings.

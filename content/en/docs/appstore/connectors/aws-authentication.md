@@ -53,9 +53,13 @@ After you install the connector, you can find it in the **App Explorer**, in the
 * [Static credentials](#static)
 * [Signature version 4 headers](#signature-v4-headers)
 
+{{% alert color="info" %}
+}In general, session credentials are the recommended authentication method for use with your production app. Static credentials are not suitable for use in production - you should only use them in test or demo environments. Signature version 4 headers cover more advanced use cases. You can use them if session credentials do not cover your requirements, or if you are implementing AWS Authentication for a platform-supported AWS connector that specifically requires signature headers authentication. For more information, refer to the documentation of the platform-supported connector that you are implementing.
+{{% /alert %}}
+
 ### 4.1 Implementing Session Credentials {#session}
 
-Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour.
+Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour. This is the recommended authentication method for most use cases.
 
 To authenticate your app in AWS by using session credentials, first add a client certificate in the Deployment Portal, and then add the **GetSessionCredentials** activity to a microflow in Studio Pro.
 
@@ -132,9 +136,9 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 ### 4.2 Implementing Static Credentials {#static}
 
-Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This type of credentials is suitable for test and demo apps. 
+Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is suitable for test and demo apps. 
 
-To create static credentials with the **Get Static Credentials** activity in your app, perform the following steps:
+To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:
 
 1. Open your app in Studio Pro.
 2. Optional: If you want to use the AWS Authentication connector with an existing platform-supported connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, download and install the connector into your app.
@@ -152,3 +156,59 @@ To create static credentials with the **Get Static Credentials** activity in you
     For platform-specific AWS connectors, you can refer to the connector documentation to find out more about the available options.
 
 ### 4.3 Implementing Signature Version 4 Headers {#signature-v4-headers}
+
+Using signature version 4 headers grants you full control over the contents of the request that you send to AWS. You may want to use this method to authenticate without using the AWS console or SDK, for example, if the language you are using does not have SDK yet. For more information about signature version 4 headers, see [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the AWS documentation.
+
+This authentication method is suitable for advanced use cases. If your use case can be fulfilled with session credentials authentication, consider using that method instead. If required, you can also use signature headers in combination with session credentials.
+
+To help you work with signature version 4 headers, the following sections of this document contains a description of the [domain model](#domain-model) and [Java action](#java-action) that you can use, as well as an [example microflow](#microflow) configuration.
+
+#### 4.3.1 Domain Model {#domain-model}
+
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
+
+You can view the domain model in the **App Explorer** in the **AWS Authentication** > **Domain model** section. The following entities are relevant for signature version 4 headers authentication:
+
+* `SigV4Builder` - This entity contains the parameters required to sign the request. It has a one-to-one association with the `Credentials` entity, which contains the parameters corresponding to the [access key ID and secret access key](#prerequisites).
+    
+    | Name | Description |
+    | --- | --- |
+    | `Service` | The service that you want to connect to, for example, S3 |
+    | `Method` | REST methods, for example, `GET` |
+    | `Region` | The AWS region where your service resides |
+    | `Path` | URI from domain to query; enter `\` to leave blank |
+    | `RequestBody` | The body of your request; signature version 4 headers require that the request body as part of the signing process, before you make the actual call. |
+    
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4builder.png" >}}
+
+* `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
+    
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4parameters.png" >}}
+
+* `SigV4SignedHeaders` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
+
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4headers.png" >}}
+
+#### 4.3.2 `GetSigV4SignedHeaders` Java Action {#java-action}
+
+The `GetSigV4SignedHeaders` Java action computes and provides the signed headers. It takes the following parameters as input:
+
+* A `SigV4Builder` object
+* A `SigV4Parameter` object that provides a list of headers
+* Another, optional `SigV4Parameter` object that provides a list of `QueryParameters`
+
+The output of the action is a `SigV4SignedHeaders` object.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4action.png" >}}
+
+#### 4.3.3 Example Microflow {#microflow}
+
+The following microflow shows an example implementation of signature version 4 headers authentication.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4microflow.png" >}}
+
+In this example, a `SigV4Builder` activity is created and associated with a `Credentials` entity, a list of headers, and list of query parameters.
+
+These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4SignedHeader` entity.
+
+The values set in the response entity are used as request headers in the REST call to AWS.

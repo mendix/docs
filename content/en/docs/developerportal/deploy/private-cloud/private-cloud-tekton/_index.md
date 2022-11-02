@@ -108,11 +108,11 @@ If your cluster is air-gapped and does not have access to the internet, you will
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
 
-## 5 Tekton Installation for not air-gapped (regular) Environments{#tekton-installation}
+## 5 Tekton Installation for non air-gapped (regular) Environments{#tekton-installation}
 
-If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for Connected Environments](#pipelines-installation).
+If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for non air-gapped Environments](#pipelines-installation).
 
-### 5.1 Installing on not air-gapped Kubernetes
+### 5.1 Installing on non air-gapped Kubernetes
 
 To install Tekton with Tekton Triggers, apply the following yaml manifests:
 
@@ -126,14 +126,14 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 The manifests target the `tekton-pipelines` namespace.
 {{% /alert %}}
 
-### 5.2 Installing on not air-gapped OpenShift
+### 5.2 Installing on non air-gapped OpenShift
 
 To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift Pipelines, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation. 
 Main objects would be installed in `openshift-pipelines` namespace. 
 
 At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
 
-## 6 Pipeline Installation for not air-gapped Environments{#pipelines-installation}
+## 6 Pipeline Installation for non air-gapped Environments{#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
@@ -141,13 +141,13 @@ Before you install the Mendix pipelines, which contain all Tekton-related object
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
-The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.
+The namespace can be the same namespace where the Mendix Operator runs, or you can create a new namespace. Further, we will use $NAMESPACE_WITH_PIPELINES to refer to that namespace.
 
 The installation command is:
 
 ```bash {linenos=false}
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
-helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
+helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG
 ```
@@ -155,7 +155,7 @@ helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
 ## 7 Installing Triggers{#installing-triggers}
 
 {{% alert color="info" %}}
-Installing triggers is the same for both connected and air-gapped environments.
+Installing triggers is the same for both non air-gapped and air-gapped environments.
 {{% /alert %}}
 
 Standard triggers provide HTTP services to trigger (run) pipelines like create-app-pipeline, configure-app-pipeline, and delete-app-pipeline to manage app environments.
@@ -195,7 +195,7 @@ curl -X POST \\
   -H 'Content-Type: application/json' \\
   -H 'Event: create-app' \\
   -d '{
-    "namespace":"your-kubernetes-namespace",
+    "namespace":"namespace-with-operator",
     "env-internal-name":"mx-environment-internal-name",
     "dtap-mode":"D",
     "storage-plan-name":"file-plan-name",
@@ -238,8 +238,8 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
     --set name=$SOME_UNIQUE_NAME \
     --set triggerType=gitlabwebhook \
     --set buildPipelineName=build-pipeline \
-    --set gitlabwebhook.operatorNamespace=kubernetes \
-    --set gitlabwebhook.mendixEnvironmentInternalName=app \
+    --set gitlabwebhook.operatorNamespace=namespace-with-operator \
+    --set gitlabwebhook.mendixEnvironmentInternalName=mx-environment-internal-name \
     --set gitlabwebhook.protocol=ssh \
     --set gitlabwebhook.scheduledEventsMode=auto \
     --set gitlabwebhook.constantsMode=auto | kubectl apply -f - -n $NAMESPACE_WITH_PIPELINES
@@ -327,7 +327,7 @@ curl -X POST \
   -H 'Event: create-app' \
   -H 'X-GitLab-Token: SomeLongSecureToken42' \
   -d '{
-    "namespace":"your-kubernetes-namespace",
+    "namespace":"namespace-with-operator",
     "env-internal-name":"mx-environment-internal-name",
     "dtap-mode":"D",
     "storage-plan-name":"file-plan-name",
@@ -335,13 +335,14 @@ curl -X POST \
 }'
 ```
 
-| Parameter | Explanation |
-| --- | --- |
-| `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
-| `env-internal-name` | Mendix environment internal name. The MendixApp CR will be created with this name |
-| `dtap-mode` | mode for running the Mendix application. Available options:<br/>`P` – Production (for all production environments)<br/>`D` – Development |
-| `storage-plan-name` | name of an already-created storage plan |
-| `database-plan-name` | name of an already-created database plan |
+| Parameter           | Explanation                                                                                                                                                                                                                                |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `namespace`         | name of the Kubernetes namespace where the Mendix Operator runs                                                                                                                                                                            |
+| `env-internal-name` | Mendix environment internal name. The MendixApp CR will be created with this name                                                                                                                                                          |
+| `dtap-mode`         | mode for running the Mendix application. Available options:<br/>`P` – Production (for all production environments)<br/>`D` – Development<br/> Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/).  |
+| `storage-plan-name` | name of an already-created storage plan                                                                                                                                                                                                    |
+| `database-plan-name` | name of an already-created database plan                                                                                                                                                                                                   |
+| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                                                                                                                                        |
 
 ### 9.2 Build Pipeline
 
@@ -364,21 +365,22 @@ curl -X POST \
       "url":"https://yourgitdomain.com/user/repo.git",
       "revision":"main"
    },
-   "namespace":"your-kubernetes-namespace",
+   "namespace":"namespace-with-operator",
    "env-internal-name":"mx-environment-internal-name",
    "constants-mode":"auto",
    "scheduled-events-mode":"auto"
 }'
 ```
 
-| Parameter | Explanation |
-| --- | --- |
-| `repo.url` | URL of git repository that will be fetched |
-| `repo.revision` | a git revision (for example, branch, tag, or sha) that will be fetched |
-| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
-| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
+| Parameter | Explanation                                                                                                                                                                                                                                                         |
+| --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `repo.url` | URL of git repository that will be fetched                                                                                                                                                                                                                          |
+| `repo.revision` | a git revision (for example, branch, tag, or sha) that will be fetched                                                                                                                                                                                              |
+| `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                                                                                                                                         |
+| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name`                                                                                                                       |
 | `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |
-| `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
+| `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator                                                                                 |
+| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                                                                                                                                         |
 
 #### 9.2.2 Build Pipeline Using a GitLab Webhook Trigger
 
@@ -403,7 +405,7 @@ curl -X POST \
   -H 'Event: configure-app' \
   -H 'X-GitLab-Token: SomeLongSecureToken42' \
   -d '{
-    "namespace":"your-kubernetes-namespace",
+    "namespace":"namespace-with-operator",
     "env-internal-name":"mx-environment-internal-name",
     "source-url":"https://example.com/url-to-mda/or/oci-image",
     "replicas":5,
@@ -417,19 +419,20 @@ curl -X POST \
 }'
 ```
 
-| Parameter | Explanation |
-| --- | --- |
-| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
+| Parameter | Explanation                                                                                                                                   |
+| --- |-----------------------------------------------------------------------------------------------------------------------------------------------|
+| `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                   |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
-| `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed |
-| `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same |
-| `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development |
-| `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"} |
-| `add-constants` *(Optional)* | constants to add provided as a JSON map. Example: {"KEY":"VALUE"} |
-| `remove-constants` *(Optional)* | constants to delete provided as a JSON array. Example: ["KEY1","KEY2"] |
-| `set-env-vars` *(Optional)* | environment variables to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"} |
-| `add-env-vars` *(Optional)* | environment variables to add provided as a JSON map. Example: {"KEY":"VALUE"} |
-| `remove-env-vars` *(Optional)* | environment variables to delete as JSON array. Example: ["KEY1","KEY2"] |
+| `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed                                                |
+| `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same                                                                         |
+| `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development       |
+| `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"}                                     |
+| `add-constants` *(Optional)* | constants to add provided as a JSON map. Example: {"KEY":"VALUE"}                                                                             |
+| `remove-constants` *(Optional)* | constants to delete provided as a JSON array. Example: ["KEY1","KEY2"]                                                                        |
+| `set-env-vars` *(Optional)* | environment variables to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"}                         |
+| `add-env-vars` *(Optional)* | environment variables to add provided as a JSON map. Example: {"KEY":"VALUE"}                                                                 |
+| `remove-env-vars` *(Optional)* | environment variables to delete as JSON array. Example: ["KEY1","KEY2"]                                                                       |
+| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                               |
 
 ### 9.4 Delete App Pipeline
 
@@ -442,15 +445,16 @@ curl -X POST \
   -H 'Event: delete-app' \
   -H 'X-GitLab-Token: SomeLongSecureToken42' \
   -d '{
-    "namespace":"your-kubernetes-namespace",
+    "namespace":"namespace-with-operator",
     "env-internal-name":"mx-environment-internal-name"
 }'
 ```
 
-| Parameter | Explanation |
-| --- | --- |
-| `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
+| Parameter | Explanation                                                                                                                                     |
+| --- |-------------------------------------------------------------------------------------------------------------------------------------------------|
+| `namespace` | name of the Kubernetes namespace where the Mendix Operator runs                                                                                 |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names  using the command `kubectl get mendixapps -n $namespace_name` |
+| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                         |
 
 ## 10 Troubleshooting{#troubleshooting}
 
@@ -470,9 +474,9 @@ tekton-triggers-core-interceptors-5b6f7b6c56-7m7fm   1/1     Running   0        
 tekton-triggers-webhook-7f5c9477cc-fb624             1/1     Running   0          20d
 ```
 
-Also, you need to check the listener of the Tekton Trigger (`$YOUR_NAMESPACE` is the namespace from the [Installing Triggers](#installing-triggers) step):
+Also, you need to check the listener of the Tekton Trigger (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step):
 ```bash {linenos=false}
-kubectl get po -n $YOUR_NAMESPACE
+kubectl get po -n $NAMESPACE_WITH_PIPELINES
 ```
 The output should include a `Running` pod similar to the one below:
 ```
@@ -486,9 +490,9 @@ In some cases, you can send an HTTP request to trigger a pipeline, but the pipel
 
 To investigate this, the first place that you need to look is the logs of the listener.
 
-To view the logs you need to identify the name of the listener pods. Use the command `kubectl get po -n $YOUR_NAMESPACE` to do this. The listener has a name similar to `el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b`.
+To view the logs you need to identify the name of the listener pods. Use the command `kubectl get po -n $NAMESPACE_WITH_PIPELINES` to do this. The listener has a name similar to `el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b`.
 
-Then use the command: `kubectl logs $LISTENER_POD -n $YOUR_NAMESPACE`, using the pod name in place of $LISTENER_POD.
+Then use the command: `kubectl logs $LISTENER_POD -n $NAMESPACE_WITH_PIPELINES`, using the pod name in place of $LISTENER_POD.
 
 Information log messages like those shown below do not indicate an issue — they are caused by implementation details:
 ```
@@ -500,7 +504,7 @@ Information log messages like those shown below do not indicate an issue — the
 
 ### 10.3 Listing All Pipeline Runs
 
-To view the list of pipeline runs use the command `kubectl get pipelineruns -n $YOUR_NAMESPACE` (`$YOUR_NAMESPACE` is the namespace from the [Installing Triggers](#installing-triggers) step).
+To view the list of pipeline runs use the command `kubectl get pipelineruns -n $NAMESPACE_WITH_PIPELINES` (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step).
 
 The output of this command looks like this:
 ```
@@ -513,10 +517,10 @@ mx-pipeline-build-run-gitlab-2bjc7         True        Succeeded   22d         2
 
 Logs regarding pipeline execution can be found in the pods.
 
-Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is the namespace from the [Installing Triggers](#installing-triggers) step):
+Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step):
 1. Get a list of pipelines:
     ```bash {linenos=false}
-    kubectl get pipelineruns -n $YOUR_NAMESPACE
+    kubectl get pipelineruns -n $NAMESPACE_WITH_PIPELINES
     ```
     In the output, there is one failed pipelinerun with the name `mx-pipeline-app-create-run-generic-zzt8h`:
     ```
@@ -527,7 +531,7 @@ Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is the namespa
 
 2. Get the pods for the failed pipeline runs:
     ```bash {linenos=false}
-    kubectl get po -n $YOUR_NAMESPACE | grep mx-pipeline-app-create-run-generic-zzt8h
+    kubectl get po -n $NAMESPACE_WITH_PIPELINES | grep mx-pipeline-app-create-run-generic-zzt8h
     ```
     In the output there is a `Failed` pod:
     ```
@@ -536,7 +540,7 @@ Example of finding logs of the failed pipeline (`$YOUR_NAMESPACE` is the namespa
 
 3. Get the logs for the failed pod:
     ```bash {linenos=false}
-    kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $YOUR_NAMESPACE
+    kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $NAMESPACE_WITH_PIPELINES
     ```
 
     In the output there are logs which indicate the error:

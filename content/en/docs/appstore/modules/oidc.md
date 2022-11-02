@@ -90,11 +90,11 @@ If you are migrating from the community edition of the module ([OpenIDConnect Si
 
 Once the Mx Model Reflection module has been imported into your app, you need to configure it.
 
-1. Add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu
+1. In the **App Explore**r, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
     {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" >}}
 
-2. Run the app and click the newly-added navigation link to use MxModelReflection
+2. Run the app and click the newly-added navigation link to use Mx Model Reflection.
 
     {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" >}}
 
@@ -329,8 +329,8 @@ This section is only relevant if you are a Mendix partner and you want to integr
 
 To parse of SAM access tokens you need to have done the following:
 
-1. Set-up the connectivity between your app and SAM as described [above](#oidc-configuration).
-2. Install the **MxModelReflection** module.
+1. Set up the connectivity between your app and SAM as described [above](#oidc-configuration).
+2. Install the **Mx Model Reflection** module.
 3. Check **Enable Access Token Parsing** and select *Default SAM Token processing* as the **custom AccessToken processing microflow**.
     {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" >}}
 4. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the [Client Configuration](#client-configuration).
@@ -358,7 +358,7 @@ Your custom microflow should do the following
 Once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
 
 1. Login as an administrator, for example `Demo_administrator`.
-1. Refresh the module containing your microflow as described in [Installing MxModelReflection](#mxmodelreflection).
+1. Refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
 1. Go to OIDC Config 
 1. In the **OpenID Provider** tab, select an existing client configuration and click **Edit**
 1. Check **Enable Access Token Parsing** and select your microflow (for example, *CustomATP_xxx*) as the **custom AccessToken processing microflow**.

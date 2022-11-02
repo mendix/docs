@@ -26,7 +26,7 @@ This how-to will teach you how to do the following:
 * Use content (for example, widgets, modules, and others) downloaded from the Marketplace in Studio Pro
 
 {{% alert color="warning" %}}
-If you are using Studio Pro on a Mac device with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
+If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
 
 ## 2 Installing Marketplace Content {#install}
 

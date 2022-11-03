@@ -57,7 +57,7 @@ The module comes with some example microflows which you can find in **App** > **
 
 To use these Java Actions you must do the following:
 
-1. Provide a **Credentials** object which you have retrieved using the `GetStaticCredentials` microflow in the [AWS Authentication](/appstore/connectors/aws-authentication/) connector — this needs to be passed to all the Java actions as a parameter to allow authentication to take place.
+1. Provide a **Credentials** object which you have retrieved using the `GetSessionCredentials` microflow in the [AWS Authentication](/appstore/connectors/aws-authentication/) connector — this needs to be passed to all the Java actions as a parameter to allow authentication to take place.
 
 2. Provide other parameters to the action as objects of entities in the AWSS3Connector domain model. 
 

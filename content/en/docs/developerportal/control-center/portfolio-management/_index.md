@@ -247,7 +247,7 @@ The list contains the following information:
 
 #### 2.1.4 RICE Prioritization {#rice}
 
-{{% alert type="info" %}}For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.{% /alert %}}
+{{% alert type="info" %}}For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.{{% /alert %}}
 
 In the RICE prioritization view, all the projects are sequenced by their RICE scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 

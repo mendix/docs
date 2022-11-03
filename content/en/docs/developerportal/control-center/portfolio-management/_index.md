@@ -161,27 +161,27 @@ Each project card shows the following information:
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/project-card.png" >}}
 
-* Project name (①) –  Clicking it opens a [side pane](#view-project) that shows project details.
+* ① Project name  – Clicking it opens a [side pane](#view-project) that shows project details.
 
-* Ellipsis icon (**...**) (②) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
+* ② Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
 
   {{% alert type="info" %}}
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
-* Tags for the project (③) – These are the tags used to classify the project. Tags can be used, for example, to indicate the types of projects.
+* ③ Tags for the project – These are the tags used to classify the project. Tags can be used, for example, to indicate the types of projects.
 
-* Department (④) – This is the department to which the project belongs.
+* ④ Department – This is the department to which the project belongs.
 
-* Calendar icon (⑤) – Hovering over the icon shows the following defined dates of the project lifecycle:
+* ⑤ Calendar icon – Hovering over the icon shows the following defined dates of the project lifecycle:
 
   * **Intake** – This is the time when the project is accepted based on business requirements.
   * **Start Date** – This is the time when the first actions are taken to start implementation.
   * **Go-Live Date** – This is the time when the app is expected to be up and running.
 
-* Icon of the linked app (⑥) – Clicking the icon shows the information about the Mendix app that is linked with the project.
+* ⑥ Icon of the linked app – Clicking the icon shows the information about the Mendix app that is linked with the project.
 
-* Avatar of the project owner (⑦) – Hovering over the avatar shows the name of the project owner.
+* ⑦ Avatar of the project owner – Hovering over the avatar shows the name of the project owner.
 
 #### 2.2.2 List View {#list-view}
 

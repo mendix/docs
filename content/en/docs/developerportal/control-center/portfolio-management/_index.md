@@ -217,6 +217,8 @@ The list contains the following information:
 
 #### 2.1.3 WSJF Prioritization {#wsjf}
 
+{{% alert type="info" %}}For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management*.{{% /alert %}}
+
 In the WSJF prioritization view, all the projects are sequenced by their WSJS scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 
 The list contains the following information:
@@ -243,9 +245,9 @@ The list contains the following information:
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
 
-For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management*.
-
 #### 2.1.4 RICE Prioritization {#rice}
+
+{{% alert type="info" %}}For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.{% /alert %}}
 
 In the RICE prioritization view, all the projects are sequenced by their RICE scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 
@@ -282,8 +284,6 @@ The list contains the following information:
   {{% alert type="info" %}}
   Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
   {{% /alert %}}
-
-For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.
 
 ### 2.3 Viewing Project Details {#view-project}
 

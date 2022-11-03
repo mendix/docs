@@ -53,7 +53,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 * [Static credentials](#static)
 * [Signature version 4 headers](#signature-v4-headers)
 
-{{% alert color="info" %}
+{{% alert color="info" %}}
 }In general, session credentials are the recommended authentication method for use with your production app. Static credentials are not suitable for use in production - you should only use them in test or demo environments. Signature version 4 headers cover more advanced use cases. You can use them if session credentials do not cover your requirements, or if you are implementing AWS Authentication for a platform-supported AWS connector that specifically requires signature headers authentication. For more information, refer to the documentation of the platform-supported connector that you are implementing.
 {{% /alert %}}
 

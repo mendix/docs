@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2022
 
+### November 3rd, 2022
+
+#### Improvements
+
+* Notifications for newly registered resources are now grouped, helping to de-clutter your Catalog experience.
+
 ### October 27th, 2022
 
 #### Improvements

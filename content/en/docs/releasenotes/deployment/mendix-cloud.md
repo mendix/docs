@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### November 1st, 2022
+
+#### Improvements
+
+* We have enabled DNSSEC for all `*.mendixcloud.com` domains.
+
 ### October 20th, 2022
 
 #### Fix

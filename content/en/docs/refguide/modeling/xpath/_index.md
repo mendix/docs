@@ -33,9 +33,9 @@ A common Mendix XPath query consists of a several elements.
 | A | B | C | D |
 | --- | --- | --- | --- |
 | Aggregate function (optional) | Entity to retrieve (required) | Constraint (optional) | Attribute to retrieve (optional) |
-| avg | //Sales.Order | [IsPaid = true()] | /TotalPrice |
+| avg | `//Sales.Order` | `[IsPaid = true()]` | `/TotalPrice` |
 
-Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes '//' and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. E.g. //Sales.Order would return all objects of entity 'Order' in the module 'Sales'.
+Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes `//` and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. For example, `//Sales.Order` would return all objects of entity **Order** in the module **Sales**.
 
 Element C of a query is optional and contains one or more constraints to restrict the data being retrieved.
 
@@ -45,12 +45,12 @@ Consider the following query:
 //Sales.Customer[Name='Jansen']
 ```
 
-The constraint is clearly visible between brackets and restricts the objects retrieved to those for which the attribute 'Name' equals 'Jansen'. Objects with any other name than Jansen are excluded from the list.
+The constraint is clearly visible between brackets and restricts the objects retrieved to those for which the attribute **Name** equals **Jansen**. Objects with any other name than Jansen are excluded from the list.
 The number of possible constraints on a single query is unlimited. For more information on how to add and manipulate these constraints, see [XPath Constraints](/refguide/xpath-constraints/).
 
 Element D of a query is optional and specifies an attribute of the retrieved entity. This option is rarely used in Studio Pro itself as all data is stored in objects, making it cumbersome and needlessly complicated to deal with a list of single attribute. However, various Java actions have use of such lists. Also, this functionality can be used in conjunction with Part A to create aggregates of certain attributes easily.
 
-Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-avg/), [count](/refguide/xpath-count/), [max](/refguide/xpath-max/), [min](/refguide/xpath-min/) and [sum](/refguide/xpath-sum/). With the exception of 'count', each of these functions require that a particular attribute is specified in element D.
+Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-avg/), [count](/refguide/xpath-count/), [max](/refguide/xpath-max/), [min](/refguide/xpath-min/) and [sum](/refguide/xpath-sum/). With the exception of [count] (/refguide/xpath-count/), each of these functions require that a particular attribute is specified in element D.
 
 ## 3 Tokens
 

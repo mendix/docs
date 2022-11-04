@@ -35,7 +35,7 @@ Before you use the Email connector, do the following:
 4. Check for and remove orphaned JAR files from any old modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
 
 {{% alert color="warning" %}}
-Certain functionalities of the Email connector will not work correctly if the **Mx Model Reflection** module is not configured, or if you have not removed older email modules.
+These steps must be completed to ensure that the module is configured correctly.
 {{% /alert %}}
 
 ### 1.3 Included Widgets {#included-widgets}

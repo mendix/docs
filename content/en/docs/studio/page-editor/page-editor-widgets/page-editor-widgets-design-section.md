@@ -7,7 +7,7 @@ tags: ["studio", "page editor", "widgets", "on click action", "events"]
 
 ## 1 Introduction 
 
-The **Design** section in **Properties** allows you to change spacing and alignment of a widget on a page, but is not limited to these functions. For some elements you can, for example, change their color. Hover over the information icon to get more details on each option.
+The **Design** section in **Properties** allows you to change spacing and alignment of a widget on a page, but is not limited to these functions. For some elements you can, for example, change their color. Click the information icon to get more details on each option.
 
 {{< figure src="/attachments/studio/page-editor/page-editor-widgets/page-editor-widgets-design-section/design-section-info-icon.png" >}}
 

@@ -18,15 +18,9 @@ Your app uses objects which you want to store independently from the database. U
 
 This connector uses the AWS Authentication connector to provide the credentials with which to authenticate to the S3 bucket. You need to have the downloaded and configured the AWS Authentication connector to use the Amazon S3 connector. See [AWS Authentication connector](/appstore/connectors/aws-authentication/) for more information.
 
-## 2 Configuration
+## 2 Installation
 
-The Java actions provided in the module need AWS credentials. These are provided using the [AWS Authentication](/appstore/connectors/aws-authentication/) connector. This needs to be set up as described in the linked document.
-
-To include the Amazon S3 connector in your app, do the following.
-
-1. Open your app in Studio Pro
-
-2. Download the [Amazon S3](https://marketplace.mendix.com/link/component/120340) connector from the Marketplace (see [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon S3 connector into your app.
 
 ## 3 Using the Amazon S3 Connector
 

@@ -50,7 +50,7 @@ The number of possible constraints on a single query is unlimited. For more info
 
 Element D of a query is optional and specifies an attribute of the retrieved entity. This option is rarely used in Studio Pro itself as all data is stored in objects, making it cumbersome and needlessly complicated to deal with a list of single attribute. However, various Java actions have use of such lists. Also, this functionality can be used in conjunction with Part A to create aggregates of certain attributes easily.
 
-Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-avg/), [count](/refguide/xpath-count/), [max](/refguide/xpath-max/), [min](/refguide/xpath-min/) and [sum](/refguide/xpath-sum/). With the exception of [count] (/refguide/xpath-count/), each of these functions require that a particular attribute is specified in element D.
+Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-avg/), [count](/refguide/xpath-count/), [max](/refguide/xpath-max/), [min](/refguide/xpath-min/) and [sum](/refguide/xpath-sum/). With the exception of [count](/refguide/xpath-count/), each of these functions require that a particular attribute is specified in element D.
 
 ## 3 Tokens
 

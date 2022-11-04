@@ -65,6 +65,8 @@ To create a new project, do as follows:
 
    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
+      {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
+
    2. Select the app that you want to link to the project.
 
    If you woud like to see more information about a linked app, click the app name after it is linked.

@@ -47,12 +47,12 @@ Specific properties for **List View** are described in the table below:
 
 Specific properties for the **Container** widget are described in the table below:
 
-| Property         | Description                              | Possible Values                                              |
-| ---------------- | ---------------------------------------- | ------------------------------------------------------------ |
-| Align Content    | Aligns content inside a container.       | When aligning content as a column, elements inside a container will be aligned one under another; when aligning content as a row, elements inside a container will be aligned next to each other.<br />Possible values for **Align Content** are the following:<ul><li>None</li><li>Left align as a row</li><li>Center align as row</li><li>Right align as row</li><li>Left align as column</li><li>Center align as column</li><li>Right align as column</li></ul> |
-| Background color | Applies a background color.              | The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](/studio/theme-customizer/).<br />Possible values for **Background color** are the following:<ul><li>None – color defined in **Backgrounds** > **Default** of the **UI Customization** section of the [Theme Customizer](/studio/theme-customizer/)</li><li>Background Primary</li><li>Background Secondary</li><li>Brand Primary</li><li>Brand Secondary</li><li>Brand Success</li><li>Brand Warning</li><li>Brand Danger</li><li>Brand Gradient</li></ul> |
-| Shade            | Applies a shade to the background color. | Possible values for **Shade** are the following:<ul><li>None</li><li>Light</li><li>Dark</li></ul> |
-| Add Shadow       | Applies shadow to the widget.            | Possible values for **Add Shadow** are the following:<ul><li>None</li><li>Small</li><li>Medium</li><li>Large</li></ul> |
+| Property         | Description                                                  | Possible Values                                              |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Align Content    | Aligns content inside a container. <br />When aligning content as a column, elements inside a container will be aligned one under another; when aligning content as a row, elements inside a container will be aligned next to each other. | Possible values for **Align Content** are the following:<ul><li>None</li><li>Left align as a row</li><li>Center align as row</li><li>Right align as row</li><li>Left align as column</li><li>Center align as column</li><li>Right align as column</li></ul> |
+| Background color | Applies a background color.<br />The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](/studio/theme-customizer/). | Possible values for **Background color** are the following:<ul><li>None – color defined in **Backgrounds** > **Default** of the **UI Customization** section of the [Theme Customizer](/studio/theme-customizer/)</li><li>Background Primary</li><li>Background Secondary</li><li>Brand Primary</li><li>Brand Secondary</li><li>Brand Success</li><li>Brand Warning</li><li>Brand Danger</li><li>Brand Gradient</li></ul> |
+| Shade            | Applies a shade to the background color.                     | Possible values for **Shade** are the following:<ul><li>None</li><li>Light</li><li>Dark</li></ul> |
+| Add Shadow       | Applies shadow to the widget.                                | Possible values for **Add Shadow** are the following:<ul><li>None</li><li>Small</li><li>Medium</li><li>Large</li></ul> |
 
 ### 3.3 Button Specific Properties {#button-design-properties}
 
@@ -69,13 +69,13 @@ Specific properties for **Buttons** are described in the table below:
 
 Specific properties for the **Text** widget are described in the table below:
 
-| Property     | Description                          | Possible Values                                              |
-| ------------ | ------------------------------------ | ------------------------------------------------------------ |
-| Weight       | Changes the weight of the font       | Possible values for **Weight** are the following:<ul><li>None</li><li>Light</li><li>Normal <em>(used if weight is set to **None**)</em></li><li>Semibold</li><li>Bold</li></ul> |
-| Color        | Changes the color of the text        | Possible values for **Color** are the following:<ul><li>Header color</li><li>Detail color (light-gray color)</li><li>Brand Primary</li><li>Brand Secondary</li><li>Brand Success</li><li>Brand Warning</li><li>Brand Danger</li><li>White</li></ul><br />{{% alert color="info" %}}The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](/studio/theme-customizer/).<br />{{%/alert %}} |
-| Alignment    | Aligns the text                      | Possible values for **Alignment** are the following:<ul><li>None</li><li>Left</li><li>Center</li><li>Right</li></ul> |
-| Transform    | Changes letter case of the text      | Possible values for **Transform** are the following:<ul><li>None</li><li>Lowercase</li><li>Uppercase</li><li>Capitalize</li></ul> |
-| Wrap Options | Wrap a long text into multiple lines | Possible values for **Wrap Options** are the following:<ul><li>None – text is not wrapped</li><li>Wrap</li><li>No Wrap</li></ul> |
+| Property     | Description                                                  | Possible Values                                              |
+| ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Weight       | Changes the weight of the font.                              | Possible values for **Weight** are the following:<ul><li>None</li><li>Light</li><li>Normal <em>(used if weight is set to **None**)</em></li><li>Semibold</li><li>Bold</li></ul> |
+| Color        | Changes the color of the text. <br />The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](/studio/theme-customizer/). | Possible values for **Color** are the following:<ul><li>Header color</li><li>Detail color (light-gray color)</li><li>Brand Primary</li><li>Brand Secondary</li><li>Brand Success</li><li>Brand Warning</li><li>Brand Danger</li><li>White</li></ul> |
+| Alignment    | Aligns the text.                                             | Possible values for **Alignment** are the following:<ul><li>None</li><li>Left</li><li>Center</li><li>Right</li></ul> |
+| Transform    | Changes letter case of the text.                             | Possible values for **Transform** are the following:<ul><li>None</li><li>Lowercase</li><li>Uppercase</li><li>Capitalize</li></ul> |
+| Wrap Options | Wrap a long text into multiple lines.                        | Possible values for **Wrap Options** are the following:<ul><li>None – text is not wrapped</li><li>Wrap</li><li>No Wrap</li></ul> |
 
 ## 4 Read More
 

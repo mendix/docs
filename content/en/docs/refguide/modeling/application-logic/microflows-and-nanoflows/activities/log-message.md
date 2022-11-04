@@ -20,7 +20,7 @@ With the **Log message** activity you can create messages that appear in the log
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" width="900" >}}
 
 The **Log message** properties pane consists of the following sections:
 

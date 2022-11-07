@@ -12,21 +12,23 @@ The [Amazon S3](https://marketplace.mendix.com/link/component/120340) connector 
 
 ### 1.1 Typical Use Cases
 
-Your app uses objects which you want to store independently from the database. Using AWS S3 gives you the benefits of a secure and redundant storage system that uses a flat object storage structure.
+Amazon S3 gives gives you the benefits of a secure and redundant storage system that uses a flat object storage structure. You may want to use it if your app uses objects which you want to store independently from the database.
 
-### 1.2  Dependencies
+### 1.2  Prerequisites
 
-This connector uses the AWS Authentication connector to provide the credentials with which to authenticate to the S3 bucket. You need to have the downloaded and configured the AWS Authentication connector to use the Amazon S3 connector. See [AWS Authentication connector](/appstore/connectors/aws-authentication/) for more information.
+The Amazon S3 connector requires the [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
 
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon S3 connector into your app.
 
-## 3 Using the Amazon S3 Connector
+## 3 Configuration
 
-The Amazon S3 connector module contains a number of Java actions which can be used in your microflows to connect to one or more S3 buckets. These use the domain model of the module to connect to your S3 bucket(s).
+After you install the connector, you can find it in the **App Explorer**, in the **AWSS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to one or more Amazon S3 buckets. Each activity can be implemented by using it in a microflow.
 
-### 3.1 Domain Model
+To help you work with the Amazon S3 connector, the following sections of this document list the available entities and activities that you can use in your application.
+
+### 3.1 Domain Model {#domain-model}
 
 The domain model used by the Amazon S3 connector is shown below.
 
@@ -43,7 +45,7 @@ When using the Java actions, results will be stored as objects of the following 
 
 <sup><small>[1]</small></sup>The Document entity is persistable for technical reasons, but will have the `DeleteAfterDownload` flag set so that it is automatically deleted from the database. You will not have to remove Document objects yourself.
 
-### 3.2 Java Actions
+### 3.2 Activities {#activities}
 
 You can drag Java actions from the **Toolbox** into your microflows to connect to your S3 bucket(s).
 

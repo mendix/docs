@@ -13,7 +13,7 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 
 ### 1.1 Dependencies
 
-* [Community Commons](/appstore/modules/community-commons-function-library/)
+* The [Community Commons](/appstore/modules/community-commons-function-library/) module
 * *junit-4.13.1.jar*
 * *commons-io-2.11.0.jar*
 * *commons-lang3-3.11.jar*
@@ -22,7 +22,7 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 * *hamcrest-2.2.jar*
 
 {{% alert color="info" %}}
-For module versions below 9.1.0, use the [Object Handling](/appstore/modules/object-handling/) module instead of Community Commons.
+For module versions below 9.1.0, use the [Object Handling](/appstore/modules/object-handling/) module instead of the Community Commons module.
 {{% /alert %}}
 
 ## 2 Installation

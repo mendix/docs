@@ -243,7 +243,7 @@ If a license has previously been imported, you will be told that it is `[Duplica
 
 ## 7 Applying Licenses to Your Operator and Apps
 
-To use the licenses, you have to add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Mendix Cloud Cluster* documentation.
+To use the licenses, you have to add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation.
 Assume that the operator is running in the namespace `<operator-ns>`.
 
 ### 7.1 Storing Operator User Credentials
@@ -405,11 +405,7 @@ The report is presented as a CSV file containing a summary of the licenses at va
 
 If you are migrating a Mendix Operator and Mendix apps which are already licensed to use the PCLM, you will need to remove the existing licenses. If your namespace was never licensed, please ignore this section.
 
-Once you have configured the Mendix Operator running in a specific `<namespace>` to use the PCLM (following steps 7.1 and 7.2) you need to perform the following steps to remove the existing licenses:
-
-### 8.1 Static Runtime Licenses
-
-If you are using static Runtime licenses, simply restart the Mendix Operator, 
+Once you have configured the Mendix Operator running in a specific `<namespace>` to use the PCLM (following steps 7.1 and 7.2) you need to restart the Mendix operator to remove the existing licenses. You can do this as follows:
 
 ```bash {linenos=false}
 kubectl -n <namespace> scale deployment mendix-operator --replicas=0
@@ -432,63 +428,6 @@ This will indicate that licenses have been applied to the operator and apps in t
 | ------------------------------------ | ---------- | -------- | ----------- |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
-
-### 8.2 Call-Home / Subscription Runtime Licenses
-
-For Call-home (subscription) runtime licenses, you will need to update the following resources **for each** `MendixApp` configured in the `<namespace>`:
-
-Firstly, list all the `MendixApps` configured in the given `<namespace>`
-
-```bash {linenos=false}
-kubectl -n <namespace> get MendixApps
-```
-
-That returns something like:
-
-```text {linenos=false}
-NAME       AGE
-my-app-1   1h
-my-app-2   2h
-```
-
-Edit each of the MendixApp CRs. For example, to edit “my-app-1”:
-
-```bash {linenos=false}
-kubectl -n <namespace> edit MendixApp my-app-1
-```
-
-Remove all the custom configuration properties that relate to the Call-home License server from the spec > runtime > customConfiguration section. These have the prefix `License.*`.
-
-```yaml {linenos=false}
-spec: 
-  runtime:
-    customConfiguration: >-
-          {"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.3\"}","License.SubscriptionSecret":"28e25669-d69a-4e14-a5ee-849bacdb2bd6","License.UseLicenseServer":"true","License.LicenseServerURL":"https://subscription-api.test.mendix.com/activate","License.EnvironmentName":"b3406922-331d-4958-b5ee-bec1f1a04cd0"}
-```
-
-After all the `MendixApp` CRs are updated, restart the Mendix Operator:
-
-```bash {linenos=false}
-kubectl -n <namespace> scale deployment mendix-operator --replicas=0
-kubectl -n <namespace> scale deployment mendix-operator --replicas=1
-```
-
-Once all the MendixApps are running we can confirm that the licenses were assigned:
-
-```bash {linenos=false}
-mx-pclm-cli license list-usage -s <pclm-http-url> \
-    -u <admin-user> \
-    -p <admin-password>
-```
-
-This would return for the previous example: 
-
-| License-ID                           | Namespace  | App-ID   | Type        |
-| ------------------------------------ | ---------- | -------- | ----------- |
-| `<license-id>` | `<namepace>` | my-app-1 | mx-operator |
-| `<license-id>` | `<namepace>` | my-app-1 | mx-runtime  |
-| `<license-id>` | `<namepace>` | my-app-2 | mx-operator |
-| `<license-id>` | `<namepace>` | my-app-2 | mx-runtime  |
 
 ## 9 Troubleshooting
 

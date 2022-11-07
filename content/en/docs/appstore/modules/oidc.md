@@ -63,6 +63,7 @@ The OIDC SSO module does not yet support
 * Other client authentication methods such as using asymmetric keys (“private_key_jwt”).
 * Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens.
 * Mobile apps.
+* PWA Apps.
 
 ## 2 Dependencies
 

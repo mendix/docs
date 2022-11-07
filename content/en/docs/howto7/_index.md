@@ -15,6 +15,10 @@ cascade:
         priority: 0.2
 ---
 
+{{% alert color="info" %}}
+Support for Mendix 7 will be available after the release of Mendix 10. For details, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.
+{{% /alert %}}
+
 Browse the Mendix how-to's to find step-by-step guides that will teach you how to build and customize apps with Mendix.
 
 The *Mendix How-tos* are divided into the following categories:

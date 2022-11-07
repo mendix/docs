@@ -15,6 +15,10 @@ cascade:
         priority: 0.3
 ---
 
+{{% alert color="info" %}}
+Support for Mendix 7 will be available after the release of Mendix 10. For details, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.
+{{% /alert %}}
+
 The *Mendix Reference Guide* covers important topics on the  [Desktop Modeler](/refguide7/desktop-modeler/), [Mendix Runtime](/refguide7/runtime/), and other components of the Mendix Platform.
 
 Before installing Mendix 7, please read [System Requirements](/refguide7/system-requirements/). If you have been using version 6 of the Desktop Modeler, we recommend reading [Moving from 6 to 7](/refguide7/moving-from-6-to-7/).

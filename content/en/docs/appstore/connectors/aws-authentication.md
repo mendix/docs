@@ -185,7 +185,7 @@ You can view the domain model in the **App Explorer** in the **AWS Authenticatio
     
     {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4parameters.png" >}}
 
-* `SigV4SignedHeaders` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
+* `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
 
     {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4headers.png" >}}
 
@@ -197,7 +197,7 @@ The `GetSigV4SignedHeaders` Java action computes and provides the signed headers
 * A `SigV4Parameter` object that provides a list of headers
 * Another, optional `SigV4Parameter` object that provides a list of `QueryParameters`
 
-The output of the action is a `SigV4SignedHeaders` object.
+The output of the action is a `SigV4Headers` object.
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4action.png" >}}
 

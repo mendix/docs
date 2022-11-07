@@ -16,7 +16,7 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 * [Community Commons](/appstore/modules/community-commons-function-library/)
 * *junit-4.13.1.jar*
 * *commons-io-2.11.0.jar*
-* *commons-lang3-3.7.jar*
+* *commons-lang3-3.11.jar*
 * *httpclient5-5.0.3.jar*
 * *httpcore5-5.0.3.jar*
 * *hamcrest-2.2.jar*

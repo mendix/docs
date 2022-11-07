@@ -39,7 +39,7 @@ Customized log messages are created by defining a **Template**. The template is 
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/log-levels/log-message-template.png" >}}
 
-In the image above, the template for the message is **Email not sent to department {1}**. With this example template, when the error occurs the customer’s email address is inserted into the parameter placeholder **{1}** (for example, the log message would be **Email not sent to department Customer Support**. Thus, the log message is customized with data that is specific to the error.
+In the image above, the template for the message is *Email not sent to department {1}*. With this example template, when the error occurs the customer’s email address is inserted into the parameter placeholder **{1}** (for example, the log message would be *Email not sent to department Customer Support*. Thus, the log message is customized with data that is specific to the error.
 
 #### 2.1.4 Stack Trace
 

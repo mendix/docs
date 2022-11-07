@@ -328,7 +328,7 @@ oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/
 For ECR you need to create secret with [authorization token](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html#registry-auth-token) and refresh it every 12 hours.
 To make it easier we build Kubernetes CronJob that you can reuse.
 
-This CronJob requires user with the next permissions:
+This CronJob requires IAM user with the next policy:
 ```
 {
     "Version": "2012-10-17",
@@ -361,7 +361,8 @@ You need replace strings `$YOUR_REGISTRY_REGION`, `$YOUR_ACCOUNT` and `$YOUR_REP
 
 Manifest below contains CronJob that will refresh secret with ECR .dockerconfig every 4 hours.
 Also, it contains Job that will create that secret for the first time.
-Replace $BASE64_KEYID_HERE, $BASE64_ACCESSKEY_HERE, $BASE64_AWS_ACCOUNT_HERE and $BASE64_AWS_REGION_HERE strings with the correct one. 
+Replace $BASE64_KEYID_HERE, $BASE64_ACCESSKEY_HERE, $BASE64_AWS_ACCOUNT_HERE and $BASE64_AWS_REGION_HERE strings with the correct one.</br>
+$BASE64_KEYID_HERE and $BASE64_ACCESSKEY_HERE are the Access key ID and Secret access key of the created IAM user.
 ```
 apiVersion: v1
 kind: Secret

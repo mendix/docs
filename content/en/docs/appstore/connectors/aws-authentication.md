@@ -54,7 +54,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 * [Signature version 4 headers](#signature-v4-headers)
 
 {{% alert color="info" %}}
-}In general, session credentials are the recommended authentication method for use with your production app. Static credentials are not suitable for use in production - you should only use them in test or demo environments. Signature version 4 headers cover more advanced use cases. You can use them if session credentials do not cover your requirements, or if you are implementing AWS Authentication for a platform-supported AWS connector that specifically requires signature headers authentication. For more information, refer to the documentation of the platform-supported connector that you are implementing.
+In general, session credentials are the recommended authentication method for use with your production app. Static credentials are not suitable for use in production - you should only use them in test or demo environments. Signature version 4 headers cover more advanced use cases. You can use them if session credentials do not cover your requirements, or if you are implementing AWS Authentication for a platform-supported AWS connector that specifically requires signature headers authentication. For more information, refer to the documentation of the platform-supported connector that you are implementing.
 {{% /alert %}}
 
 ### 4.1 Implementing Session Credentials {#session}
@@ -209,6 +209,6 @@ The following microflow shows an example implementation of signature version 4 h
 
 In this example, a `SigV4Builder` activity is created and associated with a `Credentials` entity, a list of headers, and list of query parameters.
 
-These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4SignedHeader` entity.
+These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4Header` entity.
 
 The values set in the response entity are used as request headers in the REST call to AWS.

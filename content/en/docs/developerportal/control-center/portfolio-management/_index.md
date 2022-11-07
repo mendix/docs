@@ -11,13 +11,17 @@ tags: ["Portfolio Management"]
 
 The [Portfolio Management](https://portfolio.mendix.com) app helps companies maximize project value throughout the app lifecycle. This application allows you to plan, track progress, estimate, and assess the value of different projects.
 
-{{% todo %}}Add information where to find portfolio management in the navigation within the mx platform{{%  /todo  %}}
+{{% alert type="info" %}}
+The Portfolio Management app is available to all Mendix Cloud customers. Mendix Admins can access all portfolios within their company.
+{{% /alert %}}
 
-The Portfolio Management app is available to all Mendix Cloud customers. Mendix Admins can access all portfolios within their company. 
+To start the Portfolio Management app, go to the Developer Portal, open the access menu by clicking the icon on the upper-left corner, as shown in the image below, and then select **Portofolio**.
+
+{{< figure src="/attachments/developerportal/control-center/portfolio-management/access-menu.png" >}}
 
 ## 2 Projects Overview Page {#projects-overview}
 
-When you start the Portfolio Management app, you see all the portfolios of your company. 
+After you start the Portfolio Management app, you see all the portfolios of your company. 
 
 {{< figure src="/attachments/developerportal/control-center/portfolio-management/landing-page.png" >}}
 
@@ -39,77 +43,60 @@ On the upper-right corner, you can use the **Filters** to filter projects. Using
 
 ### 2.1 Creating a New Project {#create-new-project}
 
+In the Portfolio Management app, the term "Project" refers to a software project that you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+
 {{% alert type="info" %}}
 Only Portfolio Managers can create a new project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-In the Portfolio Management app, the term "Project" refers to a software project that you manage as you work along the development lifecycle. An app can be the result of multiple projects (if the app is complex and big) or only one project. For progress tracking, we recommend you to break down an app into smaller projects whenever possible.
+To create a new project and add project details to it, do as follows:
 
-To create a new project, do as follows:
+1. [Create a project.](#create-project)
+2. [Add general information.](#add-general-information)
+3. [Add planning information.](#add-planning-information)
+4. [Add prioritization information.](#add-prioritization-information)
+5. [Add estimated value.](#add-estimated-value)
+6. [Add notes.](#add-notes)
+7. [Save project details.](#save-details)
+
+#### 2.1.1 Creating a Project {#create-project}
 
 1. Go to the **Projects Overview** page.
-
 2. Click **Create New Project**.
-
 3. Enter the **Project Name** and the **Stage** in which the project is. 
-
 4. Click **Create Project**. The project is created and appears on the **Projects Overview** page. The **Edit Project** side pane opens on the right side of the page where you can add the details of the new project.
 
-5. Select **Tags** for the project. You can use tags to classify your projects, for example by departments or types. You can select existing tags, or create new tags. 
+Now you can proceed to [add planning information](#add-planning-information).
 
-   {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
+#### 2.1.2 Adding General Information {#add-general-information}
 
-6. Enter the **Description** of the project.
+1.  In the **Edit Project** side pane, select **Tags** for the project. You can use tags to classify your projects, for example by departments or types. You can select existing tags, or create new tags. 
 
-7. If there is an existing app that you want to change or if development is already in progress, you can link the app to this project:
+    {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
-   1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
+2. Enter the **Description** of the project.
+3. If there is an existing app that you want to change or if development is already in progress, you can link the app to this project:
 
-      {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
+    1.  In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
-   2. Select the app that you want to link to the project.
+        {{% alert color="info" %}}If a field has the **ⓘ** icon next to it like the **Link Existing App** field, then you can check out the description of this field by hovering over the **ⓘ** icon.{{% /alert %}}
 
-   If you woud like to see more information about a linked app, click the app name after it is linked.
+    2.  Select the app that you want to link to the project.
 
-8. Set the **Owner** for the project.
+        If you woud like to see more information about a linked app, click the app name after it is linked.
 
-9. Select the **Stage**, **Department**, **Country**, and **Use Case** for the project.
+4. Set the **Owner** for the project.
+5.  Select the **Stage**, **Department**, **Country**, and **Use Case** for the project.
 
-   {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-10. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
+6. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
-11. Click **Planning** to show all the fields in this section. Set the following dates in this section:
+Now you can proceed to [add prioritization information](#add-prioritization-information).
 
-    * **Intake** – This is the time when the project is accepted based on business requirements.
-    * **Start Date** – This is the time when the first actions are taken to start implementation.
-    * **Go-Live date** – This is the time when the app is expected to be up and running.
+##### 2.1.2.1 Managing Tags {#manage-tags}
 
-12. Click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
-
-    {{% alert color="info" %}}The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about these models and the components of each model, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section or the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*{{% /alert %}}
-
-13. Click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
-
-    * **Type of Value** – This is the type of the value that is created by the project.
-
-      {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
-
-    * **Frequency** – This indicates whether the value is **Once-off** or **Recurring**.
-
-    * **Value** – This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
-
-    * **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
-
-      If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
-
-14. If you want to add a note, click **Notes**, and then click **Post Note** after you add the note.
-
-15. Click **Save**. All the details are saved for the new project.
-
-#### 2.1.1 Managing Tags {#manage-tags}
-
-While you are in the process of [creating a new project](#create-new-project) or [editing a project](#edit-delete-project), you can manage tags as follows:
+While you are in the process of [adding general information](#add-general-information), you can manage tags as follows:
 
 In the **Edit Project** side pane, click the settings icon next to the **Tags** text box.
 
@@ -136,6 +123,52 @@ To delete an existing tag, do as follows:
 1. Hover over the row where the tag is listed, a delete icon (red trashcan) appears at the end of the row.
 2. Click the delete icon. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
+
+#### 2.1.3 Adding Planning Information {#add-planning-information}
+
+In the **Edit Project** side pane, click **Planning** to show all the fields in this section. Set the following dates in this section:
+
+* **Intake** – This is the time when the project is accepted based on business requirements.
+* **Start Date** – This is the time when the first actions are taken to start implementation.
+* **Go-Live date** – This is the time when the app is expected to be up and running.
+
+Now you can proceed to [add prioritization information](#add-prioritization-information).
+
+#### 2.1.4 Adding Prioritization Information {#add-prioritization-information}
+
+In the **Edit Project** side pane, click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
+
+{{% alert color="info" %}}
+The title of this section can be **Prioritization: WSFJ Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about the prioritization models and the components of each model, see the [WSJF](/developerportal/control-center/prioritization-models/#wsjf) section or the [RICE](/developerportal/control-center/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*
+{{% /alert %}}
+
+Now you can proceed to [add estimated value](#add-estimated-value).
+
+#### 2.1.5 Adding Estimated Value {#add-estimated-value}
+
+In the **Edit Project** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
+
+*  **Type of Value** – This is the type of the value that is created by the project.
+
+    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+
+* **Frequency** – This indicates whether the value is **Once-off** or **Recurring**.
+* **Value** – This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
+* **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
+
+If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
+
+Now you can proceed to [add notes](#add-notes).
+
+#### 2.1.6 Adding Notes{#add-notes}
+
+If you want to add a note, click **Notes** in the **Edit Project** side pane, and then click **Post Note** after you add the note.
+
+Now you can proceed to [save project details](#save-details).
+
+#### 2.1.7 Saving Project Details {#save-details}
+
+At the bottom of the **Edit Project** side pane, click **Save**. Now all the details are saved for the new project that you just created.
 
 ### 2.2 Changing Your View {#change-view}
 

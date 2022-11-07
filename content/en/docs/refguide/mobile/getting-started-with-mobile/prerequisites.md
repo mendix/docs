@@ -102,6 +102,19 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 If your port forwarding settings are correct but you still get an error that the Make It Native app **cannot detect Studio Pro**, please reinstall the Make It Native app on your mobile device.
 
+#### 3.1.5 Your Company Policy prevents you from Connecting
+
+If your company has a very strict network policy and does not allow the required ports to be opened, there are three additional approaches you can take:
+
+1. Connect your PC via Wifi to a personal hotspot on your mobile phone, then look up your PCs IP address and connect to `http://[IP]:8080` from the mobile phone.
+1. Install Make It Native or a custom developer app on an Android Simulator (for example [BlueStacks](https://www.bluestacks.com)) and connect to `http://localhost:8080`.
+1. Tunnel the ports from your desktop to your Android device via USB by executing the following commands from your shell (requires [Android Studio](https://developer.android.com/studio)):
+
+```
+adb reverse tcp:8080 tcp:8080
+adb reverse tcp:8083 tcp:8083
+```
+
 ### 3.2 Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).

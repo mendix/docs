@@ -100,6 +100,17 @@ These instructions install the Tekton Dashboard in the same namespace as the Tek
 
 You can read the official installation procedure on the [Tekton Dashboard](https://github.com/tektoncd/dashboard/#readme) GitHub repo.
 
+#### 3.4 Simplified architecture example{#architecture}
+
+Below is example of recommended architecture setup.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" >}}
+
+In this example you can see that there are 3 namespaces.
+1. Namespace with installed Mendix operator.
+2. Namespace with installed Mendix [tekton pipelines](#pipelines-installation) and [triggers](#installing-triggers).
+3. Namespace with installed [Tekton & Tekton Triggers](#tekton-installation).
+
 ## 4 Air-gapped Environments
 
 {{% alert color="info" %}}
@@ -141,7 +152,7 @@ Before you install the Mendix pipelines, which contain all Tekton-related object
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
-The namespace can be the same namespace where the Mendix Operator runs, or you can create a new namespace. Further, we will use $NAMESPACE_WITH_PIPELINES to refer to that namespace.
+You need to install it in the separate namespace like shown [here](#architecture). Further, we will use $NAMESPACE_WITH_PIPELINES to refer to that namespace.
 
 The installation command is:
 
@@ -310,6 +321,183 @@ For OpenShift you need to provide an SSL certificate file for the registry and g
 ```bash {linenos=false}
 oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}' -n $YOUR_NAMESPACE_WITH_PIPELINES
 oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]' -n $YOUR_NAMESPACE_WITH_PIPELINES
+```
+
+#### 8.2.3 AWS ECR 
+
+For ECR you need to create secret with [authorization token](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html#registry-auth-token) and refresh it every 12 hours.
+To make it easier we build Kubernetes CronJob that you can reuse.
+
+This CronJob requires user with the next permissions:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ManageRepositoryContents",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:GetAuthorizationToken",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:GetRepositoryPolicy",
+                "ecr:DescribeRepositories",
+                "ecr:ListImages",
+                "ecr:DescribeImages",
+                "ecr:BatchGetImage",
+                "ecr:InitiateLayerUpload",
+                "ecr:UploadLayerPart",
+                "ecr:CompleteLayerUpload",
+                "ecr:PutImage"
+            ],
+            "Resource": [
+                "arn:aws:ecr:$YOUR_REGISTRY_REGION:$YOUR_ACCOUNT:repository/$YOUR_REPO"
+            ]
+        }
+    ]
+}
+```
+You need replace strings `$YOUR_REGISTRY_REGION`, `$YOUR_ACCOUNT` and `$YOUR_REPO` with your values (use the same repo from [this section](pipelines-installation)).  
+
+Manifest below contains CronJob that will refresh secret with ECR .dockerconfig every 4 hours.
+Also, it contains Job that will create that secret for the first time.
+Replace $BASE64_KEYID_HERE, $BASE64_ACCESSKEY_HERE, $BASE64_AWS_ACCOUNT_HERE and $BASE64_AWS_REGION_HERE strings with the correct one. 
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ecr-secret
+type: Opaque
+data:
+  AWS_ACCESS_KEY_ID: $BASE64_KEYID_HERE
+  AWS_SECRET_ACCESS_KEY: $BASE64_ACCESSKEY_HERE
+  AWS_ACCOUNT: $BASE64_AWS_ACCOUNT_HERE
+  AWS_REGION: $BASE64_AWS_REGION_HERE
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ecr-token-update
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: ecr-token-update
+rules:
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["get", "create", "delete"]
+  - apiGroups: [""]
+    resources: ["serviceaccounts"]
+    verbs: ["get", "patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: ecr-token-update-binding
+subjects:
+  - kind: ServiceAccount
+    name: ecr-token-update
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: ecr-token-update
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: create-ecr-secret
+spec:
+  template:
+    spec:
+      serviceAccountName: ecr-token-update
+      containers:
+        - name: kubectl
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - secretRef:
+                name: ecr-secret
+          image: alpine/k8s:1.18.16
+          command:
+            - "/bin/sh"
+            - "-c"
+            - |
+              DOCKER_REGISTRY_SERVER=https://${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com
+              DOCKER_USER=AWS
+              DOCKER_PASSWORD=`aws ecr get-login --region ${AWS_REGION} | cut -d' ' -f6`
+              DOCKER_CONFIG_PASSWORD=`echo ${DOCKER_USER}:${DOCKER_PASSWORD} | base64 -w 0`
+              CONFIG="
+              {
+                \"auths\": {
+                  \"${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com\": {
+                    \"auth\": \"${DOCKER_CONFIG_PASSWORD}\"
+                  }
+                }
+              }"
+              
+              echo "Writing to config.json"
+              printf "${CONFIG}" > config.json
+              
+              kubectl delete secret aws-registry || true
+              kubectl create secret generic aws-registry \
+              --from-file=.dockerconfigjson=config.json \
+              --type=kubernetes.io/dockerconfigjson
+              
+              kubectl patch serviceaccount tekton-triggers-mx-sa -p '{"imagePullSecrets":[{"name":"aws-registry"}]}'
+              kubectl patch serviceaccount tekton-triggers-mx-sa -p '{"secrets":[{"name":"aws-registry"}]}'
+      restartPolicy: Never
+  backoffLimit: 1
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: aws-registry-credential-cron
+spec:
+  schedule: "0 */4 * * *"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      template:
+        spec:
+          serviceAccountName: ecr-token-update
+          terminationGracePeriodSeconds: 0
+          restartPolicy: Never
+          containers:
+            - name: kubectl
+              imagePullPolicy: IfNotPresent
+              envFrom:
+                - secretRef:
+                    name: ecr-secret
+              image: alpine/k8s:1.18.16
+              command:
+                - "/bin/sh"
+                - "-c"
+                - |
+                  DOCKER_REGISTRY_SERVER=https://${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com
+                  DOCKER_USER=AWS
+                  DOCKER_PASSWORD=`aws ecr get-login --region ${AWS_REGION} | cut -d' ' -f6`
+                  DOCKER_CONFIG_PASSWORD=`echo ${DOCKER_USER}:${DOCKER_PASSWORD} | base64 -w 0`
+                  CONFIG="
+                  {
+                    \"auths\": {
+                      \"${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com\": {
+                        \"auth\": \"${DOCKER_CONFIG_PASSWORD}\"
+                      }
+                    }
+                  }"
+                  
+                  echo "Writing to config.json"
+                  printf "${CONFIG}" > config.json
+                  
+                  kubectl delete secret aws-registry || true
+                  kubectl create secret generic aws-registry \
+                  --from-file=.dockerconfigjson=config.json \
+                  --type=kubernetes.io/dockerconfigjson
+                  
+                  kubectl patch serviceaccount tekton-triggers-mx-sa -p '{"imagePullSecrets":[{"name":"aws-registry"}]}'
+                  kubectl patch serviceaccount tekton-triggers-mx-sa -p '{"secrets":[{"name":"aws-registry"}]}'
 ```
 
 ## 9 Triggering Pipelines

@@ -131,18 +131,10 @@ Warning Threshold | If the health check microflow returns a non-empty string val
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
 First actions to take | Since the health check microflow is specific to your application, we cannot generically advise actions to take.
 
-Virtual Machine Crash | |
-:---|:---|
-Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
-Example message | Your application's virtual machine died 1 times in the last minute.
-Warning Threshold | Not used.
-Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
-First actions to take | Check the log files and application metrics for a possible cause of the crash.
-
 Virtual Machine Error | |
 :---|:---|
 Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
-Example message | Your application's virtual machine died because of non-recoverable error 1 times in the last minute.
+Example message | Your application's virtual machine died because of non-recoverable error in the last 5 minutes.
 Warning Threshold | Not used.
 Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
 First actions to take | Check the log files and application metrics for a possible cause of the error.
@@ -150,7 +142,7 @@ First actions to take | Check the log files and application metrics for a possib
 Virtual Machine Out Of Memory | |
 :---|:---|
 Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
-Example message | Your application's virtual machine ran out of memory and died 1 times in the last minute.
+Example message | Your application's virtual machine ran out of memory and died in the last 5 minutes.
 Warning Threshold | Not used.
 Critical Threshold | If the JVM process has run out of memory and the application's virtual machine crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.

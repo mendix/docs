@@ -97,7 +97,7 @@ To enable your environment to use Vault as external secret storage, follow these
     ```
 5. Bind the Vault role to a k8s service (replace `<{env-policy}>` with the policy name from the previous step; use a unique role name in place of `<{env-role}>`; specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`):
     ```shell
-    vault write auth/kubernetes/role/<{app-role}> \
+    vault write auth/kubernetes/role/<{env-role}> \
       bound_service_account_names=<{env-serviceaccount}> \
       bound_service_account_namespaces=<{env-namespace}> \
       policies=<{env-policy}> \

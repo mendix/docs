@@ -16,7 +16,7 @@ cascade:
 ---
 
 {{% alert color="info" %}}
-Support for Mendix 7 will be available after the release of Mendix 10. For details, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.
+Support for Mendix 7 will be available after the release of Mendix 10 for a maximum duration of one year. For details, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.
 {{% /alert %}}
 
 The *Mendix Reference Guide* covers important topics on the  [Desktop Modeler](/refguide7/desktop-modeler/), [Mendix Runtime](/refguide7/runtime/), and other components of the Mendix Platform.

@@ -119,7 +119,7 @@ To enable your environment to use Vault as external secret storage, follow these
     spec:
       provider: vault
       parameters:
-        vaultAddress: "http://vault.{<Vault-namespace>}.svc.cluster.local:8200>"
+        vaultAddress: "http://vault.{<Vault-namespace>}.svc.cluster.local:8200"
         roleName: "<{env-role}>"
         objects: |
           - secretKey: "database-type"

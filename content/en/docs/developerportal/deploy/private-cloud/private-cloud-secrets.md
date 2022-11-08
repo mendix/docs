@@ -114,8 +114,8 @@ To enable your environment to use Vault as external secret storage, follow these
     kind: SecretProviderClass
     metadata:
       name: <{MendixApp CR name}>
-    annotations:
-      privatecloud.mendix.com/environment-class: "true"
+      annotations:
+        privatecloud.mendix.com/environment-class: "true"
     spec:
       provider: vault
       parameters:

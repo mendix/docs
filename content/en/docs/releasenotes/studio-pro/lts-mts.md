@@ -66,7 +66,7 @@ This diagram illustrates the LTS concept with version and [end of support](#end)
 
 {{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" >}}
 
-{{% alert color="info" %}}For details on extending support for an older major version, see the Extended Support section in Mendix Support.{{% /alert %}}
+{{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
 
 ### 2.2 Release Cycle
 

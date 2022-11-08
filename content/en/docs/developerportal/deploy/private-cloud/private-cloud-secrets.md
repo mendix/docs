@@ -248,6 +248,6 @@ When implementing a secret store, keep in mind the following considerations:
 
 * It is not currently possible to use Storage Plans with CSI Secrets Storage. Instead, your infrastructure admin must attach a Kubernetes `ServiceAccount` and `SecretProviderClass` would be attached to the app before or after the environment is created.
 * If a secret is rotated or updated, the app should be restarted to use new credentials.
-* Dynamic secrets in HashiCorp Vault are supported - from the app environment, they're identical to regular secrets.
+* Dynamic secrets in HashiCorp Vault are supported - from the app environment, they are identical to regular secrets.
 * The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass`.
-* CSI Secrets Storage can override app settings - if a parameter is configured in the Cloud Portal (or `MendixApp` CR), its value from CSI Secrets Storage will have a higher priority and will override the value specified in the Cloud Portal. Currently this applies only to the `MxAdmin` password. In the future, this may also include app constants and other settings.
+* CSI Secrets Storage can override app settings - if a parameter is configured in the Cloud Portal or `MendixApp` CR, its value from CSI Secrets Storage will have a higher priority and will override the value specified in the Cloud Portal. Currently this applies only to the `MxAdmin` password. In the future, this may also include app constants and other settings.

@@ -22,11 +22,15 @@ The **System.User** entity has inbuilt access rules where access is given to its
 
 ## 2 Defining Access Rules
 
-Access rules are defined via entity's **Properties** > **Access rules**, or on the **Access rules** tab of the entity dialog. 
+There are two ways to view access rules:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="300px" >}}
+* Via entity's **Properties** > **Access rules**: 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="700px" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="250px" >}}
+
+* Via the **Access rules** tab of the entity dialog box:
+
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="550px" >}}
 
 {{% alert color="info" %}}
 The **Access rules** section is visible only if the [App Security](/refguide/app-security/) is set to **Production**.
@@ -34,7 +38,7 @@ The **Access rules** section is visible only if the [App Security](/refguide/app
 
 An example of the access rules properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="850px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" >}}
 
 Access rules properties consist of the following sections:
 
@@ -111,7 +115,7 @@ If a user cannot view the value of an attribute because of security constraints,
 
 An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="500px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" >}}
 
 {{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.

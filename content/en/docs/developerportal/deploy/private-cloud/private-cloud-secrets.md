@@ -94,7 +94,6 @@ To enable your environment to use Vault as external secret storage, follow these
       bound_service_account_names=<{env-serviceaccount}> \
       bound_service_account_namespaces=<{env-namespace}> \
       policies=<{env-policy}> \
-      ttl=20m
     ```
 7. Create a Kubernetes `ServiceAccount` for your environment, as shown in the following example. Specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`:
     ```shell

@@ -20,20 +20,14 @@ However, using a secret storage incorrectly may reduce the security of your app.
 To implement an external secret store, you must configure the required settings by following these steps:
 
 1. Set up and configure the secret storage provider, for example, HashiCorp Vault, or AWS Secret Manager.
-    In most cases, this should only be done once for the entire cluster.
-    For more information and support, contact the secret storage provider vendor.
+    In most cases, this should only be done once for the entire cluster. For more information and support, contact the secret storage provider.
 2. Install and configure a [Kubernetes Secrets Store CSI driver](https://secrets-store-csi-driver.sigs.k8s.io/#supported-providers), for example, [AWS Secrets Manager CSI Secrets Store](https://github.com/aws/secrets-store-csi-driver-provider-aws).
-    This driver is installed globally for the entire cluster.
-    For more information, refer to documentation supplied by the secret store provider.
+    This driver is installed globally for the entire cluster. For more information, refer to documentation supplied by the secret storage provider.
 3. Prepare a Kubernetes `ServiceAccount` to be used for authentication. 
-    The `ServiceAccount` name must match the [Mendix App CR](/deploy/private-cloud-technical-appendix-01/) name (that, is, the internal name of the app environment).
-    In addition, the `ServiceAccount` needs to have a `privatecloud.mendix.com/environment-account: "true"` annotation.
-    Your secret store provider may have other requirements - for more information, refer to documentation supplied by the secret store provider.
-    Typically, the Kubernetes `ServiceAccount` requires vendor-specific annotations to link it with an account or role in the secret store provider.
+    The `ServiceAccount` name must match the [Mendix App CR](/deploy/private-cloud-technical-appendix-01/) name (that, is, the internal name of the app environment). In addition, the `ServiceAccount` needs to have a `privatecloud.mendix.com/environment-account: "true"` annotation.
+    Your secret storage provider may have other requirements - for more information, refer to documentation supplied by the secret storage provider. Typically, the Kubernetes `ServiceAccount` requires vendor-specific annotations to link it with an account or role in the secret storagee provider.
 4. Configure the [SecretProviderClass](https://secrets-store-csi-driver.sigs.k8s.io/getting-started/usage.html#create-your-own-secretproviderclass-object)
-     The `SecretProviderClass` contains vendor-specific configuration that specifies mapping rules - where to read the keys, how to transform and rename them.
-     You must configure it to match the Mendix App CR name, and use a specific list of mappable keys - for more information, see [SecretProviderClass Keys](#keys).
-     In addition, the `SecretProviderClass` should have a `privatecloud.mendix.com/environment-class: "true"` annotation.
+     The `SecretProviderClass` contains vendor-specific configuration that specifies mapping rules - where to read the keys, how to transform and rename them. You must configure it to match the Mendix App CR name, and use a specific list of mappable keys - for more information, see [SecretProviderClass Keys](#keys). In addition, the `SecretProviderClass` should have a `privatecloud.mendix.com/environment-class: "true"` annotation.
      Your secret store provider may have other requirements - for more information, refer to documentation supplied by the secret store provider.
 5. Configure permissions to read secrets specified in the `SecretProviderClass`.
     The specific configuration requirements depend on your secret store provider. It usually involves allowing the Kubernetes `ServiceAccount` to access specific keys in Vault or in AWS console.

@@ -348,6 +348,15 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 Storage plans are “blueprints” that specify how to request/decomission a new database or blob storage and pass its credentials to an environment.
 {{% /alert %}}
 
+The following **Storage Types** are supported:
+
+* Minio
+* Ephemeral
+* Amazon-S3
+* Azure Blob
+* Google-cloud
+* ceph
+
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
 
 {{% alert color="info" %}}
@@ -717,6 +726,12 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
+**Google Cloud** will connect to an existing Google cloud bucket. You need to create bucket and get the credentials from the service account and fill in all the details into the StoragePlan. You will need to provide all the information about your Google cloud storage such as plan name, endpoint, access key and secret key.
+
+{{% alert color="info" %}}
+Please note the bucket for the google cloud needs to be created manually. Mx4PC will not create the google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a seperate folder in the bucket.
+{{% /alert %}}
+
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
 ##### 4.3.2.3 Ingress{#ingress}
@@ -759,7 +774,7 @@ For **OpenShift 3** and **OpenShift 4** registries, the default image pull crede
 
 For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount – no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
 
-For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
+For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html). You can choose between Static crdentials and [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html)
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
@@ -770,7 +785,7 @@ For **Google Cloud Container Registry**, the supported authentication is [worklo
 * `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
 
-    Below is an example how to bind a google cloud service account to a kubernetes service account:
+Below is an example how to bind a google cloud service account to a kubernetes service account:
 
     ```shell
     gcloud iam service-accounts add-iam-policy-binding \
@@ -1537,6 +1552,12 @@ We recommend using *horizontal* pod autoscaling to adjust environments to meet d
 Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}
 
+### 5.7 Licensing the Private cloud apps through Private cloud License Manager
+
+The Mendix Private Cloud License Manager (PCLM) provides a repository of your offline Mendix licenses to enable you to manage these centrally, rather than needing to apply these manually to each app. This reduces the possibility of errors, and enables the production of license usage reports. You can find more information on how to configure the PCLM in your namespace in [Private Cloud License Manager](/developerportal/deploy/private-cloud-license-manager/)
+
+The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
+
 ## 6 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
@@ -1576,7 +1597,7 @@ The only limitations are that:
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
+When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 {{% /alert %}}
 
 ### 6.2 Namespace Management
@@ -1593,6 +1614,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 * Plans
 * Installation
 * Additional information
+* Customization
 
 See the sections below for more information.
 
@@ -1628,8 +1650,13 @@ You can also see an activity log containing the following information for all na
 * When user's permission is changed in the namespace
 * When enviroment configurations are added, updated, or removed
 * When Runtime Metrics configurations are added, updated, or deleted
+* When developer mode is enabled in the namespace
+* When developer mode is disabled in the namespace
+* When Secret store is enabled in the namespace
+* When Secret store is disabled in the namespace
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
+
 
 #### 6.2.1 Apps
 
@@ -1778,6 +1805,18 @@ You can also download the Configuration Tool again, if you wish.
 #### 6.2.6 Additional Information
 
 This tab shows information on the versions of the various components installed in your namespace.
+
+#### 6.2.7 Customization
+
+This tab enables the cluster manager to customize the enablement of Secret store and developer mode for the developers. 
+
+Enabling the External Secrets Store option will allow users to retrieve secrets from External Secrets Store for database plan, storage plan, MxAdmin password.
+
+Enabling the Development Mode option will allow users to change the type of an environment to Development.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
+
+
 
 ## 7 Current Limitations
 

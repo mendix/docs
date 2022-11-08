@@ -261,7 +261,7 @@ Configuring local clients, like [PaperCut](https://www.papercut.com/), is suppor
 1. Follow the steps for [adding an email account](#adding-email-account). 
 2. Automatic configuration will not work for local clients, so continue with manual configuration in the wizard.
 3. Select the **Send emails** checkbox.
-4. Select **SMTP** for the **Protocol**, enter `localhost` for the **Server host**, and `25` for the **Server port**.
+4. Select **SMTP** for the **Protocol**, enter `localhost` for the **Server host**, and the **Server port** number (for example, `25`).
 5. Enter a random email ID on the login screen, and it should start working.
 
 ### 5.4 Adding Attachments

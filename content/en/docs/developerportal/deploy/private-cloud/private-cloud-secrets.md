@@ -61,20 +61,20 @@ The following sections outline the process of implementing an external secret st
 ### 3.1 Configuring a Secret Store with Vault
 
 To enable your environment to use Vault as external secret storage, follow these steps:
-1. Install [Vault](https://developer.hashicorp.com/vault/docs/platform/k8s/helm) and its [CSI Secrets Driver](https://github.com/hashicorp/vault-csi-provider) (if it's not already installed in the cluster)
-2. Create a database secret in Vault (replace `<{env-db-secret}>` with a unique name, and update any values to match your database configuration):
+1. Install [Vault](https://developer.hashicorp.com/vault/docs/platform/k8s/helm) and its [CSI Secrets Driver](https://github.com/hashicorp/vault-csi-provider), if it is not already installed in the cluster.
+2. Create a database secret in Vault, as shown in the following example. Replace `<{env-db-secret}>` with a unique name, and update any values to match your database configuration:
     ```shell
     vault kv put secret/<{env-db-secret}> database-type="PostgreSQL" database-jdbc-url="jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer" database-host="pg.example.com:5432" database-name="my-app-1" database-username="my-app-user-1" database-password="Welc0me!"
     ```
-3. Create a file storage secret in Vault (replace `<{env-file-secret}>` with a unique name, and update any values to match your file storage configuration):
+3. Create a file storage secret in Vault, as shown in the following example. Replace `<{env-file-secret}>` with a unique name, and update any values to match your file storage configuration:
     ```shell
     vault kv put secret/<{env-file-secret}> storage-service-name="com.mendix.storage.s3" storage-endpoint="https://my-app-bucket.s3.eu-west-1.amazonaws.com" storage-access-key-id="AKIA################" storage-secret-access-key="A#######################################" storage-bucket-name="subdirectory" storage-use-ca-certificates="true" storage-perform-delete="true"
     ```
-4. Create an app environment configuration secret in Vault (replace `<{env-configuration-secret}>` with a unique name, and set any additional parameters):
+4. Create an app environment configuration secret in Vault, as shown in the following example. Replace `<{env-configuration-secret}>` with a unique name, and set any additional parameters:
     ```shell
     vault kv put secret/<{env-configuration-secret}> mx-admin-password="Welc0me!"
     ```
-5. Create the required Vault role (replace `<{env-policy}>` with a unique name to identify the app environment, and update any paths to match the secrets you created on the previous steps):
+5. Create the required Vault role, as shown in the following example. Replace `<{env-policy}>` with a unique name to identify the app environment, and update any paths to match the secrets you created in the previous steps:
     ```shell
     vault policy write <{env-policy}> - <<EOF
     path "secret/<{env-db-secret}>" {
@@ -88,7 +88,7 @@ To enable your environment to use Vault as external secret storage, follow these
     }
     EOF
     ```
-6. Bind the Vault role to a k8s service (replace `<{env-policy}>` with the policy name from the previous step; use a unique role name in place of `<{env-role}>`; specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`):
+6. Bind the Vault role to a k8s service, as shown in the following example. Replace `<{env-policy}>` with the policy name from the previous step, use a unique role name in place of `<{env-role}>`, and specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`):
     ```shell
     vault write auth/kubernetes/role/<{env-role}> \
       bound_service_account_names=<{env-serviceaccount}> \
@@ -96,7 +96,7 @@ To enable your environment to use Vault as external secret storage, follow these
       policies=<{env-policy}> \
       ttl=20m
     ```
-7. Create a Kubernetes `ServiceAccount` for your environment (specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`):
+7. Create a Kubernetes `ServiceAccount` for your environment, as shown in the following example. Specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`:
     ```shell
     kubectl -n <{env-namespace}> create serviceaccount <{env-serviceaccount}>
     kubectl -n <{env-namespace}> annotate serviceaccount <{env-serviceaccount}> privatecloud.mendix.com/environment-account=true

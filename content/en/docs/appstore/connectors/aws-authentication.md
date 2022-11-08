@@ -18,7 +18,7 @@ The AWS Authentication connector gives your app the ability to use the following
 
 * [Session credentials](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use session credentials to authenticate, unless your connector specifically requires a different type of authentication.
 * [Static credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) - These are static IAM credentials that are valid indefinitely. As a best practice, you should not use them in your production app. However, you may want to use them to quickly test your connector, if the connector that you are implementing supports this type of authentication.
-* [Signature version 4 headers](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) - These credentials represent an advanced use case. You may use them if the session credentials do not fully cover your requirements, for example, if your request has parameters that session credentials do not support. Some compatible AWS connectors may also explicitly require this type of authentication.
+* [Signature version 4 headers](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) - These credentials represent an advanced use case. You may use them together with session or static credentials to sign your request, for example, while calling the API without using AWS SDK. Some compatible AWS connectors may explicitly require this type of authentication.
 
 You can implement the above authentication types by means of adding a corresponding activity to the microflow that requires AWS authentication (for example, in order to connect to Amazon Dynamo DB and retrieve specific information from a table). Each activity returns a Credentials object, which is then used for authentication.
 
@@ -54,7 +54,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 * [Signature version 4 headers](#signature-v4-headers)
 
 {{% alert color="info" %}}
-In general, session credentials are the recommended authentication method for use with your production app. Static credentials are not suitable for use in production - you should only use them in test or demo environments. Signature version 4 headers cover more advanced use cases. You can use them if session credentials do not cover your requirements, or if you are implementing AWS Authentication for a platform-supported AWS connector that specifically requires signature headers authentication. For more information, refer to the documentation of the platform-supported connector that you are implementing.
+In general, session credentials are the recommended authentication method for use with your production app. Static credentials are not suitable for use in production - you should only use them in test or demo environments. Signature version 4 headers cover more advanced use cases. For example, you can use them to supplement session or static credentials with custom code. For more information, refer to the documentation of the platform-supported connector that you are implementing.
 {{% /alert %}}
 
 ### 4.1 Implementing Session Credentials {#session}
@@ -157,9 +157,9 @@ To create static credentials with the **GetStaticCredentials** activity in your 
 
 ### 4.3 Implementing Signature Version 4 Headers {#signature-v4-headers}
 
-Using signature version 4 headers grants you full control over the contents of the request that you send to AWS. You may want to use this method to authenticate without using the AWS console or SDK, for example, if the language you are using does not have SDK yet. For more information about signature version 4 headers, see [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the AWS documentation.
+Using signature version 4 headers grants you full control over the contents of the request that you send to AWS. You may want to use this method to authenticate a session or static credentials request without using the AWS console or SDK, for example, if the language you are using does not have SDK yet. For more information about signature version 4 headers, see [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the AWS documentation.
 
-This authentication method is suitable for advanced use cases. If your use case can be fulfilled with session credentials authentication, consider using that method instead. If required, you can also use signature headers in combination with session credentials.
+This authentication method is suitable for advanced use cases. If your use case can be fulfilled with session credentials authentication alone, consider using that method instead.
 
 To help you work with signature version 4 headers, the following sections of this document contains a description of the [domain model](#domain-model) and [Java action](#java-action) that you can use, as well as an [example microflow](#microflow) configuration.
 

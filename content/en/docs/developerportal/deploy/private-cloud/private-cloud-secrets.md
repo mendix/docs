@@ -9,12 +9,11 @@ tags: ["Deploy", "Private Cloud", "Secrets", "Secret Stores", "Vault", "Kubernet
 ## 1 Introduction
 
 You can increase the security of your environment by implementing an external secrets store to manage your Kubernetes secrets.
-Environments running Mendix for Private Cloud can be granted read-only access to a secrets store by using a [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/).
-This document outlines the high-level process, and provides example implementations for HashiCorp Vault and AWS Secrets Manager.
+Environments running Mendix for Private Cloud can be granted read-only access to a secrets store by using a [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/). This document outlines the high-level process, and provides example implementations for HashiCorp Vault and AWS Secrets Manager.
 
-{{% alert color="info" %}}Using an external secret storage provides multiple benefits - such rotating credentials from a single location, collecting audit logs and dynamically generating role-specific credentials.
-However, using a secret storage incorrectly could reduce security; this document uses a simplified approach to setting up Vault and should not be used for production environments.
-Consult with your secrets store provider to ensure that it's set up correctly.{{% /alert %}}
+{{% alert color="info" %}}Using an external secret storage provides multiple benefits, such as rotating credentials from a single location, collecting audit logs and dynamically generating role-specific credentials.
+
+However, using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.{{% /alert %}}
 
 ## 2 Configuring Your Environment
 

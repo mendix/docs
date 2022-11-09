@@ -350,12 +350,12 @@ Storage plans are “blueprints” that specify how to request/decomission a new
 
 The following **Storage Types** are supported:
 
-* Minio
-* Ephemeral
-* Amazon-S3
-* Azure Blob
-* Google-cloud
-* ceph
+* MiniO
+* Ephemeral (non-persistent)
+* Amazon S3
+* Azure Blob Storage
+* Google Cloud Storage bucket
+* Ceph RADOS
 
 **Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
 

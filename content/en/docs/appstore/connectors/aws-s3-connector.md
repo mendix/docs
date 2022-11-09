@@ -24,76 +24,61 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to one or more Amazon S3 buckets. Each activity can be implemented by using it in a microflow.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to one or more Amazon S3 buckets. Each activity can be implemented by using it in a microflow, and the Amazon S3 connector comes with example microflows which you can use to quickly configure the S3 connector for your use case.
+
+To quickly configure the connection to Amazon S3 by using an example microflow, perform the following steps:
+
+1. Optional: If you have not configured your default AWS region before, click **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**, and then select the region of your choice.
+    This step is not required, but you may wish to perform it for one of the following reasons:
+        
+        * To reduce latency by choosing a region which is geographically close to you
+        * To choose a region to which you have access, if you do not have access to some regions
+        
+    {{% alert color="info" %}}
+    For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`.
+    {{% /alert %}}
+
+2. Create a microflow with session credentials authentication. For more information, see [Implementing Session Credentials](/appstore/connectors/aws-authentication/#session).
+3. In the App Explorer, in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**, find an example microflow that performs a function which you want to use in your app.
+    For example, if you want to get the contents of an object in the S3 bucket, find the **SUB_GetObject** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
+4. Drag the example microflow onto the working area of the microflow that you created in step 2, and position it after the **GetSessionCredentials** activity.
+5. Double-click on the microflow activity that you added in step 4.
+    The example microflow opens.
+6. Configure the required parameters.
+    For example, for the **SUB_GetObject** example microflow, you must configure the S3 object that you want to access.
 
 To help you work with the Amazon S3 connector, the following sections of this document list the available entities and activities that you can use in your application.
 
 ### 3.1 Domain Model {#domain-model}
 
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
+
 The domain model used by the Amazon S3 connector is shown below.
 
 {{< figure src="/attachments/appstore/connectors/aws-s3-connector/domain-model.png" >}}
 
-When using the Java actions, results will be stored as objects of the following entity types. These objects can be passed to other Java actions to specify on which object(s) an action is to be performed.
+When using the [Java activities](#activities), results are stored as objects of the following entity types. These objects can be passed to other Java activities to specify on which objects an activity is to be performed.
 
-| Entity | Persistable | Description |
-| --- | --- | --- |
-| Bucket | No | Bucket information |
-| Prefix | No | information about prefixes used by a bucket |
-| S3Object | No | information about objects in a bucket |
-| Document | Yes<sup><small>[1]</small></sup> | the content of an S3 object |
+| Entity | Description |
+| --- | --- |
+| Bucket | Bucket information |
+| Prefix | Information about prefixes used by a bucket |
+| S3Object | Information about objects in a bucket |
+| Document | The content of an S3 object |
 
-<sup><small>[1]</small></sup>The Document entity is persistable for technical reasons, but will have the `DeleteAfterDownload` flag set so that it is automatically deleted from the database. You will not have to remove Document objects yourself.
+The entities are either not persistable, or have the `DeleteAfterDownload` flag set so that they are automatically deleted from the database. Because of that, you do not need remove the resulting objects yourself.
 
 ### 3.2 Activities {#activities}
 
-You can drag Java actions from the **Toolbox** into your microflows to connect to your S3 bucket(s).
-
-The module comes with some example microflows which you can find in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**.
-
-To use these Java Actions you must do the following:
-
-1. Provide a **Credentials** object which you have retrieved using the `GetSessionCredentials` microflow in the [AWS Authentication](/appstore/connectors/aws-authentication/) connector — this needs to be passed to all the Java actions as a parameter to allow authentication to take place.
-
-2. Provide other parameters to the action as objects of entities in the AWSS3Connector domain model. 
-
-3. Have an [error handler](/refguide/error-handling-in-microflows/) defined for the Java action to deal with any errors.
-
-The Java Actions you can use are listed below. You can drag them into your microflows from the **Toolbox**.
-
-{{< figure src="/attachments/appstore/connectors/aws-s3-connector/s3-connector-actions.png" >}}
-
-Here is a summary of the Java actions - see the sections below for more detail.
-
-| Operation     | Purpose | Param. 1 | Param. 2 | Param. 3 | Return Value                                                            |
-| --- | --- | --- | --- | --- | --- |
-| List Bucket   | List all Buckets for these credentials | `Credentials` object | n/a | n/a | List of `Bucket` objects  |
-| List Prefix   | List all Prefixes for a bucket | `Credentials` object | `Bucket` object | n/a | List of `Prefix` objects |
-| List Object   | List of S3 Objects in a bucket | `Credentials` object | `Bucket` object | n/a | List of `S3Object` objects |
-| Get Object    | Get content of an S3 Object | `Credentials` object | `S3Object` object | n/a | `Document` object |
-| Put Object    | Save data as an S3 Object | `Credentials` object | `Document` object | `Bucket` object | Success Boolean |
-| Delete Object | Delete an S3 Object and contents | `Credentials` object | `S3Object` object | n/a | Success Boolean |
-| Move Object   | Move an S3 Object to a different bucket | `Credentials` object | `S3Object` object | `Bucket` object | Success Boolean |
-| Copy Object   | Copy an S3 Object to a different bucket | `Credentials` object | `S3Object` object | `Bucket` object | Success Boolean |
+Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon S3 connector, they represent the actions that can be performed on S3 buckets.
 
 #### 3.2.1 List Bucket
 
-This action lists all the S3 buckets which are visible using the supplied credentials.
-
-{{% alert color="info" %}}
-When List Bucket is first used, a connection will be made to the region stored in the constant **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**.
-
-This can be changed to the AWS Region of your choice. You may wish to do this for one of the following reasons:
-
-* To reduce latency by choosing a region which is geographically close to you
-* To choose a region to which you have access, if you do not have access to some regions
-
-**For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`**.
-{{% /alert %}}
+This activity lists all the S3 buckets which are available for the supplied AWS credentials.
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
 
 **Returns**
 
@@ -101,12 +86,12 @@ This can be changed to the AWS Region of your choice. You may wish to do this fo
 
 #### 3.2.2 List Prefix
 
-This action lists all the [prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) used to organize objects in an S3 bucket.
+This activity lists all the [prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) used to organize objects in an S3 bucket.
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of entity type `Bucket` – the bucket you are querying
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Bucket` – the bucket that you are querying
 
 **Returns**
 
@@ -114,38 +99,38 @@ This action lists all the [prefixes](https://docs.aws.amazon.com/AmazonS3/latest
 
 #### 3.2.3 List Object
 
-This action lists all the objects in an S3 bucket.
+This activity lists all the objects in an S3 bucket.
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of entity type `Bucket` – the bucket you are querying
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Bucket` – the bucket that you are querying
 
 **Returns**
 
-* List of objects of entity type `S3Object` which are in the bucket you supplied as a parameter
+* List of objects of entity type `S3Object` which are in the bucket that you supplied as a parameter
 
 #### 3.2.4 Get Object
 
-This action returns the contents of a single object defined by an object of entity type `S3Object`.
+This activity returns the contents of a single object defined by an object of entity type `S3Object`.
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of type `S3Object` – the object which you want to download — the object must contain the `Key` of the object and be associated with the desired `Bucket`
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of type `S3Object` – the object which you want to download; must contain the `Key` of the object and be associated with the desired `Bucket`
 
 **Returns**
 
-* Object of type `Document` – contains the content of the S3 object requested          |
+* Object of type `Document` – contains the content of the S3 object requested
 
 #### 3.2.5 Put Object
 
-This action puts the contents of a `Document` object into a single object defined by an object of entity type `S3Object`. The name of the object is the `Name` attribute of the `Document`. This action can update an existing object, or it can create a new object.
+This activity puts the contents of a `Document` object into a single object defined by an object of entity type `S3Object`. The name of the object is the `Name` attribute of the `Document`. This activity can update an existing object, or it can create a new object.
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of type `Document` – contains the data you want to upload to AWS S3 Storage — the `Name` attribute of the document contains the `Key` of the S3 object where the content is put, see [Creating object key names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) in the AWS S3 documentation for information about creating valid object keys
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of type `Document` – contains the data you want to upload to AWS S3 Storage; the `Name` attribute of the document contains the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object where the content is put
 * Object of type `Bucket` – the destination bucket where you want to upload the object
 
 **Returns**
@@ -154,12 +139,12 @@ This action puts the contents of a `Document` object into a single object define
 
 #### 3.2.6 Delete Object
 
-This action deletes a single object defined by an object of entity type `S3Object`.
+This activity deletes a single object defined by an object of entity type `S3Object`.
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of type `S3Object` – the object which you want to delete — the object must contain the `Key` of the object and be associated with the `Bucket` it is in
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
 
 **Returns**
 
@@ -167,7 +152,7 @@ This action deletes a single object defined by an object of entity type `S3Objec
 
 #### 3.2.7 Move Object
 
-This action moves an object from one bucket to another bucket. The new object has the same key as the original object and the original object is deleted.
+This activity moves an object from one bucket to another bucket. The new object has the same key as the original object, and the original object is deleted.
 
 {{% alert color="info" %}}
 You cannot change the key of an existing object. To do this, you should:
@@ -180,8 +165,8 @@ You cannot change the key of an existing object. To do this, you should:
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of type `S3Object` – the object which you want to move — the object must contain the `Key` of the object and be associated with the `Bucket` it is in
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
 * Object of type `Bucket` – the destination bucket to which you want to move the object
 
 **Returns**
@@ -190,12 +175,12 @@ You cannot change the key of an existing object. To do this, you should:
 
 #### 3.2.8 Copy Object
 
-This action copies an object from one bucket to another bucket.  The new object has the same key as the original object and the original object remains in its original bucket.
+This activity copies an object from one bucket to another bucket.  The new object has the same key as the original object and the original object remains in its original bucket.
 
 **Parameters**
 
-* Object of entity type `Credentials` – these belong to a AWS user managed using the `AWSAuthentication` module
-* Object of type `S3Object` – the object which you want to copy — the object must contain the `Key` of the object and be associated with the `Bucket` it is in
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
 * Object of type `Bucket` – the destination bucket to which you want to copy the object
 
 **Returns**

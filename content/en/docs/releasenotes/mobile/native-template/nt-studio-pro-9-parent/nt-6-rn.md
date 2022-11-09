@@ -5,6 +5,14 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.3.2
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We removed the _WidgetExporter snippet which was forcing Push notifications entitlement for iOS apps. Ticket #167685
+
 ## 6.3.1
 
 **Release date: October 6th, 2022**

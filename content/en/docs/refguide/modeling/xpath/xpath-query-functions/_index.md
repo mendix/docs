@@ -1,8 +1,12 @@
 ---
-title: "XPath Query Functions"
-url: /refguide/xpath-query-functions/
+title: "XPath Aggregate Functions"
+url: /refguide/xpath-aggregate-functions/
 tags: ["studio pro"]
 ---
+
+{{% alert color="warning" %}}
+These functions are for use in Java code only and they must contain full XPath queries as their arguments.
+{{% /alert %}}
 
 The following XPath query aggregate functions are available:
 
@@ -12,8 +16,6 @@ The following XPath query aggregate functions are available:
 * [min](/refguide/xpath-min/)
 * [sum](/refguide/xpath-sum/)
 
-These functions must contain full queries as their arguments. Moreover, the `avg`, `max`, `min`, and `sum` functions must specify a column in the query to aggregate.
-
-{{% alert color="warning" %}}
-These functions are for use in Java code only.
+{{% alert color="info" %}}
+The functions `avg`, `max`, `min`, and `sum` functions must specify a column in the query to aggregate.
 {{% /alert %}}

@@ -28,14 +28,14 @@ In Studio Pro, you do not write complete queries, only the constraints. The enti
 
 ## 2 XPath Elements
 
-A common Mendix XPath query consists of a several elements.
+A common Mendix XPath query consists of several elements.
 
 | A | B | C | D |
 | --- | --- | --- | --- |
 | Aggregate function (optional) | Entity to retrieve (required) | Constraint (optional) | Attribute to retrieve (optional) |
 | avg | `//Sales.Order` | `[IsPaid = true()]` | `/TotalPrice` |
 
-Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes `//` and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. For example, `//Sales.Order` would return all objects of entity **Order** in the module **Sales**.
+Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes `//` and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. For example, `//Sales.Order` would return all objects of entity `Order` in the module `Sales`.
 
 Element C of a query is optional and contains one or more constraints to restrict the data being retrieved.
 
@@ -45,12 +45,12 @@ Consider the following query:
 //Sales.Customer[Name='Jansen']
 ```
 
-The constraint is clearly visible between brackets and restricts the objects retrieved to those for which the attribute **Name** equals **Jansen**. Objects with any other name than Jansen are excluded from the list.
+The constraint is clearly visible between brackets and restricts the objects retrieved to those for which the attribute `Name` equals `Jansen`. Objects with any other name than Jansen are excluded from the list.
 The number of possible constraints on a single query is unlimited. For more information on how to add and manipulate these constraints, see [XPath Constraints](/refguide/xpath-constraints/).
 
 Element D of a query is optional and specifies an attribute of the retrieved entity. This option is rarely used in Studio Pro itself as all data is stored in objects, making it cumbersome and needlessly complicated to deal with a list of single attribute. However, various Java actions have use of such lists. Also, this functionality can be used in conjunction with Part A to create aggregates of certain attributes easily.
 
-Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-avg/), [count](/refguide/xpath-count/), [max](/refguide/xpath-max/), [min](/refguide/xpath-min/) and [sum](/refguide/xpath-sum/). With the exception of [count](/refguide/xpath-count/), each of these functions require that a particular attribute is specified in element D.
+Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide/xpath-avg/), [count](/refguide/xpath-count/), [max](/refguide/xpath-max/), [min](/refguide/xpath-min/) and [sum](/refguide/xpath-sum/). With the exception of [count](/refguide/xpath-count/), each of these functions requires that a particular attribute is specified in element D. Element A is for use in Java code only.
 
 ## 3 Tokens
 
@@ -62,15 +62,17 @@ For details, see [XPath Operators](/refguide/xpath-operators/).
 
 ## 5 Functions
 
+There are two function types - [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). Aggregate functions are for use in Java code only and they must contain full queries as their arguments. Constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints. 
+
 See below some frequently used XPath functions:
 
-* [XPath functions](/refguide/xpath-query-functions/):
+* [XPath aggregate functions](/refguide/xpath-aggregate-functions/):
     * [avg](/refguide/xpath-avg/)
     * [count](/refguide/xpath-count/)
     * [max](/refguide/xpath-max/)
     * [min](/refguide/xpath-min/)
     * [sum](/refguide/xpath-sum/)
-* [Constraint functions](/refguide/xpath-constraint-functions/):
+* [XPath constraint functions](/refguide/xpath-constraint-functions/):
     * [contains](/refguide/xpath-contains/)
     * [starts-with](/refguide/xpath-starts-with/)
     * [ends-with](/refguide/xpath-ends-with/)

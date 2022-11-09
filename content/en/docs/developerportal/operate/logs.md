@@ -14,6 +14,10 @@ From this page of the Developer Portal, you can access the logs produced by your
 
 The page is accessed through the **Logs** menu item in the left-hand menu.
 
+{{% alert color="warning" %}}
+You must have the **Access to Monitoring** permission to view logs. This needs to be set by the Technical Contact of the app. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how to do this.
+{{% /alert %}}
+
 ## 2 Apps Deployed to Mendix Cloud Version 4
 
 {{% alert color="info" %}}

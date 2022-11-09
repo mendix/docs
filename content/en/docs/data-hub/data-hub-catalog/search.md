@@ -356,6 +356,7 @@ The source and endpoint details of the dataset are displayed:
 * **Version** number of the data source that the dataset is exposed in
 * **Connections** – the number of apps that consume this dataset
 * A description of the dataset
+* [Authentication method](/data-hub/data-hub-catalog/register-data/#authentication)
 
 You can perform the following actions from this screen:
 

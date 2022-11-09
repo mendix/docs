@@ -29,6 +29,14 @@ description: "Native Template 6 release notes."
 
 * We improved our app security allowing apps to use new Database encryption capability of Studio Pro 9.18.
 
+## 6.2.28
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We removed the _WidgetExporter snippet which was forcing Push notifications entitlement for iOS apps. Ticket #167685
+
 ## 6.2.27
 
 **Release date: September 19th, 2022**

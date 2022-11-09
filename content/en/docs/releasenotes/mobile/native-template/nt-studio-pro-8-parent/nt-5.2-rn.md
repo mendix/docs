@@ -5,6 +5,15 @@ weight: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.14
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We removed the _WidgetExporter snippet which was forcing Push notifications entitlement for iOS apps. Ticket #167685
+* We fixed an issue to build Android apps locally using Apple M1 machines.
+
 ## 5.2.13
 
 **Release date: June 15th, 2022**

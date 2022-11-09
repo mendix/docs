@@ -1,36 +1,35 @@
 ---
-title: "Install Mendix Studio Pro"
-url: /howto/general/install/
+title: "Installing Mendix Studio Pro"
+url: /refguide/install/
+linktitle: "Install Mendix Studio Pro"
 category: "General Info"
-weight: 5
+weight: 15
 description: "Describes how to install Mendix Studio Pro."
 tags: ["studio pro", "install", "install studio pro", "download"]
+aliases:
+    - /howto/general/install/
 ---
 
 {{% button color="info" href="https://marketplace.mendix.com/link/studiopro/" text="Go to Marketplace" title="Download Studio Pro from the Marketplace" %}}
 
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). If you use a Mac device, see [Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine.
+Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
+
+If you use a Mac device, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
 {{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
 
-## 2 Prerequisites
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* A Windows environment to install Studio Pro (For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/))
-
-## 3 Downloading Mendix Studio Pro
+## 2 Downloading Mendix Studio Pro
 
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
 2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
 
-## 4 Installing Mendix Studio Pro {#install}
+## 3 Installing Mendix Studio Pro {#install}
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
@@ -57,7 +56,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
-## 5 Troubleshooting {#troubleshooting}
+## 4 Troubleshooting {#troubleshooting}
 
 Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
@@ -78,7 +77,7 @@ Based on the error message you get from the installer you can decide to install 
 
 After that you can retry installing Studio Pro.
 
-## 6 Installing Mendix Studio Pro Offline {#offline}
+## 5 Installing Mendix Studio Pro Offline {#offline}
 
 The Mendix Studio Pro installation experience includes all the tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation, the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them if any of the required pieces of software are missing. 
 
@@ -106,7 +105,7 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
-## 7 Read More
+## 6 Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/)
 * [App Modeling](/refguide/modeling/)

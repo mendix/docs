@@ -11,17 +11,17 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2022
 
-### November 11th, 2022
+### November 10th, 2022
 
 #### Improvements
 
-* It is no longer possible to change the Technical Owner of a Mendix App in the Data Hub Catalog, those are managed in the Cloud Portal.
-* Added authentication details part in Data Source Catalog page
+* You can now view authentication details in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. 
+* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 
 #### Fixes
 
-* We fixed a bug where whitespaces in certain fields were causing duplicate services to be created
-* Sample data sources will no longer have an "Automatically registered" tag  
+* We fixed a bug where whitespaces in certain fields were causing duplicate services to be created.
+* We remove the **Automatically registered** tag from sample data sources.
 
 ### November 3rd, 2022
 

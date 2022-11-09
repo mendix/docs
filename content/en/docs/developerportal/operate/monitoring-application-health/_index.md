@@ -241,13 +241,11 @@ First actions to take | If this alert triggers, and visiting the application URL
 
 ## 5 Basic License
 
-### 5.1 CRITICAL: Health: Database error
+### 5.1 Database Errors In the Log
 
-You may receive an email informing you of the following error: **CRITICAL: Health: Database error: SSL connection has been closed unexpectedly**.
+You might see database connection errors in your app logs. For example, something like: `ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed.` You do not have to do anything, your app will continue to work as expected.
 
-You do not have to do anything, your app will continue to work as expected.
-
-The reason you receive a message is this. When you are using a [basic license](/developerportal/deploy/basic-package/), you are given your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will trigger this alert.
+The reason you receive a message is that when you are using a [basic license](/developerportal/deploy/basic-package/), you are given your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will cause these error messages.
 
 The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
 

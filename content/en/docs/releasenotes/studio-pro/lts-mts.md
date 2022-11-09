@@ -114,7 +114,7 @@ For the support duration, the MTS will receive patch releases only.
 
 The impact of upgrading between MTS versions is higher than upgrading between LTS versions. That is because an MTS has a shorter support duration than an LTS, which means it has less time to become as stable as an LTS version. In addition, the upgrade has to be done approximately every six months.
 
-## 4 Monthly Release Version
+## 4 Monthly Release Version {#patch}
 
 A monthly release is a a non-MTS/LTS minor release that only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release.
 

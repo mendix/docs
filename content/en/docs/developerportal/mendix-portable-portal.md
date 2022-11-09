@@ -51,6 +51,36 @@ The **My Apps** page contains two tabs: the **Cloud** tab and the **Stories** ta
 
 ### 4.1 Cloud Tab {#cloud}
 
+{{< figure src="/attachments/developerportal/mendix-portable-portal/cloud-tab.png" width="50%">}}
+
+The **Cloud** tab shows information about the packages and environments, and allows you to manage them.
+
+{{% alert color="warning" %}}
+You can only manage licensed apps running on the Mendix Cloud. To do this, you will need to have the **Transport Rights** permission granted by the app's technical contact. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+
+Free apps will be shown with a red cross and a **Sandbox** environment indicator. Choosing a management option will return an error.
+
+Apps running in other clouds (for example, Mendix for Private Cloud) will display **No environments found**.
+{{% /alert %}}
+
+#### 4.1.1 Packages
+
+The **Packages** section will show you the latest package that has been created for your app. If you tap the package name, you will see details of the package. You will also have options to deploy this package to one of your environments. If you do not have the **Transport Rights** permission the deploy will fail.
+
+{{% todo %}}What are the possible symbols next to the packages?{{% /todo %}}
+
+You can also create a new package from the Team Server. Do the following:
+
+1. Tap the **+** symbol
+2. Select the **Branch** and **Revision** containing the version you want.
+3. Give it a semantic **Version**.
+4. Enter a **Tag Description**.
+5. Tap **Create Package**.
+
+You will get an indication that your package is being built and will be able to see the package once the build is complete.
+
+#### 4.1.2 Environments
+
 ### 4.2 Stories Tab
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/stories.png" >}}

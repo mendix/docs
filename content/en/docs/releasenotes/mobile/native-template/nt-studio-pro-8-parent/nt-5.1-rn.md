@@ -11,7 +11,7 @@ description: "Native Template 5.1 release notes."
 
 ### Fixes
 
-* We removed the _WidgetExporter snippet which was forcing Push notifications entitlement for iOS apps. Ticket #167685
+* We fixed an issue related to a recent React Native release that caused Android build failures. Tickets 170385, 170396, 170398 and 170469.
 * We fixed an issue to build Android apps locally using Apple M1 machines.
 
 ## 5.1.19

@@ -67,8 +67,6 @@ Apps running in other clouds (for example, Mendix for Private Cloud) will displa
 
 The **Packages** section will show you the latest package that has been created for your app. If you tap the package name, you will see details of the package.
 
-{{% todo %}}What are the possible symbols next to the packages?{{% /todo %}}
-
 Tapping the package name also gives you options to deploy this package to any of your environments. If you do not have the **Transport Rights** permission the deployment will fail.
 
 You can also create a new package from the Team Server. Do the following:
@@ -93,8 +91,6 @@ The **Environments** section will show you
     * Orange – there is at least one warning alert, but no critical alerts
     * Red – there is at least one critical alert
     
-    {{% todo %}}Is this information about caching also true for Portable Portal?{{% /todo %}}
-
     ??The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).??
     
 * Deployment package **Version** – for example, 1.0.0.18

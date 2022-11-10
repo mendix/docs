@@ -23,7 +23,11 @@ Examples of XPath queries are:
     Retrieve the average of the total prices of all paid orders.
 
 {{% alert color="warning" %}}
-Not all [XPath operators](/refguide/xpath-operators/) are supported by Studio Pro and the syntax of your query may differ between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
+Not all [XPath operators](/refguide/xpath-operators/) are supported by Studio Pro.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+The syntax of XPath queries may differ between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
 ## 2 XPath Elements
@@ -33,7 +37,7 @@ A common Mendix XPath query consists of several elements.
 | A | B | C | D |
 | --- | --- | --- | --- |
 | Aggregate function (optional) | Entity to retrieve (required) | Constraint (optional) | Attribute to retrieve (optional) |
-| avg | `//Sales.Order` | `[IsPaid = true()]` | `/TotalPrice` |
+| `avg` | `//Sales.Order` | `[IsPaid = true()]` | `/TotalPrice` |
 
 Element B describes the core of each query and consists of a description of the object being retrieved. This segment always starts with two forward slashes `//` and includes the name of the entity you wish to access preceded by the module containing the entity separated by a period. For example, `//Sales.Order` would return all objects of entity `Order` in the module `Sales`.
 

@@ -17,10 +17,10 @@ For example, this query retrieves all customers whose name is equal to Jansen:
 The first half of the query is responsible for defining the entity to retrieve and the second half (between the brackets) constrains the data to a certain attribute. Note that the constraint is (and should always be) enclosed by brackets.
 
 {{% alert color="warning" %}}
-In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
+The syntax of XPath queries may differ between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
-The following example shows how you should perform an XPath query in Studio Pro by only writing an XPath constraint. The entity `//Sales.Customer` is provided by selecting it in Studio Pro:
+The following example shows how you should perform an XPath query in Studio Pro. You **Select** the entity `//Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
 
 {{< figure src="/attachments/refguide/modeling/xpath/XPath-constraint-example.png" alt="Xpath constraint example in Studio Pro" width="400px" >}}
 

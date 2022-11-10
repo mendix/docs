@@ -318,6 +318,7 @@ The following statuses will be reported:
 * **networkStatus** – Ready
 * **runtimeStatus** – Ready
 * **storageStatus** – Ready
+* **serviceAccountStatus** - attached
 
 ### 3.5 Starting and Stopping Your App
 

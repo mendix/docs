@@ -276,7 +276,7 @@ Once you have entered the details you can apply two validation checks by clickin
 The following **Database Types** are supported:
 
 * PostgreSQL
-* Ephemeral
+* Ephemeral (non-persistent)
 * SQL Server
 * Dedicated JDBC
 
@@ -348,10 +348,19 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 Storage plans are “blueprints” that specify how to request/decomission a new database or blob storage and pass its credentials to an environment.
 {{% /alert %}}
 
-**Minio** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/minio/minio/tree/master/docs/gateway) with configured etcd.
+The following **Storage Types** are supported:
+
+* MiniO
+* Ephemeral (non-persistent)
+* Amazon S3
+* Azure Blob Storage
+* Google Cloud Storage bucket
+* Ceph RADOS
+
+**MinIO** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/MinIO/MinIO/tree/master/docs/gateway) with configured etcd.
 
 {{% alert color="info" %}}
-To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+To use TLS, specify the MinIO URL with an `https` schema, for example `https://MinIO.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
 
 If the MinIO URL is specified with an `http` schema, TLS will not be used.
 {{% /alert %}}
@@ -717,6 +726,12 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
+**Google Cloud Storage bucket** will connect to an existing Google cloud bucket. You need to create bucket and get the credentials from the service account and fill in all the details into the StoragePlan. You will need to provide all the information about your Google cloud storage such as plan name, endpoint, access key and secret key.
+
+{{% alert color="info" %}}
+Please note the bucket for the google cloud needs to be created manually. Mx4PC will not create the google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a seperate folder in the bucket.
+{{% /alert %}}
+
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
 
 ##### 4.3.2.3 Ingress{#ingress}
@@ -761,7 +776,7 @@ For **Generic registry…** options, the configuration script will ask if the cr
 
 For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
-When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
+When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering). You can choose between Static crdentials and [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html)
 
 For **Google Cloud Container Registry**, the supported authentication is [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). You will need to supply the following:
 
@@ -770,7 +785,7 @@ For **Google Cloud Container Registry**, the supported authentication is [worklo
 * `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
 
-    Below is an example how to bind a google cloud service account to a kubernetes service account:
+Below is an example how to bind a google cloud service account to a kubernetes service account:
 
     ```shell
     gcloud iam service-accounts add-iam-policy-binding \
@@ -869,7 +884,7 @@ These custom CAs will be trusted by:
 * The Mendix Agent when connecting to Mendix Developer portal
 
 {{% alert color="info" %}}
-To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for Minio. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
+To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for MinIO. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -1576,7 +1591,7 @@ The only limitations are that:
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the cluster from your platform. You will need to explicitly delete the cluster using the tools provided by your platform.
+When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 {{% /alert %}}
 
 ### 6.2 Namespace Management

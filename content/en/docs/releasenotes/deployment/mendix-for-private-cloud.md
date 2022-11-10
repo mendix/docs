@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### November 10th , 2022
+
+#### Mendix Operator v2.9.0{#2.9.0}
+
+* We now allow to use pod identity webhook authentication for ECR registry authentication. With this the image builder will use the service accounts for authentication which is more secure than static credentials
+* We provide additional information for service account status. With this, we will provide information if Service account is successfully attached to an app.
+* When using CSI secrets storage, we now indicate which parameters were loaded from the secret storage.
+* We replaced an internal go-chi dependency with Go Fiber - to ensure that Mendix for Private Cloud is using a well-maintained HTTP implementation.
+* We have also fixed the issue where mxpc-cli was not responding to the mouse inputs in Linux terminal. (Ticket 168570)
+
 ### September 29th, 2022
 
 #### Mendix Operator v2.8.0{#2.8.0}

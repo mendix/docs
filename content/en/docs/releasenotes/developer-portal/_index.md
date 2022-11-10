@@ -17,6 +17,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### November 10th, 2022
+
+#### Improvements
+
+* We improved the way [Company Brand](/developerportal/control-center/#company-brand) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
+* We removed the Brand Colors feature for Company Brand.
+
 ### October 20th, 2022
 
 #### Fixes

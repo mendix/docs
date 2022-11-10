@@ -360,7 +360,7 @@ The following **Storage Types** are supported:
 **MinIO** will connect to a [MinIO](https://min.io/product/overview) S3-compatible object storage. You will need to provide all the information about your MinIO storage such as endpoint, access key, and secret key. The MinIO server needs to be a full-featured MinIO server, or a [MinIO Gateway](https://github.com/MinIO/MinIO/tree/master/docs/gateway) with configured etcd.
 
 {{% alert color="info" %}}
-To use TLS, specify the MinIO URL with an `https` schema, for example `https://MinIO.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
+To use TLS, specify the MinIO URL with an `https` schema, for example `https://minio.local:9000`. If MinIO has a self-signed certificate, you'll also need to configure [custom TLS](#custom-tls) so that the self-signed certificate is accepted.
 
 If the MinIO URL is specified with an `http` schema, TLS will not be used.
 {{% /alert %}}
@@ -785,7 +785,7 @@ For **Google Cloud Container Registry**, the supported authentication is [worklo
 * `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
 
-Below is an example how to bind a google cloud service account to a kubernetes service account:
+    Below is an example how to bind a google cloud service account to a kubernetes service account:
 
     ```shell
     gcloud iam service-accounts add-iam-policy-binding \

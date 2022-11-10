@@ -16,8 +16,8 @@ Here is an overview of what the Translation contains:
 | Item                                        | Name                        |
 | ------------------------------------------- | --------------------------- |
 | [Predefined entities](#predefined-entities) | Language, Translator        |
-| [Constants](#constants)                     | LicenseToken, TokenEndpoint |
-| [Microflows](#microflows)                   | CreateTranslator            |
+| [Constants](#constants)                     | AWS_Default_Region |
+| [Microflows](#microflows)                   | CreateTranslator, TranslateText_MF            |
 | [Nanoflows](#nanoflows)                     | TranslateText               |
 
 In most cases, you will only need what is contained in the **Translation** > **USE_ME** folder. The content in the **Translation** > **Internal** folder is for internal use only and you will not need it.
@@ -39,38 +39,17 @@ This app service can only be used with Studio Pro 9 versions starting with [9.3.
 
 ## 2 Installation
 
-### 2.1 Obtaining a License Token {#obtain-license-token}
+### 2.1 Obtaining a AWS credentials {#obtain-aws-credentials}
 
-Translation is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a license token.
-
-#### 2.1.1 Starting a Trial
-
-A trial gives everyone in your company one-month access to the app service. The trial has a limitation with [data usage](#check-usage) up to 2500 minutes. To start a trial, perform the following steps:
-
-1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the marketplace.
-2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-3. Select the check box to agree to the **Terms & Conditions**.
-4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Translation** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
-
-#### 2.1.2 Starting a Subscription
-
-1. Go to the [Translation](https://marketplace.mendix.com/link/component/118411) page in the marketplace.
-2. Click **Subscribe** to start a subscription.
-3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used. 
-6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Translation** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
+Translation is a premium Mendix product that requires AWS authentication. To use this app service in your app, first you must obtain AWS credentials. For more information, see [AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
 
 ### 2.2 Installing the Component in Your App
 
 1. To download and install the Translation app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
-2. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+
+2. To download and install the AWS Authentication Connector in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer**.
+
+3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Configuration
 
@@ -100,13 +79,9 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 
 ### 3.2 Constants {#constants}
 
-#### 3.2.1 Constants
+#### 3.2.1 AWS_Default_Region
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As Translation is a commercial product, no matter your app is deployed in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), your own environment, or locally in Studio Pro, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
-
-#### 3.2.2 TokenEndpoint
-
-The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the app service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity.
+The **AWS_Default_Region** constant provides a default AWS region configuration for an app that uses this app service. AWS Regions are separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a region closest to them in order to host their cloud infrastructure there. The closer your region is to you, the better, so that you can reduce network latency as much as possible for your end-users.
 
 ### 3.3 Microflows {#microflows}
 
@@ -120,13 +95,19 @@ For more information about the language codes, see the [Supported Languages](#su
 
 {{< figure src="/attachments/appstore/app-services/translation/createtranslator.png" alt="createtranslator" >}}
 
+#### 3.3.2 TranslateText_MF
+
+The **TranslateText_MF** microflow takes the **translator** and **credentials** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
+
+{{< figure src="/attachments/appstore/app-services/translation/translatetext.png" alt="translatetext" >}}
+
 ### 3.4 Nanoflows {#nanoflows}
 
-#### 3.4.1 TranslatorText
+#### 3.4.1 TranslateText
 
-The **TranslatorText** microflow takes the **translator** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
+The **TranslateText** nanoflow takes the **translator** and **credentials** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
 
-{{< figure src="/attachments/appstore/app-services/translation/translatortext.png" alt="translatortext" >}}
+{{< figure src="/attachments/appstore/app-services/translation/translatetext.png" alt="translatetext" >}}
 
 ### 3.5 Supported Languages {#supported-languages}
 
@@ -208,37 +189,48 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 | Vietnamese |vi |
 | Welsh |cy |
 
-### 3.6 Configuring the License Token {#configure-license-token}
+### 3.6 Configuring the AWS credentials {#configure-aws-credentials}
 
 #### 3.6.1 For an App Deployed Locally or as a Mendix Free App
 
-If you deploy your app locally or as a Mendix Free App, configure the license token in Studio Pro. Perform the following steps:
+If you deploy your app locally or as a Mendix Free App, configure the AWS credentials in Studio Pro. Perform the following steps:
 
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
-2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
-4. Fill in the **Value** with the license token that you obtained.
-5. Click **OK** to save the settings.
+1. Create a microflow as follows:
+    1. Name the microflow *GetCredential*. 
+    2. Right-click the working area and select **Add** > **Activity** from the pop-up menu.
+    3. Double-click the activity to open the **Action Activity** dialog box.
+    4. Select **Get Static Credentials** action from **AWS Authentication** category as target object.
+    5. Under **Input** section, fill **Access key ID**, and **Secret access key** as AWS credentials respectivly.
+    6. Under **Output** section, update **Object name** as *Credentials*.
+    7. Click **OK** to save the changes.
+    8. Right-click the credentials action to *Set $Credentials as return value*.
 
-    {{< figure src="/attachments/appstore/app-services/translation/licensetoken-inmendix.png" alt="licensetoken-inmendix" >}}
+2. Default AWS region configuration:
+    1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
+    2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+    3. On the **Constants** tab, create a new constant with the predefined constant **Translation.AWS_Default_Region**.
+    4. Fill in the **Value** with the AWS region that you obtained.
+    5. Click **OK** to save the settings.
 
-6. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
+    {{< figure src="/attachments/appstore/app-services/translation/awsregion-inmendix.png" alt="awsregion-inmendix" >}}
+
+3. This is the microflow could help you to pass credentials object in calling all the service actions. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
 #### 3.6.2 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the Developer Portal.
+If you deploy your app in the Mendix Cloud, configure the AWS region in the [Developer Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-{{< figure src="/attachments/appstore/app-services/translation/licensetoken-cloudportal.png" alt="licensetoken-cloudportal" >}}
+{{< figure src="/attachments/appstore/app-services/translation/awsregion-cloudportal.png" alt="awsregion-cloudportal" >}}
 
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
+If you have already deployed your app, change the existing **AWS_Default_Region** constant value on the **Model Options** tab and restart the app.
 
-{{< figure src="/attachments/appstore/app-services/translation/licensetoken-envdetails.png" alt="licensetoken-envdetails" >}}
+{{< figure src="/attachments/appstore/app-services/translation/awsregion-envdetails.png" alt="awsregion-envdetails" >}}
 
 #### 3.6.3 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/).
+If you deploy your app in your own environment, you need to configure the AWS region in your own environment. For more information, see [Deployment](/developerportal/deploy/).
 
 ## 4 Usage
 
@@ -248,14 +240,15 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateTranslator*.
-    2. Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
-    3. Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
+    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    3. Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
+    4. Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
 
         {{< figure src="/attachments/appstore/app-services/translation/call-createtranslator-microflow.png" alt="call-createtranslator-microflow" >}}
 
         In this example,  **inputLanguageCode** is set to *'en'* and **outputLanguageCode** is set to *'zh'*, so the default translation will be from English to Chinese. You can also set them to other [language codes](#supported-languages). For more information about the parameters, see  [CreateTranslator microflow](#create-translator).
 
-    4. Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
+    5. Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
 
         {{< figure src="/attachments/appstore/app-services/translation/createtranslator-nanoflow.png" alt="createtranslator-nanoflow" >}}
 
@@ -325,15 +318,21 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
         {{< figure src="/attachments/appstore/app-services/translation/data-view.png" alt="data-view" >}}
 
-17. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-18. Change the settings of the **Button** widget as follows:
+16. Inside the **Data view** widget, Add a new **Data view** widget below the **Text area** widget.
+17. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
+    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
+    2. For **Data source**, select **Microflow**.
+    3. **Select** the **GetCredential** microflow for **Microflow**.
+    4. Click **OK** to save the settings. 
+18. Inside the GetCredential **Data view** widget, add a **Button** widget.
+19. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Translate*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
-19. Make sure you have [configured the license token](#configure-license-token).
-20. Run your app locally. You can perform text translation directly in the browser:
+20. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
+21. Run your app locally. You can perform text translation directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/translation/runlocally-translation.png" alt="runlocally-translation" >}}
 

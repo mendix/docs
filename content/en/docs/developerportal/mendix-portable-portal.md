@@ -65,9 +65,11 @@ Apps running in other clouds (for example, Mendix for Private Cloud) will displa
 
 #### 4.1.1 Packages
 
-The **Packages** section will show you the latest package that has been created for your app. If you tap the package name, you will see details of the package.
+The **Packages** section will show you the latest package that has been created for your app.
 
-Tapping the package name also gives you options to deploy this package to any of your environments. If you do not have the **Transport Rights** permission the deployment will fail.
+Tap the **Packages** title to see a list of all the packages which are currently available.
+
+Tap the package name of the latest package to see details of the package. This also gives you options to deploy this package to any of your environments. If you do not have the **Transport Rights** permission the deployment will fail.
 
 You can also create a new package from the Team Server. Do the following:
 
@@ -87,9 +89,8 @@ The **Environments** section will show you
 
 * Environment name – for example, Acceptance
 * Environment status – indicated by the color of the check mark next to the environment name:
-    * Green – there are no alerts
-    * Orange – there is at least one warning alert, but no critical alerts
-    * Red – there is at least one critical alert
+    * Green checkmark – the environment is up and running
+    * Red cross – the environment is not running (stopped)
     
     ??The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).??
     
@@ -99,11 +100,11 @@ The **Environments** section will show you
 
 Tapping the environment allows you to perform the following actions, if you have the **Transport Rights** permission for the environment:
 
-* **Restart Application** – this stops the running application and starts it again
+* **Restart Application** – this stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment
 * **Start/Stop Application**
 * **Transport to** – stage an environment to another environment, for example acceptance or production
-* **View Constants**
-* **View Scheduled Events**
+* **View Constants** – here you can view the deployed value of app constants. You can also change constant values, and these will be applied to the environment the next time it is restarted
+* **View Scheduled Events** – here you can view and enable/disable the app's scheduled events. Changes will be applied to the environment the next time it is restarted
 
 ### 4.2 Stories Tab
 

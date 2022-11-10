@@ -73,7 +73,7 @@ Tap the package name of the latest package to see details of the package. This a
 
 You can also create a new package from the Team Server. Do the following:
 
-1. Tap the **+** symbol
+1. Tap the **+** symbol.
 2. Select the **Branch** and **Revision** containing the version you want.
 3. Give it a semantic **Version**.
 4. Enter a **Tag Description**.
@@ -81,7 +81,8 @@ You can also create a new package from the Team Server. Do the following:
 
     You will get an indication that your package is being built.
     
-You will get a notification from the app when the build is complete, and will be able then be able to see the package details. 
+
+You will get a notification from the app when the build is complete, and will then be able to see the package details. 
 
 #### 4.1.2 Environments
 
@@ -100,11 +101,11 @@ The **Environments** section will show you
 
 Tapping the environment allows you to perform the following actions, if you have the **Transport Rights** permission for the environment:
 
-* **Restart Application** – this stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment
+* **Restart Application** – This stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment.
 * **Start/Stop Application**
-* **Transport to** – stage an environment to another environment, for example acceptance or production
-* **View Constants** – here you can view the deployed value of app constants. You can also change constant values, and these will be applied to the environment the next time it is restarted
-* **View Scheduled Events** – here you can view and enable/disable the app's scheduled events. Changes will be applied to the environment the next time it is restarted
+* **Transport to** – This stages an environment to another environment, for example acceptance or production.
+* **View Constants** – Here you can view the deployed value of app constants. You can also change constant values, and these will be applied to the environment the next time it is restarted.
+* **View Scheduled Events** – Here you can view and enable/disable the app's scheduled events. Changes will be applied to the environment the next time it is restarted.
 
 ### 4.2 Stories Tab
 

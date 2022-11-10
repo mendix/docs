@@ -33,7 +33,7 @@ For this how-to, it is necessary that you set up a test app with test data. To d
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
 2. [Create overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and the **Order** entities and their objects.
-3. [Create menu items](/howto/general/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and the **Order** overview pages.
+3. [Create menu items](/refguide/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and the **Order** overview pages.
 4. Add the following customer data to your app:
 
     {{< figure src="/attachments/howto/logic-business-rules/filtering-data-on-an-overview-page/example-customers-data.png" width="500px" >}}

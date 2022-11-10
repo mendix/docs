@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We updated the `Virtual Machine Out of Memory` and `Virtual Machine Error` alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
+* We updated the *Virtual Machine Out of Memory* and *Virtual Machine Error* alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
 
 ### October 20th, 2022
 

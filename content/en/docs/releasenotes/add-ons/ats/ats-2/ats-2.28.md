@@ -4,6 +4,23 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.2
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We applied security fixes related to libraries used
+* We fixed issue causing videos of run testsuites/-cases not to be loaded.
+
+## 2.28.1
+
+**Release date: October 25th, 2022**
+
+### Fixes
+
+* We applied security fixes related to libraries used
+
 ## 2.28.0
 
 **Release date: October 11th, 2022**

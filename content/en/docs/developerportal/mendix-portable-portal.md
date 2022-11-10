@@ -65,9 +65,11 @@ Apps running in other clouds (for example, Mendix for Private Cloud) will displa
 
 #### 4.1.1 Packages
 
-The **Packages** section will show you the latest package that has been created for your app. If you tap the package name, you will see details of the package. You will also have options to deploy this package to one of your environments. If you do not have the **Transport Rights** permission the deploy will fail.
+The **Packages** section will show you the latest package that has been created for your app. If you tap the package name, you will see details of the package.
 
 {{% todo %}}What are the possible symbols next to the packages?{{% /todo %}}
+
+Tapping the package name also gives you options to deploy this package to any of your environments. If you do not have the **Transport Rights** permission the deployment will fail.
 
 You can also create a new package from the Team Server. Do the following:
 
@@ -77,9 +79,35 @@ You can also create a new package from the Team Server. Do the following:
 4. Enter a **Tag Description**.
 5. Tap **Create Package**.
 
-You will get an indication that your package is being built and will be able to see the package once the build is complete.
+    You will get an indication that your package is being built.
+    
+You will get a notification from the app when the build is complete, and will be able then be able to see the package details. 
 
 #### 4.1.2 Environments
+
+The **Environments** section will show you 
+
+* Environment name – for example, Acceptance
+* Environment status – indicated by the color of the check mark next to the environment name:
+    * Green – there are no alerts
+    * Orange – there is at least one warning alert, but no critical alerts
+    * Red – there is at least one critical alert
+    
+    {{% todo %}}Is this information about caching also true for Portable Portal?{{% /todo %}}
+
+    ??The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).??
+    
+* Deployment package **Version** – for example, 1.0.0.18
+* **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
+* The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
+
+Tapping the environment allows you to perform the following actions, if you have the **Transport Rights** permission for the environment:
+
+* **Restart Application** – this stops the running application and starts it again
+* **Start/Stop Application**
+* **Transport to** – stage an environment to another environment, for example acceptance or production
+* **View Constants**
+* **View Scheduled Events**
 
 ### 4.2 Stories Tab
 

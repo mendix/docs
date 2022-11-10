@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 18                # at 18.12 - current verison needs to be reviewed every 6 months
+  - 16                # at 16.18 - current version on Xenial needs to be reviewed every 6 months
 arch: amd64           # optional, this is default, routes to a full VM
 # arch: arm64         # this is the recommended LXD container - faster spin up but some limitations Not used as it seems very unstable.
 os: linux             # optional, this is default

@@ -10,8 +10,8 @@ weight: 72
 
 ### Fixes
 
-* We applied security fixes related to libraries used
-* We fixed issue causing videos of run testsuites/-cases not to be loaded.
+* We applied security fixes related to used libraries.
+* We fixed an issue where videos of run test suites and test cases were not loaded.
 
 ## 2.28.1
 
@@ -19,7 +19,7 @@ weight: 72
 
 ### Fixes
 
-* We applied security fixes related to libraries used
+* We applied security fixes related to used libraries.
 
 ## 2.28.0
 

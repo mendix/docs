@@ -11,8 +11,8 @@ description: "Native Template 5.2 release notes."
 
 ### Fixes
 
-* We fixed an issue related to a recent React Native release that caused Android build failures. Tickets 170385, 170396, 170398 and 170469.
-* We fixed an issue to build Android apps locally using Apple M1 machines.
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+* We fixed an issue which affected Android apps built locally using Apple M1 machines.
 
 ## 5.2.13
 

@@ -5,6 +5,14 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.3.2
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+
 ## 6.3.1
 
 **Release date: October 6th, 2022**
@@ -20,6 +28,14 @@ description: "Native Template 6 release notes."
 ### Improvements
 
 * We improved our app security allowing apps to use new Database encryption capability of Studio Pro 9.18.
+
+## 6.2.28
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
 
 ## 6.2.27
 

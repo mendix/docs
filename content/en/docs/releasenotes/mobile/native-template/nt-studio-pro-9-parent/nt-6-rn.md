@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an issues related to a recent React Native release that caused Android build failures. Tickets 170385, 170396, 170398 and 170469.
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
 
 ## 6.3.1
 
@@ -35,7 +35,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an issues related to a recent React Native release that caused Android build failures. Tickets 170385, 170396, 170398 and 170469.
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
 
 ## 6.2.27
 

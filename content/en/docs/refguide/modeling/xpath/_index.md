@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
 
-XPath queries can be written both in Studio Pro, for example when you want to specify a constraint on the data retrieved in a Retrieve microflow activity, and directly in code in the *.java* files of your Java actions. Note that not all operators are supported by Studio Pro, and that the syntax of your query may differ between Studio Pro and Java environments.
+XPath queries can be written both in Studio Pro, for example when you want to specify a [constraint](/refguide/xpath-constraints/) on the data retrieved in a Retrieve microflow activity, and directly in code in the *.java* files of your Java actions. 
 
 Examples of XPath queries are:
 
@@ -23,7 +23,7 @@ Examples of XPath queries are:
     Retrieve the average of the total prices of all paid orders.
 
 {{% alert color="warning" %}}
-In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
+Not all [XPath operators](/refguide/xpath-operators/) are supported by Studio Pro and the syntax of your query may differ between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
 ## 2 XPath Elements
@@ -62,7 +62,7 @@ For details, see [XPath Operators](/refguide/xpath-operators/).
 
 ## 5 Functions
 
-There are two function types - [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). Aggregate functions are for use in Java code only and they must contain full queries as their arguments. Constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints. 
+There are two function types - [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). XPath aggregate functions are for use in Java code only and they must contain full queries as their arguments. XPath constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints. 
 
 See below some frequently used XPath functions:
 

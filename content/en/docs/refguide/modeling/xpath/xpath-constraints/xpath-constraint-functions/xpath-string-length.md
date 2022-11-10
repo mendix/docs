@@ -4,5 +4,14 @@ url: /refguide/xpath-string-length/
 tags: ["studio pro"]
 ---
 
+## 1 Overview
 
-For information on this constraint function, see [XPath length](/refguide/xpath-length/).
+The `length()` function returns the length of a string attribute or value.
+
+## 2 Example
+
+This query returns all customers with a `FirstName` of 5 or more characters:
+
+```java {linenos=false}
+//Sales.Customer[length(FirstName) >= 5]
+```

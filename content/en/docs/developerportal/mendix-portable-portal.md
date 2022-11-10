@@ -91,8 +91,11 @@ The **Environments** section will show you
 * Environment status – indicated by the color of the check mark next to the environment name:
     * Green checkmark – the environment is up and running
     * Red cross – the environment is not running (stopped)
-    
-    ??The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).??
+
+{{% todo %}}In the Developer Portal documentation, we mention that the status can be cached. Is this relevant for the portable portal?  
+
+`The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).`
+{{% /todo %}} 
     
 * Deployment package **Version** – for example, 1.0.0.18
 * **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0

@@ -21,7 +21,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 #### Fixes
 
 * We fixed a bug where whitespaces in certain fields were causing duplicate services to be created.
-* We remove the **Automatically registered** tag from sample data sources.
+* We removed the **Automatically registered** tag from sample data sources.
 
 ### November 3rd, 2022
 

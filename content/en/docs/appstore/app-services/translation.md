@@ -1,27 +1,27 @@
 ---
-title: "Translation"
+title: "Amazon Translate"
 url: /appstore/app-services/translation/
 category: "App Services"
-description: "Describes the configuration and usage of the Translation app service, which enables performing text translation in your web apps."
+description: "Describes the configuration and usage of the Amazon Translate app service, which enables performing text translation in your web apps."
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [Translation](https://marketplace.mendix.com/link/component/118411) connector enables you to connect your app to [Translation](https://aws.amazon.com/translate/) and build web applications that work with state-of-the-art multi-language text translation.
+The [Amazon Translate](https://marketplace.mendix.com/link/component/118411) connector enables you to connect your app to [Amazon Translate](https://aws.amazon.com/translate/) and build web applications that work with state-of-the-art multi-language text translation.
 
 ### 1.1 Typical Use Cases
 
-Translation provides a service that enables you to perform text translation in your Mendix applications. You can use it to localize your app into multiple languages to better support the requirements of your users.
+Amazon Translate provides a service that enables you to perform text translation in your Mendix applications. You can use it to localize your app into multiple languages to better support the requirements of your users.
 
 ### 1.2 Prerequisites
 
-The Translation connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon Translate connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Translation connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Translate connector into your app.
 
 ## 3 Configuration
 
@@ -31,11 +31,11 @@ After you install the connector, you can find it in the **App Explorer**, in the
 The artifacts that you need are contained in the **Translation** > **USE_ME** folder. The content in the **Translation** > **Internal** folder is for internal use only. In most cases, you will not need to use it directly.
 {{% /alert %}}
 
-
+To help you work with the Amazon Translate connector, the following sections of this document list the available entities, constants, microflows, and nanoflows that you can use in your application. For more information about using them in your app, as well as sample configuration instructions, see [Usage](#usage).
 
 ### 3.1 Domain model {#domain-model}
 
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Translation connector, the domain model contains the `Translator` and `Language` entities.
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Amazon Translate connector, the domain model contains the `Translator` and `Language` entities.
 
 #### 3.1.1 Translator
 
@@ -61,18 +61,22 @@ The `Language` entity is an entity referenced from `Translator` that incorporate
 
 ### 3.2 Constants {#constants}
 
+Constants are used to define configuration values. The Amazon Translate connector contains one constant,  `AWS_Default_Region`.
+
 #### 3.2.1 AWS_Default_Region
 
 The `AWS_Default_Region` constant provides a default AWS region configuration for an app that uses this app service. AWS Regions are separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a region closest to them in order to host their cloud infrastructure there. The closer your region is to you, the better, so that you can reduce network latency as much as possible for your end-users.
 
 ### 3.3 Microflows {#microflows}
 
+Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. Microflows run in the runtime server and can therefore not be used in offline apps. For more information, see [Microflows](/refguide/microflows/).
+
 #### 3.3.1 CreateTranslator {#create-translator}
 
 The `CreateTranslator` microflow takes `inputText`, `inputLanguageCode`, and `outputLanguageCode` as input parameters and creates translator actions in the back-end service. For instance, `inputLanguageCode` and `outputLanguageCode` can be set to `en-US`.
 
 {{% alert color="info" %}}
-For more information about the language codes, see the [Supported Languages](#supported-languages) section.
+For more information about the language codes, see the [list of supported languages](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) in AWS documentation.
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/app-services/translation/createtranslator.png" alt="createtranslator" >}}
@@ -85,40 +89,37 @@ The `TranslateText_MF` microflow takes the `translator` and `credentials` object
 
 ### 3.4 Nanoflows {#nanoflows}
 
+Nanoflows are similar to [microflows](/refguide/microflows/), in that they allow you to express the logic of your application. Unlike microflows, they can run directly on the browser or device, and can be used in an offline app. For more information, see [Nanoflows](/refguide/nanoflows/).
+
 #### 3.4.1 TranslateText
 
 The `TranslateText` nanoflow takes the `translator` and `credentials` object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the `translator` object.
 
 {{< figure src="/attachments/appstore/app-services/translation/translatetext.png" alt="translatetext" >}}
 
-### 3.5 Configuring the AWS credentials {#configure-aws-credentials}
+## 4 Usage {#usage}
 
-#### 3.6.1 For an App Deployed Locally or as a Mendix Free App
+Refer to the sections below for more information about using the Amazon Translate connector in your app, including a sample nanoflow configuration.
 
-If you deploy your app locally or as a Mendix Free App, configure the AWS credentials in Studio Pro. Perform the following steps:
+### 4.1 Configuring the AWS region
 
-1. Create a microflow as follows:
-    1. Name the microflow *GetCredential*. 
-    2. Right-click the working area and select **Add** > **Activity** from the pop-up menu.
-    3. Double-click the activity to open the **Action Activity** dialog box.
-    4. Select **Get Static Credentials** action from **AWS Authentication** category as target object.
-    5. Under **Input** section, fill **Access key ID**, and **Secret access key** as AWS credentials respectivly.
-    6. Under **Output** section, update **Object name** as *Credentials*.
-    7. Click **OK** to save the changes.
-    8. Right-click the credentials action to *Set $Credentials as return value*.
+Before you configure the translation service, you must select the default AWS region for the translation. The required configuration steps differ based on where your app is deployed.
 
-2. Default AWS region configuration:
-    1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
-    2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-    3. On the **Constants** tab, create a new constant with the predefined constant **Translation.AWS_Default_Region**.
-    4. Fill in the **Value** with the AWS region that you obtained.
-    5. Click **OK** to save the settings.
+#### 4.1.1 For an App Deployed Locally or as a Mendix Free App
+
+If you deploy your app locally or as a Mendix Free App, configure the AWS region in Studio Pro. Perform the following steps:
+
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+3. On the **Constants** tab, create a new constant with the predefined constant **Translation.AWS_Default_Region**.
+4. Fill in the **Value** with the AWS region that you obtained.
+5. Click **OK** to save the settings.
 
     {{< figure src="/attachments/appstore/app-services/translation/awsregion-inmendix.png" alt="awsregion-inmendix" >}}
 
-3. This is the microflow could help you to pass credentials object in calling all the service actions. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
+When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
 
-#### 3.6.2 For an App Deployed in the Mendix Cloud
+#### 4.1.2 For an App Deployed in the Mendix Cloud
 
 If you deploy your app in the Mendix Cloud, configure the AWS region in the [Developer Portal](/developerportal/deploy/environments-details/).
 
@@ -130,19 +131,17 @@ If you have already deployed your app, change the existing **AWS_Default_Region*
 
 {{< figure src="/attachments/appstore/app-services/translation/awsregion-envdetails.png" alt="awsregion-envdetails" >}}
 
-#### 3.6.3 For an App Deployed in Your Own Environment
+#### 4.1.3 For an App Deployed in Your Own Environment
 
 If you deploy your app in your own environment, you need to configure the AWS region in your own environment. For more information, see [Deployment](/developerportal/deploy/).
 
-## 4 Usage
+### 4.2 Configuring Your App to Perform Text Translation in the Browser
 
-### 4.1 Performing Text Translation in Your Browser
-
-When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation:
+Follow the steps below to configure the translation service:
 
 1. Create a nanoflow as follows:
     1. Name the nanoflow *CreateTranslator*.
-    2. Add the **GetCredential** microflow from the sample module to the nanoflow. 
+    2. Add session credential authentication to the nanoflow. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/#session-credentials). 
     3. Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
     4. Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**. 
 
@@ -233,12 +232,11 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
-20. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
 21. Run your app locally. You can perform text translation directly in the browser:
 
     {{< figure src="/attachments/appstore/app-services/translation/runlocally-translation.png" alt="runlocally-translation" >}}
 
-### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
+### 4.3 Checking Statistics on the Usage Dashboard {#check-usage}
 
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
@@ -250,6 +248,3 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 3. Find **Translation** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
-## 5 Read More
-
-* [Text Analytics and Translation App](https://academy.mendix.com/link/paths/118/Text-Analytics-and-Translation-App)

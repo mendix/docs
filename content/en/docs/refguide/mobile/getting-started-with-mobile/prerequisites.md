@@ -45,7 +45,12 @@ iOS archive versions for Make It Native are served via TestFlight links. To join
 
 ### 2.2 Direct Download Links {#direct-links}
 
-For Make it Native 9 apps, please download them in their app stores. If you would like to download an older Make it Native 8 version directly, see the section below.
+For Make it Native 9 apps, download the following Android or iOS Make It Native apps directly using these QR codes:
+
+|                                  Android                                  |                                iOS                                |
+| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
+| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" >}} |
+|   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US)    |        [Link](https://apps.apple.com/us/app/make-it-native-9/id1542182000)         |
 
 #### 2.2.1 Make It Native for Studio Pro 8.8 and Below:
 

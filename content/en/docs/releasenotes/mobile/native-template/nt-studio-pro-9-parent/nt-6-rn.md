@@ -9,23 +9,24 @@ description: "Native Template 6 release notes."
 
 **Release date: November 10th, 2022**
 
-## Fixes
+### Fixes
 
-* We fixed an issue with Push Notifications not working correctly on Android 12 devices. Tickets 167479, 167837, 168814.
+* We fixed an issue with push notifications not working correctly on Android 12 devices. (Tickets 167479, 167837, 168814)
 
 ### Warning
 
 **Please make sure you are using the new version of Native Mobile Resources module from Marketplace (version 3.13.0).**
 
 If you already have a project in AppCenter you will need to add the following environment variable in order to be compatible, to do follow the steps below:
+
 1. Open your project in AppCenter and go to "Build" menu item
-2. For **all branches**, click on the wrench icon
-3. In "Environment Variable", add the following Name and Value (If this option is not enable, please enable it):
-3.1. Name: **JAVA_HOME**  Value: **$(JAVA_HOME_11_X64)**
+1. For **all branches**, click on the wrench icon
+1. In "Environment Variable", add the following Name and Value (If this option is not enable, please enable it):
+  1. Name: **JAVA_HOME**  Value: **$(JAVA_HOME_11_X64)**
 
-Check image below to make sure it is set as expected:
+  Your variable should be set up like this:
 
-![env_var](https://user-images.githubusercontent.com/45102481/200879507-cdba57bd-6b99-44be-a838-e243fa324bdb.png)
+  ![env_var](https://user-images.githubusercontent.com/45102481/200879507-cdba57bd-6b99-44be-a838-e243fa324bdb.png)
 
 ## 6.3.2
 

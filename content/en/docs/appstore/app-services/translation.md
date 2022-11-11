@@ -9,85 +9,67 @@ tags: ["translation", "service", "app store", "marketplace", "component", "platf
 
 ## 1 Introduction
 
-The [Translation](https://marketplace.mendix.com/link/component/118411) app service enables you to build web applications to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
-
-Here is an overview of what the Translation contains:
-
-| Item                                        | Name                        |
-| ------------------------------------------- | --------------------------- |
-| [Predefined entities](#predefined-entities) | Language, Translator        |
-| [Constants](#constants)                     | AWS_Default_Region |
-| [Microflows](#microflows)                   | CreateTranslator, TranslateText_MF            |
-| [Nanoflows](#nanoflows)                     | TranslateText               |
-
-In most cases, you will only need what is contained in the **Translation** > **USE_ME** folder. The content in the **Translation** > **Internal** folder is for internal use only and you will not need it.
+The [Translation](https://marketplace.mendix.com/link/component/118411) connector enables you to connect your app to [Translation](https://aws.amazon.com/translate/) and build web applications that work with state-of-the-art multi-language text translation.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on Mendix cloud that enables you to easily perform text translation with multi-language support in your Mendix applications.
+Translation provides a service that enables you to perform text translation in your Mendix applications. You can use it to localize your app into multiple languages to better support the requirements of your users.
 
-### 1.2 Features
+### 1.2 Prerequisites
 
-This app service enables doing the following:
-
-* Customize text translation
-* Switch different language options
-
-### 1.3 Prerequisites
-
-This app service can only be used with Studio Pro 9 versions starting with [9.3.0](/releasenotes/studio-pro/9.4/).
+The Translation connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
 
 ## 2 Installation
 
-### 2.1 Obtaining a AWS credentials {#obtain-aws-credentials}
-
-Translation is a premium Mendix product that requires AWS authentication. To use this app service in your app, first you must obtain AWS credentials. For more information, see [AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
-
-### 2.2 Installing the Component in Your App
-
-1. To download and install the Translation app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
-
-2. To download and install the AWS Authentication Connector in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer**.
-
-3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Translation connector into your app.
 
 ## 3 Configuration
 
-### 3.1 Predefined Entities {#predefined-entities}
+After you install the connector, you can find it in the **App Explorer**, in the **Translation** section. The connector provides a [domain model](#domain-model), as well as the [constants](#constants), [microflows](#microflows), and [nanoflows](#nanoflows) that you can use to implement automatic translation for your app.
+
+{{% alert color="info" %}}
+The artifacts that you need are contained in the **Translation** > **USE_ME** folder. The content in the **Translation** > **Internal** folder is for internal use only. In most cases, you will not need to use it directly.
+{{% /alert %}}
+
+
+
+### 3.1 Domain model {#domain-model}
+
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Translation connector, the domain model contains the `Translator` and `Language` entities.
 
 #### 3.1.1 Translator
 
-The **Translator** entity is a conceptual entity that incorporates all the information of the translator object. It contains both input and output text strings. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module. 
+The `Translator` entity is a conceptual entity that incorporates all the information of the translator object. It contains both input and output text strings. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module. 
 
 {{< figure src="/attachments/appstore/app-services/translation/translator.png" alt="translator" >}}
 
 | Attribute | Description |
 | --- | --- |
-| **InputText** | The input text string (minimum length: 1, maximum length: 5000). |
-| **OutputText** | The output text string. |
+| `InputText` | The input text string (minimum length: 1, maximum length: 5000). |
+| `OutputText` | The output text string. |
 
 #### 3.1.2 Language
 
-The **Language** entity is an entity referenced from **Translator** that incorporates all the information of supported language object.
+The `Language` entity is an entity referenced from `Translator` that incorporates all the information of supported language object.
 
 {{< figure src="/attachments/appstore/app-services/translation/language.png" alt="language" >}}
 
 | Attribute | Description |
 | --- | --- |
-| **Name** | The language name, equivalent to the locale name. |
-| **Code** | The [language code](#supported-languages) that assigns letters or numbers as identifiers or classifiers for languages (minimum length: 2, maximum length: 5). |
+| `Name` | The language name, equivalent to the locale name. |
+| `Code` | The [language code](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) that assigns letters or numbers as identifiers or classifiers for languages (minimum length: 2, maximum length: 5). |
 
 ### 3.2 Constants {#constants}
 
 #### 3.2.1 AWS_Default_Region
 
-The **AWS_Default_Region** constant provides a default AWS region configuration for an app that uses this app service. AWS Regions are separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a region closest to them in order to host their cloud infrastructure there. The closer your region is to you, the better, so that you can reduce network latency as much as possible for your end-users.
+The `AWS_Default_Region` constant provides a default AWS region configuration for an app that uses this app service. AWS Regions are separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a region closest to them in order to host their cloud infrastructure there. The closer your region is to you, the better, so that you can reduce network latency as much as possible for your end-users.
 
 ### 3.3 Microflows {#microflows}
 
 #### 3.3.1 CreateTranslator {#create-translator}
 
-The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service. For instance, **inputLanguageCode** and **outputLanguageCode** can be set to `en-US`.
+The `CreateTranslator` microflow takes `inputText`, `inputLanguageCode`, and `outputLanguageCode` as input parameters and creates translator actions in the back-end service. For instance, `inputLanguageCode` and `outputLanguageCode` can be set to `en-US`.
 
 {{% alert color="info" %}}
 For more information about the language codes, see the [Supported Languages](#supported-languages) section.
@@ -97,7 +79,7 @@ For more information about the language codes, see the [Supported Languages](#su
 
 #### 3.3.2 TranslateText_MF
 
-The **TranslateText_MF** microflow takes the **translator** and **credentials** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
+The `TranslateText_MF` microflow takes the `translator` and `credentials` object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the `translator` object.
 
 {{< figure src="/attachments/appstore/app-services/translation/translatetext.png" alt="translatetext" >}}
 
@@ -105,91 +87,11 @@ The **TranslateText_MF** microflow takes the **translator** and **credentials** 
 
 #### 3.4.1 TranslateText
 
-The **TranslateText** nanoflow takes the **translator** and **credentials** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
+The `TranslateText` nanoflow takes the `translator` and `credentials` object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the `translator` object.
 
 {{< figure src="/attachments/appstore/app-services/translation/translatetext.png" alt="translatetext" >}}
 
-### 3.5 Supported Languages {#supported-languages}
-
-| Language | Language Code |
-| ---- | -----------|
-| Afrikaans |af |
-| Albanian |sq |
-| Amharic |am |
-| Arabic |ar |
-| Armenian |hy |
-| Azerbaijani |az |
-| Bengali |bn |
-| Bosnian |bs |
-| Bulgarian |bg |
-| Catalan |ca |
-| Chinese (Simplified) |zh |
-| Chinese (Traditional) |zh-TW |
-| Croatian |hr |
-| Czech |cs |
-| Danish |da |
-| Dari |fa-AF |
-| Dutch |nl |
-| English |en |
-| Estonian |et |
-| Farsi (Persian) |fa |
-| Filipino, Tagalog |tl |
-| Finnish |fi |
-| French |fr |
-| French (Canada) |fr-CA |
-| Georgian |ka |
-| German |de |
-| Greek |el |
-| Gujarati |gu |
-| Haitian Creole |ht |
-| Hausa |ha |
-| Hebrew |he |
-| Hindi |hi |
-| Hungarian |hu |
-| Icelandic |is |
-| Indonesian |id |
-| Irish |ga |
-| Italian |it |
-| Japanese |ja |
-| Kannada |kn |
-| Kazakh |kk |
-| Korean |ko |
-| Latvian |lv |
-| Lithuanian |lt |
-| Macedonian |mk |
-| Malay |ms |
-| Malayalam |ml |
-| Maltese |mt |
-| Marathi |mr |
-| Mongolian |mn |
-| Norwegian |no |
-| Pashto |ps |
-| Polish |pl |
-| Portuguese |pt |
-| Portuguese (Portugal) |pt-PT |
-| Punjabi |pa |
-| Romanian |ro |
-| Russian |ru |
-| Serbian |sr |
-| Sinhala |si |
-| Slovak |sk |
-| Slovenian |sl |
-| Somali |so |
-| Spanish |es |
-| Spanish (Mexico) |es-MX |
-| Swahili |sw |
-| Swedish |sv |
-| Tamil |ta |
-| Telugu |te |
-| Thai |th |
-| Turkish |tr |
-| Ukrainian |uk |
-| Urdu |ur |
-| Uzbek |uz |
-| Vietnamese |vi |
-| Welsh |cy |
-
-### 3.6 Configuring the AWS credentials {#configure-aws-credentials}
+### 3.5 Configuring the AWS credentials {#configure-aws-credentials}
 
 #### 3.6.1 For an App Deployed Locally or as a Mendix Free App
 

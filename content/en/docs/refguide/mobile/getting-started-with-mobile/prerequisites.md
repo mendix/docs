@@ -104,4 +104,4 @@ If your port forwarding settings are correct but you still get an error that the
 
 ### 3.2 Configure Parallels
 
-To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).
+To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).

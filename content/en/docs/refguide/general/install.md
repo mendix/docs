@@ -16,7 +16,7 @@ aliases:
 
 Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
 
-If you use a Mac device, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
+If you use a Mac device, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 

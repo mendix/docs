@@ -1,14 +1,14 @@
 ---
-title: "Implement Community Best Practices for App Performance"
+title: "Community Best Practices for App Performance"
 linktitle: "Best Practices for App Performance"
-url: /howto/general/community-best-practices-for-app-performance/
-category: "General Info"
-weight: 35
+url: /refguide/community-best-practices-for-app-performance/
+weight: 15
 description: "Describes some best practices to apply during development to get a better performing app. This document is created by and for the Mendix community."
 tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7
+    - /howto/general/community-best-practices-for-app-performance/
 ---
 
 ## 1 Introduction

@@ -43,7 +43,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
 
 As a Mendix Administrator, you will find the IdP setup on the **Single Sign-On** tab of your Control Center's [Security](/developerportal/control-center/#security) section.
 
-In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, the Control Center displays a pop-up screen to inform you of known limitations.
+In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, a pop-up screen will be displayed to inform you of known limitations.
 
 From here you can add a configuration, edit draft versions of a configuration, activate a draft version or de-activate the current IdP configuration.
 
@@ -93,17 +93,13 @@ If your test fails, see the [Troubleshooting](#troubleshooting) section for advi
 
 ## 5 Activating
 
-When you are ready, you can activate the IdP configuration from the overview page. Your users will immediately benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IdP authentication.
-
-As an option, you can inform your users of the change in the sign-in process via a standard email message. This email is a fixed template which cannot be configured. 
+When you are ready, you can activate the IdP configuration from the overview page. Your users will start to benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IdP authentication.
 
 Please be aware that there can be only one active IdP configuration at a time. When you activate an IdP configuration while another one is already active, the current active configuration will be de-activated automatically.
 
 ## 6 Deactivating
 
-You can deactivate the IdP configuration at any time. The changes become into effect immediately. Users will be forced to reset their Mendix passwords on first sign-in.
-
-Optionally you can inform your users of the change in the sign-in process via a a standard email message. This email is a fixed template which cannot be configured.
+You can deactivate the IdP configuration at any time. The changes start coming into effect immediately. Users will have to reset their Mendix passwords to be able to sign-in since it has been scrambled upon activation.
 
 ## 7 Microsoft Azure AD
 

@@ -13,20 +13,23 @@ description: "Native Template 6 release notes."
 
 * We fixed an issue with push notifications not working correctly on Android 12 devices. (Tickets 167479, 167837, 168814)
 
-### Warning
+### Update Your Native Mobile Resources Module
 
-**Please make sure you are using the new version of Native Mobile Resources module from Marketplace (version 3.13.0).**
+{{% alert color="warning" %}}
+Due to a library update, your Native Template must be aligned with Native Mobile Resources or else your build will fail. Please make sure you are using the newest version of the Native Mobile Resources module from Marketplace (currently [version 3.13.0](https://marketplace.mendix.com/link/component/109513)).
+{{% /alert %}}
 
-If you already have a project in AppCenter you will need to add the following environment variable in order to be compatible, to do follow the steps below:
+If you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:
 
-1. Open your project in AppCenter and go to "Build" menu item
-1. For **all branches**, click on the wrench icon
-1. In "Environment Variable", add the following Name and Value (If this option is not enable, please enable it):
-  1. Name: **JAVA_HOME**  Value: **$(JAVA_HOME_11_X64)**
+1. Open your project in AppCenter and go to **Build** menu item.
+1. In **all branches**, click the wrench icon.
+1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):
+    1. Name: **JAVA_HOME**.
+    1. Value: **$(JAVA_HOME_11_X64)**.
 
-  Your variable should be set up like this:
+In the end, your variable should be set up like this:
 
-  ![env_var](https://user-images.githubusercontent.com/45102481/200879507-cdba57bd-6b99-44be-a838-e243fa324bdb.png)
+{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" >}}
 
 ## 6.3.2
 

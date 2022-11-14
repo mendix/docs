@@ -36,7 +36,7 @@ Should you consider using a connected environment, the following URLs should be 
 | `https://privatecloud.mendixcloud.com` | Registry for downloading MDA artifacts |
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
 | `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
-| `https://subscription-api.mendix.com` | Service to verify call-home licence |
+| `https://subscription-api.mendix.com` | Service to verify call-home license |
 
 ## 3 Creating a Cluster and Namespace
 
@@ -349,7 +349,7 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 ##### 4.3.2.2 Storage Plan{#storage-plan}
 
 {{% alert color="info" %}}
-Storage plans are “blueprints” that specify how to request/decomission a new database or blob storage and pass its credentials to an environment.
+Storage plans are “blueprints” that specify how to request/decommission a new database or blob storage and pass its credentials to an environment.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -667,7 +667,6 @@ To use the Autogenerate Prefix option you need Mendix Operator version 2.7.0 or 
 Be sure to follow the naming guidelines for prefixes as described in the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html).
 {{% /alert %}}
 
-
 The associated IAM user account needs to have the following IAM policy (replace `<bucket_name>` with the your S3 bucket name):
 
 ```json
@@ -734,10 +733,10 @@ If the plan name already exists you will receive an error that it cannot be crea
 To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.1.0 or later.
 {{% /alert %}}
 
-**Google Cloud Storage bucket** will connect to an existing Google cloud bucket. You need to create bucket and get the credentials from the service account and fill in all the details into the StoragePlan. You will need to provide all the information about your Google cloud storage such as plan name, endpoint, access key and secret key.
+**Google Cloud Storage bucket** will connect to an existing Google cloud bucket. You need to create the bucket, get the credentials from the service account, and fill in all the details into the StoragePlan. You will need to provide all the information about your Google cloud storage such as plan name, endpoint, access key, and secret key.
 
 {{% alert color="info" %}}
-Please note the bucket for the google cloud needs to be created manually. Mx4PC will not create the google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a seperate folder in the bucket.
+Please note that the bucket for the Google cloud needs to be created manually. Mx4PC will not create the Google cloud bucket. The format of the endpoint should be *https://storage.googleapis.com/<bucket-name>*. Keep in mind that the all the apps will be created in a separate folder in the bucket.
 {{% /alert %}}
 
 **Ephemeral** will enable you to quickly set up your environment and deploy your app, but any data objects you store will be lost when you restart your environment.
@@ -784,14 +783,14 @@ For **Generic registry…** options, the configuration script will ask if the cr
 
 For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
-When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering). You can choose between Static crdentials and [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html)
+When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering). You can choose between Static credentials and [IRSA authentication](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html).
 
 For **Google Cloud Container Registry**, the supported authentication is [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). You will need to supply the following:
 
 * `Registry Name`: google container registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
 * `Registry URL`: container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
 * `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
-* `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
+* `Kubernetes Service Account`: the Kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the Kubernetes service account to your google service account.
 
     Below is an example how to bind a google cloud service account to a kubernetes service account:
 
@@ -811,7 +810,6 @@ The workload identity is only enabled when using the google-gcr option in the CL
 Other options (e.g. generic registry) will not enable the pod annotations required for the GCR authentication plugin to work correctly.
 Only the google-gcr option is validated and supported when using the Google Container Registry on Google Cloud Platform.
 {{% /alert %}}
-
 
 #### 4.3.3 Proxy{#proxy}
 
@@ -1533,7 +1531,7 @@ Replace `{namespace}` with the namespace name, and `{envname}` with the MendixAp
 The Kubernetes [Horizontal pod autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) documentation explains additional available autoscaling options.
 
 {{% alert color="warning" %}}
-The Mendix Runtime is based on Java, which preallocates memory and typically never releases it.
+The Mendix Runtime is based on Java, which pre-allocates memory and typically never releases it.
 Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
@@ -1546,7 +1544,7 @@ Scaling an environment down (decreasing the number of replicas) removes some of 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.
 
 {{% alert color="warning" %}}
-The Mendix Runtime is based on Java, which preallocates memory and typically never releases it.
+The Mendix Runtime is based on Java, which pre-allocates memory and typically never releases it.
 Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
@@ -1649,7 +1647,7 @@ You can also see an activity log containing the following information for all na
 * When a user accepts the invitation as a namespace member
 * When a user is removed as a namespace member
 * When user's permission is changed in the namespace
-* When enviroment configurations are added, updated, or removed
+* When environment configurations are added, updated, or removed
 * When Runtime Metrics configurations are added, updated, or deleted
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
@@ -1690,7 +1688,6 @@ The new value for the annotation will only be applied when the application is re
 {{% /alert %}}
 
 You can also configure the runtime metrics for the environment in the Runtime section. For more details, see [Customize Runtime Metrics](#customize-runtime-metrics), above.
-
 
 #### 6.2.2 Members
 

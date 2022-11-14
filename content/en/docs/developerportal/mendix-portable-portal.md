@@ -151,6 +151,8 @@ In each section, you can swipe right or left to check out the next or previous i
 
 The **Notifications** page shows all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the results of the actions you performed on the [Cloud](#cloud) tab of the Portable Portal app.
 
+{{% alert color="info" %}}If you allow the Portable Portal app to send you push notifications, you will also get all the notifications on your phone.{{% /alert %}}
+
 ## 8 Settings Page
 
 The **Settings** page displays your profile picture, your company information, and your email address.

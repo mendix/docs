@@ -48,9 +48,9 @@ If you have any issues when following these instructions, see the [Troubleshooti
 
 ## 3 Overview of Tekton and the Mendix for Private Cloud Pipelines
 
-### 3.1 Tekton components
+### 3.1 Tekton Components
 
-[Tekton](https://tekton.dev/) is an open-source cloud native CI/CD solution which consists of 4 components:
+[Tekton](https://tekton.dev/) is an open-source cloud native CI/CD solution which consists of the following components:
 
 * Pipelines – basic building blocks (tasks and steps) of a CI/CD workflow
 * Triggers – event triggers for a CI/CD workflow
@@ -59,11 +59,11 @@ If you have any issues when following these instructions, see the [Troubleshooti
     
 ### 3.2 Tekton Pipelines
 
-Each activity needed for management of Mendix for Private Cloud environments and apps is mapped to a Tekton **pipeline**. These pipelines are run when a **trigger** condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
+Each activity needed for management of Mendix for Private Cloud environments and apps is mapped to a Tekton pipeline. These pipelines are run when a trigger condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
 
-A **pipeline** is a collection of **tasks** in order. Tekton creates tasks in a number of Kubernetes pods and ensures that each pod successfully completes its task. 
+A *pipeline* is a collection of tasks in order. Tekton creates tasks in a number of Kubernetes pods and ensures that each pod successfully completes its task. 
 
-A **task** is a collection of **steps** in order. Tekton runs a task in the form of a Kubernetes pod, where each step becomes a running container in the pod. This design allows you to set up a shared environment for a number of related steps. For example, you may mount a Kubernetes volume in a task; this will be accessible from each step of the task.
+A *task* is a collection of steps in order. Tekton runs a task in the form of a Kubernetes pod, where each step becomes a running container in the pod. This design allows you to set up a shared environment for a number of related steps. For example, you may mount a Kubernetes volume in a task; this will be accessible from each step of the task.
  
 A *step* is an operation in a CI/CD workflow. Tekton performs each step as a running container in the task pod. 
     
@@ -86,7 +86,6 @@ Mendix has created the following Tekton pipelines:
 * **create-app-pipeline** – create a basic MendixApp CR — After running this pipeline, we are ready to run build-pipeline
 * **delete-app-pipeline** – delete a Mendix App CR, which triggers the deletion of the environment
 
-
 #### 3.3.2 Mendix Triggers
 
 Triggers are set up to trigger the Mendix pipelines in two ways:
@@ -108,9 +107,9 @@ Below is and example of the recommended architecture setup.
 
 The example shows the following namespaces:
 
-* Namespace with a Mendix operator.
-* Namespace with Mendix [Tekton pipelines](#pipelines-installation) and [triggers](#installing-triggers).
-* Namespace with [Tekton and Tekton Triggers](#tekton-installation).
+* Namespace with a Mendix operator
+* Namespace with Mendix [Tekton pipelines](#pipelines-installation) and [triggers](#installing-triggers)
+* Namespace with [Tekton and Tekton Triggers](#tekton-installation)
 
 ## 4 Air-gapped Environments
 
@@ -120,13 +119,13 @@ If your cluster is air-gapped and does not have access to the internet, you will
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
 
-## 5 Tekton Installation for non air-gapped (regular) Environments{#tekton-installation}
+## 5 Tekton Installation for Non Air-gapped (Regular) Environments{#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for non air-gapped Environments](#pipelines-installation).
 
-### 5.1 Installing on non air-gapped Kubernetes
+### 5.1 Installing on Non Air-gapped Kubernetes
 
-To install Tekton with Tekton Triggers, apply the following yaml manifests:
+To install Tekton with Tekton Triggers, apply the following *yaml* manifests:
 
 ```bash {linenos=false}
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml
@@ -138,14 +137,15 @@ kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers
 The manifests target the `tekton-pipelines` namespace.
 {{% /alert %}}
 
-### 5.2 Installing on non air-gapped OpenShift
+### 5.2 Installing on Non Air-gapped OpenShift
 
 To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift Pipelines, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation. 
+
 Main objects would be installed in `openshift-pipelines` namespace. 
 
 At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
 
-## 6 Pipeline Installation for non air-gapped Environments{#pipelines-installation}
+## 6 Pipeline Installation for Non Air-gapped Environments{#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
@@ -153,7 +153,8 @@ Before you install the Mendix pipelines, which contain all Tekton-related object
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
-Install it in a separate namespace, as shown in [Simplified architecture example](#architecture). The installation command below uses {$NAMESPACE_WITH_PIPELINES} to refer to that namespace.
+
+Install the pipeline in a separate namespace, as shown in [Simplified architecture example](#architecture). The installation command below uses {$NAMESPACE_WITH_PIPELINES} to refer to that namespace.
 
 The installation command is:
 
@@ -164,7 +165,7 @@ helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG
 ```
 
-## 7 Installing Triggers{#installing-triggers}
+## 7 Installing Triggers {#installing-triggers}
 
 {{% alert color="info" %}}
 Installing triggers is the same for both non air-gapped and air-gapped environments.
@@ -191,12 +192,12 @@ Despite the `X-GitLab-Token` header name, this authentication works outside of G
 and all HTTP requests to the trigger will work with that header.
 More details on how to activate a trigger using any HTTP client are [here](#auth-other-clients).   
 
-#### 7.2.1 GitLab configuration
+#### 7.2.1 GitLab Configuration
 
 To set the GitLab Token in GitLab you specify it as the **Secret Token** when creating the webhook:
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
 
-#### 7.2.2 Other HTTP clients{#auth-other-clients}
+#### 7.2.2 Other HTTP Clients {#auth-other-clients}
 
 With HTTP clients you simply need to add `X-GitLab-Token` to your header.
 For example, using the `curl` client:
@@ -215,9 +216,9 @@ curl -X POST \\
 }'
 ```
 
-### 7.3 Generic Trigger{#generic-trigger}
+### 7.3 Generic Trigger {#generic-trigger}
 
-A **Generic trigger** is a trigger that can be used as HTTP/curl request. All Mendix-related parameters will be specified in HTTP request body. 
+A Generic trigger is a trigger that can be used as HTTP/curl request. All Mendix-related parameters will be specified in HTTP request body. 
 
 To install a generic trigger you can use the following command:
 
@@ -236,11 +237,11 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section)           |
 | `$NAMESPACE_WITH_PIPELINES` | Namespace from section 6.                                                                              |
 
-You can use one Generic Trigger with several environments. To use it with several environments you just need to pass the correct parameters in the HTTP request body.
+You can use one Generic trigger with several environments. To use it with several environments you just need to pass the correct parameters in the HTTP request body.
 
 ### 7.4 GitLab Webhook Trigger{#gitlab-webhook}
 
-The **GitLab webhook trigger** triggers the build-pipeline pipeline in combination with GitLab. All Mendix environment related parameters are specified during trigger installation as you create one trigger per environment.
+The GitLab webhook trigger triggers the build-pipeline pipeline in combination with GitLab. All Mendix environment related parameters are specified during trigger installation as you create one trigger per environment.
 
 To install a GitLab webhook trigger use the following command:
 
@@ -299,7 +300,7 @@ Make sure that an ingress controller already installed. You can use an [NGINX Co
 
 In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
 
-## 8 Authentication to external services
+## 8 Authentication to External Services
 
 This needs to be configured before you trigger any pipelines.
 
@@ -646,7 +647,7 @@ curl -X POST \
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names  using the command `kubectl get mendixapps -n $namespace_name` |
 | `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                         |
 
-## 10 Troubleshooting{#troubleshooting}
+## 10 Troubleshooting {#troubleshooting}
 
 ### 10.1 Checking Tekton Components
 

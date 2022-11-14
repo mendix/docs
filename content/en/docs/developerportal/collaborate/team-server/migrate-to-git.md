@@ -34,7 +34,6 @@ Access to SVN is disabled as soon as migration starts to prevent developers from
 
 To inform your team members about the process, several emails are sent out automatically :
 
-* (Optional) Migration scheduled
 * Migration started
 * Migration completed or migration failed
 

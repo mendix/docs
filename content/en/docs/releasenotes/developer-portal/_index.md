@@ -19,9 +19,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### November 16th, 2022
 
-#### New features
+#### New Features
 
-* We introduced a self-service option for Teamserver SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences).
+* We introduced a self-service option for Team Server SVN that allows Scrum Masters to permanently migrate eligible apps to Git. For more information on what apps are eligible for migration and on the migration process, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). For more information on steps after the migration and process differences between Git and SVN, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences).
 
 ### November 10th, 2022
 

@@ -68,6 +68,21 @@ Make sure that the roles that need to change the configuration of the Deep Link 
 
 To configure and manage deep links at runtime, add the **DeepLink.DeeplinkConfigurationOverview** snippet to a custom admin page, and make sure that all the users who operate the app can access this page. You need to add the **DeepLink.Admin** module role to their user roles.
 
+On the **Configuration** tab, there are these settings:
+
+
+
+
+
+On the **Advanced** tab, there are these settings:
+
+* **Do not force a login action** – If selected, anonymous users will be able to access the deep link. If unselected, anonymous user sessions will be redirected to the location in the **LoginLocation** constant.
+* **Language** – The selected language will be associated to the anonymous user session.
+* **Keep the deep link the entire session** – If selected, the deep link will be the home page for the session. For example, when the user goes to `/link/article/1`, the deep link handler microflow is executed and the user is navigated to the page specified in handler microflow. This handler microflow now will be executed every time user reloads the Mendix app or calls the **DeepLink.DeepLinkHome** microflow. Ending current session will stop this behaviour until this deep link is called again.
+* **Process an argument as an Object** – This is deprecated.
+* **Process an argument as a String** – This is deprecated.
+* **Alternative Index Page** – If selected, the default index location (`index.html`) and the **DeepLink.IndexPage** constant will be overridden by this value. This is useful for theme-related use cases, for example, `index-dark.html`.
+
 ### 3.5 Optional Configuration
 
 The configuration in this section is optional. Use it if it helps with your implementation.
@@ -126,7 +141,7 @@ To solve this problem, you can use one of the following solutions:
 
 * As an alternative to upgrading the module and Studio Pro, you can use a custom login page instead of the default login page. To do so, perform the steps as follows:
 
-  1. Set the `LoginLocation` constant to `“../..?cont=”`. This directs the user to the custom login page. If you use a page URL for the login page, then adjust the constant accordingly, for example, to `“../../p/login?cont=”`.
+  1. Set the **LoginLocation** constant to `“../..?cont=”`. This directs the user to the custom login page. If you use a page URL for the login page, then adjust the constant accordingly, for example, to `“../../p/login?cont=”`.
 
   2. Add the following JavaScript using the [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget from the Marketplace to your custom login page:
 

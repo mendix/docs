@@ -39,7 +39,7 @@ Select at least one app that you want to manage in the Portal Portal app. You ca
 
 After you select the apps, tap **Continue**. Then the [My Apps](#my-apps) page opens.
 
-If this is the first time that you select apps on the **App Selection** page, you are prompted to select if you allow the Portable Portal app to send you notifications. We do recommend you select **Allow** since sending notifications is one of the main features of the app.
+{{% alert color="info" %}}If this is the first time that you select apps on the **App Selection** page, you are prompted to select if you allow the Portable Portal app to send you notifications. We do recommend you select **Allow** since sending notifications is one of the main features of the app.{{% /alert %}}
 
 ## 5 My Apps Page {#my-apps}
 

@@ -30,11 +30,25 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-{{% todo %}}Fill in the name of the section where you can find the connector, and add a microflow configuration example.{{% /todo %}}
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonRekognitionConnector** section. The connector provides a [domain model](#domain-model) and [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a microflow.
 
-After you install the connector, you can find it in the **App Explorer**, in the XXX section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a microflow.
+For example, to detect labels for a given image, implement the **DetectLabels** activity by performing the following steps:
 
-### 3.1 Constants
+1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+2. Enter a name for your microflow, for example, *ACT_DetectLabels*, and then click **OK**.
+3. In the **App Explorer**, in the **AmazonRekognitionConnector** > **Operations** section, find the **DetectLabels** activity.
+4. Drag the **DetectLabels** activity onto the work area of your microflow.
+5. Double-click the **DetectLabels** microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image and specify an AWS region. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
+6. In the **Edit** parameters section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
+7. Click **OK**.
+8. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
+9. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
+10. Double-click the **Retrieve** activity.
+11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
+12. Click **OK**.
+13. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
+
+### 3.1 Constants {#constants}
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
 
@@ -67,7 +81,7 @@ The entities in the table below describe all generalizations. These are (re-)use
 | `Emotion`           | This entity holds the information regarding the emotions that appear to be expressed on the face, and the confidence level in the determination. The API is only making a determination of the physical appearance of a person's face. It is not a determination of the person’s internal emotional state and should not be used in such a way. For example, a person pretending to have a sad face might not be sad emotionally.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 | `PersonsEquipment`  | This entity holds information regarding a person's status of wearing protective equipment, including the value. The value is a representation of the ID of the detected person.<br />Additionally, this entity is a generalization, and the specialization(s) of this entity should be used instead. |
 
-### 3.3 Enumerations
+### 3.3 Enumerations {#enumerations}
 
 An enumeration is a predefined list of values that can be used as an attribute type.
 
@@ -81,7 +95,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `MEDIUM` | MEDIUM      |
 | `HIGH`   | HIGH        |
 
-#### 3.3.2 `AWS_Region`
+#### 3.3.2 `AWS_Region` {#aws_region}
 
 | **Name**         | **Caption**    |
 | ---------------- | -------------- |

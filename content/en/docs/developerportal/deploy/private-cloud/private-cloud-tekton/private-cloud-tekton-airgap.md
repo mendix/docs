@@ -182,7 +182,7 @@ Before you install the Mendix pipelines, which contain all Tekton-related object
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines. To get access to the helm charts, contact your CSM.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
-The namespace can be the same namespace where the Mendix Operator runs, or you can create a new namespace. Further, we will use $NAMESPACE_WITH_PIPELINES to refer to that namespace.
+The namespace can be the same namespace where the Mendix Operator runs, or you can create a new namespace. The sections below use {$NAMESPACE_WITH_PIPELINES} to refer to that namespace.
 
 For air-gapped environments, you need to specify the images individually, as well as the private registry you set up in [Preparation for Air-gapped Environments](#preparation):
 

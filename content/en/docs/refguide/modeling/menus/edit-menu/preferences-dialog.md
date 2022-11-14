@@ -57,7 +57,7 @@ Enable this setting to increase the speed at which a running application is upda
 
 #### 2.4.1 Default App Directory
 
-This is the directory in which new apps will be stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog when creating a new app. If a different directory is selected in the App Settings dialog, that directory will be stored as the new default app directory.
+This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 
 ### 3 Mendix Assist Tab
 

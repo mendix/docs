@@ -15,7 +15,7 @@ The [OpenID Connect (OIDC) SSO module](https://marketplace.mendix.com/link/compo
 OIDC is an extension of OAuth2 that propagates the end-user's identity to your application.
 
 {{% alert color="warning" %}}
-This OIDC SSO module works with Mendix version 9.0 and above. If you are using a previous version of Mendix, you can use the *community-supported* module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
+This OIDC SSO module works with Mendix version 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -63,6 +63,7 @@ The OIDC SSO module does not yet support
 * Other client authentication methods such as using asymmetric keys (“private_key_jwt”).
 * Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens.
 * Mobile apps.
+* PWA Apps.
 
 ## 2 Dependencies
 
@@ -86,19 +87,19 @@ If you are migrating from the community edition of the module ([OpenIDConnect Si
 4. Replace all the layouts that end in `_REPLACEME` used in pages in this module with layouts from your own project. The layouts are in the **Implementation** > **Layouts** folder of the module. Use the [Find Usages](/refguide/find-and-find-advanced/#find-usages) command to find where they are used.
 5. Follow the instructions in [OIDC App Configuration](#app-configuration) to set up your app.
 
-### 3.1 Installing MxModelReflection{#mxmodelreflection}
+### 3.1 Installing Mx Model Reflection{#mxmodelreflection}
 
-Once the MxModelReflection has been imported into your app, you need to configure it.
+Once the Mx Model Reflection module has been imported into your app, you need to configure it.
 
-1. Add the page `MxObjects_Overview` from the `MxModelReflection` module to the Navigation menu
+1. In the **App Explorer**, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
     {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" >}}
 
-2. Run the app and click the newly-added navigation link to use MxModelReflection
+2. Run the app and click the newly-added navigation link to use Mx Model Reflection.
 
     {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" >}}
 
-3. Select the modules `MxModelReflection` and `OIDC`  and click **Click to refresh** for both the modules and the entities.
+3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities.
 
     {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" >}}
 
@@ -200,7 +201,7 @@ In this case, the OIDC client is the app you are making.
     * If you don't have an automatic configuration URL, you can fill in the other endpoints manually.
 1. Click **Save**
     {{% alert color="info" %}}
-Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.
+    Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.
     {{% /alert %}}
 1. Select your client configuration and click **Edit**.
 1. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
@@ -329,8 +330,8 @@ This section is only relevant if you are a Mendix partner and you want to integr
 
 To parse of SAM access tokens you need to have done the following:
 
-1. Set-up the connectivity between your app and SAM as described [above](#oidc-configuration).
-2. Install the **MxModelReflection** module.
+1. Set up the connectivity between your app and SAM as described [above](#oidc-configuration).
+2. Install the **Mx Model Reflection** module.
 3. Check **Enable Access Token Parsing** and select *Default SAM Token processing* as the **custom AccessToken processing microflow**.
     {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" >}}
 4. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the [Client Configuration](#client-configuration).
@@ -339,12 +340,29 @@ To parse of SAM access tokens you need to have done the following:
 
 #### 7.3.2 Parsing Access Tokens Using a Custom Microflow
 
-If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has the access token as the parameter.
+If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
+
+You can find a sample microflow for parsing access tokens, `ACT_TokenCustomATPRetrieve Roles` in the **SAM** folder of the OIDC module.
+
+Your custom microflow should do the following
+
+1. Retrieve the access token of the account.
+1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.
+1. Convert these roles to a list of `System.UserRole` objects.
+    Your token will contain one of the following:
+
+    * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
+    * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
+
+1. Invoke the `BCO_Account_ProcessRolesToken` in the **SAM** folder of the OIDC module to associate the current user with the correct user roles in your app.
 
 Once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
 
-1. Refresh the module containing your microflow as described in [Installing MxModelReflection](#mxmodelreflection).
-2. Check **Enable Access Token Parsing** and select your microflow (for example, *CustomATP_xxx*) as the **custom AccessToken processing microflow**.
+1. Login as an administrator, for example `Demo_administrator`.
+1. Refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
+1. Go to OIDC Config 
+1. In the **OpenID Provider** tab, select an existing client configuration and click **Edit**
+1. Check **Enable Access Token Parsing** and select your microflow (for example, *CustomATP_xxx*) as the **custom AccessToken processing microflow**.
 
 {{% alert color="info" %}}
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
@@ -405,3 +423,11 @@ Content - {"error":"invalid_client","error_description":"client authentication f
 ### 8.3 Custom Microflow Implementation Should Be Required to Process Access_Token Roles
 
 If you get the error message “Custom microflow implementation should be required to process Access_token roles” in the Mendix Studio Pro console logs, this indicates you have not completely implemented your custom microflow for parsing access tokens (`CustomATP_…`). See the section on [Access Token Parsing](#access-token-parsing).
+
+### 8.4 End-Users of App Deployed On Premises Do Not Return to the App After Sign In
+
+If you have deployed your app on premises but did not configure a return URL for your app properly, the end-users of your app are redirected to your IDP for login, but will not be redirected back to your app.
+
+To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
+
+{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" >}}

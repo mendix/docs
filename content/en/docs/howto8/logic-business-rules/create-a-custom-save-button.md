@@ -69,7 +69,7 @@ You need to recreate the default Save behavior to customize it afterwards. Do th
 
     {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/commit-object-properties.png" >}}
 
-6. Open the **Toolbox**, find the **Close page** activity there, and drag and drop it to the flow after the **Commit object(s)** activity:
+6. Open the **Toolbox**, find the **Close page** activity there, and drag it into the flow after the **Commit object(s)** activity:
 
     {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/close-page-activity.png" >}}
 
@@ -79,7 +79,7 @@ You have recreated the default **Save** button logic.
 
 To extend the logic with a custom message that will be shown when end-users click the button, do the following:
 
-1. Open **Toolbox**, find the **Show message** activity, and drag and drop it after the **Close page** activity.
+1. Open **Toolbox**, find the **Show message** activity, and drag it after the **Close page** activity.
 
 2. Double-click the new activity to open its properties.
 

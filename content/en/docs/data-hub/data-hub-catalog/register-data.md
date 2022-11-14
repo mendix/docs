@@ -2,7 +2,7 @@
 title: "Register OData Resources in the Data Hub Catalog"
 linktitle: "Register OData Resources"
 url: /data-hub/data-hub-catalog/register-data/
-description: "How to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form"
+description: "Describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form."
 category: "Data Hub Catalog"
 weight: 35
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
@@ -15,11 +15,11 @@ aliases:
 
 ## 1 Introduction
 
-There are three ways to register exposed OData services in the Data Hub Catalog. We support all OData versions.
+There are three ways to register [published OData services](/refguide/published-odata-services/) in the Data Hub Catalog. We support all OData versions.
 
 **This how-to will teach you how to register a service in the following ways:**
 
-* [Through the Mendix Cloud](#mendix-cloud)
+* [Through the Mendix Cloud](#mendix-cloud), done automatically when you deploy a [published OData service](/refguide/published-odata-services/) to the Mendix Cloud
 * [Through the Data Hub Catalog Registration API](#registration-api)
 * [Through the Data Hub Catalog UI form](#registration-form)
 
@@ -29,11 +29,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/).
 * You have a Mendix account.
-* You have an exposed OData service that you are ready to register, or follow sections 3 and 4 in [this how-to](https://docs.mendix.com/data-hub/share-data/) to create one.
+* You have an exposed OData service that you are ready to register, or follow sections 3 and 4 in [Share Data Between Apps](/data-hub/share-data/) to create one.
 
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
-If you have an exposed OData service that is deployed to the Mendix Cloud, then congratulations! Your service is already registered in the Data Hub Catalog.
+If you have an exposed OData service that is deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), a [published OData service](/refguide/published-odata-services/), then congratulations! Your service is already registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 ## 4 Registering a Service Without the Mendix Cloud {#without-mendix-cloud}
 
@@ -43,6 +43,8 @@ If you are not using the Mendix Cloud to deploy your Mendix application, there a
 * [Through the Data Hub Catalog UI form](#registration-form)
 
 The Data Hub Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. You need to provide details about both the application and environment where the service is deployed in order to register your service.
+
+For detailed information on working with external entities and the Catalog without the Mendix Cloud (for on-prem or local deployment), see [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
 
 ### 4.1 Registering a Service Through the Data Hub Catalog Registration API {#registration-api}
 
@@ -295,19 +297,13 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 
 Follow the steps below:
 
-1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service:
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/register-data/register-data-source-odata-connector.png" alt="upload contract" >}}
+1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
 
 2. On the **Contract** screen, upload your XML or ZIP file.
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/register-data/register-data-source-contract.png" alt="upload contract"   width="400"  >}}
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
 3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, **Data Source Relative Path**.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/register-data/register-data-source-details.png" alt="upload contract"   width="400"  >}}
 
 4. Select the **Go to next step** option that appears once you have filled out all the required fields.
 
@@ -321,8 +317,25 @@ Follow the steps below:
     2. **Sandbox**: the Mendix Free App environment, data is not of production quality.
     3. **Non-production**: hosting is paid for, but data is not of production quality.
 
-8. Select the **Done!** option that appears once you have filled out all the required fields.
+8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/data-hub/data-hub-catalog/curate/#authentication) later. 
+   
+9.  Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
 
 The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin/#settings) section of *Data Hub Administration*.
+
+#### 4.2.1 Selecting an Authentication Method {#authentication}
+
+Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. 
+
+The following methods are supported by the Data Hub Catalog:
+
+* **Basic authentication** – Authenticates from a username and password
+* **Active session** – For Mendix data sources, authenticates from the open and active browser session
+* **Mendix SSO** – For Mendix data sources, authenticates from single sign-on using the [Mendix SSO](/appstore/modules/mendix-sso/) module
+* **OAuth** – Authenticates with [OAuth](https://oauth.net/)
+* **OpenID Connect** – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
+* **Other** – Specify other ways to authenticate, including custom modules
+
+Fill in as many details as you can to ensure that consuming developers can easily authentication themselves to consume your service.

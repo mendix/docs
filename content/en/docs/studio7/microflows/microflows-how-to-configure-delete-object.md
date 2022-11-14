@@ -56,7 +56,7 @@ A new blank page is created.
 Now you will configure a list view and will add a button with [**Delete Object** action](/studio7/page-editor-widgets-events-section/#delete-object-action) that deletes the corresponding customer when a user clicks the button. Do the following:
 
 1. Open the page *Customers* that you have created.
-2. In **Building Blocks** > **Lists** find **List 1**, drag and drop it to the page. This building block contains a list view in it by default.
+2. In **Building Blocks** > **Lists** find **List 1**, drag it onto the page. This building block contains a list view in it by default.
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/list-1.png" >}}
 
@@ -80,7 +80,7 @@ Now you will configure a list view and will add a button with [**Delete Object**
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/arrow-button.png" >}}
 
-6. In **Toolbox** > **Widgets** > **Buttons** find **Delete Object**, drag and drop it inside the container that is left from the arrow button. 
+6. In **Toolbox** > **Widgets** > **Buttons** find **Delete Object**, drag it into the container that is left from the arrow button. 
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/container-for-the-delete-button.png" >}}
 
@@ -102,7 +102,7 @@ You can also configure the [**Delete Object** action](/studio7/page-editor-widge
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/add-row.png" >}}
 
-3. In **Toolbox** > **Widgets** > **Data Containers**, find data view, drag and drop it inside the column (that was added together with a new row).
+3. In **Toolbox** > **Widgets** > **Data Containers**, find data view, drag it inside the column (that was added together with a new row).
 
 4. Now you need to configure the data view. In **Properties** of the data view, do the following: <br/>
 
@@ -111,7 +111,7 @@ You can also configure the [**Delete Object** action](/studio7/page-editor-widge
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/data-view-list-widget.png" >}}
 
-5. You need to fill the data view with data. In **Toolbox** >**Widgets** > **Typography**, select **Text**, drag and drop it inside data view content. 
+5. You need to fill the data view with data. In **Toolbox** >**Widgets** > **Typography**, select **Text**, drag it inside data view content. 
 
 6. You will make a heading out of the **Text** widget you have just added. Open the **Properties** of the **Text** and do the following:<br/>
 
@@ -120,7 +120,7 @@ You can also configure the [**Delete Object** action](/studio7/page-editor-widge
 
         {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/text-heading4.png" >}}<br/>
 
-7. Now you will add a text box to display details of the selected customer. In **Widgets** > **Input Elements**, select **Text Box**, drag and drop it inside the data view content. 
+7. Now you will add a text box to display details of the selected customer. In **Widgets** > **Input Elements**, select **Text Box**, drag it inside the data view content. 
 8. Open the **Properties** of the **Text Box**, and in **Data Source**, set **Attribute** to **Name** (the label for the text box will be changed to **Name** automatically).  
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/text-box-name.png" >}}
@@ -130,7 +130,7 @@ You can also configure the [**Delete Object** action](/studio7/page-editor-widge
 
     {{< figure src="/attachments/studio7/microflows/microflows-how-to-configure-delete-object/text-box-address.png" >}}
 
-11. In **Toolbox** > **Widgets** > **Buttons** find **Delete Object**, drag and drop it inside the data view. 
+11. In **Toolbox** > **Widgets** > **Buttons** find **Delete Object**, drag it inside the data view. 
 12. The button is already preconfigured: its **On Click Action** is set to **Delete Object**, and **Caption** is set to **Delete**. But you will add some styling to it. Do the following:<br/>
 
     1. In the **General** section, set **Style** to **Danger**.<br/>

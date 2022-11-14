@@ -153,17 +153,13 @@ To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over t
 It is not possible to remove yourself as a Mendix Admin.
 {{% /alert %}}
 
-## 7 Company Brand
+## 7 Company Brand {#company-brand}
 
-{{% alert color="warning" %}}
-Features on this page are available to try out, but you will not see changes implemented yet.
-{{% /alert %}}
+On this page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content and available for usage in your [company onboarding](#onboarding).
 
-On this page, you can add and edit a **Logo** that will appear on your company page. (Please note your company page will be available in a future iteration of Control Center.)
+You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 
-You can set a **Cover image** to be the background header of your company page. If you do not set an image by clicking **Upload**, the **Primary** color as set in the **Brand colors** section will be used.
-
-{{< figure src="/attachments/developerportal/control-center/brand.jpg" >}}
+{{< figure src="/attachments/developerportal/control-center/company-brand.png" >}}
 
 ## 8 Onboarding {#onboarding}
 
@@ -172,6 +168,10 @@ On the **Landing Page** tab of this page, you can customize your company's onboa
 You can start configuring the sections and blocks of your landing page from a standard template or from scratch. You can work on drafts and preview how the page looks before publishing for your company's new platform users.
 
 {{< figure src="/attachments/developerportal/control-center/onboarding-landing.png" >}}
+
+When you configure the landing page, if you turn on the **Include company logo** toggle and the **Include company header image** toggle on the left side, and then click the **Update Company Branding** button on the top, then the **Company Logo** and **Cover Image** currently set in the [Company Brand](#company-brand) page will be used on your landing page.
+
+{{< figure src="/attachments/developerportal/control-center/update-company-branding.png" >}}
 
 Once you publish your landing page, this will be where new users land after signing up with your company's domains on Mendix. This page is also accessible via the **Getting Started with Mendix** link in the upper-right navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
 

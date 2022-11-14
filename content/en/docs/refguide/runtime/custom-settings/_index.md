@@ -66,7 +66,7 @@ The following custom settings can be configured:
 | **LongLivedSessionTimeout** | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
 | **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
 | **ScheduledEventExecution** | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. {{% alert color="warning" %}}This setting cannot be configured when running locally. To enable and disable scheduled events when running locally, please use the 'Enabled' setting on the [Scheduled Events execution properties](/refguide/scheduled-events-task-queue/) in Studio Pro.{{% /alert %}} | NONE |
-| **SessionKeepAliveUpdatesInterval** | Defines after how much time expired sessions can be removed from the database. | 100000 (100s) |
+| **SessionKeepAliveUpdatesInterval** | Defines after how much time expired sessions can be removed from the database. | one sixth of the value configured for the `SessionTimeout` setting; if the `SessionTimeout` is not set, this value defaults to 100000 (100 seconds) |
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
 | **TaskQueue.<wbr>ShutdownGracePeriod** | Time in ms to wait for task in a task queue to finish when shutting down. | 10000 (10 seconds) |
 | **TempPath** | The location of the temporary files. | [deployment folder]\data\tmp |
@@ -98,6 +98,7 @@ The settings below influence the behavior of the log files. These settings can o
 | **DatabaseName** | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
 | **DatabaseJdbcUrl** | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | **DatabaseUseSsl** | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
+| **DatabaseUseIntegratedSecurity** | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. | false |
 | **LogMinDurationQuery** | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. |   |
 | **OracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
 | **DataStorage.EnableDiagnostics** | This setting can be used to generate a uniqueness constraint violation report. | false |
@@ -134,7 +135,7 @@ Before the data copy process starts, the source database will also be brought in
 | **SourceDatabaseName** | The name of the source database. |   |
 | **SourceDatabasePassword** | The password for the connection to the source database. |   |
 | **SourceDatabaseType** | The type of the source database. Possible values: `DB2`, `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, or `SQLSERVER`. |   |
-| **SourceDatabaseUseIntegratedSecurity** | This setting defines whether integrated security should be used for SQL Server. If true, user name and password will not be used. | false |
+| **SourceDatabaseUseIntegratedSecurity** | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. | false |
 | **SourceDatabaseUseSsl** | For PostgreSQL databases, defines whether the connection to the source database will be made using SSL. | false |
 | **SourceDatabaseUserName** | The user name for the connection to the source database. |   |
 | **SourceOracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |

@@ -145,7 +145,7 @@ To install the iOS app on your mobile test device, follow these steps:
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/appletrust.png" alt="trust dialog" >}}
 
 2. Open iTunes and connect your iOS mobile test device to your computer.
-3. Select the *.ipa* package file that you downloaded earlier, and drag it onto your mobile test device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile test device.
+3. Select the *.ipa* package file that you downloaded earlier, and drag it into your mobile test device's **Devices** section on iTunes' left menu. Drop the *.ipa* file there to install it on your mobile test device.
 4. If there is an existing version, iTunes will ask if you want to replace that existing version of the app. If there is one, do so. 
 5. Your app will show up in the list of apps. Click the **Install** button next to your app.
 6. Click **Apply** at the bottom of the screen to execute the actual installation.

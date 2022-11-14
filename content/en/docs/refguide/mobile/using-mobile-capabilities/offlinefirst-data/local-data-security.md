@@ -57,7 +57,7 @@ To learn more, see [Encrypting Local Databases](/refguide/mobile/using-mobile-ca
 
 ## 4 Encrypting Local Databases {#encrypting-local-databases}
 
-Mendix v9.18 and above allow you to encrypt the local databases of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
+Studio Pro 9.18 and above allows you to encrypt the local databases of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 
 {{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 
@@ -65,7 +65,7 @@ Mendix v9.18 and above allow you to encrypt the local databases of native apps. 
 
 Before enabling local database encryption, ensure that these prerequisites are met:
 
-* Use Mendix Studio Pro v9.18 (or a higher version) 
+* Use Mendix Studio Pro 9.18 (or a higher version) 
 * Upgrade your Native Template to v6.3.0 (or a higher version) 
 * Upgrade Make It Native to the latest version
 

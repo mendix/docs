@@ -1,15 +1,70 @@
 ---
-title: "Data Hub"
+title: "Data Hub Catalog"
 url: /releasenotes/data-hub/
-description: "Release notes for updates to the Mendix Data Hub"
+description: "Release notes for updates to the Mendix Data Hub Catalog"
 tags: ["data hub", "data hub catalog", "data hub Landscape"]
 weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
+These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 ## 2022
+
+### November 10th, 2022
+
+#### Improvements
+
+* You can now view authentication details in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. 
+* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+
+#### Fixes
+
+* We fixed a bug where whitespaces in certain fields were causing duplicate services to be created.
+* We removed the **Automatically registered** tag from sample data sources.
+
+### November 3rd, 2022
+
+#### Improvements
+
+* Notifications for newly registered resources are now grouped, helping to de-clutter your Catalog experience.
+
+### October 27th, 2022
+
+#### Improvements
+
+* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) in *Register OData Resources in the Data Hub Catalog*.
+* Sample data sources are now clearly indicated with a label.
+
+### October 20th, 2022
+
+#### Improvements
+
+* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
+
+### Fixes
+
+* We fixed a bug where HTML tags were appearing on toast notifications. 
+
+### October 13th, 2022
+
+#### Improvements
+
+* Based on your feedback, we have renamed instances of **Delete data source** in the UI to **Remove data source**. Removing a data source will not delete it from your model.
+
+#### Fixes
+
+* We fixed a bug where the redeployment of an endpoint resulted in an error. The error mistakenly reported the redeployed endpoint as a duplicate rather than an update.
+
+### October 6th, 2022
+
+#### Improvements
+
+* Mendix Admins can now enable and disable sample data sets in the Catalog. To do so, go to the **Data Hub** page of the Control Center, click the **Settings** tab, and toggle **Sample Data Sources are hidden**. 
+
+#### Fixes
+
+* We fixed an error that was preventing the registration a new version of an existing service on the Registration form. 
 
 ### September 29th, 2022
 

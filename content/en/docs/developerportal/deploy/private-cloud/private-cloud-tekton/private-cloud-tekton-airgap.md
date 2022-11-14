@@ -44,16 +44,16 @@ Get the Tekton package:
 
 ```bash
 mkdir tekton && cd tekton
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.0.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.2.json
 aip pull
 ```
 
 Get the yaml manifest for the Tekton installation:
 
 ```bash
-curl https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.26.0/release.yaml -s > tekton.yaml
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/release.yaml -s > tekton-triggers.yaml
-curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.15.0/interceptors.yaml -s > interceptors.yaml
+curl https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml -s > tekton.yaml
+curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/release.yaml -s > tekton-triggers.yaml
+curl https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/interceptors.yaml -s > interceptors.yaml
 ```
 
 Then you need to transfer the `tekton` folder to the air-gapped environment with the aip tool:
@@ -99,7 +99,7 @@ Get the pipeline package:
 
 ```bash
 mkdir pipeline && cd pipeline
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.0.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.2.json
 aip pull
 ```
 
@@ -179,7 +179,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
-2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can download these from [Mendix for Private Cloud Standalone Tekton Pipelines](https://cdn.mendix.com/mendix-for-private-cloud/tekton-pipelines/standalone-cicd/standalone-cicd-v1.0.0.zip).
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines. To get access to the helm charts, contact your CSM.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.
@@ -192,14 +192,14 @@ helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
   --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.1 \
-  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
+  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
   --set images.build=$PRIVATE_REGISTRY/mxbuild \
   --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.1 \
-  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 \
-  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.4 
+  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
+  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
+  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
+  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 \
+  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.6 
 ```
 
 ## 5 Installing Triggers{#installing-triggers}

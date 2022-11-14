@@ -1,5 +1,6 @@
 ---
 title: "Run a Mendix Docker Image"
+linktitle: "Run Docker Image"
 url: /developerportal/deploy/run-mendix-docker-image/
 weight: 10
 description: "Describes running a Mendix Docker image."

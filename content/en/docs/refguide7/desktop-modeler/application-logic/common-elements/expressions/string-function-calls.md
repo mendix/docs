@@ -1,7 +1,6 @@
 ---
 title: "String Function Calls"
 url: /refguide7/string-function-calls/
-parent: "expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -89,11 +88,11 @@ Retrieves a substring of a string. Note that the first character of a string is 
 ### 5.1 Input Parameters
 
 * Subject
-   * Type: string
+    * Type: string
 * Start position of the substring
-   * Type: integer
+    * Type: integer
 * Desired length of the result (optional)
-   * Type: integer
+    * Type: integer
 
 ### 5.2 Output
 

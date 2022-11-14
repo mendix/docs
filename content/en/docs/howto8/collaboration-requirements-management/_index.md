@@ -18,4 +18,3 @@ This category of how-to's presents information on using version control via the 
 * [Share the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/) – teaches you how to open and manage the data stored inside the built-in database
 * [Translate Your App Content](/howto8/collaboration-requirements-management/translate-your-app-content/) – explains how to deliver your Mendix app in multiple languages 
 * [Work with an On-Premises Version Control Server](/howto8/collaboration-requirements-management/on-premises-svn-howto/) – details how to configure your Mendix apps to work with your own (on-premises) version control system
-

@@ -1,7 +1,6 @@
 ---
 title: "XPath Quarter-from-DateTime"
 url: /refguide/xpath-quarter-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "OQL COALESCE"
 url: /refguide/oql-coalesce/
-parent: "oql-functions"
 tags: ["studio pro"]
 ---
 

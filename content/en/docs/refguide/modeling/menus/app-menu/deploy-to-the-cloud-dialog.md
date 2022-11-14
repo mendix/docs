@@ -1,7 +1,6 @@
 ---
 title: "Deploy to the Cloud"
 url: /refguide/deploy-to-the-cloud-dialog/
-parent: "app-menu"
 tags: ["studio pro"]
 ---
 

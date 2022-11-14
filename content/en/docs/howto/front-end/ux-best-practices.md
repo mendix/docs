@@ -3,9 +3,11 @@ title: "Implement Best Practices for UX Design"
 url: /howto/front-end/ux-best-practices/
 category: "Front End"
 weight: 10
+description: "Describes best practices written by a UX Designer for contributing to the app development process."
 tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "front end"]
 aliases:
     - /howtogeneral/bestpractices/ux-best-practices.html
+    - /howtogeneral/bestpractices/ux-best-practices
 ---
 
 ## 1 Introduction
@@ -219,4 +221,3 @@ These are the basic UX best practices outlined in this document:
 ## 11 Read More
 
 * [Common UX Mistakes Made by Business Developers](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379)
-

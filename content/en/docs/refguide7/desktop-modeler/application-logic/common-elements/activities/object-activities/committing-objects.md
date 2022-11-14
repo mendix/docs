@@ -1,7 +1,6 @@
 ---
 title: "Commit Object(s)"
 url: /refguide7/committing-objects/
-parent: "object-activities"
 ---
 
 ## 1 Introduction
@@ -54,4 +53,4 @@ When inside a [nanoflow](/refguide7/nanoflows/), the object is refreshed across 
 
 {{% /alert %}}
 
-_Default value_: No
+*Default value*: No

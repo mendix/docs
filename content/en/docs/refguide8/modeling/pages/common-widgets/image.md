@@ -1,11 +1,11 @@
 ---
 title: "Image"
 url: /refguide8/image/
-parent: "common-widgets"
 weight: 20
 tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide8/image-property.html
+    - /refguide8/image-property
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,9 +22,7 @@ For example, you can configure an image clicking which a page with customer deta
 {{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-example.png" alt="Image Example" >}}
 
 {{% alert color="info" %}}
-
 If you want to dynamically show different images based on data, you need to add [image viewer](/refguide8/image-viewer/) on your page.
-
 {{% /alert %}}
 
 ## 2 Properties
@@ -51,7 +49,7 @@ Image properties consist of the following sections:
 
 ### 2.3 Events Section {#events}
 
-For information on the Events section and its properties, see [On Click Event & Events Section](/refguide8/on-click-event/). 
+For information on the Events section and its properties, see [On Click Event and Events Section](/refguide8/on-click-event/). 
 
 ### 2.4 General Section {#general}
 
@@ -123,5 +121,3 @@ The image widget is converted to the image viewer and you can configure it.
 * [Page](/refguide8/page/)
 * [Common Widgets](/refguide8/common-widgets/)
 * [Properties Common in the Page Editor](/refguide8/common-widget-properties/)
-
-

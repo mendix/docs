@@ -1,11 +1,11 @@
 ---
 title: "Annotation"
 url: /refguide8/annotation/
-parent: "application-logic"
 weight: 60
 tags: ["studio pro", "annotation", annotation flow]
 aliases:
     - /refguide8/annotation-flow.html
+    - /refguide8/annotation-flow
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

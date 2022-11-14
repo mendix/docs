@@ -2,7 +2,7 @@
 title: "Runtime Deployment"
 url: /refguide/runtime-deployment/
 category: "Mendix Runtime"
-description: "A description of how the Mendix Runtime is deployed"
+description: "Describes how the Mendix Runtime is deployed."
 weight: 30
 tags: ["runtime", "deploy", "mxbuild", "runtime server", "m2ee"]
 ---
@@ -43,12 +43,12 @@ This is the command line interpreter which allows Cloud Foundry environments to 
 
 ### 2.6 Buildpack
 
-The buildpack is the Mendix script which controls the deployment of Mendix models to a cloud environment. it performs the following tasks:
+The buildpack is the Mendix script which controls the deployment of Mendix models to a cloud environment. It performs the following tasks:
 
-* identifies the target environment and bound services such as database and file storage
-* if it receives an app in mpk format it initiates Mxbuild to convert it into mda format
-* it identifies the correct version of the Java Runtime Environment and pushes it to the environment
-* it identifies the correct version of the Mendix Runtime and uses m2ee to push the Runtime Server to the environment, with a link to the app *.mda* which defines the app
+* Identifies the target environment and bound services such as database and file storage
+* If it receives an app in *.mpk* format, it initiates Mxbuild to convert it into *.mda* format
+* It identifies the correct version of the Java Runtime Environment and pushes it to the environment
+* It identifies the correct version of the Mendix Runtime and uses m2ee to push the Runtime Server to the environment, with a link to the app *.mda* which defines the app
 
 ### 2.7 Project MDA
 
@@ -70,4 +70,3 @@ It starts the Runtime Server by starting a Java RE and pointing it at the releva
 ### 2.11 Runtime Server
 
 This is the interpreter which runs the app. For more information see [Runtime Server](/refguide/runtime-server/).
-

@@ -1,7 +1,6 @@
 ---
 title: "Download a Backup"
 url: /developerportal/operate/download-backup/
-parent: "backups"
 weight: 20
 description: "This page describes how to download a backup."
 tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
@@ -13,7 +12,7 @@ tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
 
 This how-to describes downloading a back up from a Free App environment or a licensed cloud node.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Download a full backup of a Free App environment
 * Download a full backup of a licensed cloud node

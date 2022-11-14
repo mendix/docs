@@ -8,6 +8,8 @@ tags: ["desktop modeler"]
 aliases:
     - /refguide7/modeler.html
     - /refguide7/Modeler.html
+    - /refguide7/modeler
+    - /refguide7/Modeler
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -33,7 +35,7 @@ The table below describes all the available dockable window panes.
 | --- | --- |
 | Breakpoints (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
 | Changes | For [Team Server](/refguide7/team-server/) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
-| Connector | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
+| Connector | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag onto the button to connect them. |
 | Console | Shows the output of the Mendix Runtime while running an application. |
 | Debugger (via Debug Windows) | This can be used to debug your application. |
 | Documentation | Shows the documentation for the currently selected element (if applicable). |
@@ -155,7 +157,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Tablet Browser | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | Phone Browser | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
 | Hybrid Phone App Online | Views the app as a phone app online. | |
-| View in the Mendix App | Views the app via the [Mendix Mobile app](/refguide7/getting-the-mendix-app/). | |
+| View in the Mendix App | Views the app via the [Mendix Developer App](/refguide7/getting-the-mendix-app/). | |
 
 ### 4.6 Language Menu
 
@@ -175,7 +177,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | --- | --- | --- |
 | Help | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | Help Contents | Opens the start page of the documentaton in the default web browser. |   |
-| Ask a Question | Opens the [Mendix Forum](https://forum.mendixcloud.com/index4.html) in the default web browser. |   |
+| Ask a Question | Opens the [Mendix Forum](https://forum.mendix.com/p/questions) in the default web browser. |   |
 | Open Log File Directory | Opens the log files for your app locally. |   |
 | About Mendix Modeler | Shows information about the current version of the Mendix Modeler. |   |
 

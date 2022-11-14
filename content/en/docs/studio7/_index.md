@@ -7,15 +7,18 @@ cascade:
     - space: "Mendix 7 Studio Guide"
     - mendix_version: "7"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
         priority: 0.3
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}
-
 The **Studio 7 Guide** describes Mendix Studio functionality that corresponds to Mendix 7.23.7 version. For details on the latest functionality and features, see the [Studio 9 Guide](/studio/). 
+{{% /alert %}}
 
+{{% alert color="info" %}}
+Support for Mendix 7 will be available after the release of Mendix 10. For details, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.
 {{% /alert %}}
 
 ## 1 Introduction 
@@ -39,7 +42,7 @@ The *Studio 7 Guide* is divided into the following categories:
 * [Navigation Document](/studio7/navigation/)
 * [Microflows](/studio7/microflows/)
 * [Data Filters](/studio7/filters/)
-* [Previewing & Publishing Your App](/studio7/publishing-app/)
+* [Previewing and Publishing Your App](/studio7/publishing-app/)
 * [Checks](/studio7/checks/)
 * [Consistency Errors](/studio7/consistency-errors/)
 * [Theme Customizer](/studio7/theme-customizer/)

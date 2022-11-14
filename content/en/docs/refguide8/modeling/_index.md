@@ -8,6 +8,9 @@ aliases:
     - /refguide8/desktop-modeler.html
     - /refguide8/modeler.html
     - /refguide8/Modeler.html
+    - /refguide8/desktop-modeler
+    - /refguide8/modeler
+    - /refguide8/Modeler
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.1 Introduction
 ---
 

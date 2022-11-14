@@ -1,7 +1,7 @@
 ---
 title: "9.4"
 url: /releasenotes/sdk/metamodel-9.4/
-parent: "metamodel-9"
+weight: 96
 ---
 
 ## 9.4.0
@@ -27,7 +27,7 @@ parent: "metamodel-9"
 * We introduced the `nativeHomePage` and `otaEnabled` properties.
 * We deleted the `homePage` property.
 
-#### NativeHomePageBase & NativeHomePage (Elements)
+#### NativeHomePageBase and NativeHomePage (Elements)
 
 * We introduced these elements.
 
@@ -44,4 +44,3 @@ parent: "metamodel-9"
 #### PageParameter (Elements)
 
 * We introduced this element.
-

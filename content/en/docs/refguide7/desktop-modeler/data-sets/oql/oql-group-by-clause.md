@@ -1,7 +1,6 @@
 ---
 title: "OQL Group by Clause"
 url: /refguide7/oql-group-by-clause/
-parent: "oql"
 ---
 
 
@@ -9,7 +8,7 @@ The GROUP BY clause will condense all returned rows into a single row that share
 
 The syntax is as following:
 
-```
+```sql
 GROUP BY
     expression [ ,...n ]
 
@@ -24,7 +23,7 @@ Specifies a constraint. When a GROUP BY expression is used, constraints must be 
 
 {{% alert color="info" %}}
 
-```
+```sql
 SELECT COUNT(Sales.Customer/*)
 FROM Sales.Customer
 INNER JOIN Sales.Customer/Sales.Customer_Address/Sales.Address
@@ -35,7 +34,7 @@ This query returns the count of all customers per city.
 
 {{% /alert %}}{{% alert color="info" %}}
 
-```
+```sql
 SELECT SUM(Sales.Order/TotalPrice)
 FROM Sales.Order
 INNER JOIN Sales.Order/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address
@@ -46,7 +45,7 @@ This query returns the sum of the total prices of all orders per city.
 
 {{% /alert %}}{{% alert color="info" %}}
 
-```
+```sql
 SELECT SUM(Sales.Order/TotalPrice)
 FROM Sales.Order
 INNER JOIN Sales.Order/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address

@@ -1,5 +1,6 @@
 ---
 title: "Use the XSUAA Connector for SAP Business Technology Platform"
+linktitle: "Use XSUAA Connector for SAP BTP"
 url: /partners/sap/use-sap-xsuaa-connector/
 category: "SAP"
 weight: 45
@@ -15,7 +16,7 @@ A Mendix application is role-based. Using the SAP BTP cockpit, you can assign th
 
 In this document, you will see how to use the XSUAA Connector for SAP Business Technology Platform to provide SSO in an app which has two roles: Supervisor and Inspector. 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Add the XSUAA Connector to your app
 * Configure the XSUAA connector within your app
@@ -27,10 +28,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an SAP app using an SAP app template
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
-* Set the security level for the app to at least Prototype/demo to use SAP Authentication; for more information see [App Security](/refguide/project-security/) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app/)
+* Set the security level for the app to at least Prototype/demo to use SAP Authentication; for more information see [App Security](/refguide/app-security/) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app/)
 * Set up the app with the following two **User roles** in **App** > **Security**: Supervisor and Inspector
 
-	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-roles-to-app.png" >}}
+    {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-roles-to-app.png" >}}
 
 * Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
 
@@ -83,26 +84,28 @@ If login.html does not support XSUAA then you need to add the SSO login button t
 1. In the top menu of , select **App** > **Show App Directory in Explorer**.
 2. Open the **theme** folder.
 3. Copy the content of **login-with-sso.html** to **login.html**.
-3. Open **login.html** for editing.
-4. Locate the following lines:
+4. Open **login.html** for editing.
+5. Locate the following lines:
 
-	```html
-	<a id="ssoButton" href="/openid/login" class="btn btn-default btn-lg">
-		<img src="logo.png" />
-		<span class="loginpage-signin">Mendix Account</span>
-	</a>
-	```
-5. Replace those lines with the following lines (or add them below the `<a>` element in the code above):
+    ```html
+    <a id="ssoButton" href="/openid/login" class="btn btn-default btn-lg">
+        <img src="logo.png" />
+        <span class="loginpage-signin">Mendix Account</span>
+    </a>
+    ```
 
-	```html
-	<a id="ssoButton" href="/xsauaalogin/" class="btn btn-default btn-lg">
-		<img src="logo.png" />
-		<span class="loginpage-signin">Sign in using XSUAA</span>
-	</a>
-	```
-6. Deploy and run your app. The XSUAA login button will look like this:
+6. Replace those lines with the following lines (or add them below the `<a>` element in the code above):
 
-	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/sso-login-screen.png" >}}
+    ```html
+    <a id="ssoButton" href="/xsauaalogin/" class="btn btn-default btn-lg">
+        <img src="logo.png" />
+        <span class="loginpage-signin">Sign in using XSUAA</span>
+    </a>
+    ```
+
+7. Deploy and run your app. The XSUAA login button will look like this:
+
+    {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/sso-login-screen.png" >}}
 
 #### 4.2.2 Redirecting Your Application to XSUAA Without Showing the Login Page
 
@@ -119,31 +122,27 @@ To accomplish this, follow these steps:
 1. Open the app directory of your app and then open the **theme** folder.
 2. Change the contents of **login.html** to the following:
 
-	```html
-	<!doctype html>
-	<html>
-		<head>
-			<script>
-				window.location.assign("/xsauaalogin/")
-			</script>
-		</head>
-	</html>
-	```
+    ```html
+    <!doctype html>
+    <html>
+        <head>
+            <script>
+                window.location.assign("/xsauaalogin/")
+            </script>
+        </head>
+    </html>
+    ```
 
 ## 5 Configuring the SAP BTP Subaccount
 
 Your app is configured to use an IdP. Now you need to configure the IdP and allocate users to roles. This is performed in the [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
 
 {{% alert color="info" %}}
-
 Before configuring the IdP, you must first deploy your app to SAP BTP. This will expose the user roles in the app to the security configuration tools in the SAP BTP cockpit.
 {{% /alert %}}
 
-
 {{% alert color="warning" %}}
-
 This section describes actions which are carried out using the SAP BTP cockpit. This document uses the current navigation through the SAP BTP cockpit but this is outside the Mendix environment and may be changed. SAP BTP documentation is in the [SAP Help Portal](https://help.sap.com/viewer/p/CP).
-
 {{% /alert %}}
 
 The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP BTP app environment (yellow), SAP User Account and Authentication (orange), and the IdP (green).
@@ -182,15 +181,15 @@ Here, we add a new Role Collection for the Inspector 2 role in the SAP BTP space
 
 1. Give the new Role Collection a name and, optionally, a description.
 
-	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/new-role-collection.png" >}}
+    {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/new-role-collection.png" >}}
 
 2. Click on the **Name** of the Role Collection to allocate roles to the Role Collection.
 
-	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/select-role-collection.png" >}}
+    {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/select-role-collection.png" >}}
 
 3. Add the Role(s) which you want to include in this Role Collection.
 
-	{{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-role.png" >}}
+    {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-role.png" >}}
 
 The new role collection can now be seen in the SAP BTP cockpit for this Subaccount, with the Role(s) which it includes.
 
@@ -209,11 +208,8 @@ Depending on the IdP, you can either map **Users** (G) directly to a Role Collec
 This is the method used by the **SAP ID Service**, amongst others.
 
 1. Click on the SAP ID Service in the Trust Configurations.
-
 2. Enter the username (email) of an SAP user that you want to give access to.
-
 3. Click **Show Assignments** to show existing assignments.
-
 4. Click **Add Assignment** and choose the Role Collection (in this case *Inspector 2*) to which you want to grant access.
 
 The selected user now has access to the selected Role Collection and, through that, to the correct User Role in your app.
@@ -233,7 +229,6 @@ You can link an individual username to the Role Collection in the same way as de
 Alternatively, you can link a Role Collection to an existing Group within the IdP. In this case, you need to do the following.
 
 1. Open **Role Collection Mappings** for the IdP.
-
 2. Create a new Role Collection Mapping and map the Role Collection (for example, *Inspector 2 Role Collection*) to an existing Group (for example, *Inspector 2 Group*) in the IdP.
 
 {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/role-collection-mapping.png" >}}
@@ -248,6 +243,6 @@ You can picture the authentication as shown below:
 
 * [How to Create a Secure App](/howto/security/create-a-secure-app/)
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [App Security](/refguide/project-security/)
+* [App Security](/refguide/app-security/)
 * [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/) (documentation)
 * [SAP Business Technology Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

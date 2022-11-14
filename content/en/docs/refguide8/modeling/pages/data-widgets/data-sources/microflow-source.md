@@ -1,7 +1,6 @@
 ---
 title: "Microflow Source"
 url: /refguide8/microflow-source/
-parent: "data-sources"
 tags: ["studio pro", "microflow source", "data source"]
 weight: 40
 ---
@@ -46,7 +45,7 @@ This microflow does the following:
 
 ## 3 Properties
 
-###  3.1 Microflow{#microflow}
+### 3.1 Microflow{#microflow}
 
 This designates the microflow to be used to populate the data widget. This microflow will be run whenever the data widget is loaded into the browser or refreshed. The microflow must have a return value of either an object or a list of objects, depending on the data widget being used.
 

@@ -1,7 +1,6 @@
 ---
 title: "Nanoflow Properties"
 url: /refguide7/nanoflow/
-parent: "nanoflows"
 ---
 
 ## 1 Introduction

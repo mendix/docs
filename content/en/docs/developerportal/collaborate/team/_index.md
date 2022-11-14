@@ -28,9 +28,9 @@ On this page, you can do the following:
 * Select a new **Role** for a team member (for details on available roles, see [App Roles](/developerportal/collaborate/app-roles/))
 * Click **Remove Member** to remove a user from the team
 * Click **Invite member** to invite a new user to the team (for more information, see the [Inviting Team Members](#inviting) section below)
-*  Click **Role settings** to view and edit the permissions for the team roles (clicking **Security Guide** in the **Role** dialog box will present useful information for configuring roles)
+* Click **Role settings** to view and edit the permissions for the team roles (clicking **Security Guide** in the **Role** dialog box will present useful information for configuring roles)
 
-	{{< figure src="/attachments/developerportal/collaborate/team/role-settings.png"   width="400"  >}}
+    {{< figure src="/attachments/developerportal/collaborate/team/role-settings.png"   width="400"  >}}
 
 * Click **Change log** to view the change log for the team and [node permissions](/developerportal/deploy/node-permissions/)
 
@@ -40,8 +40,7 @@ To invite new team members, follow these steps:
 
 1. Click **Invite Member** on the **Team** page or the **+** icon next to the team in the [app Buzz](/developerportal/collaborate/buzz/#app-buzz).
 2. Enter the email address for the Mendix user(s) you want to invite to the team.
-3. Add a personal message (optional).
-4. Confirm the invitation(s).
+3. Confirm the invitation(s).
 
 ## 4 Read More
 

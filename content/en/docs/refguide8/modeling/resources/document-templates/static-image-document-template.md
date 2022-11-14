@@ -1,11 +1,12 @@
 ---
 title: "Static Image (Document Template)"
 url: /refguide8/static-image-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide8/Static+Image+(document+template).html
     - /refguide8/static-image-(document-template).html
+    - /refguide8/Static+Image+(document+template)
+    - /refguide8/static-image-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

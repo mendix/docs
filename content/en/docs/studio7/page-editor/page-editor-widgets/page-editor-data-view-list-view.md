@@ -1,7 +1,6 @@
 ---
-title: "Data View & List View Properties"
+title: "Data View and List View Properties"
 url: /studio7/page-editor-data-view-list-view/
-parent: "page-editor-widgets"
 description: "Describes the data view and list view in the page editor of Mendix Studio."
 weight: 10
 tags: ["studio", "page editor", "pages", "data view", "list view"]
@@ -35,7 +34,7 @@ Data view consists of the following properties:
 
 ### 2.1 Data Source {#data-source-data-view} 
 
-The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide7/data-sources/) in the *Studio Pro Guide*. 
+The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide7/data-sources/) in the *Studio Pro Guide*. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
@@ -66,7 +65,7 @@ List view consists of the following properties:
 
 ### 3.1 Data Source {#data-source-list-view}
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide7/data-sources/) in the *Studio Pro Guide*. 
+The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide7/data-sources/) in the *Studio Pro Guide*. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
@@ -78,7 +77,7 @@ The data source determines which objects will be shown in the list view. For gen
 
 ### 3.2 Events
 
- You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
+You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
 
 For more information on the **Events** section and on click actions, see [Events Section in Widgets](/studio7/page-editor-widgets-events-section/). 
 

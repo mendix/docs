@@ -1,7 +1,6 @@
 ---
 title: "Configure Module-Level Theme Settings"
 url: /howto/front-end/module-level-theme-settings/
-parent: "atlas-ui"
 weight: 25
 description: "Understand the advanced options of module-level theme settings."
 tags: ["build", "app", "studio", "studio pro", "style", "styling"]

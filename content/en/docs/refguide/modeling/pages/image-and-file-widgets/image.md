@@ -1,11 +1,11 @@
 ---
 title: "Static Image"
 url: /refguide/image/
-parent: "image-and-file-widgets"
 weight: 20
 tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide/image-property.html
+    - /refguide/image-property
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,9 +18,7 @@ For example, you can configure an image clicking which a page with customer deta
 {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-example.png" alt="Image Example" >}}
 
 {{% alert color="info" %}}
-
 If you want to dynamically show different images based on data, you need to add [dynamic image](/refguide/image-viewer/) on your page.
-
 {{% /alert %}}
 
 ## 2 Properties
@@ -47,7 +45,7 @@ Static image properties consist of the following sections:
 
 ### 2.3 Events Section {#events}
 
-For information on the Events section and its properties, see [On Click Event & Events Section](/refguide/on-click-event/). 
+For information on the Events section and its properties, see [On Click Event and Events Section](/refguide/on-click-event/). 
 
 ### 2.4 General Section {#general}
 
@@ -117,6 +115,5 @@ The **Static image** widget is converted to the dynamic image and you can config
 ## 4 Read More
 
 * [Page](/refguide/page/)
-* [Images, Videos & Files](/refguide/image-and-file-widgets/)
+* [Images, Videos, and Files](/refguide/image-and-file-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)
-

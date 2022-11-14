@@ -3,10 +3,12 @@
 //
 
 .table {
-  width: 100%;
+  width: 90%; // NK - adjusted width to match rest of content
   margin-bottom: $spacer;
   color: $table-color;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+  position: relative; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
+  z-index: 2; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
 
   th,
   td {
@@ -14,6 +16,10 @@
     vertical-align: top;
     border: $table-border-width solid $table-border-color; // NK - added borders to tables
     font-size: 0.8rem; // NK - smaller font size
+
+    ul, ol > ul li, > ol li {
+        margin-bottom: .25rem;  // NK - removes margin padding at end of list item in table cell
+    }
   }
 
   thead th {
@@ -175,7 +181,7 @@
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
         display: block;
-        width: 100%;
+        width: 90%; // NK - adjusted width to match rest of content
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
 

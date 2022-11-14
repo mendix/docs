@@ -1,7 +1,6 @@
 ---
 title: "Get Started with Atlas UI"
 url: /howto8/front-end/get-started-with-atlasui/
-parent: "atlas-ui"
 weight: 10
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
@@ -10,7 +9,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Mendix Studio is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you sign into Mendix Studio for the first time, you get the option to choose an app template that is powered by Atlas UI. For more information on Mendix Studio, see the [Studio Guide](/studio8/). 
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Choose an app template
 * Edit your app in Mendix Studio
@@ -65,7 +64,7 @@ The [Theme Customizer](/studio8/theme-customizer/) allows you to customize your 
 
 ## 8 Read More
 
-* [How to Create Custom Preview Images for Building Blocks & Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
+* [How to Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [How to Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [How to Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)
 * [How to Share Company Atlas UI Resources](/howto8/front-end/share-company-atlas-ui-resources/)

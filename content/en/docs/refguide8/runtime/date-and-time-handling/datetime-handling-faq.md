@@ -1,7 +1,6 @@
 ---
 title: "DateTime Handling FAQ"
 url: /refguide8/datetime-handling-faq/
-parent: "date-and-time-handling"
 notoc: true
 tags: ["studio pro"]
 ---
@@ -28,7 +27,7 @@ The time zone setting for a user defines under what time zone operations are per
 
 Just like a regular timezone. If you are in Eastern Standard Time (EST, which is UTC -5) normally then you are in Eastern Daylight Time (EDT, which is UTC -4) during the summer. This is of course all handled automatically, but note that you really ARE in a different timezone in summer.
 
-## 6 I Planned a Scheduled Event at 02:00 Using Server Time & Set It to Repeat Every Day, Why Did My Local DST Change & Why Are Scheduled Events Starting to Run an Hour Off?
+## 6 I Planned a Scheduled Event at 02:00 Using Server Time and Set It to Repeat Every Day, Why Did My Local DST Change and Why Are Scheduled Events Starting to Run an Hour Off?
 
 This can be confusing but is expected. The scheduling of scheduled events is interval-based and not time-based. Notice that the original date of the scheduled event is still at your previous timezone (before the DST period changed), the scheduled event is simply repeating itself every 24 hour, which might mean that you will see a change in the local time it runs at, because during DST shifts a day may take 25 hours or 23 hours. This will cause a temporary shift for as long as the DST change lasts.
 
@@ -50,7 +49,7 @@ It is currently 14:15 (EST), should I see that time or 19:15, for example?
 
 You should see 19:15, the non-localized date will always show as UTC time. The current DateTime is simply a moment in time and obviously happens at the same moment everywhere on earth, but for non localized dates it would be displayed as UTC.
 
-## 11 When I Press a Microflow Button & Want to Compare a Non-Localized Date Attribute with a Localized Date Attribute, What Should the Platform Do in the Case of the `($entity/localizeddate > $entity/nonlocalizeddate)` Expression, for Example with a Localized Date at 14:00 EST & Non-Localized Date at 14:15 UTC?
+## 11 When I Press a Microflow Button and Want to Compare a Non-Localized Date Attribute with a Localized Date Attribute, What Should the Platform Do in the Case of the `($entity/localizeddate > $entity/nonlocalizeddate)` Expression, for Example with a Localized Date at 14:00 EST and Non-Localized Date at 14:15 UTC?
 
 It will simply compare the UTC values of the dates. See a previous question where we said that non-localized date is purely a display setting. So in this case 14:00 EST is greater than 14.15 UTC, because it really compares 19:00 UTC with 14:15 UTC.
 
@@ -62,12 +61,11 @@ If you want to compare times of the day between different time zones, so you wou
 
 It depends on when you run this statement. Usually it will return true because the beginning of the current day in UTC is sooner (so smaller) than the begin of the current day in EST. However, if you run this when the day already changed in UTC time but not in EST time (so between midnight and 05:00 UTC, or 19:00 and midnight EST) then it will return false, because the begin of the current day will be a day later in the UTC timezone.
 
-## 14 If I Am Comparing Something with a `[%CurrentDateTime%]` Token in a DataGrid, Which Time Should It Use as a Constraint for a Localized & for a Non-Localized Date? 
+## 14 If I Am Comparing Something with a `[%CurrentDateTime%]` Token in a DataGrid, Which Time Should It Use as a Constraint for a Localized and for a Non-Localized Date? 
 
 So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
 
-Whether something is a local date or not is irrelevant in this case. Note that there is no UTC variant of the`
-[%CurrentDateTime%]` token because this wouldn't make any sense, a moment in time is the same everywhere in the world, even if it may be displayed differently depending on the place. To answer the question, this is yes to both. It will show all records after 12:10 EST (for the localized dates) which is the same as 17:10 UTC (which is how your non-localized dates would show), but these times are the same.
+Whether something is a local date or not is irrelevant in this case. Note that there is no UTC variant of the `[%CurrentDateTime%]` token because this wouldn't make any sense, a moment in time is the same everywhere in the world, even if it may be displayed differently depending on the place. To answer the question, this is yes to both. It will show all records after 12:10 EST (for the localized dates) which is the same as 17:10 UTC (which is how your non-localized dates would show), but these times are the same.
 
 ## 15 How Do I Plan an Event at the Start of Office Hours in a Different Time Zone?
 

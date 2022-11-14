@@ -7,7 +7,7 @@ The width unit specifies the unit of the specified column widths (see property '
 | Percentage | Column widths are expressed as percentages of the available width. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | Column widths are expressed as pixels. Optionally, some columns can have width 'auto' and those columns evenly divide the rest of the space. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
 
-_Default value:_ Percentage
+*Default value:* Percentage
 
 ### Column Widths
 

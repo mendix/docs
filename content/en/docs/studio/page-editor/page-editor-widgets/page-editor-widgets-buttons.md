@@ -1,7 +1,6 @@
 ---
 title: "Buttons"
 url: /studio/page-editor-widgets-buttons/
-parent: "page-editor-widgets"
 description: "Describes button widgets in Mendix Studio."
 weight: 50
 tags: ["studio", "page editor", "button", "widgets"]
@@ -16,26 +15,24 @@ Button [widgets](/studio/page-editor-widgets/) allow end-users to perform variou
 The following categories and buttons are available in Mendix Studio as default widgets:
 
 * **Buttons** – buttons with general actions, such as opening or closing a page, calling a microflow, signing users out, opening a link:
-  * Open Page
-  * Call Microflow
-  * Close Page
-  * Sign Out
-  * Open Link
+    * Open Page
+    * Call Microflow
+    * Close Page
+    * Sign Out
+    * Open Link
 * **Data Buttons** – buttons that manipulate data and are used to create or delete an object, save or cancel changes:
-  * Create Object
-  * Save Changes
-  * Delete Object
-  * Cancel Changes
+    * Create Object
+    * Save Changes
+    * Delete Object
+    * Cancel Changes
 * **Workflow Buttons** – buttons that are related to [workflows](/studio/workflows/) and are used to call  a workflow, complete or show a [user task](/studio/workflows-user-task/), show a workflow page:
-  * Call Workflow
-  * Complete Task
-  * Show User Task
-  * Show Workflow
+    * Call Workflow
+    * Complete Task
+    * Show User Task
+    * Show Workflow
 
 {{% alert color="info" %}}
-
 Apart from the default button widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](/studio/page-editor-widgets/#widgets-by-origin) section in *Widgets*.
-
 {{% /alert %}}
 
 ## 2 Events Section
@@ -47,9 +44,7 @@ Properties in the **Events** section are partially preset for buttons listed abo
 For more information, see the [Default Properties in the Events Section](#default-properties) section. 
 
 {{% alert color="info" %}}
-
 You can change preset properties, and make the button perform another action. 
-
 {{% /alert %}}
 
 For more information on the **Events** section and on click actions, see [Events Section](/studio/page-editor-widgets-events-section/).
@@ -78,16 +73,17 @@ You can find the list of default actions and properties that need to be configur
 | Show User Task | Show Task Page     | None                                                         |
 | Show Workflow  | Show Workflow Page | **Admin Page**                                               |
 
-## 3 General Section
+## 3 General Section {#general}
 
 Properties available in the **General** section are described in the table below.
 
-| Property    | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. |
-| Icon        | Determines the icon that will be shown in front of the caption of the button. |
-| Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>Button  *(default)*  – the widget will be rendered as a button</li><li>Link – the widget will be rendered as a hyperlink</li></ul> |
-| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default <em>(default for all buttons except **Save Changes**)</em></li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success <em>(default for the **Save Changes** button)</em></li><li>Warning</li><li>Danger</li></ul>The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](/studio/theme-customizer/). |
+| Property     | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Caption      | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. |
+| Translations | Only available if multiple languages are set up in your app in Mendix Studio Pro. This option allows you to add translations of the button caption to other languages. For more information on how to add translations, see [Translating Your App to Multiple Languages](/studio/language-support/). |
+| Icon         | Determines the icon that will be shown in front of the caption of the button. |
+| Render Mode  | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>Button  *(default)*  – the widget will be rendered as a button</li><li>Link – the widget will be rendered as a hyperlink</li></ul> |
+| Style        | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default <em>(default for all buttons except **Save Changes**)</em></li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success <em>(default for the **Save Changes** button)</em></li><li>Warning</li><li>Danger</li></ul>The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](/studio/theme-customizer/). |
 
 ## 4 Conditional Visibility
 

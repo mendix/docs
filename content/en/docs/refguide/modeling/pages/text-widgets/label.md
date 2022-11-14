@@ -1,7 +1,6 @@
 ---
 title: "Label"
 url: /refguide/label/
-parent: "text-widgets"
 weight: 30
 tags: ["studio pro", "label", "text widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,11 +11,9 @@ tags: ["studio pro", "label", "text widgets"]
 {{% alert color="warning" %}}The label widget is not supported on native mobile pages.{{% /alert %}}
 
 {{% alert color="warning" %}}
-
 For input elements, it is recommended to use the [label property](/refguide/text-box/) to describe the purpose of widgets to end-users.
 
 You can also use the [text widget](/refguide/text/) as it provides more features, for example, you can add parameters, and it generates semantically correct HTML.
-
 {{% /alert %}}
 
 A label shows static text, which describes the purpose of a specific widget to a user.

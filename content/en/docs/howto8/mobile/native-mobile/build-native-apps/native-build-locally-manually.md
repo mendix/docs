@@ -1,7 +1,7 @@
 ---
 title: "Build a Mendix Native Mobile App Locally Manually"
+linktitle: "Local Native Mobile App Manual Build"
 url: /howto8/mobile/native-build-locally-manually/
-parent: "build-native-apps"
 weight: 30
 description: Describes how to build your first Mendix native mobile app locally manually.
 tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
@@ -77,10 +77,7 @@ For a Windows machine building an Android app, do the following:
 
 1. Run `npm i`  to install the required dependencies.
 
-
-{{% alert color="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
-{{% /alert %}}
+    {{% alert color="info" %}}When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.{{% /alert %}}
 
 2. Instances of the Native Template v5.1.9 and higher include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the npm run configure command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your project.
 
@@ -94,9 +91,9 @@ This method is useful if you do not have Git installed. To get the Native Templa
 
 1. Navigate to the [Native Template releases](https://github.com/mendix/native-template/releases).
 1. Scroll to the version you want to download.
-1.  Select the source code binary to download a copy of the code:
+1. Select the source code binary to download a copy of the code:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/github-assets.png" alt="iOS output"   width="250"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/github-assets.png" alt="iOS output"   width="250"  >}}
 
 1. Unzip the file.
 1. Run `npm i && cd ios && pod install` to install the required dependencies.
@@ -111,9 +108,10 @@ For bundling your resources, Mendix Studio Pro comes with a helpfull tool called
 
 1. Run the following command:
 
-	```
-	mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check [path-to-project-mpr-file]
-	```
+    ```shell {linenos=false}
+    mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check [path-to-project-mpr-file]
+    ```
+
 The bundles will be generated relatively to the `project-directory\deployment\native\bundles`
 
 1. Run MXBuild against your project to generate the required bundle and assets.
@@ -123,7 +121,7 @@ When completed there should be a folder under the project's deployment folder `p
 1. Move the ios folder's content to *{your Native Template root}/ios/Bundle*.
 1. The `android` folder structure should be the following:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/android-output.png" alt="iOS output"   width="250"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/android-output.png" alt="iOS output"   width="250"  >}}
 
 1. Move the folder's content to *{your Native Template root}/android/app/src/main*. Choose to overwrite if requested to do so.
 1. Open *{your Native Template root}/android/app/src/main/res/raw/runtime_url* using a text editor.
@@ -145,17 +143,17 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Select the `<Native Template root>/android` as the entry point for the app.
 1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-home.png" alt="Android Studio"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-home.png" alt="Android Studio"   width="350"  >}}
 
-   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
+    Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
-   
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
+
 1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}
 
 ### 5.2 Building an iOS App with XCode
 
@@ -189,13 +187,13 @@ The iOS project is using CocoaPods for its dependency management. For more infor
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-setup-team.png" alt="XCode Build Toolbar"   width="350"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-setup-team.png" alt="XCode Build Toolbar"   width="350"  >}}
 
-	As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
+    As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
 1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:
 
-	{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  >}}
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 
@@ -235,16 +233,16 @@ To remove dependencies which do not support auto-linking, do the following:
 1. Remove the dependency's entry from the *ios/Podfile* file.
 1. Remove the dependency's `include` and `project` entries from the *android/setting.gradle*. For example, to remove the Firebase module remove the following: 
 
-	```
-	include ':react-native-firebase'
-	project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
-	```
+    ```text
+    include ':react-native-firebase'
+    project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
+    ```
 
 1. Remove the dependency's `implementation` entry in the *android/app/build.gradle*. For example, to remove the Firebase module remove the following:
 
-	```
-	implementation project(":react-native-firebase")
-	```
+    ```text {linenos=false}
+    implementation project(":react-native-firebase")
+    ```
 
 1. Remove any custom code included in the iOS or Android project.
 

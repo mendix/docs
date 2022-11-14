@@ -34,12 +34,13 @@ Studio enables you to do the following:
 The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](/studio/general/) 
+* [Workflows](/studio/workflows/)
 * [Pages](/studio/page-editor/)
 * [Working with Data](/studio/work-with-data/)
 * [Navigation Document](/studio/navigation/)
 * [Microflows](/studio/microflows/)
-* [Workflows](/studio/workflows/)
-* [Previewing & Publishing Your App](/studio/publishing-app/)
+* [Expressions](/studio/expressions/)
+* [Previewing and Publishing Your App](/studio/publishing-app/)
 * [Checks](/studio/checks/)
 * [Theme Customizer](/studio/theme-customizer/)
 * [Settings](/studio/settings/)

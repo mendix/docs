@@ -13,8 +13,8 @@ The [App Switcher](https://marketplace.mendix.com/link/component/119451) is a mo
 
 ## 2 Prerequisites
 
-- Use Mendix Studio Pro [9.6.1](/releasenotes/studio-pro/9.1/) or higher
-- Install [Mendix SSO module](/appstore/modules/mendix-sso/) – we recommend having this module updated to the latest version
+* Use Mendix Studio Pro [9.6.1](/releasenotes/studio-pro/9.1/) or higher
+* Install [Mendix SSO module](/appstore/modules/mendix-sso/) – we recommend having this module updated to the latest version
 
 ## 3 Configuration
 
@@ -25,12 +25,12 @@ The [App Switcher](https://marketplace.mendix.com/link/component/119451) is a mo
 
 ## 4 Troubleshooting
 
-- Failed to get an access token for user x
-  - The token cannot be retrieved
-  - Make sure Mendix SSO is correctly implemented and the user is logged into the application before accessing
+* Failed to get an access token for user x
+    * The token cannot be retrieved
+    * Make sure Mendix SSO is correctly implemented and the user is logged into the application before accessing
   
-- Failed to get custom authentication token for user x
-  - This can happen for various reasons – check the `HTTPResponse` to see the possible reason:
+* Failed to get custom authentication token for user x
+    * This can happen for various reasons – check the `HTTPResponse` to see the possible reason:
     
     | Error Code | Reason | Solution |
     | ---------- | ------ |------ |
@@ -40,6 +40,4 @@ The [App Switcher](https://marketplace.mendix.com/link/component/119451) is a mo
     | 404 | URL not found. |Make sure the URL is correct.|
     | 500 | Authentication error. This can occur if the user ID is empty. |Check the user ID.|
     | 560 | Exception. User does not have the correct access. |Make sure the user has access to the user module role in AppSwitcherModule.|
-    
-    
     

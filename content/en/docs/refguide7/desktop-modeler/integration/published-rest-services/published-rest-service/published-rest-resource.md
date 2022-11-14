@@ -1,7 +1,6 @@
 ---
 title: "Published REST Resource"
 url: /refguide7/published-rest-resource/
-parent: "published-rest-service"
 weight: 50
 description: "The configurable options for a published REST resource"
 tags: ["published REST", "resource"]
@@ -23,7 +22,7 @@ You can generate a published REST resource from an entity in your domain model. 
 
 ## 2 General
 
-### <a name="name"></a>2.1 Resource Name
+### 2.1 Resource Name{#name}
 
 The resource name uniquely identifies the resource in the [service](/refguide7/published-rest-service/). It is part of the location of the operations, so it cannot contain spaces or special characters.
 

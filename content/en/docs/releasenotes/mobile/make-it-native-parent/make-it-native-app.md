@@ -1,7 +1,6 @@
 ---
 title: "Make It Native 8 App"
 url: /releasenotes/mobile/make-it-native-app/
-parent: make-it-native-parent
 weight: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "mendix 8"]
@@ -79,7 +78,7 @@ If you are working in Mendix Studio Pro 8.8 or higher, you must update your Make
 
 For older versions of Studio Pro please install the appropriate legacy app [here](/refguide/getting-the-make-it-native-app/).
 {{% /alert %}}
-	
+
 ### New Features
 
 * We added support for all new Mendix Studio Pro 8.8 features. 
@@ -100,7 +99,7 @@ For older versions of Studio Pro please install the appropriate legacy app [here
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
-	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
+    * Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
 
 ## Android 1.2.2 / iOS 1.2.4
 
@@ -113,7 +112,7 @@ For older versions of Studio Pro please install the appropriate legacy app [here
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
-	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
+    * Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
 
 ## Android 1.2.1 / iOS 1.2.3
 
@@ -126,7 +125,7 @@ For older versions of Studio Pro please install the appropriate legacy app [here
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
-	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
+    * Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
 
 ## Android 1.2.1 / iOS 1.2.2
 
@@ -143,7 +142,7 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
-	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
+    * Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
 
 ## Android 1.2.0 / iOS 1.2.1
 
@@ -158,7 +157,7 @@ On iOS:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
-	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
+    * Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
 
 ## Android 1.2.0 / iOS 1.2.0
 
@@ -167,9 +166,7 @@ On iOS:
 ### New Features
 
 * This version adds support for [Mendix Studio Pro 8.3](/releasenotes/studio-pro/8.3/).
-
 * The Make It Native app features a new **Toggle Inspector** developer menu option that exposes insights on styles and layouts. With this option you can debug styles, change them easily, and evaluate the results directly in the Make It Native app. We believe this option  greatly enhances the experience of creating feature-rich, engaging layouts for your Native Mendix Apps.
-
 * The Make It Native app now fully supports Atlas UI Dark Mode. 
 
 ### Improvements
@@ -186,7 +183,7 @@ On Android:
 ### Known Issues
 
 * When using the **Touchable** option in the inspector overlay, the Mendix Native app crashes.
-	* Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
+    * Fixed in [Studio Pro 8.8](/releasenotes/studio-pro/8.8/#417)
 
 ## Android 1.1.0 / iOS 1.1.0
 
@@ -214,4 +211,4 @@ On Android:
 ### Known Issues
 
 * Clearing data on Android via the start screen does not clear cookies correctly. Using the developer menu option does clear cookies.
-	* Fixed in [1.1.0](#153).
+    * Fixed in [1.1.0](#153).

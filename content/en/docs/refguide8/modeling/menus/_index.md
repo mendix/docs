@@ -24,7 +24,7 @@ The top-bar of Studio Pro contains the following menus:
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
-* [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendixcloud.com/index4.html), open log file directory, or view information on  the current information of Studio Pro
+* [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendix.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
 ## 2 File Menu {#file}
 
@@ -60,7 +60,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | --- | --- | --- |
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | **Help Contents** | Opens the start page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the [Mendix Forum](https://forum.mendixcloud.com/index4.html) in the default web browser. |   |
+| **Ask a Question** | Opens the [Mendix Forum](https://forum.mendix.com/p/questions) in the default web browser. |   |
 | **Open Log File Directory** | Opens the log files for your app locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 

@@ -1,11 +1,11 @@
 ---
 title: "Drop-Down"
 url: /refguide8/drop-down/
-parent: "input-widgets"
 weight: 30
 tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
     - /refguide8/drop-down-widget.html
+    - /refguide8/drop-down-widget
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -109,5 +109,5 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 ## 3 Read More
 
-*   [Data View](/refguide8/data-view/)
-*   [Attributes](/refguide8/attributes/)
+* [Data View](/refguide8/data-view/)
+* [Attributes](/refguide8/attributes/)

@@ -1,11 +1,12 @@
 ---
 title: "Header (Document Template)"
 url: /refguide8/header-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide8/header-(document-template).html
     - /refguide8/Header+(document+template).html
+    - /refguide8/header-(document-template)
+    - /refguide8/Header+(document+template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

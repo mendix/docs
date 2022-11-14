@@ -1,7 +1,6 @@
 ---
 title: "Associations"
 url: /studio/domain-models-association-properties/
-parent: "domain-models"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -58,28 +57,25 @@ Delete behavior defines what should happen to the associated object when an obje
 | Delete {name of entity} object(s) as well                    | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). <br />You can also specify an error message for your end-users when they try to delete an object that is associated with other entity's objects. For example: "You cannot delete this location, because a course is associated with it." |
 
-For examples of delete behavior configuring, see [Delete Behavior](/howto/data-models/create-a-basic-data-layer/#delete-behavior) section in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-to’s*.
-
+For examples of delete behavior configuring, see [Delete Behavior](/howto/data-models/create-a-basic-data-layer/#delete-behavior) section in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-tos*.
 
 ## 5 Cross-Module Associations {#cross-module-associations}
 
 Cross-module association makes an association between entities of different modules.
 
 {{% alert color="info" %}}
-
 You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and Marketplace modules) and make cross-module associations in Studio. 
-
 {{% /alert %}}
 
 In Studio, cross-module association is indicated with the following:
 
-*  An icon next to the entity that has such association: 
+* An icon next to the entity that has such association: 
 
-   {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-association-properties/association-icon.png" >}}
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-association-properties/association-icon.png" >}}
 
-*  A pop-up window, which displays when you click the icon:
+* A pop-up window, which displays when you click the icon:
 
-   {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-association-properties/association-pop-up.png" >}}
+    {{< figure src="/attachments/studio/work-with-data/domain-models/domain-models-association-properties/association-pop-up.png" >}}
 
 Cross module associations have the following properties:
 

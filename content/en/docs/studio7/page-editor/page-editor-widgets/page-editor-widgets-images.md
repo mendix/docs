@@ -1,7 +1,6 @@
 ---
 title: "Image Widgets"
 url: /studio7/page-editor-widgets-images/
-parent: "page-editor-widgets"
 description: "Describes image widgets in Mendix Studio."
 weight: 30
 tags: ["studio", "page editor", "image", "image widgets", "widgets"]
@@ -14,14 +13,12 @@ Image [widgets](/studio7/page-editor-widgets/) are used to show images to the us
 There are two image widgets in Mendix Studio:
 
 * Image – allows you to show a static (non-changing) image in your app
-*  Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
+* Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
 
-   {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-images/image-widgets.png"   width="350"  >}}
+    {{< figure src="/attachments/studio7/page-editor/page-editor-widgets/page-editor-widgets-images/image-widgets.png"   width="350"  >}}
 
 {{% alert color="info" %}}
-
 You can switch between static and dynamic image in widget's properties. For more information, see the [General Section](#image-general). 
-
 {{% /alert %}} 
 
 ## 2 General Section {#image-general}

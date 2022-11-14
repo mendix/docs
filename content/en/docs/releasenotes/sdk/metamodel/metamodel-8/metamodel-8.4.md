@@ -1,7 +1,7 @@
 ---
 title: "8.4"
 url: /releasenotes/sdk/metamodel-8.4/
-parent: "metamodel-8"
+weight: 97
 ---
 
 ## 8.4.0
@@ -26,11 +26,11 @@ parent: "metamodel-8"
 
 * We deleted the `argumentRuntime` property.
 
-#### JavaScriptActionCallAction & JavaScriptActionParameterMapping (Elements)
+#### JavaScriptActionCallAction and JavaScriptActionParameterMapping (Elements)
 
 * We removed the experimental status of these elements.
 
-#### StringTemplateParameterValue & PushToClientAction (Elements)
+#### StringTemplateParameterValue and PushToClientAction (Elements)
 
 * We introduced these elements.
 
@@ -73,7 +73,7 @@ parent: "metamodel-8"
 
 * We added the public `platform` property.
 
-#### MicroflowParameterMapping & NanoflowParameterMapping (Elements)
+#### MicroflowParameterMapping and NanoflowParameterMapping (Elements)
 
 * We introduced the `variable` property.
 * We deleted the `widget` property. Use the `variable` property instead.

@@ -1,10 +1,11 @@
 ---
 title: "Table (Document Template)"
 url: /refguide8/table-document-template/
-parent: "document-templates"
 aliases:
     - /refguide8/table-(document-template).html
     - /refguide8/Table+(document+template.html
+    - /refguide8/table-(document-template)
+    - /refguide8/Table+(document+template
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Boolean Expressions"
 url: /refguide8/boolean-expressions/
-parent: "expressions"
 weight: 50
 tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
@@ -24,19 +23,19 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-	```java
-	(6 > 4) and (3 < 5)
-	```
+    ```java {linenos=false}
+    (6 > 4) and (3 < 5)
+    ```
 
-	The output is `true` because both of the expressions are `true`.
+    The output is `true` because both of the expressions are `true`.
 
 * If you use the following input:
 
-	```java
-	('hello' = 'hallo') and (3 < 5)
-	```
+    ```java {linenos=false}
+    ('hello' = 'hallo') and (3 < 5)
+    ```
 
-	The output is `false`, because only the second expression is `true`.
+    The output is `false`, because only the second expression is `true`.
 
 ## 3 or
 
@@ -48,21 +47,21 @@ The examples below illustrate which value the expression returns:
 
 * You have a entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
 
-	If you use the following input:
+    If you use the following input:
 
-	```java
-	($product/price < $product/recommendedPrice : 2) or ($product/price 	> 0)
-	```
+    ```java {linenos=false}
+    ($product/price < $product/recommendedPrice : 2) or ($product/price     > 0)
+    ```
 
-	The expression will return `true` because at least one of the 	expressions is true (the second one). Note that the expression would 	still return `true` if both statements had been true.
+    The expression will return `true` because at least one of the     expressions is true (the second one). Note that the expression would     still return `true` if both statements had been true.
 
 * If you use the following input: 
 
-	```java
-	('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
-	```
-	
-	The expression will return `false`, because both expressions are false.
+    ```java {linenos=false}
+    ('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
+    ```
+
+    The expression will return `false`, because both expressions are false.
 
 ## 4 not
 
@@ -82,21 +81,16 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-	```java
-	not('hello' = 'hallo')
+    ```java {linenos=false}
+    not('hello' = 'hallo')
+    ```
 
-	```
-
-	The expression will return `true` .
-
+    The expression will return `true` .
 
 * If you use the following input:
 
-	```java
-	not(true)
-	```
+    ```java {linenos=false}
+    not(true)
+    ```
 
-	The expression will return `false` .
-
-
-
+    The expression will return `false` .

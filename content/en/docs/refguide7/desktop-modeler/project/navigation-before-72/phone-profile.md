@@ -1,7 +1,6 @@
 ---
 title: "Phone Profile"
 url: /refguide7/phone-profile/
-parent: "navigation-before-72"
 description: "Describes usage of the phone profile in a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 

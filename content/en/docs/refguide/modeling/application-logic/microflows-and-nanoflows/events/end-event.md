@@ -1,7 +1,6 @@
 ---
 title: "End Event"
 url: /refguide/end-event/
-parent: "events"
 weight: 2
 tags: ["studio pro", "end event", "event"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -36,13 +35,10 @@ You can choose to return nothing, or to return, for example, a list, enumeration
 The return value can be entered as an [expression](/refguide/expressions/).
 
 {{% alert color="info" %}}
-
 If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
-
 {{% /alert %}}
 
 ## 3 Read More
 
 * [Start Event](/refguide/start-event/)
-
 * [Microflow Call](/refguide/microflow-call/)

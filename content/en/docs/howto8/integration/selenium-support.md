@@ -10,7 +10,7 @@ tags: ["selenium", "integration"]
 
 Mendix uses CSS classes to identify page content like widgets and pop-up windows. You can use these classes in Selenium to manipulate pages and verify data.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Use naming conventions
 * Avoid pitfalls

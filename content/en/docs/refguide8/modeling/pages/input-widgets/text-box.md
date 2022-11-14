@@ -1,7 +1,6 @@
 ---
 title: "Text Box"
 url: /refguide8/text-box/
-parent: "input-widgets"
 weight: 10
 tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -181,6 +180,7 @@ The placeholder text is shown when no text has been entered yet, or when a displ
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
 <a name="label-properties"></a>
+
 ### 2.9 Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}

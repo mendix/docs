@@ -1,7 +1,6 @@
 ---
 title: "Use the Platform SDK"
 url: /apidocs-mxsdk/mxsdk/using-platform-sdk/
-parent: "sdk-howtos"
 weight: 12
 ---
 

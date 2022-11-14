@@ -1,11 +1,11 @@
 ---
 title: "Show Home Page"
 url: /refguide8/show-home-page/
-parent: "client-activities"
 weight: 30
 tags: ["studio pro", "show home page", "home page", "client activities"]
 aliases:
     - /refguide8/Show+Home+Page.html
+    - /refguide8/Show+Home+Page
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -51,4 +51,3 @@ The **Action** section of the properties pane shows the action associated with t
 
 * [Show Page](/refguide8/show-page/)
 * [Activities](/refguide8/activities/)
-

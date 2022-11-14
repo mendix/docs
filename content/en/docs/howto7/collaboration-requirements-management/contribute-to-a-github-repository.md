@@ -1,7 +1,7 @@
 ---
 title: "Contribute to a GitHub Repository"
 url: /howto7/collaboration-requirements-management/contribute-to-a-github-repository/
-category: "Collaboration & Requirements Management"
+category: "Collaboration and Requirements Management"
 weight: 20
 tags: ["github"]
 ---
@@ -9,7 +9,7 @@ tags: ["github"]
 
 We like to work with our community, and we encourage you to create and contribute using pull requests!
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Contribute to a GitHub repository according to our guidelines
 

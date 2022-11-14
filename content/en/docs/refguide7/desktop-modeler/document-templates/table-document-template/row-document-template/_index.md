@@ -1,10 +1,11 @@
 ---
 title: "Row (Document Template)"
 url: /refguide7/row-document-template/
-parent: "table-document-template"
 aliases:
     - /refguide7/Row+(document+template).html
     - /refguide7/row-(document-template).html
+    - /refguide7/Row+(document+template)
+    - /refguide7/row-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

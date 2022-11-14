@@ -1,7 +1,6 @@
 ---
 title: "Project Security"
 url: /refguide7/project-security/
-parent: "project"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -99,13 +98,13 @@ A user role can be allowed to manage users with a number of other user roles (in
 
 The user name of the administrator user that can be used to sign into the application.
 
-_Default value_: MxAdmin
+*Default value*: MxAdmin
 
 **Password**
 
 The password of the administrator user that can be used to sign into the application.
 
-_Default value_: 1
+*Default value*: 1
 
 **User Role**
 
@@ -191,15 +190,15 @@ The sign-in microflow has two parameters.
 
 {{% alert color="warning" %}}
 
-Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](/refguide7/associations/) to automatically clean objects that were attached to the anonymous user.
+Clean up objects that were attached to the anonymous user and that you do *not* transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](/refguide7/associations/) to automatically clean objects that were attached to the anonymous user.
 
 {{% /alert %}}
 
 The sign-in microflow is executed when an end-user:
 
-1.  Uses your application without signing in (thus as an anonymous user), and then
-2.  clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
-3.  signs in to your application.
+1. Uses your application without signing in (thus as an anonymous user), and then
+2. clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
+3. signs in to your application.
 
 {{% alert color="info" %}}
 

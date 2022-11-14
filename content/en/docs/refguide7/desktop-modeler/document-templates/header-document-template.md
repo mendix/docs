@@ -1,10 +1,11 @@
 ---
 title: "Header (Document Template)"
 url: /refguide7/header-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Header+(document+template).html
     - /refguide7/header-(document-template).html
+    - /refguide7/Header+(document+template)
+    - /refguide7/header-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

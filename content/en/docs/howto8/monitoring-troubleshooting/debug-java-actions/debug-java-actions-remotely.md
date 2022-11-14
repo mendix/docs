@@ -1,7 +1,6 @@
 ---
 title: "Debug Java Actions Remotely"
 url: /howto8/monitoring-troubleshooting/debug-java-actions-remotely/
-parent: "debug-java-actions"
 tags: ["monitoring", "troubleshooting", "java action", "debug"]
 ---
 
@@ -9,7 +8,7 @@ tags: ["monitoring", "troubleshooting", "java action", "debug"]
 
 To debug the Java actions used in a Mendix microflow, you need to make some configuration changes to the way you start the Mendix Runtime. This how-to will explain how to manage this.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Edit the server configuration
 * Configure remote debugging
@@ -22,7 +21,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 1. Open the [Project Settings](/refguide8/project-settings/).
 2. Edit the configuration on the **Configurations** tab.
-3.  Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
+3. Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" >}}
 

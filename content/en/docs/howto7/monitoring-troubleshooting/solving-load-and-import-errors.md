@@ -1,11 +1,12 @@
 ---
-title: "Solve Load & Import Errors"
+title: "Solve Load and Import Errors"
 url: /howto7/monitoring-troubleshooting/solving-load-and-import-errors/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 11
 tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
     - /howto7/solving-load-and-import-errors.html
+    - /howto7/solving-load-and-import-errors
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

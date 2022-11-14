@@ -1,7 +1,6 @@
 ---
 title: "Break Event"
 url: /refguide/break-event/
-parent: "events"
 weight: 5
 tags: ["studio pro", "break event", "event", "loop"]
 ---

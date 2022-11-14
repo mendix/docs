@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEEND"
 url: /refguide7/oql-rangeend/
-parent: "oql-functions"
 ---
 
 

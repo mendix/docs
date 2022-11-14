@@ -1,8 +1,9 @@
 ---
 title: "Use the Java API"
 url: /howto/logic-business-rules/java-api-tutorial/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 130
+description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
 tags: ["microflow", "logic", "java", "API"]
 ---
 
@@ -14,7 +15,7 @@ To avoid cluttering the tutorial, only the relevant code will be shown, not the 
 
 When you look at these examples, often an IContext will be used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you're working will determine if you have these rights and can perform that action.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Execute microflows and commit objects
 * Copy FileDocuments
@@ -125,8 +126,7 @@ After this, all `Attachments` belonging to one `GenericObject` have been copied 
 * [Trigger a Microflow From a Menu Item](/howto/logic-business-rules/trigger-microflow-from-menu-item/)
 * [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
-* [Extract & Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Set Up Error Handling](/howto/logic-business-rules/set-up-error-handling/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)

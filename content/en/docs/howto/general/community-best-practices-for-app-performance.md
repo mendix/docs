@@ -1,11 +1,14 @@
 ---
 title: "Implement Community Best Practices for App Performance"
+linktitle: "Best Practices for App Performance"
 url: /howto/general/community-best-practices-for-app-performance/
 category: "General Info"
-weight: 8
+weight: 35
+description: "Describes some best practices to apply during development to get a better performing app. This document is created by and for the Mendix community."
 tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
+    - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7
 ---
 
 ## 1 Introduction
@@ -35,13 +38,13 @@ If you made a simple and sound design of the app's domain models, consider the f
 * Consider archiving data if your volume grows too large and you do not need all the data all the time. You can even consider creating two identical entities, one with the data currently being used, and the other with all the data that is only used for reporting or other historic reasons.
 * Consider denormalizing the data, which means copying attribute values to other entities. This is so the data is not retrieved every time from the source. If data does not change a lot, this can save a lot of queries. However, you need to build the logic to keep the copied attributes in sync!
 * Do not use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
-	* Combine attributes in one entity and add an enumeration to determine its specialization.
-	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
-	* Add a non-persistable layer with inheritance that is populated by your business logic.
+    * Combine attributes in one entity and add an enumeration to determine its specialization.
+    * Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
+    * Add a non-persistable layer with inheritance that is populated by your business logic.
 * Do not use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
 * Avoid using more than one [association](/refguide/associations/) between entities, especially if such associations give different access levels. Instead, use [enumerations](/refguide/enumerations/) within one of the entities, or add an intermediary entity between the entities that contains an enumeration with the association type. For example, if different user types are accessing a document, do not create the associations **Document_Owner**, **Document_Editor**, **Document_Viewer**, etc. Instead, add an intermediary entity named **DocumentAccess** between the entities that contains an enumeration named **AccessType**, with the possible values of **Owner**, **Editor**, and **Viewer**.
 
-##  3 Index Best Practices
+## 3 Index Best Practices
 
 Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practices apply:
 
@@ -54,7 +57,7 @@ Indexes is a topic with a long history of best practices from the database world
 * Indexes can be used best for equal searches, ranges searches for dates and numbers, and leading/`startsWith` searches on strings.
 * Index scans can be done to match more difficult clauses like `contains` or `endsWith`. These are still faster then full table scans.
 
-## 4 Microflow Best Practices
+## 4 Microflow Best Practices {#microflow-community-best-practices}
 
 * Minimize the work in loops:
     * Do commits after the loop in a list commit. 
@@ -101,8 +104,14 @@ For OQL, many of the same best practices apply as for XPath.
 * Minimize the number of roles per user.
 * Minimize the number of rules per entity.
 
-## 10 Web Services & XML Best Practices
+## 10 Web Services and XML Best Practices
 
 * Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.
+
+## 11 MxAssist Performance Bot
+
+[MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app for better performance. It can be accessed via **View** > **MxAssist Performance Bot**.
+
+For more information on performance best practices, see [Performance Best Practices](/refguide/performance-best-practices/).

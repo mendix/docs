@@ -1,7 +1,6 @@
 ---
 title: "File Manager"
 url: /refguide8/file-manager/
-parent: "file-widgets"
 tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -79,6 +78,10 @@ Default: *5*
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, for example, `txt;doc`
 
 If a file with an extension that is not allowed is selected, a [system text](/refguide8/system-texts/) for **File manager/image viewer** > **Error: incorrect file extension** will be shown below the file manager.
+
+{{% alert color="warning" %}}
+The feature to allow extensions is not meant as a security feature, as the file manager widget does not check the contents of a file to see if they match the provided extension. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto8/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
+{{% /alert %}}
 
 #### 2.4.4 Show File in Browser
 

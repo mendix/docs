@@ -3,7 +3,7 @@ title: "Logs"
 url: /developerportal/operate/logs/
 category: "Operations"
 weight: 30
-description: "This page describes the Logs page of the Developer Portal."
+description: "Describes how to see the logs from your app."
 tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -13,6 +13,10 @@ tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]
 From this page of the Developer Portal, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
 The page is accessed through the **Logs** menu item in the left-hand menu.
+
+{{% alert color="warning" %}}
+You must have the **Access to Monitoring** permission to view logs. This needs to be set by the Technical Contact of the app. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how to do this.
+{{% /alert %}}
 
 ## 2 Apps Deployed to Mendix Cloud Version 4
 
@@ -44,7 +48,7 @@ For apps deployed to the deprecated Mendix Cloud version 3 (v3), you can select 
 
 You can view the current log in your browser, or you can view and download an archived log. All timestamps are shown in UTC.
  
-Logs on Mendix Cloud v3 are rotated and archived every 5MB. The logs are kept for at least 3 months.
+Logs on Mendix Cloud v3 are rotated and archived every 5 MB. The logs are kept for at least 3 months.
 
 Action Button | Performs the Action
 :---|:---

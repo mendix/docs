@@ -1,7 +1,6 @@
 ---
 title: "Branch Line Manager"
 url: /refguide8/branch-line-manager-dialog/
-parent: "version-control-menu"
 weight: 80
 tags: ["studio pro", "manage branch lines", "branch line manager"]
 ---
@@ -19,6 +18,7 @@ The **Branch Line Manager** is used to manage [branch lines](/refguide8/version-
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
+
 1. To do maintenance development on a version of your app that is running in production. You can keep on developing in the main line while you fix issues in the branch line.
 2. If you are starting the development of a very large feature that will take more than a day to develop. By doing this in a branch line you can commit the half-implemented feature (possibly even with errors) without disturbing other development in the main line.
 

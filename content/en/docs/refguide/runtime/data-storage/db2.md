@@ -1,10 +1,13 @@
 ---
 title: "DB2"
 url: /refguide/db2/
-parent: "data-storage"
 weight: 40
 tags: ["studio pro"]
 ---
+
+{{% alert color="warning" %}}
+Support for DB2 is deprecated and [will be removed in Mendix version 10](/releasenotes/studio-pro/9.12/#deprecations).
+{{% /alert %}}
 
 ## 1 Introduction
 

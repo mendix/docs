@@ -13,7 +13,7 @@ The App Repository API enables retrieving information (branches, commits) of app
 
 Below is the base URL for all App Repository API endpoints:
 
-```
+```http {linenos=false}
 https://repository.api.mendix.com/v1
 ```
 
@@ -52,7 +52,8 @@ This is the generic error response format. The payload example format applies to
 | `errorMessage` | String | A short, human-readable message explaining the error. |
 
 Payload Example:
-```
+
+```json
 {
     "errorCode": "RS400",
     "errorMessage": "Please provide valid input to execute this request. Invalid app id"
@@ -88,7 +89,7 @@ Returns information about the version control repository for a Mendix app.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) settings tab of your app in the Developer Portal. |
 
 ##### 6.1.1.2 Example
 
@@ -111,7 +112,7 @@ List of objects with the following key-value pairs:
 
 |Name|Type|Description|
 |---|---|---|
-|`appId`|String|The App ID (sometimes also known as Project ID) of the Mendix app.|
+|`appId`|String|The App ID of the Mendix app.|
 |`type`|String|The type of repository. At the moment this is either `"svn"` or `"git"`, but later on other repository types may be introduced.|
 |`url`|String|The URL of the repository.|
 
@@ -142,7 +143,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 
 ##### 6.2.1.2 Query Parameter
 
@@ -224,7 +225,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
 ##### 6.3.1.2 Example
@@ -250,6 +251,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 |Content-Type|`application/json; charset=utf-8`|
 
 #### 6.3.3 Response Payload {#response-payload}
+
 An object with the following key-value pairs:
 
 |Name|Type|Description|
@@ -295,13 +297,14 @@ The response is paginated using cursor-based pagination.
 HTTP Method: GET
  URL: https://repository.api.mendix.com/v1/repositories/<AppId>/branches/<Name>/commits
 ```
+
 #### 6.4.1 Request
 
 ##### 6.4.1.1 Path Parameters
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
 ##### 6.4.1.2 Query Parameters

@@ -1,14 +1,13 @@
 ---
 title: "Call Web Service"
 url: /refguide/call-web-service-action/
-parent: "integration-activities"
 tags: ["studio pro", "integration activity", "call web service"]
 weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}
- This activity can only be used in **Microflows**.
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -19,7 +18,7 @@ The **Call web service** activity can be used to call one of the [imported web s
 
 An example of call web service properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/call-web-service-properties.png" alt="call web service properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/properties.png" alt="call web service properties" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -57,13 +56,11 @@ The properties dialog box consists of five tabs:
 **Override location** defines whether to override the location where the web service is called.
 
 {{% alert color="info" %}}
-
 When calling a web service using a call web service activity, the location of the web service is determined as follows.
 
-1.  If the location is overridden in the call web service activity, the location specified in that action is used.
-2.  If the service that defines the operation has a location constant defined, the value of that constant is used.
-3.  Otherwise, the location as specified in the WSDL of the imported web service is used.
-
+1. If the location is overridden in the call web service activity, the location specified in that action is used.
+2. If the service that defines the operation has a location constant defined, the value of that constant is used.
+3. Otherwise, the location as specified in the WSDL of the imported web service is used.
 {{% /alert %}}
 
 ### 4.3 Location
@@ -130,11 +127,11 @@ When you select **Override**, you can configure which client certificate will be
 * When you deploy the app in the Mendix cloud, set the **Client certificate identifier** to the desired **WEB SERVICE CALL NAME** when [pinning a client certificate](/developerportal/deploy/certificates/#outgoing-client-certificates).
 * When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide/custom-settings/#ca-certificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide/configuration/#custom).
 
-When this identifier is not set for the environment where your app is deployed (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use app settings** were selected).
+When this identifier is not set for the environment where your app is deployed (either not pinned or not present in *ClientCertificateUsages*), the default settings will be used (as if **Use app settings** were selected).
 
 ## 5 HTTP Headers Tab{#http-headers}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/http-headers-tab-call-web-service.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/http-headers.png" >}}
 
 ### 5.1 Use HTTP Authentication
 
@@ -172,7 +169,7 @@ This option for request parts can be used when all children of the XML element o
 
 Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [expressions](/refguide/expressions/) resulting in the same data type as the parameter.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/request-parameter-option.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/req-param.png" >}}
 
 For primitive parameters (both optional and nillable) that do not have an export mapping, you can choose to send empty values by setting **Send empty values** to **Yes, as null**.
 
@@ -181,11 +178,9 @@ For primitive parameters (both optional and nillable) that do not have an export
 This option can be used when all children of the XML element of the request part occur at most once. You need to supply an argument value for all top-level elements of the request (parameters). For simple parameters you can enter a microflow expression, for complex parameters you define a mapping.
 
 {{% alert color="warning" %}}
-
 If a primitive request parameter is both optional and nillable, you need to select whether or not to send the empty values.
 
 *Default value*: do not send the empty values.
-
 {{% /alert %}}
 
 ### 7.4 Custom Request Template

@@ -1,9 +1,9 @@
 ---
 title: "Action Button"
 url: /refguide7/action-button/
-parent: "button-widgets"
 aliases:
     - /refguide7/link-button.html
+    - /refguide7/link-button
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -25,7 +25,7 @@ An action button can perform various actions such as calling a microflow or nano
 
 Disables the action button until the action is completed or failed.
 
-_Default value_ : false.
+*Default value* : false.
 
 ## Common properties
 

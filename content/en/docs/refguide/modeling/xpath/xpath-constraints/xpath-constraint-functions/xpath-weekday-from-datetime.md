@@ -1,7 +1,6 @@
 ---
 title: "XPath Weekday-from-DateTime"
 url: /refguide/xpath-weekday-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

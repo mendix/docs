@@ -5,7 +5,6 @@ category: "SAP"
 weight: 28
 description: "Presents reference information on the SAP Cloud Connector."
 tags: ["SAP", "SAP Cloud Platform", "on-premises", "Cloud Connector", "Destination Services", "SAP BTP", "SAP Business Technology Platform"]
-frontpage_featured: false
 ---
 
 ## 1 Introduction

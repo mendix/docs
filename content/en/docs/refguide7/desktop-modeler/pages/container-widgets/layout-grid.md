@@ -1,7 +1,6 @@
 ---
 title: "Layout grid"
 url: /refguide7/layout-grid/
-parent: "container-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +13,7 @@ The layout grid is a widget that gives structure to your pages. A layout grid co
 
 The layout grid is exported as nested div elements. In addition to the classes you specify in the various Class properties, a number of classes are added automatically.
 
-```
+```html
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6"> ... </div>
@@ -26,8 +25,8 @@ The layout grid is exported as nested div elements. In addition to the classes y
 
 The outermost `div` represents the widget as a whole and gets the one of the following classes:
 
-*   `container-fluid` when width is set to full width
-*   `container` when width is set to fixed width
+* `container-fluid` when width is set to full width
+* `container` when width is set to fixed width
 
 The second `div` represents a row and automatically gets the `row` class. The innermost `div` represents a column and automatically gets the weight class `col-md-<weight>`.
 
@@ -43,9 +42,9 @@ Each row in turn contains columns and the number of columns can differ per row.
 
 A row in a layout grid contains one or more columns. Each column can be styled with the Class and Style properties. Additionally, the Weight property determines how wide the column is. The weights of all columns in a row must add up to 12\. Examples of valid rows are:
 
-*   one column with weight 12
-*   two columns, both with weight 6
-*   a column with weight 3 and a column with weight 9. 
+* one column with weight 12
+* two columns, both with weight 6
+* a column with weight 3 and a column with weight 9. 
 
 There is rarely a use case for more than four columns in a row.
 

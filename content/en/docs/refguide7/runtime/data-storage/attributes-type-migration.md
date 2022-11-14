@@ -1,7 +1,6 @@
 ---
 title: "Attributes Type Migration"
 url: /refguide7/attributes-type-migration/
-parent: "data-storage"
 weight: 10
 ---
 

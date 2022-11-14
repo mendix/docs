@@ -1,7 +1,6 @@
 ---
 title: "Add Date Function Calls"
 url: /refguide8/add-date-function-calls/
-parent: "expressions"
 weight: 110
 tags: ["studio pro", "expressions", "add date function"]
 ---
@@ -43,13 +42,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1400)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:01:02:400 CET 2007"
 ```
 
@@ -78,13 +77,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:01:03 CET 2007"
 ```
 
@@ -113,13 +112,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addMinutes(dateTime(2007, 1, 1, 1, 1, 1), 3)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:04:01 CET 2007"
 ```
 
@@ -148,13 +147,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addHours(dateTime(2007, 1, 1, 1, 1, 1), 25)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 02 02:01:01 CET 2007"
 ```
 
@@ -183,13 +182,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addDays(dateTime(2007, 1, 1, 1, 1, 1), 3)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 04 01:01:01 CET 2007"
 ```
 
@@ -218,13 +217,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addWeeks(dateTime(2007, 1, 1, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 15 01:01:01 CET 2007"
 ```
 
@@ -253,13 +252,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addMonths(dateTime(2007, 1, 1, 1, 1, 1), 13)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Feb 01 01:01:01 CET 2008"
 ```
 
@@ -288,13 +287,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java
+```java {linenos=false}
 addYears(dateTime(2007, 1, 1, 1, 1, 1), 11)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Mon Jan 01 01:01:01 CET 2018"
 ```
 
@@ -304,14 +303,12 @@ It is possible to pass values of the Long type to different **Add date function*
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 addSeconds(dateTime(1970, 1, 1, 0, 0, 0), (long)(2147483647 + 100))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 "Tue Jan 19 04:15:47 CET 2038"
 ```
-
-

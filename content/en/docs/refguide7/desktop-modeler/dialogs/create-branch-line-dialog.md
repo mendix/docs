@@ -1,7 +1,6 @@
 ---
 title: "Create Branch Line Dialog"
 url: /refguide7/create-branch-line-dialog/
-parent: "dialogs"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "List view"
 url: /refguide7/list-view/
-parent: "data-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -49,10 +48,10 @@ The list view supports the following types of data sources: database source, XPa
 
 See the corresponding data source for its properties:
 
-*   [Database source](/refguide7/database-source/)
-*   [XPath source](/refguide7/xpath-source/)
-*   [Microflow source](/refguide7/microflow-source/)
-*   [Association source](/refguide7/association-source/)
+* [Database source](/refguide7/database-source/)
+* [XPath source](/refguide7/xpath-source/)
+* [Microflow source](/refguide7/microflow-source/)
+* [Association source](/refguide7/association-source/)
 
 ## Templates properties
 

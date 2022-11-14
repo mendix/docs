@@ -1,10 +1,11 @@
 ---
 title: "Columns (Document Template)"
 url: /refguide7/columns-document-template/
-parent: "data-grid-document-template"
 aliases:
     - /refguide7/Columns+(document+template).html
     - /refguide7/columns-(document-template).html
+    - /refguide7/Columns+(document+template)
+    - /refguide7/columns-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -28,13 +29,13 @@ A column can show its contexts as text (default) or as image.
 
 The precision of a value is defined by the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 
-_Default value:_ 2
+*Default value:* 2
 
 ### Group Digits (Only for Numeric Attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
 
-_Default value:_ False
+*Default value:* False
 
 ### Date Format (Only for Attributes of the DateTime Type)
 
@@ -42,7 +43,7 @@ The date format determines whether the date part, the time part or both are show
 
 Possible values: 'Date', 'Time', 'Date and time' and in 2.5.3 'Custom'.
 
-_Default value:_ Date
+*Default value:* Date
 
 ### Custom Date Format (Only for Attributes of the DateTime Type)
 

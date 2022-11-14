@@ -28,9 +28,9 @@ Configuring the label on the progress circle can be done on the **Progress Label
 
 * Whether to show a label or not
 * The type of the label:
-	* **Text**: a custom text
-	* **Percentage**: the **Current value** converted onto the configured range as a percentage. 
-	* **Custom**: a custom widget
+    * **Text**: a custom text
+    * **Percentage**: the **Current value** converted onto the configured range as a percentage. 
+    * **Custom**: a custom widget
 
 ### 2.2 Styling
 
@@ -39,7 +39,11 @@ Under the **Appearance** tab, the following styling properties can be adjusted f
 * Bar and background color based on brand styling
 * Size (small, medium, and large)
 
-## 3 Widgets Below Version 2.0.0
+## 3 Strict CSP Compatibility
+
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+
+## 4 Widgets Below Version 2.0.0
 
 Features:
 

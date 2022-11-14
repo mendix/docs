@@ -1,7 +1,6 @@
 ---
 title: "Query Tool"
 url: /addons/apd-addon/rg-one-query-tool/
-parent: "rg-one-apm"
 ---
 To collect database or application information the Query Tool has been introduced.
 

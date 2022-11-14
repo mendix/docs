@@ -9,4 +9,4 @@ The default button is marked with a "[default]" suffix in the Modeler, so that y
 
 </div>
 
-_Default value:_ False
+*Default value:* False

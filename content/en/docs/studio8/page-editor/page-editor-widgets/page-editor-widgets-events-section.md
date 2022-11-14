@@ -1,7 +1,6 @@
 ---
 title: "Events Section"
 url: /studio8/page-editor-widgets-events-section/
-parent: "page-editor-widgets"
 weight: 70
 description: "Describes the Events section in widgets properties in Mendix Studio."
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
@@ -21,20 +20,18 @@ You can find the description of possible on click actions below:
 
 * **Nothing** – no action is taken when the user clicks a widget
 * **Page** –  the specified page is opened
-  * **Create Object** – creates a new object and passed it to the selected page (disabled by default). For more information, see section [2.1 Create Object Option](#create-object-option)
+    * **Create Object** – creates a new object and passed it to the selected page (disabled by default). For more information, see section [2.1 Create Object Option](#create-object-option)
 * **Microflow** – the selected microflow is executed 
 * **More** – contains the following type of actions:
-  * **Save Changes** – saves (commits) all changes made on the page
-  * **Cancel Changes** – rolls back all changes made on the page 
-  * **Close Page** – closes the pop-up window (for pop-up pages) or navigates to the previously visited page  
-  * **Sign Out** – the current user is signed out of the app 
-  * **Open Link** – triggers an action based on the link type (for more information, see section [2.2 Open Link Action](#open-link-action)
-  * **Delete Object** – deletes an object (for more information, see section [2.3 Delete Object Action](#delete-object-action))
+    * **Save Changes** – saves (commits) all changes made on the page
+    * **Cancel Changes** – rolls back all changes made on the page
+    * **Close Page** – closes the pop-up window (for pop-up pages) or navigates to the previously visited page
+    * **Sign Out** – the current user is signed out of the app
+    * **Open Link** – triggers an action based on the link type (for more information, see section [2.2 Open Link Action](#open-link-action)
+    * **Delete Object** – deletes an object (for more information, see section [2.3 Delete Object Action](#delete-object-action))
 
 {{% alert color="info" %}}
-
 The list of available on click actions may differ depending on the widget. For example, **Delete Object** on-click action is unavailable for the list view. 
-
 {{% /alert %}}
 
 ### 2.1 Create Object Option {#create-object-option}
@@ -52,7 +49,7 @@ Thus, when setting the on-click action of the **New** button to **Page**, you ne
 If you enable **Create Object** option, you need to set the following:
 
 * **Page** – specifies which page with the new created object should be shown. The page should contain a data view that expects this object.
-* **Entity** – specifies the object of which entity will be created and passed to the selected page as a context.    
+* **Entity** – specifies the object of which entity will be created and passed to the selected page as a context.
 
 ### 2.2 Open Link Action {#open-link-action}
 
@@ -64,7 +61,7 @@ See the description in the table below:
 
 | Action Property | Description                                                  |
 | --------------- | ------------------------------------------------------------ |
-| Link Type       | Possible values for **Link Type** are the following: <ul><li>**Web** – navigates to a website</li><li>**Email** – composes an email</li><li>**Phone Call** – starts a phone call</li><li>**Text Message** – sends a text message</li></ul>{{%alert type="info" %}}When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.<br />{{%/alert %}} |
+| Link Type       | Possible values for **Link Type** are the following: <ul><li>**Web** – navigates to a website</li><li>**Email** – composes an email</li><li>**Phone Call** – starts a phone call</li><li>**Text Message** – sends a text message</li></ul>{{% alert color="info" %}}When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.<br />{{%/alert %}} |
 | Source          | Possible values for **Source** are the following: <ul><li>**Use literal value** – you can fill a value out (Specify **Url** for **Web**, **Recipient** for **Email**, and **Phone Number** for **Phone Cal**l and **Message**) </li><li>**Use attribute** – if you select **Database**>**Entity** as a data source for the list view,  you can choose the attribute of a string type that belongs to the entity or create a new one (when the **Use attribute** option is configured, you do not need to fill out any information manually, it will be updated dynamically)</li></ul> |
 
 ### 2.3 Delete Object Action {#delete-object-action}
@@ -78,7 +75,6 @@ If you place the **Delete Object** in a list view, the corresponding list view i
 For example, you have a page with a list view showing customer names. A **Delete** button is placed inside the list next to each name. Thus, if you click **Delete** in a line that says "Peter", this customer and all customer's details will be deleted. 
 
 {{< figure src="/attachments/studio8/page-editor/page-editor-widgets/page-editor-widgets-events-section/list-view-delete.png"   width="350"  >}}
-
 
 #### 2.3.2 Delete Object Action in a Data View
 

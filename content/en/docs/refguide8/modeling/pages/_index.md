@@ -22,7 +22,7 @@ Every page is based on a page [layout](/refguide8/layout/) and a page template. 
 
 {{< figure src="/attachments/refguide8/modeling/pages/page-structure.png" >}}
 
-Pages can be linked, so that one page can open another page. If this second page contains a [data widget](/refguide8/data-widgets/) with a page parameter data source, then an object or objects can be passed from the current page to the new page. For information on opening pages, and triggering other sorts of event, see [On Click Event & Events Section](/refguide8/on-click-event/).
+Pages can be linked, so that one page can open another page. If this second page contains a [data widget](/refguide8/data-widgets/) with a page parameter data source, then an object or objects can be passed from the current page to the new page. For information on opening pages, and triggering other sorts of event, see [On Click Event and Events Section](/refguide8/on-click-event/).
 
 Pages are opened either in the current pane of the browser or in a pop-up, child, window. Where the page is opened depends on its [layout type](/refguide8/layout/#layout-type). Mendix performs navigation as efficiently as possible. If a new page uses the same layout as the old one, only the data on the page will refresh rather than the whole page being built from scratch.
 
@@ -58,7 +58,7 @@ Widgets are grouped into the following categories:
 * [Report widgets](/refguide8/report-widgets/) aggregate data and show it in the form of a table or a chart
 * [Authentication widgets](/refguide8/authentication-widgets/) allow to add the user verification process such as password and login id text boxes.
 * Add-on widgets can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript
-  * [Chart widgets](/refguide8/chart-widgets/) are add-on widgets that graphically represent data using various chart types
+    * [Chart widgets](/refguide8/chart-widgets/) are add-on widgets that graphically represent data using various chart types
 
 ## 4 Read More
 

@@ -23,4 +23,3 @@ For more details on configuration, see [Advanced Configuration Settings](https:/
 
 * [Plotly JavaScript Open Source Graphing Library](https://plot.ly/javascript/)
 * [JavaScript Figure Reference](https://plot.ly/javascript/reference)
-

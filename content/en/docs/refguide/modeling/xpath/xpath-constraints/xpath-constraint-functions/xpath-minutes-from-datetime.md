@@ -1,7 +1,6 @@
 ---
 title: "XPath Minutes-from-DateTime"
 url: /refguide/xpath-minutes-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

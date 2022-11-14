@@ -1,7 +1,6 @@
 ---
 title: "Show Workflow Admin Page"
 url: /refguide/show-workflow-page/
-parent: "workflow-activities"
 weight: 60
 tags: ["studio pro", "workflow page", "workflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

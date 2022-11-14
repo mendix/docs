@@ -1,7 +1,6 @@
 ---
 title: "Function API with REST"
 url: /addons/ats-addon/ov-function-api-rest/
-parent: "ov-function-api"
 weight: 1
 ---
 
@@ -13,7 +12,7 @@ This page describes how to use the Function API directly.
 Before you start writing tests, install the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) package.
 {{% /alert %}}
 
-## 2 Creating a Driver & Getting the sessionId
+## 2 Creating a Driver and Getting the sessionId
 
 ```JavaScript
 const webdriver = require('selenium-webdriver');

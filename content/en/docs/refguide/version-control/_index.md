@@ -1,8 +1,10 @@
 ---
 title: "Version Control"
 url: /refguide/version-control/
-description: "This document gives definitions and explains the version control  process"
+description: "Gives definitions and explains the version control process."
 weight: 30
+no_list: false
+description_list: true
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -13,7 +15,7 @@ tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collabo
 Version Control allows you to manage your app development in two ways:
 
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
-* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
+* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
 Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
 
@@ -28,6 +30,8 @@ Git is in Beta since Mendix 9.6.0, you can enable Beta features in Studio Pro [P
 [Team Server](/developerportal/collaborate/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
 To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles/#team-roles) section *App Roles*.
+
+For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide/version-control-faq/).
 
 ### 2.2 Repository {#repository}
 
@@ -124,7 +128,7 @@ The figure below shows how two developers might collaborate on a [Studio-enabled
 
 {{< figure src="/attachments/refguide/version-control/image1.png" >}}
 
-### 3.2 Work in Studio Only
+### 3.1 Work in Studio Only
 
 The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
 
@@ -140,7 +144,7 @@ The developer can commit this to the Team Server repository at any time to make 
 
 {{< figure src="/attachments/refguide/version-control/image3.png" >}}
 
-### 3.3 Work in Studio & Studio Pro
+### 3.3 Work in Studio and Studio Pro
 
 Two developers are working on the same [development line](#development-line) of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
@@ -227,8 +231,4 @@ As with the examples in the [Version Control Processes for a Single Branch](#vc-
 
 Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
-## 6 Main Documents in This Category
-
-* [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/) – presents technical details for using version control (theoretical concerns are described above)
-* [Collaborative Development](/refguide/collaborative-development/) – describes the process of sharing app model changes when a team of more than one person is working on the app
-* [Team Server](/developerportal/collaborate/team-server/) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)
+## 6 Documents in This Category

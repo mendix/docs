@@ -1,12 +1,13 @@
 ---
 title: "Scroll Container"
 url: /refguide8/scroll-container/
-parent: "container-widgets"
 weight: 50
 tags: ["studio pro", "scroll container", "container widget", "widget"]
 aliases:
     - /refguide8/horizontal-split-pane.html
     - /refguide8/vertical-split-pane.html
+    - /refguide8/horizontal-split-pane
+    - /refguide8/vertical-split-pane
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +24,6 @@ Scroll containers may be placed on navigation layouts as well as on pages.
 The scroll container example below divides the layout in three parts: a header containing a logo, a content part with a placeholder and a footer:
 
 {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" >}}
-
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
 

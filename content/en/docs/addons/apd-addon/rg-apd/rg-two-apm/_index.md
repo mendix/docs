@@ -1,10 +1,10 @@
 ---
 title: "APM 2 Reference Guide"
 url: /addons/apd-addon/rg-two-apm/
-parent: "rg-apd"
 weight: 1
 aliases:
     - /apm/reference-guide/rg-2/reference-guide-2.html
+    - /apm/reference-guide/rg-2/reference-guide-2
 ---
 
 ## 1 Introduction

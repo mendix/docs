@@ -16,7 +16,7 @@ The OData Connector for SAP solutions is an OData connector written specifically
 
 {{< figure src="/attachments/partners/sap/sap-odata-connector/appstore-sapodata.png" >}}
 
-You can use the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/).
+You can use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [How to Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/).
 
 {{% alert color="info" %}}
 Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData version 4. Currently, only **Get List** and **Get Entry** are supported for services using OData version 4.
@@ -32,7 +32,7 @@ The SAP Destination Service replaces the SAP Cloud Connector flag which was used
 
 ## 2 Using the OData Connector for SAP Solutions{#UsingtheSAPODataConnector}
 
-Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the App Explorer under project **{App name}** > **Marketplace modules** > **SAPODataConnector**.
+Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the App Explorer under **{App name}** > **Marketplace modules** > **SAPODataConnector**.
 
 ### 2.1 Microflow Actions
 
@@ -64,10 +64,10 @@ For more information on domain models, see [Domain Model](/refguide/domain-model
 
 Most of the actions of the OData Connector for SAP solutions make use of a domain model representing the SAP service data model. These models contain non-persistable Mendix entities which represent entities in the OData service which is exposed by an SAP back-end system. The entities contain attributes which correspond to the entity properties plus additional attributes which support the OData Connector for SAP solutions.
 
-You can create a data model by inspecting the service metadata. The response from the service can be used in the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/).
+You can create a data model by inspecting the service metadata. The response from the service can be used in the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/).
 
 {{% alert color="info" %}}
-In addition to the domain model, the OData Model Creator will also create three other items:
+In addition to the domain model, the Model Creator will also create three other items:
 
 * A constant with the name of the service which has the value of the Service Root URL for the SAP OData service you are using
 * An enumeration (**EntitySetNames**) containing a list of all the entities in the entity model and the OData entity sets that correspond to them
@@ -82,15 +82,15 @@ The examples used in this guide are based on the **GWSAMPLE_BASIC** OData servic
 You will need to have an SAP account with access to the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/) system to be able to use this service.
 {{% /alert %}}
 
-This data model for the GWSAMPLE_BASIC service can be obtained from the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). To create the data model, you do one of the following:
+This data model for the GWSAMPLE_BASIC service can be obtained from the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/). To create the data model, you do one of the following:
 
 * You can create it manually using the OData metadata XML for GWSAMPLE_BASIC, which can be found at [https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/$metadata](https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/$metadata)
-* You can find it in the **SAP Catalog Service** of the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/)
+* You can find it in the **SAP Catalog Service** of the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/)
     * Sign in to the server *sapes5.sapdevcenter.com* using your SAP ES5 credentials
     * Search for the GWSAMPLE_BASIC API
     * Use the GWSAMPLE_BASIC Schema
 
-In both cases, save the file you download from the **OData Model Creator for SAP solutions** and then, using the instructions in [How to Use OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/), import it into your app. Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
+In both cases, save the file you download from the **Model Creator for SAP Integrations** and then, using the instructions in [How to Use Model Creator for SAP Integrations](/partners/sap/use-sap-model-creator/), import it into your app. Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
 
 Part of the data model for this sample data is:
 
@@ -112,30 +112,30 @@ Here is the domain model of the OData Connector for SAP solutions:
 This domain model is part of the OData Connector for SAP solutions module and can be found in **App** > **Marketplace modules** > **SAPODataConnector**. Each [entity](/refguide/entities/) contains one or more [attributes](/refguide/attributes/):
 
 * **ODataObject** – represents the generic OData object; all entities which can be manipulated directly in the SAP OData service domain model are specializations of this
-  * **meta objectURI** – the address given by the OData service to the OData object
-  * **meta_etag** – the entity tag (ETag) for the object; this is used for optimistic concurrency control to check that an object has not been changed in the SAP back-end system by another user
+    * **meta objectURI** – the address given by the OData service to the OData object
+    * **meta_etag** – the entity tag (ETag) for the object; this is used for optimistic concurrency control to check that an object has not been changed in the SAP back-end system by another user
 * **ResultInfo** – holds information about the result of a query
-  * **totalCount** – when a query is executed with `$inlinecount=allpages` the result returns the total record count for the given criteria; if a ResultInfo entity object is specified, this value will be stored in the totalCount attribute and can be used for paging
+    * **totalCount** – when a query is executed with `$inlinecount=allpages` the result returns the total record count for the given criteria; if a ResultInfo entity object is specified, this value will be stored in the totalCount attribute and can be used for paging
 * **ComplexType** – represents the generic OData service domain model entities which are of type Complex
 * **FunctionParameters** – represents a wrapper for the parameter entities that need to be passed to OData functions
-  * **postParameterInline** – a Boolean which indicates whether the parameters should be posted inline or passed as the body of the POST request; the default value is **true**
-* **RequestParams** – passes conditions to the OData Connector for SAP solutions actions which change the behavior of the action; pass _empty_ if you want to use the default behavior
-  * **expectedHttpResult** – the expected HTTP result code; normally, an HTTP result code which is not expected will cause an exception; if a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success; setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones (for example, 204 "No Content" when no data is available instead of 200 "OK" with an empty result)
-  * **connectTimeout** – limit, in seconds, before creating a connection times out (default 60 seconds)
-  * **readTimeOut** – limit, in seconds, before reading from the connection times out (default 120 seconds)
-  * **Proxy** – used internally
-  * **manualProxy** – used internally
+    * **postParameterInline** – a Boolean which indicates whether the parameters should be posted inline or passed as the body of the POST request; the default value is **true**
+* **RequestParams** – passes conditions to the OData Connector for SAP solutions actions which change the behavior of the action; pass *empty* if you want to use the default behavior
+    * **expectedHttpResult** – the expected HTTP result code; normally, an HTTP result code which is not expected will cause an exception; if a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success; setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones (for example, 204 "No Content" when no data is available instead of 200 "OK" with an empty result)
+    * **connectTimeout** – limit, in seconds, before creating a connection times out (default 60 seconds)
+    * **readTimeOut** – limit, in seconds, before reading from the connection times out (default 120 seconds)
+    * **Proxy** – used internally
+    * **manualProxy** – used internally
 * **Header** – add a custom HTTP header that provides more information in an HTTP request
-  * **Name** – the name of the header
-  * **Value** – the value of the header
+    * **Name** – the name of the header
+    * **Value** – the value of the header
 * **CloudConnector Info** – information which can be read from SAP BTP to obtain proxy details used to access the SAP Cloud Connector
-  * **ProxyHost** – the address of the proxy which gives access through the SAP Cloud Connector
-  * **ProxyPort** – the port which is to gain access through the SAP Cloud Connector
-  * **ProxyBearerToken** – an authorization token which is needed when using the SAP Cloud Connector
+    * **ProxyHost** – the address of the proxy which gives access through the SAP Cloud Connector
+    * **ProxyPort** – the port which is to gain access through the SAP Cloud Connector
+    * **ProxyBearerToken** – an authorization token which is needed when using the SAP Cloud Connector
 * **Cookie** – the cookie is maintained internally and is valid for a Mendix session or in the microflow context of a startup microflow or scheduled event
 * **CSRFToken** – the Cross-Site Request Forgery (CSRF) token is maintained internally and is used to prevent CSRF attacks; a CSRF token is obtained when a **Get** or **Get list** OData action is performed and is maintained for a Mendix session (or transaction context) which means that:
-  * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSRF token must be obtained before any other actions are performed
-  * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
+    * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSRF token must be obtained before any other actions are performed
+    * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
 * **Destination** – Information which defines the destination when using the *SAP Destination Service*. See [SAP Destination Service](/partners/sap/sap-destination-service/) for more information.<br />
     There are also some entities which are used to construct the *Destination* entity. Attribute values should always be taken from the Destination entity, rather than these entities:
     * DestinationConfiguration
@@ -148,7 +148,7 @@ This domain model is part of the OData Connector for SAP solutions module and ca
 
 This section describes all the actions of the OData Connector for SAP solutions. They are categorized as being either for [entity and attribute manipulation](#EntityManipulation) or [helper actions](#HelperActions).
 
-Some inputs are necessary for the connector to work and these are marked **(required)**. Other inputs are not required, but in some cases this must be made explicit by setting them to _empty_.
+Some inputs are necessary for the connector to work and these are marked **(required)**. Other inputs are not required, but in some cases this must be made explicit by setting them to *empty*.
 
 A more detailed description of the parameters is in the [Connector Action Parameters](#ConnectorActionParameters) section.
 
@@ -161,19 +161,19 @@ The Get List action gets a list of objects described by a type of entity in the 
 {{< figure src="/attachments/partners/sap/sap-odata-connector/get-list-params.png" >}}
 
 * Input
-  * Response type (required) - the type of entity which represents the objects which are returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
-  * Query (required) - the query which will return a list of objects from the OData service. See the section [Query](#Query), below, for more information
-  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
-  * Parent - If the Get List action returns a list of objects which all have a single parent object (an object which is linked as one parent to many objects of Response type) then you can pass the parent object here and Get List will make the associations. Set this to _empty_ if it is not required
-  * Result info - This is an object of type ResultInfo where the number of items in the list is returned. Note that the query should include $inlinecount=allpages in order to return the total number of items in the list. Set this to _empty_ if it is not required
+    * Response type (required) - the type of entity which represents the objects which are returned
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Query (required) - the query which will return a list of objects from the OData service. See the section [Query](#Query), below, for more information
+    * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
+    * Parent - If the Get List action returns a list of objects which all have a single parent object (an object which is linked as one parent to many objects of Response type) then you can pass the parent object here and Get List will make the associations. Set this to *empty* if it is not required
+    * Result info - This is an object of type ResultInfo where the number of items in the list is returned. Note that the query should include $inlinecount=allpages in order to return the total number of items in the list. Set this to *empty* if it is not required
 * Output
-  * Return type - List
-  * Variable - the name which you would like to give to the list of objects which was returned from the query
+    * Return type - List
+    * Variable - the name which you would like to give to the list of objects which was returned from the query
 
 For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
-```javascript
+```javascript {linenos=false}
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
 
@@ -186,21 +186,22 @@ The Get Entry operation gets a single existing entity instance from the OData se
 {{< figure src="/attachments/partners/sap/sap-odata-connector/get-entry-params.png" >}}
 
 * Input
-  * Response type (required) - the type of entity which represents the object which is returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*  
-  * Url (required) - The URL of the object to be retrieved
-  * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+    * Response type (required) - the type of entity which represents the object which is returned
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*  
+    * Url (required) - The URL of the object to be retrieved
+    * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
 * Output
-  * Return type - Object: an object which has the same type as the entity type which was passed as Response type
-  * Variable - the name which you would like to give to the object which is returned by the OData service
+    * Return type - Object: an object which has the same type as the entity type which was passed as Response type
+    * Variable - the name which you would like to give to the object which is returned by the OData service
 
 For example, this connector can get details of a product using the **GWSAMPLE_BASIC** service. This can often be done by passing the meta_objectURI attribute of an object, in this case a Product, which you have already retrieved.
 
 For a product with the reference **HT-1000**, the URL would be set to:
 
-```javascript
+```javascript {linenos=false}
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '(''HT-1000'')'
 ```
+
 This produces the GET request `https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/ProductSet('HT-1000')` and, if the product exists, returns it.  You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
 #### 3.1.3 Create
@@ -215,13 +216,13 @@ This Create is not the same as the Mendix **Create object** action. The OData Co
 
 * Input
 
-  * Odata object (required) - an object which is a specialization of the OdataObject entity and corresponds to the OData Entity which is being created
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
-  * Query (required) - A URL which points to the Collection to which the object belongs. The Collection also identifies as an Entity Set in the OData service.
-  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+    * Odata object (required) - an object which is a specialization of the OdataObject entity and corresponds to the OData Entity which is being created
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Query (required) - A URL which points to the Collection to which the object belongs. The Collection also identifies as an Entity Set in the OData service.
+    * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
 * Output
-  * Return type - Boolean
-  * Variable - the name which you would like to give to the Boolean variable holding the value indicating the success or failure of the create action
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable holding the value indicating the success or failure of the create action
 
 **Deep Create**
 
@@ -233,7 +234,7 @@ In the image below, creating a **Parent** object via the OData Connector for SAP
 
 For example, this connector can be used to create a product using the **GWSAMPLE_BASIC** service. In this case the **Query** is
 
-```javascript
+```javascript {linenos=false}
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet)
 ```
 
@@ -243,7 +244,7 @@ For example, this connector can be used to create a product using the **GWSAMPLE
 
 The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create object** action.
 
- You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
+You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
 #### 3.1.4 Delete
 
@@ -252,12 +253,12 @@ The Delete operation deletes an existing entity instance in the SAP back-end sys
 {{< figure src="/attachments/partners/sap/sap-odata-connector/delete-params.png" >}}
 
 * Input
-  * Odata object (required) - The Mendix representation of the object which you wish to delete
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
-  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+    * Odata object (required) - The Mendix representation of the object which you wish to delete
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
 * Output
-  * Return type - Boolean
-  * Variable - the name which you would like to give to the Boolean variable holding the value indicating the success or failure of the delete action
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable holding the value indicating the success or failure of the delete action
 
 For example, this connector can delete a product using the **GWSAMPLE_BASIC** service.
 
@@ -274,15 +275,15 @@ The Execute entry action allows you to invoke these service operations on the SA
 {{< figure src="/attachments/partners/sap/sap-odata-connector/execute-entry-params.png" >}}
 
 * Input
-  * Response type (required) - the type of entity which represents the object which is returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
-  * Url (required) - the URL of the service operation. This is generally */[function name]* and is preceded by the SERVICEROOT if an SAP Destination Service is not being used
-  * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
-  * Function parameters (required): Additional parameters which the service operation needs in order to retrieve, update, or create the correct data. The name of the relevant Function Parameters entity, imported into your app as part of the SAP service data model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
-  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+    * Response type (required) - the type of entity which represents the object which is returned
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Url (required) - the URL of the service operation. This is generally */[function name]* and is preceded by the SERVICEROOT if an SAP Destination Service is not being used
+    * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
+    * Function parameters (required): Additional parameters which the service operation needs in order to retrieve, update, or create the correct data. The name of the relevant Function Parameters entity, imported into your app as part of the SAP service data model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
+    * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
 * Output
-  * Return type - Object: an object which has the same type as the entity type which was passed as Response type
-  * Variable - the name which you would like to give to the object which is returned by the OData service operation
+    * Return type - Object: an object which has the same type as the entity type which was passed as Response type
+    * Variable - the name which you would like to give to the object which is returned by the OData service operation
 
 #### 3.1.6 Execute list
 
@@ -291,15 +292,15 @@ This performs the same action as the Execute entry action, but this is used wher
 {{< figure src="/attachments/partners/sap/sap-odata-connector/execute-list-params.png" >}}
 
 * Input
-  * Response type (required) - the type of entity which represents the objects in the list which is returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
-  * Url (required) - the URL of the service operation. This is generally */[function name]* and is preceded by the SERVICEROOT if an SAP Destination Service is not being used
-  * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
-  * Function parameters (required): Additional parameters which the service operation needs in order to retrieve or create the correct data. The name of the relevant function parameters entity, imported into your app as part of the SAP service domain model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
-  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+    * Response type (required) - the type of entity which represents the objects in the list which is returned
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Url (required) - the URL of the service operation. This is generally */[function name]* and is preceded by the SERVICEROOT if an SAP Destination Service is not being used
+    * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
+    * Function parameters (required): Additional parameters which the service operation needs in order to retrieve or create the correct data. The name of the relevant function parameters entity, imported into your app as part of the SAP service domain model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
+    * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
 * Output
-  * Return type - List
-  * Variable - the name which you would like to give to the list of objects which is returned by the OData service operation
+    * Return type - List
+    * Variable - the name which you would like to give to the list of objects which is returned by the OData service operation
 
 #### 3.1.7 Refresh
 
@@ -308,12 +309,12 @@ This action refreshes local data which is cached in objects within the Mendix do
 {{< figure src="/attachments/partners/sap/sap-odata-connector/refresh-params.png" >}}
 
 * Input
-  * Odata object (required) - The Mendix representation of the object containing the 'dirty' data which you wish to refresh by retrieving it from SAP using the OData service
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
-  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+    * Odata object (required) - The Mendix representation of the object containing the 'dirty' data which you wish to refresh by retrieving it from SAP using the OData service
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
 * Output
-  * Return type - Boolean
-  * Variable - the name which you would like to give to the Boolean variable which indicates the success or failure of the refresh action.
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable which indicates the success or failure of the refresh action.
 
 #### 3.1.8 Update
 
@@ -322,12 +323,12 @@ The Update operation changes the attributes of an existing entity instance in th
 {{< figure src="/attachments/partners/sap/sap-odata-connector/update-params.png" >}}
 
 * Input
-  * Odata object (required) - The Mendix representation of the object containing the updated data which you wish to update.
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
-  * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+    * Odata object (required) - The Mendix representation of the object containing the updated data which you wish to update.
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
 * Output
-  * Return type - Boolean
-  * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the update action
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the update action
 
 For example, this connector can update details of a product using the **GWSAMPLE_BASIC** service.
 
@@ -339,8 +340,8 @@ This creates a RequestParams object which can be used to control the behavior of
 
 * Input - There are no inputs required for this connector
 * Output
-  * Return type - SAPODataConnector.RequestParams
-  * Variable - the name which you would like to give to the RequestParams object which is returned by this action
+    * Return type - SAPODataConnector.RequestParams
+    * Variable - the name which you would like to give to the RequestParams object which is returned by this action
 
 #### 3.2.2 Add header
 
@@ -349,12 +350,12 @@ One or more headers can be provided to the OData Connector for SAP solutions act
 When you need to pass additional HTTP headers in an OData Connector for SAP solutions action, **you do not pass the headers directly as a single parameter**. The headers are associated with a RequestParams object and it is this object which is used as a parameter to the action. This enables a variable number of headers to be passed easily to an action.
 
 * Input
-  * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the **Create request params** action
-  * Name (required) - the name of the HTTP header field
-  * Value (required) - the value of the HTTP header field
+    * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the **Create request params** action
+    * Name (required) - the name of the HTTP header field
+    * Value (required) - the value of the HTTP header field
 * Output
-  * Return type - Boolean
-  * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the add header action
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the add header action
 
 For example, a service operation may require your email address (`me@here.com`) to be passed in the "From" HTTP header. In this case you would create a RequestParams object and use Add header to add a header with Name='From' and Value='me@here.com'.
 
@@ -365,12 +366,12 @@ This header is automatically associated with the RequestParams object.
 This action is a specialized version of the Add header action. It allows an authentication request to be made without having to manually encode the parameters as Base64. This header will have a name of 'Authorization' and a value which is the encoding of the Username and Password passed to the action.
 
 * Input
-  * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the **Create request params** action
-  * Username (required) - The user to be authenticated
-  * Password (required) - The password for the user to be authenticated
+    * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the **Create request params** action
+    * Username (required) - The user to be authenticated
+    * Password (required) - The password for the user to be authenticated
 * Output
-  * Return type - Boolean
-  * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the authentication action
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the authentication action
 
 #### 3.2.4 Get Latest Http Response
 
@@ -378,8 +379,8 @@ This action returns the HTTP Response to the last OData action that was performe
 
 * Input - This action does not take any input parameters
 * Output
-  * Return type - System.HttpResponse
-  * Variable - the name which you would like to give to the HttpResponse object which is returned by this action
+    * Return type - System.HttpResponse
+    * Variable - the name which you would like to give to the HttpResponse object which is returned by this action
 
 For example, you could catch an exception on **Get List** and display an error message to the user.
 
@@ -395,8 +396,8 @@ This creates a **CloudConnectorInfo** object and fills the values for **ProxyHos
 
 * Input - This action does not take any input parameters
 * Output
-  * Return type - SAPODataConnector.CloudConnectorInfo
-  * Variable - the name which you would like to give to the CloudConnectorInfo object which is created and returned by this action
+    * Return type - SAPODataConnector.CloudConnectorInfo
+    * Variable - the name which you would like to give to the CloudConnectorInfo object which is created and returned by this action
 
 {{% alert color="warning" %}}
 If your app is not running on SAP BTP, this action will throw an error.
@@ -412,7 +413,7 @@ Every action of the OData Connector for SAP solutions will ask for a set of para
 
 The parameters can be entered using the drop-down, clicking the **Edit** or **Select…** buttons, or typing directly into a text field.
 
-Within the edit box, you can type your parameter. As is standard in Mendix, certain characters (for example [@ $ .]) will trigger a pop-up window to help you select the right values. This can also be triggered using <kbd>Ctrl</kbd>+<kbd>Space</kbd>. Typing while this pop-up window is open will filter the list of possibilities. For example, you can type (the beginning of) _entitysetnames_ and the pop-up window will allow you to select the collection of entity set names which you want.
+Within the edit box, you can type your parameter. As is standard in Mendix, certain characters (for example [@ $ .]) will trigger a pop-up window to help you select the right values. This can also be triggered using <kbd>Ctrl</kbd>+<kbd>Space</kbd>. Typing while this pop-up window is open will filter the list of possibilities. For example, you can type (the beginning of) *entitysetnames* and the pop-up window will allow you to select the collection of entity set names which you want.
 
 {{< figure src="/attachments/partners/sap/sap-odata-connector/editbox-sapodataconnector.png" >}}
 
@@ -422,7 +423,7 @@ Press <kbd>Enter</kbd> to select the highlighted item.
 
 #### 4.1.1 Odata object
 
-This is an object which is based on an entity type which is a specialization of the OdataObject entity in the OData Connector for SAP solutions domain model. These entities are the ones created in the domain models which you can download from the Marketplace or import via the OData Model Creator for SAP solutions. Objects which are not based on a specialization of the OdataObject entity cannot be used here.
+This is an object which is based on an entity type which is a specialization of the OdataObject entity in the OData Connector for SAP solutions domain model. These entities are the ones created in the domain models which you can download from the Marketplace or import via the Model Creator for SAP Integrations. Objects which are not based on a specialization of the OdataObject entity cannot be used here.
 
 #### 4.1.2 Response type
 
@@ -442,7 +443,7 @@ This is the OData query which identifies what data should be returned. This quer
 
 The format of the Query is:
 
-```javascript
+```javascript {linenos=false}
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '?' + 'QUERYPARAMETERS'
 ```
 
@@ -463,16 +464,17 @@ If you are using a Destination configured by the SAP Destination Service, then t
 
 For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
-```javascript
+```javascript {linenos=false}
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
+
 {{% alert color="info" %}}
 Note that the request has to be URL encoded so that, for example, spaces have to be encoded as %20. Mendix has the function urlEncode() which can do this for you.
 {{% /alert %}}
 
 This is the equivalent of the SQL SELECT statement:
 
-```sql
+```sql {linenos=false}
 SELECT * FROM SalesOrderSet WHERE Category='Notepads'
 ```
 
@@ -490,7 +492,7 @@ This is the parameter used within an action when:
 
 When you are referencing an object, the format of the URL is:
 
-```javascript
+```javascript {linenos=false}
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
 
@@ -578,9 +580,9 @@ For example, you want to retrieve all the **SalesOrderLineItems** which are asso
 
 #### 4.1.10 Result info
 
- This is an object of type ResultInfo where the number of items in the list is returned. It is used for the Get List action. Note that for a Get List the query should include `$inlinecount=allpages` in order to return the total number of items in the list.
+This is an object of type ResultInfo where the number of items in the list is returned. It is used for the Get List action. Note that for a Get List the query should include `$inlinecount=allpages` in order to return the total number of items in the list.
 
-Set this to _empty_ if it is not required.
+Set this to *empty* if it is not required.
 
 #### 4.1.11 Username
 
@@ -624,9 +626,8 @@ If you have issues using the OData Connector for SAP Solutions, there is a troub
 * [Entities](/refguide/entities/)
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
 * [How to Use the OData Connector for SAP Solutions](/partners/sap/use-sap-odata-connector/)
-* [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator/)
 * [SAP Cloud Connector](/partners/sap/sap-cloud-connector/)
 * [SAP Help Portal](https://help.sap.com)
-* [OData Model Creator for SAP Solutions](https://sapodatamodelcreator.mendixcloud.com/)
+* [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/)
 * [SAP Data Models](/partners/sap/sap-data-models/)
 * [OData Query Options](/refguide/odata-query-options/)

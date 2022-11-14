@@ -1,7 +1,6 @@
 ---
 title: "XPath id"
 url: /refguide7/xpath-id/
-parent: "xpath-query-functions"
 ---
 
 ## 1 Overview

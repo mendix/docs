@@ -2,7 +2,7 @@
 title: "AWS IoT"
 url: /appstore/connectors/aws-iot/
 category: "Connectors"
-description: "Describes the configuration and usage of the AWS IoT connector, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the AWS IoT connector, which enables connecting to IoT devices and data on AWS IoT."
 tags: ["marketplace", "marketplace component", "aws", "iot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---

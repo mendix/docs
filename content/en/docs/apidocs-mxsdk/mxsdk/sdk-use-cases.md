@@ -17,9 +17,9 @@ The longer an organization exists, the larger its installed base of legacy softw
 
 Some of the possibilities:
 
-*   Bootstrap new apps & modify existing apps
-*   Automatically generate CRUD pages for your entities
-*   Transform legacy business logic to microflows
+* Bootstrap new apps and modify existing apps
+* Automatically generate CRUD pages for your entities
+* Transform legacy business logic to microflows
 
 ## 3 Analyzing Your Apps {#analyzing}
 
@@ -29,9 +29,9 @@ If you are looking to improve your existing Mendix app models, it can be hard to
 
 Some of the possibilities are:
 
-*   Counting and listing the components of your app.
-*   Creating a "Death Star" architecture diagram of your app.
-*   Calculating industry standard software metrics like [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) and [fan-in/out](https://en.wikipedia.org/wiki/Fan-out_%28software%29) of microflows.
+* Counting and listing the components of your app.
+* Creating a "Death Star" architecture diagram of your app.
+* Calculating industry standard software metrics like [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) and [fan-in/out](https://en.wikipedia.org/wiki/Fan-out_%28software%29) of microflows.
 
 ## 4 Exporting Your Apps {#exporting}
 
@@ -41,9 +41,9 @@ The SDK allows you to export your Mendix app model and then take it basically an
 
 Some of the possibilities are:
 
-*   Generating documentation.
-*   Transforming microflows into Java method.
-*   Setting up scaffolding for Selenium page objects.
+* Generating documentation.
+* Transforming microflows into Java method.
+* Setting up scaffolding for Selenium page objects.
 
 ## 5 Modifying Your Apps {#modifying}
 
@@ -53,6 +53,6 @@ Your existing Mendix apps will likely need updates and changes. Some of these ch
 
 Some of the possibilities are:
 
-*   Batch updating page elements and labels
-*   Reorganizing the layout of your app model in the blink of an eye
-*   Exposing your microflows as web services and your entities as OData resources
+* Batch updating page elements and labels
+* Reorganizing the layout of your app model in the blink of an eye
+* Exposing your microflows as web services and your entities as OData resources

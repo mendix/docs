@@ -1,10 +1,11 @@
 ---
 title: "Static Label (Document Template)"
 url: /refguide7/static-label-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Static+label+(document+template).html
     - /refguide7/static-label-(document-template).html
+    - /refguide7/Static+label+(document+template)
+    - /refguide7/static-label-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

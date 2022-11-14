@@ -19,9 +19,9 @@ Use this module to brand your Atlas UI app with your own brand or customer brand
 
 * Navigation layouts
 * Page templates
-	* Responsive templates
-	* Tablet templates
-	* Phone templates
+    * Responsive templates
+    * Tablet templates
+    * Phone templates
 * Building blocks
 * Custom widgets
 * Image library
@@ -34,4 +34,4 @@ When using this module in an existing app with a custom theme, the custom theme 
     
 ## 3 Read More
 
-* [Atlas UI How-to's](/howto/front-end/atlas-ui/)
+* [Atlas UI How-tos](/howto/front-end/atlas-ui/)

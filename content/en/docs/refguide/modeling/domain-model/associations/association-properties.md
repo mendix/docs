@@ -1,7 +1,6 @@
 ---
 title: "Association Properties"
 url: /refguide/association-properties/
-parent: "associations"
 weight: 10
 tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -35,11 +34,26 @@ Associations have the following properties:
 
 The name used to refer to the association. For example, in forms or microflows.
 
-### 2.2 Documentation {#documentation}
+### 2.2 Export Level 
+
+{{% alert color="info" %}}
+
+This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
+
+{{% /alert %}}
+
+**Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Hidden *(default)* | The document/element content is hidden from a consumer.      |
+| Usable             | Consumers can see the association in the domain model and use it in their app. |
+
+### 2.3 Documentation {#documentation}
 
 You can write notes and documentation in the **Documentation** property.
 
-### 2.3 Multiplicity {#multiplicity}
+### 2.4 Multiplicity {#multiplicity}
 
 Multiplicity can be of the following types:
 
@@ -51,7 +65,7 @@ Multiplicity can be of the following types:
 
 For more information about association types, see the [Type](/refguide/association-member-properties/#type) section in *Association Tab Properties*, and for information on ownership, see the [Owner](/refguide/association-member-properties/#owner) section in *Association Tab Properties*.
 
-### 2.4 Navigability {#navigability}
+### 2.5 Navigability {#navigability}
 
 | Navigability | Meaning | Equivalent of |
 | --- | --- | --- |
@@ -60,9 +74,17 @@ For more information about association types, see the [Type](/refguide/associati
 
 This corresponds to the **Owner** property for **Reference sets**. See the [Owner](/refguide/association-member-properties/#owner) section of *Association Tab Properties* for a more detailed discussion of the impact of changing navigability.
 
-Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
+Despite its name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
 
-### 2.5 Delete Behavior {#delete-behavior}
+#### 2.5.1 One-Way Navigable Associations {#one-way-navigable}
+
+One-way navigable associations are associations that allow navigation to associated entities only in a single direction: from parent to child. These associations are typically introduced by OData service integration, either through an external provider or the Mendix Data Hub, in [external entities](/refguide/external-entities/#associations). The major implications of one-way navigability are related to XPath use cases such as constraints and queries.
+
+You can retrieve data from all other domain model associations in both directions.
+
+One-way navigable associations are represented by a dashed arrow in Domain model editor. An icon shows the direction of its navigability.
+
+### 2.6 Delete Behavior {#delete-behavior}
 
 | Value | Description |
 | --- | --- |

@@ -1,10 +1,11 @@
 ---
 title: "Footer (Document Template)"
 url: /refguide7/footer-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Footer+(document+template).html
     - /refguide7/footer-(document-template).html
+    - /refguide7/Footer+(document+template)
+    - /refguide7/footer-(document-template)
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

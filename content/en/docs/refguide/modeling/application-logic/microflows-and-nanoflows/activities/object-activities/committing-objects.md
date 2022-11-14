@@ -1,7 +1,6 @@
 ---
 title: "Commit Object(s)"
 url: /refguide/committing-objects/
-parent: "object-activities"
 weight: 30
 tags: ["studio pro"]
 ---
@@ -89,7 +88,7 @@ If set to *Yes*, the object is refreshed across the client, which includes reloa
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 
 #### 3.3.3 Action is in a Nanoflow
 
@@ -105,11 +104,11 @@ When inside a [nanoflow](/refguide/nanoflows/), the object is refreshed across t
 
 When you commit an object, the current value is saved. This means that you cannot rollback to the previous values of the object using the **Rollback** action of a microflow.
 
-However, a Mendix **Commit** is not the same as a database **Commit**. For an object of a persistable entity, the saved value is not committed to the database until the microflow and any microflows from which it is called, completes. This means that errors in a microflow *can* initiate a rollback. If a microflow action errors and has **Error handling** set to *Rollback* or *Custom with rollback*, the value of the object *will* be rolled back to the value it had at the start of the microflow. See [Error Event](/refguide/error-event/#errors-in-microflows) for more information.
+However, a Mendix **Commit** is not the same as a database **Commit**. For an object of a persistable entity, the saved value is not committed to the database until the microflow and any microflows from which it is called, completes. This means that errors in a microflow *can* initiate a rollback. If a microflow action errors and has **Error handling** set to *Rollback* or *Custom with rollback*, the value of the object *will* be rolled back to the value it had at the start of the microflow. See [Error Handling in Microflows](/refguide/error-handling-in-microflows/) for more information.
 
 Mendix mimics this behavior for *non-persistable* entities. Committing a non persistable entity means you cannot use a **Rollback** action to go back to the previous values, although rollback error handling in a microflow *will* roll back to the original values.
 
-### 5.2 Autocommit and Associated Objects
+### 5.2 Autocommit and Associated Objects {#autocommit-and-associated-objects}
 
 When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform may also autocommit associated objects.
 
@@ -126,11 +125,11 @@ If you end up with autocommitted objects, it is always because of a modeling err
 During commit the the following will occur:
 
 * Events: For *explicitly committed* objects all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
-	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
-	* Changes made prior to the commit will be kept
-		{{% alert color="warning" %}}Before and after events are not executed for autocommitted objects.{{% /alert %}}
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
+    * Changes made prior to the commit will be kept
+        {{% alert color="warning" %}}Before and after events are not executed for autocommitted objects.{{% /alert %}}
 * Database: there is an insert or update query executed both for explicitly committed objects and auto committed objects
-	* Depending on the object state, the platform will do an insert for objects with the state **Instantiated** and an update for all other states
+    * Depending on the object state, the platform will do an insert for objects with the state **Instantiated** and an update for all other states
 * Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/18582172.png" >}}

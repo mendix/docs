@@ -3,7 +3,7 @@ title: "Mendix Support"
 url: /developerportal/support/
 description: ""
 tags: ["Support", "SLA", "Gold", "Platinum"]
-weight: 30
+weight: 35
 aliases:
     - /howtogeneral/support/index.html
 ---

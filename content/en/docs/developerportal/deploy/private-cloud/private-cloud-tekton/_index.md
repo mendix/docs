@@ -102,14 +102,15 @@ You can read the official installation procedure on the [Tekton Dashboard](https
 
 #### 3.4 Simplified architecture example{#architecture}
 
-Below is example of recommended architecture setup.
+Below is and example of the recommended architecture setup.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" >}}
 
-In this example you can see that there are 3 namespaces.
-1. Namespace with installed Mendix operator.
-2. Namespace with installed Mendix [tekton pipelines](#pipelines-installation) and [triggers](#installing-triggers).
-3. Namespace with installed [Tekton & Tekton Triggers](#tekton-installation).
+The example shows the following namespaces:
+
+* Namespace with a Mendix operator.
+* Namespace with Mendix [Tekton pipelines](#pipelines-installation) and [triggers](#installing-triggers).
+* Namespace with [Tekton and Tekton Triggers](#tekton-installation).
 
 ## 4 Air-gapped Environments
 

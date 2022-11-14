@@ -197,7 +197,7 @@ From version 9.18.0, Mendix Studio Pro uses the system browser for signing in to
 
 Studio Pro uses an embedded browser for login. Login via embedded browser may not work when customer’s IdP is allowing only for trusted devices and doesn’t recognize the embedded browser.
 
-Mendix has created an enhancement of Studio Pro (9.21+) that uses system browser to overcome this limitation.
+Mendix has created an enhancement in Studio Pro (9.21+) that uses your system browser to for login, to overcome this limitation.
 
 ### 9.5 IdP Does Not Have JWKS Endpoint
 

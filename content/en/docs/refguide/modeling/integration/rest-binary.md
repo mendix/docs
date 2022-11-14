@@ -8,37 +8,51 @@ tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "publ
 
 ## 1 Introduction
 
-Learn how to publish or consume files with REST in Studio Pro.
+Follow this guide to learn how to publish images and files as REST services for use in other apps. 
 
 ### 1.1 Prerequisites 
 
-To publish or consume files with REST, do the following:
+To publish or consume files and images with REST, do the following:
 
-* Install Studio Pro
-* Read how to [publish](/howto/integration/publish-rest-service/) and [consume](/howto/integration/consume-a-rest-service/) REST services
-* Read about [working with images and files](/howto/data-models/working-with-images-and-files/) in Studio Pro
+* Install Studio Pro 
+
+While not required, we recommend reading the following for more background:
+
+* [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
+* [Working with images and files](/howto/data-models/working-with-images-and-files/) in Studio Pro
 
 ## 2 Using Images and Files in Your App
 
-To publish and consume images or files with REST, you need to be using them in your app. The entities that you will expose and publish will be **System.Image** or **System.FileDocument**
+To publish and consume images or files with REST, you need to be using them in your app. Images and files you use in your app are stored in **System.Image** and **System.FileDocument** entities.
 
-Follow [Work with Images and Files](/howto/data-models/working-with-images-and-files/) for step-by-step instructions, including using the **System.Image** and **System.FileDocument** generalizations.
+Follow [Work with Images and Files](/howto/data-models/working-with-images-and-files/) for step-by-step instructions on setting up these entities and overview pages and using them in your app.
 
 ## 3 Publish Images and Files as REST 
 
+We can use this entity as a reference:
 
 
 
-(Separate between images and PDFs)
+To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide/published-rest-service/), do the following:
+
+1.  Generate the overview pages if you have not yet done so.
+    Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**.
+
+2.  Expose the entity as a REST resource.
+    Right-click on the **System.Image** or **System.FileDocument** entity that contains the file(s) that you want to publish, and click **Expose as a REST resource**.
+
+3.  Click **Select** next to the **Service** field, then click on the folder where you want to create the service and click **New**. Enter a name for the REST service and click **OK**.
+   
+4.  Back in the **Generate resource and operations** window, select the **Key attribute** and required **Operations**, then click **OK**.
+    The **Key attribute** should be **FileID**.
+    See the [Operations](/refguide/generate-rest-resource/#operations) section of *Generating a Published REST Resource* for a description of each operation.
+
+5.  The **Published REST service** document has been created and is now open on your screen. By default, the **Get by** key should return a binary response because it will return a FileDocument. 
 
 
 
-1. System.File Document - Entity containing the files you want to publish in a REST API
-2. Generate overview pages
-3. Expose as REST resource
-4. Select the required operations (Get all, get by key, post, delete). Default generated service, the Get by key should return a binary response because it will return a file document).
-5. A binary object without an export mapping will return binary content (Export mapping: none)
-6. [Microflow example, returning a file document]
+6.  A binary object without an export mapping will return binary content (Export mapping: none)
+7.  [Microflow example, returning a file document]
 
 ## 4 Consuming Images and Files with REST
 

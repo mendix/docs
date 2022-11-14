@@ -26,7 +26,7 @@ Type the name of the resource that you want to publish.
 
 To be able to create a **Get by key**, a **Patch** or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
 
-## 4 Operations
+## 4 Operations {#operations}
 
 Check the operations that you want to generate:
 

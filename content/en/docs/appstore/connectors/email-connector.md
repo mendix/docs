@@ -147,9 +147,11 @@ When the module is running, you can create templates to use for a specific email
 
 In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** use this snippet to configure this functionality.
 
-#### 4.3.1 Create EmailMessage from EmailTemplate
+#### 4.3.1 Creating an Email Message from a Template
 
-When modeling your app in Studio Pro, use the  **CreateEmailFromTemplate** Java action. The input parameters are the following:
+When modeling your app in Studio Pro, use the  **CreateEmailFromTemplate** Java action to create a draft message that you can preview and modify. Once your message is ready, you can send it with the **SendEmail** action.
+
+The input parameters are the following:
 
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email template** – email template from which email message object is created and sent
@@ -159,7 +161,7 @@ Refer to sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**. Thi
 
 #### 4.3.2 Sending an Email with a Template
 
-When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action. The input parameters are the following:
+When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action to send an email from a template. The input parameters are the following:
 
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email account** – email account consisting of outgoing email configuration

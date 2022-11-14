@@ -49,7 +49,11 @@ The default language is the language of the user interface of your app. Choose t
 
 ### 2.4 App Directory
 
-Specify the directory in which the files for your app are stored. If you enable the online services for the new app, you will see that the suffix *-main* will be appended to the directory name automatically. This is to indicate that the directory contains the main branch line of your app. While working on your app, you can create new branches and download these to other directories. For more information on the branch line management, see [Branch Line Manager](/refguide/branch-line-manager-dialog/).
+Specify the directory in which the files for your app are stored.
+
+If you enable the online services for the new app, you will see that the suffix *-main* will be appended to the directory name automatically. This is to indicate that the directory contains the main branch line of your app. While working on your app, you can create new branches and download these to other directories. For more information on the branch line management, see [Branch Line Manager](/refguide/branch-line-manager-dialog/).
+
+The default directory in which new apps are stored can be changed in the [Preferences](/refguide/preferences-dialog/#241-default-app-directory) dialog.
 
 ## 3 Read More
 

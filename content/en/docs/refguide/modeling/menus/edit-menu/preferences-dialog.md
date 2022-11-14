@@ -53,6 +53,12 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
+### 2.4 Disk Location
+
+#### 2.4.1 Default App Directory
+
+This is the directory in which new apps will be stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog when creating a new app. If a different directory is selected in the App Settings dialog, that directory will be stored as the new default app directory.
+
 ### 3 Mendix Assist Tab
 
 #### 3.1 Logic Bot

@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### November 14th, 2022
+
+#### Improvements
+
+* We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spams.
+
 ### November 10th, 2022
 
 #### Improvements

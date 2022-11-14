@@ -65,7 +65,7 @@ A **pipeline** is a collection of **tasks** in order. Tekton creates tasks in a 
 
 A **task** is a collection of **steps** in order. Tekton runs a task in the form of a Kubernetes pod, where each step becomes a running container in the pod. This design allows you to set up a shared environment for a number of related steps. For example, you may mount a Kubernetes volume in a task; this will be accessible from each step of the task.
  
-A **step** is an operation in a CI/CD workflow. Tekton performs each step as a running container in the task pod. 
+A *step* is an operation in a CI/CD workflow. Tekton performs each step as a running container in the task pod. 
     
 Tasks and pipelines are specified as custom resources (CRs) in a Kubernetes cluster.
 
@@ -100,7 +100,7 @@ These instructions install the Tekton Dashboard in the same namespace as the Tek
 
 You can read the official installation procedure on the [Tekton Dashboard](https://github.com/tektoncd/dashboard/#readme) GitHub repo.
 
-#### 3.4 Simplified architecture example{#architecture}
+#### 3.4 Simplified architecture example {#architecture}
 
 Below is and example of the recommended architecture setup.
 
@@ -153,7 +153,7 @@ Before you install the Mendix pipelines, which contain all Tekton-related object
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
-You need to install it in the separate namespace like shown [here](#architecture). Further, we will use $NAMESPACE_WITH_PIPELINES to refer to that namespace.
+Install it in a separate namespace, as shown in [Simplified architecture example](#architecture). The installation command below uses {$NAMESPACE_WITH_PIPELINES} to refer to that namespace.
 
 The installation command is:
 
@@ -176,11 +176,11 @@ There are also two options to build a Mendix app using either a generic or a Git
 
 ### 7.1 Persistent Volume Claims (PVCs)
 
-By default, pipelines comes with a *5GB PVC* with an **empty *storageClassName***. You can create your own PVC by following [these instructions](https://tekton.dev/docs/getting-started/#persistent-volumes) in the Tekton documentation.
+By default, pipelines comes with a 5GB PVC with an **empty *storageClassName***. You can create your own PVC by following [these instructions](https://tekton.dev/docs/getting-started/#persistent-volumes) in the Tekton documentation.
 
 To use your own PVC add `--set pvcName=$your-pvc-name` to each command during installation of the triggers.
 
-### 7.2 Authentication{#authentication}
+### 7.2 Authentication {#authentication}
 
 You can specify a secret access token which the trigger will use to validate received payloads.
 

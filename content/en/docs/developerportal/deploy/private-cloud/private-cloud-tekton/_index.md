@@ -154,7 +154,7 @@ Before you install the Mendix pipelines, which contain all Tekton-related object
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 
-Install the pipeline in a separate namespace, as shown in [Simplified architecture example](#architecture). The sections below uses {$NAMESPACE_WITH_PIPELINES} to refer to that namespace.
+Install the pipeline in a separate namespace, as shown in [Simplified architecture example](#architecture). The sections below use {$NAMESPACE_WITH_PIPELINES} to refer to that namespace.
 
 The installation command is:
 

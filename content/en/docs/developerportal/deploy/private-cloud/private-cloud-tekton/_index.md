@@ -359,7 +359,7 @@ This CronJob requires IAM user with the next policy:
     ]
 }
 ```
-You need replace strings `$YOUR_REGISTRY_REGION`, `$YOUR_ACCOUNT` and `$YOUR_REPO` with your values (use the same repo from [this section](pipelines-installation)).  
+You need replace strings `$YOUR_REGISTRY_REGION`, `$YOUR_ACCOUNT` and `$YOUR_REPO` with your values (use the same repo from [this section](#pipelines-installation)).  
 
 Manifest below contains CronJob that will refresh secret with ECR .dockerconfig every 4 hours.
 Also, it contains Job that will create that secret for the first time.

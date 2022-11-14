@@ -38,7 +38,7 @@ To quickly configure the connection to Amazon S3 by using an example microflow, 
     For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`.
     {{% /alert %}}
 
-2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication).
+2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/).
 3. In the App Explorer, in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**, find an example microflow that performs a function which you want to use in your app.
     For example, if you want to get the contents of an object in the S3 bucket, find the **SUB_GetObject** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
 4. Drag the example microflow onto the working area of the microflow that you created in step 2, and position it after the **GetSessionCredentials** activity.

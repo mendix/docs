@@ -8,9 +8,7 @@ tags: ["studio pro"]
 
 The `min()` function returns the minimum value of its argument.
 
-The function requires an XPath query as argument.
-
-The function must specify a column in the query to aggregate.
+The function must specify a column in the query to aggregate (for example, `/TotalPrice`).
 
 The query must specify an attribute that has a numeric type.
 

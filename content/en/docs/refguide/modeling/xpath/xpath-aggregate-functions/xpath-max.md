@@ -8,9 +8,7 @@ tags: ["studio pro"]
 
 The `max()` function returns the maximum value of its argument.
 
-The function requires an XPath query as argument.
-
-The function must specify a column in the query to aggregate.
+The function must specify a column in the query to aggregate (for example, `/TotalPrice`).
 
 The query must specify an attribute that has a numeric type.
 
@@ -18,12 +16,12 @@ The query must specify an attribute that has a numeric type.
 
 This query returns the highest total price found in any object:
 
-```java
+```java {linenos=false}
 max(//Sales.Order/TotalPrice)
 ```
 
 This query returns the highest total price of an order placed by a customer named "Jansen":
 
-```java
+```java {linenos=false}
 max(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```

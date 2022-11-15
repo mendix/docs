@@ -16,7 +16,7 @@ Amazon SNS helps improve your app by providing a messaging service to send notif
 
 ### 1.2 Prerequisites
 
-The Amazon SNS connector requires the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon SNS connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
 
 {{% alert color="info" %}}
 Ensure that the AWS user account used for authentication has the appropriate permissions to access the SNS service in AWS.

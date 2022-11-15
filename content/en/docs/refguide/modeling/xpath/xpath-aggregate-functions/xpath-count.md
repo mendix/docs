@@ -4,10 +4,6 @@ url: /refguide/xpath-count/
 tags: ["studio pro"]
 ---
 
-{{% alert color="warning" %}}
-This function is for use in Java code only and it must contain a full XPath query as its argument.
-{{% /alert %}}
-
 ## 1 Overview
 
 The `count()` function counts all objects retrieved by the enclosed query and returns the value as an integer.

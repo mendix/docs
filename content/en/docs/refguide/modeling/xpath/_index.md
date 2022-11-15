@@ -66,7 +66,7 @@ For details, see [XPath Operators](/refguide/xpath-operators/).
 
 ## 5 Functions
 
-There are two function types - [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). XPath aggregate functions are for use in Java code only and they must contain full queries as their arguments. XPath constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints. 
+There are two function types - [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). XPath aggregate functions are for use in Java code only and must contain full queries as their arguments. XPath constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints. 
 
 See below some frequently used XPath functions:
 

@@ -4,10 +4,6 @@ url: /refguide/xpath-avg/
 tags: ["studio pro"]
 ---
 
-{{% alert color="warning" %}}
-This function is for use in Java code only and it must contain a full XPath query as its argument.
-{{% /alert %}}
-
 ## 1 Overview
 
 The `avg()` function returns the average of its argument.

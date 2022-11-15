@@ -5,7 +5,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}
-These functions are for use in Java code only and they must contain full XPath queries as their arguments.
+These functions are for use in Java code only and must contain full XPath queries as their arguments.
 {{% /alert %}}
 
 The following XPath query aggregate functions are available:

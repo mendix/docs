@@ -4,10 +4,6 @@ url: /refguide/xpath-max/
 tags: ["studio pro"]
 ---
 
-{{% alert color="warning" %}}
-This function is for use in Java code only and it must contain a full XPath query as its argument.
-{{% /alert %}}
-
 ## 1 Overview
 
 The `max()` function returns the maximum value of its argument.

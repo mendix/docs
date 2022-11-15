@@ -12,6 +12,7 @@ The following pages describe the functions that can be executed within constrain
 * [ends-with](/refguide/xpath-ends-with/)
 * [false](/refguide/xpath-false/)
 * [hours-from-dateTime](/refguide/xpath-hours-from-datetime/)
+* [length](/refguide/xpath-length/)
 * [minutes-from-dateTime](/refguide/xpath-minutes-from-datetime/)
 * [month-from-dateTime](/refguide/xpath-month-from-datetime/)
 * [not](/refguide/xpath-not/)

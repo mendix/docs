@@ -73,9 +73,15 @@ The description of the **DeepLink.DeeplinkConfigurationOverview** snippet is as 
 On the **Configuration** tab, there are these settings:
 
 * **Name** – This is the name used for constructing the URL. For example, if you enter *product* here, the URL will be `http://my.app/link/product`. 
+
 * **Description** – This is the description of the deep link.
-* **Deeplink Hander Microflow** – The selected microflow will be executed when the deep link URL is requested.
+
+* **Deeplink Handler Microflow** – The selected microflow will be executed when the deep link URL is requested.
+
+  {{% alert color="info" %}}If the deep link handler microflow was changed to accept a different entity, then you have to re-select it from the microflows list.{{% /alert %}}
+
 * **The attribute of which the value will be used for looking up the requested object** – The value of the selected attribute will be used for looking up the requested object.
+
 * **Example** – This shows an example of the deep link URL.
 
 On the **Advanced** tab, there are these settings:

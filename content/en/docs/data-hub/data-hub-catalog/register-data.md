@@ -78,7 +78,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v3/applications' \
+curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Application"}'
@@ -112,7 +112,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v3/applications/{application_UUID}/environments' \
+curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Environment", "Location": "https://my-deployed-application-url.com", "Type": "Production"}'
@@ -153,7 +153,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request PUT 'https://hub.mendix.com/rest/registration/v3/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
+curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Endpoints":[{"Path": "/path/to/my/service/endpoint","ServiceVersion":{"Version": "1.0","Service":{"Name": "My-Service-Name","ContractType": "OData_3_0"},"SecurityScheme": { "SecurityTypes": [{"Name": "Basic"}] },"Contracts":[{"Type": "Metadata",  "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"}]}}]}'
@@ -170,7 +170,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 		"SecurityClassification": "Internal",
 		"UUID": "f6cde195-a45e-4077-b055-bca10e83c202",
 		"Links": [{
-				"Href": "https://hub.mendix.com/rest/registration/v3/endpoints/f6cde195-a45e-4077-b055-bca10e83c202",
+				"Href": "https://hub.mendix.com/rest/registration/v4/endpoints/f6cde195-a45e-4077-b055-bca10e83c202",
 				"Rel": "Self"
 			},
 			{
@@ -189,7 +189,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 				"ContractType": "OData_3_0",
 				"UUID": "0fe4ce93-a421-4ffe-8022-3715a5a60d15",
 				"Links": [{
-					"Href": "https://hub.mendix.com/rest/registration/v3/applications/0301800d-b104-417f-8a64-a8f3ba3450c3/services/My-Service-Name",
+					"Href": "https://hub.mendix.com/rest/registration/v4/applications/0301800d-b104-417f-8a64-a8f3ba3450c3/services/My-Service-Name",
 					"Rel": "Self"
 				}]
 			},
@@ -222,12 +222,12 @@ To call the Transform API, you need the following:
 
     {{% alert color="info" %}}These two values can be found in the `metadata.json` file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html#/Dependencies.json/post_dependenciesjson). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson). 
 
 You can see an example of a request that converts a `dependencies.json` file below: 
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/transform/v1/dependenciesjson' \
+curl --location --request POST 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{

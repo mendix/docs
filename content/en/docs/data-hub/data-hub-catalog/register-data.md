@@ -62,7 +62,7 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 2. Use the application UUID to [register the environment, and retrieve the environment UUID](#register-environment).
 3. Use the application UUID and the environment UUID to [register one or more services](#register-services).
 
-    If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
+    If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering them.
 
 The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
@@ -207,11 +207,11 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 
 #### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
-The Transform API converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
+The Transform API, an endpoint in the Registration API, converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
 
 {{% alert color="info" %}}These optional fields are not currently converted by the Transform API: `SecurityClassification`, `Discoverable`, `Validated`, `ServiceVersion`, `Tags`.{{% /alert %}}
 
-To call the Transform API, you need the following:
+To call the Transform endpoint of the Registration API, you need the following:
 
 * Your app's `dependencies.json` file converted to an escaped JSON string
 

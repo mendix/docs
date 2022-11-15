@@ -30,7 +30,7 @@ To deploy an app to your private cloud platform, you need the following:
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
 * Mendix Studio Pro version 7.23.3 (build 48173) or above.
 * A Mendix app created with the version of Studio Pro you are using.
-* Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created.
+* Make sure that the security of the app must be set to Production. By default, all environments are set to Production mode when created. If you want to change it to Developer mode, connect with cluster manager to enable the developer mode in the cluster manager page.
 
 ## 3 Deploying an App for the First Time
 
@@ -100,13 +100,17 @@ All environments are defined as production environments, which means that [secur
 
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-    {{% alert color="info" %}}You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}
+{{% alert color="info" %}}
+You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
+{{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
 
-4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, whatever you call them.
+4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, whenever you create them.
 
 5. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentNamespaceSelection.png" >}}
 
 6. Enter a **Subscription Secret** if you want your app to run as a licensed app. Without a license, your app will be subjected to restrictions very similar to those listed in the [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
 
@@ -130,7 +134,15 @@ All environments are defined as production environments, which means that [secur
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
+
+{{% alert color="info" %}}
+If cluster manager has configured Secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store [here](/developerportal/deploy/private-cloud/private-cloud-secrets.md).
+{{% /alert %}}
+
 10. Select a **Storage plan** from the list of plans set up in the namespace.
+{{% alert color="info" %}}
+If cluster manager has configured Secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store [here](/developerportal/deploy/private-cloud/private-cloud-secrets.md).
+{{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
 
@@ -139,7 +151,11 @@ All environments are defined as production environments, which means that [secur
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image8.png" >}}
 
-See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
+    See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
+
+{{% alert color="info" %}}
+The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial* 
+{{% /alert %}}  
 
 ### 3.4 Deploying the Deployment Package{#deploy-package}
 
@@ -296,6 +312,10 @@ The Operator license is independent from a Mendix Runtime license. The Operator 
 You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
 {{% /alert %}}
 
+##### 4.2.1.6 Service Account
+
+The word **Service Account** indicates that if this environment is successfully attached to a service account or not. If no service accounts are created specific to this environment, then this environment will be attached to the default service account.
+
 #### 4.2.2 Add Environment
 
 This adds a new environment as described in [Creating an Environment](#create-environment), above.
@@ -386,7 +406,7 @@ This allows you to clear the password for the local admin user set in the Privat
 
 ##### 5.1.3.5 Change Admin Password
 
-This allows you to change the password for the local admin user in your app. The password you set here will be pushed to your app environment every time the app is deployed.
+This allows you to change the password for the local admin user in your app. The password you set here will be pushed to your app environment every time the app is deployed. However, if MxAdmin password is configured in the Cloud Portal (or MendixApp CR) and CSI Secrets Storage, then secret storage will have a higher priority and will override the value specified in the Portal.
 
 {{% alert color="info" %}}
 By default, there will be no admin password set for your environment. This means that the Mendix administration account will be inactive unless you set (change) a password.

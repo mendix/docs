@@ -1614,6 +1614,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 * Plans
 * Installation
 * Additional information
+* Customization
 
 See the sections below for more information.
 
@@ -1649,6 +1650,8 @@ You can also see an activity log containing the following information for all na
 * When user's permission is changed in the namespace
 * When environment configurations are added, updated, or removed
 * When Runtime Metrics configurations are added, updated, or deleted
+* When developer mode is enabled in the namespace
+* When developer mode is disabled in the namespace
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-activity-logs.PNG" >}}
 
@@ -1798,6 +1801,16 @@ You can also download the Configuration Tool again, if you wish.
 #### 6.2.6 Additional Information
 
 This tab shows information on the versions of the various components installed in your namespace.
+
+#### 6.2.7 Customization
+
+This tab enables the cluster manager to customize the enablement of Secret store and developer mode for the developers. 
+
+Enabling the External Secrets Store option will allow users to retrieve secrets from External Secrets Store for database plan, storage plan, MxAdmin password.
+
+Enabling the Development Mode option will allow users to change the type of an environment to Development.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
 
 ## 7 Current Limitations
 

@@ -68,15 +68,19 @@ Make sure that the roles that need to change the configuration of the Deep Link 
 
 To configure and manage deep links at runtime, add the **DeepLink.DeeplinkConfigurationOverview** snippet to a custom admin page, and make sure that all the users who operate the app can access this page. You need to add the **DeepLink.Admin** module role to their user roles.
 
+The description of the **DeepLink.DeeplinkConfigurationOverview** snippet is as follows:
+
 On the **Configuration** tab, there are these settings:
 
-
-
-
+* **Name** – This is the name used for constructing the URL. For example, if you enter *product* here, the URL will be `http://my.app/link/product`. 
+* **Description** – This is the description of the deep link.
+* **Deeplink Hander Microflow** – The selected microflow will be executed when the deep link URL is requested.
+* **The attribute of which the value will be used for looking up the requested object** – The value of the selected attribute will be used for looking up the requested object.
+* **Example** – This shows an example of the deep link URL.
 
 On the **Advanced** tab, there are these settings:
 
-* **Do not force a login action** – If selected, anonymous users will be able to access the deep link. If unselected, anonymous user sessions will be redirected to the location in the **LoginLocation** constant.
+* **Do not force a login action** – If selected, anonymous users will be able to access the deep link. If unselected, anonymous user sessions will be redirected to the location specified in the **LoginLocation** constant.
 * **Language** – The selected language will be associated to the anonymous user session.
 * **Keep the deep link the entire session** – If selected, the deep link will be the home page for the session. For example, when the user goes to `/link/article/1`, the deep link handler microflow is executed and the user is navigated to the page specified in handler microflow. This handler microflow now will be executed every time user reloads the Mendix app or calls the **DeepLink.DeepLinkHome** microflow. Ending current session will stop this behaviour until this deep link is called again.
 * **Process an argument as an Object** – This is deprecated.

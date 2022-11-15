@@ -72,7 +72,7 @@ However, you can migrate manually by creating a new app based on Team Server Git
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server?
 
-Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TurtoiseSVN, TurtoiseGit, or GitHub Desktop by using the following repository URLs:
+Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop by using the following repository URLs:
 
 * Team Server SVN: `https://teamserver.sprintr.com/<your AppID>/` 
 * Team Server Git: `https://git.api.mendix.com/<your AppID>.git`

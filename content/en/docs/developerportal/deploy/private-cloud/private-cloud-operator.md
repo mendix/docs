@@ -5,7 +5,6 @@ url: /developerportal/deploy/private-cloud-operator/
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 weight: 30
 tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -102,7 +101,7 @@ spec:
         return 403;
       }
   ingressClassName: alb # Optional, can be omitted : specify the Ingress class
-  ingressPath: "/" # Optional, can be omitted : specify the Ingress path
+  ingressPath: "/" # Optional, can be omitted : specify the Ingress path. Anything other than "/" or "/*" will be ignored as Mendix applications don't support path based routing
   ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
@@ -319,6 +318,7 @@ The following statuses will be reported:
 * **networkStatus** – Ready
 * **runtimeStatus** – Ready
 * **storageStatus** – Ready
+* **serviceAccountStatus** - attached
 
 ### 3.5 Starting and Stopping Your App
 

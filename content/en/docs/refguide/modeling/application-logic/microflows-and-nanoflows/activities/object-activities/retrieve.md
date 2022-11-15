@@ -78,7 +78,7 @@ This property specifies the range that determines how many objects are retrieved
 
 #### 3.3.3 XPath Constraint
 
-The [XPath](/refguide/xpath/) constraint defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
+The [XPath constraint](/refguide/xpath-constraints/) defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
 {{% alert color="info" %}}
 Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve activity is in a nanoflow.

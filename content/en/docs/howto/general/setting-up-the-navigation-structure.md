@@ -134,6 +134,6 @@ To avoid adding the menu widget on every page in your app,  you can use a layout
 ## 8 Read More
 
 * [Atlas UI](/howto/front-end/atlas-ui/)
-* [Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 * [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

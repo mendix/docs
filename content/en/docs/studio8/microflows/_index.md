@@ -108,7 +108,7 @@ To add a new activity or event to the microflow, do the following:
 1. Open the microflow you want to add the event or activity to.
 2. Open the **Toolbox** tab.
 3. Select the event or activity in the **General**, **Object Activities** or **Client Activities** section.
-4. Drag and drop the event or activity in the microflow. 
+4. Drag the event or activity into the microflow. 
 
 ## 8 Toolbox {#microflows-toolbox}
 
@@ -213,4 +213,4 @@ When configuring the activities of microflows you will notice icons above or und
 * [Decision](/studio8/microflows-decision/) – explains what a decision is and describes its properties
 * [Loop](/studio8/microflows-loop/) – explains what a loop is and describes its properties
 * [Microflow Expressions](/studio8/microflows-expressions/) – explains how to use microflow expressions
-* [Set & Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/) – explains how to set or/and change a value for microflow activities
+* [Set and Change a Value for Different Activities in the Microflows](/studio8/microflows-setting-and-changing-value/) – explains how to set or/and change a value for microflow activities

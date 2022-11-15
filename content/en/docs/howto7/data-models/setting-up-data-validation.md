@@ -109,7 +109,7 @@ Validating user input can also be achieved by overriding the default save button
 
 ## 5 Read More
 
-* [How to Work with Images & Files](/howto7/data-models/working-with-images-and-files/)
+* [How to Work with Images and Files](/howto7/data-models/working-with-images-and-files/)
 * [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer/)
 * [How to Work with Object Events](/howto7/data-models/working-with-object-events/)
 * [How to Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/)

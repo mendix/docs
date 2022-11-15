@@ -1,5 +1,5 @@
 ---
-title: "Start Styling with Gulp & Sass"
+title: "Start Styling with Gulp and Sass"
 url: /howto8/front-end/style-with-gulp-and-sass/
 weight: 2
 tags: ["gulp", "sass", "ux", "front end"]
@@ -26,7 +26,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [How to Set Up Gulp & Sass](/howto8/front-end/sass-eight/)
+* Complete [How to Set Up Gulp and Sass](/howto8/front-end/sass-eight/)
 
 ## 3 Setting Up the Gulp Project
 

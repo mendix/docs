@@ -79,5 +79,5 @@ For SVG files, TwelveMonkeys ImageIO itself delegates to the Batik library—whi
 ## 3 Read More
 
 * [Page](/refguide/page/)
-* [Images, Videos & Files](/refguide/image-and-file-widgets/)
+* [Images, Videos, and Files](/refguide/image-and-file-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

@@ -1,5 +1,5 @@
 ---
-title: "Create Custom Preview Images for Building Blocks & Page Templates"
+title: "Create Custom Preview Images for Building Blocks and Page Templates"
 linktitle: "Custom Preview Images"
 url: /howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/
 weight: 50

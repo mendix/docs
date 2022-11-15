@@ -1,5 +1,5 @@
 ---
-title: "Work with Load Units & Elements"
+title: "Work with Load Units and Elements"
 url: /apidocs-mxsdk/mxsdk/loading-units-and-elements/
 ---
 

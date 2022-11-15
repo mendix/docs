@@ -1,7 +1,7 @@
 ---
 title: "API Documentation"
 url: /apidocs-mxsdk/apidocs/
-description: "The Mendix Platform API documentation is divided into sections such as Runtime, Client, Feedback, and Deploy."
+description: "Presents an overview of the Mendix Platform API documentation, such as Runtime, Client, Feedback, and Deploy."
 weight: 10
 aliases:
     - /apidocs/index.html
@@ -64,7 +64,7 @@ For details, see [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/).
 
 Use these SDKs to gain access to the inner-workings of a Mendix app.
 
-For details, see [Model SDK & Platform SDK](/apidocs-mxsdk/apidocs/model-platform-sdk/).
+For details, see [Model SDK and Platform SDK](/apidocs-mxsdk/apidocs/model-platform-sdk/).
 
 ## 11 Permissions API
 

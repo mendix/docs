@@ -1,6 +1,6 @@
 ---
 title: "Use an SAP Connectivity Service with REST and SOAP"
-linktitle: "Use SAP Connectivity Service with REST & SOAP"
+linktitle: "Use SAP Connectivity Service with REST and SOAP"
 url: /partners/sap/sap-destination-with-rest/
 category: "SAP"
 weight: 25

@@ -9,5 +9,5 @@ tags: ["studio", "microflows", "decision", "domain model", "how to"]
 
 The following how-tos will guide you through the process of configuring a decision in Mendix Studio:
 
-* [Step 1: Build the Domain Model & Configure a Microflow](/studio7/microflows-how-to-configure-decision-p1/)
+* [Step 1: Build the Domain Model and Configure a Microflow](/studio7/microflows-how-to-configure-decision-p1/)
 * [Step 2: Embed the Microflow in Your App](/studio7/microflows-how-to-configure-decision-p2/)

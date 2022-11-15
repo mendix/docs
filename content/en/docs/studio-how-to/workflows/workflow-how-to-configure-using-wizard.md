@@ -70,7 +70,7 @@ The Administrator role has access to the Workflow Dashboard and the Workflow Man
 
 To test your workflow, you need to switch between different user roles. Follow the steps below:
 
-1. Click the **Preview** button. (For more information on how to preview your app, see [Previewing & Publishing Your App](/studio/publishing-app/).)
+1. Click the **Preview** button. (For more information on how to preview your app, see [Previewing and Publishing Your App](/studio/publishing-app/).)
 2. Click the user icon on the right and select a user role:
 
     {{< figure src="/attachments/studio-how-to/workflows/workflow-how-to-configure-using-wizard/user-roles.png" alt="Demo User Role"  width="350" >}}

@@ -92,6 +92,6 @@ Having defined the mappings for the attributes, these mappings are also shown in
 
 Import mappings have the additional option to receive an incoming parameter. The parameter can be passed in by the calling microflow when microflow uses the [import from mapping](/refguide8/import-mapping-action/) action.
 
-To define a parameter for your mapping, click the parameter box and select the data type. You can also drag an entity to the parameter box. 
+To define a parameter for your mapping, click the parameter box and select the data type. You can also drag an entity into the parameter box. 
 
 You can use a parameter as a key or in a microflow to obtain objects. When you use an entity parameter, you can set associations to it. When you use a primitive parameter (string, integer, etc.), you can write the value to an attribute of an object that is being imported.

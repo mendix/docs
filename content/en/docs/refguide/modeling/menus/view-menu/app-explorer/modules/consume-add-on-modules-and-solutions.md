@@ -1,6 +1,7 @@
 ---
 title: "Consuming Add-on Modules and Solutions"
 url: /refguide/consume-add-on-modules-and-solutions/
+linktitle: "Consume Add-on Modules and Solutions"
 weight: 30
 tags: ["studio pro", "add-on", "solution", "module", "modules"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

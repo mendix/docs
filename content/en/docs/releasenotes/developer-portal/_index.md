@@ -17,6 +17,51 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### November 10th, 2022
+
+#### Improvements
+
+* We improved the way [Company Brand](/developerportal/control-center/#company-brand) is stored and distributed. The company logo that is uploaded in Company Brand will be updated throughout the platform where it is used.
+* We removed the Brand Colors feature for Company Brand.
+
+### October 20th, 2022
+
+#### Fixes
+
+* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Private Beta).
+
+### October 6th, 2022
+
+#### Improvements
+
+* You can now see your app history under the [General Settings](/developerportal/collaborate/general-settings/#history) page. Previously this was located under the **Stories** page.
+
+#### Fixes
+
+* We fixed an issue which could occur when you try to accept feedback items with a long description.
+* We fixed an issue where the feedback description was not always scrollable.
+
+#### Deprecations
+
+* All [Mendix Feedback](/appstore/widgets/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+
+### September 28th, 2022
+
+#### New Features
+
+* We replaced the widget used in story description in [Epics](/developerportal/collaborate/epics/) with a new one, which fixes the bug you might have been experiencing. This replacement also comes with the following changes:
+   * You can use @ to mention someone in the text of story description or epic objective. The mentioned person will get a notification once the text is saved.
+   * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/collaborate/epics/#story-details) dialog box or the [epic details](/developerportal/collaborate/epics/#epic-details) dialog box.
+   * Story and epic details now appear in a dialog box instead of a side pane.
+   * The widget styling is now slightly different.
+* We added a **Project Buzz** button on the [Board](/developerportal/collaborate/epics/#board) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.
+* We added an error page in case you access Epics with no apps enabled.
+* We made it possible for you to link commits from Studio Pro to stories in Epics.
+
+#### Improvements
+
+* We improved some empty states in the story details dialog box, epics details dialog box, archived sprint details dialog box, and archived story details dialog box in Epics.
+
 ### September 15th, 2022
 
 #### New Features
@@ -96,7 +141,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
     * Archive single stories or whole swimlanes
     * Easily search through your completed stories and get an overview of completed sprints in the archive
 
-You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+    You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so we recommend using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30th, 2022
 
@@ -550,7 +595,7 @@ You can try it out for any Mendix app. Your Scrum Master just needs to enable Ep
 
 #### Improvements
 
-* We tweaked the styling of the **Stories** > [Project History](/developerportal/collaborate/stories/#history) page.
+* We tweaked the styling of the **Stories** > **Project History** page.
 * We made [moving a story](/developerportal/collaborate/stories/#move-stories) to another app more intuitive.
 * We removed the Model page, which contained tips on how to get started creating your apps.
 

@@ -42,6 +42,14 @@ The Premier Support package contains the following for customers on the Mendix P
 
 Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to know more.
 
+### 1.3 Extended Support {#extended-support}
+
+Extended Support is available as a product for the oldest major Mendix version where support is scheduled to end upon release of a new major version. With this product, support according to the SLA for the oldest version is available from the GA release date of the newest major version in a six-month package that you can purchase once or twice (for a maximum duration of one year). 
+
+For example, support for Mx7 is scheduled to end upon the release of Mx10 GA. However, if you have purchased Extended Support, Mx7 remains supported for either six months or one year from the release date of Mx10 GA.
+
+Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
+
 ## 2 Finding Your Answers
 
 We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
@@ -157,7 +165,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring â
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 Depending on the Cloud architecture a Mendix application is built using the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.
-Check our [System Requirements](/refguide/system-requirements/) for the supported components of any Cloud Foundry / Docker & Kubernetes / traditional architecture.
+Check our [System Requirements](/refguide/system-requirements/) for the supported components of any Cloud Foundry / Docker and Kubernetes / traditional architecture.
 
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 

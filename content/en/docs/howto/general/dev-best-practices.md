@@ -113,7 +113,7 @@ Every app consists of processes. Structure your documents for these processes in
 
 Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 
-### 3.4 Microflows
+### 3.4 Microflows {#microflow-naming-conventions}
 
 Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}\_{Operation}**. For example,  **ACT_Vendor_StartWorkflow**.
 
@@ -309,7 +309,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 [Event handlers](/refguide/event-handlers/) on domain entities must be used with a lot of caution. They can quickly result in complex and possibly unexpected behavior when several of them are applied to a single entity. It is often best to make the execution of microflows more explicit by using sub-microflows that are called manually, for example, just before committing an object.
 
-### 4.2 Microflows
+### 4.2 Microflows {#microflow-dev-best-practices}
 
 #### 4.2.1 Size {#size}
 
@@ -335,7 +335,15 @@ If you decide to color code the different activities in your app, be sure to ali
 
 #### 4.2.4 Complexity
 
-Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
+Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary. 
+
+The example below shows a low-code approach that we recommend because it presents a clear picture of what is happening in the microflow:
+
+{{< figure src="/attachments/howto/general/dev-best-practices/recommended-microflow.png" width="700px">}}
+
+The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
+
+{{< figure src="/attachments/howto/general/dev-best-practices/not-recommended-microflow.png" width="450px">}}
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 
@@ -343,7 +351,7 @@ The number of parameters for a microflow should be kept to a minimum to facilita
 
 #### 4.2.5 Error Handling and Logging
 
-Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
+Use microflow [error handling](/refguide/error-handling-in-microflows/) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging/). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 

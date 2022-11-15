@@ -21,8 +21,8 @@ This how-to will teach you how to do the following:
 Before you can start exporting XML documents, you need data in your application that is used during the export. You first need to set up the data structure and GUI to maintain the customer data. Then you'll create the actual export logic and the corresponding export mapping. So, you need to know how to do the following:
 
 * Create a domain model (for more information, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
-* Create a custom file document (for more information, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/))
-* Create overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
+* Create a custom file document (for more information, see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/))
+* Create overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items, (for more information, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -76,13 +76,13 @@ The XML schema describes what the contents of an XML document should be. We need
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581810.png" >}}
 
-5. Open the **Connector** pane and drag the **XMLDocument** entity from the **Connector** to the placeholder:
+5. Open the **Connector** pane and drag the **XMLDocument** entity from the **Connector** into the placeholder:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581809.png" >}}
 
     The mapping editor for this element will pop up, you can close that by clicking **OK**.
 
-6. Drag the **Customer** entity from the **Connector** to the placeholder:
+6. Drag the **Customer** entity from the **Connector** into the placeholder:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581808.png" >}}
 

@@ -1,5 +1,5 @@
 ---
-title: "XPath Keywords & System Variables"
+title: "XPath Keywords and System Variables"
 url: /refguide/xpath-keywords-and-system-variables/
 tags: ["studio pro", "BeginOfCurrent"]
 ---

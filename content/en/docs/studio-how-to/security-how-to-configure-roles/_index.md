@@ -1,6 +1,6 @@
 ---
 title: "Secure Your App and Configure Access to Its Functionality"
-linktitle: "Secure App & Configure Access"
+linktitle: "Secure App and Configure Access"
 url: /studio-how-to/security-how-to-configure-roles/
 description: "Describes how to configure security in Mendix Studio."
 weight: 40
@@ -45,7 +45,7 @@ There are the following pages in this app:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor/). 
-* Familiarize yourself with information about security, roles, and permissions in Studio. For more information, see [Security, Roles & Permissions](/studio/settings-security/).
+* Familiarize yourself with information about security, roles, and permissions in Studio. For more information, see [Security, Roles, and Permissions](/studio/settings-security/).
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models/).
 
 ## 3 Enabling Security

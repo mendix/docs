@@ -1,5 +1,5 @@
 ---
-title: "Set Up Gulp & Sass"
+title: "Set Up Gulp and Sass"
 url: /howto8/front-end/sass-eight/
 weight: 1
 tags: ["gulp", "sass", "ux", "front end"]
@@ -227,5 +227,5 @@ Other issues might occur with SVN and possible rewriting of *Gulpfile.js*. To fi
 
 ## 8 Read More
 
-* [How to Start Styling with Gulp & Sass](/howto8/front-end/style-with-gulp-and-sass/)
+* [How to Start Styling with Gulp and Sass](/howto8/front-end/style-with-gulp-and-sass/)
 * [How to Use Calypso](/howto8/front-end/calypso/)

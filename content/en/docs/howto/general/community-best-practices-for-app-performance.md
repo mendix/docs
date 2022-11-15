@@ -57,7 +57,7 @@ Indexes is a topic with a long history of best practices from the database world
 * Indexes can be used best for equal searches, ranges searches for dates and numbers, and leading/`startsWith` searches on strings.
 * Index scans can be done to match more difficult clauses like `contains` or `endsWith`. These are still faster then full table scans.
 
-## 4 Microflow Best Practices
+## 4 Microflow Best Practices {#microflow-community-best-practices}
 
 * Minimize the work in loops:
     * Do commits after the loop in a list commit. 

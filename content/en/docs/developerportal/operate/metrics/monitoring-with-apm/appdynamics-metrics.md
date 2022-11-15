@@ -12,7 +12,7 @@ tags: ["AppDynamics", "Mendix Cloud", "v4", "monitoring", "analysis"]
 [AppDynamics](https://www.appdynamics.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to AppDynamics to provide additional monitoring.
 
 {{% alert color="warning" %}}
-AppDynamics is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+AppDynamics is not supported in the deprecated Mendix Cloud v3. For support on other cloud deployment options such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 {{% alert color="info" %}}

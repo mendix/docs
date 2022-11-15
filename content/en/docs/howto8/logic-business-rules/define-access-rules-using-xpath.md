@@ -1,7 +1,7 @@
 ---
 title: "Define Access Rules Using XPath"
 url: /howto8/logic-business-rules/define-access-rules-using-xpath/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 10
 tags: ["microflow", "logic", "access rule", "xpath"]
 ---
@@ -27,7 +27,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581378.png" >}}
 
     For more information on creating a domain model, see [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/).
-2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)).
+2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview and Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/)).
 3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/)).
 4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto8/security/create-a-secure-app/)).
 
@@ -83,4 +83,4 @@ To define the access rules on the Order entity using XPath, follow these steps:
 * [Optimize Retrieve Activities](/howto8/logic-business-rules/optimizing-retrieve-activities/)
 * [Configure Error Handling](/howto8/logic-business-rules/set-up-error-handling/)
 * [Optimize Microflow Aggregates](/howto8/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)

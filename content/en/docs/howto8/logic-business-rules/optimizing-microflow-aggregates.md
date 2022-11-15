@@ -1,7 +1,7 @@
 ---
 title: "Optimize Microflow Aggregates"
 url: /howto8/logic-business-rules/optimizing-microflow-aggregates/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 7
 tags: ["microflow", "aggregate"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
@@ -28,4 +28,4 @@ If you do want to use the list but you also want the optimized query, do two sep
 * [Optimize Retrieve Activities](/howto8/logic-business-rules/optimizing-retrieve-activities/)
 * [Configure Error Handling](/howto8/logic-business-rules/set-up-error-handling/)
 * [Optimize Microflow Aggregates](/howto8/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto8/logic-business-rules/extract-and-use-sub-microflows/)

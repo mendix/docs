@@ -145,7 +145,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Read More
 
-* [How to Work with Images & Files](/howto7/data-models/working-with-images-and-files/)
+* [How to Work with Images and Files](/howto7/data-models/working-with-images-and-files/)
 * [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer/)
 * [How to Set Up Data Validation](/howto7/data-models/setting-up-data-validation/)
 * [How to Work with Object Events](/howto7/data-models/working-with-object-events/)

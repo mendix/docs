@@ -13,6 +13,38 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### November 14th , 2022
+
+#### Mendix Operator v2.9.0{#2.9.0}
+
+* We now allow you to use pod identity webhook authentication for ECR registry authentication. With this, the image builder will use the service accounts for authentication. This is more secure than static credentials.
+* We provide additional information for service account status showing whether the service account is successfully attached to an app.
+* When using CSI secrets storage, we now indicate which parameters were loaded from the secret storage.
+* We replaced an internal go-chi dependency with Go Fiber to ensure that Mendix for Private Cloud is using a well-maintained HTTP implementation.
+* We also fixed an issue where mxpc-cli was not responding to the mouse inputs in a Linux terminal. (Ticket 168570)
+
+### October 6th, 2022
+
+#### Portal Improvements
+
+* We now allow sorting of namespaces in the namespace selection list of the Create environment flow.
+* Newly-created environments will always run in Production mode (the DTAP mode is set to `P`) – you can no longer choose the purpose of your environment.
+   * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
+* We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
+* We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
+
+### September 29th, 2022
+
+#### Mendix Operator v2.8.0{#2.8.0}
+
+* We have now reduced the security permissions required by Mendix for Private Cloud pods. This means that pods do not need elevated permissions on the Kubernetes cluster.
+* We have limited the Mendix app emptyDir size to 4 MiB to prevent memory-backed emptyDirs from consuming more memory than required.
+* You may see some other minor changes to the Mendix Operator. These do not add or change any functionality at present, but are in preparation for supporting external storage secrets in a future release.
+
+### September 27th, 2022{#tekton}
+
+* We have added a number of Tekton pipelines that can be used to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Private Cloud apps. For more information, see [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/).
+
 ### August 26th, 2022
 
 #### Mendix Operator v2.7.0{#2.7.0}
@@ -138,7 +170,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
 
-* We have added a new field to set the kubernetes ingress class as an annotation in the installer.
+* We have added a new field to set the Kubernetes ingress class as an annotation in the installer.
 * We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster/#customize-registry-imagenametemplate).
 
 #### Portal Improvements

@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - lts/*             # latest LTS version ('node' will give latest version)
+  - 16                # latest LTS version ('node' will give latest version)
 arch: amd64           # optional, this is default, routes to a full VM
 # arch: arm64         # this is the recommended LXD container - faster spin up but some limitations Not used as it seems very unstable.
 os: linux             # optional, this is default

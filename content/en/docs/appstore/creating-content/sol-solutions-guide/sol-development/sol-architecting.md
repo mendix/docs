@@ -29,7 +29,7 @@ The Mendix Marketplace contains numerous adaptive solutions, for example:
 
 Each solution is useable as is, but it can also be adapted to become even more suitable for the customer.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion & Retail" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-development/sol-architecting/mendix-plm-for-fashion-and-retail.png" alt="Mendix PLM for Fashion and Retail" >}}
 
 ## 3 Architect a Solution for Adaptation
 

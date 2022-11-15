@@ -1,5 +1,5 @@
 ---
-title: "Import & Export Objects"
+title: "Import and Export Objects"
 url: /howto7/integration/importing-and-exporting-objects/
 category: "Integration"
 weight: 2

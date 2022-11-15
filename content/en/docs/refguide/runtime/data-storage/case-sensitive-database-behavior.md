@@ -80,7 +80,7 @@ This table presents the default case sensitivity by different database types:
 | HSQLDB            | I              | I           | I                    |
 | POSTGRESQL        | S              | S           | I                    |
 | DB2               | S              | S¹          | I³                   |
-| MARIADB & MYSQL   | C              | C           | C                    |
+| MARIADB and MYSQL | C              | C           | C                    |
 | ORACLE            | C¹             | C           | I                    |
 | SAP HANA          | S¹             | S¹          | I²                   |
 | SQL SERVER        | C              | C           | C                    |

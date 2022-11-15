@@ -42,7 +42,7 @@ To speed up the development process, most changes you make within Studio Pro wil
 
 In *Studio*, you can click **Preview** in the upper-right corner of Studio to see a preview of your app in the browser. 
 
-For more information see [Previewing & Publishing Your App](/studio/publishing-app/).
+For more information see [Previewing and Publishing Your App](/studio/publishing-app/).
 
 ## 3 Mendix Cloud
 
@@ -52,7 +52,7 @@ From within Mendix Studio Pro, you can view the cloud nodes you have available i
 
 For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
-### 3.1 Mendix Cloud Dedicated
+### 3.1 Mendix Cloud Dedicated {#mendix-cloud-dedicated}
 
 Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). This works in exactly the same way as the Mendix Cloud, but runs on your own virtual private cloud and will only host your company's apps.
 

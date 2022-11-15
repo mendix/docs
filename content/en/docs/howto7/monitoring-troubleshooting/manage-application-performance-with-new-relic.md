@@ -2,7 +2,7 @@
 title: "Manage Application Performance with New Relic"
 linktitle: "New Relic App Performance"
 url: /howto7/monitoring-troubleshooting/manage-application-performance-with-new-relic/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 13
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
@@ -101,5 +101,5 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [How to Debug Microflows](/howto7/monitoring-troubleshooting/debug-microflows/)
 * [How to Debug Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions/)
 * [How to Handle Common Mendix SSO Errors](/howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors/)
-* [How to Solve Load & Import Errors](/howto7/monitoring-troubleshooting/solving-load-and-import-errors/)
+* [How to Solve Load and Import Errors](/howto7/monitoring-troubleshooting/solving-load-and-import-errors/)
 * [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)

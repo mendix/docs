@@ -1,5 +1,5 @@
 ---
-title: "Model SDK & Platform SDK"
+title: "Model SDK and Platform SDK"
 url: /apidocs-mxsdk/apidocs/model-platform-sdk/
 category: "API Documentation"
 weight: 37

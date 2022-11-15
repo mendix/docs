@@ -1,7 +1,7 @@
 ---
 title: "Translate Your App Content"
 url: /howto7/collaboration-requirements-management/translate-your-app-content/
-category: "Collaboration & Requirements Management"
+category: "Collaboration and Requirements Management"
 weight: 50
 tags: ["translate", "collaboration"]
 ---

@@ -2,9 +2,8 @@
 title: "Supported Providers"
 url: /developerportal/deploy/private-cloud-supported-environments/
 description: "Describes which providers are supported by Mendix for Private Cloud"
-weight: 50
+weight: 100
 tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry", "Database"]
-#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -34,7 +33,7 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.23
+* Kubernetes versions 1.19 through 1.25
 * OpenShift 4.6 through 4.10
 
 {{% alert color="warning" %}}
@@ -112,11 +111,14 @@ It is possible to have username/password authentication or to push without authe
 
 ### 3.2 Externally Hosted Registry
 
-Externally hosted registries are supported if they allow username/password authentication. This includes:
+Externally hosted [OCI compliant](https://github.com/opencontainers/distribution-spec/blob/main/spec.md) registries are supported if they allow username/password authentication. This includes:
 
 * [Docker Hub](https://hub.docker.com/)
 * [quay.io](https://quay.io/)
 * [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR)
+* [JFROG Artifactory](https://jfrog.com/artifactory/)
+* [Sonatype Nexus](https://www.sonatype.com/products/nexus-repository)
+* [Harbor](https://goharbor.io)
 
 When using ACR in combination with Azure Kubernetes Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
 
@@ -230,6 +232,7 @@ This refers to a SQL Server database which is automatically provisioned by the O
 The following Microsoft SQL Server editions are supported:
 
 * SQL Server 2017
+* SQL Server 2019
 
 The following managed Microsoft SQL Server databases are supported:
 
@@ -363,6 +366,7 @@ Mendix for Private Cloud is compatible with the following ingress controllers:
 * [Traefik](https://traefik.io/traefik/)
 * [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
 * [Ingress for External HTTP(S) Load Balancing](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
+* [Azure Application Gateway Ingress Controller](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)
 
 For ingress, it is possible to do the following:
 

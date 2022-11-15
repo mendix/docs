@@ -93,13 +93,11 @@ If your test fails, see the [Troubleshooting](#troubleshooting) section for advi
 
 ## 5 Activating
 
-When you are ready, you can activate the IdP configuration from the overview page. Your users will start to benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IdP authentication.
-
-Please be aware that there can be only one active IdP configuration at a time. When you activate an IdP configuration while another one is already active, the current active configuration will be de-activated automatically.
+When you are ready, you can activate the IdP configuration from the overview page. The changes come into effect immediately, updating your users will take some time depending on the number of users in your company. Your users will start to benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IdP authentication.
 
 ## 6 Deactivating
 
-You can deactivate the IdP configuration at any time. The changes start coming into effect immediately. Users will have to reset their Mendix passwords to be able to sign-in since it has been scrambled upon activation.
+You can deactivate the IdP configuration at any time. The changes come into effect immediately, updating your users will take some time depending on the number of users in your company. Users will have to reset their Mendix password to be able to sign-in since it was scrambled upon activation.
 
 ## 7 Microsoft Azure AD
 

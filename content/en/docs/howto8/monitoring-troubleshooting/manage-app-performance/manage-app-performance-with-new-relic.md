@@ -98,5 +98,5 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [Set Log Levels](/howto8/monitoring-troubleshooting/log-levels/)
 * [Debug Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
 * [Debug Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)
-* [Solve Load & Import Errors](/howto8/monitoring-troubleshooting/solving-load-and-import-errors/)
+* [Solve Load and Import Errors](/howto8/monitoring-troubleshooting/solving-load-and-import-errors/)
 * [Debug Microflows Remotely](/howto8/monitoring-troubleshooting/debug-microflows-remotely/)

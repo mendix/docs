@@ -1,7 +1,7 @@
 ---
 title: "Write Data to Another App"
 url: /data-hub/write-data/
-description: "Describes add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Data Hub Catalog, and use them to build your app."
+description: "Describes how to add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Data Hub Catalog, and use them to build your app."
 tags: ["Data Hub", "external entities", "published OData service" ,"how to","OData", "Data Hub Catalog"]
 weight: 20
 ---
@@ -63,7 +63,7 @@ To consume an OData entity, do the following:
 
 1. In the **Data Hub** pane, enter a search term in the search field. 
 2. Select your entity from the **Data Hub** pane. By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
-3. Drag the entity to the domain model.
+3. Drag the entity into the domain model.
 
 Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
 

@@ -63,7 +63,7 @@ The widget can be made visible to users with a specific user role only. For exam
 
 {{% alert color="info" %}}
 
-You can only configure role-based conditional visibility when security is enabled. For more information, see [Security, Roles & Permissions](/studio/settings-security/).
+You can only configure role-based conditional visibility when security is enabled. For more information, see [Security, Roles, and Permissions](/studio/settings-security/).
 
 {{% /alert %}}
 
@@ -110,4 +110,4 @@ Conditional visibility based on user roles is set for the widget.
 ## 4 Read More
 
 * [Widgets](/studio/page-editor-widgets/)
-* [Security, Roles & Permissions](/studio/settings-security/)
+* [Security, Roles, and Permissions](/studio/settings-security/)

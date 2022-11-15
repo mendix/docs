@@ -1,6 +1,6 @@
 ---
 title: "Importing and Exporting Apps, Modules, Widgets, and Documents"
-linktitle: "Importing & Exporting Elements"
+linktitle: "Importing and Exporting Elements"
 url: /refguide/import-and-export/
 category: "App Modeling"
 weight: 12

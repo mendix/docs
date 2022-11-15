@@ -14,7 +14,7 @@ We want to create a large network of Mendix apps, so let's start integrating!
 
 ## 2 Main Documents in This Category
 
-* [Import & Export Objects](/howto8/integration/importing-and-exporting-objects/) – presents how to to import and export projects, modules, widgets, and module documents
+* [Import and Export Objects](/howto8/integration/importing-and-exporting-objects/) – presents how to to import and export projects, modules, widgets, and module documents
 * [Import XML Documents](/howto8/integration/importing-xml-documents/) – teaches you how to prepare the data structure and GUI, add an XML schema, and create XML-to-domain mapping
 * [Export XML Documents](/howto8/integration/export-xml-documents/) – shows you how to add an XML schema and create domain-to-XML mapping and export logic
 * [Import Excel Documents](/howto8/integration/importing-excel-documents/) – illustrates setting up import templates and importing data into your application via the Excel Importer

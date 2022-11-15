@@ -16,7 +16,7 @@ Datadog logging and application metrics are supported in Mendix version 7.15 and
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Datadog is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+Datadog is not supported in the deprecated Mendix Cloud v3. For support on other cloud deployment options such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 For more information on the data you can send to Datadog, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/)
@@ -187,7 +187,7 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 ### 4.6 System Metrics{#system-metrics}
 
-System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DATADOG_ENABLE_CHECKS** to *true*.
+System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DD_ENABLE_CHECKS** to *true*.
 
 *Default value: false*
 

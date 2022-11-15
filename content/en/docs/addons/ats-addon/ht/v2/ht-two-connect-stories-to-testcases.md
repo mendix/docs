@@ -1,6 +1,6 @@
 ---
-title: "Link Test Cases & Test Suites to User Stories"
-linktitle: "Link Test Cases & Suites to User Stories"
+title: "Link Test Cases and Test Suites to User Stories"
+linktitle: "Link Test Cases and Suites to User Stories"
 url: /addons/ats-addon/ht-two-connect-stories-to-testcases/
 description: "Describes the steps for linking Test Cases and Test Suites to User Stories."
 tags: ["ATS", "testing"]

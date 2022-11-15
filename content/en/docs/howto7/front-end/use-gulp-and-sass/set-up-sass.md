@@ -1,5 +1,5 @@
 ---
-title: "Set Up Gulp & Sass"
+title: "Set Up Gulp and Sass"
 url: /howto7/front-end/set-up-sass/
 weight: 1
 tags: ["gulp", "sass", "ux", "front end"]
@@ -199,4 +199,4 @@ Have fun styling!
 
 ## 7 Read More
 
-* [How to Start Styling with Gulp & Sass](/howto7/front-end/style-with-gulp-and-sass/)
+* [How to Start Styling with Gulp and Sass](/howto7/front-end/style-with-gulp-and-sass/)

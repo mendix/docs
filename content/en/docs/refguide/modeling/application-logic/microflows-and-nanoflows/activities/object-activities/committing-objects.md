@@ -108,7 +108,7 @@ However, a Mendix **Commit** is not the same as a database **Commit**. For an ob
 
 Mendix mimics this behavior for *non-persistable* entities. Committing a non persistable entity means you cannot use a **Rollback** action to go back to the previous values, although rollback error handling in a microflow *will* roll back to the original values.
 
-### 5.2 Autocommit and Associated Objects
+### 5.2 Autocommit and Associated Objects {#autocommit-and-associated-objects}
 
 When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform may also autocommit associated objects.
 

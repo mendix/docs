@@ -136,6 +136,6 @@ Delete behavior includes objects which are in memory. This means that delete cas
 
 ## 8 Read More
 
-* [Work with Images & Files](/howto8/data-models/working-with-images-and-files/)
+* [Work with Images and Files](/howto8/data-models/working-with-images-and-files/)
 * [Denormalize Data to Improve Performance](/howto8/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto8/data-models/setting-up-data-validation/)

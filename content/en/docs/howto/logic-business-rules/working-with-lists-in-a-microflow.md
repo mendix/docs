@@ -1,7 +1,7 @@
 ---
 title: "Work with Lists in a Microflow"
 url: /howto/logic-business-rules/working-with-lists-in-a-microflow/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 60
 description: "Describes how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 tags: ["microflow", "logic", "list"]

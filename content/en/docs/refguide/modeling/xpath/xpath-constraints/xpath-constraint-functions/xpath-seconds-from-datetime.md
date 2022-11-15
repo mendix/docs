@@ -12,6 +12,6 @@ The `seconds-from-dateTime()` function extracts the seconds part of a **Date and
 
 This query returns all the logs where the seconds part of `DateAttribute` is 30 (for example, "2011-12-30 08:08:30"):
 
-```java
+```java {linenos=false}
 //Logging.Log[seconds-from-dateTime(DateAttribute) = 30]
 ```

@@ -23,7 +23,7 @@ This how-to will teach you how to do the following:
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
-* Download the [Selenium Client & WebDriver](http://www.seleniumhq.org/download/) for Java
+* Download the [Selenium Client and WebDriver](http://www.seleniumhq.org/download/) for Java
 
 {{% alert color="warning" %}}
 This how-to uses the Company Expenses app template starting in the [Add the Third Test Method](#third) section for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.

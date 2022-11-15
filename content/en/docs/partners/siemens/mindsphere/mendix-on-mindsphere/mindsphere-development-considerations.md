@@ -373,7 +373,7 @@ MindSphere supports up to five application roles. You should take this into acco
 
 To use these scopes, you must create identically-named scopes for each MindSphere application role. These scopes will map to identically-name user roles in your Mendix app.
 
-There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](/partners/siemens/mindsphere-module-details/) section of *MindSphere Module Details*.
+There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles and Scopes](/partners/siemens/mindsphere-module-details/) section of *MindSphere Module Details*.
 
 ### 9.4 Logout from MindSphere
 

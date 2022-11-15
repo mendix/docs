@@ -48,6 +48,8 @@ This section describes how to configure a Git versioned app in Studio Pro. You n
 
 ### 4.1 Preparing Your Repository {#preparing-your-repo}
 
+Mendix supports multiple Git service providers that are listed below. For more information on a specific provider and requirements for it, see [System Requirements](/refguide/system-requirements/). 
+
 Studio Pro is able to use the following Git server providers:
 
 * Azure DevOps Server

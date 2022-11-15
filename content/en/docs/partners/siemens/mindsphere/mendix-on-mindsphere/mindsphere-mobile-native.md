@@ -57,7 +57,7 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
 1. Click **Save** to save your new app.
 
-    You have to map Mendix user roles to MindSphere user roles (see a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](/partners/siemens/mindsphere-module-details/#rolesscopes) section of *MindSphere Module Details*). The standard template will be delivered with the roles **Admin** and **User** therefore we will create the corresponding MindSphere scopes. If this does not match the roles in your application, please adapt these instructions accordingly.
+    You have to map Mendix user roles to MindSphere user roles (see a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles and Scopes](/partners/siemens/mindsphere-module-details/#rolesscopes) section of *MindSphere Module Details*). The standard template will be delivered with the roles **Admin** and **User** therefore we will create the corresponding MindSphere scopes. If this does not match the roles in your application, please adapt these instructions accordingly.
 
     {{% alert color="info" %}}The standard template also includes the role **Anonymous** which will be used for the authentication process. You should not register this role in the Developer Cockpit.{{% /alert %}}
 

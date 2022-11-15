@@ -131,7 +131,7 @@ To add a new activity or event to the microflow, do the following:
 1. Open the microflow you want to add the event or activity to.
 2. Open the **Toolbox** tab.
 3. Select the event or activity in the **General**, **Object Activities** or **Client Activities** section.
-4. Drag and drop the event or activity in the microflow. 
+4. Drag the event or activity into the microflow. 
 
 ### 3.7 Disabling an Activity {#disable}
 
@@ -150,7 +150,7 @@ The activity is excluded from the flow. You can re-enable the activity back in t
 
 ## 4 Toolbox Elements {#microflows-toolbox}
 
-The **Toolbox** tab contains elements that you can drag and drop on to a microflow. Below is a categorized overview of all elements. The following sections are used:
+The **Toolbox** tab contains elements that you can drag into a microflow. Below is a categorized overview of all elements. The following sections are used:
 
 * [General](#microflow-general-section)
 * [Object Activities](#microflow-object-activities)
@@ -221,14 +221,12 @@ The **Workflow Activities** section contain activities that interact with workfl
 
 The **Workflow Activities** are described in the table below:
 
-| Activity                 | Description                                                  |
-| ------------------------ | ------------------------------------------------------------ |
-| Apply Jump-To Option     | The **Apply Jump-To Option** activity allows the workflow to jump to a selected activity. This activity should be used after the **Generate Jump-To Options** activity that generates the list of possible workflow activities the workflow can jump to. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue.<br />This functionality is configured and used in the Workflow Commons module (a workflow-specific module) on Admin pages. |
-| Call Workflow            | The **Call Workflow** activity starts the selected workflow. |
-| Complete Task            | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
-| Generate Jump-To Options | The **Generate Jump-To Options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The **Apply Jump-To Option** activity should be used after the **Generate Jump-To Options** to let the workflow continue from the selected activity.<br />This functionality is configured and used in the Workflow Commons module (a workflow-specific module) on Admin pages. |
-| Retrieve Workflow Data   | The **Retrieve Workflow Data** activity can be used to retrieve the selected Workflow Context entity. The action determines the return type based on the selected workflow (the configured Workflow Context entity of that workflow). |
-| Show User Task Page      | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
+| Activity               | Description                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| Call Workflow          | The **Call Workflow** activity starts the selected workflow. |
+| Complete Task          | The **Complete Task** activity sets an outcome the specified [user task](/studio/workflows-user-task/) should follow. When a user task has several outcomes, you can choose the one the user task will follow. For example, when end-users select that an employee is working from home, the user task will follow the dedicated path for it. |
+| Retrieve Workflow Data | The **Retrieve Workflow Data** activity can be used to retrieve the selected Workflow Context entity. The action determines the return type based on the selected workflow (the configured Workflow Context entity of that workflow). |
+| Show User Task Page    | The **Show User Task Page** activity opens a user task page specified in [user task properties](/studio/workflows-user-task/). |
 
 ### 4.5 Workflow Administration {#workflow-administration}
 

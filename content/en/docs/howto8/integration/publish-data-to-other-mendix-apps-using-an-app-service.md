@@ -52,13 +52,13 @@ We will now create a microflow that retrieves all the products from the database
 To create this microflow, follow these steps:
 
 1. Add a microflow called **PublishProducts**.
-2. From the **Toolbox**, drag a **Retrieve** activity onto the microflow.
+2. From the **Toolbox**, drag a **Retrieve** activity into the microflow.
 3. Double-click the **Retrieve** activity and select **From database**.
 4. For **Entity**, select **Product**, then click **OK**.
-5. From the **Toolbox**, drag a **Create list** activity onto the microflow.
+5. From the **Toolbox**, drag a **Create list** activity into the microflow.
 6. Double-click the **Create list** activity.
 7. For **Entity**, select **PublishedProduct**, then click **OK**.
-8. From the **Toolbox** (under **Other**), drag a **Loop** activity onto the microflow.
+8. From the **Toolbox** (under **Other**), drag a **Loop** activity into the microflow.
 9. Double-click the loop and for **Iterate over**, select **ProductList**, then click **OK**.
 10. From the **Toolbox**, drag a **Create** activity onto the loop.
 11. Double-click the **Create** activity and for **Entity**, select **PublishedProduct**.

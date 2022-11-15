@@ -12,7 +12,7 @@ The `starts-with()` function tests whether a string attribute starts with a spec
 
 This query returns all the customers from which the name starts with the string "Jans":
 
-```java
+```java {linenos=false}
 //Sales.Customer[starts-with(Name, 'Jans')]
 ```
 

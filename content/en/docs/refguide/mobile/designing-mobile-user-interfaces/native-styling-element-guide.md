@@ -392,8 +392,9 @@ The widget’s render hierarchy is as follows for uniform:
 | `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
 | `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
 | `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
-| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio Pro v8.11).|
+| `valueContainer` | This has all ViewStyle properties and rippleColor | Styles the value button's container (with Studio Pro v8.11).|
 | `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
+| `valueContainerError` | Same properties as `valueContainer`  | Overrides `valueContainer` styles if the dropdown has a validation error (with Studio Pro v9.19.0).|
 | `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
 | `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
 | `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
@@ -507,6 +508,7 @@ The widget’s style properties are as follows:
 | `value` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the date picker is pressed (defaults to `rgba(0, 0, 0, 0.2)`). |
 | `value`  | `underlayColor` | This is the color while pressing the date picker on iOS, if not set it will be defaulted to opacity only. |
 | `valueDisabled` | This has all TextStyle properties | Overrides `value` styles if the date picker is non-editable. |
+| `valueContainerError` | This has all TextStyle properties | Overrides `value` styles if the date picker has a validation error. |
 | `placeholder` | This has all TextStyle properties |   |
 | `placeholderDisabled` | This has all TextStyle properties | Overrides `placeholder` styles if the date picker is non-editable. |
 | `validationMessage` | This has all TextStyle properties |  |
@@ -525,7 +527,7 @@ The default class to style all reference selector inputs is named `ReferenceSele
 
 ## 7 Images, Videos and Files
 
-Images, videos and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](/refguide/image-and-file-widgets/).
+Images, videos and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide/image-and-file-widgets/).
 
 ### 7.1 Static Image {#image}
 
@@ -1774,7 +1776,61 @@ The widget consists of the following elements:
 
 The default class to style all column chart widgets is named `com_mendix_widget_native_columnchart_ColumnChart`.
 
-## 12 Read More
+### 11.33 Gallery
+
+The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
+
+The widget’s style properties are as follows:
+
+```xml
+<container/>
+<emptyPlaceholder/>
+<firstItem/>
+<lastItem/>
+<list/>
+<listItem/>
+<loadMoreButtonContainer/>
+<loadMoreButtonPressableContainer/>
+<loadMoreButtonCaption/>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the empty placeholder. |
+| `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the first item of the list. |
+| `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the last item of the list. |
+| `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the list container. |
+| `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to each item container in the list. |
+| `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | rippleColor | Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only) |
+| `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (Boolean) (Android only) |
+| `loadMoreButtonPressableContainer` | radius | Defines the radius of the ripple effect. (number) (Android only) |
+| `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
+| `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
+
+### 11.33.1 Gallery Filtering
+
+In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
+
+The widget’s style properties are as follows:
+
+```xml
+<textInputContainer/>
+<textInputContainerFocused/>
+<textInput/>
+<textInputClearIcon/>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `textInputContainer` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input. |
+| `textInputContainerFocused` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input when the text box is focused. |
+| `textInput` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the text input. |
+| `textInputClearIcon` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies style to the text clear button in the text box. |
+
+## 13 Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)

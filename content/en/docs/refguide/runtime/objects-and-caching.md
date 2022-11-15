@@ -1,5 +1,5 @@
 ---
-title: "Objects & Caching"
+title: "Objects and Caching"
 url: /refguide/objects-and-caching/
 category: "Mendix Runtime"
 description: "Describes how objects interact with each other within a runtime request."

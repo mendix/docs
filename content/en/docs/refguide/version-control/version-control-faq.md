@@ -2,7 +2,7 @@
 title: "Version Control FAQ"
 url: /refguide/version-control-faq/
 category: "Version Control"
-weight: 15
+weight: 30
 description: "Presents and explains several frequently asked questions about version control."
 tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 ---
@@ -72,7 +72,7 @@ However, you can migrate manually by creating a new app based on Team Server Git
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server?
 
-Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TurtoiseSVN, TurtoiseGit, or GitHub Desktop by using the following repository URLs:
+Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop by using the following repository URLs:
 
 * Team Server SVN: `https://teamserver.sprintr.com/<your AppID>/` 
 * Team Server Git: `https://git.api.mendix.com/<your AppID>.git`
@@ -103,5 +103,5 @@ For Git, connecting to a third-party Git version control repository is in Beta. 
 Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
 Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
 
-* code for Java & JavaScript actions
+* code for Java and JavaScript actions
 * HTML/CSS for theming

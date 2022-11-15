@@ -21,7 +21,7 @@ The [Microflows](/refguide/microflows/) overview page | The [`microflows`](https
 
 ### 1.2 Microflow and Rule Structure
 
-Microflows consist of a collection of objects connected by flows. The objects represent activities, such as Object manipulation & retrieval, microflow calls, web service calls, etc. (details follow below).
+Microflows consist of a collection of objects connected by flows. The objects represent activities, such as Object manipulation and retrieval, microflow calls, web service calls, etc. (details follow below).
 
 For example, a simple microflow could consist of a start event, a single activity, and an end event. The microflow would then have three MicroflowObjects in its MicroflowObjectCollection, and would have two SequenceFlows. The first sequence flow would have the start event as its origin and the activity as its destination. The second sequence flow would have the activity as its origin, and the end event as its destination.
 

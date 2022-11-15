@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In this section you will learn to show a page when a user taps a notification.
 
-1. Drag and drop a **Notifications** widget onto your native home page. 
+1. Drag a **Notifications** widget onto your native home page. 
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/notif-widget.png" alt="notifications widget"   width="400"  >}}
 
@@ -38,7 +38,7 @@ In this section you will learn to show a page when a user taps a notification.
 7. Type *NotifPage* into **Page Name**.
 8. Click **Blank** pane on the left and select the **Blank** page template. 
 9. Click **OK** to create your page. 
-10. Drag and drop an **Open page button** widget onto **NotifPage**.
+10. Drag an **Open page button** widget onto **NotifPage**.
 11. When prompted, click your **Home_Native** page:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/home-native-select.png" alt="click home page"   width="400"  >}}

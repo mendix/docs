@@ -5,6 +5,15 @@ weight: 20
 description: "Native Template 5.1 release notes."
 ---
 
+## 5.1.20
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+* We fixed an issue which affected Android apps built locally using Apple M1 machines.
+
 ## 5.1.19
 
 **Release date: May 11th, 2022**
@@ -45,7 +54,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 * We improved the capability configurations by adding an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
 * We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.
-* We removed support for the deprecated Fabric & Crashlytics module.
+* We removed support for the deprecated Fabric and Crashlytics module.
 
 ## 5.1.13
 

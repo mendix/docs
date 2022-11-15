@@ -21,5 +21,5 @@ To open the **Settings**, click the gear icon in the left menu bar.
 
 ## 2 Main Documents in This Category
 
-* [Security, Roles & Permissions](/studio/settings-security/) – describes security in Mendix Studio, user roles and permissions for them
+* [Security, Roles, and Permissions](/studio/settings-security/) – describes security in Mendix Studio, user roles and permissions for them
 * [Widget Overview](/studio/settings-widget-overview/) – describes settings for Mendix Marketplace and local widgets in your app

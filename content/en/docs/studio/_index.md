@@ -40,7 +40,7 @@ The *Studio 9 Guide* is divided into the following categories:
 * [Navigation Document](/studio/navigation/)
 * [Microflows](/studio/microflows/)
 * [Expressions](/studio/expressions/)
-* [Previewing & Publishing Your App](/studio/publishing-app/)
+* [Previewing and Publishing Your App](/studio/publishing-app/)
 * [Checks](/studio/checks/)
 * [Theme Customizer](/studio/theme-customizer/)
 * [Settings](/studio/settings/)

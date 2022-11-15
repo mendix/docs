@@ -16,7 +16,7 @@ In this guide, you will learn about the following:
 
 * Exposing non-persistable entities as published OData resources 
 * Using a microflow to define how resources should be retrieved and stored, and to return values of published OData services
-* Selecting a key (other than the object ID) when exposing entities as OData resources
+* Selecting a key when exposing entities as OData resources
 
 ### 1.2 Prerequisites
 
@@ -34,7 +34,7 @@ OData is a set of best practices for building REST APIs that standardizes many a
 
 ### 2.2 Compatibility with Data Hub
 
-Wrapping a service, API, or database in OData ensures compatibility with the [Mendix Data Hub](/data-hub/). Published OData services are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
+Wrapping a service, API, or database in OData ensures compatibility with the [Mendix Data Hub](/data-hub/). Published OData services are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
   
 ## 3 Non-Persistable Entities as Published OData Resources {#npe-published-odata}
 
@@ -115,10 +115,6 @@ In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count
 
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
-{{% alert color="info" %}}
-Selecting a different key is only available for published OData services that use OData v3 and v4.
-{{% /alert %}}
-
 Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration).
 
 Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
@@ -128,23 +124,27 @@ Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select wh
 * **String**
 * **AutoNumber** 
 
-Select an attribute with the following constraints: 
+Select a combination of attributes with the following constraints: 
 
-* Unique – Every entity should have a unique value, so any one key points to exactly one entity.
-* Required – If the attribute value is empty, you cannot find an entity with it anymore.
-* Stable over time – The attribute value used for the key should not change for an entity, so that you can find it again later.
+* Unique – The combination of key attributes should be unique, so each key points to exactly one entity.
+* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
+* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
 
-A unique and required attribute is automatically selected when such an attribute is available, and when exposing an entity as a Published OData Resource for the first time. You can set these constraints using [validation rules](/refguide/validation-rules/). If there is no attribute that has a unique constraint or a required constraint, then it will select the first attribute with a supported type.
+When exposing an entity as a published OData resource for the first time, Studio Pro chooses a unique and required attribute as the key. If there is no attribute that has a unique constraint or a required constraint, then it will select the first attribute with a supported type. You can set these constraints using [validation rules](/refguide/validation-rules/).
 
-### 5.1 Selecting an Attribute as a Key {#select-key}
+{{% alert color="info" %}}
+Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
+{{% /alert %}}
 
-To select a different attribute as a key, do the following:
+### 5.1 Selecting Attributes as a Key {#select-key}
+
+To select different attributes as a key, do the following:
 
 1. Open the **Published OData Resource**. 
 2. In the **Key** section, click **Edit** located next to the **Key** property.
-3. In the **Key Selection** dialog box, move the desired key attribute to the right side and move the old key attribute to the left side. 
+3. In the **Key Selection** dialog box, move the key attributes to the right side. 
 
-Currently, you can only set only a single attribute as a key. 
+A key icon represents attributes that are part of the key.
 
 ## 6 Testing {#testing}
 

@@ -11,6 +11,21 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2022
 
+### October 25th, 2022
+
+#### New Features
+
+We are excited to bring new changes to the Mendix Marketplace and improve access to Marketplace content in Studio Pro for our community. The new revamp of the Marketplace in Studio Pro presents a better UI with easier navigation, better search functionality, a faster content-discovery experience, and more control over category and filters. We have also included new filter that helps you select **Platform-supported content**. 
+
+The new view helps you to browse through Marketplace components and view component details more quickly, just as you can in the online Marketplace. 
+
+Finally, we introduced UI changes for pagination and points of entry to the Marketplace for a better user experience.
+
+For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+
+{{% alert color="warning" %}}
+If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.{{% /alert %}}
+
 ### August 27th, 2022
 
 #### Improvements
@@ -24,7 +39,6 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 * We have introduced a content curation feature, which allows Mendix Admins to curate Marketplace content for Studio. Mendix Admins can do the following from the [Marketplace Content](/developerportal/control-center/#marketplace-content) page in Control Center:
    * Limit available public Marketplace content in Studio
    * Approve and hide private Marketplace content in Studio
-
 
 ### March 24th, 2022
 
@@ -206,13 +220,11 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### April 7th, 2020
 
-#### Security Fix Needed for App Store in Studio Pro/Desktop Modeler {#private-fix}
+#### Fixes {#private-fix}
 
-Downloading [private content](/appstore/general/share-app-store-content/#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
-
-You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8/), [8.6.x](/releasenotes/studio-pro/8.6/), and [7.23.x](/releasenotes/studio-pro/7.23/) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
-
-You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
+* Downloading [private content](/appstore/general/share-app-store-content/#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
+    * You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8/), [8.6.x](/releasenotes/studio-pro/8.6/), and [7.23.x](/releasenotes/studio-pro/7.23/) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
+    * You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 
 ### February 26th, 2020
 
@@ -224,7 +236,7 @@ You can continue downloading the latest version of private App Store content fro
 
 ### November 14th, 2019
 
-#### Content Support Update
+#### Improvements
 
 We are invested in maintaining Mendix Marketplace content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
 
@@ -254,7 +266,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 ### September 11th, 2019
 
-#### Improvement
+#### Improvements
 
 We added the flexibility to label your App Store content with a [custom version number](/appstore/general/share-app-store-content/#updating).
 
@@ -262,7 +274,7 @@ We added the flexibility to label your App Store content with a [custom version 
 
 ### August 30th, 2019
 
-#### SAP Connector Renaming
+#### Improvements
 
 We renamed all the SAP-related connectors and app templates in the App Store to be consistent. The changes are:
 
@@ -279,9 +291,12 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
 ### August 26th, 2019
 
-#### SAP OData Connector Improvements and Fixes
+#### Improvements
 
 * We updated the **SAP OData Connector** to support the **Edm.Int64** data type. (Ticket 87284)
+
+#### Fixes
+
 * We also fixed a *java.net.SocketException: Broken pipe (Write failed)* exception which occurred when sending a large request to the OData service endpoint. (Ticket 86680)
 
 ### July 31st, 2019  
@@ -289,20 +304,20 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 #### Improvements 
 
 * We simplified the options available for formatting the Documentation section when creating new App Store content.
-* We made it possible to upload images into the Documentation editor - you can drag and drop an image from your file explorer into the editor, or link to images via URL (Copy + Paste does *not* work due to browser inconsistencies).
+* We made it possible to upload images into the Documentation editor - you can drag an image from your file explorer into the editor, or link to images via URL (Copy + Paste does *not* work due to browser inconsistencies).
 * We made some user changes and improvements when you create new content using GitHub as the source. For example, an easier-to-use selection screen when choosing your repository.  
 * We also made some other minor bug fixes. 
 
 ### July 5th, 2019
 
-#### SAP Logging Connector Updates
+#### Improvements
 
 * We updated the **SAP Logging Connector** to allow the log level to be set via a constant instead of an enumeration. This means that you can change the log level with a restart, without needing to fully redeploy your app.
-* We also solved an issue where the SAP Logging Connector had conflicts with the Community Commons module.
+* We solved an issue where the SAP Logging Connector had conflicts with the Community Commons module.
 
 ### June 28th, 2019
 
-#### SAP Logging Improvement
+#### Improvements
 
 We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/partners/sap/sap-logger/).
 
@@ -323,15 +338,15 @@ We added a component in the App Store which, when configured in your app, allows
 
 ### February 15th, 2019
 
-#### SAP OData Connector Improvements and Fixes
+#### Improvements 
 
 * We now throw an error which you can catch in a microflow if the destination does not exist, or the app is running locally. Previously the error could not be caught.
-* We fixed some typos in the OData Connector actions.
 * We now provide OData Connector support for Mendix apps which use Oracle DB as their database.
+* We fixed some typos in the OData Connector actions.
 
 ### January 24th, 2019
 
-#### IBM Watson Connector Suite Improvements
+#### Improvements
 
 * We released an upgraded version of the [IBM Watson Connector Suite](https://marketplace.mendix.com/link/component/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://marketplace.mendix.com/link/component/2880/), which includes the new IBM Watson Connector Suite.
@@ -340,7 +355,7 @@ We added a component in the App Store which, when configured in your app, allows
 
 ### January 21st, 2019
 
-#### Fix
+#### Fixes
 
 The **Reviews** section at the bottom of the [App Store main page](https://marketplace.mendix.com/) presents the latest published user reviews. We fixed an issue where clicking on a user's name to view their profile caused an internal server error. You will now be redirected to the expected user.
 
@@ -348,15 +363,15 @@ The **Reviews** section at the bottom of the [App Store main page](https://marke
 
 ### December 17th, 2018
 
-#### Improvement
+#### Improvements
 
 We have noticed that when searching in the App Store (via the **Search Mendix** search bar), users frequently use keywords like **Mendix**, **Modeler**, **Desktop**, and **Download** as well as different Desktop Modeler versions. The search results did not provide the expected results based on these keywords (as in, they did not show the Modeler download page). With this update, it is now possible to search for the Modeler and all of its versions in the **Search Mendix** search bar, which will redirect you to the [Desktop Modeler page](https://marketplace.mendix.com/link/studiopro/) in the Mendix Marketplace.
 
 ### October 1st, 2018
 
-#### SAP OData Connector Version 4.0.0
+#### SAP OData Connector 4.0
 
-This version of the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525/) allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP back end services. See [SAP Destination Service](/partners/sap/sap-destination-service/).
+ This version of the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525/) allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP back end services. See [SAP Destination Service](/partners/sap/sap-destination-service/).
 
 The following authentication types are currently supported in SAP Destination Services:
 
@@ -374,7 +389,7 @@ The SAP Leonardo Machine Learning Foundation Connector is available in the App S
 
 The existing SAP Blank app template has been replaced by a new Fiori Blank app template. This new Fiori Blank app template has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
 
-#### Breaking Change
+#### Breaking Changes
 
 The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/partners/sap/sap-destination-service/) for more details.
 
@@ -382,4 +397,4 @@ The new **SAP OData Connector** will break existing projects which are using the
 
 ### June 21st, 2017
 
-Private company App Store content is now indicated in the **Template** browser with a lock icon.
+* Private company App Store content is now indicated in the **Template** browser with a lock icon.

@@ -141,7 +141,7 @@ Create a test case by following these steps:
 
 6. Delete the contents of your new container.
 7. Search in Toolbox for the **Group Box** widget.
-8. Drag and drop the widget into your empty container:
+8. Drag the widget into your empty container:
 
     {{< figure src="/attachments/howto/extensibility/build-native-widget/initial-widget.png" alt="initial widget" >}}
 
@@ -562,11 +562,11 @@ Verify that the new content property works:
 
     {{< figure src="/attachments/howto/extensibility/build-native-widget/content-area.png" alt="content area" >}}
 
-4. Drag and drop a **Call nanoflow button** widget into the content area.
+4. Drag a **Call nanoflow button** widget into the content area.
 5. Click **New** and a new nanoflow *ACT_ShowMessage*.
 6. Double-click the button and change the **Caption** to *Show message*.
 7. Navigate to **ACT_ShowMessage**.
-8. Drag and drop a **Show message** activity onto your nanoflow.
+8. Drag a **Show message** activity into your nanoflow.
 9. Double-click the activity and add the text *Hello World!* to the **Template**, then click **OK**.
 10. Rerun the app locally.
 11. With the Make It Native app, verify that your button is inside the group box and is triggering a message popup saying **Hello World!**.
@@ -615,7 +615,7 @@ It would be nice to hide the content area of the group box completely when there
     }
     ```
 
-4. To see your changes, drag and drop a new **Group box** widget onto your home page. Run your app and check to see that your new group box with no content shows no empty white box:
+4. To see your changes, drag a new **Group box** widget onto your home page. Run your app and check to see that your new group box with no content shows no empty white box:
 
     {{< figure src="/attachments/howto/extensibility/build-native-widget/6-button-inside.png" alt="new group box" >}}
 

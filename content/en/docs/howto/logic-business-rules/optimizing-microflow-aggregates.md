@@ -1,7 +1,7 @@
 ---
 title: "Optimize Microflow Aggregates"
 url: /howto/logic-business-rules/optimizing-microflow-aggregates/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 70
 description: "Describes how to evaluate large datasets in microflows."
 tags: ["microflow", "aggregate"]
@@ -31,4 +31,4 @@ When an average is calculated within an optimized SQL query, the rounding mode c
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
 * [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
 * [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract & Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

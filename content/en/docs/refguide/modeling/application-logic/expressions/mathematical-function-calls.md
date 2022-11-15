@@ -262,9 +262,9 @@ The input parameters are described in the table below:
 
 The output is described in the table below:
 
-| Value                                                        | Type                    |
-| ------------------------------------------------------------ | ----------------------- |
-| The number to the power, as in, n^p. The result will be of the most precise type necessary. | Integer/Long or Decimal |
+| Value                                | Type    |
+| ------------------------------------ | ------- |
+| The number to the power, as in, n^p. | Decimal |
 
 ### 8.3 Example
 
@@ -274,7 +274,7 @@ If you use the following input:
 pow(2, 3)
 ```
 
-The output is of type Integer/Long:
+The output is:
 
 ```java {linenos=false}
 8
@@ -286,7 +286,7 @@ Another example of an input is:
 pow(2.5, 3)
 ```
 
-The output is of type Decimal:
+The output is:
 
 ```java {linenos=false}
 15.625
@@ -295,18 +295,6 @@ The output is of type Decimal:
 {{% alert color="info" %}}
 Calculation of `pow` with a decimal power might be less accurate, as the standard Java/Javascript libraries do not support these calculations with high precision. Use a specialized library in a custom Java/Javascript action if high precision is required for this case.
 {{% /alert %}}
-
-### 8.4 (square) root
-
-To get the square root of a decimal, use 0.5 as the second parameter:
-
-* `pow(16, 0.5)` results in `4`
-
-Or, use a division for a specific root:
-
-* `pow(27, 1:3)` results in `3`
-
-* `pow(16, 1:4)` results in `2`
 
 ## 9 abs
 
@@ -346,4 +334,42 @@ The output in both cases is:
 
 ```java {linenos=false}
 5
+```
+
+## 10 sqrt
+
+Calculates the square root of a number.
+
+### 10.1 Input Parameters
+
+The input parameters are described in the table below:
+
+| Value    | Type                  |
+| -------- | --------------------- |
+| A number | Integer/Long, Decimal |
+
+{{% alert color="info" %}}
+A negative input for sqrt results in an error.
+{{% /alert %}}
+
+### 10.2 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type                    |
+| ------------------------------------------------------------ | ----------------------- |
+| The square root of the input value | Decimal |
+
+### 10.3 Example
+
+If you use the following input:
+
+```java {linenos=false}
+sqrt(9)
+```
+
+The output is of type Decimal:
+
+```java {linenos=false}
+3
 ```

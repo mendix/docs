@@ -42,7 +42,7 @@ The notification should be displayed at the end of the minute.
 If your app is open, it will not show the notification due to iOS and Android user guidelines. However, notifications for open apps can still trigger onReceive events. This allows you to design custom actions for notifications, such as showing a page with pop-up layout. Follow these steps to model an onReceive event:
 
 1. Make a new nanoflow named *ON_ReceiveNotification*.
-2. Drag and drop a **Log message** activity on your nanoflow.
+2. Drag a **Log message** activity into your nanoflow.
 3. Double-click this activity. 
 4. In **Template** write *I triggered on receive notification* then click **OK**.
 5. Double-click your home page's notifications widget.
@@ -71,14 +71,14 @@ To cancel a scheduled notification, you can use either the **Cancel Scheduled No
 To cancel all scheduled notifications, do the following:
 
 1. Create a nanoflow named  *ACT_CancelAllScheduledNotifications*.
-2. Drag and drop a JavaScript action named **Cancel all scheduled notifications** onto your nanoflow: 
+2. Drag a JavaScript action named **Cancel all scheduled notifications** into your nanoflow: 
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-schedule-cancel/cancel-all-action.png" alt="cancel scheduled action"   width="500"  >}}
 
 3. Double-click your new cancel notification action.
 4. Select  **Use return value** > **No**.
 5. Click **OK**.
-6. Drag and drop this nanoflow to your home screen and name its button *Cancel all*.
+6. Drag this nanoflow onto your home screen and name its button *Cancel all*.
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-schedule-cancel/cancel-button.png" alt="cancel button"   width="300"  >}}
 
@@ -104,7 +104,7 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 
 5. Click **OK** once more to close the dialog box. 
 6. Create a nanoflow named *ACT_CancelScheduledNotifications*.
-7. Drag and drop a JavaScript Action named **Cancel scheduled notification** onto your nanoflow:
+7. Drag a JavaScript Action named **Cancel scheduled notification** into your nanoflow:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-schedule-cancel/cancel-scheduled-notif.png" alt="cancel one notification" >}}
 
@@ -112,7 +112,7 @@ To cancel a specific scheduled notification, you will need to supply a notificat
 9. Click **Notification id** > **Edit**.
 10. Type *'testID'* into the parameter argument field and click **OK**.
 11. Click **OK** again to close the dialog box.
-12. Drag and drop this nanoflow onto your home screen and name its button *Cancel a specific notification*:
+12. Drag this nanoflow onto your home screen and name its button *Cancel a specific notification*:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-schedule-cancel/cancel-specific-button.png" alt="cancel one button"   width="300"  >}}
 

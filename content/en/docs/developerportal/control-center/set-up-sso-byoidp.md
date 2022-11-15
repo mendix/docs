@@ -43,7 +43,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
 
 As a Mendix Administrator, you will find the IdP setup on the **Single Sign-On** tab of your Control Center's [Security](/developerportal/control-center/#security) section.
 
-In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, a pop-up screen will be displayed to inform you of known limitations.
+In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, a pop-up screen will inform you of known limitations.
 
 From here you can add a configuration, edit draft versions of a configuration, activate a draft version or de-activate the current IdP configuration.
 

@@ -36,7 +36,7 @@ For example, to list all existing Amazon SNS subscriptions, implement the [ListS
 2. Enter a name for your microflow, for example, *ACT_ListSubscriptions*, and then click **OK**.
 3. In the new microflow, configure AWS Authentication with static credentials.
     For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/#static).
-4. In the **App Explorer**, in the **Amazon SNSConnector** section, find the **ListSubscriptions** activity.
+4. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **ListSubscriptions** activity.
 5. Drag the **ListSubscriptions** activity onto the work area of your microflow.
 6. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 7. Position the **Retrieve** activity between the **ListSubscriptions** activity and the microflow end event.

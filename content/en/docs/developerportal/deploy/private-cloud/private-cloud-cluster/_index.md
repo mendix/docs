@@ -1804,9 +1804,13 @@ This tab shows information on the versions of the various components installed i
 
 #### 6.2.7 Customization
 
-This tab enables the cluster manager to customize the enablement of Secret store and developer mode for the developers. 
+This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
 
-Enabling the External Secrets Store option will allow users to retrieve secrets from External Secrets Store for database plan, storage plan, MxAdmin password.
+Enabling the **External Secrets Store** option will allow users to retrieve the following secrets from an external secrets store
+
+* database plan
+* storage plan
+* MxAdmin password
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
 

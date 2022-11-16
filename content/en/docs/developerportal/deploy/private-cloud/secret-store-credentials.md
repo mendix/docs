@@ -62,7 +62,7 @@ The following sections outline the process of implementing an external secret st
 
 To enable your environment to use Vault as external secret storage, follow these steps:
 1. Install [Vault](https://developer.hashicorp.com/vault/docs/platform/k8s/helm) and its [CSI Secrets Driver](https://github.com/hashicorp/vault-csi-provider), if it is not already installed in the cluster.
-2. Install [CSI Secret Store Driver](https://developer.hashicorp.com/vault/tutorials/kubernetes/kubernetes-secret-store-driver#install-the-secrets-store-csi-driver), as shown in the following example. Replace `<{ns}>` with the namespace name where Vault is installed, and update any values to match your database configuration:
+2. Install [CSI Secret Store Driver](https://developer.hashicorp.com/vault/tutorials/kubernetes/kubernetes-secret-store-driver#install-the-secrets-store-csi-driver), as shown in the following example. Replace `<{ns}>` with the namespace name where Vault is installed:
     ```shell
     helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
     helm -n <{ns}> install csi secrets-store-csi-driver/secrets-store-csi-driver \
@@ -71,7 +71,7 @@ To enable your environment to use Vault as external secret storage, follow these
 3. Configure a Postgres or SQLServer database server with the following:
     * A dedicated database to store your secrets
     * An S3-compatible storage
-4. Set up the secret in the database by starting an interactive shell session on the `vault-0` pod, as shown in the following example. Replace `<{ns}>` with the namespace name where Vault is installed, and update any values to match your database configuration:
+4. Set up the secret in the database by starting an interactive shell session on the `vault-0` pod, as shown in the following example. Replace `<{ns}>` with the namespace name where Vault is installed:
     ```shell
     kubectl -n <ns> exec -it vault-0 -- /bin/sh
    ``` 
@@ -87,7 +87,7 @@ To enable your environment to use Vault as external secret storage, follow these
     kubernetes_host="https://$KUBERNETES_PORT_443_TCP_ADDR:443" \
     kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
     ```
-7. Create a database secret in Vault, as shown in the following example. Replace `<{env-db-secret}>` with a unique name, and update any values to match your database configuration:
+7. Create a database secret in Vault, as shown in the following example. Replace `<{env-db-secret}>` with a unique name:
     ```shell
     vault kv put secret/<{env-db-secret}> database-type="PostgreSQL" database-jdbc-url="jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer" database-host="pg.example.com:5432" database-name="my-app-1" database-username="my-app-user-1" database-password="Welc0me!"
     ```
@@ -182,30 +182,36 @@ To enable your environment to use Vault as external secret storage, follow these
             objectName: "mx-admin-password"
             secretPath: "secret/<{env-configuration-secret}>"
     ```
+14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`in the Mendix app CRD.
     The following yaml shows an example Mendix app CRD:
+    
     ```yaml
-    cat > mendixApp.yaml <<EOF 
-    apiVersion: privatecloud.mendix.com/v1alpha1 
-    kind: MendixApp 
-    metadata: 
-        name: <{internal name}> 
-    spec: 
-        mendixRuntimeVersion: <{Runtime version}> allowOverrideSecretsWithSecretStoreCSIDriver: true 
-        replicas: 1 
-        resources: 
-            limits: 
-            cpu: "1" 
-            memory: 512Mi 
-            requests: 
-            cpu: 100m 
-            memory: 512Mi 
-            runtime: customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}' 
-            dtapMode: P 
-            logAutosubscribeLevel: INFO 
-            runtimeLicense: {} 
-            runtimeMetricsConfiguration: {} 
-            sourceURL: oci image url 
-            sourceVersion: <version of app> EOF
+    cat > mendixApp.yaml <<EOF
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: <{Mendix App CR name}>
+    spec:
+      mendixRuntimeVersion: 9.4.0.24572
+      allowOverrideSecretsWithSecretStoreCSIDriver: true
+      replicas: 1
+      resources:
+    limits:
+      cpu: "1"
+      memory: 512Mi
+    requests:
+        cpu: 100m
+        memory: 512Mi
+        runtime:
+        customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}'
+        dtapMode: D
+        logAutosubscribeLevel: INFO
+        runtimeLicense: {}
+        runtimeMetricsConfiguration: {}
+        sourceURL: oci-image://<{image URL}>
+        sourceVersion: 0.0.0.87
+    EOF
+    ```
 
 ### 3.2 Configuring a Secret Store with AWS Secrets Manager
 
@@ -243,31 +249,35 @@ To enable your environment to use AWS Secrets Manager as external secret storage
     kubectl -n <{k8s namespace}> annotate serviceaccount <{environment name}> privatecloud.mendix.com/environment-account=true
     kubectl -n <{k8s namespace}> annotate serviceaccount <{environment name}> eks.amazonaws.com/role-arn=<{aws role ARN}>
     ```
-10. In the Mendix app, set `allowOverrideSecretsWithSecretStoreCSIDriver` to *true*, and make sure that the app does not use storage plans. For more information, see [Additional considerations](#additional-considerations).
+10. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`in the Mendix app CRD.
     The following yaml shows an example Mendix app CRD:
+    
     ```yaml
-    cat > mendixApp.yaml <<EOF 
-    apiVersion: privatecloud.mendix.com/v1alpha1 
-    kind: MendixApp 
-    metadata: 
-        name: <{internal name}> 
-    spec: 
-        mendixRuntimeVersion: <{Runtime version}> allowOverrideSecretsWithSecretStoreCSIDriver: true 
-        replicas: 1 
-        resources: 
-            limits: 
-            cpu: "1" 
-            memory: 512Mi 
-            requests: 
-            cpu: 100m 
-            memory: 512Mi 
-            runtime: customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}' 
-            dtapMode: P 
-            logAutosubscribeLevel: INFO 
-            runtimeLicense: {} 
-            runtimeMetricsConfiguration: {} 
-            sourceURL: oci image url 
-            sourceVersion: <version of app> EOF
+    cat > mendixApp.yaml <<EOF
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: <{Mendix App CR name}>
+    spec:
+      mendixRuntimeVersion: 9.4.0.24572
+      allowOverrideSecretsWithSecretStoreCSIDriver: true
+      replicas: 1
+      resources:
+    limits:
+      cpu: "1"
+      memory: 512Mi
+    requests:
+        cpu: 100m
+        memory: 512Mi
+        runtime:
+        customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}'
+        dtapMode: D
+        logAutosubscribeLevel: INFO
+        runtimeLicense: {}
+        runtimeMetricsConfiguration: {}
+        sourceURL: oci-image://<{image URL}>
+        sourceVersion: 0.0.0.87
+    EOF
     ```
 11. Attach the secret to the environment by applying the following k8s yaml:
     ```yaml

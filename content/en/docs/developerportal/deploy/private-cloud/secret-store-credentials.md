@@ -196,20 +196,20 @@ To enable your environment to use Vault as external secret storage, follow these
       allowOverrideSecretsWithSecretStoreCSIDriver: true
       replicas: 1
       resources:
-    limits:
-      cpu: "1"
-      memory: 512Mi
-    requests:
-        cpu: 100m
-        memory: 512Mi
-        runtime:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 100m
+          memory: 512Mi
+      runtime:
         customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}'
         dtapMode: D
         logAutosubscribeLevel: INFO
         runtimeLicense: {}
-        runtimeMetricsConfiguration: {}
-        sourceURL: oci-image://<{image URL}>
-        sourceVersion: 0.0.0.87
+      runtimeMetricsConfiguration: {}
+      sourceURL: oci-image://<{image URL}>
+      sourceVersion: 0.0.0.87
     EOF
     ```
 
@@ -263,20 +263,20 @@ To enable your environment to use AWS Secrets Manager as external secret storage
       allowOverrideSecretsWithSecretStoreCSIDriver: true
       replicas: 1
       resources:
-    limits:
-      cpu: "1"
-      memory: 512Mi
-    requests:
-        cpu: 100m
-        memory: 512Mi
-        runtime:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 100m
+          memory: 512Mi
+      runtime:
         customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}'
         dtapMode: D
         logAutosubscribeLevel: INFO
         runtimeLicense: {}
-        runtimeMetricsConfiguration: {}
-        sourceURL: oci-image://<{image URL}>
-        sourceVersion: 0.0.0.87
+      runtimeMetricsConfiguration: {}
+      sourceURL: oci-image://<{image URL}>
+      sourceVersion: 0.0.0.87
     EOF
     ```
 11. Attach the secret to the environment by applying the following k8s yaml:

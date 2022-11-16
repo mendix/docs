@@ -50,7 +50,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* There are now user trials avaiable for **Premium** app services, such as [Email Service](/appstore/app-services/email-service/) and [Speech to Text](/appstore/app-services/speech-to-text/). This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
+* There are now user trials avaiable for **Premium** app services, such as [Email Service](/appstore/app-services/email-service/) and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
 * User trial subscriptions are now listed under [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions).
 * For new uploads of public components, you can now optionally share a [virus scan report](/appstore/general/share-app-store-content/#package) to speed up the governance process.
 * For solutions and solution templates, you can now add a [use case](/appstore/general/share-app-store-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.

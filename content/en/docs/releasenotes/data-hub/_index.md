@@ -11,6 +11,10 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2022
 
+### November 17th, 2022
+
+* You can now initiate an email to the owner of a data set to request access right from the authentication details view.
+
 ### November 10th, 2022
 
 #### Improvements

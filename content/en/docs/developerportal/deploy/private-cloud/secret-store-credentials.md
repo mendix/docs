@@ -65,25 +65,41 @@ To enable your environment to use Vault as external secret storage, follow these
 2. Install [CSI Secret Store Driver](https://developer.hashicorp.com/vault/tutorials/kubernetes/kubernetes-secret-store-driver#install-the-secrets-store-csi-driver), as shown in the following example. Replace `<{ns}>` with the namespace name where Vault is installed, and update any values to match your database configuration:
     ```shell
     helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
-    helm -n <ns> install csi secrets-store-csi-driver/secrets-store-csi-driver \
+    helm -n <{ns}> install csi secrets-store-csi-driver/secrets-store-csi-driver \
     --set syncSecret.enabled=true
     ```
 3. Configure a Postgres or SQLServer database server with the following:
     * A dedicated database to store your secrets
     * An S3-compatible storage
-4. Create a database secret in Vault, as shown in the following example. Replace `<{env-db-secret}>` with a unique name, and update any values to match your database configuration:
+4. Set up the secret in the database by starting an interactive shell session on the `vault-0` pod, as shown in the following example. Replace `<{ns}>` with the namespace name where Vault is installed, and update any values to match your database configuration:
+    ```shell
+    kubectl -n <ns> exec -it vault-0 -- /bin/sh
+   ``` 
+5. Enable the Kubernetes authentication method by running the following command:
+    ```text
+    vault auth enable kubernetes
+    ```
+6. Configure the Kubernetes authentication method to use the service account token, the location of the Kubernetes host, and its certificate, as shown in the following example:
+    ```shell
+    vault write auth/kubernetes/config \
+    issuer="https://kubernetes.default.svc.cluster.local" \
+    token_reviewer_jwt="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" \
+    kubernetes_host="https://$KUBERNETES_PORT_443_TCP_ADDR:443" \
+    kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    ```
+7. Create a database secret in Vault, as shown in the following example. Replace `<{env-db-secret}>` with a unique name, and update any values to match your database configuration:
     ```shell
     vault kv put secret/<{env-db-secret}> database-type="PostgreSQL" database-jdbc-url="jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer" database-host="pg.example.com:5432" database-name="my-app-1" database-username="my-app-user-1" database-password="Welc0me!"
     ```
-5. Create a file storage secret in Vault, as shown in the following example. Replace `<{env-file-secret}>` with a unique name, and update any values to match your file storage configuration:
+8. Create a file storage secret in Vault, as shown in the following example. Replace `<{env-file-secret}>` with a unique name, and update any values to match your file storage configuration:
     ```shell
     vault kv put secret/<{env-file-secret}> storage-service-name="com.mendix.storage.s3" storage-endpoint="https://my-app-bucket.s3.eu-west-1.amazonaws.com" storage-access-key-id="AKIA################" storage-secret-access-key="A#######################################" storage-bucket-name="subdirectory" storage-use-ca-certificates="true" storage-perform-delete="true"
     ```
-6. Create an app environment configuration secret in Vault, as shown in the following example. Replace `<{env-configuration-secret}>` with a unique name, and set any additional parameters:
+9. Create an app environment configuration secret in Vault, as shown in the following example. Replace `<{env-configuration-secret}>` with a unique name, and set any additional parameters:
     ```shell
     vault kv put secret/<{env-configuration-secret}> mx-admin-password="Welc0me!"
     ```
-7. Create the required Vault role, as shown in the following example. Replace `<{env-policy}>` with a unique name to identify the app environment, and update any paths to match the secrets you created in the previous steps:
+10. Create the required Vault role, as shown in the following example. Replace `<{env-policy}>` with a unique name to identify the app environment, and update any paths to match the secrets you created in the previous steps:
     ```shell
     vault policy write <{env-policy}> - <<EOF
     path "secret/<{env-db-secret}>" {
@@ -97,19 +113,19 @@ To enable your environment to use Vault as external secret storage, follow these
     }
     EOF
     ```
-8. Bind the Vault role to a k8s service, as shown in the following example. Replace `<{env-policy}>` with the policy name from the previous step, use a unique role name in place of `<{env-role}>`, and specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`):
+11. Bind the Vault role to a k8s service, as shown in the following example. Replace `<{env-policy}>` with the policy name from the previous step, use a unique role name in place of `<{env-role}>`, and specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`):
     ```shell
     vault write auth/kubernetes/role/<{env-role}> \
       bound_service_account_names=<{env-serviceaccount}> \
       bound_service_account_namespaces=<{env-namespace}> \
       policies=<{env-policy}> \
     ```
-9. Create a Kubernetes `ServiceAccount` for your environment, as shown in the following example. Specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`:
+12. Create a Kubernetes `ServiceAccount` for your environment, as shown in the following example. Specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`:
     ```shell
     kubectl -n <{env-namespace}> create serviceaccount <{env-serviceaccount}>
     kubectl -n <{env-namespace}> annotate serviceaccount <{env-serviceaccount}> privatecloud.mendix.com/environment-account=true
     ```
-10. Create the `SecretProviderClass` CR for the Secrets Store CSI Driver:
+13. Create the `SecretProviderClass` CR for the Secrets Store CSI Driver:
     ```yaml
     apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
     kind: SecretProviderClass

@@ -72,16 +72,7 @@ However, you can migrate manually by creating a new app based on Team Server Git
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server?
 
-Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop by using the following repository URLs:
-
-* Team Server SVN: `https://teamserver.sprintr.com/<your AppID>/` 
-* Team Server Git: `https://git.api.mendix.com/<your AppID>.git`
-
-If you have Git-based apps, you can also connect to a local repository. 
-
-{{% alert color="info" %}}
-Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.
-{{% /alert %}}
+Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools/) section in *Using Version Control in Studio Pro*. 
 
 ## 11 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 

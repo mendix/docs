@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ### November 17th, 2022
 
-* You can now initiate an email to the owner of a data set to request access right from the authentication details view.
+* You can now request access to a data source directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
 
 ### November 10th, 2022
 

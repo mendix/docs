@@ -13,16 +13,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### August 17th, 2022
+### November 17th, 2022
 
 #### Portal Improvements
 
-* A new attribute is added in the mendix app cr. This will allow the app to use the secret store credentials.
-* We have added a new status for database and storage plan when the environment is configured with secret store.
-* We have added a new section to enable/disable secret store on cluster manager page. This will allow the developers to create environment using secret store credentials for database, storage and mxadmin password when this switch is enabled by Cluster manager. 
+* A new attribute "allowOverrideSecretsWithSecretStoreCSIDriver" is added in the mendix app cr. This will allow the app to use the secret store credentials.
+* When using Mendix Operator version 2.9.0, it’s now possible to load database, file storage and other configuration (such as MxAdmin password) from Kubernetes CSI Secrets Store. This allows to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) in place of the Cloud Portal and Kubernetes secrets. In upcoming releases, it will be possible to store more configuration options in CSI Secrets Store - such as app constants and runtime settings.
+* We have added a new section to enable/disable secret store on cluster manager page. This will allow the developers to create environment using secret store credentials for database, storage and mxadmin password when this switch is enabled by Cluster manager.
+* We have added a new status field indicating if database, file storage and other configuration options were loaded from CSI Secrets Storage.
 * We fixed an issue where deployment with spaces in the branch lines triggered an error. (Ticket 167448 and 167577)
 * We have added a new status in environment details page when environment is attached to a service account.
-* We now enable the cluster manager to enable/disable development mode in cluster manager page. This will allow the developer to create app in development mode.
+* Cluster manager can enable/disable development mode in cluster manager page. This will allow the developers to create app in development mode.
 * We added activity log entries for development mode enable/disable activity in Namespace
 
 ### November 14th , 2022

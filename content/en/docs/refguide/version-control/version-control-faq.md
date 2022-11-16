@@ -72,7 +72,7 @@ However, you can migrate manually by creating a new app based on Team Server Git
 
 ## 10 Can I Use Third-Party Tools to Connect to the Team Server?
 
-Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop. For more information how to set this up, please read this section about [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools). 
+Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools/) section in *Using Version Control in Studio Pro*. 
 
 ## 11 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 

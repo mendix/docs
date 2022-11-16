@@ -1,5 +1,6 @@
 ---
 title: "Pages in the Mendix Metamodel"
+linktitle: "Pages in the Metamodel"
 url: /apidocs-mxsdk/mxsdk/pages-metamodel/
 weight: 3
 description: "This page contains detailed explanations on how pages, layouts, and page content are structured."

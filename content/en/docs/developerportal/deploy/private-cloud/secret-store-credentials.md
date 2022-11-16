@@ -166,6 +166,30 @@ To enable your environment to use Vault as external secret storage, follow these
             objectName: "mx-admin-password"
             secretPath: "secret/<{env-configuration-secret}>"
     ```
+    The following yaml shows an example Mendix app CRD:
+    ```yaml
+    cat > mendixApp.yaml <<EOF 
+    apiVersion: privatecloud.mendix.com/v1alpha1 
+    kind: MendixApp 
+    metadata: 
+        name: <{internal name}> 
+    spec: 
+        mendixRuntimeVersion: <{Runtime version}> allowOverrideSecretsWithSecretStoreCSIDriver: true 
+        replicas: 1 
+        resources: 
+            limits: 
+            cpu: "1" 
+            memory: 512Mi 
+            requests: 
+            cpu: 100m 
+            memory: 512Mi 
+            runtime: customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}' 
+            dtapMode: P 
+            logAutosubscribeLevel: INFO 
+            runtimeLicense: {} 
+            runtimeMetricsConfiguration: {} 
+            sourceURL: oci image url 
+            sourceVersion: <version of app> EOF
 
 ### 3.2 Configuring a Secret Store with AWS Secrets Manager
 
@@ -204,6 +228,31 @@ To enable your environment to use AWS Secrets Manager as external secret storage
     kubectl -n <{k8s namespace}> annotate serviceaccount <{environment name}> eks.amazonaws.com/role-arn=<{aws role ARN}>
     ```
 10. In the Mendix app, set `allowOverrideSecretsWithSecretStoreCSIDriver` to *true*, and make sure that the app does not use storage plans. For more information, see [Additional considerations](#additional-considerations).
+    The following yaml shows an example Mendix app CRD:
+    ```yaml
+    cat > mendixApp.yaml <<EOF 
+    apiVersion: privatecloud.mendix.com/v1alpha1 
+    kind: MendixApp 
+    metadata: 
+        name: <{internal name}> 
+    spec: 
+        mendixRuntimeVersion: <{Runtime version}> allowOverrideSecretsWithSecretStoreCSIDriver: true 
+        replicas: 1 
+        resources: 
+            limits: 
+            cpu: "1" 
+            memory: 512Mi 
+            requests: 
+            cpu: 100m 
+            memory: 512Mi 
+            runtime: customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}' 
+            dtapMode: P 
+            logAutosubscribeLevel: INFO 
+            runtimeLicense: {} 
+            runtimeMetricsConfiguration: {} 
+            sourceURL: oci image url 
+            sourceVersion: <version of app> EOF
+    ```
 11. Attach the secret to the environment by applying the following k8s yaml:
     ```yaml
     apiVersion: secrets-store.csi.x-k8s.io/v1

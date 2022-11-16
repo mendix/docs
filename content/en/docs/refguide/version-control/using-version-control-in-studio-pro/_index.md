@@ -391,14 +391,17 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 When using external tools, you might be asked to authenticate separately to Team Server.
 
 Connecting to Git is done via a Personal Access Token (PAT). For more information on how to create a PAT, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/) in the *Developer Portal Guide*. 
-* URL: `https://git.api.mendix.com/<your AppID>.git`
-* Username: your Mendix account username. Alternatively, you can use the word *pat* as your username.
-* Password: the Personal Access Token you created.
+You need to use the following credentials:
 
-Connecting to SVN is done with your Mendix credentials.
+* URL: `https://git.api.mendix.com/<your AppID>.git`
+* Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
+* Password: the Personal Access Token you created
+
+Connecting to SVN is done with your Mendix credentials:
+
 * URL: `https://teamserver.sprintr.com/<your AppID>/`
-* Username: your Mendix account username.
-* Password: your Mendix account password.
+* Username: your Mendix account username
+* Password: your Mendix account password
 
 ### 9.3 Adding Files and Directories
 

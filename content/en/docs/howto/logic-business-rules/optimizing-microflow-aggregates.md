@@ -24,9 +24,9 @@ For instance, in the microflow shown in the following example, the Mendix Runtim
 
 ### 2.1 Examples for When Optimization is not Applied
 
-However, if you reuse the same list for multiple list aggregates, an optimization process will not be applied. The Mendix Runtime only creates an optimized SQL query if the list is not used in the microflow afterwards and a custom range is not configured. If you use the list later (for example, to iterate over) or a custom range is configured, the query will not be optimized. 
+However, if you reuse the same list for multiple list aggregates, an optimization process will not be applied. The Mendix Runtime only creates an optimized SQL query if the list is not used in the microflow afterwards and a custom range is not configured. If you use the list later (for example, to iterate over the list) or a custom range is configured, the query will not be optimized. 
 
-For instance, in the following example, it uses the same list variable multiple times, the Mendix Runtime no longer merges the activities. 
+For instance, in the following example, the same list is used multiple times, and hence the Mendix Runtime no longer merges the activities. 
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-microflow-aggregates/not-merged-activities.png" >}}
 
@@ -38,11 +38,12 @@ If you do want to use the list more than once and you also want the optimized qu
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-microflow-aggregates/two-separate-retrieves.png" >}}
 
-When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings is not be respected. The result that is returned is rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
+When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings is not respected. The result that is returned is rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
 
-Since the Mendix Runtime merges list retrieve activities and list aggregates, you do not have to think about the memory consumption of these activities. If we are talking about data sets of thousands and larger, it is even faster to do multiple aggregates in the database, as a database is designed for doing retrieves and aggregates as fast as possible. The only reason you would not want to use multiple retrieves is in a case with very complex constraints (for example, multiple associations and attributes) or when your data is likely to change in the few milliseconds between the two queries.
+Since the Mendix Runtime merges list retrieve activities and list aggregates, you do not have to think about the memory consumption of these activities. If we are talking about datasets of thousands and larger, it is even faster to do multiple aggregates in the database, as a database is designed for doing retrieves and aggregates as fast as possible. The only reason you do not want to use multiple retrieves is when there are very complex constraints (for example, multiple associations and attributes) or when your data is likely to change in the few milliseconds between the two queries.
 
 ## 3 Read More
 
+* [Aggregate List](/refguide/aggregate-list/)
 * [Retrieve Activities](/refguide/retrieve/)
 * [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)

@@ -16,7 +16,7 @@ Git is a more modern version control system that has several advantages over SVN
 
 To be able to migrate your app to Git, your app needs to meet the following criteria:
 
-* Mendix version of the app is 9.12 or above
+* Mendix version of *all branches* in the app is 9.12 or above
 * Current version control is in Team Server SVN
 * Your app has maximum 100 revisions across all branches (we plan to increase this maximum in the coming months)
 

@@ -325,9 +325,11 @@ If the caption is `null`, `undefined`, or not a string, then the default caption
 
 ## 7 Widget Preview in Structure Mode
 
-To configure the appearance of the custom widget in Studio Pro, export a `getPreview` function. This function receives two parameters: the first one contains the current values, and the second one indicates whether dark mode is set. The function should return a preview properties object containing the configuration of the custom widget preview.
+To configure the appearance of the custom widget in Studio Pro, export a `getPreview` function. This function receives three parameters: the first one contains the current values, the second one indicates whether dark mode is set, and the third parameter passes the current Studio Pro version. The function should return a preview properties object containing the configuration of the custom widget preview.
 
 Please note that the default colors will be automatically adjusted for dark mode (for example font color, border color, and more). However, the `isDarkMode` flag can be used when setting colors explicitly.
+
+To create a preview for different versions, you can use the third argument `version`. It contains the current Studio Pro version as an array of numbers in the format [`major`, `minor`, `build`], e.g. `[9, 18, 0]`.
 
 The following describes the API for the preview properties object that the `getPreview` should return.
 
@@ -372,7 +374,7 @@ Additionally, a fixed `width` and `height` can be set. If not set, it will maxim
 Here is an example of a circle SVG:
 
 ```typescript
-export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => {
+export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => {
     const mySvgImage = `
 <svg height="1000" width="1000">
     <circle cx="500" cy="500" r="400" stroke="black" stroke-width="35" fill="blue" />
@@ -406,7 +408,7 @@ Containers can be used to stack multiple elements vertically. These elements are
 Here is an example of two texts with borders around them:
 
 ```typescript
-export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
+export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => (
     {
         type: "Container",
         borders: true,
@@ -441,7 +443,7 @@ As an example, this is useful for creating grid-like structures. By default, all
 As an example, consider this. The following code creates a row layout with four children. The first child (`Image`) takes the first half of the available space, and the other three children (`Texts`) share the other half. This can be achieved by simply setting the `grow` property of the first child to 3:
 
 ```typescript
-export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
+export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => (
     {
         type: "RowLayout",
         columnSize: "fixed",
@@ -472,7 +474,7 @@ Please note that forcing items smaller than they require works for images, but m
 Here is an example to show how grow factors behave:
 
 ```typescript
-export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
+export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => (
     {
         type: "RowLayout",
         columnSize: "grow",
@@ -508,7 +510,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) =>
 Here is an example of a button to show how to center items using row layouts:
 
 ```typescript
-export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean) => (
+export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => (
     {
         type: "RowLayout",
         columnSize: "grow",
@@ -554,7 +556,7 @@ The text to be displayed must be passed as `content`. You can optionally set a `
 Here is an example:
 
 ```typescript
-export const getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => (
+export const getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => (
     {
         type: "Text",
         content: values.myTextProp, // set displayed text to the value of myTextProp
@@ -568,15 +570,16 @@ type DropZoneProps = BaseProps & {
     type: "DropZone";
     property: object; // widgets property object from Values API
     placeholder: string; // text to be shown inside the dropzone when empty
+    showDataSourceHeader: bool?; // true by default. Toggles whether to show a header containing information about the datasource
 }
 ```
 
-The drop zone preview type can be used to add drop zones to the widget preview. It requires a widget property of type `widgets` in order to be able to store the information about the containing widgets.
+The drop zone preview type can be used to add drop zones to the widget preview. It requires a widget property of type `widgets` in order to be able to store the information about the containing widgets. If the property has a datasource, a header will be shown inside the dropzone containing information about the datasource. This header is optional and can be hidden by setting `showDataSourceHeader` to `false`.
 
 To configure a drop zone, the widgets property object (which can be obtained directly from the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)) needs to be passed as `property`, as the following example shows:
 
 ```typescript
-exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
+exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => ({
     type: "Container",
     borders: true,
     children: [
@@ -612,7 +615,7 @@ To configure a selectable, the object from the [Value API](/apidocs-mxsdk/apidoc
 The following example shows how to render a container with a list of selectable objects. In this case, each object is shown as a text with its caption:
 
 ```typescript
-export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean) {
+export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) {
     const container: ContainerProps = {
         type: "Container",
         borders: true,
@@ -651,7 +654,7 @@ type DatasourceProps = BaseProps & {
 The **datasource** preview type can be used when developing a widget with a data source. Using it will render a container with a data source header, similar to other data widgets such as data views or list views. For example, the following will render a data source container with a drop-zone:
 
 ```typescript
-    exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean) => ({
+    exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => ({
       type: "Datasource",
       property: values.myDatasourceProp, // pass the datasource property
       child: {

@@ -26,7 +26,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * The Cluster Manager can enable and disable development mode in cluster manager page. This will allow the developers to create app in development mode.
 * We added activity log entries whan development mode is enabled or disabled in a Namespace.
 
-### November 14th , 2022
+### November 14th, 2022
 
 #### Mendix Operator v2.9.0{#2.9.0}
 

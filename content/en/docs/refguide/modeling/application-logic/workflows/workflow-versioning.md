@@ -78,6 +78,7 @@ When an app developer changes the **Workflow Context** entity of a workflow, exi
 You can do one of the following: 
 
 * The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the workflow parameter context object of the right entity. To learn more about Java actions read [How to Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
 
 To prevent this issue, you need to make sure that context objects cannot be deleted while they are still being used in running workflow instances.
@@ -91,9 +92,10 @@ When the workflow starts, a **Workflow Context** object is assigned to the workf
 This conflict may occur even without deploying a new app version.
 {{% /alert %}}
 
-You can do the following:
+You can do one of the following:
 
 * The workflow can be aborted, e.g. by using the **Workflow Admin** page in the Workflow Commons.
+* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the new workflow parameter context object. To learn more about Java actions read [How to Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 
 
 #### 3.2.4 Workflow Definition Deleted

@@ -41,6 +41,20 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 The user task object of the System.WorkflowUserTask entity available from the microflow parameters.
 
+### 3.2 Auto-Assign
+
+An option to specify automatically assigning the user task to the user who has opened the task page if the user task has been not assigned to anyone.
+By default, this is set to **Yes**.
+
+### 3.3 Who Can Open
+
+An option to specify who is able to open the user task page when a user has already been assigned to it.
+
+| Option | Description |
+| --- | --- |
+| Users with access  | all users with access to the user task can open the user task page. |
+| Assigned user *(default)* | only the user who has been currently assigned is able to open the user task page. |
+
 ## 4 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

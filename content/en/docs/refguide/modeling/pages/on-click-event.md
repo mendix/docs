@@ -300,6 +300,13 @@ For more information on workflow-related entities in the System module, see the 
 
 **Show user task page** opens an overview page set for the [user task](/refguide/user-task/) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
+The following properties are specific for this event:
+
+* **Auto-assign** – Assign the [user task](/refguide/user-task/) automatically to the user who has opened the task page if the [user task](/refguide/user-task/) has been not assigned to anyone. the **Default** is set as **Yes**.
+* **Who can open** – Specifies who is able to open the user task page when a user has already been assigned to it. **Assigned user** option is the **Default** behaviour.
+    * **Users with access**  – all users with access to the [user task](/refguide/user-task/) can open the user task page.
+    * **Assigned user** – only the user who has been currently assigned is able to open the user task page.
+
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 
 ### 3.16  Complete User Task {#complete-task}

@@ -13,7 +13,7 @@ To use the recorder function, you must have the Google Chrome browser installed 
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-recorder/information-icon.png" >}}
 
-Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where you can add the plugin to your browser.
+Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where you can add the plugin to your browser. The recorder is called the ATS Desktop Recorder.
 
 ## 3 Using the Plugin
 

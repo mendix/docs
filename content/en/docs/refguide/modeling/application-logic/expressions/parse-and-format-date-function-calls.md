@@ -10,9 +10,29 @@ tags: ["studio pro", "expressions", "parsing", "formatting"]
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-{{% alert color="info" %}}
-For details on all pattern possibilities, see the Java class [SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
-{{% /alert %}}
+The following pattern letters can be used in functions which accept format:
+
+| Letter | Date or Time Component                    | Examples         |
+| ------ | ----------------------------------------- | ---------------- |
+| L      | Month in year                             | July; Jul; 07    |
+| y      | Year                                      | 1996; 96         |
+| G      | Era designator                            | AD               |
+| E      | Day name in week                          | Tuesday; Tue     |
+| u      | Day of week (1 = Monday, ..., 7 = Sunday) | 1                |
+| Y      | Week year                                 | 2009; 09         |
+| w      | Week in year                              | 27               |
+| W      | Week in month                             | 2                |
+| D      | Day in year                               | 189              |
+| d      | Day in month                              | 10               |
+| F      | Day of week in month                      | 2                |
+| a      | Am/pm marker                              | PM               |
+| H      | Hour in day (0-23)                        | 0                |
+| k      | Hour in day (1-24)                        | 24               |
+| K      | Hour in am/pm (0-11)                      | 0                |
+| h      | Hour in am/pm (1-12)                      | 12               |
+| m      | Minute in hour                            | 30               |
+| s      | Second in minute                          | 55               |
+| S      | Millisecond                               | 978              |
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 

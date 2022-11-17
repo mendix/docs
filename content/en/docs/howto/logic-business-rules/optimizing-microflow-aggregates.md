@@ -16,21 +16,21 @@ This document describes how Mendix Runtime optimizes list aggregate activities w
 
 When a database retrieve activity is only used once in one list aggregate activity and a custom range is not configured, the Mendix Runtime can automatically merge these two activities into a single action. This executes a single aggregate query on the database. So, if you retrieve all 100k log lines from a database and only do a count on the list, you will not receive a heap space. This is because the microflow never places all 100k records in memory.
 
-For instance, in the microflow shown in the following example, the Mendix Runtime will merge the two activities into one single count query:
+For instance, in this microflow, the Mendix Runtime will merge the two activities into one single count query:
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-microflow-aggregates/one-single-retrieve-query.png" width="500px" >}}
 
 ## 2 Optimization
 
-### 2.1 Examples for When Optimization is not Applied
+### 2.1 Examples for When Optimization is Not Applied
 
-However, if you reuse the same list for multiple list aggregates, an optimization process will not be applied. The Mendix Runtime only creates an optimized SQL query if the list is not used in the microflow afterwards and a custom range is not configured. If you use the list later (for example, to iterate over the list) or a custom range is configured, the query will not be optimized. 
+If you reuse the same list for multiple list aggregates, an optimization process will not be applied. The Mendix Runtime only creates an optimized SQL query if the list is not used in the microflow afterwards and a custom range is not configured. If you use the list later (for example, to iterate over the list) or a custom range is configured, the query will not be optimized. 
 
-For instance, in the following example, the same list is used multiple times, and hence the Mendix Runtime no longer merges the activities. 
+For instance, in this example, the same list is used multiple times, and hence the Mendix Runtime no longer merges the activities:
 
 {{< figure src="/attachments/howto/logic-business-rules/optimizing-microflow-aggregates/not-merged-activities.png" >}}
 
-If the list is not merged into a single query, all these records are kept in memory. Basically, this has the same effect as when you iterate over the list. If you iterate over the list, you have to think about the memory consumption, meaning that you cannot retrieve 10,000 objects with a single retrieve query. To prevent memory errors (for example, heap space, GC limit overhead), you should not use a list multiple times in a microflow unless you use a limit and offset.
+If the list is not merged into a single query, all these records are kept in memory. Basically, this has the same effect as when you iterate over the list. If you iterate over the list, you have to think about the memory consumption, meaning that you cannot retrieve 10,000 objects with a single retrieve query. To prevent memory errors (for example, heap space or GC limit overhead), you should not use a list multiple times in a microflow unless you use a limit and offset.
 
 ### 2.2 Recommended Optimization Approaches
 

@@ -45,7 +45,7 @@ To change the **Export level** and mark documents/elements as **Usable**, do the
 4. Navigate to its properties.
 5. Set the **Export level** property to **Usable**:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
+    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
 
 You can see that documents/elements that are marked as usable have an **eye icon**, this means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
 
@@ -78,11 +78,11 @@ Before exporting an add-on module or a solution to customers, note that English 
 
 To export the add-on module, right-click it in the App Explorer and select **Export add-on module package**: 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/configure-add-on-and-solution-modules/export-add-on.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-add-on.png" >}}
 
 It is possible to add files in an add-on module package, you can select them during export and they will be imported. 
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" >}}
 
 {{% alert color="info" %}}
 Selection made above is not saved when exporting the module again, you need to select files for every subsequent export.

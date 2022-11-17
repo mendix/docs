@@ -13,7 +13,7 @@ You can specify a number of requirements for passwords. These requirements will 
 
 To set password policy properties, open **App Security** > the **Password policy** tab:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/app-explorer/security/app-security/password-policy/password-policy-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/password-policy/password-policy-tab.png" >}}
 
 Password policy properties are described in the table below:
 

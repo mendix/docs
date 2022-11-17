@@ -1,5 +1,5 @@
 ---
-title: "Recorder"
+title: "Desktop Recorder"
 url: /addons/ats-addon/rg-two-recorder/
 ---
 
@@ -17,7 +17,7 @@ Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where 
 
 ## 3 Using the ATS Desktop Recorder
 
-Before you can use the ATS Desktop Recorder, you must set your project preferences to the Desktop recorder. You can open the project preferences from any page by clicking the cog icon:
+Before you can use the ATS Desktop Recorder, you must set your project preferences to the Desktop Recorder. You can open the project preferences from any page by clicking the cog icon:
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-recorder/configure-project-preferences.png" >}}
 
@@ -35,9 +35,9 @@ Some recorded test steps offer you several actions to choose from. In the exampl
 
 To change the selected action, click the recorded test step under **Recorded Events**, then click **Select** on the right side of the action you want.
 
-## 4 Do I Need Administrative Privileges to Install the recorder?
+## 4 Do I Need Administrative Privileges to Install the Recorder?
 
-For the desktop recorder, in most cases, no additional administrative privileges are needed. However, the administrator may have restricted access to registry eidting, which is necessary for the installation. If this is the case, the following error will be displayed during installation: "ERROR: Registry editing has been disabled by your administrator." If you see this message, ask your system administrator to complete the installation or temporarily lift the restrictions on registry editing.
+In most cases for the Desktop Recorder, no additional administrative privileges are needed. However, the administrator may have restricted access to registry eidting, which is necessary for the installation. If this is the case, the following error will be displayed during installation: "ERROR: Registry editing has been disabled by your administrator." If you see this message, ask your system administrator to complete the installation or temporarily lift the restrictions on registry editing.
 
 ## 5 Current Limitations on Recording
 
@@ -49,4 +49,4 @@ These are the current limitations on recording:
 * Assertions are not recorded
 * Generating nice descriptions with labels only works if you use the label function in Mendix
 
-{{% alert color="info" %}} In the past ATS also had a Web Recorder, due to changes in the Chrome store policy we deprecated the Web Recorder in Q4, 2019. Even though it might still work for some existing customers, the ATS Desktop recorder is the default choice. {{% /alert %}}
+{{% alert color="info" %}}In the past, ATS also had a Web Recorder. However, due to changes in the Chrome store policy, we deprecated the Web Recorder in Q4 2019. Even though the Web Recorder might still work for some existing customers, the ATS Desktop recorder is the default choice.{{% /alert %}}

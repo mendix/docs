@@ -5,17 +5,19 @@ url: /addons/ats-addon/rg-two-recorder/
 
 ## 1 Introduction
 
-The recorder is a function/plugin in ATS that records the actions behind your test steps during testing an application. When you click **Save**, ATS adds the recorded steps to your test case.
+The ATS Desktop recorder is a function/plugin in ATS that records the actions behind your test steps during testing an application. When you click **Save**, ATS adds the recorded steps to your test case.
 
-## 2 Installing the Plugin
+## 2 Installing the ATS Desktop Recorder
 
-To use the recorder function, you must have the Google Chrome browser installed on your system and install the **ATS Recorder** Chrome plugin. To install the plugin, click this icon in the upper-right corner of the screen:
+To use the recorder function, you must have the Google Chrome browser installed on your system, install the **ATS Recorder** Chrome plugin, and download and install the ATS Desktop Recorder. To install the plugin, click this icon in the upper-right corner of the screen:
 
 {{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-recorder/information-icon.png" >}}
 
 Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where you can add the plugin to your browser. The recorder is called the ATS Desktop Recorder.
 
-## 3 Using the Plugin
+## 3 Using the ATS Desktop Recorder
+
+Before you can use the ATS Desktop Recorder, you must check your preferences.
 
 With the ATS Recorder plugin installed, you can start a recording session at any time by clicking the **Record** button inside a test case or an action. You open the Mendix application you want to test in another tab of the browser, and then start testing the application by walking through the app manually. Then ATS will record all the steps.
 

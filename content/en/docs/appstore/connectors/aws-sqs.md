@@ -73,17 +73,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Message (Object)`, `Queue (Object)` | Send status (Boolean) |
 
-#### 3.2.2 Receive Message
-
-The `ReceiveMessage` Amazon SQS activity allows you to receive a single message from a particular queue. It requires a queue as parameter.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `Queue (Object)` | `Message (Object)` |
-
-#### 3.2.3 Receive Messages
+#### 3.2.2 Receive Messages
 
 The `ReceiveMessages` Amazon SQS activity allows you to receive up to 10 messages from a particular queue. It requires a queue as parameter. By default, this activity uses short polling; for long polling, use the `ReceiveMessageWaitTimeSeconds` parameter.
 
@@ -97,7 +87,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Queue (Object)` | `Message (List of Objects, maximum 10)` |
 
-#### 3.2.4 List Queue {#list-queues}
+#### 3.2.3 List Queue {#list-queues}
 
 The `ListQueue` Amazon SQS activity allows you to get a list of queues created in a particular region for the user. It does not require any entry parameters.
 
@@ -107,7 +97,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | N/A | `Queue (List of Objects, maximum 1000)` |
 
-#### 3.2.5 Delete Message
+#### 3.2.4 Delete Message
 
 The `DeleteMessage` Amazon SQS activity allows you to delete a message from a queue. It requires a queue and a message to be deleted as parameters.
 
@@ -117,7 +107,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Message (Object)`, `Queue (Object)` | Delete status (Boolean) |
 
-#### 3.2.6 CreateQueue
+#### 3.2.5 CreateQueue
 
 The `CreateQueue` Amazon SQS activity allows you to create a queue in a specific region with the credentials provided. It requires that you authenticate as an AWS user with admin credentials.
 
@@ -127,7 +117,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Queue (Object)` | Create status (Boolean) |
 
-#### 3.2.7 Get Queue Attributes
+#### 3.2.6 Get Queue Attributes
 
 The `GetQueueAttributes` Amazon SQS activity allows you to view all attribute values set for a specific queue. It requires that you authenticate as an AWS user with admin credentials.
 
@@ -137,7 +127,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Queue (Object)` | `QueueAttributes (Object)` |
 
-#### 3.2.8 Purge Queue
+#### 3.2.7 Purge Queue
 
 The `PurgeQueue` Amazon SQS activity allows you to delete all messages from a specific queue. It requires that you authenticate as an AWS user with admin credentials.
 
@@ -147,7 +137,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Queue (Object)` | `Purge status (Boolean)` |
 
-#### 3.2.9 Delete Queue
+#### 3.2.8 Delete Queue
 
 The `DeleteQueue` Amazon SQS activity allows you to delete a specific queue. It requires that you authenticate as an AWS user with admin credentials.
 

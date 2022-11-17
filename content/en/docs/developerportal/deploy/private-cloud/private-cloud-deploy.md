@@ -136,13 +136,13 @@ You can change the internal name if you wish, but do not reuse one which has alr
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
     {{% alert color="info" %}}
-If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/private-cloud/private-cloud-secrets.md).
+If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/private-cloud/secret-store-credentials/).
 {{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
     {{% alert color="info" %}}
-If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/private-cloud/private-cloud-secrets.md).
+If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/private-cloud/secret-store-credentials/).
 {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}

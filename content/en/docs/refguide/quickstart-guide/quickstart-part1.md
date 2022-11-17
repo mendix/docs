@@ -30,8 +30,8 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Create your [free account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs
 )⁠—which takes only two minutes to finish
-* [Download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro
-* If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+* [Download](https://marketplace.mendix.com/index3.html) and [install](/refguide/install/) Mendix Studio Pro
+* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ## 2 Choosing an App Template with a Responsive Navigation Profile
 

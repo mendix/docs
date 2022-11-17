@@ -21,7 +21,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
 * Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
+* Create a menu item to access the customer overview page (for details, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 
 ## 3 Replacing the Default Save Button with a Custom One
 

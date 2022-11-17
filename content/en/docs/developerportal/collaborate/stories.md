@@ -79,7 +79,6 @@ Click **More** to access the following options:
 
 * **Import / Export** – opens the **Import / Export** page; for details, see the [Importing and Exporting to Excel](#import-export) section below
 * **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
-* **History** – opens the **Project History** page; for details, see the [History](#history) section below
 
 #### 2.4.1 Importing and Exporting to Excel {#import-export}
 
@@ -111,14 +110,6 @@ The following buttons are available:
 * **Configure Label** – enables changing the name and/or color of an existing label
 * **Merge Label** – enables merging the selected label into another label; all stories which have the selected label are labeled with the other label and the selected label is deleted
 * **Remove Label** – enables removing the selected label from any stories to which it has been applied; the label is then deleted
-
-#### 2.4.3 History {#history}
-
-The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/history.jpg"   width="550"  >}}
-
-When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 
 ### 2.5 Sprint Actions {#sprint-actions}
 

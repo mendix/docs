@@ -59,7 +59,7 @@ You can add new entities in the **Toolbox**.
 To add an entity, do the following:
 
 1. Open the **Toolbox** tab of the domain model.
-2. Drag and drop **New Entity** to the working area.
+2. Drag **New Entity** into the working area.
 3. Fill out the name for it and click **Create**:
 
     {{< figure src="/attachments/studio7/domain-models/create-new-entity-dialog.png" >}}

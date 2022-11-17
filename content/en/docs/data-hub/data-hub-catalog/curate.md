@@ -3,7 +3,7 @@ title: "Curate Registered Assets"
 url: /data-hub/data-hub-catalog/curate/
 category: "Data Hub Catalog"
 weight: 45
-description: "Curating and enhancing findability of data assets in Data Hub"
+description: "Describes how to curate and enhance findability of data assets in Data Hub."
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---
 
@@ -54,7 +54,7 @@ When a data source is selected in the **Search Results**, the following options 
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
     * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
     * **Validate** – indicates that the data source and datasets have been validated
-* **Delete Data Source** – allows Owners to delete their own data sources, while Curators or Admins can delete any data sources in the company
+* **Remove Data Source** – allows Owners to remove their own data sources, while Curators or Admins can remove any data sources in the company
 
 When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
 
@@ -73,15 +73,10 @@ You can curate Application Details from the **Application Details** screen as fo
 
 The **Business Owners** and **Technical Owners** are displayed as a link in the asset **Metadata** pane so that users can contact them through the email that is provided for them.
 
-By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Data Hub Home and also when registering assets using the Data Hub API.
+By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Data Hub Home and also when registering assets using the Data Hub API. 
 
 {{% alert color="info" %}}
 **Business Owners** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset. It does not mean that they are able to access the asset in Data Hub or curate it.{{% /alert %}}
-
-App owners can be changed by users with curation rights (owners and curators) from the **Application Details** screen.
-
-{{% alert color="warning" %}}
-If you, as a **Technical Owner**, curate the application and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the [Discoverability](#discoverability) is turned off for the asset, then you will also not be able to find the asset in the Catalog.{{% /alert %}}
 
 {{% alert color="info" %}}
 Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
@@ -91,17 +86,17 @@ Curators and Mendix Admins can manage the lists of custom owners as part of **Ad
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
+The **Technical Owner** can only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+
 #### 4.1.2 Adding a Custom Owner {#custom-owner}
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
 
 Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
 
-To add a custom owner follow these steps:
+To add a custom **Business Owner**, follow these steps:
 
-1. On the **Application Metadata** screen, if you start typing the name of an owner and it is not in the drop-down list, you will be prompted to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed:
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/curate/custom-contact.png" alt="custom contact create"   width="275"  >}}
+1. On the **Application Metadata** screen, if you start typing the name of an owner and it is not in the drop-down list, you will be prompted to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed.
 
 1. Enter the **Name** and **Email** of the owner and click **Save**.
 
@@ -204,6 +199,12 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
+### 5.3 Adding Authentication to a Service {#authentication}
+
+Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. Add this later if not configured during the registration step.
+
+For a description of supported authentication methods, see the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog*.
+
 ## 6 Discoverable and Validated {#discoverability}
 
 The discoverable and validated properties of registered assets can be set from the Curate bar for the selected asset.
@@ -238,4 +239,4 @@ Owners of a data source can delete their own data sources. Anyone with curation 
 
 Deleting something from Catalog only removes the metadata registration. It does not affect the publishing application or any of the applications that are consuming the data source.
 
-To delete a data source, go to the [Curation Bar](#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+To delete a data source, go to the [Curation Bar](#curation-bar) for the data source and click **Edit**, then click **Remove Data Source**.

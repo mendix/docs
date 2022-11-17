@@ -43,7 +43,7 @@ To extract the validation steps to a sub-microflow, follow these steps:
 
 3. In the **Add microflow** dialog box, enter a name for the sub-microflow.
 
-    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Implement Mendix Best Practices for Development](/howto/general/dev-best-practices/).{{% /alert %}}
+    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Mendix Best Practices for Development](/refguide/dev-best-practices/).{{% /alert %}}
 
 4. Click **OK**.
 5. Open the sub-microflow by right-clicking the sub-microflow action and selecting **Go to microflow**.
@@ -73,7 +73,7 @@ You can use an existing microflow as a sub-microflow. For example, after creatin
 To reuse an existing microflow, follow these steps:
 
 1. In the App Explorer, find the microflow that you want to reuse as a sub-microflow.
-2. Drag and drop it onto the working area of another microflow, as in the following figure:
+2. Drag it onto the working area of another microflow, as in the following figure:
 
 {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" alt="Dragging a microflow onto the working area of another microflow" >}}
 

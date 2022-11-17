@@ -25,7 +25,7 @@ Follow these steps to set the bookmark:
 
 5. Create a browser bookmark for this link with one of these methods:
 
-    * Drag the link to your browser's bookmark bar
+    * Drag the link into your browser's bookmark bar
     * Right-click the link and select **Add bookmark for this link**
 
 ### 2.1 Compatibility

@@ -31,7 +31,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Read through [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/)
 * Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ### 2.1 Downloading the Make It Native 9 App
 
@@ -113,9 +113,9 @@ Nanoflows also interact with the database on the user's mobile device, which is 
 
 As you look at your new **ACT_TakeNewPicture** nanoflow, do the following:
 
-1. Drag and drop a **Create object** action from the **Toolbox** onto the nanoflow. 
+1. Drag a **Create object** action from the **Toolbox** into the nanoflow. 
 1. Double-click the create object action and select the entity type as **Picture**, then click **OK**. 
-1. Drag and drop a **Take Picture** action from the **Toolbox** onto the nanoflow after the create object activity:
+1. Drag a **Take Picture** action from the **Toolbox** into the nanoflow after the create object activity:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/add-activities.png" width="450px" alt="Take picture action">}}
 
@@ -163,7 +163,7 @@ All done! You can now run your app and test all the features you have built. To 
 1. Open the Make it Native app on your mobile device.
 1. Click the drop-down menu in Studio Pro and select **View app on your device**.
 1. Click the **View Native Mobile App** tab.
-1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/howto/general/using-mendix-studio-pro-on-a-mac/)):
+1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/min-qr.png" width="300px" alt="Scan QR code">}}
 

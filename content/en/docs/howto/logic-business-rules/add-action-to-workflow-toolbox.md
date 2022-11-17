@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
 * Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
-* Your app has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/111349) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/).
+* Your app has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/111349) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/).
 
 ## 3 Exposing the Microflow as the Workflow Action
 
@@ -44,7 +44,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
 1. Create a new microflow that calls **ACT_SAP_INVENTORY_LAPTOP_CHECK**. Name the new microflow **WFS_MY_SYSTEM_TASK**.
 2. Make sure that the input parameters of the **WFS_MY_SYSTEM_TASK** microflow are mapped to the workflow definition. For the **Employee_Onboarding** workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
-3. In **Toolbox**, select **Microflow call** and drag and drop it to the flow:
+3. In **Toolbox**, select **Microflow call** and drag it to the flow:
 
     {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/microflow-call.png" alt="Microflow call action" >}}
 
@@ -80,11 +80,11 @@ Now that you have exposed the microflow as the custom workflow action, you can u
 
     {{< figure src="/attachments/howto/logic-business-rules/add-action-to-workflow-toolbox/workflow-toolbox.png" alt="Workflow Toolbox" >}}
 
-3. Drag and drop the action to the workflow.
+3. Drag the action into the workflow.
 
 Congratulations! You have turned the microflow into the custom workflow action and can easily use it in the workflow editor.
 
 ## 5 Read More
 
 * [Microflow Properties](/refguide/microflow/)
-* [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app/)
+* [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/)

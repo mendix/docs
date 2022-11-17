@@ -16,7 +16,7 @@ Mendix 7 contains a completely new build approach for clustering. The main featu
 
 Clustering support is built natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
 
-Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the *Some Notes on Scaling* section [How to Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes/#scaling).
+Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the *Some Notes on Scaling* section [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/#scaling).
 
 ## 3 Cluster Infrastructure
 

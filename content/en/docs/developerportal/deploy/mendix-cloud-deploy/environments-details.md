@@ -460,13 +460,10 @@ Mendix Cloud uses runtime settings to configure the included systems for logs, b
 * `DatabaseType`
 * `DatabaseUserName`
 * `DatabaseUseSsl`
-* `DTAPMode`
-* `EnableSessionFingerprinting`
 * `JavaKeyStorePassword`
 * `LogFileName`
 * `MaxLogFileCount`
 * `MaxLogFileSize`
-* `MicroflowConstants`
 * `MyScheduledEvents`
 * `OracleServiceName`
 * `ScheduledEventExecution`
@@ -542,4 +539,4 @@ The custom services that are currently available for each environment are as fol
 
 ### 9.2 Enabling Custom Services
 
-Technical Contacts need enable and disable custom services for individual environments of each app. The service must first been enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).
+Technical Contacts need to enable and disable custom services for individual environments of each app. The service must first be enabled for the app by its Technical Contact (see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation).

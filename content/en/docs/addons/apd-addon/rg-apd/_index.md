@@ -2,6 +2,7 @@
 title: "APD Reference Guides"
 url: /addons/apd-addon/rg-apd/
 category: "APD"
+description: "Presents a list of APD/APM reference guides for each APD/APM version."
 ---
 
 ## 1 Introduction

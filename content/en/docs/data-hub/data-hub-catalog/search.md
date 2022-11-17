@@ -320,8 +320,6 @@ The contract of the published OData service (the *$metadata* document) contains 
 
 When a data source is selected in the search results, the following details are displayed:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-service.png" alt="service details" >}}
-
 * Application icon
 * Name of the data source
 * **Non-discoverable** icon – if the data source has been set to non-discoverable (by default, data sources are discoverable to all users in your company and no icon appears)
@@ -329,6 +327,7 @@ When a data source is selected in the search results, the following details are 
 * **Environment Name** – where the app is deployed
 * **Version** – version number of the service
 * **Connections** – number of apps that consume the service
+* **Authentication** – authentication information, and the option to **Request access** if available
 * A description of the data source
 * All **Datasets** that are exposed in the data source (you can expand each one to see details of the attributes and associations)
 
@@ -338,7 +337,7 @@ You can perform the following actions from this screen:
 
 * **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
 * **Share Data Source** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
-* [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer.
+* [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer. You can upload this in the Catalog to register it manually.
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
 #### 3.5.2 Details for a Selected Dataset {#entity-details}
@@ -356,6 +355,7 @@ The source and endpoint details of the dataset are displayed:
 * **Version** number of the data source that the dataset is exposed in
 * **Connections** – the number of apps that consume this dataset
 * A description of the dataset
+* [Authentication method](/data-hub/data-hub-catalog/register-data/#authentication)
 
 You can perform the following actions from this screen:
 
@@ -404,7 +404,7 @@ See the [Curation Bar](#curation-bar) section below for changing **Discoverabili
 The following discoverability values can be set:
 
 * **Discoverable** – all users in your company can see and consume the asset in the Data Hub Catalog and Studio Pro 
-* **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the Data Hub Admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.
+* **Non-Discoverable** – the asset is only visible to owners, Data Hub curators, and the company admin in the Catalog; it is not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.
 
 #### 3.6.5 Validated
 

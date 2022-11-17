@@ -4,7 +4,7 @@ url: /appstore/creating-content/sol-solutions-guide/
 linktitle: "Creating Solutions"
 category: "Creating Content"
 weight: 3
-description: "A guide to best practices and techniques for using Mendix"
+description: "Provides information and guidance on how to develop solutions you can sell both on and off the Mendix Marketplace."
 tags: ["solutions guide", "adaptive solutions", "solutions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -19,7 +19,7 @@ This section provides information and guidance on how to develop solutions you c
 
 ## 2 What Is a Solution?
 
-A solution is any Mendix app that is suitable to be sold to multiple different customers. This means the app is built to match the needs and expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case, general Mendix development [best practices](/howto/general/dev-best-practices/) apply, and you can get started building a solution with any template available on the Mendix Platform.
+A solution is any Mendix app that is suitable to be sold to multiple different customers. This means the app is built to match the needs and expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case, general Mendix development [best practices](/refguide/dev-best-practices/) apply, and you can get started building a solution with any template available on the Mendix Platform.
 
 Customers often require more from a solution than it supports out of the box. Whether it is an integration with an existing system in the customer's IT landscape, a change to better match the processes of the customer, or simply an adjusted UI to better match the brand of the customer, these adaptations require more than just a prescriptive software-as-a-service (SaaS) solution. This means you need to enable the solution to be adapted so that it can fit the specific needs of a customer.
 

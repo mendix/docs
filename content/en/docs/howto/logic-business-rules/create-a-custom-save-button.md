@@ -21,7 +21,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
 * Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
+* Create a menu item to access the customer overview page (for details, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 
 ## 3 Replacing the Default Save Button with a Custom One
 
@@ -63,7 +63,7 @@ You need to recreate the default Save behavior to customize it afterwards. Do th
 
     {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/commit-object-properties.png" >}}
 
-6. Open the **Toolbox**, find the **Close page** activity there, and drag and drop it to the flow after the **Commit object(s)** activity:
+6. Open the **Toolbox**, find the **Close page** activity there, and drag it into the flow after the **Commit object(s)** activity:
 
     {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/close-page-activity.png" >}}
 
@@ -73,7 +73,7 @@ You have recreated the default **Save** button logic.
 
 To extend the logic with a custom message that will be shown when end-users click the button, do the following:
 
-1. Open **Toolbox**, find the **Show message** activity, and drag and drop it after the **Close page** activity.
+1. Open **Toolbox**, find the **Show message** activity, and drag it after the **Close page** activity.
 2. Double-click the new activity to open its properties.
 3. In the **Template** property enter a text that will be displayed in the message. Type in *Customer is saved!* 
 

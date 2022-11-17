@@ -2,7 +2,7 @@
 title: "MindSphere"
 url: /partners/siemens/mindsphere/
 category: "Siemens"
-description: "Reference content for using apps deployed to MindSphere"
+description: "Presents reference content for using apps deployed to MindSphere."
 tags: ["Siemens", "MindSphere"]
 ---
 

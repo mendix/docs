@@ -26,10 +26,7 @@ To import a WSDL, follow these steps:
 
 1. Right-click your module in the **App Explorer** and select **Add other** > **Consumed web service**.
 2. Enter a name for the new consumed web service (for example, **TemperatureConverter**) and click **OK**.
-3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**:
-
-    {{< figure src="/attachments/howto/integration/consume-a-simple-web-service/wsdl-source.png" >}}
-
+3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
 4. The **Select Ports** dialog box is displayed for selecting a web service port:
 
     {{< figure src="/attachments/howto/integration/consume-a-simple-web-service/18582065.png" >}}
@@ -95,7 +92,7 @@ To create logic to call the web service, follow these steps:
 
     {{< figure src="/attachments/howto/integration/consume-a-simple-web-service/18582070.png" >}}
 
-20. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/).
+20. Create a menu item that triggers this microflow. For details on how to create a menu item, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
 
 21. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 

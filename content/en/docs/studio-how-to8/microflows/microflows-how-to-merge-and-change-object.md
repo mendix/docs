@@ -45,7 +45,7 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-merge-and-change-object/microflow-without-merge.png" >}}
 
-2. Open the **Toolbox** tab > the **General** section, drag and drop the **Merge** activity before the end event of the flow labelled **Bronze**:
+2. Open the **Toolbox** tab > the **General** section, drag the **Merge** activity before the end event of the flow labelled **Bronze**:
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-merge-and-change-object/adding-merge.png" >}}
 
@@ -83,7 +83,7 @@ Do the following:
     1. Click **Create**.
 
 2. Now you will configure a new activity in the microflow. Open the microflow named *Show_grade_specific_page*.
-3. In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag and drop it after the merge in the microflow.
+3. In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag it after the merge in the microflow.
 
     {{< figure src="/attachments/studio-how-to8/microflows/microflows-how-to-merge-and-change-object/change-object-added.png" >}}
 

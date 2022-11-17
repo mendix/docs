@@ -52,7 +52,6 @@ Building apps with Mendix gives you access to several mobile capabilities:
 * [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): native apps can present a notification to the user that is triggered by the runtime even if the app is not running
 * [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-and-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
 * [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
-* [Content Security Policy](/refguide/mobile/using-mobile-capabilities/csp/): by employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context
 
 For more information on empowering your apps, see [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/).
 

@@ -15,16 +15,17 @@ The key difference between business events and traditional communication between
 
 To deliver these events reliably between your applications, a Mendix Event Broker is required. For apps running the Mendix cloud on licensed nodes, you'll need to purchase a license for a [Mendix Event Broker](#mendix-event-broker). A limited multi-tenant Event Broker is provided for free apps in the Mendix cloud. If desired for development, you can run your own broker cluster.
 
-Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.
-
 {{% alert color="info" %}}
 Mendix Business Events is supported for Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above.{{% /alert %}} 
+
+{{% alert color="info" %}}
+Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.{{% /alert %}} 
 
 ### 1.1 Typical Use Cases
 
 Business events help you automate the resulting actions when something happens in your organization. The following are examples of when business events can be useful:
 
-* Registering payments in a financial app, with another app sending a receipt
+* Uploading a payment receipt in one app, while another app processes the outgoing payment in the company's ledger
 * Making an appointment with a service provider in an appointment app, then needing it to be added to the scheduling app of the service provider
 * Customers placing an order in a webshop, and other apps need to take follow-up actions like scheduling shipment, sending the invoice, and reordering inventory stock
 
@@ -241,7 +242,8 @@ Business Events offers three different deployment models:
 2. Free apps use a free multi-tenant Event Broker
 3. Production apps use the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
 
-Business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with all other deployment models expected in forthcoming releases.
+{{% alert color="info" %}}
+Currently, business events can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), with other deployment models expected in forthcoming releases.{{% /alert %}} 
 
 ### 6.1 Local Deployment
 
@@ -269,8 +271,6 @@ For development and testing it may be useful to run all your apps on your local 
 
 The Mendix Business Events [Local Setup Tool](https://github.com/mendix/event-broker-tools) helps you deploy locally by setting up a Docker container with Kafka. This repository includes the required `docker-compose.yml` file.
   
-The last service in this configuration file, `postgres`, is not required, but it is useful if you want to test with a postgres database on your workstation. You will have to specify this also in the runtime settings of your project. For more information, see the [Using PostgreSQL Database (Optional)](#postgres-db) section.
-  
 Start your docker cluster using the command `docker-compose up`. This will download or update all the required docker images and start Kafka.
 
 ### 7.2 Using PostgreSQL Database (Optional) {#postgres-db}
@@ -278,6 +278,20 @@ Start your docker cluster using the command `docker-compose up`. This will downl
 You can configure the app running in Studio Pro to use the postgres database created using docker. Remember to use a different database name for every app.
 
 {{< figure src="/attachments/appstore/modules/business-events/postgres.png" >}}
+
+Here is an example of postgres service that you can add to your `docker-compose.yml` file.
+
+``` yml
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: cspdb-dev
+      POSTGRES_USER: mendix
+      POSTGRES_PASSWORD: mendix
+      PGPASSWORD: mendix
+    ports:
+      - "25432:5432"
+```
 
 ## 8 Frequently Asked Questions
 

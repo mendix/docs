@@ -79,13 +79,13 @@ The XML schema describes what the contents of an XML document should be. We need
 
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581817.png" >}}
 
-6. Drag the **XMLDocument** entity from the **Connector** to the placeholder:
+6. Drag the **XMLDocument** entity from the **Connector** into the placeholder:
 
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581809.png" >}}
 
     The mapping editor for this element will pop up, you can close that by clicking **OK**.
 
-7. Drag the **Customer** entity from the **Connector** to the placeholder:
+7. Drag the **Customer** entity from the **Connector** into the placeholder:
 
     {{< figure src="/attachments/howto7/integration/export-xml-documents/18581808.png" >}}
 

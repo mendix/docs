@@ -35,7 +35,7 @@ The table below describes all the available dockable window panes.
 | --- | --- |
 | Breakpoints (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
 | Changes | For [Team Server](/refguide7/team-server/) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
-| Connector | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
+| Connector | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag onto the button to connect them. |
 | Console | Shows the output of the Mendix Runtime while running an application. |
 | Debugger (via Debug Windows) | This can be used to debug your application. |
 | Documentation | Shows the documentation for the currently selected element (if applicable). |

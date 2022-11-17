@@ -20,7 +20,7 @@ The [Accordion](https://marketplace.mendix.com/link/component/117895) widget ena
 
 ## 2 Configuration
 
-Configuring the accordion widget is simple. Drag and drop the widget onto a page and use the configuration properties described in the following sections.
+Configuring the accordion widget is simple. Drag the widget onto a page and use the configuration properties described in the following sections.
 
 ### 2.1 General Tab {#general}
 

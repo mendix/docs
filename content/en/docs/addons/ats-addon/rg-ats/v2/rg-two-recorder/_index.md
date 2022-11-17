@@ -17,7 +17,9 @@ Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where 
 
 ## 3 Using the ATS Desktop Recorder
 
-Before you can use the ATS Desktop Recorder, you must check your preferences.
+Before you can use the ATS Desktop Recorder, you must set your project preferences to the Desktop recorder. You can open the project preferences from any page by clicking the cog icon:
+
+{{< figure src="/attachments/addons/ats-addon/rg-ats/v2/rg-two-recorder/configure-project-preferences.png" >}}
 
 With the ATS Recorder plugin installed, you can start a recording session at any time by clicking the **Record** button inside a test case or an action. You open the Mendix application you want to test in another tab of the browser, and then start testing the application by walking through the app manually. Then ATS will record all the steps.
 
@@ -42,3 +44,5 @@ These are the current limitations on recording:
 * Switching between browser tabs/windows is not recorded
 * Assertions are not recorded
 * Generating nice descriptions with labels only works if you use the label function in Mendix
+
+{{% alert color="info" %}} In the past ATS also had a Web Recorder, due to changes in the Chrome store policy we deprecated the Web Recorder in Q4, 2019. Even though it might still work for some existing customers, the ATS Desktop recorder is the default choice. {{% /alert %}}

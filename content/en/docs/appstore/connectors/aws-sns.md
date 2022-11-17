@@ -30,7 +30,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonSNSConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon SNS. Each activity can be implemented by using it in a microflow.
 
-For example, to list all existing Amazon SNS subscriptions, implement the [ListSubscriptions](#list-subscriptions) activity by doing the following steps:
+For example, to list all existing Amazon SNS subscriptions, implement the [ListTopics](#list-topics) activity by doing the following steps:
 
 1. Configure AWS Authentication with session-based credentials. For more information, see AWS Authentication.
     For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/#session).
@@ -104,54 +104,32 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 ### 3.3 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon SNS connector, they represent actions such as creating or deleting a topic in Amazon SNS.
+Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon SNS connector, they represent actions such as creating or deleting a Topic in Amazon SNS.
 
-#### 3.3.1 Create Topic
+#### 3.3.1 ListTopics
 
-The `CreateTopic` Amazon SNS activity allows you to create a topic. It requires a topic name as parameter. The topic is created in the same AWS region as the SNS client region used to create it.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `Name (String)` | `Topic (Object)` |
-
-#### 3.3.2 Delete Topic
-
-The `DeleteTopic` Amazon SNS activity allows you to delete  a topic from Amazon SNS. It requires a topic object to be deleted.
+The `ListTopics` Amazon SNS action allows you to retrieve a list of all Topics for a given Amazon SNS environment. It requires a valid AWS Region. The action returns a `ListTopicsResponse` object which contains a list of Topic objects.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Topic (Object)` | Delete status (Boolean) |
+| `AWS_Region (Enumeration)` | `ListTopicsResponse (Object)` |
 
-#### 3.3.3 List Subscription {#list-subscriptions}
+This activity returns a `ListTopicsResponse` object with objects from the following entities, as shown in the table below:
 
-The `ListSubscription` Amazon SNS activity allows you to get a list of all current subscriptions. It does not require any entry parameters.
+| Name | Generalization | Description |
+| --- | --- | --- |
+| `ListTopicsResponse` |  | This entity is the response for the Amazon SNS `ListTopics` action. It holds a list of ListTopicsTopic objects. |
+| `ListTopicsTopic` | `AmazonSNSConnector.Topic` | This entity holds information on the retrieved Topic. The attributes it contains are **ARN**, which reflects the name of the resource inside the Amazon environment, and **Name**, which reflects the name of the Topic.  |
 
-The input and output for this service are shown in the table below:
+#### 3.3.2 Publish
 
-| Input | Output |
-| --- | --- |
-| N/A | `Subscription (List of Objects)` |
-
-#### 3.3.4 Subscribe Endpoint
-
-The `SubscribeEndpoint` Amazon SNS activity allows you to create an SNS subscription. It requires a subscription request with the protocol (for example, email), endpoint (for example, a specific email address), and the ARN of a topic to subscribe to.
+The `Publish` Amazon SNS activity allows you to publish a message to all those subscribed to a given Topic. It requires a valid AWS Region and a `PublishRequest` object, containing both a Message object and a Topic object. The output of the action is a Boolean value which represents whether the operation was successful.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `SubscriptionRequest (Object)` | `Subscription (Object)` |
-
-#### 3.3.5 Unsubscribe Endpoint
-
-The `UnsubscribeEndpoint` Amazon SNS activity allows you to delete an SNS subscription. It requires a subscription to be deleted.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `Subscription (Object)` | Unsubscribe status (Boolean) |
+| `AWS_Region (Enumeration)` | `IsPublished (Boolean)` |
+| `PublishRequest (Object)` |  |

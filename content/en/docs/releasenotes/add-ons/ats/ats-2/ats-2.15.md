@@ -10,7 +10,7 @@ weight: 85
 
 ### Desktop Recorder
 
-A new recorder has been released for  ATS. For details on this release and how it affects you, see [Which Recorder Should I Use?](/addons/ats-addon/rg-two-desktoprecorder/).
+A new recorder has been released for  ATS. For more information, see [Desktop Recorder](/addons/ats-addon/rg-ats/v2/rg-two-recorder).
 
 ### Improvements
 

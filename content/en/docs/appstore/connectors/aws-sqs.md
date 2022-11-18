@@ -73,13 +73,13 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 #### 3.2.1 Send Message
 
-The `SendMessage` Amazon SQS activity allows you to send a message to a queue. It requires a message and a queue as parameters.
+The `SendMessage` Amazon SQS activity allows you to send a message to a queue. It requires `SendMessageRequest` as a parameter.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Message (Object)`, `Queue (Object)` | Send status (Boolean) |
+| `SendMessageRequest`, `Credentials` | `SendMessageResponse` |
 
 #### 3.2.2 Receive Messages
 

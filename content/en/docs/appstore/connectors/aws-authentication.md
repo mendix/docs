@@ -16,7 +16,7 @@ AWS Authentication gives you the tools needed to authenticate your app with AWS 
 
 The AWS Authentication connector gives your app the ability to use the following types of AWS credentials:
 
-* [Session credentials](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use session credentials to authenticate.
+* [Session credentials](https://aws.amazon.com/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use session credentials to authenticate.
 * [Static credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) - These are static IAM credentials that are valid indefinitely. As a best practice, it is recommended to use Session credentials. However, you may want to use them to quickly test your connector, create a demo, or in cases where you are not able to set up and configure session based credentials.
 * [Signature version 4 headers](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) - These credentials represent an advanced use case. You may use them together with session or static credentials to sign your request, for example, while calling the API without using AWS SDK. Some compatible AWS connectors may explicitly require this type of authentication.
 

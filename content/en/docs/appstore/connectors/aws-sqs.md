@@ -123,7 +123,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Queue (Object)` | Create status (Boolean) |
+| `CreateQueueRequest` | Create status (Boolean) |
 
 #### 3.2.6 Get Queue Attributes
 

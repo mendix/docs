@@ -106,7 +106,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon SNS connector, they represent actions such as creating or deleting a Topic in Amazon SNS.
 
-#### 3.3.1 ListTopics
+#### 3.3.1 ListTopics {#list-topics}
 
 The `ListTopics` Amazon SNS action allows you to retrieve a list of all Topics for a given Amazon SNS environment. It requires a valid AWS Region. The action returns a `ListTopicsResponse` object which contains a list of Topic objects.
 

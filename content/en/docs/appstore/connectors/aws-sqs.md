@@ -153,4 +153,4 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Queue (Object)` | `Delete status (Boolean)` |
+| `DeleteQueueRequest` | `Delete status (Boolean)` |

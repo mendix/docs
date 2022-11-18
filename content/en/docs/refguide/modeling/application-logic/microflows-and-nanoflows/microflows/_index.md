@@ -15,7 +15,7 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
 
-For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/howto/general/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/howto/general/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/howto/general/community-best-practices-for-app-performance/#microflow-community-best-practices).
+For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/refguide/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/refguide/community-best-practices-for-app-performance/#microflow-community-best-practices).
 
 
 ## 2 Microflow Notation

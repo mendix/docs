@@ -43,7 +43,7 @@ To see the results of this how-to, set up a test app and populate it with test d
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" alt="Customer and Order entities with one-to-many association" >}}
 
 2.  Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage Customer and Order objects.
-3.  Create [menu items](/howto/general/setting-up-the-navigation-structure/) to access Customer and Order overview pages.
+3.  Create [menu items](/refguide/setting-up-the-navigation-structure/) to access Customer and Order overview pages.
 4.  Add the following customer data to your app:
     | Name | Address | Zip code | City |
     | --- | --- | --- | --- |

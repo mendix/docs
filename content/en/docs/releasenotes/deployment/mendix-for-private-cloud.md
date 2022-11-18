@@ -13,6 +13,29 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### November 17th, 2022
+
+#### Portal Improvements
+
+* A new attribute `allowOverrideSecretsWithSecretStoreCSIDriver` has been added in the MendixApp CR. This allows the app to use credentials held in the secret store.
+* When using Mendix Operator version 2.9.0, it is now possible to load database, file storage, and other configurations (such as MxAdmin password) from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. In upcoming releases, it will be possible to store more configuration options in the CSI Secrets Store - such as app constants and runtime settings.
+* We have added a new section to enable and disable the secret store on cluster manager page. When this switch is enabled by the Cluster Manager, you can create an environment using secret store credentials for database, storage, and MxAdmin password.
+* We have added a new status field indicating whether database, file storage, and other configuration options were loaded from CSI Secrets Storage.
+* We fixed an issue where deployment with spaces in the branch lines triggered an error. (Ticket 167448 and 167577)
+* We have added a new status on the environment details page when environment is attached to a service account.
+* The Cluster Manager can enable and disable development mode in cluster manager page. This will allow the developers to create app in development mode.
+* We added activity log entries whan development mode is enabled or disabled in a Namespace.
+
+### November 14th, 2022
+
+#### Mendix Operator v2.9.0{#2.9.0}
+
+* We now allow you to use pod identity webhook authentication for ECR registry authentication. With this, the image builder will use the service accounts for authentication. This is more secure than static credentials.
+* We provide additional information for service account status showing whether the service account is successfully attached to an app.
+* When using CSI secrets storage, we now indicate which parameters were loaded from the secret storage.
+* We replaced an internal go-chi dependency with Go Fiber to ensure that Mendix for Private Cloud is using a well-maintained HTTP implementation.
+* We also fixed an issue where mxpc-cli was not responding to the mouse inputs in a Linux terminal. (Ticket 168570)
+
 ### October 6th, 2022
 
 #### Portal Improvements

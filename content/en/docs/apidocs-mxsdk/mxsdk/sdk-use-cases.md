@@ -2,7 +2,7 @@
 title: "SDK Use Cases"
 url: /apidocs-mxsdk/mxsdk/sdk-use-cases/
 category: "Mendix Platform SDK"
-weight: 5
+weight: 2
 ---
 
 ## 1 Introduction
@@ -25,7 +25,7 @@ Some of the possibilities:
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844117.png" >}}
 
-If you are looking to improve your existing Mendix app models, it can be hard to figure out where to start. Especially if you join a project where you need to work on an existing app, it is a lot of work to get a feeling for where the complexity of an app can be found. With the Mendix SDKyou are empowered to access every part of the model, which allows you to analyze your app model and find out where the complex areas reside.
+If you are looking to improve your existing Mendix app models, it can be hard to figure out where to start. Especially if you join a project where you need to work on an existing app, it is a lot of work to get a feeling for where the complexity of an app can be found. Mendix models are completely open and accessible, making it possible to automate model quality analysis. With the Mendix SDK, you are empowered to access every part of the model, which allows you to analyze your app model and find out where the complex areas reside.
 
 Some of the possibilities are:
 
@@ -49,10 +49,17 @@ Some of the possibilities are:
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844115.png" >}} 
 
-Your existing Mendix apps will likely need updates and changes. Some of these changes can be tedious to do by hand, whether it's replacing group boxes by div containers, creating a better visual layout for your microflows, or publishing your microflows as Web Service operations. With the Model SDK you can create a script that does these things for you.
+Your existing Mendix apps will likely need updates and changes. Some of these changes can be tedious to do by hand, whether it is replacing group boxes by div containers, creating a better visual layout for your microflows, or publishing your microflows as Web Service operations. With the Model SDK you can create a script that does these things for you, so you can focus on the creative and fun parts of your app.
 
 Some of the possibilities are:
 
 * Batch updating page elements and labels
 * Reorganizing the layout of your app model in the blink of an eye
 * Exposing your microflows as web services and your entities as OData resources
+
+
+
+
+
+
+

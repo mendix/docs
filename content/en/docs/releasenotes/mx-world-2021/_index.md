@@ -68,8 +68,8 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Multiple page parameters | GA: Sep 2022 |
 | Native mobile – simplified monitoring | Sep 2022 |
 | Native mobile – file and image background sync | TBD |
-| Data widgets – Tree Table | GA: Sep 2022 |
-| Data widgets – Spread Sheet Grid | GA: Dec 2022 |
+| Data widgets – Tree Table | GA: TBD |
+| Data widgets – Spread Sheet Grid | GA: TBD |
 
 ## 7 Page Bot and Machine Learning Toolkit
 

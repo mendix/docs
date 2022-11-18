@@ -134,9 +134,9 @@ The input parameters for receiving email are the following:
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
     * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
 
-{{% alert color="warning" %}}
-When duplicating this microflow, do not change input parameters’ name and data type.
-{{% /alert %}}
+    {{% alert color="warning" %}}
+    When duplicating this microflow, do not change input parameter names and data types.
+    {{% /alert %}}
 
 * **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
 * **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation
@@ -147,9 +147,21 @@ When the module is running, you can create templates to use for a specific email
 
 In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** use this snippet to configure this functionality.
 
-#### 4.3.1 Sending an Email with a Template
+#### 4.3.1 Creating an Email Message from a Template
 
-When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action. The input parameters are the following:
+When modeling your app in Studio Pro, use the  **CreateEmailFromTemplate** Java action to create a draft message that you can preview and modify. Once your message is ready, you can send it with the **SendEmail** action.
+
+The input parameters are the following:
+
+* **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
+* **Email template** – email template from which email message object is created and sent
+* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
+
+Refer to sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**. This sample Microflow demonstrate how to use **CreateEmailFromTemplate** Java action and set attachments to EmailMessage in addition to attachments provided by EmailTemplate.
+
+#### 4.3.2 Sending an Email with a Template
+
+When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action to send an email from a template. The input parameters are the following:
 
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email account** – email account consisting of outgoing email configuration

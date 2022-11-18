@@ -12,7 +12,7 @@ Every [published REST service](/refguide/published-rest-service/) is automatical
 
 If you need to communicate with the service from another app, you can use the *swagger.json* file to generate an API in many different systems, including Microsoft Visual Studio, React, Angular, and Java. This makes it easy to communicate between your different apps.
 
-Many of the popular API tools support OpenAPI 2.0, including [SoapUI](https://www.soapui.org/), [Postman](https://www.getpostman.com/), and [Swagger UI](https://swagger.io/swagger-ui/) (for a longer list of supported tools, see [swagger.io/commercial-tools](https://swagger.io/commercial-tools/)). This means that you can easily test your published service from any of these tools.
+Many of the popular API tools support OpenAPI 3.0, including [SoapUI](https://www.soapui.org/), [Postman](https://www.getpostman.com/), and [Swagger UI](https://swagger.io/swagger-ui/) (for a longer list of supported tools, see [swagger.io/commercial-tools](https://swagger.io/commercial-tools/)). This means that you can easily test your published service from any of these tools.
 
 A technical description is presented below of which parts of the *swagger.json* file are generated.
 
@@ -22,7 +22,7 @@ The main schema object documents the service.
 
 | Property | Generated Value |
 | --- | --- |
-| `swagger` | 2.0 |
+| `swagger` | 3.0.1 |
 | `info.title` | The [name of the service](/refguide/published-rest-service/#service-name). |
 | `info.description` | The [public documentation of the service](/refguide/published-rest-service/#public-documentation). |
 | `info.version` | 1.0.0 |

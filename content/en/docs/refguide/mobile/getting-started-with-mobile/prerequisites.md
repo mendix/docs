@@ -18,12 +18,9 @@ While developing Mendix apps, you will need to test and iterate to make the best
 
 ## 2 Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. It currently comes in two versions: 
+The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro v9.0 and above.
 
-* The **Make It Native 8 app** for Mendix Studio Pro 8 (v8.8 and above) 
-* The **Make It Native 9 app** for Studio Pro v9.0 and above
-
-Both of these apps are available for both Android and iOS devices.
+This app is available for both Android and iOS devices.
 
 For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 

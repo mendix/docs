@@ -1,7 +1,6 @@
 ---
 title: "Amazon Translate"
-url: /appstore/app-services/translation/
-category: "App Services"
+url: /appstore/connector/amazon-translate
 description: "Describes the configuration and usage of the Amazon Translate app service, which enables performing text translation in your web apps."
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -37,7 +36,7 @@ To help you work with the Amazon Translate connector, the following sections of 
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Amazon Translate connector, the domain model contains the `Translator` and `Language` entities.
 
-#### 3.1.1 Translator
+#### 3.1.1 TranslateRequest
 
 The `TranslateRequest` entity is an entity that returns the output of the translation as a string from the microflow action. The entity  contains `InputLanguageCode`, `OutputLanguageCode` and `InputText` as attributes.
 

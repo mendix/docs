@@ -52,12 +52,20 @@ To help you work with the Amazon SQS connector, the following sections of this d
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-| Name | Description |
-| --- | --- |
-| `Queue` | Non-persistent; stores the name, region, and URL of a queue |
-| `QueueAttributes` | Non-persistent; stores the attributes for a specific queue, such as the approximate number of messages to be retrieved from the queue |
-| `Message` | Non-persistent; stores the message which is to be sent to a queue, or which is received from an external microservice  |
-| `MessageAttribute` | Non-persistent; stores the key-value pairs for attributes that are to be added to a message |
+The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
+
+| Name | Description | Specializations |
+| --- | --- | --- |
+| `Queue` | Stores the name, region, and URL of a queue | `CreateQueueRequest` (has an additional `IsFiFoQueue` attribute to indicate if the queue operates on a First In, First Out basis); `CreateQueueResponse`; `DeleteQueueRequest`; `DeleteMessageRequest` (has an additional `ReceiptHandle` attribute); `GetQueueAttributesRequest`; `ListQueue`; `PurgeQueueReqeuest`; `ReceiveMessagesRequest` (has additional `MaxNoOfMessages` and `WaitTimeSeconds` attributes); `SendMessageRequest` (has additional `messageDeduplicationId` and `messageGroupId` attributes) |
+| `Message` | Stores the message which is to be sent to a queue, or which is received from an external microservice  | `ReceivedMessage`; `SendMessageResponse`; `SQSMessageToSend` |
+| `Attribute` | Stores the key-value pairs for attributes that are to be added to a message or queue | `CreateQueueAttribute`; `SQSQueueAttribute`; `ReceivedFromQueueAttributes` |
+| `GetQueueAttributesResponse` | Stores the response for a `GetQueueAttributes` call |
+| `ListQueueRequest` | Stores the request for a `ListQueue` call |
+| `ListQueueResponse` | Stores the response for a `ListQueue` call |
+| `PurgeQueueRequest` | Stores the request for a `PurgeQueue` call |
+| `ReceiveMessagesResponse` | Stores the response for a `ReceiveMessages` call |
+
+The entities are non-persistent. Because of that, you do not need remove the resulting objects after download.
 
 ### 3.2 Activities {#activities}
 

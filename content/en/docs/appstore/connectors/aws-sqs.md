@@ -83,7 +83,7 @@ The input and output for this service are shown in the table below:
 
 #### 3.2.2 Receive Messages
 
-The `ReceiveMessages` Amazon SQS activity allows you to receive up to 10 messages from a particular queue. It requires a queue as parameter. By default, this activity uses short polling; for long polling, use the `ReceiveMessageWaitTimeSeconds` parameter.
+The `ReceiveMessages` Amazon SQS activity allows you to receive up to 10 messages from a particular queue. It requires a ReceiveMessageRequest as parameter. By default, this activity uses short polling; for long polling, use the `WaitTimeSeconds` parameter in the ReceiveMessageRequest entity.
 
 {{% alert color="info" %}}
 If the number of messages in the queue is small (fewer than 1,000), you may receive fewer messages than you requested per a `ReceiveMessage` call. If the number of messages in the queue is very small, you might not receive any messages in a particular `ReceiveMessage` response. If this happens, repeat the request.

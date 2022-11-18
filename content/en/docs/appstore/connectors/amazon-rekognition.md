@@ -39,7 +39,7 @@ For example, to detect labels for a given image, implement the **DetectLabels** 
 3. In the **App Explorer**, in the **AmazonRekognitionConnector** > **Operations** section, find the **DetectLabels** activity.
 4. Drag the **DetectLabels** activity onto the work area of your microflow.
 5. Double-click the **DetectLabels** microflow activity to configure the required parameters. For the **DetectLabels** activity, you must attach an image and specify an AWS region. Optional parameters are **MinConfidence** and **MaxLabels**. (Corresponding labels should have at least the provided **MinConfidence**, and **MaxLabels** is the maximum number of labels returned.) Other activities may have different required parameters.
-6. In the **Edit** parameters section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws-region).
+6. In the **Edit** parameters section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws_region).
 7. Click **OK**.
 8. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 9. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.

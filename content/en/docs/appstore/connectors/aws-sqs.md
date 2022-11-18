@@ -93,7 +93,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Queue (Object)` | `Message (List of Objects, maximum 10)` |
+| `ReceiveMessageRequest` | `ReceiveMessageResponse` |
 
 #### 3.2.3 List Queue {#list-queues}
 

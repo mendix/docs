@@ -143,7 +143,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Queue (Object)` | `Purge status (Boolean)` |
+| `PurgeQueueRequest` | `Purge status (Boolean)` |
 
 #### 3.2.8 Delete Queue
 

@@ -13,7 +13,9 @@ Environments running Mendix for Private Cloud can be granted read-only access to
 
 {{% alert color="info" %}}Using an external secret storage provides multiple benefits, such as rotating credentials from a single location, collecting audit logs and dynamically generating role-specific credentials.
 
-However, using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.{{% /alert %}}
+However, using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.{{% /alert %}}. 
+
+{{% alert color="info" %}}Kindly note that Azure blob storage is not supported as a storage for Azure. The Mx4Pc is currently compatibile with HashiCorp Vault and AWS Secrets Manager.{{% /alert %}}
 
 ## 2 Configuring Your Environment
 
@@ -176,8 +178,8 @@ To enable your environment to use Vault as external secret storage, follow these
             objectName: "storage-perform-delete"
             secretPath: "secret/<{env-file-secret}>"
           - secretKey: "storage-use-ca-certificates"
-            objectAlias: "storage-use-ca-certificates"
-            secretPath: "secret/<{env-file-secret}>
+            objectName: "storage-use-ca-certificates"
+            secretPath: "secret/<{env-file-secret}>"
           - secretKey: "mx-admin-password"
             objectName: "mx-admin-password"
             secretPath: "secret/<{env-configuration-secret}>"
@@ -243,13 +245,18 @@ To enable your environment to use AWS Secrets Manager as external secret storage
         ]
     }
     ```
-9. Create a Kubernetes `ServiceAccount` for your environment:
+9. Allow a k8s ServiceAccount to assume a role.
+Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole" >}}
+       
+10. Create a Kubernetes `ServiceAccount` for your environment:
     ```shell
     kubectl -n <{k8s namespace}> create serviceaccount <{environment name}>
     kubectl -n <{k8s namespace}> annotate serviceaccount <{environment name}> privatecloud.mendix.com/environment-account=true
     kubectl -n <{k8s namespace}> annotate serviceaccount <{environment name}> eks.amazonaws.com/role-arn=<{aws role ARN}>
     ```
-10. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`in the Mendix app CRD.
+11. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`in the Mendix app CRD.
     The following yaml shows an example Mendix app CRD:
     
     ```yaml
@@ -279,7 +286,7 @@ To enable your environment to use AWS Secrets Manager as external secret storage
       sourceVersion: 0.0.0.87
     EOF
     ```
-11. Attach the secret to the environment by applying the following k8s yaml:
+12. Attach the secret to the environment by applying the following k8s yaml:
     ```yaml
     apiVersion: secrets-store.csi.x-k8s.io/v1
     kind: SecretProviderClass

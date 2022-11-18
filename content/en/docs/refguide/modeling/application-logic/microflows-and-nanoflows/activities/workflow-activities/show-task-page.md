@@ -43,17 +43,21 @@ The user task object of the System.WorkflowUserTask entity available from the mi
 
 ### 3.2 Auto-Assign
 
-An option to specify automatically assigning the user task to the user who has opened the task page if the user task has been not assigned to anyone.
-By default, this is set to **Yes**.
+With this option, you can automatically assign the user task to the user who has opened the task page, if the user task has not been assigned to anyone yet.
+This option is enabled by default.
+
+{{% alert color="info" %}}
+Only the user who is assigned to the task can complete it (otherwise, it results in a Runtime error). If you choose to not automatically assign the user to the task when the page is opened, make sure that the user is assigned before the task is completed. For example, you can add the **Assign to me** button to the page.
+{{% /alert %}}
 
 ### 3.3 Who Can Open
 
-An option to specify who is able to open the user task page when a user has already been assigned to it.
+This option specifies who is able to open the user task page when a user has already been assigned to it.
 
 | Option | Description |
 | --- | --- |
-| Users with access  | all users with access to the user task can open the user task page. |
-| Assigned user *(default)* | only the user who has been currently assigned is able to open the user task page. |
+| Users with access  | All users who have access to the user task can open the user task page.<br />Note that this option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a **Save** button. This button saves data, but does not complete the task. <br />Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user. |
+| Assigned user *(default)* | Only the user who is currently assigned to the task is able to open the user task page. |
 
 ## 4 Common Section {#common}
 

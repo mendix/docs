@@ -249,6 +249,11 @@ To enable your environment to use AWS Secrets Manager as external secret storage
 Open the role for editing and add an entry for the ServiceAccount(s) to the list of conditions:
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole" >}}
+
+For the second condition, (copy-paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<k8s namespace>:<k8s serviceaccount name>`).
+See https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough for more details.
+The role ARN is required, you can use the Copy button next to the ARN name in the role details.
+After this, the specified serviceaccount in the specified namespace will be able to assume this role.
        
 10. Create a Kubernetes `ServiceAccount` for your environment:
     ```shell

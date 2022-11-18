@@ -133,7 +133,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Queue (Object)` | `QueueAttributes (Object)` |
+| `GetQueueAttributesRequest` | `GetQueueAttributesResponse`| 
 
 #### 3.2.7 Purge Queue
 

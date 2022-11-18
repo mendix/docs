@@ -118,7 +118,7 @@ To enable your environment to use Vault as external secret storage, follow these
     vault write auth/kubernetes/role/<{env-role}> \
       bound_service_account_names=<{env-serviceaccount}> \
       bound_service_account_namespaces=<{env-namespace}> \
-      policies=<{env-policy}> \
+      policies=<{env-policy}>
     ```
 12. Create a Kubernetes `ServiceAccount` for your environment, as shown in the following example. Specify the environment's Kubernetes namespace and ServiceAccount in place of `<{env-namespace}>` and `<{env-serviceaccount}>`:
     ```shell
@@ -175,9 +175,9 @@ To enable your environment to use Vault as external secret storage, follow these
           - secretKey: "storage-perform-delete"
             objectName: "storage-perform-delete"
             secretPath: "secret/<{env-file-secret}>"
-          #- secretKey: "storage-use-ca-certificates"
-          #  objectAlias: "storage-use-ca-certificates"
-          #  secretPath: "secret/<{env-file-secret}>
+          - secretKey: "storage-use-ca-certificates"
+            objectAlias: "storage-use-ca-certificates"
+            secretPath: "secret/<{env-file-secret}>
           - secretKey: "mx-admin-password"
             objectName: "mx-admin-password"
             secretPath: "secret/<{env-configuration-secret}>"
@@ -318,8 +318,8 @@ To enable your environment to use AWS Secrets Manager as external secret storage
               objectAlias: "storage-bucket-name"
             - path: '"storage-perform-delete"'
               objectAlias: "storage-perform-delete"
-            #- path: '"storage-use-ca-certificates"'
-            #  objectAlias: "storage-use-ca-certificates"
+            - path: '"storage-use-ca-certificates"'
+              objectAlias: "storage-use-ca-certificates"
             - path: '"mx-admin-password"'
               objectAlias: "mx-admin-password"
     ```

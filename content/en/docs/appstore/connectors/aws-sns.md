@@ -58,7 +58,7 @@ The domain model is a data model that describes the information in your applicat
 
 ### 3.2 Enumerations
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon SNS connector, enumerations list values such as the list of available AWS regions and the category under which messages appear in error logs.
+An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon SNS connector, enumerations list values such as the list of available AWS regions, the native data type of the content, and the category under which messages appear in error logs.
 
 #### 3.2.1 `LogNodes`
 

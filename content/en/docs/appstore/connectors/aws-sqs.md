@@ -34,8 +34,8 @@ For example, to list all existing Amazon SQS subscriptions, implement the [ListQ
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListQueues*, and then click **OK**.
-3. In the new microflow, configure AWS Authentication with static credentials.
-    For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/#static).
+3. In the new microflow, configure AWS Authentication with either session or static credentials.
+    For more information, see [AWS Authentication](/appstore/connectors/aws-authentication).
 4. In the **App Explorer**, in the **AmazonSQSConnector** section, find the **ListQueue** activity.
 5. Drag the **ListQueue** activity onto the work area of your microflow.
 6. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.

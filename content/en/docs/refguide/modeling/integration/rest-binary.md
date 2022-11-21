@@ -1,5 +1,5 @@
 ---
-title: "Publish and Consume Images and Files with REST"
+title: "Images and Files with REST"
 url: /refguide/send-receive-files-rest/
 linktitle: "Publish and Consume Images and Files with REST"
 weight: 79
@@ -8,7 +8,7 @@ tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "publ
 
 ## 1 Introduction
 
-Follow this guide to learn how to publish images and files as REST services for use in other apps. 
+Follow this guide to learn how to publish images and files as REST services for use in other apps.
 
 ### 1.1 Prerequisites 
 
@@ -16,14 +16,14 @@ To publish or consume files and images with REST, do the following:
 
 * Install Studio Pro 
 
-While not required, we recommend reading the following for more background:
+We recommend reading the following for more background:
 
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
 * [Working with images and files](/howto/data-models/working-with-images-and-files/) in Studio Pro
 
 ## 2 Using Images and Files in Your App
 
-To publish and consume images or files with REST, you need to be using them in your app. Images and files you use in your app are stored in **System.Image** and **System.FileDocument** entities.
+To publish images or files with REST, you need to be using them in your app. Images and files you use in your app are stored in **System.Image** and **System.FileDocument** entities.
 
 Follow [Work with Images and Files](/howto/data-models/working-with-images-and-files/) for step-by-step instructions on setting up these entities and overview pages and using them in your app.
 
@@ -43,25 +43,27 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
 3.  Click **Select** next to the **Service** field, then click on the folder where you want to create the service and click **New**. Enter a name for the REST service and click **OK**.
    
-4.  Back in the **Generate resource and operations** window, select the **Key attribute** and required **Operations**, then click **OK**.
-    The **Key attribute** should be **FileID**.
+4.  Back in the **Generate resource and operations** window, select **MyFileID** as the **Key attribute** and check the boxes for the following **Operations***:
+    * **Get all**
+    * **Get by key**
+    * **Post (Create)**
+    * **Delete**
+
     See the [Operations](/refguide/generate-rest-resource/#operations) section of *Generating a Published REST Resource* for a description of each operation.
 
-The **Published REST service** document for the exposed entity has been created and is now open on your screen.
+5.  Click **OK**. The **Published REST service** document for the exposed image or file entity has been created and is now open on your screen.
 
 ### 3.1 Understanding the Service Details
 
-Double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key should return a binary response because it will return a **FileDocument**. The **Export mapping** is blank because a binary object without an export mapping will return binary content.
+Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key will return a binary response because it will return a **FileDocument**. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-binary/no-export-mapping.png" >}}
 
-Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFiles_Get_ByKey** microflow. You can see that the generated **Get by** key returns a file document.
-
-
+Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFiles_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 
 ## 4 Consuming Images and Files with REST
 
-Now, you need to implement an API client that will retrieve binary files and store the result in a FileDocument.
+Now that you have a published REST service for your image or file entity, you need to implement an API client that will retrieve binary files and store the result in a FileDocument.
  - RetrievedFile (System.Image)
 
 Can use an image, let's say a PNG file. 

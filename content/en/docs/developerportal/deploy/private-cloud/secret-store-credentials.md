@@ -84,9 +84,7 @@ To enable your environment to use Vault as external secret storage, follow these
 6. Configure the Kubernetes authentication method to use the service account token, the location of the Kubernetes host, and its certificate, as shown in the following example:
     ```shell
     vault write auth/kubernetes/config \
-    issuer="https://kubernetes.default.svc.cluster.local" \
-    token_reviewer_jwt="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" \
-    kubernetes_host="https://$KUBERNETES_PORT_443_TCP_ADDR:443" \
+    kubernetes_host=https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_SERVICE_PORT \
     kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
     ```
 7. Create a database secret in Vault, as shown in the following example. Replace `<{env-db-secret}>` with a unique name:
@@ -104,13 +102,13 @@ To enable your environment to use Vault as external secret storage, follow these
 10. Create the required Vault role, as shown in the following example. Replace `<{env-policy}>` with a unique name to identify the app environment, and update any paths to match the secrets you created in the previous steps:
     ```shell
     vault policy write <{env-policy}> - <<EOF
-    path "secret/<{env-db-secret}>" {
+    path "secret/data/<{env-db-secret}>" {
         capabilities = ["read"]
     }
-    path "secret/<{env-file-secret}>" {
+    path "secret/data/<{env-file-secret}>" {
         capabilities = ["read"]
     }
-    path "secret/<{env-configuration-secret}>" {
+    path "secret/data/<{env-configuration-secret}>" {
         capabilities = ["read"]
     }
     EOF
@@ -129,7 +127,7 @@ To enable your environment to use Vault as external secret storage, follow these
     ```
 13. Create the `SecretProviderClass` CR for the Secrets Store CSI Driver:
     ```yaml
-    apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
+    apiVersion: secrets-store.csi.x-k8s.io/v1
     kind: SecretProviderClass
     metadata:
       name: <{MendixApp CR name}>
@@ -143,46 +141,46 @@ To enable your environment to use Vault as external secret storage, follow these
         objects: |
           - secretKey: "database-type"
             objectName: "database-type"
-            secretPath: "secret/<{env-db-secret}>"
+            secretPath: "secret/data/<{env-db-secret}>"
           - secretKey: "database-jdbc-url"
             objectName: "database-jdbc-url"
-            secretPath: "secret/<{env-db-secret}>"
+            secretPath: "secret/data/<{env-db-secret}>"
           - secretKey: "database-username"
             objectName: "database-username"
-            secretPath: "secret/<{env-db-secret}>"
+            secretPath: "secret/data/<{env-db-secret}>"
           - secretKey: "database-password"
             objectName: "database-password"
-            secretPath: "secret/<{env-db-secret}>"
+            secretPath: "secret/data/<{env-db-secret}>"
           - secretKey: "database-host"
             objectName: "database-host"
-            secretPath: "secret/<{env-db-secret}>"
+            secretPath: "secret/data/<{env-db-secret}>"
           - secretKey: "database-name"
             objectName: "database-name"
-            secretPath: "secret/<{env-db-secret}>"
+            secretPath: "secret/data/<{env-db-secret}>"
           - secretKey: "storage-service-name"
             objectName: "storage-service-name"
-            secretPath: "secret/<{env-file-secret}>"
+            secretPath: "secret/data/<{env-file-secret}>"
           - secretKey: "storage-endpoint"
             objectName: "storage-endpoint"
-            secretPath: "secret/<{env-file-secret}>"
+            secretPath: "secret/data/<{env-file-secret}>"
           - secretKey: "storage-access-key-id"
             objectName: "storage-access-key-id"
-            secretPath: "secret/<{env-file-secret}>"
-          - secretKey: "torage-secret-access-key"
+            secretPath: "secret/data/<{env-file-secret}>"
+          - secretKey: "storage-secret-access-key"
             objectName: "storage-secret-access-key"
-            secretPath: "secret/<{env-file-secret}>"
+            secretPath: "secret/data/<{env-file-secret}>"
           - secretKey: "storage-bucket-name"
             objectName: "storage-bucket-name"
-            secretPath: "secret/<{env-file-secret}>"
+            secretPath: "secret/data/<{env-file-secret}>"
           - secretKey: "storage-perform-delete"
             objectName: "storage-perform-delete"
-            secretPath: "secret/<{env-file-secret}>"
+            secretPath: "secret/data/<{env-file-secret}>"
           - secretKey: "storage-use-ca-certificates"
             objectName: "storage-use-ca-certificates"
-            secretPath: "secret/<{env-file-secret}>"
+            secretPath: "secret/data/<{env-file-secret}>"
           - secretKey: "mx-admin-password"
             objectName: "mx-admin-password"
-            secretPath: "secret/<{env-configuration-secret}>"
+            secretPath: "secret/data/<{env-configuration-secret}>"
     ```
 14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`in the Mendix app CRD.
     The following yaml shows an example Mendix app CRD:
@@ -214,6 +212,8 @@ To enable your environment to use Vault as external secret storage, follow these
       sourceVersion: 0.0.0.87
     EOF
     ```
+
+{{% alert color="warn" %}}These examples are provided for [KV Secrets Engine - Version 2](https://developer.hashicorp.com/vault/docs/secrets/kv/kv-v2). When setting policies or reading keys from the Vault `kv-v2` keystore, paths should be prefixed with `secrets/data/`. Please refer to the Hashicorp Vault documentation for more information.{{% /alert %}}. 
 
 ### 3.2 Configuring a Secret Store with AWS Secrets Manager
 

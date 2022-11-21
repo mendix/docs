@@ -17,7 +17,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
-### November 16th, 2022
+### November 21st, 2022
 
 #### New Features
 

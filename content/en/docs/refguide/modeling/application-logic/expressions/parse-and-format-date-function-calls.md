@@ -34,7 +34,7 @@ The following pattern letters can be used to parse and format Date and time valu
 | s      | Second in minute                          | 50                     |
 | S      | Millisecond                               | 201                    |
 
-The following two pattern letters are only available for microflows:
+The following pattern letters are only available for microflows:
 
 | Letter | Date or Time Component                    | Examples                              |
 | ------ | ----------------------------------------- | ------------------------------------- |

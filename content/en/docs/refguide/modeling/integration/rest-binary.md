@@ -31,7 +31,7 @@ Follow [Work with Images and Files](/howto/data-models/working-with-images-and-f
 
 We can use this entity as a starting point:
 
-{{< figure src="/attachments/refguide/integration/rest-binary/starting-entity.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-binary/starting-entity.png" >}}
 
 To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide/published-rest-service/), do the following:
 
@@ -53,9 +53,11 @@ The **Published REST service** document for the exposed entity has been created 
 
 Double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key should return a binary response because it will return a **FileDocument**. The **Export mapping** is blank because a binary object without an export mapping will return binary content.
 
-{{< figure src="/attachments/refguide/integration/rest-binary/no-export-mapping.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-binary/no-export-mapping.png" >}}
 
 Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFiles_Get_ByKey** microflow. You can see that the generated **Get by** key returns a file document.
+
+
 
 ## 4 Consuming Images and Files with REST
 

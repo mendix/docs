@@ -359,7 +359,7 @@ You can perform the following actions from this screen:
 
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
 * **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
-* **Edit** – click to quickly access the dataset edit screen
+* **Edit** – click to access the dataset edit screen
 
 #### 3.5.2.2 Dataset Information
 

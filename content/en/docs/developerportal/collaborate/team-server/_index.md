@@ -21,7 +21,11 @@ When you commit your app model changes to the Team Server in Studio Pro, you can
 
 On the **Team Server** screen of the Developer Portal, you can see a URL to access you app, revision history, and revision details.
 
-## 2 Team Server URL
+## 2 Versioning with Git
+
+In the **Versioning with Git** section, Scrum masters can migrate apps from SVN version control system to Git. For more information, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/). 
+
+## 3 Team Server URL
 
 The **Team Server URL** can be used to directly access your app content. On SVN you can see all the files and branches of your app. The URL can have the following form:
 

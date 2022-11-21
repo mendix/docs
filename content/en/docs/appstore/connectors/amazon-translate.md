@@ -8,7 +8,7 @@ tags: ["translation", "service", "app store", "marketplace", "component", "platf
 
 ## 1 Introduction
 
-The [Amazon Translate](https://marketplace.mendix.com/link/component/118411) connector enables you to connect your app to [Amazon Translate](https://aws.amazon.com/translate/) and build web applications that work with state-of-the-art multi-language text translation.
+The [Amazon Translate](https://marketplace.mendix.com/link/component/204706) connector enables you to connect your app to [Amazon Translate](https://aws.amazon.com/translate/) and build web applications that work with state-of-the-art multi-language text translation.
 
 ### 1.1 Typical Use Cases
 

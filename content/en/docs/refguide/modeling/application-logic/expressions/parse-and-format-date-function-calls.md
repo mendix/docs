@@ -10,9 +10,37 @@ tags: ["studio pro", "expressions", "parsing", "formatting"]
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-{{% alert color="info" %}}
-For details on all pattern possibilities, see the Java class [SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
-{{% /alert %}}
+The following pattern letters can be used to parse and format Date and time values:
+
+| Letter | Date or Time Component                    | Examples               |
+| ------ | ----------------------------------------- | ---------------------- |
+| L      | Month in year                             | November; Nov; 11      |
+| y      | Year                                      | 2001; 01               |
+| G      | Era designator                            | AD                     |
+| E      | Day name in week                          | Tuesday; Tue           |
+| u      | Day of week (1 = Monday, ..., 7 = Sunday) | 5                      |
+| Y      | Week year                                 | 2009; 09               |
+| w      | Week in year                              | 11                     |
+| W      | Week in month                             | 2                      |
+| D      | Day in year                               | 133                    |
+| d      | Day in month                              | 7                      |
+| F      | Day of week in month                      | 1                      |
+| a      | Am/pm marker                              | PM                     |
+| H      | Hour in day (0-23)                        | 0                      |
+| k      | Hour in day (1-24)                        | 24                     |
+| K      | Hour in am/pm (0-11)                      | 0                      |
+| h      | Hour in am/pm (1-12)                      | 12                     |
+| m      | Minute in hour                            | 24                     |
+| s      | Second in minute                          | 50                     |
+| S      | Millisecond                               | 201                    |
+
+The following two pattern letters are only available for microflows:
+
+| Letter | Date or Time Component                    | Examples                              |
+| ------ | ----------------------------------------- | ------------------------------------- |
+| z      | Time zone                                 | Pacific Standard Time; PST; GMT-08:00 |
+| Z      | Time zone                                 | -0800                                 |
+| X      | Time zone                                 | -08; -0800; -08:00                    |
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 

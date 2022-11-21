@@ -40,6 +40,7 @@ The following two pattern letters are only available for microflows:
 | ------ | ----------------------------------------- | ------------------------------------- |
 | z      | Time zone                                 | Pacific Standard Time; PST; GMT-08:00 |
 | Z      | Time zone                                 | -0800                                 |
+| X      | Time zone                                 | -08; -0800; -08:00                    |
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 

@@ -8,7 +8,7 @@ tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "publ
 
 ## 1 Introduction
 
-Follow this guide to learn how to publish images and files as REST services for use in other apps.
+Follow this guide to learn how to publish images and files as REST services.
 
 ### 1.1 Prerequisites 
 
@@ -35,11 +35,12 @@ We can use this entity as a starting point:
 
 To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide/published-rest-service/), do the following:
 
-1.  Generate the overview pages if you have not yet done so.
-    Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**.
+1.  Generate the overview pages if you have not yet done so, and link them to the home page and navigation.
+    * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
+    * Add a button to the home page that links to the Overview page you created.
 
 2.  Expose the entity as a REST resource.
-    Right-click on the **System.Image** or **System.FileDocument** entity that contains the file(s) that you want to publish, and click **Expose as a REST resource**.
+    * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file(s) that you want to publish, and click **Expose as a REST resource**.
 
 3.  Click **Select** next to the **Service** field, then click on the folder where you want to create the service and click **New**. Enter a name for the REST service and click **OK**.
    
@@ -61,7 +62,9 @@ Open your published REST service, then double-click the **Get by** key, or singl
 
 Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFiles_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 
-## 4 Consuming Images and Files with REST
+
+
+## 4 Retrieve Images and Files with REST
 
 Now that you have a published REST service for your image or file entity, you need to implement an API client that will retrieve binary files and store the result in a FileDocument.
  - RetrievedFile (System.Image)

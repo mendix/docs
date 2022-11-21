@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "amazon", "rekognition", "connect
 
 ## 1 Introduction
 
-The [Amazon Rekognition connector]([#needs-url]) provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
+The [Amazon Rekognition connector](https://marketplace.mendix.com/link/component/204717) provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
 ### 1.1 Typical Use Cases
 

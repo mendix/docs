@@ -10,7 +10,7 @@ tags: ["studio pro", "expressions", "parsing", "formatting"]
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-The following pattern letters can be used in functions which accept format:
+The following pattern letters can be used to parse and format Date and time values:
 
 | Letter | Date or Time Component                    | Examples               |
 | ------ | ----------------------------------------- | ---------------------- |
@@ -33,6 +33,13 @@ The following pattern letters can be used in functions which accept format:
 | m      | Minute in hour                            | 24                     |
 | s      | Second in minute                          | 50                     |
 | S      | Millisecond                               | 201                    |
+
+The following two pattern letters are only available for microflows:
+
+| Letter | Date or Time Component                    | Examples                              |
+| ------ | ----------------------------------------- | ------------------------------------- |
+| z      | Time zone                                 | Pacific Standard Time; PST; GMT-08:00 |
+| Z      | Time zone                                 | -0800                                 |
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 

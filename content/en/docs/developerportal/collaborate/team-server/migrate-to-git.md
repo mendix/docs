@@ -49,7 +49,18 @@ Inform your team members that they should commit their changes before migration.
 
 After migration is completed all developers need to check out (re-download) the app from Team Server and remove existing local copies, since developers can no longer interact with SVN. For more information, see [Migrating from SVN to Git: Steps After Migration and Process Differences](/refguide/svn-git-differences/).
 
-## 5 Read More
+## 5 What to do if the migration failed?
+
+In case of a failed migration we'll roll back all changes. This means access to SVN is restored and you can keep developing on your app, so you can check for the common causes of a failed migration. Once you have checked and resolved the likely culprits, you can attempt another migration.
+
+There are several cases that can cause a migration to fail:
+
+* There are no branches called `branches/trunk` or `branches/tags`
+* There are branches with the same name with different casing, such as "branch1" and "BRANCH1"
+* There are branches with a name that isn't valid in Git, see [this page](https://git-scm.com/docs/git-check-ref-format) for more details
+* There are branches that are below version 9.12
+
+## 6 Read More
 
 * [Version Control](/refguide/version-control/)
 * [Version Control FAQ](/refguide/version-control-faq/)

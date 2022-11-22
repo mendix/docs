@@ -134,9 +134,9 @@ The input parameters for receiving email are the following:
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
     * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
 
-{{% alert color="warning" %}}
-When duplicating this microflow, do not change input parameters’ name and data type.
-{{% /alert %}}
+    {{% alert color="warning" %}}
+    When duplicating this microflow, do not change input parameter names and data types.
+    {{% /alert %}}
 
 * **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
 * **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation

@@ -296,7 +296,7 @@ This table breaks down the roles and permissions for user groups:
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
 
-Once a member is added, you can select their permission level: **Group Member** or **Group Admin**. A Group Admin can manage the user group.
+Once a member is added, you can select their permission level: **Group Member** or **Group Admin**.
 
 {{< figure src="/attachments/appstore/general/app-store-overview/members.png" >}}
 

@@ -7,7 +7,7 @@ tags: ["error", "error handling", "rollback", "microflow", "logic"]
 
 ## 1 Introduction
 
-In a [microflow](/refguide/microflows/), microflow elements ([activities](/refguide/microflows/#activities), [decisions](refguide/microflows/#activities), or [loops](/refguide/loop/)) can sometimes fail and produce an error. If you do nothing, Mendix will report the error with a system error message and roll back all the changes. However, you can also change this behavior and handle errors yourself.
+In a [microflow](/refguide/microflows/), microflow elements ([activities](/refguide/activities/), [decisions](/refguide/decisions/), or [loops](/refguide/loop/)) can sometimes fail and produce an error. If you do nothing, Mendix will report the error with a system error message and roll back all the changes. However, you can also change this behavior and handle errors yourself.
 
 This document introduces different error handling options in microflows and explains how they work using simple examples. An example of how combined custom error handling works is also given in this document.
 

@@ -182,7 +182,7 @@ To change your view on the **Projects Overview** page, click the drop-down list 
 
 * [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice)
 
-  {{% alert color="info" %}}You can see either **WSFJ Prioritization** or **RICE Prioritization** here, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+  {{% alert color="info" %}}You can see either **WSJF Prioritization** or **RICE Prioritization** here, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 #### 2.2.1 Kanban View {#kanban-view}
 
@@ -254,7 +254,7 @@ The list contains the following information:
 
 {{% alert type="info" %}}For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management*.{{% /alert %}}
 
-In the WSJF prioritization view, all the projects are sequenced by their WSJS scores by default. Clicking the header of a different column sequences the projects using the values in that column.
+In the WSJF prioritization view, all the projects are sequenced by their WSJF scores by default. Clicking the header of a different column sequences the projects using the values in that column.
 
 The list contains the following information:
 

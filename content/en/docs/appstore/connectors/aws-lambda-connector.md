@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "aws", "lambda", "connector"]
 
 ## 1 Introduction
 
-The [AWS Lambda]([#needs url]) connector provides a way for your app to trigger AWS Lambda data processing.
+The [AWS Lambda](https://marketplace.mendix.com/link/component/204511) connector provides a way for your app to trigger AWS Lambda data processing.
 
 ### 1.1 Typical Use Cases
 

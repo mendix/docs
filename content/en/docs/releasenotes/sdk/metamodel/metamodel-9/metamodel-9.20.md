@@ -19,7 +19,7 @@ weight: 80
 
 #### CustomIconCollection (ModelUnit)
 
-* We introduced this modelunit. 
+* We introduced this model unit. 
 
 #### CustomIcon (Element)
 
@@ -37,5 +37,4 @@ weight: 80
 
 #### OpenUserTaskClientAction (Element)
 
-* We introduced the `assignOnOpen` property. 
-* We introduced the `openWhenAssigned` property. 
+* We introduced the `assignOnOpen` and `openWhenAssigned` properties.

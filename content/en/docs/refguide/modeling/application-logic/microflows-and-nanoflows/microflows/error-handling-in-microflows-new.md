@@ -1,8 +1,11 @@
 ---
 title: "Error Handling in Microflows"
-url: /refguide/error-handling-in-microflows-new-to-be-updated/
+url: /refguide/error-handling-in-microflows/
 weight: 4
 tags: ["error", "error handling", "rollback", "microflow", "logic"]
+aliases:
+    - /howto/logic-business-rules/set-up-error-handling.html
+    - /howto/logic-business-rules/set-up-error-handling
 ---
 
 ## 1 Introduction
@@ -13,7 +16,7 @@ This document introduces different error handling options in microflows and expl
 
 This document also presents information on how you can inspect errors using predefined error objects and the best practices for working with error handling in microflows.
 
-## 2 Error Handling Options
+## 2 Error Handling Options {#errorhandlers}
 
 There are four error handling options:
 
@@ -68,7 +71,7 @@ In this example, the error handling in **Microflow 2** is set to **Custom withou
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/without-roll-back-error-event.png" width="600px" >}}
 
-When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before ****GenerateError**** because the error handling is set to **Custom without rollback**. When an error occurs in **Microflow 2**, changes made in **Create Order** are at this moment still kept because of the savepoint right before **GenerateError**. The error is logged using a custom error message. After that, the error event throws an error to terminate **Microflow 2** and rolls back everything to the state of savepoint which is at the very beginning of **Microflow 1**. Hence, changes made in **Create Customer** and in **Create Order** are both reverted.
+When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Custom without rollback**. When an error occurs in **Microflow 2**, changes made in **Create Order** are at this moment still kept because of the savepoint right before **GenerateError**. The error is logged using a custom error message. After that, the error event throws an error to terminate **Microflow 2** and rolls back everything to the state of savepoint which is at the very beginning of **Microflow 1**. Hence, changes made in **Create Customer** and in **Create Order** are both reverted.
 
 {{% alert color="info" %}}
 Using custom error handling without rollback and ending the error handling flow with an error event here makes it possible to create a custom log message with details about the **NewOrder** (if you used error handling with rollback, this information would not be available). However, after logging this message, everything will still be rolled back.  

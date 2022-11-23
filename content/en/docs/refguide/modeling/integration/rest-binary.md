@@ -134,21 +134,31 @@ Now that you have a published REST service for your image or file entity, implem
     * In the **Domain Model**, right click to add an entity called **RetrievedFile**. 
     * Double-click on the entity to open the **Properties** and select the **Generalization**. To test with the PNG file, we can use **System.Image**.
 
-3.  Create a page that will display the published image.
-    * Right-click on the **CMSClient** module and click **Add page**. 
-    * 
+3.  Create a **GetImage** microflow.
+    * Right click in the **CMSClient** module and select **Add microflow**.
 
+4.  Drag a **Call REST service** action into the microflow, and set the following properties:
+    * In the **General** tab: 
+         * **Location** – the URL to your rest service and the specific file (for example, `http://localhost:8080/rest/restservicename/v1/entityname/1`)
+    * In the **Response** tab: 
+         * **Response handling** – select **Store in a file document
+         * **Store in variable** – select **Yes**
+         * **Type** – select the **RetrievedFile** entity
+         * **Variable Name** – enter `GetResponseFile`
+  
+5.  Drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image.
+    * Double click the newly created action to open the properties.
+    * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
+  
+6.  Create a page that will display the published image, and add a **Get Image** button that will retrieve the image from the **GetImage** microflow.
+    * Right-click on the **CMSClient** module and click **Add page**.
+    * Add a **Data grid** on your page. 
+    * The **Data source** is of the type **Database** with the **RetrievedFile** entity.
 
-
-* Button to retrieve image in a MF
-* Image widget to directly view the image without a MF REST call
-* List view to show all retrieved images
-* Image widget links to resource endpoint provided by the REST service
-Call rest service: GetImage MF; Call REST (GET)[GetResponseFile] Retrieved File -> Change 'GetResponseFile'. REST Call activity also uses the same API endpoint
-In the Response: stores the retrieved binary image in the entity provided (GetResponseFile), and refreshes the object in the client so the listview will display the additional retrieved image. The images then show up in your test app
 
 Other points to address:
+Call rest service: GetImage MF; Call REST (GET)[GetResponseFile] Retrieved File -> Change 'GetResponseFile'. REST Call activity also uses the same API endpoint
+Use Image widget example - Image widget to directly view the image without a MF REST call; Image widget links to resource endpoint provided by the REST service
 You can upload an example PDF, different location, so no need to update the URL
 Image viewer doesn't work for PDFs -> needs to be replaced by a different widget to view PDF resources. But opens fine in a browser
 Easiest way to display a PDF: use an HTML snippet widget to add an embed tag to your page
-

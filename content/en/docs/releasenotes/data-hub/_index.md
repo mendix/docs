@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ### November 24th, 2022
 
-* It is now possible to edit data source details directly from the data source details page.
+* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
 * We fixed an issue with the display of services with anonymous access in the data source details page.
 
 ### November 17th, 2022

@@ -48,7 +48,7 @@ To create a new project and add project details to it, do as follows:
 3. [Add planning information.](#add-planning-information)
 4. [Add prioritization information.](#add-prioritization-information)
 5. [Add estimated value.](#add-estimated-value)
-6. [Add notes.](#add-notes)
+6. [Add comments.](#add-comments)
 7. [Save project details.](#save-details)
 
 #### 2.1.1 Creating the Project {#create-project}
@@ -150,11 +150,11 @@ In the **Edit Project** side pane, click **Estimated Value** to show all the fie
 
 If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
 
-Now you can proceed to [add notes](#add-notes).
+Now you can proceed to [add comments](#add-comment).
 
-#### 2.1.6 Adding Notes {#add-notes}
+#### 2.1.6 Adding Comments {#add-comments}
 
-If you want to add a note, click **Notes** in the **Edit Project** side pane, and then click **Post Note** after you add the note.
+If you want to add a comment, click **Comments** in the **Edit Project** side pane, and then click **Post Comment** after you add the comment.
 
 Now you can proceed to [save project details](#save-details).
 
@@ -297,7 +297,7 @@ On the upper-right corner of the pane, there is a link icon, an ellipsis icon (*
 Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
 {{% /alert %}}
 
-When you view project details, you can only **Post Note**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
+When you view project details, you can only **Post Comment**. You cannot change any other information. To change other information, you need to [edit the project](#edit-delete-project).
 
 ### 2.4 Editing or Deleting a Project {#edit-delete-project}
 
@@ -333,9 +333,9 @@ The **Archived Projects** page shows all the projects that are archived. You can
 
 The list contains the following information:
 
-* **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional notes, who archived the project, and when.
+* **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional comments, who archived the project, and when.
 
-  {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Note**. You cannot edit any other information.{{% /alert %}}
+  {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
 * **Department** – This is the department to which the project belongs.
 * **Stage** – This shows which stage the project is currently in.
@@ -379,10 +379,10 @@ The table below shows the permissions of Portfolio Managers and Users:
 | Edit existing projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Delete projects | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View project details | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
-| Create notes | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
-| Edit notes | Own notes | Own notes |
-| Delete notes | Own notes | Own notes |
-| View notes | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
+| Create comment | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
+| Edit comments | Own comments | Own comments |
+| Delete comments | Own comments | Own comments |
+| View comments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
 
 ### 4.1 Adding New Users
 

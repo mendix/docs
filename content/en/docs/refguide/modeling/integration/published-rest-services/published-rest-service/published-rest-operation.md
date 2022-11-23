@@ -50,7 +50,7 @@ The **Method** and **Operation path** define the operation that is executed for 
 
 The **Example Location** gives an example of a URL on which the operation can be reached. 
 
-#### 2.1.4 Microflow
+#### 2.1.4 Microflow {#microflow}
 
 An operation can have the following parameters:
 
@@ -80,6 +80,7 @@ The result of the microflow is the result of the operation and can include the f
    a. Use the [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) header to specify the file's MIME type.
    b. Use the [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) header to specify the file name and to indicate whether the file should be downloaded as an attachment.
    c. Use additional HTTP response headers to communicate other information about the file.
+   See the [Setting Up the MIME Type](/refguide/send-receive-files-rest/#set-mime-type) section of *Publish and Consume Images and Files with REST* for more information.
 
 2. **Return a** ***list*** **or an** ***object*** – specify an export mapping to convert it to XML or JSON.
 

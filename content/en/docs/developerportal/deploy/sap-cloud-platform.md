@@ -667,15 +667,11 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
-{{% alert color="info" %}}
-If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does not support the `hanatrial-securestore` database.
-{{% /alert %}}
-
-For trial accounts which do have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-securestore** from the drop-down of supported databases.
+For new trial accounts, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-securestore** from the drop-down of supported databases.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" >}}
 
-If your trial account does not include `hanatrial-securestore`, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan securestore is not found*.
+Some older trial accounts do not include `hanatrial-securestore`. In this case you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan securestore is not found*.
 
 #### 8.2.3 SAP HANA Performance Tuning
 

@@ -52,7 +52,7 @@ After migration is completed all developers need to check out (re-download) the 
 ## 5 If Migration Failed
 
 If the migration process failed, all changes are rolled back. This means access to SVN is restored and you can keep developing your app.
-You can check common causes of a failed migration below and resolve them. After that you can attempt migrate your app again.
+You can check common causes of a failed migration below and resolve them. After that you can attempt to migrate your app again.
 
 Causes of a failed migration can be the following:
 

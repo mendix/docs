@@ -13,9 +13,7 @@ The [Portfolio Management](https://portfolio.mendix.com) app helps companies max
 
 {{% alert type="info" %}}The Portfolio Management app is available to all Mendix Cloud customers. Mendix Admins can access all portfolios within their company.{{% /alert %}}
 
-To start the Portfolio Management app, go to the Developer Portal, open the access menu by clicking the icon on the upper-left corner, as shown in the image below, and then select **Portofolio**.
-
-{{< figure src="/attachments/developerportal/portfolio-management/access-menu.png" >}}
+To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portofolio**.
 
 ## 2 Projects Overview Page {#projects-overview}
 

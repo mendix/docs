@@ -5,7 +5,7 @@ url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
 weight: 40
 description: "Describes how to deploy to SAP Business Technology Platform."
-tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
+tags: ["SAP", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -335,7 +335,7 @@ When the app has been transported you will be on the page **Configure the Applic
 
 The environment details page contains the following four tabs:
 
-* [General](#general-tab) – how the application is deployed on SAP Cloud Platform
+* [General](#general-tab) – how the application is deployed on SAP BTP
 * [Model Options](#model-options-tab) – application constants and scheduled events
 * [Services](#binding-services) – Cloud Foundry service management
 * [Runtime](#runtime-tab) – custom environment variables which define "User-Provided Variables" in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime

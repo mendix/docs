@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "amazon", "sns", "connector"]
 
 ## 1 Introduction
 
-The [Amazon SNS connector]([#needs-url]) provides a way for you to enrich your Mendix app with app-to-app and app-to-person notifications by implementing [Amazon Simple Notification Service (SNS)](https://aws.amazon.com/sns/).
+The [Amazon SNS connector](https://marketplace.mendix.com/link/component/204715) provides a way for you to enrich your Mendix app with app-to-app and app-to-person notifications by implementing [Amazon Simple Notification Service (SNS)](https://aws.amazon.com/sns/).
 
 ### 1.1 Typical Use Cases
 

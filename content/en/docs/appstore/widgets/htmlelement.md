@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "widget", "htmlelement", "platfor
 
 ## 1 Introduction
 
-The [HTML Element](https://marketplace.mendix.com/) allows the user to create custom HTML elements to build custom structures, visualizations or interactions. It can be used to do advanced text formatting, build custom UI components, embed HTML etc.
+The [HTML Element](https://marketplace.mendix.com/link/component/204843) allows the user to create custom HTML elements to build custom structures, visualizations or interactions. It can be used to do advanced text formatting, build custom UI components, embed HTML etc.
 It contains settings to define the HTML tag, HTML attributes, events, repeat elements, and this widget can be nested and combined with other widgets.
 
 ### 1.1 Features
@@ -52,8 +52,8 @@ To configure this widget, follow these steps:
     * **No** (default) – if selected, the element is rendered once. 
 * **Content**
     * **Container for widgets** (default) – if selected, the widget acts as a container for other widgets.
-    * **HTML** – if selected, the widget acts as a standalone HTML element itself. 
-* **HTML** (Visible if **Content** option is set to **HTML**) – sets the desired HTML structure.
+    * **HTML** – if selected, use custom HTML markup defined in HTML setting. 
+* **HTML** (Visible if **Content** option is set to **HTML**) – could be either expression or text template. Define custom HTML markup for the widget, the value should be valid HTML and it will be inserted as HTML element content.
 
 #### 2.1.2 HTML Attributes Section
 

@@ -13,9 +13,9 @@ Mendix Studio Pro needs to connect to the Team Server, where all your apps are s
 
 ## 2 Troubleshooting Team Server App Network Settings
 
-Being unable to download the Team Server app can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and the Team Server itself.
-- `https://git.api.mendix.com/` for Git based apps.
-- `https://teamserver.sprintr.com/` for SVN based apps.
+Being unable to download the Team Server app can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and the Team Server itself that is located at:
+* `https://git.api.mendix.com/` for Git based apps.
+* `https://teamserver.sprintr.com/` for SVN based apps.
 
 Mendix Studio Pro uses the HTTPS (TCP) to communicate with the Team Server. To access the Team Server from Studio Pro, the network at your location needs the following settings:
 

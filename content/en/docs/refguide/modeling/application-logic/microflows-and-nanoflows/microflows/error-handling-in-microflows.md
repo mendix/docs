@@ -99,7 +99,7 @@ When **Microflow 1** starts with a button click, a savepoint is created at the v
 You should be very careful with using the **Continue** option since it can make it very difficult to understand when something goes wrong. Where possible, try to use **Custom without rollback** instead and log the error message.
 {{% /alert %}}
 
-## 3 An Example of Combined Error Handling
+## 3 An Example of Combined Error Handling {#example}
 
 In this example, the error handling on the **GenerateError** activity in **Microflow 2** and on the call of **Microflow 2** are both set to **Custom without rollback**. The error handling flow in **Microflow 2** ends with an error event. 
 

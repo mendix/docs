@@ -113,30 +113,41 @@ When an error occurs in **Microflow 2**, changes made in **Create Order** are at
 
 When an error occurs inside a microflow, a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (as in, after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error objects, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity **System.Error**, while `$latestSoapFault` is an object of entity **System.SoapFault**, which is a specialization of **System.Error**.
 
-In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
+In a custom error handler that is executed after an error occurs, `$latestError` is set to an object of entity **System.Error** containing information about the error that occurred. It contains the following attributes:
+
+| Attribute | Type | Description |
+| --- | --- | --- |
+| ErrorType | String | The Java exception type of the error that occurred. |
+| Message | String | The message of the Java exception. |
+| Stacktrace | String | The stacktrace of the Java exception. |
+
+{{% alert color="warning" %}}
+In microflows that apply entity access, you may not be able to inspect the attributes of error objects for security reasons.
+{{% /alert %}}
+
+### 4.1 Inspecting REST Errors
+
+If the error is a REST fault (an error that occurs as a result of a REST call), the result of the the call will be stored in `$latestHttpResponseVariable` which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide/call-rest-action/#response) section in *Call REST Service*.
+
+### 4.2 Inspecting SOAP Errors
+
+If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object of type **System.SoapFault** that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
 {{% alert color="info" %}}
 You can determine whether an error was a SOAP fault by checking `$latestSoapFault` for `empty`.
 {{% /alert %}}
 
-The following table shows the attributes of **System.Error** and **System.SoapFault**.
+The attributes of the **System.SoapFault** entity are shown below:
 
-| Entity | Attribute | Type | Description |
-| --- | --- | --- | --- |
-| System.Error | ErrorType | String | The Java exception type of the error that occurred. |
-| System.Error | Message | String | The message of the Java exception. |
-| System.Error | Stacktrace | String | The stacktrace of the Java exception. |
-| System.SoapFault | Code | String | The code element of the SOAP fault. |
-| System.SoapFault | Reason | String | The reason element of the SOAP fault. |
-| System.SoapFault | Node | String | The node element of the SOAP fault. |
-| System.SoapFault | Role | String | The role element of the SOAP fault. |
-| System.SoapFault | Detail | String | The detail element of the SOAP fault. |
+| Attribute | Type | Description |
+| --- | --- | --- |
+| Code | String | The code element of the SOAP fault. |
+| Reason | String | The reason element of the SOAP fault. |
+| Node | String | The node element of the SOAP fault. |
+| Role | String | The role element of the SOAP fault. |
+| Detail | String | The detail element of the SOAP fault. |
 
 For more information, see [SOAP Fault](http://www.w3.org/TR/soap12-part1/#soapfault).
-
-{{% alert color="warning" %}}
-In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
-{{% /alert %}}
 
 ## 5 Best Practices
 

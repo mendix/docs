@@ -65,6 +65,8 @@ When **Microflow 1** starts with a button click, a savepoint is created at the v
 
 ### 2.3 Error Handling - Custom without Rollback
 
+Setting "Custom without Rollback" will not stop data changes within the activity which failed from being rolled back. For example, if a [Call REST Service](/refguide/call-rest-action/) returns an error, any data the REST call retrieved will not be kept.
+
 #### 2.3.1 Error Handling Which Ends with an Error Event
 
 In this example, the error handling in **Microflow 2** is set to **Custom without rollback** and the error handling flow ends with an error event.

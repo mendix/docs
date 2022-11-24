@@ -53,7 +53,7 @@ In this example, the error handling in **Microflow 2** is set to **Custom with r
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/with-roll-back-error-event.png" width="600px" >}}
 
-When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, everything rolls back to the state of this savepoint because the error handling is set to **Custom with rollback**. Hence, changes made in ****Create Order**** and in **Create Customer** are both reverted. The error is logged using a custom error message. After that, the error event throws an error to terminate **Microflow 2**, and **Microflow 1** will terminate because there is no custom error handing there.
+When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, everything rolls back to the state of this savepoint because the error handling is set to **Custom with rollback**. Hence, changes made in **Create Order** and in **Create Customer** are both reverted. A custom error is logged using a **Log message** activity. After that, the error event throws an error to terminate **Microflow 2**, and **Microflow 1** will terminate because there is no custom error handing there.
 
 #### 2.2.2 Error Handling Which Ends with an End Event
 

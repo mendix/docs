@@ -4,7 +4,7 @@ linktitle: "Prioritization Models"
 url: /developerportal/portfolio-management/prioritization-models/
 parent: "portfolio-management"
 weight: 5
-description: "Describes the prioritization models supported by the Portfolio Management app."
+description: "Describes the prioritization models supported by the Portfolio Management tool."
 tags: ["Portfolio Management", "prioritization models", "wsjf prioritization", "rice prioritization"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,7 +13,7 @@ tags: ["Portfolio Management", "prioritization models", "wsjf prioritization", "
 
 When you manage projects in a flow-based manner, only looking at each project's return on investment theoretically does not produce the best economic benefit. Instead, sequencing projects based on their priorities and updating their priorities continuously can bring you the best result.
 
-The [Portfolio Management](/developerportal/control-center/portfolio-management/) app supports two prioritization models, WSJF and RICE. These two prioritization models can be used to prioritize your projects in a flow-based environment. WSJF and RICE are based on different components. You can pick the prioritization model that is most suitable for your project portfolio management.
+The [Portfolio Management](/developerportal/control-center/portfolio-management/) tool supports two prioritization models, WSJF and RICE. These two prioritization models can be used to prioritize your projects in a flow-based environment. WSJF and RICE are based on different components. You can pick the prioritization model that is most suitable for your project portfolio management.
 
 ## 2 WSJF {#wsjf}
 
@@ -29,7 +29,7 @@ You can calculate the CoD by adding up the following three primary components:
 
 ### 2.2 Calculating Job Size
 
-The job size of a project is the amount of effort that a project requires. In the Portfolio Management app, the job size of a project is rated by five levels: **XL**, **L**, **M**, **S**, or **XS**. You should rate the job size of a project by comparing it with other projects. For example, you can set the project with the smallest job size to **XS**, and then set the other projects relative to that.
+The job size of a project is the amount of effort that a project requires. In the Portfolio Management tool, the job size of a project is rated by five levels: **XL**, **L**, **M**, **S**, or **XS**. You should rate the job size of a project by comparing it with other projects. For example, you can set the project with the smallest job size to **XS**, and then set the other projects relative to that.
 
 If the job size of a project is too big, we recommend you to split it into multiple smaller projects.
 

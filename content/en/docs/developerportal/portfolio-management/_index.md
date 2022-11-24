@@ -148,7 +148,7 @@ In the **Edit Project** side pane, click **Estimated Value** to show all the fie
 
 If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
 
-Now you can proceed to [add comments](#add-comment).
+Now you can proceed to [add comments](#add-comments).
 
 #### 2.1.6 Adding Comments {#add-comments}
 

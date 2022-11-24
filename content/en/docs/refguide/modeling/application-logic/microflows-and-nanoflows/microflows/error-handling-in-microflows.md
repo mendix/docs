@@ -126,7 +126,7 @@ In a custom error handler that is executed after an error occurs, `$latestError`
 | Stacktrace | String | The stacktrace of the Java exception. |
 
 {{% alert color="warning" %}}
-In microflows that apply entity access, you may not be able to inspect the attributes of error objects for security reasons.
+In microflows that apply entity access, you may not be able to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
 {{% /alert %}}
 
 ### 4.1 Inspecting REST Errors

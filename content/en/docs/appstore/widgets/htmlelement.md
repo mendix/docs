@@ -9,28 +9,27 @@ tags: ["marketplace", "marketplace component", "widget", "htmlelement", "platfor
 
 ## 1 Introduction
 
-The [HTML Element](https://marketplace.mendix.com/link/component/204843) allows the user to create custom HTML elements to build custom structures, visualizations or interactions. It can be used to do advanced text formatting, build custom UI components, embed HTML etc.
-It contains settings to define the HTML tag, HTML attributes, events, repeat elements, and this widget can be nested and combined with other widgets.
+The [HTML Element](https://marketplace.mendix.com/link/component/204843) widget allows a developer to create custom HTML elements to build custom structures, visualizations, or interactions. The widget can also execute advanced text formatting, build custom UI components, and embed HTML.
+
+The HTML Element widget contains settings to define the HTML tag, HTML attributes, events, and repeat elements. This widget can be nested and combined with other widgets.
 
 ### 1.1 Features
 
-Basically any arbitrary custom HTML configuration can be used.
+Almost any arbitrary custom HTML configuration can be used with HTML Element. Here are some example outputs:
 
-Some example outputs are;
-
-* Embedded video
+* Embedded video:
 
     {{< figure src="/attachments/appstore/widgets/htmlelement/sample-embedded-html.png" >}}
------
-* Text Formatting
+
+* Text formatting:
 
     {{< figure src="/attachments/appstore/widgets/htmlelement/sample-formatting-text.png" >}}
------
-* Building  custom UI component
+
+* Building a custom UI component:
 
     {{< figure src="/attachments/appstore/widgets/htmlelement/sample-custom-ui.png" >}}
------
-* Custom tailored HTML
+
+* Custom-tailored HTML:
 
     {{< figure src="/attachments/appstore/widgets/htmlelement/sample-tailored-html.png" >}}
 
@@ -38,7 +37,7 @@ Some example outputs are;
 
 To configure this widget, follow these steps:
 
-1. In Studio Pro, place the HTML Element widget where you wish your custom HTML Element to be visible.
+1. In Studio Pro, place the HTML Element widget where you want your custom HTML Element to be visible.
 2. Double-click the HTML Element widget to open the **Edit HTML Element** dialog box.
 3. Configure the widget using the properties described in the sections below.
 

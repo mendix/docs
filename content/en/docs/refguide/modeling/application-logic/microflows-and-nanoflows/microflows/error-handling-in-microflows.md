@@ -28,7 +28,7 @@ There are four error handling options:
 Except for the **Rollback** option, which is the default, the other three are all custom error handling options. For **Custom with rollback** and **Custom without rollback**, you can create an additional flow from the microflow elements (activities or decisions) from which the error is returned and mark this flow as an error handling flow. You can end this flow with an [error event](/refguide/error-event/) or an [end event](/refguide/end-event/). Hence, we introduce these two custom error handling options based on what event terminates the error handling flow.
 
 {{% alert color="info" %}}
-In the error handling flow, you can include activities that update the database. Custom error handling does not affect newly created objects there, but if you want to update the status of an existing object that was created outside of this flow and that was rolled back because of custom error handling, then an error will occur.
+In the error handling flow, you can include activities that update the database. Custom error handling does not affect newly created objects there, but if you try to update the status of an existing object that was created outside of this flow and that was rolled back because of custom error handling, then an error will occur.
 
 You can also include decisions in the error handling flow based on what you want. It is recommended to put a [Log message activity](/refguide/log-message/) in the error handling flow to log the error and present a custom error message to the end-user.
 {{% /alert %}}

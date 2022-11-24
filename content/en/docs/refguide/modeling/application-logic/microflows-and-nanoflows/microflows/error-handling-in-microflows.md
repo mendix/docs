@@ -97,6 +97,8 @@ In this example, the error handling in **Microflow 2** is set to **Continue**.
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Continue**. When the error in **Microflow 2** occurs, the microflow continues as if nothing happened. Changes made in **Create Customer** and **Create Order** are both kept. No error message is logged and no message is displayed to the end-user.
 
+Data changes within the activity which returns an error (for example, within an iteration of a [loop](/refguide/loop/)) will always be rolled back. It is only data changes outside the activity returning the error which will be kept.
+
 {{% alert color="warning" %}}
 You should be very careful with using the **Continue** option since it can make it very difficult to understand when something goes wrong. Where possible, try to use **Custom without rollback** instead and log the error message.
 {{% /alert %}}

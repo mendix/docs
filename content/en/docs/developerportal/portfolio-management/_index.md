@@ -122,29 +122,27 @@ To delete an existing tag, do as follows:
 
 In the **Edit Project** side pane, click **Planning** to show all the fields in this section. Set the following dates in this section:
 
-* **Intake** – This is the time when the project is accepted based on business requirements.
-* **Start Date** – This is the time when the first actions are taken to start implementation.
-* **Go-Live date** – This is the time when the app is expected to be up and running.
+* **Intake** – the time when the project is accepted based on business requirements
+* **Start Date** – the time when the first actions are taken to start implementation
+* **Go-Live date** – the time when the app is expected to be up and running
 
 #### 2.1.4 Adding Prioritization Information {#add-prioritization-information}
 
 In the **Edit Project** side pane, click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
 {{% alert color="info" %}}
-The title of this section can be **Prioritization: WSJF Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. </br></br>For more information about the prioritization models and the components of each model, see the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section or the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*
+The title of this section can be **Prioritization: WSJF Model** or **Prioritization: RICE Model**, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page. For more information about the prioritization models and the components of each model, see the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section or the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management.*
 {{% /alert %}}
 
 #### 2.1.5 Adding Estimated Value {#add-estimated-value}
 
 In the **Edit Project** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
 
-*  **Type of Value** – This is the type of the value that is created by the project.
-
-    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
-
-* **Frequency** – This indicates whether the value is **Once-off** or **Recurring**.
-* **Value** – This is the amount of the value in numbers. Use a comma every third digit from the right, for example, *1,000,000*.
-* **Additional Information**, enter anything that can help clarify how estimated value may impact the overall costs of the project. 
+*  **Type of Value** – the type of the value that is created by the project
+  * A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page
+* **Frequency** – indicates whether the value is **Once-off** or **Recurring**
+* **Value** – the amount of the value in numbers; use a comma every third digit from the right (for example, *1,000,000*)
+* **Additional Information** – nter anything that can help clarify how estimated value may impact the overall costs of the project
 
 If the project creates more than one type of value, click **Add Value** to add more value. After you enter all values, the system shows the **Sum of Recurring Values** and the **Sum of One-Off Values**.
 
@@ -168,9 +166,7 @@ To change your view on the **Projects Overview** page, click the drop-down list 
 
 * [Kanban view](#kanban-view)
 * [List view](#list-view)
-* [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice)
-
-  {{% alert color="info" %}}You can see either **WSJF Prioritization** or **RICE Prioritization** here, depending on the prioritization model selected on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+* [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice) (the section you see here depends on the prioritization model selected in [Portfolio Settings](#portfolio-settings))
 
 #### 2.2.1 Kanban View {#kanban-view}
 
@@ -184,23 +180,17 @@ Each project card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/project-card.png" >}}
 
-* ① Project name  – Clicking it opens a [side pane](#view-project) that shows project details.
-* ② Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
-
-  {{% alert type="info" %}}
-  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
-  {{% /alert %}}
-
-* ③ Tags for the project – These are the tags used to classify the project. Tags can be used, for example, to indicate the types of projects.
-* ④ Department – This is the department to which the project belongs.
-* ⑤ Calendar icon – Hovering over the icon shows the following defined dates of the project lifecycle:
-
-  * **Intake** – This is the time when the project is accepted based on business requirements.
-  * **Start Date** – This is the time when the first actions are taken to start implementation.
-  * **Go-Live Date** – This is the time when the app is expected to be up and running.
-
-* ⑥ Icon of the linked app – Clicking the icon shows the information about the Mendix app that is linked with the project.
-* ⑦ Avatar of the project owner – Hovering over the avatar shows the name of the project owner.
+* ① Project name  – clicking this opens a [side pane](#view-project) that shows project details
+* ② Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
+    * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
+* ③ Tags for the project – these tags are used to classify the project (tags can be used, for example, to indicate the types of projects)
+* ④ Department – the department to which the project belongs
+* ⑤ Calendar icon – hovering over the icon shows the following defined dates of the project lifecycle:
+    * **Intake** – the time when the project is accepted based on business requirements
+  * **Start Date** – the time when the first actions are taken to start implementation
+  * **Go-Live Date** – the time when the app is expected to be up and running
+* ⑥ Icon of the linked app – clicking this shows the information about the Mendix app that is linked with the project
+* ⑦ Avatar of the project owner – hovering over the avatar shows the name of the project owner
 
 #### 2.2.2 List View {#list-view}
 
@@ -210,22 +200,17 @@ In the list view, projects are shown in a list.  Clicking the header of a column
 
 The list contains the following information:
 
-* **Project name** – Clicking it opens a [side pane](#view-project) that shows project details.
-* **Department** – This is the department to which the project belongs.
-* **Stage** – This shows which stage the project is currently in.
-
-  {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
-
-* **Intake** – This is the time when the project is accepted based on business requirements.
-* **Start Date** – This shows the time when the first actions are taken to start implementation.
-* **Go-Live Date** – This shows the time when the app is expected to be up and running.
-* **Linked App** – Clicking the icon shows the information about the Mendix app that is linked with the project.
-* **Owner** – This shows the name of the project owner.
-* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
-
-  {{% alert type="info" %}}
-  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
-  {{% /alert %}}
+* **Project name** – clicking this opens a [side pane](#view-project) that shows project details
+* **Department** – the department to which the project belongs
+* **Stage** – the stage the project is currently in
+  * A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page
+   **Intake** – the time when the project is accepted based on business requirements
+* **Start Date** – the time when the first actions are taken to start implementation
+* **Go-Live Date** – the time when the app is expected to be up and running
+* **Linked App** – clicking this shows the information about the Mendix app linked with the project
+* **Owner** –  shows the name of the project owner
+* Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
+  * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
 
 #### 2.2.3 WSJF Prioritization {#wsjf}
 
@@ -238,18 +223,15 @@ The list contains the following information:
 * **Project** – Clicking it opens a [side pane](#view-project) that shows project details.
 * **Stage** – This shows which stage the project is currently in.
 
-  {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+{{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-* **Business Value** – This indicates how much business value this project will generate. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
-* **Time Criticality** – This indicates how time-critical this project is. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
-* **Risk Reduction** – This indicates how much this project will help mitigate or reduce future risks. You can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**.
-* **Size** – The is the job size of the project. You can select **XL**, **L**, **M**, **S**, or **XS**.
-* **Score** – This is the WSJF score of the project.
-* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
-
-  {{% alert type="info" %}}
-  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
-  {{% /alert %}}
+* **Business Value** –  indicates how much business value this project will generate; you can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**
+* **Time Criticality** –  indicates how time-critical this project is; you can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**
+* **Risk Reduction** – indicates how much this project will help mitigate or reduce future risks; you can select **Highest**, **High**, **Medium**, **Low**, or **Lowest**
+* **Size** – the job size of the project; you can select **XL**, **L**, **M**, **S**, or **XS**
+* **Score** – the WSJF score of the project
+* Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project ()
+  * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
 
 #### 2.2.4 RICE Prioritization {#rice}
 
@@ -259,29 +241,22 @@ In the RICE prioritization view, all the projects are sequenced by their RICE sc
 
 The list contains the following information:
 
-* **Project** – Clicking it opens a [side pane](#view-project) that shows project details.
-* **Stage** – This shows which stage the project is currently in.
-
-  {{% alert type="info" %}}A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
-
-* **Reach** – This is the estimated number of relevant users that the project may affect within a time period. You must enter an integer in this field.
-* **Impact** – This is the estimated amount of impact that the project may have on individual users. You can select **Massive**, **High**, **Medium**, **Low**, or **Minimal**.
-* **Confidence** – This indicates how confident you are about your Impact and Reach estimates. You can select **High**, **Medium**, or **Low**.
-* **Effort** – This is the estimated total amount of time that the project will require from all members of your team: product, design, and development. You must enter an integer in this field.
-* **Score** – This is the RICE score of the project.
-* Calendar icon – Hovering over the icon shows the following defined dates of the project lifecycle:
-
-  * **Intake** – This is the time when the project is accepted based on business requirements.
-  * **Start Date** – This is the time when the first actions are taken to start implementation.
-  * **Go-Live Date** – This is the time when the app is expected to be up and running.
-
-* Icon of the linked app – Clicking the icon shows the information about the Mendix app that is linked with the project.
-* Avatar of the project owner – Hovering over the avatar shows the name of the project owner.
-* Ellipsis icon (**...**) – Clicking the icon opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project.
-
-  {{% alert type="info" %}}
-  Only Portfolio Managers can edit, archive, or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
-  {{% /alert %}}
+* **Project** – clicking this opens a [side pane](#view-project) that shows project details
+* **Stage** – shows which stage the project is currently in
+  * A Portfolio Manager can set up custom stages for projects in [Portfolio Settings](#portfolio-settings)
+* **Reach** – the estimated number of relevant users that the project may affect within a time period; you must enter an integer in this field
+* **Impact** –  the estimated amount of impact that the project may have on individual users; you can select **Massive**, **High**, **Medium**, **Low**, or **Minimal**
+* **Confidence** – indicates how confident you are about your Impact and Reach estimates; you can select **High**, **Medium**, or **Low**
+* **Effort** – the estimated total amount of time that the project will require from all members of your team: product, design, and development; you must enter an integer in this field
+* **Score** – the RICE score of the project
+* Calendar icon – hovering over the icon shows the following defined dates of the project lifecycle:
+  * **Intake** – the time when the project is accepted based on business requirements
+  * **Start Date** – the time when the first actions are taken to start implementation
+  * **Go-Live Date** – the time when the app is expected to be up and running
+* Icon of the linked app – clicking this shows the information about the Mendix app that is linked with the project
+* Avatar of the project owner – hovering over the avatar shows the name of the project owner
+* Ellipsis icon (**...**) – clicking this opens a pop-up menu that enables you to [edit](#edit-delete-project), [archive](#archive-project), or [delete](#edit-delete-project) the project
+  * Only Portfolio Managers can edit, archive, or delete a project (for more information on roles and permissions, see [Access Management](#access-management)) 
 
 ### 2.3 Viewing Project Details {#view-project}
 
@@ -316,7 +291,6 @@ Only Portfolio Managers can archive a project. For more information on roles and
 To archive a project, perform the following steps:
 
 1. On the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Archive**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Archive**.
-
 2. In the dialog box that opens, select the reason why the project is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
 
    {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
@@ -335,16 +309,13 @@ The list contains the following information:
 
   {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
-* **Department** – This is the department to which the project belongs.
-* **Stage** – This shows which stage the project is currently in.
-* **Archiving reason** – This is the reason why the project was archived.
-* **Archived date** – This shows the date when the project was archived.
-* **Archived by** – This is the name of the person who archived the project.
-* Ellipsis (**...**) icon – Clicking the icon opens a pop-up menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project.
-
-  {{% alert type="info" %}}
-  Only Portfolio Managers can restore or delete a project. For more information on roles and permissions, see [Access Management](#access-management).
-  {{% /alert %}}
+* **Department** – the department to which the project belongs
+* **Stage** – which stage the project is currently in
+* **Archiving reason** – the reason why the project was archived
+* **Archived date** – the date when the project was archived
+* **Archived by** – the name of the person who archived the project
+* Ellipsis (**...**) icon – clicking this opens a pop-up menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project
+  Only Portfolio Managers can restore or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
 
 ### 3.1 Restoring or Deleting an Archived Project {#restore-delete-archived-project}
 
@@ -418,9 +389,7 @@ On the **Portfolio Settings** page, Portfolio Managers can customize the options
 * **Currency**
 * **Departments**
 * **Countries**
-* **Stages**
-
-  * You can click the **^** icon or the **v** icon to move a stage upwards or downwards.
+* **Stages**  – click the **^** icon or the **v** icon to move a stage upwards or downwards
 
     {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" >}}
 
@@ -433,7 +402,3 @@ To add an option, click **Add Department**, **Add Country**, **Add Stage**, **Ad
 To delete or edit an existing option, hover over the option to show the **Delete** button or the **Edit** button at the end of row, and then click the corresponding button.
 
 {{< figure src="/attachments/developerportal/portfolio-management/delete-edit-stage.png" >}}
-
-## 6 Read More
-
-{{% todo %}}Add the learning path{{% /todo %}}

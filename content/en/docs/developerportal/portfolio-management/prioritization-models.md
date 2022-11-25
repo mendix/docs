@@ -3,7 +3,7 @@ title: "Prioritization Models Supported by Portfolio Management"
 linktitle: "Prioritization Models"
 url: /developerportal/portfolio-management/prioritization-models/
 parent: "portfolio-management"
-weight: 5
+weight: 100
 description: "Describes the prioritization models supported by the Portfolio Management tool."
 tags: ["Portfolio Management", "prioritization models", "wsjf prioritization", "rice prioritization"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

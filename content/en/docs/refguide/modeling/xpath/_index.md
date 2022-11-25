@@ -27,7 +27,7 @@ Not all [XPath operators](/refguide/xpath-operators/) are supported by Studio Pr
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The syntax of XPath queries may differ between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
+The syntax of XPath queries differs between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
 ## 2 XPath Elements

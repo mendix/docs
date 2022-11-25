@@ -367,6 +367,10 @@ The return type of the expression must be defined using either the `type` or the
 
 ##### 4.1.2.1 Fixed Return Type
 
+{{% alert color="info" %}}
+The `type` attribute was required in Mendix versions [9.19](/releasenotes/studio-pro/9.19/) and below.
+{{% /alert %}}
+
 You can set a fixed return type for your expression property with one of the supported types from below.
 
 | Supported Return Types | Corresponding Types Client Components Receive                                           |
@@ -377,11 +381,11 @@ You can set a fixed return type for your expression property with one of the sup
 | `Integer`              | `DynamicValue<BigJS>`                                                                   |
 | `String`               | `DynamicValue<string>`                                                                  |
 
-{{% alert color="info" %}}
-The `type` attribute was required in Mendix [9.19](/releasenotes/studio-pro/9.19/) and earlier.
-{{% /alert %}}
+##### 4.1.2.2 Return Type Assignable to an Attribute
 
-##### 4.1.2.2 Return Type Assignable To An Attribute
+{{% alert color="info" %}}
+The `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
+{{% /alert %}}
 
 You can use `assignableTo` to specify that the return type of the expression property should depend on the attribute property with the given property path. This means that the value of the expression will be assignable to the attribute configured for that attribute property (using [`setValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value)).
 
@@ -410,10 +414,6 @@ For example, when properties are defined as follows:
 The client component will receive a `myExpression` prop of type `DynamicValue<string | boolean>`.
 
 This is a union type of all possible value types for the expression. The actual type of the value depends on the attribute configured for the `myAttribute` property. For an attribute of type `String`, the value will be a `string`; otherwise, it will be a `boolean`.
-
-{{% alert color="info" %}}
-The `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
-{{% /alert %}}
 
 #### 4.1.3 Studio Pro UI
 
@@ -571,15 +571,15 @@ Then the Studio Pro UI for the property appears like this:
 This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
+{{% /alert %}}
+
 The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
 
 If a `dataSource` attribute is not specified the client will receive a `ReferenceValue` for references (singular references), a `ReferenceSetValue` for reference sets (multiple references), or a union of them. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListReferenceValue` or `ListReferenceSetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listassociationvalue) depending on the configuration of the property. For more information, see the [Datasource](#datasource) section below.
-
-{{% alert color="info" %}}
-The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
-{{% /alert %}}
 
 #### 4.5.1 XML Attributes {#xml-attributes}
 

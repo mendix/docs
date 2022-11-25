@@ -158,6 +158,7 @@ For more information, see [SOAP Fault](http://www.w3.org/TR/soap12-part1/#soapfa
 Consider the following best practices for error handling:
 
 * Always use a log activity to print the error message and stack trace.
+* Add custom error handling for activities that depend on third-party systems, as these activities might fail and usually provide detailed information on the cause of failure. With custom error handling, you should log the object that might have caused the error, the error type and message, or any responses from REST, SOAP, or Java action calls.
 * Where possible, avoid using the **Continue** option and use **Custom without rollback** instead.
 * Do not overdo it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the Mendix Runtime to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception.
 

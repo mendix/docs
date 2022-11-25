@@ -675,9 +675,9 @@ Some older trial accounts do not include `hanatrial-securestore`. In this case y
 
 #### 8.2.3 SAP HANA Performance Tuning
 
-If your SAP HANA database has performance issues, you may be able to improve performance by performing the following tuning.
+If your SAP HANA database has performance issues, you may be able to improve performance by performing the following tuning:
 
-1. Obtain the following service binding credentials from the SAP BTP Cockpit, or via the cli:
+1. Obtain the following service binding credentials from the SAP BTP cockpit, or via the cli:
 
     * host
     * url

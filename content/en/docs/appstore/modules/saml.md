@@ -82,7 +82,7 @@ If you need any of these features, contact your Mendix CSM to discuss inclusion 
 
 If you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a Certificate Authority (CA) (see [Use a Certificate Issued by a Certificate Authority](#use-ca) for more details)
 
-The URL for downloading your app’s SP metadata is independent of the value of your app’s EntityID that you configure (see section 3.1) and which is included in the SP-metadata. Instead the metadata URL is based on the alias for the connected IDP where the SP metadata will be used.
+The URL for downloading the SP metadata of your app is independent of the value of the EntityID that you configure for your app (see [Configuring Service Provider](configure-sp)) and which is included in the SP metadata. Instead, the metadata URL is based on the alias for the connected IDP where the SP metadata will be used.
 
 ### 1.4 Dependencies{#dependencies}
 
@@ -138,7 +138,7 @@ To configure SAML, start your app and navigate to the **OpenConfiguration** micr
 
 You can now finish configuring your SAML module in your app by reviewing/updating the Service Provider (SP), and creating/updating the IdP configuration.
 
-### 3.1 Configuring Service Provider
+### 3.1 Configuring Service Provider{configure-sp}
 
 Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
 
@@ -146,7 +146,7 @@ Before any IdP can be configured, you need to configure the SP, which is your cu
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
 {{% /alert %}}
 
-You can choose what you want to enter for the **Entity Id**, **Organization**, and **Contact person**. The SAML module imposes no restrictions and doesn’t apply any validations. SAML core specification recommends to “use a URL containing its own domain name to identify itself“ as value for your app’s EntityID.
+You can choose what you want to enter for the **Entity Id**, **Organization**, and **Contact person**. The SAML module imposes no restrictions and doesn’t apply any validations. The SAML core specification recommends that you “use a URL containing its own domain name to identify itself“ as the value of the EntityID of your app.
 
 
 * **Log available days** – If **Log SAML Requests** is checked in the IdP configuration, all login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This setting configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. If it is set to 0, all records will be removed daily.
@@ -197,7 +197,7 @@ Upon completing these steps, you only need to send the SP metadata file to the I
 
 The following settings apply to this IdP configuration:
 
-* **Alias** – The alias for your IDP can be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (besides that it is required). But you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
+* **Alias** – The alias for your IDP can be used in the URL of the application to indicate the IdP configuration that should be used during login. There are no validations on this field (except that it is required), but you should make sure that this alias is compatible with usage in an URL (meaning, no `/`, `&`, `?`, or special character that could get lost in the communication).
 * **Log SAML Requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
 #### 3.2.3 Identity Provider Metadata
@@ -289,9 +289,9 @@ In-session authentication is a process that takes place within a session that wa
 
 * to require the primary end-user to re-authenticate shortly before they are allowed to do a critical transaction in your app
 * to have a second end-user add their authentication (for example, for electronic signing) but leave the primary end-user associated with the overall session
-* to let the user interact anonymously with your app at first, but ask him to identify and authenticate himself during that session.
+* to let the user interact anonymously with your app at first, but ask them to identify and authenticate themselves during that session
 
-Usage of the in-session authentication does change the user roles that apply to the current session. In case your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML-IDP as for the initial (non-anonymous) session and will otherwise let the user select his IDP.
+Usage of the in-session authentication does change the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, it lets the user select their IDP.
 
 This flow can be initiated by using the URL `https://{app-url}/sso/login?action=verify`
 

@@ -35,7 +35,8 @@ Be careful when importing elements, as you can overwrite your existing work. Pay
 
 A Mendix package (*.mpk*) file can store a complete Mendix app. 
 
-You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as out-of-the-box solution.  
+You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as out-of-the-box solution. In this case a Solution will be [set-up](/appstore/creating-content/sol-setup) for you.
+Solutions are compatible with future [upgrades](/appstore/creating-content/sol-upgrade).
 
 To import a complete app or solution package, follow these steps:
 
@@ -50,6 +51,9 @@ To import a complete app or solution package, follow these steps:
     You have the following options in this dialog box:
 
     * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server** or **Locally on disk**
+	
+	{{% alert color="info" %}} For a Solution to be compatible with future upgrades, it must be set-up using **New Mendix Team Server** (recommended) or **Private server** only. Solutions stored **Locally on disk** can't be upgraded{{% /alert %}}
+	
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
 

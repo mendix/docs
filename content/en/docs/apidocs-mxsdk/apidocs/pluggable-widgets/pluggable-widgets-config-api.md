@@ -574,7 +574,7 @@ type DropZoneProps = BaseProps & {
 }
 ```
 
-The drop zone preview type can be used to add drop zones to the widget preview. It requires a widget property of type `widgets` in order to be able to store the information about the containing widgets. If the property has a datasource, a header will be shown inside the dropzone containing information about the datasource. This header is optional and can be hidden by setting `showDataSourceHeader` to `false`.
+The drop zone preview type can be used to add drop zones to the widget preview. It requires a widget property of type `widgets` to be able to store the information about the containing widgets. If the property has a data source, a header will be shown inside the dropzone containing information about the data source. This header is optional and can be hidden by setting `showDataSourceHeader` to `false`.
 
 To configure a drop zone, the widgets property object (which can be obtained directly from the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)) needs to be passed as `property`, as the following example shows:
 

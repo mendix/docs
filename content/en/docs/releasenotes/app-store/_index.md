@@ -387,7 +387,7 @@ The SAP Leonardo Machine Learning Foundation Connector is available in the App S
 
 #### SAP Fiori Styling
 
-The existing SAP Blank app template has been replaced by a new Fiori Blank app template. This new Fiori Blank app template has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
+The existing SAP Blank app template has been replaced by a new Fiori Blank app template. This new Fiori Blank app template has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the SAP Fiori UI experience.
 
 #### Breaking Changes
 

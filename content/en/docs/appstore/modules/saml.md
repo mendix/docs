@@ -159,7 +159,7 @@ You can choose what you want to enter for the **Entity Id**, **Organization**, a
 
     If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom EntityID, and shown as the **Key store alias**. See [Managing the Key Store](#keystore), below, for more key store options.
 
-The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** to download the XML file or by opening `http://<Application Root URL>/SSO/metadata` for your app's URL.
+The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** to download the XML file or by opening `http://<Application Root URL>/SSO/metadata​/<IDP-Alias>` for your app's URL.
 
 #### 3.1.1 Managing the Key Store{#keystore}
 

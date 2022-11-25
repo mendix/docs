@@ -11,9 +11,9 @@ tags: ["Deploy", "Private Cloud", "Licensing", "PCLM", "License Server", "Licens
 
 When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
-Apps which have access to the internet have licenses which work on a subscription basis and contact the Mendix license server for validating the license. This method is not available to apps which are not connected to the internet (air-gapped), which need to use static, offline, licenses.
+Apps which are deployed to the Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix for Private Cloud, and may even be in standalone mode and not connected to the internet (air-gapped).
 
-The Mendix **Private Cloud License Manager** (PCLM) provides a repository of your offline Mendix licenses to enable you to manage these centrally, rather than needing to apply these manually to each app. This reduces the possibility of errors, and enables the production of license usage reports.
+Rather than having to apply and update licenses for each environment individually, the Mendix **Private Cloud License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
 The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
@@ -21,14 +21,21 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 
 To install and use the PCLM, you need the following prerequisites:
 
-* a standalone Mendix for Private Cloud cluster
+* a Mendix for Private Cloud cluster
 * administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
 * a Postgres or SQLServer database server and within it:
-    * a dedicated database to store your licenses, user authorization details, and usage information
+    * a dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information
+        * Public accessibility must be set to yes
+        * Database server must allow inbound connections
+        * Database must be called `mxlicenses`
     * a dedicated administrator user role with all grants over this database (including the `Create Table` server role, and `Select`, `Insert`, `Update`, `Delete`, and `Truncate` database roles for the tables that are created)
 * kubectl or the OpenShift CLI
 * the mx-pclm-cli tool
-* the default password for the PCLM server `administrator` account – you can obtain this from [Mendix Support](https://support.mendix.com)
+* the default password for the PCLM server `administrator` account – you will receive this together with your copy of the PCLM server
+
+{{% alert color="info" %}}
+The PCLM server will not create the database for the licenses, you need to create this yourself using the guidance above.
+{{% /alert %}}
 
 ## 3 Installing the PCLM server
 
@@ -90,18 +97,9 @@ This creates the following resources:
 
 You will now be able to communicate with the PCLM Server through an HTTP REST endpoint. The endpoint will be different depending on whether you are using a Kubernetes Service or Kubernetes Ingress.
 
-### 4.1 Using the Kubernetes Service
+### 4.1 Using Kubernetes Ingress
 
-If PCLM is installed in the same Kubernetes cluster as the Private Cloud environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM Server was installed.
-
-You can confirm that you can connect to the PCLM server using the following URLs:
-
-* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/health` should return `HTTP 200 OK`
-* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics
-
-### 4.2 Using Kubernetes Ingress
-
-If the PCLM server is installed in a separate cluster, you have to create an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster or a [Route](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/routes.html) for your OpenShift cluster in order to allow those HTTP connections.
+In most cases, the PCLM server is installed in a separate cluster. This means you have to create an [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster or a [Route](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/routes.html) for your OpenShift cluster in order to allow those HTTP connections.
 
 You must also define a host domain in the DNS service (for example, AWS Route53).
 
@@ -127,12 +125,28 @@ spec:
                   number: 80
 ```
 
-Given the many possible Ingress controllers which depend on the Cloud provider, you will need to follow the instructions for your Ingress controller and Cloud.
+Given the many possible ingress controllers which depend on the cloud provider, you will need to follow the instructions for your ingress controller and cloud.
+
+To apply the manifest to configure the ingress in the Kubernetes namespace, use the following command:
+
+`$ kubectl -n <namespace> apply -f <ingress-file>`
+
+* `<namespace>` – the namespace in which the PCLM server will run
+* `<ingress-file>` – the name of the file which contains the yaml manifest for the ingress configuration
 
 You can confirm that you can connect to the PCLM server using the following URLs:
 
 * `http<s>://pclm.<domain>/health` should return `HTTP 200 OK`
 * `https<s>://pclm.<domain>/metrics` should return `HTTP 200 OK` together with the collected server metrics
+
+### 4.2 Using the Kubernetes Service
+
+If PCLM is installed in the same Kubernetes cluster as the Private Cloud environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM Server was installed.
+
+You can confirm that you can connect to the PCLM server using the following URLs:
+
+* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/health` should return `HTTP 200 OK`
+* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics
 
 ## 5 Setting Up Users
 
@@ -309,13 +323,17 @@ Where:
 
 Once you have patched the Mendix Operator, all app environments which are controlled through the operator will have licenses applied automatically.
 
+{{% alert color="info" %}}
+You cannot choose which environments will be licensed. If you have more environments controlled through the operator than licenses, some environments will not be licensed. You can see which environments have been licensed using the instructions in [Verifying That the Licenses Are Applied](#verify), below.
+{{% /alert %}}
+
 If you delete a licensed app environment, the mx-runtime license will be marked as unused and will be applied to new app environments. This may take up to 30 minutes.
 
 If you do not have any unused licenses, new app environments will not be licensed.
 
 The Mendix Operator will also pick up a Mendix Operator license if one has been imported into the PCLM server.
 
-### 7.4 Verifying That the Licenses Are Applied
+### 7.4 Verifying That the Licenses Are Applied{#verify}
 
 There are multiple ways to verify whether the licenses (both Operator and MendixApp) are applied and where.
 

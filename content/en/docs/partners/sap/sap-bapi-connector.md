@@ -82,7 +82,7 @@ To use the BAPI Connector, you have to first set up your environment and configu
 
 4. Configure the connection details by going to JCO_Constants folder and set the SAP system connection details as described in the section below.
 
-### 4.1 SAP System Connection Details
+### 4.1 SAP System Connection Details{#sap-connection-details}
 
 You need to set the following connection details to tell the BAPI Connector how it can connect to your chosen BAPI destination.
 
@@ -103,6 +103,8 @@ The following JCo Properties map directly to these constants in the module:
 | Host   | jco.client.ashost |
 | SystemNumber  | jco.client.sysnr  |
 | RouterAddress | jco.client.saprouter |
+
+#### 4.1.1 Additional JCoProperties{#jco-properties}
 
 If you need to set additional JCoProperties for which a constant is not available, you can create a list of objects of the `Property` entity (see the domain model section, below) and use the `GetJCoDestination` action. You need to set the following attributes in the `Property` object:
 
@@ -154,7 +156,11 @@ The BAPI Connector provides the following microflow actions. These can be used a
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/use-me-microflows.png" >}}
 
-**GetJCoDestination** – The action `GetJCoDestination`, is used to get the JCoDestination. Assign the values from the *JCO_Constants* described in *the* *Configure Connection Details* section above. The action returns a `Destination` object which is used when making calls to a BAPI.
+The microflow actions are described in the following sections.
+
+### 6.1 GetJCoDestination
+
+The action `GetJCoDestination`, is used to get the JCoDestination. Assign the values from the *JCO_Constants* described in [SAP System Connection Details](#sap-connection-details), above. The action returns a `Destination` object which is used when making calls to a BAPI.
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/getjcodestination-properties.png" >}}
 
@@ -169,15 +175,29 @@ This example shows setting of below properties to GetJCoDestination action:
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/getjcodestination-additional.properties.png" >}}
 
-The microflow actions are described in the following sections.
+#### 6.1.1 Using an SNC Connection
 
-### 6.1 Create_BAPIExplorer
+Alternatively, you can configure **GetJCoDestination** to use an SNC connection by setting up the properties listed below (using the method described in [Additional JCoProperties](#jco-properties)), and then passing the list of properties as described above.
+
+The values for the properties can be found in the **Connection Properties** of the BAPIs which you can see by right-clicking the BAPI in the **SAP GUI for Java**. The options from the **Expert Settings** can be found in the **Advanced** tab as a string which will resemble a list of HTTP parameters: `conn=/R/DA1/G/PUBLIC&sncname=p:CN=ehdev.industrysoftware.automation.siemens.com,C=US,0=Siemens,OU=Siemens&sncon=true&sncqop=9&cpg=1100&dcpg=4110&clnt=340&lang=EN&systemName=DA1`.
+
+| Property | Value | Source |
+| --- | --- | --- |
+| jco.client.snc_mode |  |  |
+| jco.client.snc_partnername | sncname | Expert Settings |
+| jco.client.snc_qop | sncqop | Expert Settings |
+| jco.client.snc_myname |  |  |
+| jco.client.snc_lib |  |  |
+| jco.client.mshost | Message Server | System Tab |
+| jco.client.r3name | System | System Tab  |
+
+### 6.2 Create_BAPIExplorer
 
 This microflow opens the BAPI explorer page to allow you to find all the BAPIs available at your JCo destination.
 
 For more information on how to use this microflow, see [BAPI Schema for Model Creator](#bapi-schema), below.
 
-### 6.2 CallBAPI
+### 6.3 CallBAPI
 
 This microflow action is used to call a BAPI function.
 
@@ -190,7 +210,7 @@ This microflow action is used to call a BAPI function.
 | Response type | Type of the `BAPIResponseObject` having export parameters set.<br>The entity type is defined in your BAPI module domain model. |
 | Commit transaction  | Setting this `true` will call `BAPI_COMMIT_TRANSACTION` to commit changes. Not required for Get calls. |
 
-### 6.3 CallBAPISequence
+### 6.4 CallBAPISequence
 
 Use this microflow action when you want to call more than one BAPI in a given order. This microflow action is only required when you want to call more than one BAPI in a single [JCoContext](https://javadoc.io/doc/com.sap.cloud/neo-java-web-api/2.35.9/com/sap/conn/jco/JCoContext.html). After the calls have been made, this executes an additional call to `BAPI_COMMIT_TRANSACTION` to commit all the changes made in this JCOContext.
 
@@ -202,7 +222,7 @@ Use this microflow action when you want to call more than one BAPI in a given or
 | List of BAPI requests | A list of `BAPIRequest` objects.   |
 | Output | A Boolean indicating the success or failure of the BAPI call sequence. If you use the return value, the result will be returned as `Variable name`. |
 
-### 6.4 GetBAPIResponse
+### 6.5 GetBAPIResponse
 
 This microflow action is used together with `CallBAPISequence`. It returns the response for one of the BAPIRequest objects which was in the list supplied to a `CallBAPISequence` action. You need to add this action to your microflow for every `BAPIRequest` object for which you need the response.
 
@@ -214,7 +234,7 @@ This microflow action is used together with `CallBAPISequence`. It returns the r
 | Return entity type | The `BAPIResponse` specialization entity associated with the `BAPIRequest` entity given in request. <br>This entity will be defined in your BAPI module domain model. |
 | Output | An object of the entity type mentioned in **Return entity type** |
 
-### 6.5 TestDestinationConnection {#test-connection}
+### 6.6 TestDestinationConnection {#test-connection}
 
 This action can be found in the **Internal > microflows** folder of the `SAPBAPIConnector` module.
 

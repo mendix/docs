@@ -279,17 +279,19 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 ### 7.2 Optimization
 
-Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the runtime. This is an advanced setting that gives developers control over app performance. Change those settings when you face performance issues on executing workflow instances or workflow initiated microflows. The two numbers indicate the amount of threads that process the queues containing workflow instances or workflow initiated microflows to be executed. The performance can be tracked (since Mendix 9.19) using the following Task Queue metrics:
+Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows. 
+App performance can be tracked (from Mendix 9.19 and above) using the following Task Queue metrics:
 
-* `mx.runtime.stats.taskqueue.queue-wait-time` - shows the time a task has to wait for execution. 
-* `mx.runtime.stats.taskqueue.queue-active-threads` - shows the actual amount of threads executing tasks from the queue.
-* `mx.runtime.stats.taskqueue.task-execution-time` - shows the time it takes to execute a task from the queue
+* `mx.runtime.stats.taskqueue.queue-wait-time` – the amount of time a task has to wait for execution
+* `mx.runtime.stats.taskqueue.queue-active-threads` – the actual amount of threads executing tasks from the queue
+* `mx.runtime.stats.taskqueue.task-execution-time` – time needed to execute a task from the queue
 
-These metrics have a tag named queue which has the following values relevant for workflow execution:
-* `System.MendixWorkflows-WorkflowExecution` - representing the queue for workflow instance execution
-* `System.MendixWorkflows-DefaultTaskExecution` - representing the queue for workflow initiated microflows execution
+These metrics have a tag-named queue which has the following values relevant to workflow execution:
 
-When the queue-wait-time increases and the queue-active-threads is on the maximum configured in the settings, then it can be wise to increase the maximum.
+* `System.MendixWorkflows-WorkflowExecution` – a queue for workflow instance execution
+* `System.MendixWorkflows-DefaultTaskExecution` – a queue for workflow-initiated microflows execution
+
+If the waiting time of the queue increases and active threads in the queue reach the current maximum, it is advised to increase the maximum in settings.
 
 #### 7.2.1 Workflow instance threads
 

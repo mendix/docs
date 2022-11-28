@@ -279,7 +279,7 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 ### 7.2 Optimization
 
-Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows. 
+Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows, for more information see [Workflow Imstance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
 App performance can be tracked (from Mendix 9.19 and above) using the following Task Queue metrics:
 
 * `mx.runtime.stats.taskqueue.queue-wait-time` – the amount of time a task has to wait for execution
@@ -293,13 +293,13 @@ These metrics have a tag-named queue which has the following values relevant to 
 
 If the waiting time of the queue increases and active threads in the queue reach the current maximum, it is advised to increase the maximum in settings.
 
-#### 7.2.1 Workflow instance threads
+#### 7.2.1 Workflow Instance Threads {#workflow-instance-threads}
 
-Defines the maximum number of threads that can process active workflow instances simultaneously. Note that it has no relationship with the amount of workflow instances that are active in the system.
+Defines the maximum number of threads that can process active workflow instances simultaneously. This setting does not relate to the amount of workflow instances that are active in the system.
 
-#### 7.2.2 Microflow threads
+#### 7.2.2 Microflow Threads {#microflow-threads}
 
-Defines the maximum number of workflow initiated microflows that the runtime will execute simultaneously. Workflow initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. It has no influence on microflows executed by pages or other parts of the system.
+Defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
 
 ### 7.3 Events {#events}
 

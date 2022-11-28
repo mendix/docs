@@ -42,7 +42,7 @@ There are a few other differences between the way you develop and deploy apps in
 * In Mendix Cloud v4, the debugger is always active, and does not have to be activated – the **Show Debugger Information** button shows the credentials to connect Mendix Studio Pro to the debugger
     {{% alert color="info" %}}You can only use the debugger if your app is scaled to a single instance.{{% /alert %}}
 * In Mendix Cloud v4, the number of permitted database connections is tied to the RAM of the database environment, rather than being static.
-    * The limit is roughly 100 connections per GB of database RAM – the defaults are perfectly fine for most situations, but you can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up for each runtime instance.
+    * The limit is roughly 100 connections per GiB of database RAM – the defaults are perfectly fine for most situations, but you can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up for each runtime instance.
 * In Mendix Cloud v4, there are some circumstances in which your app can run out of file connections
     * The default number of file connections is 50, but this can be increased and you may need to ensure that file connections are not being held open unnecessarily – see the [Other Considerations](/developerportal/deploy/mxcloudv4/#other-considerations) section of *Mendix Cloud v4* for further advice
 * In Mendix Cloud v4, there are some monitoring features which are available in v3 which are not currently available – in particular:
@@ -50,7 +50,7 @@ There are a few other differences between the way you develop and deploy apps in
     * The database status is not visible on the node details screen
 * Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
     * If you have external clients connecting *to* your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
-* In Mendix Cloud v4, the disk space available to your app in the runtime container is separate from the file storage and generally less than 3 GB. This has an impact on the possibilities for custom Java code, which is run on the runtime containers. When manipulating large files with custom Java code which creates temporary files, you can run into this disk size limitation. This means you might have to change your application logic to process multiple smaller files with Java code instead of using one large file, so that temporary files are garbage collected as you go along.
+* In Mendix Cloud v4, the disk space available to your app in the runtime container is separate from the file storage and generally less than 3 GiB. This has an impact on the possibilities for custom Java code, which is run on the runtime containers. When manipulating large files with custom Java code which creates temporary files, you can run into this disk size limitation. This means you might have to change your application logic to process multiple smaller files with Java code instead of using one large file, so that temporary files are garbage collected as you go along.
 
 ## 3 Prerequisites
 

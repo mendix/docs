@@ -26,7 +26,7 @@ The Amazon Rekognition connector requires the [AWS Authentication connector vers
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Rekonigtion connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Rekognition connector into your app.
 
 ## 3 Configuration
 

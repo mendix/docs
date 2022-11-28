@@ -142,8 +142,6 @@ You can now finish configuring your SAML module in your app by reviewing/updatin
 
 Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
 
-You will need to fill in several dialog boxes of information. Use **Previous** to go back to the previous dialog, or **Cancel** to abandon your changes. 
-
 {{% alert color="info" %}}
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
 {{% /alert %}}
@@ -160,10 +158,8 @@ You can choose what you want to enter for the **Entity Id**, **Organization**, a
 
     If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom EntityID, and shown as the **Key store alias**. See [Managing the Key Store](#keystore), below, for more key store options.
 
-Click **Save** to save the configuration.
-
 {{% alert color="info" %}}
-The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** on the final configuration step to download the XML file or by opening `http://<Application Root URL>/SSO/metadata​/<IDP-Alias>` for your app's URL.
+The SP metadata that you supply to the IdP is only available after you have configured the [IdP-specific settings](#idp-specific-settings) following the instructions below.
 {{% /alert %}}
 
 #### 3.1.1 Managing the Key Store{#keystore}
@@ -196,7 +192,13 @@ If you have multiple IdPs, please make sure each IdP has a unique **Entity descr
 
 When creating a new IdP configuration, you are guided through a workflow to help you configure everything required for the IdP configuration. Each option in the workflow is explained below, and can be changed by editing an existing IdP Configuration.
 
-Upon completing these steps, you only need to send the SP metadata file to the IdP and have them configure the authentication on their end. 
+Use **Previous** to go back to the previous dialog, or **Cancel** to abandon your changes. Click **Save** on the last step to save the configuration.
+
+Upon completing these steps, you only need to send the SP metadata file to the IdP and have them configure the authentication on their end. The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** on the final configuration step to download the XML file or by opening `http://<Application Root URL>/SSO/metadata​/<IDP-Alias>` for your app's URL.
+
+{{% alert color="warning" %}}
+The XML for the SP metadata is signed. If you make any changes to the metadata (even just opening it in an editor) this can mean that the signature no longer matches the content and the metadata will be rejected.
+{{% /alert %}}
 
 #### 3.2.2 General
 

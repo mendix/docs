@@ -123,7 +123,7 @@ You cannot cut/copy/paste from Studio Pro to Studio.
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
 
-### 2.7 Changing the Parameters of a Page
+### 2.7 Changing the Parameters of a Page {#change-parameters}
 
 To change the parameters of the page, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about page parameters, see the [Parameters](/refguide/page-properties/#parameters) section in *Page Properties*.
 

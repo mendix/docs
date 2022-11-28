@@ -1,306 +1,170 @@
 ---
-title: "Text to Speech"
-url: /appstore/app-services/text-to-speech/
+title: "Amazon Polly"
+url: /appstore/connectors/aws-polly/
 category: "App Services"
-description: "Describes the configuration and usage of the Text to Speech app service, which enables converting text into voice in your web apps."
-tags: ["text to speech", "service", "app store", "marketplace", "component", "platform support"]
+description: "Describes the configuration and usage of the Amazon Polly connector, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "aws", "polly", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [Text to Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-speech app from the scratch. All you need to do is drag and drop items and configure them.
-
-Here is an overview of what the Text To Speech contains:
-
-| Item                                        | Name                        |
-| ------------------------------------------- | --------------------------- |
-| [Predefined entities](#predefined-entities) | SpeechSynthesizer, Voice    |
-| [Constants](#constants)                     | AWS_Default_Region |
-| [Microflows](#microflows)                   | CreateSpeechSynthesizer, SynthesizeSpeech_MF     |
-| [Nanoflows](#nanoflows)                     | SynthesizeSpeech            |
-| [Widgets](#widgets)                         | AudioPlayer                 |
-
-In most cases, you will only need what is contained in the **TextToSpeech** > **USE_ME** folder. The content in the **TextToSpeech** > **Internal** folder is for internal use only and you will not need it.
+The [Amazon Polly]([#needs-url]) connector enables you to connect your app to [Amazon Polly](https://aws.amazon.com/polly/) and easily convert written text into human voice in your web applications.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to easily convert written text into voice in your Mendix apps. You can perform some basic operations, such us synthesizing speech from given text with different language options, and playing synthesized audio with the **AudioPlayer** widget.
+Amazon Polly allows you to synthesize text to speech with 96 voices supporting 34 languages. You can use this to accommodate the following use cases:
 
-### 1.2 Features
+* Provide accessibility features for users who have difficulty reading
+* Create interfaces in your application supported with audio.
 
-This app service enables doing the following:
+### 1.2 Prerequisites
 
-* Convert text to voice
-* Support different language options
-* Play synthesized audio with the **AudioPlayer** widget
+The Amazon Polly Connector requires the AWS authentication connector version 2.1 or higher to authenticate with Amazon Web Services (AWS). for more information about installing and configuring the AWS Authentication Connector see AWS authentication.
 
-### 1.3 Prerequisites
+### 1.3 Dependencies
 
-This app service can only be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4/).
+* AWS Authentication Connector
+* Mendix studio Pro 9.18.0
+
 
 ## 2 Installation
 
-### 2.1 Obtaining a AWS credentials {#obtain-aws-credentials}
-
-Text to Speech is a premium Mendix product that requires AWS authentication. To use this app service in your app, first you must obtain AWS credentials. For more information, see [AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).
-
-### 2.2 Installing the Component in Your App
-
-1. To download and install the Text to Speech app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer** and also in the **Cognitive AI widgets** category in the **Toolbox**.
-
-2. To download and install the AWS Authentication Connector in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can see it in the **App Explorer**.
-
-3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+Follow the instructions in How to Use Marketplace Content in Studio Pro to import the Amazon Polly connector into your app.
 
 ## 3 Configuration
 
-### 3.1 Predefined Entities {#predefined-entities}
+After you install the connector, you can find it under Add-On modules in the AmazonPollyConnector section. The connector provides a domain model and activities that you can use to connector your app to Amazon Polly. Each activity can be implemented using it in a microflow or nanoflow.
+
+For example to synthesize a string of text into speech, implement the SynthesizeSpeech microflow action by performing the following steps:
+
+1. In the App Explorer, right click on the name of your module and then click Add microflow.
+2. Enter a name for your microflow, for example, ACT_SynthesizeSpeech, and then click OK
+3. Int he App Explorer, in the AmazonPollyConnector > Operations section, find the SynthesizeSpeech activity
+4. Drag the SynthesizeSpeech activity onto the work are of your microfow
+5. Double click the SynthesizeSpeech activity to configure the required parameters. For the SynthesizeSpeech activity you must add your own entity that inherits from System.FileDocument to store the contents of the audio in and specify the AWS Region. Next build up your SynthesizeSpeechRequest entity in your microflow as last parameter. This entity requires 
+    * OutputFormat (MP3, OGG_VORBIS and PCM). JSON is not yet supported by the connector
+    * SampleRate ( The valid values for mp3 and ogg_vorbis are "8000", "16000", "22050", and "24000". Valid values for pcm are "8000" and "16000")
+    * VoiceID - The selected voice for the output of the text
+    * Text - the actual string of text that needs to be translated
+6. In the Edit parameters section, edit the AWS_Region parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see AWS_Region.
+7. Click OK
+8. After the SynthesizeSpeech activity open a page that contains a widget for playing audio (like the Play Audio widget)
+9. Configure the widget to use the FileDocument configured in the SynthesizeSpeech action.
+10. Configure a method to trigger the ACT_SynthesizeSpeech action. For example by associating it with a custom button on a page in your app. For an example of how this can be implemented, see Create a Custom Save Button.
+
+### 3.1 Constants
+
+Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
+
+| Name | Description |
+| --- | --- |
+| `AmazonPollyConnector.AWS_ClientCertificateID` | The ID for the ClientCertificate used to sign the authentication requests. (Link to Auth v2 docs) |
+| `AmazonPollyConnector.HostPattern` | The endpoint URL for the AWS Rekognition Service, for example, `https://rekognition.us-east-1.amazonaws.com` |
+| `AmazonPollyConnector.ProfileARN` | The ProfileARN for the IAM Roles Anywhere profile that has access to the Rekognition AWS service (Link to Auth v2 docs) |
+| `AmazonPollyConnector.Region` | The region in which both the IAM Roles Anywhere and the Rekognition service are located |
+| `AmazonPollyConnector.RoleARN` | The RoleARN of the IAM Role that has access to the Rekognition service. |
+| `AmazonPollyConnector.AWS_TrustAnchorARN` | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
+| `AmazonPollyConnector`.UseStaticCredentials | The USeStaticCredentials boolean defines if the connector uses the provided Static Credentials (AccessKey and SecretKey) over the Session ?Based Credentials |
+| `AmazonPollyConnector`.AccessKey | The AccesKey from an AWS account able to use this service. |
+| `AmazonPollyConnector`.SecretKey | The SecretKey from an AWS Account able to use this service |
 
-#### 3.1.1 SpeechSynthesizer
+### 3.2 Domain Model
 
-The **SpeechSynthesizer** entity is a conceptual entity that incorporates all the information of the synthesized media document. It contains the text and synthesized audio string. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
+| Name | Description |
+| --- | --- |
+| `Voice` | The Voice entity is a representation of an Amazon Polly voice. It contains the unique identifier for a voice (VoiceID) that is required for SynthesizeSpeech actions. It also contains additional information on a voice like the name, language and gender. |
 
-{{< figure src="/attachments/appstore/app-services/text-to-speech/speechsynthesizer.png" alt="speechsynthesizer" >}}
+### 3.3 Enumerations
 
-| Attribute |Data Type | Description|
-| --- | --- |---|
-| `Text` | String |The text string need to be converted. |
-| `Audio` | String |The base64-encoded audio data string. |
+An enumeration is a predefined list of values that an be used as an attribute type
 
-The **Voice** entity is an entity referenced from **SpeechSynthesizer** that incorporates all the information of the supported voice object.
+#### 3.3.1 `OutputFormat`
 
-{{< figure src="/attachments/appstore/app-services/text-to-speech/voice.png" alt="voice" >}}
+The format in which the returned output will be encoded. For audio stream, this will be mp3, ogg_vorbis, or pcm. JSON is currently not supported
 
-| Attribute |Data Type | Description|
-| --- | --- |---|
-| `LanguageName` | String |The language name of the voice object. |
-| `LanguageCode` | String |The [language code](#supported-languages) of the voice object. |
-| `VoiceName` | String |The name of the voice object. |
-| `VoiceId` | String |The UUID of the voice object. |
-| `SampleRate` | String |The sample rate of voice. |
-| `Description` | String |The text string of the voice description. |
+Values
 
-There is a many-to-many association between the **SpeechSynthesizer** entity and the **Voice** entity.
+| Name | Caption |
+| --- | ---------- |
+| MP3        | MP3        |
+| OGG_VORBIS | OGG_VORBIS |
+| PCM        | PCM        |
 
-### 3.2 Constants {#constants}
+#### 3.3.2 Enumeration `Engine`
 
-#### 3.2.1 AWS_Default_Region
+Specifies which engines (standard or neural) that are supported by a given voice.
 
-The **AWS_Default_Region** constant provides a default AWS region configuration for an app that uses this app service. AWS Regions are separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a region closest to them in order to host their cloud infrastructure there. The closer your region is to you, the better, so that you can reduce network latency as much as possible for your end-users.
+Values
 
-### 3.3 Microflows {#microflows}
+| Name | Caption |
+| --- | --- |
+| Standard | standard |
+| Neural | neural |
 
-#### 3.3.1 CreateSpeechSynthesizer {#createspeechsynthesizer}
+#### 3.3.3 Enumeration `TextType`
 
-The **CreateSpeechSynthesizer** microflow takes **text**, **languageCode** and **credentials** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string. For instance, **languageCode** can be set to `en-US`. 
+Values
 
-{{< figure src="/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer.png" alt="createspeechsynthesizer" >}}
+| Name | Caption |
+| --- | --- |
+| PlainText | PlainText |
+| SSML | SSML |
 
-{{% alert color="info" %}}
-For more information about language codes, see the [Supported Languages](#supported-languages) section.
-{{% /alert %}}
+#### 3.3.4 Enumeration `AWS_Region`
 
-#### 3.3.2 SynthesizeSpeech_MF
+Values
 
-The **SynthesizeSpeech_MF** microflow takes **speechSynthesizer** and **credentials** object as an input parameter, syntheizes audio string from the input parameter, and updates the **speechSynthesizer** audio string parameter.
+| Name | Caption |
+| --- | --- |
+| us_east_2 | US Easth (Ohio) |
+| us_east_1 | US East (N. Virginia) |
+| us_west_1 | US West (N. California) |
+| us_west_2 | US West (Oregon) |
+| af_south_1 | Africa (Cape Town) |
+| ap_east_1 | Asia Pacific (Hong Kong) |
+| ap_southeast_3 | Asia Pacific (Jakarta) |
+| ap_south_1 | Asia Pacific (Mumbai) |
+| ap_northeast_3 | Asia Pacific (Osaka) |
+| ap_northeast_2 | Asia Pacific (Seoul) |
+| ap_southeast_1 | Asia Pacific (Singapore) |
+| ap_southeast_2 | Asia Pacific (Sydney) |
+| ap_northeast_1 | Asia Pacific (Tokyo) |
+| ca_central_1 | Canada (Central) |
+| eu_central_1 | Europe (Frankfurt) |
+| eu_west_1 | Europe (Ireland) |
+| eu_west_2 | Europe (London) |
+| eu_south_1 | Europe (Milan) |
+| eu_west_3 | Europe (Paris) |
+| eu_north_1 | Europe (Stockholm) |
+| me_south_1 | Middle East (Bahrain) |
+| sa_east_1 | South America (São Paulo) |
 
-{{< figure src="/attachments/appstore/app-services/text-to-speech/synthesizespeech.png" alt="synthesizespeech" >}}
+### 3.4 Activities
 
-### 3.4 Nanoflows {#nanoflows}
+Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 3.4.1 SynthesizeSpeech
+#### 3.4.1 Synthesize Speech
 
-The **SynthesizeSpeech** nanoflow takes **speechSynthesizer** and **credentials** object as an input parameter, syntheizes audio string from the input parameter, and updates the **speechSynthesizer** audio string parameter.
+The SynthesizeSpeech action allows you to synthesize a string of text into an audio file. It requires a SynthesizeSpeechRequest entity containing the required information and a TargetFileDocument (System.FileDocument or specialization) that will contain the response of the SynthesizeSpeech action.
+The other required parameter is AWS_Region in which the Polly service should be called.
 
-{{< figure src="/attachments/appstore/app-services/text-to-speech/synthesizespeech.png" alt="synthesizespeech" >}}
+This activity returns a System.FileDocument entity containing the synthesized speech.
 
-### 3.5 Widgets {#widgets}
+#### 3.4.2 DescribeVoices
+The DescribeVoices action returns the list of voices from the Amazon Polly service. It requires an AWS_Region parameter to get the list of supported voices from the given AWS region.
+These can be used in the Synthesize Speech action to synthesize a piece of text to speech with the right voice. The DescribeVoices action returns this in the form of a DescribeVoicesResponse entity containing a list of DescribeVoice entities.
 
-#### 3.5.1 AudioPlayer {#audioplayer}
+##### 3.4.2.1 Parameters
 
-The core widget required is the **AudioPlayer** widget. You can make the following settings for the **AudioPlayer** widget:
+| Name | Type | Documentation |
+| --- | --- | --- |
+| AWS_Region | Enumeration AmazonPollyConnector.AWS_Region | |
 
-* **General** tab
-    * **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
-    * **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
+##### 3.4.2.2 Return type
 
-### 3.6 Supported Languages {#supported-languages}
+| Name | Type |
+| --- | --- |
+| DescribeVoices | AmazonPollyConnector.DescribeVoicesResponse | 
 
-| Language               | Language Code |
-| ---------------------- | ------------- |
-| Arabic                 | arb           |
-| Chinese, Mandarin      | cmn-CN        |
-| Danish                 | da-DK         |
-| Dutch                  | nl-NL         |
-| English, Australian    | en-AU         |
-| English, British       | en-GB         |
-| English, Indian        | en-IN         |
-| English, New Zealand   | en-NZ         |
-| English, South African | en-ZA         |
-| English, US            | en-US         |
-| English, Welsh         | en-GB-WLS     |
-| French                 | fr-FR         |
-| French, Canadian       | fr-CA         |
-| Hindi                  | hi-IN         |
-| German                 | de-DE         |
-| Icelandic              | is-IS         |
-| Italian                | it-IT         |
-| Japanese               | ja-JP         |
-| Korean                 | ko-KR         |
-| Norwegian              | nb-NO         |
-| Polish                 | pl-PL         |
-| Portuguese, Brazilian  | pt-BR         |
-| Portuguese, European   | pt-PT         |
-| Romanian               | ro-RO         |
-| Russian                | ru-RU         |
-| Spanish, European      | es-ES         |
-| Spanish, Mexican       | es-MX         |
-| Spanish, US            | es-US         |
-| Swedish                | sv-SE         |
-| Turkish                | tr-TR         |
-| Welsh                  | cy-GB         |
-
-### 3.7 Configuring the AWS credentials {#configure-aws-credentials}
-
-#### 3.7.1 For an App Deployed Locally or as a Mendix Free App
-
-If you deploy your app locally or as a Mendix Free App, configure the AWS credentials in Studio Pro. Perform the following steps:
-
-1. Create a microflow as follows:
-    1. Name the microflow *GetCredential*. 
-    2. Right-click the working area and select **Add** > **Activity** from the pop-up menu.
-    3. Double-click the activity to open the **Action Activity** dialog box.
-    4. Select **Get Static Credentials** action from **AWS Authentication** category as target object.
-    5. Under **Input** section, fill **Access key ID**, and **Secret access key** as AWS credentials respectivly.
-    6. Under **Output** section, update **Object name** as *Credentials*.
-    7. Click **OK** to save the changes.
-    8. Right-click the credentials action to *Set $Credentials as return value*.
-
-2. Default AWS region configuration:
-    1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/app-settings/) dialog box.
-    2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-    3. On the **Constants** tab, create a new constant with the predefined constant **TextToSpeech.AWS_Default_Region**.
-    4. Fill in the **Value** with the AWS region that you obtained.
-    5. Click **OK** to save the settings.
-
-    {{< figure src="/attachments/appstore/app-services/text-to-speech/awsregion-inmendix.png" alt="awsregion-inmendix" >}}
-
-3. This is the microflow could help you to pass credentials object in calling all the service actions. When you finish building the app, click **Run Locally** to run your app locally or click **Run** to deploy it as a Mendix Free App. Then you can see the app service in your app.
-
-#### 3.7.2 For an App Deployed in the Mendix Cloud
-
-If you deploy your app in the Mendix Cloud, configure the AWS region in the [Developer Portal](/developerportal/deploy/environments-details/).
-
-Before you deploy your app, configure the app **Constants** in the deployment package.
-
-{{< figure src="/attachments/appstore/app-services/text-to-speech/awsregion-cloudportal.png" alt="awsregion-cloudportal" >}}
-
-If you have already deployed your app, change the existing **AWS_Default_Region** constant value on the **Model Options** tab and restart the app.
-
-{{< figure src="/attachments/appstore/app-services/text-to-speech/awsregion-envdetails.png" alt="awsregion-envdetails" >}}
-
-#### 3.7.3 For an App Deployed in Your Own Environment
-
-If you deploy your app in your own environment, you need to configure the AWS region in your own environment. For more information, see [Deployment](/developerportal/deploy/).
-
-## 4 Usage
-
-### 4.1 Converting Text to Speech in Your Browser
-
-When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up the text-to-speech conversion:
-
-1. Create a nanoflow as follows:
-    1. Name the nanoflow *CreateSpeechSynthesizer*.
-
-    2. Add the **CreateSpeechSynthesizer** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
-
-    3. Double-click the **CreateSpeechSynthesizer** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
-
-        {{< figure src="/attachments/appstore/app-services/text-to-speech/call-createspeechsynthesizer-microflow.png" alt="call-createspeechsynthesizer-microflow" >}}
-
-        In this example, the **languageCode** is set to `''`, then the default language option `en-US` is used. You can also set it to a different [language code](#supported-languages). For more information about the parameters, see [CreateSpeechSynthesizer](#createspeechsynthesizer)
-
-    4. Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
-
-        {{< figure src="/attachments/appstore/app-services/text-to-speech/createspeechsynthesizer-nanoflow.png" alt="createspeechsynthesizer" >}}
-
-2. Create a microflow as follows:
-    1. Name the microflow *GetSupportedVoices*. 
-    2. Right-click the working area and select **Add** > **Parameter** from the pop-up menu. 
-    3. Double-click the parameter to open the **Parameter** dialog box.
-    4. Set **Data type** to **Object** and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.
-    5. For **Name**, enter *speechSynthesizer*.
-    6. Click **OK** to save the changes.
-    7. Add a retrieve object activity to the microflow.
-    8. Double-click the retrieve object activity to open the **Retrieve Objects** dialog box.
-    9. Set the **Source** to **By association**.
-    10. Set **Association** to **$speechSynthesizer/SpeechSynthesizer_SupportedVoices**.
-    11. Click **OK** to save the settings.
-    12. Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
-
-        {{< figure src="/attachments/appstore/app-services/text-to-speech/getsupportedvoices-microflow.png" alt="getsupportedvoices-microflow" >}}
-
-3. Add a **Data view** widget to your page.
-4. Set the **GetCredential** microflow as the data source of the **Data view** widget as follows:
-    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
-    2. For **Data source**, select **Microflow**.
-    3. **Select** the **GetCredential** microflow for **Microflow**.
-    4. Click **OK** to save the settings. 
-5. Inside the GetCredential **Data view** widget, add a new **Data view** widget.
-6. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
-    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
-    2. For **Data source**, select **Nanoflow**.
-    3. **Select** the **CreateSpeechSynthsizer** nanoflow for **Nanoflow**.
-    4. Click **OK** to save the settings.
-7. Inside the **Data view** widget, add a **Text area** widget.
-8. Change the settings of the **Text area** widget as follows:
-    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-    2. Set **Data source** to **SpeechSynthesizer_Voice/Voice/SpeechSynthesizer_Voice/SpeechSynthesizer/Text**.
-    3. Click **OK** to save the settings.
-9. Inside the **Data view** widget, add a **Reference selector** widget below the **Text area** widget.
-10. Change the settings of the **Reference selector** widget as follows:
-    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
-    2. Go to the **Selectable objects** tab.
-    3. Set **Source** to **Microflow**.
-    4. Set the **Microflow** as **GetSupportedVoices**.
-    5. Go to the **General** tab.
-    6. Set **Data source** to **TextToSpeech.SpeechSynthesizer_Voice/TextToSpeech.Voice/TextToSpeech.Voice.Description**.
-    7. For **Label caption**, enter *Language*.
-    8. Click **OK** to save the settings.
-11. Inside the **Data view** widget, add an [Audio player](#audioplayer) widget below the **Reference selector** widget.
-12. Change the settings of the **Audio player** widget as follows:
-    1. Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
-    2. On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
-    3. Set **Controls** to **true**.
-
-        {{< figure src="/attachments/appstore/app-services/text-to-speech/audioplayer-datasource.png" alt="audioplayer-datasource" >}}
-
-    4. Click **OK** to save the settings.
-13. Inside the **Data view** widget, add a **Button** widget below the **Audio player** widget.
-14. Change the settings of the **Button** widget as follows:
-    1. Double-click the **Button** widget to open the **Action Button** dialog box.
-    2. For **Caption**, enter *Synthesize Speech*.
-    3. In the **Event** section, set **On click** to **Call a nanoflow**.
-    4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **TextToSpeech** > **USE_ME** folder.
-    5. Click **OK** to save the settings. 
-15. Make sure you have [configured the AWS credentials](#configure-aws-credentials).
-16. Run your app locally. You can convert text to speech directly in the browser:
-
-    {{< figure src="/attachments/appstore/app-services/text-to-speech/runlocally-text-to-speech.png" alt="runlocally-text-to-speech" >}}
-
-### 4.2 Checking Statistics on the Usage Dashboard {#check-usage}
-
-The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
-
-1. Log into the Marketplace.
-2. Go to **My Marketplace** and then do as follows:
-
-    * If you have a trial, click [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) on the left navigation menu. This page shows all the products that you have trials for.
-    * If you have a subscription, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) on the left navigation menu. This page gives an overview of all the subscriptions of your organization.
-3. Find **Text to Speech** in the list.
-4. Click **Usage Dashboard** to show the usage details.
-
-## 5 Read More
-
-* [Build an App with Speech Synthesis and Recognition](https://academy.mendix.com/link/paths/119/Build-an-App-with-Speech-Synthesis-and--Recognition)
+The DescribeVoices action returns the list of voices from the Amazon Polly service. It requires an AWS_Region parameter to get the list of supported voices from the given AWS region.<br>These can be used in the Synthesize Speech action to synthesize a piece of text to speech with the right voice. The DescribeVoices action returns this in the form of a DescribeVoicesResponse entity containing a list of DescribeVoice entities. |

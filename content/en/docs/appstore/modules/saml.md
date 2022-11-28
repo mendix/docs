@@ -142,12 +142,13 @@ You can now finish configuring your SAML module in your app by reviewing/updatin
 
 Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
 
+You will need to fill in several dialog boxes of information. Use **Previous** to go back to the previous dialog, or **Cancel** to abandon your changes. 
+
 {{% alert color="info" %}}
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
 {{% /alert %}}
 
 You can choose what you want to enter for the **Entity Id**, **Organization**, and **Contact person**. The SAML module imposes no restrictions and doesn’t apply any validations. The SAML core specification recommends that you “use a URL containing its own domain name to identify itself“ as the value of the EntityID of your app.
-
 
 * **Log available days** – If **Log SAML Requests** is checked in the IdP configuration, all login attempts are tracked in the **SAMLRequest** and **SSOLog** entities. This setting configures how long those records are kept before removing them. A scheduled event runs daily to remove all the files outside that date range. This value is mandatory. If it is set to 0, all records will be removed daily.
 * **Use Encryption** – This allows the encryption of any messages being sent from the SP to the IdP. This is in addition to the encryption provided by using a secure HTTPS connection. If encryption is chosen, all the messages going out to the IdP will be encrypted, and a self-signed certificate will be generated and stored in the key store. Changing the encryption requires all IdPs to re-import the new metadata file.
@@ -159,7 +160,11 @@ You can choose what you want to enter for the **Entity Id**, **Organization**, a
 
     If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Use encryption** a key store is automatically created using the URL of the application, or the custom EntityID, and shown as the **Key store alias**. See [Managing the Key Store](#keystore), below, for more key store options.
 
-The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** to download the XML file or by opening `http://<Application Root URL>/SSO/metadata​/<IDP-Alias>` for your app's URL.
+Click **Save** to save the configuration.
+
+{{% alert color="info" %}}
+The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** on the final configuration step to download the XML file or by opening `http://<Application Root URL>/SSO/metadata​/<IDP-Alias>` for your app's URL.
+{{% /alert %}}
 
 #### 3.1.1 Managing the Key Store{#keystore}
 

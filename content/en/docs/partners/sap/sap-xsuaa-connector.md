@@ -5,7 +5,7 @@ url: /partners/sap/sap-xsuaa-connector/
 category: "SAP"
 weight: 40
 description: "Presents reference information on the XSUAA Connector for SAP Business Technology Platform."
-tags: ["SAP", "SAP Cloud Platform", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
+tags: ["SAP", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
 ---
 
 ## 1 Introduction

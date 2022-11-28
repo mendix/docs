@@ -16,8 +16,8 @@ AWS Authentication gives you the tools needed to authenticate your app with AWS 
 
 The AWS Authentication connector gives your app the ability to use the following types of AWS credentials:
 
-* [Session credentials](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use session credentials to authenticate, unless your connector specifically requires a different type of authentication.
-* [Static credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) - These are static IAM credentials that are valid indefinitely. As a best practice, you should not use them in your production app. However, you may want to use them to quickly test your connector, if the connector that you are implementing supports this type of authentication.
+* [Session credentials](https://aws.amazon.com/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use session credentials to authenticate.
+* [Static credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) - These are static IAM credentials that are valid indefinitely. As a best practice, it is recommended to use Session credentials. However, you may want to use them to quickly test your connector, create a demo, or in cases where you are not able to set up and configure session based credentials.
 * [Signature version 4 headers](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) - These credentials represent an advanced use case. You may use them together with session or static credentials to sign your request, for example, while calling the API without using AWS SDK. Some compatible AWS connectors may explicitly require this type of authentication.
 
 You can implement the above authentication types by means of adding a corresponding activity to the microflow that requires AWS authentication (for example, in order to connect to Amazon Dynamo DB and retrieve specific information from a table). Each activity returns a Credentials object, which is then used for authentication.
@@ -54,7 +54,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 * [Signature version 4 headers](#signature-v4-headers)
 
 {{% alert color="info" %}}
-In general, session credentials are the recommended authentication method for use with your production app. Static credentials are not suitable for use in production - you should only use them in test or demo environments. Signature version 4 headers cover more advanced use cases. For example, you can use them to supplement session or static credentials with custom code. For more information, refer to the documentation of the platform-supported connector that you are implementing.
+In general, session credentials are the recommended authentication method for use with your production app. Static credentials are recommended for test or demo environments. Signature version 4 headers cover more advanced use cases. For example, you can use them to supplement session or static credentials with custom code. For more information, refer to the documentation of the platform-supported connector that you are implementing.
 {{% /alert %}}
 
 ### 4.1 Implementing Session Credentials {#session}
@@ -136,7 +136,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 ### 4.2 Implementing Static Credentials {#static}
 
-Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is suitable for test and demo apps. 
+Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure session credentials. 
 
 To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:
 

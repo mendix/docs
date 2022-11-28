@@ -17,10 +17,17 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### November 14th, 2022
+
+#### Improvements
+
+* We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spams.
+
 ### November 10th, 2022
 
 #### Improvements
 
+* We updated the **Virtual Machine Out of Memory** and **Virtual Machine Error** alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
 * We now warn you if you try to set unsupported custom runtime settings. These are settings, mainly related to storage options, which are controlled by the Mendix Cloud deployment and cannot be customized for apps which are deployed to the Mendix Cloud.
 
 ### November 1st, 2022
@@ -39,8 +46,8 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We updated our alert template to remove the *Application Server Memory* alert.
-* We added the *Database Freeable Memory* alert with the critical threshold set to 10%.
+* We updated our alert template to remove the **Application Server Memory** alert.
+* We added the **Database Freeable Memory** alert with the critical threshold set to 10%.
 
 ### September 15th, 2022
 

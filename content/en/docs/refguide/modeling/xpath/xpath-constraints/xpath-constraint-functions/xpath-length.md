@@ -12,6 +12,6 @@ The `length()` function returns the length of a string attribute or value.
 
 This query returns all customers with a `FirstName` of 5 or more characters:
 
-```java
+```java {linenos=false}
 //Sales.Customer[length(FirstName) >= 5]
 ```

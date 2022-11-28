@@ -164,5 +164,5 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 
 ## 6 Read More
 
-* [How to Implement Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance/)
+* [Community Best Practices for App Performance](/refguide/community-best-practices-for-app-performance/)
 * [How to Implement Best Practices for App Security](/howto/security/best-practices-security/)

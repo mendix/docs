@@ -459,7 +459,7 @@ If you are using a custom URL, see [How Do I Get my SAML Metadata or CommunityCo
 
 ## 9 Read More
 
-* Academy lecture [SSO Using SAML](https://academy.mendix.com/link/module/115/lecture/938)
+* Academy lecture [SSO Using SAML](https://academy.mendix.com/link/modules/115/lectures/938/2.3.1-SSO-using-SAML)
 
     {{% alert color="info" %}}You must log into the Mendix Platform to see the lecture above.{{% /alert %}}
 

@@ -257,7 +257,7 @@ See [How to Use the Model Creator for SAP Integrations](/partners/sap/use-sap-mo
 
 1. The BAPI Connector for SAP Solutions provides a short description of the SAP BAPI contained in your SAP Business Suite or S/4HANA system. For detailed documentation of an SAP BAPI, please refer to standard SAP BAPI documentation.
 2. The entity description provided by the BAPI is not visible in the Model Creator for SAP Integrations.
-3. The BAPI Connector for SAP Solutions is limited to discovering and using a SAP BAPI. It cannot be used for invoking Remote-enabled Function Modules (RFMs).
+3. The BAPI Connector for SAP Solutions is limited to discovering and using an SAP BAPI. It cannot be used for invoking Remote-enabled Function Modules (RFMs).
 
 {{% alert color="info" %}}
 Minimum 1 GB memory per instance is required to run application on SAP BTP.

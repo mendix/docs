@@ -54,6 +54,10 @@ In the enterprise market, SOAP (see also [Wikipedia](http://en.wikipedia.org/wik
 
 An XSD (XML Schema Definition) document is a document that describes how the XML is structured so that both parties know what the message means. An XSD itself is written in XML.
 
+When importing an XSD file into your app, Studio Pro only accepts absolute paths, and the accepted schemes are limited to files or links starting with `https` or `http`.
+
+When importing or exporting an XML schema, the XSD file needs to be in your app. If the XML refers to an XSD file that is not in your app, a runtime error will be thrown. Add the XSD file manually to resolve this error.
+
 ## 6 WSDL {#wdsl}
 
 A WSDL (Web Service Definition Language) document is a document that describes how a client can interact with the server that publishes it. It describes the types of messages (incoming and outgoing) and where the messages must be sent to (an endpoint URL).

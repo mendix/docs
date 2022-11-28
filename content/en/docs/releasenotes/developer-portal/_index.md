@@ -17,6 +17,25 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### November 30th, 2022
+
+#### New Features
+
+The new [Portfolio Management](/developerportal/control-center/portfolio-management/) tool allows portfolio managers, business stakeholders, and developers to stay informed about projects and manage them in the different development stages. By providing everything you need to collaborate effectively in one place, it is now easier than ever to bring project ideas to the Mendix Platform.
+
+In Portfolio Management, you can do the following
+
+* Control and manage digital project initiatives in one overview (via Kanban and list views)
+* Prioritize project initiatives by industry standard prioritization methods:
+	* Weighted shortest jobs first (WSJF)
+	* Reach, impact, confidence, and effort (RICE)
+* Sort, filter, and search project initiatives on fields such as **Tags**, **Owners**, **Departments**, and **Dates**
+* Add attachments, link Mendix apps, and assign owners to a project initiative
+* Archive and restore project initiatives
+* Invite users to dedicated portfolio boards (both internal to your organization and external)
+* Easily manage portfolio users via **Access Management**
+* Get notified when you get assigned to a project initiative or someone commented on a project initiative you own
+
 ### November 10th, 2022
 
 #### Improvements

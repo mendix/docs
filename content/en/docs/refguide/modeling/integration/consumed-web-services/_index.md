@@ -50,13 +50,15 @@ See  [Import Mappings](/refguide/import-mappings/) for further information on ma
 
 In the enterprise market, SOAP (see also [Wikipedia](http://en.wikipedia.org/wiki/SOAP_(protocol))) is a common protocol for web services. It defines a standard way for systems to communicate with each other. XML is used as the message format.
 
-## 5 XSD
+## 5 XSD {#xsd}
 
 An XSD (XML Schema Definition) document is a document that describes how the XML is structured so that both parties know what the message means. An XSD itself is written in XML.
 
-## 6 WSDL
+## 6 WSDL {#wdsl}
 
 A WSDL (Web Service Definition Language) document is a document that describes how a client can interact with the server that publishes it. It describes the types of messages (incoming and outgoing) and where the messages must be sent to (an endpoint URL).
+
+WDSLs have associated [XSD](#xsd) documents that are used to validate the data.
 
 Using imported web services, you can import a web service from an external application to use in your own application. You can import web services from third parties (such as the
 [w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other Mendix apps.

@@ -23,11 +23,11 @@ The MQTT Connector consists of microflow actions that enable doing the following
 
 The MQTT connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
 
-## 2 Configuration {#configuration}
+## 2 Broker Configuration {#configuration}
 
-### 2.1 Configuring the Broker
+### 2.1 Configuring the Broker {#configure-broker}
 
-Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
+Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally and setting up in that page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 
 If the broker needs basic authentication for connection, then you can set up a username and password that will be stored in the domain model. See the [Authentication](#auth) section below.
 
@@ -58,7 +58,7 @@ Enabling SSL will establish a secure connection to the broker. To input your SSL
 
 ## 3 Usage
 
-To use the MQTT Connector, make sure the broker connection is already set up, or [create a broker connection directly in a microflow](#broker-microflow). 
+To use the MQTT Connector, make sure you have [configured the broker connection](#configure-broker), or [create a broker connection directly in a microflow](#broker-microflow). 
 
 Build microflows that use the connection details from the domain model to connect, and set up connection details using the domain model. Include microflows that first use the connection details from the domain model to connect, before the subscribe or publish actions can be performed.
 

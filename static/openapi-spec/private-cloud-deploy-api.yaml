@@ -12,7 +12,6 @@ info:
   description: 'The API to manage clusters, namespaces, and environments for Mendix apps which are deployed to Mendix for Private Cloud.'
 servers:
   - url: 'https://privatecloud.mendixcloud.com/api/v3'
-    description: PROD
 paths:
   '/jobs/{jobId}':
     parameters:
@@ -327,9 +326,16 @@ paths:
       operationId: get-cli-versions
       description: Retrieves all available versions of mxpc-cli.
       parameters: []
-  '/cli/{cliVersionValue}?os=&architecture=':
+  '/cli/{cliVersionValue}':
     parameters:
-      - $ref: '#/components/parameters/cliVersionValue'
+      - name: cliVersionValue
+        in: path
+        required: true
+        schema:
+          type: string
+          pattern: '[0-9].[0-9].[0-9]'
+          example: 2.0.0
+        description: A version of mxpc-cli..
     post:
       summary: Get/Download mxpc-cli
       operationId: get-cli
@@ -366,7 +372,7 @@ components:
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: The ID of the Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.
+      description: 'The ID of the Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
       x-examples:
         example-appid: c533ee0b-f7db-4e62-868b-1192d392ccec
     error:
@@ -637,7 +643,7 @@ components:
       x-stoplight:
         id: nslc1ped244bv
       example: schedule_events.mda
-      description: Name of an MDA. When the Build API becomes available for Mendix for Private Cloud, this will be replaced with a Package UUID.
+      description: 'Name of an MDA. When the Build API becomes available for Mendix for Private Cloud, this will be replaced with a Package UUID.'
       x-examples:
         example-packageId: schedule_events.mda
     constant:
@@ -1063,7 +1069,7 @@ components:
                     - name: Validation
                       reason: App 76ef1b0f-4050-4810-a159-cb419268636c could not be found
     job:
-      description: The job response returned by a get-job request. The Location header is populated once the job has completed successfully.
+      description: The job response returned by a get-job request. The Location header is populated once the job has been created successfully.
       content:
         application/json:
           schema:
@@ -1380,9 +1386,6 @@ components:
                     availableOperatingSystems: 'windows, linux, macos'
                     availableArchitectures: x86
   securitySchemes:
-    MxID3 token:
-      type: http
-      scheme: bearer
     Personal Access Token:
       type: http
       scheme: mxtoken

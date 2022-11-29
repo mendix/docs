@@ -21,6 +21,10 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 
 The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/199/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" >}}
 
 The Mendix Feedback widget is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.

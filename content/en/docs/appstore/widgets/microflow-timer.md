@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "microflow timer", "pla
 
 The [Microflow Timer](https://marketplace.mendix.com/link/component/27/) widget can be used to time and execute a microflow or nanoflow as long as a certain page is open. The microflow or nanoflow can be executed once or repeatedly, in which case it will not stop until it returns false or until the page is closed. 
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/27/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 {{% alert color="warning" %}}
 In offline apps, you cannot use microflows, but you can use nanoflows.
 {{% /alert %}}

@@ -15,6 +15,10 @@ This widget is deprecated.
 
 The [Mobile Features](https://marketplace.mendix.com/link/component/48902/) widget can be placed in a page layout and used in [hybrid mobile](/refguide/hybrid-mobile/) applications.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/48902/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Typical Use Cases
 
 The widget is designed to be dropped on your master mobile page template. It overrides functions in the Mendix UI code to hook into Cordova plugins. The features below (with the exception of custom body classes) can be switched on and off.

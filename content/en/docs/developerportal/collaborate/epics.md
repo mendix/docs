@@ -134,6 +134,15 @@ On the **Planning** page, you can switch between a Scrum workflow and a Kanban w
 
 {{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" >}}
 
+There are three tabs for the board settings:
+
+* **Board Type** – Enables switching from Scrum to Kanban board settings
+* **Toast Settings** – Allows you to enable/disable the toast notifications
+
+    {{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" >}}
+
+* **Data Migration** – Allows you to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics (for more information, see )
+
 If you use the Scrum workflow, the **Planning** page shows the following categories: **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog**. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** on the upper-right corner. Once the Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories are completed in this Sprint, all the completed stories are [archived](#archive) automatically, and you will decide where the unfinished stories should go. 
 
 If you use the Kanban workflow, the **Planning** page shows the following categories: **To Do**, **Refinement**, and **Backlog**. 
@@ -143,6 +152,7 @@ No matter which workflow you use, you can always create an epic or a story by cl
 Each row in a category shows the following information about a story:
 
 * Whether the story is a bug or a feature
+* If the story has a feedback item linked to it
 * Unique story ID
 * Story title
 * Linked epic
@@ -213,11 +223,13 @@ Every time you complete a Sprint, all the stories that are **Done** are archived
 
 All the archived stories are shown on the **Archive** page. You can see the following information of an archived story:
 
-* Unique story ID – Clicking it shows the story details.
-* Story title – Clicking it shows the story details.
-* Which Sprint the story belongs to – Clicking it shows the [archived Sprint details](#archived-sprint-details).
-* Linked epic – Clicking it shows the epic details.
-* Archive date and time – Clicking it shows the story details.
+* Unique story ID – clicking this shows the story details
+* Story title – clicking this shows the story details
+* Which Sprint the story belongs to – clicking this shows the [archived Sprint details](#archived-sprint-details)
+* Linked epic – clicking this shows the epic details
+* Archive date and time – clicking this shows the story details
+
+If a feedback item was linked to your archived story, you will see it with a purple icon:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive.png" >}}
 

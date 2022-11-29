@@ -11,6 +11,10 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 The [Badge](https://marketplace.mendix.com/link/component/50325/) widget shows a value inside a colored badge or label.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/50325/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 The widget does the following:
 
 * Displays a value based on a configured text template

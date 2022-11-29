@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "carousel", "image", "p
 
 The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/47784/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Allows you to use the widget as a composable region for your image widgets, text widgets, and more

@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "progress bar", "bootst
 
 The [Progress Bar](https://marketplace.mendix.com/link/component/48910/) widget displays a progress bar.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/48910/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 The widget does the following:
 
 * Displays a progress percentage in the form of a bar based on a configurable range

@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "languageSelector", "gr
 
 The [Language Selector](https://marketplace.mendix.com/link/component/202738/) widget allows the end-user to easily switch the language of your application.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/202738/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Displays a list of app languages available to the end-user determined by the developer.

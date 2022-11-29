@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "htmlelement", "platfor
 
 The [HTML Element](https://marketplace.mendix.com/link/component/204843) widget allows a developer to create custom HTML elements to build custom structures, visualizations, or interactions. The widget can also execute advanced text formatting, build custom UI components, and embed HTML.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/204843" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 The HTML Element widget contains settings to define the HTML tag, HTML attributes, events, and repeat elements. This widget can be nested and combined with other widgets.
 
 ### 1.1 Features

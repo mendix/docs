@@ -14,6 +14,10 @@ This widget is deprecated. For an alternative, see [Tooltip](/appstore/widgets/t
 
 The [Bootstrap Tooltip](https://marketplace.mendix.com/link/component/1939/) widget adds a tooltip to a user-defined field that contains help text or extra information.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/1939/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Typical Usage Scenario
 
 * Add help text to an input field that is visible upon focus

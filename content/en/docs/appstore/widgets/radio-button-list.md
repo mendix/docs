@@ -15,6 +15,10 @@ This widget is deprecated. For more information, see the [Deprecated Support Cat
 
 The [Radio Button List](https://marketplace.mendix.com/link/component/20/) widget enables rendering an attribute or association as a radio button list. The widget is used with enumeration values, Boolean values, and references, and it is a useful replacement for the default drop-down menu or reference selector widget.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/20/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Typical Use Cases
 
 Visualize all the possible options in your user interface, instead of just forcing your end-user to open a drop-down menu to view all available options.

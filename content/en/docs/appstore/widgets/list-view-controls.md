@@ -15,6 +15,10 @@ This widget is deprecated. You can use the [Data Widgets](/appstore/modules/data
 
 The [List View Controls](https://marketplace.mendix.com/link/component/105694/) enable filtering and searching a list view with the database and XPath data sources.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/105694/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 These are the available list view widgets:
 
 * [Check box filter](#check-box-filter) – filters a list view with various constraints when checked or unchecked

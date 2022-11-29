@@ -19,6 +19,10 @@ The [Google Maps](https://marketplace.mendix.com/link/component/48911/) widget c
 
 For information on styling your Google Maps widget, see the [Style Google Maps](#style-google-maps) section below.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/48911/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Show the location on a map based on an address or a coordinate

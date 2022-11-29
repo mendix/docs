@@ -13,7 +13,13 @@ This widget is deprecated.
 
 ## 1 Introduction
 
-The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
+The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget retrieves information about your device and mobile app. 
+
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/65139/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
+The widget can retrieve the following data:
 
 * **Device ID** – the unique ID of the device
 * **Device platform** – the platform on which the app runs (for example, Android, iOS, or web)

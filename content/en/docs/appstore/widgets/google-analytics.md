@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "google analytics", "ev
 
 The [Google Analytics](https://marketplace.mendix.com/link/component/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/105/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Typical Usage Scenario
 
 With this widget, you can track custom events, page views, and transactions. For example, you want to track how often a product is viewed and inspect it in Google Analytics, and you want a detailed overview of all transactions.

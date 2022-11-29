@@ -9,7 +9,13 @@ tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", 
 
 ## 1 Introduction {#introduction}
 
-The [Maps](https://marketplace.mendix.com/link/component/108261/) widget enables showing locations on maps. It supports the following map providers:
+The [Maps](https://marketplace.mendix.com/link/component/108261/) widget enables showing locations on maps. 
+
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/108261/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
+The widget supports the following map providers:
 
 * [Google Maps](https://www.google.com/maps/)
 * [OpenStreetMap](https://www.openstreetmap.org)

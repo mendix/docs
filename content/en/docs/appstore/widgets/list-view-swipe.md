@@ -15,6 +15,10 @@ This widget is deprecated.
 
 The [List View Swipe](https://marketplace.mendix.com/link/component/47781/) widget makes it possible for the app end-user to perform a swipe action on a list view.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/47781/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Open a page after an item is swiped

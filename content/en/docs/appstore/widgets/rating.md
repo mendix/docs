@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "star rating", "rating"
 
 The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables rating from 0 to a defined maximum amount using an attribute.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/54611" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 {{< figure src="/attachments/appstore/widgets/rating/example.gif" alt="Example" >}}
 
 ## 2 Usage

@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "badge button", "token"
 
 The [Badge Button](https://marketplace.mendix.com/link/component/52705/) widget can function as a special distinctive mark or token put on any display as a button.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/52705/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Display a badge on a button

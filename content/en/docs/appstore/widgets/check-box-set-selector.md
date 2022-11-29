@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "check box set selector
 
 The [Check Box Set Selector](https://marketplace.mendix.com/link/component/121/) widget lets you use a list of check boxes for your reference set. It supports multiple display attributes and looks the same as a [reference set selector](/refguide/reference-set-selector/).
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/121/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Typical Usage Scenario
 
 * Quickly set or adjust a reference set without having to go through pop-up windows and buttons

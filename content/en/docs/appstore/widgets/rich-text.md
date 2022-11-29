@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "rich text", "platform 
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/74889/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 {{< figure src="/attachments/appstore/widgets/rich-text/example.jpg" alt="Example" >}}
 
 ### 1.1 Features

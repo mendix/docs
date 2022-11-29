@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "image", "platform supp
 
 The [Image](https://marketplace.mendix.com/link/component/118579) widget displays an image and optionally performs an on-click action like enlarging to mobile-friendly, opening a page, calling a mircoflow, and more.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/118579" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Supports different data sources

@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "auto-load more", "load
 
 The [Auto-Load More](https://marketplace.mendix.com/link/component/50323/) widget loads more items on the list view as the end-user scrolls.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/50323/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ## 2 Usage
 
 1. Place the widget in the same page or snippet as the target list view (as in, right below it).

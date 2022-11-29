@@ -12,9 +12,7 @@ tags: ["Epics", "Sprint", "Developer Portal"]
 
 Epics enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow. 
 
-{{% alert color="info" %}}
-You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app, since that will make data migration difficult later.
-{{% /alert %}}
+{{% alert color="info" %}}You can currently use Epics as well as [Stories](/developerportal/collaborate/stories/). However, we recommend you not to use both of them at the same time for one app, since that will make data migration difficult later.{{% /alert %}}
 
 ### 1.1 Getting Your Team Access to an App in Epics
 
@@ -116,6 +114,7 @@ The story details dialog box shows the following items:
     * You can edit the description of the story by clicking **Edit Description** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
     * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
     * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list. Once you save the story, the system will send a notification to the tagged person.
+
 * **Assign to** – You can assign the story to anybody who can access the app in the Developer Portal.
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** page and the **Planning** page.
 * **Tasks** – You can add a task by clicking **+ Add Task**. You can move the tasks by dragging them around.
@@ -128,7 +127,7 @@ The story details dialog box shows the following items:
 
 {{% alert color="info" %}}To save any change on the story details dialog box, click **Save Story** at the bottom of the page.{{% /alert %}}
 
-## 3 Planning
+## 3 Planning {#planning}
 
 On the **Planning** page, you can switch between a Scrum workflow and a Kanban workflow by clicking the settings icon on the upper-right side of the screen. Which workflow you use also decides how the **Planning** page and the [Board](#board) page look.
 
@@ -247,3 +246,41 @@ When you click the Sprint icon in a row of an archived story on the **Archived**
 * Who archived the Sprint, shown under **Archived by**
 * Stories that were completed, shown under **Completed Stories**
 * Stories that were not completed, shown under **Incomplete Stories**
+
+## 6 Migrating from Stories to Epics {**KEEP AS SECTION HERE? OR MOVE INTO PLANNING?**}
+
+{{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, we recommend working on Epics from that point forward.{{% /alert %}}
+
+### 6.1 Migration Process
+
+To migrate from Stories to Epics, follow these steps:
+
+1. Go to [Planning](#planning) and click the settings icon on the upper-right side of the screen.
+2. Go to the **Data Migration** tab. Make sure that you read the information before you click **Start Migration**:
+
+    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" >}}
+
+3. Select the content you want to migrate.
+
+    {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
+    
+    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" >}}
+    
+### 6.2 What Is Migrated?
+
+These are the new locations of migrated stories:
+
+| From Stories | To Epics | Additionnal Information |
+| --- | --- | --- |
+| **Active Sprint** | **Active Sprint** in [Planning](#planning) | All the stories are migrated to the **To Do** swimlane with their tags. |
+| Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |
+| Archived stories | [Archive](#archive) | 
+
+These are the new details of migrated Sprints:
+
+| From Stories | To Epics | Example |
+| --- | --- | --- |
+| Sprint **Name** | Tag with the format: **sprint:Sprint_Name** | **Sprint_Sprint 1** |
+| Story **Status** | Tag with the format: **status:Status** | **status:To-do** |
+| **Assignee** | Story is assigned unless the assignee is not a member of the app. | |
+

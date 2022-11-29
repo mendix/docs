@@ -194,7 +194,7 @@ When creating a new IdP configuration, you are guided through a workflow to help
 
 Use **Previous** to go back to the previous dialog, or **Cancel** to abandon your changes. Click **Save** on the last step to save the configuration.
 
-Upon completing these steps, you only need to send the SP metadata file to the IdP and have them configure the authentication on their end. The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** on the final configuration step to download the XML file or by opening `http://<Application Root URL>/SSO/metadata​/<IDP-Alias>` for your app's URL.
+Upon completing these steps, you only need to send the SP metadata file to the IdP and have them configure the authentication on their end. The SAML module generates separate SP metadata for every connected SAML IDP (see [Configuring the IdP-Specific Settings](#idp-specific-settings)).  The SP metadata for your app can be obtained by clicking **Download SP Metadata** on the final configuration step to download the XML file or by opening `http://<Application Root URL>/SSO/metadata/<IDP-Alias>` for your app's URL.
 
 {{% alert color="warning" %}}
 The XML for the SP metadata is signed. If you make any changes to the metadata (even just opening it in an editor) this can mean that the signature no longer matches the content and the metadata will be rejected.
@@ -442,7 +442,7 @@ End users can access your app through the following endpoints when using the SAM
 
 Your SAML IdP can consume the following endpoints at your app. Typically the SP-metadata is used to communicate the URLs to your SAML IdP. As a Low-Code Developer you don’t have to consider these endpoints. This information is included here for completeness and as a reference when questions arise around integration with your SAML IdP.
 
-* **/SSO/metadata** – This provides a point for the IdP to automatically download the metadata from this SP
+* **/SSO/metadata/[IDP-Alias]** – This provides a point for the IdP to automatically download the metadata from this SP
 * **/SSO/assertion** – This is the endpoint where the IdP submits the SAML assertion to the so-called ‘Assertion Consumer Service’
 * **/SSO/attribute** – This is the endpoint where the SAML-IdP submits requested attributes about the authenticated user
 * **/SSO/logout** – This URL will trigger a single logout

@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "calendar", "platform s
 
 The [Calendar](https://marketplace.mendix.com/link/component/107954/) widget can be used to display and manage calendar events.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/107954/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Add and edit calendar events

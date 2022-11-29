@@ -20,7 +20,7 @@ Amazon Polly allows you to synthesize text to speech, with 96 voices supporting 
 
 ### 1.2 Prerequisites
 
-The Amazon Polly Connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). for more information about installing and configuring the AWS Authentication Connector see [AWS authentication](https://docs.mendix.com/appstore/connectors/aws-authentication/).
+The Amazon Polly Connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). for more information about installing and configuring the AWS Authentication Connector see [AWS Authentication](/appstore/connectors/aws-authentication/).
 
 ### 1.3 Dependencies
 
@@ -65,7 +65,8 @@ Constants are used to define configuration values. All activities are exported a
 
 | Name | Description |
 | --- | --- |
-| `AmazonPollyConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. |
+| `AmazonPollyConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+ |
 | `AmazonPollyConnector.HostPattern` | The endpoint URL for the Amazon Polly service |
 | `AmazonPollyConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service |
 | `AmazonPollyConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located |

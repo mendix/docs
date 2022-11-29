@@ -34,11 +34,11 @@ After you open an app in Epics, you can easily switch to other apps that you hav
 
 {{< figure src="/attachments/developerportal/collaborate/epics/switch-app.png" >}}
 
-## 2 Pages in Epics
+### 1.3 Pages in Epics
 
-Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive**. Some pages show look different based on whether you work in the Scrum workflow or the Kanban workflow.
+Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive**. Some pages show look different based on whether you work in the Scrum workflow or the Kanban workflow. These pages are described in the sections below.
 
-### 2.1 The Board Page {#board}
+## 2 Board {#board}
 
 If you work in the Scrum workflow, the **Board** page gives an overview of your current Sprint. At the top of the page, it shows the name of the Sprint, when it ends, how many stories and points it has. Below, it shows the goal of the current Sprint.
 
@@ -54,7 +54,7 @@ Clicking **Project Buzz** on the upper-right corner of the page brings you to th
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
-#### 2.1.1 Swimlanes
+### 2.1 Swimlanes
 
 On the **Board** page, the stories are grouped into different swimlanes based on their status. The two default swimlanes are **To Do** and **Done**. 
 
@@ -70,7 +70,7 @@ To rename, [archive](#archive), or delete a swimlane, click the *...* icon on th
 
 To move a swimlane, drag it to the new location.
 
-#### 2.1.2 Story Cards
+### 2.2 Story Cards
 
 On the **Board** page, each card represents a story.
 
@@ -99,7 +99,7 @@ To move a card within a swimlane or across swimlanes, drag the card to the new l
 
 Clicking the story card opens the [story details dialog box](#story-details).
 
-#### 2.1.3 Story Details Dialog Box {#story-details}
+### 2.3 Story Details {#story-details}
 
 When you click the card of a story, the story details dialog box opens.
 
@@ -128,7 +128,7 @@ The story details dialog box shows the following items:
 
 {{% alert color="info" %}}To save any change on the story details dialog box, click **Save Story** at the bottom of the page.{{% /alert %}}
 
-### 2.2 The Planning Page
+## 3 Planning
 
 On the **Planning** page, you can switch between a Scrum workflow and a Kanban workflow by clicking the settings icon on the upper-right side of the screen. Which workflow you use also decides how the **Planning** page and the [Board](#board) page look.
 
@@ -162,7 +162,7 @@ To move a story, drag the row to a different category.
 
 Clicking a row opens the [story details](#story-details) page.
 
-### 2.3 The Epics Page
+## 4 Epics
 
 The **Epics** page shows all the epics for your current app. 
 
@@ -179,7 +179,7 @@ You can create an epic by clicking **Create Epic** on the upper-right corner of 
 
 Clicking a row opens the [epic details](#epic-details) page.
 
-#### 2.3.1 Epic Details Dialog Box {#epic-details}
+### 4.1 Epic Details {#epic-details}
 
 If you click the row of an epic, the epic details dialog box opens. 
 
@@ -204,7 +204,7 @@ The epic details dialog box shows the following items:
 
 {{% alert color="info" %}}To save any change on the epic details dialog box, click **Save Epic** at the bottom of the page.{{% /alert %}}
 
-### 2.4 The Archive Page {#archive}
+## 5 Archive {#archive}
 
 Every time you complete a Sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
 
@@ -223,7 +223,7 @@ All the archived stories are shown on the **Archive** page. You can see the foll
 
 You can search stories based on story titles in the search box.
 
-#### 2.4.1 Archived Sprint Details Dialog Box {#archived-sprint-details}
+### 5.1 Archived Sprint Details {#archived-sprint-details}
 
 When you click the Sprint icon in a row of an archived story on the **Archived** page, you can see the following details of this Sprint:
 

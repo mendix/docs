@@ -1,35 +1,36 @@
 ---
-title: "Set-up solution"
+title: "Set Up a Solution"
 url: /appstore/creating-content/sol-setup
-linktitle: "Set-up solution"
+linktitle: "Set Up a Solution"
 weight: 10
-description: "A solution needs to be properly inbitialized in order to be compatible with the future upgrades"
-tags: [ "solutions", "set-up solution", "startup", "adaptive solutions", "prescriptive solutions" ]
+description: "Describes properly initializing a Mendix solution to be compatible with future upgrades."
+tags: ["solutions", "set-up solution", "startup", "adaptive solutions", "prescriptive solutions" ]
 ---
 
 ## 1 Introduction
 
-Solution set-up is a procedure of creating your app from a Mendix Solution package and configuring it to be compatible with future upgrades.
+Setting up a Mendix solution is the process of creating your app from the solution package and configuring it to be compatible with future upgrades.
 
-To set-up a solution, open Studio Pro and [import](/refguide/import-and-export/) .mxsolution package.
+## 2 Prerequisites
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-import.png" alt="Import Solution" >}}
+To set up a Mendix solution, make sure you meet the following prerequisites:
 
-## 2 Solution Set-up process
+* A solution can only be set up with the Studio Pro version that exactly matches the version used to create it (for example, if Studio Pro 9.6.0 was used to create the solution, only that version can be used to set up the solution), so make sure you are using the correct Studio Pro version
+* The solution must be version-controlled and use Git, and in order to be compatible with upgrades, your app must be version-controlled
+* It is impossible to initialize a solution on a non-empty repository
 
-### 2.1. Prerequisites
+## 3 Setup Process
 
-- Currently solution can be set-up only with the Studio Pro of exactly the same version that was used to create it.
-- A solution must be version controlled and use Git. In order to be compatible with the upgrades an app has to be version controlled.
-- It is impossible to initialize solution on a non-empty repository.
+To set up a solution, follow these steps:
 
-### 2.2. Process
+1. Open Studio Pro and [import](/refguide/import-and-export/) the *.mxsolution* package:
 
-Selected a target directory for your solution and pressed OK. The process is automatic afterwards.
+    {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-import.png" alt="Import Solution" >}}
 
-Once a solution is initialized, a special `solution-releases` branch will be created. This branch contains the unchanged version of a solution (as provided by ISV).
-It is not allowed to make any changes in that branch as this will render the solution incompatible with the upgrades or will lead to unpredictable errors during upgrade.
+2. Select the target directory for your solution and click **OK**.
+3. Once the solution is initialized, a special **solution-releases** branch is created. This branch contains the unchanged version of the solution (as provided by the ISV).
+You cannot make any changes in this branch, as this will render the solution incompatible with upgrades or lead to unpredictable errors during upgrades.
 
-### 2.3. See also
+### 4 Read More
 
-- The Upgrade procedure of a correctly set-up solution is described in [Upgrade section](/appstore/creating-content/sol-upgrade) 
+* [Upgrade a Solution](/appstore/creating-content/sol-upgrade) 

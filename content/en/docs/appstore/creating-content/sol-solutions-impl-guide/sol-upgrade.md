@@ -1,37 +1,36 @@
 ---
-title: "Upgrade solution"
+title: "Upgrade a Solution"
 url: /appstore/creating-content/sol-upgrade
-linktitle: "Upgrade solution"
+linktitle: "Upgrade a Solution"
 weight: 10
-description: "A properly set-up solution can be upgraded to a new version provided by ISV"
-tags: [ "solutions", "upgrade solution", "startup", "adaptive solutions", "prescriptive solutions" ]
+description: "Describes how to upgrade a properly set up solution with a new version provided by the ISV."
+tags: ["solutions", "upgrade solution", "startup", "adaptive solutions", "prescriptive solutions"]
 ---
 
 ## 1 Introduction
 
-Solution upgrade is a procedure of merging changes provided by ISV in the new version of the solution into an adapted solution.
+Upgrading a solution is the process of merging changes provided by the ISV into a new version of an adaptive solution.
 
-To upgrade a solution, open Studio Pro and click File->Upgrade solution menu item.
+## 2 Prerequisites
+
+To upgrade a Mendix solution, make sure the following prerequisites are met:
+
+* You are using the same Studio Pro version as the version used to create the solution package (for example, if Studio Pro 9.6.0 was used to create the solution, only that version can be used to upgrade the solution)
+* Your version control system is Git
+* Your app is currently on the **main** branch line
+* The **solution-releases** branch line exists
+* There are no uncommitted changes or unresolved conflicts in your app
+* There is only one MPR file in the solution package
+* The name of your app's MPR file is the same as the name of the MPR file in the solution package
+* The solution you are upgrading to is the same solution that was used to set up your adaptive solution
+
+## 3 Upgrading Process
+
+To upgrade a solution, follow these steps:
+
+1. Open Studio Pro and click **File** > **Upgrade Solution**.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-upgrade.png" alt="Upgrade Solution" >}}
-
-## 2 Solution Upgrade process
-
-### 2.1. Prerequisites
-
-The upgrade can be performed only if the following requirements are met:
-- Solution package you want to upgrade to was created with exactly the same Studio Pro version as the one you have open.
-- Version Control system is Git
-- The App is currently on `Main` branch
-- There is no uncommitted changes in your App
-- There is no unresolved conflicts in your App
-- `solution-releases` branch exists
-- There is only one MPR file in the Solution package.
-- The name of your App's MPR file is the same as the name of the MPR file in the Solution package
-- The Solution you are trying to upgrade to is the same solution that was used to set-up your solution.
-
-
-### 2.2. Process
 
 Selected Solution package file (.mxsolution) provided by ISV and pressed OK. The process is automatic afterwards.
 

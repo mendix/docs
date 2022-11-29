@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", 
 
 The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
-To see the component in the Marketplace, click here:
+To see the component in the Mendix Marketplace, click here:
 
 {{% button color="dark" href="https://marketplace.mendix.com/link/component/105695/" text="See component in Marketplace" title="See component in Marketplace" %}}
 

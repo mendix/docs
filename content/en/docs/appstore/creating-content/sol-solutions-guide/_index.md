@@ -9,10 +9,6 @@ tags: ["solutions guide", "adaptive solutions", "solutions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-These guides for creating content in the Marketplace are under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest documentation!
-{{% /alert %}}
-
 ## 1 Introduction
 
 This section provides information and guidance on how to develop solutions you can sell both on and off the Mendix Marketplace.

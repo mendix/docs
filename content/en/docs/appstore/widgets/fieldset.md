@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "fieldset", "token", "p
 
 The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Fieldset) widget is a container which groups widgets within a form. Structuring a form helps end-users fill it out, especially when they rely on accessibility tools like a screen reader. For example, you could use this widget to group input widgets that belong to the same address when a form requires multiple addresses.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/113922/Mendix/Fieldset" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ## 2 Features
 
 * Group widgets in a form

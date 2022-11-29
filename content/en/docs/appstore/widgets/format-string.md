@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "format string", "platf
 
 The [Format String](https://marketplace.mendix.com/link/component/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/264/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Typical Use Cases
 
 Use this widget to display multiple attributes as a single string.

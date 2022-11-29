@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "range slider", "platfo
 
 The [Range Slider](https://marketplace.mendix.com/link/component/52704/) allows the user to set a range using a slider. You need to configure a minimum value and a maximum value for the slider, which define the limits of the slider's track. The user can set a range within these limits by defining the lower bound value and the upper bound value of the range.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/52704/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 {{% alert color="info" %}}
 If the user needs to set one value, instead of a range, you should use the [Slider](/appstore/widgets/slider/) widget instead.
 {{% /alert %}}

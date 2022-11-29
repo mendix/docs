@@ -1,54 +1,40 @@
 ---
-title: "Implementing Solutions"
+title: "Implement a Solution"
 url: /appstore/creating-content/sol-solutions-impl/
-linktitle: "Implementing Solutions"
+linktitle: "Implement Solutions"
 category: "Creating Content"
 weight: 4
 description: "Provides information and guidance on how to implement Mendix solutions."
-tags: ["solutions guide", "adaptive solutions", "solutions", "implement solution", "set-up solution", "upgrade solution"]
+tags: ["solutions guide", "adaptive solutions", "solutions", "implement solution", "set up solution", "upgrade solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-These guides for creating content in the Marketplace are under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest documentation!
-{{% /alert %}}
-
 ## 1 Introduction
 
-This section provides information and guidance on how to set-up and upgrade solutions.
+This page provides information and guidance on how to set up and upgrade a solution.
 
-## 2 Solution lifecycle
+## 2 Solution Lifecycle
 
-Typical solution lifecycle is shown on the image below:
+This image presents the typical solution lifecycle:
+
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-lifecycle.png" alt="Adaptive Solution Lifecycle" >}}
 
-There is 3 main stages a solution goes thru during it's lifecycle. 
+There are three main stages a solution goes through during its lifecycle:
 
+* **Build** – This stage is performed by an ISV, who creates a solution and releases new versions with improvements. Mendix recommends releasing a new solution version along with a [Studio Pro LTS](/releasenotes/studio-pro/lts-mts/#lts) release.
+* **Implement** – At this stage, the solution is adapted to fit a specific customer's needs. This can be done by the ISV, an implementation partner, or the customer themselves.
+* **Consume** – This stage is the actual production use of the application by the customer.
 
-- Build
+## 3 Implement Stage
 
-This stage is performed by ISVs. They create solutions and keep working on the improvements releasing new versions every now and then (it is advised to release new version of the solutions together with Mendix Studio Pro LTS releases).
+As the **Build** stage is an iterative process, a new version is periodically released by the ISV. In the **Implement** stage, the implementer needs to incorporate the changes from this new version into the current implementation.
 
-- Implement
+To be able to implement, you must set up the solution in the proper way to enable future upgrades to new versions provided by the ISV. For more information, see [Set Up a Solution](/appstore/creating-content/sol-solutions-impl/setup) 
 
-At this stage solutions are adapted to fit specific customer's needs. This can be done by either ISV itself or Implementation partner or even the customer itself.
-
-- Consume
-
-This stage is actual production use of the application.
-
-## 3 Implement stage
-
-As the Build stage is an iterative process, a new version is periodically released by ISV. Then the implementor needs to incorporate the changes from this new version into the current implementation. 
-
-In order to so that, there are 2 procedures to follow:
-
-- Solution needs to be set-up the proper way to enable future upgrades to the new ISV provided versions. Set-up procedure is described in [Set-up section](/appstore/creating-content/sol-solutions-impl/setup) 
-
-- The Upgrade procedure of a correctly set-up solution is described in [Upgrade section](/appstore/creating-content/sol-solutions-impl/sol-upgrade) 
+For details on the upgrade procedure for a solution that has been set up correctly, see [Upgrade a Solution](/appstore/creating-content/sol-solutions-impl/sol-upgrade).
 
 ## 4 Read More
 
-For more details on building solutions, see [Architecting Adaptive Solutions](/appstore/creating-content/sol-architecting/).
+* [Develop a Solution](/appstore/creating-content/sol-development/)
+* [Architect an Adaptive Solution](/appstore/creating-content/sol-architecting/).
 
-You can check out [Developing Solutions](/appstore/creating-content/sol-development/) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.

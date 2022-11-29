@@ -73,7 +73,7 @@ The name of the variable in which the result of the aggregation is stored. This 
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
-## 5 Optimize Aggregate Activities
+## 5 Optimizing Aggregate Activities
 
 In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If there are a lot of [retrieves](/refguide/retrieve/) and aggregates on large datasets in a microflow, it is easy to run into performance or memory problems. 
 

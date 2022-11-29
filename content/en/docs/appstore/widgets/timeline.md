@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "timeline", "platform s
 
 You can use the [Timeline](https://marketplace.mendix.com/link/component/115852/) widget to create a vertical list of events with descriptions.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/115852/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ## 2 Configuration
 
 ### 2.1 Choosing the Render Type

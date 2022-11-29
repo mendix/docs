@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "switch", "platform sup
 
 The [Switch](https://marketplace.mendix.com/link/component/50324/) widget enables toggling a Boolean attribute.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/50324/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ## 2 Usage
 
 To use this widget, place it in a [data container](/refguide/data-sources/) that has a Boolean attribute.

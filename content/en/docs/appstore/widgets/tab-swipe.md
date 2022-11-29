@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "tab swipe", "platform 
 
 The [Tab Swipe](https://marketplace.mendix.com/link/component/78620/) widget can be used for navigating between tabs.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/78620/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ## 2 Usage
 
 To use this widget, follow these steps:

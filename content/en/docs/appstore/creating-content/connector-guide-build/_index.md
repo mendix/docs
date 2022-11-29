@@ -1,5 +1,5 @@
 ---
-title: "Build Connectors"
+title: "Build a Connector"
 url: /appstore/creating-content/connector-guide-build/
 category: "Creating Content"
 weight: 5

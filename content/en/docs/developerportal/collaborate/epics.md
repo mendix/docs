@@ -140,7 +140,7 @@ There are three tabs for the board settings:
 
     {{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" >}}
 
-* **Data Migration** – Allows you to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics (for more information, see )
+* **Data Migration** – Allows you to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics (for more information, see [**ADD LINK**])
 
 If you use the Scrum workflow, the **Planning** page shows the following categories: **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog**. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** on the upper-right corner. Once the Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories are completed in this Sprint, all the completed stories are [archived](#archive) automatically, and you will decide where the unfinished stories should go. 
 
@@ -294,6 +294,25 @@ And here is the outcome after migration:
 
 {{% alert color="info" %}}Beside the story details above, the remaining details for your stories are migrated according to their equivalents in [Epics](#epics).{{% /alert %}}
 
-{{% alert color="info" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics files can only be associated with Stories and not Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
+{{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
+### 6.3 Migration Report 
+
+The migration report is available a few seconds after the migration completes (depending on the number of stories you have).
+
+Click **View Migration Report** to view the migration report:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-report-buttons.png" >}}
+
+{{% alert color="info" %}}
+The **Continue Retrying Migration** button only appears if a Platform Administrator has manually set the migration for that app to be retried if there are major errors on the first migration.
+{{% /alert %}}
+
+The migration report will open:
+
+[**ADD SCREENSHOT HERE, OR RE-ORDER THIS CONTENT?**]
+
+{{% alert color="info" %}}
+If you have unmigrated data but the section has been successfully migrated, Mendix recommends manually migrating the data from [Stories](/developerportal/collaborate/stories/) to Epics.
+{{% /alert %}}
 

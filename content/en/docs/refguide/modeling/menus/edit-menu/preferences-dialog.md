@@ -53,6 +53,12 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
+### 2.4 Disk Location
+
+#### 2.4.1 Default App Directory
+
+This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
+
 ### 3 Mendix Assist Tab
 
 #### 3.1 Logic Bot
@@ -64,7 +70,11 @@ The **Logic Bot** tab contains the following settings:
 
 #### 3.2 Performance Bot
 
-The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
+The **Performance Bot** tab contains the following settings:
+
+* **Show recommendation in editors** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors.
+
+* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
 
 ## 4 Model Tab
 

@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "label selector", "plat
 
 The [Label Selector](https://marketplace.mendix.com/link/component/292/) widget enables easily creating objects, assigning objects to other objects, and removing objects (for example, labels) from other objects.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/292/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 It features both an input box for searching and creating objects and a drop-down menu for selecting objects that already exist . The implementation is based on the [Tag-it library](https://aehlke.github.io/tag-it/).
 
 You configure background colors for labels and how the text contrasts with a label background via the `text-normal` or `text-contrast` class.

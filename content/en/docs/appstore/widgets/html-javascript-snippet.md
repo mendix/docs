@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "html", "javascript", "
 
 The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) widget is useful for adding a piece of HTML or JavaScript to a page (for example, to embed a YouTube or Flash object). In addition, it can be used to enhance styling by adding arbitrary HTML elements.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/56/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Typical Use Cases
 
 * Display a predefined HTML document

@@ -155,6 +155,8 @@ You can add any local information about the external entity in this tab.
 
 ## 3 Authentication {#authentication}
 
+When working with external entities in production environments, you need to set up authentication in both the producing and consuming apps.
+
 ## 4 External Entity Limitations {#limitations}
 
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The datasets associated with the entities are maintained in the originating apps.

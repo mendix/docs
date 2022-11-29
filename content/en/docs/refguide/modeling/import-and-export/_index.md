@@ -1,5 +1,5 @@
 ---
-title: "Importing and Exporting Apps, Modules, Widgets, and Documents"
+title: "Import and Export Apps, Modules, Widgets, and Documents"
 linktitle: "Importing and Exporting Elements"
 url: /refguide/import-and-export/
 category: "App Modeling"
@@ -20,10 +20,10 @@ When you have an app package, you cannot import individual modules or widgets fr
 
 You can import and export the following:
 
-* apps
-* modules
-* widgets
-* documents such as pages or microflows
+* Apps
+* Modules
+* Widgets
+* Documents such as pages or microflows
 
 ## 2 Importing Various Elements
 
@@ -35,8 +35,7 @@ Be careful when importing elements, as you can overwrite your existing work. Pay
 
 A Mendix package (*.mpk*) file can store a complete Mendix app. 
 
-You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as out-of-the-box solution. In this case a Solution will be [set-up](/appstore/creating-content/sol-setup) for you.
-Solutions are compatible with future [upgrades](/appstore/creating-content/sol-upgrade).
+You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as an out-of-the-box solution. In this case, the solution is [set up](/appstore/creating-content/sol-setup) for you. These solutions are compatible with future [upgrades](/appstore/creating-content/sol-upgrade).
 
 To import a complete app or solution package, follow these steps:
 

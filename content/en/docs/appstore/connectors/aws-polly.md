@@ -40,7 +40,7 @@ For example, to synthesize a string of text into speech, implement the [Synthesi
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_SynthesizeSpeech*, and then click **OK**.
-3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **SynthesizeSpeech** activity.
+3. In the **App Explorer**, in the **AmazonPollyConnector** section, find the **SynthesizeSpeech** activity.
 4. Drag the **SynthesizeSpeech** activity onto the work are of your microflow.
 5. Double-click the **SynthesizeSpeech** activity to configure the required parameters. 
     
@@ -65,9 +65,7 @@ Constants are used to define configuration values. All activities are exported a
 
 | Name | Description |
 | --- | --- |
-| `AmazonPollyConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/).
- |
-| `AmazonPollyConnector.HostPattern` | The endpoint URL for the Amazon Polly service |
+| `AmazonPollyConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/). |
 | `AmazonPollyConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service |
 | `AmazonPollyConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located |
 | `AmazonPollyConnector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. |

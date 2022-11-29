@@ -1,7 +1,7 @@
 ---
 title: "Install and Configure Mendix for Private Cloud Non-interactive Mode"
+linktitle: "Non-interactive Mode"
 url: /developerportal/deploy/private-cloud-cli-non-interactive/
-parent: "private-cloud-cluster"
 description: "Describes how to install and configure Mendix for Private Cloud in non-interactive mode"
 weight: 5
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
@@ -35,7 +35,7 @@ When using connected mode, you need to put namespace id and namespace secret as 
 
 To perform the [base installation](/developerportal/deploy/private-cloud-cluster/#base-installation), use the following command:
 
-```shell
+```shell {linenos=false}
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
 ```
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
@@ -44,7 +44,7 @@ The namespace-id and namespace-secret are only required when using Mendix for Pr
 
 To [configure the namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace) with a configuration file, use the following command:
 
-```shell
+```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
@@ -82,6 +82,7 @@ registry:
 
 To [upgrade the versions of Mendix components in your namespace](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster), use the following command:
 
-```shell
-./mxpc-cli upgrade-namespace --clusterType <cluster-type>
+```shell {linenos=false}
+./mxpc-cli upgrade-namespace --clusterType <cluster-type> --namespace <namespace>
+
 ```

@@ -1,14 +1,12 @@
 ---
 title: "Import Mapping Action"
 url: /refguide7/import-mapping-action/
-parent: "microflow-activities"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
-
 
 ## 1 Introduction
 
@@ -102,7 +100,7 @@ Validation properties are only applicable if an import mapping is selected that 
 
 Determines whether the import action should validate the incoming XML against the [XML schema](/refguide7/xml-schemas/).
 
-Setting this to _yes_ can greatly decrease performance!
+Setting this to *yes* can greatly decrease performance!
 
 *Default value:* No
 

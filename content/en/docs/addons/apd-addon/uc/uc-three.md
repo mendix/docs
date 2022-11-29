@@ -1,7 +1,6 @@
 ---
 title: "APD 3 Use Cases"
 url: /addons/apd-addon/uc-three/
-parent: "uc"
 weight: 10
 ---
 

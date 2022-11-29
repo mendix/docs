@@ -1,7 +1,6 @@
 ---
 title: "Set Up your Personal Access Token"
 url: /apidocs-mxsdk/mxsdk/setup-your-pat/
-parent: "sdk-howtos"
 weight: 11
 ---
 
@@ -12,6 +11,7 @@ Before running your first script, you need to set up your personal access token 
 ## 2 Creating the Personal Access Token
 
 You can manage your Mendix personal access tokens with [Mendix Warden](https://warden.mendix.com/) as follows:
+
 1. Go to [Mendix Warden](https://warden.mendix.com/).
 1. Click **Add**.
 1. Enter the **Name** of the token.

@@ -1,7 +1,6 @@
 ---
 title: "Open App Dialog"
 url: /refguide7/open-app-dialog/
-parent: "dialogs"
 aliases:
     - /refguide7/open-project-dialog.html
     - /refguide7/open-project-dialog

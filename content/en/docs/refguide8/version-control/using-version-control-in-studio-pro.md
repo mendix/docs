@@ -187,8 +187,8 @@ Resolving a conflict will make the conflict go away but the document may, of cou
 
 Project conflicts are conflicts are conflicts at the level of the project. There are two cause for project conflicts:
 
-1.  One person deletes a document and the other makes a change inside that document.
-2.  Both people move a document but to different places in the project tree.
+1. One person deletes a document and the other makes a change inside that document.
+2. Both people move a document but to different places in the project tree.
 
 The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** dock.
 
@@ -341,9 +341,9 @@ Studio Pro takes care of some file management automatically. If you add or remov
 
 We advise you to always commit and update inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
 
-### 9.1 TortoiseSVN & Subclipse {#tortoisesvn-subclipse}
+### 9.1 TortoiseSVN and Subclipse {#tortoisesvn-subclipse}
 
-If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [https://tortoisesvn.net/](https://tortoisesvn.net/).
+If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [TortoiseSVN](https://tortoisesvn.net/).
 
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
@@ -351,21 +351,21 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
-Also, if you are developing Java actions using Eclipse, we advise you to install Subclipse to help you with version control of Java files. You can download Subclipse from the Eclipse Marketplace inside Eclipse or from [http://subclipse.tigris.org/](http://subclipse.tigris.org/).
+Also, if you are developing Java actions using Eclipse, we advise you to install Subclipse to help you with version control of Java files. You can download Subclipse inside Eclipse or from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/subclipse).
 
-### 9.2 Adding Files & Directories
+### 9.2 Adding Files and Directories
 
 If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.
 
 Make sure you use the SVN export feature of TortoiseSVN if you are copying a directory that is already under version control into your project.
 
-### 9.3 Deleting Files & Directories
+### 9.3 Deleting Files and Directories
 
 If you delete a file from your project, Studio Pro will automatically also delete it from the Team Server.
 
 If you want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'.
 
-### 9.4 Branching & Deploying
+### 9.4 Branching and Deploying
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 

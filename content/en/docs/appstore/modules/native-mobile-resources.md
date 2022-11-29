@@ -18,7 +18,7 @@ For excellent deep-dive demonstrations of how to use these native mobile widgets
 {{< vidyard "wBDgxvFKGwFYkyxKhpHVLT" >}}
 
 {{% alert color="info" %}}
-Native Mobile Resources v3.1.4 and above will indicate their version inside *themesource/nativemobileresources/.version* located in the project directory. Versions v3.1.3 and below included a constant in the module indicating version.
+Native Mobile Resources v3.1.4 and above will indicate their version inside *themesource/nativemobileresources/.version* located in the app directory. Versions v3.1.3 and below included a constant in the module indicating version.
 {{% /alert %}}
 
 ## 2 Native Widgets
@@ -30,6 +30,7 @@ These are the native widgets included in these resources along with links to the
 | [Activity Indicator](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/activity-indicator-native) | Displays a circular loading indicator. |
 | [Animation](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/animation-native) | Provides default animations for contents and widgets. |
 | [App Events](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/app-events-native) | Triggers actions based on load, network status, and timer events. |
+| [Background Gradient](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/background-gradient-native) | Allows you to apply a background that transitions between multiple colors in a linear direction. |
 | [Background Image](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/background-image-native) | Allows to layer other widgets on top of an image. |
 | [Badge](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/badge-native) | Displays text or a value as a badge. |
 | [Bar Chart (Beta)](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/bar-chart-native) | The bar chart widget renders a horizontal bar graph based on static and dynamic data sets. |
@@ -39,6 +40,7 @@ These are the native widgets included in these resources along with links to the
 | [Color Picker](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/color-picker-native) | Allows the app end-user to select colors. |
 | [Feedback](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/feedback-native) | Allows the app end-user to submit feedback directly into the app. |
 | [Floating Action Button](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/floating-action-button-native) | Displays a circular floating icon button. |
+| [Gallery](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/gallery-native) | A replacement for both the template grid and list view. |
 | [Intro Screen](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/intro-screen-native) | Shows swipeable containers to show contents as introductions. |
 | [Line Chart (Beta)](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) | Renders a scalable line graph based on static and dynamic data sets. |
 | [List View Swipe](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/listview-swipe-native) | Shows controls on swipe for an interactive list view. |
@@ -49,6 +51,7 @@ These are the native widgets included in these resources along with links to the
 | [Progress Bar](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/progress-bar-native) | Displays progress in a horizontal bar. |
 | [Progress Circle](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/progress-circle-native) | Displays progress in a circle with enclosed text. |
 | [QR Code](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/qr-code-native) | Displays a QR code based on a value. |
+| [Radio Buttons](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/radio-buttons-native) | Offers flexible, accessible radio button functionality. |
 | [Range slider](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/range-slider-native) | Changes a range of values using a slider. |
 | [Rating](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/rating-native) | Gives a rating by selecting stars. |
 | [Repeater](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/repeater-native) | Iterates over a data source or nanoflow and repeats the content while changing the values assigned to it. |

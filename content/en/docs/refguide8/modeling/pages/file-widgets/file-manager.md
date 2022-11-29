@@ -1,7 +1,6 @@
 ---
 title: "File Manager"
 url: /refguide8/file-manager/
-parent: "file-widgets"
 tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

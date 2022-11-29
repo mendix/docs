@@ -1,7 +1,6 @@
 ---
 title: "Deploy Your First Hybrid Mobile App"
 url: /howto8/mobile/deploy-your-first-hybrid-mobile-app/
-parent: "hybrid-mobile"
 weight: 50
 tags: ["mobile", "deploy"]
 ---
@@ -10,7 +9,7 @@ tags: ["mobile", "deploy"]
 
 Besides boasting native functionality, another major advantage of a hybrid mobile apps is that you only need to go through the approval process once. Updates after the approval process only require a new deployment of your app in the Mendix cloud.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Open a hybrid example app
 * Install the app on your device

@@ -1,7 +1,7 @@
 ---
 title: "Debug a Hybrid Mobile Application"
 url: /howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 5
 tags: ["monitoring", "troubleshooting", "debug", "hybrid mobile"]
 ---
@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "debug", "hybrid mobile"]
 
 This how-to explains the steps involved in debugging a Mendix application that is running in the Mendix Developer App on your mobile phone.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Debug a mobile application
 

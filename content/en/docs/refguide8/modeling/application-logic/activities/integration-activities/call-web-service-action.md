@@ -1,7 +1,6 @@
 ---
 title: "Call Web Service"
 url: /refguide8/call-web-service-action/
-parent: "integration-activities"
 tags: ["studio pro", "integration activity", "call web service"]
 weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,7 +11,7 @@ weight: 20
 {{% /alert %}}
 
 {{% alert color="warning" %}}
- This activity can only be used in **Microflows**.
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -61,13 +60,11 @@ The properties dialog box consists of five tabs:
 **Override location** defines whether to override the location where the web service is called.
 
 {{% alert color="info" %}}
-
 When calling a web service using a call web service activity, the location of the web service is determined as follows.
 
-1.  If the location is overridden in the call web service activity, the location specified in that action is used.
-2.  If the service that defines the operation has a location constant defined, the value of that constant is used.
-3.  Otherwise, the location as specified in the WSDL of the imported web service is used.
-
+1. If the location is overridden in the call web service activity, the location specified in that action is used.
+2. If the service that defines the operation has a location constant defined, the value of that constant is used.
+3. Otherwise, the location as specified in the WSDL of the imported web service is used.
 {{% /alert %}}
 
 ### 4.3 Location
@@ -137,7 +134,7 @@ When you select **Override**, you can configure the client certificate that will
 * When you deploy the app to the Mendix cloud, the identifier is set when [pinning a client certificate](/developerportal/deploy/certificates/#outgoing-client-certificates)
 * When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide8/custom-settings/#ca-certificates)
 
-When this identifier is not set (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use project settings** were selected).
+When this identifier is not set (either not pinned or not present in *ClientCertificateUsages*), the default settings will be used (as if **Use project settings** were selected).
 
 ## 5 HTTP Headers Tab{#http-headers}
 

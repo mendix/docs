@@ -1,7 +1,6 @@
 ---
 title: "Template Grid (Document Template)"
 url: /refguide8/template-grid-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide8/Template+Grid+(document+template).html
@@ -24,7 +23,6 @@ The template grid shows a list of objects in a tile view. For example, a templat
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/918137.png" >}}
 
 A template grid showing products with name, description, and image.
-
 {{% /alert %}}
 
 ## 2 Components
@@ -51,9 +49,9 @@ This defines the amount of columns the template grid will contain.
 
 The data source properties determine which objects will be shown in the template grid. The list of objects in the template grid is constrained by the following mechanisms:
 
-1.  For top-level template grids, the objects passed in the microflow calling the document export action are shown.
-2.  For nested template grids, if an entity path is used, only the objects reachable by following the path from the containing object are shown.
-3.  For nested template grids, if a microflow is used, the objects returned by the microflow are shown.
+1. For top-level template grids, the objects passed in the microflow calling the document export action are shown.
+2. For nested template grids, if an entity path is used, only the objects reachable by following the path from the containing object are shown.
+3. For nested template grids, if a microflow is used, the objects returned by the microflow are shown.
 
 ### 5.1 Entity (Path)
 

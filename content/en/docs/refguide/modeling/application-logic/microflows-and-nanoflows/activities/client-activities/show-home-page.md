@@ -1,7 +1,6 @@
 ---
 title: "Show Home Page"
 url: /refguide/show-home-page/
-parent: "client-activities"
 weight: 30
 tags: ["studio pro", "show home page", "home page", "client activities"]
 aliases:
@@ -15,7 +14,7 @@ This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/offline-first/#microflows) section of the *Offline-First Reference Guide*.
+This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -48,4 +47,3 @@ The **Action** section of the properties pane shows the action associated with t
 
 * [Show Page](/refguide/show-page/)
 * [Activities](/refguide/activities/)
-

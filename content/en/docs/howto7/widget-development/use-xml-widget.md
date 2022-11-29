@@ -76,8 +76,8 @@ Other possible attributes are:
 | isDefault | Marks a property as the default property that is selected when the widget is selected. |
 | multiline | Makes the string input mulitple lines, which is useful for long texts. |
 | parameterIsList| Requires the parameter of a microflow to be a list of the type defined in the **entityProperty**. |
-| isPath | _("no", "optional", "yes")_ The path for an attribute or entity property, it can be either "no", "optional" or "yes", where "no" is the default value if the property is left out. The "optional" means that the attribute/entity can be either the current entity (or an attribute of the current entity) or an entity (or attribute) over a 1-deep association. |
-| pathType | _("reference", "referenceSet")_ This defines what sort of reference should be shown for an entity/attribute over an association, either a "reference" or a "referenceSet". |
+| isPath | *("no", "optional", "yes")* The path for an attribute or entity property, it can be either "no", "optional" or "yes", where "no" is the default value if the property is left out. The "optional" means that the attribute/entity can be either the current entity (or an attribute of the current entity) or an entity (or attribute) over a 1-deep association. |
+| pathType | *("reference", "referenceSet")* This defines what sort of reference should be shown for an entity/attribute over an association, either a "reference" or a "referenceSet". |
 
 The different property types and their respective required attributes are discussed below.
 
@@ -108,16 +108,16 @@ A property of type Attribute is always related to an entity: it uses the entityC
 
 An attribute property has an extra required child element: a list of attributeTypes that define what type of attributes are accepted. This could be any of the following:
 
-*   AutoNumber
-*   Binary
-*   Boolean
-*   DateTime
-*   Decimal (Modeler > v5.13)
-*   Enum
-*   HashString
-*   Integer
-*   Long
-*   String
+* AutoNumber
+* Binary
+* Boolean
+* DateTime
+* Decimal (Modeler > v5.13)
+* Enum
+* HashString
+* Integer
+* Long
+* String
 
 ### 5.2 Boolean
 
@@ -195,6 +195,7 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
  <description>Form to open</description>
 </property>
 ```
+
 {{% alert color="info" %}}
 For forms containing a data view, remember that calling a form  with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
 {{% /alert %}}
@@ -227,9 +228,9 @@ The integer property lets you to pass an integer to the widget.  This property r
 
 The Microflow property allows a user to select a microflow in the Mendix Modeler. There are three options:
 
-1.  If needsEntityContext is set to "true", the selected microflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
-2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the microflow will have no input parameters.
-3.  If the entityProperty attribute is specified, the selected microflow is required to have this entity as an input parameter.
+1. If needsEntityContext is set to "true", the selected microflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
+2. If needsEntityContext is set to false and no entityProperty attribute is specified, the microflow will have no input parameters.
+3. If the entityProperty attribute is specified, the selected microflow is required to have this entity as an input parameter.
 
 ```xml
 <property key="messageMicroflow" type="microflow" required="false">
@@ -244,21 +245,21 @@ The Microflow property has an extra required child element: returnType. Use this
 
 Possible return types:
 
-*   Void
-*   Boolean
-*   Integer
-*   Float
-*   DateTime
-*   String
-*   Object
+* Void
+* Boolean
+* Integer
+* Float
+* DateTime
+* String
+* Object
 
 ### 5.2.8 Nanoflow
 
 The Nanoflow property allows a user to select a nanoflow in the Mendix Modeler. There are three options:
 
-1.  If needsEntityContext is set to "true", the selected nanoflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
-2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the nanoflow will have no input parameters.
-3.  If the entityProperty attribute is specified, the selected nanoflow is required to have this entity as an input parameter.
+1. If needsEntityContext is set to "true", the selected nanoflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
+2. If needsEntityContext is set to false and no entityProperty attribute is specified, the nanoflow will have no input parameters.
+3. If the entityProperty attribute is specified, the selected nanoflow is required to have this entity as an input parameter.
 
 ```xml
 <property key="validationNanoflow" type="nanoflow" required="false" needsEntityContext="true">
@@ -273,13 +274,13 @@ The Nanoflow property has an extra required child element: returnType. Use this 
 
 Possible return types:
 
-*   Void
-*   Boolean
-*   Integer
-*   Float
-*   DateTime
-*   String
-*   Object
+* Void
+* Boolean
+* Integer
+* Float
+* DateTime
+* String
+* Object
 
 ### 5.2.9 Object
 
@@ -348,4 +349,4 @@ Remember to use the correct language notation according to the [Java supported l
 
 ## 6 Read More
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/)
+* [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/)

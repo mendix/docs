@@ -1,5 +1,5 @@
 ---
-title: "LTS, MTS & Monthly Releases"
+title: "LTS, MTS, and Monthly Releases"
 url: /releasenotes/studio-pro/lts-mts/
 category: "Studio Pro"
 weight: 1
@@ -9,22 +9,43 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To define different types of versions and releases, consider the example of [8.18.1](/releasenotes/studio-pro/8.18/#8181):
+To understand the different types of versions and releases, consider the example of Studio Pro version  [8.18.1](/releasenotes/studio-pro/8.18/#8181) and see the sections below.
 
-* **8** – the first number in a release indicates the major version
-	* A major version is generally released every 18 months (please note we reserve the right to change this timeline with a minimum of 12 months for each major release and a maximum of 24 months)
-	* Includes new features and fixes
-	* Can include breaking changes
-	* In relation to our SLA and to clarify our current offering, today Mendix supports major versions 7, 8, and 9
-		* Once version 10 has been released, suppport on version 7 will end
-* **18** – the second number in a release indicates the minor version 
-	* A minor version is generally released every month
-	* Includes new features and fixes
-	* Does not include breaking changes
-* <a name="patch"></a>**1** – the third number in a release indicates the patch version 
-	* A patch version is released on an as-needed basis
-	* Includes security fixes and critical bug fixes
-	* Does not include new features or breaking changes
+### 1.1 Major Version {#major-version}
+
+In the 8.18.1 example, the first number (**8**) indicates the major version.
+
+Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 7, 8, and 9. Once version 10 has been released, version 7 will only be supported via the Extended Support product.
+
+As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two Public Beta releases.
+
+For Mendix 10 and 11, we are planning to follow this release timeline:
+
+| Release | Date |
+| --- | --- |
+| 9.24 LTS | March 2023 |
+| 10 Public Beta 1 | April 2023 |
+| 10 Public Beta 2 | May 2023 |
+| 10.0 GA | June 2023 |
+| 10.6 MTS | December 2023 |
+| 10.12 MTS | June 2024 |
+| 10.18 MTS | December 2024 |
+| 10.21 LTS | March 2025 |
+| 11 Public Beta 1 | April 2025 |
+| 11 Public Beta 2 | May 2025 |
+| 11.0 GA | June 2025 |
+
+### 1.2 Minor Version
+
+In the 8.18.1 example, the second number (**18**) indicates the minor version. 
+
+A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
+
+### 1.3 Patch Version
+
+In the 8.18.1 example, the third number (**1**) indicates the patch version. 
+
+A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes.
 
 ## 2 Long-Term Support Version (LTS) {#lts}
 
@@ -32,22 +53,26 @@ An LTS version is the latest minor version before a new major version is release
 
 These are the current LTS versions of Studio Pro:
 
-* [8.18](/releasenotes/studio-pro/8.18/) (started in March 2021)
-* [7.23](/releasenotes/studio-pro/7.23/) (started in February 2019)
+* [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
+* [7.23](/releasenotes/studio-pro/7.23/) (started in February, 2019)
 
 Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
 ### 2.1 Support Duration
 
-Support for an LTS version ends when a third consecutive major version is released for General Availability (for example, support on version 6 has ended with the GA release of version 9).
+Support for an LTS version ends when a third consecutive major version is released for General Availability (for example, support on version 6 ended with the GA release of version 9).
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
 {{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" >}}
 
+{{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
+
 ### 2.2 Release Cycle
 
-There are no regular releases for an LTS, as they only start with the release of a new higher major version for General Availability. There will only be [patch](#patch) releases for an LTS on an as-needed basis.
+An LTS starts with the release of a new higher major version for General Availability. For a description of Mendix’s major release cadence, see the [Major Version](#major-version) section above.
+
+For an LTS version, there will only be [patch](#patch) releases on an as-needed basis.
 
 ### 2.3 Support with Patch Releases
 
@@ -61,9 +86,15 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 An MTS is a minor version released approximately every 6 months after a new major version release for General Availability.
 
-This is the current MTS version for Studio Pro:
+These are the current MTS versions for Studio Pro:
 
-* [9.6](/releasenotes/studio-pro/9.6/) (started in September 2021)
+* [9.18](/releasenotes/studio-pro/9.18/) (started in September, 2022)
+* [9.12](/releasenotes/studio-pro/9.12/) (started in March, 2022)
+* [9.6](/releasenotes/studio-pro/9.6/) (started in September, 2021)
+
+{{% alert color="info" %}}
+Older MTS versions (for example, 9.6) remain supported until the next LTS version has been released.
+{{% /alert %}}
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
 
@@ -83,7 +114,7 @@ For the support duration, the MTS will receive patch releases only.
 
 The impact of upgrading between MTS versions is higher than upgrading between LTS versions. That is because an MTS has a shorter support duration than an LTS, which means it has less time to become as stable as an LTS version. In addition, the upgrade has to be done approximately every six months.
 
-## 4 Monthly Release Version
+## 4 Monthly Release Version {#patch}
 
 A monthly release is a a non-MTS/LTS minor release that only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release.
 
@@ -115,4 +146,4 @@ The "end of support" for a version means that fixes, updates, investigating, tro
 
 If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you stop using that version and move to a newer LTS version that is supported. 
 
-Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended.
+Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended unless you have purchased the [Extended Support](/developerportal/support/#extended-support) product.

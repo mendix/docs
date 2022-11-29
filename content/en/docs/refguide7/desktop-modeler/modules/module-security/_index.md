@@ -1,7 +1,6 @@
 ---
 title: "Module Security"
 url: /refguide7/module-security/
-parent: "modules"
 ---
 
 ## 1 Introduction

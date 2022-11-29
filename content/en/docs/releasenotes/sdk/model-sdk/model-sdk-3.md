@@ -1,7 +1,7 @@
 ---
 title: "3"
 url: /releasenotes/sdk/model-sdk-3/
-parent: "model-sdk"
+weight: 98
 ---
 
 ## 3.3.0
@@ -61,9 +61,9 @@ Note: impact = low means "some code might work now".
 
 Note: impact = low means "some code might work now".
 
-Add "deleting model units": You do this by using `splice` on the container of a model unit; for example,:
+Add "deleting model units": You do this by using `splice` on the container of a model unit; for example,:
 
-```
+```text
 const deleteIndex = page.container.documents.indexOf(page);
 page.container.documents.splice(deleteIndex, 1);
 ```

@@ -1,7 +1,7 @@
 ---
 title: "8.6"
 url: /releasenotes/sdk/metamodel-8.6/
-parent: "metamodel-8"
+weight: 95
 ---
 
 ## 8.6.0
@@ -15,7 +15,7 @@ parent: "metamodel-8"
 * We deleted the `template` property. Use `TypedTemplate` instead.
 * We introduced the `typedTemplate` property.
 
-#### TypedTemplate, TypedTemplateArgument & PrimitiveTypedTemplateArgument (Elements)
+#### TypedTemplate, TypedTemplateArgument, and PrimitiveTypedTemplateArgument (Elements)
 
 * We introduced these elements.
 

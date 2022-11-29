@@ -1,7 +1,6 @@
 ---
 title: "Relational Expressions"
 url: /refguide/relational-expressions/
-parent: "expressions"
 weight: 30
 description: "Describes relational expressions in Mendix."
 tags: ["studio pro", "relational expression", "expressions"]
@@ -41,15 +40,16 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 4<3
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 False
 ```
+
 ## 3 Greater Than ( > )
 
 This expression determines whether the first value is greater than the second value.
@@ -67,6 +67,9 @@ Possible values are described in the table below:
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
+{{% alert color="warning" %}}
+An error is raised if at least one value is `empty`.
+{{% /alert %}}
 
 ### 3.3 Output
 
@@ -80,15 +83,16 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 4>3
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 True
 ```
+
 ## 4 Less Than or Equal To ( <= )
 
 This expression determines whether the first value is less than or equal to the second value.
@@ -106,6 +110,9 @@ Possible values are described in the table below:
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
+{{% alert color="warning" %}}
+An error is raised if at least one value is `empty`.
+{{% /alert %}}
 
 ### 4.2 Output
 
@@ -121,25 +128,25 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     6<=3
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     False
     ```
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     3<=3
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     True
     ```
 
@@ -160,6 +167,9 @@ Possible values are described in the table below:
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
+{{% alert color="warning" %}}
+An error is raised if at least one value is `empty`.
+{{% /alert %}}
 
 ### 5.2 Output
 
@@ -173,13 +183,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 4>=3
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 True
 ```
 
@@ -201,6 +211,9 @@ Possible values are described in the table below:
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
+{{% alert color="info" %}}
+A comparison with an empty value evaluates as `true` if and only if the other value is `empty` or is an empty list.
+{{% /alert %}}
 
 ### 6.2 Output
 
@@ -216,25 +229,25 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     "mystring" = "myotherstring"
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     False
     ```
 
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     dateTime(2007) = dateTime(2007)
     ```
 
     the output is:
 
-    ```java
+    ```java {linenos=false}
     True
     ```
 
@@ -258,6 +271,9 @@ Possible values are described in the table below:
 {{% alert color="info" %}}
 The two values should be in the same category (for example, if one is numeric, the other should be numeric too).
 {{% /alert %}}
+{{% alert color="info" %}}
+A comparison with an empty value evaluates as `true` if and only if the other value is `empty` or is an empty list.
+{{% /alert %}}
 
 ### 7.2 Output 
 
@@ -271,12 +287,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 "mystring" != "mystring"
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 False
 ```

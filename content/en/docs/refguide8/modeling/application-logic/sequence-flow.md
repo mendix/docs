@@ -1,7 +1,6 @@
 ---
 title: "Sequence Flow"
 url: /refguide8/sequence-flow/
-parent: "application-logic"
 weight: 30
 tags: ["studio pro", "sequence flow", "microflow"]
 ---

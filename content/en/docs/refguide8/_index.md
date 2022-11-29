@@ -5,10 +5,12 @@ description: "The various sections of the Mendix Studio Pro Guide provide detail
 tags: ["studio pro"]
 weight: 60
 no_list: false
+description_list: true
 cascade:
     - space: "Studio Pro 8 Guide"
     - mendix_version: "8"
     - old_content: true
+    - hide_feedback: true
     - sitemap:
         priority: 0.4
 ---
@@ -21,7 +23,7 @@ Before installing Studio Pro 8, please read [System Requirements](/refguide8/sys
 
 If you have been using Desktop Modeler version 7, we recommend reading [Moving from Desktop Modeler Version 7 to Studio Pro Version 8](/refguide8/moving-from-7-to-8/).
 
-If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 8 How-to's](/howto8/).
+If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 8 How-tos](/howto8/).
 
 ## 2 Studio Pro Functionality
 
@@ -56,6 +58,3 @@ Mobile app development allows you to create native mobile and hybrid apps and an
 ## 6 Guide Categories
 
 The *Studio Pro 8 Guide* is divided into the following categories:
-
-
-

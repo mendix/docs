@@ -1,7 +1,6 @@
 ---
 title: "Build Hybrid Apps "
 url: /howto8/mobile/build-hybrid-apps/
-parent: "hybrid-mobile"
 weight: 2
 tags: ["mobile", "hybrid"]
 ---
@@ -20,4 +19,3 @@ The documents in this section focus on publishing hybrid apps in the Apple and G
 
 * [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
-

@@ -1,7 +1,6 @@
 ---
 title: "Getting the Mendix Developer App"
 url: /refguide7/getting-the-mendix-app/
-parent: "developing-hybrid-mobile-apps"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 The **Mendix Developer App** is a free mobile App that allows you to test the apps you develop with Mendix on your device.

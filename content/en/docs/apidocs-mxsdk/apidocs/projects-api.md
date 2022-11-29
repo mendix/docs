@@ -40,7 +40,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectName | String | Name of the project. May not be blank or contain any of the following characters: `<>:/\|?*` |
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
-| ApiKey | String | An [API Key](/apidocs-mxsdk/apidocs/authentication/) associated to the user account of _User_. |
+| ApiKey | String | An [API Key](/apidocs-mxsdk/apidocs/authentication/) associated to the user account of *User*. |
 | TemplateUUID (can be `empty`) | String | The [UUID](/appstore/general/app-store-overview/#usage) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
 
 #### 3.1.2 Output
@@ -89,9 +89,9 @@ The DeleteApp operation will remove an application, including all resources that
 
 #### 3.3.1 Parameters
 
-| Name | Type |	Description |
+| Name | Type | Description |
 | --- | --- | --- |
-| ProjectID |	String | ID of the project/app, as can be found under the app settings. |
+| ProjectID | String | ID of the project/app, as can be found under the app settings. |
 | User | String | The email address you use to log into your Mendix account.|
 | ApiKey | String | An API Key associated to the user account of the User.|
 

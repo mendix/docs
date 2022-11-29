@@ -1,0 +1,7 @@
+{{ if not .Params.notoc }}
+{{ with .TableOfContents }}
+{{ if ge (len .) 200 }}
+<div class="td-toc container-fluid overflow-auto">{{ . }}</div><!-- NK - added overflow-auto for scrolling -->
+{{ end }}
+{{ end }}
+{{ end }}

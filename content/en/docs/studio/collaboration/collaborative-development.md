@@ -14,11 +14,9 @@ aliases:
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-
 Collaborative development is only available if your app has Mendix version 7.23.3 or above. You cannot sync your changes with Studio Pro if your app has Mendix version 7.23.2 or below. 
 
 You will still be able to open your app in Studio. However, to sync changes between Studio and Studio Pro, Studio Pro must be upgraded to version 7.23.3 or above. 
-
 {{% /alert %}}
 
 Collaborative development is the process that allows team members work together on one app in Mendix Studio Pro and Mendix Studio and easily synchronize changes made by others using [version control](/refguide/version-control/). 
@@ -39,23 +37,21 @@ As all Studio changes are auto-saved, the collaborative development is indicated
 
     {{< figure src="/attachments/studio/collaboration/collaborative-development/committing-changes.png" alt="Committing Changes Dialog Box"   width="350"  >}}
 
-2.  **Syncing Changes** – your screen gets locked for a few moments each time the Studio Pro users commit. <br/>
+2. **Syncing Changes** – your screen gets locked for a few moments each time the Studio Pro users commit. <br/>
 
     {{< figure src="/attachments/studio/collaboration/collaborative-development/synching-changes.png" alt="Synching Changes Dialog Box"   width="350"  >}}
 
     There are two possible outcomes of this process:<br/>
 
-    a.  In Studio Pro, there are no conflicts in the app, and changes from Studio Pro will be applied to Studio. (Conflicts are changes that contradict each other and cannot be merged automatically. For example, one user has changed a caption of a button, while another user has deleted this button).
+    1. In Studio Pro, there are no conflicts in the app, and changes from Studio Pro will be applied to Studio. (Conflicts are changes that contradict each other and cannot be merged automatically. For example, one user has changed a caption of a button, while another user has deleted this button).
+    1. There are app conflicts which should be solved in Studio Pro before the Studio Pro user can commit again. Your screen is unlocked without any changes to your app.
 
-    b.  There are app conflicts which should be solved in Studio Pro before the Studio Pro user can commit again. Your screen is unlocked without any changes to your app.  
+3. **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information, see the [Managing Studio on Development Lines](/refguide/collaborative-development/#managing-studio) section in the *Collaborative Development* in the *Studio Pro Guide*. 
+    During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 
 
-3.  **Switching Contents** – in Studio Pro, users can change the branch line Studio is enabled for. For more information, see the [Managing Studio on Development Lines](/refguide/collaborative-development/#managing-studio) section in the *Collaborative Development* in the *Studio Pro Guide*. 
-	During this process Studio gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Studio Pro user is changing the branch line for Studio. This means that the contents of your app will change. 
-
-	{{< figure src="/attachments/studio/collaboration/collaborative-development/switching-branches.png" alt="Switching Contents Dialog Box"   width="350"  >}}
+    {{< figure src="/attachments/studio/collaboration/collaborative-development/switching-branches.png" alt="Switching Contents Dialog Box"   width="350"  >}}
 
 ## 4 Read More
 
 * [Version Control](/refguide/version-control/)
 * [Collaborative Development](/refguide/collaborative-development/)
-

@@ -19,7 +19,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Un
 * [Set Up Hybrid Push Notifications](/howto8/mobile/setting-up-hybrid-push-notifications/)
 * [Include Push Notifications](/howto8/mobile/push-notifications/)
 * [Configure the Mendix Feedback Widget for iOS](/howto8/mobile/feedback-widget-ios/)
-* [Implement SSO on a Hybrid App with Mendix & SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/)
+* [Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/)
 * [Debug a Hybrid Mobile App](/howto8/mobile/debug-a-mobile-app/)
 * [Deploy Your First Hybrid Mobile App](/howto8/mobile/deploy-your-first-hybrid-mobile-app/)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)

@@ -1,7 +1,6 @@
 ---
 title: "Object Activities"
 url: /refguide8/object-activities/
-parent: "activities"
 weight: 10
 tags: ["studio pro", "microflow", "object"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
@@ -24,17 +23,11 @@ The activities described in this document are in the **Object Activities** secti
 The following are the object activities you can use in your microflow or nanoflow:
 
 * [Cast object](/refguide8/cast-object/) *(only in microflows)* – changes the type of object from a generalized object type to the specialized object type
-
 * [Change object](/refguide8/change-object/) – changes the members of an object
-
 * [Commit objects(s)](/refguide8/committing-objects/) – either stores objects of persistable entities in the database or stores objects of non-persistable entities in memory to allow them to be rolled back
-
 * [Create object](/refguide8/create-object/) – creates an object
-
 * [Delete object(s)](/refguide8/deleting-objects/) *(only in microflows)* – activity deletes one or more objects
-
 * [Retrieve](/refguide8/retrieve/) – gets one or more objects of an entity
-
 * [Rollback object](/refguide8/rollback-object/) – undoes uncommitted changes made to an object
 
 ## 2 Read More

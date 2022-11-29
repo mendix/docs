@@ -76,41 +76,40 @@ To create a new filter, do the following:
     To add a filter to a *page*, open properties of a list view or a data grid).
 
 2. Make sure the database is selected as the data source and that an entity is selected.
-
-2. Click the **Filter** field.
+3. Click the **Filter** field.
 
     {{< figure src="/attachments/studio8/work-with-data/data-filters/filter-field.png"   width="300"  >}}
 
-3. In the **Add Filter** dialog box, specify the attribute/association on the left first, as operators depend on the type of attribute that you have chosen. For example, if you choose *Date and Time* attribute type, you will be able to select the **in same quarter as** operator, while this operator is unavailable for other attribute types. 
+4. In the **Add Filter** dialog box, specify the attribute/association on the left first, as operators depend on the type of attribute that you have chosen. For example, if you choose *Date and Time* attribute type, you will be able to select the **in same quarter as** operator, while this operator is unavailable for other attribute types. 
 
     {{< figure src="/attachments/studio8/work-with-data/data-filters/in-same-quarter-as-operator-example.png" >}}
 
-4. Select an operator and a value on the right. 
+5. Select an operator and a value on the right. 
 
     The value on the right can be a literal value that you type in (only available for string, long, integer, decimal, and autonumber attribute types), or it can be an attribute, association, or value you choose from the drop-down list. The options in the drop-down list depend on the left attribute/association. 
 
     {{< figure src="/attachments/studio8/work-with-data/data-filters/list-of-options.png" >}}
 
-5. To add more conditions and manage them, do the following: <br/>
+6. To add more conditions and manage them, do the following: <br/>
 
-    a. Click **Add new condition**. <br/>
+    1. Click **Add new condition**. <br/>
 
-    {{< figure src="/attachments/studio8/work-with-data/data-filters/add-new-condition.png" >}}<br/>
+        {{< figure src="/attachments/studio8/work-with-data/data-filters/add-new-condition.png" >}}<br/>
 
-    b. If needed, change the `and` operator to `or` operator clicking the drop-down arrow. <br/>
-    c.  If you want to change the order of conditions, click the icon on the left (appears when you hover over it) and drag it.<br/>
+    1. If needed, change the `and` operator to `or` operator clicking the drop-down arrow. <br/>
+    1. If you want to change the order of conditions, click the icon on the left (appears when you hover over it) and drag it.<br/>
 
-    {{< figure src="/attachments/studio8/work-with-data/data-filters/change-order.png" >}}<br/>
+        {{< figure src="/attachments/studio8/work-with-data/data-filters/change-order.png" >}}<br/>
 
-6. To create a new group and manage it, do the following: <br/>
+7. To create a new group and manage it, do the following: <br/>
 
-    a.  Hover over the bottom of the dialog-box and click **Create a New Group** that appears there.<br/>
+    1. Hover over the bottom of the dialog-box and click **Create a New Group** that appears there.<br/>
 
-    {{< figure src="/attachments/studio8/work-with-data/data-filters/create-new-group.png" >}}<br/>
+        {{< figure src="/attachments/studio8/work-with-data/data-filters/create-new-group.png" >}}<br/>
 
-    b. To change the `and` operator applied to groups to `or` operator, click the drop-down arrow. 
+    2. To change the `and` operator applied to groups to `or` operator, click the drop-down arrow. 
 
-7. Click **Add** to save the filter.
+8. Click **Add** to save the filter.
 
 The new filter is added. In the properties, you can see the total amount of conditions in the filter.
 
@@ -123,7 +122,6 @@ To delete a filter, do the following:
     In a *page*, navigate to properties of a list view or a data grid.
 
 2. Click the **Filter** field.
-
 3. In the **Edit Filter** dialog box, click **Clear**. 
 
     {{< figure src="/attachments/studio8/work-with-data/data-filters/clear-filter.png" >}}

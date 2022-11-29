@@ -27,21 +27,21 @@ To do this, start your app on the database you would like to copy the data to. T
 
 The most commonly used custom settings for database migration are:
 
-*   SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
-*   SourceDatabaseHost
-*   SourceDatabaseName
-*   SourceDatabaseUserName
-*   SourceDatabasePassword
+* SourceDatabaseType (HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER)
+* SourceDatabaseHost
+* SourceDatabaseName
+* SourceDatabaseUserName
+* SourceDatabasePassword
 
 For more information on the full list of available settings, see [Runtime Customization](/refguide8/custom-settings/).
 
 These settings can be configured as follows:
 
-*  Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
+* Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
     {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398970.png" >}} 
 
-*  Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
+* Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
     {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398971.png" >}} 
 
@@ -66,11 +66,8 @@ You can configure Studio Pro to use a PostgreSQL database instead of the inbuilt
 To do this, perform the following steps:
 
 1. Open your **Project '…'** > **Settings**.
-
 2. Click **New** to add a new configuration from the **Configurations** tab.
-
 3. Give your configuration a new **Name**.
-
 4. On the **Database** tab, set the following values:
     * **Type** – **PostgreSQL**
     * **Database name** – *default*
@@ -130,7 +127,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
 
 To do this, perform the following steps:
 
-1. Sign in to the SAP BTP Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
+1. Sign in to the SAP BTP, Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
 2. Get the PostgreSQL service instance details from the environment variables of the application using the following command:
 
     `cf env {application-name}`
@@ -142,13 +139,13 @@ To do this, perform the following steps:
     * `port` – `{port}`
     * `username` – `{username}`
 
-     as shown in the highlighted image below:
-    
+    as shown in the highlighted image below:
+
     {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/sap-postgres-config.png" >}}
 
 4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
 5. Deploy the mda, but **do not start the application**.
-6. Sign in to the SAP BTP Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
+6. Sign in to the SAP BTP, Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
 7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
 
     ```bash

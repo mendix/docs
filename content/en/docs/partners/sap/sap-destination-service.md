@@ -160,11 +160,11 @@ The attributes in the **Destination** entity which are used for *Principal Propo
 
 ## 6 Good Practice
 
-### 6.1	Destination Name
+### 6.1 Destination Name
 
 The destination name should be recorded in a constant so that it is the same everywhere that it is used. This also means that it can be changed in all places at once.
 
-### 6.2	Get Destination
+### 6.2 Get Destination
 
 You need to get the destination at least once before you perform any actions which use it.
 
@@ -176,7 +176,7 @@ If your access token has expired, you will get a return code of **401**. The acc
 
 If the **Get Destination** action returns a different error, or signing in again does not solve the issue, then continue testing for other possible causes.
 
-### 6.3	Deploying Locally
+### 6.3 Deploying Locally
 
 The SAP Destination Service does not support running on a local machine. Your app must be deployed to SAP BTP to get the destination.
 
@@ -188,23 +188,23 @@ When you use OData Connector for SAP solutions actions, you often have to provid
 
 With the SAP Destination Service, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that you will also need to start the query with the COLLECTIONNAME in the case where the URL is obtained from the object metadata or *Deferred* attribute. See [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/) for more details.
 
-## 7	Troubleshooting
+## 7 Troubleshooting
 
-### 7.1	Failure to Get Destination
+### 7.1 Failure to Get Destination
 
 If *Get Destination* fails, check the following:
 
-*	The destination name is exactly as shown in the destinations page of your subaccount on SAP BTP
-*	The user accessing the Mendix App is also authenticated on the service you are trying to use. The usernames (email addresses) must be the same.
-*	That the destination has been set up correctly in the SAP BTP cockpit.
+* The destination name is exactly as shown in the destinations page of your subaccount on SAP BTP
+* The user accessing the Mendix App is also authenticated on the service you are trying to use. The usernames (email addresses) must be the same.
+* That the destination has been set up correctly in the SAP BTP cockpit.
 
 Remember that the SAP Destination Service will only work when deployed to SAP BTP, with users who are authenticated using an Identity Provider configured through SAP and XSUAA.
 
-### 7.2	Unexpected Results in App
+### 7.2 Unexpected Results in App
 
 Ensure that the user accessing the Mendix App has the required level of access on the service you are trying to use. They must be able to access all the data which your app is expecting.
 
-## 8	Read More
+## 8 Read More
 
 * [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector/)
 * [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector/)

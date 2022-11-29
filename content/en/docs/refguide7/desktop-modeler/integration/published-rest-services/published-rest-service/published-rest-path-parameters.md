@@ -1,7 +1,6 @@
 ---
 title: "Published REST Path Parameters"
 url: /refguide7/published-rest-path-parameters/
-parent: "published-rest-service"
 weight: 30
 #description: " "
 tags: ["published REST", "path parameters", "Data and Time"]

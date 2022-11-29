@@ -1,7 +1,6 @@
 ---
 title: "Create Variable"
 url: /refguide/create-variable/
-parent: "variable-activities"
 tags: ["studio pro", "create variable", "variable", "variable activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

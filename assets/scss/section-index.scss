@@ -1,0 +1,18 @@
+.section-index {
+
+    .entry {
+        padding: 0; // NK - removes padding around entry div
+    }
+
+    h5 {
+        margin-bottom: 0;
+
+        a {
+            font-weight: 700;
+        }
+    }
+
+    p {
+        margin-top: 0;
+    }
+}

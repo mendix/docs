@@ -1,7 +1,6 @@
 ---
 title: "Performance Tool Results"
 url: /addons/apd-addon/rg-one-performance-tool-results/
-parent: "rg-one-performance-tool"
 ---
 The performance tool results are saved per session. The session name can be changed in the top right corner of the screen via the **Rename** button. Next to this is the **Show filter** button, which will open a dialog box that will show the used filter when recording this session. The session results are displayed in a search grid with the ability to search the fields that are stored with a "microflow performance" record. By default, the grid only shows main microflows (Main? = Yes). These are microflows that were not called by other microflows during recording. By default the list is sorted according to duration. 
 

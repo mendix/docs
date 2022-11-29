@@ -1,7 +1,6 @@
 ---
 title: "XPath Hours-from-DateTime"
 url: /refguide/xpath-hours-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 
@@ -13,6 +12,6 @@ The `hours-from-dateTime()` function extracts the hours value from a **Date and 
 
 This query returns all the logs where the hours part of `DateAttribute` is 8 (for example, "2011-12-30 08:00:00"):
 
-```java
+```java {linenos=false}
 //Logging.Log[hours-from-dateTime(DateAttribute) = 8]
 ```

@@ -1,7 +1,6 @@
 ---
 title: "Manipulate Existing Models"
 url: /apidocs-mxsdk/mxsdk/manipulating-existing-models/
-parent: "sdk-howtos"
 weight: 40
 ---
 

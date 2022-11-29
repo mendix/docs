@@ -1,7 +1,6 @@
 ---
 title: "Import Project Package"
 url: /refguide7/import-project-package-dialog/
-parent: "dialogs"
 ---
 
 ## 1 Introduction
@@ -61,4 +60,3 @@ In the **Project directory** field, specify the directory where the project file
 ## 4 Read More
 
 * [Export Project Package](/refguide7/export-project-package-dialog/)
-

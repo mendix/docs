@@ -1,7 +1,6 @@
 ---
 title: "Migrate Existing Apps to Atlas UI"
 url: /howto8/front-end/migrate-existing-projects-to-atlasui/
-parent: "atlas-ui"
 weight: 20
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
@@ -10,7 +9,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Atlas UI and Mendix Studio bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI and Studio, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix projects to Atlas UI.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Prepare your app for Atlas UI
 * Replace the UI Framework module
@@ -25,7 +24,7 @@ To replace the UI Framework, follow these steps:
 
 1. Delete the **UI_Resources** module.
 2. Download and import the [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) module from the Mendix Marketplace.
-3.  When the Atlas UI Resources module is downloaded from the Mendix Marketplace, it will be found in **App Store modules**:
+3. When the Atlas UI Resources module is downloaded from the Mendix Marketplace, it will be found in **App Store modules**:
 
     {{< figure src="/attachments/howto8/front-end/atlas-ui/migrate-existing-projects-to-atlasui/migrate_dm_appstore.png" >}}
 
@@ -57,7 +56,7 @@ A lot of Mendix projects have a custom theme. If this is the case for your proje
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)
-* [Create Custom Preview Images for Building Blocks & Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
+* [Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [Share Company Atlas UI Resources](/howto8/front-end/share-company-atlas-ui-resources/)
 * [Troubleshooting Atlas UI Changes](/refguide8/migration-atlas/)

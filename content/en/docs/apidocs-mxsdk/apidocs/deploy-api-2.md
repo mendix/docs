@@ -40,9 +40,9 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/packages/upload?name=<Package
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app
-*   _PackageName_ (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
-*   _file_ (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
+* *AppId* (String): Subdomain name of an app
+* *PackageName* (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
+* *file* (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
 **Example Request**
 
@@ -64,6 +64,7 @@ Content-Disposition: form-data;
 ```
 
 Curl example:
+
 ```bash
 curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/v2/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
 ```
@@ -99,8 +100,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/jobs/<JobId>
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app
-*   _JobID_ (String): the ID of a job which was triggered by a previous API call
+* *AppId* (String): Subdomain name of an app
+* *JobID* (String): the ID of a job which was triggered by a previous API call
 
 **Example Request**
 

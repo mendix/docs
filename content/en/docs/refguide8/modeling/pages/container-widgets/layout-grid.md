@@ -1,7 +1,6 @@
 ---
 title: "Layout Grid"
 url: /refguide8/layout-grid/
-parent: "container-widgets"
 weight: 10
 tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid", "layout"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -20,11 +19,9 @@ A layout grid consists of [rows](#rows) and [columns](#columns): {{< figure src=
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
 
 {{% alert color="info" %}}
-
 Row and column properties described below are available if your project has [Mendix version 8.5.1](/releasenotes/studio-pro/8.5/) or above  and [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 
 
 For more information on row and column properties, see the [Rows and Their Properties](#rows) and [Columns and Their Properties](#columns) sections. 
-
 {{% /alert %}}
 
 ## 2 Layout Grid Properties
@@ -60,9 +57,7 @@ The **General** section contains the **Width** property, which determines the wi
 | Fixed width | The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in Studio Pro but is determined by Bootstrap. |
 
 {{% alert color="warning" %}}
-
 As the layout grid responds to the viewport width, and not to the width of its container, a fixed width layout grid should only be used on top-level.
-
 {{% /alert %}}
 
 ### 2.4 Visibility Section {#visibility}
@@ -95,13 +90,10 @@ The **General** section of a row contains the following properties:
 
 * **Align columns vertically** – this property aligns all columns in a row vertically. You can select the following options:
 
-  * **Not set** – alignment is not set
-
-  * **Top** – columns are aligned to the top of the layout grid
-
-  * **Center** – columns are aligned to the center of the layout grid
-
-  * **Bottom** – columns are aligned to the bottom of the layout grid
+    * **Not set** – alignment is not set
+    * **Top** – columns are aligned to the top of the layout grid
+    * **Center** – columns are aligned to the center of the layout grid
+    * **Bottom** – columns are aligned to the bottom of the layout grid
 
 {{% alert color="info" %}}This setting can be overridden by the **Align vertically** setting of an individual column.
 {{% /alert %}}
@@ -116,7 +108,7 @@ The **General** section of a row contains the following properties:
 
 Columns form a row of a layout grid.  
 
- An example of layout grid column properties is represented in the image below:
+An example of layout grid column properties is represented in the image below:
 
 {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/layout-grid/column-properties.png" alt="Column Properties"   width="300"  >}}
 
@@ -155,7 +147,7 @@ For the *desktop* and *tablet*, you might want to set the first column with a pi
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12* (for more information on the column size property, see the [Size](#column-size) section). In this case, the second column will be automatically wrapped to another line:
 
- {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/layout-grid/layout-example-phone.png" alt="Layout Example, Phone"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/layout-grid/layout-example-phone.png" alt="Layout Example, Phone"   width="300"  >}}
 
 On the picture below you can see the settings for two column described above:
 
@@ -178,7 +170,6 @@ The **Align vertically** property overrides the **Align columns vertically** pro
 To add a new row, do the following:
 
 1. Select an existing row in a layout grid.
-
 2. Right-click and select **Insert row above** or **Insert row below**:
 
     {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/layout-grid/adding-row.png" alt="Adding a New Row" >}}

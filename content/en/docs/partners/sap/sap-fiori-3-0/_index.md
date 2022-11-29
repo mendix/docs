@@ -19,7 +19,9 @@ The SAP Fiori user experience creates a consistent UI across SAP products. SAP F
 
 The Mendix module gives you access to designing your pages with SAP Fiori-styled widgets and building blocks as part of your layout. You can also allow end-users to select a theme and apply it immediately. The module supports SAP Quartz Light and Dark themes.
 
-You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app, or by including the [SAP Fiori 3 UI Resources](https://marketplace.mendix.com/link/component/116359) module in your app.
+You can experience the SAP Fiori 3 design by using the [SAP Fiori 3 Starter App](https://marketplace.mendix.com/link/component/116366) as the basis for a new app.
+
+Alternatively, you can include the [SAP Fiori 3 UI Resources](https://marketplace.mendix.com/link/component/116359) module in your existing app. See [Add Fiori to Your App](#add-fiori), below, for instructions on how to do this.
 
 More information on using SAP Fiori 3 design in your Mendix app is available in the following sections:
 
@@ -39,7 +41,7 @@ Some SAP Fiori components are not yet supported by Mendix core widgets. These ar
 
 ### 2.1 Examples of Mendix Core Widget Styling
 
-You can see examples of the Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources Marketplace Module.
+You can see examples of the SAP Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources Marketplace Module.
 
 Most widgets work the same way as they do in other Mendix styles based on Atlas UI, but there are some changes which are listed in the sections below.
 
@@ -119,16 +121,16 @@ In addition, there are some limitations on supporting other components:
 
 ## 3 Building Blocks{#building-blocks}
 
-You can see examples of the Fiori 3 building blocks by going to the **Building Blocks** page of the SAP Fiori 3 UI Resources Marketplace Module. The building blocks are categorized by type.
+You can see examples of the SAP Fiori 3 building blocks by going to the **Building Blocks** page of the SAP Fiori 3 UI Resources Marketplace Module. The building blocks are categorized by type.
 
 ## 4 Layouts{#layouts}
 
-You can see examples of the Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources Marketplace Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
+You can see examples of the SAP Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources Marketplace Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
 
 The guidelines for the use of each layout are:
 
 * Use the **PopupLayout** to create a page which appears in front of the existing page.
-* Use the **SAP_Launchpad** layout when you want to create a SAP Fiori launchpad. See [SAP Fiori Launchpad – Overview](https://experience.sap.com/fiori-design-web/launchpad/) on the *SAP Fiori Design Guidelines* site for more information.
+* Use the **SAP_Launchpad** layout when you want to create an SAP Fiori launchpad. See [SAP Fiori Launchpad – Overview](https://experience.sap.com/fiori-design-web/launchpad/) on the *SAP Fiori Design Guidelines* site for more information.
 * Use a *Default* layout to display information in a single panel.
 * Use a *MasterDetail* layout to display information in two panels side-by-side such as an *Order* with multiple *Order Lines*.
 * Use a *Sliding* layout to display dynamic side content. See [Dynamic Side Content](https://experience.sap.com/fiori-design-web/dynamic-side-content/) on the *SAP Fiori Design Guidelines* site for more information.
@@ -167,7 +169,6 @@ The themes available are:
 * **belize**
 * **belizeDeep**
 
-
 ## 7 Demo Apps
 
 The [SAP Fiori 3 Demo app](https://marketplace.mendix.com/link/component/116787) Marketplace module contains a number of different skeleton apps which you can review or copy to use as the basis for your own apps.
@@ -179,3 +180,14 @@ The demo apps are:
 * Manage Products – a list of products which demonstrates the use of the count badge and navigation to see the product details
 * Bulletin Board – a list of items with navigation to see the details of each item
 * Shopping Cart Master Slider – the same as the Shopping Cart demo but using dynamic side content
+
+## 8 Add Fiori to Your App{#add-fiori}
+
+If you want to include the SAP Fiori 3 UI Resources in an existing app perform the following steps:
+
+1. Ensure that your app is using Mendix version 9.6.11 or above. 
+2. [Import](/appstore/general/app-store-content/) the  [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module into your app.
+3. Import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module into your app if it is not already there. Atlas Core must be version 3.2.2 or above.
+4. Look in the **Theme** tab of the app settings. This must contain the `SAP_3_0_UI_Resources` module below the `Atlas_Core` module.
+
+    {{< figure src="/attachments/partners/sap/sap-fiori-3-0/theme-order.png"  width="617px"  >}}

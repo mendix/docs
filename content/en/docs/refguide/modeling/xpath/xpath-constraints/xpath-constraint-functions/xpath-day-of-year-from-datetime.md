@@ -1,7 +1,6 @@
 ---
 title: "XPath Day-of-Year-from-DateTime"
 url: /refguide/xpath-day-of-year-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 
@@ -13,6 +12,6 @@ The `day-of-year-from-dateTime()` function extracts the day in the year from a *
 
 This query returns all the logs where the day in the year in `DateAttribute` is 30 (for example, "2011-01-30" and "2012-01-30"):
 
-```java
+```java {linenos=false}
 //Logging.Log[day-of-year-from-dateTime(DateAttribute) = 30]
 ```

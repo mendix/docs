@@ -1,7 +1,7 @@
 ---
 title: "Build JavaScript Actions: Part 1 (Basic)"
+linktitle: "1. Build JavaScript Actions"
 url: /howto8/extensibility/write-javascript-actions/
-parent: "build-javascript-actions"
 weight: 10
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
@@ -11,7 +11,7 @@ tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScrip
 
 Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide8/java-actions/), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a JavaScript action
 * Configure input and output parameters
@@ -24,23 +24,23 @@ Mendix has made nanoflows even more powerful with pluggable nanoflow actions —
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 
-1.  Create a new **JavaScript action** in your Mendix project:
+1. Create a new **JavaScript action** in your Mendix project:
 
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/createanewjsaction.png" alt="add javascript action from drop-down" >}}
 
-2.  Give it a descriptive name:
+2. Give it a descriptive name:
 
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/descriptivename.png" alt="naming dialog" >}}
 
     You can now start creating the API for the JavaScript action, which consists of parameters and a return type.
 
-3.  Your **TextToSpeech** action only requires a single parameter. Create it by clicking the **Add** button in the top left corner. Give the parameter a name and add an extended description if desired:
+3. Your **TextToSpeech** action only requires a single parameter. Create it by clicking the **Add** button in the top left corner. Give the parameter a name and add an extended description if desired:
 
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/jsactiondescription.png" alt="javascript action description field" >}}
 
     You can leave the **Return type** at the default Boolean value. That means that the action will return `false` if no text is provided, and return `true` after it has successfully spoken the provided text.
-  
-4.  Next, click the **Code** tab to begin editing the JavaScript action. Now you can start writing the actual action. Mendix Studio Pro already created a default template for you, using the parameters and return type we provided:
+
+4. Next, click the **Code** tab to begin editing the JavaScript action. Now you can start writing the actual action. Mendix Studio Pro already created a default template for you, using the parameters and return type we provided:
 
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/code.png" alt="text to speech code" >}}
 
@@ -129,15 +129,15 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
 
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncall.png" alt="javascript action call" >}}
-    
+
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png" alt="select text to speech action" >}}
-    
+
     Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide8/image-collection/). 
-    
+
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/exposeasnanoflow.png" alt="add caption category and icon" >}}
-    
+
     It will then appear in the **Toolbox** window when editing a nanoflow: 
-    
+
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-actions/iconintoolbox.png" alt="text to speech in nanoflow" >}}
 
 10. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **Project Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, set **Use return value** to *No* radio button.

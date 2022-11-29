@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
 url: /refguide8/oql-rangebegin/
-parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
@@ -15,7 +14,7 @@ The `RANGEBEGIN` function extracts the initial value of a range parameter.
 
 The syntax is as follows:
 
-```
+```sql {linenos=false}
 RANGEBEGIN ( $range )
 ```
 

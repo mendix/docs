@@ -1,7 +1,6 @@
 ---
 title: "Microflow Properties"
 url: /refguide7/microflow/
-parent: "microflows"
 tags: ["microflow", "entity access"]
 ---
 
@@ -28,7 +27,7 @@ Disallowing concurrent execution of a microflow is useful if a microflow would i
 | No | It is possible to execute the microflow more than once concurrently. |
 | Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
-_Default value_: No
+*Default value*: No
 
 ### 3.2 Error Message
 
@@ -83,7 +82,7 @@ By default entity access is not applied. Set 'Apply entity access' to 'Yes' if y
 
 {{% /alert %}}
 
-_Default value:_ No
+*Default value:* No
 
 ## 6 Usage Properties
 
@@ -93,4 +92,4 @@ You can search for unused items (Ctrl+Shift+F, Search for = Unused items) in the
 
 By setting the propery 'Mark as used' to 'Yes' you specify that the document is used implicitly and the Modeler will no longer list it when searching for unused items.
 
-_Default value:_ No
+*Default value:* No

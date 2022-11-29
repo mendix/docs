@@ -1,7 +1,6 @@
 ---
 title: "List Activities"
 url: /refguide7/list-activities/
-parent: "activities"
 ---
 ## Aggregate
 

@@ -1,7 +1,6 @@
 ---
 title: "Static Image (Document Template)"
 url: /refguide7/static-image-document-template/
-parent: "document-templates"
 aliases:
     - /refguide7/Static+Image+(document+template).html
     - /refguide7/static-image-(document-template).html

@@ -54,18 +54,18 @@
 
 {{ partial "print/page-heading.html" . }}
 
-<!-- MvM: Remove ToC from the printed section pages
+{{/* MvM: Remove ToC from the printed section pages
 {{ if not (.Param "print.disable_toc") }}
     <ul>
     {{ template "recurse-toc" (dict "section" .CurrentSection "psid" "") }}
     </ul>
 {{ end }}
--->
+*/}}
 
 <div class="content">
       {{ .Content }}
 </div>
 </div>
-<!-- MvM: Do not print other documents in the section, just the current _index document
+{{/* MvM: Do not print other documents in the section, just the current _index document
 {{ template "recurse-content" (dict "section" .CurrentSection "psid" "") }}
--->
+*/}}

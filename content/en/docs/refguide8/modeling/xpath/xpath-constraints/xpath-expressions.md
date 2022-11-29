@@ -1,7 +1,6 @@
 ---
 title: "XPath Expressions"
 url: /refguide8/xpath-expressions/
-parent: "xpath-constraints"
 tags: ["studio pro"]
 ---
 

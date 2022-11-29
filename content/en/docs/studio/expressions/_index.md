@@ -29,14 +29,12 @@ Expressions can be used in the following properties on a page:
 
 Expressions can be used for the following activities in a microflow: 
 
-*  Change Object
-*  Change Variable
-*  Create Object
-*  Create Variable
-*  [Decision](/studio/microflows-decision/)
-*  End Event
-
-For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/).
+* Change Object
+* Change Variable
+* Create Object
+* Create Variable
+* [Decision](/studio/microflows-decision/)
+* End Event
 
 ## 2 Writing an Expression
 
@@ -46,7 +44,7 @@ Attributes and associations of objects are accessed using a slash (for example, 
 
 You can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
-```
+```text
 $CurrentPrice/Price - (($CurrentPrice/Price div 100) * $OrderLine/Discount)
 ```
 
@@ -66,7 +64,6 @@ You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl
 If there is an errors in the expression, the place where the error is, is highlighted red and an error message is shown when you hover over it.  In some cases there are quick fixes available to quickly solve the issue.
 
 {{< figure src="/attachments/studio/expressions/expression-error.png" >}}
-
 
 ### 2.3  Expression Examples
 
@@ -156,7 +153,21 @@ The list of expressions that are used in Studio the most is represented below. F
 
 * [`dateTime`](/refguide/date-creation/) – creating a date value using the server's calendar
 
-### 3.9 Between Date Function Calls
+### 3.9 Begin-of Date Function Calls
+
+* [`BeginOfDay`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the day compared to the initial date
+* [`BeginOfWeek`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the week compared to the initial date
+* [`BeginOfMonth`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
+* [`BeginOfYear`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
+
+## 3.10 End-of Date Function Calls
+
+* [`EndOfDay`](/refguide/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
+* [`EndOfWeek`](/refguide/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
+* [`EndOfMonth`](/refguide/end-of-date-function-calls/) – calculates the end of the month compared to the initial date
+* [`EndOfYear`](/refguide/end-of-date-function-calls/) – calculates the end of the year compared to the initial date
+
+### 3.11 Between Date Function Calls
 
 * [`millisecondsBetween`](/refguide/between-date-function-calls/) – the milliseconds between two dates
 * [`secondsBetween`](/refguide/between-date-function-calls/) – the seconds between two dates
@@ -167,7 +178,7 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`calendarMonthsBetween`](/refguide/between-date-function-calls/) - the months between two dates
 * [`calendarYearsBetween`](/refguide/between-date-function-calls/) - the years between two dates
 
-### 3.10 Add Date Function Calls
+### 3.12 Add Date Function Calls
 
 * [`addMilliseconds`](/refguide/add-date-function-calls/) – adds milliseconds to a date
 * [`addSeconds`](/refguide/add-date-function-calls/) – adds seconds to a date
@@ -176,9 +187,22 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`addDays`](/refguide/add-date-function-calls/) – adds days to a date
 * [`addWeeks`](/refguide/add-date-function-calls/) – adds weeks to a date
 * [`addMonths`](/refguide/add-date-function-calls/) – adds months to a date
+* [`addQuarters`](/refguide/add-date-function-calls/) – adds quarters to a date
 * [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
 
-### 3.11 Parse & Format Decimal Function Calls
+### 3.13 Subtract Date Function Calls
+
+* [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
+* [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
+* [`subtractMinutes`](/refguide/subtract-date-function-calls/) – subtracts minutes from a date
+* [`subtractHours`](/refguide/subtract-date-function-calls/) – subtracts hours from a date
+* [`subtractDays`](/refguide/subtract-date-function-calls/) – subtracts days from a date
+* [`subtractWeeks`](/refguide/subtract-date-function-calls/) – subtracts weeks from a date
+* [`subtractMonths`](/refguide/subtract-date-function-calls/)  – subtracts months from a date
+* [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
+* [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
+
+### 3.14 Parse & Format Decimal Function Calls
 
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string 
 
@@ -186,5 +210,4 @@ The list of expressions that are used in Studio the most is represented below. F
 
 * [Microflows](/studio/microflows/)
 * [Workflows](/studio/workflows/)
-* [Set & Change a Value for Different Activities in the Microflows](/studio/microflows-setting-and-changing-value/)
 * [Expressions](/refguide/expressions/)

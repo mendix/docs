@@ -1,5 +1,6 @@
 ---
 title: "Scaffold a Widget with the Yeoman Widget Generator"
+linktitle: "Scaffold Widget with Yeoman"
 url: /howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/
 category: "Widget Development"
 tags: ["widget", "develop widget", "scaffold", "yeoman"]
@@ -9,7 +10,7 @@ tags: ["widget", "develop widget", "scaffold", "yeoman"]
 
 This how-to will teach you how to use the widget generator, which is a [Yeoman](http://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Set up a widget development environment with Node.JS, Yeoman, and Grunt
 * Test a custom widget at runtime
@@ -121,4 +122,3 @@ The solution is to go to the `WidgetName` element and replace it with your own w
 3. Remove `WidgetName`.
 
 Repeat these steps for all five of the errors.
-

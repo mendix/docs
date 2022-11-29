@@ -1,7 +1,6 @@
 ---
 title: "Header (Document Template)"
 url: /refguide8/header-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide8/header-(document-template).html

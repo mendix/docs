@@ -1,7 +1,6 @@
 ---
 title: "XPath Day-from-DateTime"
 url: /refguide/xpath-day-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 
@@ -13,6 +12,6 @@ The `day-from-dateTime()` function extracts the day of the month value from a **
 
 This query returns all the logs where `DateAttribute` is the 30th day of the month (for example, "2011-12-30"):
 
-```java
+```java {linenos=false}
 //Logging.Log[day-from-dateTime(DateAttribute) = 30]
 ```

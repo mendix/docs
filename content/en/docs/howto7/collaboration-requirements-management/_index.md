@@ -1,5 +1,5 @@
 ---
-title: "Collaboration & Requirements Management"
+title: "Collaboration and Requirements Management"
 url: /howto7/collaboration-requirements-management/
 weight: 120
 tags: ["collaboration", "requirements", "management"]
@@ -18,4 +18,3 @@ This category of how-to's presents information on using version control via the 
 * [Share the Development Database](/howto7/collaboration-requirements-management/sharing-the-development-database/)
 * [Translate Your App Content](/howto7/collaboration-requirements-management/translate-your-app-content/)
 * [Work with an On-Premises Version Control Server](/howto7/collaboration-requirements-management/on-premises-svn-howto/)
-

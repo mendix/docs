@@ -1,7 +1,6 @@
 ---
 title: "XPath Constraints"
 url: /refguide/xpath-constraints/
-parent: "xpath"
 tags: ["studio pro"]
 ---
 
@@ -11,41 +10,45 @@ A constraint can be added to any Xpath query to filter the data retrieved. It sh
 
 For example, this query retrieves all customers whose name is equal to Jansen:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen']
 ```
 
-The first half of the query is responsible for defining the entity to retrieve and the second half (between the brackets ) *constrains* the data to a certain attribute. Note that the constraint is (and should always be) enclosed by brackets.
-
-Multiple constraints can be added to a single query, this is true for all queries with the exception of the `id` query. This is most commonly done by the simple expedient of opening a new set of brackets after closing the first.
+The first half of the query is responsible for defining the entity to retrieve and the second half (between the brackets) constrains the data by a certain attribute. Note that the constraint is (and should always be) enclosed by brackets.
 
 {{% alert color="warning" %}}
-In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
+The syntax of XPath queries differs between Studio Pro and Java environments. In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
+
+The following example shows how you should perform an XPath query in Studio Pro. You **Select** the entity `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
+
+{{< figure src="/attachments/refguide/modeling/xpath/XPath-constraint-example.png" alt="Xpath constraint example in Studio Pro" width="400px" >}}
+
+Multiple constraints can be added to a single query, this is true for all queries with the exception of the `id` query. This is most commonly done by the simple expedient of opening a new set of brackets after closing the first.
 
 ## 2 Examples
 
 This query retrieves all customers whose name is equal to Jansen and who live in Rotterdam:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen'][Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
 It is also possible to combine constraints with an `and` or `or` [operator](/refguide/xpath-operators/). This query retrieves all customers whose names equal to Jansen *and* who live in Rotterdam:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen' and Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
 This query retrieves all customers whose name is Jansen or who live in Rotterdam.
 
-```java
+```java {linenos=false}
 //Sales.Customer[Name = 'Jansen' or Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
 With parentheses, constraints can be grouped to define priorities. This query retrieves all customers who are not only named "Jansen" or "Smit," but also live in Rotterdam:
 
-```java
+```java {linenos=false}
 //Sales.Customer[( Name = 'Jansen' or Name = 'Smit' ) and Sales.Customer_Address/Sales.Address/City = 'Rotterdam']
 ```
 
@@ -53,27 +56,26 @@ In some cases, it might also be useful define sub-constraints to restrict the da
 
 This query retrieves all users that have the role Administrator:
 
-```java
-//Sales.User[id = '[%UserRole_Administrator%]']]
+```java {linenos=false}
+//Sales.User[id = '[%UserRole_Administrator%]']
 ```
 
 This query retrieves all customers who live in Rotterdam or Losdun:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'Rotterdam' or City = 'Losdun']]
 ```
 
 This query retrieves all customers who live in New Amsterdam, Guyana (as opposed to those that live in, for example, New Amsterdam, Indiana):
 
-```java
+```java {linenos=false}
 //Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Adress_Country/Sales.Country/Name = 'Guyana']
 ```
 
 Avoid the use of the same path more than once in a single constraint. For example, the example on Rotterdam and Losdun could also be established like this:
 
-```java
+```java {linenos=false}
 //Sales.Customer[Sales.Customer_Address/Sales.Address/City = 'Rotterdam' or Sales.Customer_Address/Sales.Address/City = 'Losdun']
 ```
 
 However, this query is executed inefficiently and will thus significantly slow down the query process.
-

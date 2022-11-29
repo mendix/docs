@@ -1,7 +1,6 @@
 ---
 title: "Reference Set Selector"
 url: /refguide7/reference-set-selector/
-parent: "input-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,8 +22,8 @@ The reference set selector looks a lot like a [data grid](/refguide7/data-grid/)
 
 The **Add** and **Remove** buttons mean something else than the **New** and **Delete** buttons that are used by default in the data grid:
 
-*   The **Add** button adds a reference to an existing object. The **Create** button, on the other hand, creates a new object and does not add references.
-*   The **Delete** button actually deletes an object for good, whereas the **Remove** button simply removes the reference to the object and leaves the object itself intact.
+* The **Add** button adds a reference to an existing object. The **Create** button, on the other hand, creates a new object and does not add references.
+* The **Delete** button actually deletes an object for good, whereas the **Remove** button simply removes the reference to the object and leaves the object itself intact.
 
 {{% /alert %}}
 
@@ -64,13 +63,13 @@ Even if the control bar is invisible there can still be a default button that is
 
 {{% /alert %}}
 
-_Default value:_ True
+*Default value:* True
 
 ### Show Paging Buttons
 
 This property indicates whether the buttons to page through the information in the grid are visible or not. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
-_Default value:_ True
+*Default value:* True
 
 ### Column Weights
 
@@ -86,13 +85,13 @@ In the screenshot above the column weights are 63;37.
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
-_Default value:_ 5
+*Default value:* 5
 
 ### Show Empty Rows
 
 If you choose to show empty rows there will always be the grid that shows the same number of rows (see 'Number of rows') even if there are fewer objects to show on the page.
 
-_Default value:_ False
+*Default value:* False
 
 ## Behavior Properties
 
@@ -107,7 +106,7 @@ The selection mode determines whether and how the user can select items in the g
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. This was the default multi-selection behavior prior to version 3.1.0. |
 
-_Default value:_ Single selection
+*Default value:* Single selection
 
 ### Default Button Trigger
 
@@ -118,7 +117,7 @@ The default button can be triggered by a single or a double click a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click | A double click triggers the default button. |
 
-_Default value:_ Double click
+*Default value:* Double click
 
 ### Tooltip Page
 
@@ -166,6 +165,6 @@ See [Selectable Objects Properties](/refguide7/reference-selector/) of the refer
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
-*   [Entities](/refguide7/entities/)
-*   [Associations](/refguide7/associations/)
+* [Data view](/refguide7/data-view/)
+* [Entities](/refguide7/entities/)
+* [Associations](/refguide7/associations/)

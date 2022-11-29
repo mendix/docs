@@ -1,7 +1,8 @@
 ---
 title: "Domain Model in the Mendix Metamodel"
+linktitle: "Domain Model in the Metamodel"
 url: /apidocs-mxsdk/mxsdk/domain-model-metamodel/
-parent: "understanding-the-metamodel"
+description: "This document describes how a Domain Model works with all its components (attributes, access rules, etc.)."
 weight: 2
 ---
 

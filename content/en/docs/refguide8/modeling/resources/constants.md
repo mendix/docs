@@ -1,7 +1,6 @@
 ---
 title: "Constants"
 url: /refguide8/constants/
-parent: "resources"
 weight: 60
 tags: ["studio pro", "constant", "constants"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -65,6 +64,7 @@ This property defines whether the constant is accessible from client-side expres
 When a constant is exposed to the client, Mendix Runtime sends its value to the client so that in addition to microflow expressions, it will also be accessible from nanoflows and page expressions. This means that you should not use sensitive data or secrets such as passwords when a constant is exposed to the client.
 
 For a web or hybrid online app, changes to constant's values are reflected when a user refreshes the browser or restarts the app. For an offline-first application, the app stores the constants' values for offline use. The app updates the constant's values in the following cases:
+
 * When a user logs in or logs out in the app.
 * When you deploy a new version of the app that contains domain model changes used in the offline-first app.
 {{% /alert %}}

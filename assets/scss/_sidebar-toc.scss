@@ -2,9 +2,9 @@
 // Right side toc
 //
 .td-sidebar-toc {
-    //border-left: 1px solid $border-color; // NK - moved to td-main main, to fully span height of screen
-    font-size: 0.9rem; // NK - decrased
-    line-height: 1.2; // NK - decrased
+    border-left: 0; // NK - changed to 0, the actual border moved to td-main main, to fully span height of screen
+    font-size: 0.9rem; // NK - decreased
+    line-height: 1.2; // NK - decreased
 
     @supports (position: sticky) {
         position: sticky;
@@ -16,7 +16,7 @@
     order: 2;
     padding-top: 0.75rem;
     padding-bottom: 1.5rem;
-    //vertical-align: top;
+    vertical-align: top;
 
 }
 
@@ -29,6 +29,9 @@
 
 .td-toc {
 
+    height: calc(100vh - 180px); // NK - added to allow scrolling
+    overflow-x:hidden !important; // NK - added to allow scrolling
+
     a {
         display: block;
         font-weight: $font-weight-light;
@@ -38,6 +41,7 @@
     li {
         list-style: none;
         display: block;
+        border-left: 2px solid transparent; // NK - moved from a and .activeToC to give consistent border size, only color changes when active
     }
 
     li li {
@@ -51,7 +55,6 @@
         a {
 			// NK - styling for ToC
             color: $gray-800;
-			border-left: 2px solid transparent;
 			padding-left: 20px;
 			padding-bottom: .25rem;
 			padding-top: .25rem;
@@ -66,7 +69,6 @@
 			font-weight: $font-weight-bold;
 			color: $blue;
 			border-left-color: $blue;
-            border-left: 2px solid;
 		}
     }
 

@@ -1,7 +1,7 @@
 ---
 title: "Use the Java API"
 url: /howto7/logic-business-rules/java-api-tutorial/
-category: "Logic & Business Rules"
+category: "Logic and Business Rules"
 weight: 13
 tags: ["microflow", "logic", "java", "api"]
 ---
@@ -14,7 +14,7 @@ To avoid cluttering the tutorial, only the relevant code will be shown, not the 
 
 When you look at these examples, often an IContext will be used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you're working will determine if you have these rights and can perform that action.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Execute microflows and commit objects
 * Copy FileDocuments
@@ -116,8 +116,8 @@ After this, all `Attachments` belonging to one `GenericObject` have been copied 
 * [How to Create a Custom Save Button](/howto7/logic-business-rules/create-a-custom-save-button/)
 * [How to Create Your First Microflow: Hello World!](/howto7/logic-business-rules/create-your-first-microflow-hello-world/)
 * [How to Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath/)
-* [How to Drag Microflows & Pages into a Microflow](/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/)
-* [How to Extract & Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
+* [How to Drag Microflows and Pages into a Microflow](/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/)
+* [How to Extract and Use Sub-Microflows](/howto7/logic-business-rules/extract-and-use-sub-microflows/)
 * [How to Optimize Microflow Aggregates](/howto7/logic-business-rules/optimizing-microflow-aggregates/)
 * [How to Optimize Retrieve Activities](/howto7/logic-business-rules/optimizing-retrieve-activities/)
 * [How to Set Up Error Handling](/howto7/logic-business-rules/set-up-error-handling/)

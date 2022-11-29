@@ -1,7 +1,7 @@
 ---
 title: "Debug Microflows"
 url: /howto7/monitoring-troubleshooting/debug-microflows/
-category: "Monitoring & Troubleshooting"
+category: "Monitoring and Troubleshooting"
 weight: 2
 tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 ---
@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 
 The Mendix Modeler has a built-in consistency checker that validates if the application you are building contains any obvious errors. This dramatically reduces the amount of technical errors during run-time, but the Modeler isn't able to check if your app contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make this easier. If you run into a functional error in any of the microflows, you can easily debug them with the debugger.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Use breakpoints
 * Debug microflows
@@ -20,7 +20,7 @@ The Mendix Modeler has a built-in consistency checker that validates if the appl
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer/)
-* Read [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
+* Read [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 3 Debugging Overview
 
@@ -94,9 +94,9 @@ To use breakpoint conditions, follow these steps:
 
 1. Right-click the activity or split in the microflow with a breakpoint and select **Edit breakpoint condition**:
     {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-microflows/18580018.png" >}}
-2.  Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
+2. Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
-    ```java
+    ```java {linenos=false}
     $currentUser/name = 'YourUserName'
     ```
 

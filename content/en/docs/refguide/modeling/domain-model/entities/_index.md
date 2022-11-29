@@ -1,7 +1,6 @@
 ---
 title: "Entities"
 url: /refguide/entities/
-parent: "domain-model"
 weight: 10
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -22,7 +21,7 @@ For example, you have a collection of CDs like the one in the table below:
 | Title | Artist |
 | --- | --- |
 | How to Dismantle an Atomic Bomb | U2 |
-| Exodus | Bob Marley & The Wailers |
+| Exodus | Bob Marley and The Wailers |
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
@@ -86,7 +85,22 @@ The name property defines the name of the entity. This name is used to refer to 
 
 The name has to be unique only within a module domain model. You can have two entities with the same name, provided they are in the domain models of different modules.
 
-#### 3.3.2 Generalization {#generalization}
+#### 3.3.2 Export Level 
+
+{{% alert color="info" %}}
+**Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
+
+This property will not be shown for attributes if the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
+{{% /alert %}}
+
+**Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution.
+
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Hidden *(default)* | The document/element content is hidden from a consumer.      |
+| Usable             | Consumers can see the entity in the domain model and use it in their app. |
+
+#### 3.3.3 Generalization {#generalization}
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events, and other properties of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the **Car** entity could have **Vehicle** as its generalization.
 
@@ -135,7 +149,7 @@ This property defines whether the entity contains the system attribute 'changedD
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
 {{% alert color="info" %}}
-The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+The 'changedDate' property is updated when a value is set.  [In Mendix version 9.5.0 and above, setting an attribute to the value it already had and committing the entity updates the 'changedDate'](/releasenotes/studio-pro/9.5/#breaking-changes). In Mendix versions below 9.5.0 the behavior is the same as for Mendix version 8 and the 'changedDate' property is only updated when the value is different.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -168,11 +182,11 @@ You can also edit an entity by opening the entity properties dialog box.
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 
-*   [Attributes](/refguide/attributes/)
-*   [Associations](/refguide/associations/)
-*   [Validation Rules](/refguide/validation-rules/)
-*   [Event Handlers](/refguide/event-handlers/)
-*   [Indexes](/refguide/indexes/)
-*   [Access Rules](/refguide/access-rules/)
+* [Attributes](/refguide/attributes/)
+* [Associations](/refguide/associations/)
+* [Validation Rules](/refguide/validation-rules/)
+* [Event Handlers](/refguide/event-handlers/)
+* [Indexes](/refguide/indexes/)
+* [Access Rules](/refguide/access-rules/)
 
 See the detailed pages for each of these tabs for more information.

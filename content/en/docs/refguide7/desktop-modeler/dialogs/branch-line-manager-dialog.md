@@ -1,7 +1,6 @@
 ---
 title: "Branch Line Manager Dialog"
 url: /refguide7/branch-line-manager-dialog/
-parent: "dialogs"
 ---
 
 ## 1 Introduction

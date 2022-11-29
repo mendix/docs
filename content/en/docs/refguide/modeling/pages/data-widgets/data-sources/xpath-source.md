@@ -1,7 +1,6 @@
 ---
 title: "XPath Source"
 url: /refguide/xpath-source/
-parent: "data-sources"
 tags: ["studio pro", "xpath", "xpath source", "data source", "data filter"]
 weight: 20
 ---
@@ -60,7 +59,7 @@ XPath constraints are applied equally to all users and only apply to the data di
 
 XPath constraints for data sources have access to objects and attributes from all surrounding data containers. To refer to the immediately surrounding data widget, use `$currentObject`. You can refer to other surrounding data containers by adding a `$` to their name:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/xpath-source/xpath-variable-constraint.png" alt="xpath variable constraint"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/xpath-source/xpath-variable-constraint.png" alt="xpath variable constraint"   width="500"  >}}
 
 For example `$customer/Name` would refer to the `Name` attribute of the surrounding data widget with the name `customer`.
 
@@ -78,4 +77,3 @@ The feature to use objects and attributes can be used for [List view](/refguide/
 
 * [Data Containers](/refguide/data-widgets/)
 * [Data Grid](/refguide/data-grid/)
-

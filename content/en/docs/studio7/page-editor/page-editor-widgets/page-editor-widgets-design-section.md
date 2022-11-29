@@ -1,7 +1,6 @@
 ---
 title: "Design Section in Widgets"
 url: /studio7/page-editor-widgets-design-section/
-parent: "page-editor-widgets"
 description: "Describes the Design section in widgets properties in Mendix Studio."
 tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---
@@ -15,7 +14,6 @@ The **Design** section in **Properties** allows you to change spacing and alignm
 ## 2 Common Properties {#design-common-properties}
 
 The **Design** section has the following properties common to all widgets:
-
 
 | Property                                                 | Description                                                  | Possible Values                                              |
 | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -44,6 +42,7 @@ Specific properties for **List View** are described in the table below:
 | Style       | Changes the appearance of lines in the list view.            | Possible values for **Style** are the following:<ul><li>None</li><li>Striped</li><li>Bordered</li><li>Lined</li><li>No Styling</li></ul> |
 | Hover Style | Highlights a row when hovering over it. Only useful if the row is clickable. | Enabled/Disabled                                             |
 | Row Size    | Changes the size of the row.                                 | Possible values for **Row Size** are the following:<ul><li>None</li><li>Small</li><li>Large</li></ul> |
+
 ### 2.2 Container Specific Properties {#container-design-properties}
 
 Specific properties for the **Container** widget are described in the table below:
@@ -75,7 +74,6 @@ Specific properties for the **Text** widget are described in the table below:
 | Alignment    | Aligns the text                      | Possible values for **Alignment** are the following:<ul><li>None</li><li>Left</li><li>Center</li><li>Right</li></ul> |
 | Transform    | Changes letter case of the text      | Possible values for **Transform** are the following:<ul><li>None</li><li>Lowercase</li><li>Uppercase</li><li>Capitalize</li></ul> |
 | Wrap Options | Wrap a long text into multiple lines | Possible values for **Wrap Options** are the following:<ul><li>None – text is not wrapped</li><li>Wrap</li><li>No Wrap</li></ul> |
-
 
 ## 3 Read More
 

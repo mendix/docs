@@ -1,7 +1,6 @@
 ---
 title: "Workflow Properties"
 url: /refguide/workflow-properties/
-parent: "workflows"
 weight: 10
 tags: ["workflow", "workflows", "workflow properties", "Studio Pro"]
 ---
@@ -18,6 +17,7 @@ Workflow properties consist of the following sections:
 * [Common](#common)
 * [Display information](#display-info)
 * [Due date](#due-date)
+* [Events](#events)
 * [General](#general)
 
 ### 2.1 Admin Page Section {#admin-page} 
@@ -38,9 +38,9 @@ You cannot change the **Name** of the workflow but you can change the [Caption](
 
 **Documentation** allows you to describe your workflow to make it easier for people to use and modify it.
 
-### 2.4 Display Information Section {#display-info}
+### 2.3 Display Information Section {#display-info}
 
-#### 2.4.1 Workflow Name
+#### 2.3.1 Workflow Name
 
 **Workflow name** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow name** is used on preconfigured pages: the Admin Center and Workflow Admin page. 
 
@@ -48,13 +48,13 @@ The **Workflow name** can contain parameters that are written between braces, e.
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
-#### 2.4.2 Workflow Description
+#### 2.3.2 Workflow Description
 
 **Workflow description** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow description** is used in page templates. 
 
 The **Workflow description** can contain parameters that are written between braces, e.g. {1}.
 
-#### 2.4.3 Parameters {#parameters}
+#### 2.3.3 Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. For example, you can display the name of the new employee who is being onboarded using the **FullName**  parameter.
 
@@ -65,14 +65,12 @@ Parameters have the following settings:
 * **Index** – an identification number of a parameter
 * **Expression** – an XPath expression that will be displayed
 
-##### 2.4.3.1 Adding New Parameters
+##### 2.3.3.1 Adding New Parameters
 
 To add a parameter to the **Workflow name** or the **Workflow description**, do the following:
 
 1. Click the ellipsis icon next to the **Workflow name** or the **Workflow description**.
-
 2. In the **Edit workflow name** dialog box > **Parameters** section, click the **New** button. 
-
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice. 
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" >}}
@@ -83,7 +81,7 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" >}}
 
-##### 2.4.3.2 Performing Other Actions on Parameters
+##### 2.3.3.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -91,6 +89,26 @@ In addition to adding new parameters, you can perform the following actions on p
 * **Edit** – double-click a parameter to edit it or click **Edit**
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
+
+### 2.4 Events {#events}
+
+**Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
+
+#### 2.4.1 Workflow State Change {#workflow-state-change}
+
+{{% alert color="info" %}}
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/app-settings/#workflow-state-change) section in *App Settings*.
+{{% /alert %}}
+
+**Workflow state change** allows you to select a microflow that is triggered when the state of the current workflow has changed, for example, when the workflow is in progress or completed. 
+
+#### 2.4.2 User Task State Change
+
+{{% alert color="info" %}}
+This setting overrides the app-wide setting in the **App Settings**. For more information see the [User Task State Change](/refguide/app-settings/#user-task-state-change) section in *App Settings*.
+{{% /alert %}}
+
+**User task state change** allows you to select a microflow that is triggered when the state of a user task in the current workflow has changed, for example, when the a user task is completed or has failed. 
 
 ### 2.5 Due Date Section {#due-date}
 

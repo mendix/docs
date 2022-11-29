@@ -31,16 +31,14 @@ You can edit an app in Mendix Studio by opening it in the [Developer Portal](htt
 
 {{< figure src="/attachments/studio/general/edit-app.jpg" alt="Edit in Studio"   width="350"  >}}
 
-If you do not see **Edit in Studio**, go to [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal and [enable Studio](/developerportal/collaborate/general-settings/#web).
-
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
 1. In Studio Pro, open the app in that you want to view in Studio.
-2.  Click the globe icon in the top right corner (only available if Studio is enabled).
+2. Click the globe icon in the top right corner (only available if Studio is enabled).
 
-	{{< figure src="/attachments/studio/general/globe-icon.png" alt="Globe Icon" >}}
+    {{< figure src="/attachments/studio/general/globe-icon.png" alt="Globe Icon" >}}
 
 The app opens in Studio.
 
@@ -50,13 +48,12 @@ After clicking **Edit in Studio** you may need to upgrade your app to the latest
 
 {{< figure src="/attachments/studio/general/upgrade.png" alt="Upgrade"   width="350"  >}}
 
-You may also see a top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges & Mendix Versions](/studio/general-versions/).
+You may also see a top bar suggesting an upgrade to the next Mendix version. For more information on Studio upgrades and Mendix versions, see [Studio Ranges and Mendix Versions](/studio/general-versions/).
 
 {{% alert color="info" %}}
-When you upgrade your app in Studio to the latest  Mendix version, you will need to upgrade your app in the Studio Pro to the same version as well. 
+When you upgrade your app in Studio to the latest Mendix version, you will need to upgrade your app in Studio Pro to the same version as well. 
 
 If you are working in a team with others, it is wise to check with your team members if everyone is OK to upgrade the app to the latest Mendix version. 
-
 {{% /alert %}}
 
 ## 4 Switching App Modes
@@ -106,7 +103,7 @@ The **Toolbox**, **Properties** , and **Buzz** tabs are described in the table b
 
 ## 7 Top Menu Bar
 
-The top menu bar allows to undo or redo actions, view your recent documents, preview or publish your app, and view checks in your app. You can also access help and learning and view various information in the top menu bar. 
+The top menu bar allows you to undo or redo actions, view your recent documents, preview or publish your app, and view checks in your app. You can also access help and learning and view various information in the top menu bar. 
 
 {{< figure src="/attachments/studio/general/top-bar.png" alt="Top Menu Bar" >}}
 
@@ -114,24 +111,25 @@ The top menu bar items are described in the table below:
 
 | Menu item | Description |
 |------|------|
-| **Switch-to** menu | The **Switch-to** menu allows you to switch to other parts of the Mendix platform. This menu contains the following options: <ul><li>**Mendix Home** – takes you to the [Developer Portal](/developerportal/)</li><li>**Studio** – opens **My Apps** screen in the Developer Portal</li><li>**Get Studio Pro** – downloads the latest version of Mendix Studio Pro</li><li>**Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Docs** – a link to the [Mendix Documentation](https://docs.mendix.com/)</li></ul> |
+| **Switch-to** menu | The **Switch-to** menu allows you to switch to other parts of the Mendix Platform. This menu contains the following options: <ul><li>**Mendix Home** – takes you to the [Developer Portal](/developerportal/)</li><li>**Studio** – opens **My Apps** screen in the Developer Portal</li><li>**Get Studio Pro** – downloads the latest version of Mendix Studio Pro</li><li>**Academy** – a link to the [Mendix Academy](https://academy.mendix.com)</li><li>**Docs** – a link to the [Mendix Documentation](https://docs.mendix.com/)</li></ul> |
 | Undo/Redo actions | There buttons undo or redo the last action. You can also use <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> shortcuts correspondingly. |
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. Click the document to open it. |
+| [Language drop-down list](/studio/language-support/) | If you have several languages enabled in Studio Pro, you can see a language drop-down list with languages that you can translate your app to. |
 | [Preview button](/studio/publishing-app/) | Shows you what your app will look like after it is published. |
-| [Publish button](/studio/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](/studio/publishing-app/) |
+| [Publish button](/studio/publishing-app/) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing and Publishing Your App](/studio/publishing-app/) |
 | [Checks button](/studio/checks/) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](/studio/consistency-errors/).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
 | Help icon | Opens the **Help & Learning** side menu, where you can find just-in-time help – videos and how-to's that will provide you explanations and instructions in the context of your current task. For example, when working in the domain model, you will see videos and how-to's on the domain model, entities, and attributes as a recommended topic for you. However, you can also browse through the categories and other topics that cover all the main features in Studio. |
-| **More Options** icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](/studio/general-versions/) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](/studio/mx-assist/)</li><li>**Open App Buzz** – takes you to the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) in the Developer Portal</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
+| **More Options** icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](/studio/general-versions/) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](/studio/mx-assist/)</li><li>**Open App Buzz** – takes you to the [App Buzz](/developerportal/collaborate/buzz/#app-buzz) in the Developer Portal</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 
-You can copy and paste pages and microflows. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
+You can copy and paste workflows, pages, microflows, and enumerations. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
 
 ### 8.1 Copy/Paste Workflows, Pages, Microflows, and Enumerations {#copy-paste-documents}
 
 Workflows, pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste them to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate workflows, pages, microflows, and enumerations, see [Workflows](/studio/workflows/), [Pages](/studio/page-editor/), [Microflows](/studio/microflows/), and [Enumerations](/studio/domain-models-enumeration/) respectively.  
 
-Mind the following when copying and pasting pages, microflows, and enumerations:
+Mind the following when copying and pasting workflows, pages, microflows, and enumerations:
 
 * You can copy/paste workflows, pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
 * You can copy/paste workflows, pages, microflows, and enumerations only between instances of the same browser
@@ -150,5 +148,5 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Main Documents in This Category
 
-* [Studio Ranges & Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
-
+* [Studio Ranges and Mendix Versions](/studio/general-versions/) – explains how Studio version correlates to the Mendix version
+* [Translating Your App to Multiple Languages](/studio/language-support/) – describes how to translate you app to multiple languages

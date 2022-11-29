@@ -25,6 +25,7 @@ The Mendix Developer App and generated hybrid mobile apps contain their own `ind
 If you want to include more resources, you can add your own `components.json` file in the root of your theme. Copy the version above and add your own files. This is an example that dynamically adds a JavaScript file to `index.html`:
 
 **Custom 'components.json'**
+
 ```js
 {
     "files": {

@@ -1,7 +1,6 @@
 ---
 title: "Common Widget Properties"
 url: /refguide7/common-widget-properties/
-parent: "common-widgets"
 ---
 
 These are properties that are shared by many widgets. For a complete list of properties, take a look at the relevant widget.
@@ -12,7 +11,7 @@ These are properties that are shared by many widgets. For a complete list of pro
 
 This property indicates whether this widget must be filled in by the end user or not. If set to true, this widget can not be left empty and a message will be shown if the end user presses the 'Save' button.
 
-_Default value:_ False
+*Default value:* False
 
 ### Required message (only in web forms)
 
@@ -30,7 +29,7 @@ For example, if an address field is required, the required message for the text 
 
 The tab index influences the order in which the end user navigates through the form using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the form.
 
-_Default value:_ 0
+*Default value:* 0
 
 {{% snippet file="/static/_includes/refguide7/Name+Property.md" %}}
 

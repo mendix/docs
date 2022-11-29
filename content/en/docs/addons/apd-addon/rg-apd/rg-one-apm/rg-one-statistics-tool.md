@@ -1,10 +1,9 @@
 ---
 title: "Statistics Tool"
 url: /addons/apd-addon/rg-one-statistics-tool/
-parent: "rg-one-apm"
 ---
 
-## 1 Intoduction
+## 1 Introduction
 
 This chapter gives an overview of the statistics tool, which measures the durations of microflows and browser-client requests and gathers statistics like number of executions as well as the, minimum, maximum and average durations. The statistics tool is used as the first step in gaining insight into what a system is doing when it doesn’t perform  optimally. The tool is also used to determine potential performance issues by looking at the trends.
 
@@ -12,7 +11,7 @@ This chapter gives an overview of the statistics tool, which measures the durati
 
 The statistics tool screen is split into several sections:
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Overview.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/Overview.png" >}}
 
 Statistics are stored periodically to be able to determine potential trends. The **Periodic store frequency** can be changed in the [Options](#Options).   
 
@@ -51,7 +50,7 @@ In stored snapshots, you can find all the statistics bundled per snapshot. These
 * You can manually create snapshots – these will have the type **Manual**
 * A snapshot is taken periodically, by default daily – these will have the type **Periodic**
 * A trigger can fire the creation of a snapshot – these will have the type **Measurement**
- * The source of a trigger can be the measurements tool and also statistics triggers or message triggers
+* The source of a trigger can be the measurements tool and also statistics triggers or message triggers
 
 You can prevent a snapshot from being deleted by cleanup when you select to keep it.
 
@@ -65,7 +64,7 @@ You can rename snapshots and view the details that will include filtering detail
 
 This screenshot shows the options of the statistics tool:
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-statistics-tool/Options.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-statistics-tool/Options.png" >}}
 
 The statistics tool will measure all microflow statistics all the time. The statistics tool can exclude certain microflows while presenting from memory or storing to the database.
 

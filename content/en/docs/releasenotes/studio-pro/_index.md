@@ -1,9 +1,7 @@
 ---
 title: "Studio Pro"
 url: /releasenotes/studio-pro/
-toc-level: 1
 description: "Presents all of the available release notes for Mendix Studio Pro."
-frontpage_featured: true
 weight: 5
 aliases:
     - /releasenotes/desktop-modeler/index.html
@@ -16,7 +14,7 @@ These are the [Mendix Studio Pro](/refguide/) major version release notes:
 * [8](/releasenotes/studio-pro/8/)
 * [7](/releasenotes/studio-pro/7/)
 
-For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS & Monthly Release Versions](/releasenotes/studio-pro/lts-mts/).
+For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS, and Monthly Release Versions](/releasenotes/studio-pro/lts-mts/).
 
 The Windows Service release notes can be found in [Windows Service](/releasenotes/studio-pro/windows-service/).
 

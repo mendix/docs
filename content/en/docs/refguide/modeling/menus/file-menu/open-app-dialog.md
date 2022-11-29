@@ -1,7 +1,6 @@
 ---
 title: "Open App"
 url: /refguide/open-app-dialog/
-parent: "file-menu"
 weight: 20
 description: "Describes the Open App flow and the Open App dialog box"
 tags: ["studio pro", "open app"]
@@ -38,8 +37,8 @@ For opening an app you already have on disk, click **Open App Locally** in the l
 
 ### 2.3 Importing App Package {#import-app}
 
-You can also import and app package and open it. Click **Import App Package** in the left sidebar. For more information on how to import an app package, see [Import App Package](/refguide/import-project-package-dialog/). 
+You can also import and app package and open it. Click **Import App Package** in the left sidebar. For more information on how to import an app package, see [Import App Package](/refguide/import-app-package-dialog/). 
 
 ## 3 Read More
 
-* [Import App Package](/refguide/import-project-package-dialog/)
+* [Import App Package](/refguide/import-app-package-dialog/)

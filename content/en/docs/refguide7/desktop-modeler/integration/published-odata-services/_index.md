@@ -1,7 +1,6 @@
 ---
 title: "Published OData Services"
 url: /refguide7/published-odata-services/
-parent: "integration"
 aliases:
     - /refguide7/consumed-odata-services.html
     - /refguide7/consumed-odata-services
@@ -52,9 +51,9 @@ To be able to consume OData in Mendix, you need to have two types of access righ
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 
-1.  Username and password are combined into a string "username:password"
-2.  The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64, except not limited to 76 char/line
-3.  The authorization method and a single space (meaning, "Basic " is then put before the encoded string).
+1. Username and password are combined into a string "username:password"
+2. The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64, except not limited to 76 char/line
+3. The authorization method and a single space (meaning, "Basic " is then put before the encoded string).
 
 This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`.
 
@@ -74,10 +73,10 @@ If security is enabled, it is required to configure which users have access righ
 
 ### 10.5 How Security Works
 
-1.  Typically, the client issues an initial anonymous request. The anonymous request is then validated against the OData service. If anonymous access is not granted to the respective OData service, the server will return with error code 401 (Unauthorized) and the response will include the WWW-Authenticate header to instruct the client to authenticate with basic authentication.
-2.  If the client fails to provide correct credentials or does not provide a basic authentication at all, the server returns error code 401 (Unauthorized) and the WWW-Authenticate header, just as in the previous step.
-3.  If the client is granted access (either anonymously or through basic authentication), the client access rights will be checked against the security configuration of the OData resources. All accessible resources are described in the Metadata XML document available under the root URL of the service with `/$metadata` appended.
-4.  Each time the client makes a call to an OData service, whether it is a service description, or metadata, or resource, the authentication information will be re-evaluated.
+1. Typically, the client issues an initial anonymous request. The anonymous request is then validated against the OData service. If anonymous access is not granted to the respective OData service, the server will return with error code 401 (Unauthorized) and the response will include the WWW-Authenticate header to instruct the client to authenticate with basic authentication.
+2. If the client fails to provide correct credentials or does not provide a basic authentication at all, the server returns error code 401 (Unauthorized) and the WWW-Authenticate header, just as in the previous step.
+3. If the client is granted access (either anonymously or through basic authentication), the client access rights will be checked against the security configuration of the OData resources. All accessible resources are described in the Metadata XML document available under the root URL of the service with `/$metadata` appended.
+4. Each time the client makes a call to an OData service, whether it is a service description, or metadata, or resource, the authentication information will be re-evaluated.
 
 ### 11 API Documentation
 

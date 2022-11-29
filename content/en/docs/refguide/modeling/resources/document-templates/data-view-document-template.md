@@ -1,7 +1,6 @@
 ---
 title: "Data View (Document Template)"
 url: /refguide/data-view-document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 aliases:
     - /refguide/Data+View+(document+template).html
@@ -31,9 +30,9 @@ A data view showing orderline information.
 
 The data source properties determine which objects will be shown in the data grid. The list of objects in the data grid is constrained by the following mechanisms:
 
-1.  For top-level data grids, the objects passed in the microflow calling the document export action are shown.
-2.  For nested data grids, if an entity path is used, only the objects reachable by following the path from the containing object are shown.
-3.  For nested data grids, if a microflow is used, the objects returned by the microflow are shown.
+1. For top-level data grids, the objects passed in the microflow calling the document export action are shown.
+2. For nested data grids, if an entity path is used, only the objects reachable by following the path from the containing object are shown.
+3. For nested data grids, if a microflow is used, the objects returned by the microflow are shown.
 
 ### 3.1 Entity (Path)
 

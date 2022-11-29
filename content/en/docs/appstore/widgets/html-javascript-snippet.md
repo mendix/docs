@@ -31,12 +31,13 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
     * **JavaScript**
     * **JavaScript with jQuery** – this option will make sure your code can leverage jQuery v3.3.1, for example:
 
-        ```
+        ```javascript
         //for example, this code snippet will set the color of all your paragraph tags on the page to red.
         $('p').css('color', 'red')
         // or
         jQuery('p').css('color', 'red')
         ```
+
 * **Contents** – the HTML or Javascript to embe
 * **External File** – the path to the HTML or JavaScript file you want to add
     * The root is the **theme** folder
@@ -48,3 +49,7 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
 * **Enclose HTML with DIV** – determines whether the widget will wrap HTML with a DIV when HTML is added
     * If this is set to false, it will just replace the content of the widge 
     * For compatibility purposes, this is set to **Yes** on default
+
+## 3 Strict CSP Compatibility
+
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.

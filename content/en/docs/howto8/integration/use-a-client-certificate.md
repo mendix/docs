@@ -18,7 +18,7 @@ This how-to will teach you how to do the following:
 
 ## 2 Prerequisites
 
-* A PKCS12 certificate file that contains a private key — these files typically have the _.pfx_ or _.p12_ file extension
+* A PKCS12 certificate file that contains a private key — these files typically have the *.pfx* or *.p12* file extension
 * The password to open that file
 
 ## 3 Running Locally
@@ -37,7 +37,7 @@ To configure the custom settings that are only used when you run your app locall
 
 This is an example:
 
-```
+```text {linenos=false}
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "www.server-to-contact.com": "D:\\App\\Mx2.pfx" }
 ```
 
@@ -55,7 +55,7 @@ Be sure to drop `https://` from a URL endpoint.
 
 The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
 
-```
+```text {linenos=false}
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
 
@@ -74,10 +74,10 @@ To configure client certificates in the Mendix Cloud, follow these steps:
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:<br>
-	a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
-	b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
-		* For web services, enter the name of the web service (for example, *ModuleName.WebServiceName*)<br>
-		* For REST services, enter the host name of the endpoint (for example, *example.com*)<br>
-	d. Close the **Details** screen.<br>
+    1. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
+    1. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
+        * For web services, enter the name of the web service (for example,*ModuleName.WebServiceName*)<br>
+        * For REST services, enter the host name of the endpoint (for example, *example.com*)<br>
+    1. Close the **Details** screen.<br>
 
 6. Click **Stop application** and then **Start application**.

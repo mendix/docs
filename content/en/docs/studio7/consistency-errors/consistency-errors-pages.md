@@ -41,7 +41,6 @@ The table below describes the most common errors you can come across when config
 |            | No microflow configured for the data source of this data view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the data view's properties> the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | The list widget option is configured as the data source for the data view, but you have not selected the specific list you would like the data view to listen to. | Create a list view on the same page, configure it, and select it as a list widget for the data view; or change the type of the data source. |
 
-
 ## 4 Context Not Available Consistency Errors
 
 Possible errors that you can get when a page is expecting a context that is unavailable are described in the table below. 
@@ -78,11 +77,9 @@ As the **Details** button to the **Customers** page is outside a data container 
 If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customers** page, we can fix this error the following way:
 
 1. Open the **Customers** page.
-
-2.  Drag the **Details** button inside the list view.
+2. Drag the **Details** button inside the list view.
 
     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/list-view-content.png" alt="List View Example"   width="350"  >}}
-
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -91,13 +88,11 @@ Now the button gets the object of type *Customer* from the list view on the **Cu
 If you want to create a new customer and fill in the customer's details on the **Customers Details** page, you can do the following:
 
 1. Open the **Customers** page.
-
 2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
-     {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
+    {{< figure src="/attachments/studio7/consistency-errors/consistency-errors-pages/create-object-option-enabled.png" alt="Create Object Option Enabled"   width="350"  >}}
 
 3. Set **Customer** as **Entity**.
-
 4. Change the button's caption from **Details** to **Add**, as this button will now create a new customer, and not show details of an existing customer.
 
 Now when a user clicks this button, the **Customer Details** page will open, and the new *Customer* object will be created. 
@@ -126,7 +121,7 @@ The most common errors for [input elements](/studio7/page-editor-widgets-input-e
 
 | Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > the **Data Source** section and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag and drop the input element inside the data view or the list view</li></ul> |
+| CE0544     | This widget can only function inside a data container. Move it into a data view, list view or template grid. | You have added an input widget to a page, but it is not inside a data view or a list view. | There are two ways to fix the error: <ul><li>When you do not have a specific data view or list view available yet: open widget's properties > the **Data Source** section and click **Wrap with a new data view**, the input widget will be automatically placed inside a new data view.</li><li>When you already have a data view or a list view which this input element relates to: drag the input element inside the data view or the list view</li></ul> |
 | CE0545     | Select an attribute for this {name of the input element}.    | You have added an input element and it is inside a data container, but the attribute  which this input element is connected to is not selected. | Open widget's properties > the **Data Source** section and select an attribute in the **Attribute** field. |
 
 ## 6 Image Widgets Consistency Errors
@@ -142,7 +137,7 @@ Errors for static and dynamic images are described in the table below.
 | Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CE0436     | No image selected.                                           | You have added a static image widget on a page, but the image itself is not selected. | Open image properties > the **General** section and click **Select Image**. You can either select a default image or upload your own one. |
-|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag and drop a dynamic image inside it. |
+|            | Move this widget into a data container, for example a data view or list view. | You have added a dynamic image to a page, but it is not inside a data view or a list view. | Open image properties > the **General** section and click **Wrap with a new data view**, the image will be automatically placed inside a new data view. You can also add a list view or a data view to the page and drag a dynamic image inside it. |
 | CE0489     | Select an entity for the data source of this image viewer.   | You have added a dynamic image to a page, the dynamic image is placed inside a data view or a list view, but an entity for the image is not specified. | Open image properties > the **General** section and select an entity in the **Entity** field. |
 
 ## 7 On Click Action Consistency Errors 
@@ -155,7 +150,7 @@ The most common consistency errors appear when you do not configure the on click
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 
-##  8 Read More
+## 8 Read More
 
 * [Pages](/studio7/page-editor/)
 * [Navigation Consistency Errors](/studio7/consistency-errors-navigation/)

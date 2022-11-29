@@ -17,7 +17,7 @@ This property specifies what action is executed when the element is clicked. The
 | Synchronize | Synchronizes the data stored locally on your device with the server database. |
 | Sign out | Signs out the currently signed-in user. When no user is signed in, pressing this button has no effect. |
 
-_Default value:_ Do nothing
+*Default value:* Do nothing
 
 #### Page (Only for "Show a page") {#on-click-page}
 
@@ -54,7 +54,7 @@ This specifies the type of action triggered when pressing the button. These are 
 | Call | Start a phone call. |
 | Text | Send a text message. |
 
-_Default value:_ Web
+*Default value:* Web
 
 #### Address (Only for "Open link") {#on-click-address}
 

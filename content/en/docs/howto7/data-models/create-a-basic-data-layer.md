@@ -12,7 +12,7 @@ This how-to explains how you can create a basic data layer for your application 
 
 The domain model consists of entities and associations. An entity is the blueprint for an object in your application, like "Customer" or "Order." Associations define the relation between two entities. As soon as you deploy the application, Mendix takes care of the underlying database for you. This means that you won't have to create tables and write queries yourself.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create entities and attributes
 * Add enumerations
@@ -138,12 +138,11 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
 ## 8 Read More
 
-* [Work with Images & Files](/howto7/data-models/working-with-images-and-files/)
+* [Work with Images and Files](/howto7/data-models/working-with-images-and-files/)
 * [Denormalize Data to Improve Performance](/howto7/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto7/data-models/setting-up-data-validation/)
 * [Work with Object Events](/howto7/data-models/working-with-object-events/)
 * [Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Stories](/developerportal/collaborate/stories/)
 * [Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath/)
-* [Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)
-
+* [Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/)

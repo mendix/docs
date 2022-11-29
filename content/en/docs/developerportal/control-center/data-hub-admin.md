@@ -54,11 +54,11 @@ On this tab, you can do the following:
 * **Add Owner** – add new owners by filling in their name and email address; new owners will be listed as the business or technical owner for registered assets
 * **Edit** – edit the details of listed owners (hover over the row to see the actions)
 * **Delete** – delete names from the list
-	* Note that if a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner, which means that the asset will not have a contact
+    * Note that if a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner, which means that the asset will not have a contact
 
 ## 4 External Users {#external-users}
 
-Mendix Admins can invite and manage external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
+Mendix Admins can invite external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/external_users.png" alt="External users" >}}
 
@@ -72,13 +72,15 @@ Once the external user receives the invitation, they log into the Data Hub Catal
 
 {{< figure src="/attachments/developerportal/control-center/data-hub-admin/company_selector.png" alt="Company selector" >}}
 
+Company administrators can also **Remove** rights of users who no longer need access, and can add another user in their place.
+
 ## 5 Settings {#settings}
+
+### 5.1 Discoverability Status
 
 Mendix Admins can change the default discoverability status of the published data sources of the company. When OData resources are published, the discoverable status defaults to the value set here. 
 
-The default value of this setting is **On**:
-
-{{< figure src="/attachments/developerportal/control-center/data-hub-admin/Admin-Settings.PNG" alt="Settings" >}}
+The default value of this setting is **On**.
 
 {{% alert color="info" %}}
 This setting does not work in retrospect, it will only apply to the  OData resources published after changing the setting.
@@ -87,3 +89,7 @@ This setting does not work in retrospect, it will only apply to the  OData resou
 {{% alert color="info" %}}
 When the discoverable value is explicitly declared on the registration form or in the API field, it will take precedence over this company **Settings** value.
 {{% /alert %}}
+
+### 5.2 Sample Data Sources
+
+Mendix Admins can enable or disable the option to hide sample data sources in the Catalog.

@@ -1,7 +1,6 @@
 ---
 title: "Custom Domains"
 url: /developerportal/deploy/custom-domains/
-parent: "mendix-cloud-deploy"
 weight: 27
 description: "How to configure custom domains as well as generate, upload, and renew certificates in Mendix."
 tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
@@ -29,7 +28,7 @@ This documentation is describing certificates for *incoming* connections. For in
 You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
 {{% /alert %}}
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Generate a certificate request for your custom domain
 * Upload a custom domain certificate to the Mendix Cloud
@@ -95,15 +94,15 @@ If you do not have an SSL/TLS certificate you can order one from a certificate a
 
 To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow these steps:
 
-1.  Click **New**.
+1. Click **New**.
 
-2.  Click **Create a Certificate Request**.
+2. Click **Create a Certificate Request**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/newcustomdomain.png" >}}
 
-2.  Fill in the required fields.
+3. Fill in the required fields.
 
-4.  Click **Generate**.
+4. Click **Generate**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168225.png" >}}
 
@@ -227,7 +226,6 @@ To configure a custom domain for your application environment, follow these step
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168229.png" >}}
     
-
 {{% alert color="info" %}}
 
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
@@ -250,7 +248,7 @@ Your certificate is signed by the certificate authority (CA). They sign your cer
 
 To reach the root certificate, you have to link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally a CA requires more than one intermediate certificate. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
-### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
+### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?{#use-custom-url}
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings/#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
 

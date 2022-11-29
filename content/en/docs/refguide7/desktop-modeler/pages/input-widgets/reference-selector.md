@@ -1,7 +1,6 @@
 ---
 title: "Reference Selector"
 url: /refguide7/reference-selector/
-parent: "input-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,7 +19,7 @@ The reference selector is similar to a [Report Parameter](/refguide7/report-para
 
 {{% alert color="success" %}}
 
-If you only want to _display_ information, you can also use the text box. This has the added advantage that you can follow more than one association step.
+If you only want to *display* information, you can also use the text box. This has the added advantage that you can follow more than one association step.
 
 {{% /alert %}}
 
@@ -41,7 +40,7 @@ The advantage of a selecting using a drop-down is that it is very efficient; no 
 
 {{% /alert %}}
 
-_Default value:_ Drop-down
+*Default value:* Drop-down
 
 ### Empty Option Caption
 
@@ -93,14 +92,14 @@ See [Opening Pages](/refguide7/opening-pages/) for more details.
 
 The date format determines whether the reference selector displays the date, time, date and time, or a custom variation of the linked attribute. How the date and/or time are formatted depend on the localization of the user viewing the data.
 
-_Default value:_ Date
+*Default value:* Date
 
 ### Selectable Objects Properties
 
 The properties in the category 'Selectable objects' determine the objects out of which the end user can make a selection. There are two, mutually exclusive, ways of influencing the selectable objects:
 
-1.  A microflow returns the list of selectable objects.
-2.  The list of objects is determined automatically taking into account the context mechanism and the properties that influence that mechanism.
+1. A microflow returns the list of selectable objects.
+2. The list of objects is determined automatically taking into account the context mechanism and the properties that influence that mechanism.
 
 ### Microflow
 
@@ -135,12 +134,12 @@ A reference selector can be constrained by one or more paths. This is typically 
 {{% alert color="info" %}}
 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/917938.png" >}}
-_Domain model_
+*Domain model*
 
 In the domain model the order line has associations of type reference to both category and product. In this form, these can be edited with two reference selectors. The third association, from product to category, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844014.jpg" >}}
-_Form_
+*Form*
 
 The page has two reference selectors, one for category and one for product. The one for product is constrained by the path through the domain model that forms the triangle.
 
@@ -154,7 +153,7 @@ This property has no effect if a microflow is used to fill the reference selecto
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the reference selector sorts on the displayed attribute.
 
-_Default value:_ No sort order
+*Default value:* No sort order
 
 ## Data Source Properties
 
@@ -204,6 +203,6 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
-*   [Entities](/refguide7/entities/)
-*   [Associations](/refguide7/associations/)
+* [Data view](/refguide7/data-view/)
+* [Entities](/refguide7/entities/)
+* [Associations](/refguide7/associations/)

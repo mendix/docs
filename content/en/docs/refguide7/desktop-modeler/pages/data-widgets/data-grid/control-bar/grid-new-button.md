@@ -1,7 +1,6 @@
 ---
 title: "Grid Create Button"
 url: /refguide7/grid-new-button/
-parent: "control-bar"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -46,7 +45,7 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 | Inline at bottom | The new instance is added directly at the bottom of the grid or reference set selector and can be edited inline. |
 | In a page | The new instance is added and can be edit in a page. The page in which this instance is being edited can be set with the page property |
 
-_Default value:_ In a page
+*Default value:* In a page
 
 ### Page
 

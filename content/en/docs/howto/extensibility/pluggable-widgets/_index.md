@@ -3,6 +3,7 @@ title: "Build Pluggable Web Widgets"
 url: /howto/extensibility/pluggable-widgets/
 category: "Extensibility"
 weight: 20
+description: "Describes how to use the new generation of custom-built Mendix widgets based on React."
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
@@ -10,4 +11,3 @@ Pluggable web widgets are Mendix's custom-built widgets based on React. This lan
 
 * [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/)
 * [Build a Pluggable Web Widget: Part 2 (Advanced)](/howto/extensibility/create-a-pluggable-widget-two/)
-

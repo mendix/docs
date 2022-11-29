@@ -1,7 +1,6 @@
 ---
 title: "Customize Styling"
 url: /howto/front-end/customize-styling-new/
-parent: "atlas-ui"
 weight: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
 tags: ["build", "app", "studio", "studio pro", "style", "styling"]
@@ -27,7 +26,10 @@ For more information on how changes can be quickly previewed, see the [Preview a
 
 ### 2.2 Using the Styling Editor {#styling-editor}
 
-The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) inside the App Explorer, and edit them using this editor.
+The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) under App Explorer's **Styling** node. When you double click a styling file, it will be opened in the styling editor:
+
+{{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/styling-editor.png" alt="styling editor" >}}
+
 By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide/preferences-dialog/) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/styling-editor-settings.png" alt="styling editor settings" >}}
@@ -50,22 +52,22 @@ In the following example a custom style is added to change any matching element'
 
 Steps: 
 
-1.  In *theme/web/custom-variables.scss* add a SCSS variable by adding the following code to the file: 
+1. In *theme/web/custom-variables.scss* add a SCSS variable by adding the following code to the file: 
 
-    ```scss
-    $company-header-text-size: 30px;
+    ```scss {linenos=false}
+	$company-header-text-size: 30px;
     ```
 
-2.  Create a new file *theme/web/company-header.scss*. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
+2. Create a new file *theme/web/company-header.scss*. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
 
-    ```scss
-    .company-header { font-size: $company-header-text-size; }
+    ```scss {linenos=false}
+	.company-header { font-size: $company-header-text-size; }
     ```
 
-3.  Import the new file in *theme/web/main.scss* by adding the following:
+3. Import the new file in *theme/web/main.scss* by adding the following:
 
-    ```scss
-    @import “company-header”;
+    ```scss {linenos=false}
+	@import “company-header”;
     ```
 
 This ensures the SCSS is included in CSS compilation.
@@ -74,24 +76,24 @@ This ensures the SCSS is included in CSS compilation.
 
 In this example we will be creating a custom style which will change the font size of text upon use:
 
-1.  Add a JavaScript variable in *theme/native/custom-variables.js* with the following code: 
+1. Add a JavaScript variable in *theme/native/custom-variables.js* with the following code: 
    
-    ```javascript
-    export const companyHeaderTextSize = 30;
+    ```javascript {linenos=false}
+	export const companyHeaderTextSize = 30;
     ```
 
-2.  Create a new file *theme/native/company-header.js*. In the new file, the newly defined variable defined in step needs to be imported. Create a variable with an object value, containing property `fontSize` with the value referencing the newly defined custom-variable, then export the variable. The following code achieves this:
+2. Create a new file *theme/native/company-header.js*. In the new file, the newly defined variable defined in step needs to be imported. Create a variable with an object value, containing property `fontSize` with the value referencing the newly defined custom-variable, then export the variable. The following code achieves this:
 
     ```javascript
-    import { companyHeaderTextSize } from “./custom-variables”;
-    export const companyHeader = { fontSize: companyHeaderTextSize };
+	import { companyHeaderTextSize } from “./custom-variables”;
+	export const companyHeader = { fontSize: companyHeaderTextSize };
     ```
 
-3.  Import the object defined in *company-header.js* and expose it in *theme/native/main.js* as follows:
+3. Import the object defined in *company-header.js* and expose it in *theme/native/main.js* as follows:
 
     ```javascript
-    import {companyHeader} from “./company-header”;
-    module.exports = {companyHeader};
+	import {companyHeader} from “./company-header”;
+	module.exports = {companyHeader};
     ```
 
 ### 2.4 Importing CSS (Web Only)
@@ -102,7 +104,7 @@ See the following fragment as an example of how additional CSS can be added to y
 
 ```json
 {
-    "cssFiles": ["theme.compiled.css", "water.css"]
+	"cssFiles": ["theme.compiled.css", "water.css"]
 }
 ```
 
@@ -130,7 +132,7 @@ Modules that contain theme styling should be marked as UI resources modules. To 
 
 #### 4.2 Ordering UI Resource Modules
 
-When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should overwrite styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
+When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should override styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
@@ -155,24 +157,22 @@ $brand-danger: #e33f4e;
 To create a re-usable theme module, do the following:
 
 1. Create a new module in Studio Pro. Right-click **App {name}** in the App Explorer, then click **Add module…**. Give it a name. For this example the module’s name is "mytheme".
-   
 2. In your Mendix app directory, create a new file *themesource/mytheme/web/custom-variables.scss*.
 
-{{% alert color="info" %}}
-To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.
-{{% /alert %}}
+    {{% alert color="info" %}}To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.{{% /alert %}}
 
-3. Cut the variables from *theme/web/custom-variables.scss* and paste them in *themesource/mytheme/web/custom-variables.scss*.
-   
-4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name.
+3. Copy the variables from *theme/web/custom-variables.scss* and paste them in *themesource/mytheme/web/custom-variables.scss*. Remove all the variables from the *theme/web/custom-variables.scss*. The *theme/web/custom-variables.scss* file should now be empty.
+4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name. The *theme/web/custom-variables.scss* file should only contain an import statement to your "mytheme" custom variables.
 
 The two files should end up looking like this:
 
 *theme/web/custom-variables.scss*:
 
-```scss
+```scss {linenos=false}
 @import "../../themesource/mytheme/web/custom-variables.scss";
 ```
+
+Any variables still in the *theme/web/custom-variables.scss* will override the variables in *themesource/mytheme/web/custom-variables.scss* 
 
 *themesource/mytheme/web/custom-variables.scss*:
 
@@ -216,26 +216,22 @@ export const brand = {
 Steps:
 
 1. Create a new module in Studio Pro. Right-click **App {name}** in the App Explorer, then click **Add module…**. Give it a name, for this example the module’s name is “mytheme”.
-   
 2. In your Mendix app directory, create a new file *themesource/mytheme/native/custom-variables.js*.
 
-{{% alert color="info" %}}
-Note: To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.
-{{% /alert %}}
+    {{% alert color="info" %}}Note: To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.{{% /alert %}}
 
 3. Cut the export statement and variables from *theme/native/custom-variables.js* and paste in *themesource/mytheme/native/custom-variables.js*.
-   
-4.  In *theme/native/custom-variables.js* add the following code to the top of the file, replacing “mytheme” with your module name:
+4. In *theme/native/custom-variables.js* add the following code to the top of the file, replacing “mytheme” with your module name:
 
-    ```javascript
-    export * from "../../themesource/mytheme/native/custom-variables";
+    ```javascript {linenos=false}
+	export * from "../../themesource/mytheme/native/custom-variables";
     ```
 
 The two files should end up looking like this:
 
 *theme/native/custom-variables.js*:
 
-```javascript
+```javascript {linenos=false}
 export * from "../../themesource/mytheme/native/custom-variables";
 ```
 
@@ -326,9 +322,9 @@ If a module contains styling, such as a design system module, it is generally be
 The *.scss* files compile in the following order:
 
 1. The *main.scss* files from the **themesource** folders, specifically:
-   1. Non-UI Marketplace modules, in alphabetical order.
-   1. UI resources modules, ordered as in **App Settings** > **Theme**.
-   1. Non-UI user modules, ordered as in the Studio Pro **App explorer**.
+    1. Non-UI Marketplace modules, in alphabetical order.
+    1. UI resources modules, ordered as in **App Settings** > **Theme**.
+    1. Non-UI user modules, ordered as in the Studio Pro **App explorer**.
 1. Custom variables from the **theme** folder (*theme/web/custom-variables.scss*).
 1. *main.scss* from the **theme** folder (*theme/web/main.scss*).
 
@@ -336,7 +332,7 @@ If SASS compilation fails, it will be shown in Studio Pro as a consistency error
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/compilation-error.png" alt="theme compilation error" >}}
 
-The content from the **public** folder will be copied to the same folder as the *theme.compiled.css* file when deployed. This allows you to reference those resources using a relative path in the theme module's *SCSS*. For example, to use the image *themesource/{module}/public/images/login-background.jpg* from *themesource/{module}/web/main.scss*, you can simply use `url("./images/login-background.jpg)`.
+The content from the **public** folder will be copied to the same folder as the *theme.compiled.css* file when deployed. This allows you to reference those resources using a relative path in the theme module's *SCSS*. For example, to use the image *themesource/{module}/public/images/login-background.jpg* from *themesource/{module}/web/main.scss*, you can simply use `url("./images/login-background.jpg")`.
 
 Note that public folders will be copied in the same order *.scss* files are compiled. Therefore if two modules have the same public resource, the last to be copied will end up in the deployment folder.
 
@@ -345,9 +341,9 @@ Note that public folders will be copied in the same order *.scss* files are comp
 For native mobile apps the React Native framework is used to combine all the JavaScript files into one file, using a "bundler" that is responsible for creating the JavaScript bundle used to run the app. The styling of the different modules is combined and made ready to be processed by the bundler in the following order:
 
 1. All *main.js* files from the **themesource** folders in the following order:
-   1. Non-UI Marketplace modules, in alphabetical order.
-   1. UI resources modules, ordered as in **App Settings** > **Theme**.
-   1. Non-UI user modules, ordered as in Studio Pro.
+    1. Non-UI Marketplace modules, in alphabetical order.
+    1. UI resources modules, ordered as in **App Settings** > **Theme**.
+    1. Non-UI user modules, ordered as in Studio Pro.
 1. *main.js* from theme folder (*theme/native/main.js*).
 1. Original *styles.js* in the **theme** folder if it exists (*theme/styles.js*).
 
@@ -371,7 +367,7 @@ Pick the button widget as an example. The success button is by default styled as
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the variable `$exclude-button-helpers` to `true`:
 
-```scss
+```scss {linenos=false}
 $exclude-button-helpers: true;
 ```
 
@@ -475,7 +471,7 @@ Pick the button widget as an example again. The success button is by default sty
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the constant variable `excludeButtonsHelpers` to `true`:
 
-```javascript
+```javascript {linenos=false}
 export const excludeButtonsHelpers = true;
 ```
 
@@ -568,10 +564,38 @@ excludeWebView
 excludeHelpers
 ```
 
-## 9 Customizing index.html (Web)
+## 9 Customizing index.html (Web) {#custom-web}
 
-By default, Mendix generates the *index.html* (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
+By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
 ## 10 Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
 
 When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called *unsupported-browser.html* in the **theme/web** folder. If desired, you can copy *unsupported-browser.html* from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.
+
+## 11 Serving Fonts Locally (Web) {#local-fonts}
+
+By default, Atlas uses the font Open Sans, and the font files are loaded from the Google Fonts Content Delivery Network (CDN). While the Google Fonts CDN is convenient, you might need to change your font file service location.
+
+For example, you may need to change your font file service location in order to comply with stricter [CSP](/howto/security/using-mobile-capabilities/csp/) policies, or if you cannot use Google Fonts CDN due to business requirements. Fortunately, you can serve fonts from your own local server instead of using the Google Fonts CDN using the sections below.
+
+### 11.1 Downloading Font Files
+
+Font files prepared for use with Atlas are available at this [GitHub repository](https://github.com/mendix/open-sans). Download the repository’s content by clicking the **Code** button and selecting **Download ZIP**. 
+
+Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folder of your Mendix app. Make sure that *open-sans.css* and the font files are located directly in the **/theme/web/fonts/** folder of your Mendix app.
+
+### 11.2 Using Local Font Files
+
+Open your Mendix app's *theme/web/custom-variables.scss* file and locate the following line:
+
+```scss {linenos=false}
+$font-family-import: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+```
+
+Replace that line with the following code:
+
+```scss {linenos=false}
+$font-family-import: "./fonts/open-sans.css"
+```
+
+Then, save your changes. Run your app and you should see fonts rendered correctly

@@ -1,7 +1,6 @@
 ---
 title: "List Operation"
 url: /refguide/list-operation/
-parent: "list-activities"
 weight: 4
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -100,7 +99,6 @@ These operations take a list and filter it based on an expression. Inside the ex
 | --- | --- | --- |
 | Find by expression | Finds the first object that matches the given expression. | Object |
 | Filter by expression | Finds all the objects that match the given expression. | List |
-
 
 ### 3.2 List Name, Object Name, or Variable Name
 

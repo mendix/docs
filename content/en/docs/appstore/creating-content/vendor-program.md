@@ -15,7 +15,7 @@ In return, you will gain the following benefits:
 
 {{< figure src="/attachments/appstore/creating-content/vendor-program/benefits.png" >}}
 
-The overall [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) consists of the Mendix Solution Vendor Program and the Beta Mendix Supplier Program. The Beta Mendix Supplier Program is currently only applicable for content other than solutions and solution templates. If you are interested in participating in the Beta Mendix Supplier Program, please reach out to `appservices_supplier_team@mendix.com`. If you want to a upload commercial solution, make a request via the form on [Mendix Solution Vendor Program](https://www.mendix.com/marketplace-vendor-program/solutions/).
+The overall [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) consists of the **Mendix Solution Vendor Program** and the **Beta Mendix Supplier Program**. The Beta Mendix Supplier Program is currently only applicable for content other than solutions and solution templates. If you are interested in participating in the Beta Mendix Supplier Program, please reach out to `appservices_supplier_team@mendix.com`. If you want to a upload commercial solution, make a request via the form on [Mendix Solution Vendor Program](https://www.mendix.com/marketplace-vendor-program/solutions/).
 
 ## 2 Applying to the Vendor Program
 
@@ -38,7 +38,7 @@ As the owner of the Mendix Vendor account, you must have permission to legally b
 
 Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
 
-## 4 Legal & Compliance Checks
+## 4 Legal and Compliance Checks
 
 The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
 
@@ -46,5 +46,5 @@ You, as the company, are responsible for ensuring that you comply with all local
 
 ## 5 Read More
 
-* [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/)
-* [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
+* [Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/)
+* [Create Solutions](/appstore/creating-content/sol-solutions-guide/)

@@ -1,5 +1,5 @@
 ---
-title: "SDK How-to's"
+title: "SDK How-tos"
 url: /apidocs-mxsdk/mxsdk/sdk-howtos/
 category: "Mendix Platform SDK"
 weight: 4
@@ -11,7 +11,7 @@ Before the Mendix SDK can make your life easier, there's some learning to do. Fo
 
 If you'd rather find your own way, just scroll through this page to get an overview of the available documents and examples, and start wherever you want. To get set up quickly, take a look at [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).
 
-## 2 How-to's
+## 2 How-tos
 
 ### 2.1 How to Set Up Your Development Environment
 
@@ -21,10 +21,10 @@ To start working with the Mendix SDK, you'll first need to install the SDK and i
 
 Following the installation of the Mendix SDK, you will get a script that will:
 
-*   create a new app
-*   make that app available as an online workingCopy
-*   make a simple change to that workingCopy
-*   commit the change to the workingCopy
+* create a new app
+* make that app available as an online workingCopy
+* make a simple change to that workingCopy
+* commit the change to the workingCopy
 
 You'll be able to run that script and see the results in Studio Pro.
 
@@ -48,10 +48,10 @@ For an explanation on this topic, see [How to Manipulate Existing Models](/apido
 
 Some more explanation on manipulating existing models can be found in these documents:
 
-*   [How to Change Things in the Model](/apidocs-mxsdk/mxsdk/changing-things-in-the-model/)
-*   [How to Close the Server Connection](/apidocs-mxsdk/mxsdk/closing-the-server-connection/)
-*   [How to Find Things in the Model](/apidocs-mxsdk/mxsdk/finding-things-in-the-model/)
-*   [How to Load Units and Elements](/apidocs-mxsdk/mxsdk/loading-units-and-elements/)
+* [How to Change Things in the Model](/apidocs-mxsdk/mxsdk/changing-things-in-the-model/)
+* [How to Close the Server Connection](/apidocs-mxsdk/mxsdk/closing-the-server-connection/)
+* [How to Find Things in the Model](/apidocs-mxsdk/mxsdk/finding-things-in-the-model/)
+* [How to Load Units and Elements](/apidocs-mxsdk/mxsdk/loading-units-and-elements/)
 
 ### 3.3 How to Generate Code from the Model
 

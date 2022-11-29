@@ -1,7 +1,6 @@
 ---
 title: "XPath Weekday-from-DateTime"
 url: /refguide/xpath-weekday-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 
@@ -17,6 +16,6 @@ The range of values returned, and the day of the week corresponding to the lowes
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 (Friday, for locally run apps or apps using a PostgreSQL database):
 
-```java
+```java {linenos=false}
 //Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
 ```

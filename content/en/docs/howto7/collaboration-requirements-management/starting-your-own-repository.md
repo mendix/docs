@@ -1,7 +1,7 @@
 ---
 title: "Start Your Own Repository"
 url: /howto7/collaboration-requirements-management/starting-your-own-repository/
-category: "Collaboration & Requirements Management"
+category: "Collaboration and Requirements Management"
 weight: 30
 tags: []
 ---
@@ -12,9 +12,9 @@ In this how-to you will learn how to set up a GitHub repository. The repository 
 
 ## 2 Preparation
 
-*   Make sure you have a [GitHub account](https://github.com/join)
-*   Make sure you have a [Mendix account](https://developers.mendix.com/start-for-free/)
-*   Read the [GitHub - Create a repo](https://help.github.com/articles/create-a-repo) guide
+* Make sure you have a [GitHub account](https://github.com/join)
+* Make sure you have a [Mendix account](https://developers.mendix.com/start-for-free/)
+* Read the [GitHub - Create a repo](https://help.github.com/articles/create-a-repo) guide
 
 ## 3 Creating Your Repo
 
@@ -38,8 +38,7 @@ If you want to make a new release for the Marketplace, we advise you start off w
 
 ## 6 Read More
 
-*   [Stories](/developerportal/collaborate/stories/)
-*   [Contributing to a GitHub repository](/howto7/collaboration-requirements-management/contribute-to-a-github-repository/)
-*   [Version Control](/refguide7/version-control/)
-*   [Sharing the Development Database](/howto7/collaboration-requirements-management/sharing-the-development-database/)
-
+* [Stories](/developerportal/collaborate/stories/)
+* [Contributing to a GitHub repository](/howto7/collaboration-requirements-management/contribute-to-a-github-repository/)
+* [Version Control](/refguide7/version-control/)
+* [Sharing the Development Database](/howto7/collaboration-requirements-management/sharing-the-development-database/)

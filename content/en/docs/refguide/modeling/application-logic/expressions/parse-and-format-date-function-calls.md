@@ -1,7 +1,6 @@
 ---
-title: "Parse & Format Date Function Calls"
+title: "Parse and Format Date Function Calls"
 url: /refguide/parse-and-format-date-function-calls/
-parent: "expressions"
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
 tags: ["studio pro", "expressions", "parsing", "formatting"]
@@ -11,7 +10,37 @@ tags: ["studio pro", "expressions", "parsing", "formatting"]
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
+The following pattern letters can be used to parse and format Date and time values:
+
+| Letter | Date or Time Component                    | Examples               |
+| ------ | ----------------------------------------- | ---------------------- |
+| L      | Month in year                             | November; Nov; 11      |
+| y      | Year                                      | 2001; 01               |
+| G      | Era designator                            | AD                     |
+| E      | Day name in week                          | Tuesday; Tue           |
+| u      | Day of week (1 = Monday, ..., 7 = Sunday) | 5                      |
+| Y      | Week year                                 | 2009; 09               |
+| w      | Week in year                              | 11                     |
+| W      | Week in month                             | 2                      |
+| D      | Day in year                               | 133                    |
+| d      | Day in month                              | 7                      |
+| F      | Day of week in month                      | 1                      |
+| a      | Am/pm marker                              | PM                     |
+| H      | Hour in day (0-23)                        | 0                      |
+| k      | Hour in day (1-24)                        | 24                     |
+| K      | Hour in am/pm (0-11)                      | 0                      |
+| h      | Hour in am/pm (1-12)                      | 12                     |
+| m      | Minute in hour                            | 24                     |
+| s      | Second in minute                          | 50                     |
+| S      | Millisecond                               | 201                    |
+
+The following pattern letters are only available for microflows:
+
+| Letter | Date or Time Component                    | Examples                              |
+| ------ | ----------------------------------------- | ------------------------------------- |
+| z      | Time zone                                 | Pacific Standard Time; PST; GMT-08:00 |
+| Z      | Time zone                                 | -0800                                 |
+| X      | Time zone                                 | -08; -0800; -08:00                    |
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
@@ -23,7 +52,7 @@ The input parameters are described in the table below:
 
 | Value                        | Type                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| Date                         | A string which contains the textual representation of a date, meaning, `dd/mm/yyyy` , `mm/dd/yyyy`, etc. |
+| Date                         | A string which contains the textual representation of a date — for example `dd/mm/yyyy` or `mm/dd/yyyy` |
 | Format                       | String                                                       |
 | Default value (**optional**) | Date and time                                                |
 
@@ -35,32 +64,40 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------------- |
 | The parsed date or the default value if a date could not be parsed. | Date and time |
 
+{{% alert color="info" %}}
+If the `Date` string is date-like, but not a valid date, the function will be able to parse it and will return a valid `Date and time` value.
+
+For example `parseDateTime('35-11-2015', 'dd-MM-yyyy', dateTime(2015))` will return `05 December 2015 12:00 AM`.
+{{% /alert %}}
+
 ### 2.3 Example
 
 The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java
-    parseDateTime('2015-05-21', 'yyyy-MM-dd')
+    ```java {linenos=false}
+    parseDateTime('2022-04-30T22:00:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')
     ```
 
     the output is:
 
-    ```java
-    The date May 21st, 2015\. The time will be 12 o'clock at night  because it is not specified.
+    ```java {linenos=false}
+    Apr 30 2022 22:00:00
     ```
+
+    The time will be 00:00, if it is not specified.
     
 * If you use the following input:
 
-    ```java
+    ```java {linenos=false}
     parseDateTime('noDateTime', 'dd-MM-yyyy', dateTime(2007))
     ```
 
     the output is:
 
-    ```java
-    'Mon Jan 01 00:00:00 CET 2007'
+    ```java {linenos=false}
+    Mon Jan 01 00:00:00 CET 2007
     ```
 
 ## 3 formatDateTime[UTC]
@@ -88,19 +125,19 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 formatDateTime($object/Date1,'EEE, d MMM yyyy HH:mm:ss Z')
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 'Sun, 8 Jun 2008 10:12:01 +0200'
 ```
 
-To get '1987-12-31T23:59:00', you need to concatenate two formatDateTime[UTC] functions:
+To get a format like `'2008-06-08T10:12:01'`, you need to concatenate two formatDateTime[UTC] functions:
 
-```java
+```java {linenos=false}
 formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
 ```
 
@@ -128,13 +165,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 formatTime(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 '9:50 AM'
 ```
 
@@ -162,13 +199,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 formatDate(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java
+```java {linenos=false}
 '7/2/74'
 ```
 
@@ -196,19 +233,19 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 dateTimeToEpoch(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 141990610000
 ```
 
 ## 7 epochToDateTime
 
-Creates a Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
+Creates a Date and time that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
 
 ### 7.1 Input Parameters
 
@@ -224,18 +261,18 @@ The output is described in the table below:
 
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
-| A Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT. | Date and time |
+| A Date and time that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT. | Date and time |
 
 ### 7.3 Example
 
 If you use the following input:
 
-```java
+```java {linenos=false}
 epochToDateTime(141990610000)
 ```
 
 The output is:
 
-```java
+```java {linenos=false}
 dateTime(1974, 7, 2, 9, 50, 10)
 ```

@@ -1,7 +1,6 @@
 ---
 title: "Decision"
 url: /refguide/decision/
-parent: "decisions"
 weight: 3
 tags: ["studio pro", "decision", "exclusive split"]
 aliases:
@@ -65,7 +64,7 @@ The properties of the **Rule** decision type are the following ones:
 
 * **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](/refguide/expressions/). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
-	{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}
 
 #### 2.1.3 Error Handling Type
 

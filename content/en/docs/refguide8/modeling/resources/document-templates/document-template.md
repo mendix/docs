@@ -1,7 +1,6 @@
 ---
 title: "Document Template"
 url: /refguide8/document-template/
-parent: "document-templates"
 tags: ["studio pro"]
 ---
 

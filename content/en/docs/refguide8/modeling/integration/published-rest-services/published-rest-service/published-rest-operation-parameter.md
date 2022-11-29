@@ -1,7 +1,6 @@
 ---
 title: "Operation Parameters for Published REST"
 url: /refguide8/published-rest-operation-parameter/
-parent: "published-rest-service"
 weight: 20
 description: "Configure a published REST Operation by adding parameters to an operation "
 tags: ["published REST", "operation", "parameter", "resource", "mapping", "not found", "commit"]
@@ -81,6 +80,3 @@ This is used in the service's [OpenAPI (Swagger) documentation page](/refguide8/
 {{% alert color="info" %}}
 The public documentation feature was introduced in version 8.3.0.
 {{% /alert %}}
-
-
-

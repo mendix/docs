@@ -70,4 +70,3 @@ It starts the Runtime Server by starting a Java RE and pointing it at the releva
 ### 2.11 Runtime Server
 
 This is the interpreter which runs the app. For more information see [Runtime Server](/refguide8/runtime-server/).
-

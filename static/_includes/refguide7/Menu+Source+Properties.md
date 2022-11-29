@@ -7,7 +7,7 @@ The items that are shown in the menu widget are determined by the menu source. A
 | Project Navigation | The menu items are taken from one of the menus defined in the [Navigation](/refguide7/navigation/) document. Use this for the main menu of your application. |
 | Menu Document | The menu items are taken from a [Menu](/refguide7/menu/) document. Use menu documents for auxiliary menus. |
 
-_Default value:_ Project navigation
+*Default value:* Project navigation
 
 ### Menu (only for menu source 'Project navigation')
 
@@ -19,7 +19,7 @@ If the menu source is 'Project navigation', this property specify which of the t
 | Tablet | Use the 'Tablet' menu |
 | Phone | Use the 'Phone' menu |
 
-_Default value:_ Desktop
+*Default value:* Desktop
 
 ### Menu document (only for menu source 'Menu document')
 

@@ -10,6 +10,7 @@
 @import "sidebar-toc";
 @import "sidebar-tree";
 @import "tables";
+@import "section-index";
 
 // Adjust anchors vs the fixed menu.
 @include media-breakpoint-up(md) {
@@ -26,8 +27,8 @@
     h5[id]:before {
         display: block;
         content: " ";
-        //margin-top: 0; // NK - override for default values, not best way, deactivated to keep headers visible after clicking anchor link
-        //height: 0; // NK - override for default values, not best way, deactivated to keep headers visible after clicking anchor link
+        margin-top: -48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
+        height: 48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
         visibility: hidden;
     }
 }

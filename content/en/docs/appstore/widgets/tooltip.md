@@ -23,10 +23,8 @@ Several options can be defined in the Tooltip widget. For more information, see 
 
 For the sake of simplicity, there are two methods for creating a tooltip:
 
-* **Text** (default) – this mode lets you can enter text with or without parameters to quickly implement a
-  tooltip in your app
-* **Custom** – enable this mode to freely design what will be shown in the tooltip such as the text, images, and
-  widgets
+* **Text** (default) – this mode lets you can enter text with or without parameters to quickly implement a tooltip in your app
+* **Custom** – enable this mode to freely design what will be shown in the tooltip such as the text, images, and widgets
 
 ### 2.2 Tooltip Position
 
@@ -41,8 +39,7 @@ You can define how to position the tooltip in relation to the trigger element.
 
 ### 2.3 Arrow Position
 
-With the new Tooltip widget you also can define how to position the tooltip arrow in relation to the tooltip. The arrow
-is the connection between the trigger element and the tooltip content. 
+With the new Tooltip widget you also can define how to position the tooltip arrow in relation to the tooltip. The arrow is the connection between the trigger element and the tooltip content. 
 
 **Arrow Position** options are as follows:
 

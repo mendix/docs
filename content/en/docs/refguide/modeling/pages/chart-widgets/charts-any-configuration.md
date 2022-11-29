@@ -1,7 +1,6 @@
 ---
 title: "Any Chart Widgets"
 url: /refguide/charts-any-configuration/
-parent: "chart-widgets"
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30
 tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
@@ -202,3 +201,7 @@ For guidance on how to set up chart theming see: [How to Use the Charts Theme](/
 Please use with caution, as the configuration set up here will be applied to every chart in your application. Only the advanced configurations set up in the widget itself have a higher precedence.
 
 {{% /alert %}}
+
+## 9 Strict CSP Compatibility
+
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in visual defects.

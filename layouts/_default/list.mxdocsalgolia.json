@@ -148,8 +148,8 @@ Define Global variables
                             {{- end -}}
                         {{- end -}}
                         {{- $scratch.SetInMap $uniqueHit "weight.tag_name" $tagName -}}
-                        {{- /* .URL takes into account any changes by using the url: tag in the front matter */ -}}
-                        {{- $scratch.SetInMap $uniqueHit "url" $pageDot.URL -}}
+                        {{- /* .RelPermalink gives the page address relative to the baseURL. It reflects any changes from the url: tag in the front matter */ -}}
+                        {{- $scratch.SetInMap $uniqueHit "url" $pageDot.RelPermalink -}}
                         {{- $scratch.SetInMap $uniqueHit "slug" $pageDot.File.TranslationBaseName -}}
                         {{- $scratch.SetInMap $uniqueHit "unique_hierarchy" $uniqueHierarchy -}}
                     {{- end -}}

@@ -1,7 +1,7 @@
 ---
 title: "8.15"
 url: /releasenotes/sdk/metamodel-8.15/
-parent: "metamodel-8"
+weight: 86
 ---
 
 ## 8.15.0
@@ -20,6 +20,6 @@ parent: "metamodel-8"
 
 * We introduced the `submitBehaviour` and `submitOnInputDelay` properties.
 
-#### WorkflowTemplateType, UserTaskTemplateType & WorkflowOverviewTemplateType (Elements)
+#### WorkflowTemplateType, UserTaskTemplateType, and WorkflowOverviewTemplateType (Elements)
 
 * We introduced these elements.

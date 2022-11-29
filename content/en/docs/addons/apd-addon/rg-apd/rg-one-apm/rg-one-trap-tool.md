@@ -1,7 +1,6 @@
 ---
 title: "Trap Tool"
 url: /addons/apd-addon/rg-one-trap-tool/
-parent: "rg-one-apm"
 ---
 
 ## 1 Introduction
@@ -14,7 +13,7 @@ This chapter gives an overview of the trap tool, which can be used to collect th
 
 The trap tool shows the traps that are stored.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-trap-tool/Overview.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-trap-tool/Overview.png" >}}
 
 You can send the trap message to the performance tool when the performance tool is not running. This will process all microflow messages in the trap and will show the functionality that was running during the trap.
 
@@ -24,7 +23,7 @@ If you mark a trap to be kept, make sure this trap is not deleted with the perio
 
 When you select a trap, you get to see all the messages in that trap.
 
- {{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-trap-tool/Individual_Trap.png" >}}
+{{< figure src="/attachments/addons/apd-addon/rg-apd/rg-one-apm/rg-one-trap-tool/Individual_Trap.png" >}}
 
 The search parameters to include or exclude **Connection Bus** messages and **Microflow Engine** messages are available to show or hide the most occurring messages.
 

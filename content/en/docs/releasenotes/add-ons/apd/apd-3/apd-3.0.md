@@ -1,7 +1,6 @@
 ---
 title: "3.0"
 url: /releasenotes/add-ons/apd-3.0/
-parent: "apd-3"
 ---
 
 ## 3.0.0

@@ -1,7 +1,7 @@
 ---
 title: "2"
 url: /releasenotes/sdk/model-sdk-2/
-parent: "model-sdk"
+weight: 99
 ---
 
 ## 2.9.1
@@ -21,7 +21,7 @@ parent: "model-sdk"
 
 | Impact | Description |
 | --- | --- |
-| Low | Fixed _metaModelVersion_ in _AbstractModel_ to actually contain meta model version instead of Mendix product version (which is now stored in _mxVersionForModel_). |
+| Low | Fixed *metaModelVersion* in *AbstractModel* to actually contain meta model version instead of Mendix product version (which is now stored in *mxVersionForModel*). |
 | None | Added checks for Page name validation (syntax + uniqueness); includes fixes to MxCheck. |
 | None | Fixed order of meta model versions mentioned in documentation and error messages. |
 | None | Updated links to reference the updated documentation site. |
@@ -65,7 +65,7 @@ Note that Model SDK 2.6.1 and 2.6.2 have been skipped (and unpublished from NPM)
 
 | Impact | Description |
 | --- | --- |
-| Low |  `getFilePaths` has been deprecated and renamed to `getFiles`. |
+| Low |  `getFilePaths` has been deprecated and renamed to `getFiles`. |
 | Low | Improved the typings of some (internal) APIs. |
 | None | Added support for Mendix 6.6.0. |
 | None | `getFilePaths` accepts an option objects which can define `format` (either `zip` or `json`), `filter` (glob pattern) and `path` (output filename if format is `zip`). |
@@ -125,14 +125,14 @@ This release introduces a number of breaking changes in the SDK's API, so becaus
 | 631960 | None | Added support for checking deployment status. |
 | 623906 | None | Added support for deploying from the SDK. Note that this is currently **not** supported on non-trusted back ends! |
 
-The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modeling language.
+The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modeling language.
 This interference leads to elements having different kinds of containment throughout their history.
 In turn, this necessitated us to make some fundamental changes to avoid having to have breaking changes in the future.
 
-*   The `container` property is not strictly typed anymore; for example, `domainmodels.Attribute.container` is not of type `Entity` anymore but of a general `Container` type.
-*   Instead, `containerAs<T>` properties of type `T` are introduced on all elements. This property returns the instance of `T` which contains the element or throws if it's not contained by an instance of `T`. To avoid those exceptions, use `container` together with `instanceof`-guards.
-*   In case an element is contained by _multiple_ properties (as in, more than 1), `createIn<T>Under<P>` methods are generated which creates a new element in a given instance of `T` under property `P`. Several previously-existing `createIn` methods have been replaced by a `createIn<T>Under<P>` method, where these `createIn` methods considered only 1 containing property.
-*   Elements that are contained by one property in at least one version will have a `createIn` method that works as expected for those versions and throws for other versions.
-*   Elements that are always (as in, in all versions) contained by properties that are derived, will not have any `createIn...` methods.
+* The `container` property is not strictly typed anymore; for example, `domainmodels.Attribute.container` is not of type `Entity` anymore but of a general `Container` type.
+* Instead, `containerAs<T>` properties of type `T` are introduced on all elements. This property returns the instance of `T` which contains the element or throws if it's not contained by an instance of `T`. To avoid those exceptions, use `container` together with `instanceof`-guards.
+* In case an element is contained by *multiple* properties (as in, more than 1), `createIn<T>Under<P>` methods are generated which creates a new element in a given instance of `T` under property `P`. Several previously-existing `createIn` methods have been replaced by a `createIn<T>Under<P>` method, where these `createIn` methods considered only 1 containing property.
+* Elements that are contained by one property in at least one version will have a `createIn` method that works as expected for those versions and throws for other versions.
+* Elements that are always (as in, in all versions) contained by properties that are derived, will not have any `createIn...` methods.
 
-Dependent code can be easily fixed by using the `containerAs<T>` property instead of the `container` property, and (in a few specific cases) by using a `createIn<T>Under<P>` method instead of the `createIn` method.
+Dependent code can be easily fixed by using the `containerAs<T>` property instead of the `container` property, and (in a few specific cases) by using a `createIn<T>Under<P>` method instead of the `createIn` method.

@@ -1,7 +1,6 @@
 ---
 title: "Migrate From Atlas 2 To Atlas 3"
 url: /refguide/moving-from-atlas-2-to-3/
-parent: "moving-from-8-to-9"
 weight: 6
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
@@ -34,13 +33,13 @@ Before you start the upgrade process, it may help if you consult the folder stru
 
 To upgrade your theme directory to Atlas 3 specifications, please complete the following steps:
 
-1.  Rename you Atlas 2 **theme** directory. We suggest naming it to *theme_atlas2*:
+1. Rename you Atlas 2 **theme** directory. We suggest naming it to *theme_atlas2*:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas2-themefolder.png" alt="Atlas2 folder" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas2-themefolder.png" alt="Atlas2 folder" >}}
 
-1.  Download the Atlas 3 [theme.zip](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix app folder. The folder structure should look similar to the example below. **Mendix app root**, then **theme**, then **web** and **native**:
+1. Download the Atlas 3 [theme.zip](https://github.com/mendix/widgets-resources/releases/download/atlas-ui-theme-dist/theme.zip) and extract it into the root of your Mendix app folder. The folder structure should look similar to the example below. **Mendix app root**, then **theme**, then **web** and **native**:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-themefolder.png" alt="Atlas 3 folder" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-themefolder.png" alt="Atlas 3 folder" >}}
 
 ### 2.2  Migrating UI Content {#upgrade-ui-content}
 
@@ -53,33 +52,33 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 #### 2.2.1 Upgrading Atlas UI Resources to Atlas Core
 
 1. If you have modified any of the Atlas UI content found in **Atlas UI Resources** (for example building blocks, page templates, or layouts) it is recommended to move the UI content you have modified to another user defined module within your app. *Skip this step* if you have not modifed any of Atlas UI's content.
-1.  Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
+1. Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/2-rename.png" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/2-rename.png" >}}
 
-1.  Download [Atlas Core](https://marketplace.mendix.com/link/component/117187) from the Marketplace and replace the existing **Atlas_UI_Resources** renamed to **Atlas_Core**:
+1. Download [Atlas Core](https://marketplace.mendix.com/link/component/117187) from the Marketplace and replace the existing **Atlas_UI_Resources** renamed to **Atlas_Core**:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/3-import.png" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/3-import.png" >}}
 
 #### 2.2.2 Adding Atlas Web Content to Your App
 
-1.  Download [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) from Marketplace
+1. Download [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) from Marketplace
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png" alt="Atlas web content" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png" alt="Atlas web content" >}}
 
-1.  **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
+1. **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-web-content-folder-structure.png" alt="Atlas web content folder"   width="250"  >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-web-content-folder-structure.png" alt="Atlas web content folder"   width="250"  >}}
 
 #### 2.2.3 Adding Atlas Native Content to Your App
 
-1.  Download [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) from Marketplace:
+1. Download [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) from Marketplace:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" >}}
 
-1.  **Atlas Native Content** will appear as a new module inside **Marketplace Modules**:
+1. **Atlas Native Content** will appear as a new module inside **Marketplace Modules**:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-native-content-folder.png" alt="Atlas native content folder"   width="300"  >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas-native-content-folder.png" alt="Atlas native content folder"   width="300"  >}}
 
 ### 2.3 Migrating Your Web Styling {#upgrade-web-styling}
 
@@ -102,7 +101,7 @@ If you have made any of the modifications above, please follow the steps below. 
 
 This section concerns modifications you have made to the *custom-variables.scss* file of your **Atlas 2 theme**:
 
-```
+```text {linenos=false}
 theme_atlas2/styles/web/sass/app/_custom-variables.scss
 ```
 
@@ -110,13 +109,13 @@ To move your custom variable modifications to **Atlas 3**, there are two options
 
 **Option 1** — If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** SCSS file of the **Atlas 3 theme** directory:
 
-```
+```text {linenos=false}
 theme/web/custom-variables.scss
 ```
 
 **Option 2** — If you want to extract the variables into a reusable module, move them into the **custom-variables** SCSS file of a module you have created in the **themesource** directory:
 
-```
+```text {linenos=false}
 themesource/your-module/web/custom-variables.scss
 ```
 
@@ -124,7 +123,7 @@ themesource/your-module/web/custom-variables.scss
 
 This section concerns modifications you have made to the **custom** SCSS file of your **Atlas 2 theme**:
 
-```
+```text {linenos=false}
 theme_atlas2/styles/web/sass/app/_custom.scss
 ```
 
@@ -132,13 +131,13 @@ To move your custom styling modifications to **Atlas 3**, there are two options:
 
 **Option 1** — If the custom styling apply to the app level, then the modifications should be moved into the **main** SCSS file of the **Atlas 3 theme** directory: 
 
-```
+```text {linenos=false}
 theme/web/main.scss
 ```
 
 **Option 2** — If you want to extract the custom styling into a reusable module, move them into the **main** SCSS file of a module you have created in the **themesource** directory:
 
-```
+```text {linenos=false}
 themesource/your-module/web/main.scss
 ```
 
@@ -146,7 +145,7 @@ themesource/your-module/web/main.scss
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional SCSS stylesheets that you might have added:
 
-```
+```text {linenos=false}
 theme_atlas2/styles/web/sass/app/_
 ```
 
@@ -154,7 +153,7 @@ To move you additional stylesheets that you have added here to **Atlas 3**, ther
 
 **Option 1** — If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**:
 
-```
+```text {linenos=false}
 theme/web/_
 ```
 
@@ -162,7 +161,7 @@ Remember to include `@import <file name>` in *theme/web/main.scss* to include yo
 
 **Option 2** — If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**:
 
-```
+```text {linenos=false}
 themesource/your-module/web/_
 ```
 
@@ -172,13 +171,13 @@ Remember to include `@import<file name>` in *themesource/your-module/web/main.sc
 
 This section concerns modifications you have made to the *settings.json* file of your **Atlas 2 theme**:
 
-```
+```text {linenos=false}
 theme_atlas2/settings.json
 ```
 
 Custom design properties that you have added to *settings.json* need to be moved into the web's **design-property** JSON file of a module you have created in the **themesource** directory:
 
-```
+```text {linenos=false}
 themesource/your-module/web/design-properties.json
 ```
 
@@ -192,7 +191,7 @@ This section concerns modifications you have made to documents *login.html* and 
 
 Any custom *index.html* or *login.html* pages that you have created in your **Atlas 2 theme** need to be moved to the **web** directory of the **Atlas 3 theme**: 
 
-```
+```text {linenos=false}
 theme/web/login.html
 ```
 
@@ -200,7 +199,7 @@ The same applies to additional HTML documents that you may have created.
 
 Additional static resources such as images or font libraries need to be moved to the **resources** directory of **web** in the **Atlas 3 theme**: 
 
-```
+```text {linenos=false}
 theme/web/resources
 ```
 
@@ -225,7 +224,7 @@ If you have made any of the above modifications, please follow the following ste
 
 This section concerns modifications you have made to the **custom-variables** js file of your **Atlas 2 theme**.
 
-```
+```text {linenos=false}
 theme_atlas2/styles/native/app/custom-variables.js
 ```
 
@@ -233,13 +232,13 @@ To move your custom variable modifications to **Atlas 3**, there are two options
 
 **Option 1** - If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** scss file of the **Atlas 3 theme** directory. 
 
-```
+```text {linenos=false}
 theme/native/custom-variables.js
 ```
 
 **Option 2** - If you want to extract the variables into a reusable module, move them into the **custom-variables** scss file of a module you have created in the **themesource** directory.
 
-```
+```text {linenos=false}
 themesource/your-module/native/custom-variables.js
 ```
 
@@ -247,7 +246,7 @@ themesource/your-module/native/custom-variables.js
 
 This section concerns modifications you have made to the **custom** js file of your **Atlas 2 theme**.
 
-```
+```text {linenos=false}
 theme_atlas2/styles/native/app/_custom.js
 ```
 
@@ -255,13 +254,13 @@ To move your custom styling modifications to **Atlas 3**, there are two options:
 
 **Option 1** - If the custom styling apply to the app level, then the modifications should be moved into the **main** js file of the **Atlas 3 theme** directory. 
 
-```
+```text {linenos=false}
 theme/native/main.js
 ```
 
 **Option 2** - If you want to extract the custom styling into a reusable module, move them into the **main** js file of a module you have created in the **themesource** directory.
 
-```
+```text {linenos=false}
 themesource/your-module/native/main.js
 ```
 
@@ -269,7 +268,7 @@ themesource/your-module/native/main.js
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional js stylesheets that you might have added. 
 
-```
+```text {linenos=false}
 theme_atlas2/styles/native/app/_
 ```
 
@@ -277,7 +276,7 @@ To move you additional stylesheets that you have added here to **Atlas 3**, ther
 
 **Option 1** - If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**. 
 
-```
+```text {linenos=false}
 theme/native/_
 ```
 
@@ -285,7 +284,7 @@ Remember to import the file using JavaScript's `import` syntax in *theme/native/
 
 **Option 2** - If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**.
 
-```
+```text {linenos=false}
 themesource/your-module/native/_
 ```
 
@@ -295,13 +294,13 @@ Remember to import the file using JavaScript's `import` syntax in *themesource/y
 
 This section concerns modifications you have made to the *settings-native.json* file of your **Atlas 2 theme**.
 
-```
+```text {linenos=false}
 theme_atlas2/settings-native.json
 ```
 
 Custom **design properties** that you have added to *settings-native.json*, need to be moved into the native's **design-property** json file of a module you have created in the **themesource** directory. 
 
-```
+```text {linenos=false}
 themesource/your-module/web/design-properties.json
 ```
 
@@ -435,41 +434,41 @@ Design property options can also be merged across themesource modules. For more 
 
 When you have completed the sections above, you may have errors in your error list:
 
-*  For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
+* For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/4-errors.png" alt="errors" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/4-errors.png" alt="errors" >}}
 
 * For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile — use one of these methods to solve the error:
-	* Delete the layout
-	* Delete the widget in the layout
-	* Add the **Phone web** or **Tablet web** navigation profile to your Mendix application
-	* In the widget's properties pane change the **Profile** to an already existed profile, like **Responsive web**
+    * Delete the layout
+    * Delete the widget in the layout
+    * Add the **Phone web** or **Tablet web** navigation profile to your Mendix application
+    * In the widget's properties pane change the **Profile** to an already existed profile, like **Responsive web**
 
-	Note that navigation profiles have changed in Mendix 9. See the [Mendix 9 Release Notes](/releasenotes/studio-pro/9.0/) for more information.
+    Note that navigation profiles have changed in Mendix 9. See the [Mendix 9 Release Notes](/releasenotes/studio-pro/9.0/) for more information.
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/5-nav.png" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/5-nav.png" >}}
 
-*  If you are using Hybrid phone profiles, please make sure you change them to their equivalent web profiles by clicking **Change profile type** in your navigation profile:
-	* Hybrid tablet app offline → Tablet web offline
-	* Hybrid tablet app online → Tablet web
-	* Hybrid phone app offline → Phone web offline
-	* Hybrid phone app online → Phone web
+* If you are using Hybrid phone profiles, please make sure you change them to their equivalent web profiles by clicking **Change profile type** in your navigation profile:
+    * Hybrid tablet app offline → Tablet web offline
+    * Hybrid tablet app online → Tablet web
+    * Hybrid phone app offline → Phone web offline
+    * Hybrid phone app online → Phone web
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/6-hybrid-phone.png" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/6-hybrid-phone.png" >}}
 
-*  If you are using Badge, Progress Circle, Progress Bar, or Maps widgets, please make sure you update the definitions of the widgets and reconfigure following the new properties added for each widget:
+* If you are using Badge, Progress Circle, Progress Bar, or Maps widgets, please make sure you update the definitions of the widgets and reconfigure following the new properties added for each widget:
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/7-errors.png" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/7-errors.png" >}}
 
-*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties/).
+* If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties/).
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/8-errors-background.png" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/8-errors-background.png" >}}
 
 * If you have errors saying **Unknown option X for design property**, it means the design property option has been removed in Atlas 3. Use one of the following methods to solve the error: 
-	* Set the design property to its default option: right-click the error, then select **Set property X to default**
-	* Search for the design property option's CSS class in *theme_atlas2/settings.json* for web and *theme_atlas2/settings-native.json* for native, then add it to the applicable [widget's style property](/refguide/common-widget-properties/#style)  
+    * Set the design property to its default option: right-click the error, then select **Set property X to default**
+    * Search for the design property option's CSS class in *theme_atlas2/settings.json* for web and *theme_atlas2/settings-native.json* for native, then add it to the applicable [widget's style property](/refguide/common-widget-properties/#style)  
 
-	{{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/9-set-prop.png" >}}
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/9-set-prop.png" >}}
 
 * If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
 
@@ -492,8 +491,8 @@ To troubleshoot common Atlas problems, do the following:
 * If you have **Layout X no longer exists** errors, right-click the error then go to the page on which the error occurs. In the page’s properties, select a new, appropriate layout.
 * If you have **The selected image X no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your app you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
 * If you have **The selected placeholder X no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
-	* Adjust the layout the page uses to include a placeholder with matching name.
-	* On the page, move the content out of the placeholder.
+    * Adjust the layout the page uses to include a placeholder with matching name.
+    * On the page, move the content out of the placeholder.
 
 ## 6 Read More
 

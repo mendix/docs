@@ -11,7 +11,7 @@ tags: ["web service", "expose", "integration", "studio pro"]
 
 Mendix supports many ways to expose the functionality and data of your application to others. The easiest way is to use web services. A web service can contain multiple operations.
 
-**This how-to will teach you how to do the following:**
+This how-to will teach you how to do the following:
 
 * Create a web service
 * Publish a microflow as web service operation
@@ -23,9 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download the latest version of [Mendix Studio Pro](https://marketplace.mendix.com/)
 
 {{% alert color="warning" %}}
-
 This how-to was written based on Studio Pro version 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
-
 {{% /alert %}}
 
 ## 3 Data Structure and GUI
@@ -34,11 +32,11 @@ This how-to was written based on Studio Pro version 5.20. All the images, names,
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/8945665.png" >}}
 
-2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
-3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/).
+2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
+3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
 4. Run the application and add some data to expose in the web service.
 
-## <a name="4"></a>4 Creating a Published Web Service
+## 4 Creating a Published Web Service{#create-published-web-service}
 
 To create a published web service, follow these steps:
 
@@ -51,7 +49,7 @@ To create a published web service, follow these steps:
     {{< figure src="/attachments/howto/integration/expose-a-web-service/18581728.png" >}}
 
 3. You should now see the **Published Web Service** properties window. Take note of the following tab details:
-    * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation in section [6 Publishing a Microflow](#6)):
+    * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation in section [Publishing a Microflow](#publish-a-microflow)):
 
         {{< figure src="/attachments/howto/integration/expose-a-web-service/18581713.png" >}}
 
@@ -74,11 +72,11 @@ To create the functionality to expose, follow these steps:
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/18581709.png" >}}
 
-	Reference this microflow:
-    
+    Reference this microflow:
+
     {{< figure src="/attachments/howto/integration/expose-a-web-service/model.jpg" >}}
 
-## <a name="6"></a>6 Publishing a Microflow
+## 6 Publishing a Microflow{#publish-a-microflow}
 
 To publish a microflow, follow these steps:
 
@@ -86,7 +84,7 @@ To publish a microflow, follow these steps:
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/18581708.png" >}}
 
-2. Locate the web service created in [4 Creating a Published Web Service](#4) and click **Select**:
+2. Locate the web service created in [Creating a Published Web Service](#create-published-web-service) and click **Select**:
 
     {{< figure src="/attachments/howto/integration/expose-a-web-service/18581723.png" >}}
 

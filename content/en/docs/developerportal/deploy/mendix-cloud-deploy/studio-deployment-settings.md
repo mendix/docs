@@ -1,7 +1,6 @@
 ---
 title: "Studio Deployment Settings"
 url: /developerportal/deploy/studio-deployment-settings/
-parent: "mendix-cloud-deploy"
 weight: 10
 description: "Describes how to set deployment targets for Mendix Studio and Studio Pro."
 tags: ["node","developer portal","deploy", "Studio", "settings", "target", "Mendix Studios Target"]
@@ -22,14 +21,13 @@ When you deploy to a target environment from Mendix Studio Pro, the deployment w
 
 To select the target environment, do the following:
 
-1.  Open **Environments** in the left menu bar in the Developer Portal.
+1. Open **Environments** in the left menu bar in the Developer Portal.
 
-2.  <a name="target"></a>In the **Deploy** tab, click **Setup Studios Deployment**:
+2. <a name="target"></a>In the **Deploy** tab, click **Setup Studios Deployment**:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/studio-deployment-settings/developer-portal-web-modeler-target.png" alt="Deploy Tab of Environments Page" >}}
 
-    {{% alert color="info" %}} Only a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can see the **Setup Studios Deployment** button and click it. 
-    {{% /alert %}}
+    {{% alert color="info" %}} Only a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) can see the **Setup Studios Deployment** button and click it.{{% /alert %}}
 
 3. In the **Select Studio Target** dialog box, click the drop-down menu and select the environment.
 
@@ -45,6 +43,6 @@ You can see whether an environment is the target for Studio and Studio Pro from 
 
 ## 3 Read More
 
-*   [Previewing & Publishing Your App](/studio/publishing-app/)
-*   [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-*   [Environments](/developerportal/deploy/environments/)
+* [Previewing and Publishing Your App](/studio/publishing-app/)
+* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+* [Environments](/developerportal/deploy/environments/)

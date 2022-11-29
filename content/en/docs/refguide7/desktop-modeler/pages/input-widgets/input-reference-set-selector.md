@@ -1,7 +1,6 @@
 ---
 title: "Input Reference Set Selector"
 url: /refguide7/input-reference-set-selector/
-parent: "input-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -104,4 +103,4 @@ The page has displays a reference selector for the reference to country and an i
 
 ## Read More
 
-*   [Data view](/refguide7/data-view/)
+* [Data view](/refguide7/data-view/)

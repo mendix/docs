@@ -1,7 +1,6 @@
 ---
 title: "Placeholder"
 url: /refguide8/placeholder/
-parent: "layout"
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -37,7 +36,7 @@ Unlike most other widgets, the name of a placeholder carries a special significa
 
 The placeholder name is used to map page contents from one layout to the other when switching layouts or creating a new page.
 
-When a user switches a page from one layout to another, the placeholder names will be used to map the content of the page to the new layout. For every placeholder that has content in the current layout, Studio Pro will search for a placeholder with the same name in the new one. As the **Main** placeholder is mandatory, the user can always be assured that any page content placed in this placeholder will be retained. Any content in placeholders not present in the new layout will be moved above the canvas, from where it can be placed in the placeholders in the new page.
+When a user switches a page from one layout to another, the placeholder names will be used to map the content of the page to the new layout. For every placeholder that has content in the current layout, Studio Pro will search for a placeholder with the same name in the new one. As the **Main** placeholder is mandatory, the user can always be assured that any page content placed in this placeholder will be retained. Any content in placeholders not present in the new layout will be moved above the working area, from where it can be placed in the placeholders in the new page.
 
 Because of this, user experience can be improved significantly if all of a project's layouts adhere to the same or a similar naming scheme. This will ensure layouts can be alternated freely without having to consider the effect on the content of each individual placeholder. 
 

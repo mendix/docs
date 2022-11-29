@@ -3,20 +3,83 @@ title: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
 category: "Mobile"
 weight: 11
-toc-level: 1
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+## 2022
+
+### Release 1.0.127
+
+**Release date: October 6th, 2022**
+
+#### Fixes
+
+* We removed the default permissions for read and write external storage from Android applications. (Ticket 152467)
+
+### Release 1.0.126
+
+**Release date: September 19th, 2022**
+
+#### Improvements
+
+* We added support for the following fonts from the **react-native-vector-icons** library:
+   * AntDesign
+   * Entype
+   * EvilIcons
+   * Feather
+   * FontAwesome
+   * FontAwesome 5
+   * Fontisto
+   * Foundation
+   * Ionicons
+   * MaterialCommunityIcons
+   * MaterialIcons
+   * Octicons
+   * SimpleLineIcons
+   * Zocial
+
+### Release 1.0.125
+
+**Release date: September 8th, 2022**
+
+#### Improvements
+
+* We enabled compatibility with Android 12 and higher.
+
+### Release 1.0.123
+
+**Release date: August 29th, 2022**
+
+#### Fixes
+
+* We fixed an issue where some font styles were not supported as custom fonts. (Ticket #163323)
+
+### Release 1.0.121
+
+**Release date: July 21st, 2022**
+
+#### Fixes
+
+* We fixed an issue with AppCenter not accepting periods in app names. (Ticket 153722, 154433, 154489, 154814)
+
+### Release 1.0.120
+
+**Release date: May 25th, 2022**
+
+#### Fixes
+
+* We fixed a bug affecting updating data on the capabilities details screen.
+
 ### Release 1.0.113
 
 **Release date: March 18th, 2022**
 
-### New Features
+#### New Features
 
-#### Support for Android Web Links
+##### Support for Android Web Links
 
 A special form of deep app links on Android devices are web links. These are normal HTTP or HTTPS URLs that can be registered as actionable by an app. In a case where two or more apps can open a web link, a user is prompted to choose an app to open it.
 
@@ -26,25 +89,27 @@ For example, to enhance the user experience for customers on mobile devices, one
 Android users can choose default apps for opening links. If a user opts out of this selection screen by setting a default app, such as their browser, they will not be prompted again until they manually clear the default app choice using the device's preferences.
 {{% /alert %}} 
 
-#### Support for Project Folders with Multiple MPR Files
+##### Support for Project Folders with Multiple MPR Files
 
 The Mendix Native Mobile Builder can now handle project folders with multiple MPR files correctly. In earlier versions, Studio Pro would provide the project directory and the tool would open the first MPR file found in that directory. In cases where multiple MPR files existed in the same directory (for example copies of another version of the project) this could result in one MPR being accessing in Studio Pro but another being opened and built by the tool. This was an unwanted side effect of an early design limitation.
 
 Now, instead of accessing the first MPR file found in the directory, the tool will take into account the exact MPR provided by Mendix Studio Pro.
 
-### Improvements
+#### Improvements
 
 * The tool now handles apps with multiple MPR files correctly.
 * The tool now discloses the error that led to a Native Template update failing in the error dialog.
 * The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the XCode or Node versions to accommodate new requirements.
 
-### Fixes
+#### Fixes
 
 * We fixed a UI bug where, when App Center fails to configure the repository, a generic error is shown instead of the visual guide to manually link the repository. Now instead of a generic error, the visual guide is shown correctly again.
 * We fixed a bug with the Native Template update dialog box that would show the wrong reason for a required update. Now the correct reason for a required update is shown.
 * We fixed a bug that could stop apps from completely  loading when its GitHub or App Center tokens were no longer valid. Now the app will finish loading and the errors are clearly visible in the UI.
 * We fixed a bug with fatal exceptions not being caught correctly at the start of the app. This could result in a blank screen at startup. Now a dialog box is shown correctly.
 * We fixed an issue with compatibility checks where the tool would incorrectly warn that a compatible Native Template is incompatible with Mendix Native OTA. Any Native Template from version 6.2.7 or newer is compatible.
+
+## 2021
 
 ### Release 1.0.111
 
@@ -146,15 +211,15 @@ App Center's CodePush OTA page improvements:
 This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
 {{% /alert %}}
 
-Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [How to Build a Mendix Native App Locally](/howto/mobile/native-build-locally/).
+Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 
 In the wizard, new projects can be configured to use one of 2 build types:  
 
 * **Default**: Build automatically using cloud services.
-  * Using cloud services remains the **Default** selection. In this mode **it is no longer possible** to opt out of using App Center.
+    * Using cloud services remains the **Default** selection. In this mode **it is no longer possible** to opt out of using App Center.
 * **Advanced**: Create a local copy for additional customizations, or use this option to build locally.
-  * This option gives the option to select a local directory to set up your project. The Native Mobile Builder will then use this folder to do the configurations and set up the Android and iOS projects.
-  * In this mode, you can opt in to use cloud services similarly to the default mode. The Native Mobile Builder will then configure the local copy, push the changes to the repository, and finally use App Center to build your apps.
+    * This option gives the option to select a local directory to set up your project. The Native Mobile Builder will then use this folder to do the configurations and set up the Android and iOS projects.
+    * In this mode, you can opt in to use cloud services similarly to the default mode. The Native Mobile Builder will then configure the local copy, push the changes to the repository, and finally use App Center to build your apps.
 
 More key information from this release is as follows:
 
@@ -205,7 +270,7 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 ##### OTA based on App Center CodePush
 
-We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota-appcenter/).
+We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
 
 #### Improvements 
 
@@ -213,7 +278,7 @@ We added OTA support based on App Center CodePush. Look for it under the Capabil
 * Android keystore validation should be non-blocking if the tool cannot verify the validity of the key. The build will 
 still fail if the keystore values are invalid.
 * We now include dependencies associated with certain capabilities (Local notifications, Push notifications, Google Maps and Firebase Crashlytics) if they are not expressly required by the Mendix Studio Pro project.
-  
+
 #### Fixes
 
 * We fixed an issue with android certificates not being verified correctly.
@@ -225,9 +290,8 @@ still fail if the keystore values are invalid.
 
 #### Improvements 
 
-* Android keystore validation is now non-blocking if the tool cannot verify the validity of the key. The build will 
-  still fail if the keystore values are invalid.
-  
+* Android keystore validation is now non-blocking if the tool cannot verify the validity of the key. The build will still fail if the keystore values are invalid.
+
 #### Fixes
 
 * We fixed an issue with Android certificates not being verified correctly.
@@ -290,6 +354,8 @@ The Native Mobile Builder is now able to derive which files need to be kept or r
 #### Fixes
 
 * We fixed an issue with App Center build configuration not being updated with template upgrades.
+
+## 2020
 
 ### Release v1.0.74
 

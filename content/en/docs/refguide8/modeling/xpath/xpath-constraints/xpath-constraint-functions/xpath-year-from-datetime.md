@@ -1,7 +1,6 @@
 ---
 title: "XPath Year-from-DateTime"
 url: /refguide8/xpath-year-from-datetime/
-parent: "xpath-constraint-functions"
 tags: ["studio pro"]
 ---
 

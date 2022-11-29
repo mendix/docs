@@ -1,7 +1,6 @@
 ---
 title: "Validation Rules"
 url: /refguide/validation-rules/
-parent: "entities"
 weight: 40
 tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -107,7 +106,7 @@ There are limitations on using database uniqueness validation if you are using a
 
 With the database uniqueness validation option enabled, you cannot define the unique validation rule in the specialization entity for attributes which come from the generalization of this entity. If you do this, a consistency error is reported, as in this image:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-unresolved.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-error.png" >}}
 
 You can, however, define a unique validation rule for attributes which are added in the specialized entity.
 
@@ -126,7 +125,7 @@ You can, however, set a validation rule to make *EmailAddress* unique, as that a
 
 You can resolve this issue simply, by moving unique validation rules of these attributes to the generalization entity where the attribute it defined.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-resolved.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/unique-validation-rule-no-error.png" >}}
 
 ### 3.2 Association Uniqueness
 
@@ -144,4 +143,4 @@ Existing association data in the database must also adhere to the updated one-to
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/startup-error-assoc.png" >}}
 
-We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). For example, the Mendix platform could consistently return the same address each run, but other addresses would be dormant entries in the database.
+We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). For example, the Mendix Platform could consistently return the same address each run, but other addresses would be dormant entries in the database.

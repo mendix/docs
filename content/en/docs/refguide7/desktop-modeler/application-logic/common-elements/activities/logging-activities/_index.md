@@ -1,7 +1,6 @@
 ---
 title: "Logging Activities"
 url: /refguide7/logging-activities/
-parent: "activities"
 
 ---
 

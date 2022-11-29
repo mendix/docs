@@ -1,9 +1,8 @@
 ---
 title: "Populate User Types"
 url: /howto/monitoring-troubleshooting/populate-user-type/
-category: "Monitoring & Troubleshooting"
-description: "How to classify existing app end-users as either internal or external"
-## menu_order: 1
+category: "Monitoring and Troubleshooting"
+description: "Describes how to classify existing app end-users as either internal or external."
 tags: ["licensing", "Users", "Internal Users", "External Users"]
 ---
 
@@ -53,7 +52,7 @@ Therefore, the approach we take is to create a new non-persistable entity, `User
 2. Create a microflow `User_EvaluateAndSetUserType` which will populate the `UserType` attribute on the `UserReportInfo` entity for a given `User`. 
 
     In this example, we decide whether a user is `Internal` or `External` based on the email address of the user. To do that, we need to retrieve the email address of each user from the database. Note that the `System.User` entity itself does not have the email address. The email address is stored in specializations of `System.User`.
-    
+
     Here, we show how to do it for two specializations of the `System.User` entity, namely `Administration.Account` and `MendixSSO.MendixSSOUser`. In the `Administration.Account` entity, the email is in attribute named `Email`. And in the `MendixSSO.MendixSSOUser` entity, it’s in an attribute named `EmailAddress`. Hence we need to use an [Object Type Decision](/refguide/object-type-decision/) activity to split the `System.User` into `Administration.Account` and `MendixSSO.MendixSSOUser` and then fetch the email address according to the name of the attribute.
 
     {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/set-user-type.png" alt="Microflow: User_EvaluateAndSetUserType" >}}
@@ -78,4 +77,3 @@ Therefore, the approach we take is to create a new non-persistable entity, `User
     {{< figure src="/attachments/howto/monitoring-troubleshooting/populate-user-type/user-type-report.png" >}}
 
 7. The report can be exported into an Excel file.
-

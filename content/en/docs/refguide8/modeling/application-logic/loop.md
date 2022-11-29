@@ -1,7 +1,6 @@
 ---
 title: "Loop"
 url: /refguide8/loop/
-parent: "application-logic"
 weight: 80
 tags: ["studio pro", "loop", "iterate over"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "APM 1 Reference Guide"
 url: /addons/apd-addon/rg-one-apm/
-parent: "rg-apd"
 weight: 2
 ---
 
@@ -11,17 +10,17 @@ The Application Performance Monitor (APM) is a solution that helps to analyze pe
 
 This is the reference guide for the CLEVR APM for Mendix. It has the following chapters:
 
-*   [Dashboard](/addons/apd-addon/rg-one-dashboard/)
-*   [Configuration](/addons/apd-addon/rg-one-configuration/)
-*   [Log Tool](/addons/apd-addon/rg-one-log-tool/)
-*   [Trap Tool](/addons/apd-addon/rg-one-trap-tool/)
-*   [Statistics Tool](/addons/apd-addon/rg-one-statistics-tool/)
-*   [Performance Tool](/addons/apd-addon/rg-one-performance-tool/)
-*   [JVM Browser](/addons/apd-addon/rg-one-jvm-browser/)
-*   [Measurements Tool](/addons/apd-addon/rg-one-measurements-tool/)
-*   [Triggers](/addons/apd-addon/rg-one-triggers/)
-*   [Query Tool](/addons/apd-addon/rg-one-query-tool/)
-*   [Load Test Recorder](/addons/apd-addon/rg-one-load-test-recorder/)
+* [Dashboard](/addons/apd-addon/rg-one-dashboard/)
+* [Configuration](/addons/apd-addon/rg-one-configuration/)
+* [Log Tool](/addons/apd-addon/rg-one-log-tool/)
+* [Trap Tool](/addons/apd-addon/rg-one-trap-tool/)
+* [Statistics Tool](/addons/apd-addon/rg-one-statistics-tool/)
+* [Performance Tool](/addons/apd-addon/rg-one-performance-tool/)
+* [JVM Browser](/addons/apd-addon/rg-one-jvm-browser/)
+* [Measurements Tool](/addons/apd-addon/rg-one-measurements-tool/)
+* [Triggers](/addons/apd-addon/rg-one-triggers/)
+* [Query Tool](/addons/apd-addon/rg-one-query-tool/)
+* [Load Test Recorder](/addons/apd-addon/rg-one-load-test-recorder/)
 
 The sections below provide an introduction to APM. There is an explanation of what APM is, which tools are in the APM suite, and what they are used for. APM consists of the following tools:
 

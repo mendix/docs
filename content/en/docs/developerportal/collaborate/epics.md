@@ -276,11 +276,24 @@ These are the new locations of migrated stories:
 | Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |
 | Archived stories | [Archive](#archive) | 
 
-These are the new details of migrated Sprints:
+These are the new details of migrated stories:
 
 | From Stories | To Epics | Example |
 | --- | --- | --- |
 | Sprint **Name** | Tag with the format: **sprint:Sprint_Name** | **Sprint_Sprint 1** |
 | Story **Status** | Tag with the format: **status:Status** | **status:To-do** |
 | **Assignee** | Story is assigned unless the assignee is not a member of the app. | |
+
+For example, here is a Sprint with three stories from [Stories](/developerportal/collaborate/stories/):
+
+{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-stories.png" >}}
+
+And here is the outcome after migration:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-epics.png" >}}
+
+{{% alert color="info" %}}Beside the story details above, the remaining details for your stories are migrated according to their equivalents in [Epics](#epics).{{% /alert %}}
+
+{{% alert color="info" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics files can only be associated with Stories and not Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
+
 

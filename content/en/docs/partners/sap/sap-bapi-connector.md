@@ -183,11 +183,11 @@ The values for the properties can be found in the **Connection Properties** of t
 
 | Property | Value | Source |
 | --- | --- | --- |
-| jco.client.snc_mode |  |  |
+| jco.client.snc_mode | `1` – enable SNC<br />`2` – disable SNC |  |
 | jco.client.snc_partnername | sncname | Expert Settings |
 | jco.client.snc_qop | sncqop | Expert Settings |
-| jco.client.snc_myname |  |  |
-| jco.client.snc_lib |  |  |
+| jco.client.snc_myname | Server Name | Distinguished Name(DN) of client PSE |
+| jco.client.snc_lib | The path and file name for the SAP Cryptography library | Usually `C:\Program Files\SAP\FrontEnd\SecureLogin\lib\` |
 | jco.client.mshost | Message Server | System Tab |
 | jco.client.r3name | System | System Tab  |
 

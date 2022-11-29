@@ -46,7 +46,7 @@ When the module is set as the add-on module, it gets the letter A as an icon.
 
 ### 2.3 Solution Module {#solution-module}
 
-**Solution modules** are only used for developing a solution and are an inseparable part of it. Set of solution modules used for the solution form the **solution core**. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
+**Solution modules** are only used for developing a solution and are an inseparable part of it. Set of solution modules used for the solution form the **solution core**. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information on solutions, see [Create Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
 When the module is set as the solution module, it gets the letter S as an icon.
 
@@ -63,6 +63,6 @@ We recommend setting a new version every time changes are made to the module.
 ## 5 Read More
 
 * [Modules](/refguide/modules/)
-* [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
+* [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
-* [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
+* [Create Solutions](/appstore/creating-content/sol-solutions-guide/)

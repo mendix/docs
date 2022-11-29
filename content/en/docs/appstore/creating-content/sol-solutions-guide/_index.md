@@ -1,7 +1,7 @@
 ---
-title: "Creating Solutions"
+title: "Create Solutions"
 url: /appstore/creating-content/sol-solutions-guide/
-linktitle: "Creating Solutions"
+linktitle: "Create Solutions"
 category: "Creating Content"
 weight: 3
 description: "Provides information and guidance on how to develop solutions you can sell both on and off the Mendix Marketplace."
@@ -23,12 +23,12 @@ A solution is any Mendix app that is suitable to be sold to multiple different c
 
 Customers often require more from a solution than it supports out of the box. Whether it is an integration with an existing system in the customer's IT landscape, a change to better match the processes of the customer, or simply an adjusted UI to better match the brand of the customer, these adaptations require more than just a prescriptive software-as-a-service (SaaS) solution. This means you need to enable the solution to be adapted so that it can fit the specific needs of a customer.
 
-For more details on building solutions, see [Architecting Adaptive Solutions](/appstore/creating-content/sol-architecting/).
+For more details on building solutions, see [Architect Adaptive Solutions](/appstore/creating-content/sol-architecting/).
 
 ## 3 Read More
 
 After you have discovered how the [Mendix Vendor Program](/appstore/creating-content/vendor-program/) will support you in building solutions, you can check out details on the [Mendix Solution Vendor and Startup Programs](/appstore/creating-content/sol-vendor-programs/). 
 
-Then, proceed to the [Developing Solutions](/appstore/creating-content/sol-development/) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
+Then, proceed to [Develop Solutions](/appstore/creating-content/sol-development/), which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
 
-After reading through these sections, [create your app](https://new.mendix.com/) and Go Make It!
+After reading through these pages, [create your app](https://new.mendix.com/) and Go Make It!

@@ -92,7 +92,7 @@ The add-on module gets an *.mxmodule* extension.
 
 ### 3.2 Exporting Solution Package
 
-Solution package is an app package that will be sold as an out-of-the-box solution and can be used by multiple customers. It has a solution core that consists of solution modules. It can also consist of app modules and add-on modules. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
+Solution package is an app package that will be sold as an out-of-the-box solution and can be used by multiple customers. It has a solution core that consists of solution modules. It can also consist of app modules and add-on modules. For more information on solutions, see [Create Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
 To export the solution package, right-click the name of the app in the **App Explorer** and select **Export app package** or open the **File** menu > **Export App Package**. For more information on exporting, see [Export App Package](/refguide/export-app-package-dialog/).
 
@@ -108,7 +108,7 @@ If, for some reason, you switch the add-on and solution module to an app module,
 
 ## Read More
 
-* [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
+* [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
+* [Import and Export Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)

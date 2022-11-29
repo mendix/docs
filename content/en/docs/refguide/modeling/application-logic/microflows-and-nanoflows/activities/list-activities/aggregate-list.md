@@ -2,7 +2,8 @@
 title: "Aggregate List"
 url: /refguide/aggregate-list/
 weight: 1
-tags: ["studio pro", "Aggregate", "Sum", "Average", "Count", "Minimum", "Maximum"]
+tags: ["studio pro", "aggregate", "sum", "average", "count", "minimum", "maximum", "microflow"]
+#To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 
 {{% alert color="warning" %}}
@@ -71,3 +72,42 @@ The name of the variable in which the result of the aggregation is stored. This 
 ## 4 Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+
+## 5 Optimize Aggregate Activities
+
+In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If there are a lot of [retrieves](/refguide/retrieve/) and aggregates on large datasets in a microflow, it is easy to run into performance or memory problems. 
+
+This section describes how Mendix Runtime optimizes list aggregate activities with large datasets and some recommended approaches for optimization. 
+
+When a database retrieve activity is only used once in one list aggregate activity and a custom range is not configured, the Mendix Runtime can automatically merge these two activities into a single action. This executes a single aggregate query on the database. So, if you retrieve all 100k log lines from a database and only do a count on the list, you will not receive a heap space. This is because the microflow never places all 100k records in memory.
+
+For instance, in this microflow, the Mendix Runtime will merge the two activities into one single count query:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/one-single-retrieve-query.png" width="500px" >}}
+
+## 5.1 Optimization
+
+### 5.1.1 Examples for When Optimization is Not Applied
+
+If you reuse the same list for multiple list aggregates, an optimization process will not be applied. The Mendix Runtime only creates an optimized SQL query if the list is not used in the microflow afterwards and a custom range is not configured. If you use the list later (for example, to iterate over the list) or a custom range is configured, the query will not be optimized. 
+
+For instance, in this example, the same list is used multiple times, and hence the Mendix Runtime no longer merges the activities:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/not-merged-activities.png" >}}
+
+If the list is not merged into a single query, all these records are kept in memory. Basically, this has the same effect as when you iterate over the list. If you iterate over the list, you have to think about the memory consumption, meaning that you cannot retrieve 10,000 objects with a single retrieve query. To prevent memory errors (for example, heap space or GC limit overhead), you should not use a list multiple times in a microflow unless you use a limit and offset.
+
+### 5.1.2 Recommended Optimization Approaches
+
+If you do want to use the list more than once and you also want the optimized query, do two separate retrieves. As shown in the following example, an optimized query is applied and you can use the second retrieve in your microflow.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/two-separate-retrieves.png" >}}
+
+When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings is not respected. The result that is returned is rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
+
+Since the Mendix Runtime merges list retrieve activities and list aggregates, you do not have to think about the memory consumption of these activities. If we are talking about datasets of thousands and larger, it is even faster to do multiple aggregates in the database, as a database is designed for doing retrieves and aggregates as fast as possible. The only reason you do not want to use multiple retrieves is when there are very complex constraints (for example, multiple associations and attributes) or when your data is likely to change in the few milliseconds between the two queries.
+
+## 6 Read More
+
+* [Retrieve Activities](/refguide/retrieve/)
+* [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)

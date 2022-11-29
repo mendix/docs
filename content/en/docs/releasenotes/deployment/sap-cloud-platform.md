@@ -15,6 +15,13 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2022
 
+### November 17th, 2022
+
+#### Improvements
+
+* We improved the flow when creating an environment with an SAP HANA database by allowing the upload of a custom binding file when you create an environment.
+* We added the ability to choose which environment is the target for deployments directly from Mendix Studio.
+
 ### August 4th, 2022
 
 #### Improvements

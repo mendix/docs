@@ -29,7 +29,7 @@ Fill in all the required details for this new licensed app node in the [Request 
 
 Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
 
-If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP Cloud Platform*.  
+If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP BTP*.  
 
 {{% alert color="info" %}}
 Apps in the IBM Cloud Portal are licensed in a different way – see [IBM Cloud](/developerportal/deploy/ibm-cloud/) for more information.

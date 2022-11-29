@@ -6,7 +6,7 @@ weight: 70
 
 ## 1 Introduction
 
-The behavior of Mendix using a SAP HANA  database has some minor differences when compared with using a PostgreSQL database. These differences are documented below.
+The behavior of Mendix using an SAP HANA  database has some minor differences when compared with using a PostgreSQL database. These differences are documented below.
 
 ## 2 Ordering on Associated Attributes
 

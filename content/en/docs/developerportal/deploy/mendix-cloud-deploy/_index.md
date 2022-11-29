@@ -293,7 +293,7 @@ The Fallback option ensures that the data in your database is automatically copi
 
 #### 4.3.3 On-premises and Private Cloud
 
-If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can choose to deploy to [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/), or to your own cloud using [Mendix for Private Cloud](/developerportal/deploy/private-cloud/).
+If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can choose to deploy to [SAP BTP](/developerportal/deploy/sap-cloud-platform/), or to your own cloud using [Mendix for Private Cloud](/developerportal/deploy/private-cloud/).
 
 ## 5 Read More
 

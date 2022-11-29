@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "progress circle", "pla
 
 The [Progress Circle](https://marketplace.mendix.com/link/component/47783/) widget displays a progress in a circle.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/47783/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 The widget does the following:
 
 * Displays a progress percentage in the form of a circle based on a configurable range

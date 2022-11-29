@@ -11,6 +11,10 @@ tags: ["marketplace", "marketplace component", "widget", "popup", "pop-up", "pop
 
 The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget shows a floating menu with items. The widget allows users to create their own items in "custom" mode.
 
+To see the component in the Mendix Marketplace, click here:
+
+{{% button color="dark" href="https://marketplace.mendix.com/link/component/115826/" text="See component in Marketplace" title="See component in Marketplace" %}}
+
 ### 1.1 Features
 
 * Allows you to configure widgets that trigger the menu visibility

@@ -94,7 +94,7 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 ## 4 Data Hub License Limitations {#license-limitations}
 
-Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has. See [Data Hub Licenses](/data-hub/#data-hub-licences) to learn more.
+Contact your [Mendix Admin](/developerportal/control-center/#company) or company admin to find out what type of Data Hub license your organization has. See [Data Hub Licenses](/data-hub/#data-hub-licences) to learn more.
 
 ### 4.1 Local development
 

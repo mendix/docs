@@ -20,7 +20,7 @@ With the **Log message** activity you can create messages that appear in the log
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" width="900" >}}
 
 The **Log message** properties pane consists of the following sections:
 
@@ -70,7 +70,7 @@ For each parameter in the template you define a microflow expression of which th
 
 {{% alert color="info" %}}
 
-With parameters you can customize your message with data specific to the situation. For example, the message *An e-mail has been sent to customer {1}*. with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
+With parameters you can customize your message with data specific to the situation. For example, the message *An e-mail has been sent to department {1}*. with parameter `$Department/Name` shows the name of the department to which an e-mail has been sent.
 
 {{% /alert %}}
 

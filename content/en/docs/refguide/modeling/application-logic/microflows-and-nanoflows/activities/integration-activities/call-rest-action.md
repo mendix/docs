@@ -243,7 +243,7 @@ You should always add an error handler for a [call REST service](/refguide/call-
 
 ### 9.1 java.net.SocketException – Connection reset
 
-This error is occurs when your app's infrastructure closes the connection because it is inactive. Your app client does not know this and gets this error when it makes a new request.
+This error occurs when your app's infrastructure closes the connection because it is inactive. Your app client does not know this and gets this error when it makes a new request.
 
 There are two ways to resolve this:
 

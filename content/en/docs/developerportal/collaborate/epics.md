@@ -78,18 +78,18 @@ On the **Board** page, each card represents a story.
 
 A story card shows the following information:
 
-* Unique story ID, which consists of a prefix and a number (①)
-* Story title (②)
-* Epic related to the story (③)
-* Tags (④)
-* Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon (⑤)
+* ① Unique story ID, which consists of a prefix and a number
+* ② Story title
+* ③ Epic related to the story
+* ④ Tags
+* ⑤ Whether the story is about a feature or a bug – if it is about a feature, it shows a green star icon; and if it is about a bug, it shows a red bug icon
 
     {{< figure src="/attachments/developerportal/collaborate/epics/feature-bug.png" >}}
 
-* Number of comments (⑥)
-* Number of tasks (⑦)
-* Points of the story (⑧)
-* To whom the story is assigned (⑨)
+* ⑥ Number of comments
+* ⑦ Number of tasks
+* ⑧ Points of the story
+* ⑨ To whom the story is assigned
 
 To [archive](#archive) or delete a story, click the **...** icon on the upper-right corner of the card, and then select the corresponding option.
 

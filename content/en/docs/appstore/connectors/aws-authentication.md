@@ -8,140 +8,207 @@ tags: ["marketplace", "marketplace component", "aws", "authentication"]
 
 ## 1 Introduction
 
-[AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector and the Amazon Rekognition connector.
-
-There are two types of credentials that can be used through the AWS Authentication connector:
-
-- Static credentials
-- Session credentials
-
-Delivered with the connector, the **Get Static Credentials** action and the **Get Session Credentials Credentials** action can help you generate static and session credentials, respectively. The actions both return a Credentials object, which can be used for authentication for other compatible AWS connectors.
+The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector and the Amazon Rekognition connector.
 
 ### 1.1 Typical Use Cases
 
-You want to use an AWS connector, for example the [Amazon S3](/appstore/connectors/aws-s3-connector/) – then you can only connect to your S3 bucket when you have the correct credentials. The AWS Authentication connector can provide these credentials for you.
+AWS Authentication gives you the tools needed to authenticate your app with AWS services. It is a prerequisite for platform-supported AWS connectors, and may be required by community-supported connectors as well.
 
-## 2 Installation
+The AWS Authentication connector gives your app the ability to use the following types of AWS credentials:
+
+* [Session credentials](https://aws.amazon.com/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/) - This type of credentials is valid for a limited time, for example, 1 hour. Because they are temporary, they are the recommended secure solution for most use cases. As a best practice, use session credentials to authenticate.
+* [Static credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) - These are static IAM credentials that are valid indefinitely. As a best practice, it is recommended to use Session credentials. However, you may want to use them to quickly test your connector, create a demo, or in cases where you are not able to set up and configure session based credentials.
+* [Signature version 4 headers](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) - These credentials represent an advanced use case. You may use them together with session or static credentials to sign your request, for example, while calling the API without using AWS SDK. Some compatible AWS connectors may explicitly require this type of authentication.
+
+You can implement the above authentication types by means of adding a corresponding activity to the microflow that requires AWS authentication (for example, in order to connect to Amazon Dynamo DB and retrieve specific information from a table). Each activity returns a Credentials object, which is then used for authentication.
+
+{{% alert color="info" %}}
+If you plan to use AWS Authentication with a platform-supported AWS connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, refer to the documentation provided with the connector for more information about the required authentication type.
+{{% /alert %}}
+
+## 2 Prerequisites {#prerequisites}
+
+Before you can use the AWS Authentication connector, you must first configure the required setting in AWS. Depending on the authentication type that you plan to use, you may need to prepare the following items:
+
+| Item | Required for | Notes |
+| --- | --- | --- |
+| [IAM access key ID, secret access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) | Static credentials, signature version 4 headers | |
+| [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) | Session credentials | When configuring IAM Roles Anywhere, you must provide a certificate that acts as a trust anchor. The same certificate is later used as the client certificate in the Mendix Developer portal. The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12. |
+
+{{% alert color="info" %}}
+To configure the above prerequisites, you must have an IAM user with specific permissions. Those permissions may vary depending on the connector with which you want to use AWS Authentication. In general, the user should have the minimum access required to perform the functions of the connector.
+
+If you plan to use AWS Authentication with a platform-supported AWS connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, refer to the documentation provided with the connector for more information about the required permissions.
+{{% /alert %}}
+
+## 3 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the AWS Authentication connector into your app.
 
-## 3 Usage
+## 4 Usage
 
-### 3.1 Creating Static Credentials
+After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model and activities that you can use to authenticate your app in AWS. Each activity corresponds to an authentication method, and can be implemented by using it in a microflow. For more information about implementing each authentication mechanism, refer to the following sections:
 
-Static credentials use a mechanism with an access key and a secret.
+* [Session credentials](#session)
+* [Static credentials](#static)
+* [Signature version 4 headers](#signature-v4-headers)
 
-#### 3.1.1 Obtaining IAM Credentials on AWS {#obtain-iam-credentials}
-
-To create IAM Credentials using the AWS console, perform the following steps:
-
-1. In the [AWS Console](https://console.aws.amazon.com/console/home), choose the **IAM** service and select the **Users** tab.
-
-2. Either create or choose a user which has the required permissions. The permissions given to this user are beyond the scope of this document, but should be the minimum access required to perform the functions of your AWS connector(s).
-
-3. For the chosen user, switch to the **Security credentials** tab.
-
-4. Either create an access key by clicking **Create access key** or use an existing access key ID.
-
-5. Make a note of the **Secret Access Key** associated with the access key ID.
-
-
-{{% alert color="warning" %}}
-Once you have created the credentials, you cannot retrieve your secret access key from the AWS Console again. You will need to store it somewhere safely, or create a new access key if you have lost it.
-
-You can only set up two access keys for each user.
+{{% alert color="info" %}}
+In general, session credentials are the recommended authentication method for use with your production app. Static credentials are recommended for test or demo environments. Signature version 4 headers cover more advanced use cases. For example, you can use them to supplement session or static credentials with custom code. For more information, refer to the documentation of the platform-supported connector that you are implementing.
 {{% /alert %}}
 
-#### 3.1.2 Using the Get Static Credentials Action in Studio Pro
+### 4.1 Implementing Session Credentials {#session}
 
-To create static credentials with the **Get Static Credentials** action in your app, perform the following steps:
+Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour. This is the recommended authentication method for most use cases.
 
-1. Open your app in Studio Pro.
-2. Drag the **Get Static Credentials** action from the **Toolbox** into a microflow.
-3. Double-click the **Get Static Credentials** action and fill in **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#obtain-iam-credentials). You can decide how to provide them securely in your app.
+To authenticate your app in AWS by using session credentials, first add a client certificate in the Deployment Portal, and then add the **GetSessionCredentials** activity to a microflow in Studio Pro.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
+#### 4.1.1  Adding a Client Certificate in the Developer Portal
 
+When creating a trust anchor in Amazon IAM Roles Anywhere, you must provide a [certificate](#prerequisites) that acts as the trust anchor. You must then add the same certificate as the client certificate in the Developer portal.
 
-The action returns a **Credentials** object. For more information on how to use this object, see the documentation for your specific connector.
+To add the certificate, perform the following steps:
 
-### 3.2 Creating Session Credentials {#session}
-
-Session credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour.
-
-#### 3.2.1 Setting up IAM Roles Anywhere on AWS
-
-For the setup of IAM Roles Anywhere, see [AWS documentation](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html). Make sure that the user that you create or choose has the required permissions. The permissions given to this user are beyond the scope of this document, but should be the minimum access required to perform the functions of your AWS connector(s).
-
-#### 3.2.2  Adding the Client Certificate in the Mendix Deployment Portal
-
-To add the client certificate used for creating Trust Anchor in RolesAnywhere, perform the following steps:
-
-1. Log in to the Developer Portal, and select your app.
-
-2. Click **Environments** and then click **Details** on the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
-
-3. Go to the **Network** tab.
-
-4. In the **Outgoing Connections Certificates** section, add the client certificate used for creating Trust Anchor in RolesAnywhere. 
-
-5. From the list, select the client certificate that you just added and then click **Details**.
+1. Log in to the Developer Portal, and then select your app.
+2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
+3. In the **Network** tab, in the **Outgoing Connections Certificates** section, add the client certificate that you used to create a trust anchor in Roles Anywhere.
+4. From the list, select the certificate that you added, and then click **Details**.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
 
-6. Click **New** to open a dialog box, and then enter a client certificate identifier. The client certificate identifier will be used later as input when you create the session credentials.
-
+5. Click **New** .
+6. In the **Details** dialog box, in the **Web Service Call name** field, enter an identifier for the certificate, for example, *MY_S3*.
+    The client certificate identifier is used as input when you create the session credentials.
    {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
 
-After the configuration, the client certificate that you added should show as **Currently enabled**.
+The client certificate that you added now shows as **Currently enabled**.
 
 {{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
 
+#### 4.1.2 Using the GetSessionCredentials Activity in Studio Pro
 
-#### 3.2.3 Using the Get Session Credentials Action in Studio Pro
-
-To create session credentials with the **Get Session Credentials** action in your app, perform the following steps:
+After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetSessionCredentials** activity to a microflow.
 
 1. Open your app in Studio Pro.
+2. Optional: If you want to use the AWS Authentication connector with an existing platform-supported connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, download and install the connector into your app.
+    For more information, refer to the documentation of the connector that you want to use.
+3. Create or edit the microflow that requires AWS authentication.
+    Some platform-supported connectors may have default microflows that perform the functions of the connector. For those connectors, you do not need to create a new microflow. Instead, find and edit a built-in microflow that requires AWS authentication. For more information, refer to the documentation of the connector.
+4. Drag the **GetSessionCredentials** activity from the **Toolbox** into the work area of the microflow.
+    For some platform-supported connectors, the activity may already be present in the microflow. In that case, proceed to the next step.
+5. Double-click the **GetSessionCredentials** activity and configure the parameters as shown in the table below:
 
-2. Drag the **Get Session Credentials** action from the **Toolbox** into a microflow.
-
-3. Double-click the **Get Session Credentials** action and configure the parameters as shown in the table below:
-
-    | Parameter                         | Value                                                        |
-    | --------------------------------- | ------------------------------------------------------------ |
-    | **Region**                        | AWS Region                                                   |
-    | **Role ARN**                      | Arn of the AWS role to assume                                |
-    | **Profile ARN**                   | Arn of the Profile created at IAM RolesAnywhere              |
-    | **Trust Anchor ARN**              | Arn of the Trust Anchor created at IAM RolesAnywhere         |
-    | **Client Certificate Identifier** | Identifier mentioned (as Client Certificate Pin) in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
-    | **Duration**                      | Duration for which the session token should be valid         |
-    | **Session Name**                  | An identifier for the assumed role session                   |
+    | Parameter | Value |
+    | --- | --- |
+    | **Region** | AWS region |
+    | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+    | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](#prerequisites) |
+    | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](#prerequisites) |
+    | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+    | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+    | **Session Name** | An identifier for the session |
 
     The image below shows an example:
 
     {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-session-credentials.png" >}}
 
-The action returns a **Credentials** object. For more information on how to use this object, see the documentation for your specific connector.
+    The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
+6. Continue the configuration by adding more activities to your microflow.
+    For platform-specific AWS connectors, you can refer to the connector documentation to find out more about the available options.
 
-#### 3.2.4 Configuring the Local Setup
+#### 4.1.4 Configuring the Local Setup
 
 To run the AWS Authentication connector locally using Studio Pro, you must add the client certificate as a runtime configuration in Studio Pro. To do so, perform the following steps:
 
 1. In Studio Pro, open the **App Settings** dialog box, and then go to the **Configurations** tab.
-
 2. Create a new configuration or edit an existing configuration.
-
-3. Go to the **Custom** tab for the configuration, and add runtime settings **ClientCertificates** and **ClientCertificatePasswords**.
+3. Go to the **Custom** tab for the configuration, and add the **ClientCertificates** and **ClientCertificatePasswords** runtime settings.
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
 
    {{% alert color="info" %}}Fore more information, see [Runtime Customisation](/refguide/custom-settings/).{{% /alert %}}
 
-4. Click **OK** to save all the changes.
-
-5. Go to the microflow that uses the **Get Session Credentials** action, and double-click the **Get Session Credentials** action to open the **Get Session Credentials** dialog box.
-
+4. Click **OK**.
+5. Go to the microflow that uses the **GetSessionCredentials** activity, and then double-click the **GetSessionCredentials** activity to open the **GetSessionCredentials** dialog box.
 6. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 
    {{< figure src="/attachments/appstore/connectors/aws-authentication/client-certificate-id.png" >}}
+
+### 4.2 Implementing Static Credentials {#static}
+
+Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure session credentials. 
+
+To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:
+
+1. Open your app in Studio Pro.
+2. Optional: If you want to use the AWS Authentication connector with an existing platform-supported connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, download and install the connector into your app.
+    For more information, refer to the documentation of the connector that you want to use.
+3. Create or edit the microflow that requires AWS authentication.
+    Some platform-supported connectors may have default microflows that perform the functions of the connector. For those connectors, you do not need to create a new microflow. Instead, find and edit a built-in microflow that requires AWS authentication. For more information, refer to the documentation of the connector.
+4. Drag the **GetStaticCredentials** activity from the **Toolbox** into the work area of the microflow.
+    For some platform-supported connectors, the activity may already be present in the microflow. In that case, proceed to the next step.
+5. Double-click the **GetStaticCredentials** activity and fill in **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#prerequisites). You can decide how to provide them securely in your app.
+
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
+
+    The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
+6. Continue the configuration by adding more activities to your microflow.
+    For platform-specific AWS connectors, you can refer to the connector documentation to find out more about the available options.
+
+### 4.3 Implementing Signature Version 4 Headers {#signature-v4-headers}
+
+Using signature version 4 headers grants you full control over the contents of the request that you send to AWS. You may want to use this method to authenticate a session or static credentials request without using the AWS console or SDK, for example, if the language you are using does not have SDK yet. For more information about signature version 4 headers, see [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the AWS documentation.
+
+This authentication method is suitable for advanced use cases. If your use case can be fulfilled with session credentials authentication alone, consider using that method instead.
+
+To help you work with signature version 4 headers, the following sections of this document contains a description of the [domain model](#domain-model) and [Java action](#java-action) that you can use, as well as an [example microflow](#microflow) configuration.
+
+#### 4.3.1 Domain Model {#domain-model}
+
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
+
+You can view the domain model in the **App Explorer** in the **AWS Authentication** > **Domain model** section. The following entities are relevant for signature version 4 headers authentication:
+
+* `SigV4Builder` - This entity contains the parameters required to sign the request. It has a one-to-one association with the `Credentials` entity, which contains the parameters corresponding to the [access key ID and secret access key](#prerequisites).
+    
+    | Name | Description |
+    | --- | --- |
+    | `Service` | The service that you want to connect to, for example, S3 |
+    | `Method` | REST methods, for example, `GET` |
+    | `Region` | The AWS region where your service resides |
+    | `Path` | URI from domain to query; enter `\` to leave blank |
+    | `RequestBody` | The body of your request; signature version 4 headers require that the request body as part of the signing process, before you make the actual call. |
+    
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4builder.png" >}}
+
+* `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
+    
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4parameters.png" >}}
+
+* `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
+
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4headers.png" >}}
+
+#### 4.3.2 `GetSigV4SignedHeaders` Java Action {#java-action}
+
+The `GetSigV4SignedHeaders` Java action computes and provides the signed headers. It takes the following parameters as input:
+
+* A `SigV4Builder` object
+* A `SigV4Parameter` object that provides a list of headers
+* Another, optional `SigV4Parameter` object that provides a list of `QueryParameters`
+
+The output of the action is a `SigV4Headers` object.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4action.png" >}}
+
+#### 4.3.3 Example Microflow {#microflow}
+
+The following microflow shows an example implementation of signature version 4 headers authentication.
+
+{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4microflow.png" >}}
+
+In this example, a `SigV4Builder` activity is created and associated with a `Credentials` entity, a list of headers, and list of query parameters.
+
+These entities are used as input for the `GetSigV4Headers` Java action, which returns a response in the form of a `SigV4Header` entity.
+
+The values set in the response entity are used as request headers in the REST call to AWS.

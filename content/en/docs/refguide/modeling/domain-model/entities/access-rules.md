@@ -22,11 +22,15 @@ The **System.User** entity has inbuilt access rules where access is given to its
 
 ## 2 Defining Access Rules
 
-Access rules are defined via entity's **Properties** > **Access rules**, or on the **Access rules** tab of the entity dialog. 
+There are two ways to view access rules:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" >}}
+* Via entity's **Properties** > **Access rules**: 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="250px" >}}
+
+* Via the **Access rules** tab of the entity dialog box:
+
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="550px" >}}
 
 {{% alert color="info" %}}
 The **Access rules** section is visible only if the [App Security](/refguide/app-security/) is set to **Production**.
@@ -34,7 +38,7 @@ The **Access rules** section is visible only if the [App Security](/refguide/app
 
 An example of the access rules properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" >}}
 
 Access rules properties consist of the following sections:
 
@@ -48,6 +52,14 @@ Access rules properties consist of the following sections:
 In **Documentation**, you can describe the intention of the access rule. This helps to keep access rules comprehensible, especially in the case of non-trivial XPath constraints.
 
 ### 2.2 Rule Applies to the Following Module Roles Section {#module-roles}
+
+{{% alert color="info" %}}
+To apply an access rule to an entity, you need to have at least one of the following Access rights selected:
+
+* Allow creating new objects
+* Allow deleting existing objects
+* An Entity Member (attribute or association) with `Read` or `Read, Write` rights
+{{% /alert %}}
 
 #### 2.2.1 Roles
 
@@ -103,7 +115,7 @@ If a user cannot view the value of an attribute because of security constraints,
 
 An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" >}}
 
 {{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
@@ -135,7 +147,7 @@ As an example:
 2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
 The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" >}}
 
 Because of this XPath constraint, access defined in the **Access rights** tab is only applied to orders for which the customer is the current user.
 

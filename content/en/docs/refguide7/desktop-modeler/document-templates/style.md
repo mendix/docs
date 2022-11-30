@@ -82,7 +82,7 @@ To add your own, use the following setup:
 
 ```
 
-The embed-url is where the library can find the font file. The font-triplet-name is the name you would use in your custom css style. This name has to be in lowercase for your own custom fonts.
+The embed-url is where the library can find the font file. The font-triplet-name is the name you would use in your custom CSS style. 
 
 If you want to use italic or bold versions of the font, you need to specify this as well. For example:
 

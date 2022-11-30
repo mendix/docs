@@ -27,16 +27,20 @@ The Email connector supports the following protocols:
 
 ### 1.2 Prerequisites
 
-Before you use the Email connector, do the following:
+{{% alert color="warning" %}}
+Ensure that you follow these prerequisites. Missing a step might lead to errors.
+{{% /alert %}}
 
-1. Download and [configure](/appstore/modules/model-reflection/#configuration) the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module.
-2. Download and [configure](/appstore/modules/encryption/#configuration) the [Encryption](https://marketplace.mendix.com/link/component/1011) module.
+Before you use the Email connector in your app, do the following:
+
+1. Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up-to-date.
+2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up-to-date.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email Module with Templates](/appstore/modules/email-with-templates/)).
 4. Check for and remove orphaned JAR files from any old modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
 
-{{% alert color="warning" %}}
-Certain functionalities of the Email connector will not work correctly if the **Mx Model Reflection** module is not configured, or if you have not removed older email modules.
-{{% /alert %}}
+### 1.2.1 Migrating from Another Module
+
+If you are migrating to the Email connector from another email module, we recommend that you test your settings in a new app first.
 
 ### 1.3 Included Widgets {#included-widgets}
 
@@ -63,7 +67,8 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 
 Once you run your Studio Pro app, you can start configuring your email accounts in the Email Connector UI.
 
-### 3.1 Adding Email Account
+### 3.1 Adding Email Account {#adding-email-account}
+
 When you run your app to use this module for the first time, and earlier data is not present, you will see a welcome screen with an account setup wizard. Click on `Get Started` button and follow the steps to add email account. 
 
 On the Email Connector dashboard, click on `Add Email Account` and follow the wizard.
@@ -129,9 +134,9 @@ The input parameters for receiving email are the following:
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
     * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
 
-{{% alert color="warning" %}}
-When duplicating this microflow, do not change input parameters’ name and data type.
-{{% /alert %}}
+    {{% alert color="warning" %}}
+    When duplicating this microflow, do not change input parameter names and data types.
+    {{% /alert %}}
 
 * **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
 * **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation
@@ -142,9 +147,21 @@ When the module is running, you can create templates to use for a specific email
 
 In Studio Pro, you can configure this with the **SNIP_EmailTemplate_Overview** use this snippet to configure this functionality.
 
-#### 4.3.1 Sending an Email with a Template
+#### 4.3.1 Creating an Email Message from a Template
 
-When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action. The input parameters are the following:
+When modeling your app in Studio Pro, use the  **CreateEmailFromTemplate** Java action to create a draft message that you can preview and modify. Once your message is ready, you can send it with the **SendEmail** action.
+
+The input parameters are the following:
+
+* **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
+* **Email template** – email template from which email message object is created and sent
+* **Queued** – when *true*, email message will be stored in the **EmailMessage** entity with status as **QUEUED** queued and user can sent it later using scheduled event or future. You can use microflow **SE_SendQueuedEmails** to create scheduled events.
+
+Refer to sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**. This sample Microflow demonstrate how to use **CreateEmailFromTemplate** Java action and set attachments to EmailMessage in addition to attachments provided by EmailTemplate.
+
+#### 4.3.2 Sending an Email with a Template
+
+When modeling your app in Studio Pro, use the  **SendEmailWithTemplate** Java action to send an email from a template. The input parameters are the following:
 
 * **Data Object** – entity object from which you want to extract the placeholder tokens (if you want to retrieve from multiple objects, then create a [Non-Persistable Entity](/refguide/persistability/#non-persistable)
 * **Email account** – email account consisting of outgoing email configuration
@@ -249,15 +266,25 @@ Emails can be queued for sending at a later time. You can send the messages in t
           * Associate the existing email account with newly created OAuth provider.
           * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 
-### 5.3 Adding Attachments
+### 5.3 Configuring Local Email Clients
+
+Configuring local clients, like [PaperCut](https://www.papercut.com/), is supported. If using a tool like PaperCut, do the following:
+
+1. Follow the steps for [adding an email account](#adding-email-account). 
+2. Automatic configuration will not work for local clients, so continue with manual configuration in the wizard.
+3. Select the **Send emails** checkbox.
+4. Select **SMTP** for the **Protocol**, enter `localhost` for the **Server host**, and the **Server port** number (for example, `25`).
+5. Enter a random email ID on the login screen, and it should start working.
+
+### 5.4 Adding Attachments
 * To add attachments to the email message, do the following:
 
 1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable to the places where the **FileDocument** entity is required. 
      If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity. 
 2. Set the **Attachment_EmailMessage** association.
 
-### 5.2 Page Styling
+### 5.5 Page Styling
 * If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
 
-### 5.3 Known Errors
+### 5.6 Known Errors
 * If you already have the [included widgets](#included-widgets) in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.

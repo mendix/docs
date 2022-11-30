@@ -1,6 +1,7 @@
 ---
 title: "Using Version Control in Studio Pro"
 url: /refguide/using-version-control-in-studio-pro/
+linktitle: "Using Version Control"
 category: "Version Control"
 weight: 10
 description: "Describes how to work with version control and how to resolve some issues which may arise."
@@ -381,13 +382,26 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.
+{{% /alert %}}
+
 ### 9.2 Authenticating to Team Server
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done via a Personal Access Token (PAT). For more information on how to create a PAT, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/) in the *Developer Portal Guide*. When connecting, your username is your Mendix account username, and your password is the Personal Access Token you created. Alternatively, you can use the word *pat* as your username.
+Connecting to Git is done via a Personal Access Token (PAT). For more information on how to create a PAT, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/) in the *Developer Portal Guide*. 
+You need to use the following credentials:
 
-Connecting to SVN is done with your Mendix credentials.
+* URL: `https://git.api.mendix.com/<your AppID>.git`
+* Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
+* Password: the Personal Access Token you created
+
+Connecting to SVN is done with your Mendix credentials:
+
+* URL: `https://teamserver.sprintr.com/<your AppID>/`
+* Username: your Mendix account username
+* Password: your Mendix account password
 
 ### 9.3 Adding Files and Directories
 

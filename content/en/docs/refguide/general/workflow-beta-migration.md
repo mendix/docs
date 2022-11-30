@@ -1,6 +1,7 @@
 ---
-title: "Migrate Workflow Apps"
+title: "Migrating Workflow Apps"
 url: /refguide/workflow-beta-migration/
+linktitle: "Migrate Workflow Apps"
 category: "General Info"
 weight: 25
 description: "Describes how to migrate existing Workflow applications to the new feedback-improved Beta."

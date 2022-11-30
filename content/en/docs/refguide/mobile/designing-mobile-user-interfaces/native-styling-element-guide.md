@@ -1776,7 +1776,61 @@ The widget consists of the following elements:
 
 The default class to style all column chart widgets is named `com_mendix_widget_native_columnchart_ColumnChart`.
 
-## 12 Read More
+### 11.33 Gallery
+
+The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
+
+The widget’s style properties are as follows:
+
+```xml
+<container/>
+<emptyPlaceholder/>
+<firstItem/>
+<lastItem/>
+<list/>
+<listItem/>
+<loadMoreButtonContainer/>
+<loadMoreButtonPressableContainer/>
+<loadMoreButtonCaption/>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the empty placeholder. |
+| `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the first item of the list. |
+| `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the last item of the list. |
+| `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the list container. |
+| `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to each item container in the list. |
+| `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | rippleColor | Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only) |
+| `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (Boolean) (Android only) |
+| `loadMoreButtonPressableContainer` | radius | Defines the radius of the ripple effect. (number) (Android only) |
+| `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
+| `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
+
+### 11.33.1 Gallery Filtering
+
+In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
+
+The widget’s style properties are as follows:
+
+```xml
+<textInputContainer/>
+<textInputContainerFocused/>
+<textInput/>
+<textInputClearIcon/>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `textInputContainer` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input. |
+| `textInputContainerFocused` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input when the text box is focused. |
+| `textInput` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the text input. |
+| `textInputClearIcon` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies style to the text clear button in the text box. |
+
+## 13 Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)

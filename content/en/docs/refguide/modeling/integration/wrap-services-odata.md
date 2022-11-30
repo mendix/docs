@@ -34,7 +34,7 @@ OData is a set of best practices for building REST APIs that standardizes many a
 
 ### 2.2 Compatibility with Data Hub
 
-Wrapping a service, API, or database in OData ensures compatibility with the [Mendix Data Hub](/data-hub/). Published OData services are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData REST Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
+Wrapping a service, API, or database in OData ensures compatibility with the [Mendix Data Hub](/data-hub/). Published OData services are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Data Hub Catalog](/data-hub/data-hub-catalog/) and made available in the Studio Pro [Data Hub pane](/refguide/data-hub-pane/).
   
 ## 3 Non-Persistable Entities as Published OData Resources {#npe-published-odata}
 

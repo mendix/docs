@@ -41,7 +41,7 @@ Some SAP Fiori components are not yet supported by Mendix core widgets. These ar
 
 ### 2.1 Examples of Mendix Core Widget Styling
 
-You can see examples of the Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources Marketplace Module.
+You can see examples of the SAP Fiori 3 styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the SAP Fiori 3 UI Resources Marketplace Module.
 
 Most widgets work the same way as they do in other Mendix styles based on Atlas UI, but there are some changes which are listed in the sections below.
 
@@ -121,16 +121,16 @@ In addition, there are some limitations on supporting other components:
 
 ## 3 Building Blocks{#building-blocks}
 
-You can see examples of the Fiori 3 building blocks by going to the **Building Blocks** page of the SAP Fiori 3 UI Resources Marketplace Module. The building blocks are categorized by type.
+You can see examples of the SAP Fiori 3 building blocks by going to the **Building Blocks** page of the SAP Fiori 3 UI Resources Marketplace Module. The building blocks are categorized by type.
 
 ## 4 Layouts{#layouts}
 
-You can see examples of the Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources Marketplace Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
+You can see examples of the SAP Fiori 3 navigation layouts by going to the **Layout** page of the SAP Fiori 3 UI Resources Marketplace Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
 
 The guidelines for the use of each layout are:
 
 * Use the **PopupLayout** to create a page which appears in front of the existing page.
-* Use the **SAP_Launchpad** layout when you want to create a SAP Fiori launchpad. See [SAP Fiori Launchpad – Overview](https://experience.sap.com/fiori-design-web/launchpad/) on the *SAP Fiori Design Guidelines* site for more information.
+* Use the **SAP_Launchpad** layout when you want to create an SAP Fiori launchpad. See [SAP Fiori Launchpad – Overview](https://experience.sap.com/fiori-design-web/launchpad/) on the *SAP Fiori Design Guidelines* site for more information.
 * Use a *Default* layout to display information in a single panel.
 * Use a *MasterDetail* layout to display information in two panels side-by-side such as an *Order* with multiple *Order Lines*.
 * Use a *Sliding* layout to display dynamic side content. See [Dynamic Side Content](https://experience.sap.com/fiori-design-web/dynamic-side-content/) on the *SAP Fiori Design Guidelines* site for more information.

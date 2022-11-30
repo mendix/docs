@@ -68,8 +68,8 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Multiple page parameters | GA: Sep 2022 |
 | Native mobile – simplified monitoring | Sep 2022 |
 | Native mobile – file and image background sync | TBD |
-| Data widgets – Tree Table | GA: Sep 2022 |
-| Data widgets – Spread Sheet Grid | GA: Dec 2022 |
+| Data widgets – Tree Table | GA: TBD |
+| Data widgets – Spread Sheet Grid | GA: TBD |
 
 ## 7 Page Bot and Machine Learning Toolkit
 
@@ -85,7 +85,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Feature | Expected Release |
 | --- | --- |
 | Studio Pro modernization | Released for GA on [Sep 28th, 2021](/releasenotes/studio-pro/9.6/#studio-pro-new-design) |
-| Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12//#team-server-git) |
+| Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#team-server-git) |
 | BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Apr 2023 |
 | Studio Pro dark theme | Currently in Public Beta <br />GA: TBD |
 

@@ -7,6 +7,8 @@ tags: ["marketplace", "marketplace component", "connector", "microsoft", "micros
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
+{{% alert color="info" %}}This connector is deprecated.{{% /alert %}}
+
 ## 1 Introduction
 
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) enables sending messages and actionable message cards to a Microsoft Teams channel automatically. You can add and configure the connector in a microflow. Once the microflow that uses the connector is triggered, your app sends out the message to the Microsoft Teams channel. 

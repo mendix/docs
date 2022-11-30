@@ -69,18 +69,18 @@ First actions to take | Inspect the trends for **Application node CPU usage** co
 
 Application Container Disk Percentage | |
 :---|:---|
-Description | Track the disk utilization for the database belonging to the application |
+Description | Track the disk utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high disk usage: 90.5
 Warning Threshold | Disk utilization is between 75% and 85%. |
 Critical Threshold | Disk utilization is higher than 85%.
-First actions to take | Inspect the trends for **Application node CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+First actions to take | Inspect the trends for **Application node disk usage (percentage)** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Application Container Memory Percentage | |
 :---|:---|
-Description | Track the memory utilization for the database belonging to the application |
+Description | Track the memory utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high memory usage: 90.5
 Warning Threshold | Memory utilization is between 90% and 95%. |
-Critical Threshold | memory utilization is higher than 95%.
+Critical Threshold | Memory utilization is higher than 95%.
 First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Critical Logs | |
@@ -131,28 +131,20 @@ Warning Threshold | If the health check microflow returns a non-empty string val
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
 First actions to take | Since the health check microflow is specific to your application, we cannot generically advise actions to take.
 
-Virtual Machine Crash | |
-:---|:---|
-Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
-Example message | Your application's virtual machine died 1 times in the last minute.
-Warning Threshold | Not used.
-Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
-First actions to take | Check the log files and application metrics for a possible cause of the crash.
-
 Virtual Machine Error | |
 :---|:---|
-Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
-Example message | Your application's virtual machine died because of non-recoverable error 1 times in the last minute.
+Description | Show the state of the application's virtual machine (JVM), or an error state if there is an issue with JVM.
+Example message | Your application's virtual machine died because of non-recoverable error in the last 5 minutes.
 Warning Threshold | Not used.
-Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
+Critical Threshold | If the JVM process has experienced a fatal (non-recoverable) error and the application's JVM crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the error.
 
 Virtual Machine Out Of Memory | |
 :---|:---|
-Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
-Example message | Your application's virtual machine ran out of memory and died 1 times in the last minute.
+Description | Show the state of the application's virtual machine (JVM), or an error state when the issue occurs with a JVM.
+Example message | Your application's virtual machine ran out of memory and died in the last 5 minutes.
 Warning Threshold | Not used.
-Critical Threshold | If the JVM process has run out of memory and the application's virtual machine crashed.
+Critical Threshold | If the JVM process has run out of memory and the application's JVM crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
 ## 4 Cloud v3 Alerting Categories and Thresholds
@@ -164,14 +156,6 @@ Mendix Cloud v3 is deprecated and will be retired in the future. To continue run
 Mendix Cloud v3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud v4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
 
 ### 4.1 Application Status
-
-Application Server Memory | |
-:---|:---|
-Description | Track the amount of free RAM on the application server. The *flapping status* indicates how frequently the memory level drops and then recovers to acceptable value. |
-Example message | WARNING: 140 MB RAM free<br/>**Flapping Status** Service is not stable. Flapping percentage: 20% |
-Warning Threshold | Free RAM between 50 MB and 150 MB |
-Critical Threshold | Free RAM less than 50 MB |
-First actions to take | Review the flapping status to see how often this has occurred. Review your app's memory use to see if it can use less RAM. You may need to upgrade the app node memory so you don't reach the warning alert limit. |
 
 CPU | |
 :---|:---|
@@ -209,7 +193,7 @@ First actions to take | Review the application state for Out Of Memory errors an
 
 Application Server Up | |
 :---|:---|
-Description | The container or virtual machine in which the application process is running is reachable over the internal network. Alerts on this subject might point at an internal network connectivity issue.
+Description | The container or virtual machine (JVM) in which the application process is running is reachable over the internal network. Alerts on this subject might point at an internal network connectivity issue.
 Example message | Packet loss = 5%, RTA = 226.74 ms.
 Warning Threshold | Response on a series of ICMP ping packets arrives with more than 5% packet loss, or with a latency higher than 200 milliseconds.
 Critical Threshold | Response on a series of ICMP ping packets arrives with more than 50% packet loss, or with a latency higher than 1 second.
@@ -249,13 +233,11 @@ First actions to take | If this alert triggers, and visiting the application URL
 
 ## 5 Basic License
 
-### 5.1 CRITICAL: Health: Database error
+### 5.1 Database Errors In the Log
 
-You may receive an email informing you of the following error: **CRITICAL: Health: Database error: SSL connection has been closed unexpectedly**.
+You might see database connection errors in your app logs. For example, something like: `ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed.` You do not have to do anything, your app will continue to work as expected.
 
-You do not have to do anything, your app will continue to work as expected.
-
-The reason you receive a message is this. When you are using a [basic license](/developerportal/deploy/basic-package/), you are given your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will trigger this alert.
+The reason you receive a message is that when you are using a [basic license](/developerportal/deploy/basic-package/), you are given your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will cause these error messages.
 
 The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
 

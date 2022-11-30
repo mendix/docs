@@ -34,7 +34,7 @@ Go to https://warden.mendix.com/ and follow the instructions in [Create a Person
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
  
-Store the generated value `{GENERATED_PAT}`somewhere safe so you can use it to authorize your Mendix for Private Cloud API calls.
+Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix for Private Cloud API calls.
 
 #### 2.1.2 Using the PAT
 
@@ -50,7 +50,7 @@ All resource manipulation API calls are processed asynchronously. In the respons
 
 Each asynchronous call will also return a `Location` header that references the URL where the result of that job can be found. For example `https://privatecloud.mendixcloud.com/api/v3/jobs/59464c21-0558-47a9-8d3d-ccc7057dc359`. This can be used as an alternative to `GET /jobs/…`.
 
-Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"status": "finished",`, you can verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, if you were updating a cluster, you can use `GET /clusters/{clusterId}` to verify the cluster manifest.
+Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"status": "finished"`, you can verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, if you were updating a cluster, you can use `GET /clusters/{clusterId}` to verify the cluster manifest.
 
 ### 2.3 Assigning Ids
 
@@ -91,7 +91,9 @@ The following steps will create a cluster, create a namespace, and create an env
 1. After mxpc-cli has been downloaded use the command `./mxpc-cli installer -n new-operator -i {namespaceID} -s {secret}` to install and configure the Mendix operator in the namespace. `{secret}` is the secret you provided in the manifest when creating the namespace.
 
     Once the installer has run, the namespace is ready to use (namespace installed, agent connected, database and store plans configured, ingress configured, registry configured).
-1. Create a `DeploymentPackage` in the Private Cloud Portal. This step must currently be performed manually. We will release a Build API later, to address this limitation.
+1. Create a `DeploymentPackage` in the Private Cloud Portal.
+
+    {{% alert color="info" %}}This step must currently be performed manually. We will release a Build API later, to address this limitation.{{% /alert %}}
 1. Prepare a manifest for your new environment. Either use the model in the OpenAPI spec file or get the manifest of an existing environment (by calling `GET /apps/{appId}/environments/{environmentId}`, for example) and change where required. Remember to use the `{clusterID}` and `{namespace}` values for the `provider` using the cluster and namespace you have just created, and use the deployment package you have just created as the `packageId`.
 1. Make the API call `POST /apps/{appId}/environments` using the environment manifest to create a new environment. 
 1. Verify that the job is successful, as before.

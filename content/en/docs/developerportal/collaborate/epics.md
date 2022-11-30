@@ -239,10 +239,10 @@ The migration report then opens:
 
 The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
 
-The **Not Finished** status means that you can use the **Continue Retrying Migration** button option (this button is only available if a Platform Administrator has manually set the migration for that app to be retried if there are major errors on the first migration). 
+The **Not Finished** status means that you can use the **Continue Migration** button option (this button is only available if a migration has failed or there is still some stories data left to potentially migrate).
 
 {{% alert color="info" %}}
-If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Retrying Migration** button, Mendix recommends  manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
+If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends  manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
 ## 4 Epics

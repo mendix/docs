@@ -424,6 +424,8 @@ components:
             - running
             - failed
             - finished
+          example: finished
+          description: '`created` - a job has been created but has not been picked up for processing <br/> `running` - the job is being processed <br/> `finished` - the job has finished processing <br/> `failed` - something went wrong and the job processing failed'
         details:
           type: string
           example: Request to create cluster.
@@ -1386,10 +1388,11 @@ components:
                     availableOperatingSystems: 'windows, linux, macos'
                     availableArchitectures: x86
   securitySchemes:
-    Personal Access Token:
-      type: http
-      scheme: mxtoken
-      description: 'Access to the Mendix Developer Portal can also use a Personal Access Token. See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden) for documentation how to request a token and how to use it.'
+    PersonalAccessToken:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'
   requestBodies:
     environmentManifest:
       content:
@@ -1537,3 +1540,5 @@ tags:
   - name: environments
   - name: jobs
   - name: namespaces
+security:
+  - PersonalAccessToken: []

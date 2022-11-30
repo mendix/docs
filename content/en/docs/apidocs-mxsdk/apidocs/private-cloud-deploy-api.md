@@ -4,7 +4,6 @@ linktitle: "Private Cloud Deploy API"
 url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
 category: "API Documentation"
-draft: true
 weight: 38
 ---
 
@@ -28,13 +27,12 @@ This API is for connected private cloud clusters only.
 
 Authentication for the API uses a Personal Access Token (PAT).
 
-{{% alert color="info" %}}
-It is not currently possible to authenticate and use the Open API specification below as it does not support custom authentication methods.
-{{% /alert %}}
-
 #### 2.1.1 Generating a PAT
 
-Go to https://warden.mendix.com/ and follow the instructions in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). Select both `mx:deployment:read` and `mx:deployment:write` as scopes.
+Go to https://warden.mendix.com/ and follow the instructions in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). Select the following as scopes:
+
+* `mx:deployment:read` – to perform `GET` operations
+* `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
  
 Store the generated value `{GENERATED_PAT}`somewhere safe so you can use it to authorize your Mendix for Private Cloud API calls.
 
@@ -44,14 +42,15 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" >}}
 
+To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
+
 ### 2.2 Managing Asynchronous Jobs{#async-jobs}
 
 All resource manipulation API calls are processed asynchronously. In the response, there is an `id` which you can use with the `GET /jobs/…` call to get the status of the asynchronous job.
 
 Each asynchronous call will also return a `Location` header that references the URL where the result of that job can be found. For example `https://privatecloud.mendixcloud.com/api/v3/jobs/59464c21-0558-47a9-8d3d-ccc7057dc359`. This can be used as an alternative to `GET /jobs/…`.
 
-You can then verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, if you were updating a cluster, you can use 
-`GET /clusters/{clusterId}` to verify the cluster manifest.
+Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"status": "finished",`, you can verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, if you were updating a cluster, you can use `GET /clusters/{clusterId}` to verify the cluster manifest.
 
 ### 2.3 Assigning Ids
 

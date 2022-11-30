@@ -13,7 +13,7 @@ tags: ["Portfolio Management", "prioritization models", "wsjf prioritization", "
 
 When you manage projects in a flow-based manner, only looking at each project's return on investment theoretically does not produce the best economic benefit. Instead, sequencing projects based on their priorities and updating their priorities continuously can bring you the best result.
 
-The [Portfolio Management](/developerportal/control-center/portfolio-management/) tool supports two prioritization models, WSJF and RICE. These two prioritization models can be used to prioritize your projects in a flow-based environment. WSJF and RICE are based on different components. You can pick the prioritization model that is most suitable for your project portfolio management.
+The [Portfolio Management](/developerportal/portfolio-management/) tool supports two prioritization models, WSJF and RICE. These two prioritization models can be used to prioritize your projects in a flow-based environment. WSJF and RICE are based on different components. You can pick the prioritization model that is most suitable for your project portfolio management.
 
 ## 2 WSJF {#wsjf}
 

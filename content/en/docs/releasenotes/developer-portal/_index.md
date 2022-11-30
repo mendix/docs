@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-The new [Portfolio Management](/developerportal/control-center/portfolio-management/) tool allows portfolio managers, business stakeholders, and developers to stay informed about projects and manage them in the different development stages. By providing everything you need to collaborate effectively in one place, it is now easier than ever to bring project ideas to the Mendix Platform.
+The new [Portfolio Management](/developerportal/portfolio-management/) tool allows portfolio managers, business stakeholders, and developers to stay informed about projects and manage them in the different development stages. By providing everything you need to collaborate effectively in one place, it is now easier than ever to bring project ideas to the Mendix Platform.
 
 In Portfolio Management, you can do the following
 

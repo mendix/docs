@@ -45,7 +45,7 @@ You can then access the following parts of the Mendix Platform:
     * Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node
     * For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)
 * [Control Center](/developerportal/control-center/)
-* [Portfolio Management](/developerportal/control-center/portfolio-management/)
+* [Portfolio Management](/developerportal/portfolio-management/)
 * [Marketplace](/appstore/)
 * [Data Hub](/data-hub/)
 * [Academy](https://academy.mendix.com/link/home)

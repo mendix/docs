@@ -247,7 +247,7 @@ When you click the Sprint icon in a row of an archived story on the **Archived**
 * Stories that were completed, shown under **Completed Stories**
 * Stories that were not completed, shown under **Incomplete Stories**
 
-## 6 Migrating from Stories to Epics {**KEEP AS SECTION HERE? OR MOVE INTO PLANNING?**}
+## 6 Migrating from Stories to Epics {**KEEP AS SECTION HERE? OR MOVE INTO PLANNING (MIGHT HAVE TO ADD SUB-SECTIONS THERE)?**}
 
 {{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, we recommend working on Epics from that point forward.{{% /alert %}}
 
@@ -265,6 +265,8 @@ To migrate from Stories to Epics, follow these steps:
     {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
     
     {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" >}}
+    
+4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
     
 ### 6.2 What Is Migrated?
 
@@ -296,23 +298,24 @@ And here is the outcome after migration:
 
 {{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
-### 6.3 Migration Report 
+### 6.3 Migration Report {#migration-report}
 
 The migration report is available a few seconds after the migration completes (depending on the number of stories you have).
 
 Click **View Migration Report** to view the migration report:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-report-buttons.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" >}}
+
+The migration report then opens:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report.png" >}}
+
+The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
+
+The **Not Finished** status means that you can use the **Continue Retrying Migration** button option (this button is only available if a Platform Administrator has manually set the migration for that app to be retried if there are major errors on the first migration). 
 
 {{% alert color="info" %}}
-The **Continue Retrying Migration** button only appears if a Platform Administrator has manually set the migration for that app to be retried if there are major errors on the first migration.
+If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Retrying Migration** button, Mendix recommends  manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
-The migration report will open:
-
-[**ADD SCREENSHOT HERE, OR RE-ORDER THIS CONTENT?**]
-
-{{% alert color="info" %}}
-If you have unmigrated data but the section has been successfully migrated, Mendix recommends manually migrating the data from [Stories](/developerportal/collaborate/stories/) to Epics.
-{{% /alert %}}
 

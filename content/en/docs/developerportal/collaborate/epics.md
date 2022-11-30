@@ -129,24 +129,19 @@ The story details dialog box shows the following items:
 
 ## 3 Planning {#planning}
 
-On the **Planning** page, you can switch between a Scrum workflow and a Kanban workflow by clicking the settings icon on the upper-right side of the screen. Which workflow you use also decides how the **Planning** page and the [Board](#board) page look.
+There are three tabs on the **Planning** page, which are described below.
+
+### 3.1 Board Type
+
+On this tab, you can switch between a Scrum workflow and a Kanban workflow by clicking the settings icon on the upper-right side of the screen. Which workflow you use also decides how the **Planning** page and the [Board](#board) page look.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" >}}
 
-There are three tabs for the board settings:
+If you select the **Scrum** workflow, the **Planning** page shows the **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog** categories. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** in the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
 
-* **Board Type** – Enables switching from Scrum to Kanban board settings
-* **Toast Settings** – Allows you to enable/disable the toast notifications
+If you use the **Kanban** workflow, the **Planning** page shows the **To Do**, **Refinement**, and **Backlog** categories.
 
-    {{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" >}}
-
-* **Data Migration** – Allows you to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics (for more information, see [**ADD LINK**])
-
-If you use the Scrum workflow, the **Planning** page shows the following categories: **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog**. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** on the upper-right corner. Once the Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories are completed in this Sprint, all the completed stories are [archived](#archive) automatically, and you will decide where the unfinished stories should go. 
-
-If you use the Kanban workflow, the **Planning** page shows the following categories: **To Do**, **Refinement**, and **Backlog**. 
-
-No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box below, you can search stories based on the story title.
+No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search for stories based on the story title.
 
 Each row in a category shows the following information about a story:
 
@@ -163,13 +158,92 @@ Each row in a category shows the following information about a story:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/story-kanban.png" >}}
 
-To [archive](#archive) or delete a story, click the *...* icon at the end of the row, and then select the corresponding option.
+To [archive](#archive) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/archive-delete-story-kanban.png" >}}
 
 To move a story, drag the row to a different category.
 
 Clicking a row opens the [story details](#story-details) page.
+
+### 3.2 Toast Settings
+
+On this tab, you can enable or disable the toast notifications that appear like this:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" >}}
+
+### 3.3 Data Migration
+
+On this tab, you can migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics.
+
+{{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, we recommend working on Epics from that point forward.{{% /alert %}}
+
+#### 3.3.1 Migration Process
+
+To migrate from Stories to Epics, follow these steps:
+
+1. Go to [Planning](#planning) and click the settings icon on the upper-right side of the screen.
+2. Go to the **Data Migration** tab. Make sure that you read the information before you click **Start Migration**:
+
+    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" >}}
+
+3. Select the content you want to migrate.
+
+    {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
+    
+    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" >}}
+    
+4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
+   
+#### 3.3.2 What Is Migrated?
+
+These are the new locations of migrated stories:
+
+| From Stories | To Epics | Additionnal Information |
+| --- | --- | --- |
+| **Active Sprint** | **Active Sprint** in [Planning](#planning) | All the stories are migrated to the **To Do** swimlane with their tags. |
+| Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |
+| Archived stories | [Archive](#archive) | 
+
+These are the new details of migrated stories:
+
+| From Stories | To Epics | Example |
+| --- | --- | --- |
+| Sprint **Name** | Tag with the format: **sprint:Sprint_Name** | **Sprint_Sprint 1** |
+| Story **Status** | Tag with the format: **status:Status** | **status:To-do** |
+| **Assignee** | Story is assigned unless the assignee is not a member of the app. | |
+
+For example, here is a Sprint with three stories from [Stories](/developerportal/collaborate/stories/):
+
+{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-stories.png" >}}
+
+And here is the outcome after migration:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-epics.png" >}}
+
+{{% alert color="info" %}}Beside the story details above, the remaining details for your stories are migrated according to their equivalents in [Epics](#epics).{{% /alert %}}
+
+{{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
+
+#### 3.3.3 Migration Report {#migration-report}
+
+The migration report is available a few seconds after the migration completes (depending on the number of stories you have).
+
+Click **View Migration Report** to view the migration report:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" >}}
+
+The migration report then opens:
+
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report.png" >}}
+
+The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
+
+The **Not Finished** status means that you can use the **Continue Retrying Migration** button option (this button is only available if a Platform Administrator has manually set the migration for that app to be retried if there are major errors on the first migration). 
+
+{{% alert color="info" %}}
+If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Retrying Migration** button, Mendix recommends  manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
+{{% /alert %}}
 
 ## 4 Epics
 
@@ -246,76 +320,3 @@ When you click the Sprint icon in a row of an archived story on the **Archived**
 * Who archived the Sprint, shown under **Archived by**
 * Stories that were completed, shown under **Completed Stories**
 * Stories that were not completed, shown under **Incomplete Stories**
-
-## 6 Migrating from Stories to Epics {**KEEP AS SECTION HERE? OR MOVE INTO PLANNING (MIGHT HAVE TO ADD SUB-SECTIONS THERE)?**}
-
-{{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, we recommend working on Epics from that point forward.{{% /alert %}}
-
-### 6.1 Migration Process
-
-To migrate from Stories to Epics, follow these steps:
-
-1. Go to [Planning](#planning) and click the settings icon on the upper-right side of the screen.
-2. Go to the **Data Migration** tab. Make sure that you read the information before you click **Start Migration**:
-
-    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" >}}
-
-3. Select the content you want to migrate.
-
-    {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
-    
-    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" >}}
-    
-4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
-    
-### 6.2 What Is Migrated?
-
-These are the new locations of migrated stories:
-
-| From Stories | To Epics | Additionnal Information |
-| --- | --- | --- |
-| **Active Sprint** | **Active Sprint** in [Planning](#planning) | All the stories are migrated to the **To Do** swimlane with their tags. |
-| Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |
-| Archived stories | [Archive](#archive) | 
-
-These are the new details of migrated stories:
-
-| From Stories | To Epics | Example |
-| --- | --- | --- |
-| Sprint **Name** | Tag with the format: **sprint:Sprint_Name** | **Sprint_Sprint 1** |
-| Story **Status** | Tag with the format: **status:Status** | **status:To-do** |
-| **Assignee** | Story is assigned unless the assignee is not a member of the app. | |
-
-For example, here is a Sprint with three stories from [Stories](/developerportal/collaborate/stories/):
-
-{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-stories.png" >}}
-
-And here is the outcome after migration:
-
-{{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-epics.png" >}}
-
-{{% alert color="info" %}}Beside the story details above, the remaining details for your stories are migrated according to their equivalents in [Epics](#epics).{{% /alert %}}
-
-{{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
-
-### 6.3 Migration Report {#migration-report}
-
-The migration report is available a few seconds after the migration completes (depending on the number of stories you have).
-
-Click **View Migration Report** to view the migration report:
-
-{{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" >}}
-
-The migration report then opens:
-
-{{< figure src="/attachments/developerportal/collaborate/epics/migration-report.png" >}}
-
-The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
-
-The **Not Finished** status means that you can use the **Continue Retrying Migration** button option (this button is only available if a Platform Administrator has manually set the migration for that app to be retried if there are major errors on the first migration). 
-
-{{% alert color="info" %}}
-If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Retrying Migration** button, Mendix recommends  manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
-{{% /alert %}}
-
-

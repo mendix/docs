@@ -2,7 +2,7 @@
 title: "Cast Object"
 url: /refguide/cast-object/
 weight: 10
-tags: ["studio pro"]
+tags: ["studio pro", "cast object", "activity"]
 ---
 
 {{% alert color="warning" %}}
@@ -11,9 +11,9 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The cast object activity is used in a microflow after an [object type decision](/refguide/object-type-decision/) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision.
+The **Cast object** activity is used in a microflow after an [object type decision](/refguide/object-type-decision/) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision.
 
-To read more about specialization and generalization, see [Entities](/refguide/entities/).
+For more information about specialization and generalization, see [Entities](/refguide/entities/).
 
 ## 2 Properties
 
@@ -46,6 +46,6 @@ This is the name for the result of the cast. It can be used by all activities th
 
 ## 5 Example
 
-For example, there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** needs to have some special actions performed on it. These will be done in a sub-microflow which has as the input type **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to be cast to the object type **MultipleChoiceQuestion**.
+For example, there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** needs to have some special actions performed on it. These will be done in a sub-microflow which has the input type as **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to be cast to the object type **MultipleChoiceQuestion**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/cast-object/cast-example.png" alt="Example of cast in a microflow" >}}

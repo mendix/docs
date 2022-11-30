@@ -172,7 +172,7 @@ On this tab, you can enable or disable the toast notifications that appear like 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" >}}
 
-### 3.3 Data Migration
+### 3.3 Data Migration {#data-migration}
 
 On this tab, you can migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics.
 

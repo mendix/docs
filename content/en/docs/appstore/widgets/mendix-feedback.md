@@ -24,7 +24,7 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 
 The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" >}}
+{{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" >}}
 
 The Mendix Feedback widget is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.
 
@@ -73,7 +73,7 @@ Choose either **MendixSSO** or **Custom Authentication** for your feedback widge
 
         See the screenshot below for an example:
 
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/mendixsso-authentication.png" >}}
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/mendixsso-authentication.png" >}}
 
     * **Custom Authentication** – if you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
         * **User object microflow** – selects the microflow that returns **User** entity from your module
@@ -83,7 +83,7 @@ Choose either **MendixSSO** or **Custom Authentication** for your feedback widge
 
         See the screenshot below for an example:
 
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/custom-authentication.png" >}}
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/custom-authentication.png" >}}
 
 * **Authentication** tab
     The translation should be filled in automatically but you can still configure your own text and translation here.
@@ -102,22 +102,22 @@ You should use the latest version of the Mendix Feedback module, as it will prov
     1. In the **Toolbox**, find Feedback widget in the **Feedback** category
     1. Drop it into a position in the layout:
 
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/Toolbox-feedback.png" >}} 
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" >}} 
         
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-added.png" >}} 
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
 ### 3.2 Submitting Feedback on an App
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-form.png" >}} 
+{{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-form.png" >}} 
 
 Click **Enter Screenshot Mode** to take a screenshot of your page or choose **Upload From Computer** to upload a selected image.
 
       {{% alert color="info" %}The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.{{% /alert %}}
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-submit-button.png" >}} 
+{{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" >}} 
 
 After clicking Submit, your feedback will go straight to the Feedback page of the app in the Developer Portal. 
 Once you see the final page, you have successfully submitted your feedback.
@@ -128,11 +128,10 @@ After clicking **Submit**, your feedback will go straight to the [Feedback](/dev
 
 Simply download the module or widget from the Marketplace. It will replace the old feedback widget in your folder. You can encounter the following error:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/install-error.png" >}}
+{{< figure src="/attachments/appstore/modules/mendix-feedback/install-error.png" >}}
 
 When this happens, right-click the error message, and choose **Update widget** or **Update all widgets**. Then the name of the widget is changed to **Feedback**. The updated widget is ready for use.
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/new-name.png" >}}
 
 ## 4 Troubleshooting
 
@@ -150,4 +149,4 @@ If you cannot see your feedback items on the Developer Portal's **Feedback** pag
 
 If you see the following error, click **close** and then go to your widget folder to remove the duplicate old widget. 
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/widget-error.png" >}}
+{{< figure src="/attachments/appstore/modules/mendix-feedback/widget-error.png" >}}

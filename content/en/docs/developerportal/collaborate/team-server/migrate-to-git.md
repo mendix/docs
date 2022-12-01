@@ -54,15 +54,15 @@ After migration is completed all developers need to check out (re-download) the 
 If the migration process failed, all changes are rolled back. This means access to SVN is restored and you can keep developing your app.
 You can check common causes of a failed migration below and resolve them. After that you can attempt to migrate your app again.
 
-The most likely reason your migration has failed is that you have branches that are invalid. To resolve this, delete or upgrade these branches.
+The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix version 9.12. To resolve this, delete or upgrade these branches.
 
-* There are branches below version 9.12.
-
-Other failure causes have to do with the naming of your branches. You can resolve this by connecting with Tortoise SVN, as described in [working outside Studio Pro](/refguide/using-version-control-in-studio-pro/). 
+Migration failure may be also caused by the naming of your branches. Reasons can be one of the following:
 
 * There are no branches called *branches/trunk* or *branches/tags*.
 * There are branches with the same name but a different casing, such as *branch1* and *BRANCH1*.
 * There are branches with a name that is not valid in Git, for more information see [Git Documentation](https://git-scm.com/docs/git-check-ref-format).
+
+You can resolve migration failure by connecting to Tortoise SVN. For more information, see the [Working Outside Studio Pro](/refguide/using-version-control-in-studio-pro/#working-outside-studio-pro) section in *Using Version Control in Studio Pro*.
 
 ## 6 Read More
 

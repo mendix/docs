@@ -1,7 +1,7 @@
 ---
 title: "Amazon SNS"
 url: /appstore/connectors/amazon-sns/
-description: "Describes the configuration and usage of the Amazon SNS connector from the Mendix Marketplace."
+description: "Describes the configuration and usage of the Amazon SNS connector from the Mendix Marketplace. Amazon SNS is a managed service that provides message delivery from publishers to subscribers. ​"
 tags: ["marketplace", "marketplace component", "amazon", "sns", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---

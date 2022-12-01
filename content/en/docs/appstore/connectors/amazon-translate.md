@@ -1,7 +1,7 @@
 ---
 title: "Amazon Translate"
 url: /appstore/connector/amazon-translate
-description: "Describes the configuration and usage of the Amazon Translate app service, which enables performing text translation in your web apps."
+description: "Describes the configuration and usage of the Amazon Translate app service, which enables performing customizable text translation in your Mendix web apps."
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---

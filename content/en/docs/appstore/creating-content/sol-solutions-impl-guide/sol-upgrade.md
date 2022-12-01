@@ -24,6 +24,8 @@ To upgrade a Mendix solution, make sure the following prerequisites are met:
 * The name of your app's MPR file is the same as the name of the MPR file in the solution package
 * The solution you are upgrading to is the same solution that was used to set up your adaptive solution
 
+{{% alert color="info" %}}You can consider skipping versions when upgrading. For example, if you set up your solution with v1 and the ISV then released v2 and v3, it is not necessary for you to upgrade versions one by one. You can go directly from v1 to v3 if there were no data migration changes in v2.{{% /alert %}}
+
 ## 3 Upgrading Process
 
 To upgrade a solution, follow these steps:

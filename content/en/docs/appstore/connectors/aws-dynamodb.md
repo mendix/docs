@@ -1,7 +1,7 @@
 ---
 title: "Amazon DynamoDB"
 url: /appstore/connectors/amazon-dynamodb/
-description: "Describes the configuration and usage of the Amazon DynamoDB connector from the Mendix Marketplace."
+description: "Describes the configuration and usage of the Amazon DynamoDB connector from the Mendix Marketplace. Amazon DynamoDB is a NoSQL database designed to run scalable, high-performance applications."
 tags: ["marketplace", "marketplace component", "amazon", "dynamodb", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---

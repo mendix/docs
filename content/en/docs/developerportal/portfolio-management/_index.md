@@ -10,12 +10,12 @@ tags: ["Portfolio Management"]
 ## 1 Introduction
 
 The [Portfolio Management](https://portfolio.mendix.com) tool enables staying informed about projects and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring project ideas to the Mendix Platform.
-        
+
 {{% alert type="info" %}}The Portfolio Management app is available to all Mendix Cloud customers. Mendix Admins can access all portfolios within their company.{{% /alert %}}
 
 To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portofolio**.
 
-## 2 Projects Overview Page {#projects-overview}
+## 2 Projects Overview {#projects-overview}
 
 After you start the Portfolio Management app, you see all the portfolios of your company. 
 
@@ -297,7 +297,7 @@ To archive a project, perform the following steps:
 
 A pop-up window opens and tells you that the project is successfully archived. Once the project is archived, you can find it on the [Archived Projects](#archived-projects) page.
 
-## 3 Archived Projects Page {#archived-projects}
+## 3 Archived Projects {#archived-projects}
 
 The **Archived Projects** page shows all the projects that are archived. You can search for a project in the search bar. 
 
@@ -327,7 +327,7 @@ To restore or delete an archived project, go to the **Archived Projects** page, 
 
 Alternatively, to delete an archived project, you can also click the ellipsis icon (**...**) in the side pane where you view the archived project details, and then select **Delete**.
 
-## 4 Access Management Page {#access-management}
+## 4 Access Management {#access-management}
 
 The **Access Management** page shows all the users who have access to this portfolio. 
 
@@ -379,7 +379,7 @@ If you hover over a row, you can see the edit icon (pencil) or the delete icon (
 
 To update the permissions and the role of a user, click the edit icon. To delete a user, click the delete icon.
 
-## 5 Portfolio Settings Page {#portfolio-settings}
+## 5 Portfolio Settings {#portfolio-settings}
 
 {{% alert color="info" %}}The **Portfolio Settings** page is only available for Portfolio Managers.{{% /alert %}}
 

@@ -8,6 +8,7 @@ tags: ["marketplace", "marketplace component", "module", "feedback", "platform s
 ---
 
 {{% alert color="warning" %}}
+
 **There is a new Mendix Feedback module available in Marketplace 🎉 **
 
 **All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
@@ -101,22 +102,22 @@ You should use the latest version of the Mendix Feedback module, as it will prov
     1. In the **Toolbox**, find Feedback widget in the **Feedback** category
     1. Drop it into a position in the layout:
 
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/show-homepage.png" >}} //TODO
+        {{< figure src="/attachments/appstore/widgets/mendix-feedback/Toolbox-feedback.png" >}} 
         
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-added.png" >}} //TODO
+        {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-added.png" >}} 
 
 ### 3.2 Submitting Feedback on an App
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-login.png" >}} //TODO
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-form.png" >}} 
 
 Click **Enter Screenshot Mode** to take a screenshot of your page or choose **Upload From Computer** to upload a selected image.
 
       {{% alert color="info" %}The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.{{% /alert %}}
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/comment.png" >}} //TODO
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-submit-button.png" >}} 
 
 After clicking Submit, your feedback will go straight to the Feedback page of the app in the Developer Portal. 
 Once you see the final page, you have successfully submitted your feedback.

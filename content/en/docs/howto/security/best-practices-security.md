@@ -224,6 +224,12 @@ An example of an attack is when an application is embedded in an iframe. Applica
 
 By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
+If you're running your Mendix app on Mendix for Private Cloud, you can configure the HTTP headers in [the Endpoint (network) Configuration in the Mendix Operator configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings).
+
+The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
+
+If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to setup these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Informations Services (IIS).
+
 ## 12 Maintaining a High Level of App Hygiene
 
 As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your app hygiene at a high level will reduce the chances of a vulnerable application.

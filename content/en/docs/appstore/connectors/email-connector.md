@@ -98,9 +98,9 @@ This is only supported for IMAP protocols, and some servers may not support it a
 {{% /alert %}}
 
 * **Sanitize email to prevent XSS attacks** – option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. 
-* 
+
 {{% alert color="warning" %}}
-We strongly recommend turning this setting on. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+We strongly recommend turning this the **Sanitize email to prevent XSS attacks** setting on. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
 {{% /alert %}}
 
 * **Replicate everything in 'X' folder** – option to fetch emails
@@ -139,9 +139,7 @@ The input parameters for receiving email are the following:
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
     * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
 
-    {{% alert color="warning" %}}
-    When duplicating this microflow, do not change input parameter names and data types.
-    {{% /alert %}}
+    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter names and data types.{{% /alert %}}
 
 * **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
 * **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation

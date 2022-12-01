@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "module", "feedback", "platform s
 
 {{% alert color="warning" %}}
 
-**There is a new Mendix Feedback module available in Marketplace 🎉 **
+**There is a New Mendix Feedback module available in Marketplace.**
 
 **All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
 

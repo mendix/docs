@@ -31,7 +31,7 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
     * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
     * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
     * <kbd>-</kbd> + <kbd>space</kbd> – starts a list
-    * <kbd>tab</kbd> – indents the content when <kbd>tab</kbd> is configured to indent from the widget XML; otherwise, move the focus to the next element
+    * <kbd>tab</kbd> – move the focus to the next element
 
 ## 2 Configuration
 

@@ -25,7 +25,7 @@ We released a new version of Epics, our brand new Agile planning tool, for Gener
 
 We made the following improvements:
 
-* It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](#data-migration) section of *Epics*.
+* It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
 * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@*mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
 * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.

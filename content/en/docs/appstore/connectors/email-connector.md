@@ -100,7 +100,7 @@ This is only supported for IMAP protocols, and some servers may not support it a
 * **Sanitize email to prevent XSS attacks** – option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. 
 
 {{% alert color="warning" %}}
-We strongly recommend turning this setting on. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+We strongly recommend turning this the **Sanitize email to prevent XSS attacks** setting on. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
 {{% /alert %}}
 
 * **Replicate everything in 'X' folder** – option to fetch emails

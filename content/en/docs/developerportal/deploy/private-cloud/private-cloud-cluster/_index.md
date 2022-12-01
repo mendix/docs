@@ -16,6 +16,10 @@ This document explains how to set up the cluster in Mendix.
 
 Once you have created your namespace, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments, Kubernetes namespaces, and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
+{{% alert color="info" %}}
+You can also create clusters and namespaces using the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+{{% /alert %}}
+
 ## 2 Prerequisites for Creating a Cluster{#prerequisites}
 
 To create a cluster in your OpenShift context, you need the following:

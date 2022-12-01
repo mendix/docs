@@ -31,7 +31,7 @@ For module versions below 9.1.0, use the [Object Handling](/appstore/modules/obj
 
     For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
-2. Download the latest Object Handling module into your app.
+2. Download the latest Community Commons module into your app.
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 5.  The following steps are optional:

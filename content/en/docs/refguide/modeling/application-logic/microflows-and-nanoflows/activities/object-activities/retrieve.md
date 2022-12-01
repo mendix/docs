@@ -17,7 +17,7 @@ A **Retrieve** activity can be used to get one or more objects, either by direct
 
 ## 2 Properties
 
-An example of **Retrieve** activity properties is represented in the image below:
+An example of retrieve activity properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" width="700px" >}}
 
@@ -59,7 +59,7 @@ Any changes made to an object are visible in all widgets. This is because change
 
 #### 3.2.1 Association
 
-This property specifies which association is followed. The association must be an association from an object that is already available to the **Retrieve** activity. Associations can be followed in both directions.
+This property specifies which association is followed. The association must be an association from an object that is already available to the retrieve activity. Associations can be followed in both directions.
 
 ### 3.3 Retrieve from Database Properties {#from-database}
 
@@ -82,7 +82,7 @@ This property specifies the range that determines how many objects are retrieved
 The [XPath constraint](/refguide/xpath-constraints/) defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
 {{% alert color="info" %}}
-Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the **Retrieve** activity is in a nanoflow.
+Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve activity is in a nanoflow.
 {{% /alert %}}
 
 #### 3.3.4 Sorting
@@ -105,7 +105,7 @@ This is the name of the list or object returned by the activity. It can be used 
 
 You often need to retrieve objects in order to complete a process. Sometimes those objects cannot be found and you need to take additional actions. Moreover, the objects you retrieve and the objects you create are assigned different names, and you cannot merge them back into a single flow.
 
-This section presents an example for optimizing **Retrieve** activities during the process of finding and creating objects. It also gives an example for retrieving a specific instance of an object.
+This section presents an example for optimizing retrieve activities during the process of finding and creating objects. It also gives an example for retrieving a specific instance of an object.
 
 ### 5.1 A Common Example 
 
@@ -133,7 +133,7 @@ As we can see in the example below, the **GetCustomerPrimaryAddress** sub-microf
 
 Sometimes you only need to retrieve a specific instance of an object. Building a sub-microflow for just one retrieve-and-create action is too much work. An alternative way is to build your own loop, which allows you to have one main microflow but still be able to find and create objects during this process.
 
-However, there is the risk of creating an infinite loop if the **Retrieve** activity applies a constraint that is not set correctly during the create activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
+However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the create activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-one-object-instance.png" width="400px" >}}
 

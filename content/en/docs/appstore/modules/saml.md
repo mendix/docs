@@ -138,7 +138,7 @@ To configure SAML, start your app and navigate to the **OpenConfiguration** micr
 
 You can now finish configuring your SAML module in your app by reviewing/updating the Service Provider (SP), and creating/updating the IdP configuration.
 
-### 3.1 Configuring Service Provider{configure-sp}
+### 3.1 Configuring Service Provider{#configure-sp}
 
 Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
 

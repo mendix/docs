@@ -127,7 +127,7 @@ The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple em
 
 ### 4.2 Receiving Email
 
-Click **Refresh** to receive emails. Emails will be fetched and processed by server as configured in the email account.
+Click **Replicate Emails** to receive emails. Emails will be fetched and processed by server as configured in the email account.
 
 When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action. Once this Java action is called at background emails will be fetched over multiple Java threads and would be returned back to user in async manner. Email fetching will continue till the conditions defined in the email account settings at the Mendix side (like fetch Latest 1000 emails etc)
 

@@ -70,7 +70,7 @@ When inside a microflow that is called from an offline, native, or hybrid app, t
 
 For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
-#### 3.3.4  Action Is in a Nanoflow
+#### 3.3.3  Action Is in a Nanoflow
 
 In a nanoflow, the create object action reloads [data sources](/refguide/data-sources/) as if **Refresh in client** was set to **Yes**.
 

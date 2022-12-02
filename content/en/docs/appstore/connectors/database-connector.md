@@ -142,7 +142,7 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 * [MySQL](https://dev.mysql.com/downloads/connector/j/)
 * [Oracle Database](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [OrientDB](https://orientdb.org/)
-* [PostgreSQL](https://jdbc.postgresql.org/download.html)
+* [PostgreSQL](https://jdbc.postgresql.org/download)
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://www.sqlite.org/src/tree?ci=trunk)
 

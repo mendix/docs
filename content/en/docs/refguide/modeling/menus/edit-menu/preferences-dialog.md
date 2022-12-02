@@ -155,6 +155,12 @@ Default: *enabled*
 
 ### 8.2 Dark Mode Preview {#dark-mode}
 
+{{% alert color="info" %}}
+
+This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+
+{{% /alert %}}
+
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 
 {{% alert color="info" %}}

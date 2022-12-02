@@ -36,7 +36,7 @@ If any of the above requirements are not met, during the next inspection the ins
 
 Your app already contains a list of all inspection reports:
 
-{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/inspection-report-list.jpg"   width="600"  >}}
+{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/inspection-report-list.jpg"   >}}
 
 You would like the **Details** button in this list to open a page showing the details of the selected report and a table with checklist questions related to this report. You also would like to be able to add new checklists to the table or edit existing ones. 
 
@@ -48,15 +48,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/refguide/domain-model/).
 * Make sure your domain model is configured the following way:
 
-    {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/domain-model.jpg" alt="Domain Model"   width="200"  >}}
+    {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/domain-model.jpg" alt="Domain Model"   >}}
 
     * Make sure you have configured the **Question** attribute as the following enumeration:
 
-        {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/enumeration.jpd"   width="550"  >}}
+        {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/enumeration.jpg"   width="550"  >}}
 
 * Make sure your app contains a page with inspection reports list and the **Details** button:
 
-    {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/inspection-report-list.jpg"   width="600"  >}}
+    {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/inspection-report-list.jpg"   >}}
 
 ## 3 Adding a Page with a Form
 
@@ -74,17 +74,13 @@ The **Details** button in the inspection report list should open a page with the
     2. Set the **Layout** to **Atlas_Default**.
     3. Choose **Forms** >**Form Vertical**.
 
-        {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/create-new-page.jpg" alt="Create New Page"   width="550"  >}}
+        {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/create-new-page.jpg" alt="Create New Page"  >}}
 
 5. Click **OK**.
 
-6. The page with a form (a data view) is created. Open data view properties and make sure that the data source was automatically set to **Context** (**InspectionReport** parameter) and **Entity** was set to **InspectionReport**:
-
-    {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/data-view-source.jpg"   width="250"  >}} 
-
 The page with a form (a data view) is created. The **InspectionReport** parameter was automatically added to the page and the data view's data source is set to the **InspectionReport** entity: 
 
-{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/data-view-configured.jpg"   width="600"  >}}
+{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/data-view-configured.jpg"   width="350"  >}}
 
 ## 4 Showing Checklist Questions
 
@@ -104,7 +100,7 @@ Follow the steps below:
 
 4. To show only checklist items associated with the current inspection report, choose the **Checklist** entity over association (*Checklist_InspectionReport/Checklist*) in the **Select Entity** dialog box and click **Select**:
 
-    {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/data-grid-over-association.jpg" >}}
+    {{< figure src="/attachments/howto/pages/pages-how-to-configure-form/data-grid-over-association.jpg" width="400" >}}
 
 5. Say **Yes** to the question *Do you want to automatically fill in the contents of the data grid?*.
 

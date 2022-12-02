@@ -208,4 +208,3 @@ Instead of a loop, you can also calculate the total price by using the [aggregat
 ## 7 Read More
 
 *   [Defining access rules using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
-*   [Optimizing Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)

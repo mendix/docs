@@ -51,9 +51,7 @@ The following widgets are bundled in the module:
 * [Rich Text](/appstore/widgets/rich-text/)
 * [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
-{{% alert color="warning" %}}
-If you already have these widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error. 
-{{% /alert %}}
+If you already have these widgets in your app, and they are not up-to-date, you will get a `Some widgets can not be read` error. 
 
 ## 2 Setup in Studio Pro {#setup}
 
@@ -261,6 +259,13 @@ Emails can be queued for sending at a later time. You can send the messages in t
 
 ### 5.1 Sending or Receiving Email
 * If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
+
+### 5.1.1 Gmail Accounts
+
+Gmail no longer supporting basic authentication (usernames and passwords), but you can still set up an account in the Email connector by doing the following:
+
+1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and change the setting in your Google account.
+2. Set up an App Password to sign into the Email connector. See [Sign in with App Passwords](https://support.google.com/accounts/answer/185833).
 
 ### 5.2 Adding OAuth 2.0 Configuration to an App with Basic Authentication
 * If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 

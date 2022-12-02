@@ -51,9 +51,7 @@ The following widgets are bundled in the module:
 * [Rich Text](/appstore/widgets/rich-text/)
 * [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
-{{% alert color="warning" %}}
-If you already have these widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error. 
-{{% /alert %}}
+If you already have these widgets in your app, and they are not up-to-date, you will get a `Some widgets can not be read` error. 
 
 ## 2 Setup in Studio Pro {#setup}
 

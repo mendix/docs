@@ -24,7 +24,7 @@ There are two steps required to achieve this, listed below.
 Mendix for Private Cloud is a premium offering from Mendix, and there are additional licensing and cost implications if you want to use it for applications in production. See [Licensing Mendix for Private Cloud](#licensing), below, for more information.
 {{% /alert %}}
 
-### 1.1 Registering Your Cluster
+### 1.1 Registering Your Cluster and Namespace
 
 The first step is to register your private cloud cluster in the Developer Portal. For more information see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/).
 

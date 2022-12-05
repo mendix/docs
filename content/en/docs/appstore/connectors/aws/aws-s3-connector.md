@@ -1,7 +1,7 @@
 ---
 title: "Amazon S3"
 url: /appstore/connectors/aws-s3-connector/
-description: "Describes the configuration and usage of the Amazon S3 connector, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Amazon S3 connector, which is available in the Mendix Marketplace. Amazon S3 gives gives you the benefits of a secure and redundant storage system that uses a flat object storage structure."
 tags: ["marketplace", "marketplace component", "aws", "s3", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---

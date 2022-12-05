@@ -23,6 +23,10 @@ Within your namespace you can run one, or several, Mendix apps. You can see the 
 
 Because you can run several Mendix apps in the same namespace, each environment will have an **Internal Name** (UUID) added when the app is deployed to ensure that it is unique in the project. You should not use the same name as the Mendix tools used to deploy the app. See the section [Reserved Names for Mendix Apps](#reserved-names), below.
 
+{{% alert color="info" %}}
+You can also create environments and deploy and manage apps using the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+{{% /alert %}}
+
 ## 2 Prerequisites for Deploying an App
 
 To deploy an app to your private cloud platform, you need the following:

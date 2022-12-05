@@ -31,6 +31,7 @@ As workflows are only available from Mendix 9 version, Workflow Commons requires
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Atlas Web Content](https://marketplace.mendix.com/link/component/117183)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 
 ## 2 Installation 
 
@@ -40,6 +41,7 @@ Download and install the following modules:
 * Data Widgets
 * Atlas Core
 * Atlas Web Content 
+* Nanoflow Commons
 
 ## 3 Components {#components}
 

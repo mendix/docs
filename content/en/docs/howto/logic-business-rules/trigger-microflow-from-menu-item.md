@@ -92,7 +92,5 @@ Congratulations! You have created the menu item that triggers the microflow and 
 * [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/)
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Optimize the Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
 * [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
-* [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

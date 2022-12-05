@@ -8,6 +8,10 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 {{% alert color="warning" %}}
+The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile Builder, a UI tool, that integrates with Studio Pro. Read more on how to deploy your app [here](/howto8/mobile/deploying-native-app/).
+{{% /alert %}}
+
+{{% alert color="warning" %}}
 Please update to Native Builder v3.2.2. Native Builder v3.2.2 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
@@ -265,7 +269,7 @@ For distributing to a specific platform, see the subsequent sections below:
 
 #### 6.1.1 Local Signing {#android-local-signing}
 
-You can skip this section if you completed [Signing a Build](#signing-a-build). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio8/command-line/apksigner).
+You can skip this section if you completed [Signing a Build](#signing-a-build). To sign your Android app locally, use apksigner by following Google's [apksigner documentation](https://developer.android.com/studio/command-line/apksigner).
 
 #### 6.1.2 Installing on a Device
 
@@ -283,7 +287,7 @@ To install your app via USB, connect your device to a machine via USB. To Instal
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/android-app-launch.gif" alt="android app launch"   width="300"  >}}
 
-You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio8/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
+You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
 #### 6.1.3 Uploading to the Google Play Store
 
@@ -291,7 +295,7 @@ This section details publishing a signed Android app to the Google Play store. T
 
 * Completed the [Signing a Build](#signing-a-build) section above
 * Produced an *app-release.apk* build
-* Read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). 
+* Read Google's overview of [the Android app publishing process](https://developer.android.com/studio/publish). 
 
 Before submitting your app to an app store, you will have to complete Google's [signup steps](https://play.google.com/apps/publish/signup/). Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html) before publishing your app. Beyond the launch checklist information, check Google's [Preparing your app for release](https://developer.android.com/studio/publish/preparing) for information on edge cases to resolve before publishing. 
 

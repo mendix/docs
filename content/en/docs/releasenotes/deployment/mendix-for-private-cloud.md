@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### December 1st, 2022
+
+#### Portal Improvements
+
+* We have introduced an API which supports the creation, modification, and deletion, of clusters, namespaces, and environments. You can find more information in [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+* We now add the creator name in the activity logs when an app is autodeployed.
+
 ### November 17th, 2022
 
 #### Portal Improvements

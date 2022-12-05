@@ -17,6 +17,41 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### December 1st, 2022
+
+#### Improvements
+
+We released a new version of Epics, our brand new Agile planning tool, for General Availability!
+
+We made the following improvements:
+
+* It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
+* You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
+* Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
+* We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
+* If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
+
+From this point on, Epics is the default project management tool for all new apps.
+
+### November 30th, 2022
+
+#### New Features
+
+The new [Portfolio Management](/developerportal/portfolio-management/) tool allows portfolio managers, business stakeholders, and developers to stay informed about projects and manage them in the different development stages. By providing everything you need to collaborate effectively in one place, it is now easier than ever to bring project ideas to the Mendix Platform.
+
+In Portfolio Management, you can do the following
+
+* Control and manage digital project initiatives in one overview (via Kanban and list views)
+* Prioritize project initiatives by industry standard prioritization methods:
+	* Weighted shortest jobs first (WSJF)
+	* Reach, impact, confidence, and effort (RICE)
+* Sort, filter, and search project initiatives on fields such as **Tags**, **Owners**, **Departments**, and **Dates**
+* Add attachments, link Mendix apps, and assign owners to a project initiative
+* Archive and restore project initiatives
+* Invite users to dedicated portfolio boards (both internal to your organization and external)
+* Easily manage portfolio users via **Access Management**
+* Get notified when you get assigned to a project initiative or someone commented on a project initiative you own
+
 ### November 21st, 2022
 
 #### New Features

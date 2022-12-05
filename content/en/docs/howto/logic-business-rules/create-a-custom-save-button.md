@@ -89,6 +89,5 @@ Congratulations! You have created a microflow and customized the **Save** button
 
 * [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
 * [Work With Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
 * [Microflow Activities](/refguide/activities/)

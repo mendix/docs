@@ -121,7 +121,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 ### 3.3 Android Configuration
 
-1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio8/debug/dev-options.html#enable) for more information.
+1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options) for more information.
 2. Connect your device to your development machine and when the popup window appears on your mobile device to allow USB debugging, choose **Allow**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-2.png" alt="android-2" >}}
@@ -386,7 +386,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 ### 5.3 Android Configuration
 
-1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio8/debug/dev-options.html#enable) for more information.
+1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-2.png" alt="android-2" >}}

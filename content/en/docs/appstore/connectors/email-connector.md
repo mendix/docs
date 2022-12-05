@@ -51,9 +51,7 @@ The following widgets are bundled in the module:
 * [Rich Text](/appstore/widgets/rich-text/)
 * [FileDocumentViewer](https://github.com/mendixlabs/FileDocumentViewer)
 
-{{% alert color="warning" %}}
-If you already have these widgets in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error. 
-{{% /alert %}}
+If you already have these widgets in your app, and they are not up-to-date, you will get a `Some widgets can not be read` error. 
 
 ## 2 Setup in Studio Pro {#setup}
 
@@ -98,9 +96,9 @@ This is only supported for IMAP protocols, and some servers may not support it a
 {{% /alert %}}
 
 * **Sanitize email to prevent XSS attacks** – option to enable the removal of malicious scripts to prevent XSS attacks. This option is unselected by default. 
-* 
+
 {{% alert color="warning" %}}
-We strongly recommend turning this setting on. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+We strongly recommend turning this the **Sanitize email to prevent XSS attacks** setting on. To learn more about this option, see [Sanitize untrusted HTML (to prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
 {{% /alert %}}
 
 * **Replicate everything in 'X' folder** – option to fetch emails
@@ -127,7 +125,7 @@ The **To**, **Subject**, and **Email Content** fields are mandatory. Multiple em
 
 ### 4.2 Receiving Email
 
-Click **Refresh** to receive emails. Emails will be fetched and processed by server as configured in the email account.
+Click **Replicate Emails** to receive emails. Emails will be fetched and processed by server as configured in the email account.
 
 When modeling your app in Studio Pro, use **RetrieveEmailMessages** Java action. Once this Java action is called at background emails will be fetched over multiple Java threads and would be returned back to user in async manner. Email fetching will continue till the conditions defined in the email account settings at the Mendix side (like fetch Latest 1000 emails etc)
 
@@ -139,9 +137,7 @@ The input parameters for receiving email are the following:
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
     * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
 
-    {{% alert color="warning" %}}
-    When duplicating this microflow, do not change input parameter names and data types.
-    {{% /alert %}}
+    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter names and data types.{{% /alert %}}
 
 * **onFetchCompleteMicroflow** – a microflow that will be triggered when the fetch is complete and there are no more emails for the particular Java action call
 * **onFetchErrorMicroflow** – a microflow that will be triggered if there are errors during the fetch from email server operation
@@ -263,6 +259,13 @@ Emails can be queued for sending at a later time. You can send the messages in t
 
 ### 5.1 Sending or Receiving Email
 * If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
+
+### 5.1.1 Gmail Accounts
+
+Gmail no longer supporting basic authentication (usernames and passwords), but you can still set up an account in the Email connector by doing the following:
+
+1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and change the setting in your Google account.
+2. Set up an App Password to sign into the Email connector. See [Sign in with App Passwords](https://support.google.com/accounts/answer/185833).
 
 ### 5.2 Adding OAuth 2.0 Configuration to an App with Basic Authentication
 * If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 

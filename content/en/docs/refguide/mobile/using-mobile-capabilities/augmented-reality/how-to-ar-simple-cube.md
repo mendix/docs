@@ -17,7 +17,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 For Android:
 
-* Have an Android mobile device that can [support ARCore](https://developers.google.com/ar/discover/supported*devices#android_play).
+* Have an Android mobile device that can [support ARCore](https://developers.google.com/ar/develop).
 * Install [Google Play Services for AR](https://play.google.com/store/apps/details?id=com.google.ar.core&hl=en) on your device.
 * Install the latest Make It Native app on your Android mobile device for testing purposes.
 

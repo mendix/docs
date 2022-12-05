@@ -108,4 +108,3 @@ Since the Mendix Runtime merges list retrieve and aggregate activities, you do n
 ## 6 Read More
 
 * [Retrieve Activities](/refguide/retrieve/)
-* [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)

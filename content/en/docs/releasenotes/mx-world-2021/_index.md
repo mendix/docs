@@ -65,8 +65,8 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Data widgets – Gallery | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Styling editor in Studio Pro | Released for GA on [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| Multiple page parameters | GA: Sep 2022 |
-| Native mobile – simplified monitoring | Sep 2022 |
+| Multiple page parameters | Released for GA on [Sep 30th, 2022](/releasenotes/studio-pro/9.18/#mpp) |
+| Native mobile – simplified monitoring | Released for GA on [Oct 14th, 2022](/releasenotes/studio-pro/9.18/#9181) |
 | Native mobile – file and image background sync | TBD |
 | Data widgets – Tree Table | GA: TBD |
 | Data widgets – Spread Sheet Grid | GA: TBD |

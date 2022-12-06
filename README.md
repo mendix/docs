@@ -2,7 +2,7 @@
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
-Updated through SourceTree
+Cannot Update Branch if not part of Pull Request - SourceTree AND VS Code
 
 Build status:
 

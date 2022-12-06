@@ -109,10 +109,13 @@ On this tab, you can view all the responses that have been collected for the min
 
 The **Test data** tab is available for mini surveys with the status of **Ready for Implement** or **Running**.
 
-This tab shows the test data that has been collected from testers when they use a development API key in the test mode.
+This tab shows the test data that has been collected from testers in the test mode.
 
-{{% alert color="info" %}}You can get a development API key on the [Product Insights Settings](#product-insights-settings) page.<br/>You can enable the test mode on the [Settings](#settings) tab of the **Survey Overview** page.{{% /alert %}}
+You can collect test data using two methods:
 
+* Change the value of the **TEST_MODE** constant in the Product Insights module. This will show **[TEST_MODE]** on the survey widget UI.
+* Select the **Test Mode** check box on the **Settings** tab of the **Survey Overview** page. Enabling this mode will mark this project's team members as testers. This will not work if the project member is not authenticated through Mendix SSO. The survey widget will not show **[TEST_MODE]** on the UI.
+    
 ### 2.3 Product Insights Settings Page {#product-insights-settings}
 
 When you click the settings icon on the [Survey Overview](#survey-overview) page, the **Product Insights Settings** page opens.

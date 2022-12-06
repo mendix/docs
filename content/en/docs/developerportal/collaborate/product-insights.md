@@ -121,11 +121,6 @@ When you click the settings icon on the [Survey Overview](#survey-overview) page
 
 Here you can view the existing API key, or generate an API key if there is not one available. You need to use the API key as input when you configure the Product Insights - Mini Survey module in Studio Pro to implement the mini survey. You need only one API key per app.
 
-An API key can be one of the following types:
-
-* Development: A development key should be used in non-production environments for testing purposes.
-* Production: A production key should be used in production environments.
-
 ## 3 Running a Mini Survey
 
 ### 3.1 Creating a Mini Survey {#create-survey}
@@ -211,9 +206,9 @@ Before the start time of the mini survey is reached, you should implement the su
 #### 3.3.2 Installing the Product Insights - Mini Survey Module in Your App
 
 1. Open your app in Studio Pro.
-2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the [Product Insights](#needs-url) module into your app.
+2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Product Insights - Mini Survey module into your app.
 
-#### 3.3.3 Configuring the Product Insights Module
+#### 3.3.3 Configuring the Product Insights - Mini Survey Module
 
 Follow the instruction in the [Configuration](/appstore/modules/product-insights/#configuration) section in *Product Insights* to complete the implementation of the mini survey in Studio Pro.
 

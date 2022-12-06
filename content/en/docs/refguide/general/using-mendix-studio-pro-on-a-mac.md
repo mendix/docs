@@ -18,6 +18,10 @@ Using Parallels, you can run Mendix Studio Pro on your Mac device using a Window
 To run Studio Pro on Apple Silicon Macs, such as the M1(X), an MTS version starting from Mendix Studio Pro 9.6.5 or Mendix Studio Pro 9.9.1 is required. For more information, see [System Requirements](/refguide/system-requirements/).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see section [Increasing Network Speed](#increase-network-speed).
+{{% /alert %}}
+
 To start making Mendix apps on your Mac, follow this how-to.
 
 This how-to will teach you how to do the following:
@@ -125,9 +129,9 @@ To improve the performance, you can do the following:
 * Run Parallels in a window, instead of Coherence mode
 * Store apps on disk C:\
 
-### 7.1 Increasing Network Speed
+### 7.1 Increasing Network Speed {#increase-network-speed}
 
-Some users experience slow network speed. You try the following approach, which can increase the upload speed significantly:
+When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. You try the following approach, which can increase the upload speed significantly:
 
 1. In Windows 10 or 11, navigate to **Start** > **Control Panel**> **Device Manager** > **Network adapters** > **Parallels VirtIO Ethernet Adapter**. 
 2. Right-click **Parallels VirtIO Ethernet Adapter** and select **Properties** in the drop-down list. 

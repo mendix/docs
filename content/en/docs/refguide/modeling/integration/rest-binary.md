@@ -8,7 +8,7 @@ tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "publ
 
 ## 1 Introduction
 
-This guide will cover how to publish files, including images, in REST services in Studio Pro. The REST service exposes the binary data of the files, and you can use it to display images and files like PDFs directly in your app or browser. 
+This guide will cover how to publish files, including images, in REST services in Studio Pro, and how to consume them. The REST service exposes the binary data of the files, and you can use it to display images and files like PDFs directly in your app or browser. 
 
 You will learn about the following:
 
@@ -75,13 +75,15 @@ Open your published REST service, then double-click the **Get by** key, or singl
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-binary/no-export-mapping.png" >}}
 
-Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFiles_Get_ByKey** microflow. The generated **Get by** key returns a file document.
+Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFile_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 
 ### 3.3 Setting the MIME Type (For Calling a Specific File) {#set-mime-type}
 
 A `GET` request to the REST endpoint you created (for example, `http://localhost:8080/rest/restservicename/v1/entityname/`) will return the binary for the uploaded file. But if you are trying to call a specific file, we need to specify what media type it should expect so that it returns the file in the expected way (for example, displaying an image).
 
 In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers, see the **Return a file document** entry in the [Microflow](/refguide/published-rest-operation/#microflow) section of *Published REST Operation*. Detailed steps are explained below.
+
+See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a generic, external list of common content header types.
 
 #### 3.3.1 MIME Type for Images {#mime-images}
 
@@ -92,7 +94,7 @@ In the **GET_ByKey** microflow, do the following:
 3.  Under the **Refresh in client** field, click **New**.
 4.  Set the three drop-down options to the following:
      * **Key (String (Unlimited))** – set the **Value** to `'Content-Type'`
-     * **Value (String (Unlimited))** – set the **Value** to `image/png` 
+     * **Value (String (Unlimited))** – set the **Value** to `image/png` (or another image type)
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
 [Add image here]
@@ -107,8 +109,6 @@ Follow the steps in the [MIME Type for Images](#mime-images) section, then set t
 
 [Add image here]
 
-Are there other image types or file types we can add? Is there a list of ones that are supported?
-
 ### 3.4 Testing the Service {#test-service}
 
 Test the service to ensure that it works!
@@ -116,13 +116,13 @@ Test the service to ensure that it works!
 1.  Run your app and upload a PNG file.
     You can upload the files on the overview pages you created in the previous step, so make sure you have a link to the file overview page on your home page.
 
-2.  Back in Studio Pro, open the service document, and click the link to the service to display the OpenAPI doucment (for example, `http://localhost:8080/rest-doc/rest/restfileservice/v1`).
+2.  Back in Studio Pro, open the service document, and click the link to the service to display the OpenAPI document (for example, `http://localhost:8080/rest-doc/rest/restfileservice/v1`).
 
-3.  Try it out by clicking **Get/myfiles** > **Try it out** > **Execute**. The contents will display the binary.
+3.  Try it out by clicking **Get/myfile** > **Try it out** > **Execute**. The contents will display the binary.
     You can also test the call in Visual Studio Code using a REST extension doing a `GET http://localhost:8080/rest/tryagain/restfileservice/` call (`Accept: application/json`.
 
 
-4.  Clicking **Get/myfiles/{myfileid}** will return the content, but the media type is missing. See [Setting the MIME Type (For Calling a Specific File)](#set-mime-type).
+4.  Clicking **Get/myfile/{myfileid}** will return the content, but the media type is missing. See [Setting the MIME Type (For Calling a Specific File)](#set-mime-type).
 
 If you uploaded a PNG, you should actually see the image displayed!
 

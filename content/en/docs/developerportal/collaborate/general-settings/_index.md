@@ -39,7 +39,7 @@ The **General Settings** page contains the following tabs:
 Tabs with an asterisk (*) are only available for users with the **App Settings** permission.
 {{% /alert %}}
 
-## 2 General
+## 2 General {#general}
 
 In this tab, you can find the following items:
 

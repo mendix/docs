@@ -29,9 +29,8 @@ The main features of the Validation Assist are the following:
 The Validation Assist is activated by default in the page elements where data validation might be needed. These elements are the following:
 
 * a button with the **Save changes** on-click event
-
 * a button with the **Call microflow** on-click event
-
+* a button with no on-click event set for it
 * the following input widgets:
 
     * **Text box**
@@ -43,7 +42,13 @@ The Validation Assist is activated by default in the page elements where data va
     * **Reference selector**
     * **Input reference set selector**
 
-To access the Validation Assist, right-click a button or an input widget listed above and select **Generate validation microflow.** 
+To access the Validation Assist, right-click a button or an input widget listed above and select **Generate validation microflow**. 
+
+{{% alert color="info" %}}
+
+The page should contain at least one input widget, for the **Generate validation microflow** option to be available. 
+
+{{% /alert %}} 
 
 The **Generate Validation Microflow** dialog box is where you can configure all validations:
 
@@ -65,6 +70,7 @@ The dialog box consists of two sections:
     * **Edit**– edits existing out-of-the-box empty check validations or other validations created by the user
     * **Delete** – deletes the selected validation
     * **Move up** and **Move** **down** – changes the order of validations in the list
+    * **Duplicate** – duplicates selected validation
     * **Extract** **submicroflow** – extracts a list of validations and saves it as a new validation sub-microflow to reuse later
 
 ## 3 Using Validation Assist to Build Data Validations

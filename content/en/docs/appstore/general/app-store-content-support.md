@@ -2,7 +2,7 @@
 title: "Marketplace Content Support"
 url: /appstore/general/app-store-content-support/
 category: "General Info"
-weight: 50
+weight: 4
 tags: ["marketplace", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using Marketplace content in your Mendix apps."
 aliases:

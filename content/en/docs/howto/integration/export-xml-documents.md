@@ -23,7 +23,7 @@ Before you can start exporting XML documents, you need data in your application 
 * Create a domain model (for more information, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
 * Create a custom file document (for more information, see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/))
 * Create overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
-* Create menu items, (for more information, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
+* Create menu items, (for more information, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 

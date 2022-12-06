@@ -1,0 +1,16 @@
+---
+title: "AWS"
+url: /partners/aws/
+description: "Presents information about the strategic alliance between Mendix and AWS."
+weight: 20
+tags: ["AWS", "connectors"]
+---
+
+## 1 Introduction
+
+Mendix has a strategic alliance with AWS to make Mendix the fastest and easiest way to build apps on AWS.
+
+## 2 Reference Documents in This Category
+
+* [AWS in the Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/strategic-partners/aws/) – provides an overview of the AWS-Mendix alliance​ 
+* [AWS Connectors in the Mendix Marketplace](https://marketplace.mendix.com/link/component/204913) – provides an overview of the AWS connector strategy and the available connectors

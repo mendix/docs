@@ -18,11 +18,12 @@ The **Page Explorer** is a simplified page view that makes the page building eas
 ## 2 Performing Basic Functions
 
 In the **Page Explorer**, you can do the following:
-* add or move widgets via drag and drop
-* copy, paste, and delete widgets
-* open widget properties (the **Properties** pane is opened when you select a widget; alternatively, you can double-click the widget in the **Page Explorer** to open the **Properties** dialog box)
-* open the same context menu as the page editor, with the additional option to add widgets/building blocks
-* expand/collapse structure widgets to focus on one area of the page structure
+
+* Add or move widgets via drag-and-drop
+* Copy, paste, and delete widgets
+* Open widget properties (the **Properties** pane is opened when you select a widget; alternatively, you can double-click the widget in the **Page Explorer** to open the **Properties** dialog box)
+* Open the same context menu as the page editor, with the additional option to add widgets and building blocks
+* Expand/collapse structure widgets to focus on one area of the page structure
 
 ## 3 Read More
 

@@ -24,7 +24,7 @@ Before you continue, make sure that you know how to create:
 * Domain models (see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
 * A custom file document (see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/))
 * Overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
-* Menu items (see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
+* Menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 
 ## 3 Preparing the Data Structure and GUI
 
@@ -43,7 +43,7 @@ To prepare the data structure and the GUI, follow these steps:
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581650.png" >}}
 
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
-6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/).
+6. Create a menu item to access the XML document overview page (for more information, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
 
 ## 4 Adding an XML Schema (XSD)
 

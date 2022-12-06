@@ -24,7 +24,7 @@ There are two steps required to achieve this, listed below.
 Mendix for Private Cloud is a premium offering from Mendix, and there are additional licensing and cost implications if you want to use it for applications in production. See [Licensing Mendix for Private Cloud](#licensing), below, for more information.
 {{% /alert %}}
 
-### 1.1 Registering Your Cluster
+### 1.1 Registering Your Cluster and Namespace
 
 The first step is to register your private cloud cluster in the Developer Portal. For more information see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/).
 
@@ -70,10 +70,14 @@ The table below shows the differences between the capabilities for apps deployed
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
 | Mendix app/deployment package deployment | Mendix Developer Portal, Studio Pro, and Studio | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
-| Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used | Services supplied by the database server and file storage used |
+| Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
 | Monitoring | Mendix Developer Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
 | App logs | Mendix Developer Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
 | Remote debugging | Mendix Developer Portal + Studio Pro | Mendix Developer Portal + Studio Pro | Not supported |
+
+{{% alert color="info" %}}
+¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own  solution, dependent on your choice of database, file storage, and cloud platform.
+{{% /alert %}}
 
 ## 4 Licensing Mendix for Private Cloud{#licensing}
 
@@ -106,7 +110,7 @@ You can run the Mendix Operator in trial mode for evaluation purposes. When the 
 
 ### 4.2 Runtime License
 
-The Operator license is independent of a Mendix Runtime license. The Mendix Runtime license removes trial restrictions from a Mendix App itself. You need both licenses to manage and run an application through Mendix for Private Cloud.
+The Operator license is independent of a Mendix Runtime license. The Mendix Runtime license removes [trial restrictions](/developerportal/deploy/licensing-apps-outside-mxcloud/) from a Mendix App itself. You need both licenses to manage and run an application through Mendix for Private Cloud.
 
 You can request a Runtime license by doing the following:
 
@@ -150,7 +154,7 @@ You can also request for both the Operator and Runtime license within the same r
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
-If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#change-subscription-secret)
+If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
 If your app is **Standalone**, then you will have to apply the subscription secret by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
 

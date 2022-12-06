@@ -268,6 +268,10 @@ The options do the following:
 
 A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
 
+{{% alert color="warning" %}}
+The database plan does not include any functionality for backing up or restoring data on your database. It is your responsibility to ensure that appropriate provision is made for backing up and restoring your database using the tools provided by your database management system and/or cloud provider.
+{{% /alert %}}
+
 Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 
 Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
@@ -354,6 +358,10 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 
 {{% alert color="info" %}}
 Storage plans are “blueprints” that specify how to request/decommission a new database or blob storage and pass its credentials to an environment.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+The storage plan does not include any functionality for backing up or restoring files used by your app. It is your responsibility to ensure that appropriate provision is made for backing up and restoring these files using the tools provided by your storage and/or cloud provider.
 {{% /alert %}}
 
 {{% alert color="info" %}}

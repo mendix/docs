@@ -70,10 +70,14 @@ The table below shows the differences between the capabilities for apps deployed
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
 | Mendix app/deployment package deployment | Mendix Developer Portal, Studio Pro, and Studio | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
-| Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used | Services supplied by the database server and file storage used |
+| Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
 | Monitoring | Mendix Developer Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
 | App logs | Mendix Developer Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
 | Remote debugging | Mendix Developer Portal + Studio Pro | Mendix Developer Portal + Studio Pro | Not supported |
+
+{{% alert color="info" %}}
+¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own  solution, dependent on your choice of database, file storage, and cloud platform.
+{{% /alert %}}
 
 ## 4 Licensing Mendix for Private Cloud{#licensing}
 

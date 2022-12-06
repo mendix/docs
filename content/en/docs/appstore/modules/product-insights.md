@@ -9,11 +9,11 @@ tags: ["marketplace", "marketplace component", "product insights", "mini survey"
 
 ## 1 Introduction
 
-After you already created a mini survey in [Product Insights](/developerportal/collaborate/product-insights) in Developer Portal, you should use the [Product Insights](#needs-url) module to implement your mini survey in Studio Pro.
+After you have created a mini survey in [Product Insights](/developerportal/collaborate/product-insights) in the Developer Portal, you should use the Product Insights - Mini Survey module to implement your mini survey in Studio Pro.
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Product Insights module into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Product Insights - Mini Survey module into your app.
 
 ## 3 Configuration {#configuration}
 
@@ -21,7 +21,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
 1. Open your app in Studio Pro.
 
-2. In **App Explorer**, go to **Marketplace modules** > **ProductInsights_Survey** > **_SETUP**.
+2. In **App Explorer**, go to **Marketplace modules** > **ProductInsights_MiniSurvey** > **_SETUP**.
 
 3. Open the **Set API Key** folder, set the constant **APIKEY_PRODUCTINSIGHTS** to the [API key](/developerportal/collaborate/product-insights/#obtain-api-key) that you obtained, and then save the changes.
 

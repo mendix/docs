@@ -86,7 +86,7 @@ The page with a form (a data view) is created. The **InspectionReport** paramete
 
 An inspector has a list of *questions* and indicates with **Yes** or **No** whether the company meets the requirements: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist questions and their results below the inspection report: 
 
-{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/inspection-report-example.png"   width="550"  >}}
+{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/configured-page.jpg" alt="Configured Page"   width="80%"  >}}
 
 To display checklist details in a table, you can add a data grid. It is important that you place it *inside* the data view: this way the data grid will access and display only checklist items associated with the current report rather than display all checklist items ever added to all reports. This means your data grid will get data over an association, in this case called *Checklist_InspectionReport*.
 

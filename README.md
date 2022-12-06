@@ -2,7 +2,7 @@
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
-Updated again through SourceTree
+SourceTree pushes to origin
 
 Build status:
 

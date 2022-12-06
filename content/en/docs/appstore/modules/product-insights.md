@@ -27,9 +27,9 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
 4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini survey to appear.
 
-5. Open the **Show Survey** folder, and copy the **TriggerSurvey** nanoflow to your own module.
+5. Open the **Show Survey** folder, and copy the **ShowSurvey_OnAction** nanoflow to your own module.
 
-6. Set up the **TriggerSurvey** nanoflow as follows:
+6. Set up the **ShowSurvey_OnAction** nanoflow as follows:
 
    1. Double-click **Create String variable**, fill in the survey ID of the mini survey, and then save the changes.
 
@@ -37,10 +37,10 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
    2. Double-click **CHANGE ME**, add your microflow or nanoflow action here, and then save the changes.
 
-7. Create a button that calls the **TriggerSurvey** nanoflow on the page where **Template_SurveyWidget** is placed. 
+7. Create a button that calls the ** ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. 
 
    {{% alert color="info" %}}We recommend renaming the flow to something that describes the original action.{{% /alert %}}
 
-8. In **App Explorer**, double-click **Security**, and add the **ProductInsights_Survey.Use**r user role to all the system roles which use the mini survey in the **App Security** dialog box.
+8. In **App Explorer**, double-click **Security**, and add the **ProductInsights_MiniSurvey.User** user role to all the system roles which use the mini survey in the **App Security** dialog box.
 
 Now you have implemented the mini survey in Studio Pro. Once the start time of the mini survey is reached, the mini survey will start running, and all the target users of the mini survey will receive the survey automatically.

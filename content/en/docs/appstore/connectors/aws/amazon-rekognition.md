@@ -54,14 +54,14 @@ For example, to detect labels for a given image, implement the **DetectLabels** 
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
 
-| Name                                              | Value                                                        |
-| ------------------------------------------------- | ------------------------------------------------------------ |
+| Name | Value |
+| --- | --- |
 | `AWSRekognitionConnector.AWS_ClientCertificateID` | The ID for the ClientCertificate used to sign the authentication requests. (Link to Auth v2 docs) |
-| `AWSRekognitionConnector.HostPattern`             | The endpoint URL for the AWS Rekognition Service, for example, `https://rekognition.us-east-1.amazonaws.com` |
-| `AWSRekognitionConnector.ProfileARN`              | The ProfileARN for the IAM Roles Anywhere profile that has access to the Rekognition AWS service (Link to Auth v2 docs) |
-| `AWSRekognitionConnector.Region`                  | The region in which both the IAM Roles Anywhere and the Rekognition service are located |
-| `AWSRekognitionConnector.RoleARN`                 | The RoleARN of the IAM Role that has access to the Rekognition service. |
-| `AWSRekognitionConnector.AWS_TrustAnchorARN`      | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
+| `AWSRekognitionConnector.HostPattern` | The endpoint URL for the AWS Rekognition Service, for example, `https://rekognition.us-east-1.amazonaws.com` |
+| `AWSRekognitionConnector.ProfileARN` | The ProfileARN for the IAM Roles Anywhere profile that has access to the Rekognition AWS service (Link to Auth v2 docs) |
+| `AWSRekognitionConnector.Region` | The region in which both the IAM Roles Anywhere and the Rekognition service are located |
+| `AWSRekognitionConnector.RoleARN` | The RoleARN of the IAM Role that has access to the Rekognition service. |
+| `AWSRekognitionConnector.AWS_TrustAnchorARN` | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
 
 ### 3.2 Domain Model {#domain-model}
 

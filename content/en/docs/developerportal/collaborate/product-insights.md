@@ -189,19 +189,13 @@ Before the start time of the mini survey is reached, you should implement the su
 
     The [Product Insights Settings](#product-insights-settings) page opens:
 
-    *  If there is already an active API key, it is shown on the list. In this case, check the **Type** of the API key to see if it is suitable for you to use:
-
-       * **Development**: A development key should be used in non-production environments for testing purposes.
-       * **Production**: A production key should be used in production environments. 
-    
-       If it is suitable to use, click **View** to show the API key, then copy it, and save it for later use.
+    *  If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it, and save it for later use.
 
     *  If there is no active API key that you can use, generate one as follows:
       
         1. Click **Generate API Key**.
-        2. Choose whether the API key is a **Development Key** or **Product Key**.
-        3. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the new API key.
-        4. Copy the new API key, and save it for later use.
+        2. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the new API key.
+        3. Copy the new API key, and save it for later use.
 
 #### 3.3.2 Installing the Product Insights - Mini Survey Module in Your App
 

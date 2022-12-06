@@ -2,6 +2,8 @@
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
+Updated through SourceTree
+
 Build status:
 
 * production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://app.travis-ci.com/github/mendix/docs)

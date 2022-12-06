@@ -4,7 +4,7 @@ url: /appstore/connectors/aws/amazon-dynamodb/
 description: "Describes the configuration and usage of the Amazon DynamoDB connector from the Mendix Marketplace. Amazon DynamoDB is a NoSQL database designed to run scalable, high-performance applications."
 tags: ["marketplace", "marketplace component", "amazon", "dynamodb", "connector"]
 aliases:
-    - /appstore/connectors/amazon-dynamodb.html
+    - /appstore/connectors/amazon-dynamodb/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -19,7 +19,7 @@ Amazon DynamoDB helps improve your app by giving you the tools to build scalable
 ### 1.2 Prerequisites
 
 To use the Amazon DynamoDB connector, you must first install and configure the following modules:
-* [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+* [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is required to parse the `creationDateTime` attribute as returned by the `DescribeTable` activity.
 
 ## 2 Installation

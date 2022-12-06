@@ -4,7 +4,7 @@ url: /appstore/connectors/aws/aws-lambda-connector/
 description: "Describes the configuration and usage of the AWS Lambda connector, which is available in the Mendix Marketplace. AWS Lambda provides an event-driven service that can execute code for applications and services in a serverless way. You can combine it with other AWS services, such as Amazon S3, Amazon DynamoDB, or Amazon SNS."
 tags: ["marketplace", "marketplace component", "aws", "lambda", "connector"]
 aliases:
-    - /appstore/connectors/aws-lambda-connector.html
+    - /appstore/connectors/aws-lambda-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -18,7 +18,7 @@ The [AWS Lambda](https://marketplace.mendix.com/link/component/204511) connector
 
 ### 1.2  Prerequisites
 
-The AWS Lambda connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The AWS Lambda connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
@@ -31,7 +31,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 To quickly configure the connection to AWS Lambda by using an example microflow, perform the following steps:
 
 1. In the App Explorer, in **App** > **Marketplace modules** > **AWSLambdaConnector** > **ConnectionDetails**, configure the required authentication credentials.
-    For more information about the difference between static and session credentials, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+    For more information about the difference between static and session credentials, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 2. Optional: If you plan to use session credentials, edit the **UseSessionBasedCredentials** constant, and set the default value to **true**.
 3. In **AWSLambdaConnector** > **Operations**, find an example microflow that performs a function which you want to use in your app.
     For example, if you want to get the list of available Lambda functions, find the **ListFunctions** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).

@@ -4,13 +4,13 @@ url: /appstore/connectors/aws/aws-authentication/
 description: "Use the AWS Authentication connector to securely authenticate your Mendix app with an AWS service. This connector is required for all platform-supported AWS connectors. You can also use it if you want to build your own AWS connector."
 tags: ["marketplace", "marketplace component", "aws", "authentication"]
 aliases:
-    - /appstore/connectors/aws-authentication.html
+    - /appstore/connectors/aws-authentication/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector and the Amazon Rekognition connector.
+The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors, for example, the [Amazon S3](/appstore/connectors/aws/aws-s3-connector/) connector and the Amazon Rekognition connector.
 
 ### 1.1 Typical Use Cases
 
@@ -25,7 +25,7 @@ The AWS Authentication connector gives your app the ability to use the following
 You can implement the above authentication types by means of adding a corresponding activity to the microflow that requires AWS authentication (for example, in order to connect to Amazon Dynamo DB and retrieve specific information from a table). Each activity returns a Credentials object, which is then used for authentication.
 
 {{% alert color="info" %}}
-If you plan to use AWS Authentication with a platform-supported AWS connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, refer to the documentation provided with the connector for more information about the required authentication type.
+If you plan to use AWS Authentication with a platform-supported AWS connector, such as the [Amazon S3](/appstore/connectors/aws/aws-s3-connector/) connector, refer to the documentation provided with the connector for more information about the required authentication type.
 {{% /alert %}}
 
 ## 2 Prerequisites {#prerequisites}
@@ -40,7 +40,7 @@ Before you can use the AWS Authentication connector, you must first configure th
 {{% alert color="info" %}}
 To configure the above prerequisites, you must have an IAM user with specific permissions. Those permissions may vary depending on the connector with which you want to use AWS Authentication. In general, the user should have the minimum access required to perform the functions of the connector.
 
-If you plan to use AWS Authentication with a platform-supported AWS connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, refer to the documentation provided with the connector for more information about the required permissions.
+If you plan to use AWS Authentication with a platform-supported AWS connector, such as the [Amazon S3](/appstore/connectors/aws/aws-s3-connector/) connector, refer to the documentation provided with the connector for more information about the required permissions.
 {{% /alert %}}
 
 ## 3 Installation
@@ -92,7 +92,7 @@ The client certificate that you added now shows as **Currently enabled**.
 After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetSessionCredentials** activity to a microflow.
 
 1. Open your app in Studio Pro.
-2. Optional: If you want to use the AWS Authentication connector with an existing platform-supported connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, download and install the connector into your app.
+2. Optional: If you want to use the AWS Authentication connector with an existing platform-supported connector, such as the [Amazon S3](/appstore/connectors/aws/aws-s3-connector/) connector, download and install the connector into your app.
     For more information, refer to the documentation of the connector that you want to use.
 3. Create or edit the microflow that requires AWS authentication.
     Some platform-supported connectors may have default microflows that perform the functions of the connector. For those connectors, you do not need to create a new microflow. Instead, find and edit a built-in microflow that requires AWS authentication. For more information, refer to the documentation of the connector.
@@ -143,7 +143,7 @@ Static credentials use a mechanism with an access key and a secret. The credenti
 To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:
 
 1. Open your app in Studio Pro.
-2. Optional: If you want to use the AWS Authentication connector with an existing platform-supported connector, such as the [Amazon S3](/appstore/connectors/aws-s3-connector/) connector, download and install the connector into your app.
+2. Optional: If you want to use the AWS Authentication connector with an existing platform-supported connector, such as the [Amazon S3](/appstore/connectors/aws/aws-s3-connector/) connector, download and install the connector into your app.
     For more information, refer to the documentation of the connector that you want to use.
 3. Create or edit the microflow that requires AWS authentication.
     Some platform-supported connectors may have default microflows that perform the functions of the connector. For those connectors, you do not need to create a new microflow. Instead, find and edit a built-in microflow that requires AWS authentication. For more information, refer to the documentation of the connector.

@@ -4,7 +4,7 @@ url: /appstore/connectors/aws/aws-s3-connector/
 description: "Describes the configuration and usage of the Amazon S3 connector, which is available in the Mendix Marketplace. Amazon S3 gives gives you the benefits of a secure and redundant storage system that uses a flat object storage structure."
 tags: ["marketplace", "marketplace component", "aws", "s3", "connector"]
 aliases:
-    - /appstore/connectors/aws-s3-connector.html
+    - /appstore/connectors/aws-s3-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -18,7 +18,7 @@ Amazon S3 gives gives you the benefits of a secure and redundant storage system 
 
 ### 1.2  Prerequisites
 
-The Amazon S3 connector requires the [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon S3 connector requires the [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
@@ -40,7 +40,7 @@ To quickly configure the connection to Amazon S3 by using an example microflow, 
     For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`.
     {{% /alert %}}
 
-2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the App Explorer, in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**, find an example microflow that performs a function which you want to use in your app.
     For example, if you want to get the contents of an object in the S3 bucket, find the **SUB_GetObject** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
 4. Drag the example microflow onto the working area of the microflow that you created in step 2, and position it after the **GetSessionCredentials** activity.
@@ -80,7 +80,7 @@ This activity lists all the S3 buckets which are available for the supplied AWS 
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 
 **Returns**
 
@@ -92,7 +92,7 @@ This activity lists all the [prefixes](https://docs.aws.amazon.com/AmazonS3/late
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 * Object of entity type `Bucket` – the bucket that you are querying
 
 **Returns**
@@ -105,7 +105,7 @@ This activity lists all the objects in an S3 bucket.
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 * Object of entity type `Bucket` – the bucket that you are querying
 
 **Returns**
@@ -118,7 +118,7 @@ This activity returns the contents of a single object defined by an object of en
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 * Object of type `S3Object` – the object which you want to download; must contain the `Key` of the object and be associated with the desired `Bucket`
 
 **Returns**
@@ -131,7 +131,7 @@ This activity puts the contents of a `Document` object into a single object defi
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 * Object of type `Document` – contains the data you want to upload to AWS S3 Storage; the `Name` attribute of the document contains the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object where the content is put
 * Object of type `Bucket` – the destination bucket where you want to upload the object
 
@@ -145,7 +145,7 @@ This activity deletes a single object defined by an object of entity type `S3Obj
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 * Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
 
 **Returns**
@@ -167,7 +167,7 @@ You cannot change the key of an existing object. To do this, you should:
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 * Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
 * Object of type `Bucket` – the destination bucket to which you want to move the object
 
@@ -181,7 +181,7 @@ This activity copies an object from one bucket to another bucket.  The new objec
 
 **Parameters**
 
-* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws-authentication/) connector
+* Object of entity type `Credentials` – obtained from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) connector
 * Object of type `S3Object` – the S3 object which you want to delete; the object must contain the [Key](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) of the S3 object and be associated with the `Bucket` it is in
 * Object of type `Bucket` – the destination bucket to which you want to copy the object
 

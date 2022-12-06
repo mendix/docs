@@ -4,7 +4,7 @@ url: /appstore/connectors/aws/amazon-rekognition/
 description: "Describes the configuration and usage of the Amazon Rekognition connector from the Mendix Marketplace. Amazon Rekognition uses machine learning to analyze and extract information from images.​"
 tags: ["marketplace", "marketplace component", "amazon", "rekognition", "connector"]
 aliases:
-    - /appstore/connectors/amazon-rekognition.html
+    - /appstore/connectors/amazon-rekognition/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -24,7 +24,7 @@ Amazon Rekognition allows your app to analyze images by using machine learning. 
 
 ### 1.2 Prerequisites
 
-The Amazon Rekognition connector requires the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon Rekognition connector requires the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 

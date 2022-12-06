@@ -19,7 +19,7 @@ To run Studio Pro on Apple Silicon Macs, such as the M1(X), an MTS version start
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see section [Increasing Network Speed](#increase-network-speed).
+When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see the [Increasing Network Speed](#increase-network-speed) section below.
 {{% /alert %}}
 
 To start making Mendix apps on your Mac, follow this how-to.

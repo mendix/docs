@@ -1,8 +1,10 @@
 ---
 title: "AWS Lambda"
-url: /appstore/connectors/aws-lambda-connector/
+url: /appstore/connectors/aws/aws-lambda-connector/
 description: "Describes the configuration and usage of the AWS Lambda connector, which is available in the Mendix Marketplace. AWS Lambda provides an event-driven service that can execute code for applications and services in a serverless way. You can combine it with other AWS services, such as Amazon S3, Amazon DynamoDB, or Amazon SNS."
 tags: ["marketplace", "marketplace component", "aws", "lambda", "connector"]
+aliases:
+    - /appstore/connectors/aws-lambda-connector.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

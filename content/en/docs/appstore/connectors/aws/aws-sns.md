@@ -1,8 +1,10 @@
 ---
 title: "Amazon SNS"
-url: /appstore/connectors/amazon-sns/
+url: /appstore/connectors/aws/amazon-sns/
 description: "Describes the configuration and usage of the Amazon SNS connector from the Mendix Marketplace. Amazon SNS is a managed service that provides message delivery from publishers to subscribers. ​"
 tags: ["marketplace", "marketplace component", "amazon", "sns", "connector"]
+aliases:
+    - /appstore/connectors/amazon-sns/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -16,7 +18,7 @@ Amazon SNS helps improve your app by providing a messaging service to send notif
 
 ### 1.2 Prerequisites
 
-The Amazon SNS connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon SNS connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 {{% alert color="info" %}}
 Ensure that the AWS user account used for authentication has the appropriate permissions to access the SNS service in AWS.
@@ -33,7 +35,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 For example, to list all existing Amazon SNS subscriptions, implement the [ListTopics](#list-topics) activity by doing the following steps:
 
 1. Configure AWS Authentication with session-based credentials. For more information, see AWS Authentication.
-    For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/#session).
+    For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/#session).
 2. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 3. Enter a name for your microflow, for example, *ACT_ListTopics*, and then click **OK**.
 4. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **ListTopics** activity.

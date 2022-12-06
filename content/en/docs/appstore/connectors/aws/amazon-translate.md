@@ -1,8 +1,10 @@
 ---
 title: "Amazon Translate"
-url: /appstore/connector/amazon-translate
+url: /appstore/connector/aws/amazon-translate
 description: "Describes the configuration and usage of the Amazon Translate app service, which enables performing customizable text translation in your Mendix web apps."
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
+aliases:
+    - /appstore/connectors/amazon-translate/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -16,7 +18,7 @@ Amazon Translate provides a service that enables you to perform text translation
 
 ### 1.2 Prerequisites
 
-The Amazon Translate connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon Translate connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 

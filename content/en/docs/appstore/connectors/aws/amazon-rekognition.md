@@ -1,8 +1,10 @@
 ---
 title: "Amazon Rekognition"
-url: /appstore/connectors/amazon-rekognition/
+url: /appstore/connectors/aws/amazon-rekognition/
 description: "Describes the configuration and usage of the Amazon Rekognition connector from the Mendix Marketplace. Amazon Rekognition uses machine learning to analyze and extract information from images.​"
 tags: ["marketplace", "marketplace component", "amazon", "rekognition", "connector"]
+aliases:
+    - /appstore/connectors/amazon-rekognition/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -22,7 +24,7 @@ Amazon Rekognition allows your app to analyze images by using machine learning. 
 
 ### 1.2 Prerequisites
 
-The Amazon Rekognition connector requires the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon Rekognition connector requires the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
@@ -52,14 +54,14 @@ For example, to detect labels for a given image, implement the **DetectLabels** 
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS.
 
-| Name                                              | Value                                                        |
-| ------------------------------------------------- | ------------------------------------------------------------ |
+| Name | Value |
+| --- | --- |
 | `AWSRekognitionConnector.AWS_ClientCertificateID` | The ID for the ClientCertificate used to sign the authentication requests. (Link to Auth v2 docs) |
-| `AWSRekognitionConnector.HostPattern`             | The endpoint URL for the AWS Rekognition Service, for example, `https://rekognition.us-east-1.amazonaws.com` |
-| `AWSRekognitionConnector.ProfileARN`              | The ProfileARN for the IAM Roles Anywhere profile that has access to the Rekognition AWS service (Link to Auth v2 docs) |
-| `AWSRekognitionConnector.Region`                  | The region in which both the IAM Roles Anywhere and the Rekognition service are located |
-| `AWSRekognitionConnector.RoleARN`                 | The RoleARN of the IAM Role that has access to the Rekognition service. |
-| `AWSRekognitionConnector.AWS_TrustAnchorARN`      | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
+| `AWSRekognitionConnector.HostPattern` | The endpoint URL for the AWS Rekognition Service, for example, `https://rekognition.us-east-1.amazonaws.com` |
+| `AWSRekognitionConnector.ProfileARN` | The ProfileARN for the IAM Roles Anywhere profile that has access to the Rekognition AWS service (Link to Auth v2 docs) |
+| `AWSRekognitionConnector.Region` | The region in which both the IAM Roles Anywhere and the Rekognition service are located |
+| `AWSRekognitionConnector.RoleARN` | The RoleARN of the IAM Role that has access to the Rekognition service. |
+| `AWSRekognitionConnector.AWS_TrustAnchorARN` | The TrustAnchorARN of the TrustAnchor configured in IAM Roles Anwhere that is used for the configured Role |
 
 ### 3.2 Domain Model {#domain-model}
 

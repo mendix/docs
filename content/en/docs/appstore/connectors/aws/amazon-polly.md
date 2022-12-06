@@ -1,9 +1,11 @@
 ---
 title: "Amazon Polly"
-url: /appstore/connectors/amazon-polly/
+url: /appstore/connectors/aws/amazon-polly/
 category: "Connectors"
 description: "Describes the configuration and usage of the Amazon Polly connector, which is available in the Mendix Marketplace. Amazon Polly allows you to synthesize text to speech, to provide accessibility features or create audio-supported interfaces."
 tags: ["marketplace", "marketplace component", "aws", "polly", "connector", "amazon"]
+aliases:
+    - /appstore/connectors/amazon-polly/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -20,7 +22,7 @@ Amazon Polly allows you to synthesize text to speech, with 96 voices supporting 
 
 ### 1.2 Prerequisites
 
-The Amazon Polly Connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). for more information about installing and configuring the AWS Authentication Connector see [AWS Authentication](/appstore/connectors/aws-authentication/).
+The Amazon Polly Connector requires the [AWS authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). for more information about installing and configuring the AWS Authentication Connector see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ### 1.3 Dependencies
 
@@ -65,7 +67,7 @@ Constants are used to define configuration values. All activities are exported a
 
 | Name | Description |
 | --- | --- |
-| `AmazonPollyConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. For more information, see [AWS Authentication](/appstore/connectors/aws-authentication/). |
+| `AmazonPollyConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/). |
 | `AmazonPollyConnector.ProfileARN` | The `ProfileARN` for the [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) profile that has access to the Amazon Polly service |
 | `AmazonPollyConnector.Region` | The region in which both the IAM Roles Anywhere and the Polly service are located |
 | `AmazonPollyConnector.RoleARN` | The `RoleARN` of the IAM Role that has access to the Polly service. |

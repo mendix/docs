@@ -104,7 +104,7 @@ Follow the steps below:
 
 5. Say **Yes** to the question *Do you want to automatically fill in the contents of the data grid?*.
 
-5. As the main purpose of the page is to display information, you do not to search the data grid. Open data grid properties and set the **Show search bar property** to **Never**.
+5. As the main purpose of the page is to display information, you do not need to search the data grid. Open data grid properties and set the **Show search bar property** to **Never**.
 
 7. To be able to add new checklist items to the report, select the **New** button in the data grid and open its properties.
 
@@ -132,15 +132,15 @@ Follow the steps below:
 
 18. Click the **On click page** property.
 
-19. In the **Select web page** dialog box, select Manage_Checklist.
+19. In the **Select web page** dialog box, select **Manage_Checklist**.
 
 Now checklist items are displayed in the table. You can add new checklist by clicking the **New** button in the table, and edit the selected checklist by clicking the **Edit** button.
 
-{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/data-grid-configured.png"   width="80%"  >}}
+{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/data-grid-configured.jpg"   width="80%"  >}}
 
 Congratulations! You have the page that displays details of the selected report and checklist items of this report:
 
-{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/configured-page.png" alt="Configured Page"   width="80%"  >}}
+{{< figure src="/attachments/howto/pages/pages-how-to-configure-form/configured-page.jpg" alt="Configured Page"   width="80%"  >}}
 
 You can now preview your app and test your page.
 

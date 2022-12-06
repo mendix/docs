@@ -11,7 +11,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The change object activity can be used to change the members of an object. This can be done with or without committing and with or without events.
+The **Change object** activity can be used to change the members of an object. This can be done with or without committing and with or without events.
 
 ## 2 Properties
 

@@ -8,18 +8,20 @@ tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "publ
 
 ## 1 Introduction
 
-This guide will cover how to publish images and files as REST services in Studio Pro. The REST service exposes the binary data of the images and files, and can be retrieved to display images and files like PDFs directly in the app or your browser. 
+This guide will cover how to publish files, including images, in REST services in Studio Pro. The REST service exposes the binary data of the files, and you can use it to display images and files like PDFs directly in your app or browser. 
 
 You will learn about the following:
 
 * [Creating a REST service](#create-service)
 * [Trying out, or testing,](#test-service) the service
 * [Setting the MIME type](#set-mime-type) for a specific file
-* [Creating a client to retrieve files](#retrieve-files) with REST
+* [Consuming files](#retrieve-files) with REST
+
+If you are just interested in consuming REST services in your apps, skip down to the [Retrieve Files with REST](#retrieve-files) section.
 
 ### 1.1 Prerequisites 
 
-To publish or consume files and images with REST, do the following:
+To publish or consume files with REST, do the following:
 
 * Install Studio Pro 
 
@@ -28,13 +30,13 @@ We recommend reading the following for some more background:
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
 * [Working with images and files](/howto/data-models/working-with-images-and-files/) in Studio Pro
 
-## 2 Using Images and Files in Your App
+## 2 Using Files in Your App
 
 To publish images or files with REST, you need to be using them in your app. Images and files you use in your app are stored in **System.Image** and **System.FileDocument** entities.
 
 Follow [Work with Images and Files](/howto/data-models/working-with-images-and-files/) for step-by-step instructions on setting up these entities and overview pages and using them in your app.
 
-## 3 Publish Images and Files as REST {#create-service}
+## 3 Publish Files as REST {#create-service}
 
 Imagine that your app is functioning as a content management system (CMS), and you want to be able to send and receive images and files. You have an entity that stores the files, which we will use as a starting point:
 
@@ -77,7 +79,7 @@ Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFil
 
 ### 3.3 Setting the MIME Type (For Calling a Specific File) {#set-mime-type}
 
-A `GET` request to the REST endpoint you created (for example, `http://localhost:8080/rest/restservicename/v1/entityname/`) will return the binary for the uploaded file. But if you are trying to call a specific file, Mendix needs to be told what media type it should expect so that it returns the file in the expected way (for example, displaying an image).
+A `GET` request to the REST endpoint you created (for example, `http://localhost:8080/rest/restservicename/v1/entityname/`) will return the binary for the uploaded file. But if you are trying to call a specific file, we need to specify what media type it should expect so that it returns the file in the expected way (for example, displaying an image).
 
 In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers, see the **Return a file document** entry in the [Microflow](/refguide/published-rest-operation/#microflow) section of *Published REST Operation*. Detailed steps are explained below.
 
@@ -124,7 +126,7 @@ Test the service to ensure that it works!
 
 If you uploaded a PNG, you should actually see the image displayed!
 
-## 5 Retrieve Images and Files with REST {#retrieve-files}
+## 5 Retrieve Files with REST {#retrieve-files}
 
 Now that you have a published REST service for your image or file entity, implement an API client that will retrieve binary files and store the result in a `FileDocument`.
 

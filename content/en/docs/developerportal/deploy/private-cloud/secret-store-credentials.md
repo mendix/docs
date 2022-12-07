@@ -1,5 +1,5 @@
 ---
-title: "Integrate Kubernetes with Secret Stores"
+title: "Retrieve Environment-sensitive Data from a Secret Store"
 url: /developerportal/deploy/secret-store-credentials/
 description: "Describes the process for using external secret stores for Kubernetes secrets"
 weight: 20
@@ -16,8 +16,16 @@ Environments running Mendix for Private Cloud can be granted read-only access to
 {{% alert color="info" %}}Using an external secret storage provides multiple benefits, such as rotating credentials from a single location, collecting audit logs and dynamically generating role-specific credentials.
 
 Using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.
+{{% /alert %}}
 
-Azure blob storage is not supported as secret storage for Azure. The Mx4Pc is currently compatible with HashiCorp Vault and AWS Secrets Manager.{{% /alert %}}
+### 1.1 Supported Stores
+
+Mendix apps currently support the following secret stores:
+
+* AWS Secrets Manager
+* HashiCorp Vault
+
+Azure blob storage is not supported as secret storage for Azure.
 
 ## 2 Configuring Your Environment
 

@@ -18,7 +18,7 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 
 * Mendix version of *all branches* in the app is 9.12 or above
 * Current version control is in Team Server SVN
-* Your app has maximum 250 revisions across all branches (we plan to increase this maximum in the coming months)
+* Your app has maximum 1000 revisions across all branches (this limit will be removed in Q1 2023)
 
 {{% alert type="info" %}}
 

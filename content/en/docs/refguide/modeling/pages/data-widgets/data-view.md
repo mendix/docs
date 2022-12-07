@@ -47,7 +47,7 @@ The data view supports the following types of data source: context, microflow, n
 
 | Data Source Type | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
-| Context          | A data source that uses a context object which is already available, such as a page parameter or the object of a surrounding data container. Page parameters are passed to the page from another document, such as an [Open Page action](/refguide/on-click-event/#show-page) in another page or a [Show Page activity](/refguide/show-page/) in a microflow or nanoflow. If the context object comes from a data container, you must specify an entity path that starts in the context object and follows one or more associations. For more information on the context source, see [Context Source](/refguide/context-source/). |
+| Context          | A data source that uses a context object which is already available, such as a page parameter, snippet parameter or the object of a surrounding data container. Page parameters are passed to the page from another document, such as an [Open Page action](/refguide/on-click-event/#show-page) in another page or a [Show Page activity](/refguide/show-page/) in a microflow or nanoflow. In the case of a snippet parameter the data will come from a [Snippet Call](/refguide/snippet-call/) in a [page](/refguide/page/), [layout](/refguide/layout/) or another [snippet](/refguide/snippet/). If the context object comes from a data container, you must specify an entity path that starts in the context object and follows one or more associations. For more information on the context source, see [Context Source](/refguide/context-source/). |
 | Microflow        | A data source that runs a selected microflow and displays a return value. For more  information on the microflow source, see [Microflow Source](/refguide/microflow-source/). |
 | Nanoflow         | A data source that runs a selected nanoflow and displays a return value. For more  information on the nanoflow source, see [Nanoflow Source](/refguide/nanoflow-source/). |
 | Listen to widget | A data source that allows a data view to display detailed information on an object in the list widget on the same page. For more information on listen to widget source, see [Listen To Widget Source](/refguide/microflow-source/). |
@@ -124,6 +124,7 @@ To perform actions on a data view, select it on a page and right-click it. The l
 ## 5 Read More
 
 * [Page](/refguide/page/)
+* [Snippet](/refguide/snippet/)
 * [Data Containers](/refguide/data-widgets/)
 * [Data Sources](/refguide/data-sources/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

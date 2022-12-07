@@ -34,7 +34,14 @@ Snippet call properties consist of the following sections:
 
 ### 2.3 General Section {#general}
 
-This section contains the **Snippet** property, it shows the name of an actual snippet that will be displayed here.
+#### 2.3.1 Snippet
+
+The **Snippet** property shows the name of the snippet that the snippet call will invoke
+
+#### 2.3.2 Snippet settings
+
+The **Snippet settings** property opens a dialog box enabling you to configure the snippet call arguments that will be passed to the snippet
+
 
 ## 3 Performing Specific Actions
 
@@ -45,6 +52,7 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 
 ## 4 Read More
 
+* [Snippet](/refguide/snippet/)
 * [Page](/refguide/page/)
 * [Structure Widgets](/refguide/structure-widgets/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

@@ -3,6 +3,7 @@
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
 Update made in Mark-vM Repo
+Update made using VS Code
 
 Build status:
 

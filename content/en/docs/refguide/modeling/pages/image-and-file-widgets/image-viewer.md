@@ -11,7 +11,9 @@ A dynamic image can be used to display an image or its thumbnail. For example, y
 
 {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-viewer/image-viewer.png" >}}
 
-A dynamic image must be placed in a data view or a template grid.
+First you need to create an entity and define that it is an image entity. This is done by the concept of 'inheritance', sometimes called 'generalization'. By inheriting from 'System.Image' your own entity gets all the properties of the system image entity. 
+
+A dynamic image must be placed in a data view or a template grid. 
 
 ## 2 Properties
 

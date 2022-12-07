@@ -84,7 +84,9 @@ To use the BAPI Connector, you have to first set up your environment and configu
 
 ### 4.1 SAP System Connection Details{#sap-connection-details}
 
-You need to set the following connection details to tell the BAPI Connector how it can connect to your chosen BAPI destination.
+You need to set the following connection details to tell the BAPI Connector how it can connect to your chosen BAPI destination. You can do this in two ways: by setting the JCo properties in the app, or by using an SNC connection.
+
+#### 4.1.1 Connecting Using App Constants
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/jcodestination-properties.png" alt="Properties to Set for JCoDestination" >}}
 
@@ -104,12 +106,28 @@ The following JCo Properties map directly to these constants in the module:
 | SystemNumber  | jco.client.sysnr  |
 | RouterAddress | jco.client.saprouter |
 
-#### 4.1.1 Additional JCoProperties{#jco-properties}
+##### 4.1.1.1 Additional JCoProperties{#jco-properties}
 
-If you need to set additional JCoProperties for which a constant is not available, you can create a list of objects of the `Property` entity (see the domain model section, below) and use the `GetJCoDestination` action. You need to set the following attributes in the `Property` object:
+If you need to set additional JCoProperties for which a constant is not available, you can create a list of objects of the `Property` entity (see the domain model section, below) and use the [GetJCoDestination](#get-jco-destination) action. You need to set the following attributes in the `Property` object:
 
 * Name – the JCoProperty key — for example to set maximum pool size, Name would be `jco.pool.maxpoolsize`
 * Value – the value to be assigned to this property
+
+#### 4.1.2 Connecting Using an SNC Connection
+
+Alternatively, you can configure **GetJCoDestination** to use an SNC connection by setting up the properties listed below (using the method described in [Additional JCoProperties](#jco-properties), above), and then passing the list of properties using the [GetJCoDestination](#get-jco-destination) action.
+
+The values for the properties can be found in the **Connection Properties** of the SAP server you want to connect to. You can see these in the SAP GUI. The options from the **Expert Settings** can be found in the **Advanced** tab as a string which will resemble a list of HTTP parameters: `conn=/R/DA1/G/PUBLIC&sncname=p:CN=xxxx.xxxxxxx.com,C=US,0=xxxxxxx,OU=xxxxxxx&sncon=true&sncqop=9&cpg=9999&dcpg=9999&clnt=999&lang=EN&systemName=DA1`.
+
+| Property | Value | Source |
+| --- | --- | --- |
+| jco.client.snc_mode | `1` – enable SNC<br />`2` – disable SNC |  |
+| jco.client.snc_partnername | sncname | Expert Settings |
+| jco.client.snc_qop | sncqop | Expert Settings |
+| jco.client.snc_myname | Server Name | Distinguished Name(DN) of client PSE |
+| jco.client.snc_lib | The path and file name for the SAP Cryptography library | Usually `C:\Program Files\SAP\FrontEnd\SecureLogin\lib\` |
+| jco.client.mshost | Message Server | System Tab |
+| jco.client.r3name | System | System Tab  |
 
 ## 5 Domain Models
 
@@ -158,7 +176,7 @@ The BAPI Connector provides the following microflow actions. These can be used a
 
 The microflow actions are described in the following sections.
 
-### 6.1 GetJCoDestination
+### 6.1 GetJCoDestination {#get-jco-destination}
 
 The action `GetJCoDestination`, is used to get the JCoDestination. Assign the values from the *JCO_Constants* described in [SAP System Connection Details](#sap-connection-details), above. The action returns a `Destination` object which is used when making calls to a BAPI.
 
@@ -174,22 +192,6 @@ This example shows setting of below properties to GetJCoDestination action:
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/configure-jcodestination-properties-mf.png" alt="Configuring  Additional  Properties – JCoDestination" >}}
 
 {{< figure src="/attachments/partners/sap/sap-bapi-connector/getjcodestination-additional.properties.png" >}}
-
-#### 6.1.1 Using an SNC Connection
-
-Alternatively, you can configure **GetJCoDestination** to use an SNC connection by setting up the properties listed below (using the method described in [Additional JCoProperties](#jco-properties)), and then passing the list of properties as described above.
-
-The values for the properties can be found in the **Connection Properties** of the BAPIs which you can see by right-clicking the BAPI in the **SAP GUI for Java**. The options from the **Expert Settings** can be found in the **Advanced** tab as a string which will resemble a list of HTTP parameters: `conn=/R/DA1/G/PUBLIC&sncname=p:CN=ehdev.industrysoftware.automation.siemens.com,C=US,0=Siemens,OU=Siemens&sncon=true&sncqop=9&cpg=1100&dcpg=4110&clnt=340&lang=EN&systemName=DA1`.
-
-| Property | Value | Source |
-| --- | --- | --- |
-| jco.client.snc_mode | `1` – enable SNC<br />`2` – disable SNC |  |
-| jco.client.snc_partnername | sncname | Expert Settings |
-| jco.client.snc_qop | sncqop | Expert Settings |
-| jco.client.snc_myname | Server Name | Distinguished Name(DN) of client PSE |
-| jco.client.snc_lib | The path and file name for the SAP Cryptography library | Usually `C:\Program Files\SAP\FrontEnd\SecureLogin\lib\` |
-| jco.client.mshost | Message Server | System Tab |
-| jco.client.r3name | System | System Tab  |
 
 ### 6.2 Create_BAPIExplorer
 

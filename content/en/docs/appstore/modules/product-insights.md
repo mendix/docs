@@ -26,7 +26,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 3. Open the **Set API Key & mode** folder and do the following:
 
    1. Set the constant **APIKEY_PRODUCTINSIGHTS** to the [API key](/developerportal/collaborate/product-insights/#obtain-api-key) that you obtained.
-   2. Configure the constant **TEST_MODE**. If this is turned on, the survey will always show.
+   2. (Optional) Configure the constant **TEST_MODE**. If this is turned on, the survey will always show.
    3. Save the changes.
 
 4. Open the **Put Survey Widget On Template** folder, and place **Template_SurveyWidget** on the page where you would like the mini survey to appear.

@@ -11,6 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2022
 
+### December 8th, 2022
+
+#### Improvements
+
+* When a user receives a notification from the Catalog informing them about newly registered endpoints or newly assigned ownership then they are directed towards the curate page showing now all the relevant and filtered resources. Also, the curate page is made more user-friendly.
+
 ### November 24th, 2022
 
 #### Improvements

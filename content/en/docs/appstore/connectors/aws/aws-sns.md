@@ -1,7 +1,8 @@
 ---
 title: "Amazon SNS"
 url: /appstore/connectors/aws/amazon-sns/
-description: "Describes the configuration and usage of the Amazon SNS connector from the Mendix Marketplace. Amazon SNS is a managed service that provides message delivery from publishers to subscribers. ​"
+description: "Describes the configuration and usage of the Amazon SNS connector from the Mendix Marketplace. Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers (also known as producers and consumers).​"
+weight: 20
 tags: ["marketplace", "marketplace component", "amazon", "sns", "connector"]
 aliases:
     - /appstore/connectors/amazon-sns/
@@ -14,7 +15,7 @@ The [Amazon SNS connector](https://marketplace.mendix.com/link/component/204715)
 
 ### 1.1 Typical Use Cases
 
-Amazon SNS helps improve your app by providing a messaging service to send notifications, both to end users (app-to-person) and to other applications (for example, AWS Lambda). Implement the Amazon SNS connector if you want your app to have the ability to send SMS, push notifications, or emails, as well as push notifications to distributed systems.
+Amazon Simple Notification Service (SNS) sends notifications two ways, A2A and A2P. A2A provides high-throughput, push-based, many-to-many messaging between distributed systems, microservices, and event-driven serverless applications. These applications include Amazon Simple Queue Service (SQS), Amazon Kinesis Data Firehose, AWS Lambda, and other HTTPS endpoints. A2P functionality lets you send messages to your customers with SMS texts, push notifications, and email.
 
 ### 1.2 Prerequisites
 

@@ -1,5 +1,5 @@
 ---
-title: "Integrate Kubernetes with Secret Stores"
+title: "Retrieve Environment-sensitive Data from a Secret Store"
 url: /developerportal/deploy/secret-store-credentials/
 description: "Describes the process for using external secret stores for Kubernetes secrets"
 weight: 20
@@ -11,11 +11,21 @@ tags: ["Deploy", "Private Cloud", "Secrets", "Secret Stores", "Vault", "Kubernet
 You can increase the security of your environment by implementing an external secrets store to manage your Kubernetes secrets.
 Environments running Mendix for Private Cloud can be granted read-only access to a secrets store by using a [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/). This document outlines the high-level process, and provides example implementations for HashiCorp Vault and AWS Secrets Manager.
 
+{{% alert color="info" %}}Secret storage does not currently support [database plans](/developerportal/deploy/private-cloud-cluster/#database-plan) or [storage plans](/developerportal/deploy/private-cloud-cluster/#storage-plan). You must provision your environment manually.{{% /alert %}}
+
 {{% alert color="info" %}}Using an external secret storage provides multiple benefits, such as rotating credentials from a single location, collecting audit logs and dynamically generating role-specific credentials.
 
 Using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.
+{{% /alert %}}
 
-Azure blob storage is not supported as secret storage for Azure. The Mx4Pc is currently compatible with HashiCorp Vault and AWS Secrets Manager.{{% /alert %}}
+### 1.1 Supported Stores
+
+Mendix apps currently support the following secret stores:
+
+* AWS Secrets Manager
+* HashiCorp Vault
+
+Azure blob storage is not supported as secret storage for Azure.
 
 ## 2 Configuring Your Environment
 
@@ -239,7 +249,7 @@ To enable your environment to use Vault as external secret storage, follow these
 
 ### 3.2 Configuring a Secret Store with AWS Secrets Manager
 
-To enable your environment to use AWS Secrets Manager as external secret storage, follow these steps:
+To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/blogs/security/how-to-use-aws-secrets-configuration-provider-with-kubernetes-secrets-store-csi-driver/) as external secret storage, follow these steps:
 
 1. In AWS Secrets Manager, create a new secret of the type **Other**.
 2. Define the keys as described in the [SecretProviderClass Keys](#keys) section above, and then click **Next**. 
@@ -369,7 +379,7 @@ To enable your environment to use AWS Secrets Manager as external secret storage
               objectAlias: "mx-admin-password"
     ```
 
-In the above example, `path` specifies the key name from the original AWS Secret (Secret Manager key), and `objectAlias` specifies how it will be named when mounted into the sidecar. Do not modify `objectAlias`, as it matches the Vault `objectName`.
+In the above example, `path` specifies the key name from the original AWS Secret (Secret Manager key), and `objectAlias` specifies how it will be named when mounted into the sidecar. Do not modify `objectAlias`, as it matches the AWS `objectName`.
 
 ## 4 Additional considerations {#additional-considerations}
 

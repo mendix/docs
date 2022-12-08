@@ -1,7 +1,7 @@
 ---
 title: "Amazon Rekognition"
 url: /appstore/connectors/aws/amazon-rekognition/
-description: "Describes the configuration and usage of the Amazon Rekognition connector from the Mendix Marketplace. Amazon Rekognition uses machine learning to analyze and extract information from images.​"
+description: "Describes the configuration and usage of the Amazon Rekognition connector from the Mendix Marketplace. Amazon Rekognition offers pre-trained and customizable computer vision (CV) capabilities to extract information and insights from your images and videos.​"
 tags: ["marketplace", "marketplace component", "amazon", "rekognition", "connector"]
 aliases:
     - /appstore/connectors/amazon-rekognition/

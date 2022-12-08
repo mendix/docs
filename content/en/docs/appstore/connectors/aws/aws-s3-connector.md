@@ -1,7 +1,7 @@
 ---
 title: "Amazon S3"
 url: /appstore/connectors/aws/aws-s3-connector/
-description: "Describes the configuration and usage of the Amazon S3 connector, which is available in the Mendix Marketplace. Amazon S3 gives gives you the benefits of a secure and redundant storage system that uses a flat object storage structure."
+description: "Describes the configuration and usage of the Amazon S3 connector, which is available in the Mendix Marketplace. Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance."
 tags: ["marketplace", "marketplace component", "aws", "s3", "connector"]
 aliases:
     - /appstore/connectors/aws-s3-connector/
@@ -14,7 +14,7 @@ The [Amazon S3](https://marketplace.mendix.com/link/component/120340) connector 
 
 ### 1.1 Typical Use Cases
 
-Amazon S3 gives gives you the benefits of a secure and redundant storage system that uses a flat object storage structure. You may want to use it if your app uses objects which you want to store independently from the database.
+Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps. With cost-effective storage classes and easy-to-use management features, you can optimize costs, organize data, and configure fine-tuned access controls to meet specific business, organizational, and compliance requirements.
 
 ### 1.2  Prerequisites
 

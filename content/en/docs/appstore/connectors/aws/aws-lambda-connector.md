@@ -1,7 +1,7 @@
 ---
 title: "AWS Lambda"
 url: /appstore/connectors/aws/aws-lambda-connector/
-description: "Describes the configuration and usage of the AWS Lambda connector, which is available in the Mendix Marketplace. AWS Lambda provides an event-driven service that can execute code for applications and services in a serverless way. You can combine it with other AWS services, such as Amazon S3, Amazon DynamoDB, or Amazon SNS."
+description: "Describes the configuration and usage of the AWS Lambda connector, which is available in the Mendix Marketplace. AWS Lambda is a serverless, event-driven compute service that lets you run code for virtually any type of application or backend service without provisioning or managing servers."
 tags: ["marketplace", "marketplace component", "aws", "lambda", "connector"]
 aliases:
     - /appstore/connectors/aws-lambda-connector/
@@ -14,7 +14,7 @@ The [AWS Lambda](https://marketplace.mendix.com/link/component/204511) connector
 
 ### 1.1 Typical Use Cases
 
-[AWS Lambda](https://aws.amazon.com/lambda/) provides an event-driven service that can execute code for applications and services in a serverless way. You can combine it with other AWS services, such as Amazon S3, Amazon DynamoDB, or Amazon SNS.
+[AWS Lambda](https://aws.amazon.com/lambda/) is a serverless, event-driven compute service that lets you run code for virtually any type of application or backend service without provisioning or managing servers. You can trigger Lambda from over 200 AWS services and software as a service (SaaS) applications, and only pay for what you use. 
 
 ### 1.2  Prerequisites
 

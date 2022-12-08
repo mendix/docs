@@ -22,6 +22,8 @@ This module allows Mendix developers with little or no experience in building wo
 * Attachments layer on top of workflows
 * Comments section to use with workflows
 
+{{% alert color="info" %}}For versions 2.4.0 and higher, attachments in Workflow Commons are now (an optional) part of comments. Attachments outside the scope of a comment need to be part of your own domain model, and should be associated to the context entity of the Workflow. This is required so you can configure the applicable security settings, since the context of a specific Workflow is not known in advance in Workflow Commons.{{% /alert %}}
+
 ### 1.3 Prerequisites
 
 As workflows are only available from Mendix 9 version, Workflow Commons requires Mendix 9.0.5 and above.

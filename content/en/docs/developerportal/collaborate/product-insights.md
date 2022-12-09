@@ -71,9 +71,9 @@ Clicking the mini survey in a row on the list shows its [survey details](#survey
 
 #### 2.1.3 Settings Tab {#settings}
 
-On the **Settings** tab of the **Survey Overview** page, you can enable the test mode. Enabling this mode marks the team members of this app as testers. Testers will see the survey every time it is triggered, and their responses will not be saved. You can view all the test data on the [Test data](#test-data) tab of the survey details page.
+On the **Settings** tab of **Survey Overview**, you can select **Enable Mendix SSO test users**, which marks the app team members as testers. Testers see the survey every time it is triggered, and their responses are not saved. You can view all the test data on the [Test data](#test-data) tab of the survey details page.
 
-{{% alert color="info" %}}If a team member is not authenticated through Mendix SSO, the test mode does not work for them.{{% /alert %}} 
+{{% alert color="info" %}}If a team member is not authenticated through Mendix SSO, this setting does not work for them.{{% /alert %}} 
 
 ### 2.2 Survey Details {#survey-details}
 

@@ -9,13 +9,13 @@ tags: ["Product Insights", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-By using Product Insights in the Developer Portal and the Product Insights - Mini Survey module in the Marketplace, you can set up mini surveys for a target user group that you would like to reach to collect their feedback and gain valuable product insights.
+By using **Product Insights** in the Developer Portal and the [Product Insights - Mini Survey](/appstore/modules/product-insights) module in the Marketplace, you can set up mini surveys for a target user group that you would like to reach to collect their feedback and gain valuable product insights.
 
-This document first describes all the pages in Product Insights in the Developer Portal, and then describes the procedure on how to run a mini survey: you begin with creating the mini survey with Product Insights in the Developer Portal, and then you should implement the mini survey by configuring the Product Insights module in Studio Pro. After the mini survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
+This document first describes all the pages in Product Insights in the Developer Portal, and then describes the procedure on how to run a mini survey: you begin with creating the mini survey with Product Insights in the Developer Portal, and then you should implement the mini survey by configuring the Product Insights - Mini Survey module in Studio Pro. After the mini survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
 
-## 2 Pages in Product Insights in the Developer Portal 
+## 2 Product Insights Configuration 
 
-### 2.1 Survey Overview Page {#survey-overview}
+### 2.1 Survey Overview {#survey-overview}
 
 When you open an app in Product Insights, if the app already has existing mini surveys, the **Survey Overview** page opens.
 
@@ -75,7 +75,7 @@ On the **Settings** tab of the **Survey Overview** page, you can enable the test
 
 {{% alert color="info" %}}If a team member is not authenticated through Mendix SSO, the test mode does not work for them.{{% /alert %}} 
 
-### 2.2 Survey Details Page {#survey-details}
+### 2.2 Survey Details {#survey-details}
 
 When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
 
@@ -113,12 +113,12 @@ This tab shows the test data that has been collected from testers in the test mo
 
 You can collect test data using two methods:
 
-* Change the value of the **TEST_MODE** constant in the Product Insights module. This will show **[TEST_MODE]** on the survey widget UI.
-* Select the **Test Mode** check box on the **Settings** tab of the **Survey Overview** page. Enabling this mode will mark this project's team members as testers. This will not work if the project member is not authenticated through Mendix SSO. The survey widget will not show **[TEST_MODE]** on the UI.
-    
-### 2.3 Product Insights Settings Page {#product-insights-settings}
+* Change the value of the **TEST_MODE** constant in the Product Insights - Mini Survey module. This will show **[TEST_MODE]** on the survey widget UI.
+* Select the **Test Mode** check box on the **Settings** tab of **Survey Overview**. Enabling this mode will mark this project's team members as testers. This will not work if the project member is not authenticated through Mendix SSO. The survey widget will not show **[TEST_MODE]** on the UI.
+  
+### 2.3 Product Insights Settings {#product-insights-settings}
 
-When you click the settings icon on the [Survey Overview](#survey-overview) page, the **Product Insights Settings** page opens.
+When you click the settings icon on [Survey Overview](#survey-overview), **Product Insights Settings** opens.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
@@ -131,9 +131,9 @@ Here you can view the existing API key, or generate an API key if there is not o
 1. Open the app in the Developer Portal.
 2. Click **Product Insights**. Depending on if there are existing mini surveys for this app, you see one of the following scenarios:
 
-   * If there are already existing mini surveys for this app, the [Survey Overview](#survey-overview) page opens. The page lists all the existing mini surveys, and also shows the **Create New Survey** button.
+   * If there are already existing mini surveys for this app, [Survey Overview](#survey-overview) opens. The page lists all the existing mini surveys, and also shows the **Create New Survey** button.
    * If there are no existing mini surveys for this app, you only see the **Create New Survey** button.
-3. Click the **Create New Survey** button. The **Create New Survey** page opens.
+3. Click the **Create New Survey** button.
 4. Enter the following information for your mini survey:
 
    * **Background**
@@ -207,7 +207,7 @@ Before the start time of the mini survey is reached, you should implement the su
 
 #### 3.3.3 Configuring the Product Insights - Mini Survey Module
 
-Follow the instruction in the [Configuration](/appstore/modules/product-insights/#configuration) section in *Product Insights* to complete the implementation of the mini survey in Studio Pro.
+Follow the instructions in the [Configuration](/appstore/modules/product-insights/#configuration) section in *Product Insights - Mini Survey* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing and Exporting Responses of a Mini Survey {#view-export-responses}
 

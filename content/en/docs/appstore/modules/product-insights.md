@@ -1,5 +1,5 @@
 ---
-title: "Product Insights"
+title: "Product Insights - Mini Survey"
 url: /appstore/modules/product-insights/
 category: "Modules"
 description: "Describes the configuration and usage of the Product Insights module, which is available in the Mendix Marketplace."

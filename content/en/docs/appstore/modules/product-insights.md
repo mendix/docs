@@ -2,22 +2,22 @@
 title: "Product Insights - Mini Survey"
 url: /appstore/modules/product-insights/
 category: "Modules"
-description: "Describes the configuration and usage of the Product Insights module, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Product Insights - Mini Survey module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "product insights", "mini survey"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-After you have created a mini survey in [Product Insights](/developerportal/collaborate/product-insights) in the Developer Portal, you should use the Product Insights - Mini Survey module to implement your mini survey in Studio Pro.
+After you have created a mini survey in [Product Insights](/developerportal/collaborate/product-insights) in the Developer Portal, you can use the Product Insights - Mini Survey module to implement your mini survey in Studio Pro.
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Product Insights - Mini Survey module into your app.
+To import this module into your app, follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
 ## 3 Configuration {#configuration}
 
-{{% alert color="info" %}}Before you configure the Product Insights module in Studio Pro, you should have already created your mini survey in Product Insights in the Developer Portal. If not, you should go there and [create the mini survey](/developerportal/collaborate/product-insights/#create-survey) first, and then follow the procedure below. {{% /alert %}}
+{{% alert color="info" %}}Before you configure this module in Studio Pro, make sure you have  [created your mini survey](/developerportal/collaborate/product-insights/#create-survey) in **Product Insights** in the Developer Portal. {{% /alert %}}
 
 1. Open your app in Studio Pro.
 
@@ -37,11 +37,11 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](https:
 
    1. Double-click **Create String variable**, fill in the survey ID of the mini survey, and then save the changes.
 
-      {{% alert color="info" %}}You can find the survey ID on the [Settings](/developerportal/collaborate/product-insights/#survey-details-settings) tab or [Implementation](/developerportal/collaborate/product-insights/#survey-details-implementation) tab of the survey details page in Product Insights in the Developer Portal.{{% /alert %}}
+      {{% alert color="info" %}}You can find the survey ID on the [Settings](/developerportal/collaborate/product-insights/#survey-details-settings) tab or [Implementation](/developerportal/collaborate/product-insights/#survey-details-implementation) tab of the survey details page in **Product Insights** in the Developer Portal.{{% /alert %}}
 
    2. Double-click **CHANGE ME**, add your microflow or nanoflow action here, and then save the changes.
 
-7. Create a button that calls the ** ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. 
+7. Create a button that calls the **ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. 
 
    {{% alert color="info" %}}We recommend renaming the flow to something that describes the original action.{{% /alert %}}
 

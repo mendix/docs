@@ -73,7 +73,7 @@ Clicking the mini survey in a row on the list shows its [survey details](#survey
 
 On the **Settings** tab of **Survey Overview**, you can select **Enable Mendix SSO test users**, which marks the app team members as testers. Testers see the survey every time it is triggered, and their responses are not saved. You can view all the test data on the [Test data](#test-data) tab of the survey details page.
 
-{{% alert color="info" %}}If a team member is not authenticated through Mendix SSO, this setting does not work for them.{{% /alert %}} 
+{{% alert color="info" %}}If an app team member is not authenticated through Mendix SSO, this setting does not work for them.{{% /alert %}} 
 
 ### 2.2 Survey Details {#survey-details}
 
@@ -109,13 +109,13 @@ On this tab, you can view all the responses that have been collected for the min
 
 The **Test data** tab is available for mini surveys with the status of **Ready for Implement** or **Running**.
 
-This tab shows the test data that has been collected from testers in the test mode.
+This tab shows the test data that has been collected from testers in the test mode or Mendix SSO test users.
 
 You can collect test data using two methods:
 
 * Change the value of the **TEST_MODE** constant in the Product Insights - Mini Survey module. This will show **[TEST_MODE]** on the survey widget UI.
-* Select the **Test Mode** check box on the **Settings** tab of **Survey Overview**. Enabling this mode will mark this project's team members as testers. This will not work if the project member is not authenticated through Mendix SSO. The survey widget will not show **[TEST_MODE]** on the UI.
-  
+* Select the **Enable Mendix SSO test users"** check box on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
+
 ### 2.3 Product Insights Settings {#product-insights-settings}
 
 When you click the settings icon on [Survey Overview](#survey-overview), **Product Insights Settings** opens.

@@ -4,14 +4,14 @@ url: /appstore/modules/mendix-feedback/
 category: "Modules"
 description: "Describes the configuration and usage of the Mendix Feedback module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "module", "feedback", "platform support"]
+aliases:
+    - /appstore/widgets/mendix-feedback/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}
 
-**There is a New Mendix Feedback module available in Marketplace.**
-
-**All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
+All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
 

@@ -47,17 +47,6 @@ Mendix uses the following static IP addresses. If you need further information, 
 | Mendix Cloud V4 US | North Virginia (us-east-1) | `52.205.207.103` <br /> `52.55.243.62` <br /> `34.197.224.250` |
 | Mendix Cloud V4 US | Oregon (us-west-2) | `35.160.4.29` <br /> `54.190.172.197` <br /> `44.236.131.88` |
 
-#### 2.2.2 Mendix Cloud v3 (XS4/BIT)
-
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
-* `82.94.240.112/28`
-* `2001:888:2177::/48`
-* `213.154.238.16/28`
-* `2001:7b8:670::/48`
-
 ## 3 Frequently Asked Questions
 
 **Why does the IP address need to change?**

@@ -2,7 +2,7 @@
 title: "Share Marketplace Content"
 url: /appstore/general/share-app-store-content/
 category: "General Info"
-weight: 40
+weight: 2
 description: "Describes how to create and share Mendix Marketplace content."
 tags: ["marketplace", "public app store", "private app store", widget", "module"]
 aliases:
@@ -53,7 +53,7 @@ When considering intellectual property (IP) in the Mendix Marketplace, follow th
 * Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
 * If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
 
-For more information, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
+For more information, see [Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 ### 3.3 For Widgets
 

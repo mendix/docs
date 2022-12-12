@@ -65,11 +65,11 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Data widgets – Gallery | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Styling editor in Studio Pro | Released for GA on [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| Multiple page parameters | GA: Sep 2022 |
-| Native mobile – simplified monitoring | Sep 2022 |
+| Multiple page parameters | Released for GA on [Sep 30th, 2022](/releasenotes/studio-pro/9.18/#mpp) |
+| Native mobile – simplified monitoring | Released for GA on [Oct 14th, 2022](/releasenotes/studio-pro/9.18/#9181) |
 | Native mobile – file and image background sync | TBD |
-| Data widgets – Tree Table | GA: Sep 2022 |
-| Data widgets – Spread Sheet Grid | GA: Dec 2022 |
+| Data widgets – Tree Table | GA: TBD |
+| Data widgets – Spread Sheet Grid | GA: TBD |
 
 ## 7 Page Bot and Machine Learning Toolkit
 
@@ -77,17 +77,17 @@ If you want to watch the keynote speech in which these announcements were made, 
 | --- | --- |
 | MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7/#mx-assist-logic-bot) |
 | MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7/); [Nov 30th, 2021](/releasenotes/studio-pro/9.8/); [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| MxAssist Page Bot | Currently in Private Beta<br/>GA: TBD |
-| Machine learning toolkit | Currently in Private Beta<br/>GA: TBD |
+| Validation Assist | Currently in Public Beta<br/>GA: Jan 2023 |
+| Machine learning toolkit | Currently in Private Beta<br/>Public Beta: Jan 2023 |
 
 ## 8 Studio Pro Experience
 
 | Feature | Expected Release |
 | --- | --- |
 | Studio Pro modernization | Released for GA on [Sep 28th, 2021](/releasenotes/studio-pro/9.6/#studio-pro-new-design) |
-| Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12//#team-server-git) |
+| Team Server Git (Mendix Cloud) | Released for GA on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#team-server-git) |
 | BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Apr 2023 |
-| Studio Pro dark theme | Public Beta: Mar 2022 |
+| Studio Pro dark theme | Currently in Public Beta <br />GA: TBD |
 
 ## 9 Data Hub 2.0
 

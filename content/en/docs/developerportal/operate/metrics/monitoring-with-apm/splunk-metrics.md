@@ -17,7 +17,7 @@ Mendix provides integration with [Splunk Cloud Platform](https://www.splunk.com/
 
 Mendix currently sends only the runtime application logs to Splunk.
 
-Splunk Cloud Platform is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+Splunk Cloud Platform is not supported in the deprecated Mendix Cloud v3. For support on other cloud deployment options such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## 2 Prerequisites

@@ -21,7 +21,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
 * Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/))
+* Create a menu item to access the customer overview page (for details, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 
 ## 3 Replacing the Default Save Button with a Custom One
 
@@ -89,6 +89,5 @@ Congratulations! You have created a microflow and customized the **Save** button
 
 * [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
 * [Work With Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
 * [Microflow Activities](/refguide/activities/)

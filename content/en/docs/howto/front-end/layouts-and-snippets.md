@@ -207,6 +207,6 @@ In addition, a snippet can define an entity that serves as a context for the wid
 
 * [Atlas UI](/howto/front-end/atlas-ui/)
 * [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/)
-* [Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
+* [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
 * [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

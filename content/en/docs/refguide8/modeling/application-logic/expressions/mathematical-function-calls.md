@@ -266,9 +266,9 @@ The input parameters are described in the table below:
 
 The output is described in the table below:
 
-| Value                                                        | Type                    |
-| ------------------------------------------------------------ | ----------------------- |
-| The number to the power, as in, n^p. The result will be of the most precise type necessary. | Integer/Long or Decimal |
+| Value                                | Type    |
+| ------------------------------------ | ------- |
+| The number to the power, as in, n^p. | Decimal |
 
 ### 8.3 Example
 
@@ -278,7 +278,7 @@ If you use the following input:
 pow(2, 3)
 ```
 
-The output is of type Integer/Long:
+The output is:
 
 ```java {linenos=false}
 8
@@ -290,7 +290,7 @@ Another example of an input is:
 pow(2.5, 3)
 ```
 
-The output is of type Decimal:
+The output is:
 
 ```java {linenos=false}
 15.625

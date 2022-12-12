@@ -108,7 +108,7 @@ Do the following:
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/page-example.png" >}}
 
-## 3 Read More
+## 4 Read More
 
 * [Page](/refguide/page/)
 * [Images, Videos, and Files](/refguide/image-and-file-widgets/)

@@ -19,7 +19,7 @@ A dynamic image must be placed in a data view or a template grid.
 
 ## 2 Defining an Image Entity 
 
-First, you need to create an entity in your domain model and define that it is an image entity. This is done by the concept of *inheritance*, sometimes called *generalization*. By inheriting from System.Image your entity gets all the properties of the system image entity. 
+To correctly configure a dynamic image (for more information, see the [Data Source](#data-source) section below), you first need to create an entity in your domain model and define that it is an image entity. This is done by the concept of *inheritance*, sometimes called *generalization*. By inheriting from System.Image your entity gets all the properties of the system image entity. 
 
 Do the following:
 

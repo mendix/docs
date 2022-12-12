@@ -11,6 +11,8 @@ aliases:
 
 {{% alert color="warning" %}}
 
+**This is the Mendix Feedback Module, formerly the Mendix Feedback Widget.**
+
 All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
@@ -22,11 +24,11 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) module allows end-users of your application to directly submit feedback into your app. The feedback module is fully integrated with the [Feedback](/developerportal/collaborate/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories/) to improve your app.
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" >}}
 
-The Mendix Feedback widget is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.
+The Mendix Feedback module is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.
 
 ### 1.1 Typical Usage Scenario
 
@@ -39,12 +41,12 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 
 ### 1.3 Limitations
 
-* This widget can only be used in combination with Mendix apps
-* In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
+* This module can only be used in combination with Mendix apps
+* In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
 ## 2 Configuration {#configuration}
 
-You can configure the widget for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the widget. The feedback feature requires the following properties to be set:
+You can configure the module for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the module. The feedback feature requires the following properties to be set:
 
 * **Project** tab     
     * **Submit successful image url** – changes the image to show on the last successfully submitted page
@@ -95,13 +97,13 @@ You can configure the widget for certain actions in your app. All the configurat
 
 ## 3 Usage
 
-### 3.1 Adding the Widget to Your app
+### 3.1 Adding the Widget to Your App
 
-You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the widget included in your app, follow these steps:
+You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow these steps:
 
 
 1. Download the latest version of the Mendix Feedback module from the Marketplace. You are strongly encouraged to use the latest version of the module.
-1. If the widget has not been added automatically, add it as follows: 
+1. If the module has not been added automatically, add it as follows: 
     1. In the **Toolbox**, find Feedback widget in the **Feedback** category
     1. Drop it into a position in the layout:
 

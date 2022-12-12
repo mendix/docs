@@ -9,7 +9,7 @@ tags: ["mobile", "feedback", "widget", "ios"]
 
 ## 1 Introduction
 
-When you first start a Mendix hybrid mobile app for iOS, the feedback button from the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget will not work. This is due to an iOS security policy whereby the application is only allowed to make requests and load content from `file:///` URLs. Because the content in the feedback widget is hosted at `https://sprintr.home.mendix.com`, the widget will not work 
+When you first start a Mendix hybrid mobile app for iOS, the feedback button from the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget will not work. This is due to an iOS security policy whereby the application is only allowed to make requests and load content from `file:///` URLs. Because the content in the feedback widget is hosted at `https://sprintr.home.mendix.com`, the widget will not work 
 
 This how-to will teach you how to do the following:
 

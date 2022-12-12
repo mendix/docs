@@ -130,9 +130,9 @@ Once you see the final page, you have successfully submitted your feedback.
 
 After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/collaborate/feedback/) page of the app in the Developer Portal. To be sure your feedback is successfully submmited, you should see a final page that informs your the feedback is received. 
 
-### 3.3 Upgrading the Widget 
+### 3.3 Upgrading the Widget to the Module
 
-Simply download the module or widget from the Marketplace. It will replace the old feedback widget in your folder. You can encounter the following error:
+Simply download the Mendix Feedback Module from the Marketplace. It will replace the old feedback widget in your folder. You can encounter the following error:
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/install-error.png" >}}
 

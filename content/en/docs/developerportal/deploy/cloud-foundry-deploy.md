@@ -43,12 +43,9 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 * Deploy your app to Cloud Foundry
 * Troubleshoot
 
-### 1.1 Cloud Foundry on SAP and IBM
+### 1.1 Cloud Foundry on SAP
 
-Cloud Foundry providers like SAP and IBM are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal for deploying your application to these clouds. See the detailed documentation for the following targets:  
-
-* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
-* [IBM Cloud](/developerportal/deploy/ibm-cloud/)
+Cloud Foundry providers like SAP are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal for deploying your application to these clouds. See the detailed documentation for [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 
 Only use the instructions in this document if you have specific requirements which the recommended method does not support.
 

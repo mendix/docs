@@ -200,9 +200,14 @@ The elements of this section are described in the table below:
 
 ### 5.3 System Actions {#system}
 
-[Call microflow](/studio/workflow-system-actions/) activity calls a selected microflow. You can use this activity to add application logic to the path of the workflow that does not need user interaction. 
-
 {{< figure src="/attachments/studio/workflows/system-actions.jpg" alt="System Actions" >}}
+
+The elements of this section are described in the table below:
+
+| Element                                                      | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Call microflow](/studio/workflow-system-actions/#call-microflow)          | Calls a selected microflow. |
+| [Call workflow](/studio/workflow-system-actions/#call-workflow)            | Calls a selected workflow.  |
 
 ## 6 Main Documents in This Category
 

@@ -46,7 +46,8 @@ You can add customized activities to this section if you use the **Expose as a w
 
 ## 5 System Actions {#system}
 
-[Call microflow](/refguide/call-microflow/) activity calls a selected microflow. 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow.png" alt="Call Microflow" >}}
+| Graphic                                                     | Element                           | Description                                                  |
+| ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow.png" alt="Call Microflow" >}} | [Call microflow](/refguide/call-microflow/) | Calls a selected microflow. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow.png" alt="Call Workflow" >}} | [Call workflow](/refguide/call-workflow/) | Calls a selected workflow. |
 

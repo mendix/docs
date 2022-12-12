@@ -17,7 +17,7 @@ All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of Oc
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
-If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), upgrade to version 3.5.1 or higher.
+If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher.
 
 In case of any questions, contact [Mendix Support](https://support.mendix.com/hc/en-us).
 {{% /alert %}}
@@ -137,6 +137,8 @@ Simply download the module or widget from the Marketplace. It will replace the o
 {{< figure src="/attachments/appstore/modules/mendix-feedback/install-error.png" >}}
 
 When this happens, right-click the error message, and choose **Update widget** or **Update all widgets**. Then the name of the widget is changed to **Feedback**. The updated widget is ready for use.
+
+If you are using MendixSSO3 for authentication, after upgrading to the module you can choose to continue using your Microflow to configure the MendixSSO authentication or include and use the **DS_GetCurrentIdToken** Microflow from the FeedbackModule.
 
 
 ## 4 Troubleshooting

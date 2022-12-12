@@ -66,9 +66,8 @@ To deploy a Mendix app to Cloud Foundry, you have to configure the settings in S
 
 2. Enter the following in the credentials of the **Edit Cloud Foundry Settings** window:
 
-    * **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. Examples are:
-        * `https://api.ng.bluemix.net` for IBM region US South
-        * `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
+    * **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. For example:
+          * `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
     * **User name** is the name of your account on the platform
     * **Password** is the password which authenticates your account
 
@@ -112,9 +111,8 @@ This how-to will describe adding the database and file store only. Additional se
 
 To configure the Cloud Foundry environment, you will need to go to the console for your platform. You must logon with the same credentials which you used when creating a Cloud Foundry environment from Studio Pro.
 
-All these consoles have similar features which allow you to select services, bind them to your app, and view details of the environment and the app. Some example consoles are:
+All these consoles have similar features which allow you to select services, bind them to your app, and view details of the environment and the app. For example:
 
-* [IBM](https://console.bluemix.net/dashboard/apps/)
 * [SAP](https://account.hanatrial.ondemand.com/cockpit#/home/trialhome)
 
 {{% alert color="info" %}}

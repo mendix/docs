@@ -13,7 +13,7 @@ aliases:
 
 **This is the Mendix Feedback Module, formerly the Mendix Feedback Widget.**
 
-All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.
+All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1st, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with the latest version of this module.
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
@@ -64,7 +64,7 @@ You can configure the module for certain actions in your app. All the configurat
 * **Authentication** tab
 
     {{% alert color="info" %}}
-    For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to a Mendix Feedback widget of version 8.2.1 or above. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.
+    For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.
     {{% /alert %}}
 
     * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address
@@ -100,7 +100,6 @@ You can configure the module for certain actions in your app. All the configurat
 ### 3.1 Adding the Widget to Your App
 
 You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow these steps:
-
 
 1. Download the latest version of the Mendix Feedback module from the Marketplace. You are strongly encouraged to use the latest version of the module.
 1. If the module has not been added automatically, add it as follows: 

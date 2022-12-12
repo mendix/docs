@@ -9,7 +9,7 @@ tags: ["Product Insights", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-By using **Product Insights** in the Developer Portal and the [Product Insights - Mini Survey](/appstore/modules/product-insights) module in the Marketplace, you can set up mini surveys for a target user group that you would like to reach to collect their feedback and gain valuable product insights.
+By using **Product Insights** in the Developer Portal and the [Product Insights - Mini Survey](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini surveys for a target user group that you would like to reach to collect their feedback and gain valuable product insights.
 
 This document first describes all the pages in Product Insights in the Developer Portal, and then describes the procedure on how to run a mini survey: you begin with creating the mini survey with Product Insights in the Developer Portal, and then you should implement the mini survey by configuring the Product Insights - Mini Survey module in Studio Pro. After the mini survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
 

@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "product insights", "mini survey"
 
 ## 1 Introduction
 
-After you have created a mini survey in [Product Insights](/developerportal/collaborate/product-insights) in the Developer Portal, you can use the Product Insights - Mini Survey module to implement your mini survey in Studio Pro.
+After you have created a mini survey in [Product Insights](/developerportal/collaborate/product-insights/) in the Developer Portal, you can use the Product Insights - Mini Survey module to implement your mini survey in Studio Pro.
 
 ## 2 Installation
 

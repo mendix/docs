@@ -16,6 +16,12 @@ In the **Version Control** menu, you can view and/or manipulate settings that ar
 
 The **Update** option updates the local app to the latest revision that was committed to the version control server.
 
+{{% alert color="info" %}}
+
+For apps using Git as version control system the "Update" command has been renamed to "Pull", which is more common Git terminology.
+
+{{% /alert %}}
+
 ## 3 Commit
 
 The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](/refguide/commit-dialog/).

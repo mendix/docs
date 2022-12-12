@@ -48,10 +48,8 @@ You can configure the widget for certain actions in your app. All the configurat
 
 * **Project** tab     
     * **Submit successful image url** – changes the image to show on the last successfully submitted page
-
-    * **Allow screenshots** – controls whether the app user can take a screenshot or not
+    * **Allow screenshots** – controls whether the end user can take a screenshot or not
 * **Advanced** tab
-
     * * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
 
         {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
@@ -63,12 +61,17 @@ You can configure the widget for certain actions in your app. All the configurat
         * **Yes** – only used when the page includes sensitive information
 * **Authentication** tab
 
-    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. The widget works without authentication as well! However, without authentication setup all the users will be **Anonymous User**.
-Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
+    {{% alert color="info" %}}
+    For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to a Mendix Feedback widget of version 8.2.1 or above. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.
+    {{% /alert %}}
 
-    * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
-        * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
-        {{% alert color="info" %}}If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule.{{% /alert %}}
+    * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address
+        * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
+
+        {{% alert color="info" %}}
+        If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule.
+        {{% /alert %}}
+
         * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
 
         See the screenshot below for an example:
@@ -115,7 +118,9 @@ When you click the **Feedback icon**, the Mendix Platform first checks if you ar
 
 Click **Enter Screenshot Mode** to take a screenshot of your page or choose **Upload From Computer** to upload a selected image.
 
-      {{% alert color="info" %}The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.{{% /alert %}}
+      {{% alert color="info" %}}
+      The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.
+      {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" >}} 
 

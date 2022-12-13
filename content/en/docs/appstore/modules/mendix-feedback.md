@@ -23,7 +23,7 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This document is for the Mendix Feedback Module, compatible with Studio Pro v.XXX and above. If you are using the deprecated Mendix Feedback Widget (compatible with Studio Pro v.XXX and below) [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback Module, as the older Feedback Widget will no longer receive regular updates.
+This document is for the Mendix Feedback Module, compatible with Studio Pro v.9.12.2 and above. If you are using the deprecated Mendix Feedback Widget (compatible with Studio Pro v.9.12.2 and below) [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback Module, as the older Feedback Widget will no longer receive regular updates.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -46,7 +46,7 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 ### 1.3 Limitations
 
 * This module can only be used in combination with Mendix apps
-* Support version 9.12.2 or higher
+* Support Studio Pro v.9.12.2 or higher
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) is required to apply the styling 
 * In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
@@ -172,7 +172,7 @@ If you see the following error, click **close** and then go to your widget folde
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual.
 
-If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), upgrade to version 3.5.1 or higher.
+If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher.
 
 {{% /alert %}}
 
@@ -243,19 +243,8 @@ You can configure the widget for certain actions in your app. All the configurat
 
 You should use the latest version of the Mendix Feedback widget, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the widget included in your app, follow these steps:
 
-1. Download the latest version of the Mendix Feedback widget from the Marketplace. You are strongly encouraged to use version 8.6.0 or above of the widget.
-1. When the widget is included in your app, ensure that it is added to the home page of the application:
-    1. Open the home page, In the App Explorer, go to Navigation and click **Show** as shown in the screenshot:
-
-        {{< figure src="/attachments/appstore/widgets/mendix-feedback/show-homepage.png" >}}
-
-    1. If the widget has not been added automatically, add it as follows:
-        1. In the **Toolbox**, find Feedback widget in the **Add-ons** category
-        1. Drop it into a position in the page:
-
-            {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-added.png" >}}
-
-You can place the widget on any form in your app, but it needs to be placed on only one form. When the end-user accesses that form, the widget will remain in the browser until the session is expired. This means you only need to place the widget on the home form. You can use this mechanism to limit the feedback to certain user roles as well. To do that, just place the widget on their home forms but not on the home form of other users.
+    1. Download the latest version of the Mendix Feedback widget from the Marketplace. You are strongly encouraged to use version 8.6.0 or above of the widget.
+    1. When the widget is included in your app, ensure that it is added to all the layouts used in the application.
 
 #### 5.3.2 Submitting Feedback on an App
 

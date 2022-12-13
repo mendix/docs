@@ -76,9 +76,9 @@ You can configure the module for certain actions in your app. All the configurat
     * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address
         * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
 
-        {{% alert color="info" %}}
-        If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule and configure the module roles in the security.
-        {{% /alert %}}
+            {{% alert color="info" %}}
+            If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule and configure the module roles in the security.
+            {{% /alert %}}
 
         * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
 
@@ -125,9 +125,9 @@ When you click the **Feedback icon**, the Mendix Platform first checks if you ar
 
 Click **Enter Screenshot Mode** to take a screenshot of your page or choose **Upload From Computer** to upload a selected image.
 
-      {{% alert color="info" %}}
-      The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.
-      {{% /alert %}}
+{{% alert color="info" %}}
+The image is allowed up to 5MB in one of the following formats: jpg, jpeg, png, gif.
+{{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" >}} 
 
@@ -145,7 +145,6 @@ Simply download the Mendix Feedback Module from the Marketplace. It will replace
 When this happens, right-click the error message, and choose **Update widget** or **Update all widgets**. Then the name of the widget is changed to **Feedback**. The updated widget is ready for use.
 
 If you are using MendixSSO3 for authentication, after upgrading to the module you can choose to continue using your Microflow to configure the MendixSSO authentication or include and use the **DS_GetCurrentIdToken** Microflow from the FeedbackModule.
-
 
 ## 4 Troubleshooting
 

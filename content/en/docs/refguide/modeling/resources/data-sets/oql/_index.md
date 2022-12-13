@@ -80,7 +80,6 @@ Here is a list of all OQL reserved words:
 * `LIKE`
 * `LIMIT`
 * `LONG`
-* `LOWER`
 * `MAX`
 * `MILLISECOND`
 * `MIN`
@@ -97,7 +96,6 @@ Here is a list of all OQL reserved words:
 * `QUARTER`
 * `RANGEBEGIN`
 * `RANGEEND`
-* `REPLACE`
 * `RIGHT`
 * `ROUND`
 * `SECOND`
@@ -107,7 +105,6 @@ Here is a list of all OQL reserved words:
 * `THEN`
 * `TRUE`
 * `UNION`
-* `UPPER`
 * `WEEK`
 * `WEEKDAY`
 * `WHEN`

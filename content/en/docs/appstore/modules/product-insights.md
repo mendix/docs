@@ -1,15 +1,15 @@
 ---
-title: "Product Insights - Mini Survey"
+title: "Product Insights - Mini Surveys"
 url: /appstore/modules/product-insights/
 category: "Modules"
-description: "Describes the configuration and usage of the Product Insights - Mini Survey module, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Product Insights - Mini Surveys module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "product insights", "mini survey"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-After you have created a mini survey in [Product Insights](/developerportal/collaborate/product-insights/) in the Developer Portal, you can use the [Product Insights - Mini Survey](https://marketplace.mendix.com/link/component/205483) module to implement your mini survey in Studio Pro.
+After you have created a mini survey in [Product Insights](/developerportal/collaborate/product-insights/) in the Developer Portal, you can use the [Product Insights - Mini Surveys](https://marketplace.mendix.com/link/component/205483) module to implement your mini survey in Studio Pro.
 
 ## 2 Installation
 

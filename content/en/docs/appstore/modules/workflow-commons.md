@@ -22,6 +22,8 @@ This module allows Mendix developers with little or no experience in building wo
 * Attachments layer on top of workflows
 * Comments section to use with workflows
 
+{{% alert color="info" %}}For Workflow Commons version 2.4.0 and above, attachments are (an optional) part of comments. This means that the WorkflowAttachment entity is associated with the WorkflowComment entity. Security settings for the WorkflowAttachment entity are based on the workflows in which a user is involved, since the context of a specific workflow is not known in advance in Workflow Commons. If you would like to set custom security for attachments, you need to configure the attachment entity in your domain model and associate it with the Workflow Context entity of the workflow. {{% /alert %}}
+
 ### 1.3 Prerequisites
 
 As workflows are only available from Mendix 9 version, Workflow Commons requires Mendix 9.0.5 and above.
@@ -31,6 +33,7 @@ As workflows are only available from Mendix 9 version, Workflow Commons requires
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Atlas Web Content](https://marketplace.mendix.com/link/component/117183)
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 
 ## 2 Installation 
 
@@ -40,6 +43,7 @@ Download and install the following modules:
 * Data Widgets
 * Atlas Core
 * Atlas Web Content 
+* Nanoflow Commons
 
 ## 3 Components {#components}
 

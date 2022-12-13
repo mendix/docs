@@ -125,7 +125,7 @@ This defines the response of the operation. You can specify the type of the micr
 
 This shows the result type of the microflow.
 
-##### 2.1.7.2 Export Mapping
+##### 2.1.7.2 Export Mapping {#export-mapping}
 
 When the microflow returns an object or a list of objects, you must specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
 

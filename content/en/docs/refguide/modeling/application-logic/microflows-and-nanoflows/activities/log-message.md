@@ -20,7 +20,7 @@ With the **Log message** activity you can create messages that appear in the log
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" width="900" >}}
 
 The **Log message** properties pane consists of the following sections:
 
@@ -70,7 +70,7 @@ For each parameter in the template you define a microflow expression of which th
 
 {{% alert color="info" %}}
 
-With parameters you can customize your message with data specific to the situation. For example, the message *An e-mail has been sent to customer {1}*. with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
+With parameters you can customize your message with data specific to the situation. For example, the message *An e-mail has been sent to department {1}*. with parameter `$Department/Name` shows the name of the department to which an e-mail has been sent.
 
 {{% /alert %}}
 
@@ -80,7 +80,7 @@ Defines whether to include the stack trace of the latest error in this log messa
 
 Double-clicking these log messages shows the stack trace.
 
-This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in Studio Pro.
+This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stack trace to the logline in Studio Pro.
 
 ## 4 Common Section {#common}
 

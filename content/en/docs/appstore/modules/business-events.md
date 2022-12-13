@@ -271,8 +271,6 @@ For development and testing it may be useful to run all your apps on your local 
 
 The Mendix Business Events [Local Setup Tool](https://github.com/mendix/event-broker-tools) helps you deploy locally by setting up a Docker container with Kafka. This repository includes the required `docker-compose.yml` file.
   
-The last service in this configuration file, `postgres`, is not required, but it is useful if you want to test with a postgres database on your workstation. You will have to specify this also in the runtime settings of your project. For more information, see the [Using PostgreSQL Database (Optional)](#postgres-db) section.
-  
 Start your docker cluster using the command `docker-compose up`. This will download or update all the required docker images and start Kafka.
 
 ### 7.2 Using PostgreSQL Database (Optional) {#postgres-db}
@@ -280,6 +278,20 @@ Start your docker cluster using the command `docker-compose up`. This will downl
 You can configure the app running in Studio Pro to use the postgres database created using docker. Remember to use a different database name for every app.
 
 {{< figure src="/attachments/appstore/modules/business-events/postgres.png" >}}
+
+Here is an example of postgres service that you can add to your `docker-compose.yml` file.
+
+``` yml
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: cspdb-dev
+      POSTGRES_USER: mendix
+      POSTGRES_PASSWORD: mendix
+      PGPASSWORD: mendix
+    ports:
+      - "25432:5432"
+```
 
 ## 8 Frequently Asked Questions
 

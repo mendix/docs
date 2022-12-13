@@ -52,19 +52,22 @@ The scripts are intended to show the range of available deployment options. They
 The following script example demonstrates the process required to update your app. Firstly, it imports the necessary cmdlets. After that, it stops your app and updates it with files extracted from the Mendix Deployment Package. Finally, the script restarts the app with the `SynchronizeDatabase` parameter to synchronize the database without user input.
 
 ```text {linenos=table}
-Import-Module '{<Mendix Service Console installation directory>}\Mendix.Service.Commands.dll'                                                                                                                        
-$MDA_PATH = Read-Host '{Location of your Mendix Deployment Package}'       
-$APP_NAME = Read-Host '{Name of your app}'         
+Import-Module '{<Mendix Service Console installation directory>}\Mendix.Service.Commands.dll'
 
-"Deploying " + $MDA_PATH + " to app " + $APP_NAME                         
+$MDA_PATH = '{Location of your Mendix Deployment Package}'
+$MDA_FILE = '{Name of your Mendix Deployment Package}' 
+$LITERAL_PATH = $MDA_PATH + "\" + $MDA_FILE
+$APP_NAME = '{Name of your app}'
 
-# stop app                                                      
-Stop-MxApp $APP_NAME                                                    
+"Deploying " + $MDA_PATH + " to app " + $APP_NAME
 
-# unpack app                                                    
-Update-MxApp $APP_NAME -LiteralPath $MDA_PATH + "/" + $MDA_FILE
+# stop app
+Stop-MxApp $APP_NAME
 
-# start app, update database                                     
+# unpack app                                                    
+Update-MxApp $APP_NAME -LiteralPath $LITERAL_PATH
+
+# start app, update database                                     
 Start-MxApp $APP_NAME -SynchronizeDatabase
 ```
 

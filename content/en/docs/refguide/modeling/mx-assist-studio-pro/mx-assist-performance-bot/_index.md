@@ -128,4 +128,4 @@ Performance Bot may also be executed from the command line, via the [mx Command-
 
 * [Mendix Assist](/refguide/mx-assist-studio-pro/)
 * [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
-* [How to Implement Mendix Best Practices for Development](/howto/general/dev-best-practices/)
+* [Mendix Best Practices for Development](/refguide/dev-best-practices/)

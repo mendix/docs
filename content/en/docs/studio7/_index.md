@@ -17,6 +17,10 @@ cascade:
 The **Studio 7 Guide** describes Mendix Studio functionality that corresponds to Mendix 7.23.7 version. For details on the latest functionality and features, see the [Studio 9 Guide](/studio/). 
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Support for Mendix 7 will be available after the release of Mendix 10. For details, see the [Extended Support](/developerportal/support/#extended-support) section in *Mendix Support*.
+{{% /alert %}}
+
 ## 1 Introduction 
 
 The Mendix Platform includes [Mendix Studio](/studio7/general/) in addition to [Mendix Studio Pro](/refguide7/desktop-modeler/). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create web and mobile applications without having to know how to code.

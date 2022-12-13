@@ -18,7 +18,11 @@ Progressive web apps have three main characteristics:
 
 ## 2 Enabling PWA Features
 
-As PWAs are basically web apps with additional features, Mendix offers these features as a part of web navigation profiles. Based on what is needed, you can create a fully offline-capable PWA, or a web application that requires an internet connection but still uses PWA features.
+As PWAs are basically web apps with additional features, Mendix offers these features as a part of web navigation profiles. Depending on your needs, you can create either a fully offline-capable PWA or a web application that requires an internet connection but still uses PWA features.
+
+{{% alert color="info" %}}
+PWAs require a version of Atlas 2 or above.
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 PWAs have the following limitations on iOS:
@@ -65,7 +69,7 @@ You can also open PWA profiles on your device via the **View on your device** op
 
 {{< figure src="/attachments/refguide/mobile/progressive-web-app/view-dialog.png" alt="View menu"   width="350"  >}}
 
-Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).
+Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
 
 {{% alert color="info" %}}
 When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.

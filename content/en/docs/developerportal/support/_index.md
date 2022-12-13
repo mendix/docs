@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: "Provides information on how to obtain support for your Mendix apps."
-weight: 30
+weight: 35
 no_list: false 
 description_list: true
 tags: ["support", "sla", "standard", "premier", "platform"]
@@ -41,6 +41,14 @@ The Premier Support package contains the following for customers on the Mendix P
 * Quarterly ticket review meetings with the senior designated team
 
 Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to know more.
+
+### 1.3 Extended Support {#extended-support}
+
+Extended Support is available as a product for the oldest major Mendix version where support is scheduled to end upon release of a new major version. With this product, support according to the SLA for the oldest version is available from the GA release date of the newest major version in a six-month package that you can purchase once or twice (for a maximum duration of one year). 
+
+For example, support for Mx7 is scheduled to end upon the release of Mx10 GA. However, if you have purchased Extended Support, Mx7 remains supported for either six months or one year from the release date of Mx10 GA.
+
+Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
 
 ## 2 Finding Your Answers
 

@@ -1,7 +1,7 @@
 ---
-title: "Architecting Adaptive Solutions"
+title: "Architect Adaptive Solutions"
 url: /appstore/creating-content/sol-architecting/
-linktitle: "Architecting Solutions"
+linktitle: "Architect Solutions"
 weight: 1
 description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
@@ -72,4 +72,4 @@ When designing the interfaces of your solutions, you should do the following:
 
 ### 3.4 Applying IP Protection 
 
-IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Applying IP Protection](/appstore/creating-content/sol-ip-protection/).
+IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Apply IP Protection](/appstore/creating-content/sol-ip-protection/).

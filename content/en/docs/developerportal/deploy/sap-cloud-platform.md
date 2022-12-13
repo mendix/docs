@@ -5,7 +5,7 @@ url: /developerportal/deploy/sap-cloud-platform/
 category: "Deployment"
 weight: 40
 description: "Describes how to deploy to SAP Business Technology Platform."
-tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
+tags: ["SAP", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -335,7 +335,7 @@ When the app has been transported you will be on the page **Configure the Applic
 
 The environment details page contains the following four tabs:
 
-* [General](#general-tab) – how the application is deployed on SAP Cloud Platform
+* [General](#general-tab) – how the application is deployed on SAP BTP
 * [Model Options](#model-options-tab) – application constants and scheduled events
 * [Services](#binding-services) – Cloud Foundry service management
 * [Runtime](#runtime-tab) – custom environment variables which define "User-Provided Variables" in SAP cloud foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
@@ -394,9 +394,21 @@ If you do not select **Remove resources** in this dialog, the resources will be 
 
 #### 7.1.5 Change Development Mode
 
-Click **Change** to change the Development Mode toggle. Set it to Yes if you want the application to run with only prototype security, or completely without security. This is not recommended for acceptance or production environments.
+Click **Change** to change the **Development Mode** toggle. Set it to Yes if you want the application to run with only prototype security, or completely without security. This is not recommended for acceptance or production environments.
 
-#### 7.1.6 Scaling
+#### 7.1.6 Change App URL
+
+Click **Change** to change the **App URL** for this environment.
+
+#### 7.1.7 Change Redirect URLs
+
+Click **Change** to change the **Redirect URLs**. Redirect URLs are custom URLs (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
+
+#### 7.1.8 Change Mendix Studios Target
+
+You can see if this is the current target environment to which apps will be published from Mendix Studio. If this is not the current target environment for Mendix Studio, click **Change** to make it the target.
+
+#### 7.1.9 Scaling
 
 If the app is started or stopped (that is, the environment has been created successfully and the app has been deployed without errors) then options to scale the app are available.
 
@@ -412,7 +424,7 @@ Click **Reset** to return the values to what they were before the sliders were m
 You can also make use of the **Application Autoscaler** service on SAP BTP. Mendix provides assistance in setting up the parameters needed to configure application autoscaler. For more information see [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler/).
 {{% /alert %}}
 
-#### 7.1.7 Change License Subscription ID
+#### 7.1.10 Change License Subscription ID
 
 Click **Change** to change the subscription secret which is the code which registers your production Mendix license to this environment.
 
@@ -655,21 +667,17 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
-{{% alert color="info" %}}
-If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does not support the `hanatrial-schema` database.
-{{% /alert %}}
-
-For trial accounts which do have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
+For new trial accounts, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-securestore** from the drop-down of supported databases.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" >}}
 
-If your trial account does not include `hanatrial-schema`, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
+Some older trial accounts do not include `hanatrial-securestore`. In this case you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan securestore is not found*.
 
 #### 8.2.3 SAP HANA Performance Tuning
 
-If your SAP HANA database has performance issues, you may be able to improve performance by performing the following tuning.
+If your SAP HANA database has performance issues, you may be able to improve performance by performing the following tuning:
 
-1. Obtain the following service binding credentials from the SAP BTP Cockpit, or via the cli:
+1. Obtain the following service binding credentials from the SAP BTP cockpit, or via the cli:
 
     * host
     * url

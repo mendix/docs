@@ -13,9 +13,6 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
 
-{{% alert color="info" %}}
-This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to the deprecated Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](/developerportal/operate/trends/).
-
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
 {{% /alert %}}
 

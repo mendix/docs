@@ -9,6 +9,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+This document is for the Mendix Feedback Module, compatible with Studio Pro v.9.12.2 and above. If you are using the deprecated Mendix Feedback Widget (compatible with Studio Pro v.8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback Module, as the older Feedback Widget will no longer receive regular updates.
+{{% /alert %}}
+
 {{% alert color="warning" %}}
 
 **This is the Mendix Feedback Module, formerly the Mendix Feedback Widget.**
@@ -20,10 +24,6 @@ The feedback provided via a widget version lower than 8.4.0 is no longer sent to
 If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher.
 
 In case of any questions, contact [Mendix Support](https://support.mendix.com/hc/en-us).
-{{% /alert %}}
-
-{{% alert color="info" %}}
-This document is for the Mendix Feedback Module, compatible with Studio Pro v.9.12.2 and above. If you are using the deprecated Mendix Feedback Widget (compatible with Studio Pro v.8.6.0 and above) [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback Module, as the older Feedback Widget will no longer receive regular updates.
 {{% /alert %}}
 
 ## 1 Introduction

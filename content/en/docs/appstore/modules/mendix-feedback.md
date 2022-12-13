@@ -43,6 +43,7 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 
 * This module can only be used in combination with Mendix apps
 * Support version 9.12.2 or higher
+* [Atlas UI Core module](https://marketplace.mendix.com/link/component/117187) is required to apply the styling 
 * In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
 ## 2 Configuration {#configuration}

@@ -1,7 +1,7 @@
 ---
 title: "Beta Releases"
 url: /releasenotes/beta-features/
-tags: ["Beta", "Private Beta", "Public Beta", "GA", "General Availability", "feature", "feature flag", "product"]
+tags: ["Beta", "GA", "General Availability", "feature", "feature flag", "product"]
 weight: 55
 #notoc: true
 #layout: wide
@@ -9,7 +9,7 @@ weight: 55
 
 ## 1 Introduction
 
-Some Mendix Platform releases contain Private Beta or Public Beta features or products that can be used and evaluated by early-adopter developers. Mendix releases Beta versions in two circumstances:
+Some Mendix Platform releases contain Beta features or products that can be used and evaluated by early-adopter developers. Mendix releases Beta versions in two circumstances:
 
 * When a new product or product version is introduced and made available to early adopters so that they can try it
 * When individual features are introduced within a non-Beta product which are, in principle, production-ready but are either subject to change or need to be reviewed by a broader audience; these features are disabled by default

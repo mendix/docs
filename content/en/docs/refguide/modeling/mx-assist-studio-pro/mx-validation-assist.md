@@ -8,7 +8,7 @@ tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bo
 
 {{% alert color="info" %}}
 
-This feature is currently in [Public Beta](/releasenotes/beta-features/).
+This feature is currently in [Beta](/releasenotes/beta-features/).
 
 {{% /alert %}}
 

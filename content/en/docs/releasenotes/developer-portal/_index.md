@@ -69,7 +69,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Private Beta).
+* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Beta).
 
 ### October 6th, 2022
 
@@ -144,7 +144,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Notifications](/developerportal/#notifications) for Public Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/developerportal/#notifications) for Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 21st, 2022
 
@@ -170,7 +170,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Epics](/developerportal/collaborate/epics/), our brand new tool for Agile planning, for Public Beta usage. Epics has many features. For example, you can:
+* We released [Epics](/developerportal/collaborate/epics/), our brand new tool for Agile planning, for Beta usage. Epics has many features. For example, you can:
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
@@ -667,7 +667,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We redesigned the [story details](/developerportal/collaborate/stories/#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories/#managing-labels) with the new UI; this functionality will be released in the future.
+* We redesigned the [story details](/developerportal/collaborate/stories/#story-details) page and made it available for Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories/#managing-labels) with the new UI; this functionality will be released in the future.
 * When you add a [task](/developerportal/collaborate/stories/#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
 * We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 

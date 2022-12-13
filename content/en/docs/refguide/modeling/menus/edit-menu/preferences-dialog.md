@@ -121,7 +121,7 @@ This option is available when [Enable automatic repository optimization](#optimi
 
 {{% alert color="info" %}}
 
-This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+This functionality is currently in [Beta](/releasenotes/beta-features/).
 
 {{% /alert %}}
 
@@ -157,7 +157,7 @@ Default: *enabled*
 
 {{% alert color="info" %}}
 
-This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+This functionality is currently in [Beta](/releasenotes/beta-features/).
 
 {{% /alert %}}
 

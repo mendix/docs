@@ -8,7 +8,7 @@ tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single 
 ---
 
 {{% alert color="info" %}}
-This feature is currently in [Public Beta](/releasenotes/beta-features/).
+This feature is currently in [Beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction

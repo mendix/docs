@@ -5,6 +5,8 @@ weight: 2
 tags: ["runtime", "java", "memory usage", "memory", "studio pro"]
 ---
 
+## 1 Introduction
+
 The Java memory is divided in different Memory Usage blocks. Each of these blocks are a snapshot of the actual memory usage of that segment. Each of the memory usage blocks can be broken down into four different values
 
 | Memory block | Description |
@@ -16,11 +18,11 @@ The Java memory is divided in different Memory Usage blocks. Each of these block
 
 For all Mendix applications the value for init and max start with identical values. Immediately after startup the JVM can execute the garbage collection and correct the memory usage.
 
-## Memory Segments
+## 2 Memory Segments
 
-### **_Perm Gen and Code Cache    _**
+### 2.1 Permanent Generation and Code Cache
 
-The Permanent Generation space is allocated to all classes and libraries. The allocated memory to the Perm Gen stays fairly static and only increases when new libraries or classes are loaded into the application. The Perm Gen is not part of the Java Heap, it is added on top of the assigned heap. For more details, see [Presenting the Permanent Generation](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation).
+The Permanent Generation (Perm Gen) space is allocated to all classes and libraries. The allocated memory to the Perm Gen stays fairly static and only increases when new libraries or classes are loaded into the application. The Perm Gen is not part of the Java Heap, it is added on top of the assigned heap. For more details, see [Presenting the Permanent Generation](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation).
 
 This image on the right shows shows in detail how data moves through the memory. The Stack is made up out of all threads, classes and in case of Mendix also contains all information about microflows domain model and all other Mendix specific information.
 
@@ -46,9 +48,9 @@ When the **Young Generation** reaches its capacity the Major Garbage collection 
 
 The Major Garbage Collection process is optimized for speedy garbage collection without wasting a lot of memory.
 
-The **Old / Tenured Generation** won’t cleaned frequently by the garbage collector. The Tenured Generation space either keeps on increasing until it reaches +/- 70% of its capacity, or after several days. The tenured space will steadily increase and should drop close to 0% after garbage collection.
+The **Old / Tenured Generation** will be cleaned less frequently by the garbage collector. The Tenured Generation space will, generally, steadily increase until the GC is triggered and will usually drop considerably after garbage collection.
 
-### Examples
+### 2.2 Examples
 
 {{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844068.png" >}}
 
@@ -58,4 +60,4 @@ A healthy Mendix application that consumes a small amount of memory will show a 
 
 The graph on the right shows an unhealthy application. As can be seen here, the memory usage steadily increases throughout the span of one week. This can only be caused by a process that keeps consuming memory.
 
-It is acceptable for an application to consume a lot of memory in the tenured generation space, the JVM should run the major garbage collection and reduce the tenured generation to zero.
+It is acceptable for an application to consume a lot of memory in the tenured generation space, the JVM should run the major garbage collection and reduce the tenured generation to zero. 

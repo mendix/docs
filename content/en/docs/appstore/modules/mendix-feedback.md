@@ -112,7 +112,7 @@ You should use the latest version of the Mendix Feedback module, as it will prov
     1. In the **Toolbox**, find Feedback widget in the **Feedback** category
     1. Drop it into a position in the layout:
 
-        {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" >}} 
+        {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="350px">}} 
         
         {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 

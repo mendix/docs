@@ -60,8 +60,7 @@ You can configure the module for certain actions in your app. All the configurat
 * **Advanced** tab
     * * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
 
-        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
-        {{% /alert %}}
+        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.{{% /alert %}}
         
     * **Feedback server location** – the URL of the Developer Portal server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
     * **Screenshot Foreign Rendering**
@@ -69,16 +68,12 @@ You can configure the module for certain actions in your app. All the configurat
         * **Yes** – only used when the page includes sensitive information
 * **Authentication** tab
 
-    {{% alert color="info" %}}
-    For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.
-    {{% /alert %}}
+    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication. However, without authentication each users will be an **Anonymous User**. Choose either **MendixSSO** or **Custom Authentication** for your feedback widget. You need to enter the value of authentication items manually, as the widget does not support a drop-down menu for selecting a microflow or the attributes of an entity.{{% /alert %}}
 
     * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address
         * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module
 
-            {{% alert color="info" %}}
-            If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule and configure the module roles in the security.
-            {{% /alert %}}
+            {{% alert color="info" %}}If you are using MendixSSO 3, please include and select the **DS_GetCurrentIdToken** microflow from the FeedbackModule and configure the module roles in the security.{{% /alert %}}
 
         * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
 

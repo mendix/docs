@@ -7,7 +7,7 @@ tags: ["studio pro", "manage branch lines", "branch line manager"]
 
 ## 1 Introduction
 
-The **Branch Line Manager** is used to manage the [branch lines](/refguide/version-control/#branches) of an app that are stored on a version control server.
+The **Branch Line Manager** is used to manage the [branch lines](/refguide/version-control/#branches) of an app that are stored on a version control server. You can create or delete branch lines for your app. 
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" >}}
 
@@ -36,10 +36,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 
 In the **App repository address** field, enter the address of the app you want to manage and click **Connect** to load the available branches from the repository.
 
-## 3 Managing Branch Lines
-
-In the **Branch Line Manager**, you can only create and delete branch lines. Renaming a branch is not possible as of now.  
-## 4 Read More
+## 3 Read More
 
 * [Version Control](/refguide/version-control/)
 * [Collaborative Development](/refguide/collaborative-development/)

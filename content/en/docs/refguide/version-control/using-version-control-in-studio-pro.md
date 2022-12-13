@@ -43,9 +43,9 @@ The app will be downloaded from the Team Server and opened in Studio Pro.
 
 Let us say you have a working copy of an app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules which have been changed can be identified by looking at the **status**.
 
-When you are happy with a set of changes, you **commit** them to the repository. Others can then choose to update and retrieve those changes.
+When you are happy with a set of changes, you **commit** them to the repository. Others can then choose to update/pull and retrieve those changes.
 
-You can **update** your working copy with changes committed by others.
+You can **update/pull** your working copy with changes committed by others.
 
 You can also see a **history** of all the changes which have been committed, no matter who committed them.
 
@@ -108,7 +108,7 @@ Studio Pro also attaches some information automatically:
 
 If you also changed Java source code, added widgets or made other changes that affect files other than the app file you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
 
-Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you updated, you will have to update first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
+Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you updated/pulled, you will have to update/pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
 
 ### 4.3 Pushing
 
@@ -122,21 +122,21 @@ To push changes, select **Version Control** > **Push** or make sure that the **A
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
 
-### 4.4 Updating
+### 4.4 Updating/Pulling
 
-Updating retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
+Updating (SVN terminology) or pulling (Git terminology) retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
 
-To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **Version Control** > **Update** menu item.
+To update the working copy of your app, click **Update** (for SVN) or **Pull** (for Git) in the **Changes** pane, or choose the **Version Control** > **Update/Pull** menu item.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/update-button.png" alt="Update Button" >}}
 
-Changes you receive from the repository when updating are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the update, the original of your working copy is updated as well.
+Changes you receive from the repository when updating/pulling are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the update/pull, the original of your working copy is updated as well.
 
-For example, if the last time you updated you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now update, you will receive those changes and Z will be the new *original* to which your changes are compared.
+For example, if the last time you updated/pulled you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now update/pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
 
 Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the  [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
 
-If your team is committing often you will have to update often. Frequent updating has the benefit that you receive fewer changes with each update, so integrating those changes with your work is easier.
+If your team is committing often you will have to update/pull often. Frequent updating/pulling has the benefit that you receive fewer changes with each update/pull, so integrating those changes with your work is easier.
 
 ### 4.5 History {#history}
 
@@ -162,7 +162,7 @@ You can revert changes in the **Changes** pane, from **Version Control** > **Rev
 
 ## 6 Dealing With Conflicts {#conflicts}
 
-If you update your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
+If you update/pull your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
 
 There are two different sorts of conflict:
 
@@ -223,7 +223,7 @@ Of course, not all maintenance fixes need to be merged to the main line. Sometim
 
 #### 7.1.2 Developing a New Feature Independently
 
-Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update on the main line. Without using a branch line, you would have to constantly make sure that your app is error free and does not break other parts of the system.
+Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update/pull on the main line. Without using a branch line, you would have to constantly make sure that your app is error free and does not break other parts of the system.
 
 Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
 
@@ -369,7 +369,7 @@ If you are using a different hosting environment, you create a deployment packag
 
 Studio Pro takes care of some file management automatically. If you add or remove custom widgets they are automatically added or removed from version control, too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
 
-We advise you to always commit and update inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
+We advise you to always commit and update/pull inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
 
 ### 9.1 External Tools {#external-tools}
 

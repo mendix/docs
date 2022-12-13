@@ -200,14 +200,9 @@ The elements of this section are described in the table below:
 
 ### 5.3 System Actions {#system}
 
+The elements of this section allow you to [call a microflow](/studio/workflow-system-actions/#call-microflow) or [call another workflow](/studio/workflow-system-actions/#call-workflow):
+
 {{< figure src="/attachments/studio/workflows/system-actions.jpg" alt="System Actions" >}}
-
-The elements of this section are described in the table below:
-
-| Element                                                      | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Call microflow](/studio/workflow-system-actions/#call-microflow)          | Calls a selected microflow. |
-| [Call workflow](/studio/workflow-system-actions/#call-workflow)            | Calls a selected workflow.  |
 
 ## 6 Main Documents in This Category
 

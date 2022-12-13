@@ -46,6 +46,10 @@ You can add customized activities to this section if you use the **Expose as a w
 
 ## 5 System Actions {#system}
 
+Elements in this category allow you to call a microflow or another workflow.
+
+The elements of this category are described in the table below:
+
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow.png" alt="Call Microflow" >}} | [Call microflow](/refguide/call-microflow/) | Calls a selected microflow. |

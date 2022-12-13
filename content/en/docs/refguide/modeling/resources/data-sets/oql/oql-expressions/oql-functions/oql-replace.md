@@ -4,11 +4,13 @@ url: /refguide/oql-replace/
 tags: ["studio pro"]
 ---
 
+{{% alert color="info" %}}
+This function is only available for Mendix Studio Pro 9.21.0 and above.
+{{% /alert %}}
+
 ## 1 Description
 
 The `REPLACE` function replaces all occurrences of a specified string value with another string value. The function supports limited and unlimited strings. Arguments of other types are not supported.
-
-The function is supported in Mendix versions 9.21.0 and higher
 
 ## 2 Syntax
 
@@ -26,4 +28,4 @@ REPLACE ( expression, pattern, replacement )
 
 ## 3 Database-specific limitations
 
-The behavior of the `REPLACE` function relies on underlying database implementation, which may vary per database vendor. For most supported databases, default behavior of `REPLACE` is case-sensitive. That means that `REPLACE('ABC abc', 'abc', 'xyz')` results in `'ABC xyz'`. In some configurations, the behavior is case-insensitive. For example, for SQL Server, case sensitivity of `REPLACE` depends on used collation.
+The behavior of the `REPLACE` function relies on underlying database implementation, which may vary by database vendor. For most supported databases, default behavior of `REPLACE` is case-sensitive. That means that `REPLACE('ABC abc', 'abc', 'xyz')` results in `'ABC xyz'`. In some configurations, the behavior is case-insensitive. For example, for SQL Server, case sensitivity of `REPLACE` depends on used collation.

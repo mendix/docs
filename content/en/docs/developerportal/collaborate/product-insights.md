@@ -7,6 +7,10 @@ description: "Describes how to set up mini surveys to gain product insights into
 tags: ["Product Insights", "Sprint", "Developer Portal"]
 ---
 
+{{% alert color="warning" %}}
+This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 By using **Product Insights** in the Developer Portal and the [Product Insights - Mini Survey](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini surveys for a target user group that you would like to reach to collect their feedback and gain valuable product insights.

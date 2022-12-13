@@ -36,12 +36,11 @@ Snippet call properties consist of the following sections:
 
 #### 2.3.1 Snippet
 
-The **Snippet** property shows the name of the snippet that the snippet call will invoke
+The **Snippet** property shows the name of the snippet that the snippet call will display.
 
 #### 2.3.2 Snippet settings
 
-The **Snippet settings** property opens a dialog box enabling you to configure the snippet call arguments that will be passed to the snippet
-
+The **Snippet settings** property opens a dialog which shows a list of parameters of the selected snippet and the objects that will be passed to each of them.
 
 ## 3 Performing Specific Actions
 

@@ -10,9 +10,9 @@ tags: ["studio pro", "snippet", "page resources"]
 
 Snippets define reusable interface parts. They can be used on both [pages](/refguide/page/) and [layouts](/refguide/layout/). By using snippets you can make changes in fewer places when you modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you change something in the snippet, that change will show up in both places.
 
-A snippet like on page paramenters can accept zero or many parameters. The number of parameters a snippet is defining is indicated by parentheses next to the parameters icon in the top left corner of the snippet canvas, which when clicked opens a dialog for editing the the snippet's parameters.
+A snippet expects zero or more parameters. To change the parameters of the snippet, click the Parameters button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The Parameters button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about snippet parameters, see the [Parameters](#parameters) section in snippet properties.
 
-In the example below, the snippet is defining 1 parameter of name **Order** and type **MyFirstModule.Order**.
+In the example below, the snippet defines a single parameter with name **Order** and type **MyFirstModule.Order**.
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/snippet/snippet.png" alt="Example of a snippet"   width="400"  >}}
 
@@ -35,9 +35,9 @@ Snippet properties consist of the following sections:
 
 ### 2.2 Data Section{#data}
 
-#### 2.2.1 Parameters
+#### 2.2.1 Parameters{#parameters}
 
-**Snippet Parameters** work the same way as [Page Parameter](/studio/page-parameter/) with the difference that snippet's parameter can be accessed at top level without the need for a Data View or any other Data Container if the snippet has only 1 parameter.
+**Snippet Parameters** works the same way as [Page Parameter](/studio/page-parameter/) with the difference that snippet's parameter can be accessed at top level, for example when creating expressions or selecting attributes.
 
 ### 2.3 Designer Section{#designer}
 

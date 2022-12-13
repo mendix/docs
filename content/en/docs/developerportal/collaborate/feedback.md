@@ -16,7 +16,7 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 
 This feedback comes from different sources:
 
-* Submitted via the [Mendix Feedback widget](/appstore/widgets/mendix-feedback/)
+* Submitted via the [Mendix Feedback widget](/appstore/modules/mendix-feedback/)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
 * Submitted in Mendix Studio (for more information, see [Buzz](/studio/collaboration-buzz/)) in the *Studio Guide*
 

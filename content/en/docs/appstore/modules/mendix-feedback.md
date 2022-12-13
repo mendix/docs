@@ -23,7 +23,7 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This document is for the Mendix Feedback Module, compatible with Studio Pro v.9.12.2 and above. If you are using the deprecated Mendix Feedback Widget (compatible with Studio Pro v.9.12.2 and below) [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback Module, as the older Feedback Widget will no longer receive regular updates.
+This document is for the Mendix Feedback Module, compatible with Studio Pro v.9.12.2 and above. If you are using the deprecated Mendix Feedback Widget (compatible with Studio Pro v.8.6.0 and above) [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. We recommend you use the newer Mendix Feedback Module, as the older Feedback Widget will no longer receive regular updates.
 {{% /alert %}}
 
 ## 1 Introduction

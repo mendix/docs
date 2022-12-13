@@ -198,14 +198,14 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 * This widget can only be used in combination with Mendix apps
 * In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](https://docs.mendix.com/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513))
 
-### 5.2 Configuration {#configuration}
+### 5.2 Configuration {#legacy-configuration}
 
 You can configure the widget for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the widget. The feedback feature requires the following properties to be set:
 
 * **Project** tab
     * **App ID** – the unique identifier of your app, which you can find in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal
 
-        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
+        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#legacy-update-app-id) below.
         {{% /alert %}}
 
         **Allow screenshots** – controls whether the app user can take a screenshot or not
@@ -273,7 +273,7 @@ When this happens, right-click the error message, and choose **Update widget** o
 
 ### 5.4 Troubleshooting
 
-#### 5.4.1 Updating App ID on the Project Tab {#update-app-id}
+#### 5.4.1 Updating App ID on the Project Tab {#legacy-update-app-id}
 
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
@@ -288,7 +288,7 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 
 #### 5.4.3 Feedback Item Does Not Show on the Developer portal
 
-If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#configuration) section above.
+If you cannot see your feedback items on the Developer Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Please check if all the configurations are filled in per the [Configuration](#legacy-configuration) section above.
 
 #### 5.4.4 Creating a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 

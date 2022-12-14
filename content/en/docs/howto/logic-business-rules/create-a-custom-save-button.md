@@ -1,10 +1,12 @@
 ---
-title: "Create a Custom Save Button"
-url: /howto/logic-business-rules/create-a-custom-save-button/
-category: "Logic and Business Rules"
+title: "Creating a Custom Save Button"
+url: /refguide/create-a-custom-save-button/
 weight: 40
 description: "Describes how to create a custom save button by utilizing microflows."
-tags: ["microflow", "logic", "save button", "how-to"]
+tags: ["microflow", "logic", "save button"]
+aliases:
+    - /howto/logic-business-rules/create-a-custom-save-button
+    - /howto/logic-business-rules/create-a-custom-save-button.html
 ---
 ## 1 Introduction
 
@@ -14,8 +16,8 @@ This document explains how you can create a custom Save button on a detail page 
 
 Before you continue, make sure you have completed the following:
 
-* [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/)
-* [Create overview and detail pages for the Customer object](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* Create a domain model with a **Customer** entity (for guidance, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/)
+* [Create overview and detail pages for the Customer entity](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 2 Replacing the Default Save Button with a Custom One
 

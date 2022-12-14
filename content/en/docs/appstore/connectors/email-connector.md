@@ -59,7 +59,7 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 
 1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
-3. The `EmailConnectorAdmin` module role is included with this module. Although your application’s end users only see user roles and not module roles, you should review the access permissions and object limitations for a better understanding before linking module role to [User Roles](/refguide/user-roles/) in app **Security**.
+3. The **EmailConnectorAdmin** [module role](/refguide/module-security/#module-role) is included with this connector. Although your application’s end users only see user roles and not module roles, review the access permissions and object limitations for a better understanding before linking the module role to [User Roles](/refguide/user-roles/) in **App Security**(/refguide/app-security/).
 
 ## 3 Email Account Configuration {#accountconfig}
 

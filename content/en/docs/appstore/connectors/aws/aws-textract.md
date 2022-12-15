@@ -9,277 +9,232 @@ tags: ["marketplace", "marketplace component", "amazon", "textract", "connector"
 
 ## 1 Introduction
 
-The [Amazon DynamoDB connector](https://marketplace.mendix.com/link/component/204872) provides a way for you to increase the security, scalability, and performance of your Mendix app by implementing [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
+The [Amazon Textract connector](#needslink) provides a way for you to enrich your Mendix app with the capability to extract text, handwriting and data from documents by implementing [Amazon Textract](https://aws.amazon.com/textract/).
 
 ### 1.1 Typical Use Cases
 
-Amazon DynamoDB helps improve your app by giving you the tools to build scalable, performant applications on a flexible, serverless database. You can use it to develop high-traffic online platforms and applications for a variety of modern industries, such as content streaming, electronic commerce, or gaming.
+Amazon Textract helps improve your app by giving you the tools to extract data from documents in a structured manner. For example, you can use it to extract business data from handwritten documents, or patient data from intake forms.
 
 ### 1.2 Prerequisites
 
-To use the Amazon DynamoDB connector, you must first install and configure the following modules:
-* [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-* [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is required to parse the `creationDateTime` attribute as returned by the `DescribeTable` activity.
+The Amazon Textract connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon DynamoDB connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Textract connector into your app.
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonDynamoDBConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon DynamoDB. Each activity can be implemented by using it in a microflow.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonTextractConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Textract. Each activity can be implemented by using it in a microflow.
 
-For example, to list all Amazon DynamoDB tables for a specific region, implement the [ListTables](#list-tables) activity by doing the following steps:
+For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocument) activity by doing the following steps:
 
-1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
-2. Enter a name for your microflow, for example, *ACT_ListTables*, and then click **OK**.
-3. In the **App Explorer**, in the **Amazon DynamoDBConnector** > **Operations** section, find the **ListTables** activity.
-4. Drag the **ListTables** activity onto the work area of your microflow.
-5. Double-click the **ListTables** microflow activity to configure the required parameters.
-    For the `ListTables` activity, you must specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
-6. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression.
-    For a list of available AWS regions, see [AWS_Region](#aws-region).
-7. Click **OK**.
-8. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-9. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
-10. Double-click the **Retrieve** activity.
-11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **ListTablesResponse** as the association.
-12. Click **OK**.
-13. Configure a method for triggering the **ACT_ListTables** microflow.
-    For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
+1. Configure AWS Authentication with static credentials. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+2. In the **Domain Model**, right-click on the work area, and then click **Add entity**.
+3. Enter a name for your entity, for example, *Document*, and then click **OK**.
+4. Double-click the Document entity, select the generalization **FileDocument**, and then click **OK**.
+5. In the Document entity, find the **Acces rules** tab.
+6. Create new access rules by doing the following steps:
+    1. Click **New**.
+    2. Select a user role, and then select the check boxes **Allow creating new objects** and **Allow deleting existing objects**. 
+    3. Set the access rights for **Name**, **DeleteAfterDownload** and **Contents** to **Read/write**
+    4. Set the remaining access rights to **Read**.
+7. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
+8. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
+9. In the **Properties** pane of **Document_Overview**, in the **Navigation** section, select **Visible for** for a user role.
+10. Configure your page by doing the following steps:
+    1. Open the page. 
+    2. Double-click on the data grid.
+    3. In the **Data source** tab, select the **Document** entity.
+    4. Click **OK**.
+    5. Confirm that you want to automatically fill the contents of the data grid.
+11. Create a page where your users can enter data for the app by doing the following steps:
+    1. Right-click the **New** button in the data grid.
+    2. Click **Generate page**.
+    3. Enter a name for your page, for example, *Document_NewEdit*.
+    4. Click **OK**.
+12. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role.
+13. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
+14. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
+15. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
+16. Configure the activity by doing the following steps:
+    1. Double-click the activity. 
+    2. Select the **AnalyzeDocumentRequest** entity. 
+    3. Add the members **GetForms** and **GetTables**, set the value to **true**, and then click **OK**.
+17. In the App Explorer, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
+18. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
+19. Configure the **AnalyzeDocument** activity by doing the following steps:
+    1. Double-click the activity.
+    2. Set the values for **AWS_Region**, **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
+    3. Click **OK**.
+20. In the **Toolbox** pane, search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
+21. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
+22. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
+    1. Double-click the **AnalyzeDocumentResponse_ProcessResults** microflow.
+    2. Set the **AnalyzeDocumentResponse** parameter.
+    3. Click **OK**.
+23. In the **Toolbox** pane, find the **List operation** activity.
+24. Drag the activity onto the microflow area between the **AnalyzeDocumentResponse_ProcessResults** microflow and the end event.
+25. Configure the **List operation** activity by doing the following steps:
+    1. Double-click the activity.
+    2. Select **Head** as the operation.
+    3. Select the list that the **AnalyzeDocumentResponse_ProcessResults** microflow returns.
+26. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
+27. In the **Toolbox** pane, find the **Show page** activity.
+28. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
+29. Configure the **Show page** activity by doing the following steps:
+    1. Double-click the activity
+    2. Select the page with a data view of the Page entity.
+    3. Set the **Page** parameter
+    4. Click **OK**.
+30. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
+30. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action.
 
-To help you work with the Amazon DynamoDB connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+To help you work with the Amazon Textract connector, the following sections of this document list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application.
 
 ### 3.1 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
-
 | Name | Description |
 | --- | --- |
-| `Table` | This generalization entity holds information for a given table. The attribute it contains is `Name`, which is the name of the table inside of Amazon DynamoDB. |
-| `Key` | This generalization entity holds information for the key in a key-value pair. The sole purpose of this entity is to be specialized from. Values in DynamoDB are stored in key-value pairs and the connector returns the data in its native type. |
-| `Item` | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `BooleanValue`, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | This generalization entity holds information for a key-value pair for a given Item. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
+| `Block` | This generalization entity holds information for items that are recognized in a document within a group of pixels close to each other.<br><br>The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the Confidence describes he score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or check box), the `Text` describes the word or line of text that is recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed).<br><br>Additionally, this entity contains a list of `Relationship` objects, a specialized` Geometry` object (`BlockGeometry`) and if the action involved a query a `QueryBlock` object. |
+| `Geometry` | This generalization entity holds information for the location of identified information on a document page: detected page, text, key-value pairs, tables, table cells and selection elements. Additionally, it contains a list of `Point` objects and a `BoundingBox` object. |
+| `Point` | This entity holds information of the location of a fine-grained polygon of a recognized item. The attribute it contains are X and Y. The X describes the X-coordinate for a point on a polygon and the Y describes the Y-coordinate for a point on a polygon. |
+| `BoundingBox` | This entity holds information for an axis-aligned coarse representation of the location of the recognized item on the document page. The attribute it contains are `Height`, `Left`, `Top` and `Width`. The `Height` describes height of the bounding box as a ratio of the overall document page height, the `Left` describes the left coordinate of the bounding box as a ratio of the overall document page width, the `Top` describes the top coordinate of the bounding box as a ratio of the overall document page height and `Width` describes the width of the bounding box as a ratio of the overall document page width. |
+| `Relationship` | Contains the relationship type of a block entity to another block entity<br><br>This entity holds information about how blocks are related to each other. The attribute it contains is `RelationshipType` which describes the type of relationships for all blocks in the `BlockId`'s array. This is represented as a list of `BlockId` objects. |
+| `BlockId` | This entity holds information for blocks that are related by each other. The attribute it contains is `_Id` which reflects the identification of the block. |
+| `QueryBlock` | This entity holds information for the results of the search query. The attribute it contains is `Text` which describes the value matched to the search query. Additionally, it contains a list of `PagesSearched` objects. |
+| `PagesSearched` | This entity holds information for identifying which pages have been searched. |
+| `ExpenseField` | This generalization entity holds information for the detected information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber` which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object and a `Currency` object. |
+| `Currency` | This entity holds information for the detected currency. The attribute it contains are Code and Confidence. The `Code` describes the currency code for the detected currency (USD for dollars, EUR for euro, and so on) and the `Confidence` describes the percentual confidence of the detected currency. |
+| `ExpenseType` | This entity holds information about the detected expense type. The attribute it contains are `Text` and `Confidence`. The `Text` describes the detected word or line and the `Confidence` describes the percentual confidence in the detection. |
+| `GroupProperty` | This entity holds information for showing the group that a certain key belongs to. The attribute it contains is `_id` which describes the group identification number which will be the same for each member of the group. Additionally, it contains a list of `ExpenseGroupPropertyType` objects. |
+| `ExpenseGroupPropertyType` | This entity holds information for distinguishing whether the expense group is a name or an address. The attribute it contains is `_Type`. |
+| `ExpenseDetection` | This generalization entity holds information for describing the detected expenses. The attribute it contains are `Text` and `Confidence`. The `Text` describes the word or line of text that is detected and the `Confidence` describes the percentual confidence in the text's detection. Additionally, it contains a specialized `Geometry` object (`AnalyzeExpenseGeometry`). |
 
-### 3.2 Enumerations
+### 3.2 Enumerations {#enumerations}
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon DynamoDB connector, enumerations list values such as the status of database tables, or the list of available AWS regions.
-
-#### 3.2.1 `ENUM_BooleanValue`
-
-| Name | Caption |
-| --- | --- |
-| `_TRUE` | **TRUE** |
-| `_FALSE` | **FALSE** |
-
-#### 3.2.2 `ENUM_TableStatus`
+#### 3.2.1 RelationshipType
 
 | Name | Caption |
 | --- | --- |
-| `CREATING` | **CREATING** |
-| `UPDATING` | **UPDATING** |
-| `DELETING` | **DELETING** |
-| `ACTIVE` | **ACTIVE** |
-| `INACCESSIBLE_ENCRYPTION_CREDENTIALS` | **INACCESSIBLE_ENCRYPTION_CREDENTIALS** |
+| `VALUE` | VALUE |
+| `CHILD` | CHILD |
+| `COMPLEX_FEATURES` | COMPLEX_FEATURES |
+| `MERGED_CELL` | MERGED_CELL |
+| `TITLE` | TITLE |
+| `ANSWER` | ANSWER |
 
-#### 3.2.3 `ENUM_KEY`
-
-| Name | Caption |
-| --- | --- |
-| `HASH` | **HASH (partition)** |
-| `RANGE` | **RANGE (sort)** |
-| `UNKNOWN_TO_SDK_VERSION` | **UNKNOWN_TO_SDK_VERSION** |
-
-#### 3.2.4 `ENUM_AttributeType`
+3.2.2 TextType
 
 | Name | Caption |
 | --- | --- |
-| `String` | **String** |
-| `Number` | **Number** |
-| `Binary` | **Binary** |
+| `PRINTED` | PRINTED |
+| `HANDWRITING` | HANDWRITING |
 
-#### 3.2.5 `ENUM_ComparisonOperator`
-
-| Name | Caption |
-| --- | --- |
-|`BEGINS_WITH` | **BEGINS_WITH** |
-| `BETWEEN` | **BETWEEN** |
-| `CONTAINS` | **CONTAINS** |
-| `EQ` |	**EQUAL** |
-| `GE` |	**GREATER_THAN_OR_EQUAL** |
-| `GT` |	**GREATER_THAN** |
-| `IN` |	**IN** |
-| `LE` |	**LESS_THAN_OR_EQUAL** |
-| `LT` |	**LESS_THAN** |
-| `NE` |	**NOT_EQUAL** |
-| `NOT_CONTAINS` |	**NOT_CONTAINS** |
-| `NOT_NULL` |	**NOT_NULL** |
-| `_NULL` |	**NULL** |
-
-#### 3.2.6 `AWS_Region` {#aws-region}
+3.2.3 EntityTypes
 
 | Name | Caption |
 | --- | --- |
-| `us_east_2` |	**US Easth (Ohio)** |
-| `us_east_1` |	**US East (N. Virginia)** |
-| `us_west_1` |	**US West (N. California)** |
-| `us_west_2` |	**US West (Oregon)** |
-| `af_south_1` |	**Africa (Cape Town)** |
-| `ap_east_1` |	**Asia Pacific (Hong Kong)** |
-| `ap_southeast_3` |	**Asia Pacific (Jakarta)** |
-| `ap_south_1` |	**Asia Pacific (Mumbai)** |
-| `ap_northeast_3` |	**Asia Pacific (Osaka)** |
-| `ap_northeast_2` |	**Asia Pacific (Seoul)** |
-| `ap_southeast_1` |	**Asia Pacific (Singapore)** |
-| `ap_southeast_2` |	**Asia Pacific (Sydney)** |
-| `ap_northeast_1` |	**Asia Pacific (Tokyo)** |
-| `ca_central_1` |	**Canada (Central)** |
-| `eu_central_1` |	**Europe (Frankfurt)** |
-| `eu_west_1` |	**Europe (Ireland)** |
-| `eu_west_2` |	**Europe (London)** |
-| `eu_south_1` |	**Europe (Milan)** |
-| `eu_west_3` |	**Europe (Paris)** |
-| `eu_north_1` |	**Europe (Stockholm)** |
-| `me_south_1` |	**Middle East (Bahrain)** |
-| `sa_east_1` |	**South America (São Paulo)** |
+| `KEY` | KEY |
+| `VALUE` | VALUE |
+| `COLUMN_HEADER` | COLUMN_HEADER |
+
+3.2.4 AWS_Region
+
+| Name | Caption |
+| --- | --- |
+| `us_east_2` | US Easth (Ohio) |
+| `us_east_1` | US East (N. Virginia) |
+| `us_west_1` | US West (N. California) |
+| `us_west_2` | US West (Oregon) |
+| `af_south_1` | Africa (Cape Town) |
+| `ap_east_1` | Asia Pacific (Hong Kong) |
+| `ap_southeast_3` | Asia Pacific (Jakarta) |
+| `ap_south_1` | Asia Pacific (Mumbai) |
+| `ap_northeast_3` | Asia Pacific (Osaka) |
+| `ap_northeast_2` | Asia Pacific (Seoul) |
+| `ap_southeast_1` | Asia Pacific (Singapore) |
+| `ap_southeast_2` | Asia Pacific (Sydney) |
+| `ap_northeast_1` | Asia Pacific (Tokyo) |
+| `ca_central_1` | Canada (Central) |
+| `eu_central_1` | Europe (Frankfurt) |
+| `eu_west_1` | Europe (Ireland) |
+| `eu_west_2` | Europe (London) |
+| `eu_south_1` | Europe (Milan) |
+| `eu_west_3` | Europe (Paris) |
+| `eu_north_1` | Europe (Stockholm) |
+| `me_south_1` | Middle East (Bahrain) |
+| `sa_east_1` | South America (São Paulo) |
+
+#### 3.2.5 BlockType
+
+| Name | Caption |
+| --- | --- |
+| `CELL` | CELL |
+| `KEY_VALUE_SET` | KEY_VALUE_SET |
+| `LINE` | LINE |
+| `MERGED_CELL` | MERGED_CELL |
+| `PAGE` | PAGE |
+| `QUERY` | QUERY |
+| `QUERY_RESULT` | QUERY_RESULT |
+| `SELECTION_ELEMENT` | SELECTION_ELEMENT |
+| `TABLE` | TABLE |
+| `TITLE` | TITLE |
+| `WORD` | WORD |
+
+#### 3.2.6 SelectionStatus
+
+| Name | Caption |
+| --- | --- |
+| `SELECTED` | SELECTED |
+| `NOT_SELECTED` | NOT_SELECTED |
 
 ### 3.3 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon DynamoDB connector, they represent the actions that can be performed on DynamoDB database tables.
+Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense.
 
-#### 3.3.1 Batch Get Item
+#### 3.3.1 AnalyzeDocument {#analyzedocument}
 
-The `BatchGetItem` Amazon DynamoDB activity allows you to get multiple items from DynamoDB in a single call. It requires a valid AWS Region and a response entity that contains the tables from which the item must be fetched. You must also specify whether the activity should perform a consistent read, and provide a list of keys to query from.
+The `AnalyzeDocument` Amazon Textract action allows you to analyze documents and extract information from them. It requires a valid AWS region and `AnalyzeDocumentRequest` object. It additionally requires at least a `RequestQuery` object when the `GetQueries` attribute in `AnalyzeDocumentRequest` is set to true.
 
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `BatchGetItemRequest (Object)` | `BatchGetItemResponse (Object)` |
-| `IsConsistentRead (Boolean)` | |
-
-This activity returns a `BatchGetItemResponse` object with objects from the following entities, as shown in the table below:
-
-| Name |	Generalization |	Documentation |
-| --- | --- | --- |
-| `RequestTable` | `AmazonDynamoDBConnector.Table` | This entity holds the references of which items are to be retrieved. The attribute it contains is `ProjectionExpression`, which is a string that identifies the attributes that one wants to retrieve. |
-| `ResponseTable` | `AmazonDynamoDBConnector.Table` | This entity holds information for the item retrieval. It contains a list of items, each of which contain a list of key-value pairs. |
-| `Item` | | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `BooleanValue`, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
-
-#### 3.3.2 List Tables {#list-tables}
-
-The `ListTables` Amazon DynamoDB activity allows you to retrieve a list of `Table` objects for a given region, which contains the table's name. It requires a valid AWS region and AWS credentials.
+Additionally, you can use the `AnalyzeDocumentResponse_ProcessResults` sub-flow. This will process the response from Amazon Textract into the specialized `BlockItem` model.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| N/A | `ListTableResponse (Object)` |
+| `AnalyzeDocumentRequest` (Object) | `AnalyzeDocumentResponse` (Object) |
+| `AWS_Region` (Enumeration) | |
+| `FileDocument` (Object) | |
 
-This activity returns a ListTablesResponse object with objects from the following entities, as shown in the table below:
+This activity returns a `AnalyzeDocumentResponse` object with objects from the following entities, as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `ListTablesResponse` | | This entity is the root object that holds a list of `ListTable` objects. It is the response for the Amazon DynamoDB `ListTables` activity. It holds a list of `ListTable` objects. |
-| `ListTable` | `AmazonDynamoDBConnector.Table` | This entity holds information of the retrieved table. The attribute it contains is `Name`, which reflects the name of the table inside Amazon DynamoDB. |
+| `AnalyzeDocumentResponse` | | This entity is the response for the Amazon Textract `AnalyzeDocument` action. It contains a list of specialized Block objects (`AnalyzeDocumentBlock`). |
+| `AnalyzeDocumentBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other.<br><br>The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes he score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or check box), the Text describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed).<br><br>Additionally, this entity contains a list of `Relationship` objects, a `QueryBlock` object and a specialized `Geometry` object (`BlockGeometry`). |
 
-#### 3.3.3 Describe Table
+#### 3.3.2 AnalyzeExpense
 
-The `DescribeTable` Amazon DynamoDB activity allows you to get a description from a given table inside DynamoDB. It requires a valid AWS region and a table name. It returns a `TableDescription` object which includes the `Name`, `ItemCount`, `CreationDateTime`, `TableARN`, `TableId` and `TableStatus`, as well as a list of `AttributeDefinitions` and `KeySchemaElements`.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `TableName (String)` | `TableDescription (Object)` |
-
-This activity returns a `TableDescription` object with objects from the following entities, as shown in the table below:
-
-| Name | Generalization | Documentation | Attributes |
-| --- | --- | --- | --- |
-| `TableDescription` | `AmazonDynamoDBConnector.Table` | This entity is the response for the Amazon DynamoDB `DescribeTable` activity. The attributes it contains are `Name`, `ItemCount`, `CreationDateTime`, `TableARN`, `TableId` and `TableStatus`. The response additionally contains a list of at least one `KeySchemaElement` and `AttributeDefinition` (for a table with only a partition key). | `Name` - the name of the table inside Amazon DynamoDB; `ItemCount` - the number of items the table contains; `CreationDateTime` - the moment at which the table had been created; `TableARN` - the resource name of the table inside Amazon; `TableId` - the table's identification; `TableStatus` - the status of the table. | 
-| `AttributeDefinition` | `AmazonDynamoDBConnector.Key` | This entity holds information regarding the columns inside an Amazon DynamoDB table. The attributes it contains are `AttributeName` and `AttributeType`. | `AttributeName` - the column's name as it appears inside Amazon DynamoDB; `AttributeType` - the data type for the column. |
-| `KeySchemaElement` | `AmazonDynamoDBConnector.Key` | This entity holds information regarding the key schema for a given table. The attributes it contains are `Key` and `KeyType`. | `Key` - the name of the column as it appears in Amazon DynamoDB; | `KeyType` - either `HASH (partition)` or `RANGE (sort)`. |
-
-#### 3.3.4 Batch Write Item
-
-The `BatchWriteItem` Amazon DynamoDB activity allows you to put or delete multiple items from DynamoDB in a single call. It requires a valid AWS Region, a `BatchWriteItemRequest` object containing the tables from which the item needs to be put or deleted. This activity has no return value.
+The AnalyzeExpense Amazon Textract action allows you to analyze expense documents and extract information from them. It requires a valid AWS region and a specialized `System.FileDocument` object in PNG, JPEG, PDF, or TIFF format.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `BatchWriteRequest (Object)` | N/A |
+| `AWS_Region` (Enumeration) | `AnalyzeExpenseResponse` (Object) |
+| `FileDocument` (Object) | |
 
-#### 3.3.5 Delete Item
-
-The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, and a `DeleteItemRequest` object with an `Item` object associated to it. If the given table has only a partition key, the `Item` object should have a `KeyValue` object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the `Item` object must have two `KeyValue` objects.
-
-Optionally, you can include a condition expression. The delete activity is then only performed when the condition returns true. Additionally, you can include an expression attribute list to escape reserved words.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `DeleteItemRequest (Object)` | N/A |
-
-#### 3.3.6 Scan Table
-
-The `ScanTable` Amazon DynamoDB activity allows you to retrieve items from an Amazon DynamoDB table. It requires a valid AWS Region and a `ScanTableRequest` object. Optional parameters (attributes within `ScanTableRequest`) are the limit (how much data is retrieved in each batch), as well as the index name (the name of the secondary global index of the given table). This activity returns a `ScanTableResponse` object with a list of items associated with it.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ScanTableRequest (Object)`	| `ScanTableResponse (Object)` |
-
-This activity returns a `ScanTableResponse` object with objects from the following entities, as shown in the table below:
+This activity returns an `AnalyzeExpenseResponse` object with objects from the following entities, as shown in the table below:
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `ScanTableResponse` | `AmazonDynamoDBConnector.Table` | This entity holds the information that is returned from the scan table activity. This entity has the table's name as an attribute. Moreover, it contains a list of items. Each item represents a row inside an Amazon DynamoDB table. Each item contains a list of key-value pairs, which represent the attributes inside a row of a table. |
-| `Item` | | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is BooleanValue, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
-
-#### 3.3.7 Put Item
-The `PutItem` Amazon DynamoDB activity allows you to put and update an item in DynamoDB. It requires a valid AWS Region, `TableName`, and an `Item` object. If the table has only a partition key, then only one `KeyValue` object is required inside the `Item` object. If the table has both a partition and sort key, then two `KeyValue` objects are required.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `TableName (String)` | `RequestID (String)` |
-| `Item (Object)` | |
-
-#### 3.3.8 Get Item
-The `GetItem` Amazon DynamoDB activity allows you to get an item from DynamoDB. It requires a valid AWS Region, a `TableName`, `IsConsistentRead`, and an `Item` object.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `TableName (String)`	| `Item (Object)` |
-| `IsConsistentRead (Boolean)` | |
-| `Item (Object)` |	|
-
-This activity returns an `Item` object with objects from the following entities as shown in the table below:
-
-| Name | Generalization | Documentation |
-| --- | --- | --- |
-| Item | | This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one `KeyValue` object. |
-| `KeyValueLong` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `LongValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueDecimal` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `DecimalValue`, which is a numeric representation of value in a key-value pair. |
-| `KeyValueBoolean` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `BooleanValue`, which is a Boolean representation of value in a key-value pair. |
-| `KeyValueString` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
+| `AnalyzeExpenseResponse` | | This entity is the response for the Amazon Textract `AnalyzeExpense` action. The attribute it contains is `PageCount` which describes the number of pages that are detected in the document. Additionally, it contains a list of `ExpenseDocument`, each of which contains a list of `SummaryFields`, `LineItemGroups` and `AnalyzeExpenseBlocks`. |
+| `ExpenseDocument` | | This entity holds information for regarding the document. The attribute it contains is `ExpenseIndex`, which describes which invoice or receipt in the document the information is coming from (1 refers to the first document, 2 refers to the second document, and so on). |
+| `SummaryField` | `AmazonTextractConnector.ExpenseField` | This specialized entity holds information for the detected non-expense related information, separated into categories `Type`, L`abelDetection` and `ValueDetection`. The attribute it contains is `PageNumber` which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object and a `Currency` object. |
+| `LineItemGroup` | | This entity holds information for a grouping of tables which contain `LineItems`. The attribute it contains is `LineItemGroupIndex` which describes which table was detected (1 represents the first encountered table, 2 represent the second encountered table, and so on). |
+| `LineItemField` | | This entity holds information for a line within the given document's table. |
+| `LineItemExpenseField` | `AmazonTextractConnector.ExpenseField` | This specialized entity holds information for the detected expense-related information, separated into categories `Type`, `LabelDetection` and `ValueDetection`. The attribute it contains is `PageNumber`, which describes the page number on which the value was detected. Additionally, it contains a list of `GroupProperty` objects, a specialized `ExpenseDetection` object (both `ExpenseDetectionLabel` and `ExpenseDetectionValue`), an `ExpenseType` object, and a `Currency` object. |
+| `AnalyzeExpenseBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other.<br><br>The attributea it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes he score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or check box), the `Text` describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten or printed).<br><br>Additionally, this entity contains a list of `Relationship` objects and a specialized Geometry object (`BlockGeometry`). |

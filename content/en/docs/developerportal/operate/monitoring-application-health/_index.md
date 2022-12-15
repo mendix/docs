@@ -147,93 +147,9 @@ Warning Threshold | Not used.
 Critical Threshold | If the JVM process has run out of memory and the application's JVM crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
-## 4 Cloud v3 Alerting Categories and Thresholds
+## 4 Basic License
 
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
-Mendix Cloud v3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud v4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
-
-### 4.1 Application Status
-
-CPU | |
-:---|:---|
-Description | Overall system load of the application server. High values indicate high CPU load because of application activity, and/or the CPU is spending too much time waiting for disk reads or writes.
-Example message | System load: CRITICAL (9.6, 10.19, 10.84)
-Warning Threshold | System load is higher than 2.8 over the last 1, 5 and 15, with a maximum deviation of 20% between the values.
-Critical Threshold | System load is higher than 6.0 over the last 1, 5 and 15 minutes, with a maximum deviation of 20% between the values.
-First actions to take | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior.
-
-Critical Logs | |
-:---|:---|
-Description | The *CRITICAL* log level is reserved for issuing messages in *rare cases where the application may not be able to function reliably anymore*, for example, there's a chance of data corruption when the application continues to be running. Internal JVM Errors are logged to this level. Out of Memory errors, which are JVM Errors must be treated as harmful for the stability and integrity of your Mendix application process.
-Example message | 2 critical error(s) were logged
-Warning Threshold | Not used.
-Critical Threshold | If any logging is done on CRITICAL level, the alerts status always directly switches to Critical. The critical log messages counter will only be reset when restarting the application process.
-First actions to take | Inspect the application log file and look up the CRITICAL error messages. Restart the application as soon as possible in case of stability issues.
-
-Health Microflow | |
-:---|:---|
-Description | A health check microflow was implemented in the application model, but it detected a warning that needs to be reported, and returns this warning as string value when the microflow finishes. |
-Example message | Health: the nightly import job took more than an hour to complete! |
-Warning Threshold | The warning status is triggered as long as the defined health check microflow returns a non-empty string.
-Critical Threshold | Not used.
-First actions to take | Because a health check is completely defined by customizable application logic, this can vary wildly.
-
-Running | |
-:---|:---|
-Description | Show the state (running, not running) of the application, or an error state when the process should be running, but is not responding or otherwise inaccessible.
-Example message | Application should be running, but the application process has disappeared!
-Warning Threshold | Not used.
-Critical Threshold | If the application process should be running but completely disappeared, or if the JVM process does not respond to any signal any more.
-First actions to take | Review the application state for Out Of Memory errors and/or review OS memory trends for a OS-level memory problem. If unavailable, restart the application.
-
-### 4.2 Platform Status
-
-Application Server Up | |
-:---|:---|
-Description | The container or virtual machine (JVM) in which the application process is running is reachable over the internal network. Alerts on this subject might point at an internal network connectivity issue.
-Example message | Packet loss = 5%, RTA = 226.74 ms.
-Warning Threshold | Response on a series of ICMP ping packets arrives with more than 5% packet loss, or with a latency higher than 200 milliseconds.
-Critical Threshold | Response on a series of ICMP ping packets arrives with more than 50% packet loss, or with a latency higher than 1 second.
-First actions to take | If this alert triggers and the application seems to be slow to respond, or if you're getting the red error page with running monsters, visit https://status.mendix.com/ to see if there is an outage. Inspect trends graphs to look for any anomaly in application behavior leading up to the problem. If no outage is reported, contact Mendix Support, there might be something wrong with this specific environment.
-
-Database Server Up | |
-:---|:---|
-Description | The operating system of the database server used by the application is reachable over the internal network. Alerts on this subject might point at an internal network connectivity issue.
-Example message | Packet loss = 5%, RTA = 226.74 ms.
-Warning Threshold | Response on a series of ICMP ping packets arrives with more than 5% packet loss, or with a latency higher than 200 milliseconds.
-Critical Threshold | Response on a series of ICMP ping packets arrives with more than 50% packet loss, or with a latency higher than 1 second.
-First actions to take | If this alert triggers and the application log displays errors about not being able to create database connections, visit https://status.mendix.com/ to see if there is an outage. Inspect trends graphs to look for any anomaly in application behavior leading up to the problem. If no outage is reported, contact Mendix Support, there might be something wrong with this specific environment.
-
-Application Server Disk Usage | |
-:---|:---|
-Description | Track the amount of disk space used for storage of the application model, application log files and uploaded files owned by the application.
-Example message | Disk usage 83% (warning=80, critical=90).
-Warning Threshold | More than 80% of available disk space is in use.
-Critical Threshold | More than 90% of available disk space is in use.
-First actions to take | Review trends for *Application node disk usage in %* and *Application node disk usage (in bytes)* and inspect the usage value of the application files partition (usually /srv/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old files, or upgrading the cloud resource pack (for example, by ordering more storage).
-
-Database Server Disk Usage | |
-:---|:---|
-Description | Track the amount of disk space used for the database belonging to the application.
-Example message | Disk usage 92% (warning=80, critical=90).
-Warning Threshold | More than 80% of available disk space is in use.
-Critical Threshold | More than 90% of available disk space is in use.
-First actions to take | Review trends for *Database node disk usage in %* and *Database node disk usage (in bytes)* and inspect the usage value of the database partition (usually /var/lib/postgresql/) to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or upgrading the cloud resource pack (for example, by ordering more storage).
-
-Web Server | |
-:---|:---|
-Description | The application URL is reachable. This check tries to visit the URL of your application, retrieving HTTP headers on the top level location /.
-Example message | Did not find correct headers for URL `https://example.mendixcloud.com/`.
-Warning Threshold | The application URL is not reachable.
-Critical Threshold | Not used.
-First actions to take | If this alert triggers, and visiting the application URL results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
-
-## 5 Basic License
-
-### 5.1 Database Errors In the Log
+### 4.1 Database Errors In the Log
 
 You might see database connection errors in your app logs. For example, something like: `ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed.` You do not have to do anything, your app will continue to work as expected.
 
@@ -241,7 +157,7 @@ The reason you receive a message is that when you are using a [basic license](/d
 
 The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
 
-## 6 Alerts History
+## 5 Alerts History
 
 To access the history of the alerts from your app, follow these steps:
 
@@ -256,7 +172,7 @@ To access the history of the alerts from your app, follow these steps:
 
 3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 
-## 7 Read More
+## 6 Read More
 
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)

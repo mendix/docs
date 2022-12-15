@@ -1,7 +1,8 @@
 ---
 title: "Amazon Translate"
 url: /appstore/connector/aws/amazon-translate
-description: "Describes the configuration and usage of the Amazon Translate app service, which enables performing customizable text translation in your Mendix web apps."
+description: "Describes the configuration and usage of the Amazon Translate app service. Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation."
+weight: 20
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 aliases:
     - /appstore/connectors/amazon-translate/
@@ -14,7 +15,8 @@ The [Amazon Translate](https://marketplace.mendix.com/link/component/204706) con
 
 ### 1.1 Typical Use Cases
 
-Amazon Translate provides a service that enables you to perform text translation in your Mendix applications. You can use it to localize your app into multiple languages to better support the requirements of your users.
+Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation. Neural machine translation is a form of language translation automation that uses deep learning models to deliver more accurate and more natural sounding translation than traditional statistical and rule-based translation algorithms.
+With Amazon Translate, you can localize content such as websites and applications for your diverse users, easily translate large volumes of text for analysis, and efficiently enable cross-lingual communication between users.
 
 ### 1.2 Prerequisites
 

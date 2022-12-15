@@ -2,7 +2,7 @@
 title: "Feedback"
 url: /developerportal/collaborate/feedback/
 category: "Collaboration"
-weight: 5
+weight: 6
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
 tags: ["Feedback","Developer Portal", "feedback widget"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -16,7 +16,7 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 
 This feedback comes from different sources:
 
-* Submitted via the [Mendix Feedback widget](/appstore/widgets/mendix-feedback/)
+* Submitted via the [Mendix Feedback widget](/appstore/modules/mendix-feedback/)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
 * Submitted in Mendix Studio (for more information, see [Buzz](/studio/collaboration-buzz/)) in the *Studio Guide*
 

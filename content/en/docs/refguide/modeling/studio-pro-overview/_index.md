@@ -126,6 +126,7 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
 | <kbd>Alt</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>Tab</kbd> | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
+| <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>-</kbd> | Zooms in or out. |
 | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
 
 ##### 7.1.1.3 Panes Only

@@ -1,7 +1,8 @@
 ---
 title: "AWS Authentication"
 url: /appstore/connectors/aws/aws-authentication/
-description: "Use the AWS Authentication connector to securely authenticate your Mendix app with an AWS service. This connector is required for all platform-supported AWS connectors. You can also use it if you want to build your own AWS connector."
+description: "Use the AWS Authentication connector to securely authenticate your Mendix app with an AWS service. This connector is required for all platform-supported AWS connectors. You can also use it if you want to build your own AWS connectors."
+weight: 10
 tags: ["marketplace", "marketplace component", "aws", "authentication"]
 aliases:
     - /appstore/connectors/aws-authentication/
@@ -35,7 +36,7 @@ Before you can use the AWS Authentication connector, you must first configure th
 | Item | Required for | Notes |
 | --- | --- | --- |
 | [IAM access key ID, secret access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) | Static credentials, signature version 4 headers | |
-| [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) | Session credentials | When configuring IAM Roles Anywhere, you must provide a certificate that acts as a trust anchor. The same certificate is later used as the client certificate in the Mendix Developer portal. The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12. |
+| [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) | Session credentials, signature version 4 headers | When configuring IAM Roles Anywhere, you must provide a certificate that acts as a trust anchor. The same certificate is later used as the client certificate in the Mendix Developer portal. The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12. |
 
 {{% alert color="info" %}}
 To configure the above prerequisites, you must have an IAM user with specific permissions. Those permissions may vary depending on the connector with which you want to use AWS Authentication. In general, the user should have the minimum access required to perform the functions of the connector.

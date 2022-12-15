@@ -90,6 +90,12 @@ This setting defines the default response to the question whether to automatical
 
 This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](/refguide/commit-dialog/).
 
+For example, you can see how to set up file comparison for Visual Studio Code below: 
+
+```
+{path to VS Code}/Code.exe --wait --diff "{0}" "{1}"
+```
+
 #### 5.1.2 Argument Pattern
 
 This is the pattern from which the arguments are derived that are passed to the file comparison program. The following two placeholders can be used in this pattern:
@@ -121,7 +127,7 @@ This option is available when [Enable automatic repository optimization](#optimi
 
 {{% alert color="info" %}}
 
-This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+This functionality is currently in [Beta](/releasenotes/beta-features/).
 
 {{% /alert %}}
 
@@ -157,7 +163,7 @@ Default: *enabled*
 
 {{% alert color="info" %}}
 
-This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+This functionality is currently in [Beta](/releasenotes/beta-features/).
 
 {{% /alert %}}
 

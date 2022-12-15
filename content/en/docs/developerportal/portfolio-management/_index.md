@@ -27,7 +27,7 @@ Click a portfolio to open the **Project Overview** page, which gives an overview
 
 {{< figure src="/attachments/developerportal/portfolio-management/projects-overview.png" >}}
 
-{{% alert type="info" %}}For the Public Beta version, it is only possible to have one portfolio board for an organization. We aim to provide the capability to create multiple portfolio boards in later versions. Stay tuned.{{% /alert %}}
+{{% alert type="info" %}}For the Beta version, it is only possible to have one portfolio board for an organization. We aim to provide the capability to create multiple portfolio boards in later versions. Stay tuned.{{% /alert %}}
 
 On the top of the page, you can search for a project in the search bar.
 

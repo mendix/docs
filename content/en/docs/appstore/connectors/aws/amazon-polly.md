@@ -2,7 +2,8 @@
 title: "Amazon Polly"
 url: /appstore/connectors/aws/amazon-polly/
 category: "Connectors"
-description: "Describes the configuration and usage of the Amazon Polly connector, which is available in the Mendix Marketplace. Amazon Polly allows you to synthesize text to speech, to provide accessibility features or create audio-supported interfaces."
+description: "Describes the configuration and usage of the Amazon Polly connector, which is available in the Mendix Marketplace. Amazon Polly uses deep learning technologies to synthesize natural-sounding human speech, so you can convert articles to speech."
+weight: 20
 tags: ["marketplace", "marketplace component", "aws", "polly", "connector", "amazon"]
 aliases:
     - /appstore/connectors/amazon-polly/
@@ -15,7 +16,7 @@ The [Amazon Polly](https://marketplace.mendix.com/link/component/205068) connect
 
 ### 1.1 Typical Use Cases
 
-Amazon Polly allows you to synthesize text to speech, with 96 voices supporting 34 languages. You can use this to accommodate the following use cases:
+Amazon Polly allows you to synthesize text to speech, with 96 voices supporting 34 languages. With dozens of lifelike voices across a broad set of languages, use Amazon Polly to build speech-activated applications, for example, to accommodate the following use cases:
 
 * Provide accessibility features for users who have difficulty reading
 * Create audio-supported interfaces in your application.

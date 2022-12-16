@@ -53,6 +53,10 @@ The Advanced Audit Trail app service is different from the [Audit Trail](/appsto
 
 * You need to install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) in your application.
 
+### 1.6 Known Issues
+
+* On Mendix Cloud XS Containers the app might run out of memory due to too many objects of type ScheduledEventInformation being created. This issue is being investigated. (CLDOPS-13090)
+
 ## 2 Installation
 
 ### 2.1 Starting a Subscription {#obtain-license-key}

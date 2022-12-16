@@ -11,20 +11,22 @@ The Java memory is divided in different Memory Usage blocks. Each of these block
 
 | Memory block | Description |
 | --- | --- |
-| ***init*** | Represents the initial amount of memory (in bytes) that the Java virtual machine requests from the operating system for memory management of this segment during startup. The Java virtual machine may request additional memory from the operating system and may also release memory to the system over time. |
+| ***init*** | Represents the initial amount of memory (in bytes) that the Java virtual machine (JVM) requests from the operating system for memory management of this segment during startup. The JVM may request additional memory from the operating system and may also release memory to the system over time. |
 | ***used*** | represents the amount of memory that is actively used (in bytes). |
-| ***committed*** | Represents the amount of memory (in bytes) that is guaranteed to be available for use by the Java virtual machine. The amount of committed memory may change over time (increase or decrease). |
+| ***committed*** | Represents the amount of memory (in bytes) that is guaranteed to be available for use by the JVM. The amount of committed memory may change over time (increase or decrease). |
 | ***max*** | Represents the maximum amount of memory (in bytes) that can be used for memory management. The maximum amount of memory may change over time if defined. The amount of used and committed memory will always be less than or equal to max if max is defined. |
 
 For all Mendix applications the value for init and max start with identical values. Immediately after startup the JVM can execute the garbage collection and correct the memory usage.
 
 ## 2 Memory Segments
 
-### 2.1 Permanent Generation and Code Cache
+### 2.1 Metaspace and Code Cache
 
-The Permanent Generation (Perm Gen) space is allocated to all classes and libraries. The allocated memory to the Perm Gen stays fairly static and only increases when new libraries or classes are loaded into the application. The Perm Gen is not part of the Java Heap, it is added on top of the assigned heap. For more details, see [Presenting the Permanent Generation](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation).
+Classes and libraries within the JVM are allocated in metaspace. This is a separate part of native memory. The memory allocated to metaspace stays fairly static and only increases when new libraries or classes are loaded into the application. Metaspace is not part of the heap, but is kept in the native OS memory.
 
-This image on the right shows shows in detail how data moves through the memory. The Stack is made up out of all threads, classes and in case of Mendix also contains all information about microflows domain model and all other Mendix specific information.
+In JVM version 7 and before, this data was stored in what was called the permanent generation (perm gen). In contrast to the perm gen, metaspace is able to collect classes that are no longer used and thus reduce memory impact.
+
+The image below shows in detail how data moves through the memory. The Stack is made up of all threads and classes and, in case of Mendix,  information about microflows, the domain model, and all other Mendix-specific information.
 
 {{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844065.png" >}}
 

@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "saml", "IdP", "identity provider
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This module is not currently compatible with Mendix versions 9.19 and above. We are working on a new version to resolve this issue.
+This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
 {{% /alert %}}
 
 The [SAML](https://marketplace.mendix.com/link/component/1174/) module can be used to give end-users access to your Mendix application based on their identity in your Identity Provider (IdP). A Mendix application that uses the SAML SSO module will delegate user login to your Identity Provider using SAML 2.0.

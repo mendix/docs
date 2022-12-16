@@ -156,13 +156,7 @@ The developer works on the app in Studio. They start with the app in state 1, th
 
 ### 3.4 Update Studio Pro Working Copy
 
-The developer using Studio Pro wants to include the changes made by the developer using Studio. They choose to update their working copy.
-
-All the changes from the Studio working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Studio Pro working copy. While the Studio Pro working copy is being updated, Studio is locked temporarily so that the Studio working copy is stable while it is copied.
-
-{{% alert color="info" %}}
-This will also pick up changes from other developers using Studio Pro, if they have committed changes to this branch.
-{{% /alert %}}
+The developer using Studio Pro wants to update their working copy. When they update it, all the changes from other developers using Studio Pro (if they committed their changes to this branch) and changes from Studio will be picked up. The Studio working copy changes are put into a new revision on the Team Server (state 4). While the Studio Pro working copy is being updated, Studio is locked temporarily so that the Studio working copy is stable while it is copied.
 
 If there are conflicts, the developer using Studio Pro will have to resolve them before they can commit the changes to the Team Server repository.
 

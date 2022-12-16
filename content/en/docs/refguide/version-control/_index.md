@@ -124,17 +124,7 @@ The Repository Service manages communication between Studio or Studio Pro and ot
 
 ## 3 Version Control Processes in Studio and Studio Pro for a Single Branch {#vc-single}
 
-The figure below shows how two developers might collaborate on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line).
-
-{{< figure src="/attachments/refguide/version-control/image1.png" >}}
-
-### 3.1 Work in Studio Only
-
-The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
-
-{{< figure src="/attachments/refguide/version-control/image2.png" >}}
-
-### 3.2 Work in Studio Pro Only
+### 3.1 Work in Studio Pro Only
 
 Another (or the same) developer opens the app for the first time in Studio Pro. A new revision (state 2) is created on the Team Server from the current state of the Studio working copy. It is downloaded to the local machine as the working copy for Studio Pro. Studio is locked temporarily so that the Studio working copy is stable while it is copied.
 
@@ -144,11 +134,25 @@ The developer can commit this to the Team Server repository at any time to make 
 
 {{< figure src="/attachments/refguide/version-control/image3.png" >}}
 
-### 3.3 Work in Studio and Studio Pro
+### 3.2 Work in Studio and Studio Pro
 
-Two developers are working on the same [development line](#development-line) of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
+{{% alert color="info" %}}
+From Mendix 9.21, we only support collaborative development within Studio Pro. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above.
+{{% /alert %}}
+
+The figure below shows how two developers might collaborate on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). 
+
+{{< figure src="/attachments/refguide/version-control/image1.png" >}}
+
+Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
 {{< figure src="/attachments/refguide/version-control/image4.png" >}}
+
+### 3.3 Work in Studio Only
+
+The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
+
+{{< figure src="/attachments/refguide/version-control/image2.png" >}}
 
 ### 3.4 Update Studio Pro Working Copy
 

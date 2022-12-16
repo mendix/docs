@@ -8,6 +8,10 @@ tags: ["studio pro", "studio", "collaborative development", "sync"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+From Mendix 9.21, we only support collaborative development within Studio Pro. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. 
+{{% /alert %}}
+
 ## 1 Introduction 
 
 Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one app in Mendix Studio Pro and Mendix Studio, and easily synchronize changes using [version control](/refguide/version-control/). Studio Pro can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
@@ -107,7 +111,7 @@ The development line for Studio has been selected.
 
 When you switch Studio to another development line, Studio gets locked for a few moments during this process, a pop-up dialog is shown to its users that the Studio Pro user is changing the line for Studio. All changes from Studio are committed to the current development line, and only after that is the line changed. 
 
-### 5.2 Disabling Studio for a Development Line
+### 5.2 Disabling Studio for a Development Line {#disable-studio}
 
 If Studio is enabled for a development line, you can disable it. 
 
@@ -162,7 +166,13 @@ You have deleted the branch.
 You cannot delete a Studio enabled branch. If you need to delete this branch, enable Studio for another line, and only then delete the branch. 
 {{% /alert %}}
 
-## 7 Read More
+## 7 Collaborative Development with Studio from Mendix 9.21
+
+From Mendix 9.21, collaborative development with Mendix Studio is not available as Studio supports apps with Mendix version 9.20 or below. If you have a branch line enabled for Studio in your app, you need to disable Studio for this branch line first to be able to upgrade your app. For more information on how to disable Studio for a branch line, see [Disabling Studio for a Development Line](#disable-studio) section above.
+
+If you do not have any branch line enabled for Studio, collaborative development between Studio Pro users has no changes. 
+
+## 8 Read More
 
 * [Version Control](/refguide/version-control/)
 * [Troubleshooting Collaborative Development](/refguide/collaborative-development-troubleshooting/)

@@ -4,6 +4,7 @@ url: /studio/
 tags: ["studio", "web modeler"]
 weight: 20
 cascade:
+    - banner: Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with Mendix 9.21 or above can be opened with Studio Pro. 
     - space: "Studio 9 Guide"
     - mendix_version: "9"
     - sitemap:
@@ -11,12 +12,6 @@ cascade:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
-
-{{% alert color="warning" %}}
-
-The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix version 9. It describes the latest Studio functionality and features.
-
-{{% /alert %}}
 
 ## 1 Introduction 
 

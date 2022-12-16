@@ -1,7 +1,7 @@
 ---
-title: "Creating a Custom Save Button"
+title: "Creating a Custom Save Button with a Microflow"
 url: /refguide/create-a-custom-save-button/
-weight: 40
+weight: 1
 description: "Describes how to create a custom save button by utilizing microflows."
 tags: ["microflow", "logic", "save button"]
 aliases:
@@ -10,13 +10,13 @@ aliases:
 ---
 ## 1 Introduction
 
-Mendix uses visual models called microflows to define the logic of your application. A microflow is a visual way of expressing what traditionally would be written in code. 
+Mendix uses visual models called microflows to define the logic of your application. A [microflow](/refguide/microflows/) is a visual way of expressing what traditionally would be written in code. 
 
 This document explains how you can create a custom Save button on a detail page using a microflow. You will replace the default Save button with a Save button that shows a custom message to end-users after they click it. 
 
 Before you continue, make sure you have completed the following:
 
-* Create a domain model with a **Customer** entity (for guidance, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/)
+* Create a domain model with a **Customer** entity (for guidance, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/))
 * [Create overview and detail pages for the Customer entity](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 2 Replacing the Default Save Button with a Custom One
@@ -25,7 +25,7 @@ To replace the default **Save** button with a custom one, follow these steps:
 
 1. Open the **Customer_Detail** page:
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/customer-detail.png" width="400px" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/customer-detail.png" width="400px" >}}
 
 2. Right-click the **Save** button and select **Delete** to remove it.
 3. Right-click the drop-zone under the **Cancel** button.
@@ -33,16 +33,16 @@ To replace the default **Save** button with a custom one, follow these steps:
 5. In the **Select Microflow** dialog box, click **New** to create a new microflow.
 6. Set the **Name** as *Customer_Save*.
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/customer-save.png" width="400px" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/customer-save.png" width="400px" >}}
 
 7. After the button is created, open its **Properties** pane.
 8. Change the **Caption** property to *Save*:
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/button-properties.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/button-properties.png" >}}
 
 9. Set a floppy disk as the **Icon**:
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/icon.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/icon.png" >}}
 
 You have created a button that calls a microflow.
 
@@ -52,7 +52,7 @@ To recreate the default Save behavior, do the following:
 
 1. Right-click the new **Save** button and select **Go to on click microflow** to open the new microflow. The microflow should look like this:
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/created-microflow.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/created-microflow.png" >}}
 
 2. Open the **Toolbox** and select the **Commit object(s)** activity there.
 3. Drag the **Commit object(s)** activity into the flow between the start and end events.
@@ -60,12 +60,12 @@ To recreate the default Save behavior, do the following:
 5. In the **Input** section, select **Customer** for **Object or List**.
 6. Set **Refresh in client** to **Yes** and click **OK**:
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/commit-object-properties.png" width="400px" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/commit-object-properties.png" width="400px" >}}
 
 7. Open the **Toolbox**, find the **Close page** activity there.
 8. Drag the **Close page** activity into the flow after the **Commit object(s)** activity:
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/close-page-activity.png" width="400px ">}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/close-page-activity.png" width="400px ">}}
 
 You have recreated the default **Save** button logic.
 
@@ -77,13 +77,13 @@ To extend the logic with a custom message that will be shown when end-users clic
 2. Double-click the new activity to open its properties.
 3. In the **Template** column, type *Customer is saved!*.
 
-    {{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/show-message-properties.png" width="400px" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/show-message-properties.png" width="400px" >}}
 
 4. Click **OK** to save the changes. 
 
 Congratulations! You have customized the **Save** button using a microflow: 
 
-{{< figure src="/attachments/howto/logic-business-rules/create-a-custom-save-button/microflow.png" width="500px" >}}
+{{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/microflow.png" width="500px" >}}
 
 ## 5 Read More
 

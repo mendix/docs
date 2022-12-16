@@ -32,8 +32,8 @@ For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocu
 1. Configure AWS Authentication with static credentials. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 2. In the **Domain Model**, right-click on the work area, and then click **Add entity**.
 3. Enter a name for your entity, for example, *Document*, and then click **OK**.
-4. Double-click the Document entity, select the generalization **FileDocument**, and then click **OK**.
-5. In the Document entity, find the **Acces rules** tab.
+4. Double-click the **Document** entity, select the generalization **FileDocument**, and then click **OK**.
+5. In the **Document** entity, find the **Acces rules** tab.
 6. Create new access rules by doing the following steps:
     1. Click **New**.
     2. Select a user role, and then select the check boxes **Allow creating new objects** and **Allow deleting existing objects**. 
@@ -56,39 +56,41 @@ For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocu
 12. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role.
 13. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
 14. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
-15. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
-16. Configure the activity by doing the following steps:
+15. Add an input parameter of the Document entity to the ACT_AnalyzeDocument microflow.
+16. In the properties pane of ACT_AnalyzeDocument, under Security, assign a user role to Allow roles.
+17. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
+18. Configure the  **Create object** activity by doing the following steps:
     1. Double-click the activity. 
     2. Select the **AnalyzeDocumentRequest** entity. 
     3. Add the members **GetForms** and **GetTables**, set the value to **true**, and then click **OK**.
-17. In the App Explorer, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
-18. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
-19. Configure the **AnalyzeDocument** activity by doing the following steps:
+19. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
+20. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
+21. Configure the **AnalyzeDocument** activity by doing the following steps:
     1. Double-click the activity.
     2. Set the values for **AWS_Region**, **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
-20. In the **Toolbox** pane, search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
-21. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
-22. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
+22. In the **Toolbox** pane, search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
+23. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
+24. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
     1. Double-click the **AnalyzeDocumentResponse_ProcessResults** microflow.
     2. Set the **AnalyzeDocumentResponse** parameter.
     3. Click **OK**.
-23. In the **Toolbox** pane, find the **List operation** activity.
-24. Drag the activity onto the microflow area between the **AnalyzeDocumentResponse_ProcessResults** microflow and the end event.
-25. Configure the **List operation** activity by doing the following steps:
+25. In the **Toolbox** pane, find the **List operation** activity.
+26. Drag the activity onto the microflow area between the **AnalyzeDocumentResponse_ProcessResults** microflow and the end event.
+27. Configure the **List operation** activity by doing the following steps:
     1. Double-click the activity.
     2. Select **Head** as the operation.
     3. Select the list that the **AnalyzeDocumentResponse_ProcessResults** microflow returns.
-26. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
-27. In the **Toolbox** pane, find the **Show page** activity.
-28. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
-29. Configure the **Show page** activity by doing the following steps:
+28. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
+29. In the **Toolbox** pane, find the **Show page** activity.
+30. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
+31. Configure the **Show page** activity by doing the following steps:
     1. Double-click the activity
     2. Select the page with a data view of the Page entity.
     3. Set the **Page** parameter
     4. Click **OK**.
-30. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
-30. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action.
+32. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
+33. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action.
 
 To help you work with the Amazon Textract connector, the following sections of this document list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application.
 

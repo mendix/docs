@@ -48,7 +48,7 @@ For example, to list all Amazon DynamoDB tables for a specific region, implement
 11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **ListTablesResponse** as the association.
 12. Click **OK**.
 13. Configure a method for triggering the **ACT_ListTables** microflow.
-    For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
+    For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button](/refguide/creating-a-custom-save-button/).
 
 To help you work with the Amazon DynamoDB connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 

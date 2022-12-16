@@ -1,7 +1,6 @@
 ---
 title: "Creating a Custom Save Button with a Microflow"
-url: /refguide/create-a-custom-save-button/
-weight: 1
+url: /refguide/creating-a-custom-save-button/
 description: "Describes how to create a custom save button by utilizing microflows."
 tags: ["microflow", "logic", "save button"]
 aliases:

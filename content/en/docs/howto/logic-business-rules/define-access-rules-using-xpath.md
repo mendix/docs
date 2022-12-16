@@ -78,7 +78,7 @@ To define the access rules on the Order entity using XPath, follow these steps:
 
 ## 4 Read More
 
-* [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/)
+* [Creating a Custom Save Button](/refguide/creating-a-custom-save-button/)
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

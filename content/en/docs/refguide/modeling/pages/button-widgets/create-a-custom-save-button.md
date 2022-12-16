@@ -16,7 +16,7 @@ This document explains how you can create a custom Save button on a detail page 
 
 Before you continue, make sure you have completed the following:
 
-* Create a domain model with a **Customer** entity (for guidance, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/))
+* Add a **Customer** entity to your domain model (for guidance, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/))
 * [Create overview and detail pages for the Customer entity](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 2 Replacing the Default Save Button with a Custom One
@@ -62,7 +62,7 @@ To recreate the default Save behavior, do the following:
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/commit-object-properties.png" width="400px" >}}
 
-7. Open the **Toolbox**, find the **Close page** activity there.
+7. Open the **Toolbox**, and find the **Close page** activity there.
 8. Drag the **Close page** activity into the flow after the **Commit object(s)** activity:
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/close-page-activity.png" width="400px ">}}
@@ -71,10 +71,10 @@ You have recreated the default **Save** button logic.
 
 ## 4 Extending the Microflow with a Custom Message
 
-To extend the logic with a custom message that will be shown when end-users click the button, do the following:
+To extend the logic with a custom message that is shown to end-users when they click the button, do the following:
 
 1. Open **Toolbox**, find the **Show message** activity, and drag it after the **Close page** activity.
-2. Double-click the new activity to open its properties.
+2. Double-click the **Show message** activity to open its properties.
 3. In the **Template** column, type *Customer is saved!*.
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/show-message-properties.png" width="400px" >}}

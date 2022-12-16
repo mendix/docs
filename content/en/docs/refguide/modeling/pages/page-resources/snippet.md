@@ -10,7 +10,7 @@ tags: ["studio pro", "snippet", "page resources"]
 
 Snippets define reusable interface parts. They can be used on both [pages](/refguide/page/) and [layouts](/refguide/layout/). By using snippets you can make changes in fewer places when you modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you change something in the snippet, that change will show up in both places.
 
-A snippet expects zero or more parameters. To change the parameters of the snippet, click the Parameters button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The Parameters button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about snippet parameters, see the [Parameters](#parameters) section in snippet properties.
+A snippet expects zero or more parameters. To change the parameters of the snippet, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about snippet parameters, see the [Parameters](#parameters) section in snippet properties.
 
 In the example below, the snippet defines a single parameter with name **Order** and type **MyFirstModule.Order**.
 
@@ -37,7 +37,7 @@ Snippet properties consist of the following sections:
 
 #### 2.2.1 Parameters{#parameters}
 
-**Snippet Parameters** works the same way as [Page Parameter](/studio/page-parameter/) with the difference that snippet's parameter can be accessed at top level, for example when creating expressions or selecting attributes.
+**Snippet Parameters** works the same way as [Page Parameter](/studio/page-parameter/) with the difference that a snippet's parameter can be accessed at the top level, for example when creating expressions or selecting attributes.
 
 ### 2.3 Designer Section{#designer}
 

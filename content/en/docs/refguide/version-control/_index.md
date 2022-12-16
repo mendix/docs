@@ -124,6 +124,10 @@ The Repository Service manages communication between Studio or Studio Pro and ot
 
 ## 3 Version Control Processes in Studio and Studio Pro for a Single Branch {#vc-single}
 
+{{% alert color="info" %}}
+From Mendix 9.21, we only support collaborative development within Studio Pro. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above.
+{{% /alert %}}
+
 ### 3.1 Work in Studio Pro Only
 
 Another (or the same) developer opens the app for the first time in Studio Pro. A new revision (state 2) is created on the Team Server from the current state of the Studio working copy. It is downloaded to the local machine as the working copy for Studio Pro. Studio is locked temporarily so that the Studio working copy is stable while it is copied.
@@ -135,10 +139,6 @@ The developer can commit this to the Team Server repository at any time to make 
 {{< figure src="/attachments/refguide/version-control/image3.png" >}}
 
 ### 3.2 Work in Studio and Studio Pro
-
-{{% alert color="info" %}}
-From Mendix 9.21, we only support collaborative development within Studio Pro. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above.
-{{% /alert %}}
 
 The figure below shows how two developers might collaborate on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). 
 

@@ -2,9 +2,13 @@
 title: "Studio"
 url: /releasenotes/studio/
 weight: 10
-cascade:
-      - banner: Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with Mendix 9.21 or above can be opened with Studio Pro.
 ---
+
+{{% alert color="warning" %}}
+
+Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with Mendix 9.21 or above can be opened with Studio Pro.
+
+{{% /alert %}}
 
 The release notes for [Mendix Studio](/releasenotes/studio/) are correlated with the version ranges of [Mendix Studio Pro](/releasenotes/studio-pro/): 
 

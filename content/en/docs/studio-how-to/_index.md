@@ -4,12 +4,17 @@ url: /studio-how-to/
 tags: ["studio", "how to"]
 weight: 25
 cascade:
-    - banner: Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with Mendix 9.21 or above can be opened with Studio Pro.
     - space: "Studio 9 How-tos"
     - mendix_version: "9"
     - sitemap:
         priority: 0.7
 ---
+
+{{% alert color="warning" %}}
+
+Mendix Studio only supports apps built in Mendix 9.20 and below. Apps built with Mendix 9.21 or above can be opened with Studio Pro.
+
+{{% /alert %}}
 
 ## 1 Introduction 
 

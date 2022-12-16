@@ -41,6 +41,10 @@ weight: 79
 
 ### Pages
 
+#### SnippetParameter, SnippetParameterMapping & UserRoleSet (Elements)
+
+* We introduced these elements. 
+
 #### PageVariable & DataViewSource (Elements)
 
 * We introduced the `snippetParameter` property. 
@@ -48,28 +52,16 @@ weight: 79
 #### Snippet (ModelUnit)
 
 * We introduced the `parameters` property. 
-* We deleted the `entity` property. Use the 'parameters' property instead.
-
-#### SnippetParameter (Element)
-
-* We introduced this element. 
+* We deleted the `entity` property. Use the `parameters` property instead.
 
 #### SnippetCall (Element)
 
 * We introduced the `parameterMappings` property. 
 
-#### SnippetParameterMapping (Element)
-
-* We introduced this element. 
-
 #### RetrievalQuery (Element)
 
 * We introduced the `allowedUserRoleSets` property. 
 * We deleted the `allowedUserRoles` property. 
-
-#### UserRoleSet (Element)
-
-* We introduced this element. 
 
 #### RuntimeOperation (Element)
 

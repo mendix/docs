@@ -12,13 +12,6 @@ aliases:
 
 Offline-first apps built with Mendix store data in the local database to provide smooth end-user experiences. Consequently, user devices store a copy of the data locally. This documentation explains techniques to ensure that local data is stored securely and other data best practices.
 
-### 1.2 Local Encryption Information
-
-This section explains how local encryption works in Mendix. To skip ahead to implementation, see the [Encrypting Local Databases](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-local-databases)
- section below.
-
-How does local database encryption work? Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the secure storage system of the OS (iOS/Keychain and Android/Keystore). The Mendix Client reads and decrypts the database key stored in the local storage and uses it to unlock the database.
-
 ## 2 Local Data Safety
 
 In native mobile apps, the Mendix Client stores the data and files in the file system—often sandboxed and encrypted by the operating system. This ensures that other apps, external entities, or end-users cannot access the app's data. 
@@ -95,13 +88,16 @@ Disabling database encryption will apply only to newly-installed apps. Existing 
 
 Local database encryption also works with the Make It Native App and a custom developer app. Ensure that you upgrade the Make It Native app and your application template to v6.3.0 or higher, otherwise the app may not start.
 
-### 4.6 Verifying a Database is Encrypted
+### 4.6 How Does Local Database Encryption Work?
+Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the secure storage system of the OS (iOS/Keychain and Android/Keystore). The Mendix Client reads and decrypts the database key stored in the local storage and uses it to unlock the database.
+
+### 4.7 Verifying a Database is Encrypted
 
 Verifying the database encryption requires access to the database file stored on the device (or emulator), which is only possible for debug builds of your app. 
 
 Once you access the database file, you can attempt to open it using any SQLite viewer. The viewer will open it immediately for unencrypted databases, whereas the same operation will fail for encrypted databases.
 
-#### 4.6.1 Locating the Database File on Android
+#### 4.7.1 Locating the Database File on Android
 
 Viewing the file system of an Android device requires [Android Studio](https://developer.android.com/studio/). Once you have that software, do the following:
 
@@ -112,7 +108,7 @@ Viewing the file system of an Android device requires [Android Studio](https://d
 1. Find the database file in this folder (often named *default* without an extension). Right-click this file, then click **Save as**. 
 1. Save the file in a folder on your computer.
 
-#### 4.6.2 Locating the Database File on iOS
+#### 4.7.2 Locating the Database File on iOS
 
 To locate the database file on iOS, do the following:
 

@@ -39,11 +39,11 @@ For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocu
     2. Select a user role, and then select the check boxes **Allow creating new objects** and **Allow deleting existing objects**. 
     3. Set the access rights for **Name**, **DeleteAfterDownload** and **Contents** to **Read/write**
     4. Set the remaining access rights to **Read**.
+    The configured access rules look like this:
     {{< figure src="/attachments/appstore/connectors/aws-textract/6-completed-access-rules.png" >}}
 7. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
 8. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
-9.  In the **Properties** pane of **Document_Overview**, in the **Navigation** section, select **Visible for** for a user role.
-{{< figure src="/attachments/appstore/connectors/aws-textract/visible-user-role.png" >}}
+9.  In the **Properties** pane of **Document_Overview**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
 10. Configure your page by doing the following steps:
     1. Open the page. 
     2. Double-click on the data grid.
@@ -55,27 +55,27 @@ For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocu
     2. Click **Generate page**.
     3. Enter a name for your page, for example, *Document_NewEdit*.
     4. Click **OK**.
-12. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role.
+12. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
 13. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
 14. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
-15. Add an input parameter of the Document entity to the ACT_AnalyzeDocument microflow.
-{{< figure src="/attachments/appstore/connectors/aws-textract/input-parameter-microflow.png" >}}
+15. Add an input [parameter](/refguide/parameter/) of the Document entity to the ACT_AnalyzeDocument microflow.
 16. In the properties pane of ACT_AnalyzeDocument, under Security, assign a user role to Allow roles.
 17. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
 18. Configure the  **Create object** activity by doing the following steps:
     1. Double-click the activity. 
     2. Select the **AnalyzeDocumentRequest** entity. 
     3. Add the members **GetForms** and **GetTables**, set the value to **true**, and then click **OK**.
+    The configured activity properties look like this: 
     {{< figure src="/attachments/appstore/connectors/aws-textract/create-object-properties.png" >}}
 19. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
-{{< figure src="/attachments/appstore/connectors/aws-textract/find-analyze-document.png" >}}
 20. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
 21. Configure the **AnalyzeDocument** activity by doing the following steps:
     1. Double-click the activity.
     2. Set the values for **AWS_Region**, **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
+    The configured properties look like this:
     {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-properties.png" >}} 
-22. In the **Toolbox** pane, search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
+22. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
 23. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
 24. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
     1. Double-click the **AnalyzeDocumentResponse_ProcessResults** microflow.
@@ -87,19 +87,19 @@ For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocu
     1. Double-click the activity.
     2. Select **Head** as the operation.
     3. Select the list that the **AnalyzeDocumentResponse_ProcessResults** microflow returns.
-28. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
+28. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model. The page model will look like this:
 {{< figure src="/attachments/appstore/connectors/aws-textract/block-item-page.png" >}}
-29. In the **Toolbox** pane, find the **Show page** activity.
-30. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
-31. Configure the **Show page** activity by doing the following steps:
+1.  In the **Toolbox** pane, find the **Show page** activity.
+2.  Drag the activity onto the microflow area between the **List* operation** activity and the end event.
+3.  Configure the **Show page** activity by doing the following steps:
     1. Double-click the activity
     2. Select the page with a data view of the Page entity.
     3. Set the **Page** parameter
     4. Click **OK**.
-32. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
-33. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
+4.  On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
+5.  Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
     The configured microflow looks like this:
-    {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-configured-microflow.png" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-configure-microflow.png" >}}
 
     The processed results look like this on the page:
     {{< figure src="/attachments/appstore/connectors/aws-textract/processed-results.png" >}}

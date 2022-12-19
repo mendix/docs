@@ -9,7 +9,7 @@ tags: ["studio pro", "studio", "collaborative development", "sync"]
 ---
 
 {{% alert color="warning" %}}
-From Mendix 9.21, we only support collaborative development within Studio Pro. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
+From Mendix 9.21, we only support collaborative development between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
 {{% /alert %}}
 
 ## 1 Introduction 
@@ -166,7 +166,7 @@ You have deleted the branch.
 You cannot delete a Studio enabled branch. If you need to delete this branch, enable Studio for another line, and only then delete the branch. 
 {{% /alert %}}
 
-## 7 Collaborative Development with Studio from Mendix 9.21
+## 7 Collaborative Development with Studio from Mendix 9.21 {#studio-9.21}
 
 From Mendix 9.21, collaborative development with Mendix Studio is not available as Studio supports apps with Mendix version 9.20 or below. If you have a branch line enabled for Studio in your app, you need to disable Studio for this branch line first to be able to upgrade your app. For more information on how to disable Studio for a branch line, see [Disabling Studio for a Development Line](#disable-studio) section above.
 

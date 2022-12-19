@@ -51,7 +51,7 @@ Licenses for the Mendix Event Broker are available for all regions, but once sel
 
 #### 2.1.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
-Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in two places:
+Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
 
 1. On the App level, under Environments > [Services](/developerportal/deploy/environments/#services)
 2. On the [Environment Details](/developerportal/deploy/environments-details/#services) page, for each environment

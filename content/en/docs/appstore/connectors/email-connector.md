@@ -37,7 +37,7 @@ Before you use the Email connector in your app, do the following:
 2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up-to-date.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email Module with Templates](/appstore/modules/email-with-templates/)).
 4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
-5. Clean the deployment directory before running the app.
+5. [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory) before running the app.
 
 ### 1.2.1 Migrating from Another Module
 
@@ -61,9 +61,9 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
 
-### 2.1 Module security and roles
+### 2.1 Module Security and Roles
 
-The module comes with a default EmailConnectorAdmin module role. Access rights for this role has been set with wider set of use-cases in mind. Please review the access rights if they fits to your use-case and security requirements before linking the module role to User Roles in App Security(/refguide/app-security/).
+The module comes with a default **EmailConnectorAdmin** module role. Access rights for this role have been set with wider use-cases in mind. Please review the access rights if they fit to your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
 
 ## 3 Email Account Configuration {#accountconfig}
 

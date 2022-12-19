@@ -125,7 +125,7 @@ The Repository Service manages communication between Studio or Studio Pro and ot
 ## 3 Version Control Processes in Studio and Studio Pro for a Single Branch {#vc-single}
 
 {{% alert color="info" %}}
-From Mendix 9.21, we only support collaborative development within Studio Pro. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
+From Mendix 9.21, we only support [collaborative development](/refguide/collaborative-development/) between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
 {{% /alert %}}
 
 ### 3.1 Work in Studio Pro Only

@@ -59,15 +59,10 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 
 1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
-3. The **EmailConnectorAdmin** [module role](/refguide/module-security/#module-role) is included with this connector. Although your application’s end users only see user roles and not module roles, review the access permissions and object limitations for a better understanding before linking the module role to [User Roles](/refguide/user-roles/) in **App Security**(/refguide/app-security/).
 
 ### 2.1 Module security and roles
 
-The module comes with **EmailConnectorAdmin** [module role](/refguide/module-security/#module-role) and entity access is already defined for this role. Microflows which are accessible from client API does not have any xpath constraint and hence access to data is allowed for all users of all roles by default. Hence, before using such Microflows into your application please set/check xpath constraint and apply the constraints according to your need. 
-
-{{% alert color="info" %}}
-UI pages shipped with this module is only to demonstrate the uses of the module, hence does not apply any restrictions on which data should be visible/accessible to which user-role. 
-{{% /alert %}}
+The module comes with a default EmailConnectorAdmin module role. Access rights for this role has been set with wider set of use-cases in mind. Please review the access rights if they fits to your use-case and security requirements before linking the module role to User Roles in App Security(/refguide/app-security/).
 
 ## 3 Email Account Configuration {#accountconfig}
 

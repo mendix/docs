@@ -48,7 +48,7 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
 1.  Add a new module (or use **MyFirstModule**) and name it **CMS**.
    
-2.  Generate the overview pages if you have not yet done so, and link them to the home page and navigation.
+2.  Go to the domain model and generate the overview pages if you have not yet done so, and link them to the home page and navigation.
     * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
     * Add a button to the home page that links to the Overview page you created.
 

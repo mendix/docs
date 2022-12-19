@@ -36,7 +36,8 @@ Before you use the Email connector in your app, do the following:
 1. Download and [configure](/appstore/modules/model-reflection/#configuration) the latest version of [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module. If you have the module already, ensure that it is up-to-date.
 2. Download and [configure](/appstore/modules/encryption/#configuration) the latest version of the [Encryption](https://marketplace.mendix.com/link/component/1011) module. If you have the module already, ensure that it is up-to-date.
 3. Remove any existing email modules ([IMAP/POP3](/appstore/modules/imap/) or [Email Module with Templates](/appstore/modules/email-with-templates/)).
-4. Check for and remove orphaned JAR files from any old modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
+4. Check for and remove orphaned JAR files from any old email modules in the *userlib* subdirectory (for example, *javax.mail-1.6.2.jar* and *activation-1.1.jar*).
+5. [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory) before running the app.
 
 ### 1.2.1 Migrating from Another Module
 
@@ -59,7 +60,10 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 
 1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module.
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
-3. Link [User Roles](/refguide/user-roles/) in app **Security** to ensure that the configuration page displays when you locally run the app.
+
+### 2.1 Module Security and Roles
+
+The module comes with a default **EmailConnectorAdmin** module role. Access rights for this role have been set with wider use-cases in mind. Please review the access rights if they fit to your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
 
 ## 3 Email Account Configuration {#accountconfig}
 
@@ -135,7 +139,7 @@ The input parameters for receiving email are the following:
 * **onEmailFetchMicroflow** – a microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account
     * You can process the list according to what you need. 
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
-    * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
+    * Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**.
 
     {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter names and data types.{{% /alert %}}
 
@@ -195,7 +199,7 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 The input parameters are the following:
 
 * **Email account** – email account consisting of incoming email configuration
-* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_EmailFetchMicroflow*.
+* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_Background_EmailFetchMicroflow*.
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change the input parameter name and data type.
@@ -206,12 +210,12 @@ When duplicating this microflow, do not change the input parameter name and data
     * `CONNECTIONTOSERVERLOST`
     * `CONNECTIONRETRYEXHAUSTED`
 
-    Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_SubscriptionStateChanged**.
+    Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
 
     {{% alert color="warning" %}}When duplicating this microflow, do not change input parameters’ name and data type.{{% /alert %}}
 
 {{% alert color="info" %}}
-Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **ACT_SubscribeForEmailNotification**.
+Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
 {{% /alert %}}
 
 {{% alert color="info" %}}

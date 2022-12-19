@@ -61,6 +61,10 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 2. Launch the UI by using the **EmailConnector_OverviewPage** in the **USE_ME** folder.
 3. The **EmailConnectorAdmin** [module role](/refguide/module-security/#module-role) is included with this connector. Although your application’s end users only see user roles and not module roles, review the access permissions and object limitations for a better understanding before linking the module role to [User Roles](/refguide/user-roles/) in **App Security**(/refguide/app-security/).
 
+### 2.1 Module security and roles
+
+The module comes with **EmailConnectorAdmin** [module role](/refguide/module-security/#module-role) and entity access is alredy defined for this role. Microflows which are accessible from client API does not have any xpath constraint and hence access to data is allowed for all users of all roles by default. UI pages shipped with this module is only to demonstrate the usees of the module.
+
 ## 3 Email Account Configuration {#accountconfig}
 
 Once you run your Studio Pro app, you can start configuring your email accounts in the Email Connector UI.

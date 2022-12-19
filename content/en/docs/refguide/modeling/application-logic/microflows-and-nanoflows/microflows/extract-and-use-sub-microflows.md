@@ -1,6 +1,7 @@
 ---
 title: "Extracting and Using Sub-Microflows"
 url: /howto/logic-business-rules/extract-and-use-sub-microflows/
+url: /refguide/extracting-and-using-sub-microflows/
 weight: 50
 description: "Describes how to break down a large microflow into more manageable parts."
 tags: ["microflow", "sub-microflow", "extract"]
@@ -16,7 +17,7 @@ For example, you can use sub-microflows to construct a microflow that imports da
 In addition to increased transparency and easier troubleshooting, creating sub-microflows also means that you can reuse some of them in other processes. In the example above, processes other than data import may also require a validation stage. Creating a sub-microflow for the data validation allows you to reuse it in other microflows as needed.
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This document will teach you how to do the following:
 
 * Create sub-microflows by extracting them from an existing microflow
 * Troubleshoot extractions of sub-microflows
@@ -76,6 +77,6 @@ To reuse an existing microflow, follow these steps:
 
 {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" alt="Dragging a microflow onto the working area of another microflow" >}}
 
-## 5 Read More
+## 4 Read More
 
 * [Microflows](/refguide/microflows/)

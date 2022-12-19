@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### December 13th, 2022
+
+#### New Feature
+
+We have released the Beta version of [Product Insights](/developerportal/collaborate/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
+
+A survey can have a maximum of three questions that appear in your app based on the implemented criteria. You can choose between four different question types (rating scale, multiple choice, open question, and NPS question), and you can place the survey toaster in any of corner of the page. You can also preview exactly what the survey will look like.
+
+This feature is in Beta, so we would very much appreciate your feedback. If you have any questions or suggestions for improvement, just reach out via the **Feedback** widget on the **Product Insights** page in the Developer Portal.
+
 ### December 1st, 2022
 
 #### Improvements
@@ -69,7 +79,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Private Beta).
+* We fixed an issue where the story name in the revision history was not visible when you link a commit to a story in Epics or Jira (Beta).
 
 ### October 6th, 2022
 
@@ -84,7 +94,7 @@ In Portfolio Management, you can do the following
 
 #### Deprecations
 
-* All [Mendix Feedback](/appstore/widgets/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
+* All [Mendix Feedback](/appstore/modules/mendix-feedback/) widgets with versions lower than 8.4.0 are disabled. The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/collaborate/feedback/) section of the Developer Portal, but your app will keep working as usual. Please download and replace your current Mendix Feedback widget with version 8.4.0 or higher. If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which also includes a version of the Mendix Feedback widget), please upgrade to version 3.5.1 or higher of that module. 
 
 ### September 28th, 2022
 
@@ -144,7 +154,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Notifications](/developerportal/#notifications) for Public Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/developerportal/#notifications) for Beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 21st, 2022
 
@@ -170,7 +180,7 @@ In Portfolio Management, you can do the following
 
 #### New Features
 
-* We released [Epics](/developerportal/collaborate/epics/), our brand new tool for Agile planning, for Public Beta usage. Epics has many features. For example, you can:
+* We released [Epics](/developerportal/collaborate/epics/), our brand new tool for Agile planning, for Beta usage. Epics has many features. For example, you can:
 
     * Map your exact development process with fully customizable swimlanes
     * Use Scrum or Kanban – we support both!
@@ -266,7 +276,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed a bug where screenshots posted through the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget could be viewed in thumbnail size only. It ain't much, but it's honest work. (Tickets 143368, 143399, 143435, 143505, 143526, 143602, 143657, 143681, 143782, 143818, 143838, 143919, 143924, 143965)
+* We fixed a bug where screenshots posted through the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget could be viewed in thumbnail size only. It ain't much, but it's honest work. (Tickets 143368, 143399, 143435, 143505, 143526, 143602, 143657, 143681, 143782, 143818, 143838, 143919, 143924, 143965)
 
 #### Improvements
 
@@ -318,7 +328,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * The arrival of [Git support](/refguide/branch-line-manager-dialog/#byo-server-app) means that a new version of the [Platform SDK](/apidocs-mxsdk/mxsdk/) is in order. We made some changes to the Developer Portal to accommodate this new version, which is currently being tested and will be published soon.
-* We introduced a new version of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/) that will be used by a new generation of [Feedback widgets](/appstore/widgets/mendix-feedback/) coming to the Marketplace soon.
+* We introduced a new version of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api/) that will be used by a new generation of [Feedback widgets](/appstore/modules/mendix-feedback/) coming to the Marketplace soon.
 * Until now, you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox for a Free App. We changed this behavior so that the only check is on whether the environment is licensed. A consequence of this change is that the cloud icon on the app tiles on the [My Apps](/developerportal/#my-apps) page is only displayed if your app is deployed to a licensed node.
 
 ### November 4th, 2021
@@ -667,7 +677,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We redesigned the [story details](/developerportal/collaborate/stories/#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories/#managing-labels) with the new UI; this functionality will be released in the future.
+* We redesigned the [story details](/developerportal/collaborate/stories/#story-details) page and made it available for Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories/#managing-labels) with the new UI; this functionality will be released in the future.
 * When you add a [task](/developerportal/collaborate/stories/#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
 * We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 
@@ -695,7 +705,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
+* We placed a deprecation warning in a file hosted by the Developer Portal that is used in old versions of the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget. As of October 1st, 2020, we will end support for Mendix Feedback widget version 5 or below. Please always keep your Feedback widget up-to-date to ensure the best experience for your users.
 * We fixed an issue where you could move a user story to a different Sprint without specifying the target Sprint.
 
 ### July 28th, 2020
@@ -901,7 +911,7 @@ In Portfolio Management, you can do the following
 
 #### Feedback and Support
 
-* We removed the [Mendix Feedback](/appstore/widgets/mendix-feedback/) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
+* We removed the [Mendix Feedback](/appstore/modules/mendix-feedback/) widget from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 
 ### January 3rd, 2019
 

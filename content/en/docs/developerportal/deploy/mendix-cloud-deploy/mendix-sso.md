@@ -12,6 +12,10 @@ tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
+{{% /alert %}}
+
 The [Mendix SSO module](/appstore/modules/mendix-sso/) enables your app end-users to sign in with their Mendix account when your app is deployed to the Mendix Cloud.
 
 {{% alert color="warning" %}}

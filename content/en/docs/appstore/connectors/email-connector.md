@@ -63,7 +63,11 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 
 ### 2.1 Module security and roles
 
-The module comes with **EmailConnectorAdmin** [module role](/refguide/module-security/#module-role) and entity access is alredy defined for this role. Microflows which are accessible from client API does not have any xpath constraint and hence access to data is allowed for all users of all roles by default. UI pages shipped with this module is only to demonstrate the usees of the module.
+The module comes with **EmailConnectorAdmin** [module role](/refguide/module-security/#module-role) and entity access is already defined for this role. Microflows which are accessible from client API does not have any xpath constraint and hence access to data is allowed for all users of all roles by default. Hence, before using such Microflows into your application please set/check xpath constraint and apply the constraints according to your need. 
+
+{{% alert color="info" %}}
+UI pages shipped with this module is only to demonstrate the uses of the module, hence does not apply any restrictions on which data should be visible/accessible to which user-role. 
+{{% /alert %}}
 
 ## 3 Email Account Configuration {#accountconfig}
 

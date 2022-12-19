@@ -1,6 +1,5 @@
 ---
 title: "Extracting and Using Sub-Microflows"
-url: /howto/logic-business-rules/extract-and-use-sub-microflows/
 url: /refguide/extracting-and-using-sub-microflows/
 weight: 50
 description: "Describes how to break down a large microflow into more manageable parts."
@@ -11,13 +10,13 @@ tags: ["microflow", "sub-microflow", "extract"]
 
 When building microflows that span multiple functions, the best practice is to break down the large microflow into sub-microflows. Sub-microflows represent individual parts of the whole microflow, for example, specific functions. You can reuse any sub-microflows in other parts in the application. Furthermore, when you have very large and complex microflows, using sub-microflows can help you better manage your logic and business processes. Use sub-microflows to make your microflow easier to understand, modify, and troubleshoot if needed.
 
-For example, you can use sub-microflows to construct a microflow that imports data into the system. A data import process usually consists of several stages, such as data validation, import, and mapping the data into your Mendix domain model. As a best practice, instead of creating a single large microflow, you should extract the validation and mapping stages into their own sub-microflows to better manage the logic. 
+For example, you can use sub-microflows to construct a microflow that imports data into the system. A data import process usually consists of several stages, such as data validation, data import, and mapping the data into your Mendix domain model. As a best practice, instead of creating a single large microflow, you should extract the validation and mapping stages into their own sub-microflows to better manage the logic. 
 
 {{% alert color="info" %}}
-In addition to increased transparency and easier troubleshooting, creating sub-microflows also means that you can reuse some of them in other processes. In the example above, processes other than data import may also require a validation stage. Creating a sub-microflow for the data validation allows you to reuse it in other microflows as needed.
+In addition to increased transparency and easier troubleshooting, creating sub-microflows also means that you can reuse some of them in other processes. In the example above, processes other than data import may also require a validation stage. Creating a sub-microflow for the data validation allows you to reuse it in other microflows if needed.
 {{% /alert %}}
 
-This document will teach you how to do the following:
+This document teaches you how to do the following:
 
 * Create sub-microflows by extracting them from an existing microflow
 * Troubleshoot extractions of sub-microflows
@@ -31,7 +30,7 @@ You can create a sub-microflow by extracting a part of an existing microflow. Th
 
 In this scenario, it makes sense to create a sub-microflow for the validation steps. If you do this, you can reuse this sub-microflow in other microflows where you need to validate a registration again.
 
-To extract the validation steps to a sub-microflow, follow these steps:
+To extract the validation steps into a sub-microflow, follow these steps:
 
 1. Select the area that you want to capture and use as a sub-microflow.
 
@@ -50,7 +49,7 @@ To extract the validation steps to a sub-microflow, follow these steps:
 
     {{< figure src="/attachments/howto/logic-business-rules/extract-and-use-sub-microflows/18581016.png" alt="Multiple actions replaced with a microflow action" >}}
 
-6. Make any other required configuration changes, depending on the contents of the sub-microflow. 
+6. Make any other required configuration changes depending on the contents of the sub-microflow. 
 
     For example, the sub-microflow shown in the image below does not return anything, so the sub-microflow call cannot be used in the **Is Valid?** check that immediately follows it.
 

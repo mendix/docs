@@ -135,7 +135,7 @@ The input parameters for receiving email are the following:
 * **onEmailFetchMicroflow** – a microflow that will be triggered when **List of EmailMessage** is fetched from the email server per the batch size configured in the email account
     * You can process the list according to what you need. 
     * Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. 
-    * Refer to the sample microflow **OCH_EmailFetchMicroflow**.
+    * Refer to the sample microflow **OCH_Background_EmailFetchMicroflow**.
 
     {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter names and data types.{{% /alert %}}
 
@@ -195,7 +195,7 @@ When modeling your app in Studio Pro, call the **SubscribeToIncomingEmail** Java
 The input parameters are the following:
 
 * **Email account** – email account consisting of incoming email configuration
-* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_EmailFetchMicroflow*.
+* **onNewEmailReceivedMicroflow** – a microflow that will be triggered when new email (List) is received from the server. You can process the list per your need. Make sure you have list of **Email_Connector.EmailMessage** as a parameter to this microflow. Refer to the sample microflow **OCH_Background_EmailFetchMicroflow*.
 
 {{% alert color="warning" %}}
 When duplicating this microflow, do not change the input parameter name and data type.
@@ -206,12 +206,12 @@ When duplicating this microflow, do not change the input parameter name and data
     * `CONNECTIONTOSERVERLOST`
     * `CONNECTIONRETRYEXHAUSTED`
 
-    Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_SubscriptionStateChanged**.
+    Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
 
     {{% alert color="warning" %}}When duplicating this microflow, do not change input parameters’ name and data type.{{% /alert %}}
 
 {{% alert color="info" %}}
-Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **ACT_SubscribeForEmailNotification**.
+Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
 {{% /alert %}}
 
 {{% alert color="info" %}}

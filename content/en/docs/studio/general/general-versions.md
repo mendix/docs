@@ -48,8 +48,8 @@ The table below shows how Studio ranges relate to Mendix versions and what versi
 | 7.23         | The latest 7.23 version. <br />No automatic upgrade, only manual upgrade to Mendix 8. For details, see the [Upgrading to Mendix Version 8](/studio8/general-versions/#upgrade-to-8) section in *Studio Ranges and Mendix Versions* in *Studio 8 Guide*. |
 | 8.0–8.6      | The latest 8.18 version; mandatory upgrade when opening an  in Studio. |
 | 8.7–8.18     | The latest 8.18 version.<br />No automatic upgrade to Mendix 9, only manual upgrade in Mendix Studio Pro. For details, see [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/). |
-| 9.0-9.6      | Latest available version, but no lower than 9.5.1. Due to breaking changes, minimum Studio-supported version in this bundle is 9.5.1.  Apps below 9.5.1 will not open in Studio and an automatic upgrade will be suggested. |
-| 9.7 and above  | Latest available version from 9.7 and above.                 |
+| 9.0–9.6     | Latest available version, but no lower than 9.5.1. Due to breaking changes, minimum Studio-supported version in this bundle is 9.5.1.  Apps below 9.5.1 will not open in Studio and an automatic upgrade will be suggested. |
+| 9.7–9.20 | Latest available version from 9.7 to 9.20. Studio only supports apps built in Mendix 9.20 and below. Apps built with Mendix 9.21 or above can be opened with Studio Pro. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/). |
 
 {{% alert color="warning" %}} 
 

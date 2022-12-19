@@ -12,7 +12,7 @@ This guide will cover how to publish files, including images, in REST services i
 
 You will learn about the following:
 
-* [Creating a REST service](#create-service)
+* [Creating a REST service](#create-service) with a **System.Image** or **System.FileDocument** entity
 * [Trying out, or testing,](#test-service) the service
 * [Setting the MIME type](#set-mime-type) for a specific file
 * [Consuming files](#retrieve-files) with REST
@@ -48,9 +48,9 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
 1.  Add a new module (or use **MyFirstModule**) and name it **CMS**.
    
-2.  Go to the domain model and generate the overview pages if you have not yet done so, and link them to the home page and navigation.
+2.  Go to the domain model, generate the overview pages for the file or image entity if you have not yet done so, then link them to the home page and navigation.
     * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
-    * Add a button to the home page that links to the Overview page you created.
+    * Add a button to the home page that links to the **Overview** page you created.
 
 3.  Expose the entity as a REST resource.
     * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file(s) that you want to publish, and click **Expose as a REST resource**.

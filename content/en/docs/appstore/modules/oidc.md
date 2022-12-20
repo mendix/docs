@@ -178,13 +178,32 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 
 ### 5.1 OIDC Provider Configuration
 
+#### 5.1.1 General OIDC Providers
+
 1. In your IdP, provision a new OpenID client application. You will receive a ClientID and Client Secret.
 2. You will also need the OIDC configuration endpoint (for example: [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration))
 3. Register the following callback URLs:
     * `https://<your-app-url>/oauth/v2/callback`
     * `makeitnative://<your-app-url>/oauth/callback`
 
+#### 5.1.2 Azure AD Provider Configuration for APIs{#azure-portal}
+
+This section gives some guidance for doing the necessary configurations at your Azure AD provider to obtain access tokens for your APIs.
+
+If you don’t set the access token up correctly, you will get access tokens that contain both `nonce` and `aud` claims. These are intended to be presented to the Microsoft Graph API and cannot be validated by your API.
+
+To get the Microsoft Identity Platform to issue access tokens you can pass to your API, you need to set up a custom scope in the App Registration’s **Expose an API** tab, and request that scope when you acquire the tokens. TO do this:
+
+1. Open the **Expose an API** tab in the **App Registration** page of the Azure Portal.
+1. In the **Expose an API** tab, set up a custom scope.
+    The scope will be prefixed with your `Application ID URI`.
+1. In the **API permissions** tab, assign the created scope to the application.
+
+By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that we can present to our API
+
 ### 5.2 OIDC Client Configuration{#client-configuration}
+
+#### 5.2.1 General OIDC Clients
 
 In this case, the OIDC client is the app you are making.
 
@@ -217,6 +236,17 @@ In this case, the OIDC client is the app you are making.
 Once you have completed these steps, the SSO-configuration is ready for testing. See the section on [Testing and troubleshooting](#testing) for more information.
 
 See the section [Optional Features](#optional) information on additional optional features you may want to implement.
+
+#### 5.2.2 Azure AD Client Configuration for APIs 
+
+For Azure AD access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
+
+1. Start your app, log in as an administrator, for example *demo_administrator*, and access the OpenID Setup page.
+1. Add the custom scope which you [configured in Azure] in **Available scopes**.
+1. Save the configuration.
+1. Edit the Azure configuration and add the custom scope to **Selected scopes**.
+
+Now, you can acquire tokens which can be validated using jwks URI.
 
 ## 6 User Provisioning
 
@@ -325,12 +355,13 @@ The microflow returns an object of type `System.HttpResponse`. This could indica
 With the OAuth/OIDC protocol, access tokens can be opaque or can be a JSON Web Token (JWT).
 If you are just delegating authentication for your app to the IdP you will not need to know the contents of the access token.
 
-If you want to use the information in an access token which is a JWT, you need to parse the access token. For example, you may want to assign user roles in your app based on the contents of the access token JWT.
+If you want to use the information in an access token which is a JWT, you need to parse the access token in a microflow. For example, you may want to assign user roles in your app based on the contents of the access token JWT.
 
-You can parse an access token in a microflow.
-
-* If you are using Siemens SAM as your IdP, the OIDC SSO module provides you with a default microflow for parsing of SAM access tokens.
-* If you are using another IdP, you can create a custom microflow to parse the access token.
+* The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
+    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted
+    * AzureAD – in this case the `roles` claim is interpreted
+    * Private IAM Broker (PIB) – in this case the `scope` claim is interpreted
+* If you are using another IdP or want to use a different claim, you can create a custom microflow to parse the access token.
 
 To parse access tokens, you need to check **Enable Access Token Parsing** when performing [OIDC Client Configuration](#client-configuration).
 
@@ -356,11 +387,26 @@ To parse of SAM access tokens you need to have done the following:
 5. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 6. Save the configuration.
 
-#### 8.3.2 Parsing Access Tokens Using a Custom Microflow
+#### 8.3.2 Parsing PIB Access Tokens
 
-If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
+The OIDC SSO module provides a default access token parsing microflow for PIB. To use it, do the following.
 
-You can find a sample microflow for parsing access tokens, `ACT_TokenCustomATPRetrieve Roles` in the **SAM** folder of the OIDC module.
+1. Create a secure REST API endpoint following the instructions in [API Authentication](#api-authentication), above.
+1. Run your app and sign in as an administrator.
+1. Configure the PIB client information in the OIDC Client configuration screen.
+1. Check **Enable Access Token Parsing** to parse access tokens when performing OIDC Client Configuration
+1. Select the appropriate access token parsing microflow:
+
+    * For PIB, the default access token parsing microflow is `OIDC.Default_PIB_TokenProcessing_CustomATP`.
+    * You can also parse the access token using the custom microflow `OIDC.ACT_Token_CustomATPRetrieveRoles` which takes an access token as input and returns a list of non-persistent objects of type `OIDC.Role`.
+
+To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
+
+#### 8.3.3 Parsing Access Tokens Using a Custom Microflow 
+
+If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter. This is how you can parse access tokens issued by IdPs such as Microsoft Azure.
+
+You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.
 
 Your custom microflow should do the following
 
@@ -392,21 +438,6 @@ Once you have created the microflow (for example `CustomATP_xxx`), you must do t
 {{% alert color="info" %}}
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
 {{% /alert %}}
-
-### 8.4 Parsing Access Tokens issued by PIB
-
-The OIDC SSO module provides a default access token parsing microflow for PIB. To use it, do the following.
-
-1. Create a secure REST API endpoint following the instructions in [API Authentication](#api-authentication), above.
-1. Run your app and sign in as an administrator.
-1. Configure the PIB client information in the OIDC Client configuration screen.
-1. Check **Enable Access Token Parsing** to parse access tokens when performing OIDC Client Configuration
-1. Select the appropriate access token parsing microflow:
-
-    * For PIB, the default access token parsing microflow is `OIDC.Default_PIB_TokenProcessing_CustomATP`.
-    * You can also parse the access token using the custom microflow `OIDC ACT_Token_CustomATPRetrieveRoles` which takes an access token as input and returns a list of non-persistent objects of type `OIDC.Role`.
-
-To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
 
 ### 8.5 Deep Links
 

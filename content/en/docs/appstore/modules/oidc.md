@@ -245,9 +245,17 @@ Make a single call from `CUSTOM_UserProvisioning` to your own module where you i
 
 The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
 
-## 7 Optional Features{#optional}
+## 7 API Authentication {#api-authentication}
 
-### 7.1 Performing API Calls on Behalf of an Authenticated User
+You can create your own APIs within your Mendix app and secure the end point over OICD using a custom authentication microflow. To do this:
+
+1. Create a REST API endpoint which needs to be secured.
+2. Use **Custom** as the [authentication method](/refguide/published-rest-service/#authentication) to secure the endpoint with an access token.
+3. Select the `OIDC.APIAuthentication` microflow which has `HTTPRequest` as the input and returns `System.User` as the output.
+
+## 8 Optional Features{#optional}
+
+### 8.1 Performing API Calls on Behalf of an Authenticated User
 
 You might want to make API calls to other apps/services on behalf of the end-user. As you have used the OIDC module to authenticate the end-user to your app, your app also has an access token for this end-user. 
 
@@ -263,7 +271,7 @@ The OIDC SSO module contains microflows that do this for you. These microflows a
 
 You can find the following microflows in the **USE_ME** > **3. Make Authorized API Calls** folder of the OIDC module.
 
-#### 7.1.1 DELETE
+#### 8.1.1 DELETE
 
 Takes as input:
 
@@ -273,7 +281,7 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-#### 7.1.2 GET
+#### 8.1.2 GET
 
 Takes as input:
 
@@ -282,7 +290,7 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-#### 7.1.3 PATCH
+#### 8.1.3 PATCH
 
 Takes as input:
 
@@ -292,7 +300,7 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-#### 7.1.4 POST
+#### 8.1.4 POST
 
 Takes as input:
 
@@ -302,7 +310,7 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-#### 7.1.5 PUT
+#### 8.1.5 PUT
 
 Takes as input:
 
@@ -312,7 +320,7 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-### 7.3 Access Token Parsing{#access-token-parsing}
+### 8.3 Access Token Parsing{#access-token-parsing}
 
 With the OAuth/OIDC protocol, access tokens can be opaque or can be a JSON Web Token (JWT).
 If you are just delegating authentication for your app to the IdP you will not need to know the contents of the access token.
@@ -332,7 +340,7 @@ From version **VERSION** of the OIDC SSO module, the following claims will be us
 * PIB – scope
 * Azure – roles
 
-#### 7.3.1 Parsing SAM Access Tokens
+#### 8.3.1 Parsing SAM Access Tokens
 
 {{% alert color="info" %}}
 This section is only relevant if you are a Mendix partner and you want to integrate your app with the Siemens SAM IdP.
@@ -348,7 +356,7 @@ To parse of SAM access tokens you need to have done the following:
 5. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 6. Save the configuration.
 
-#### 7.3.2 Parsing Access Tokens Using a Custom Microflow
+#### 8.3.2 Parsing Access Tokens Using a Custom Microflow
 
 If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
 
@@ -385,23 +393,38 @@ Once you have created the microflow (for example `CustomATP_xxx`), you must do t
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
 {{% /alert %}}
 
-### 7.4 Deep Links
+### 8.4 Parsing Access Tokens issued by PIB
+
+The OIDC SSO module provides a default access token parsing microflow for PIB. To use it, do the following.
+
+1. Create a secure REST API endpoint following the instructions in [API Authentication](#api-authentication), above.
+1. Run your app and sign in as an administrator.
+1. Configure the PIB client information in the OIDC Client configuration screen.
+1. Check **Enable Access Token Parsing** to parse access tokens when performing OIDC Client Configuration
+1. Select the appropriate access token parsing microflow:
+
+    * For PIB, the default access token parsing microflow is `OIDC.Default_PIB_TokenProcessing_CustomATP`.
+    * You can also parse the access token using the custom microflow `OIDC ACT_Token_CustomATPRetrieveRoles` which takes an access token as input and returns a list of non-persistent objects of type `OIDC.Role`.
+
+To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
+
+### 8.5 Deep Links
 
 To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to '/oauth/v2/login?cont='
 
-### 7.5 Logging Out
+### 8.6 Logging Out
 
 A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the IdP's “end session endpoint” if configured.
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-## 8 Testing and Troubleshooting{#testing}
+## 9 Testing and Troubleshooting{#testing}
 
 Once you have your app deployed, you can test the SSO set-up by trying to login. If you have multiple IdPs setup, you will be able to choose which IdP to use for authentication. If you have only one IdP provider configured, then you will be taken directly to that IdP's sign in page.
 
 The OIDC SSO module uses two endpoints at your IdP to achieve the SSO. You may get errors from either of these endpoints.
 
-### 8.1 /authorize
+### 9.1 /authorize
 
 The `/authorize` endpoint logs the end-user in through the browser.
 
@@ -416,7 +439,7 @@ error_description = user is not assigned to the client application.
 
 Section 4.1.2.1 of [RFC6749](https://datatracker.ietf.org/doc/html/rfc6749) and section 3.1.2.6 of [OIDC specifications](https://openid.net/specs/openid-connect-core-1_0.html#AuthError), indicate all error codes that may be returned.
 
-### 8.2 /token
+### 9.2 /token
 
 The `/token` endpoint is a back-end call to get an access token.
 
@@ -437,11 +460,11 @@ Content - {"error":"invalid_client","error_description":"client authentication f
 
 [Section 5.2 of RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749#section-5.2) indicates and clarifies all the possible error codes that may be returned.
 
-### 8.3 Custom Microflow Implementation Should Be Required to Process Access_Token Roles
+### 9.3 Custom Microflow Implementation Should Be Required to Process Access_Token Roles
 
 If you get the error message “Custom microflow implementation should be required to process Access_token roles” in the Mendix Studio Pro console logs, this indicates you have not completely implemented your custom microflow for parsing access tokens (`CustomATP_…`). See the section on [Access Token Parsing](#access-token-parsing).
 
-### 8.4 End-Users of App Deployed On Premises Do Not Return to the App After Sign In
+### 9.4 End-Users of App Deployed On Premises Do Not Return to the App After Sign In
 
 If you have deployed your app on premises but did not configure a return URL for your app properly, the end-users of your app are redirected to your IDP for login, but will not be redirected back to your app.
 

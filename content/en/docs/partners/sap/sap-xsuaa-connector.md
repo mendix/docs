@@ -10,10 +10,6 @@ tags: ["SAP", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
 
 ## 1 Introduction
 
-{{% alert color="warning" %}}
-This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
-{{% /alert %}}
-
 XSUAA is a service provided by the SAP Business Technology Platform (SAP BTP) that will bind to the Mendix application as soon as the application is deployed within the SAP Business Technology Platform (SAP BTP) using the deployment features in the Mendix Developer Portal.
 
 Out of the box, SAP BTP has the SAP external identify provider (IDP) configured as the default IDP. It is possible to use your own (corporate) IDP as an alternative so that you can automatically give access to all the employees of your organization.

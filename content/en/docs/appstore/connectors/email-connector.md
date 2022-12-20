@@ -63,7 +63,7 @@ After you install the [Email Connector](https://marketplace.mendix.com/link/comp
 
 ### 2.1 Module Security and Roles
 
-The module comes with a default **EmailConnectorAdmin** module role. Access rights for this role have been set with wider use-cases in mind. Please review the access rights if they fit to your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
+The module comes with a default **EmailConnectorAdmin** module role. Access rights for this role have been set with wider use-cases in mind. Check that the access rights fit your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
 
 ## 3 Email Account Configuration {#accountconfig}
 

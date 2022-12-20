@@ -93,8 +93,6 @@ You can configure the module for certain actions in your app. All the configurat
 
 * **Authentication** tab
     The translation should be filled in automatically but you can still configure your own text and translation here.
-    
-    
 
 ## 3 Usage
 
@@ -103,8 +101,9 @@ You can configure the module for certain actions in your app. All the configurat
 You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow these steps:
 
 1. Download the latest version of the Mendix Feedback module from the Marketplace. You are strongly encouraged to use the latest version of the module.
-1. If the module has not been added automatically, add it as follows: 
-    1. In the **Toolbox**, find Feedback widget in the **Feedback** category
+2. Configure the **User roles** in the module's **Security**.
+3. If the Feedback widget has not been updated to the one from the Feedback module automatically, add via these steps: 
+    1. In the **Toolbox**, find the Feedback widget in the **Feedback** category.
     1. Drop it into a position in the layout:
 
         {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="350px">}} 

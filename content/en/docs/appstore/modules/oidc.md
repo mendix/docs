@@ -392,13 +392,17 @@ The OIDC SSO module provides a default access token parsing microflow for PIB. T
 1. Select the appropriate access token parsing microflow:
 
     * For PIB, the default access token parsing microflow is `OIDC.Default_PIB_TokenProcessing_CustomATP`.
-    * You can also parse the access token using the custom microflow `OIDC.ACT_Token_CustomATPRetrieveRoles` which takes an access token as input and returns a list of non-persistent objects of type `OIDC.Role`.
+    * You can also parse the access token using the custom microflow `OIDC.ACT_Token_CustomATPRetrieveRoles` which takes an access token as input and returns a list of non-persistent objects of type `OIDC.Role`. See the next section for more information.
 
 To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
 
 #### 8.3.3 Parsing Access Tokens Using a Custom Microflow 
 
 If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter. This is how you can parse access tokens issued by IdPs such as Microsoft Azure.
+
+{{% alert color="info" %}}
+If you are using Microsoft Azure, ensure you have followed the instructions for getting valid tokens in [Configuration of OIDC Provider](#oidc-configuration), above.
+{{% /alert %}}
 
 You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.
 

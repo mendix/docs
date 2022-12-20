@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### December 21st, 2022
+
+#### Fixes
+
+* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/#3-sprint-status) page
+
 ### December 13th, 2022
 
 #### New Feature

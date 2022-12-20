@@ -15,8 +15,8 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 Datadog logging and application metrics are supported in Mendix version 7.15 and above.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-Datadog is not supported in the deprecated Mendix Cloud v3. For support on other cloud deployment options such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
+{{% alert color="info" %}}
+For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 For more information on the data you can send to Datadog, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/)

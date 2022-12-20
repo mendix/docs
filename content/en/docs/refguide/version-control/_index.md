@@ -67,9 +67,9 @@ A conflict occurs when two versions of the app cannot be combined automatically.
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-### 2.7 Update {#update}
+### 2.7 Update/Pull {#update}
 
-Updating is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
+Updating (SVN terminology) or pulling (Git terminology) is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision.
 
@@ -154,9 +154,13 @@ The developer works on the app in Studio. They start with the app in state 1, th
 
 {{< figure src="/attachments/refguide/version-control/image2.png" >}}
 
-### 3.4 Update Studio Pro Working Copy
+### 3.4 Update/Pull Studio Pro Working Copy
 
-The developer using Studio Pro wants to update their working copy. When they update it, all the changes from other developers using Studio Pro (if they committed their changes to this branch) and changes from Studio will be picked up. The Studio working copy changes are put into a new revision on the Team Server (state 4). While the Studio Pro working copy is being updated, Studio is locked temporarily so that the Studio working copy is stable while it is copied.
+The developer using Studio Pro wants to include the changes made by the developer using Studio. They choose to update (for SVN) or pull (for Git) their working copy.
+
+All the changes from the Studio working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Studio Pro working copy. While the Studio Pro working copy is being updated, Studio is locked temporarily so that the Studio working copy is stable while it is copied.
+
+{{% alert color="info" %}} This will also pick up changes from other developers using Studio Pro, if they have committed changes to this branch. {{% /alert %}}
 
 If there are conflicts, the developer using Studio Pro will have to resolve them before they can commit the changes to the Team Server repository.
 

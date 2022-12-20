@@ -62,12 +62,10 @@ This scenario is identical to scenario 4, with one exception: your app includes 
 ### Scenario 6 - VPN
 
 {{% alert color="warning" %}}
-VPN is not supported at all in Mendix Cloud V4.
+VPN is not supported at all in the Mendix Cloud.
 {{% /alert %}}
 
 Many companies use a Virtual Private Network (VPN) to secure network connections between their own offices and data centers and other companies.
-
-Mendix offered IPSEC VPN in the Mendix Cloud V3 on some legacy connections, but is currently moving towards other secure protocols. These work better with modern Cloud-native best practices such as scaling horizontally, failover to other data centers, and multi-tenant cloud environments. It was removed in Mendix Cloud V4.
 
 In this scenario, unencrypted TCP/UDP protocols can be used; all inter-network traffic is transparently encrypted by the VPN IPSEC Gateways. Subnets which should be routed over the VPN connections have to managed manually, and DNS resolution is done locally. Therefore, the app has to connect to the back end service by its IP address rather than its domain name.
 

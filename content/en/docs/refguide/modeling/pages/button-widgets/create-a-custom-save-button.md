@@ -1,5 +1,6 @@
 ---
 title: "Creating a Custom Save Button with a Microflow"
+linktitle: "Creating a Custom Save Button"
 url: /refguide/creating-a-custom-save-button/
 description: "Describes how to create a custom save button by utilizing microflows."
 tags: ["microflow", "logic", "save button"]
@@ -11,24 +12,26 @@ aliases:
 
 Mendix uses visual models called microflows to define the logic of your application. A [microflow](/refguide/microflows/) is a visual way of expressing what traditionally would be written in code. 
 
-This document explains how you can create a custom Save button on a detail page using a microflow. You will replace the default Save button with a Save button that shows a custom message to end-users after they click it. 
+This document explains how you can create a custom **Save** button on a detail page using a microflow. You need to replace the default **Save** button with a **Save** button that shows a custom message to end-users after they click it. 
 
 Before you continue, make sure you have completed the following:
 
-* Add a **Customer** entity to your domain model (for guidance, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/))
-* [Create overview and detail pages for the Customer entity](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+1. Create a **Customer** entity with the attribute **Name** in your domain model (for more information, see [Create a basic data layer](/howto/data-models/create-a-basic-data-layer/)).
+
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/entity-customer.png" width="200px" >}}
+
+2. Create a **Customer_Detail** page for the **Customer** entity (for more information, see [Create overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)).
+
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/detail-page-customer.png" width="400px" >}}
 
 ## 2 Replacing the Default Save Button with a Custom One
 
-To replace the default **Save** button with a custom one, follow these steps:
+The detail page you just created has a default **Save** button. To recreate the behavior of this default button, you need to replace it with a custom one. To do so, follow these steps:
 
-1. Open the **Customer_Detail** page:
-
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/customer-detail.png" width="400px" >}}
-
+1. Open the **Customer_Detail** page.
 2. Right-click the **Save** button and select **Delete** to remove it.
-3. Right-click the drop-zone under the **Cancel** button.
-4. Select **Add widget** and then select **Call microflow button**.
+3. Open the **Toolbox** and search for **Call microflow button** there.
+4. Drag the **Call microflow button** into the drop-zone under the **Cancel** button.
 5. In the **Select Microflow** dialog box, click **New** to create a new microflow.
 6. Set the **Name** as *Customer_Save*.
 
@@ -47,7 +50,7 @@ You have created a button that calls a microflow.
 
 ## 3 Recreating the Default Save Behavior
 
-To recreate the default Save behavior, do the following:
+The button you just created calls an empty microflow that does not do anything yet. To recreate the default Save behavior for this button, do the following:
 
 1. Right-click the new **Save** button and select **Go to on click microflow** to open the new microflow. The microflow should look like this:
 

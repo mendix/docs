@@ -41,7 +41,7 @@ The basic setup and reception of emails can be done using the **EmailAccount_Ove
 Provide a value for the `EncryptionKey` constant available in the **Constants** folder under **USE_ME**  for email account password encryption. 
 
 ### 2.1 Module Security and Roles
-The module comes with a default **IMAPPOP3Admin** module role. Access rights for this role have been set with wider use-cases in mind. Check that the access rights fit to your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
+The module comes with a default **IMAPPOP3Admin** module role. Access rights for this role have been set with wider use-cases in mind. Check that the access rights fit your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
 
 ### 2.2 Account Settings
 

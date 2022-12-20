@@ -326,12 +326,6 @@ You can parse an access token in a microflow.
 
 To parse access tokens, you need to check **Enable Access Token Parsing** when performing [OIDC Client Configuration](#client-configuration).
 
-From version **VERSION** of the OIDC SSO module, the following claims will be used to assign the user role, depending on the IdP:
-
-* SAM – sws.samauth.role.name
-* PIB – scope
-* Azure – roles
-
 #### 7.3.1 Parsing SAM Access Tokens
 
 {{% alert color="info" %}}

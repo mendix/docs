@@ -10,9 +10,9 @@ tags: ["studio pro", "snippet", "page resources"]
 
 Snippets define reusable interface parts. They can be used on both [pages](/refguide/page/) and [layouts](/refguide/layout/). By using snippets you can make changes in fewer places when you modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you change something in the snippet, that change will show up in both places.
 
-A snippet is indicated by a blue bar above a drop-zone. The blue bar has the snippet icon at the left and the name of an entity, if the snippet is in the context of an entity. If the snippet has no context, the bar says `(none)`.
+A snippet expects zero or more parameters. To change the parameters of the snippet, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about snippet parameters, see the [Parameters](#parameters) section in snippet properties.
 
-In the example below, the snippet is used in the context of the **Orders.Order** entity.
+In the example below, the snippet defines a single parameter with name **Order** and type **MyFirstModule.Order**.
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/snippet/snippet.png" alt="Example of a snippet"   width="400"  >}}
 
@@ -25,6 +25,7 @@ An example of snippet properties is represented in the image below:
 Snippet properties consist of the following sections:
 
 * [Common](#common)
+* [Data](#data)
 * [Designer](#designer)
 * [General](#general)
 
@@ -32,33 +33,36 @@ Snippet properties consist of the following sections:
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 2.2 Designer Section{#designer}
+### 2.2 Data Section{#data}
 
-#### 2.2.1 Canvas Width
+#### 2.2.1 Parameters{#parameters}
+
+**Snippet Parameters** works the same way as [Page Parameter](/studio/page-parameter/) with the difference that a snippet's parameter can be accessed at the top level, for example when creating expressions or selecting attributes.
+
+### 2.3 Designer Section{#designer}
+
+#### 2.3.1 Canvas Width
 
 **Canvas width** defines the width in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the width of the page in the actual application.
 
 Default value: *800*
 
-#### 2.2.2 Canvas Height
+#### 2.3.2 Canvas Height
 
 **Canvas height** defines the preferred minimum height in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the height of the page in the actual application.
 
 Default value: *600*
 
-### 2.3 General Properties{#general}
+### 2.4 General Properties{#general}
 
-#### 2.3.1 Platform
+#### 2.4.1 Platform
 
 The values for the platform property are:
 
 * Web *(default)* – these snippets are used for pages which are going to be displayed in a browser or hybrid mobile app
 * Native – these snippets are used for pages which are going to be displayed in a native mobile app
 
-#### 2.3.2 Entity
+## 3 Read More
 
-This property defines the entity that is used as context for the widgets placed on this snippet.
+* [Snippet Call](/refguide/snippet-call/)
 
-Entity optionally specifies an [entity](/refguide/entities/) that serves as the context for the widgets placed on it. When an entity is defined on a snippet, any usages of the snippet need to be placed inside a context for that entity or a specialization: a data view, for example.
-
-For example, if you wanted to use an attribute of a Customer entity in a snippet, you could place a text box that shows the customer's name in the snippet without having to define a data view first.

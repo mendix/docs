@@ -71,7 +71,7 @@ For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocu
 20. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
 21. Configure the **AnalyzeDocument** activity by doing the following steps:
     1. Double-click the activity.
-    2. Set the values for **AWS_Region**, **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
+    2. Set the values for [AWS_Region](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region), **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
     The configured properties look like this:
     {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-properties.png" >}} 
@@ -153,6 +153,8 @@ The domain model is a data model that describes the information in your applicat
 | `COLUMN_HEADER` | COLUMN_HEADER |
 
 3.2.4 AWS_Region
+
+For a list of supported regions, see [Service endpoints](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region).
 
 | Name | Caption |
 | --- | --- |

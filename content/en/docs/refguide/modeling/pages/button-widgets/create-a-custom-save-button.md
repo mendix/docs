@@ -56,7 +56,7 @@ The button you just created calls an empty microflow that does not do anything y
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/created-microflow.png" >}}
 
-2. Open the **Toolbox** and select the **Commit object(s)** activity there.
+2. Open the **Toolbox** and search for the **Commit object(s)** activity there.
 3. Drag the **Commit object(s)** activity into the flow between the start and end events.
 4. Double-click the **Commit object(s)** activity to open its properties.
 5. In the **Input** section, select **Customer** for **Object or List**.

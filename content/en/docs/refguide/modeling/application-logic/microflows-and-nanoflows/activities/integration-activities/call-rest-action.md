@@ -202,7 +202,7 @@ These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](/refguide/import-mappings/); the fields that you can choose here are described in the [Import Mapping action](/refguide/import-mapping-action/)
 * **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
-* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument`
+* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument` (see [Send and Receive Files with REST](/reguide/rest-binary) for detailed information working with files with REST)
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
 
@@ -224,8 +224,8 @@ This attribute is filled when one of the following scenarios occur:
 
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
-
-This variable can be accessed from any microflow action in the [scope](/refguide/objects-and-caching/#scope-tracking).
+* 
+This variable can only be accessed in the microflow where the **Call REST Service** activity is used.
 
 #### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 

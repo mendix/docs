@@ -15,11 +15,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
+* You can now edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
 
 #### Fixes
 
-* We fixed an issue with PUT environment API request which resulted in 409 conflict instead of updating the environment.(Ticket 173609)
+* We fixed an issue with a `PUT` environment API request, which resulted in 409 conflict instead of updating the environment. (Ticket 173609)
 
 ### December 8th, 2022
 
@@ -31,7 +31,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* It is now possible to edit data set details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* You can now edit data set details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 #### Fixes
 

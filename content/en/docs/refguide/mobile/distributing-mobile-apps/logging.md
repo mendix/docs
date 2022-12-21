@@ -38,7 +38,7 @@ For more information on log levels, see the [Log Levels](/refguide/logging/#log-
 
 ### 3.1 Critical
 
-**Critical** is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action. Mendix Cloud v3 treats these messages as alerts and will notify you on the cloud dashboard.
+**Critical** is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action.
 
 ### 3.2 Error
 

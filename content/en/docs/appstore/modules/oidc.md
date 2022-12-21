@@ -246,7 +246,7 @@ For Azure AD access to APIs through an access token, in addition to the configur
 1. Save the configuration.
 1. Edit the Azure configuration and add the custom scope to **Selected scopes**.
 
-Now, you can acquire tokens which can be validated using jwks URI.
+Now, you can acquire tokens which can be validated using JWKS URI.
 
 ## 6 User Provisioning
 

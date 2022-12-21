@@ -312,7 +312,7 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-### 7.3 Access Token Parsing{#access-token-parsing}
+### 7.2 Access Token Parsing{#access-token-parsing}
 
 With the OAuth/OIDC protocol, access tokens can be opaque or can be a JSON Web Token (JWT).
 If you are just delegating authentication for your app to the IdP you will not need to know the contents of the access token.
@@ -326,7 +326,11 @@ You can parse an access token in a microflow.
 
 To parse access tokens, you need to check **Enable Access Token Parsing** when performing [OIDC Client Configuration](#client-configuration).
 
-#### 7.3.1 Parsing SAM Access Tokens
+{{% alert color="info" %}}
+In version **VERSION** and above of the OIDC SSO module you will also find microflows for parsing PIB and Azure AD tokens. These will be released publicly in the future and documented at that time.
+{{% /alert %}}
+
+#### 7.2.1 Parsing SAM Access Tokens
 
 {{% alert color="info" %}}
 This section is only relevant if you are a Mendix partner and you want to integrate your app with the Siemens SAM IdP.
@@ -342,32 +346,28 @@ To parse of SAM access tokens you need to have done the following:
 5. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 6. Save the configuration.
 
-#### 7.3.2 Parsing Access Tokens Using a Custom Microflow
+#### 7.2.2 Parsing Access Tokens Using a Custom Microflow
 
 If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
 
 You can find a sample microflow for parsing access tokens, `ACT_TokenCustomATPRetrieve Roles` in the **SAM** folder of the OIDC module.
 
-Your custom microflow should do the following
+Your custom microflow should use the access token to create a list of user roles. Your token will contain one of the following:
+
+* the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
+* the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
+
+For version **VERSION** and above of the OIDC SSO module, your custom microflow takes the access token as a parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
+
+For versions of the OIDC SSO module below **VERSION**, the process is a bit more complicated. The custom microflow must do the following:
 
 1. Retrieve the access token of the account.
 1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.
-
 1. Convert these roles to a list of objects containing the user role.
-    Your token will contain one of the following:
-
-    * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
-    * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
-
-    From version **VERSION** of the OIDC SSO module, your custom microflow should return a list of objects of type `OIDC.Role`.
-
-    {{% alert color="info" %}}If you are using an earlier version of the OIDC SSO module you must perform two steps:
-    
 1. Return a list of objects of type `System.UserRole`.
 1. Invoke the `BCO_Account_ProcessRolesToken` in the **SAM** folder of the OIDC module to associate the current user with the correct user roles in your app.
-    {{% /alert %}}
 
-Once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
+For all versions of the OIDC SSO module, once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
 
 1. Login as an administrator, for example `Demo_administrator`.
 1. Refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
@@ -379,11 +379,11 @@ Once you have created the microflow (for example `CustomATP_xxx`), you must do t
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
 {{% /alert %}}
 
-### 7.4 Deep Links
+### 7.3 Deep Links
 
 To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to '/oauth/v2/login?cont='
 
-### 7.5 Logging Out
+### 7.4 Logging Out
 
 A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the IdP's “end session endpoint” if configured.
 

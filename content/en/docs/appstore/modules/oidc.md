@@ -348,7 +348,7 @@ To parse of SAM access tokens you need to have done the following:
 
 #### 7.2.2 Parsing Access Tokens Using a Custom Microflow
 
-If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
+If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
 
 You can find a sample microflow for parsing access tokens, `ACT_TokenCustomATPRetrieve Roles` in the **SAM** folder of the OIDC module.
 

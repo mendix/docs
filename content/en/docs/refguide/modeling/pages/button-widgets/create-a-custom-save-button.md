@@ -52,7 +52,7 @@ You have created a button that calls a microflow.
 
 The button you just created calls an empty microflow that does not do anything yet. To recreate the default Save behavior for this button, do the following:
 
-1. Right-click the new **Save** button and select **Go to on click microflow** to open the new microflow. The microflow should look like this:
+1. Right-click the new **Save** button and select **Go to on click microflow** to open the new microflow. An example of how the microflow should like is below:
 
     {{< figure src="/attachments/refguide/modeling/pages/button-widgets/create-a-custom-save-button/created-microflow.png" >}}
 

@@ -327,7 +327,7 @@ You can parse an access token in a microflow.
 To parse access tokens, you need to check **Enable Access Token Parsing** when performing [OIDC Client Configuration](#client-configuration).
 
 {{% alert color="info" %}}
-In version **VERSION** and above of the OIDC SSO module you will also find microflows for parsing PIB and Azure AD tokens. These will be released publicly in the future and documented at that time.
+In version 2.0.0 and above of the OIDC SSO module you will also find microflows for parsing PIB and Azure AD tokens. These will be released publicly in the future and documented at that time.
 {{% /alert %}}
 
 #### 7.2.1 Parsing SAM Access Tokens
@@ -357,9 +357,9 @@ Your custom microflow should use the access token to create a list of user roles
 * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
 * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
 
-For version **VERSION** and above of the OIDC SSO module, your custom microflow takes the access token as a parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
+For version 2.0.0 and above of the OIDC SSO module, your custom microflow takes the access token as a parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
 
-For versions of the OIDC SSO module below **VERSION**, the process is a bit more complicated. The custom microflow must do the following:
+For versions of the OIDC SSO module below 2.0.0, the process is a bit more complicated. The custom microflow must do the following:
 
 1. Retrieve the access token of the account.
 1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.

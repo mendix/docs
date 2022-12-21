@@ -31,7 +31,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now edit data set details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* You can now edit data set details directly from the [data set details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 #### Fixes
 

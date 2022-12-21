@@ -101,7 +101,7 @@ You can configure the module for certain actions in your app. All the configurat
 You should use the latest version of the Mendix Feedback module, as it will provide the most up-to-date features for leaving feedback and communicating with the team. To ensure you have the latest version of the module included in your app, follow these steps:
 
 1. Download the latest version of the Mendix Feedback module from the Marketplace. You are strongly encouraged to use the latest version of the module.
-2. Configure the **User roles** in the module's **Security**.
+2. Configure the **User roles** in the **App Security** for the module.
 3. If the Feedback widget has not been updated to the one from the Feedback module automatically, add via these steps: 
     1. In the **Toolbox**, find the Feedback widget in the **Feedback** category.
     1. Drop it into a position in the layout:

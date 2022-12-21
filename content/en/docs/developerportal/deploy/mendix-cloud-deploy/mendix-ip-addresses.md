@@ -60,17 +60,6 @@ AWS API requests can, therefore, originate from the following IP ranges:
 The [aws:VpcSourceIp](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-vpcsourceip) condition
 key can be used in a policy to allow principals (Mendix apps and end-users) to make requests only from within a specified IP range. If you apply IP restrictions to your AWS IAM user or role, make sure that the IP ranges for AWS API requests, above, are allowed in your policy.
 
-#### 2.2.2 Mendix Cloud v3 (XS4/BIT)
-
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
-* `82.94.240.112/28`
-* `2001:888:2177::/48`
-* `213.154.238.16/28`
-* `2001:7b8:670::/48`
-
 ## 3 Frequently Asked Questions
 
 **Why does the IP address need to change?**

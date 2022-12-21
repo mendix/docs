@@ -11,6 +11,16 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2022
 
+### December 22th, 2022
+
+#### Improvements
+
+* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+
+#### Fixes
+
+* We fixed an issue with PUT environment API request which resulted in 409 conflict instead of updating the environment.(Ticket 173609)
+
 ### December 8th, 2022
 
 #### Improvements

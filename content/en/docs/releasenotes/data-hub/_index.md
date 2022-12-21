@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
 
 #### Fixes
 
@@ -27,11 +27,11 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 * When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/data-hub/data-hub-catalog/curate/) page that shows all relevant and filtered resources. 
 
-### November 24th, 2022
+### November 24th, 2022 {#nov-24}
 
 #### Improvements
 
-* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* It is now possible to edit data set details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 #### Fixes
 

@@ -36,11 +36,14 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 ## 2 Configuration
 
-The basic setup and reception of emails can be done using the **EmailAccount_Overview** page, which is in the **ExamplePages** folder under **USE_ME**. Link this page in your app to configure the email server.
+The basic setup and reception of emails can be done using the **EmailAccount_Overview** page, which is in the **Pages** folder under **USE_ME**. Link this page in your app to configure the email server.
 
-Provide a value for the `EncryptionKey` constant available in the **USE_ME** folder for email account password encryption. 
+Provide a value for the `EncryptionKey` constant available in the **Constants** folder under **USE_ME**  for email account password encryption. 
 
-### 2.1 Account Settings
+### 2.1 Module Security and Roles
+The module comes with a default **IMAPPOP3Admin** module role. Access rights for this role have been set with wider use-cases in mind. Check that the access rights fit your use case and security requirements before linking the module role to User Roles in [App Security](/refguide/app-security/).
+
+### 2.2 Account Settings
 
 The **Account Settings** window includes the following options:
 

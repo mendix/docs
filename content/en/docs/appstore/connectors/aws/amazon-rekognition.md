@@ -49,7 +49,7 @@ For example, to detect labels for a given image, implement the **DetectLabels** 
 10. Double-click the **Retrieve** activity.
 11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
 12. Click **OK**.
-13. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button](/refguide/creating-a-custom-save-button/).
+13. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ### 3.1 Constants {#constants}
 

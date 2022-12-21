@@ -44,7 +44,7 @@ Curation is performed from the [asset details screen](/data-hub/data-hub-catalog
 Owners of registered assets and can only curate their services.
 {{% /alert %}}
 
-When a data source is selected in the **Search Results**, the following options are displayed via **Edit**:
+When a data source is selected in the **Search Results**, you can do the following after clicking **Edit**:
 
 * **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu

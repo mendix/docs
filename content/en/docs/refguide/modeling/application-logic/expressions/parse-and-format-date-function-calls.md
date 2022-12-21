@@ -14,7 +14,8 @@ The following pattern letters can be used to parse and format Date and time valu
 
 | Letter | Date or Time Component                    | Examples               |
 | ------ | ----------------------------------------- | ---------------------- |
-| L      | Month in year                             | November; Nov; 11      |
+| M      | Month in year (context sensitive)         | November; Nov; 11      |
+| L      | Month in year (standalone)                | November; Nov; 11      |
 | y      | Year                                      | 2001; 01               |
 | G      | Era designator                            | AD                     |
 | E      | Day name in week                          | Tuesday; Tue           |
@@ -33,6 +34,10 @@ The following pattern letters can be used to parse and format Date and time valu
 | m      | Minute in hour                            | 24                     |
 | s      | Second in minute                          | 50                     |
 | S      | Millisecond                               | 201                    |
+
+{{% alert color="info" %}}
+At this moment, neither the pattern letter M nor L works consistently in distinguishing between context and standalone in nanoflows and when used for text that has three or more characters (for instance, MMM or MMMM).
+{{% /alert %}}
 
 The following pattern letters are only available for microflows:
 

@@ -58,7 +58,7 @@ The domain model is a data model that describes the information in your applicat
 
 The domain model used by the Amazon S3 connector is shown below.
 
-{{< figure src="/attachments/appstore/connectors/aws-s3-connector/domain-model.png" >}}
+{{< figure src="/attachments/appstore/connectors/aws-s3-connector/domain-model.png" alt="A graphical representation of the domain model, also described in text below" >}}
 
 When using the [Java activities](#activities), results are stored as objects of the following entity types. These objects can be passed to other Java activities to specify on which objects an activity is to be performed.
 

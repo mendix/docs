@@ -77,16 +77,16 @@ To add the certificate, perform the following steps:
 3. In the **Network** tab, in the **Outgoing Connections Certificates** section, add the client certificate that you used to create a trust anchor in Roles Anywhere.
 4. From the list, select the certificate that you added, and then click **Details**.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
+   {{< /attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" alt="The Outgoing Connections Certificates section with the Details button highlighted" >}}
 
 5. Click **New** .
 6. In the **Details** dialog box, in the **Web Service Call name** field, enter an identifier for the certificate, for example, *MY_S3*.
     The client certificate identifier is used as input when you create the session credentials.
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" alt="The Details dialog box with the certificate identifier highlighted" >}}
 
 The client certificate that you added now shows as **Currently enabled**.
 
-{{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
+{{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" alt="A lightbulb icon indicates that a certificate is enabled" >}}
 
 #### 4.1.2 Using the GetSessionCredentials Activity in Studio Pro
 
@@ -113,7 +113,7 @@ After enabling the certificate, you can now configure the microflow that authent
 
     The image below shows an example:
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-session-credentials.png" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-session-credentials.png" alt="Example Session Credentials configuration" >}}
 
     The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
 6. Continue the configuration by adding more activities to your microflow.
@@ -127,7 +127,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 2. Create a new configuration or edit an existing configuration.
 3. Go to the **Custom** tab for the configuration, and add the **ClientCertificates** and **ClientCertificatePasswords** runtime settings.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" alt="Configuration of the runtime settings" >}}
 
    {{% alert color="info" %}}Fore more information, see [Runtime Customisation](/refguide/custom-settings/).{{% /alert %}}
 
@@ -135,7 +135,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 5. Go to the microflow that uses the **GetSessionCredentials** activity, and then double-click the **GetSessionCredentials** activity to open the **GetSessionCredentials** dialog box.
 6. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/client-certificate-id.png" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/client-certificate-id.png" alt="Configuration of the GetSessionCredentials activity" >}}
 
 ### 4.2 Implementing Static Credentials {#static}
 
@@ -152,7 +152,7 @@ To create static credentials with the **GetStaticCredentials** activity in your 
     For some platform-supported connectors, the activity may already be present in the microflow. In that case, proceed to the next step.
 5. Double-click the **GetStaticCredentials** activity and fill in **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#prerequisites). You can decide how to provide them securely in your app.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" >}}
+   {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-get-static-credentials.png" alt="Example Static Credentials configuration" >}}
 
     The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
 6. Continue the configuration by adding more activities to your microflow.
@@ -182,15 +182,15 @@ You can view the domain model in the **App Explorer** in the **AWS Authenticatio
     | `Path` | URI from domain to query; enter `\` to leave blank |
     | `RequestBody` | The body of your request; signature version 4 headers require that the request body as part of the signing process, before you make the actual call. |
     
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4builder.png" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4builder.png" alt="Sigv4Builder entity with parameters" >}}
 
 * `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
     
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4parameters.png" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4parameters.png" alt="Sigv4Parameter entity with parameters" >}}
 
 * `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4headers.png" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4headers.png" alt="Sigv4Headers entity with parameters" >}}
 
 #### 4.3.2 `GetSigV4SignedHeaders` Java Action {#java-action}
 
@@ -202,13 +202,13 @@ The `GetSigV4SignedHeaders` Java action computes and provides the signed headers
 
 The output of the action is a `SigV4Headers` object.
 
-{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4action.png" >}}
+{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4action.png" alt="Sample Sigv4Headers object" >}}
 
 #### 4.3.3 Example Microflow {#microflow}
 
 The following microflow shows an example implementation of signature version 4 headers authentication.
 
-{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4microflow.png" >}}
+{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4microflow.png" alt="A screenshot of the example microflow, also described in text below" >}}
 
 In this example, a `SigV4Builder` activity is created and associated with a `Credentials` entity, a list of headers, and list of query parameters.
 

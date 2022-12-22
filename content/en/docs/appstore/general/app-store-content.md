@@ -75,7 +75,7 @@ There are three ways to install a Marketplace component, which are described in 
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-#####  2.1.1 For Older Versions of Studio Pro {#older}
+#### 2.1 For Older Versions of Studio Pro {#older}
 
 These steps cover downloading content from the Marketplace available in Studio Pro version 9.18 and below:
 

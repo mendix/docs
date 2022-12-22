@@ -31,6 +31,7 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 
 {{% alert color="warning" %}}
 Please note the following:
+
 * `Crash` logs are not supported currently
 {{% /alert %}}
 
@@ -70,8 +71,8 @@ This section provides some details on specific log nodes used by the Mendix nati
 
 The following log nodes are used by Mendix when writing log messages:
 
-
 {{% alert color="warning" %}}
+
 * From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
 * Enabling the `trace` log level may cause too many logs to be sent to the [Mendix Runtime](/refguide/runtime/), so it should not be kept enabled for long periods of time.
 {{% /alert %}}

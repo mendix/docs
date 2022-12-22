@@ -35,11 +35,11 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the **Cloud Settings** tab of the **General Settings** in the left-hand menu of the Development Portal.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" alt="The Cloud Settings tab with the SAP BTP option selected" >}}
 
 Click **Set up SAP Cloud** and you will be taken to the SAP BTP welcome page.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings-landing-page.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings-landing-page.png" alt="The SAP BTP welcome page" >}}
 
 Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
@@ -78,7 +78,7 @@ Make sure that you have enough quota in this region for your organization to run
 * Route
 * Binding to XSUAA
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/01-sap-select-region.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/01-sap-select-region.png" alt="Selecting Europe (Frankfurt) as the region" >}}
 
 If you have already logged on to SAP and your SAP session has not expired, you will only have to choose the region. If you do not have a current SAP session you will be asked for your SAP credentials as well. Providing your credentials will grant the Deployment Portal access to manage your SAP BTP account.
 
@@ -93,7 +93,7 @@ If you have issues using SAP authentication, please refer to the reference [SAP 
 
 You will now be asked to provide the final details for the SAP BTP development environment.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/create-development.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/create-development.png" alt="Sample configuration details" >}}
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
 
@@ -103,7 +103,7 @@ If you select **Yes** for **Custom database?**, you will be asked for the Name a
 
 After the environment has been created successfully, you will see the following page:
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/02-sap-configured-for-use.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/02-sap-configured-for-use.png" alt="The Getting Started page for Mendix Desktop Modeler" >}}
 
 Your development environment is now configured and you can now develop your app.
 
@@ -113,7 +113,7 @@ You can create several environments for your app. For example, you may have crea
 
 This is done from the **Environments** page of the Developer Portal.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" alt="A sample Environments page" >}}
 
 Your Environments page will show you the following:
 
@@ -125,11 +125,11 @@ To create a new environment, perform the following steps:
 
 1. Click **Add Environment** to start the wizard.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-environment.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-environment.png" alt="The Deployment Package Repository wizard" >}}
 
 2. Select the region where you want your app to be deployed.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-env-0.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-env-0.png" alt="Selecting Europe (Frankfurt) as the region" >}}
 
     If no session is active for that region, or the current session does not have access to that region, you will be asked for your SAP credentials for that region.
 
@@ -145,13 +145,13 @@ To create a new environment, perform the following steps:
     https://myapp-development.cfapps.eu10.ondemand.com
     ```
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/07-sap-env-1.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/07-sap-env-1.png" alt="Sample configuration details" >}}
 
 4. Click **Next**.
 
 5. Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/08-sap-env-2.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/08-sap-env-2.png" alt="Sample environment characteristics" alt="The Environments page with multiple environments" >}}
 
 6. Set the size of the memory that the app needs in order to run. This can also be changed later.
 
@@ -161,7 +161,7 @@ To create a new environment, perform the following steps:
 
     If you choose **Custom database** you will need to enter a name for the database and the plan.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-database.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-database.png" alt="Configuring custom database settings" >}}
 
 9. Select **File Store Enabled** if your application makes use of FileDocument or Image objects. Other sorts of object do not need File Store to be enabled.
 
@@ -173,11 +173,9 @@ To create a new environment, perform the following steps:
 
 12. Click **Next** to create the environment and finish the setup.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/09-sap-env-3.png" >}}
-
 An environment is created; with more than one environment it is possible to transport your application between environments (see [Transport App Between Environments](#TransportApp), below).
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/10-sap-env-tap.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/10-sap-env-tap.png" alt="The Environments page with multiple environments" >}}
 
 ## 4 Preparing Packages for Deployment
 
@@ -206,25 +204,25 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
 1. Go to the **Environments** page of the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" alt="A sample Environments page" >}}
 
 2. Click **Create package from Team Server** to start the wizard.
 
 3. Select the branch on the Team server which you want to use.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/03-sap-select-branch.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/03-sap-select-branch.png" alt="Selecting the branch" >}}
 
 4. Select the revision of the branch you want to build.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/04-sap-select-revision.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/04-sap-select-revision.png" alt="Selecting the revision" >}}
 
 5. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/05-sap-define-tag.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/05-sap-define-tag.png" alt="Adding the version number and description" >}}
 
 6. Click **Build this revision** to build the package.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/06-sap-build-revision.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/06-sap-build-revision.png" alt="A revision being built into a deployment package" >}}
 
 When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
@@ -256,15 +254,15 @@ SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc10
 
 1. A green tick indicates that the build has finished. Click **Deploy** to deploy the package to SAP BTP.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-revision-built.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-revision-built.png" alt="A deployment package ready to deploy" >}}
 
 2. Change the deployment environment if required.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-transport.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-transport.png" alt="Changing the deployment environment" >}}
 
 3. The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%"  >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%" alt="Changing the timeout value" >}}
 
 4. Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 

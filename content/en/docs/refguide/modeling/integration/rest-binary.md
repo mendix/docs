@@ -81,7 +81,7 @@ Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFil
 
 A `GET` request to the REST endpoint you created (for example, `http://localhost:8080/rest/restservicename/v1/entityname/`) will return the binary for the uploaded file. But if you are trying to call a specific file, we need to specify what media type it should expect so that it returns the file in the expected way (for example, displaying an image).
 
-In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers, see the **Return a file document** entry in the [Microflow](/refguide/published-rest-operation/#microflow) section of *Published REST Operation*. Detailed steps are explained below.
+In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers in microflows, see the **Return a file document** entry in the [Microflow](/refguide/published-rest-operation/#microflow) section of *Published REST Operation*. Detailed steps are explained below.
 
 See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a generic, external list of common content header types.
 
@@ -94,7 +94,7 @@ In the **GET_ByKey** microflow, do the following:
 3.  Under the **Refresh in client** field, click **New**.
 4.  Set the three drop-down options to the following:
      * **Key (String (Unlimited))** – set the **Value** to `'Content-Type'`
-     * **Value (String (Unlimited))** – set the **Value** to `image/png` (or another image type)
+     * **Value (String (Unlimited))** – set the **Value** to `'image/png'` (or another image type)
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
 [Add image here]
@@ -104,7 +104,7 @@ In the **GET_ByKey** microflow, do the following:
 Follow the steps in the [MIME Type for Images](#mime-images) section, then set the three drop-down options to the following:
 
      * **Key (String (Unlimited))** – set the **Value** to `'Content-Type'`
-     * **Value (String (Unlimited))** – set the **Value** to `application/pdf` 
+     * **Value (String (Unlimited))** – set the **Value** to `'application/pdf'` 
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
 [Add image here]
@@ -128,7 +128,7 @@ If you uploaded a PNG, you should actually see the image displayed!
 
 ## 5 Retrieve Files with REST {#retrieve-files}
 
-Now that you have a published REST service for your image or file entity, implement an API client that will retrieve binary files and store the result in a `FileDocument`.
+You can implement an API client in your app that will retrieve binary files and store them in a `FileDocument` entity.
 
 1.  Right-click on the **File Explorer** and select **Add module**, then rename it as **CMSClient**.
 

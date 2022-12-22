@@ -6,8 +6,6 @@
 hugo.exe
 /htmltest.exe
 /.hugo_build.lock
-# Extra file from GH Actions
-tmp.log
 
 # For Mac users
 .DS_Store

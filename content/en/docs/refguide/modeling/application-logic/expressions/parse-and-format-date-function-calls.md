@@ -52,7 +52,7 @@ The input parameters are described in the table below:
 
 | Value                        | Type                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| Date                         | A string which contains the textual representation of a date — for example `dd/mm/yyyy` or `mm/dd/yyyy` |
+| Date                         | A string which contains the textual representation of a date — for example `dd/MM/yyyy` or `MM/dd/yyyy` |
 | Format                       | String                                                       |
 | Default value (**optional**) | Date and time                                                |
 

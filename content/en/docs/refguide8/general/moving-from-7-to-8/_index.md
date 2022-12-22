@@ -173,10 +173,6 @@ Mendix Desktop Modeler version 7 was 64-bit application but could also run on 32
 
 Mendix Studio Pro is a 64-bit application which will **only** run on 64-bit versions of Windows. This must be the 64-bit version of Windows 7, Service Pack 1, or above.
 
-## 8 Mendix Cloud Version 3
-
-Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud v3 node, then we recommend that you upgrade to Mendix Cloud v4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
-
 ## 8 Java Code Generation {#java-code-generation}
 
 In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.

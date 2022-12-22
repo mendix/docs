@@ -331,7 +331,6 @@ After setting up the driver either locally or globally, create a *.gitattributes
 
 Save the files and now when **git merge** is run and it involves *.mpr* files, the mx.exe merge will run Studio Pro merge algorithm before Git finishes the merge.
 
-
 ## 8 Versioning an App Deployed to the Cloud {#versioning-app}
 
 ### 8.1 Deploying Locally

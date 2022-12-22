@@ -154,15 +154,15 @@ The next step in setting up security is to configure the entity access otherwise
 
      1. In the **Rule applies to the following modules** section, select the **Manager** role.
        
-    2. In the **Member read and write rights** section, click the drop-down list for the **FullName** attribute and select **Read**. 
+     2. In the **Member read and write rights** section, click the drop-down list for the **FullName** attribute and select **Read**. 
     
-    3. As the Manager should be able to select where the new employee is working from and devices that they need, set the **WFH**, **PhoneModel**, and **LaptopModel** to **Read,Write**.
+     3. As the Manager should be able to select where the new employee is working from and devices that they need, set the **WFH**, **PhoneModel**, and **LaptopModel** to **Read,Write**.
     
-    4. Set the **FirstDay** attribute to **Read**.
+     4. Set the **FirstDay** attribute to **Read**.
 
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" >}}
 
-    5. Click **OK** to save settings.
+     5. Click **OK** to save settings.
 
 6. In the **Access rules** tab, click **New** again to create rule for Facilities and User roles.
     1. In the **Rule applies to the following modules** section, select **Facilities** and **User** roles.

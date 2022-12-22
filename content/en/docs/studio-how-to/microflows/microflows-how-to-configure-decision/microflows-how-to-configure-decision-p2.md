@@ -77,7 +77,7 @@ To embed the microflow with a decision (the attribute of the enumeration type) t
     
 8. Select the button (displayed as an arrow) in the list view, open its properties and do the following: 
 
-    1. Set **Events **> **On Click Action** to **Microflow**.
+    1. Set **Events**> **On Click Action** to **Microflow**.
     2. Click the **Microflow** property and choose the **ACT_Customer_ShowGradeSpecificPage** microflow in the **Select Microflow** dialog box.
 
         {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p2/details-button-microflow.png" >}} 

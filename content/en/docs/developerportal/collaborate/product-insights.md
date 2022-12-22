@@ -180,14 +180,14 @@ Before the start time of the mini survey is reached, you should implement the su
 
 1. Open the app in the Developer Portal.
 2. Click **Product Insights**. The [Survey Overview](#survey-overview) page opens.
-3.  Click the settings icon on the [Survey Overview](#survey-overview) page.
+3. Click the settings icon on the [Survey Overview](#survey-overview) page.
 
     {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
     The [Product Insights Settings](#product-insights-settings) page opens:
 
-    *  If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it, and save it for later use.
-    *  If there is no active API key that you can use, generate one as follows:
+    * If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it, and save it for later use.
+    * If there is no active API key that you can use, generate one as follows:
       
         1. Click **Generate API Key**.
         2. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the new API key.

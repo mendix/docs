@@ -158,7 +158,6 @@ As you will verify customers by their statuses, you need to create a correspondi
     2. Set the [Type](/studio/domain-models-attributes/) to **Boolean**. 
     3. Click **Create**. 
 
-
 The attribute for the **Customer** entity is created.
 
 {{< figure src="/attachments/studio-how-to/microflows/microflows-how-to-configure-decision/microflows-how-to-configure-decision-p1/blocked-attribute.png" >}}

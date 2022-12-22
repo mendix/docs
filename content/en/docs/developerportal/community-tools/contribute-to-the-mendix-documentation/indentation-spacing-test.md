@@ -83,19 +83,19 @@ Paragraph text here.
 Paragraph text here.
 
 * unordered list
-	1. ordered list
-		* unordered list
+    1. ordered list
+        * unordered list
 
 Paragraph text here.
 
 1. First list item
 1. Second list item
-	* Unordered sub-list.
+    * Unordered sub-list.
 1. Third list item
-	1. Ordered sub-list
+    1. Ordered sub-list
 3. And another item.
 
-	Indenting with a tab and a line break works for generic list items, but not elements like code blocks. Tabs get treated as four spaces, regardless of tab settings within an editor.
+    Indenting with a tab and a line break works for generic list items, but not elements like code blocks. Tabs get treated as four spaces, regardless of tab settings within an editor.
 
 {{% alert color="danger" %}}
 DO NOT USE TABS
@@ -106,17 +106,17 @@ DO NOT USE TABS
 Paragraph text here.
 
 * unordered list  
-	1. ordered list  
-		* unordered list  
+    1. ordered list  
+        * unordered list  
 
 Paragraph text here.
 
 1. First list item  
-	* Unordered sub-list.
+    * Unordered sub-list.
 1. Second list item  
-	1. Ordered sub-list
+    1. Ordered sub-list
 3. And another item.  
-	Indenting with a tab and trailing spaces works for generic list items, but not elements like code blocks.
+    Indenting with a tab and trailing spaces works for generic list items, but not elements like code blocks.
 
 {{% alert color="danger" %}}
 DO NOT USE TABS
@@ -194,9 +194,9 @@ My alert box
 My alert box
 {{% / alert %}}
 
-
 {{% alert color="warning" %}}
 Lists in alerts:
+
 1. First list item
 2. Second list item `a code snippet`
     * Sub-list
@@ -204,9 +204,11 @@ Lists in alerts:
         ```
         A code block
         ```
+
 {{% / alert %}}
 
 ## 2 Use of Markdown Extras
+
 ### 2.1 Block Quotes
 
 >A block of text
@@ -239,8 +241,8 @@ If you need an element that starts collapsed and can be expanded by clicking, it
 hidden stuff
 </details>
 
-
 The code example of details syntax:
+
 ```html
 <details><summary>Description of what is hidden</summary>
 hidden stuff

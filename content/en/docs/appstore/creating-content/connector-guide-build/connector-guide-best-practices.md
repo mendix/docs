@@ -196,6 +196,7 @@ Consider doing the following for all entity attributes:
 * Check all date values. If the service only returns a date (no time), then set **localize** to *No*.
 * Check all number values (decimal, integer, long), and remove the default value of 0.
 * 
+
 ### 3.10 Dependencies
 
 Given that there is no dependency management between Mendix modules, try to minimize the number of dependencies your module has on other modules. If you do have to depend on other modules, make sure those modules are well-maintained by you or by Mendix themselves. Introducing another community-supported module as a dependent module might be too much of a risk for developers wanting to use your module.

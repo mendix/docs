@@ -319,7 +319,7 @@ Follow the steps below:
 
 8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/data-hub/data-hub-catalog/curate/#authentication) later. 
    
-9.  Select the **Done!** option that appears once you have filled out all the required fields.
+9. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
 

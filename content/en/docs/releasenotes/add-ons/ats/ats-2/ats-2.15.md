@@ -14,7 +14,6 @@ A new recorder has been released for ATS. For more information, see [Desktop Rec
 
 /addons/ats-addon/rg-ats/v2/rg-two-recorder/
 
-
 ### Improvements
 
 When deleting an action that is being used somewhere else, a warning is now shown in the **Confirm Delete** pop-up window.

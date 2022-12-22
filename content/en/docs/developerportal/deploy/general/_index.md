@@ -60,4 +60,3 @@ On this page, you can manage and publish your app in mobile app stores.
 Mendix supports Android and iOS.
 
 For more details, see [Mobile App](/developerportal/deploy/mobileapp/).
-

@@ -52,11 +52,11 @@ Follow the instructions in the [Importing Content from the App Explorer](/appsto
 
 1. In Microsoft Teams, go to your Teams channel.
 2. Click the ellipsis (**...**) icon of your Teams channel to open the pop-up menu.
-3.  Click **Connectors** to open the **Incoming Webhook** page.
+3. Click **Connectors** to open the **Incoming Webhook** page.
 
     {{< figure src="/attachments/appstore/connectors/ms-teams-connector/connectors.png" >}}
 
-4.  Enter the details for your Webhook and copy the connector URL as shown in the image below.
+4. Enter the details for your Webhook and copy the connector URL as shown in the image below.
 
     {{< figure src="/attachments/appstore/connectors/ms-teams-connector/configure-connectors.png" >}}
 

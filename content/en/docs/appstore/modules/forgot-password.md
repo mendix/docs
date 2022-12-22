@@ -71,6 +71,7 @@ To disable the signup functionality and use the Forgot Password module only for 
 * remove the **Sign-up** button from the `LoginSnippet` snippet in the `_Use Me` folder of the `ForgotPassword` Marketplace module
 * remove all the actions from the `CreateNewUserFromSignUp` microflow.
     {{% /alert %}}
+
 1. In the **Deeplink** tab, configure the deeplink to use the `ForgotPassword.Step3_DL_SetNewPassword` microflow.
         {{< figure src="/attachments/appstore/modules/forgot-password/configure-deeplink.png" >}}
 

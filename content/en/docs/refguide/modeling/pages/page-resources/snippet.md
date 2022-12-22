@@ -65,4 +65,3 @@ The values for the platform property are:
 ## 3 Read More
 
 * [Snippet Call](/refguide/snippet-call/)
-

@@ -152,7 +152,6 @@ After your end-users attach the files, it would be nice to display files in a li
     1. Open the **Label** property and delete the *File* text from it.
     2. In the **Design** section, set **Align Self** to *Right*.
 
-
 Great job! Now you have the list that shows attached files and your users can download files from this list:
 
 {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/list-view-configured.png" alt="Configured List View"   width="500"  >}}

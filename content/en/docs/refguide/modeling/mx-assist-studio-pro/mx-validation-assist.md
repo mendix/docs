@@ -107,7 +107,7 @@ To configure the **Save** button for the use case above, do the following:
 
        The microflow is added to validations. 
 
-5.  You also would like to add one more validation that checks that the name of the customer is valid (the name has only alphabetical symbols). To add a validation, do the following:
+5. You also would like to add one more validation that checks that the name of the customer is valid (the name has only alphabetical symbols). To add a validation, do the following:
 
     1. Click **New** in the **Generate Validation Microflow** dialog box. 
     2. In the **Add Validation** dialog box, make sure that **Type** is set to **Based on expression**.
@@ -121,7 +121,7 @@ To configure the **Save** button for the use case above, do the following:
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow.png" alt="Extract Sub-Microflow" >}}
 
-    2.  In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
+    2. In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
 

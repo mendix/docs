@@ -350,7 +350,7 @@ To parse of SAM access tokens you need to have done the following:
 
 #### 7.2.2 Parsing Access Tokens Using a Custom Microflow
 
-If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
+If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`.
 
 You can find a sample microflow for parsing access tokens, `ACT_TokenCustomATPRetrieve Roles` in the **SAM** folder of the OIDC module.
 
@@ -359,9 +359,9 @@ Your custom microflow should use the access token to create a list of user roles
 * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
 * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
 
-For version 2.0.0 and above of the OIDC SSO module, your custom microflow takes the access token as a parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
+For version 2.0.0 and above of the OIDC SSO module, your custom microflow takes the access token as the parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
 
-For versions of the OIDC SSO module below 2.0.0, the process is a bit more complicated. The custom microflow must do the following:
+For versions of the OIDC SSO module below 2.0.0, the process is a bit more complicated. The custom microflow has an `Administration.Account` object as the parameter and must do the following:
 
 1. Retrieve the access token of the account.
 1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.

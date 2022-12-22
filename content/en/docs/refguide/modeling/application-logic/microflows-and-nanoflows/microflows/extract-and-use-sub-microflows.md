@@ -26,11 +26,11 @@ This document teaches you how to do the following:
 
 ## 2 Creating Sub-Microflows
 
-You can create a sub-microflow by extracting a part of an existing microflow. The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both of these checks, the registration is committed to the database.
+You can create a sub-microflow by extracting a part of an existing microflow. The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both checks, the registration is committed to the database.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/example-complex-microflow.png" alt="An example of a complex microflow for validating an object and committing it to a database" >}}
 
-In this scenario, it makes sense to create a sub-microflow for the validation steps. If you do this, you can reuse this sub-microflow in other microflows where you need to validate a registration again.
+In this scenario, it makes sense to create a sub-microflow for the validation steps. If you do this, you can reuse this sub-microflow in other microflows if you need to validate a registration again.
 
 To extract the validation steps into a sub-microflow, follow these steps:
 
@@ -47,7 +47,7 @@ To extract the validation steps into a sub-microflow, follow these steps:
     {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions).{{% /alert %}}
 
 4. Click **OK**.
-5. Open the sub-microflow by right-clicking the sub-microflow action and selecting **Go to microflow**.
+5. Open the sub-microflow by right-clicking the sub-microflow call and selecting **Go to microflow**.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/submicroflow-in-parent-microflow.png" alt="Multiple actions replaced with a microflow action" >}}
 

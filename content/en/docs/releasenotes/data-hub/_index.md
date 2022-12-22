@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
+* You can now edit data source details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
 
 #### Fixes
 
@@ -31,7 +31,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now edit data set details directly from the [data set details](/data-hub/data-hub-catalog/search/#service-details) page.
+* You can now edit dataset details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 #### Fixes
 
@@ -41,7 +41,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now request access to a data source directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
+* You can now request access to a data source directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
 
 ### November 10th, 2022
 

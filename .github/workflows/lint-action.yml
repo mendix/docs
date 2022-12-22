@@ -53,3 +53,5 @@ jobs:
           assignees: NatasaKralj
           reviewers: NatasaKralj
           labels: Internal WIP
+          add-paths: |
+            content/en/docs/**/*.md

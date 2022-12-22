@@ -13,7 +13,7 @@ The `DATEDIFF` function returns the difference between two given date/time value
 The syntax is as follows:
 
 ```sql
-DATEDIFF ( unit , startdate_expression, enddate_expression )
+DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 ```
 
 ### 2.1 unit
@@ -28,3 +28,10 @@ DATEDIFF ( unit , startdate_expression, enddate_expression )
 ### 2.3 enddate_expression
 
 `enddate_expression` specifies the end date of the period being calculated. This should be formatted in an expression which resolves to a date/time value.
+
+### 2.4 timezone
+
+`timezone` specifies the time zone to use for the retrieval.
+This parameter is optional and defaults to the local time zone.
+It should be a string literal containing an IANA time zone.
+GMT offset time zones are not supported.

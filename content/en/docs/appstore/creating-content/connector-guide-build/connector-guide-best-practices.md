@@ -195,7 +195,6 @@ Consider doing the following for all entity attributes:
 * Set all string values to unlimited.
 * Check all date values. If the service only returns a date (no time), then set **localize** to *No*.
 * Check all number values (decimal, integer, long), and remove the default value of 0.
-* 
 
 ### 3.10 Dependencies
 

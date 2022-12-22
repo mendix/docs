@@ -139,7 +139,7 @@ The title of this section can be **Prioritization: WSJF Model** or **Prioritizat
 In the **Edit Project** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Enter information in the following fields in this section:
 
 * **Type of Value** – the type of the value that is created by the project
-* A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page
+    * A Portfolio Manager can customize the options for **Type of Value** on the [Portfolio Settings](#portfolio-settings) page
 * **Frequency** – indicates whether the value is **Once-off** or **Recurring**
 * **Value** – the amount of the value in numbers; use a comma every third digit from the right (for example, *1,000,000*)
 * **Additional Information** – nter anything that can help clarify how estimated value may impact the overall costs of the project
@@ -204,7 +204,7 @@ The list contains the following information:
 * **Department** – the department to which the project belongs
 * **Stage** – the stage the project is currently in
     * A Portfolio Manager can set up custom stages for projects on the [Portfolio Settings](#portfolio-settings) page
-   **Intake** – the time when the project is accepted based on business requirements
+* **Intake** – the time when the project is accepted based on business requirements
 * **Start Date** – the time when the first actions are taken to start implementation
 * **Go-Live Date** – the time when the app is expected to be up and running
 * **Linked App** – clicking this shows the information about the Mendix app linked with the project
@@ -293,7 +293,7 @@ To archive a project, perform the following steps:
 1. On the **Projects Overview** page, click the ellipsis icon (**...**) for that project, and then select **Archive**. Alternatively, you can also click the ellipsis icon (**...**) in the [side pane](#view-project) where you view project details, and then select **Archive**.
 2. In the dialog box that opens, select the reason why the project is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
 
-   {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
+    {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
 
 A pop-up window opens and tells you that the project is successfully archived. Once the project is archived, you can find it on the [Archived Projects](#archived-projects) page.
 
@@ -307,7 +307,7 @@ The list contains the following information:
 
 * **Project Name** – Clicking it opens a side pane that shows the details of the archived project as well as why the project was archived, additional comments, who archived the project, and when.
 
-  {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
+    {{% alert type="info" %}}When you view the details of a archived project, you can only **Post Comment**. You cannot edit any other information.{{% /alert %}}
 
 * **Department** – the department to which the project belongs
 * **Stage** – which stage the project is currently in
@@ -315,7 +315,7 @@ The list contains the following information:
 * **Archived date** – the date when the project was archived
 * **Archived by** – the name of the person who archived the project
 * Ellipsis (**...**) icon – clicking this opens a pop-up menu that enables you to [restore](#restore-delete-archived-project) or [delete](#restore-delete-archived-project) the archived project
-  Only Portfolio Managers can restore or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
+    Only Portfolio Managers can restore or delete a project (for more information on roles and permissions, see [Access Management](#access-management))
 
 ### 3.1 Restoring or Deleting an Archived Project {#restore-delete-archived-project}
 

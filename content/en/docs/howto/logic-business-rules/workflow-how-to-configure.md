@@ -152,24 +152,22 @@ The next step in setting up security is to configure the entity access otherwise
 
 5. In the **Access rules** tab, click **New** again to create rule for the Manager role.
 
-     1. In the **Rule applies to the following modules** section, select the **Manager** role.
-       
-     2. In the **Member read and write rights** section, click the drop-down list for the **FullName** attribute and select **Read**. 
-    
-     3. As the Manager should be able to select where the new employee is working from and devices that they need, set the **WFH**, **PhoneModel**, and **LaptopModel** to **Read,Write**.
-    
-     4. Set the **FirstDay** attribute to **Read**.
+    1. In the **Rule applies to the following modules** section, select the **Manager** role.
+    2. In the **Member read and write rights** section, click the drop-down list for the **FullName** attribute and select **Read**. 
+    3. As the Manager should be able to select where the new employee is working from and devices that they need, set the **WFH**, **PhoneModel**, and **LaptopModel** to **Read,Write**.
+
+    4. Set the **FirstDay** attribute to **Read**.
 
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" >}}
 
-     5. Click **OK** to save settings.
+    5. Click **OK** to save settings.
 
 6. In the **Access rules** tab, click **New** again to create rule for Facilities and User roles.
     1. In the **Rule applies to the following modules** section, select **Facilities** and **User** roles.
     2. In the **Member read and write rights** section, click **Set all to Read**.
-    
+
         {{< figure src="/attachments/howto/logic-business-rules/workflow-how-to-configure/access-rules-facilities-and-user.png" alt="Access Rules for the Facilities and User Role" >}}
-        
+
     3. Click **OK** to save settings.
 
 7. Click **OK** in the **Properties** dialog box.
@@ -305,7 +303,6 @@ Do the following:
     3. Set a new page called **PrepareDesk_Workflow** for the **Page** property it referring to steps 7-9 of the [Selecting a Device for the New Hire](#select-device) section.
 
 5. You need to make sure that only the relevant information is displayed on the **PrepareDesk_Workflow** page. In the App Explorer, double-click the **PrepareDesk_Workflow** page to open it.
-
 6. By default, all attributes are added to the employee detail form. You need to make sure that the Facilities department will be able to view the fields but not change them. Do the following: 
 
     1. Select the data view with the employee details and go to its properties.
@@ -320,9 +317,8 @@ Do the following:
     1. Name the user task **Ship_Devices** and set its title to **Facilities: Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
     2. Configure the task to be assigned to the Facilities role only referring to steps 5 and 6 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression. 
     3. Set a new page called **ShipDevices_Workflow** for the **Page** property it referring to steps 7-9 of the [Selecting a Device for the New Hire](#select-device) section.
-    
-10. You need to make sure that only relevant information is displayed on the **ShipDevices_Workflow** page and that this page can be accessed by the Facilities department only. In the App Explorer, double-click the **ShipDevices_Workflow** page to open it.
 
+10. You need to make sure that only relevant information is displayed on the **ShipDevices_Workflow** page and that this page can be accessed by the Facilities department only. In the App Explorer, double-click the **ShipDevices_Workflow** page to open it.
 11. Repeat steps 6-7 above to make the employee detail form read-only and to restrict the page access to the Facilities role.
 
 Great job! You have configured the decision and user tasks on whether the new hire is working from the office or from home. 

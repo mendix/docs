@@ -75,9 +75,7 @@ To solve this, you can add a button which will open a pop-up page where your end
 Follow the steps below:
 
 1. Open the **Employee Profile** page where IT administrators create and edit information on employees and assets assigned to them. 
-
 2. Open the **Toolbox** and search for the **Open Page** button.
-
 3. Drag the button above **Save** and **Cancel** buttons:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/open-page-button.png" alt="Open Page Button"   width="350"  >}}
@@ -85,43 +83,31 @@ Follow the steps below:
 4. Open button properties and do the following:
 
     1. Select the **Caption** property and rename it to *Attach File*.
-    
     2. Click the **Icon** property. 
-    
     3. In the **Select icon** dialog box, search for the *file* icon, and click **Select**.
-
     4. Click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/attach-file-button.png" alt="Attach Files"   width="150"  >}}
-    
+
     5. Click the **Page** property.
-    
     6. In the **Select Page** dialog box that opens, click the plus icon in the top right corner to add a new page.
-    
-    9. In the **Create Page** dialog box, do the following:
-    
+
+    7. In the **Create Page** dialog box, do the following:
+
         1. Set the **Title** to *Attach File*.
-        
         2. Set the **Layout** to *PopupLayout*.
-    
         3. Set **Entity** to **Document**.
-        
         4. The **Autofill Contents** option is on, so contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.    
-        
+
             {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-attach-file-page.png"  width="500"  >}}
-        
-        4. A new pop-up page with a preconfigured form (a data view) is created:
-        
+
+        5. A new pop-up page with a preconfigured form (a data view) is created:
             {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/attach-file-page.png" alt="Attach Files Page"   width="500"  >}}
-        
         6. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
-        
         7. Open the **Toolbox**, search for a **File Uploader**, drag it inside the data view on the **Attach File** page. 
-        
         8. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
-        
         9. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**:
-        
+
             {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/create-object-property.png" alt="Create Object Property"   width="300"  >}}
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
@@ -133,9 +119,7 @@ You have created a pop-up page that will allow IT administrators to attach files
 After your end-users attach the files, it would be nice to display files in a list and give users an opportunity to download attached files if needed. To do so, you need to add a list:
 
 1. Open the **Employee_Profile** page.
-
 2. In the **Toolbox**, search for **List View** and drag it under the **Attach File** button (make sure you drop it *inside* the data view, this way you will be able to list only files associated with a selected employee instead of all files that were attached to any employee profile). 
-
 3. Select the list view, open its properties, and do the following:
 
     1. Click the **Entity** property.
@@ -144,9 +128,7 @@ After your end-users attach the files, it would be nice to display files in a li
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-files/select-file-entity.png" alt="Select Entity"   width="400"  >}}
 
 4. Delete the **Size** text widget from the list view. 
-
 5. Open the **Toolbox** and search for a **File Downloader**, drag it to the column where the **Details** button was placed. 
-
 6. Open the **File Downloader** (**File Manager**) properties  and do the following: 
 
     1. Open the **Label** property and delete the *File* text from it.

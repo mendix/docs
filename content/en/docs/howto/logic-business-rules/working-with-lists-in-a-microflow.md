@@ -67,29 +67,30 @@ To see the results of this how-to, set up a test app and populate it with test d
 Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the Processing status.
 
 1. Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
-2. In the **Add Microflow** dialog box, in the **Name** field, enter *Microflow *IVK_SetOrderToComplete**, and then click **OK**.
-4. On the **Orders** overview page, add an **Action** button to the toolbar.
+2. In the **Add Microflow** dialog box, in the **Name** field, enter *IVK_SetOrderToComplete*, and then click **OK**.
+3. On the **Orders** overview page, add an **Action** button to the toolbar.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581118.png" alt="Adding the Action button" >}}
 
-5. Double-click the action button and change the **Caption** to *Set Processing to Complete*.
-6. In the **On click** list, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
+4. Double-click the action button and change the **Caption** to *Set Processing to Complete*.
+5. In the **On click** list, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581054.png" alt="Selecting the caption and microflow" >}}
 
-7. Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
-8. Open the **Toolbox** and search for the **Retrieve** action.
-9. Drag a **Retrieve** action from the **Toolbox** to the line between the start and end events.
+6. Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
+7. Open the **Toolbox** and search for the **Retrieve** action.
+8. Drag a **Retrieve** action from the **Toolbox** to the line between the start and end events.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581091.png" alt="A view of the microflow with the Retrieve activity" >}}
 
-10. Double-click the **Retrieve** action activity, and then set the following properties:
+9. Double-click the **Retrieve** action activity, and then set the following properties:
     * **Source** – select **From database**
     * **Entity** – select **Order**
     * **List** – enter *OrderList*
-11. To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: `[OrderStatus = 'Processing']`.
+10. To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: `[OrderStatus = 'Processing']`.
 
- {{% alert color="info" %}}Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
+{{% alert color="info" %}}
+Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
 {{% /alert %}}
 
 ## 4 Updating Multiple Objects by Iterating over a List
@@ -156,13 +157,14 @@ To calculate the total sum of all your orders via a loop, create a variable whic
     * **Variable** – enter *CalculatedTotalPrice*
 
         {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/variable.png" alt="Configuring the Create variable activity" >}}
-    
+
 9. Drag a **Change variable** activity into the **Loop** activity.
 10. Double-click the **Change variable** activity and configure the following settings:
     * **Variable** – select **CalculatedTotalPrice**
     * **Value** – enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`
-        
+
         With the above settings, as the loop iterates over the list, it adds the price of every order to the CalculatedTotalPrice variable.
+
 11. Drag a **Show Message** action from the **Toolbox** and place it after the **Loop** activity.
 12. Double-click the **Show message** activity and configure the following settings:
     * **Template** – enter *Total calculated price: {1}*
@@ -196,13 +198,13 @@ Instead of a loop, you can also calculate the total price by using the [aggregat
   
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581055.png" alt="Configuring the Show message activity" >}}
 
-6. Click **OK**, and then save the microflow.
-  
+7. Click **OK**, and then save the microflow.
+
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581058.png" alt="A microflow configured to calculate the total list value with aggregates" >}}
 
-7. Redeploy your application.
-8. On the **Orders** overview page, click **Calculate total order price**.
-  
+8. Redeploy your application.
+9. On the **Orders** overview page, click **Calculate total order price**.
+
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" >}}
 
 ## 7 Read More

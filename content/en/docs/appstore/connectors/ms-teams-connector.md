@@ -76,7 +76,6 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
     {{< figure src="/attachments/appstore/connectors/ms-teams-connector/connector-in-microflow.png" >}}
 
 2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
-
 3. Specify the following settings with expression syntax:
 
     {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}

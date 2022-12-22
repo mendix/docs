@@ -291,7 +291,7 @@ Perform the following steps:
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-publish.png" >}}
 
-11. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
+10. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
 
      {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-published.png" >}}
 

@@ -146,15 +146,10 @@ The text with the blue background above the entity tells you that it is a specia
 A **Published Business Event Service** contains a definition of the business events provided by this service. A contract can be exported from the published service, to inform other developers what the published business event service provides. This is similar to a OpenAPI or WSDL contract.
 
 1. Right-click on the module folder, hover over **Add other**, and click **Published Business Event Service**.
-
 2. Provide the name for your service and **OK** to create it.
-   
 3. If needed, select an **Event Name Prefix**. Use this to distinguish events from other ones in your company, like in a different department. This ensures that your events are uniquely named. This field is empty by default. 
-
 4. Once you have the Service created, click **Add** to link your modelled **PublishedBusinessEvent** entity as an event.
-
 5. Select the entity that you would like to publish to add it to the service.
-
 6. Once you have all of your entities linked into the **Published Business Event Service**, export it to be shared as an AsyncAPI contract in YAML format.
 
 {{% alert color="info" %}}
@@ -189,11 +184,8 @@ This is done in a reliable way: if the receiving app is unavailable the event wi
 To start consuming a business event contract, you first need to create a **Consumed Business Event Service**.
 
 1. Right-click on the module folder, hover over **Add other**, then click **Consumed Business Event Service**.
-
 2. Provide the name for your service.
-
 3. Import a AsyncAPI service contract. Click **Browse** and select the YAML file (created in the [Create a Published Business Event Service](#create-be) step). This will make subscriptions to business events available for you to start mapping to entities within your consuming application.
-
 4. Click **OK**.
 
 {{< figure src="/attachments/appstore/modules/business-events/subscriptions-available-2.png" >}}
@@ -220,11 +212,8 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 {{< figure src="/attachments/appstore/modules/business-events/four-entities-in-domain-model.png" >}}
 
 * **PublishedBusinessEvent**: This non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. This is used to define what your published business events look like.
- 
 * **ConsumedBusinessEvent**: This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the module, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
-
 * **DeadLetterQueue**: This persistant entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
-
 * **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  Should the Microflow fail, the entity will be removed as part of the same transaction.
 
 ### 5.3.1 Dead Letter Queue for Failed Messages {#dead-letter-queue}
@@ -276,7 +265,7 @@ For development and testing it may be useful to run all your apps on your local 
 ### 7.1 Using the Business Events Local Setup Tool {#local-setup}
 
 The Mendix Business Events [Local Setup Tool](https://github.com/mendix/event-broker-tools) helps you deploy locally by setting up a Docker container with Kafka. This repository includes the required `docker-compose.yml` file.
-  
+
 Start your docker cluster using the command `docker-compose up`. This will download or update all the required docker images and start Kafka.
 
 ### 7.2 Using PostgreSQL Database (Optional) {#postgres-db}
@@ -303,15 +292,15 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 1. Can I undo a Publish Event action in case my microflow fails?
 
-   Yes. If you do a rollback in an error handler, the business event will not be sent to other applications.
+    Yes. If you do a rollback in an error handler, the business event will not be sent to other applications.
 
 2. Can I publish my own events from other software directly to a Kafka topic?
 
-   No, that is currently not supported. 
+    No, that is currently not supported. 
 
 3. Can I send related or associated objects as a single business event?
 
-   No, only a flat object. For complex data structures, provide an API where the consuming app can retrieve the complex structure upon retrieval of a Business Event. Alternatively, you can use a string attribute in the Business Event to store JSON or XML using mappings.
+    No, only a flat object. For complex data structures, provide an API where the consuming app can retrieve the complex structure upon retrieval of a Business Event. Alternatively, you can use a string attribute in the Business Event to store JSON or XML using mappings.
 
 4. I want to replicate data between my Mendix apps. Should I use business events?
 
@@ -340,7 +329,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 10. How do I know the event was successfully published?
 
     Messages are first queued within the **Outbox** for successful delivery as a business event.  Monitoring the **Outbox** entity will allow the developer to determine if there are unpublished business event entities. See the [Business Event Entities](#be-entities) for more information on the **Outbox**.
- 
+
 11. How do I know events are consumed successfully?
 
     The flow of events are controlled by the persistence of the event to the **Consumed Business Event** entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure.   They only cause for such failure would be database-related and unlikely to occur.

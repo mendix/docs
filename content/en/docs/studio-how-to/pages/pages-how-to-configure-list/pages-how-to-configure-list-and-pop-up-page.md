@@ -30,9 +30,7 @@ When a Sales Representative clicks a row in this list, the details of the corres
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor/). 
-
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models/).
-
 * Make sure your domain model is configured the following way:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list/domain-model.png"   width="200"  >}} 
@@ -105,24 +103,17 @@ You can add a button that will open the  **OpportunityContact_NewEdit**  pop-up 
 Do the following:
 
 1. Open the page with the list of opportunity contacts.
-
 2. Open the **Toolbox** > **Widgets**.
-
 3. Search for the **Open Page** button and drag it above the list view.
-
 4. Open the button's properties and click the **Entity** property.
-
 5. In the **Select Entity** dialog box, select the **OpportunityContact** entity and click **Select**.
-
 6. Click the **Page** property.
-
-6. In the **Select Page** dialog box, select **OpportunityContact_NewEdit** and click **Select**.
+7. In the **Select Page** dialog box, select **OpportunityContact_NewEdit** and click **Select**.
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-configure-list-and-pop-up-page/new-button-properties.jpg" >}}
 
 8. Click the **Parameters** property and set it to **Create Object**.
-
-7. To adjust button's place on the page, set the **Spacing Left** to **Large** and **Spacing Top** to **Medium**.
+9. To adjust button's place on the page, set the **Spacing Left** to **Large** and **Spacing Top** to **Medium**.
 
 The button now allows Sales Representatives to add new items to the list:
 

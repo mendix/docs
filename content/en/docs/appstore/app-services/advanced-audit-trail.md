@@ -99,24 +99,22 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
     * **SnapshotRetentionDays**: This is the days that the records be kept in the local snapshot cache.
     * **OnlyDeleteProcessedItems**: This indicates whether items should be deleted only if they are sent to the external data storage.
         * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
-    
+
 * Snapshots
     * **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g., password fields) in the snapshots.
-       
+
         * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value).
         * **False**: Hashed Strings will be excluded and therefore not audited.
-        
+
         {{% alert color="info" %}}Manually-encrypted (e.g., using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
-  
+
 * Integration
     * **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
-        
+
     * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
-    
     * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
-    
     * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
 
 ### 3.3 Configuring Scheduled Events {#scheduled-events}

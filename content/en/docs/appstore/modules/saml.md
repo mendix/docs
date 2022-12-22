@@ -248,9 +248,7 @@ The following settings control user provisioning:
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.1.8/v3.1.9 and above for Mendix version 9
-
 * v2.2.0 and above for Mendix version 8
-
 * v1.16.4 and above for Mendix version 7
 {{% /alert %}}
 

@@ -266,7 +266,7 @@ Emails can be queued for sending at a later time. You can send the messages in t
 
 ### 5.1 Sending or Receiving Email
 
-* If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
+If you encounter any problems with sending or receiving emails, check the **Show error logs** in the **Account Settings** and the debug logs in Studio Pro. If there is nothing in the log file, but you have sent an email and it does not appear in your app, then it is not an error on the connector side.
 
 ### 5.1.1 Gmail Accounts
 
@@ -277,11 +277,12 @@ Gmail no longer supporting basic authentication (usernames and passwords), but y
 
 ### 5.2 Adding OAuth 2.0 Configuration to an App with Basic Authentication
 
-* If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
-     1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
-     2. For the desired email account, set the **isOAuthUsed** attribute from **EmailAccount** entity to **True**.
-          * Associate the existing email account with newly created OAuth provider.
-          * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
+If you already have an email account configured using basic authentication in your app, and want to use OAuth 2.0 authentication without removing that email account, do the following: 
+
+1. On the **EmailConnector_Overview** page, click **Add Account** and select the option **Use Microsoft Azure AD**. See [OAuth Provider Configuration Details](#oauth-config-details).  
+2. For the desired email account, set the **isOAuthUsed** attribute from **EmailAccount** entity to **True**.
+    * Associate the existing email account with newly created OAuth provider.
+    * Navigate to the **EmailConnector_Overview** page and handle the warning messages visible for desired email account.
 
 ### 5.3 Configuring Local Email Clients
 
@@ -295,16 +296,18 @@ Configuring local clients, like [PaperCut](https://www.papercut.com/), is suppor
 
 ### 5.4 Adding Attachments
 
-* To add attachments to the email message, do the following:
+To add attachments to the email message, do the following:
 
 1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable to the places where the **FileDocument** entity is required. 
-     If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity. 
+
+    If you have a custom entity, you can extend it with **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity.
+
 2. Set the **Attachment_EmailMessage** association.
 
 ### 5.5 Page Styling
 
-* If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
+If the **Email Connector** page styling is affected as you select/view email messages, please turn on the **Sanitize email to prevent XSS attacks** option available in the [Account Settings](#other-account-settings). It is probably due to errors in the email message CSS, so this option should fix any issues. 
 
 ### 5.6 Known Errors
 
-* If you already have the [included widgets](#included-widgets) in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.
+If you already have the [included widgets](#included-widgets) in your app, and they are not up-to-date, you may get a `Some widgets can not be read` error when trying to run locally.

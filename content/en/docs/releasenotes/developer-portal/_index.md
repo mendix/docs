@@ -131,8 +131,6 @@ In Portfolio Management, you can do the following
 * We fixed an issue where users were not able to delete an app, if other users were still members of this app.
 * We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
 
-## 2022
-
 ### August 25th, 2022
 
 #### Fixes

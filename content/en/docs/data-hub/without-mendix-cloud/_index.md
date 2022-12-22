@@ -75,10 +75,12 @@ If you are deploying locally, or just do not want to register the data sources i
 
 To import a metadata contract file of a published OData service, do the following:
 
-1. Export the contract from the publishing app and download it to your computer. </br>
+1. Export the contract from the publishing app and download it to your computer.
+
     Go to **Settings** tab of the **Published OData Service** document, and click **Export** next to the **Metadata** field. Save the `$metadata.xml` file.
 
-2. Import the contract into the consuming app. </br>
+2. Import the contract into the consuming app.
+
     Right-click the **App Explorer** where you would like to add the service, then click **Add other** > **Consumed OData Service**. Select the `$metadata.xml` file you exported.
 
 The service will now appear in the Data Hub pane.
@@ -87,10 +89,14 @@ The service will now appear in the Data Hub pane.
 
 To import a published OData service URL, do the following:
 
-1. Copy the OData service URL. </br>
+1. Copy the OData service URL.
+
     To find the published OData service URL from Mendix apps, go to the **Settings** tab of the **Published OData Service** document, and copy the entire link in the **Metadata** field.
-2. Add a **Consumed OData service** to your consuming app.</br>
+
+2. Add a **Consumed OData service** to your consuming app.
+
     Right-click the **App Explorer** in the module where you would like to add the service, then click **Add other** > **Consumed OData Service**.
+
 3. In the **Add Consumed OData Service** dialog box, make sure **From URL** is selected, and paste the copied URL into the field.
 
 The service will now appear in the Data Hub pane.

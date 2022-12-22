@@ -90,28 +90,35 @@ When you use a microflow to provide data, any security constraints are applied t
 
 ### 4.1.1 Microflow Parameters
 
-*. **HttpRequest** – The first accepted parameter is an HTTP request of the entity type **System.HttpRequest**.  This parameter is optional.</br>
-When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute*Uri* **will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+* **HttpRequest** – The first accepted parameter is an HTTP request of the entity type **System.HttpRequest**. This parameter is optional.
 
-* **ODataResponse** – The second accepted parameter is an OData response of the entity type **System.ODataResponse**. This parameter is optional.</br>
-     The **ODataResponse** has a **Count** attribute where the count value can be stored. 
-     In OData, there are two different count types:
-           1. **Count as a request** – Use this when the consumer is only interested in the number of objects and not the object themselves.</br>
-           For example, consider the following request: `persons/$count?$filter=name eq 'John'`.</br>
-         
-           This returns the number of people named John. </br>
+    When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
-           If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.</br>
-           1. **Inline count in the request** – Use this when the consumer is interested in the total number of objects while retrieving some of the objects.</br>
+* **ODataResponse** – The second accepted parameter is an OData response of the entity type **System.ODataResponse**. This parameter is optional.
 
-           For example, consider the following request: `persons?$count=true&$skip=5&top=5` </br>
+    The **ODataResponse** has a **Count** attribute where the count value can be stored.
 
-           This returns an OData payload with maximum give objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects. </br>
+    In OData, there are two different count types:
 
-           If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
+    1. **Count as a request** – Use this when the consumer is only interested in the number of objects and not the object themselves.
+
+        For example, consider the following request: `persons/$count?$filter=name eq 'John'`.
+
+        This returns the number of people named John.
+
+        If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.
+
+    1. **Inline count in the request** – Use this when the consumer is interested in the total number of objects while retrieving some of the objects.
+
+        For example, consider the following request: `persons?$count=true&$skip=5&top=5`
+
+        This returns an OData payload with maximum give objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects.
+
+        If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
 
 {{% alert color="info" %}}
-In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, the count value can be stored in the `ODataResponse` object.{{% /alert %}}
+In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
+{{% /alert %}}
 
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
@@ -122,7 +129,7 @@ Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select wh
 * **Integer**
 * **Long**
 * **String**
-* **AutoNumber** 
+* **AutoNumber**
 
 Select a combination of attributes with the following constraints: 
 
@@ -193,12 +200,18 @@ Set up a Twitter client module that allows users to input a Twitter ID and commu
 
 1. Create a consumed OData service in the client module, and import the XML file you exported in the [building the connector](#twitter-connector) section.
 2. Drag the external **Users**, **Tweets**, and **Followers** entities into your client domain model.
-3. Add a non-persistable entity for the TwitterClientInput to be able to fill in the data, handled by a **NewTwitterInput** microflow.</br> 
-    Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this: 
+3. Add a non-persistable entity for the TwitterClientInput to be able to fill in the data, handled by a **NewTwitterInput** microflow.
+
+    Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this:
+
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." >}}
+
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/newtwitterinput-microflow.png" alt="Microflow that handles inputted usernames." >}}
-4. Add a new page to display the data, and create a ShowUserPage microflow. </br> 
+
+4. Add a new page to display the data, and create a ShowUserPage microflow.
+
     The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
+
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." >}}
 
 5. On the **TwitterPage**, use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.

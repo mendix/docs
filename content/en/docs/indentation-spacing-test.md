@@ -32,7 +32,7 @@ See [Section Spacing Tests](#spacing) for multiple examples of spacing.
 
 Paragraph text here.
 
-* unordered list
+* unordered list Paragraph text here.
     1. ordered list
         * unordered list
 
@@ -45,7 +45,7 @@ Paragraph text here.
 1. Third list item
     1. Ordered sub-list **works with 4** spaces.
         1. Another level of sublist
-3. And another item.
+35. And another item.
     A new line with an indentation of **4** spaces and no trailing spaces does nothing. 
 
 Without this text, the lower list was treated as part of the upper numbered list.
@@ -74,9 +74,15 @@ Paragraph text here.
 1. Second list item  
     * Unordered sub-list indenting **works with 4** spaces.
 1. Third list item  
-    1. Ordered sub-list **works with 4** spaces.
-3. And another item.  
+
     Indenting with **4** spaces and **1** or **2** trailing spaces **works**.
+            
+### 1.10 Spacing Between List Items and Images, No Line Breaks, with Trailing Spaces
+
+1. First list item
+2. Second list item  
+    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
+    * Adding trailing spaces (`<br>`) doesn't change example.
 
 ### 1.3 Indents with Tabs and a Line Break – DO NOT USE TABS
 
@@ -95,13 +101,14 @@ Paragraph text here.
 	1. Ordered sub-list
 3. And another item.
 
-	Indenting with a tab and a line break works for generic list items, but not elements like code blocks. Tabs get treated as four spaces, regardless of tab settings within an editor.
+	Indenting with a tab and a line break works for generic list items, `Hello World!` but not elements like code blocks. Tabs get treated as four spaces, regardless of tab settings within an editor.
+    Just making a mess in the file.
 
 {{% alert color="danger" %}}
 DO NOT USE TABS
 {{% / alert %}}
 
-### 1.4 Indents with Tabs and Trailing Spaces – DO NOT USE TABS
+### 1.4 Indents with Tabs and Trailing Spaces – DO NOT USE TABS `Hello World!`
 
 Paragraph text here.
 
@@ -111,12 +118,12 @@ Paragraph text here.
 
 Paragraph text here.
 
-1. First list item  
+1. First  item  
 	* Unordered sub-list.
 1. Second list item  
 	1. Ordered sub-list
 3. And another item.  
-	Indenting with a tab and trailing spaces works for generic list items, but not elements like code blocks.
+	Indenting with a tab and  spaces works for generic list items, but not elements like code blocks.
 
 {{% alert color="danger" %}}
 DO NOT USE TABS
@@ -147,15 +154,7 @@ Code blocks do NOT need a line break to work. Not part of list indent.
 Do not add a double-space between the number (or bullet point) and first letter of first word in a list item. This can break code block formatting.
 {{% / alert %}}
 
-### 1.7 Indent Between List Items and Code Block (Highlight Shortcode) – DO NOT USE HIGHLIGHT
 
-1. First list item
-2. Second list item
-    {{< highlight go >}}
-    Code blocks with shortcode HIGHLIGHT do NOT need trailing spaces to be indented. They don't need to be indented either, as long as there is no blank line between.
-    Highight does NEED a language specified, otherwise the shortcode errors.
-    Using Hugo version 0.91.2 produces an extra blank line in the code block. 0.93.1 removes the blank line.
-    {{< / highlight >}}
 
 ### 1.8 Spacing Between List Items and Images
 
@@ -174,12 +173,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
     * Image indentation works with **4 spaces**.
     * Images don't need a line break to work.
 
-### 1.10 Spacing Between List Items and Images, No Line Breaks, with Trailing Spaces
 
-1. First list item
-2. Second list item  
-    {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
-    * Adding trailing spaces (`<br>`) doesn't change example.
 
 ### 1.11 Indent for Alerts in Lists
 

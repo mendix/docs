@@ -283,15 +283,15 @@ Perform the following steps:
 
 9. For each sample image that you uploaded, perform the following steps:
 
-    1.  Click **Add Marker** in the **Action** column. The **Mark Document** dialog box opens. In the **Choose fields to mark** pane, you can delete a previously made mark from the duplicated model, or mark a new text field or table in the sample image:
+    1. Click **Add Marker** in the **Action** column. The **Mark Document** dialog box opens. In the **Choose fields to mark** pane, you can delete a previously made mark from the duplicated model, or mark a new text field or table in the sample image:
         * To delete a previously made mark, in the **Markers from duplicated model** list, click the delete icon for that mark.
         * To mark new text fields or tables in the sample image, follow the instructions in [Marking Text Fields in a Sample Image](#mark-text-fields) or [Marking Tables in Sample Images](#mark-tables).
     2. To save the markers, click **Done**. The **Mark Document** dialog box closes. The **Status** for the sample image on the **Edit Markers & ID's** page is changed from **Not Marked** to **Marked**.
-    3.  Repeat the steps above until all the uploaded sample images have the **Status** of **Marked**.
+    3. Repeat the steps above until all the uploaded sample images have the **Status** of **Marked**.
 
         {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-publish.png" >}}
 
-11. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
+10. At the bottom of the page, click **Publish**. Your new model should appear in the **Existing Models** list as **Published**.
 
      {{< figure src="/attachments/appstore/app-services/intelligent-document-service/edit-model-published.png" >}}
 

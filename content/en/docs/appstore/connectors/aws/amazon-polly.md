@@ -30,7 +30,6 @@ The Amazon Polly Connector requires the [AWS authentication connector version 2.
 * AWS Authentication Connector
 * Mendix Studio Pro 9.18.0
 
-
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Polly connector into your app.

@@ -36,7 +36,7 @@ The following pattern letters can be used to parse and format Date and time valu
 | S      | Millisecond                               | 201                    |
 
 {{% alert color="info" %}}
-At this moment, neither the pattern letter M nor L works consistently in distinguishing between context and standalone in nanoflows and when used for text that has three or more characters (for instance, MMM or MMMM).
+In nanoflows, neither the pattern letter M nor L works consistently in distinguishing between context and standalone currently when the pattern has three or more characters (for instance, MMM or MMMM).
 {{% /alert %}}
 
 The following pattern letters are only available for microflows:

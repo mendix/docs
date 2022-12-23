@@ -201,6 +201,7 @@ To set the GitLab Token in GitLab you specify it as the **Secret Token** when cr
 
 With HTTP clients you simply need to add `X-GitLab-Token` to your header.
 For example, using the `curl` client:
+
 ```bash {linenos=table, hl_lines=[3]}
 curl -X POST \\
   http://pipeline.trigger.yourdomain.com/ \\
@@ -278,6 +279,7 @@ After installing the generic trigger or the GitLab webhook trigger, you will hav
 Make sure that you have access to that service (by creating an ingress or load balancer from a cloud provider, etc).
 
 Here is an example of ingress object:
+
 ```yaml {linenos=false}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -296,6 +298,7 @@ spec:
                 port:
                   number: 8080
 ```
+
 Make sure that an ingress controller already installed. You can use an [NGINX Controller](https://kubernetes.github.io/ingress-nginx/) for this purpose.
 
 In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
@@ -331,6 +334,7 @@ For ECR you need to create secret with [authorization token](https://docs.aws.am
 To make it easier we build Kubernetes CronJob that you can reuse.
 
 This CronJob requires IAM user with the next policy:
+
 ```
 {
     "Version": "2012-10-17",
@@ -359,12 +363,14 @@ This CronJob requires IAM user with the next policy:
     ]
 }
 ```
+
 You need replace strings `$YOUR_REGISTRY_REGION`, `$YOUR_ACCOUNT` and `$YOUR_REPO` with your values (use the same repo from [this section](#pipelines-installation)).  
 
 Manifest below contains CronJob that will refresh secret with ECR .dockerconfig every 4 hours.
 Also, it contains Job that will create that secret for the first time.
 Replace $BASE64_KEYID_HERE, $BASE64_ACCESSKEY_HERE, $BASE64_AWS_ACCOUNT_HERE and $BASE64_AWS_REGION_HERE strings with the correct one.</br>
 $BASE64_KEYID_HERE and $BASE64_ACCESSKEY_HERE are the Access key ID and Secret access key of the created IAM user.
+
 ```
 apiVersion: v1
 kind: Secret
@@ -652,10 +658,13 @@ curl -X POST \
 ### 10.1 Checking Tekton Components
 
 To verify that all components are running correctly, use the following command:
+
 ```bash {linenos=false}
 kubectl get po -n tekton-pipelines
 ```
+
 You should see a list of `Running` pods similar to that below:
+
 ```
 NAME                                                 READY   STATUS    RESTARTS   AGE
 tekton-pipelines-controller-78d8d6d4b-rbd6g          1/1     Running   0          20d
@@ -666,10 +675,13 @@ tekton-triggers-webhook-7f5c9477cc-fb624             1/1     Running   0        
 ```
 
 Also, you need to check the listener of the Tekton Trigger (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step):
+
 ```bash {linenos=false}
 kubectl get po -n $NAMESPACE_WITH_PIPELINES
 ```
+
 The output should include a `Running` pod similar to the one below:
+
 ```
 NAME                                             READY   STATUS      RESTARTS   AGE
 el-mx-pipeline-listener-gitlab-55f75fc997-nrl5b  1/1     Running     11         17d
@@ -686,6 +698,7 @@ To view the logs you need to identify the name of the listener pods. Use the com
 Then use the command: `kubectl logs $LISTENER_POD -n $NAMESPACE_WITH_PIPELINES`, using the pod name in place of $LISTENER_POD.
 
 Information log messages like those shown below do not indicate an issue — they are caused by implementation details:
+
 ```
 {"level":"info","ts":"2022-08-10T09:46:54.300Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'configure-app') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-configure-app-trigger-generic"}
 {"level":"info","ts":"2022-08-10T09:46:54.300Z","logger":"eventlistener","caller":"sink/sink.go:229","msg":"interceptor stopped trigger processing: rpc error: code = FailedPrecondition desc = expression header.match('Event', 'build') did not return true","knative.dev/controller":"eventlistener","eventlistener":"mx-pipeline-listener-generic","namespace":"mxpipeline","eventlistenerUID":"fcf84b8f-bcb1-46f1-bcd0-ae4b21d85f06","/triggers-eventid":"627c82d7-1d9e-4dda-99c7-14166c86b385","/trigger":"mx-pipline-build-trigger-generic"}
@@ -698,6 +711,7 @@ Information log messages like those shown below do not indicate an issue — the
 To view the list of pipeline runs use the command `kubectl get pipelineruns -n $NAMESPACE_WITH_PIPELINES` (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step).
 
 The output of this command looks like this:
+
 ```
 NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
 mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
@@ -709,11 +723,15 @@ mx-pipeline-build-run-gitlab-2bjc7         True        Succeeded   22d         2
 Logs regarding pipeline execution can be found in the pods.
 
 Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step):
+
 1. Get a list of pipelines:
+
     ```bash {linenos=false}
     kubectl get pipelineruns -n $NAMESPACE_WITH_PIPELINES
     ```
+
     In the output, there is one failed pipelinerun with the name `mx-pipeline-app-create-run-generic-zzt8h`:
+
     ```
     NAME                                       SUCCEEDED   REASON      STARTTIME   COMPLETIONTIME
     mx-pipeline-app-create-run-generic-zzt8h   False       Failed      8d          8d
@@ -721,20 +739,25 @@ Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is t
     ```
 
 2. Get the pods for the failed pipeline runs:
+
     ```bash {linenos=false}
     kubectl get po -n $NAMESPACE_WITH_PIPELINES | grep mx-pipeline-app-create-run-generic-zzt8h
     ```
+
     In the output there is a `Failed` pod:
+
     ```
     mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2   0/1     Error       0          8d
     ```
 
 3. Get the logs for the failed pod:
+
     ```bash {linenos=false}
     kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $NAMESPACE_WITH_PIPELINES
     ```
 
     In the output there are logs which indicate the error:
+
     ```
     Error: mendixapps.privatecloud.mendix.com "mxapp" already exists
     Usage:
@@ -766,6 +789,7 @@ As alternative, it's possible to use [Tekton Dashboard](https://github.com/tekto
 Pipeline runs can produce a lot of pods. To clean up the pods you can delete `pipelineruns` Custom Resource objects.
 
 For example, to delete all pipeline runs except latest 5 use the following commands:
+
 ```bash {linenos=false}
 NUM_TO_KEEP=5
 TO_DELETE="$(kubectl get pipelinerun -o jsonpath='{range .items[?(@.status.completionTime)]}{.status.completionTime}{" "}{.metadata.name}{"\n"}{end}' | sort | head -n -${NUM_TO_KEEP} | awk '{ print $2}')"

@@ -54,9 +54,13 @@ For more complex use cases, which require more knowledge of how OAuth and OIDC w
 * Uses the Authorization Code Grant flow to sign the end-user in via the browser.
 * Uses the 'nonce' parameter to defend against replay attacks.
 * Validates ID-token signatures.
-* It validates access tokens in one of two ways:
-    * If the IdP supports token introspection, the OIDC module will introspect the access token to see if it is valid.
-    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate it using the IdP's public key that is published on the JWKS endpoint.
+* When authenticating APIs, it validates access tokens in one of two ways:
+
+    * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
+    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+
+    For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
+
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
@@ -400,7 +404,7 @@ To confirm that the authorization is working, get an access token from PIB and p
 
 #### 8.2.3 Parsing Access Tokens Using a Custom Microflow 
 
-If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter. This is how you can parse access tokens issued by IdPs such as Microsoft Azure.
+If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Azure.
 
 {{% alert color="info" %}}
 If you are using Microsoft Azure, ensure you have followed the instructions for getting valid tokens in [Configuration of OIDC Provider](#oidc-configuration), above.
@@ -413,9 +417,9 @@ Your custom microflow should use the access token to create a list of user roles
 * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
 * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
 
-For version 2.0.0 and above of the OIDC SSO module, your custom microflow takes the access token as a parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
+For version 2.0.0 and above of the OIDC SSO module, your custom microflow takes the access token as the parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
 
-For versions of the OIDC SSO module below 2.0.0, the process is a bit more complicated. The custom microflow must do the following:
+For versions of the OIDC SSO module below 2.0.0, the process is a bit more complicated. The custom microflow has an `Administration.Account` object as the parameter and must do the following:
 
 1. Retrieve the access token of the account.
 1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.

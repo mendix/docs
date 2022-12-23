@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 To see the results of this how-to, set up a test app and populate it with test data.
 
-1.  Create a [domain model](/howto/data-models/create-a-basic-data-layer/) with the following entities:
+1. Create a [domain model](/howto/data-models/create-a-basic-data-layer/) with the following entities:
     * *Customer*
         | Attribute name | Attribute type |
         | --- | --- |
@@ -42,9 +42,9 @@ To see the results of this how-to, set up a test app and populate it with test d
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" alt="Customer and Order entities with one-to-many association" >}}
 
-2.  Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage Customer and Order objects.
-3.  Create [menu items](/refguide/setting-up-the-navigation-structure/) to access Customer and Order overview pages.
-4.  Add the following customer data to your app:
+2. Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage Customer and Order objects.
+3. Create [menu items](/refguide/setting-up-the-navigation-structure/) to access Customer and Order overview pages.
+4. Add the following customer data to your app:
     | Name | Address | Zip code | City |
     | --- | --- | --- | --- |
     | Olav | Gedempte Zalmhaven 34 | 3050 TE | Rotterdam |
@@ -52,7 +52,7 @@ To see the results of this how-to, set up a test app and populate it with test d
     | Peter | Meloenstraat 123 | 2565 PE | Den Haag |
     | Harry | Emmerreklaan 25 | 1458 PE | Utrecht |
 
-5.  Add the following order data to your app:
+5. Add the following order data to your app:
     | Number | Customer | Date | Total price | Order status |
     | --- | --- | --- | --- | --- |
     | 1 | Harry | 1/28/2022 | 345.00 | Open |
@@ -66,40 +66,41 @@ To see the results of this how-to, set up a test app and populate it with test d
 
 Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the Processing status.
 
-1.  Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
-2.  In the **Add Microflow** dialog box, in the **Name** field, enter *Microflow _IVK_SetOrderToComplete_*, and then click **OK**.
-4.  On the **Orders** overview page, add an **Action** button to the toolbar.
+1. Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
+2. In the **Add Microflow** dialog box, in the **Name** field, enter *IVK_SetOrderToComplete*, and then click **OK**.
+3. On the **Orders** overview page, add an **Action** button to the toolbar.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581118.png" alt="Adding the Action button" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581118.png" alt="Adding the Action button" >}}
 
-5.  Double-click the action button and change the **Caption** to *Set Processing to Complete*.
-6.  In the **On click** list, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
+4. Double-click the action button and change the **Caption** to *Set Processing to Complete*.
+5. In the **On click** list, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581054.png" alt="Selecting the caption and microflow" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581054.png" alt="Selecting the caption and microflow" >}}
 
-7.  Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
-8.  Open the **Toolbox** and search for the **Retrieve** action.
-9.  Drag a **Retrieve** action from the **Toolbox** to the line between the start and end events.
+6. Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
+7. Open the **Toolbox** and search for the **Retrieve** action.
+8. Drag a **Retrieve** action from the **Toolbox** to the line between the start and end events.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581091.png" alt="A view of the microflow with the Retrieve activity" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581091.png" alt="A view of the microflow with the Retrieve activity" >}}
 
-10. Double-click the **Retrieve** action activity, and then set the following properties:
+9. Double-click the **Retrieve** action activity, and then set the following properties:
     * **Source** – select **From database**
     * **Entity** – select **Order**
     * **List** – enter *OrderList*
-11.  To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: `[OrderStatus = 'Processing']`.
+10. To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: `[OrderStatus = 'Processing']`.
 
- {{% alert color="info" %}}Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
+{{% alert color="info" %}}
+Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
 {{% /alert %}}
 
 ## 4 Updating Multiple Objects by Iterating over a List
 
 After retrieving a list of orders with the status Processing, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to Complete.
 
-1.  Open the **IVK_SetOrderToComplete** microflow that you created in the previous section.
-2.  Drag a **Loop** action from the **Toolbox** and place it between the **OrderProcessingList** action activity, and the end event of the microflow.
+1. Open the **IVK_SetOrderToComplete** microflow that you created in the previous section.
+2. Drag a **Loop** action from the **Toolbox** and place it between the **OrderProcessingList** action activity, and the end event of the microflow.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581086.png" alt="Microflow with a Retrieve activity followed by a Loop activity" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581086.png" alt="Microflow with a Retrieve activity followed by a Loop activity" >}}
 
 3. Double-click the **Loop** activity.
 4. In the **Iterate over** list, select **OrderList**, and then click **OK**.
@@ -107,8 +108,8 @@ After retrieving a list of orders with the status Processing, use a [loop](/refg
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581084.png" alt="A Change object activity placed inside a Loop activity" >}}
 
-6.  Double-click the **Change object** activity.
-7.  In the **Object** list, select **IteratorOrder**, and then click **New**.
+6. Double-click the **Change object** activity.
+7. In the **Object** list, select **IteratorOrder**, and then click **New**.
 8. In the **Edit Change Item** dialog box, configure the following settings:
     * **Member** – select **OrderStatus**
     * **Value** – enter *MyFirstModule.OrderStatus.Complete*
@@ -120,7 +121,7 @@ After retrieving a list of orders with the status Processing, use a [loop](/refg
     * **Refresh in Client** – set to **Yes**; this settings refreshes your list in the client so that your changes are visible
 13. Click **OK**, and then save the microflow.
 
-	{{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/working-with-lists-optimization.jpg" alt="A microflow configured to iterate over a list" >}}
+    {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/working-with-lists-optimization.jpg" alt="A microflow configured to iterate over a list" >}}
 
 14. Redeploy your application.
 15. On the **Orders** overview page, click **Set Processing to Complete**.
@@ -156,13 +157,14 @@ To calculate the total sum of all your orders via a loop, create a variable whic
     * **Variable** – enter *CalculatedTotalPrice*
 
         {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/variable.png" alt="Configuring the Create variable activity" >}}
-    
+
 9. Drag a **Change variable** activity into the **Loop** activity.
 10. Double-click the **Change variable** activity and configure the following settings:
     * **Variable** – select **CalculatedTotalPrice**
     * **Value** – enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`
-        
+
         With the above settings, as the loop iterates over the list, it adds the price of every order to the CalculatedTotalPrice variable.
+
 11. Drag a **Show Message** action from the **Toolbox** and place it after the **Loop** activity.
 12. Double-click the **Show message** activity and configure the following settings:
     * **Template** – enter *Total calculated price: {1}*
@@ -180,31 +182,31 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 
 Instead of a loop, you can also calculate the total price by using the [aggregate list](/refguide/aggregate-list/) function. Use the aggregate list to calculate values such as the maximum, minimum, sum, average, and total number of objects over a list of objects.
 
-1.  In the **IVK_CalculateTotalPriceOrders** microflow, remove the loop and the **CalculatedTotalPrice** variable.
-2.  Add an **Aggregate list** activity after the **OrderList**.
+1. In the **IVK_CalculateTotalPriceOrders** microflow, remove the loop and the **CalculatedTotalPrice** variable.
+2. Add an **Aggregate list** activity after the **OrderList**.
 
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581061.png" alt="Adding an Aggregate list activity" >}}
 
-3.  Double-click the **Aggregate list** activity, and then set the following properties:
+3. Double-click the **Aggregate list** activity, and then set the following properties:
     * **List** – select **OrderList**
     * **Function** – select **Sum**
     * **Attribute** – select **TotalPrice**
     * **Variable** – enter a descriptive name, for example, *SumTotalPrice*
-4.  Click **OK**.
-5.  Double-click the **Show message** activity.
+4. Click **OK**.
+5. Double-click the **Show message** activity.
 6. In the **Parameters** section, delete the *$CalculatedTotalPrice* variable, and then add the *$SumTotalPrice* variable.
   
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581055.png" alt="Configuring the Show message activity" >}}
 
-6.  Click **OK**, and then save the microflow.
-  
+7. Click **OK**, and then save the microflow.
+
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581058.png" alt="A microflow configured to calculate the total list value with aggregates" >}}
 
-7.  Redeploy your application.
-8.  On the **Orders** overview page, click **Calculate total order price**.
-  
+8. Redeploy your application.
+9. On the **Orders** overview page, click **Calculate total order price**.
+
     {{< figure src="/attachments/howto/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" >}}
 
 ## 7 Read More
 
-*   [Defining access rules using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
+* [Defining access rules using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)

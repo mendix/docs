@@ -71,7 +71,7 @@ You will now need to create the repositories listed by the command above. The co
 {{% alert color="info" %}}
 Some registries cannot support complex repository addresses such as `my.registry.com/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.26.0` and you may have to use a simpler format such as `my.registry.com/tekton/webhook:v0.26.0`. You will then need to update the `state.json` file (in your current directory) which is used by aip to push information to your repositories.
 
-You will need to update the `destination: ` value for each of the repositories as shown below:
+You will need to update the `destination:` value for each of the repositories as shown below:
 
 ```json {linenos=table,hl_lines=[6],linenostart=22}
 …
@@ -83,6 +83,7 @@ You will need to update the `destination: ` value for each of the repositories a
 },
 …
 ```
+
 {{% /alert %}}
 
 ```bash
@@ -164,9 +165,11 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 
 1. Edit the `tekton-triggers-controller` deployment.
 2. Add the following line to the `args` section:
+
     ```bash{linenos=false}
     - '--el-security-context=false'
     ```
+
 3. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
 4. Edit the `tekton-triggers-core-interceptors` deployment.
 5. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).

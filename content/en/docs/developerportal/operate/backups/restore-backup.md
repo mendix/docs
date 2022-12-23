@@ -77,8 +77,8 @@ The app previously deployed to the node does not, however, need to have had the 
 
     The upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application.
 
-5. Upload the *.db* or *.gz* backup file.
-6. You will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
+4. Upload the *.db* or *.gz* backup file.
+5. You will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 4 Restoring a Backup for a Free App
 

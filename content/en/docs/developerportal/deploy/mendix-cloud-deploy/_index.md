@@ -135,7 +135,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is from the Team Server through the Developer Portal.
 
-##### 2.2.1 Deploying via Studio Pro
+#### 2.2.1 Deploying via Studio Pro
 
 To deploy your app directly from Studio Pro, follow these steps:
 
@@ -150,7 +150,7 @@ To deploy your app directly from Studio Pro, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deployment-started.png" alt="A pop-up with the Show online option visible" >}}
 
-##### 2.2.2 Creating a Package from the Team Server {#package-from-team-server}
+#### 2.2.2 Creating a Package from the Team Server {#package-from-team-server}
 
 You can also deploy an app from Team Server. To do this, follow these steps:
 

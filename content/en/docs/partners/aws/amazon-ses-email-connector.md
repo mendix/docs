@@ -28,13 +28,13 @@ To configure your SES account in the Email Connector in Studio Pro, follow these
 3. Set up the Email Connector. For more information, see [Set Up in Studio Pro](/appstore/connectors/email-connector/#setup) and [Email Account Configuration](/appstore/connectors/email-connector/#accountconfig).  
 4. On the **EmailConnector_Overview** page, click **Add email account**. 
 5. Enter the following details: 
-    - **Email** - SMTP username for Amazon SES 
-    - **Password** -  SMTP password for Amazon SES 
+    * **Email** - SMTP username for Amazon SES 
+    * **Password** -  SMTP password for Amazon SES 
 6. Click **Next**.
 7. Click **OK** to manually configure your email account. 
 8. Select the **Send emails** checkbox, and then enter the following details: 
-    - **Protocol** - SMTP 
-    - **Server host** - enter SMTP hostname for Amazon SES 
-    - **Server port** - any configured STARTTLS port for Amazon SES (for example, 25, 587, 2587, and so on) 
-    - Select Use TLS / Use SSL accordingly 
+    * **Protocol** - SMTP 
+    * **Server host** - enter SMTP hostname for Amazon SES 
+    * **Server port** - any configured STARTTLS port for Amazon SES (for example, 25, 587, 2587, and so on) 
+    * Select Use TLS / Use SSL accordingly 
 9. Click **Finish**. 

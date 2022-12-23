@@ -20,6 +20,7 @@ Amazon DynamoDB helps improve your app by giving you the tools to build scalable
 ### 1.2 Prerequisites
 
 To use the Amazon DynamoDB connector, you must first install and configure the following modules:
+
 * [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is required to parse the `creationDateTime` attribute as returned by the `DescribeTable` activity.
 
@@ -48,7 +49,7 @@ For example, to list all Amazon DynamoDB tables for a specific region, implement
 11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **ListTablesResponse** as the association.
 12. Click **OK**.
 13. Configure a method for triggering the **ACT_ListTables** microflow.
-    For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
+    For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 To help you work with the Amazon DynamoDB connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
@@ -112,43 +113,43 @@ An enumeration is a predefined list of values that can be used as an attribute t
 |`BEGINS_WITH` | **BEGINS_WITH** |
 | `BETWEEN` | **BETWEEN** |
 | `CONTAINS` | **CONTAINS** |
-| `EQ` |	**EQUAL** |
-| `GE` |	**GREATER_THAN_OR_EQUAL** |
-| `GT` |	**GREATER_THAN** |
-| `IN` |	**IN** |
-| `LE` |	**LESS_THAN_OR_EQUAL** |
-| `LT` |	**LESS_THAN** |
-| `NE` |	**NOT_EQUAL** |
-| `NOT_CONTAINS` |	**NOT_CONTAINS** |
-| `NOT_NULL` |	**NOT_NULL** |
-| `_NULL` |	**NULL** |
+| `EQ` |    **EQUAL** |
+| `GE` |    **GREATER_THAN_OR_EQUAL** |
+| `GT` |    **GREATER_THAN** |
+| `IN` |    **IN** |
+| `LE` |    **LESS_THAN_OR_EQUAL** |
+| `LT` |    **LESS_THAN** |
+| `NE` |    **NOT_EQUAL** |
+| `NOT_CONTAINS` |    **NOT_CONTAINS** |
+| `NOT_NULL` |    **NOT_NULL** |
+| `_NULL` |    **NULL** |
 
 #### 3.2.6 `AWS_Region` {#aws-region}
 
 | Name | Caption |
 | --- | --- |
-| `us_east_2` |	**US Easth (Ohio)** |
-| `us_east_1` |	**US East (N. Virginia)** |
-| `us_west_1` |	**US West (N. California)** |
-| `us_west_2` |	**US West (Oregon)** |
-| `af_south_1` |	**Africa (Cape Town)** |
-| `ap_east_1` |	**Asia Pacific (Hong Kong)** |
-| `ap_southeast_3` |	**Asia Pacific (Jakarta)** |
-| `ap_south_1` |	**Asia Pacific (Mumbai)** |
-| `ap_northeast_3` |	**Asia Pacific (Osaka)** |
-| `ap_northeast_2` |	**Asia Pacific (Seoul)** |
-| `ap_southeast_1` |	**Asia Pacific (Singapore)** |
-| `ap_southeast_2` |	**Asia Pacific (Sydney)** |
-| `ap_northeast_1` |	**Asia Pacific (Tokyo)** |
-| `ca_central_1` |	**Canada (Central)** |
-| `eu_central_1` |	**Europe (Frankfurt)** |
-| `eu_west_1` |	**Europe (Ireland)** |
-| `eu_west_2` |	**Europe (London)** |
-| `eu_south_1` |	**Europe (Milan)** |
-| `eu_west_3` |	**Europe (Paris)** |
-| `eu_north_1` |	**Europe (Stockholm)** |
-| `me_south_1` |	**Middle East (Bahrain)** |
-| `sa_east_1` |	**South America (São Paulo)** |
+| `us_east_2` |    **US Easth (Ohio)** |
+| `us_east_1` |    **US East (N. Virginia)** |
+| `us_west_1` |    **US West (N. California)** |
+| `us_west_2` |    **US West (Oregon)** |
+| `af_south_1` |    **Africa (Cape Town)** |
+| `ap_east_1` |    **Asia Pacific (Hong Kong)** |
+| `ap_southeast_3` |    **Asia Pacific (Jakarta)** |
+| `ap_south_1` |    **Asia Pacific (Mumbai)** |
+| `ap_northeast_3` |    **Asia Pacific (Osaka)** |
+| `ap_northeast_2` |    **Asia Pacific (Seoul)** |
+| `ap_southeast_1` |    **Asia Pacific (Singapore)** |
+| `ap_southeast_2` |    **Asia Pacific (Sydney)** |
+| `ap_northeast_1` |    **Asia Pacific (Tokyo)** |
+| `ca_central_1` |    **Canada (Central)** |
+| `eu_central_1` |    **Europe (Frankfurt)** |
+| `eu_west_1` |    **Europe (Ireland)** |
+| `eu_west_2` |    **Europe (London)** |
+| `eu_south_1` |    **Europe (Milan)** |
+| `eu_west_3` |    **Europe (Paris)** |
+| `eu_north_1` |    **Europe (Stockholm)** |
+| `me_south_1` |    **Middle East (Bahrain)** |
+| `sa_east_1` |    **South America (São Paulo)** |
 
 ### 3.3 Activities {#activities}
 
@@ -167,7 +168,7 @@ The input and output for this service are shown in the table below:
 
 This activity returns a `BatchGetItemResponse` object with objects from the following entities, as shown in the table below:
 
-| Name |	Generalization |	Documentation |
+| Name |    Generalization |    Documentation |
 | --- | --- | --- |
 | `RequestTable` | `AmazonDynamoDBConnector.Table` | This entity holds the references of which items are to be retrieved. The attribute it contains is `ProjectionExpression`, which is a string that identifies the attributes that one wants to retrieve. |
 | `ResponseTable` | `AmazonDynamoDBConnector.Table` | This entity holds information for the item retrieval. It contains a list of items, each of which contain a list of key-value pairs. |
@@ -242,7 +243,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `ScanTableRequest (Object)`	| `ScanTableResponse (Object)` |
+| `ScanTableRequest (Object)`    | `ScanTableResponse (Object)` |
 
 This activity returns a `ScanTableResponse` object with objects from the following entities, as shown in the table below:
 
@@ -256,6 +257,7 @@ This activity returns a `ScanTableResponse` object with objects from the followi
 | `KeyValueString` | | This generalization entity holds information for a key-value pair for a given `Item`. The attribute it contains is `StringValue`, which is a string representation of value in a key-value pair. |
 
 #### 3.3.7 Put Item
+
 The `PutItem` Amazon DynamoDB activity allows you to put and update an item in DynamoDB. It requires a valid AWS Region, `TableName`, and an `Item` object. If the table has only a partition key, then only one `KeyValue` object is required inside the `Item` object. If the table has both a partition and sort key, then two `KeyValue` objects are required.
 
 The input and output for this service are shown in the table below:
@@ -266,15 +268,16 @@ The input and output for this service are shown in the table below:
 | `Item (Object)` | |
 
 #### 3.3.8 Get Item
+
 The `GetItem` Amazon DynamoDB activity allows you to get an item from DynamoDB. It requires a valid AWS Region, a `TableName`, `IsConsistentRead`, and an `Item` object.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `TableName (String)`	| `Item (Object)` |
+| `TableName (String)`    | `Item (Object)` |
 | `IsConsistentRead (Boolean)` | |
-| `Item (Object)` |	|
+| `Item (Object)` |    |
 
 This activity returns an `Item` object with objects from the following entities as shown in the table below:
 

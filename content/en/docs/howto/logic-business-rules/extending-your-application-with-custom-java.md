@@ -164,4 +164,3 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 * [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
 * [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)

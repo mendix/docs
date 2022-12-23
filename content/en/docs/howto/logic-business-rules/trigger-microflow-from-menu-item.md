@@ -93,4 +93,4 @@ Congratulations! You have created the menu item that triggers the microflow and 
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
 * [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
-* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)

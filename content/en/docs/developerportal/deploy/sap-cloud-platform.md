@@ -338,7 +338,7 @@ The environment details page contains the following four tabs:
 
 Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environment-details.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environment-details.png" alt="An environment with the Details option highlighted" >}}
 
 {{% alert color="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
 
@@ -348,7 +348,7 @@ Changes made to the app in the SAP BTP cockpit are only temporary and can be ove
 
 This tab contains information on how the application is deployed on SAP BTP.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/11-sap-env-details.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/11-sap-env-details.png" alt="A view of the General tab" >}}
 
 Most of this page shows information about the app, but there are several options which allow you to change the app.
 
@@ -382,7 +382,7 @@ Click **View Recent Log** to see recent events written to the log.
 
 You will be asked to confirm that this environment should be removed. You will also be asked to confirm that the resources associated with the environment should also be removed. Note that the default is NOT to remove the resources.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-environment.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-environment.png" alt="The Delete Environment dialog with the Remove resources option highlighted" >}}
 
 {{% alert color="info" %}}
 If you do not select **Remove resources** in this dialog, the resources will be left in SAP BTP. This could be useful if you want to remove the environment but, for some reason, a resource cannot be removed. In this case, the resources can only be removed individually from within the SAP BTP cockpit.
@@ -428,7 +428,7 @@ Click **Change** to change the subscription secret which is the code which regis
 
 This tab displays the application constants and allows you to edit them. It also lets you enable or disable scheduled events.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/12-sap-model-options.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/12-sap-model-options.png" alt="A view of the Model Options tab" >}}
 
 {{% alert color="info" %}}
 You need to restart your app if you change any of these options.
@@ -450,7 +450,7 @@ To change a value, select the constant you want to change and click **Edit**.
 
 This tab displays Cloud Foundry services which are bound to the app, waiting to be bound to the app, or available to be bound to the app. These are the services which are available to you in SAP BTP and are the same services that you can see in the SAP BTP marketplace.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-tab.png"   width="50%"  >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-tab.png"   width="50%" alt="A view of the Services tab" >}}
 
 {{% alert color="warning" %}}
 There are a number of services which your Mendix app requires. **If you unbind any of these services, your app will probably stop working**:
@@ -478,7 +478,7 @@ To connect a service in the section **Available Services**
 3. Select a JSON **File** to upload if you need to add extra configuration.
 4. Click **Connect Services**.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-connect.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-connect.png" alt="The Available Services section with the list of plans highlighted" >}}
 
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
@@ -517,16 +517,16 @@ If you no longer require a service you can unbind it or remove it from your app.
     * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound again next time your app is restarted
     * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind.png" alt="Unbinding or deleting a service" >}}
 
-3. Confirm by clicking the appropriate button
+3. Confirm by clicking the appropriate button:
 
     * **Unbind**
     * **Delete & Restart App**
     * **Delete** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Delete*. However, this may leave the app in an unstable state as the service will be deleted from the environment
     * **Cancel** – do not delete or unbind this service
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind-warning.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind-warning.png" alt="Confirmation message when unbinding a service" >}}
 
     Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound but not deleted, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
 
@@ -552,7 +552,7 @@ If you want to change the configuration of a service which is already bound, you
 
 3. You can either use the Configurator to create your configuration by clicking **Open Editor**, or click **Browse…** to upload an existing file as the configuration.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-binding-configuration.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-binding-configuration.png" alt="Adding a binding configuration" >}}
 
     See the documentation for the service you are configuring for more information.
 
@@ -592,7 +592,7 @@ The variables beginning **DT_** set up Dynatrace. Setting these variables means 
 
 You can also enter other environment variables which can be used to support Mendix features which are in Beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png" alt="List of custom environment variables" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png" alt="List of custom environment variables" alt="Creating a custom environment variable" >}}
 
 {{% alert color="info" %}}
 Only use unsupported environment variables if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
@@ -610,7 +610,7 @@ SAP have removed some of the PostgreSQL databases available in their marketplace
 
 Select the **postgresql-db** (PostgreSQL, Hyperscaler Option) database service.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-service.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-service.png" alt="Selecting the database service" >}}
 
 You will need to upload a file which contains the configuration for this database – click **Browse…** to select your configuration file. You can use the [SAP Hyperscaler PostgreSQL Configurator](#postgresql-configurator) to help you create the configuration file and find more information in the *Parameters* section of [PostgreSQL on SAP Business Technology Platform, Hyperscaler Option](https://help.sap.com/viewer/b3fe3621fa4a4ed28d7bbe3d6d88f036/Cloud/en-US/0630e03aa45d479eaf806c564dc2447a.html) in the *SAP Help Portal*.
 
@@ -624,7 +624,7 @@ To get help to create the configuration file, click the **Configurator** button.
 
 On the new page which is displayed you can set the required values for your **SAP Hyperscaler PostgreSQL** database. Tooltips describe the values which you need to provide. 
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-configurator.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-configurator.png" alt="Configuring the SAP Hyperscaler PostgreSQL database" >}}
 
 {{% alert color="warning" %}}
 There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
@@ -665,7 +665,7 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 
 For new trial accounts, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-securestore** from the drop-down of supported databases.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" alt="Configuring SAP HANA for trial accounts" >}}
 
 Some older trial accounts do not include `hanatrial-securestore`. In this case you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan securestore is not found*.
 
@@ -680,7 +680,7 @@ If your SAP HANA database has performance issues, you may be able to improve per
     * schema
     * password
     * user
-        {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/binding-credentials.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/binding-credentials.png" alt="Sample binding configuration" >}}
 2. Go to the [runtime tab](#runtime-tab) of your app environment
 3. Enter the following unsupported environment variables with the associated values, using the values taken from the service binding credentials:
     | Variable | Value |
@@ -712,31 +712,31 @@ The additional parameters that you added to the url in the `MXRUNTIME_DatabaseJd
 
 If you add an environment and it fails to be created it will be shown with a red symbol next to it on the Environments page:
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-environment.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-environment.png" alt="Error symbol on the Environments page" >}}
 
 This could be caused by exceeding your organization quota limit for a service which you are trying to create, or for some other reason. To find the exact cause, do the following:
 
 1. Click **Details** next to the failed environment.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-details.png" alt="Details option by a specific environment" >}}
 
 2. Click **Details** on the error message at the top of the page.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-more-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-more-details.png" alt="Details option on top of the page" >}}
 
 A more detailed description of the reason why the environment creation failed will be displayed.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-description.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-description.png" alt="Error details for a failed environment creation" >}}
 
 ### 9.2 Deleting an App
 
 Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/leave-app.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/leave-app.png" alt="The Leave app option on the General Settings page" >}}
 
 If you are the last member of the app development team, you will be asked if you want to delete the app.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-app.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-app.png" alt="Confirmation message for deleting the app" >}}
 
 {{% alert color="info" %}}
 This will not stop the app and delete the deployment of the app in SAP BTP.
@@ -750,7 +750,7 @@ You can still delete the app and its resources from the SAP BTP cockpit, but you
 
 Under some circumstances an app with a service in the **Services To Be Bound** status will not restart. You will get an error with *Could not bind service...* in the details.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-bind-error.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-bind-error.png" alt="Example Could not bind service... error" >}}
 
 This indicates that SAP Cloud Portal is not able to bind the service, even though it has been instantiated correctly. If you remove the service from the app, then the app should restart successfully.
 
@@ -760,11 +760,11 @@ If you are trying to bind more than one new service, it is not possible to ident
 
 If an app is deployed to SAP using the Studio Pro **Run** or **Publish** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-desktop-modeler.png"   width="50%"  >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-desktop-modeler.png" width="50%" alt="Error while deploying an app" >}}
 
 If you use the Developer Portal to look at the details of the environment to which you are deploying, you will see that the services are still waiting to be bound.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-not-bound.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-not-bound.png" alt="Message in the Developer Portal" >}}
 
 Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from Studio Pro, as usual.
 

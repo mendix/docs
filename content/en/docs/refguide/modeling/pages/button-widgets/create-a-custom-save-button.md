@@ -5,8 +5,7 @@ url: /refguide/creating-a-custom-save-button/
 description: "Describes how to create a custom save button by utilizing microflows."
 tags: ["microflow", "logic", "save button"]
 aliases:
-    - /howto/logic-business-rules/create-a-custom-save-button
-    - /howto/logic-business-rules/create-a-custom-save-button.html
+    - /howto/logic-business-rules/create-a-custom-save-button/
 ---
 ## 1 Introduction
 
@@ -92,4 +91,4 @@ Congratulations! You have customized the **Save** button using a microflow:
 * [Microflows](/refguide/microflows/)
 * [Microflow Activities](/refguide/activities/)
 * [Work With Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)

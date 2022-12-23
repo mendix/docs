@@ -40,9 +40,9 @@ banner: "This is a draft and will not be rendered in the production website. Use
 
 Paragraph text here. extra space 
 
-### Heading 3
+### Hello!
 
-Paragraph text here.
+What will break the consolidated file view of the PR's history?
 
 #### Heading 4
 
@@ -58,7 +58,7 @@ Another paragraph here.
 
 See [Section Spacing Tests](#spacing) for multiple examples of spacing. 
 
-### 1.1 Indents with Four Spaces
+### 1.1 What's up?
 
 Paragraph text here.
 
@@ -92,13 +92,13 @@ Two line breaks between the numbered lists were not enough to make them separate
 
 ### 1.2 Indents with Four Spaces and Trailing Space(s)
 
-Paragraph text here.
+Happy Holidays!
 
 * unordered list  
     1. ordered list  
         * unordered list
 
-Paragraph text here.
+What will break the consolidated file view of the PR's history?
 
 1. First list item  
 1. Second list item  
@@ -213,7 +213,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 My alert box
 {{% / alert %}}
 3. Third list item
-    * Sub-list item
+    * Sub-list item. More silly changes
 {{% alert color="info" %}}
 My alert box
 {{% / alert %}}
@@ -226,11 +226,12 @@ Lists in alerts:
     * Sub-list
 
         ```
-        A code block
+        A code block Some more changes
         ```
 {{% / alert %}}
 
 ## 2 Use of Markdown Extras
+
 ### 2.1 Block Quotes
 
 >A block of text
@@ -256,6 +257,8 @@ Two ways to add comments:
     ```
 
 ### 2.3 Details
+
+How do I break this file???????
 
 If you need an element that starts collapsed and can be expanded by clicking, it will look like the following:
 
@@ -307,11 +310,13 @@ With a paragraph
 
 ## Level 2 Section – Level 2 after
 
-## Level 2 Section – Level 3  after
+## Level 2 Section – Level 3  aft2er
+
+French toast is the best breakfast food!
 
 ### Level 3 Section – Level 2 after
 
-## Level 2 Section – List after
+## Level Design is an uderappreciated skill List after
 
 * List item 1
 * List item 2

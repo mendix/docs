@@ -54,9 +54,13 @@ For more complex use cases, which require more knowledge of how OAuth and OIDC w
 * Uses the Authorization Code Grant flow to sign the end-user in via the browser.
 * Uses the 'nonce' parameter to defend against replay attacks.
 * Validates ID-token signatures.
-* It validates access tokens in one of two ways:
-    * If the IdP supports token introspection, the OIDC module will introspect the access token to see if it is valid.
-    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate it using the IdP's public key that is published on the JWKS endpoint.
+* When authenticating APIs, it validates access tokens in one of two ways:
+
+    * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
+    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+
+    For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published JWKS endpoint.
+
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.

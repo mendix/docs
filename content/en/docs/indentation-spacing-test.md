@@ -6,6 +6,36 @@ description: "Various test cases for rendering of indents and spaces"
 banner: "This is a draft and will not be rendered in the production website. Use this page to test how spacing and indents will render with various elements and shortcodes."
 ---
 
+
+## Test Buttons
+
+{{% button color="info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
+
+{{% button color="success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
+
+{{% button color="danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+
+{{% button color="warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+
+{{% button color="light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
+
+{{% button color="dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+
+{{% button color="link" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Link" title="What do you think of this button?" %}}
+
+{{% button color="outline-info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
+
+{{% button color="outline-success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
+
+{{% button color="outline-danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+
+{{% button color="outline-warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+
+{{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
+
+{{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+
+
 ## Heading 2
 
 Paragraph text here. extra space 
@@ -76,7 +106,7 @@ Paragraph text here.
 1. Third list item  
 
     Indenting with **4** spaces and **1** or **2** trailing spaces **works**.
-            
+
 ### 1.10 Spacing Between List Items and Images, No Line Breaks, with Trailing Spaces
 
 1. First list item
@@ -173,7 +203,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
     * Image indentation works with **4 spaces**.
     * Images don't need a line break to work.
 
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
 
 ### 1.11 Indent for Alerts in Lists
 
@@ -299,6 +329,8 @@ With a paragraph
 
 #### Level 4 section
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
+
 ##### Level 5 section
 
 ###### Level 6 section
@@ -365,30 +397,4 @@ A new list
     1. Subitem 4
 1. Item 3
 
-## Test Buttons
 
-{{% button color="info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
-
-{{% button color="success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
-
-{{% button color="danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
-
-{{% button color="warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
-
-{{% button color="light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
-
-{{% button color="dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
-
-{{% button color="link" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Link" title="What do you think of this button?" %}}
-
-{{% button color="outline-info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
-
-{{% button color="outline-success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
-
-{{% button color="outline-danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
-
-{{% button color="outline-warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
-
-{{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
-
-{{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}

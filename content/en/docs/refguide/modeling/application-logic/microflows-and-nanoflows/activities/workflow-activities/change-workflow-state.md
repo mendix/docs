@@ -53,7 +53,7 @@ You can select the following operations that represent the new state of the work
 * **Retry workflow** – This operation allows you to retry the failed workflow. **Retry workflow** differs from **Restart workflow** – **Restart workflow** starts the same workflow from the beginning, while **Retry workflow** retries the failed activity to see whether the workflow can get back into the in-progress state. There can be the following use cases:
     * If the failed activity is a user task activity, **Retry workflow** attempts to get the user task back to the state it had before it failed. 
     * If the user task failed due to an execution error in the event handling microflow (for more information, see the [Events Section](/refguide/user-task/#events) in *User Task* and the [User Task State Change](/refguide/workflow-properties/#user-task-state-change) section in *Workflow Properties*), the failed microflow is re-executed. 
-    * If the user task failed due to no users targeted by a microflow (for more information, see the [Assign User Task Using](/refguide/user-task/#assign-user-task) section in *User Task*), the targetting microflow is executed again unless the targeted users are added manually, in which case the user task is put into the in-progress state.
+    * If the user task failed because no users were targeted by a microflow (for more information, see the [Assign User Task Using](/refguide/user-task/#assign-user-task) section in *User Task*), the targeting microflow is executed again unless the targeted users are added manually, in which case the user task is put into the in-progress state.
 
 {{% alert color="info" %}}
 The workflow instance state changes are reflected in the **System.Workflow.State** attribute.

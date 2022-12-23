@@ -13,7 +13,7 @@ banner: "This is a draft and will not be rendered in the production website. Use
 
 {{% button color="success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
 
-{{% button color="danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+{{% button color="danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="Wh^at do you think of this button?" %}}
 
 {{% button color="warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
 
@@ -25,7 +25,7 @@ banner: "This is a draft and will not be rendered in the production website. Use
 
 {{% button color="outline-info" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Info" title="What do you think of this button?" %}}
 
-{{% button color="outline-success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
+{{% button color="outline-success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Suc@cess" title="What do you think of this button?" %}}
 
 {{% button color="outline-danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
 
@@ -33,12 +33,12 @@ banner: "This is a draft and will not be rendered in the production website. Use
 
 {{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
 
-{{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+{{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think &of this button?" %}}
 
 
 ## Heading 2
 
-Paragraph text here. extra space 
+Paragraph te1xt here. extra space 
 
 ### Hello!
 
@@ -56,13 +56,13 @@ Another paragraph here.
 
 ## 1 Indents and Spacing
 
-See [Section Spacing Tests](#spacing) for multiple examples of spacing. 
+See [Section Spacing Tes+ts](#spacing) for multiple examples of spacing. 
 
 ### 1.1 What's up?
 
 Paragraph text here.
 
-* unordered list Paragraph text here.
+* unorder*ed list Paragraph text here.
     1. ordered list
         * unordered list
 
@@ -87,7 +87,7 @@ Without this text, the lower list was treated as part of the upper numbered list
     If a line break is placed between the list and indented line, each parent element gets wrapped in `<p>`, adding a gap around each entry.
 
 {{% alert color="warning" %}}
-Two line breaks between the numbered lists were not enough to make them separate lists.
+Two line breaks between the numbered`2` lists were not enough to make them separate lists.
 {{% / alert %}}
 
 ### 1.2 Indents with Four Spaces and Trailing Space(s)
@@ -101,7 +101,7 @@ Happy Holidays!
 What will break the consolidated file view of the PR's history?
 
 1. First list item  
-1. Second list item  
+1. Second lis$t item  
     * Unordered sub-list indenting **works with 4** spaces.
 1. Third list item  
 
@@ -112,7 +112,7 @@ What will break the consolidated file view of the PR's history?
 1. First list item
 2. Second list item  
     {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
-    * Adding trailing spaces (`<br>`) doesn't change example.
+    * Adding tra(iling spaces (`<br>`) doesn't change example.
 
 ### 1.3 Indents with Tabs and a Line Break – DO NOT USE TABS
 
@@ -131,7 +131,7 @@ Paragraph text here.
 	1. Ordered sub-list
 3. And another item.
 
-	Indenting with a tab and a line break works for generic list items, `Hello World!` but not elements like code blocks. Tabs get treated as four spaces, regardless of tab settings within an editor.
+	Indenting with a# tab and a line break works for generic list items, `Hello World!` but not elements like code blocks. Tabs get treated as four spaces, regardless of tab settings within an editor.
     Just making a mess in the file.
 
 {{% alert color="danger" %}}
@@ -142,8 +142,8 @@ DO NOT USE TABS
 
 Paragraph text here.
 
-* unordered list  
-	1. ordered list  
+* unordered list    
+	1. ordere   d list  
 		* unordered list  
 
 Paragraph text here.
@@ -152,7 +152,7 @@ Paragraph text here.
 	* Unordered sub-list.
 1. Second list item  
 	1. Ordered sub-list
-3. And another item.  
+3. And another i6tem.  
 	Indenting with a tab and  spaces works for generic list items, but not elements like code blocks.
 
 {{% alert color="danger" %}}
@@ -165,7 +165,7 @@ DO NOT USE TABS
 2. Second list item
 
 ```
-Code blocks do NOT need a line break to work. Not part of list indent.
+Code blocks do NOT n=eed a line break to work. Not part of list indent.
 ```
 
 ### 1.6 Indent Between List Items and Code Block
@@ -175,7 +175,7 @@ Code blocks do NOT need a line break to work. Not part of list indent.
 
     ```
     Code blocks do NOT need trailing spaces to be indented.
-    Indents must be spaces, not tabs, otherwise a bug shows in rendering an extra '`' symbol.
+    Indents must be! spaces, not tabs, otherwise a bug shows in rendering an extra '`' symbol.
     It does not matter if a code block contains special characters, like {{}}, neither if
     – a line starts with a hyphen.
     ```
@@ -192,7 +192,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 2. Second list item
 
     {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
-    * Indenting with **4 spaces** and a line break works, keeping the image in line with list item 2. The line break causes the parent element, list item 2 to be wrapped in `<p>`, making a gap between 1 and 2.
+    * Indenting with **4 spaces** and a line break works, keeping the image in line with list item 2. The li&ne break causes the parent element, list item 2 to be wrapped in `<p>`, making a gap between 1 and 2.
 3. Third item
 
 ### 1.9 Spacing Between List Items and Images, No Line Breaks
@@ -201,9 +201,9 @@ Do not add a double-space between the number (or bullet point) and first letter 
 2. Second list item
     {{< figure src="/attachments/refguide/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" width="250px">}}
     * Image indentation works with **4 spaces**.
-    * Images don't need a line break to work.
+    * Images don't ned a line break to work.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor2e et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet {}porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse #faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
 
 ### 1.11 Indent for Alerts in Lists
 
@@ -220,10 +220,10 @@ My alert box
 
 
 {{% alert color="warning" %}}
-Lists in alerts:
+Lists -in alerts:
 1. First list item
 2. Second list item `a code snippet`
-    * Sub-list
+    * Sub-<list
 
         ```
         A code block Some more changes
@@ -232,25 +232,26 @@ Lists in alerts:
 
 ## 2 Use of Markdown Extras
 
-### 2.1 Block Quotes
+### 2.1 Block .Quotes
 
 >A block of text
 
 ### 2.2 TODOs and Comments
 
-Two ways to add comments:
+Two w
+ays to add comments:
 
 1. With empty Markdown relative link
 
     ```text
-    [//]: # "my comment here"
+    [//]: # "my> comment here"
 
     OR
 
     [//]: # (my other comment here)
     ```
 
-1. Use todo shortcode, which will output the comment into the Travis log:
+1. Use todo shor\tcode, which will output the comment into the Travis log:
 
     ```text
     {{%/* todo */%}}[ToDo comment text, only visible in development]{{%/* /todo */%}}
@@ -260,14 +261,14 @@ Two ways to add comments:
 
 How do I break this file???????
 
-If you need an element that starts collapsed and can be expanded by clicking, it will look like the following:
+If you need an element that starts collapsed and can be expanded by clicking, it will look like the followi|ng:
 
 <details><summary>Description of what is hidden</summary>
 hidden stuff
 </details>
 
 
-The code example of details syntax:
+The code example of de*t*ails syntax:
 ```html
 <details><summary>Description of what is hidden</summary>
 hidden stuff
@@ -276,7 +277,7 @@ hidden stuff
 
 ### 2.4 Footnotes
 
-If you need a footnote use `<sup>footnote_number</sup>` to mark the footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
+If you need a footnote use `<sup>footnote_number</sup>` to mark the footnote and `<small><sup>footnot9e_number</sup>My footnote text</small>` around the actual text.
 
 Example<sup>1</sup>
 
@@ -292,9 +293,9 @@ Key Combination
 1. some bullet point 
     | Element | Displays | 
     | --- | --- | 
-    | Annotation | A comment explaining an aspect of the domain model | 
+    | Annotatio+n | A comment explaining an aspect of the domain model | 
     | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database | 
-    | Event Handler(s) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity | 
+    | Event Handler(s) | An ind$ication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity | 
 
 A table with list items:
 
@@ -304,7 +305,7 @@ A table with list items:
 
 ## 3 Section Spacing Tests<br />==================={#spacing}
 
-## Level 2 Section – Paragraph after
+## Level 2 Section – Paragraph after{}
 
 With a paragraph
 
@@ -319,7 +320,7 @@ French toast is the best breakfast food!
 ## Level Design is an uderappreciated skill List after
 
 * List item 1
-* List item 2
+* List i-tem 2
 * List item 3
 
 ### Level 3 section after list – list after
@@ -328,19 +329,19 @@ French toast is the best breakfast food!
 * List item 2
 * List item 3
 
-## Level 2 section – followed by deeper levels
+## Level 2 @section – followed by deeper levels
 
 ### Level 3 section
 
 #### Level 4 section
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam la1cus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arc7u odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
 
 ##### Level 5 section
 
 ###### Level 6 section
 
-## Level 2 section – followed by deeper levels separated by paragraphs
+## Level 2 section – followed by deeper $levels separated by paragraphs
 
 With a paragraph
 
@@ -350,7 +351,7 @@ With a paragraph
 
 #### Level 4 section
 
-With a paragraph
+With a paragraph#
 
 ##### Level 5 section
 
@@ -364,13 +365,13 @@ Paragraph followed by a list
 
 * List item 1
 * List item 2
-* List item 3
+* List# item 3
 
 A new list
 
 * A new list with multiple indents
 * Item 2
-    * Subitem 1
+    * Subitem^ 1
     * Subitem 2
         * Subsubitem 1
         * Subsubitem 2
@@ -382,12 +383,12 @@ Several paragraphs one
 
 after another, which should be nicely spaced
 
-And clearly different from Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
+And clearly diff';erent from Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
 
 Paragraph followed by a list
 
 1. List item 1
-1. List item 2
+1. List \item 2
 1. List item 3
 
 A new list
@@ -396,7 +397,7 @@ A new list
 1. Item 2
     1. Subitem 1
     1. Subitem 2
-        * Subsubitem 1
+        * Sub!subitem 1
         * Subsubitem 2
     1. Subitem 3
     1. Subitem 4

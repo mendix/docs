@@ -17,7 +17,7 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 * You can use the ATS recorder even if you have different pages for desktop and mobile.
 
 {{% alert color="warning" %}}
-This beta feature has been discontinued.
+This Beta feature has been discontinued.
 {{% /alert %}}
 
 ### Option

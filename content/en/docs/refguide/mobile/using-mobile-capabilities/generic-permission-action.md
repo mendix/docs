@@ -140,13 +140,12 @@ target 'YourAwesomeProject' do
 end
 ```
 
-
 To allow a Siri permission you will need to enable Siri capability in your app. This can be done one of two ways:
 
 * The first way is by navigating to **Xcode** > **Signing & Capabilities** > **+** > **Siri** and then enabling the capability
 * The second way is by updating the */ios/{app name}/{app name}.entitlements* file as follows:
 
-	```xml
+    ```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
@@ -156,7 +155,7 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 		<true/>
 	</dict>
 	</plist>
-	```
+    ```
 
 ### 5.2 Android {#update-android-native-permissions}
 

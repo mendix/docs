@@ -18,7 +18,7 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 
 * Mendix version of *all branches* in the app is 9.12 or above
 * Current version control is in Team Server SVN
-* Your app has maximum 250 revisions across all branches (we plan to increase this maximum in the coming months)
+* Your app has maximum 1000 revisions across all branches (this limit will be removed in Q1 2023)
 
 {{% alert type="info" %}}
 
@@ -54,12 +54,13 @@ After migration is completed all developers need to check out (re-download) the 
 If the migration process failed, all changes are rolled back. This means access to SVN is restored and you can keep developing your app.
 You can check common causes of a failed migration below and resolve them. After that you can attempt to migrate your app again.
 
-Causes of a failed migration can be the following:
+The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix version 9.12. To resolve this, delete or upgrade these branches. 
+
+Migration failure may be also caused by the naming of your branches. You can resolve such migration failures by connecting to Tortoise SVN. For more information, see the [Working Outside Studio Pro](/refguide/using-version-control-in-studio-pro/#working-outside-studio-pro) section in *Using Version Control in Studio Pro*. Reasons can be one of the following:
 
 * There are no branches called *branches/trunk* or *branches/tags*.
 * There are branches with the same name but a different casing, such as *branch1* and *BRANCH1*.
 * There are branches with a name that is not valid in Git, for more information see [Git Documentation](https://git-scm.com/docs/git-check-ref-format).
-* There are branches that are below Studio Pro version 9.12.
 
 ## 6 Read More
 

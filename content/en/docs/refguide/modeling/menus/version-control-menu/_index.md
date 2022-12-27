@@ -12,9 +12,9 @@ In the **Version Control** menu, you can view and/or manipulate settings that ar
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/version-control-menu.png" alt="Version Control Menu" >}}
 
-## 2 Update
+## 2 Update/Pull
 
-The **Update** option updates the local app to the latest revision that was committed to the version control server.
+The **Update** (for SVN) or **Pull** (for Git) option updates the local app to the latest revision that was committed to the version control server.
 
 ## 3 Commit
 

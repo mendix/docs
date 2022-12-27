@@ -31,6 +31,7 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 
 {{% alert color="warning" %}}
 Please note the following:
+
 * `Crash` logs are not supported currently
 {{% /alert %}}
 
@@ -38,7 +39,7 @@ For more information on log levels, see the [Log Levels](/refguide/logging/#log-
 
 ### 3.1 Critical
 
-**Critical** is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action. Mendix Cloud v3 treats these messages as alerts and will notify you on the cloud dashboard.
+**Critical** is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action.
 
 ### 3.2 Error
 
@@ -70,8 +71,8 @@ This section provides some details on specific log nodes used by the Mendix nati
 
 The following log nodes are used by Mendix when writing log messages:
 
-
 {{% alert color="warning" %}}
+
 * From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
 * Enabling the `trace` log level may cause too many logs to be sent to the [Mendix Runtime](/refguide/runtime/), so it should not be kept enabled for long periods of time.
 {{% /alert %}}

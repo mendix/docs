@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: "Provides information on how to obtain support for your Mendix apps."
-weight: 30
+weight: 35
 no_list: false 
 description_list: true
 tags: ["support", "sla", "standard", "premier", "platform"]

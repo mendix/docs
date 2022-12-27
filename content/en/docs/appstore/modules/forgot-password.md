@@ -40,7 +40,9 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
 
 1. Import the [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module into your app.
 1. Add the [Dependencies](#dependencies) listed above from the Marketplace.
+
     {{% alert color="info" %}}You can accept any warnings about files being overwritten.{{% /alert %}}
+
 1. Open the [App Settings](/refguide/app-settings/) and make the following changes:
     * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant `Encryption.EncryptionKey`
         {{< figure src="/attachments/appstore/modules/forgot-password/encryption-key.png" >}}
@@ -65,12 +67,14 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
     * Click **Reset email template** and provide the details for the email sent when an end-user has forgotten their password
         {{< figure src="/attachments/appstore/modules/forgot-password/email-template.png" >}}
 1. In the **Signup Email** tab, provide the details for the email sent when an end-user wants to sign up to use the app.
+
     {{% alert color="info" %}}
 To disable the signup functionality and use the Forgot Password module only for resetting passwords, do the following:
 
 * remove the **Sign-up** button from the `LoginSnippet` snippet in the `_Use Me` folder of the `ForgotPassword` Marketplace module
 * remove all the actions from the `CreateNewUserFromSignUp` microflow.
     {{% /alert %}}
+
 1. In the **Deeplink** tab, configure the deeplink to use the `ForgotPassword.Step3_DL_SetNewPassword` microflow.
         {{< figure src="/attachments/appstore/modules/forgot-password/configure-deeplink.png" >}}
 
@@ -83,7 +87,8 @@ To disable the signup functionality and use the Forgot Password module only for 
     You will receive an email containing a link to reset your password.
         {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
 1. Open the link in the browser.
-    You can now reset your password.        {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
+    You can now reset your password.
+        {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
 
 ## 4 Upgrading from Mendix Version 8 to Mendix Version 9 {#upgrade8-9}
 
@@ -100,4 +105,3 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below 
 1. This will resolve two of the errors. Open the page of error and again change the (master) layout to `Atlas_TopBar(Atlas_UI_Resources)`.
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix version 9.
- 

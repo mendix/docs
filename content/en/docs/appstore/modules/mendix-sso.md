@@ -9,6 +9,10 @@ tags: ["marketplace", "marketplace component", "sso", "single sign on", "platfor
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
+{{% /alert %}}
+
 With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) module, you can utilize single sign-on functionality by directly integrating with the Mendix identity provider and leveraging the [OpenID Connect](https://openid.net/connect/) framework.
 
 This module allows end-users to log in with their Mendix account with the click of a button, instead of requiring their local user credentials. This avoids having to deal with local user management or password reset flows, and improves governance capabilities over your app landscape.

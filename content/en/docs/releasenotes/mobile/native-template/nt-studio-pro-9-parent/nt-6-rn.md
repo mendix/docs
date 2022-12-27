@@ -70,20 +70,20 @@ In the end, your variable should be set up like this:
 ### Improvements
 
 * We added support for the following fonts from the **react-native-vector-icons** library:
-   * AntDesign
-   * Entype
-   * EvilIcons
-   * Feather
-   * FontAwesome
-   * FontAwesome 5
-   * Fontisto
-   * Foundation
-   * Ionicons
-   * MaterialCommunityIcons
-   * MaterialIcons
-   * Octicons
-   * SimpleLineIcons
-   * Zocial
+    * AntDesign
+    * Entype
+    * EvilIcons
+    * Feather
+    * FontAwesome
+    * FontAwesome 5
+    * Fontisto
+    * Foundation
+    * Ionicons
+    * MaterialCommunityIcons
+    * MaterialIcons
+    * Octicons
+    * SimpleLineIcons
+    * Zocial
 
 ## 6.2.26
 

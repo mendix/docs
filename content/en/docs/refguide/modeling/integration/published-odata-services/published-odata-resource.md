@@ -96,7 +96,7 @@ It is possible to customize the name of the entity set that is displayed in the 
 
 Default: *{Entity name}s*
 
-## 6 Use Paging
+## 6 Use Paging {#paging}
 
 The **Use paging** option is used to set a maximum number of objects per response and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 

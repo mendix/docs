@@ -191,6 +191,12 @@ The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/s
 
 ## 10 Query Options {#query-options}
 
-Select the options that you would like to include in each OData capability.
+Select the options that to include for the **Readable** OData capability.
 
 * **Countable** – required for getting the total number of records
+
+Options required for pagination:
+* **Top supported** – required when **Use paging** is selected.  This option supports the $top query, which requests the number of items in the queried collection to be included in the result.
+* **Skip supported** – required when **Use paging** is selected. This option supports the $skip query, which requests the number of items in the queried collection that are to be skipped and not included in the result.
+
+For more information, see [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in the Microsoft OData documentation.

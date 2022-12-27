@@ -141,13 +141,15 @@ Studio Pro 9.22 and above allows you to encrypt the files and images stored in n
 Before enabling local file encryption, ensure that these prerequisites are met:
 
 * Use Mendix Studio Pro 9.22 (or a higher version) 
-* Upgrade your Native Template to v6.XX.0 (or a higher version) // todo: provide NT release once known
+* Upgrade your Native Template to v6.3.0 (or a higher version)
 * Upgrade Make It Native to the latest version
 
 {{% alert color="info" %}}
-Local database encryption works in Native Template v6.XX.0 and higher. If this setting is enabled using an older version of the native template, the app will not encrypt the files, and the client will log the following warning message:
+Local database encryption works in Native Template v6.3.0 and higher. If this setting is enabled using an older version of the native template, the app will not encrypt the files, and the client will log the following warning message:
 
 > Encrypting user files and images is enabled; however, the current native template does not support this functionality. Please update your app's native template to support encryption. User files and images will not be encrypted.
+
+If you are using Native Template 6.3.0 or higher and building the app locally on your computer, you may need to reinstall the dependencies of your app using the `npm i` command.
 
 {{% /alert %}}
 

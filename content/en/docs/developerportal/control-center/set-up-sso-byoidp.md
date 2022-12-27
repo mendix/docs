@@ -8,7 +8,7 @@ tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single 
 ---
 
 {{% alert color="info" %}}
-This feature is currently in [Public Beta](/releasenotes/beta-features/).
+This feature is currently in [Beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -193,9 +193,9 @@ Mendix supports two client authentication methods: `client_secret_post` (client 
 
 ### 9.3 Incorrect Conditional Access Policies
 
-Studio Pro uses an embedded browser for login. The customer’s conditional access policies in AzureAD may block Studio Pro for this. For example, customers using Microsoft’s Intune for MDM/MAM will hit this limitation.
+Prior to Mendix version 9.18.0, Studio Pro used an embedded browser for signing in. Conditional access policies in AzureAD could block this Studio Pro browser. For example, customers using Microsoft’s Intune for MDM/MAM would hit this limitation.
 
-Mendix has created an enhancement of Studio Pro that uses system browser to overcome this limitation. This feature is in Private Beta and can be provided on request.
+From version 9.18.0, Mendix Studio Pro uses the system browser for signing in to overcome this limitation.
 
 ### 9.4 IdP Does Not Allow Untrusted Devices
 

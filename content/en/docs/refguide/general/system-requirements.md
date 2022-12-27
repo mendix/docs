@@ -19,7 +19,6 @@ Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versio
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
-{{% todo %}}Do we still need C++ 2010 for any versions of Mx9?{{% /todo %}}
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
@@ -28,7 +27,6 @@ The following frameworks are required. They will be installed automatically by t
     * Eclipse Temurin JDK 11 (x64)– for Mendix versions 9.18.0 and above
     
     Oracle JDK 11 can also be used if this is already installed.
-{{% todo %}}Are the following needed for all versions of Mx9?{{% /todo %}}
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -45,7 +43,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
-### 2.1 Firewall Settings
+### 2.1 Firewall Settings {#firewall-settings}
 
 Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to whitelist them:
 
@@ -58,6 +56,7 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8080: runtime port
 * 8083: mobile packager
 * 8090: admin port
+* 8100: sign-in port (for version 9.18 and above)
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
@@ -150,12 +149,13 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ## 7 Server
 
-### 7.1 Operating System
+### 7.1 Operating System {#server-os}
 
 * Microsoft Windows Server 2008 SP2 and above
-* Debian 8 (Jessie) and above
-* Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
-* CentOS 6, CentOS 7
+* The following Unix-like operating systems:
+    * Debian 8 (Jessie) and above
+    * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, and Red Hat Enterprise Linux 8
+    * CentOS 6, CentOS 7
 
 ### 7.2 Web Server
 
@@ -206,7 +206,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 * SAP AWS S3 Object Storage
 * SAP Azure Blob Storage
 
-For container-mounted storage in Kubernetes, provided by an external storage class, see also [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes/).
+For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
 ### 9.2 Storage Types for Servers
 

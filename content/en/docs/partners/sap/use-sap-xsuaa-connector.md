@@ -10,6 +10,10 @@ tags: ["SAP", "integration", "OData", "SSO"]
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
+{{% /alert %}}
+
 When you deploy an application to SAP Business Technology Platform (SAP BTP) using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **Id**entity **P**rovider (IdP) for a Mendix application. This means that the user can sign on to their app using this IdP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
 
 A Mendix application is role-based. Using the SAP BTP cockpit, you can assign the roles within the app to roles within your SAP subaccount. The roles in the SAP subaccount can then be assigned to individual users via the selected IdP (Trust Configuration).
@@ -33,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/partners/sap/use-sap-xsuaa-connector/add-roles-to-app.png" >}}
 
-* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)
+* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)
 
 ## 3 Getting the XSUAA Connector for SAP Business Technology Platform Module
 

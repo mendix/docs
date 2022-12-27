@@ -205,9 +205,9 @@ Calculates the exponent of a number to a certain power.
 
 ### Output
 
-The number to the power, as in, n^p. The result will be of the most precise type necessary.
+The number to the power, as in, n^p.
 
-Type: Integer/Long or Decimal
+Type: Decimal
 
 ```java
 pow(2, 3)
@@ -218,8 +218,6 @@ returns:
 ```java
 8
 ```
-
-of type "Integer/Long"
 
 and
 
@@ -232,8 +230,6 @@ returns:
 ```java
 15.625
 ```
-
-of type "Decimal"
 
 Calculation of 'pow' with a decimal exponent might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
 

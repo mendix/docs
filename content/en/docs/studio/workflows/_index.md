@@ -22,7 +22,7 @@ Workflows are a visual way of processing logic in your application. A workflow l
 {{< figure src="/attachments/studio/workflows/workflow-example.jpg" alt="Workflow Example" >}}
 
 {{% alert type="note" %}}
-Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration/). 
+Workflows are available in Studio from **Mendix version 9.12.1**. If you have an app with workflow functionality below this version, this app is most likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrating Workflow Apps](/refguide/workflow-beta-migration/). 
 {{% /alert %}}
 
 ## 2 Performing Basic Functions
@@ -200,7 +200,7 @@ The elements of this section are described in the table below:
 
 ### 5.3 System Actions {#system}
 
-[Call microflow](/studio/workflow-system-actions/) activity calls a selected microflow. You can use this activity to add application logic to the path of the workflow that does not need user interaction. 
+The elements of this section allow you to [call a microflow](/studio/workflow-system-actions/#call-microflow) or [call another workflow](/studio/workflow-system-actions/#call-workflow):
 
 {{< figure src="/attachments/studio/workflows/system-actions.jpg" alt="System Actions" >}}
 

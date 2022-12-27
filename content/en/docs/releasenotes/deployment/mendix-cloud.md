@@ -17,6 +17,38 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2022
 
+### November 14th, 2022
+
+#### Improvements
+
+* We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spams.
+
+### November 10th, 2022
+
+#### Improvements
+
+* We updated the **Virtual Machine Out of Memory** and **Virtual Machine Error** alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
+* We now warn you if you try to set unsupported custom runtime settings. These are settings, mainly related to storage options, which are controlled by the Mendix Cloud deployment and cannot be customized for apps which are deployed to the Mendix Cloud.
+
+### November 1st, 2022
+
+#### Improvements
+
+* We have enabled DNSSEC for all `*.mendixcloud.com` domains.
+
+### October 20th, 2022
+
+#### Fix
+
+* We fixed an issue with validation of white spaces in intermediate certificate chains for custom domains. (Tickets 15376, 163961, 165121, 165756, 167669, and 168416)
+
+### October 17th, 2022
+
+#### Improvements
+
+* We updated our alert template to remove the **Application Server Memory** alert.
+* We added the **Database Freeable Memory** alert with the critical threshold set to 10%.
+
 ### September 15th, 2022
 
 #### Improvements
@@ -617,7 +649,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, and 98313)
 * We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
-* We made some changes to the Mendix Cloud v3 [Trends](/developerportal/operate/trends/) graphs.
+* We made some changes to the Mendix Cloud v3 Trends graphs.
 
 ### June 16th, 2020
 

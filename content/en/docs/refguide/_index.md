@@ -17,7 +17,7 @@ cascade:
 
 The *Mendix Studio Pro 9 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.
 
-Before installing Studio Pro 9, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [How to Install Mendix Studio Pro](/howto/general/install/).
+Before installing Studio Pro 9, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [Installing Mendix Studio Pro](/refguide/install/).
 
 If you have been using Studio Pro version 8, we recommend reading [Moving from Mendix Studio Pro 8 to 9](/refguide/moving-from-8-to-9/).
 

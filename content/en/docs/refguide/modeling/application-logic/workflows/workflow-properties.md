@@ -94,7 +94,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 **Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
 
-#### 2.4.1 Workflow State Change 
+#### 2.4.1 Workflow State Change {#workflow-state-change}
 
 {{% alert color="info" %}}
 This setting overrides the app-wide setting in the **App Settings**. For more information see the [Workflow State Change](/refguide/app-settings/#workflow-state-change) section in *App Settings*.

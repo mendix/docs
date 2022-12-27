@@ -2,7 +2,7 @@
 title: "Version Control FAQ"
 url: /refguide/version-control-faq/
 category: "Version Control"
-weight: 15
+weight: 30
 description: "Presents and explains several frequently asked questions about version control."
 tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 ---
@@ -29,19 +29,9 @@ Mendix adheres to strict security standards and considers you the sole owner of 
 
 ## 5 What Are the Differences between Team Server SVN and Team Server Git?
 
-Team Server Git has full feature parity with Team Server SVN, meaning both are integrated with Studio and Studio Pro, support cloud deployments, provide access to our various APIs, and support products like [AQM](/addons/aqm-addon/). 
+For information on differences between SVN and Git, see [Migrating to Git: SVN and Git Process Differences](/refguide/svn-git-differences/).
 
-As both technologies have fundamental differences, there are differences in the developer workflow. 
-
-In SVN, it is possible to retrieve changes and apply them directly on uncommitted changes. 
-
-In Git, conflict resolution can only be done on committed changes. This means you have to commit locally before being able to retrieve/pull changes from other developers. The advantage is that you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
-
-In SVN, commits are done to a central server which enforces the commit order. These commits are represented with a number that is generally sequentially increasing (e.g. 1, 2, 3, 4, 5). 
-
-In Git, committing is first done locally. Commits are then sent to other repositories in such a way that they are uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as these can be generated in a distributed setting and still be the same on different clients with identical changes. 
-
-## 6 What Are the Advantages of Team Server Git over Team Server SVN?
+## 6 What Are the Advantages of Team Server Git over Team Server SVN? {#git-advantages}
 
 Team Server Git has the following advantages over Team Server SVN:
 
@@ -67,21 +57,11 @@ Mendix  is focusing on improving Team Server Git support and migrating customers
 
 ## 9 Can I Migrate from Team Server SVN to Git?
 
-Currently, there is no out-of-the-box migration service available that keeps historical data. This service is planned later in 2022.
-However, you can migrate manually by creating a new app based on Team Server Git, exporting the Team Server SVN app, and copying that to the new app repository. This does **not** preserve your app history.
+Scrum masters can migrate an SVN app to Git in the Developer Portal. For more information on how to migrate, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*. 
 
-## 10 Can I Use Third-Party Tools to Connect to the Team Server?
+## 10 Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 
-Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TurtoiseSVN, TurtoiseGit, or GitHub Desktop by using the following repository URLs:
-
-* Team Server SVN: `https://teamserver.sprintr.com/<your AppID>/` 
-* Team Server Git: `https://git.api.mendix.com/<your AppID>.git`
-
-If you have Git-based apps, you can also connect to a local repository. 
-
-{{% alert color="info" %}}
-Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.
-{{% /alert %}}
+Yes, as the Team Server is based on a full implementation of Git or SVN. You can directly use third-party tools like TortoiseSVN, TortoiseGit, or GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/using-version-control-in-studio-pro/#external-tools) section in *Using Version Control in Studio Pro*. 
 
 ## 11 Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 

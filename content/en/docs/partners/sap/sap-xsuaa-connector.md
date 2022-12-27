@@ -5,10 +5,14 @@ url: /partners/sap/sap-xsuaa-connector/
 category: "SAP"
 weight: 40
 description: "Presents reference information on the XSUAA Connector for SAP Business Technology Platform."
-tags: ["SAP", "SAP Cloud Platform", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
+tags: ["SAP", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
 ---
 
 ## 1 Introduction
+
+{{% alert color="warning" %}}
+This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
+{{% /alert %}}
 
 XSUAA is a service provided by the SAP Business Technology Platform (SAP BTP) that will bind to the Mendix application as soon as the application is deployed within the SAP Business Technology Platform (SAP BTP) using the deployment features in the Mendix Developer Portal.
 

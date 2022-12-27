@@ -29,7 +29,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     For more information on creating a domain model, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/).
 2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)).
-3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/)).
+3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)).
 4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto/security/create-a-secure-app/)).
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581008.png" >}}
@@ -78,9 +78,7 @@ To define the access rules on the Order entity using XPath, follow these steps:
 
 ## 4 Read More
 
-* [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/)
+* [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/)
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
-* [Optimize Retrieve Activities](/howto/logic-business-rules/optimizing-retrieve-activities/)
-* [Optimize Microflow Aggregates](/howto/logic-business-rules/optimizing-microflow-aggregates/)
-* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)

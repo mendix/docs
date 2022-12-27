@@ -13,19 +13,25 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 
 ### 1.1 Dependencies
 
-* [Object Handling](/appstore/modules/object-handling/)
+* The [Community Commons](/appstore/modules/community-commons-function-library/) module
 * *junit-4.13.1.jar*
-* *commons-io-2.8.0.jar*
-* *commons-lang3-3.7.jar*
+* *commons-io-2.11.0.jar*
+* *commons-lang3-3.11.jar*
 * *httpclient5-5.0.3.jar*
 * *httpcore5-5.0.3.jar*
 * *hamcrest-2.2.jar*
 
+{{% alert color="info" %}}
+For module versions below 9.1.0, use the [Object Handling](/appstore/modules/object-handling/) module instead of the Community Commons module.
+{{% /alert %}}
+
 ## 2 Installation
 
 1. Import the Unit Testing module into your app.
+
     For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
-2. Download the latest Object Handling module into your app.
+
+2. Download the latest Community Commons module into your app.
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 5. The following steps are optional:

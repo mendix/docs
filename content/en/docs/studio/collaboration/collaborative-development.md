@@ -14,9 +14,7 @@ aliases:
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-Collaborative development is only available if your app has Mendix version 7.23.3 or above. You cannot sync your changes with Studio Pro if your app has Mendix version 7.23.2 or below. 
-
-You will still be able to open your app in Studio. However, to sync changes between Studio and Studio Pro, Studio Pro must be upgraded to version 7.23.3 or above. 
+From Mendix 9.21, we only support collaborative development between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
 {{% /alert %}}
 
 Collaborative development is the process that allows team members work together on one app in Mendix Studio Pro and Mendix Studio and easily synchronize changes made by others using [version control](/refguide/version-control/). 

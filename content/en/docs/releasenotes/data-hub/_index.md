@@ -1,15 +1,92 @@
 ---
-title: "Data Hub"
+title: "Data Hub Catalog"
 url: /releasenotes/data-hub/
-description: "Release notes for updates to the Mendix Data Hub"
+description: "Release notes for updates to the Mendix Data Hub Catalog"
 tags: ["data hub", "data hub catalog", "data hub Landscape"]
 weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
+These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 ## 2022
+
+### December 22th, 2022
+
+#### Improvements
+
+* You can now edit data source details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
+
+#### Fixes
+
+* We fixed an issue with a `PUT` environment API request, which resulted in 409 conflict instead of updating the environment. (Ticket 173609)
+
+### December 8th, 2022
+
+#### Improvements
+
+* When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/data-hub/data-hub-catalog/curate/) page that shows all relevant and filtered resources. 
+
+### November 24th, 2022 {#nov-24}
+
+#### Improvements
+
+* You can now edit dataset details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
+
+#### Fixes
+
+* We fixed an issue with the display of services with anonymous access in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+
+### November 17th, 2022
+
+#### Improvements
+
+* You can now request access to a data source directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
+
+### November 10th, 2022
+
+#### Improvements
+
+* You can now view authentication details in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. 
+* The **Technical Owner** can now only be changed in the **Control Center**, not within the **Data Hub Catalog**. See the [Custom Owners](/developerportal/control-center/data-hub-admin/#custom-owners) section of *Data Hub Administration*.
+
+#### Fixes
+
+* We fixed a bug where whitespaces in certain fields were causing duplicate services to be created.
+* We removed the **Automatically registered** tag from sample data sources.
+
+### November 3rd, 2022
+
+#### Improvements
+
+* Notifications for newly registered resources are now grouped, helping to de-clutter your Catalog experience.
+
+### October 27th, 2022
+
+#### Improvements
+
+* When registering a service in the registration form, you can now designate which authentication type is needed for consumers to access it. For more information, see [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) in *Register OData Resources in the Data Hub Catalog*.
+* Sample data sources are now clearly indicated with a label.
+
+### October 20th, 2022
+
+#### Improvements
+
+* You will now get a notification about which services automatically registered in the Catalog. Services are automatically registered when deploying a published OData service. To learn more, see [Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data/).
+
+### Fixes
+
+* We fixed a bug where HTML tags were appearing on toast notifications. 
+
+### October 13th, 2022
+
+#### Improvements
+
+* Based on your feedback, we have renamed instances of **Delete data source** in the UI to **Remove data source**. Removing a data source will not delete it from your model.
+
+#### Fixes
+
+* We fixed a bug where the redeployment of an endpoint resulted in an error. The error mistakenly reported the redeployed endpoint as a duplicate rather than an update.
 
 ### October 6th, 2022
 

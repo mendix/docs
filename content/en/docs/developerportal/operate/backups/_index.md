@@ -75,23 +75,6 @@ Anything you can download you can also upload again, which means you can upload 
 Uploading a **Files Only** archive resulta in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
-#### 3.2.2 Uploading Data in Mendix Cloud v3
-
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% alert color="warning" %}}
-In **Mendix Cloud v3**, this does not add a backup to the backup list but directly update the application with the newly uploaded data.
-
-Your environment is cleared completely. The existing deployment package, uploaded files, and database are removed. If you are uploading data to the production environment, any published app services will be unpublished.
-{{% /alert %}}
-
-You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment.
-
-You can upload two types of data:
-
-* **Database**
-* **Uploaded files** (*zip* or *tar.gz*)
-
 ### 3.3 Download Backup
 
 You can download a backup archive containing one of the following: 

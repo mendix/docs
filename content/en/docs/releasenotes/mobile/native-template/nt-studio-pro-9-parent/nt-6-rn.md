@@ -5,6 +5,40 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.3.3
+
+**Release date: November 10th, 2022**
+
+### Fixes
+
+* We fixed an issue with push notifications not working correctly on Android 12 devices. (Tickets 167479, 167837, 168814)
+
+### Update Your Native Mobile Resources Module
+
+{{% alert color="warning" %}}
+Due to a library update, your Native Template must be aligned with Native Mobile Resources or else your build will fail. Please make sure you are using the newest version of the Native Mobile Resources module from Marketplace (currently [version 3.13.0](https://marketplace.mendix.com/link/component/109513)).
+{{% /alert %}}
+
+If you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:
+
+1. Open your project in AppCenter and go to **Build** menu item.
+1. In **all branches**, click the wrench icon.
+1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):
+    1. Name: **JAVA_HOME**.
+    1. Value: **$(JAVA_HOME_11_X64)**.
+
+In the end, your variable should be set up like this:
+
+{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" >}}
+
+## 6.3.2
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+
 ## 6.3.1
 
 **Release date: October 6th, 2022**
@@ -21,6 +55,14 @@ description: "Native Template 6 release notes."
 
 * We improved our app security allowing apps to use new Database encryption capability of Studio Pro 9.18.
 
+## 6.2.28
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+
 ## 6.2.27
 
 **Release date: September 19th, 2022**
@@ -28,20 +70,20 @@ description: "Native Template 6 release notes."
 ### Improvements
 
 * We added support for the following fonts from the **react-native-vector-icons** library:
-   * AntDesign
-   * Entype
-   * EvilIcons
-   * Feather
-   * FontAwesome
-   * FontAwesome 5
-   * Fontisto
-   * Foundation
-   * Ionicons
-   * MaterialCommunityIcons
-   * MaterialIcons
-   * Octicons
-   * SimpleLineIcons
-   * Zocial
+    * AntDesign
+    * Entype
+    * EvilIcons
+    * Feather
+    * FontAwesome
+    * FontAwesome 5
+    * Fontisto
+    * Foundation
+    * Ionicons
+    * MaterialCommunityIcons
+    * MaterialIcons
+    * Octicons
+    * SimpleLineIcons
+    * Zocial
 
 ## 6.2.26
 

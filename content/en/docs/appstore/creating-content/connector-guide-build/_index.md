@@ -74,7 +74,7 @@ Because connectors expose data via custom microflow activities, you can find the
 
 Once you deploy an application, the connector will automatically deploy with it. You can also set a few runtime or node specific configurations (via the application interface or constants).
 
-As an example, check out the [AWS IoT](/appstore/connectors/aws-iot/) connector. This connector uses AWS-provided Java libraries to interact with the AWS IoT service. The functions from these Java libraries in turn are exposed via a set of Mendix Java actions that are available in the toolbox to use in your logic.
+As an example, check out the [Amazon SNS](/appstore/connectors/amazon-sns/) connector. This connector uses AWS-provided libraries to interact with the Amazon Simple Notification Service. The functions are exposed via a set of Mendix actions that are available in the toolbox to use in your logic.
 
 ## 3 Building a Mendix Connector in Studio Pro {#build-connector}
 

@@ -74,9 +74,7 @@ To solve this, you can add a button which will open a pop-up page where your end
 Follow the steps below:
 
 1. Open the **New Report** page where employees submit a new report. 
-
 2. Open the **Toolbox** and search for the **Open Page** button.
-
 3. Drag the button above **Save** and **Cancel** buttons:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/open-page-button.png"   width="450"  >}}
@@ -84,20 +82,15 @@ Follow the steps below:
 4. Open button properties and do the following:
 
     1. Select the **Caption** property and rename it to *Attach Images*.
-
     2. Click the **Icon** property. 
-
     3. In the **Select icon** dialog box, search for the *picture* icon, and click **Select**.
-
     4. Click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/button-style-change.png"   width="150"  >}}
 
     5. In the button properties, click the **Page** property.
-
     6. In the **Select Page** dialog box, click the plus icon in the top right corner to add a new page. 
-
-    12. In the **Create new page** dialog box, do the following:
+    7. In the **Create Page** dialog box, do the following:
 
         1. Set the **Title** to *Attach Images*.
         2. Set the **Layout** to *PopupLayout*.
@@ -106,17 +99,14 @@ Follow the steps below:
 
         {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/create-new-page-images.png"   width="500"  >}}
 
-13. A new pop-up page with a preconfigured form (a data view) is created:
+5. A new pop-up page with a preconfigured form (a data view) is created:
 
     {{< figure src="/attachments/studio-how-to/pages/pages-how-to-attach-images/attach-images-page.png"   width="500"  >}}
 
-14. As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
-
-15. Open the **Toolbox**, search for an **Image Uploader**, drag it inside the data view on the **Attach Images** page. 
-
-16. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
-    
-17. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**: 
+6. As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes from the data view. 
+7. Open the **Toolbox**, search for an **Image Uploader**, drag it inside the data view on the **Attach Images** page. 
+8. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
+9. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**: 
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
 

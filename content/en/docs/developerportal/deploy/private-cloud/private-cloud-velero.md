@@ -79,4 +79,3 @@ To restore a backup that you created with Velero, follow these steps:
     ```
 
     {{% alert color="info" %}}Adding finalizers is not required, but it is recommended as a best practice. It ensures that the Kubernetes garbage collection cleans up the storage from deleted environments.{{% /alert %}}
-    

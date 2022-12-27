@@ -33,8 +33,8 @@ For details on how to add a specific APM tool to your app, see one of the follow
 
 A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
-{{% alert color="warning" %}}
-Monitoring using an APM tool is not supported in the deprecated Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+{{% alert color="info" %}}
+For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## 2 What Information Can Mendix Supply to a Saas-based Data Analytics Platform?

@@ -199,4 +199,4 @@ Options required for pagination:
 * **Top supported** – required when **Use paging** is selected.  This option supports the $top query, which requests the number of items in the queried collection to be included in the result.
 * **Skip supported** – required when **Use paging** is selected. This option supports the $skip query, which requests the number of items in the queried collection that are to be skipped and not included in the result.
 
-For more information, see [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in the Microsoft OData documentation.
+For more information, see [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in Microsoft's OData documentation.

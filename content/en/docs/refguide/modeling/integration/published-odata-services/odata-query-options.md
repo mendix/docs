@@ -136,6 +136,8 @@ You can select which attributes and associations to return by specifying the `$s
 
 ## 7 Paging {#paging}
 
+Paging, or pagination, helps you allows you to load data incrementally. See [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in Microsoft's OData documentation for more information.
+
 ### 7.1 Top (Limit)
 
 You can limit the number of returned objects using the `$top` query option, where the limit is a positive integer. For example: `?$top=100`.

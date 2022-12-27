@@ -5,6 +5,14 @@ weight: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.15
+
+**Release date: December 27th, 2022**
+
+### Fixes
+
+* We changed the order of repositories in Android builds to fix an issue with jitpack.io.
+
 ## 5.2.14
 
 **Release date: November 9th, 2022**

@@ -26,20 +26,20 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 #### Improvements
 
 * We added support for the following fonts from the **react-native-vector-icons** library:
-   * AntDesign
-   * Entype
-   * EvilIcons
-   * Feather
-   * FontAwesome
-   * FontAwesome 5
-   * Fontisto
-   * Foundation
-   * Ionicons
-   * MaterialCommunityIcons
-   * MaterialIcons
-   * Octicons
-   * SimpleLineIcons
-   * Zocial
+    * AntDesign
+    * Entype
+    * EvilIcons
+    * Feather
+    * FontAwesome
+    * FontAwesome 5
+    * Fontisto
+    * Foundation
+    * Ionicons
+    * MaterialCommunityIcons
+    * MaterialIcons
+    * Octicons
+    * SimpleLineIcons
+    * Zocial
 
 ### Release 1.0.125
 

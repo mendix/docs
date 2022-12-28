@@ -17,7 +17,7 @@ OIDC is an extension of OAuth2 that propagates the end-user's identity to your a
 {{% alert color="warning" %}}
 This OIDC SSO module works with Mendix version 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
 
-Unfortunately, it is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
+If you are using Mendix version 9.20 and above, please use version 2.0.0 or above of the OIDC SSO module.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -31,10 +31,11 @@ Alternatives to using OIDC SSO for managing single sign on are:
 
 ### 1.1 Typical Usage Scenarios
 
-* **B2C-apps:** Your app is aimed at consumers who have an identity at a 'social IdP' which uses OIDC, such as Google. In this case your app will only delegate the authentication to the IdP, no further user information is available to the app.
-* **B2E-app:** Your app is aimed at your company's employees and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case your app may have its own logic to assign user roles or you may use authorization information from your IdP as provided to your app using an access token.
-* **API-consumption.** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Data Hub.
-* **Xcelerator-apps.** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
+* **B2C apps:** Your app is aimed at consumers who have an identity at a 'social IdP' which uses OIDC, such as Google. In this case your app will only delegate the authentication to the IdP, no further user information is available to the app.
+* **B2E app:** Your app is aimed at your company's employees and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case your app may have its own logic to assign user roles or you may use authorization information from your IdP as provided to your app using an access token.
+* **API consumption.** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Data Hub.
+* **Authorizing access to a Mendix back-end app.**  If you want to secure APIs in Mendix back-end apps using an access token, your API can use an access token passed by the calling app in the authorization header. If the access token is a JWT, your app can use the user and/or the user’s authorizations to assign user roles based on the claims in the access token JWT. 
+* **Xcelerator apps.** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
 
 ### 1.2 Features and Limitations
 
@@ -52,7 +53,14 @@ For more complex use cases, which require more knowledge of how OAuth and OIDC w
 
 * Uses the Authorization Code Grant flow to sign the end-user in via the browser.
 * Uses the 'nonce' parameter to defend against replay attacks.
-* Only validates ID-token signatures, not access tokens.
+* Validates ID-token signatures.
+* When authenticating APIs, it validates access tokens in one of two ways:
+
+    * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
+    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+
+    For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
+
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
@@ -310,7 +318,7 @@ Takes as input:
 
 The microflow returns an object of type `System.HttpResponse`. This could indicate an error.
 
-### 7.3 Access Token Parsing{#access-token-parsing}
+### 7.2 Access Token Parsing{#access-token-parsing}
 
 With the OAuth/OIDC protocol, access tokens can be opaque or can be a JSON Web Token (JWT).
 If you are just delegating authentication for your app to the IdP you will not need to know the contents of the access token.
@@ -324,7 +332,11 @@ You can parse an access token in a microflow.
 
 To parse access tokens, you need to check **Enable Access Token Parsing** when performing [OIDC Client Configuration](#client-configuration).
 
-#### 7.3.1 Parsing SAM Access Tokens
+{{% alert color="info" %}}
+In version 2.0.0 and above of the OIDC SSO module you will also find microflows for parsing PIB and Azure AD tokens. These will be released publicly in the future and documented at that time.
+{{% /alert %}}
+
+#### 7.2.1 Parsing SAM Access Tokens
 
 {{% alert color="info" %}}
 This section is only relevant if you are a Mendix partner and you want to integrate your app with the Siemens SAM IdP.
@@ -340,25 +352,28 @@ To parse of SAM access tokens you need to have done the following:
 5. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 6. Save the configuration.
 
-#### 7.3.2 Parsing Access Tokens Using a Custom Microflow
+#### 7.2.2 Parsing Access Tokens Using a Custom Microflow
 
-If you choose to implement your own microflow to parse an access token, the microflow name must start with `CustomATP`, for example `CustomATP_MyTokenParser`. The custom microflow has an `Administration.Account` object as the parameter.
+If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`.
 
 You can find a sample microflow for parsing access tokens, `ACT_TokenCustomATPRetrieve Roles` in the **SAM** folder of the OIDC module.
 
-Your custom microflow should do the following
+Your custom microflow should use the access token to create a list of user roles. Your token will contain one of the following:
+
+* the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
+* the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
+
+For version 2.0.0 and above of the OIDC SSO module, your custom microflow takes the access token as the parameter. Use this access token to determine the roles the user has within your app when signed in using the OIDC module. These should be returned as a list of objects of type `OIDC.Role`.
+
+For versions of the OIDC SSO module below 2.0.0, the process is a bit more complicated. The custom microflow has an `Administration.Account` object as the parameter and must do the following:
 
 1. Retrieve the access token of the account.
 1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.
-1. Convert these roles to a list of `System.UserRole` objects.
-    Your token will contain one of the following:
-
-    * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
-    * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
-
+1. Convert these roles to a list of objects containing the user role.
+1. Return a list of objects of type `System.UserRole`.
 1. Invoke the `BCO_Account_ProcessRolesToken` in the **SAM** folder of the OIDC module to associate the current user with the correct user roles in your app.
 
-Once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
+For all versions of the OIDC SSO module, once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
 
 1. Login as an administrator, for example `Demo_administrator`.
 1. Refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
@@ -370,11 +385,11 @@ Once you have created the microflow (for example `CustomATP_xxx`), you must do t
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
 {{% /alert %}}
 
-### 7.4 Deep Links
+### 7.3 Deep Links
 
 To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to '/oauth/v2/login?cont='
 
-### 7.5 Logging Out
+### 7.4 Logging Out
 
 A standard logout action will end an end-user's Mendix session, but will not end their SSO session. To perform an SSO logout, also known as Single Log Out (SLO), use the nanoflow `ACT_Logout`, which will redirect your user to the IdP's “end session endpoint” if configured.
 
@@ -382,7 +397,7 @@ To do this, add a menu item or button for your end-users that calls the nanoflow
 
 ## 8 Testing and Troubleshooting{#testing}
 
-Once you have your app deployed, you can test the SSO set-up by trying to login.
+Once you have your app deployed, you can test the SSO set-up by trying to login. If you have multiple IdPs setup, you will be able to choose which IdP to use for authentication. If you have only one IdP provider configured, then you will be taken directly to that IdP's sign in page.
 
 The OIDC SSO module uses two endpoints at your IdP to achieve the SSO. You may get errors from either of these endpoints.
 

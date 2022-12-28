@@ -47,7 +47,7 @@ For example, to list all existing Amazon SNS subscriptions, implement the [ListT
 9. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **ListTopicsResponse** as the association.
 10. Click **OK**.
 11. Configure a method for triggering the **ACT_ListTopics** microflow.
-    For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
+    For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 To help you work with the Amazon SNS connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
@@ -73,28 +73,28 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 | Name | Caption |
 | --- | --- |
-| `us_east_2` |	**US Easth (Ohio)** |
-| `us_east_1` |	**US East (N. Virginia)** |
-| `us_west_1` |	**US West (N. California)** |
-| `us_west_2` |	**US West (Oregon)** |
-| `af_south_1` |	**Africa (Cape Town)** |
-| `ap_east_1` |	**Asia Pacific (Hong Kong)** |
-| `ap_southeast_3` |	**Asia Pacific (Jakarta)** |
-| `ap_south_1` |	**Asia Pacific (Mumbai)** |
-| `ap_northeast_3` |	**Asia Pacific (Osaka)** |
-| `ap_northeast_2` |	**Asia Pacific (Seoul)** |
-| `ap_southeast_1` |	**Asia Pacific (Singapore)** |
-| `ap_southeast_2` |	**Asia Pacific (Sydney)** |
-| `ap_northeast_1` |	**Asia Pacific (Tokyo)** |
-| `ca_central_1` |	**Canada (Central)** |
-| `eu_central_1` |	**Europe (Frankfurt)** |
-| `eu_west_1` |	**Europe (Ireland)** |
-| `eu_west_2` |	**Europe (London)** |
-| `eu_south_1` |	**Europe (Milan)** |
-| `eu_west_3` |	**Europe (Paris)** |
-| `eu_north_1` |	**Europe (Stockholm)** |
-| `me_south_1` |	**Middle East (Bahrain)** |
-| `sa_east_1` |	**South America (São Paulo)** |
+| `us_east_2` |    **US Easth (Ohio)** |
+| `us_east_1` |    **US East (N. Virginia)** |
+| `us_west_1` |    **US West (N. California)** |
+| `us_west_2` |    **US West (Oregon)** |
+| `af_south_1` |    **Africa (Cape Town)** |
+| `ap_east_1` |    **Asia Pacific (Hong Kong)** |
+| `ap_southeast_3` |    **Asia Pacific (Jakarta)** |
+| `ap_south_1` |    **Asia Pacific (Mumbai)** |
+| `ap_northeast_3` |    **Asia Pacific (Osaka)** |
+| `ap_northeast_2` |    **Asia Pacific (Seoul)** |
+| `ap_southeast_1` |    **Asia Pacific (Singapore)** |
+| `ap_southeast_2` |    **Asia Pacific (Sydney)** |
+| `ap_northeast_1` |    **Asia Pacific (Tokyo)** |
+| `ca_central_1` |    **Canada (Central)** |
+| `eu_central_1` |    **Europe (Frankfurt)** |
+| `eu_west_1` |    **Europe (Ireland)** |
+| `eu_west_2` |    **Europe (London)** |
+| `eu_south_1` |    **Europe (Milan)** |
+| `eu_west_3` |    **Europe (Paris)** |
+| `eu_north_1` |    **Europe (Stockholm)** |
+| `me_south_1` |    **Middle East (Bahrain)** |
+| `sa_east_1` |    **South America (São Paulo)** |
 
 #### 3.2.3 `MessageAttributeType`
 

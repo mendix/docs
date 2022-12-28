@@ -30,7 +30,6 @@ The Amazon Polly Connector requires the [AWS authentication connector version 2.
 * AWS Authentication Connector
 * Mendix Studio Pro 9.18.0
 
-
 ## 2 Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Polly connector into your app.
@@ -58,7 +57,7 @@ For example, to synthesize a string of text into speech, implement the [Synthesi
 8. Open a page that contains a widget for playing audio, for example, the [Play Audio](https://marketplace.mendix.com/link/component/120804) widget.
 9. Configure the widget to use the `FileDocument` configured in the **SynthesizeSpeech** activity.
 10. Configure a method to trigger the `ACT_SynthesizeSpeech` activity. 
-    For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
+    For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 To help you work with the Amazon Translate connector, the following sections of this document list the available entities, constants, activities, and enumerations that you can use in your application.
 

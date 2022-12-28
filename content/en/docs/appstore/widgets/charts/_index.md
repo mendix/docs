@@ -91,7 +91,7 @@ At the top of the panel there is a drop-down list which shows the currently sele
 To see available options and useful examples, see Plotly's [JavaScript Figure Reference](https://plotly.com/javascript/reference/index/) guide. 
 {{% /alert %}}
 
-For more information on saving custom settings for a chart, see the [Chart customization ](#customization).
+For more information on saving custom settings for a chart, see the [Chart customization](#customization).
 
 #### 2.2.2 Show Legend
 
@@ -158,9 +158,9 @@ Please, find more details in [Custom Configurations](#custom-configurations) in 
 
 * **Interpolation** – Determines the line shape. Could be  **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
-	* **Line** – Draws a series as simple line.
-	* **Line with markers** – Draws a line with markers on top of each dot.
-	* **Custom** – Makes a custom line style for series.
+    * **Line** – Draws a series as simple line.
+    * **Line with markers** – Draws a line with markers on top of each dot.
+    * **Custom** – Makes a custom line style for series.
 * **Line color** – The color used to fill line for this data series.
 * **Area fill color** – The color used to fill area for this data series.
 
@@ -212,7 +212,7 @@ This setting controls a chart's format. In the **group** format, columns go one 
 
 ### 5.5 Heat Map
 
-####  5.5.1 Data Source
+#### 5.5.1 Data Source
 
 ##### 5.5.1.1 Value attribute
 
@@ -268,15 +268,15 @@ The font color to display values for each dot.
 
 * **Interpolation** – This determines the line shape: **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
-	* **Line** – Draws a series as a simple line.
-	* **Line with markers** – Draws a line with markers on top of each dot.
-	* **Custom** – A custom line style for a series.
+    * **Line** – Draws a series as a simple line.
+    * **Line with markers** – Draws a line with markers on top of each dot.
+    * **Custom** – A custom line style for a series.
 * **Line color** – The color used to fill line for this data series.
 * **Area fill color** – The color used to fill area for this data series.
 
 ### 5.7 Pie Chart
 
-####  5.7.1 Data Source
+#### 5.7.1 Data Source
 
 ##### 5.7.1.1 Series Name
 
@@ -320,9 +320,9 @@ If set to **Yes** then show additional range control at the bottom of chart.
 
 * **Interpolation** – Determines the line shape. Could be  **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
-	* **Line** – Draws a series as a simple line.
-	* **Line with markers** – Draws a line with markers on top of each dot.
-	* **Custom** – Makes a custom line style for a series.
+    * **Line** – Draws a series as a simple line.
+    * **Line with markers** – Draws a line with markers on top of each dot.
+    * **Custom** – Makes a custom line style for a series.
 * **Line color** – The color used to fill line for this data series.
 * **Fill area** – If set to **Yes** then fill area between data point and x-axis.
 * **Area fill color** – The color used to fill area for this data series.
@@ -557,4 +557,3 @@ Use this with caution, as the configs set up here shall be applied to every inst
 ### 8 Read More
 
 * [Charts Configuration](/refguide/charts-configuration/)
-

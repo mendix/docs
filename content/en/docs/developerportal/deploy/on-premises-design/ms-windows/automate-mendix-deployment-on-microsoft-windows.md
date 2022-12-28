@@ -144,6 +144,7 @@ To solve this issue, follow these steps:
     </startup> 
     </configuration> 
     ```
+
 With the above configuration, PowerShell primarily uses .NET version 4, but also supports the version that it previously used, for example, version 2.
 
 ### 5.2 Could Not Load File or Assembly System.Management.Automation
@@ -174,6 +175,7 @@ At line:1 char:1
     + CategoryInfo          : InvalidOperation: (App1:String) [Start-MxApp], InvalidOperationException
     + FullyQualifiedErrorId : AppProcessError,Mendix.Service.Commands.StartAppCommand
 ```
+
 #### 5.3.1 Cause
 
 PowerShell is run without administrator privileges.
@@ -189,6 +191,7 @@ PowerShell shows an error message similar to the following:
 ```text {linenos=false}
 Start-MxApp: Could not load file or assembly 'Mendix.Service, Version=4.7.0.0, Culture=neutral, PublicKeyToken=null'. Het systeem kan het opgegeven bestand niet vinden.
 ```
+
 #### 5.4.1 Cause
 
 You ran the `Start-MxApp` cmdlet in a version of PowerShell other than 5.1.
@@ -209,6 +212,7 @@ At line:1 char:1
 + CategoryInfo : InvalidOperation: (MyFirstApp:String) [Start-MxApp], Exception 
 + FullyQualifiedErrorId : AppProcessError,Mendix.Service.Commands.StartAppCommand
 ```
+
 #### 5.5.1 Cause
 
 You tried to start the app without first creating the app database.

@@ -5,6 +5,14 @@ weight: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.3.4
+
+**Release date: December 27th, 2022**
+
+### Fixes
+
+* We changed the order of repositories in Android builds to fix an issue with jitpack.io.
+
 ## 6.3.3
 
 **Release date: November 10th, 2022**
@@ -55,6 +63,14 @@ In the end, your variable should be set up like this:
 
 * We improved our app security allowing apps to use new Database encryption capability of Studio Pro 9.18.
 
+## 6.2.29
+
+**Release date: December 27th, 2022**
+
+### Fixes
+
+* We changed the order of repositories in Android builds to fix an issue with jitpack.io.
+
 ## 6.2.28
 
 **Release date: November 9th, 2022**
@@ -70,20 +86,20 @@ In the end, your variable should be set up like this:
 ### Improvements
 
 * We added support for the following fonts from the **react-native-vector-icons** library:
-   * AntDesign
-   * Entype
-   * EvilIcons
-   * Feather
-   * FontAwesome
-   * FontAwesome 5
-   * Fontisto
-   * Foundation
-   * Ionicons
-   * MaterialCommunityIcons
-   * MaterialIcons
-   * Octicons
-   * SimpleLineIcons
-   * Zocial
+    * AntDesign
+    * Entype
+    * EvilIcons
+    * Feather
+    * FontAwesome
+    * FontAwesome 5
+    * Fontisto
+    * Foundation
+    * Ionicons
+    * MaterialCommunityIcons
+    * MaterialIcons
+    * Octicons
+    * SimpleLineIcons
+    * Zocial
 
 ## 6.2.26
 

@@ -8,7 +8,7 @@ tags: ["AWS", "Amazon Simple Email Service", "SES", "email", "Mendix Email Conne
 
 ## 1 Introduction
 
-[Amazon Simple Email Service (SES)](https://aws.amazon.com/ses/) is an email platform that provides an easy way to send and receive email using your own email addresses and domains. Amazon SES also provides SMTP details, which you can configure in the Mendix platform-supported [Email Connector](https://marketplace.mendix.com/link/component/120739) to send emails in your app.
+[Amazon Simple Email Service (SES)](https://aws.amazon.com/ses/) is an email platform that provides an easy way to send and receive email using your own email addresses and domains. Amazon SES also provides SMTP details, which you can configure in the Mendix platform-supported [Email Connector](https://marketplace.mendix.com/link/component/120739) to send emails in your app.
 
 ## 2 Configuring the Mendix Email Connector for Amazon SES
 
@@ -20,7 +20,7 @@ To configure your SES account in the Email Connector in Studio Pro, follow these
     * SMTP username 
     * SMTP password
 
-    For more information, see [Obtaining Amazon SES SMTP credentials](https://docs.aws.amazon.com/ses/latest/dg/smtp-credentials.html)
+    For more information, see [Obtaining Amazon SES SMTP credentials](https://docs.aws.amazon.com/ses/latest/dg/smtp-credentials.html).
 
     {{% alert color="info" %}}
     Only email IDs and identities configured under Verified identities, and that are verified for Amazon SES accounts, can be used as sender and receiver.
@@ -28,13 +28,13 @@ To configure your SES account in the Email Connector in Studio Pro, follow these
 3. Set up the Email Connector. For more information, see [Set Up in Studio Pro](/appstore/connectors/email-connector/#setup) and [Email Account Configuration](/appstore/connectors/email-connector/#accountconfig).  
 4. On the **EmailConnector_Overview** page, click **Add email account**. 
 5. Enter the following details: 
-    - **Email** - SMTP username for Amazon SES 
-    - **Password** -  SMTP password for Amazon SES 
+    * **Email** - SMTP username for Amazon SES 
+    * **Password** -  SMTP password for Amazon SES 
 6. Click **Next**.
 7. Click **OK** to manually configure your email account. 
 8. Select the **Send emails** checkbox, and then enter the following details: 
-    - **Protocol** - SMTP 
-    - **Server host** - enter SMTP hostname for Amazon SES 
-    - **Server port** - any configured STARTTLS port for Amazon SES (for example, 25, 587, 2587, and so on) 
-    - Select Use TLS / Use SSL accordingly 
+    * **Protocol** - SMTP 
+    * **Server host** - enter SMTP hostname for Amazon SES 
+    * **Server port** - any configured STARTTLS port for Amazon SES (for example, 25, 587, 2587, and so on) 
+    * Select Use TLS / Use SSL accordingly 
 9. Click **Finish**. 

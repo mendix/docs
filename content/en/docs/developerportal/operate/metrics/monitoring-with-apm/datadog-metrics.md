@@ -165,19 +165,23 @@ The valid values for **DD_SITE** are:
 * datadoghq.com
 * datadoghq.eu
 
-### 4.3 Database Disk Storage Availability
+### 4.3 Java Metrics
+
+In addition to the standard metrics available to all monitoring tools, Datadog also provides metrics from the runtime, using the prefix `jmx`. These are provided via the [JMX integration](https://docs.datadoghq.com/integrations/java/?tab=host) of Datadog.
+
+### 4.4 Database Disk Storage Availability
 
 You can decide whether a metric for the disk storage size available to the database is sent to Datadog. To disable this metric, set **DATADOG_DATABASE_DISKSTORAGE_METRIC** to *false*.
 
 *Default value: true*
 
-### 4.4 Email Address Redaction{#redact-emails}
+### 4.5 Email Address Redaction{#redact-emails}
 
 Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_REDACTION** to *false*.
 
 *Default value: true*
 
-### 4.5. Rate and Count Database Metrics{#database-metrics}
+### 4.6 Rate and Count Database Metrics{#database-metrics}
 
 Datadog sends gauge database metrics to Datadog as a default. Rate and Count metrics are not compatible with the Datadog PostgreSQL integration. You can enable these additional metrics by setting **DATADOG_DATABASE_RATE_COUNT_METRICS** to *true*.
 
@@ -185,13 +189,13 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 *Default value: false*
 
-### 4.6 System Metrics{#system-metrics}
+### 4.7 System Metrics{#system-metrics}
 
 System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DD_ENABLE_CHECKS** to *true*.
 
 *Default value: false*
 
-### 4.7 Datadog Events Log
+### 4.8 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
@@ -199,15 +203,15 @@ The Datadog Events log contains events which come from your app: those are the s
 
 By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 
-### 4.8 Datadog Agent not Started
+### 4.9 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 4.9 Datadog Issues
+### 4.10 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-### 4.10 Metrics on Datadog Usage
+### 4.11 Metrics on Datadog Usage
 
 Metrics on Datadog can include an additional namespace, **datadog** which contains metrics on Datadog usage.
 

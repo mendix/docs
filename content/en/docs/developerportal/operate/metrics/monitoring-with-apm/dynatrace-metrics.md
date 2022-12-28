@@ -80,7 +80,7 @@ To set this tag, do the following:
 1. Go to the **Environments** page of your app in the *Developer Portal*.
 2. Click **Details** to select an environment you are monitoring with Dynatrace. 
 3. Open the **Tags** tab.
-4. Add a **Tag** – this is the string which is sent to Dynatrace as a dimension.
+4. Add a **Tag** – this is the string which is sent to Dynatrace as a dimension. See [Tags Tab](/developerportal/deploy/environments-details/#tags) in *Environment Details* for more information.
 5. **Restart** the application.
 
 Setting this value for your app means that all metrics from this environment of your app will have these tags. For example, the tags for mx.microflow.time.avg for this set of metrics include **env:accp**.

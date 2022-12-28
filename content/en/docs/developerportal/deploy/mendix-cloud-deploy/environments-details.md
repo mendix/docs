@@ -512,7 +512,7 @@ When a maintenance operation is planned, it appears under **Planned Maintenance*
 
 You automatically receive email notifications about planned maintenance.
 
-## 8 Tags Tab
+## 8 Tags Tab{#tags}
 
 You can set tags on your environment. These are arbitrary strings that are not interpreted by the Developer Portal.
 

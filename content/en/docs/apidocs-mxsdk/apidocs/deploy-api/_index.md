@@ -650,9 +650,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 403 | NO_ACCESS | You do not have access |
 | 403 | TRANSPORT_NOT_ALLOWED | No access to transport to environment 'mode'. |
 | 403 | APP_IS_RUNNING | The 'mode' environment of 'app id' must be stopped to do transport. |
+| 403 | NOT ALLOWED | Cannot transport - MDA processing failed, try uploading again with a valid MDA. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | PACKAGE_NOT_FOUND | Package not found. |
 | 500 | PACKAGE_PARSE_FAILED | Failed to parse deployment package file. |
+| 503 | SERVICE UNAVAILABLE | Cannot transport - MDA is still being processed, retry later |
 
 ### 3.12 Clean environment
 

@@ -37,7 +37,7 @@ This feature is in Beta, so we would very much appreciate your feedback. If you 
 
 #### Improvements
 
-We released a new version of Epics, our brand new Agile planning tool, for General Availability!
+We released a new version of [Epics](/developerportal/collaborate/epics/), our brand new Agile planning tool, for General Availability!
 
 We made the following improvements:
 

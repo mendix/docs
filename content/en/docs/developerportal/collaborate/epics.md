@@ -20,7 +20,7 @@ Epics enables your team members to collaborate efficiently during the app develo
 
 Only a Scrum Master can give the team access to an app in Epics. To do so, the Scrum Master should open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), then go to the [General Settings](/developerportal/collaborate/general-settings/) page, then go to the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab, and click **Switch to Epics**, as shown in the screenshot below. This gives everyone in the team access to this app in Epics.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/project-management.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/project-management.png" width="600px" >}}
 
 To give the team access to another app in Epics, the Scrum Master needs to repeat this procedure.
 
@@ -60,7 +60,7 @@ On the **Board** page, the stories are grouped into different swimlanes based on
 
 You can add more custom swimlanes, such as **In Progress**, **In Review**, **Testing**, etc. To add a new swimlane, hover over the border of the swimlane where the new swimlane should be added, and click the vertical line when it appears. Enter the name of the swimlane and click **✓** to save the changes.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/add-swimlane.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/add-swimlane.png" width="500px" >}}
 
 To rename, [archive](#archive), or delete a swimlane, click the *...* icon on the upper-right corner of the swimlane, and then select the corresponding option.
 
@@ -137,7 +137,7 @@ There are three tabs on the **Planning** page, which are described below.
 
 On this tab, you can switch between a Scrum workflow and a Kanban workflow by clicking the settings icon on the upper-right side of the screen. Which workflow you use also decides how the **Planning** page and the [Board](#board) page look.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" width="600px" >}}
 
 If you select the **Scrum** workflow, the **Planning** page shows the **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog** categories. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** in the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
 
@@ -172,7 +172,7 @@ Clicking a row opens the [story details](#story-details) page.
 
 On this tab, you can enable or disable the toast notifications that appear like this:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" width="400px" >}}
 
 ### 3.3 Data Migration {#data-migration}
 
@@ -187,13 +187,13 @@ To migrate from Stories to Epics, follow these steps:
 1. Go to [Planning](#planning) and click the settings icon on the upper-right side of the screen.
 2. Go to the **Data Migration** tab. Make sure that you read the information before you click **Start Migration**:
 
-    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" width="400px" >}}
 
 3. Select the content you want to migrate.
 
     {{% alert color="warning" %}}Stories will become read-only once ALL sections have been migrated successfully. There is no further synchronization available between Developer Portal and Epics (or vice versa). After the migration is completed, the option to migrate is removed from Epics.{{% /alert %}}
     
-    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" >}}
+    {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-content.png" width="400px" >}}
     
 4. A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
    
@@ -233,7 +233,7 @@ The migration report is available a few seconds after the migration completes (d
 
 Click **View Migration Report** to view the migration report:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" width="600px" >}}
 
 The migration report then opens:
 

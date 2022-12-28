@@ -7,11 +7,11 @@ tags: ["native", "startup", "performance", "optimization"]
 ---
 ## 1 Introduction
 
-When native apps increase in size (model complexity and amount of data), the app’s startup time can increase as well. This is usually caused by too much data being initially synchronized to the device--but there could be other causes as well. In this guide you will learn what happens at startup and how to optimize your app for a quick startup experience.
+As native apps increase in size, model complexity, and the amount of data they deal, the app’s startup time can increase as well. This is usually caused by too much data being initially synchronized to the device, however there can be other causes. In this guide you will learn what happens at startup and how to optimize your native app for a quick startup experience.
 
 ## 2 Startup Activities
 
-There are four major things going on when the launch screen is shown:
+Four major things take place when the launch screen is shown:
 
 1. The application is initialized.
 2. An over-the-air (OTA) update is downloaded and installed (if available).

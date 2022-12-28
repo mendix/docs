@@ -237,7 +237,7 @@ Click **View Migration Report** to view the migration report:
 
 The migration report then opens:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/migration-report.png" width="600px >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report.png" width="600px" >}}
 
 The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
 

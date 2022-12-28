@@ -18,7 +18,7 @@ Four major things take place when the launch screen is shown:
 3. An initial full sync is executed.
 4. If you have a nanoflow as home page, it will be executed.
 
-You can inspect what is actually happening by enabling Trace logs for the various `Client_` log-nodes (most important are `Client_Startup` and `Client_Synchronization`). For more details see [Mobile Logging](https://docs.mendix.com/refguide/mobile/distributing-mobile-apps/logging/).
+You can inspect what is actually happening by enabling Trace logs for the various `Client_` log-nodes (most important are `Client_Startup` and `Client_Synchronization`). For more details see [Mobile Logging](/refguide/mobile/distributing-mobile-apps/logging/).
 
 ## 3 Application Initialization
 
@@ -26,11 +26,13 @@ Application initialization should not take long in most scenarios. However, it i
 
 ## 4 Over-the-Air Updates
 
-OTA updates let you upgrade your native client from the cloud without installing an updated version on the cloud. You can enable OTA Updates in the native navigation profile. Once enabled, each time you publish your Mendix application an OTA bundle is generated and published as well. For more details see [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
+OTA updates let you upgrade your native client from the cloud without installing an updated version on the cloud. You can enable OTA updates in the native navigation profile. Once enabled, each time you publish your Mendix app an OTA bundle is generated and published as well. For more details see [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
 
-The Mendix client checks for a new OTA update each time end-users start their native mobile apps. If there is no new OTA, the app starts as usual. If there is a new OTA update, the client downloads and installs it automatically. If the size of the OTA package is large, this may affect the startup performance as downloading a larger package would take longer.
+The Mendix Client checks for a new OTA update each time end-users start their native mobile apps. If there is no new OTA update the app starts as usual. If there is a new OTA update, the client downloads and installs it automatically. If the size of the OTA package is large, this may slow startup performance as downloading large packages takes time.
 
-OTA updates can be optimized by keeping the payload of the application small. Avoid large images or animations in the static resources of your project or widgets (including their dependencies). You can check the size of the OTA bundle by downloading it via this link from a deployed runtime: https://[RUNTIME-URL]/mxota/ios.zip (or android.zip).
+OTA updates can be optimized by keeping the application's payload small. Avoid including large images or animations in the static resources of your project or widgets (including their dependencies). 
+
+You can an OTA bundle's size by downloading it via a link like this from a deployed runtime: `https://{YOUR-RUNTIME-URL}/mxota/ios.zip` (or android.zip for Android apps).
 
 ## 5 Initial Synchronization
 

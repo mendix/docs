@@ -137,7 +137,7 @@ There are three tabs on the **Planning** page, which are described below.
 
 On this tab, you can switch between a Scrum workflow and a Kanban workflow by clicking the settings icon on the upper-right side of the screen. Which workflow you use also decides how the **Planning** page and the [Board](#board) page look.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" width="600px" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/switch-scrum-kanban.png" width="400px" >}}
 
 If you select the **Scrum** workflow, the **Planning** page shows the **Active Sprint**, **Next Sprint**, **Refinement**, and **Backlog** categories. The goal for the current Sprint is shown on the top of all categories. When there is no active Sprint, you can start a new Sprint by clicking **Start Sprint** in the upper-right corner. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. You can end a Sprint by clicking **End Sprint** on the upper-right corner. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are [archived](#archive) automatically, and you can decide where the unfinished stories should go. 
 
@@ -172,7 +172,7 @@ Clicking a row opens the [story details](#story-details) page.
 
 On this tab, you can enable or disable the toast notifications that appear like this:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" width="400px" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/toast-notification.png" width="500px" >}}
 
 ### 3.3 Data Migration {#data-migration}
 
@@ -233,11 +233,11 @@ The migration report is available a few seconds after the migration completes (d
 
 Click **View Migration Report** to view the migration report:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" width="600px" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" >}}
 
 The migration report then opens:
 
-{{< figure src="/attachments/developerportal/collaborate/epics/migration-report.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/epics/migration-report.png" width="600px >}}
 
 The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
 

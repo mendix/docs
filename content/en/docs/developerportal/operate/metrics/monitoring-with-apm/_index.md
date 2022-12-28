@@ -65,7 +65,6 @@ The metrics from your app's environment are supplied in the following namespaces
 
 * commons.pool2 – database connection pool metrics
 * jetty – metrics from the ingress controller of the app
-* jmx – metrics from the Mendix runtime  <!-- TODO: Need to move this to Datadog page -->
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs
 * postgresql – database metrics specific to PostgreSQL databases
 * system – metrics from the base system running on the platform or PaaS — in Datadog these are disabled by default, but can be enabled using the [`DD_ENABLE_CHECKS`](/developerportal/operate/datadog-metrics/#system-metrics) environment variable.

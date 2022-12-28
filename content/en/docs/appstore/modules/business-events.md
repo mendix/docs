@@ -73,7 +73,7 @@ There is a single Kafka broker for Free Apps that all your company Free Apps can
 
 ### 3.1 Managing the Mendix Event Broker {#manage-mx-broker}
 
-Technical Contacts with a license to the Mendix Event Broker can manage its features in the [Developer Portal](/developerportal/) on the [Event Broker Manager](https://broker.mendix.com/) page.
+Technical Contacts with a license to the Mendix Event Broker can manage its features on the [Event Broker Manager](https://broker.mendix.com/) page. 
 
 #### 3.1.1 Environments and Spaces
 

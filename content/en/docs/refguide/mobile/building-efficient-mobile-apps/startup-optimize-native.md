@@ -1,6 +1,6 @@
 ---
 title: "Optimize Native Startup"
-url: /refguide/mobile/distributing-mobile-apps/native-startup/
+url: /refguide/mobile/building-efficient-mobile-apps/native-startup/
 weight: 32
 description: "Describes optimizing native app startup times by tailoring the way your app syncs data."
 tags: ["native", "startup", "performance", "optimization"]
@@ -18,7 +18,7 @@ Four major things take place when the launch screen is shown:
 3. An initial full sync is executed.
 4. If you have a nanoflow as home page, it will be executed.
 
-You can inspect what is actually happening by enabling Trace logs for the various `Client_` log-nodes (most important are `Client_Startup` and `Client_Synchronization`). For more details see [Mobile Logging](/refguide/mobile/distributing-mobile-apps/logging/).
+You can inspect what is actually happening by enabling Trace logs for the various `Client_` log-nodes (most important are `Client_Startup` and `Client_Synchronization`). For more details see [Mobile Logging](/refguide/mobile/building-efficient-mobile-apps/logging/).
 
 ## 3 Application Initialization
 
@@ -42,7 +42,7 @@ The initial full sync cannot be skipped. Therefore, for data-heavy apps it is im
 
 It is often better to use **Nothing (preserve data)** and synchronize (using a microflow and Sync-To-Device) only when the data is accessed or refreshed. Excluding file documents and images from startup synchronization and then synchronizing them lazily on-demand can boost your app's performance significantly. 
 
-If you need to synchronize files and images on startup, ensure their size is small. In most cases, image sizes can be reduced by lowering their resolution. You can refer to the **Client_Startup** log node’s logs to see how long your startup synchronization took. For more information on Native Logging, see [Logging in Native Apps](/refguide/mobile/distributing-mobile-apps/logging/).
+If you need to synchronize files and images on startup, ensure their size is small. In most cases, image sizes can be reduced by lowering their resolution. You can refer to the **Client_Startup** log node’s logs to see how long your startup synchronization took. For more information on Native Logging, see [Logging in Native Apps](/refguide/mobile/building-efficient-mobile-apps/logging/).
 
 ## 6 Nanoflow Home Page
 

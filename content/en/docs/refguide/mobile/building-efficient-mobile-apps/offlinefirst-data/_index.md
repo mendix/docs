@@ -1,7 +1,7 @@
 ---
 title: "Offline-First Data"
 url: /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/
-weight: 10
+weight: 20
 aliases:
     - /refguide/offline-first/
     - /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/

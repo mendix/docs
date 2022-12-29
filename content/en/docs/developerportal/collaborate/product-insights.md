@@ -13,17 +13,19 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 ## 1 Introduction
 
-By using **Product Insights** in the Developer Portal and the [Product Insights – Mini-Surveys](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini-surveys for a target user group that you would like to reach to collect their feedback and gain valuable product insights.
+By using **Product Insights** in the Developer Portal and the [Product Insights – Mini-Surveys](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini-surveys for target user groups you would like to reach to collect their feedback and gain valuable product insights.
 
-This document first describes all the pages in Product Insights in the Developer Portal, and then describes the procedure on how to run a mini-survey: you begin with creating the mini-survey with Product Insights in the Developer Portal, and then you should implement the mini-survey by configuring the Product Insights – Mini-Surveys module in Studio Pro. After the mini-survey is up and running, you can view responses that have been collected in Product Insights in the Developer Portal, and export the responses to an XLSX file.
+You begin with creating the mini-survey with **Product Insights** in the Developer Portal, and then you implement the mini-survey by configuring the Product Insights – Mini-Surveys module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **Product Insights** and export the responses to an XLSX file.
+
+This document first describes all the pages in **Product Insights** in the Developer Portal, and then describes the procedure for running a mini-survey.
 
 ## 2 Product Insights Configuration 
 
 ### 2.1 Survey Overview {#survey-overview}
 
-When you open an app in Product Insights, if the app already has existing mini-surveys, the **Survey Overview** page opens.
+If an app you open in Product Insights already has existing mini-surveys, the **Survey Overview** page opens first.
 
-On the upper-left corner of the page, you can see the name of the app that currently opens in Product Insights. Click the app name opens a drop-down list, which shows other apps that have been previously opened in Product Insights – if you select one of these apps, it opens in Project Insights.
+On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened in Product Insights.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/app-drop-down-list.png" >}}
 
@@ -33,18 +35,16 @@ The **Survey Overview** page has three tabs: the **Active** tab, the **Archived*
 
 #### 2.1.1 Active Tab {#active}
 
-The **Active** tab shows all the mini-surveys that are active for the app.
+The **Active** tab shows all the mini-surveys that are active for the app with the following details:
 
-The list on this tab contains the following information:
-
-* **Survey ID** – This is the unique ID of the mini-survey. You can also find the survey ID on the [survey details](#survey-details) page of the mini-survey. You need to use the survey ID as input when you configure the Product Insights – Mini-Surveys module in Studio Pro to implement the mini-survey.
+* **Survey ID** – This is the unique ID of the mini-survey. You can also find this ID on the [survey details](#survey-details) page of the mini-survey. You need to use the ID as input when you configure the Product Insights – Mini-Surveys module in Studio Pro to implement the mini-survey.
 * **Name** – This is the name of the mini-survey.
-* **Responses** – This shows the number of the responses that have been collected for the mini-survey.
+* **Responses** – This shows the number of responses that have been collected for the mini-survey.
 * **Status** – This shows the status of the mini-survey. For more information, see the [Statuses of Mini-Surveys](#survey-status) section.
 * **Start & End Dates** – This shows the start and end dates of the mini-survey.
 * **Created on** – This shows when the mini-survey was created.
 
-Clicking the mini-survey in a row on the list shows its [survey details](#survey-details) page.
+Click the mini-survey in a row on the list to see its [survey details](#survey-details) page.
 
 ##### 2.1.1.1 Statuses of Mini-Surveys {#survey-status}
 

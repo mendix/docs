@@ -50,7 +50,7 @@ If you work in the Kanban workflow, the **Board** page gives an overview of all 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
 
-Clicking **Project Buzz** on the upper-right corner of the page brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on their titles.
+Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on their titles.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
@@ -94,7 +94,7 @@ To [archive](#archive) or delete a story, click the **...** icon on the upper-ri
 
 To move a card within a swimlane or across swimlanes, drag the card to the new location.
 
-Clicking the story card opens the [story details](#story-details) dialog box.
+Click the story card to open the [story details](#story-details) dialog box.
 
 ### 2.3 Story Details {#story-details}
 
@@ -163,7 +163,7 @@ To [archive](#archive) or delete a story, click the **...** icon at the end of t
 
 To move a story, drag the row to a different category.
 
-Clicking a row opens the [story details](#story-details) page.
+Click a row to open the [story details](#story-details) page.
 
 ### 3.2 Toast Settings
 
@@ -216,7 +216,7 @@ For example, here is a Sprint with three stories from [Stories](/developerportal
 
 {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-stories.png" >}}
 
-And here is the outcome after migration:
+Here is the outcome after migration:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-epics.png" >}}
 

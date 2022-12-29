@@ -1,5 +1,5 @@
 ---
-title: "Optimize Native Startup"
+title: "Optimizing Native Startup"
 url: /refguide/mobile/building-efficient-mobile-apps/native-startup/
 weight: 15
 description: "Describes optimizing native app startup times by tailoring the way your app syncs data."

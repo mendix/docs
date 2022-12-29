@@ -42,7 +42,17 @@ In web apps, you can use CSS to style the user interface. Styling in native mobi
 
 For more information on design and styling, see [Designing Mobile User Interfaces](/refguide/mobile/designing-mobile-user-interfaces/).
 
-## 5 Using Mobile Capabilities
+## 5 Building Efficient Mobile Applications
+
+After you have built your application and tested it on end-user devices, you may notice room for improvement. With targeted data syncs, smart logs, and more you can optimize your apps for the smoothest developer and user experience possible.
+
+The following documents will help you understand data syncing, accelerate your app's performance, and more:
+
+* [Optimizing Native Startup](/refguide/mobile/building-efficient-mobile-apps/native-startup/) – This guide teaches you how to speed up your native app's startup time.
+* [Logging In Native Apps](/refguide/mobile/building-efficient-mobile-apps/logging/) – In Mendix Studio Pro v9.16 and above, native mobile apps are able to send logs to the [Mendix Runtime](/refguide/runtime/). Read this guide for information on native app logging configuration.
+* [Offline-First Data](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
+
+## 6 Using Mobile Capabilities
 
 Building apps with Mendix gives you access to several mobile capabilities:
 
@@ -58,7 +68,7 @@ Although this document is located in a different category, for more information 
 
 For more information on empowering your apps, see [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/).
 
-## 6 Building, Testing, and Distributing Apps
+## 7 Building, Testing, and Distributing Apps
 
 Distributing web apps is a single step; deploying to the production environment lets your end-users access the latest version of the web app. However, native mobile apps require more steps. Part of the application model (pages, nanoflows, and JavaScript actions) are distributed as part of the native mobile app. Even if you deploy a new version of the app, your end users will be interacting with the old version. That is why a second step is needed: distribution. To distribute the latest version of a native mobile app to users, you can either build a new version using the Native Mobile Builder and then release it to online app stores, or you can use the [over-the-air](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) update mechanism to update the app elements stored in the apps without releasing a new version of your native mobile app. For more information on all aspects of the app life cycle, see [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).
 

@@ -108,7 +108,7 @@ On the upper-right corner, you can click the link icon to copy the link to the s
 
 The story details dialog box shows the following items:
 
-* **Description** – this is the description of the story:
+* **Description** – the description of the story:
 
     * Edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor; the editor supports different text formats, including code blocks
     * Link a story in the editor by typing *#*, typing the story title, and selecting the right story from the list
@@ -119,9 +119,9 @@ The story details dialog box shows the following items:
 * **Tasks** – enables adding a task by clicking **+ Add Task**; you can move the tasks by dragging them around
 * **Story Type** – enables setting the story type to **Bug** or **Feature**
 * **Linked Epic** – enables linking the story to an epic
-* **Tags** – enables adding or removing tags; to create a new tag, type the new tag in the text box and then click **Create new "[tag name]"**
+* **Tags** – enables adding or removing tags; to create a new tag, type the tag in the text box and click **Create new "[tag name]"**
 * **Story Points** – enables setting the story points to an integer
-* **Attached Files** – enables adding attached files by clicking **+** below **Attached Files**
+* **Attached Files** – enables adding attached files by clicking **+**
 * **Comment** – enables typing your comment in the text box and then clicking **Post Your Comments** to save and post the comment
 
 {{% alert color="info" %}}To save any change on the story details dialog box, click **Save Story** at the bottom of the page.{{% /alert %}}
@@ -175,14 +175,14 @@ On this tab, you can enable or disable the toast notifications that appear like 
 
 On this tab, you can migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics.
 
-{{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, we recommend working on Epics from that point forward.{{% /alert %}}
+{{% alert color="info" %}}Only a Scrum Master can start a migration. Once you have started the migration, Mendix recommends working on Epics from that point forward.{{% /alert %}}
 
 #### 3.3.1 Migration Process
 
 To migrate from Stories to Epics, follow these steps:
 
 1. Go to [Planning](#planning) and click the settings icon on the upper-right side of the screen.
-2. Go to the **Data Migration** tab. Make sure that you read the information before you click **Start Migration**:
+2. Go to the **Data Migration** tab. Be sure to read the information before you click **Start Migration**:
 
     {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-info.png" width="400px" >}}
 
@@ -200,7 +200,7 @@ These are the new locations of migrated stories:
 
 | From Stories | To Epics | Additionnal Information |
 | --- | --- | --- |
-| **Active Sprint** | **Active Sprint** in [Planning](#planning) | All the stories are migrated to the **To Do** swimlane with their tags. |
+| **Active Sprint** | **Active Sprint** in [Planning](#planning) | All stories are migrated to **To Do** swimlane with tags. |
 | Rest of the Sprints and backlog | **Refinement** in [Planning](#planning) | |
 | Archived stories | [Archive](#archive) | 
 
@@ -208,9 +208,9 @@ These are the new details of migrated stories:
 
 | From Stories | To Epics | Example |
 | --- | --- | --- |
-| Sprint **Name** | Tag with the format: **sprint:Sprint_Name** | **Sprint_Sprint 1** |
-| Story **Status** | Tag with the format: **status:Status** | **status:To-do** |
-| **Assignee** | Story is assigned unless the assignee is not a member of the app. | |
+| Sprint **Name** | Tag with this format: **sprint:Sprint_Name** | **Sprint_Sprint 1** |
+| Story **Status** | Tag with this format: **status:Status** | **status:To-do** |
+| **Assignee** | Story is assigned unless the assignee is not a member of the app team. | |
 
 For example, here is a Sprint with three stories from [Stories](/developerportal/collaborate/stories/):
 
@@ -220,15 +220,15 @@ And here is the outcome after migration:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/data-migration-example-epics.png" >}}
 
-{{% alert color="info" %}}Beside the story details above, the remaining details for your stories are migrated according to their equivalents in [Epics](#epics).{{% /alert %}}
+Beside the story details above, the remaining details for your stories are migrated according to their equivalents in [Epics](#epics).
 
 {{% alert color="warning" %}}In [Stories](/developerportal/collaborate/stories/), files are associated with Comments, not with Stories. In Epics, files can only be associated with Stories, not with Comments. Therefore, files migrated from Stories will lose their Comment context.{{% /alert %}}
 
 #### 3.3.3 Migration Report {#migration-report}
 
-The migration report is available a few seconds after the migration completes (depending on the number of stories you have).
+The migration report is available a few seconds after the migration completes (timing depends on the number of stories you have).
 
-Click **View Migration Report** to view the migration report:
+Click **View Migration Report**:
 
 {{< figure src="/attachments/developerportal/collaborate/epics/migration-report-buttons.png" width="400px" >}}
 
@@ -238,51 +238,47 @@ The migration report then opens:
 
 The **Migration Configuration** section presents what you have selected to migrate and the status of that migration. 
 
-The **Not Finished** status means that you can use the **Continue Migration** button option (this button is only available if a migration has failed or there is still some stories data left to potentially migrate).
+The **Not Finished** status means that you can use the **Continue Migration** button option (this button is only available if a migration has failed or there is still some stories data left to migrate).
 
 {{% alert color="info" %}}
-If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends  manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
+If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
 ## 4 Epics {#epics}
 
-The **Epics** page shows all the epics for your current app. 
+The **Epics** page shows all the epics for your current app. Each row shows the following details about the epic:
 
-Each row shows the following information about an epic:
-
-* Unique epic ID, which consists of a prefix and a number
-* Epic title
+* Unique ID, which consists of a prefix and a number
+* Title
 * To whom the epic is assigned
-* How many stories are completed for that epic
+* How many stories are completed for the epic
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 
 You can create an epic by clicking **Create Epic** on the upper-right corner of the page.
 
-Clicking a row opens the [epic details](#epic-details) page.
-
 ### 4.1 Epic Details {#epic-details}
 
 If you click the row of an epic, the epic details dialog box opens. 
 
-On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the  ellipsis icon opens a pop-up menu that allows you to delete the epic. You need to confirm your action after you click **Delete**.
+On the upper-right corner, there is a link icon and an ellipsis (**...**) icon. Clicking the link icon copies the link to the epic. Clicking the ellipsis icon opens a pop-up menu that allows you to delete the epic.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic-details-page-ellipsis.png" >}}
 
 The epic details dialog box shows the following items:
 
-* **Objective** – This is the description of the epic.
+* **Objective** – this is the description of the epic:
 
-    * You can edit the objective of the epic by clicking **Edit Objective** and make changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
-    * You can link a story in the editor. To do so, type #, then start typing the story title, and then select the right story from the list.
-    * You can tag a person in the editor. To do so, type *@*, then start typing the person's name, and then select the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
+    * Edit the objective of the epic by clicking **Edit Objective** and making changes in the WYSIWYG editor; the editor supports different text formats, including code blocks
+    * Link a story in the editor by typing *#*, typing the story title, and selecting the right story from the list
+    * Tag a person in the editor by typing *@*, typing the person's name, and selecting the right person from the list; once you save the epic, the system will send a notification to the tagged person
 
-* **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
-* **Tags** – You can add or remove tags. To create a new tag, type the new tag in the text box and then click **Create new "[tag name]"**.
-* **Attachments** – You can add attachments by clicking **+** below **Attachments**. 
-* **Archived Stories** – This lists all the archived stories that are linked to this epic.
-* **Stories** – This lists all the open stories that are linked to this epic.
-* **Comment** – You can type your comment in the text box and then click **Post Your Comments** to save and post the comment.
+* **Assign to** – enables assigning the epic to anybody who can access the app in the Developer Portal
+* **Tags** – enables adding or removing tags; to create a new tag, type the tag in the text box and click **Create new "[tag name]"**
+* **Attachments** – enables adding attachments by clicking **+**
+* **Archived Stories** – all the archived stories that are linked to this epic
+* **Stories** – all the open stories that are linked to this epic
+* **Comment** – enables typing your comment in the text box and then clicking **Post Your Comments** to save and post the comment
 
 {{% alert color="info" %}}To save any change on the epic details dialog box, click **Save Epic** at the bottom of the page.{{% /alert %}}
 
@@ -290,10 +286,10 @@ The epic details dialog box shows the following items:
 
 Every time you complete a Sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
 
-* Clicking the **...** icon on the upper-right corner of the story card or the swimlane on the **Board** page, and then selecting **Archive**
-* Clicking the **...** icon at the end of a row on the **Planning** page, and then selecting **Archive**
+* Click the **...** icon on the upper-right corner of the story card or the swimlane on the **Board** page and then select **Archive**
+* Click the **...** icon at the end of a row on the **Planning** page and then select **Archive**
 
-All the archived stories are shown on the **Archive** page. You can see the following information of an archived story:
+All the archived stories are shown on the **Archive** page. You can see the following details for an archived story:
 
 * Unique story ID – clicking this shows the story details
 * Story title – clicking this shows the story details
@@ -312,10 +308,10 @@ You can search stories based on story titles in the search box.
 When you click the Sprint icon in a row of an archived story on the **Archived** page, you can see the following details of this Sprint:
 
 * Sprint name
-* When this Sprint was archived
-* When this Sprint started and ended
+* When the Sprint was archived
+* When the Sprint started and ended
 * Sprint goal
 * Whether the Sprint goal was reached
-* Who archived the Sprint, shown under **Archived by**
-* Stories that were completed, shown under **Completed Stories**
-* Stories that were not completed, shown under **Incomplete Stories**
+* Who archived the Sprint (shown under **Archived by**)
+* Stories that were completed (shown under **Completed Stories**)
+* Stories that were not completed (shown under **Incomplete Stories**)

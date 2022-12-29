@@ -36,7 +36,7 @@ You can an OTA bundle's size by downloading it via a link like this from a deplo
 
 ## 5 Initial Synchronization
 
-Synchronization ensures that the changes to domain model objects on the client and the runtime are kept in sync. Full synchronization ensures that all changes from the client are sent to the runtime, and all entities that are configured to synchronize “All Objects” are sent to the client. For more details see [Offline Synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
+Synchronization ensures that the changes to domain model objects on the client and the runtime are kept in sync. Full synchronization ensures that all changes from the client are sent to the runtime, and all entities that are configured to synchronize “All Objects” are sent to the client. For more details see [Offline Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
 
 The initial full sync cannot be skipped. Therefore, for data-heavy apps it is important to control the sync behavior and use **All Objects** and **By Xpath** sparingly. 
 

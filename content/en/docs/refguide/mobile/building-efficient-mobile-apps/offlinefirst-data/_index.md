@@ -1,9 +1,10 @@
 ---
 title: "Offline-First Data"
-url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/
+url: /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/
 weight: 10
 aliases:
     - /refguide/offline-first/
+    - /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/
 ---
 
 ## 1 Introduction
@@ -20,7 +21,7 @@ Mendix supports building offline-first applications for [native mobile](/refguid
 
 ## 2 Synchronization
 
-Synchronization is the process of copying data and files from the app's server to the device and updating the server with the changes made on the local device. The local database is populated when the app starts for the first time. After this initial synchronization, data will remain available in the app so that it can work without an internet connection. You can model when and how to perform the subsequent synchronizations. In some cases, the Mendix Client may perform a synchronization automatically. Designing an efficient synchronization strategy is crucial for a high-performance app and a smooth UX. For more information, see the [Synchronization Guide](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
+Synchronization is the process of copying data and files from the app's server to the device and updating the server with the changes made on the local device. The local database is populated when the app starts for the first time. After this initial synchronization, data will remain available in the app so that it can work without an internet connection. You can model when and how to perform the subsequent synchronizations. In some cases, the Mendix Client may perform a synchronization automatically. Designing an efficient synchronization strategy is crucial for a high-performance app and a smooth UX. For more information, see the [Synchronization Guide](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
 
 ## 3 Modeling Offline-First Apps
 
@@ -40,7 +41,7 @@ Imagine that you have deployed the first version of your native mobile app, your
 
 A similar issue may occur regarding changes to other app elements, including microflows and constants available to the client. For example, if your new deployment renames a microflow or modifies its parameters, users who have not updated their apps will be working with the previous model of the app where it references the microflow with the old name. 
 
-For more information on offline-first app design, see [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/).
+For more information on offline-first app design, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
 
 ## 4 Distributing Mobile Apps 
 
@@ -56,6 +57,6 @@ Session management in offline-first apps uses the same system mentioned above, b
 
 ## 6 Main Documents in This Category
 
-* [Offline Synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) – describes how and when synchronization occurs, and how to resolve sync errors.
-* [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/) – describes how to make secure, high-performing offline-first apps.
-* [Offline Data Security](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/) - describes best practices to increase security of the data stored on the device
+* [Offline Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) – describes how and when synchronization occurs, and how to resolve sync errors.
+* [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/) – describes how to make secure, high-performing offline-first apps.
+* [Offline Data Security](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/) - describes best practices to increase security of the data stored on the device

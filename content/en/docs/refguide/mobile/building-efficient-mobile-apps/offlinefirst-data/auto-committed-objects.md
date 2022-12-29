@@ -1,6 +1,6 @@
 ---
 title: "Synchronization & Auto-Committed Objects"
-url: /refguide/mobile/using-mobile-capabilities/offlinefirst-data/auto-committed-objects/
+url: /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/auto-committed-objects/
 weight: 40
 description: "Describes when offline sync can create auto-committed objects and what to do when that occurs."
 tags: ["offline", "offline-first", "auto-committed", "autocommitted"]
@@ -25,7 +25,7 @@ To continue the example, here is the related nanoflow:
 
 The example above saves the `$NewOrder` object to the local database, including the association value referencing the uncommitted `$NewCustomer` object. Since the `$NewCustomer` is not yet committed, however, the reference is invalid. To solve this issue, the nanoflow must commit the `$NewCustomer` object.
 
-Assume a user closes the app right after the example nanoflow has run. Since the `$NewCustomer` object is stored only in memory, it will be gone. The `$NewOrder` object references a customer object which no longer exists. When you try to synchronize `$NewOrder` later, it will fail due to the dangling reference error. You must set the reference to `empty` to successfully synchronize this object. To learn more about dangling references, see the [Dangling References](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/#dangling-references) section of *Offline Synchronization*.
+Assume a user closes the app right after the example nanoflow has run. Since the `$NewCustomer` object is stored only in memory, it will be gone. The `$NewOrder` object references a customer object which no longer exists. When you try to synchronize `$NewOrder` later, it will fail due to the dangling reference error. You must set the reference to `empty` to successfully synchronize this object. To learn more about dangling references, see the [Dangling References](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#dangling-references) section of *Offline Synchronization*.
 
 It is true that an offline-first app *can* create auto-committed objects on the runtime database. However, although auto-committed objects help ensure database consistency in web applications, creating auto-committed objects in offline-first apps is *not recommended*.
 
@@ -114,7 +114,7 @@ The offline synchronization detected {count} auto-committed objects during synch
 - {EntityN}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
 
 Please refer to the documentation to learn more about this issue and how to solve it:
-https://docs.mendix.com/refguide/mobile/using-mobile-capabilities/offlinefirst-data/auto-committed-objects/
+https://docs.mendix.com/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/auto-committed-objects/
 ```
 
 #### 5.1.2 Created While Executing a Microflow
@@ -135,7 +135,7 @@ The offline synchronization detected {count} auto-committed objects during synch
 - {EntityN}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
 
 Please refer to the documentation to learn more about this issue and how to solve it:
-https://docs.mendix.com/refguide/mobile/using-mobile-capabilities/offlinefirst-data/auto-committed-objects/
+https://docs.mendix.com/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/auto-committed-objects/
 ```
 
 Auto-committed objects created inside microflows that are called from a nanoflow will remain on the database.

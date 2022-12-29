@@ -46,12 +46,15 @@ For more information on design and styling, see [Designing Mobile User Interface
 
 Building apps with Mendix gives you access to several mobile capabilities:
 
-* [Offline-First Data](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 * [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): native apps can define a custom URL scheme (for instance, `my-app://`) that allows other apps to access pages and functionalities of the app
 * [Location and Maps](/refguide/mobile/using-mobile-capabilities/location-and-maps/): native apps can access the user location and display native maps inside the application
 * [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): native apps can present a notification to the user that is triggered by the runtime even if the app is not running
 * [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-and-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
 * [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
+
+Although this document is located in a different category, for more information offline-first capabilities see the following:
+
+* [Offline-First Data](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 
 For more information on empowering your apps, see [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/).
 
@@ -59,6 +62,6 @@ For more information on empowering your apps, see [Using Mobile Capabilities](/r
 
 Distributing web apps is a single step; deploying to the production environment lets your end-users access the latest version of the web app. However, native mobile apps require more steps. Part of the application model (pages, nanoflows, and JavaScript actions) are distributed as part of the native mobile app. Even if you deploy a new version of the app, your end users will be interacting with the old version. That is why a second step is needed: distribution. To distribute the latest version of a native mobile app to users, you can either build a new version using the Native Mobile Builder and then release it to online app stores, or you can use the [over-the-air](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) update mechanism to update the app elements stored in the apps without releasing a new version of your native mobile app. For more information on all aspects of the app life cycle, see [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).
 
-As your native mobile app gets more complex, monitoring your app's behavior and users' interactions becomes an essential part of your app development cycle. Therefore Mendix supports sending default and custom logs of different levels from the Mendix native app to the [Mendix Runtime](/refguide/runtime/). This allows app administrators to monitor the app, gain insight on different app states, and possess an improved overview for troubleshooting. To learn more about logging in native mobile apps, see [Logging](/refguide/mobile/distributing-mobile-apps/logging/).
+As your native mobile app gets more complex, monitoring your app's behavior and users' interactions becomes an essential part of your app development cycle. Therefore Mendix supports sending default and custom logs of different levels from the Mendix native app to the [Mendix Runtime](/refguide/runtime/). This allows app administrators to monitor the app, gain insight on different app states, and possess an improved overview for troubleshooting. To learn more about logging in native mobile apps, see [Logging](/refguide/mobile/building-efficient-mobile-apps/logging/).
 
 We also have the information you need to [test](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/) and [debug](/refguide/mobile/distributing-mobile-apps/native-debug/) your Mendix apps. To debug a web app's JavaScript, you simply open the developer console. But to debug a Mendix native app, you can use the Make It Native testing app's **Enable Remote JS Debugging** function to open the app up to normal debugging with Chrome.

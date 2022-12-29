@@ -67,7 +67,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Styling editor in Studio Pro | Released for GA on [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
 | Multiple page parameters | Released for GA on [Sep 30th, 2022](/releasenotes/studio-pro/9.18/#mpp) |
 | Native mobile – simplified monitoring | Released for GA on [Oct 14th, 2022](/releasenotes/studio-pro/9.18/#9181) |
-| Native mobile – file and image background sync | TBD |
+| Native mobile – file and image background sync | GA: TBD |
 | Data widgets – Tree Table | GA: TBD |
 | Data widgets – Spread Sheet Grid | GA: TBD |
 

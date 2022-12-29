@@ -110,6 +110,10 @@ In detail, the following graph shows what happens during deletions:
 The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+The **Delete object(s)** activity will also remove the variable from the Microflow. Take care to not use a variable anymore after using it in a **Delete object(s)** activity.
+{{% /alert %}}
+
 * Events:
     * All before and after events are executed, and if any before-delete event returns false, an exception can be thrown
     * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior

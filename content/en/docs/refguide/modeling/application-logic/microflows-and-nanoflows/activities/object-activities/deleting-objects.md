@@ -111,7 +111,7 @@ The **Committing** state of the **IMendixObject** is deprecated since Mendix Stu
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The **Delete object(s)** activity will also remove the variable from the Microflow. Take care to not use a variable anymore after using it in a **Delete object(s)** activity.
+The **Delete object(s)** activity also removes the variable from the microflow. Be careful not to use the variable anymore after using it in a **Delete object(s)** activity.
 {{% /alert %}}
 
 * Events:

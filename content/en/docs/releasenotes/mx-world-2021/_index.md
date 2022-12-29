@@ -43,8 +43,6 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Studio expression editor | Released for GA on [May 19th, 2021](/releasenotes/studio/9.0-9.6/#expression-editor) |
 | End-user services – App Switcher | Released for GA on [Jan 14th, 2022](/appstore/modules/app-switcher/) |
 | Studio workflow templates | Released for GA |
-| End-user services – notifications | Currently in  Public Beta<br />GA: TBD |
-| End-user services – branding | Currently in Private Beta<br/>GA: TBD |
 
 ## 5 Control Center
 

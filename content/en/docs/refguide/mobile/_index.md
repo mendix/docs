@@ -46,12 +46,15 @@ For more information on design and styling, see [Designing Mobile User Interface
 
 Building apps with Mendix gives you access to several mobile capabilities:
 
-* [Offline-First Data](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 * [Deep Links](/refguide/mobile/using-mobile-capabilities/deep-links/): native apps can define a custom URL scheme (for instance, `my-app://`) that allows other apps to access pages and functionalities of the app
 * [Location and Maps](/refguide/mobile/using-mobile-capabilities/location-and-maps/): native apps can access the user location and display native maps inside the application
 * [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/): native apps can present a notification to the user that is triggered by the runtime even if the app is not running
 * [Local Notifications](/refguide/mobile/using-mobile-capabilities/location-and-maps/): in addition to push notifications, native apps can schedule notifications to be shown at a specific time even if the app is not running
 * [Augmented Reality](/refguide/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
+
+Although this document is located in a different category, for more information offline-first capabilities see the following:
+
+* [Offline-First Data](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 
 For more information on empowering your apps, see [Using Mobile Capabilities](/refguide/mobile/using-mobile-capabilities/).
 

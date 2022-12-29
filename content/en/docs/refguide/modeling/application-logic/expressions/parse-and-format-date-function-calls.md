@@ -36,7 +36,9 @@ The following pattern letters can be used to parse and format Date and time valu
 | S      | Millisecond                               | 201                    |
 
 {{% alert color="info" %}}
-In nanoflows, neither the pattern letter M nor L works consistently in distinguishing between context and standalone currently when the pattern has three or more characters (for instance, MMM or MMMM).
+In microflows, both pattern letters M and L work completely as expected regardless of the date locale.
+
+However, in nanoflows, for languages where the month name changes depending on the context (for instance, Catalan, Polish, and Ukrainian; for more example languages, see [Languages with Genitive Cases](https://rluzynski.fedorapeople.org/slides/2017-01-27-DevConf.cz/GenitiveMonths-updated.pdf)), pattern letter M should NOT be used. Pattern letter L can be used but needs to be tested carefully. We recommend that its limit is LL, given that LLL and LLLL might not work properly depending on languages. 
 {{% /alert %}}
 
 The following pattern letters are only available for microflows:

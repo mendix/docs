@@ -9,6 +9,10 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
+{{% /alert %}}
+
 The [Deep Link](https://marketplace.mendix.com/link/component/43/) module allows you to configure a mapping between a request handler and microflows. In this way, you can create additional entry points to access specific parts of your application. The Deep Link module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
 If you need to access pages or set up a published REST service, the Deep Link module may not be the best solution – there are also other approaches available. For the differences between these approaches, see the table below:

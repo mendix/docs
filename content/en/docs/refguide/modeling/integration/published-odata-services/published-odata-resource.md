@@ -102,6 +102,8 @@ The **Use paging** option is used to set a maximum number of objects per respons
 
 Default: *No*
 
+When set to **Yes**, select **Top supported** and **Skip supported** [query options](#query-options).
+
 Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 then moves to position 1000. This means that the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
 ## 7 Page Size
@@ -191,12 +193,12 @@ The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/s
 
 ## 10 Query Options {#query-options}
 
-Select the options that to include for the **Readable** OData capability.
+Select the options to include for the **Readable** OData capability.
 
 * **Countable** – required for getting the total number of records
-
-Options required for pagination:
-* **Top supported** – required when **Use paging** is selected.  This option supports the $top query, which requests the number of items in the queried collection to be included in the result.
+* **Top supported** – required when **Use paging** is selected.  This option supports the $top query, which requests the number of items in the queried collection to be included in the result. 
 * **Skip supported** – required when **Use paging** is selected. This option supports the $skip query, which requests the number of items in the queried collection that are to be skipped and not included in the result.
 
-For more information, see [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in Microsoft's OData documentation.
+For more information, see the following:
+* [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in Microsoft's OData documentation
+* The [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org

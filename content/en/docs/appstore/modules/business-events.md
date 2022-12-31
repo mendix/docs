@@ -258,6 +258,14 @@ To deploy to production, you must have a subscription to the [Mendix Event Broke
 
 You can also use your own event broker cluster.
 
+#### 6.3.1 Warning Message When Deploying
+
+If you deploying an app to production that contains a published business event service, you might receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
+
+1. Select the **Enable** checkbox for the environment.
+2. Transport the mda to an environment.
+3. Restart the environment.
+
 ## 7 Local Testing {#local-testing}
 
 For development and testing it may be useful to run all your apps on your local workstation, including the Event Broker. You can do this by creating an event broker, a Kafka cluster, on your workstation by running Kafka through `docker-compose`.

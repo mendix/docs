@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "email module with templates", "t
 ---
 
 {{% alert color="info" %}}
-This module is deprecated. Check out the [Email](/appstore/connectors/email-connector/) connector as an alternative. You can use the community-supported [Email Connector migration utility] to migrate data this module to the Email connector.
+This module is deprecated. Check out the [Email](/appstore/connectors/email-connector/) connector as an alternative. You can use the community-supported [Email Connector migration utility](https://marketplace.mendix.com/link/component/205008) to migrate data this module to the Email connector.
 {{% /alert %}}
 
 ## 1 Introduction

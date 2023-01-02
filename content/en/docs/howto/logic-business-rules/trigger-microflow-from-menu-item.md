@@ -91,6 +91,6 @@ Congratulations! You have created the menu item that triggers the microflow and 
 * [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
 * [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/)
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
-* [Work with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/)
+* [Working with Lists in a Microflow](/refguide/working-with-lists-in-a-microflow/)
 * [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
 * [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)

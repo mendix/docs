@@ -93,7 +93,7 @@ You can use the Email Service in a microflow to send HTML or plain text messages
 
 {{< figure src="/attachments/appstore/app-services/email-service/inbuilt-domain-entities.png" >}}
 
-You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow/).
+You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/refguide/working-with-lists-in-a-microflow/).
 
 {{% alert type="info" %}}
 Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back.

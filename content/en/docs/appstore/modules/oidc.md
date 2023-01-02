@@ -422,7 +422,7 @@ The OIDC SSO module provides a default access token parsing microflow for PIB. T
 * For PIB, the default access token parsing microflow is `OIDC.Default_PIB_TokenProcessing_CustomATP`.
 * You can also parse the access token using the custom microflow `OIDC.ACT_Token_CustomATPRetrieveRoles` which takes an access token as input and returns a list of non-persistent objects of type `OIDC.Role`. See the next section for more information.
 
-To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
+To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header.
 
 #### 8.2.3 Parsing Microsoft Azure AD Access Tokens
 
@@ -430,7 +430,7 @@ The OIDC SSO module provides a default access token parsing microflow for Azure 
 
 * For Azure AD, the default access token parsing microflow is `OIDC.Default_Azure_TokenProcessing_CustomATP`.
 
-To confirm that the authorization is working, get an access token from your Azure AD IdP and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
+To confirm that the authorization is working, get an access token from your Azure AD IdP and pass it to the API Endpoint using the authorization header.
 
 #### 8.2.4 Parsing Access Tokens Using a Custom Microflow 
 
@@ -481,6 +481,8 @@ To do this, add a menu item or button for your end-users that calls the nanoflow
 Once you have your app deployed, you can test the SSO set-up by trying to login. If you have multiple IdPs setup, you will be able to choose which IdP to use for authentication. If you have only one IdP provider configured, then you will be taken directly to that IdP's sign in page.
 
 The OIDC SSO module uses two endpoints at your IdP to achieve the SSO. You may get errors from either of these endpoints.
+
+When testing, you can use Postman (or any client application) to check the responses from the various endpoints.
 
 ### 9.1 /authorize
 

@@ -192,11 +192,11 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
     * `https://<your-app-url>/oauth/v2/callback`
     * `makeitnative://<your-app-url>/oauth/callback`
 
-#### 5.1.2 Azure AD Provider Configuration for APIs{#azure-portal}
+#### 5.1.2 Microsoft Azure AD Provider Configuration for APIs{#azure-portal}
 
 This section gives some guidance for doing the necessary configurations at your Azure AD provider to obtain access tokens containing the right authorization claims to secure your APIs.
 
-If you don’t set the access token up correctly, you will get access tokens containing `aud` claims. These are intended to be presented to the Microsoft Graph API and cannot be validated by your API.
+If you don’t set the access token up correctly, you will get access tokens containing default `aud` (audience) claims. The default audience is the Microsoft Graph API and so these access tokens cannot be validated by your API.
 
 To get the Microsoft Identity Platform to issue access tokens you can pass to your API, you need to set up a custom scope in the App Registration’s **Expose an API** tab, and request that scope when you acquire the tokens. TO do this:
 
@@ -204,9 +204,9 @@ To get the Microsoft Identity Platform to issue access tokens you can pass to yo
 1. In the **Expose an API** tab, set up a custom scope.
     The scope will be prefixed with your `Application ID URI`.
 1. In the **API permissions** tab, assign the created scope to the application.
-1. In the **App roles** tab, add the user roles you want to authorize using either the user role name, or the user role UUID.
+1. In the **App roles** tab, add the user roles you want to authorize using either the user role name, or the user role UUID. This adds the configured user roles to the roles claim in the access token. 
 
-By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that we can present to our API
+By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that can be validated at the `/jwks` URI.
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 
@@ -244,14 +244,14 @@ Once you have completed these steps, the SSO-configuration is ready for testing.
 
 See the section [Optional Features](#optional) information on additional optional features you may want to implement.
 
-#### 5.2.2 Azure AD Client Configuration for APIs 
+#### 5.2.2 Microsoft Azure AD Client Configuration for APIs 
 
 For Azure AD access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
 
 1. Start your app, log in as an administrator, for example *demo_administrator*, and access the OpenID Setup page.
-1. Add the custom scope which you [configured in Azure] in **Available scopes**.
+1. Add the custom scope which you [configured in Azure](#azure-portal) in **Available scopes**.
 1. Save the configuration.
-1. Edit the Azure configuration and add the custom scope to **Selected scopes**.
+1. Edit the Azure AD configuration and add the custom scope to **Selected scopes**.
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
@@ -365,9 +365,30 @@ If you are just delegating authentication for your app to the IdP you will not n
 If you want to use the information in an access token which is a JWT, you need to parse the access token in a microflow. For example, you may want to assign user roles in your app based on the contents of the access token JWT.
 
 * The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
-    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted
-    * AzureAD – in this case the `roles` claim is interpreted
-    * Private IAM Broker (PIB) – in this case the `scope` claim is interpreted
+    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
+
+        ```json {linenos=false}
+        "sws.samauth.role.name": [
+        "c1c31b36-2779-4ddd-a6e7-eaff22ad382c"
+        ]
+        ```
+
+    * Microsoft Azure AD – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+
+        ```json {linenos=false}
+        "roles": [
+        "c1c31b36-2779-4ddd-a6e7-eaff22ad382c"
+        ]
+        ```
+
+    * Private IAM Broker (PIB) – in this case the `scope` claim is interpreted — for example:
+
+        ```json {linenos=false}
+        {
+        "scope": "mx:app:userrole:a2275396-a31a-4f06-81c5-10fdfcb9f507 mx:app:userrole:c8de23c9-64fa-4faa-a263-6debc7e01edf mx:app:userrole:20c79248-e9f2-4131-b4a1-ee6b634b8f69"
+        }
+        ```
+
 * If you are using another IdP or want to use a different claim, you can create a custom microflow to parse the access token.
 
 To parse access tokens, you need to do the following:
@@ -403,12 +424,20 @@ The OIDC SSO module provides a default access token parsing microflow for PIB. T
 
 To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
 
-#### 8.2.3 Parsing Access Tokens Using a Custom Microflow 
+#### 8.2.3 Parsing Microsoft Azure AD Access Tokens
 
-If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Azure.
+The OIDC SSO module provides a default access token parsing microflow for Azure AD. To use it, select the appropriate access token parsing microflow:
+
+* For Azure AD, the default access token parsing microflow is `OIDC.Default_Azure_TokenProcessing_CustomATP`.
+
+To confirm that the authorization is working, get an access token from your Azure AD IdP and pass it to the API Endpoint using the authorization header. You can use Postman or any client application.
+
+#### 8.2.4 Parsing Access Tokens Using a Custom Microflow 
+
+If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Azure AD.
 
 {{% alert color="info" %}}
-If you are using Microsoft Azure, ensure you have followed the instructions for getting valid tokens in [Configuration of OIDC Provider](#oidc-configuration), above.
+If you are using Microsoft Azure AD, ensure you have followed the instructions for getting valid tokens in [Configuration of OIDC Provider](#oidc-configuration), above.
 {{% /alert %}}
 
 You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.

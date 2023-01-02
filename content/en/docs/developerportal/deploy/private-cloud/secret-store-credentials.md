@@ -25,8 +25,6 @@ Mendix apps currently support the following secret stores:
 * AWS Secrets Manager
 * HashiCorp Vault
 
-Azure blob storage is not supported as secret storage for Azure.
-
 ## 2 Configuring Your Environment
 
 To implement an external secret store, you must configure the required settings by following these steps:
@@ -57,13 +55,42 @@ The following table lists the properties used as keys for database and storage-r
 | Database Username | `database-username` | `my-app-user-1` | ✓ |
 | Database Password | `database-password` | `Welc0me!` | ✓ |
 | Storage service name | `storage-service-name` | `com.mendix.storage.s3` | ✓ |
-| Storage endpoint | `storage-endpoint` | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` | ✓ |
-| Storage access key id | `storage-access-key-id` | `AKIA################` |  |
-| Storage secret access key | `storage-secret-access-key` | `A#######################################` |  |
-| S3 subdirectory (or bucket name for S3-like storage systems) | `storage-bucket-name` | `subdirectory` | ✓ |
+| S3 Storage endpoint | `storage-endpoint` | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` | ✓ (only for S3) |
+| S3 Storage access key id | `storage-access-key-id` | `AKIA################` |  |
+| S3 Storage secret access key | `storage-secret-access-key` | `A#######################################` |  |
+| S3 subdirectory (or bucket name for S3-like storage systems) | `storage-bucket-name` | `subdirectory` | ✓ (only for S3) |
+| Azure storage account | `storage-azure-account-name` | `example` | ✓ (only for Azure Blob Storage) |
+| Azure storage account key | `storage-azure-account-key` | `aw==` | ✓ (only for Azure Blob Storage) |
+| Azure storage container name | `storage-azure-container` | `examplecontainer` | ✓ (only for Azure Blob Storage) |
+| Use HTTP for Azure | `storage-azure-use-https` | `true` |  |
 | Use configured CA trust for file storage | `storage-use-ca-certificates` | `true` |  |
 | Delete files from storage when deleted in the app | `storage-perform-delete` | `true` |  |
 | Mendix Admin Password | `mx-admin-password` | `Welc0me!` |  |
+
+`storage-service-name` should specify one of the following supported blob storage providers:
+
+* `com.mendix.storage.s3` for AWS S3 or S3-compatible providers
+* `com.mendix.storage.azure` for Azure Blob Storage
+
+To set a Mendix app constant, use the `mx-const-{name}` format.
+For example, if you need to set the `MyFirstModule.WelcomePageTitle` constant, specify its value via the `mx-const-MyFirstModule.WelcomePageTitle` key.
+
+To set a [Mendix Runtime custom setting](/refguide/custom-settings/), use the `mx-runtime-{name}` format.
+For example, if you need to set the `com.mendix.storage.s3.EncryptionKeys` constant, specify its value via the `mx-runtime-com.mendix.storage.s3.EncryptionKeys` key.
+
+{{% alert color="info" %}}
+Most of the Mendix Runtime settings don't contain private data or are managed by the Mendix Operator, and overriding some values could lead to unexpected behaviour.
+Consult with Mendix Support to check if using CSI Secrets Storage for your use case would be considered a supported use case.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+When using CSI Secrets Storage for app credentials, Mendix Operator 2.9.0 supports S3 (or S3-compatible) storage.
+To use Azure Blob Storage (keys with the `storage-azure-` prefix), upgrade to Mendix Operator 2.10.0 or a later version.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+To load app constants (`mx-const-*` keys) and Mendix Runtime custom settings (`mx-runtime-*`) from CSI Secrets Storage, upgrade to Mendix Operator 2.10.0 or a later version.
+{{% /alert %}}
 
 ## 3 Sample Implementations
 
@@ -386,7 +413,10 @@ In the above example, `path` specifies the key name from the original AWS Secret
 When implementing a secret store, keep in mind the following considerations:
 
 * It is not currently possible to use Storage Plans with CSI Secrets Storage. Instead, your infrastructure admin must attach a Kubernetes `ServiceAccount` and `SecretProviderClass` would be attached to the app before or after the environment is created.
-* If a secret is rotated or updated, the app should be restarted to use new credentials.
+* If a secret is rotated or updated, Mendix Operator 2.10.0 (or a later version) will detect the changes and apply them. However (depending on the Mendix Runtime version in use), the changes might not be applied - in that case, it's best to restart the environment.
+  * There's a delay of a few minutes before the CSI Secrets Storage driver detects the changes.
+  * Only file storage credentials and `MxAdmin` password changes are correctly processed at the moment.
+  * Rotation of database credentials requires an environment to be manually restarted - if the app is based on Mendix 9.21 or an earlier version. Rotation of database credentials will be added soon to the Mendix Runtime, and this document will be updated accordingly.
 * Dynamic secrets in HashiCorp Vault are supported - from the app environment, they are identical to regular secrets.
 * The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass`.
-* CSI Secrets Storage can override app settings - if a parameter is configured in the Cloud Portal or `MendixApp` CR, its value from CSI Secrets Storage will have a higher priority and will override the value specified in the Cloud Portal. Currently this applies only to the `MxAdmin` password. In the future, this may also include app constants and other settings.
+* CSI Secrets Storage can override app settings - if a parameter is configured in the Cloud Portal or `MendixApp` CR, its value from CSI Secrets Storage will have a higher priority and will override the value specified in the Cloud Portal. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants and runtime custom settings.

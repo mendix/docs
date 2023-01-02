@@ -621,6 +621,8 @@ After manually removing the StorageInstance, you'll need to manually clean up an
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
+In Mendix Operator version 2.4.0 (and later), pressing the **More Info** button will show any errors that could be explain the root cause of why the app is failing to start.
+
 ### 7.4 ApplicationRootUrl Needs to be Set Manually
 
 {{% alert color="info" %}}
@@ -639,6 +641,29 @@ To add this setting:
 
 {{% alert color="info" %}}
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
+{{% /alert %}}
+
+### 7.5 Collecting diagnostic data for a support case
+
+{{% alert color="info" %}}
+For securirty reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Cloud Portal.
+Only generic status or error messages are sent back to the Cloud Portal; those messages don't contain enough details about the environment to understand the root cause of any problems.
+{{% /alert %}}
+
+Starting with version 2.10.0, the `mxpc-cli` administration and configuration tool has an command to collect and save diagnostic logs and a few configuration details into a file.
+
+To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where logs should be saved:
+
+```{linenos=false}
+mxpc-cli log-extract -n {namespace} -f {filename}
+```
+
+This file can be shared with Mendix Support or the team responible for maintaining infrastructure.
+
+{{% alert color="warning" %}}
+Before sending logs to support, please make sure that there they don't contain any sensitive or restricted information.
+
+In some cases it might make sense to review the contents of the log file and redact it, or only keep messages from a specific time period.
 {{% /alert %}}
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}

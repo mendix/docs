@@ -216,7 +216,7 @@ The **Variable** field defines the name for the result of the operation.
 
 #### 7.3.1 $latestHttpResponse Variable
 
-The `$latestHttpResponse` variable is of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type. It is available after a **Call REST** activity.
+The `$latestHttpResponse` variable is of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type. It is available after a **Call REST** activity. This variable can only be accessed in the microflow where the **Call REST Service** activity is used.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 
@@ -224,9 +224,6 @@ This attribute is filled when one of the following scenarios occur:
 
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
-* 
-
-This variable can only be accessed in the microflow where the **Call REST Service** activity is used.
 
 #### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
@@ -249,7 +246,6 @@ This error occurs when your app's infrastructure closes the connection because i
 There are two ways to resolve this:
 
 1. Alter the value of the `http.client.CleanupAfterSeconds` [runtime setting](/refguide/custom-settings/) to be less than the connection timeout. This will ensure that the your app client will create a new HTTP client for the request.
-
 2. Handle the error in your microflow and retry a number of times before returning the error. Your flow might look similar to the one below.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/retry-rest-connection-timeout.png" >}}

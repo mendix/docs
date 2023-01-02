@@ -17,7 +17,7 @@ You will learn about the following:
 * [Setting the MIME type](#set-mime-type) for a specific file
 * [Consuming files](#retrieve-files) with REST
 
-If you are just interested in consuming REST services in your apps, skip down to the [Retrieve Files with REST](#retrieve-files) section.
+If you are only interested in consuming REST services in your apps, skip down to the [Retrieve Files with REST](#retrieve-files) section.
 
 ### 1.1 Prerequisites 
 
@@ -30,19 +30,13 @@ We recommend reading the following for some more background:
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
 * [Working with images and files](/howto/data-models/working-with-images-and-files/) in Studio Pro
 
-## 2 Using Files in Your App
-
-To publish images or files with REST, you need to be using them in your app. Images and files you use in your app are stored in **System.Image** and **System.FileDocument** entities.
-
-Follow [Work with Images and Files](/howto/data-models/working-with-images-and-files/) for step-by-step instructions on setting up these entities and overview pages and using them in your app.
-
-## 3 Publish Files as REST {#create-service}
+## 2 Publish Files with REST {#create-service}
 
 Imagine that your app is functioning as a content management system (CMS), and you want to be able to send and receive images and files. You have an entity that stores the files, which we will use as a starting point:
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-binary/starting-entity.png" >}}
 
-### 3.1 Publishing the Service {#publish-service}
+### 2.1 Publishing the Service {#publish-service}
 
 To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide/published-rest-service/), do the following:
 
@@ -69,7 +63,7 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
 The **Published REST service** document for the exposed image or file entity has been created and is now open on your screen. After you run your app, click the URL in the **Location** field to open the OpenAPI specs.
 
-### 3.2 Understanding the Service Details {#service-details}
+### 2.2 Understanding the Service Details {#service-details}
 
 Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key will return a binary response. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
 
@@ -77,7 +71,7 @@ Open your published REST service, then double-click the **Get by** key, or singl
 
 Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFile_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 
-### 3.3 Setting the MIME Type (For Calling a Specific File) {#set-mime-type}
+### 2.3 Setting the MIME Type (For Calling a Specific File) {#set-mime-type}
 
 A `GET` request to the REST endpoint you created (for example, `http://localhost:8080/rest/restservicename/v1/entityname/`) will return the binary for the uploaded file. But if you are trying to call a specific file, we need to specify what media type it should expect so that it returns the file in the expected way (for example, displaying an image).
 
@@ -85,7 +79,7 @@ In the **GET_ByKey** microflow, specify the media type (or MIME type) in the con
 
 See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a generic, external list of common content header types.
 
-#### 3.3.1 MIME Type for Images {#mime-images}
+#### 2.3.1 MIME Type for Images {#mime-images}
 
 In the **GET_ByKey** microflow, do the following: 
 
@@ -99,7 +93,7 @@ In the **GET_ByKey** microflow, do the following:
 
 [Add image here]
 
-#### 3.3.2 MIME Type for PDFs
+#### 2.3.2 MIME Type for PDFs
 
 Follow the steps in the [MIME Type for Images](#mime-images) section, then set the three drop-down options to the following:
 
@@ -109,7 +103,7 @@ Follow the steps in the [MIME Type for Images](#mime-images) section, then set t
 
 [Add image here]
 
-### 3.4 Testing the Service {#test-service}
+### 2.4 Testing the Service {#test-service}
 
 Test the service to ensure that it works!
 
@@ -126,9 +120,9 @@ Test the service to ensure that it works!
 
 If you uploaded a PNG, you should actually see the image displayed!
 
-## 5 Retrieve Files with REST {#retrieve-files}
+## 3 Consume Files with REST {#retrieve-files}
 
-You can implement an API client in your app that will retrieve binary files and store them in a `FileDocument` entity.
+You can implement an API client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity. 
 
 1.  Right-click on the **File Explorer** and select **Add module**, then rename it as **CMSClient**.
 

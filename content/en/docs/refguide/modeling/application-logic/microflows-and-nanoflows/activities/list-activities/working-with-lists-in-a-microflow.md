@@ -8,17 +8,17 @@ tags: ["microflow", "logic", "list"]
 
 ## 1 Introduction
 
-In this document, you will learn how to enrich the data management capabilities of your microflow by using a list. A list consists of objects of the same type, filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of fulfilled orders from the database. You can then further process this data, for example, by calculating the total value of those orders.
+In this document, you will learn how to enrich the data management capabilities of your microflow by using a list. A list consists of objects of the same type, which can be filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of completed orders from the database. You can also further process this data, for example, by calculating the total value of those orders.
 
-This document will teach you how to do the following:
+This document teaches you how to do the following:
 
 * Retrieve and filter a list of objects from the database
 * Update multiple objects by iterating over a list
 * Calculate the total list value
 
-## 2 Preparing the Data Structure, GUI and Example Data
+## 2 Preparing the Data Structure, GUI, and Example Data
 
-To see the results of this how-to, set up a test app, and populate it with test data.
+Before you continue, you should first set up a test app, and populate it with test data. To do so, follow these steps:
 
 1. Create a [domain model](/howto/data-models/create-a-basic-data-layer/) with the following entities:
     * **Customer**
@@ -41,8 +41,8 @@ To see the results of this how-to, set up a test app, and populate it with test 
 
     {{< figure src="/attachments/howto/logic-business-rules/define-access-rules-using-xpath/18581378.png" alt="Customer and Order entities with one-to-many association" >}}
 
-2. Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage **Customer** and **Order** objects.
-3. Create [menu items](/refguide/setting-up-the-navigation-structure/) to access **Customer** and **Order** overview pages.
+2. Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and **Order** objects.
+3. Create [menu items](/refguide/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and **Order** overview pages.
 4. Add the following **Customer** data to your app:
     | Name | Address | Zip code | City |
     | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ To see the results of this how-to, set up a test app, and populate it with test 
 
 ## 3 Retrieving and Filtering a List of Objects from the Database
 
-Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the Processing status.
+Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the **Processing** status.
 
 1. Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
 2. In the **Add Microflow** dialog box, in the **Name** field, enter *IVK_SetOrderToComplete*, and then click **OK**.
@@ -89,12 +89,12 @@ Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a li
 10. To filter the list to only orders with the status **Processing**, in the **XPath constraint** field, add the following XPath expression: `[OrderStatus = 'Processing']`.
 
 {{% alert color="info" %}}
-Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as Customer. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
+Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as **Customer**. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
 {{% /alert %}}
 
 ## 4 Updating Multiple Objects by Iterating over a List
 
-After retrieving a list of orders with the status Processing, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to Complete.
+After retrieving a list of orders with the status **Processing**, use a [loop](/refguide/loop/) to iterate over this list and change the status of each object to **Complete**.
 
 1. Open the **IVK_SetOrderToComplete** microflow that you created in the previous section.
 2. Drag a **Loop** activity from the **Toolbox**, and place it between the **OrderProcessingList** activity and the end event of the microflow.
@@ -122,7 +122,7 @@ After retrieving a list of orders with the status Processing, use a [loop](/refg
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/working-with-lists-optimization.jpg" alt="A microflow configured to iterate over a list" >}}
 
-14. Redeploy your application.
+14. Run your application locally.
 15. On the **Orders** overview page, click **Set Processing to Complete**.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581113.png" alt="Setting the order status to Complete" >}}
@@ -135,7 +135,6 @@ To calculate the total sum of all your orders via a loop, create a variable whic
     * **Caption** – enter *Calculate Total Order Price*
     * **Name** – enter *IVK_CalculateTotalPriceOrders*
 2. In the **IVK_CalculateTotalPriceOrders** microflow, add a **Retrieve** activity from the **Toolbox** to the line between the start and end events.
-
 3. Double-click the **Retrieve** activity, and then set the following properties:
     * **Source** – select **From database**
     * **Entity** – select **Order**
@@ -172,7 +171,7 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581063.png" alt="A microflow configured to calculate total list value with a loop" >}}
 
-14. Redeploy your application.
+14. Rerun your application locally.
 15. On the **Orders** overview page, click **Calculate total order price**.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" >}}
@@ -201,7 +200,7 @@ Instead of a loop, you can also calculate the total price by using the [aggregat
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581058.png" alt="A microflow configured to calculate the total list value with aggregates" >}}
 
-8. Run your application locally.
+8. Rerun your application locally.
 9. On the **Orders** overview page, click **Calculate total order price**.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" >}}

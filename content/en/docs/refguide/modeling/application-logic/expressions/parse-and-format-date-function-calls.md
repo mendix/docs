@@ -42,7 +42,7 @@ However, in nanoflows, the pattern letter `M` usually should NOT be used, given 
 
 In nanoflows, the pattern letter `L` works properly except when it is used for some languages where the month name changes depending on the context (languages with the genitive case). For those languages, we recommend that the character limit is `LL`, given that with more characters (for instance, `LLL` or `LLLL`), the pattern letter `L` might not work properly. For example, `LLL` does work for Russian but not for Catalan. `LLLL` is not recommended for any of those languages. 
 
-Here is a full collection of such languages that are available in Studio Pro: Armenian, Belarusian, Catalan, Croatian, Czech, Finnish, Greek, Lithuanian,Polish, Russian, Slovak, Ukrainian.
+Here is a full collection of such languages that are available in Studio Pro: Armenian, Belarusian, Catalan, Croatian, Czech, Finnish, Greek, Lithuanian, Polish, Russian, Slovak, and Ukrainian.
 {{% /alert %}}
 
 The following pattern letters are only available for microflows:

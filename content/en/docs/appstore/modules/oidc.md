@@ -204,6 +204,7 @@ To get the Microsoft Identity Platform to issue access tokens you can pass to yo
 1. In the **Expose an API** tab, set up a custom scope.
     The scope will be prefixed with your `Application ID URI`.
 1. In the **API permissions** tab, assign the created scope to the application.
+1. In the **App roles** tab, add the user roles you want to authorize using either the user role name, or the user role UUID.
 
 By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that we can present to our API
 

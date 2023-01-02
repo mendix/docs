@@ -73,6 +73,7 @@ To submit a request with Mendix Support, follow these steps:
         * **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs/))
         * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
         * **App - Security** - issues/questions regarding the security of your Mendix app
+            Please read the section [Requirements for Security Support Tickets](#security-tickets) before raising an app security ticket. Following these guidelines ensures that your ticket can be progressed as efficiently as possible.
         * **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
     * **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
         * **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
@@ -137,23 +138,44 @@ You can add large attachments such as app files to the request. Please note that
 Attachments added to Mendix Support requests will be automatically deleted after 365 days.
 {{% /alert %}}
 
-### 5.2 Cloud Problems and Deployment Issues
+### 5.2 Requirements for Security Support Tickets{#security-tickets}
+
+If you are reporting a vulnerability or security issue, for example a warning issued by a scanning tool, please follow these steps to ensure your ticket is dealt with as efficiently as possible.
+
+1. Ensure you are using the current major version of Mendix, or the [LTS](/releasenotes/studio-pro/lts-mts/) release of a previous major version which has not reached end of support.
+1. If the vulnerability is in a marketplace component
+    1. check that it is platform supported — community-supported components are not supported by Mendix support.
+    1. ensure the component is up to day.
+1. Review the [Frequently asked questions - Security](example.com) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
+1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
+1. Include the following information:
+    * A description of the issue found — please submit only one error per support ticket.
+    * Where the issue was found — for example, which url, which Mendix version, the app id?
+    * How the issue was found — for example, was it from scanning an app and, if so, which tool was used?
+    * A copy of an app containing the reported issue — see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/) for instructions on creating an app package.
+    * An actual exploitation scenario, if possible, including steps showing how to reproduce and exploit the vulnerability.
+
+{{% alert color="info" %}}
+Mendix Support will only accept security findings for the Mendix platform. This includes the Mendix runtime, any platform-supported components, and Mendix applications provided to support you to design, develop, deploy, and monitor your apps and Mendix applications used for managing your users and resources. Mendix Support will not look into security findings related to our marketing websites.
+{{% /alert %}}
+
+### 5.3 Cloud Problems and Deployment Issues
 
 * Log file (*.txt*)
 * Date and time of the incident
 
-### 5.3 Team Server Problems and App Issues
+### 5.4 Team Server Problems and App Issues
 
 * [App ID](/developerportal/settings/general-settings/)
 
-### 5.4 Studio and Studio Pro Problems
+### 5.5 Studio and Studio Pro Problems
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
 * Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps
 
-### 5.5 Marketplace Content Problems and Module, Widget, and Theme Issues
+### 5.6 Marketplace Content Problems and Module, Widget, and Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
@@ -164,11 +186,11 @@ Attachments added to Mendix Support requests will be automatically deleted after
 Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see [Marketplace Content Support](/appstore/general/app-store-content-support/).
 {{% /alert %}}
 
-### 5.6 Mobile Problems
+### 5.7 Mobile Problems
 
 * Operating system and version (Android x.x or iOS x.x; for example, Android 6.1)
 
-### 5.7 Browser Problems
+### 5.8 Browser Problems
 
 * Operating System (Windows x or iOS x; for example, Windows 10)
 * Browser name and version (Chrome x.x, Firefox x.x, IE x.x, or Safari x.x; for example, Chrome 54.0.2840.99)

@@ -5,6 +5,7 @@ weight: 15
 description: "Describes optimizing native app startup times by tailoring the way your app syncs data."
 tags: ["native", "startup", "performance", "optimization"]
 ---
+
 ## 1 Introduction
 
 As native apps increase in size, model complexity, and the amount of data they deal, the app’s startup time can increase as well. This is usually caused by too much data being initially synchronized to the device, however there can be other causes. In this guide you will learn what happens at startup and how to optimize your native app for a quick startup experience.
@@ -49,4 +50,3 @@ If you need to synchronize files and images on startup, ensure their size is sma
 If you have configured a nanoflow as a startup nanoflow it may affect your app's startup performance—especially if the nanoflow performs additional data synchronization, excessive data operations on the local device, or microflow calls. 
 
 We recommend creating short-running startup nanoflows, because native apps keep showing their splash screen until your startup nanoflow executes a **Show page** action. If you must perform long operations in your startup nanoflow, you can show a page at the beginning to help the end-user understand the process. 
-

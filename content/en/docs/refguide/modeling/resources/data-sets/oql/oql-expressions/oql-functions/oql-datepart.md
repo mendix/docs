@@ -22,14 +22,11 @@ DATEPART ( datepart , date_expression [, timezone ] )
 
 ### 2.2 date_expression
 
-`date_expression` specifies the date to retrieve an element from.This should be formatted in an expression which resolves to a date/time value.
+`date_expression` specifies the date to retrieve an element from. This should be formatted in an expression which resolves to a date/time value.
 
 ### 2.3 timezone
 
-`timezone` specifies the time zone to use for the retrieval.
-This parameter is optional and defaults to the local time zone.
-It should be a string literal containing an IANA time zone.
-GMT offset time zones are not supported.
+`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
 
 ## 3 Example{#oql-datepart-example}
 

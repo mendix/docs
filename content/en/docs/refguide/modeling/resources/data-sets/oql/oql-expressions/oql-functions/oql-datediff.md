@@ -31,7 +31,4 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 
 ### 2.4 timezone
 
-`timezone` specifies the time zone to use for the retrieval.
-This parameter is optional and defaults to the local time zone.
-It should be a string literal containing an IANA time zone.
-GMT offset time zones are not supported.
+`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.

@@ -22,20 +22,17 @@ month-from-dateTime ( attribute [, timezone ] )
 
 ### 2.2 timezone
 
-`timezone` specifies the time zone to use for the extraction.
-This parameter is optional and defaults to the local time zone.
-It should be a string literal containing an IANA time zone or `'UTC'`.
-GMT offset time zones are not supported.
+`timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
 
 ## 3 Examples
 
-This query returns all logs where the month value `DateAttribute` is 12 (December) in the local time zone. For example, "2011-12-30":
+This query returns all logs where the month value `DateAttribute` is 12 (December) in the local time zone (for example, "2011-12-30"):
 
 ```java {linenos=false}
 //Logging.Log[month-from-dateTime(DateAttribute) = 12]
 ```
 
-This query returns all logs where the month value `DateAttribute` is 12 (December) in the New York timezone. For example, "2011-12-30":
+This query returns all logs where the month value `DateAttribute` is 12 (December) in the New York time zone (for example, "2011-12-30"):
 
 ```java {linenos=false}
 //Logging.Log[month-from-dateTime(DateAttribute, 'America/New_York') = 12]

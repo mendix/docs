@@ -22,10 +22,7 @@ day-of-year-from-dateTime ( attribute [, timezone ] )
 
 ### 2.2 timezone
 
-`timezone` specifies the time zone to use for the extraction.
-This parameter is optional and defaults to the local time zone.
-It should be a string literal containing an IANA time zone or `'UTC'`.
-GMT offset time zones are not supported.
+`timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
 
 ## 3 Examples
 

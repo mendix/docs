@@ -1,31 +1,25 @@
 ---
 title: "Triggering a Microflow From a Menu Item"
 url: /refguide/triggering-microflow-from-menu-item/
-weight: 30
+weight: 2
 description: "Describes how to create a simple microflow that will define the logic of your application."
 tags: ["Studio Pro", "microflow", "create microflow", "menu item"]
 ---
 
 ## 1 Introduction
 
-Mendix uses visual models called microflows to define the logic of your application. Microflows are visual ways of expressing what traditionally would be written in code. This how-to explains how you can create a very simple "Hello World" microflow.
+Mendix uses visual models called [microflows](/refguide/microflows/) to define the logic of your application. Microflows are visual ways of expressing what traditionally would be written in code. This document explains how you can create a very simple "Hello World" microflow and trigger it from a [menu item](/refguide/menu/#menu-item).
 
-This how-to will teach you how to do the following:
+This document will teach you how to do the following:
 
 * Create a menu item
 * Create and edit a microflow
 
-## 2 Prerequisites
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Familiarize yourself with microflow terms. For more information, see [Microflows](/refguide/microflows/). 
-
 ## 2 Creating a Menu Item {#creating-menu-item}
 
-You will create a menu item that will trigger a microflow and show the **Hello World** message to the end-users. 
+You will create a menu item that triggers a microflow and shows the **Hello World** message to the end-users. 
 
-Microflows can be triggered in many different ways. For this how-to, you will use a menu item to trigger the new microflow.
+Microflows can be triggered in many different ways. In this document, you will learn to use a menu item to trigger a microflow.
 
 To create a menu item, follow these steps:
 
@@ -69,11 +63,11 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/toolbox.png" >}}
 
-3. Drag the **Show message** activity from the **Toolbox** into the flow between the start event and end event, which will insert a show message activity:
+3. Drag the **Show message** activity from the **Toolbox** into the flow between the start event and end event:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/show-message-activity.png" >}}
 
-4. Double-click the message activity to open the **Show Message** properties.
+4. Double-click the **Show message** activity to open its properties.
 5. Enter *Hello World* for the **Template** value and click **OK**:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/show-message-properties.png" >}}
@@ -83,13 +77,11 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/hello-world-message.png" >}}
 
-Congratulations! You have created the menu item that triggers the microflow and shows the **Hello World** message to your end-users! 
+Congratulations! You have created a menu item that triggers a microflow and shows a **Hello World** message to your end-users! 
 
 ## 4 Read More
 
-* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
+* [Navigation](/refguide/navigation/)
+* [Menu Item](/refguide/menu/#menu-item)
 * [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/)
-* [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 * [Working with Lists in a Microflow](/refguide/working-with-lists-in-a-microflow/)
-* [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
-* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)

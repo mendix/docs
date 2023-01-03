@@ -1486,7 +1486,7 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 5.6 Customize Service Account
+### 5.6 Customize Service Account {#customize-service-account}
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
@@ -1495,6 +1495,8 @@ To achieve this, you need to add the annotation `privatecloud.mendix.com/environ
 {{% alert color="info" %}}
 The service account can be customized for Private Cloud Operator version 2.7.0 and above.
 {{% /alert %}}
+
+Additional annotations can be used, for example to attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/) to authenticate with AWS services instead of static credentials.
 
 ### 5.7 Autoscaling
 

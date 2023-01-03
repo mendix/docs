@@ -66,16 +66,24 @@ The following table lists the properties used as keys for database and storage-r
 | Use configured CA trust for file storage | `storage-use-ca-certificates` | `true` |  |
 | Delete files from storage when deleted in the app | `storage-perform-delete` | `true` |  |
 | Mendix Admin Password | `mx-admin-password` | `Welc0me!` |  |
+| App constant `{name}` | `mx-const-{name}` | `mx-const-MyFirstModule.WelcomePageTitle` |  |
+| Runtime custom setting `{name}` | `mx-runtime-{name}` | `mx-runtime-com.mendix.storage.s3.EncryptionKeys` |  |
 
 `storage-service-name` should specify one of the following supported blob storage providers:
 
 * `com.mendix.storage.s3` for AWS S3 or S3-compatible providers
 * `com.mendix.storage.azure` for Azure Blob Storage
 
-To set a Mendix app constant, use the `mx-const-{name}` format.
+{{% alert color="info" %}}
+If your app is upgraded to Mendix 9.20 or a later version, and its Kubernetes service account is linked to an AWS IAM Role, you don't need to specify `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket.
+Instead, the same AWS IAM role can be used for S3 authentication.
+For more information and a complete walkthrough example, see the AWS Secrets Manager [example](#configure-using-aws-secrets-manager).
+{{% /alert %}}
+
+To set a Mendix app constant, use the `mx-const-{name}` format (replace `{name}` with the name of the app constant).
 For example, if you need to set the `MyFirstModule.WelcomePageTitle` constant, specify its value via the `mx-const-MyFirstModule.WelcomePageTitle` key.
 
-To set a [Mendix Runtime custom setting](/refguide/custom-settings/), use the `mx-runtime-{name}` format.
+To set a [Mendix Runtime custom setting](/refguide/custom-settings/), use the `mx-runtime-{name}` format (replace `{name}` with the name of the custom setting).
 For example, if you need to set the `com.mendix.storage.s3.EncryptionKeys` constant, specify its value via the `mx-runtime-com.mendix.storage.s3.EncryptionKeys` key.
 
 {{% alert color="info" %}}
@@ -239,6 +247,14 @@ To enable your environment to use Vault as external secret storage, follow these
           - secretKey: "mx-admin-password"
             objectName: "mx-admin-password"
             secretPath: "secret/data/<{env-configuration-secret}>"
+          # Example: use MyFirstModule.MyConstant constant value from AWS Secrets Manager
+          #- secretKey: "MyFirstModule.MyConstant"
+          #  objectName: "mx-const-MyFirstModule.MyConstant"
+          #  secretPath: "secret/data/<{env-configuration-secret}>"
+          # Example: use com.mendix.storage.s3.EncryptionKeys custom setting from AWS Secrets Manager
+          #- secretKey: "com.mendix.storage.s3.EncryptionKeys"
+          #  objectName: "mx-runtime-com.mendix.storage.s3.EncryptionKeys"
+          #  secretPath: "secret/data/<{env-configuration-secret}>"
     ```
 
 14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`in the Mendix app CRD.
@@ -274,7 +290,7 @@ To enable your environment to use Vault as external secret storage, follow these
 
 {{% alert color="warning" %}}These examples are provided for [KV Secrets Engine - Version 2](https://developer.hashicorp.com/vault/docs/secrets/kv/kv-v2). When setting policies or reading keys from the Vault `kv-v2` keystore, paths should be prefixed with `secrets/data/`. Please refer to the [Hashicorp Vault documentation](https://developer.hashicorp.com/vault/docs) for more information.{{% /alert %}}
 
-### 3.2 Configuring a Secret Store with AWS Secrets Manager
+### 3.2 Configuring a Secret Store with AWS Secrets Manager {#configure-using-aws-secrets-manager}
 
 To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/blogs/security/how-to-use-aws-secrets-configuration-provider-with-kubernetes-secrets-store-csi-driver/) as external secret storage, follow these steps:
 
@@ -404,9 +420,40 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
               objectAlias: "storage-use-ca-certificates"
             - path: '"mx-admin-password"'
               objectAlias: "mx-admin-password"
+            # Example: use MyFirstModule.MyConstant constant value from AWS Secrets Manager
+            #- path: '"MyFirstModule.MyConstant"'
+            #  objectAlias: "mx-const-MyFirstModule.MyConstant"
+            # Example: use com.mendix.storage.s3.EncryptionKeys custom setting from AWS Secrets Manager
+            #- path: '"com.mendix.storage.s3.EncryptionKeys"'
+            #  objectAlias: "mx-runtime-com.mendix.storage.s3.EncryptionKeys"
     ```
 
 In the above example, `path` specifies the key name from the original AWS Secret (Secret Manager key), and `objectAlias` specifies how it will be named when mounted into the sidecar. Do not modify `objectAlias`, as it matches the AWS `objectName`.
+
+If your app is based on Mendix 9.20 or a later version, you can remove `storage-access-key-id` and `storage-secret-access-key` parameters, and instead attach this IAM policy to the app's IAM role (replace `<bucket_name>` with the name of the S3 bucket)
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:AbortMultipartUpload",
+        "s3:DeleteObject",
+        "s3:GetObject",
+        "s3:ListMultipartUploadParts",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<bucket_name>/*"
+      ]
+    }
+  ]
+}
+```
+
+This way, the app would authenticate with the AWS S3 API using AWS IRSA instead of static credentials.
 
 ## 4 Additional considerations {#additional-considerations}
 

@@ -646,7 +646,7 @@ If you change **App URL** in the **General** tab, you should update the `Applica
 ### 7.5 Collecting diagnostic data for a support case
 
 {{% alert color="info" %}}
-For securirty reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Cloud Portal.
+For security reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Cloud Portal.
 Only generic status or error messages are sent back to the Cloud Portal; those messages don't contain enough details about the environment to understand the root cause of any problems.
 {{% /alert %}}
 

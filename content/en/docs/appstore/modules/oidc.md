@@ -3,7 +3,7 @@ title: "OIDC SSO"
 url: /appstore/modules/oidc/
 category: "Modules"
 description: "Describes the configuration and usage of the OIDC SSO module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support"]
+tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "Azure", "PIB"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/120371
 ---

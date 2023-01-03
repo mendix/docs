@@ -11,7 +11,7 @@ tags: ["SAP", "integration", "OData", "SSO"]
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
+If you are using the XSUAA Connector for SAP BTP with Mendix versions 9.20 and above you will need to make a simple change to a Java action. See the [Using XSUAA with Mendix Versions 9.20 and Above](/partners/sap/sap-xsuaa-connector/#v920) section of *XSUAA Connector for SAP Business Technology Platform* for more information.
 {{% /alert %}}
 
 When you deploy an application to SAP Business Technology Platform (SAP BTP) using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **Id**entity **P**rovider (IdP) for a Mendix application. This means that the user can sign on to their app using this IdP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.

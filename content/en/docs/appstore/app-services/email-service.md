@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service", "email"]
 
 ## 1 Introduction
 
-The [Email Service](https://marketplace.mendix.com/link/component/118393/) app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
+The Email Service app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
 
 The app service works with [Mendix SSO](/appstore/modules/mendix-sso/), so no additional authentication changes are required.
 
@@ -47,7 +47,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
 
-1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393/) page in the Marketplace.
+1. Go to the Email Service page in the Marketplace.
 2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
 3. Select the check box to agree to the **Terms & Conditions**.
 4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
@@ -60,7 +60,7 @@ A trial gives everyone in your company one-month access to the app service. To s
 
 #### 2.1.2 Starting a Subscription
 
-1. Go to the [Email Service](https://marketplace.mendix.com/link/component/118393/) page in the marketplace.
+1. Go to the Email Service page in the marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.

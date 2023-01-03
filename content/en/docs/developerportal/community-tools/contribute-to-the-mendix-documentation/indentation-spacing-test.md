@@ -206,6 +206,7 @@ Lists in alerts:
         ```{linenos=false}
 
         A code block
+        Hello world!!!!!!
         ```
 
 {{% / alert %}}
@@ -256,7 +257,7 @@ hidden stuff
 
 ### 2.4 Footnotes
 
-If you need a footnote use `<sup>footnote_number</sup>` to mark the #!$ footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
+If you need a footnote use `<sup>footnote_5</sup>` to mark the #!$ footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
 
 Example<sup>1</sup>
 
@@ -276,8 +277,8 @@ Tests all over
     | Element | Displays | 
     | --- | --- | 
     | Annotation | A comment explaining an aspect of the domain model | 
-    | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database | 
-    | Event Handler(s) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity | 
+    | Entity Name | How the [entity](//entities//) will be referred to in the database | 
+    | Event Handler(s) | An indication that one or more [event points](/refguide/event-handlers/) have been set up for this entity | 
 
 A table with list items:
 
@@ -293,7 +294,7 @@ With a paragraph
 
 ## Level 2 Section – Level 2 after
 
-## Level 2 Section – Level 3  after
+## Level 2 Section – Level 3  before
 
 ### Level 3 Section – Level 2 after
 
@@ -319,7 +320,7 @@ And clearly different from Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ##### Level 5 section
 
-###### Level 6 section
+### Level 6 section
 
 ## Level 2 section – followed by deeper levels separated by paragraphs
 
@@ -341,10 +342,11 @@ With a paragraph
 
 ## Paragraphs and lists
 
-Paragraph followed by a list
+Paragraph followed by a listy list
 
 * List item 1
-* List item 2
+* List item 2 
+can I break this file?
 * List item 3
 
 A new list

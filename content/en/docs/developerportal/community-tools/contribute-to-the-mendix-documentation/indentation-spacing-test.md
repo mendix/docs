@@ -70,11 +70,11 @@ Paragraph text here.
 Paragraph text here.
 
 1. First list item  
-1. Second list item  
+12. Second list item  
     * Unordered sub-list indenting **works with 4** spaces.
 1. Third list item  
     1. Ordered sub-list **works with 4** spaces.
-3. And another item.  
+3.             And another item.  
     Indenting with **4** spaces and **1** or **2** trailing spaces **works**.
 
 ### 1.3 Indents with Tabs and a Line Break – DO NOT USE TABS
@@ -113,9 +113,9 @@ Paragraph text here.
 1. First list item  
 	* Unordered sub-list.
 1. Second list item  
-	1. Ordered sub-list
+        1. Ordered sub-list
 3. And another item.  $
-	Indenting with a tab and trailing spaces works for generic list items, but not elements like code blocks.
+    Indenting with a tab and trailing spaces works for generic list items, but not elements like code blocks.
 
 {{% alert color="danger" %}}
 DO NOT USE TABS Hello
@@ -196,17 +196,22 @@ My alert box!!!!!!!!!!!!!!!!!
 
 
 {{% alert color="warning" %}}
+
 Lists in alerts:
+
 1. First list item
 2. Second list item `a code snippet`
     * Sub-list
 
         ```{linenos=false}
+
         A code block
         ```
+
 {{% / alert %}}
 
 ## 2 Use of Markdown Extras
+
 ### 2.1 Block Quotes
 
 >A block of text
@@ -242,6 +247,7 @@ hidden stuff
 
 
 The code example of details syntax:
+
 ```html
 <details><summary>Description of what is hidden</summary>
 hidden stuff
@@ -250,7 +256,7 @@ hidden stuff
 
 ### 2.4 Footnotes
 
-If you need a footnote use `<sup>footnote_number</sup>` to mark the footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
+If you need a footnote use `<sup>footnote_number</sup>` to mark the #!$ footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
 
 Example<sup>1</sup>
 
@@ -260,6 +266,9 @@ Example<sup>1</sup>
 
 Key Combination
 <kbd>{key name}</kbd>
+
+Tests all over
+
 
 ### 2.6 Indent Tables
 
@@ -302,9 +311,11 @@ With a paragraph
 
 ## Level 2 section – followed by deeper levels
 
-### Level 3 section
+
 
 #### Level 4 section
+
+And clearly different from Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus mauris. In eu mi bibendum neque egestas congue. Pellentesque sit amet porttitor eget dolor. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Pulvinar etiam non quam lacus. Non quam lacus suspendisse faucibus interdum posuere lorem. Non tellus orci ac auctor augue mauris augue neque. Id ornare arcu odio ut sem nulla pharetra diam. Ultricies tristique nulla aliquet enim tortor at auctor urna.
 
 ##### Level 5 section
 
@@ -378,13 +389,13 @@ A new list
 
 {{% button color="success" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Success" title="What do you think of this button?" %}}
 
-{{% button color="danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
+{{% button color="test" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
 
 {{% button color="warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
 
 {{% button color="light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
 
-{{% button color="dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+{{% button color="dark" href="https://fakelinkkkkkkkkk/" text="Dark" title="What do you think of this button?" %}}
 
 {{% button color="link" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Link" title="What do you think of this button?" %}}
 
@@ -394,7 +405,7 @@ A new list
 
 {{% button color="outline-danger" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Danger" title="What do you think of this button?" %}}
 
-{{% button color="outline-warning" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What do you think of this button?" %}}
+{{% button color="hello?" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Warning" title="What is this?" %}}
 
 {{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
 

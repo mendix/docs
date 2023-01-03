@@ -206,7 +206,7 @@ To get the Microsoft Identity Platform to issue access tokens you can pass to yo
 1. In the **API permissions** tab, assign the created scope to the application.
 1. In the **App roles** tab, add the user roles you want to authorize using either the user role name, or the user role UUID. This adds the configured user roles to the roles claim in the access token. 
 
-By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that can be validated at the `/jwks` URI.
+By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that can be validated using the `/jwks` URI.
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 
@@ -407,7 +407,7 @@ This section is only relevant if you are a Mendix partner and you want to integr
 
 To parse of SAM access tokens you need to do the following when performing [OIDC Client Configuration](#client-configuration):
 
-1. Select *Default SAM Token processing* as the **custom AccessToken processing microflow**.
+1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
     {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" >}}
 1. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
@@ -417,10 +417,7 @@ To parse of SAM access tokens you need to do the following when performing [OIDC
 
 Mendix has released a Private IAM Broker (PIB). This allows non-Mendix clients to request access tokens which authorize them to consume APIs exposed by your Mendix backend app without a dependency on any other IAM infrastructure.
 
-The OIDC SSO module provides a default access token parsing microflow for PIB. To use it, select the appropriate access token parsing microflow:
-
-* For PIB, the default access token parsing microflow is `OIDC.Default_PIB_TokenProcessing_CustomATP`.
-* You can also parse the access token using the custom microflow `OIDC.ACT_Token_CustomATPRetrieveRoles` which takes an access token as input and returns a list of non-persistent objects of type `OIDC.Role`. See the next section for more information.
+The OIDC SSO module provides a default access token parsing microflow for PIB. To use it, select the `OIDC.Default_PIB_TokenProcessing_CustomATP` microflow.
 
 To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header.
 

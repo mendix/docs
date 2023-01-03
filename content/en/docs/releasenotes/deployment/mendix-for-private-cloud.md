@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### December 1st, 2022
+
+#### Portal Improvements
+
+* We have introduced an API which supports the creation, modification, and deletion, of clusters, namespaces, and environments. You can find more information in [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+* We now add the creator name in the activity logs when an app is autodeployed.
+
 ### November 17th, 2022
 
 #### Portal Improvements
@@ -42,7 +49,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 * We now allow sorting of namespaces in the namespace selection list of the Create environment flow.
 * Newly-created environments will always run in Production mode (the DTAP mode is set to `P`) – you can no longer choose the purpose of your environment.
-   * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
+    * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
 * We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
 * We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
 

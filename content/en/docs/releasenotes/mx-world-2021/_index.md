@@ -16,7 +16,7 @@ The new features were divided into these major announcements, which are describe
 {{< figure src="/attachments/releasenotes/mx-world-2021/innovations.png" alt="Announcements are solutions platform, app services framework, end-user services and studio, control center, next-level front-end, page bot and machine learning toolkit, studio pro experience, data hub 2.0, intelligent automation, and hybrid cloud automation." >}}
 
 {{% alert color="info" %}}
-"GA" means General Availability for all users. A GA release is different than a Beta release. For more information on Private Beta and Public Beta releases, see [Beta Releases](/releasenotes/beta-features/).
+"GA" means General Availability for all users. A GA release is different than a Beta release. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 If you want to watch the keynote speech in which these announcements were made, you can find it at [Mendix World 2021](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1624031940353001Xclf) — you will need to register or have already registered for Mendix World 2021 to see this.
@@ -43,8 +43,6 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Studio expression editor | Released for GA on [May 19th, 2021](/releasenotes/studio/9.0-9.6/#expression-editor) |
 | End-user services – App Switcher | Released for GA on [Jan 14th, 2022](/appstore/modules/app-switcher/) |
 | Studio workflow templates | Released for GA |
-| End-user services – notifications | Currently in  Public Beta<br />GA: TBD |
-| End-user services – branding | Currently in Private Beta<br/>GA: TBD |
 
 ## 5 Control Center
 
@@ -65,9 +63,9 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Data widgets – Gallery | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Styling editor in Studio Pro | Released for GA on [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| Multiple page parameters | GA: Sep 2022 |
-| Native mobile – simplified monitoring | Sep 2022 |
-| Native mobile – file and image background sync | TBD |
+| Multiple page parameters | Released for GA on [Sep 30th, 2022](/releasenotes/studio-pro/9.18/#mpp) |
+| Native mobile – simplified monitoring | Released for GA on [Oct 14th, 2022](/releasenotes/studio-pro/9.18/#9181) |
+| Native mobile – file and image background sync | GA: TBD |
 | Data widgets – Tree Table | GA: TBD |
 | Data widgets – Spread Sheet Grid | GA: TBD |
 
@@ -77,8 +75,8 @@ If you want to watch the keynote speech in which these announcements were made, 
 | --- | --- |
 | MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7/#mx-assist-logic-bot) |
 | MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7/); [Nov 30th, 2021](/releasenotes/studio-pro/9.8/); [Dec 17th, 2021](/releasenotes/studio-pro/9.9/) |
-| MxAssist Page Bot | Currently in Private Beta<br/>GA: TBD |
-| Machine learning toolkit | Currently in Private Beta<br/>GA: TBD |
+| Validation Assist | Currently in Public Beta<br/>GA: Jan 2023 |
+| Machine learning toolkit | Currently in Private Beta<br/>Public Beta: Jan 2023 |
 
 ## 8 Studio Pro Experience
 

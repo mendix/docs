@@ -19,8 +19,6 @@ To open the **Environment Details** page, go to the [Developer Portal](http://sp
 
 ## 2 General Tab
 
-The contents of the **General** tab depend on the Mendix Cloud version on which the app is hosted. By default, apps are deployed to [Mendix Cloud v4](/developerportal/deploy/mxcloudv4/), but some older apps may still run on the deprecated Mendix Cloud v3. For more information on the differences between Mendix Cloud v3 and v4, as well as migrating your app to the latest Cloud version, see [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/).
-
 In this tab, you can find the following information about your environment:
 
 * **Status**
@@ -39,11 +37,10 @@ In this tab, you can find the following information about your environment:
 * **Mendix Studios Target** – if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
 * **Plan** – for Mendix Cloud v4, this indicates the type of plan covered by this license
 * **Instances** – for Mendix Cloud v4, this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud v4](#scaling) section below
-* **Database Status** – for Mendix Cloud v3, this shows the status of the database; by default, the status is Running
 * **Database Version** – the PostgreSQL version supporting the database
 * **Region** – the region where the app is hosted
 * **Secondary Backup Location** – the region where the backup is stored
-* **Mendix Cloud Version** – Mendix Cloud v3 or v4
+* **Mendix Cloud Version** – the version of Mendix Cloud where the app is hosted
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
 
@@ -56,34 +53,16 @@ On the right side of the screen, you can find the following action buttons:
 * **Clear Environment** (only visible if your application is stopped) – this allows you to empty all the data from your database and, optionally, remove the app and file storage from the environment as well; for more information, see [Clearing an Environment](#clear-environment)
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the built-in [administrator](/refguide/administrator/) account; the new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package
+* **View Live Log**
+* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is always enabled. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions with v4-specific actions on the bottom">}}
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
 {{% /alert %}}
 
-#### 2.1.1 Actions Specific to Mendix Cloud v4
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions with v4-specific actions on the bottom">}}
-
-In Mendix Cloud v4 environments, you have two additional action buttons:
-
-* **View Live Log**
-* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is always enabled. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
-
-#### 2.1.2 Actions Specific to Mendix Cloud v3
-
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud v4. To learn more about Mendix Cloud v4 and how to migrate from Mendix Cloud v3, see [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v3.png" alt="A screenshot of the available actions with v3-specific actions on the bottom">}}
-
-In Mendix Cloud v3 environments, you have two additional action buttons:
-
-* **View Current Log**
-* **Enable/Disable Debugging** – Enables or disables the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
-
-#### 2.1.3 Clearing an Environment {#clear-environment}
+#### 2.1.2 Clearing an Environment {#clear-environment}
 
 You can use the **Clear Environment** button to clear your environment so that you can use it for another purpose. This option is only available if the environment is stopped.
 
@@ -118,9 +97,9 @@ To rename the environment, follow these steps:
 After you rename an environment, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the name of the environment and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
 {{% /alert %}}
 
-### 2.3 Scaling – Mendix Cloud v4 {#scaling}
+### 2.3 Scaling {#scaling}
 
-If your app is hosted in Mendix Cloud v4, there is a section named **Instances** in the **General** tab. Click **Change scaling** to see the options for changing the scaling.
+To see the options for changing scaling, in the **General** tab, in the **Instances** section, click **Change scaling**.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/scale.png" alt="A sample view of the Scaling page">}}
 
@@ -151,7 +130,7 @@ In this section, you can find information about the deployment package that is c
 * **Size (MB)** of the deployment package
 * **Upload date** of the deployment package
 
-#### 2.4.2 Plan Details – Mendix Cloud v4
+#### 2.4.2 Plan Details
 
 This section shows details of the plan which applies to this environment.
 
@@ -242,7 +221,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-The deprecated Mendix Cloud v3 only supports X-Frame-Options. Mendix Cloud v4 supports the following HTTP headers in the Developer Portal:
+Mendix Cloud v4 supports the following HTTP headers in the Developer Portal:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -487,7 +466,7 @@ Click **Add** > **Supported** to choose from the following variables:
 * **SAMESITE_COOKIE_PRE_MX812** – sets `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
 * **USAGE_METRICS_EMAIL_FIELDS** – if your app uses specializations of the `System.User` entity to store users, use this variable to point to the them. This enables us to identify internal and external users of your app. The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app which contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user. If you have multiple specializations of `System.User`, you can specify the values in comma-separated format. That is `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`. In the following example there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
-In addition, to support features which are in beta, you can click **Add** > **Unsupported** to add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix beta features. If you are involved in using a beta feature, you will be informed what **Name** needs to be entered here and what the **Value** should be.
+In addition, to support features which are in Beta, you can click **Add** > **Unsupported** to add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix Beta features. If you are involved in using a Beta feature, you will be informed what **Name** needs to be entered here and what the **Value** should be.
 
 ## 7 Maintenance Tab {#maintenance-tab}
 

@@ -290,13 +290,13 @@ Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#vi
 
 With this widget, you can use the following filtering settings:
 
-- Filter PMI entities by type
+* Filter PMI entities by type
 
-- Filter model view
+* Filter model view
 
-- Filter design group
+* Filter design group
 
-- Show assembly level PMI
+* Show assembly level PMI
 
 For details on how this widget behaves in an app, see the [Setting Preferences](#set-preferences) section below.
 

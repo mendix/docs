@@ -378,7 +378,7 @@ The purpose of this tab is to show the subscriptions with their current publishi
 
 ### 5.1 `ClosedChannelException`
 
-When getting a `ClosedChannelException` like the partial stacktrace below, you will need to include the certificates of your OPC UA Server in the runtime configuration. This requires you to upload your Server certificate in the Mendix Runtime Settings. 
+When getting a `ClosedChannelException` like the partial stack trace below, you will need to include the certificates of your OPC UA Server in the runtime configuration. This requires you to upload your Server certificate in the Mendix Runtime Settings. 
 
 ```text {linenos=false}
     com.mendix.core.CoreRuntimeException: com.mendix.systemwideinterfaces.MendixRuntimeException: com.mendix.core.CoreException: java.util.concurrent.ExecutionException: java.nio.channels.ClosedChannelException

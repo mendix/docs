@@ -11,11 +11,27 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2022
 
-### November 24th, 2022
+### December 22th, 2022
 
 #### Improvements
 
-* It is now possible to edit data source details directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* You can now edit data source details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. In our [November 24th](#nov-24) release, we made it possible to edit dataset details from the same page. To learn more about data sources and datasets, see the [Selected Asset Details](/data-hub/data-hub-catalog/search/#search-details) section of *Search in the Data Hub Catalog*.
+
+#### Fixes
+
+* We fixed an issue with a `PUT` environment API request, which resulted in 409 conflict instead of updating the environment. (Ticket 173609)
+
+### December 8th, 2022
+
+#### Improvements
+
+* When you receive and click on a notification from the Catalog about newly registered endpoints or newly assigned ownership, you will now be directed to the more user-friendly [Curate](/data-hub/data-hub-catalog/curate/) page that shows all relevant and filtered resources. 
+
+### November 24th, 2022 {#nov-24}
+
+#### Improvements
+
+* You can now edit dataset details directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 #### Fixes
 
@@ -25,7 +41,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* You can now request access to a data source directly from the [data source details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
+* You can now request access to a data source directly from the [asset details](/data-hub/data-hub-catalog/search/#service-details) page. Click **Request access** in the **Authentication** section to open a draft email to the owner.
 
 ### November 10th, 2022
 

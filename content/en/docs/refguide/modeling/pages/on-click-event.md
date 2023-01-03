@@ -246,7 +246,7 @@ The **Save changes** event commits all changes made to the objects in *Editable*
 The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [synchronizing it](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
 
 This event cannot be used on pages that change [external entities](/refguide/external-entities/). Use the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
 
@@ -270,7 +270,7 @@ Set the **Close page** property to indicate whether the current page should be c
 
 ### 3.11 Synchronize {#synchronize}
 
-The **Synchronize** event [synchronizes](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) the data stored locally on your device with the server database.
+The **Synchronize** event [synchronizes](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) the data stored locally on your device with the server database.
 
 ### 3.12 Sign Out {#sign-out}
 
@@ -299,6 +299,16 @@ For more information on workflow-related entities in the System module, see the 
 ### 3.15 Show User Task Page {#show-user-task-page}
 
 **Show user task page** opens an overview page set for the [user task](/refguide/user-task/) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
+
+The following properties are specific for this event:
+
+* **Auto-assign** – Assigns the [user task](/refguide/user-task/) automatically to the user who has opened the task page if the [user task](/refguide/user-task/) has not been assigned to anyone yet. This option is enabled by default. 
+    {{% alert color="info" %}}Only the user who is assigned to the task can complete it (otherwise, it results in a Runtime error). If you choose to not automatically assign the user to the task when the page is opened, make sure that the user is assigned before the task is completed. For example, you can add the **Assign to me** button to the page. {{% /alert %}}
+
+* **Who can open** – Specifies who is able to open the user task page when a user has already been assigned to it. 
+
+    * **Assigned user** *(default)* – Only the user who is currently assigned to the task is able to open the user task page. 
+    * **Users with access**  – All users who have access to the [user task](/refguide/user-task/) can open the user task page. This option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a Save button. This button saves data, but does not complete the task. Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user.
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
 

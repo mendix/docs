@@ -35,7 +35,7 @@ By default, location is built up by appending service name and "v1" to the "rest
 Example:
 
 ```text {linenos=false}
-http//localhost:8080/rest/my_service_name/v1
+http://localhost:8080/rest/my_service_name/v1
 ```
 
 You can change the the default location to almost any valid URL.

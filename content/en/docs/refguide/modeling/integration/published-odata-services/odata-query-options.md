@@ -136,7 +136,7 @@ You can select which attributes and associations to return by specifying the `$s
 
 ## 7 Paging {#paging}
 
-Paging, or pagination, allows you to load data incrementally. See [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in Microsoft's OData documentation for more information.
+Paging, or pagination, allows you to load data incrementally to better handle large amounts of data. See [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in Microsoft's OData documentation for more information.
 
 ### 7.1 Top (Limit)
 

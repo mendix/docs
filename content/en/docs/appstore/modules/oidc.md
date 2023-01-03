@@ -381,6 +381,14 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
+    * Private IAM Broker (PIB) – in this case the `scope` claim is interpreted — for example:
+
+        ```json {linenos=false}
+        {
+        "scope": "mx:app:userrole:a2275396-a31a-4f06-81c5-10fdfcb9f507 mx:app:userrole:c8de23c9-64fa-4faa-a263-6debc7e01edf mx:app:userrole:20c79248-e9f2-4131-b4a1-ee6b634b8f69"
+        }
+        ```
+
 * If you are using another IdP or want to use a different claim, you can create a custom microflow to parse the access token.
 
 To parse access tokens, you need to do the following:
@@ -390,10 +398,6 @@ To parse access tokens, you need to do the following:
 1. Configure the client information in the OIDC Client configuration screen.
 1. Check **Enable Access Token Parsing** to parse access tokens when performing [OIDC Client Configuration](#client-configuration).
 1. Select the appropriate microflow to parse the access token as described in the relevant section below. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
-
-{{% alert color="info" %}}
-In version 2.0.0 and above of the OIDC SSO module you will also find a microflow for parsing PIB tokens. This feature will be released publicly in the future and documented at that time. 
-{{% /alert %}}
 
 #### 8.2.1 Parsing SAM Access Tokens
 
@@ -409,7 +413,15 @@ To parse of SAM access tokens you need to do the following when performing [OIDC
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 1. Save the configuration.
 
-#### 8.2.2 Parsing Microsoft Azure AD Access Tokens
+#### 8.2.2 Parsing PIB Access Tokens
+
+Mendix has released a Private IAM Broker (PIB). This allows non-Mendix clients to request access tokens which authorize them to consume APIs exposed by your Mendix backend app without a dependency on any other IAM infrastructure.
+
+The OIDC SSO module provides a default access token parsing microflow for PIB. To use it, select the `OIDC.Default_PIB_TokenProcessing_CustomATP` microflow.
+
+To confirm that the authorization is working, get an access token from PIB and pass it to the API Endpoint using the authorization header.
+
+#### 8.2.3 Parsing Microsoft Azure AD Access Tokens
 
 The OIDC SSO module provides a default access token parsing microflow for Azure AD. To use it, select the appropriate access token parsing microflow:
 
@@ -417,7 +429,7 @@ The OIDC SSO module provides a default access token parsing microflow for Azure 
 
 To confirm that the authorization is working, get an access token from your Azure AD IdP and pass it to the API Endpoint using the authorization header.
 
-#### 8.2.3 Parsing Access Tokens Using a Custom Microflow 
+#### 8.2.4 Parsing Access Tokens Using a Custom Microflow 
 
 If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Azure AD.
 

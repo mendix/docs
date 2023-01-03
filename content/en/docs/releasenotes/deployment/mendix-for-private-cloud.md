@@ -17,14 +17,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.10.0{#2.10.0}
 
-* We've added an option to set app constants and custom Mendix Runtime settings when using CSI Secrets Store.
-* It's now possible to use Azure Blob Storage instead of S3 when using CSI Secrets Store.
-* We've improved status messages to indicate what data is used by CSI Secrets Store and if any additional configuration steps are required.
+* We have added an option to set app constants and custom Mendix Runtime settings when using CSI Secrets Store.
+* It is now possible to use Azure Blob Storage instead of S3 when using CSI Secrets Store.
+* We have improved status messages to indicate what data is used by CSI Secrets Store and if any additional configuration steps are required.
 * If the CSI Secrets Store driver rotates credentials, Mendix Operator will detect this and apply changes.
 * We upgraded all Go-based components to Go 1.18. (Ticket 163987)
 * We fixed a bug where deleting an environment would not clean up its database and file storage users and data.
 * We fixed a regression where collecting Prometheus metrics would return an error. This regression only affects Mendix Operator version 2.9.0.
-* The `mxpc-cli` installation and configuration tool now has an option to collect and save logs and additional diagnostic data into a file. By using this option, collecting and sending diagnostic data to support would become a lot easier.
+* The `mxpc-cli` installation and configuration tool now has an option to collect and save logs and additional diagnostic data in a file. By using this option, collecting and sending diagnostic data to support becomes a lot easier.
 
 ### December 1st, 2022
 

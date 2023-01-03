@@ -621,9 +621,9 @@ After manually removing the StorageInstance, you'll need to manually clean up an
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-In Mendix Operator version 2.4.0 (and later), pressing the **More Info** button will show any errors that could be explain the root cause of why the app is failing to start.
+In Mendix Operator version 2.4.0 and above, clicking **More Info** will show any errors that could explain why the app is failing to start.
 
-### 7.4 ApplicationRootUrl Needs to be Set Manually
+### 7.4 ApplicationRootUrl Needs to Be Set Manually
 
 {{% alert color="info" %}}
 This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
@@ -643,27 +643,27 @@ To add this setting:
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
 
-### 7.5 Collecting diagnostic data for a support case
+### 7.5 Collecting Diagnostic Data for a Support Ticket
 
 {{% alert color="info" %}}
-For security reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Cloud Portal.
-Only generic status or error messages are sent back to the Cloud Portal; those messages don't contain enough details about the environment to understand the root cause of any problems.
+For security reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Developer Portal.
+Only generic status or error messages are sent back to the Developer Portal and these messages don't contain enough details about the environment to understand the root cause of any problems.
 {{% /alert %}}
 
-Starting with version 2.10.0, the `mxpc-cli` administration and configuration tool has an command to collect and save diagnostic logs and a few configuration details into a file.
+In version 2.10.0 and above of the `mxpc-cli` administration and configuration tool there is a command to collect and save diagnostic logs and a few configuration details to a file.
 
-To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where logs should be saved:
+To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where the information should be saved:
 
-```{linenos=false}
+```bash {linenos=false}
 mxpc-cli log-extract -n {namespace} -f {filename}
 ```
 
-This file can be shared with Mendix Support or the team responible for maintaining infrastructure.
+This file can be shared with Mendix Support or the team responsible for maintaining infrastructure.
 
 {{% alert color="warning" %}}
 Before sending logs to support, please make sure that there they don't contain any sensitive or restricted information.
 
-In some cases it might make sense to review the contents of the log file and redact it, or only keep messages from a specific time period.
+To provide enough detail to work on an issue without disclosing sensitive information, you may want to redact some of the information in the log, or only keep messages from a specific time period.
 {{% /alert %}}
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}

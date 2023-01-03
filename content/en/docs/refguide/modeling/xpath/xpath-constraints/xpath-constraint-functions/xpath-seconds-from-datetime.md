@@ -1,5 +1,5 @@
 ---
-title: "XPath Seconds-from-DateTime"
+title: "XPath seconds-from-dateTime"
 url: /refguide/xpath-seconds-from-datetime/
 tags: ["studio pro"]
 ---

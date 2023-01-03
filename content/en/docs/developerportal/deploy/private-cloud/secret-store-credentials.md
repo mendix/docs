@@ -77,7 +77,7 @@ The following table lists the properties used as keys for database and storage-r
 {{% alert color="info" %}}
 If your app is created in Mendix version 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you don't need to specify `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket.
 Instead, the same AWS IAM role can be used for S3 authentication.
-For more information and a complete walkthrough example, see the AWS Secrets Manager [example](#configure-using-aws-secrets-manager).
+For more information and a complete walkthrough example, see the [AWS Secrets Manager example](#configure-using-aws-secrets-manager).
 {{% /alert %}}
 
 To set a Mendix app constant, use the `mx-const-{name}` format (replace `{name}` with the name of the app constant).
@@ -92,7 +92,7 @@ Consult with Mendix Support to check if using CSI Secrets Storage for your use c
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When using CSI Secrets Storage for app credentials, Mendix Operator 2.9.0 supports S3 (or S3-compatible) storage.
+When using CSI Secrets Storage for app credentials, Mendix Operator version 2.9.0 only supports S3 (or S3-compatible) storage.
 To use Azure Blob Storage (keys with the `storage-azure-` prefix), upgrade to Mendix Operator version 2.10.0 or above.
 {{% /alert %}}
 

@@ -195,10 +195,10 @@ The *Deletable* capability was introduced in Studio Pro [9.13.0](/releasenotes/s
 
 Select the options to include for the **Readable** OData capability.
 
-* **Countable** – required for getting the total number of records
-* **Top supported** – required when **Use paging** is selected.  This option supports the $top query, which requests the number of items in the queried collection to be included in the result. 
-* **Skip supported** – required when **Use paging** is selected. This option supports the $skip query, which requests the number of items in the queried collection that are to be skipped and not included in the result.
+* **Countable** – This option is required for getting the total number of records.
+* **Top supported** – This option indicates whether clients can specify that they want to retrieve only a limited number of items. Enable this option when [Use paging](#paging) is selected.
+* **Skip supported** – This option indicates whether clients can specify the number of items in the queried collection that are to be skipped and not included in the result. Enable this option when [Use paging](#paging) is selected.
 
-For more information, see the following:
-* [Pagination](https://learn.microsoft.com/en-us/odata/client/pagination) in Microsoft's OData documentation
-* The [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org
+The **Top supported** and **skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first *n* objects. [Paging](#paging) occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
+
+For more information, see the [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org

@@ -46,5 +46,5 @@ You, as the company, are responsible for ensuring that you comply with all local
 
 ## 5 Read More
 
-* [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/)
-* [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)
+* [Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/)
+* [Create Solutions](/appstore/creating-content/sol-solutions-guide/)

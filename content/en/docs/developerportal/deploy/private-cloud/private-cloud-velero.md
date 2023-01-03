@@ -32,19 +32,25 @@ Before starting this how-to, make sure you have completed the following prerequi
 To create a backup with Velero, follow these steps:
 
 1. Stop the Mendix Operator and Mendix agent by scaling them to 0:
+
     ```text {linenos=table}
     kubectl scale deployment mendix-agent --replicas=0
     kubectl scale deployment mendix-operator --replicas=0
     ```
+
 2. Create the backup by entering the following command:
+
     ```text {linenos=false}
     velero create backup mendix-velero-bkp
     ``` 
+
     {{% alert color="info" %}}The above command creates a backup of all your namespaces with the name *mendix-velero-bkp*. If you only want to back up a specific namespace, use the `include-namespace` flag.{{% /alert %}}
 3. Verify that the backup is complete by entering the following command:
+
     ```text {linenos=false}
     velero backup describe mendix-velero-bkp
     ```
+
 4. Restart the Mendix Operator and Mendix agent by entering the following command:
 
     ```text {linenos=table}
@@ -56,9 +62,11 @@ To create a backup with Velero, follow these steps:
 To restore a backup that you created with Velero, follow these steps:
 
 1. Restore the backup by entering the following command:
+
     ```text {linenos=false}
     velero restore create --from-backup mendix-velero-bkp --status-include-resources=storageinstances.privatecloud.mendix.com,storageplans.privatecloud.mendix.com,builds.privatecloud.mendix.com,mendixapps.privatecloud.mendix.com
     ```
+
     {{% alert color="warning" %}}As a best practice, it is recommended to restore all resources, as in the above example. Restoring only specific resources can result in unpredictable behavior. However, if you only want to restore a specific Kubernetes resource, use the `--status-include-resources flag`, for example, `--status-include-resources=storageinstances.privatecloud.mendix.com`.{{% /alert %}}
 2. After the app has started and created the database, [restore a backup](/developerportal/deploy/private-cloud-data-transfer/) of your database and S3 files.
 3. Optional: After restoring the backup, add finalizers to `StorageInstances` by entering the following command:
@@ -66,4 +74,5 @@ To restore a backup that you created with Velero, follow these steps:
     ```text {linenos=false}
     kubectl patch storageinstances $(kubectl get storageinstances --no-headers -o custom-columns=":metadata.name") -p '{"metadata":{"finalizers":["finalizer.privatecloud.mendix.com"]}}' --type=merge
     ```
+
     {{% alert color="info" %}}Adding finalizers is not required, but it is recommended as a best practice. It ensures that the Kubernetes garbage collection cleans up the storage from deleted environments.{{% /alert %}}

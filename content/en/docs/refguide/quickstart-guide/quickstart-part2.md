@@ -20,8 +20,8 @@ Mendix native mobile apps are native mobile apps based on React Native. These ap
 
 Native mobile apps are offline first and only fetch data from the server when programmed to do so. By completing this guide, you will become acquainted with the following Mendix native mobile concepts:
 
-* [Offline-first design](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/)
-* [Data synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) between mobile devices and web apps
+* [Offline-first design](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/)
+* [Data synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) between mobile devices and web apps
 * [Nanoflows](/refguide/nanoflows/): the native mobile JavaScript equivalent to microflows)
 * Using custom [JavaScript actions](/refguide/javascript-actions/) in your nanoflows
 
@@ -31,7 +31,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Read through [Part 1: Build a Responsive Web App](/refguide/quickstart-part1/)
 * Download the [Make It Native 9](/refguide/getting-the-make-it-native-app/) app on your mobile device
-* If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ### 2.1 Downloading the Make It Native 9 App
 
@@ -163,7 +163,7 @@ All done! You can now run your app and test all the features you have built. To 
 1. Open the Make it Native app on your mobile device.
 1. Click the drop-down menu in Studio Pro and select **View app on your device**.
 1. Click the **View Native Mobile App** tab.
-1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/howto/general/using-mendix-studio-pro-on-a-mac/)):
+1. Scan the QR code with the Make it Native app on your mobile device to begin testing (Mac users: be sure to use forward ports 8080/8083 as [explained here](/refguide/using-mendix-studio-pro-on-a-mac/)):
 
     {{< figure src="/attachments/refguide/quickstart-guide/part2/min-qr.png" width="300px" alt="Scan QR code">}}
 

@@ -139,9 +139,9 @@ React Native, the underlying framework of Mendix native mobile apps, unifies the
 
 There are limitations to mobile font capabilities. For example, Android supports a very limited set of font types: regular, bold, italic, and bold italic.
 
-What does that mean for your app's CSS styles? 
+What does that mean for your app's style file? 
 
-For example, what would happen if you were to use the following snippet in your CSS styles:
+For example, what would happen if you were to use the following snippet in your style file:
 
 ```css
 { 
@@ -153,7 +153,7 @@ Your font, when running app on Android, would end up looking regular instead of 
 
 In addition, Android expects the font filename to be a combination of the actual font family name, weight, and style. For example for Time New Roman bold italic, it expects something like *TimeNewRoman_bold_italic.ttf*. Failing to comply with these naming conventions makes the `fontFamily`, `fontWeight`, and `fontStyle` attributes fail to style text correctly.
 
-So how can these issues be mitigated? First of all, explicitly styling text using the common CSS text attributes `fontWeight` and `fontStyle` should be avoided. The results will vary per platform. Instead, use postscript names. Specifically, instead of a single `fontFamily` attribute with multiple weights and styles, a font family needs to be defined per weight and style combination.
+So how can these issues be mitigated? First of all, explicitly styling text using the ReactNative equivalent of the CSS text attributes `fontWeight` and `fontStyle` should be avoided. The results will vary per platform. Instead, use postscript names. Specifically, instead of a single `fontFamily` attribute with multiple weights and styles, a font family needs to be defined per weight and style combination.
 
 For example, instead of writing this: 
 

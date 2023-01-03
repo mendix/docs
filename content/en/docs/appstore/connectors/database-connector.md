@@ -54,6 +54,14 @@ For both queries and statements, the difference between the parameterized and re
 The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6/#860).
 {{% /alert %}}
 
+##### 3.1.1.1 Execute Query Action {#execute-query}
+
+To use the **Execute query** action, you need to create an actual object of the entity that will reflect the structure of the result set. The action requires this object for mapping. It is an empty object with the purpose of passing on the structure (because Java actions cannot access the model).
+
+##### 3.1.1.2 Execute Statement Action
+
+See [Execute an SQL Statement on an External Database](/howto/integration/execute-an-sql-statement-on-an-external-database/) for detailed instructions on using this action.
+
 #### 3.1.2 Results
 
 These are the results of the actions:
@@ -142,7 +150,7 @@ The many-to-many-association with `DatabaseConnector.Parameter` is also used her
 * [MySQL](https://dev.mysql.com/downloads/connector/j/)
 * [Oracle Database](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [OrientDB](https://orientdb.org/)
-* [PostgreSQL](https://jdbc.postgresql.org/download.html)
+* [PostgreSQL](https://jdbc.postgresql.org/download)
 * [Presto](https://prestodb.github.io/docs/current/installation/jdbc.html)
 * [SQLite](https://www.sqlite.org/src/tree?ci=trunk)
 

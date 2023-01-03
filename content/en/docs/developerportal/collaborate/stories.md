@@ -2,7 +2,7 @@
 title: "Stories"
 url: /developerportal/collaborate/stories/
 category: "Collaboration"
-weight: 2
+weight: 3
 description: "Describes how to manage the Sprints and stories for your apps."
 tags: ["Stories", "Sprint", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -206,7 +206,7 @@ To manage stories in Studio Pro, follow these steps:
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro. For more information on how to change the status of your story, see the [Changing the Status of a Story or a Task](/refguide/stories-pane/#changing-status) section in *Stories Pane*.
 {{% /alert %}}
 
-## 3 Sprint Status
+## 3 Sprint Status {#sprint-status}
 
 On the **Sprint Status** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. 
 

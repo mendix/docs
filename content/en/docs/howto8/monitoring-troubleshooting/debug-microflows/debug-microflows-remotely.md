@@ -8,10 +8,6 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 
 In addition to debugging a local deployment of your app, it is also possible to debug applications that are already in a cloud environment.
 
-{{% alert color="info" %}}
-These instructions are for apps running in Mendix Cloud v4. If you are running an older version of Mendix which is deployed to Mendix Cloud v3 you need the previous version of this document here: [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 **Debugging in a production environment is not recommended.**
 

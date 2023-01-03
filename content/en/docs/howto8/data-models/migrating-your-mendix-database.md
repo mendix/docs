@@ -127,7 +127,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
 
 To do this, perform the following steps:
 
-1. Sign in to the SAP BTP Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
+1. Sign in to the SAP BTP, Cloud Foundry environment (containing the PostgreSQL service) using the Cloud Foundry command line.
 2. Get the PostgreSQL service instance details from the environment variables of the application using the following command:
 
     `cf env {application-name}`
@@ -145,7 +145,7 @@ To do this, perform the following steps:
 
 4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
 5. Deploy the mda, but **do not start the application**.
-6. Sign in to the SAP BTP Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
+6. Sign in to the SAP BTP, Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
 7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
 
     ```bash

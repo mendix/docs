@@ -75,7 +75,7 @@ There are three ways to install a Marketplace component, which are described in 
         2. Configure the necessary settings based on your storage choice.
         3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
 
-#####  2.1.1 For Older Versions of Studio Pro {#older}
+#### 2.1.1 For Older Versions of Studio Pro {#older}
 
 These steps cover downloading content from the Marketplace available in Studio Pro version 9.18 and below:
 
@@ -216,6 +216,8 @@ To update the module in your app to a newer version, follow these steps::
 #### 3.2.2 Configuring the Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
+
+Keep in mind that some modules you can download may come with their own [user roles](/studio/settings-security/). If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
 ### 3.3  Using a Starter App
 

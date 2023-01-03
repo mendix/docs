@@ -18,7 +18,7 @@ Many databases implement [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601), but
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year (for example, "2011-01-13"):
 
-```java
+```java {linenos=false}
 //Logging.Log[week-from-dateTime(DateAttribute) = 2]
 ```
 

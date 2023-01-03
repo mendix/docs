@@ -320,8 +320,6 @@ The contract of the published OData service (the *$metadata* document) contains 
 
 When a data source is selected in the search results, the following details are displayed:
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-service.png" alt="service details" >}}
-
 * Application icon
 * Name of the data source
 * **Non-discoverable** icon – if the data source has been set to non-discoverable (by default, data sources are discoverable to all users in your company and no icon appears)
@@ -329,6 +327,7 @@ When a data source is selected in the search results, the following details are 
 * **Environment Name** – where the app is deployed
 * **Version** – version number of the service
 * **Connections** – number of apps that consume the service
+* **Authentication** – authentication information, and the option to **Request access** if available
 * A description of the data source
 * All **Datasets** that are exposed in the data source (you can expand each one to see details of the attributes and associations)
 
@@ -345,8 +344,6 @@ You can perform the following actions from this screen:
 
 When a **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel.
 
-{{< figure src="/attachments/data-hub/data-hub-catalog/search/search-details-entity.png" alt="search details entity" >}}
-
 ##### 3.5.2.1 General Information
 
 The source and endpoint details of the dataset are displayed:
@@ -362,6 +359,7 @@ You can perform the following actions from this screen:
 
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
 * **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
+* **Edit** – click to access the dataset edit screen
 
 #### 3.5.2.2 Dataset Information
 

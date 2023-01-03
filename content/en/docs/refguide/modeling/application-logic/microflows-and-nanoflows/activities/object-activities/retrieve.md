@@ -2,7 +2,8 @@
 title: "Retrieve"
 url: /refguide/retrieve/
 weight: 60
-tags: ["studio pro"]
+tags: ["studio pro", "retrieve", "activity", "microflow"]
+#To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,9 +17,9 @@ A **Retrieve** activity can be used to get one or more objects, either by direct
 
 ## 2 Properties
 
-An example of retrieve properties is represented in the image below:
+An example of retrieve activity properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" width="700px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -45,9 +46,9 @@ The **Source** defines the way the objects are retrieved:
 | From database | Retrieve objects from the database. This can only be used for [persistable objects](/refguide/persistability/). For more information, see the [Retrieve from Database Properties](#from-database) section below. 
 
 {{% alert color="warning" %}}
-If you have changes in the memory, this action will retrieve objects from the database, and also apply the changes in the client.
+If you have changes in the memory, this action retrieves objects from the database and also applies the changes in the client.
 
-In this case, a change is not the entire object, but just an attribute of the object (for example, a *Name* attribute on a *Person* entity). If you retrieve the *Person* entity from the database, you will still retrieve the *Age* and *Height* attributes that are stored in the database.
+In this case, a change is not the entire object, but just an attribute of the object (for example, a **Name** attribute of a **Person** entity). If you retrieve the **Person** entity from the database, you still retrieve the **Age** and **Height** attributes that are stored in the database.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -58,7 +59,7 @@ Any changes made to an object are visible in all widgets. This is because change
 
 #### 3.2.1 Association
 
-This property specifies which association will be followed. The association must be an association from an object that is already available to the retrieve activity. Associations can be followed in both directions.
+This property specifies which association is followed. The association must be an association from an object that is already available to the retrieve activity. Associations can be followed in both directions.
 
 ### 3.3 Retrieve from Database Properties {#from-database}
 
@@ -78,7 +79,7 @@ This property specifies the range that determines how many objects are retrieved
 
 #### 3.3.3 XPath Constraint
 
-The [XPath](/refguide/xpath/) constraint defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
+The [XPath constraint](/refguide/xpath-constraints/) defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
 {{% alert color="info" %}}
 Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve activity is in a nanoflow.
@@ -90,7 +91,7 @@ This property defines the order of the list. The list can be sorted in ascending
 
 ### 3.4 Type
 
-This read-only property indicates whether you will retrieve a singe object or a list.
+This read-only property indicates whether you retrieve a singe object or a list.
 
 ### 3.5 List Name or Object Name
 
@@ -99,3 +100,43 @@ This is the name of the list or object returned by the activity. It can be used 
 ## 4 Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
+
+## 5 Optimizing Retrieve Activities
+
+You often need to retrieve objects in order to complete a process. Sometimes those objects cannot be found and you need to take additional actions. Moreover, the objects you retrieve and the objects you create are assigned different names, and you cannot merge them back into a single flow.
+
+This section presents an example for optimizing retrieve activities during the process of finding and creating objects. It also gives an example for retrieving a specific instance of an object.
+
+### 5.1 A Common Example 
+
+A common example is shown below in which creating an order needs to be associated with the customer and their address. This example ends up with three different flows, and they cannot be merged back into the main flow because that causes the entities **OtherAddress** and **NewPrimaryAddress** to be unreachable.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-create-order.png" width="550px" >}}
+
+One solution for this is to include the logic (partially) in a sub-microflow (as shown in the following image). However, this is not easy to read, and preventing creating the same object multiple times at different places also causes a lot of unnecessary maintenance.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-solution-one.png" width="650px" >}}
+
+### 5.2 Optimization
+
+You can easily work around the issue in the example above by using a sub-microflow at a different place. To avoid making exceptions in your microflow for the default behavior, do not put the standard logic into a sub-microflow that is difficult to read (because of one exception earlier in the process). Since we got to this point because of an exception, it makes the most sense to solve this problem by altering the exception so that it fits in our standard flow.
+
+The easiest way to implement this is to move all the logic for acquiring the customer's address into one sub-microflow (the **GetCustomerPrimaryAddress** sub-microflow). By doing so, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-solution-two.png" width="500px" >}}
+
+As we can see in the example below, the **GetCustomerPrimaryAddress** sub-microflow contains the same logic as in the original example, except that there is only one result from this sub-microflow: the correct customer's address.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/get-address-sub-microflow.png" width="550px" >}}
+
+### 5.3 Retrieving an Instance of an Object
+
+Sometimes you only need to retrieve a specific instance of an object. Building a sub-microflow for just one retrieve-and-create action is too much work. An alternative way is to build your own loop, which allows you to have one main microflow but still be able to find and create objects during this process.
+
+However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the create activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-one-object-instance.png" width="400px" >}}
+
+## 6 Read More
+
+* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)

@@ -71,7 +71,7 @@ You will now need to create the repositories listed by the command above. The co
 {{% alert color="info" %}}
 Some registries cannot support complex repository addresses such as `my.registry.com/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook:v0.26.0` and you may have to use a simpler format such as `my.registry.com/tekton/webhook:v0.26.0`. You will then need to update the `state.json` file (in your current directory) which is used by aip to push information to your repositories.
 
-You will need to update the `destination: ` value for each of the repositories as shown below:
+You will need to update the `destination:` value for each of the repositories as shown below:
 
 ```json {linenos=table,hl_lines=[6],linenostart=22}
 …
@@ -83,6 +83,7 @@ You will need to update the `destination: ` value for each of the repositories a
 },
 …
 ```
+
 {{% /alert %}}
 
 ```bash
@@ -164,9 +165,11 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 
 1. Edit the `tekton-triggers-controller` deployment.
 2. Add the following line to the `args` section:
+
     ```bash{linenos=false}
     - '--el-security-context=false'
     ```
+
 3. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
 4. Edit the `tekton-triggers-core-interceptors` deployment.
 5. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
@@ -182,13 +185,13 @@ Before you install the Mendix pipelines, which contain all Tekton-related object
 2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines. To get access to the helm charts, contact your CSM.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
-The namespace can be the same namespace where the  Mendix Operator runs, or you can create a new namespace.
+The namespace can be the same namespace where the Mendix Operator runs, or you can create a new namespace. The sections below use {$NAMESPACE_WITH_PIPELINES} to refer to that namespace.
 
 For air-gapped environments, you need to specify the images individually, as well as the private registry you set up in [Preparation for Air-gapped Environments](#preparation):
 
 ```bash
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
-helm install -n $YOUR_NAMESPACE mx-tekton-pipeline ./pipeline/ \
+helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
   --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.1 \

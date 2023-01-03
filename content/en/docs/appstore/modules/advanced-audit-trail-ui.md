@@ -39,11 +39,11 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 #### 3.2.2 Search Results
 
 * **General**
-  * **ACT_Snapshot_SeeSnapshotsForObject**: pushes a search query for a specific object, which will then display the object-specific audit trail
-  * **ACT_Snapshot_SeeSnapshotsInTransaction**: pushes a search query for a specific transaction ID, which will then display snapshots created within the same transaction context
-  * **ACT_SnapshotQuery_LoadMore**: loads an additional batch of snapshots from Elasticsearch
+    * **ACT_Snapshot_SeeSnapshotsForObject**: pushes a search query for a specific object, which will then display the object-specific audit trail
+    * **ACT_Snapshot_SeeSnapshotsInTransaction**: pushes a search query for a specific transaction ID, which will then display snapshots created within the same transaction context
+    * **ACT_SnapshotQuery_LoadMore**: loads an additional batch of snapshots from Elasticsearch
 * **Snapshot_View**: displays the selected snapshot in a pop-up window
-*  **SnapshotQuery_SearchResults**: displays the query results in the left column
+* **SnapshotQuery_SearchResults**: displays the query results in the left column
 
     {{% alert color="info" %}}Selecting a snapshot will display its information in the right column.{{% /alert %}}
 

@@ -67,4 +67,4 @@ Defines whether to include the stack trace of the latest error in this log messa
 
 Double-clicking these log messages shows the stack trace.
 
-This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in the modeler.
+This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stack trace to the logline in the modeler.

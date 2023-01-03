@@ -24,7 +24,6 @@ In this tab you can view graphs which display the following information about th
 
 The information displayed in **Trends** depends on which **Mendix Cloud version** the app is running. The following documents describe the different trends information available:
 
-* [Trends in Mendix Cloud v3](/developerportal/operate/trends/)
 * [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
 
 You can find the Mendix Cloud version of your App in the **Environment details**. For more information, see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).

@@ -1,10 +1,9 @@
 ---
-title: "Trigger a Microflow From a Menu Item"
-url: /howto/logic-business-rules/trigger-microflow-from-menu-item/
-category: "Logic and Business Rules"
+title: "Triggering a Microflow From a Menu Item"
+url: /refguide/triggering-microflow-from-menu-item/
 weight: 30
 description: "Describes how to create a simple microflow that will define the logic of your application."
-tags: ["how-to", "microflow", "create microflow"]
+tags: ["Studio Pro", "microflow", "create microflow", "menu item"]
 ---
 
 ## 1 Introduction

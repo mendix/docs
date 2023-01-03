@@ -123,7 +123,7 @@ After this, all `Attachments` belonging to one `GenericObject` have been copied 
 ## 4 Read More
 
 * [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/)
-* [Trigger a Microflow From a Menu Item](/howto/logic-business-rules/trigger-microflow-from-menu-item/)
+* [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)
 * [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
 * [Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
 

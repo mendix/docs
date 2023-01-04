@@ -17,6 +17,8 @@ When exporting an SVG from an editor, you will often produce an SVG with several
 
 To optimize your SVGs, you can either run them through an online tool such as [SVGOMG](https://jakearchibald.github.io/svgomg/) or use a local tool such as [SVGO](https://github.com/svg/svgo).
 
+{{% alert color="info" %}}Some users have experienced an issue where SVGs are not visible in the Make It Native testing app. When deploying changed SVG images, it may be necessary to clean the deployment folder first. In Studio Pro, click on **App** > **Clean Deployment Directory**. When recompiling, any new images will now become visible in the Make It Native app.{{% /alert %}}
+
 ## 3 Unsupported Elements
 
 SVGs can contain several kinds of elements. However, not all of them are supported in native mobile apps. Unsupported elements will have no effect and should be removed. The following SVG elements are *not* supported for native mobile apps:
@@ -78,9 +80,7 @@ Would produce the following button and SVG:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" >}}
 
-{{% alert color="info" %}}Some users have experienced an issue where SVGs are not visible in the Make It Native testing app. When deploying changed SVG images, it may be necessary to clean the deployment folder first. In Studio Pro, click on **App** > **Clean Deployment Directory**. When recompiling, any new images will now become visible in the Make It Native app.{{% /alert %}}
-
-## 6 Using SVGs in Pluggable Native Widgets
+## 5 Using SVGs in Pluggable Native Widgets
 
 To use an SVG in a pluggable native widget's image property, we recommend using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
@@ -115,7 +115,7 @@ export const PluggableWidget = () => (
 
 If you want to use SVG elements directly in your pluggable widget, see the [react-native-svg](https://github.com/react-native-community/react-native-svg) library.
 
-## 7 Read More
+## 6 Read More
 
 * [Build a Pluggable Native Widget](/howto/extensibility/build-native-widget/)
 * [Atlas UI](/howto/front-end/atlas-ui/)

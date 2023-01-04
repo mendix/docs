@@ -270,7 +270,7 @@ If you encounter any problems with sending or receiving emails, check the **Show
 
 ### 5.1.1 Gmail Accounts
 
-Gmail no longer supporting basic authentication (usernames and passwords), but you can still set up an account in the Email connector by doing the following:
+Gmail no longer supports basic authentication (usernames and passwords), but you can still set up an account in the Email connector by doing the following:
 
 1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and change the setting in your Google account.
 2. Set up an App Password to sign into the Email connector. See [Sign in with App Passwords](https://support.google.com/accounts/answer/185833).

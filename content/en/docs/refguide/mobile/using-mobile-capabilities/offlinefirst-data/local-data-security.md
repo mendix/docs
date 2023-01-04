@@ -75,7 +75,7 @@ Local database encryption works in Native Template v6.3.0 and higher. If this se
 
 ### 4.2 Enabling Database Encryption for New Apps
 
-Suppose you are working on a new Mendix app that you haven't released to your users before. In that case, you can check the check box shown above and use the latest version of the native template to build and release your app.
+Suppose you are working on a new Mendix app that you have not released to your users before. In that case, you can check the check box shown above and use the latest version of the native template to build and release your app.
 
 ### 4.3 Enabling Database Encryption for Existing Apps
 
@@ -132,7 +132,7 @@ To locate the database file on iOS, do the following:
 
 ## 5 Encrypting User Files {##encrypting-user-files}
 
-Studio Pro 9.22 and above allows you to encrypt the files and images stored in native apps. File encryption can be enabled using the checkbox in the native mobile navigation profile screen:
+Studio Pro 9.22 and above allows you to encrypt the files and images stored in native apps. Enable file encryption by selecting the checkbox in the native mobile navigation profile screen:
 
 {{< figure src="/attachments/refguide/mobile/offline-first/enable-native-file-encryption.png" alt="Encrypt native file encryption checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 
@@ -140,9 +140,9 @@ Studio Pro 9.22 and above allows you to encrypt the files and images stored in n
 
 Before enabling local file encryption, ensure that these prerequisites are met:
 
-* Use Mendix Studio Pro 9.22 (or a higher version) 
+* Install and use Mendix Studio Pro 9.22 (or a higher version) 
 * Upgrade your Native Template to v6.3.0 (or a higher version)
-* Upgrade Make It Native to the latest version
+* Upgrade your Make It Native app to the latest version
 
 {{% alert color="info" %}}
 Local database encryption works in Native Template v6.3.0 and higher. If this setting is enabled using an older version of the native template, the app will not encrypt the files, and the client will log the following warning message:
@@ -155,8 +155,8 @@ If you are using Native Template 6.3.0 or higher and building the app locally on
 
 ### 5.2 Enabling Local File Encryption
 
-You can enable file encryption for both new and existing apps. Once the users update the app, any new files written to the device's storage will be encrypted. Any existing files stored before the update stay unencrypted until they're overwritten.
+You can enable file encryption for both new and existing apps. Once the users update the app, any new files written to the device's storage will be encrypted. Any existing files stored before the update stay unencrypted until they are overwritten.
 
 ### 5.3 Disabling Local File Encryption
 
-Disabling local file encryption is not supported and may cause unexpected behaviors for end-users with encrypted files on their devices. You can disable the encryption if you haven't released the encrypted version of your app to your users.
+Disabling local file encryption is not supported and may cause unexpected behaviors for end-users with encrypted files on their devices. You can disable the encryption if you have not released the encrypted version of your app to your users.

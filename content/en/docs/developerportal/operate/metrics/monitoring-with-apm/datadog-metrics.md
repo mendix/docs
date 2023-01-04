@@ -152,7 +152,7 @@ It is possible to view metrics of multi-instance application on Datadog dashboar
 
 * Navigate to the [Metrics Explorer](https://docs.datadoghq.com/metrics/explorer/#overview) on Datadog Dashboard.
 * On the top part of the page in the filter form search a metric. 
-* In the fild `from` specify envitonment id of an application in the format: `application_name:<environment id>`.
+* In the field `from` specify envitonment id of an application in the format: `application_name:<environment id>`.
 * In the field `avg by` search `instance_index`.
 
 If the app has more then one instance you shall see a few lines on the graph for each instance accordingly.  

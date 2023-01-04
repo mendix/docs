@@ -449,7 +449,6 @@ For more information, see the *AWS Database blog* [Understanding Burst vs. Basel
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
-* [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
 * [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/)
 * [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4/)

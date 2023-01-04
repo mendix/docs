@@ -1496,7 +1496,7 @@ To achieve this, you need to add the annotation `privatecloud.mendix.com/environ
 The service account can be customized for Private Cloud Operator version 2.7.0 and above.
 {{% /alert %}}
 
-If required, you can use additional annotations can be used. For example, to authenticate with AWS services instead of static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
+If required, you can use additional annotations. For example, to authenticate with AWS services instead of static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
 ### 5.7 Autoscaling
 

@@ -146,9 +146,21 @@ Setting these values for your app means that all metrics from this environment o
 You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
 {{% /alert %}}
 
-## 4 Additional Information{#additional-info}
+## 4 Multi-instance metrics{#multi-instance-metrics}
 
-### 4.1 Log Levels (DD_LOG_LEVEL){#log-levels}
+It is possible to view metrics of multi-instance application on Datadog dashboard:
+
+* Navigate to the section Metrics -> Explorer on Datadog Dashboard.
+* On the top part of the page in the filter form search a metric. 
+* In the fild `from` specify envitonment id of an application in the format: `application_name:<environment id>`.
+* In the field `avg by` search `instance_index`.
+
+If the app has more then one instance you shall see a few lines on the graph for each instance accordingly.  
+
+
+## 5 Additional Information{#additional-info}
+
+### 5.1 Log Levels (DD_LOG_LEVEL){#log-levels}
 
 The **DD_LOG_LEVEL** sets the level for which log messages *from the Mendix Datadog agent* will be sent to the Mendix application logs. It does not affect the [log level set in your app](/howto/monitoring-troubleshooting/log-levels/). Valid values are:
 
@@ -158,26 +170,26 @@ The **DD_LOG_LEVEL** sets the level for which log messages *from the Mendix Data
 * INFO
 * DEBUG
 
-### 4.2 Datadog Regions (DD_SITE)
+### 5.2 Datadog Regions (DD_SITE)
 
 The valid values for **DD_SITE** are:
 
 * datadoghq.com
 * datadoghq.eu
 
-### 4.3 Database Disk Storage Availability
+### 5.3 Database Disk Storage Availability
 
 You can decide whether a metric for the disk storage size available to the database is sent to Datadog. To disable this metric, set **DATADOG_DATABASE_DISKSTORAGE_METRIC** to *false*.
 
 *Default value: true*
 
-### 4.4 Email Address Redaction{#redact-emails}
+### 5.4 Email Address Redaction{#redact-emails}
 
 Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_REDACTION** to *false*.
 
 *Default value: true*
 
-### 4.5. Rate and Count Database Metrics{#database-metrics}
+### 5.5. Rate and Count Database Metrics{#database-metrics}
 
 Datadog sends gauge database metrics to Datadog as a default. Rate and Count metrics are not compatible with the Datadog PostgreSQL integration. You can enable these additional metrics by setting **DATADOG_DATABASE_RATE_COUNT_METRICS** to *true*.
 
@@ -185,13 +197,13 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 *Default value: false*
 
-### 4.6 System Metrics{#system-metrics}
+### 5.6 System Metrics{#system-metrics}
 
 System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DD_ENABLE_CHECKS** to *true*.
 
 *Default value: false*
 
-### 4.7 Datadog Events Log
+### 5.7 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
@@ -199,19 +211,19 @@ The Datadog Events log contains events which come from your app: those are the s
 
 By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 
-### 4.8 Datadog Agent not Started
+### 5.8 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 4.9 Datadog Issues
+### 5.9 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-### 4.10 Metrics on Datadog Usage
+### 5.10 Metrics on Datadog Usage
 
 Metrics on Datadog can include an additional namespace, **datadog** which contains metrics on Datadog usage.
 
-## 5 Read More
+## 6 Read More
 
 * [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/) – a Mendix blog about the capabilities of Datadog and, in particular, using Datadog with Mendix
 * [Metrics](/developerportal/operate/metrics/)

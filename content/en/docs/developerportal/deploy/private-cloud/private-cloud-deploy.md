@@ -621,7 +621,7 @@ After manually removing the StorageInstance, you'll need to manually clean up an
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-In Mendix Operator version 2.4.0 and above, clicking **More Info** will show any errors that could explain why the app is failing to start.
+In Mendix Operator version 2.4.0 and above, you can click **More Info** to view any errors that could explain why the app is failing to start.
 
 ### 7.4 ApplicationRootUrl Needs to Be Set Manually
 

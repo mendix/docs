@@ -86,6 +86,8 @@ For example, if you need to set the `MyFirstModule.WelcomePageTitle` constant, s
 To set a [Mendix Runtime custom setting](/refguide/custom-settings/), use the `mx-runtime-{name}` format (replace `{name}` with the name of the custom setting).
 For example, if you need to set the `com.mendix.storage.s3.EncryptionKeys` constant, specify its value via the `mx-runtime-com.mendix.storage.s3.EncryptionKeys` key.
 
+For a full configuration example, see the AWS Secrets Manager [guide](#configure-using-aws-secrets-manager).
+
 {{% alert color="info" %}}
 Most of the Mendix Runtime settings don't contain private data or are managed by the Mendix Operator, and overriding some values could lead to unexpected behaviour.
 Consult with Mendix Support to check if using CSI Secrets Storage for your use case would be considered a supported use case.

@@ -155,7 +155,9 @@ You can add any local information about the external entity in this tab.
 
 ## 3 Authentication {#authentication}
 
-When working with external entities in production environments, you need to set up authentication in both the producing and consuming apps.
+Publishers of an OData service can set the type of authentication needed to access it. See the [Security](/refguide/published-odata-services/#security) section of *Published OData Services*.
+
+Consumers of a service in an external entity need to ensure that they have the correct credentials by contacting the owner of the data source.
 
 ## 4 External Entity Limitations {#limitations}
 

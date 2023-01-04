@@ -6,13 +6,13 @@ weight: 72
 
 ## 2.28.5
 
-**Release date: Januari 3th, 2023**
+**Release date: January 3rd, 2023**
 
 ### Fixes
 
-* We fixed a generic error that could occur when trying to add a test case/suite to a test suite.
-* We fixed false positives from action ‘Find/Assert DataGrid Row'.
-* We fixed a UI issue, which caused ‘Save’ and ‘Cancel’ buttons in a popup not being clickable with a zoom level greater than 100%.
+* We fixed a generic error that occurred when trying to add a test case/suite to a test suite.
+* We fixed false positives from the Find/Assert DataGrid Row action.
+* We fixed a UI issue that caused the **Save** and **Cancel** buttons in a pop-up window to not be clickable when the zoom level was greater than 100%.
 
 ## 2.28.4
 
@@ -20,7 +20,7 @@ weight: 72
 
 ### Fixes
 
-* We applied security fixes related to administrators
+* We applied security fixes related to administrators.
 
 ## 2.28.3
 
@@ -28,7 +28,7 @@ weight: 72
 
 ### Fixes
 
-* We applied security fixes related to administrators
+* We applied security fixes related to administrators.
 
 ## 2.28.2
 

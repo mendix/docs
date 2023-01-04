@@ -133,7 +133,7 @@ To edit the Java action in Eclipse, follow these steps:
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/show-message.png"   width="500"  >}}
 
-19. Click **OK** to save the show message activity. The microflow should now look like this:
+19. Click **OK** to save the **Show message** activity. The microflow should now look like this:
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/microflow4.png"   width="500"  >}}
 
@@ -161,6 +161,5 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 
 ## 8 Read More
 
-* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
-* [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/)
-
+* [Using Eclipse](/refguide/using-eclipse/)
+* [Use the Java API](/howto/logic-business-rules/java-api-tutorial/)

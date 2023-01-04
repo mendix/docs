@@ -103,7 +103,7 @@ To send your runtime information to AppDynamics, you need to set it up using env
 ## 4 Multi-instance metrics{#multi-instance-metrics}
 
 It is possible to view metrics for multiple instances of an application on the AppDynamics Controller.
-* To observe combined metrics values for all the instances together you should navigate in Metric Browser (by default `tier name = environment ID`): `Application Infrastructure Performance/<tier name>/Custom Metrics/Mx Runtime Statistics`.
+* To observe combined metrics values for all the instances together you should navigate in [Metric Browser](https://docs.appdynamics.com/appd/22.x/latest/en/appdynamics-essentials/metrics-and-graphs/metric-browser) (by default `tier name = environment ID`): `Application Infrastructure Performance/<tier name>/Custom Metrics/Mx Runtime Statistics`.
 * AppDynamics Nodes are associated with Mendix application instances. To observe metrics for specific instance (node) you should navigate in Metric Browser: `Application Infrastructure Performance/<tier name>/Individual Nodes/<node name>/Custom Metrics/Mx Runtime Statistics`.
 
 ## 5 Additional Information{#additional-info}

@@ -78,9 +78,7 @@ Would produce the following button and SVG:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" >}}
 
-## 5 Images not Being Refreshed
-
-When deploying changed SVG images, it may be necessary to clean the deployment folder first. In Studio Pro, in the top navigation, click on "App" then "Clean Deployment Directory". When recompiling, any new images will now become visible in your native app. 
+{{% alert color="info" %}}Some users have experienced an issue where SVGs are not visible in the Make It Native testing app. When deploying changed SVG images, it may be necessary to clean the deployment folder first. In Studio Pro, click on **App** > **Clean Deployment Directory**. When recompiling, any new images will now become visible in the Make It Native app.{{% /alert %}}
 
 ## 6 Using SVGs in Pluggable Native Widgets
 

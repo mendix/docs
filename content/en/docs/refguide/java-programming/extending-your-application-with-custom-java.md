@@ -1,7 +1,6 @@
 ---
 title: "Extending Your Application with Custom Java"
 linktitle: "Extending App with Custom Java"
-url: /howto/logic-business-rules/extending-your-application-with-custom-java/
 url: /refguide/extending-your-application-with-custom-java/
 weight: 3
 category: "Java Programming"

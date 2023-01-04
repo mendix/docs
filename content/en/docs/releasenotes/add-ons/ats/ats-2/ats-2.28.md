@@ -4,6 +4,32 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.5
+
+**Release date: Januari 3th, 2023**
+
+### Fixes
+
+* We fixed a generic error that could occur when trying to add a test case/suite to a test suite.
+* We fixed false positives from action ‘Find/Assert DataGrid Row'.
+* We fixed a UI issue, which caused ‘Save’ and ‘Cancel’ buttons in a popup not being clickable with a zoom level greater than 100%.
+
+## 2.28.4
+
+**Release date: December 6th, 2022**
+
+### Fixes
+
+* We applied security fixes related to administrators
+
+## 2.28.3
+
+**Release date: November 29th, 2022**
+
+### Fixes
+
+* We applied security fixes related to administrators
+
 ## 2.28.2
 
 **Release date: November 9th, 2022**

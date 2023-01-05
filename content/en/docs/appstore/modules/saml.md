@@ -9,10 +9,6 @@ tags: ["marketplace", "marketplace component", "saml", "IdP", "identity provider
 
 ## 1 Introduction
 
-{{% alert color="warning" %}}
-This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
-{{% /alert %}}
-
 The [SAML](https://marketplace.mendix.com/link/component/1174/) module can be used to give end-users access to your Mendix application based on their identity in your Identity Provider (IdP). A Mendix application that uses the SAML SSO module will delegate user login to your Identity Provider using SAML 2.0.
 
 By configuring the information about all identity providers in this module, you will allow the users to sign in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
@@ -100,8 +96,8 @@ There are different versions of the module, depending on which version of Mendix
 
 * Mendix version 7 – SAML module version 1.17.1
 * Mendix version 8 – SAML module version 2.3.1
-* Mendix version 9 (upgraded from version 8) – SAML module version 3.3.2
-* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.3
+* Mendix version 9 (upgraded from version 8) – SAML module version 3.3.8
+* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.9
 
 ## 2 Installation
 
@@ -248,9 +244,7 @@ The following settings control user provisioning:
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.1.8/v3.1.9 and above for Mendix version 9
-
 * v2.2.0 and above for Mendix version 8
-
 * v1.16.4 and above for Mendix version 7
 {{% /alert %}}
 
@@ -266,6 +260,7 @@ These settings are only available in the following versions of the module (depen
 * **Enable delegated authentication** *(deprecated)* - See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
 
 * **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+
 #### 3.2.5 Authentication Context
 
 The following settings set the authentication context:

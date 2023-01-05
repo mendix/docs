@@ -32,22 +32,28 @@ After you install the connector, you can find it in the **App Explorer**, in the
 To quickly configure the connection to Amazon S3 by using an example microflow, perform the following steps:
 
 1. Optional: If you have not configured your default AWS region before, click **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**, and then select the region of your choice.
+
     This step is not required, but you may wish to perform it for one of the following reasons:
-        
-        * To reduce latency by choosing a region which is geographically close to you
-        * To choose a region to which you have access, if you do not have access to some regions
-        
+
+    * To reduce latency by choosing a region which is geographically close to you
+    * To choose a region to which you have access, if you do not have access to some regions
+
     {{% alert color="info" %}}
     For technical reasons, you cannot set AWS_Default_Region to `aws-global` or `us-east-1`.
     {{% /alert %}}
 
 2. Create a microflow with session or static credentials authentication. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the App Explorer, in **App** > **Marketplace modules** > **AWSS3Connector** > **Examples**, find an example microflow that performs a function which you want to use in your app.
+
     For example, if you want to get the contents of an object in the S3 bucket, find the **SUB_GetObject** example microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
+
 4. Drag the example microflow onto the working area of the microflow that you created in step 2, and position it after the **GetSessionCredentials** activity.
 5. Double-click on the microflow activity that you added in step 4.
+
     The example microflow opens.
+
 6. Configure the required parameters.
+
     For example, for the **SUB_GetObject** example microflow, you must configure the S3 object that you want to access.
 
 To help you work with the Amazon S3 connector, the following sections of this document list the available entities and activities that you can use in your application.

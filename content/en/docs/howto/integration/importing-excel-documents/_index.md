@@ -18,7 +18,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create domain models (see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
-* Create microflows (see [How to Trigger a Microflow From a Menu Item](/howto/logic-business-rules/trigger-microflow-from-menu-item/)
+* Create microflows (see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)
 * Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
 * Secure your applications (see [How to Create a Secure App](/howto/security/create-a-secure-app/))
 

@@ -7,6 +7,10 @@ tags: ["marketplace", "marketplace component", "app service", "email"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
+{{% alert color="info" %}}
+This app service is deprecated. Please use the [Email](/appstore/connectors/email-connector/) connector instead.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Email Service app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
@@ -37,57 +41,9 @@ This app service enables doing the following:
 
 This app service can only be used with Studio Pro 9 versions starting with [9.4](/releasenotes/studio-pro/9.4/).
 
-## 2 Installation
+## 2 Usage
 
-### 2.1 Obtaining SecretKey and UserName{#obtain-keys}
-
-Email Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in your app, first you need to start a subscription or a trial to get a SecretKey and a UserName.
-
-#### 2.1.1 Starting a Trial
-
-A trial gives everyone in your company one-month access to the app service. To start a trial, perform the following steps:
-
-1. Go to the Email Service page in the Marketplace.
-2. Click **Try for Free** to open the **Start Your Free Trial** page. Here you can see the **Trial Details** for the app service.
-3. Select the check box to agree to the **Terms & Conditions**.
-4. Click **Enable Trial**. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than at least 15 minutes for the system to process your request. After your request is processed, you will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [My Subscriptions](https://marketplace.mendix.com/link/mysubscriptions) page and log in there. This page shows all the products that you have trials for.
-7. Click **Email Service** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
-
-    {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
-
-#### 2.1.2 Starting a Subscription
-
-1. Go to the Email Service page in the marketplace.
-2. Click **Subscribe** to start a subscription.
-3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Contact will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **Email Service** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a **SecretKey** and a **UserName**. Save the **SecretKey** and the **UserName** somewhere safe. You need to [configure](#configure-keys) them in your app later.
-
-    {{< figure src="/attachments/appstore/app-services/email-service/binding-key-generation.png" >}}
-
-### 2.2 Installing the Component in Your App
-
-To download and install the Email Service app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro*. After the app service is installed, you can find it in the **App Explorer** and also in the **Communication Services** category in the **Toolbox**.
-
-## 3 Configuring SecretKey and UserName {#configure-keys}
-
-Before you deploy an app, you should configure the binding keys in your app as follows:
-
-1. In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
-
-    {{< figure src="/attachments/appstore/app-services/email-service/configure-username-secretkey.png" >}}
-
-2. For **SecretKey** and **UserName**, add the values that were generated when you created the binding keys, and click **OK** to save the changes.
-
-## 4 Usage
-
-### 4.1 Sending Messages to Recipients 
+### 2.1 Sending Messages to Recipients 
 
 You can use the Email Service in a microflow to send HTML or plain text messages. The Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
@@ -126,7 +82,7 @@ To configure the **Send email** activity, double-click the activity and specify 
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
 
-#### 4.1.1 Generating HTML Body Content {#generate-html-body}
+#### 2.1.1 Generating HTML Body Content {#generate-html-body}
 
 The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables.
 
@@ -142,7 +98,7 @@ The third step of the microflow generates a string from this HTML file using the
 
 In the last step of the microflow, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
 
-### 4.2 Sending Message with Attachment(s) to Recipients
+### 2.2 Sending Message with Attachment(s) to Recipients
 
 This is a representative microflow that sends emails with file attachments. The file attachments should have the file types that are [supported](#unsupported-file-types).
 
@@ -154,13 +110,13 @@ The **Attachment** attribute accepts a list of **FileDocumentObject**. You can e
 
 {{% alert type="info" %}}The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.{{% /alert %}}
 
-#### 4.2.1 Unsupported File Types for Attachments {#unsupported-file-types}
+#### 2.2.1 Unsupported File Types for Attachments {#unsupported-file-types}
 
 The following file types are not supported as attachments:
 
 *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, .xnk
 
-### 4.3 Checking Statistics on the Usage Dashboard
+### 2.3 Checking Statistics on the Usage Dashboard
 
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
@@ -173,7 +129,7 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 3. Find **Email Service** in the list.
 4. Click **Usage Dashboard** to show the usage details.
 
-## 5 Configuring the Sender's Email Address(es) or Domain on Communication Services Console
+## 3 Configuring the Sender's Email Address(es) or Domain on Communication Services Console
 
 If you are the Technical Contact, you can configure the sender's email addresses or domain on Communication Services Console:
 
@@ -189,7 +145,7 @@ If you are the Technical Contact, you can configure the sender's email addresses
     * If you choose **Email ID** as the **Verification Type**, perform the following steps:
 
         1. For **Email ID**, enter the sender's email address(es). 
-        2. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        2. Optionally, enter the **Mail From Domain** information that you want to use with your Email Service instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
         3. To verify the sender's email address(es), perform the following steps:
 
             1. Click **View Details/Edit** to open the **Email Identity** dialog box.
@@ -216,7 +172,7 @@ If you are the Technical Contact, you can configure the sender's email addresses
 
         1. For **Domain**, enter the domain address.
         2. For **Email ID**, enter the sender's email address(es). 
-        3. Optionally, enter the **Mail From Domain** information that you want to use with your [Email Service](https://marketplace.mendix.com/link/component/118393/) instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
+        3. Optionally, enter the **Mail From Domain** information that you want to use with your Email Service instance. For more details, see the [Configuring the Mail From Domain](#config-mail-from-domain) section. 
         4. Click **Save** to verify domain address.
 
             {{< figure src="/attachments/appstore/app-services/email-service/domain-verification.png" >}}
@@ -242,11 +198,11 @@ If you are the Technical Contact, you can configure the sender's email addresses
 
         {{< figure src="/attachments/appstore/app-services/email-service/dkim-and-domain-verification-record.png" >}}
 
-## 6 Increasing the Deliverability of Your Emails
+## 4 Increasing the Deliverability of Your Emails
 
 You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate whether an incoming email is authorized by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
 
-### 6.1 Configuring the Mail From Domain {#config-mail-from-domain}
+### 4.1 Configuring the Mail From Domain {#config-mail-from-domain}
 
 Sender Policy Framework (SPF) is an email authentication method. During the delivery of an email, SPF allows the mail server to check whether an incoming email claiming to come from a specific domain is submitted by an IP address authorized by the administrators of that domain. 
 
@@ -259,7 +215,7 @@ If you use the default Mail From domain of the Email Service, you can only meet 
 
 To configure your custom Mail From domain, you should work with your IT administrators to add the SPF and MX records.
 
-### 6.2 SPF and MX Records {#spf-and-mx-records}
+### 4.2 SPF and MX Records {#spf-and-mx-records}
 
 The SPF record is a list of authorized sending hosts and IP addresses for a domain, which is published in the domain's DNS records.
 
@@ -274,6 +230,6 @@ The SPF record and MX record use the formats shown in the following table:
 | notification.domain.com | TXT | "v=spf1 include:amazonses.com ~all" |
 |notification.domain.com | MX | 10 feedback-smtp.eu-central-1.amazonses.com|
 
-## 7 Read More
+## 5 Read More
 
 * [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-/)

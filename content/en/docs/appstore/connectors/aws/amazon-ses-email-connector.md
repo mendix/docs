@@ -1,8 +1,8 @@
 ---
-title: "Send Emails with Amazon SES and the Mendix Email Connector"
+title: "Send Emails with Amazon SES and Mendix Email Connector"
 url: /partners/aws/amazon-ses-email-connector/
 description: "Describes the steps required to use Amazon Simple Email Service (SES) with the Mendix Email Connector."
-weight: 30
+weight: 20
 tags: ["AWS", "Amazon Simple Email Service", "SES", "email", "Mendix Email Connector"]
 ---
 
@@ -21,10 +21,9 @@ To configure your SES account in the Email Connector in Studio Pro, follow these
     * SMTP password
 
     For more information, see [Obtaining Amazon SES SMTP credentials](https://docs.aws.amazon.com/ses/latest/dg/smtp-credentials.html).
-
-    {{% alert color="info" %}}
-    Only email IDs and identities configured under Verified identities, and that are verified for Amazon SES accounts, can be used as sender and receiver.
-    {{% /alert %}}
+{{% alert color="info" %}}
+Only email IDs and identities configured under Verified identities, and that are verified for Amazon SES accounts, can be used as sender and receiver.
+{{% /alert %}}
 3. Set up the Email Connector. For more information, see [Set Up in Studio Pro](/appstore/connectors/email-connector/#setup) and [Email Account Configuration](/appstore/connectors/email-connector/#accountconfig).  
 4. On the **EmailConnector_Overview** page, click **Add email account**. 
 5. Enter the following details: 

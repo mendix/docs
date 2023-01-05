@@ -35,6 +35,5 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 ## 3 Read More
 
 * [Environment Details](/developerportal/deploy/environments-details/)
-* [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [Mendix Cloud v4](/developerportal/deploy/mxcloudv4/)

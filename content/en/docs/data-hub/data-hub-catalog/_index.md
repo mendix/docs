@@ -2,7 +2,7 @@
 title: "Data Hub Catalog"
 url: /data-hub/data-hub-catalog/
 description: "Describes the processes and properties of Data Hub Catalog."
-weight: 30
+weight: 1
 no_list: false
 description_list: true
 tags: ["data hub", "data hub catalog"]

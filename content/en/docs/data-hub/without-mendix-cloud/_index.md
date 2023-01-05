@@ -1,5 +1,5 @@
 ---
-title: "Data Hub without Mendix Cloud"
+title: "Data Hub - Local, On-Prem, or Private Cloud"
 description: "Describes how to use Mendix Data Hub and external entities for local deployments, or for private cloud or on-premises solutions."
 url: /data-hub/data-hub-without-mendix-cloud/
 weight: 80

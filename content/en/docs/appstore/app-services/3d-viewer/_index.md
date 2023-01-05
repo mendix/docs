@@ -77,7 +77,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to get a license token and configure it later:
 
-1. Go to the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page in the marketplace.
+1. Go to the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page in the Marketplace.
 2. Click **Subscribe** to start a subscription.
 3. Select your subscription plan.
 4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.

@@ -148,15 +148,14 @@ You can add more tags if you want, but note that Datadog's charges include an el
 
 ## 4 Multi-instance metrics{#multi-instance-metrics}
 
-It is possible to view metrics of multi-instance application on Datadog dashboard:
+You can view metrics for multiple instances of an application on the Datadog dashboard:
 
-* Navigate to the [Metrics Explorer](https://docs.datadoghq.com/metrics/explorer/#overview) on Datadog Dashboard.
-* On the top part of the page in the filter form search a metric. 
-* In the field `from` specify envitonment id of an application in the format: `application_name:<environment id>`.
+* Navigate to the [Metrics Explorer](https://docs.datadoghq.com/metrics/explorer/#overview) on the Datadog Dashboard.
+* On the top part of the page, in the filter form, search a metric. 
+* In the field `from` specify environment id of an application in the format: `application_name:<environment id>`.
 * In the field `avg by` search `instance_index`.
 
-If the app has more then one instance you shall see a few lines on the graph for each instance accordingly.  
-
+If the app has more then one instance you will see lines on the graph for each instance.  
 
 ## 5 Additional Information{#additional-info}
 

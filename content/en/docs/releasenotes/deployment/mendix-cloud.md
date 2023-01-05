@@ -15,6 +15,14 @@ There are separate release notes for other deployment targets, see [Deployment](
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2023
+
+### January 5th, 2022
+
+#### Improvements
+
+* We have introduced support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in Mendix Cloud V4.
+
 ## 2022
 
 ### November 14th, 2022

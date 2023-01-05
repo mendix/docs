@@ -16,38 +16,64 @@ For people deploying to a (virtual) private cloud, you can follow the steps in t
 
 ## 2 Prerequisites
 
-Before you begin, you need the following:
+Before you begin, ensure that you have the following:
 
 * A working pipeline that deploys your Mendix app (see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for the first steps on deploying to a private cloud)
 * A [Personal Access Token](/developerportal/community-tools/warden/) to access the Data Hub Catalog APIs
 
 ## 3 Starting Point: dependencies.json
 
-A file called *dependencies.json* lists all published and consumed OData services in your app. This file contains all of the information you will need to make the API calls in the next steps.
+A file called *dependencies.json* lists all published and consumed OData services in your app. This file contains information you will need to make the API calls in the next steps.
 
 * Create an .mda package that includes *dependencies.json*. 
 Go to the **Environments** page in the Developer Portal and click Create Package From Teamserver, or run `mxbuild` (see [MxBuild](/refguide/mxbuild/)).
 
+You can also find your dependencies.json in the `deployment > model` folder of your Mendix application. 
 
-## 4 Change the Data Structure with the Transform API
+## 4 Change the Data Structure
+
+For this section, you will need:
+* A [Personal Access Token](/developerportal/community-tools/warden/)
+* The dependencies.json file 
+* Endpoint location `Name` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **Name**)
+* Endpoint location `Value` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **DefaultValue**)
 
 Use the [Transform](/data-hub/data-hub-catalog/register-data/#transform-api) operation to transform the contents of *dependencies.json* into payloads for other operations.
 
-For detailed steps, see [Preparing Your Service Details Using the Transform API](/data-hub/data-hub-catalog/register-data/#transform-api).
+For detailed steps, see [Preparing Your Service Details Using the Transform Endpoint of the Registration API](/data-hub/data-hub-catalog/register-data/#transform-api).
 
-## 5 Register the Application with the Registration API
+## 5 Register the Application
+
+For this section, you will need: 
+* A [Personal Access Token](/developerportal/community-tools/warden/)
+* The application **Name**
+
+Next, follow the steps for [registering an application through the Data Hub Registration API](/data-hub/data-hub-catalog/register-data/#register-application).
+
+Upon completion, you will have the application UUID.
+
+## 6 Register the Environment 
+
+For this section, you will need:
+
+    Personal Access Token
+    application_UUID
+    Environment Name
+    Environment Location
+    Environment Type
+
+
+Now that you have the UUID, follow the steps for [registering an environment through the Data Hub Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-environment).
 
 
 
-## 6 Register the Environment with the Registration API
+## 7 Register the Endpoint 
 
-## 7 Register the Endpoint with the Registration API
+For this section, you will need:
 
-
-    1. recommend PUT over POST because then people can run the pipeline more than once!
-    2. pointer to something about how to authenticate
-    3. call the Transform API to change the data structure
-    4. call the Registration API to register the application
-    5. the things that you’ve already decided about this app the first time you deployed it are: the name, location, and prod/non-prod-ness of the environment. if you’re on the Mendix for Private Cloud, check the info using this API endpoint.
-    6. call the Registration API to register the environment
-    7. call the Registration API to register the endpoint
+    Personal Access Token
+    application_UUID
+    environment_UUID
+    Service Path, Name, and ContractType
+    Service version Version and Security Scheme
+    Service Contract with Type and Value

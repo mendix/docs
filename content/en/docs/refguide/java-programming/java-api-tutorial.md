@@ -1,8 +1,8 @@
 ---
-title: "Use the Java API"
-url: /howto/logic-business-rules/java-api-tutorial/
-category: "Logic and Business Rules"
-weight: 130
+title: "Using the Java API"
+url: /refguide/java-api-tutorial/
+category: "Java Programming"
+weight: 4
 description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
 tags: ["microflow", "logic", "java", "API"]
 ---

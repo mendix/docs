@@ -35,11 +35,17 @@ After you install the connector, you can find it in the **App Explorer**, in the
 For example, to list all Amazon DynamoDB tables for a specific region, implement the [ListTables](#list-tables) activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+    
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/addmicroflow.png" alt="Adding a microflow">}}
+
 2. Enter a name for your microflow, for example, *ACT_ListTables*, and then click **OK**.
-3. In the **App Explorer**, in the **Amazon DynamoDBConnector** > **Operations** section, find the **ListTables** activity.
-4. Drag the **ListTables** activity onto the work area of your microflow.
-5. Double-click the **ListTables** microflow activity to configure the required parameters.
-    For the `ListTables` activity, you must specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
+3. In the **App Explorer**, in the **Amazon DynamoDBConnector** > **Operations** section, find the **ListTables** sub-microflow.
+4. Drag the **ListTables** sub-microflow onto the work area of your microflow.
+5. Double-click the **ListTables** sub-microflow to configure the required parameters.
+    
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listtables.png" alt="The ListTables sub-microflow">}}
+
+    For the `ListTables` activity, you must specify the region for which you want to retrieve the tables, as well as configure the AWS credentials. Other activities may have different required parameters.
 6. In the **Edit parameters** section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression.
     For a list of available AWS regions, see [AWS_Region](#aws-region).
 7. Click **OK**.

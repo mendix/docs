@@ -28,9 +28,11 @@ A file called *dependencies.json* lists all published and consumed OData service
 * Create an .mda package that includes *dependencies.json*. 
 Go to the **Environments** page in the Developer Portal and click Create Package From Teamserver, or run `mxbuild` (see [MxBuild](/refguide/mxbuild/)).
 
-You can also find your dependencies.json in the `deployment > model` folder of your Mendix application. 
+You can also find *dependencies.json* in the *deployment > model* folder of your Mendix application. 
 
-## 4 Change the Data Structure
+## 4 Change the Data Structure {#transform}
+
+Ensure that your contract metadata will be accepted by transforming *dependencies.json* using the **Transform** endpoint of the **Registration API**.
 
 For this section, you will need:
 * A [Personal Access Token](/developerportal/community-tools/warden/)
@@ -38,42 +40,47 @@ For this section, you will need:
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **Name**)
 * Endpoint location `Value` (found in the *metadata.json* file for your exposed OData service, in an array called **Constants**, under **DefaultValue**)
 
-Use the [Transform](/data-hub/data-hub-catalog/register-data/#transform-api) operation to transform the contents of *dependencies.json* into payloads for other operations.
-
-For detailed steps, see [Preparing Your Service Details Using the Transform Endpoint of the Registration API](/data-hub/data-hub-catalog/register-data/#transform-api).
+Follow the steps for [preparing your service details using the Transform endpoint of the Registration API](/data-hub/data-hub-catalog/register-data/#transform-api).
 
 ## 5 Register the Application
+
+Then, register the application.
 
 For this section, you will need: 
 * A [Personal Access Token](/developerportal/community-tools/warden/)
 * The application **Name**
 
-Next, follow the steps for [registering an application through the Data Hub Registration API](/data-hub/data-hub-catalog/register-data/#register-application).
+Follow the steps for [registering an application through the Data Hub Registration API](/data-hub/data-hub-catalog/register-data/#register-application).
 
-Upon completion, you will have the application UUID.
+Upon completion, you will have the `application_UUID`.
 
 ## 6 Register the Environment 
 
-For this section, you will need:
-
-    Personal Access Token
-    application_UUID
-    Environment Name
-    Environment Location
-    Environment Type
-
-
-Now that you have the UUID, follow the steps for [registering an environment through the Data Hub Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-environment).
-
-
-
-## 7 Register the Endpoint 
+Next, register the environment.
 
 For this section, you will need:
+* A [Personal Access Token](/developerportal/community-tools/warden/)
+* The `application_UUID`
+* Environment `Name`
+* Environment `Location`
+* Environment `Type`
 
-    Personal Access Token
-    application_UUID
-    environment_UUID
-    Service Path, Name, and ContractType
-    Service version Version and Security Scheme
-    Service Contract with Type and Value
+Follow the steps for [registering an environment through the Data Hub Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-environment).
+
+Upon completion, you will have the `environment_UUID`.
+
+## 7 Register the Endpoint(s)
+
+Last, register the service endpoint(s).
+
+For this section, you will need:
+* A [Personal Access Token](/developerportal/community-tools/warden/)
+* The `application_UUID`
+* The `environment_UUID`
+* The Service `Path`, `Name`, and `ContractType`
+* Service `Version` and `Security Scheme`
+* Service `Contract` with `Type` and `Value`
+
+Follow the steps for [registering services (endpoints) through the Data Hub Catalog Registration API](/data-hub/data-hub-catalog/register-data/#register-services).
+
+If you want to register more than one service for the same application and environment at once, add another object to the Endpoints list in the request body.

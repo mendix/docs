@@ -64,18 +64,23 @@ The list above for supported key fields does not include `Date` or `DateTime` da
 Attributes marked as `FC_KeepInContent=false` cannot be used.
 {{% /alert %}}
 
-Attribute types have to be primitive (not complex, collections, or enumerations). The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
+The most commonly used attribute types can be used in your app. The types of the attributes in your app will be based on the types of the attributes in the OData metadata, as given in the following table:
 
-| OData Type | Mendix Type |
-| --- | --- |
+| OData Type                     | Mendix Type                           |
+| ---                            | ---                                   |
 | Binary                         | Binary (but see 3.4) |
 | Boolean                        | Boolean <sup><small>[1]</small></sup> |
 | Byte, SByte, Int16, Int32      | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |
 | Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
+| Enumeration                    | Enumeration |
 | Int64                          | Long |
 | String, Guid                   | String |
 | (Other)                        | (Ignored) |
+
+{{% alert type="info" %}}
+Support for enumerations was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.23/).
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide/call-rest-action/) activity to call these operations.

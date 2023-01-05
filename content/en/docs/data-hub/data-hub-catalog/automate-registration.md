@@ -24,19 +24,19 @@ Before you begin, you need the following:
 
 A file called *dependencies.json* lists all published and consumed OData services in your app. This file contains all of the information you will need to make the API calls in the next steps.
 
-You can either: 
+* Create an .mda package that includes *dependencies.json*. 
+Go to the **Environments** page in the Developer Portal and click Create Package From Teamserver, or run `mxbuild` (see [MxBuild](/refguide/mxbuild/)).
 
-* Create an .mda package to deploy. 
-To do this, go to the **Environments** page in the Developer Portal and click Create Package From Teamserver, or run `mxbuild` (see [MxBuild](/refguide/mxbuild/)).
-
-* Find *dependencies.json* on the hard drive.
-The file is stored in your app directory under `appname-main\javascriptsource\nanoflowcommons\actions`.
 
 ## 4 Change the Data Structure with the Transform API
 
+Use the [Transform](/data-hub/data-hub-catalog/register-data/#transform-api) operation to transform the contents of *dependencies.json* into payloads for other operations.
 
+For detailed steps, see [Preparing Your Service Details Using the Transform API](/data-hub/data-hub-catalog/register-data/#transform-api).
 
 ## 5 Register the Application with the Registration API
+
+
 
 ## 6 Register the Environment with the Registration API
 

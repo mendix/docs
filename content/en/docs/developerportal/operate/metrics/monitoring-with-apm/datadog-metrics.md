@@ -74,6 +74,10 @@ To send your runtime information to Datadog, you need to provide the Datadog API
     * **Value**: *INFO*
 
     This will ensure that some messages are sent from the Mendix Datadog agent to Datadog – for example, that the agent has started. You can change the log level later once you have confirmed that Datadog is receiving them. See [Log Levels](#log-levels), below for more information on valid values for this custom environment variable.
+    
+    {{% alert color="warning" %}}
+    Be aware that the variable *DD_LOG_LEVEL* defines a log level of the log messages which are being sent to Datadog via Datadog Agent. The variable does **not** define the logging level of a Mendix application itself. Learn more about how to [set log levels](https://docs.mendix.com/howto/monitoring-troubleshooting/log-levels/) of the application.
+    {{% /alert %}}
 
 8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
 

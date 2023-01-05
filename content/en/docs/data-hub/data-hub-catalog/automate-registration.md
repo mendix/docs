@@ -1,5 +1,6 @@
 ---
-title: "Automate Catalog Registration"
+title: "Automate Catalog Registration on a (Virtual) Private Cloud"
+linktitle: "Automate Catalog Registration"
 url: /data-hub/data-hub-catalog/automate-registration/
 category: "Data Hub Catalog"
 weight: 70
@@ -43,11 +44,10 @@ For detailed steps, see [Preparing Your Service Details Using the Transform API]
 ## 7 Register the Endpoint with the Registration API
 
 
-    1. explanation of where to begin: .mda from Studio Pro or mxbuild outputs a dependencies.json file that gives you the info you need for the next three API calls
-    2. recommend PUT over POST because then people can run the pipeline more than once!
-    3. pointer to something about how to authenticate
-    4. call the Transform API to change the data structure
-    5. call the Registration API to register the application
-    6. the things that you’ve already decided about this app the first time you deployed it are: the name, location, and prod/non-prod-ness of the environment. if you’re on the Mendix for Private Cloud, check the info using this API endpoint.
-    7. call the Registration API to register the environment
-    8. call the Registration API to register the endpoint
+    1. recommend PUT over POST because then people can run the pipeline more than once!
+    2. pointer to something about how to authenticate
+    3. call the Transform API to change the data structure
+    4. call the Registration API to register the application
+    5. the things that you’ve already decided about this app the first time you deployed it are: the name, location, and prod/non-prod-ness of the environment. if you’re on the Mendix for Private Cloud, check the info using this API endpoint.
+    6. call the Registration API to register the environment
+    7. call the Registration API to register the endpoint

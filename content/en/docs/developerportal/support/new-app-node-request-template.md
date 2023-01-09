@@ -3,7 +3,7 @@ title: "App Node Requests"
 url: /developerportal/support/new-app-node-request-template/
 description: "Describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud."
 category: "Mendix Support"
-weight: 3
+weight: 30
 tags: ["Support", "app node", "node", "license", "subscription secret"]
 aliases:
     - /developerportal/support/new-app-request-template.html

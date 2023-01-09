@@ -33,8 +33,6 @@ Mendix Support will only assist when using platform-supported components. See th
 
 ## 2 Can Data Be Manipulated In the Client?
 
-Most common related vulnerability scan terminology for this question: XPath manipulation, XPath injection, query manipulation, query injection, user privilege escalation
-
 One common concern is that end-users can use tools in their browsers or on their devices to change the data which is held locally and use this to get access to information which should not be available to them. This section addresses several of these concerns and explains how the Mendix Runtime Server protects your data.
 
 ### 2.1 Mendix Security
@@ -75,17 +73,13 @@ If a microflow is available for your original user role, but the button to trigg
 
 ## 3 Can End-Users Upload Files Containing Malicious Content Such As Code Injection?
 
-Most common related vulnerability scan terminology for this question: uploading malicious files, uploading malicious content, file scanning, virus scanning, malware scanning
-
 Uploaded files can’t be executed on the server. The allowed extensions for files uploaded through the file manager widget can be restricted by configuration. However, this is not meant as a security feature, as the file manager widget does not check the contents of a file to see if it matches the provided extension. See [our documentation on the File Manager widget](/refguide/file-manager/#allowed-extensions) for more information.
 
-If you want to scan uploaded files for malicious content, you have to implement this yourself. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
+If you want to scan uploaded files for malicious content, you have to implement virus and malware scanning yourself. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
 
 ## 4 Why Are Vulnerabilities Reported In Some Java Libraries?
 
-Most common related vulnerability scan terminology for this question: outdated libraries, vulnerable libraries , outdated code, vulnerable code, outdated dependencies, vulnerable dependencies
-
-Security scanning tools can report vulnerabilities in Java libraries. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
+Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
 * The jar is coming from a platform supported module. For more information about support categories see [Marketplace Content Support](/appstore/general/app-store-content-support/).
 * Your module is updated to the latest version.
@@ -105,7 +99,7 @@ If an older library provides all the functionality that is required and doesn't 
 
 ## 5 Why Aren’t All Security Attributes Set For The Cookies In My App?
 
-Most common related vulnerability scan terminology for this question: insecure cookie settings, vulnerable cookies, cookies without security flag settings, cookie vulnerability, cookie with insecure, improper or missing attributes, cookie not having attribute, HTTP header
+Security scanning tools can report vulnerabilities in the way Mendix handles cookies. For example that cookies are insecure or vulnerable, or have improper or missing attributes. The sections below explain why these might be being reported.
 
 ### 5.1 Cookie missing ‘Secure’ attribute
 
@@ -125,11 +119,11 @@ Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never con
 
 ## 6 Why Are Not All Security-related HTTP Headers Set For My App?
 
-Most common related vulnerability scan terminology for this question: missing security headers, missing Access-Control-Allow-Origin, Content-Security-Policy, Referrer-Policy, X-Content-Type-Options, X-Frame-Options, X-Permitted-Cross-Domain-Policies, X-XSS-Protection or Pragma header, insecure header configuration, missing content security policy, misconfigured content security policy, insecure value for header, banner grabbing, sensitive information in Server response header, information disclosure, server information
+Security scanning tools can report vulnerabilities in the way Mendix sets HTTP Headers. These are usually related to Access-Control-Allow-Origin, Content-Security-Policy, Referrer-Policy, X-Content-Type-Options, X-Frame-Options, X-Permitted-Cross-Domain-Policies, X-XSS-Protection, or Pragma headers, or general comments about information disclosure.
 
 ### 6.1 Missing Security-Related HTTP Headers / Insecure Value for Header 
 
-Please see /howto/security/best-practices-security/#adding-http-header.
+You can add your own HTTP headers as described in the [Adding HTTP Headers](/howto/security/best-practices-security/#adding-http-header) section of *How To Implement Best Practices for App Security*.
 
 ### 6.2 Missing/Misconfigured Content Security Policy (CSP)
 
@@ -145,11 +139,9 @@ A good example of this is leaking the web server information (e.g. "Server: ngin
 
 ## 7 Why Are Static Files Publicly Accessible In My App?
 
-Most common related vulnerability scan terminology for this question: directory listing, files accessible on the web server, insecure access configuration on web server, unauthorized access on web server
+Mendix apps use two types of content: static content and dynamic content. Static content consists mainly of page templates (e.g., `*.xml` and *.xml.gz), images (e.g., `*.png`), icons (e.g., `*.svg`), JavaScript files (e.g., `*.js`), and styling (e.g., `*.css`). The dynamic content is the data that is shown on the page. This dynamic data is retrieved from the database. 
 
-Mendix apps use 2 types of content: static content and dynamic content. Static content consists mainly of page templates (e.g., `*.xml` and *.xml.gz), images (e.g., `*.png`), icons (e.g., `*.svg`), JavaScript files (e.g., `*.js`), and styling (e.g., `*.css`). The dynamic content is the data that is shown on the page. This dynamic data is retrieved from the database. 
-
-By default, the static content of your app is publicly available. The Mendix Client expects this and will not work properly if it is not. You can request the static content without signing in. This is not an issue, as the static content doesn't usually contain any sensitive data. It provides the framework within which data is displayed and logic applied. You should not add sensitive data to your static files (for example in a text widget on a page): Mendix apps provide more secure ways to store sensitive data.
+By default, the static content of your app is publicly available. This means you can make a directory listing and access files on the web server. The Mendix Client expects this and will not work properly if it is not. You can request the static content without signing in. This is not an issue, as the static content doesn't usually contain any sensitive data. It provides the framework within which data is displayed and logic applied. You should not add sensitive data to your static files (for example in a text widget on a page): Mendix apps provide more secure ways to store sensitive data.
  
 You can limit access to the static content of your app by [implementing an access restriction profile](/developerportal/deploy/access-restrictions/) that limits access to the whole app. It is not possible to restrict access only for the static files.
 

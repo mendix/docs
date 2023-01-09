@@ -227,7 +227,7 @@ Implement custom logic with a microflow by doing the following:
     {{< figure src="/attachments/refguide/quickstart-guide/part1/microflow.png" width="450px" alt="Microflow">}}
 
 1. Add a decision to the flow (The orange diamond shape) from the toolbox. 
-1. Give it the caption `Has title?` and provide the following expression (function 'trim' will [always return a string](/refguide/string-function-calls/trim/)):
+1. Give it the caption `Has title?` and provide the following expression (function 'trim' will [always return a string](/refguide/string-function-calls/#trim)):
 
     ```text
     trim($Picture/Title) != ''

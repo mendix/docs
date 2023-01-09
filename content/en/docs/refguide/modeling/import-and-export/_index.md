@@ -35,7 +35,7 @@ Be careful when importing elements, as you can overwrite your existing work. Pay
 
 A Mendix package (*.mpk*) file can store a complete Mendix app. 
 
-You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as an out-of-the-box solution. In this case, the solution is [set up](/appstore/creating-content/sol-setup/) for you. These solutions are compatible with future [upgrades](/appstore/creating-content/sol-upgrade/).
+You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as an out-of-the-box solution. In this case, the solution is [set up](/appstore/creating-content/sol-set-up/) for you. These solutions are compatible with future [upgrades](/appstore/creating-content/sol-upgrade/).
 
 To import a complete app or solution package, follow these steps:
 

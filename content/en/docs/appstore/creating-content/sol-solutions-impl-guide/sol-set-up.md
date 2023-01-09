@@ -32,4 +32,4 @@ To set up a solution, follow these steps:
 
 ### 4 Read More
 
-* [Upgrade a Solution](/appstore/creating-content/sol-upgrade) 
+* [Upgrade a Solution](/appstore/creating-content/sol-upgrade/) 

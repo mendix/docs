@@ -30,7 +30,7 @@ To upgrade a Mendix solution, make sure the following prerequisites are met:
 
 To upgrade a solution, follow these steps:
 
-1. Open Studio Pro and click **File** > **Upgrade Solution**.
+1. Open Studio Pro and click **File** > **Upgrade Solution** (via the feature flag).
 
     {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-upgrade.png" alt="Upgrade Solution" >}}
 

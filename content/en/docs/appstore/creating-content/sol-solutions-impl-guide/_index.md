@@ -29,13 +29,13 @@ There are three main stages a solution goes through during its lifecycle:
 
 As the **Build** stage is an iterative process, a new version is periodically released by the ISV. In the **Implement** stage, the implementer needs to incorporate the changes from this new version into the current implementation.
 
-To be able to implement, you must set up the solution in the proper way to enable future upgrades to new versions provided by the ISV. For more information, see [Set Up a Solution](/appstore/creating-content/sol-solutions-impl-guide/sol-set-up/).
+To be able to implement, you must set up the solution in the proper way to enable future upgrades to new versions provided by the ISV. For more information, see [Set Up a Solution](/appstore/creating-content/sol-set-up/).
 
-For details on the upgrade procedure for a solution that has been set up correctly, see [Upgrade a Solution](/appstore/creating-content/sol-solutions-impl-guide/sol-upgrade/).
+For details on the upgrade procedure for a solution that has been set up correctly, see [Upgrade a Solution](/appstore/creating-content/sol-upgrade/).
 
 ## 4 Read More
 
 * [Develop a Solution](/appstore/creating-content/sol-development/)
 * [Architect an Adaptive Solution](/appstore/creating-content/sol-architecting/)
-* [Set Up a Solution](/appstore/creating-content/sol-solutions-impl-guide/sol-set-up/)
-* [Upgrade a Solution](/appstore/creating-content/sol-solutions-impl-guide/sol-upgrade/)
+* [Set Up a Solution](/appstore/creating-content/sol-set-up/)
+* [Upgrade a Solution](/appstore/creating-content/sol-upgrade/)

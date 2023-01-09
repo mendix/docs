@@ -140,20 +140,20 @@ Attachments added to Mendix Support requests will be automatically deleted after
 
 ### 5.2 Requirements for Security Support Tickets{#security-tickets}
 
-If you are reporting a vulnerability or security issue, for example a warning issued by a scanning tool, please follow these steps to ensure your ticket is dealt with as efficiently as possible.
+If you are reporting a security finding or other security-related issue, for example a warning issued by a scanning tool, please follow these steps to ensure your ticket is dealt with as efficiently as possible.
 
 1. Ensure you are using the current major version of Mendix, or the [LTS](/releasenotes/studio-pro/lts-mts/) release of a previous major version which has not reached end of support.
-1. If the vulnerability is in a marketplace component
+1. If the security finding is in a marketplace component
     1. check that it is platform supported — community-supported components are not supported by Mendix support.
     1. ensure the component is up to day.
-1. Review the [Frequently asked questions - Security](/developerportal/support/vulnerability-faq) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
+1. Review the [Frequently asked questions - Security](/developerportal/support/security-findings-faq) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
     * A description of the issue found — please submit only one error per support ticket.
     * Where the issue was found — for example, which url, which Mendix version, the app id?
     * How the issue was found — for example, was it from scanning an app and, if so, which tool was used?
     * A copy of an app containing the reported issue — see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/) for instructions on creating an app package.
-    * An actual exploitation scenario, if possible, including steps showing how to reproduce and exploit the vulnerability.
+    * An actual exploitation scenario, if possible, including steps showing how to reproduce and exploit a vulnerability.
 
 {{% alert color="info" %}}
 Mendix Support will only accept security findings for the Mendix platform. This includes the Mendix runtime, any platform-supported components, and Mendix applications provided to support you to design, develop, deploy, and monitor your apps and Mendix applications used for managing your users and resources. Mendix Support will not look into security findings related to our marketing websites.

@@ -288,6 +288,14 @@ The most common consistency errors are connected with not configuring the on cli
 
 To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click event. 
 
-## 10 Read More
+## 10 Icon Collection Consistency Errors
+
+The icon collections have configurable class names, icon prefixes, and icon names. These properties are used to generate the CSS code for our pages, so to prevent generating invalid CSS we have the following 2 consistency errors:
+| Error code | Message in the Error Pane | Cause of the Error | Way to Fix |
+| ---------- | ------------------------- | ------------------ | ---------- |
+|   CE1616   | You cannot duplicate the icon collection class name {icon collection class name}. | There is more than one icon collection configured with the same class name | Change the class name of one of the indicated icon collections |
+|   CE5696   | Duplicate CSS class name {icon class name} for icons, resulting from the combination of icon collection prefix and icon name. | There is more than one icon where the combination of the configured icon collection prefix and its icon name has generated the same class name | Do one of the following: <ul><li>Ensure that the icons listed have unique names that aren't used in any of the icon collection prefixes.</li><li>Ensure that all the icon collections related to the icons have unique prefixes with text that won't be used within icon names.</li></ul> |
+
+## 11 Read More
 
 * [Pages](/refguide/pages/) 

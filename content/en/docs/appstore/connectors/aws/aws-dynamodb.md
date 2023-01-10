@@ -126,7 +126,7 @@ For example, to list all Amazon DynamoDB tables for a specific region, implement
 36. In the **Edit Change Item** dialog box, in the **Member** drop-down, select the attribute that you previously created, for example, `TableName`.
 37. In the expression editor, type `$IteratorListTable/Name`, and then click **OK**.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow.png" alt="The microflow after mapping the properties">}}
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
 
 38. Configure a method for triggering the **ACT_ListTables** microflow.
     For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).

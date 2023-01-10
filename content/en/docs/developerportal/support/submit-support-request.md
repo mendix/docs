@@ -142,7 +142,9 @@ Attachments added to Mendix Support requests will be automatically deleted after
 
 If you are reporting a security finding or other security-related issue, for example a warning issued by a scanning tool, please follow these steps to ensure your ticket is dealt with as efficiently as possible.
 
-1. Ensure you are using the current major version of Mendix, or the [LTS](/releasenotes/studio-pro/lts-mts/) release of a previous major version which has not reached end of support.
+1. Ensure you are using one of:
+    * the current major version of Mendix, preferably an [MTS](/releasenotes/studio-pro/lts-mts/#mts) minor version as these continue to get security updates. 
+    * the [LTS](/releasenotes/studio-pro/lts-mts/#lts) version of a previous major version which has not reached end of support.
 1. If the security finding is in a marketplace component
     1. check that it is platform supported — community-supported components are not supported by Mendix support.
     1. ensure the component is up to date.

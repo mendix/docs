@@ -47,7 +47,7 @@ For example, to list all Amazon DynamoDB tables for a specific region, implement
 
         For more information about the required parameters and how to obtain them, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 
-        {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the App Explorer">}}
+        {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" height="60%" alt="The SessionCredentials and StaticCredentials items in the App Explorer">}}
 
 2. In the **App Explorer**, find and open the domain model for your app.
 3. Right-click on the working area of the domain model, and then click **Add entity**.

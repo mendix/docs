@@ -20,7 +20,7 @@ Version Control allows you to manage your app development in two ways:
 Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
 
 {{% alert color="info" %}}
-As of version 9.12.0 [Teamserver Git is GA](/releasenotes/studio-pro/9.12/#team-server-git). BYO Git (Bring Your Own) is in Beta since Mendix 9.6.0 see [this document](/refguide/on-premises-git/) for more details. 
+Since Mendix version 9.12.0, [Teamserver Git is released for GA](/releasenotes/studio-pro/9.12/#team-server-git). BYO Git (Bring Your Own) is in Beta since Mendix version 9.6.0. For more details, see [Working with Git On-Premises Version Control Server](/refguide/on-premises-git/). 
 {{% /alert %}}
 
 ## 2 Concepts {#concepts}

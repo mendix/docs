@@ -26,14 +26,14 @@ day-of-year-from-dateTime ( attribute [, timezone ] )
 
 ## 3 Examples
 
-This query returns all the logs where the day in the year in `DateAttribute` is 30 in the local time zone (for example, "2011-01-30" and "2012-01-30"):
+This query returns all the logs where the day in the year in `DateAttribute` is 40 in the local time zone (for example, "2011-02-09" and "2012-02-09"):
 
 ```java {linenos=false}
-//Logging.Log[day-of-year-from-dateTime(DateAttribute) = 30]
+//Logging.Log[day-of-year-from-dateTime(DateAttribute) = 40]
 ```
 
-This query returns all the logs where the day in the year in `DateAttribute` is 30 in the New York time zone (for example, "2011-01-30" and "2012-01-30"):
+This query returns all the logs where the day in the year in `DateAttribute` is 40 in the New York time zone (for example, "2011-02-09" and "2012-02-09"):
 
 ```java {linenos=false}
-//Logging.Log[day-of-year-from-dateTime(DateAttribute, 'America/New_York') = 30]
+//Logging.Log[day-of-year-from-dateTime(DateAttribute, 'America/New_York') = 40]
 ```

@@ -1,5 +1,5 @@
 ---
-title: "Automate Catalog Registration on a (Virtual) Private Cloud"
+title: "Automate Catalog Registration"
 linktitle: "Automate Catalog Registration"
 url: /data-hub/data-hub-catalog/automate-registration/
 category: "Data Hub Catalog"

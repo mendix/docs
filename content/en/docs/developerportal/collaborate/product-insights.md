@@ -13,23 +13,23 @@ This feature is in Beta. For more information on Beta products, see [Beta Releas
 
 ## 1 Introduction
 
-By using **Product Insights** in the Developer Portal and the [Product Insights – Mini-Surveys](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini-surveys for target user groups you would like to reach to collect their feedback and gain valuable product insights.
+By using **Product Insights** in the Developer Portal and the [Product Insights – Mini-Surveys](/appstore/modules/product-insights/) module in the Marketplace, you can set up mini-surveys for the target user groups you would like to reach and collect their feedback to gain valuable product insights.
 
-You begin with creating the mini-survey with **Product Insights** in the Developer Portal, and then you implement the mini-survey by configuring the Product Insights – Mini-Surveys module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **Product Insights** and export the responses to an XLSX file.
+You begin with creating the mini-survey in **Product Insights** in the Developer Portal, and then you implement the mini-survey by configuring the **Product Insights – Mini-Surveys** module in Studio Pro. After the mini-survey is running, you can view responses that have been collected in **Product Insights** and export the responses to an XLSX file.
 
-This document first describes all the pages in **Product Insights** in the Developer Portal, and then describes the procedure for running a mini-survey.
+This document first describes all the pages in **Product Insights** in the Developer Portal, and then it describes the procedure for running a mini-survey.
 
 ## 2 Product Insights Configuration 
 
 ### 2.1 Survey Overview {#survey-overview}
 
-If an app you open in Product Insights already has existing mini-surveys, the **Survey Overview** page opens first.
+When you click **Product Insights** for an app that already has existing mini-surveys, the **Survey Overview** page opens first.
 
-On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened in Product Insights.
+On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Product Insights.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/app-drop-down-list.png" >}}
 
-The **Survey Overview** page has three tabs: the **Active** tab, the **Archived** tab, and the **Settings** tab.
+The tabs of the **Survey Overview** page are described below.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/survey-overview.png" >}}
 

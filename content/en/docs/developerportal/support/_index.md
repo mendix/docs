@@ -193,7 +193,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 The container runtime platform refers to the platform for managing, creating, destroying and scaling of runtime containers. In the Mendix Public Cloud and Cloud Dedicated Cloud Foundry is used.
 
-Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP or IBM Cloud, the selected third party can diagnose this component.
+Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP, the selected third party can diagnose this component.
 
 ### 10.4 Buildpack, m2ee, and Service Console
 

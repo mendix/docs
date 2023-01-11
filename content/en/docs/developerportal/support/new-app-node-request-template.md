@@ -31,10 +31,6 @@ Mendix Support will contact the [Technical Contact](/developerportal/collaborate
 
 If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP BTP*.  
 
-{{% alert color="info" %}}
-Apps in the IBM Cloud Portal are licensed in a different way – see [IBM Cloud](/developerportal/deploy/ibm-cloud/) for more information.
-{{% /alert %}}
-
 ## 3 Resizing an Existing Environment{#resize}
 
 If your environment is not the right size, for example it has too little database storage, you can request a resize from Mendix Support.

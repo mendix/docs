@@ -67,7 +67,7 @@ The list on this tab contains the following information:
 
 * **Survey ID** – This is the unique ID of the mini-survey.
 * **Name** – This is the name of the mini-survey.
-* **Responses** – This shows the number of the responses that were collected for the mini-survey.
+* **Responses** – This shows the number of responses that were collected for the mini-survey.
 * **Start & End Dates** – This shows the start and end dates of the mini-survey.
 * **Created on** – This shows when the mini-survey was created.
 
@@ -87,37 +87,37 @@ When you click a mini-survey on the [Survey Overview](#survey-overview) page, th
 
 On the upper-right corner, you can find the following buttons:
 
-* **Share Link** – Clicking **Share Link** copies the link to this page, which allows you to share the survey details page with others.
+* **Share Link** – Clicking **Share Link** copies the link to this page, which allows you to share the survey details with others.
 * **Archive Survey** – Clicking **Archive Survey** archives the survey. Once a survey is archived, you can find it on the [Archived](#archived) tab of the **Survey Overview** page.
 * **Export Responses** – Clicking **Export Responses** exports the responses that have been collected to an XLSX file.
 
-Depending on the [status](#survey-status) of the mini-survey, the survey details page may contain some or all of the following tabs: the **Settings** tab, the **Implementation** tab, the **Responses** tab, and the **Test data** tab.
+Depending on the [status](#survey-status) of the mini-survey, the survey details page may contain some or all of the following tabs: **Settings**, **Implementation**, **Responses**, and **Test data**.
 
 #### 2.2.1 Settings Tab {#survey-details-settings}
 
-The **Setting** tab is available for mini-surveys with all the statuses. It gives an overview of the survey details, including **Survey ID**.
+This tab is available for mini-surveys with all the statuses. It gives an overview of the survey details, including **Survey ID**.
 
 #### 2.2.2 Implementation Tab {#survey-details-implementation}
 
-The **Implementation** tab is available for mini-surveys with the status of **Draft**, **Ready for Implement**, or **Running**.
+This tab is available for mini-surveys with the status of **Draft**, **Ready for Implement**, or **Running**.
 
-On this tab, you can find information about how to implement the mini-survey in Studio Pro. For a more detailed procedure, see the [Implement a Mini-Survey](#implement-survey) section instead.
+On this tab, you can find information about how to implement the mini-survey in Studio Pro. For a more detailed procedure, see the [Implement a Mini-Survey](#implement-survey) section.
 
 #### 2.2.3 Responses Tab {#responses}
 
-The **Responses** tab is available for mini-surveys with the status of **Running** or **Evaluating Responses**. 
+This tab is available for mini-surveys with the status of **Running** or **Evaluating Responses**. 
 
 On this tab, you can view all the responses that have been collected for the mini-survey.
 
 #### 2.2.4 Test Data Tab {#test-data}
 
-The **Test data** tab is available for mini-surveys with the status of **Ready for Implement** or **Running**.
+This tab is available for mini-surveys with the status of **Ready for Implement** or **Running**.
 
 This tab shows the test data that has been collected from testers in the test mode or Mendix SSO test users.
 
 You can collect test data using two methods:
 
-* Change the value of the **TEST_MODE** constant in the Product Insights – Mini-Surveys module. This will show **[TEST_MODE]** on the survey widget UI.
+* Change the value of the **TEST_MODE** constant in the [Product Insights – Mini-Surveys](/appstore/modules/product-insights/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** check box on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
 ### 2.3 Product Insights Settings {#product-insights-settings}
@@ -132,32 +132,33 @@ Here you can view the existing API key, or generate an API key if there is not o
 
 ### 3.1 Creating a Mini-Survey {#create-survey}
 
-1. Open the app in the Developer Portal.
-2. Click **Product Insights**. Depending on if there are existing mini-surveys for this app, you see one of the following scenarios:
+To create a mini-survey, follow these steps:
 
-   * If there are already existing mini-surveys for this app, [Survey Overview](#survey-overview) opens. The page lists all the existing mini-surveys, and also shows the **Create New Survey** button.
-   * If there are no existing mini-surveys for this app, you only see the **Create New Survey** button.
-3. Click the **Create New Survey** button.
-4. Enter the following information for your mini-survey:
+1. Open the app in the Developer Portal and click **Product Insights**. What you see depends on whether there are existing mini-surveys for the app:
+
+   * If there are existing mini-surveys for the app, [Survey Overview](#survey-overview) opens, which lists all the existing mini-surveys and shows the **Create New Survey** button
+   * If there are no existing mini-surveys for this app, you only see the **Create New Survey** button
+2. Click **Create New Survey**.
+3. Enter the following information for your mini-survey:
 
    * **Background**
      * **Name** – Give the mini-survey a name.
      * **Goal** – Describe the goal of the mini-survey.
-   * **Conditions** – The conditions here you enter do not affect the mini-survey directly. You still need to configure these conditions later in Studio Pro.
+   * **Conditions** – The conditions you enter here do not affect the mini-survey directly. You still need to configure these conditions later in Studio Pro.
      * **Where** – Describe the location where the mini-survey appears.
      * **When & How** – Describe what can trigger the mini-survey to appear.
-     * **Target User Group (Optional)** – Describe the target user group which you would like to reach. Leaving the text box empty means you woud like to reach all users.
-     * **Attachments (Optional)** – Add attachments if needed. Supported formats are office files, .*pdf*, .*text*, .*png*, and .*jpeg*.
+     * **Target User Group (Optional)** – Describe the target user group you would like to reach. Leaving the text box empty means you woud like to reach all users.
+     * **Attachments (Optional)** – Add attachments if needed. Supported formats are Microsoft Office files, .*pdf*, .*text*, .*png*, and .*jpeg*.
    * **Settings** – The settings in this section take effect immediately. You do not need to implement these settings later in Studio Pro.
      * **Runtime** –  Set the start and end time of the mini-survey.
      * **Toaster Placement** – Set on which corner of the page the mini-survey appears.
    * **Questions** – Set up to three questions per mini-survey.
 
-5. Click **Preview** to see how the mini-survey looks once it is live.
-6. If the preview looks good, click **Mark as Ready** to complete the creation of the survey. The survey details page opens and shows the **Survey ID**.
-7. Copy the **Survey ID** and save it for later use. You will need it when you implement the mini-survey. 
+4. Click **Preview** to see how the mini-survey looks once it is live.
+5. If the preview looks good, click **Mark as Ready** to complete the creation of the survey. The survey details page opens and shows the **Survey ID**.
+6. Copy the **Survey ID** and save it for later use. You will need it when you implement the mini-survey. 
 
-Now you can proceed to [implement the mini-survey](#implement-survey).
+Now you can [implement the mini-survey](#implement-survey).
 
 ### 3.2 Editing a Mini-Survey {#edit-survey}
 

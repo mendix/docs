@@ -9,12 +9,13 @@ info:
     url: 'https://support.mendix.com'
     email: support@mendix.com
   termsOfService: 'https://www.mendix.com/terms-of-use/'
-  description: The API to Cloud Portal
+  description: The API to manage apps deployed to the Mendix Cloud.
 paths:
-  /apps:
   '/apps/{appId}':
+    parameters:
+      - $ref: '#/components/parameters/appId'
     patch:
-      summary: ''
+      summary: Change technical contact for an app
       operationId: patch-apps-technicalContact
       responses:
         '200':
@@ -57,7 +58,7 @@ paths:
       - $ref: '#/components/parameters/appId'
       - $ref: '#/components/parameters/environmentId'
     get:
-      summary: Get permissions
+      summary: Get an array of permissions to an environment for team members of an app
       tags:
         - permissions
       responses:
@@ -102,7 +103,7 @@ paths:
         '500':
           $ref: '#/components/responses/error500'
       operationId: get-environment-permissions
-      description: Retrieves permissions of application team members for a environment
+      description: Retrieve an array of application team members with their permissions to the specified environment.
       parameters:
         - schema:
             type: string
@@ -112,7 +113,7 @@ paths:
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/offset'
     patch:
-      summary: Update permissions
+      summary: Update the list of permissions to an environment for team members of an app
       operationId: update-environment-permissions
       responses:
         '200':
@@ -148,7 +149,7 @@ paths:
           $ref: '#/components/responses/error404_Patch_Permission'
         '500':
           $ref: '#/components/responses/error500'
-      description: Updates one or more application team members cloud permission for a environment
+      description: Updates the permissions of one or more application team members to the specified environment.
       requestBody:
         content:
           application/json:
@@ -175,64 +176,18 @@ paths:
         - permissions
 tags:
   - name: apps
+  - name: companies
+  - name: environments
+  - name: packages
   - name: permissions
 servers:
   - url: 'https://cloud.home.mendix.com/api/v3'
-    description: Deploy API
+    description: Production
 components:
   requestBodies: {}
   schemas:
-    app:
-      description: 'An app is identified by the ID of Sprintr projects. Cloud Portal adds its own set of attributes to such a project, related to the function of Cloud Portal.'
-      type: object
-      title: app
-      properties:
-        id:
-          $ref: '#/components/schemas/appId'
-        name:
-          type: string
-          example: My fabulous app
-          description: The name of the app
-        hasLicenseType:
-          type: string
-          enum:
-            - free
-            - licensed
-          description: The type of license. Free apps are also known as sandboxes and they are created directly from Studio (Pro).
-        subdomain:
-          type: string
-          example: myfabulousapp
-          description: The environment URL's are based on this value. It is set on app creation and cannot be changed. The value is unique in the Mendix cloud.
-        technicalContactMembership:
-          $ref: '#/components/schemas/membership'
-      required:
-        - id
-        - name
-        - hasLicenseType
-        - subdomain
-        - technicalContactMembership
-    apps:
-      description: A list of apps.
-      type: object
-      properties:
-        apps:
-          type: array
-          description: The list of apps.
-          items:
-            $ref: '#/components/schemas/app'
-        pagination:
-          $ref: '#/components/schemas/pagination'
-      required:
-        - apps
-        - pagination
-    appId:
-      type: string
-      title: appId
-      format: uuid
-      example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: The ID of the Sprintr project. In Sprintr this is called AppID and it is a UUID format.
     error:
-      description: The error object explaining what happened.
+      description: An error object explaining what happened.
       type: object
       properties:
         error:
@@ -261,11 +216,11 @@ components:
                   name:
                     type: string
                     example: query-parameter
-                    description: The group or type this messages is for.
+                    description: The group or type this message is for.
                   reason:
                     type: string
                     example: Value 'lisense' is not supported
-                    description: Feedback what is wrong or expected.
+                    description: Feedback on what is wrong or what was expected.
                 required:
                   - name
                   - reason
@@ -279,84 +234,22 @@ components:
         offset:
           type: integer
           minimum: 0
-          description: The offset used to get the list of objects. It starts at 0.
+          description: The offset used to get the array of objects. It starts at 0.
           example: 60
         limit:
           type: integer
           minimum: 1
-          description: The maximum amount of objects to retrieve. When not specified then the server will set use a default value (for example 20). When set larger than supported then the supported maximum is used.
+          description: 'The maximum number of objects to retrieve. When not specified then the server will set use the default value. If this is set to a number which is greater than the maximum supported number of objects, then the supported maximum is used.'
           example: 20
         size:
           type: integer
           minimum: 0
-          description: The amount of objects in the response.
+          description: The number of objects in the response.
           example: 17
       required:
         - offset
         - limit
         - size
-    environment:
-      description: ''
-      type: object
-      title: environment
-      properties:
-        id:
-          $ref: '#/components/schemas/environmentId'
-        appId:
-          $ref: '#/components/schemas/appId'
-        name:
-          type: string
-          description: The name of the environment.
-          example: Test
-        hasState:
-          type: string
-          enum:
-            - stopped
-            - running
-            - notdeployed
-          description: The state of the environment.
-          example: running
-        isProduction:
-          type: boolean
-          default: false
-          description: Indicates if the environment is marked as Production.
-        url:
-          type: string
-          format: uri
-          description: The full URL to access the app running on the environment.
-        dbVersion:
-          type: string
-          description: The database version used.
-        javaVersion:
-          type: string
-          description: The Java version used by the runtime.
-        package:
-          $ref: '#/components/schemas/package'
-      required:
-        - id
-        - appId
-        - name
-        - hasState
-        - isProduction
-        - url
-    environments:
-      title: environments
-      type: object
-      properties:
-        environments:
-          type: array
-          items:
-            $ref: '#/components/schemas/environment'
-        pagination:
-          $ref: '#/components/schemas/pagination'
-      required:
-        - environments
-        - pagination
-    environmentId:
-      type: string
-      title: environmentId
-      format: uuid
-      example: 22064f8f-ee55-438c-9ab2-182f2f8e5f2f
     permission:
       type: object
       x-examples: {}
@@ -401,103 +294,6 @@ components:
           type: boolean
         canManagePrivileges:
           type: boolean
-    package:
-      title: package
-      type: object
-      properties:
-        id:
-          $ref: '#/components/schemas/packageId'
-        appId:
-          $ref: '#/components/schemas/appId'
-        modelVersion:
-          type: string
-          example: 1.3.0.623
-          description: The version of the model. This is set by the developer that created the package.
-        runtimeVersion:
-          type: string
-          example: 9.12.0.41679
-          description: The Mendix runtime version.
-        createdOn:
-          type: string
-          format: date-time
-        expiresOn:
-          type: string
-          format: date-time
-          description: The date the package will expire when not in use. This is set only at packages that are unused.
-        description:
-          type: string
-        fileName:
-          type: string
-          example: MainLine-1.3.0.623.mda
-          description: The MDA file name.
-        fileSize:
-          type: integer
-          minimum: 0
-          example: 42364523
-          description: The size of the MDA file in bytes.
-        url:
-          type: string
-          format: uri
-          description: Direct download URL of the MDA file. This URL is valid for a limited time.
-      required:
-        - id
-        - appId
-        - modelVersion
-        - runtimeVersion
-        - createdOn
-        - fileName
-        - fileSize
-        - url
-    packages:
-      title: packages
-      type: object
-      properties:
-        package:
-          type: array
-          items:
-            $ref: '#/components/schemas/package'
-        pagination:
-          $ref: '#/components/schemas/pagination'
-      required:
-        - package
-        - pagination
-    packageId:
-      type: string
-      title: packageId
-      format: uuid
-      example: 3bda6b5b-f038-4c09-8697-d065446b7084
-      description: The ID of the package.
-    membership:
-      title: membership
-      type: object
-      description: The membership of a Mendix user in an app.
-      properties:
-        userId:
-          $ref: '#/components/schemas/userId'
-        appId:
-          $ref: '#/components/schemas/appId'
-        name:
-          type: string
-          description: The full name of the user.
-          example: Jane Doe
-        hasType:
-          type: string
-          enum:
-            - technicalcontact
-            - other
-          description: The role of the user in this app.
-        hasStatus:
-          type: string
-          enum:
-            - active
-            - inactive
-          description: The user's status in this membership. A user can have an active status in the Mendix platform but has an inactive status for an app.
-      required:
-        - userId
-        - appId
-        - name
-        - hasType
-        - hasStatus
     userId:
       type: string
       title: userId
@@ -511,7 +307,7 @@ components:
       schema:
         type: integer
         minimum: 0
-      description: Used with paging and defines the offset
+      description: Used with paging and defines the offset.
     limit:
       name: limit
       in: query
@@ -519,14 +315,14 @@ components:
       schema:
         type: integer
         minimum: 1
-      description: Used with paging and defines the maximum amount of objects to return
+      description: Used with paging and defines the maximum number of objects to return.
     appId:
       name: appId
       in: path
       schema:
         format: uuid
         type: string
-      description: The ID of Sprintr project or app
+      description: The unique ID of an app.
       required: true
     environmentId:
       name: environmentId
@@ -535,46 +331,11 @@ components:
       schema:
         type: string
         format: uuid
-      description: The ID of an environment
-    companyId:
-      name: companyId
-      in: path
-      required: true
-      schema:
-        type: string
-        format: uuid
-      description: The ID of a company
-    hasLicenseType:
-      name: hasLicenseType
-      in: query
-      required: false
-      schema:
-        type: string
-        enum:
-          - free
-          - licensed
+      description: The ID of an environment.
   responses:
-    error400:
-      description: |-
-        The request likely contains invalid data or is missing data.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error'
-          examples:
-            example-1:
-              value:
-                error:
-                  code: 400
-                  message: Request validation errors
-                  invalid-params:
-                    - name: query-parameter
-                      reason: Value 'lisense' is not supported
     error400_Patch_App:
       description: |-
-        The request likely contains invalid data or is missing data.
+        The request probably contains invalid data or there is data missing from the request.
 
         The error response gives additional feedback.
       content:
@@ -608,7 +369,7 @@ components:
                       reason: ''
     error400_Patch_Permission:
       description: |-
-        The request likely contains invalid data or is missing data.
+        The request probably contains invalid data or there is data missing from the request.
 
         The error response gives additional feedback.
       content:
@@ -642,18 +403,10 @@ components:
                   invalid-params:
                     - name: Authentication
                       reason: Missing or invalid Authorization header
-    error403:
-      description: |-
-        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error'
     error403_Patch_App:
       description: |-
         Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
         The error response gives additional feedback.
       content:
         application/json:
@@ -687,6 +440,7 @@ components:
     error403_Get_Permission:
       description: |-
         Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
         The error response gives additional feedback.
       content:
         application/json:
@@ -720,6 +474,7 @@ components:
     error403_Patch_Permission:
       description: |-
         Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
         The error response gives additional feedback.
       content:
         application/json:
@@ -758,15 +513,6 @@ components:
                   invalid-params:
                     - name: Authentication
                       reason: Only technical contact can change manage permission
-    error404:
-      description: |-
-        The requested item could not be found.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error'
     error404_Patch_App:
       description: |-
         The requested item could not be found.
@@ -846,7 +592,7 @@ components:
                     - name: ''
                       reason: ''
     error500:
-      description: Internal System Error
+      description: Internal System Error.
       content:
         application/json:
           schema:
@@ -873,6 +619,7 @@ components:
       type: http
       scheme: bearer
     Personal Access Token:
-      type: http
-      scheme: mxtoken
-      description: 'This is a special type and see this page for documentation how to request a token and how to use it: https://docs.mendix.com/developerportal/community-tools/warden'
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'

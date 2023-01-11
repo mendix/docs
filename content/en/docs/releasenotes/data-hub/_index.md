@@ -9,6 +9,15 @@ weight: 30
 
 These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hub/data-hub-catalog/).
 
+## 2023
+
+### January 12th, 2023
+
+#### Improvements
+
+* The Authentication for a Data Source in Catalog can now be configured. In the Catalog on the `Edit` page of a Data Source there is now and additional tab namely `Authentication` where the Data Source's Authentication setup can be configured. This includes indicating whether authentication for the Data Source is required, and the settings for the authentication required.
+
+
 ## 2022
 
 ### December 22th, 2022

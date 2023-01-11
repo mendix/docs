@@ -75,60 +75,60 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 #### 3.2.1 `ENUM_BooleanValue`
 
-| Name | Caption |
-| --- | --- |
-| `_TRUE` | **TRUE** |
-| `_FALSE` | **FALSE** |
+| Name | Caption | Description |
+| --- | --- | --- |
+| `_TRUE` | **TRUE** | The enumeration element if a key-value pair is of the type Boolean and is set to true |
+| `_FALSE` | **FALSE** | The enumeration element if a key-value pair is of the type Boolean and is set to false |
 
 #### 3.2.2 `ENUM_TableStatus`
 
-| Name | Caption |
-| --- | --- |
-| `CREATING` | **CREATING** |
-| `UPDATING` | **UPDATING** |
-| `DELETING` | **DELETING** |
-| `ACTIVE` | **ACTIVE** |
-| `INACCESSIBLE_ENCRYPTION_CREDENTIALS` | **INACCESSIBLE_ENCRYPTION_CREDENTIALS** |
+| Name | Caption | Description |
+| --- | --- | --- |
+| `CREATING` | **CREATING** | The enumeration element that shows the status of a table that is being created |
+| `UPDATING` | **UPDATING** | The enumeration element that shows the status of a table that is being updated |
+| `DELETING` | **DELETING** | The enumeration element that shows the status of a table that is being deleted |
+| `ACTIVE` | **ACTIVE** | The enumeration element that shows the status of a table that is active |
+| `INACCESSIBLE_ENCRYPTION_CREDENTIALS` | **INACCESSIBLE_ENCRYPTION_CREDENTIALS** | The enumeration element that shows the status of a table that has an inaccesible AWS KMS key. Table operations may fail due to this |
 
 #### 3.2.3 `ENUM_KEY`
 
-| Name | Caption |
-| --- | --- |
-| `HASH` | **HASH (partition)** |
-| `RANGE` | **RANGE (sort)** |
-| `UNKNOWN_TO_SDK_VERSION` | **UNKNOWN_TO_SDK_VERSION** |
+| Name | Caption | Description |
+| --- | --- | --- |
+| `HASH` | **HASH (partition)** | The enumeration element that reflects the partition key of a table |
+| `RANGE` | **RANGE (sort)** | The enumeration element that reflects the sort key of a table |
+| `UNKNOWN_TO_SDK_VERSION` | **UNKNOWN_TO_SDK_VERSION** | The enumeration element that reflects an unknown key schema element |
 
 #### 3.2.4 `ENUM_AttributeType`
 
-| Name | Caption |
-| --- | --- |
-| `String` | **String** |
-| `Number` | **Number** |
-| `Binary` | **Binary** |
+| Name | Caption | Description |
+| --- | --- | --- |
+| `String` | **String** | The enumeration element that reflects native data type of string |
+| `Number` | **Number** | The enumeration element that reflects native data type of a number (decimal or long) |
+| `Binary` | **Binary** | The enumeration element that reflects native data type of a binary file expressed as a string |
 
 #### 3.2.5 `ENUM_ComparisonOperator`
-
-| Name | Caption |
-| --- | --- |
-|`BEGINS_WITH` | **BEGINS_WITH** |
-| `BETWEEN` | **BETWEEN** |
-| `CONTAINS` | **CONTAINS** |
-| `EQ` |    **EQUAL** |
-| `GE` |    **GREATER_THAN_OR_EQUAL** |
-| `GT` |    **GREATER_THAN** |
-| `IN` |    **IN** |
-| `LE` |    **LESS_THAN_OR_EQUAL** |
-| `LT` |    **LESS_THAN** |
-| `NE` |    **NOT_EQUAL** |
-| `NOT_CONTAINS` |    **NOT_CONTAINS** |
-| `NOT_NULL` |    **NOT_NULL** |
-| `_NULL` |    **NULL** |
+For more information on using comparison operators, please visit [Amazon DynamoDB docs](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Condition.html).
+| Name | Caption | Description |
+| --- | --- | --- |
+|`BEGINS_WITH` | **BEGINS_WITH** | The enumeration element that evaluates items for a prefix |
+| `BETWEEN` | **BETWEEN** | The enumeration element that evaluates items between two given items, where the first item must be smaller than the second |
+| `CONTAINS` | **CONTAINS** | The enumeration element that evaluates items for a subsequence or value in a set |
+| `EQ` |    **EQUAL** | The enumeration element that evaluates items against an item. This comparison operator supports all data types, including lists and maps |
+| `GE` |    **GREATER_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are greater than or equal to the key-value pair |
+| `GT` |    **GREATER_THAN** | The enumeration element that evaluates whether items are greater than the key-value pair |
+| `IN` |    **IN** | The enumeration element that evaluates whether items match elements in a list |
+| `LE` |    **LESS_THAN_OR_EQUAL** | The enumeration element that evaluates whether items are less than or equal to the key-value pair |
+| `LT` |    **LESS_THAN** | The enumeration element that evaluates whether items are less than the key-value pair |
+| `NE` |    **NOT_EQUAL** | The enumeration element that evaluates whether items are unequal to the key-value pair |
+| `NOT_CONTAINS` |    **NOT_CONTAINS** | The enumeration element that evaluates items for absence of a subsequence, or absence of a value in a set |
+| `NOT_NULL` |    **NOT_NULL** | The enumeration element that evaluates whether items are not null. This comparison operator supports all data types, including lists and maps |
+| `_NULL` |    **NULL** | The enumeration element that evaluates whether items have the attribute. This comparison operator supports all data types, including lists and maps |
 
 #### 3.2.6 `AWS_Region` {#aws-region}
 
 | Name | Caption |
 | --- | --- |
-| `us_east_2` |    **US Easth (Ohio)** |
+| `us_east_2` |    **US East (Ohio)** |
 | `us_east_1` |    **US East (N. Virginia)** |
 | `us_west_1` |    **US West (N. California)** |
 | `us_west_2` |    **US West (Oregon)** |

@@ -149,7 +149,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 The `SynthesizeSpeech` activity allows you to synthesize a string of text into an audio file. It requires a `SynthesizeSpeechRequest` entity containing the required information, and a `TargetFileDocument` (`System.FileDocument` or its specialization) to contain the response of the `SynthesizeSpeech` activity. It also requires the `AWS_Region` in which the Polly service should be called.
 
-The `SynthesizeSpeech` activity returns a `System.FileDocument` entity containing the synthesized speech.
+The `SynthesizeSpeech` activity has no return value, instead the input parameter TargetFileDocument contains the synthesized speech.
 
 #### 3.4.2 DescribeVoices
 

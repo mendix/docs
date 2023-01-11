@@ -611,4 +611,3 @@ components:
                   invalid-params:
                     - name: ''
                       reason: ''
-  securitySchemes: {}

@@ -11,7 +11,7 @@ tags: ["version control", "troubleshoot", "Studio Pro", "Git"]
 
 This document describes known issues with Git version control and the ways to fix them.
 
-## 2 Known Issues
+## 2 Known Issues {#ki}
 
 You may encounter the following issues:
 

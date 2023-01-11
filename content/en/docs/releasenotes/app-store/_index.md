@@ -348,10 +348,9 @@ We added a component in the App Store which, when configured in your app, allows
 
 #### Improvements
 
-* We released an upgraded version of the [IBM Watson Connector Suite](https://marketplace.mendix.com/link/component/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
-* We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://marketplace.mendix.com/link/component/2880/), which includes the new IBM Watson Connector Suite.
+* We released an upgraded version of the IBM Watson Connector Suite, which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
+* We released an upgraded version of the IBM Watson Connector Suite Example Project, which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App app template, which includes the new IBM Watson Connector Suite.
-* For more information see [IBM Watson Connector](/appstore/connectors/ibm-watson-connector/).
 
 ### January 21st, 2019
 

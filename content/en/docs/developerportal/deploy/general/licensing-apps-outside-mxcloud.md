@@ -3,7 +3,7 @@ title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
-tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
+tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "Siemens MindSphere"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
@@ -39,8 +39,6 @@ The app will check for a license each time it is started. If the license expires
 
 You can obtain a Mendix license from Mendix support. 
 
-If you need a *Subscription Secret* to deploy to IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
-
 If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
 
 For all other license requests and *Subscription Secrets* to deploy to SAP BTP and Mendix for Private Cloud, do the following:
@@ -68,13 +66,13 @@ An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a ve
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-### 3.2 SAP BTP and IBM Cloud
+### 3.2 SAP BTP
 
-To license a Mendix app on SAP BTP or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
+To license a Mendix app on SAP BTP, you need to supply a *Subscription Secret* which is linked to your app.
 
 You can add this subscription secret as part of creating an environment on SAP BTP. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license.
 
-For more information, see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform/) or [IBM Cloud](/developerportal/deploy/ibm-cloud/).
+For more information, see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform/).
 
 ### 3.3 Siemens MindSphere
 

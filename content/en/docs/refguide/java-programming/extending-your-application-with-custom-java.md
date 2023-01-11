@@ -162,4 +162,4 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 ## 8 Read More
 
 * [Using Eclipse](/refguide/using-eclipse/)
-* [Use the Java API](/howto/logic-business-rules/java-api-tutorial/)
+* [Using the Java API](/refguide/java-api-tutorial/)

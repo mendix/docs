@@ -49,7 +49,7 @@ In Git, committing is done locally at first. Then commits are sent to other repo
 
 It is currently not possible to use Git from behind an authenticated proxy. For more information, see the [Known Issues](/howto/collaboration-requirements-management/troubleshoot-git-issues/#ki) section of *Solving Known Git Issues*. If you depend on this functionality, it is sensible to postpone migration until support is realized. 
 
-## 6 Interacting with Version Control outside Studio Pro
+## 6 Interacting with Version Control Outside Studio Pro
 
 It is possible to [set up a third-party tool to connect to the Team Server](/refguide/version-control-faq/#third-party-tools) for both SVN and Git. However, migrating to Git requires a different tool: instead of TortoiseSVN you can use tools like TortoiseGit or GitHub Desktop.
 

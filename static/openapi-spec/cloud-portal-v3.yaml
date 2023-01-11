@@ -176,9 +176,6 @@ paths:
         - permissions
 tags:
   - name: apps
-  - name: companies
-  - name: environments
-  - name: packages
   - name: permissions
 servers:
   - url: 'https://cloud.home.mendix.com/api/v3'
@@ -614,12 +611,4 @@ components:
                   invalid-params:
                     - name: ''
                       reason: ''
-  securitySchemes:
-    MxID3 token:
-      type: http
-      scheme: bearer
-    Personal Access Token:
-      name: Authorization
-      type: apiKey
-      in: header
-      description: 'See [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden) for documentation how to request a token and how to use it.<br/> Contents of the header should be `MxToken <Your PAT>`.'
+  securitySchemes: {}

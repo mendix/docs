@@ -52,12 +52,12 @@ A mini-survey can have different statuses. You can check the status of a mini-su
 
 Along its lifecycle, a mini-survey can have the following statuses:
 
-* **Draft** – A mini-survey with the status of **Draft** is not finalized. You can still edit the survey and when you finalize it, you need to mark it as ready. Once you mark a survey as ready, its status changes to **Ready to Implement**.
-* **Ready to Implement** – A mini-survey with the status of **Ready to Implement** is finalized, but its start time is not reached yet. Once the start time is reached, its status changes to **Running**.
-* **Running** – A mini-survey with the status of **Running** is currently running. Once the survey past its end time, its status changes to **Evaluate Responses.**
-* **Evaluate Responses** – A mini-survey with the status of **Evaluate Responses** has ended.
+* **Draft** – This status means the mini-survey is not finalized. You can still edit the survey and when you finalize it, you need to mark it as ready. Once you mark a survey as ready, its status changes to **Ready to Implement**.
+* **Ready to Implement** – This status means the mini-survey is finalized, but its start time is not reached yet. Once the start time is reached, its status changes to **Running**.
+* **Running** – This status means the mini-survey is currently running. Once the survey passes its end time, its status changes to **Evaluate Responses.**
+* **Evaluate Responses** – This status means the mini-survey has ended.
 
-{{% alert color="info" %}}When a mini-survey has the status of **Draft**, you can still edit everything in the survey. <br/>When a mini-survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
+{{% alert color="info" %}}When a mini-survey has the status of **Draft**, you can still edit everything in the survey. When a mini-survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
 
 #### 2.1.2 Archived Tab {#archived}
 

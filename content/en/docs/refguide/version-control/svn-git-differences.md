@@ -45,8 +45,9 @@ In SVN, commits are done to a central server which enforces the commit order. Th
 
 In Git, committing is done locally at first. Then commits are sent to other repositories and they should be uniquely identifiable. Therefore, commits in Git are represented with a SHA-1/SHA-256 hash (e.g. f0e165, bb2327, 76d34e, c31247), as they can be generated in a distributed setting and still be the same on different clients with identical changes.
 
-## 5 Proxy support
-It is currently not possible to use Git from behind an authenticated proxy. See: (limitations](/howto/collaboration-requirements-management/troubleshoot-git-issues/#2-known-issues). If you depend on this functionality, it is sensible to postpone migration until support is realised. 
+## 5 Proxy Support
+
+It is currently not possible to use Git from behind an authenticated proxy. For more information, see the [Known Issues](/howto/collaboration-requirements-management/troubleshoot-git-issues/#ki) section of *Solving Known Git Issues*. If you depend on this functionality, it is sensible to postpone migration until support is realized. 
 
 ## 6 Interacting with Version Control outside Studio Pro
 

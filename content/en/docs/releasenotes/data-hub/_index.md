@@ -15,8 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* The Authentication for a Data Source in Catalog can now be configured. In the Catalog on the `Edit` page of a Data Source there is now and additional tab namely `Authentication` where the Data Source's Authentication setup can be configured. This includes indicating whether authentication for the Data Source is required, and the settings for the authentication required.
-
+* You can now add [authentication](/data-hub/data-hub-catalog/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
 
 ## 2022
 
@@ -44,7 +43,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue with the display of services with anonymous access in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* We fixed an issue with the display of services with anonymous access in the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 ### November 17th, 2022
 

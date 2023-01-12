@@ -166,48 +166,47 @@ To edit a mini-survey, perform the following steps:
 
 1. Open the app in the Developer Portal.
 2. Click **Product Insights**. The [Survey Overview](#survey-overview) page opens.
-3. On the **Active** tab, click the mini-survey that you want to edit. The survey details page opens.
+3. On the **Active** tab, click the mini-survey that you want to edit. The [survey details](#survey-details) page opens.
 4. Go to the **Settings** tab.
-5. Depending on the [status](#survey-status) of the mini-survey, you can edit different parts of the survey:
+5. Depending on its [status](#survey-status), you can edit different parts of the survey:
 
-   * If a mini-survey has the status of **Draft**, you can edit everything in the mini-survey. To edit the mini-survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
-   * If a mini-survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (**Runtime** and **Toaster Placement**) in the mini-survey. To edit the **Setting** section, click **Edit Settings** in the **Settings** section, and then make changes.
+   * If the mini-survey has the status of **Draft**, you can edit everything in the mini-survey. To edit the mini-survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
+   * If the mini-survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey. Click **Edit Settings** and then make the changes.
 
 ### 3.3 Implementing a Mini-Survey {#implement-survey}
 
-Before the start time of the mini-survey is reached, you should implement the survey in Studio Pro. Otherwise, users do not actually receive the mini-survey even if the mini-survey has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
+Before the start time of the mini-survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini-survey, even if it has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
 
 #### 3.3.1 Obtaining an API Key {#obtain-api-key}
 
-1. Open the app in the Developer Portal.
-2. Click **Product Insights**. The [Survey Overview](#survey-overview) page opens.
-3. Click the settings icon on the [Survey Overview](#survey-overview) page.
+To obtain an API key for the implementation, follow these steps:
+
+1. On the [Survey Overview](#survey-overview) page, click the settings icon.
 
     {{< figure src="/attachments/developerportal/collaborate/product-insights/settings-icon.png" >}}
 
-    The [Product Insights Settings](#product-insights-settings) page opens:
+2. The [Product Insights Settings](#product-insights-settings) page opens:
 
-    * If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it, and save it for later use.
+    * If there is already an active API key, it is shown on the list. If it is suitable to use, click **View** to show the API key, then copy it and save it for later use.
     * If there is no active API key that you can use, generate one as follows:
 
         1. Click **Generate API Key**.
         2. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the new API key.
-        3. Copy the new API key, and save it for later use.
+        3. Copy the new API key and save it for later use.
 
-#### 3.3.2 Installing the Module
+#### 3.3.2 Installing and Configuring the Module
+
+To install the [Product Insights – Mini-Surveys](/appstore/modules/product-insights/) module, follow these steps:
 
 1. Open your app in Studio Pro.
-2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the Product Insights – Mini-Surveys module into your app.
-
-#### 3.3.3 Configuring the Module
-
-Follow the instructions in the [Configuration](/appstore/modules/product-insights/#configuration) section in *Product Insights – Mini-Surveys* to complete the implementation of the mini-survey in Studio Pro.
+2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](https://docs.mendix.com/appstore/general/app-store-content/) to import the module into your app.
+3. Follow the instructions in the [Configuration](/appstore/modules/product-insights/#configuration) section in *Product Insights – Mini-Surveys* to complete the implementation of the mini-survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
 
-When the start time that you set for the mini-survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how much responses that have been collected.
+When the start time that you set for the mini-survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/#notifications) on how many responses have been collected.
 
-To check the responses that have been collected, do as follows:
+To check the responses that have been collected, follow these steps::
 
 1. Open the app in the Developer Portal.
 2. Click **Product Insights**. The [Survey Overview](#survey-overview) page opens.

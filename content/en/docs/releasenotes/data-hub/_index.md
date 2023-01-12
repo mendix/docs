@@ -19,7 +19,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2022
 
-### December 22th, 2022
+### December 22nd, 2022
 
 #### Improvements
 

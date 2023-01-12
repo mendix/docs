@@ -173,7 +173,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     * **On click** - **Show a page**
     * **Page** - your **Table_Overview** page 
 
-        {{< figure src="/attachments/appstore/connectors/aws-dynamodb/navigation.png" alt="The New Menu Item dialog">}}
+{{< figure src="/attachments/appstore/connectors/aws-dynamodb/navigation.png" alt="The New Menu Item dialog">}}
 
 52. Click **OK**.
 

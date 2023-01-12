@@ -97,4 +97,4 @@ This video was done with [Studio Pro 8](/refguide8/), but the concepts remain ap
 ## 7 Read More
 
 * [Filtering Data on an Overview Page Using XPath](/refguide/filtering-data-on-an-overview-page/)
-* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
+* [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)

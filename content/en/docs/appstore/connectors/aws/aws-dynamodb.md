@@ -152,21 +152,24 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 39. Double-click the **Change List** activity, and then set the following values:
     * **Type** - **Add**
     * **Value** - The created object, for example, `$NewDBTable`
-40. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
-41. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
-42. In the **Lists** category, select the **List** template for the page.
-43. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
-44. On the page, double-click the **List view** widget.
+40. Double-click the end event of your microflow, and then set the following values:
+    * **Type** - **List**
+    * **Entity** - The entity that you previously added to your domain model, for example, `DBTable`
+41. Right-click the **Create List** activity, and then click **Set {TableName}** as return value.
+42. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
+43. In the **Lists** category, select the **List** template for the page.
+44. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
+45. On the page, double-click the **List view** widget.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/listview.png" alt="The List view widget">}}
 
-45. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
-46. In the **Entity (path)** field, select the **DS_ListTables** microflow.
-47. Click **OK**, and then click **Yes**.
-48. In the **Properties** pane for the page, in the **Security** section, select a user role that should be allowed to run the microflow.
-49. In the **App Explorer**, double-click the **Navigation** for your app.
-50. In the Menu section, click **New Item**.
-51. In the **New Menu Item** dialog, configure the following settings:
+46. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
+47. In the **Entity (path)** field, select the **DS_ListTables** microflow.
+48. Click **OK**, and then click **Yes**.
+49. In the **Properties** pane for the page, in the **Security** section, select a user role that should be allowed to run the microflow.
+50. In the **App Explorer**, double-click the **Navigation** for your app.
+51. In the Menu section, click **New Item**.
+52. In the **New Menu Item** dialog, configure the following settings:
     * **Caption** - A caption for the navigation item, for example, *Table*
     * **Icon** - An icon that will be displayed for this page in the navigation for your app
     * **On click** - **Show a page**
@@ -174,7 +177,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/navigation.png" alt="The New Menu Item dialog">}}
 
-52. Click **OK**.
+53. Click **OK**.
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties">}}
 

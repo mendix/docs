@@ -103,7 +103,6 @@ The following steps are required if you are building your own connector, or if y
 1. Open your app in Studio Pro.
 2. Create or edit the microflow that requires AWS authentication.
 3. Drag the **GetSessionCredentials** activity from the **Toolbox** into the work area of the microflow.
-    For some platform-supported connectors, the activity may already be present in the microflow. In that case, proceed to the next step.
 4. Double-click the **GetSessionCredentials** activity and configure the parameters as shown in the table below:
 
     | Parameter | Value |

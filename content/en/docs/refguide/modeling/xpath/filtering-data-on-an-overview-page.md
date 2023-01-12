@@ -139,4 +139,4 @@ In the previous section, you constrained the data grid on attributes of the same
 
 ## 8 Read More
 
-* [XPath Constraints](/refguide/xpath-constraints/)
+* [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)

@@ -49,7 +49,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 7. Add the following customer data to your app:
 
     {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581374.png" >}}
-    
+
 8. Add the following order data to your app:
 
     {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581373.png" >}}
@@ -83,6 +83,5 @@ To define the access rules on the Order entity using XPath, follow these steps:
 
 ## 4 Read More
 
-* [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/)
-* [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)
-* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)
+* [Filtering Data on an Overview Page Using XPath](/refguide/filtering-data-on-an-overview-page/)
+

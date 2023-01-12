@@ -175,3 +175,7 @@ For more information on browser support for certain device features, see the thi
 {{% alert color="info" %}}
 In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
 {{% /alert %}}
+
+{{% alert color="warning" %}}
+In iOS, using the Camera feature (`MediaDevices` in Mozilla's API) in any browser requires HTTPS.
+{{% /alert %}}

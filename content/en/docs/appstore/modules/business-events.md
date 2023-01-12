@@ -214,7 +214,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 * **PublishedBusinessEvent**: This non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. This is used to define what your published business events look like.
 * **ConsumedBusinessEvent**: This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the module, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
 * **DeadLetterQueue**: This persistent entity within the Domain Model of the Business Events Module is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
-* **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the Outbox and be retried at increasing intervals for 48 hours, at which time they fail.
+* **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours, and they will fail after that time.
 
 ### 5.3.1 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
@@ -336,7 +336,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 10. How do I know the event was successfully published?
 
-    Messages are first queued within the **Outbox** for successful delivery as a business event, after which they're deleted. You can match the unique `Event Id` to your business event. Monitoring the **Outbox** entity will allow the developer to determine if there are unpublished business event entities. See the [Business Event Entities](#be-entities) for more information on the **Outbox**. 
+    Messages are first queued within the **Outbox** for successful delivery as a business event, after which they are deleted. You can match the unique `Event Id` to your business event. Monitoring the **Outbox** entity will allow the developer to determine if there are unpublished business event entities. See the [Business Event Entities](#be-entities) for more information on the **Outbox**. 
 
 11. How do I know events are consumed successfully?
 

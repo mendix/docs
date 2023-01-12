@@ -167,13 +167,12 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 49. In the **App Explorer**, double-click the **Navigation** for your app.
 50.  In the Menu section, click **New Item**.
 51.  In the **New Menu Item** dialog, configure the following settings:
-
     * **Caption** - a caption for the navigation item, for example, *Table*
     * **Icon** - an icon that will be displayed for this page in the navigation for your app
     * **On click** - **Show a page**
     * **Page** - your **Table_Overview** page 
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/navigation.png" alt="The New Menu Item dialog">}}
+        {{< figure src="/attachments/appstore/connectors/aws-dynamodb/navigation.png" alt="The New Menu Item dialog">}}
 
 52. Click **OK**.
 

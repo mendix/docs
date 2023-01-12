@@ -38,7 +38,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonPollyConnector** section. The connector provides a domain model and activities that you can use to connect your app to Amazon Polly. Each activity can be implemented using it in a microflow or nanoflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-## 3.1 Configuring AWS Authentication
+### 3.1 Configuring AWS Authentication
 
 In order to use the Amazon Polly service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -70,7 +70,7 @@ In order to use the Amazon Polly service, you must authenticate with AWS. To do 
     | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
     | **SessionCredentials** | **Session Name** | An identifier for the session |
 
-## 3.2 Configuring a Microflow for an AWS Service
+### 3.2 Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon Polly, you can implement the functions of the connector by using the provided activities in microflows. For example, to synthesize a string of text into speech, implement the [SynthesizeSpeech](#synthesize-speech) activity by performing the following steps:
 

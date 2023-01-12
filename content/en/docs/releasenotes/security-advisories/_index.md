@@ -21,6 +21,7 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| CVE-2022-46823 | 9.3 | [Cross-Site Scripting Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-496604.html) | See the SSA description for remediation details. |
 | CVE-2022-46664 | 8.1 | [Improper Access Control Vulnerability in Mendix Workflow Commons Module](https://cert-portal.siemens.com/productcert/pdf/ssa-210822.pdf) | See the SSA description for remediation details. |
 | CVE-2022-45936 | 8.1 | [Improper Access Control Vulnerability in Mendix Email Connector Module](https://cert-portal.siemens.com/productcert/pdf/ssa-224632.pdf) | See the SSA description for remediation details. |
 | CVE-2022-44457 | 7.4 | [Authentication Bypass Vulnerability in Mendix SAML](https://cert-portal.siemens.com/productcert/pdf/ssa-638652.pdf) | See the SSA description for remediation details. |

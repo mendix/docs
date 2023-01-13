@@ -148,7 +148,7 @@ If you are reporting a security finding or other security-related issue, for exa
 1. If the security finding is in a marketplace component
     1. check that it is platform supported — community-supported components are not supported by Mendix support.
     1. ensure the component is up to date.
-1. Review the [Frequently asked questions - Security](/developerportal/support/security-findings-faq) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
+1. Review the [Frequently asked questions - Security](/developerportal/support/security-findings-faq/) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
     * A description of the issue found — please submit only one finding per support ticket.

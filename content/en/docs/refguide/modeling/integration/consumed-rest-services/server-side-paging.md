@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Using server-side paging and sorting for a microflow data source you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve action in a microflow. To do this however, you must model the logic for getting the correct data in the microflow itself.
+Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, however, you must model the logic for getting the correct data in the microflow itself.
 
 This how-to will teach you how to do the following:
 
@@ -23,13 +23,13 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * If you are not familiar with using data from REST services, read [Consume a REST Service](/howto/integration/consume-a-rest-service/)
-* Mendix 8.2 and above
+* Install Studio Pro version [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Creating a Microflow Data Source
 
-In this section you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto/integration/consume-a-rest-service/) — (until **Adding an Input Entity to the Domain Model** is done). 
+In this section, you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto/integration/consume-a-rest-service/) — (until **Adding an Input Entity to the Domain Model** is done). 
 
-You must complete these steps with *one crucial change*: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
+You must complete these steps with one crucial change: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
 Once successful, your app should have the following elements:
 
@@ -45,7 +45,7 @@ Once successful, your app should have the following elements:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/input-entity.png" alt="input entity"   width="500"  >}}
 
-Now you can start calling the REST service from your microflow data source. To create a microflow data source which returns a list of characters, do the following:
+Now, you can start calling the REST service from your microflow data source. To create a microflow data source which returns a list of characters, do the following:
 
 1. Right-click your module, click **Add Microflow**, and create a new microflow named *Call_REST*.
 2. From the **Toolbox**, drag a **Call REST service** activity into the microflow.
@@ -54,7 +54,7 @@ Now you can start calling the REST service from your microflow data source. To c
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/edit-call-rest.png" alt="edit call rest"   width="500"  >}}
 
-5. In the **Template** field, add `https://my-json-server.typicode.com/mendix/howto-api-data/airports` then click the **OK** button:
+5. In the **Template** field, add `https://my-json-server.typicode.com/mendix/howto-api-data/airports` and click **OK**:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/add-airport-url.png" alt="airport template"   width="500"  >}}
 
@@ -64,11 +64,11 @@ Now you can start calling the REST service from your microflow data source. To c
 
 7. Select **Apply import mapping** from the **Response handling** drop-down menu.
 8. Click **Mapping** > **Select** and select the import mapping you created.
-9. For **Variable Name**, type *Result.* Click **OK** to accept the changes:
+9. For **Variable Name**, type *Result*. Click **OK** to accept the changes:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/call-rest-response.png" alt="variable result"   width="500"  >}}
 
-10. From the **Toolbox** drag the **Retrieve** activity into the microflow and double-click it.
+10. From the **Toolbox**, drag the **Retrieve** activity into the microflow and double-click it.
 11. Click **Association** > **Select**, click **Expand All**, and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
 12. Click **OK** to accept this association.
 13. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
@@ -77,7 +77,7 @@ Now you can start calling the REST service from your microflow data source. To c
 
 ## 4 Creating a Data Grid with a Microflow Data Source
 
-In previous section you created a microflow which return a list of characters. Next you will use this microflow as a data source for a data grid:
+In the previous section, you created a microflow which returns a list of characters. Now, you will use this microflow as a data source for a data grid:
 
 1. From the **Toolbox**, drag a **Data grid** onto a page.
 2. Double-click the blue header of the newly-placed data grid.
@@ -102,7 +102,7 @@ This generates a data view around your data grid, creates the necessary widgets 
 
 ## 5 Adding Paging Support to the Microflow Data Source
 
-In the previous section you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute which is updated when you navigate through the pages with the paging bar in the client. In this section you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
+In the previous section, you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute which is updated when you navigate through the pages with the paging bar in the client. In this section, you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
 
 1. Open the the **CallREST** microflow.
 2. Double-click the **Call REST service** activity. 
@@ -122,7 +122,7 @@ Deploy your app and navigate to the page where you added your data grid. You can
 
 ## 6 Adding Server-Side Sorting Support to the Microflow Data Source
 
-Now you have service-side paging for your data grid. Next, add server-side sorting to it.
+Now, you have service-side paging for your data grid. Next, add server-side sorting to it.
 
 Clicking the header on the data grid in the client will update the **Paging** entity by setting the attribute **SortAttribute** to the attribute which is associated to the header you clicked, and the **SortAscending** is set to **true** for ascending and **false** for a descending sort order. 
 
@@ -171,7 +171,7 @@ You can set a default sort order for data. When a user has not clicked a header,
 
 8. Click **OK** to accept the changes to the member, and click **OK** once more to accept the changes to the **Create object** activity.
 
-Deploy your app again and navigate to the page with your data grid. The data will be shown ordered by **Name**.
+Deploy your app again and navigate to the page with your data grid. The data is now ordered by **Name**.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/data-by-name.png" alt="sorted by name"   width="500"  >}}
 
@@ -190,11 +190,11 @@ Apps that use a REST service which does not support sorting, or apps which do no
 
 7. Click **OK** to accept the changes to the member, and click **OK** once more to accept the changes to the **Create object** activity.
 
-Deploy your app again and navigate to the page with your data grid. The data will still be shown ordered by **Name**, but you can no longer change the sorting by clicking the header. Note the lack of an arrow above the **Name** header.
+Deploy your app again and navigate to the page with your data grid. The data is still now ordered by **Name**, but you can no longer change the sorting by clicking the header. Note the lack of an arrow above the **Name** header.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/sorting-disabled.png" alt="sorted but not clickable" >}}
 
-## 7 Add Server-Side Searching
+## 7 Adding Server-Side Searching
 
 Generating controls also generates input fields for all your attributes of the entity the microflow returns. These inputs can be used by your user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input fields by the user is set in the **Paging** entity which is passed to the data source microflow. 
 
@@ -219,7 +219,7 @@ You only need to use this data in your microflow and pass the search criteria to
 7. Click **OK** to accept the changes in the location. 
 8. Click **OK** once more to accept the changes in the **Call REST service** activity.
 
-Deploy your app again and navigate to the page with your data grid. Enter a value for a part of the name, for example *International*, and click **Search** to see your server-side searching in action!
+Deploy your app again and navigate to the page with your data grid. Enter a value for a part of the name, for example, *International*, and click **Search** to see your server-side searching in action!
 
 ## 8 Read More
 

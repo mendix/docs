@@ -198,6 +198,6 @@ In the Mendix project, document the exposed microflow actions, as well as the en
 
     *Optionally, a condition expression can be included. The delete action is then only performed when the condition returns true. Additionally, an expression attribute list can be included to escape reserved words.*
 
-## Publishing to the Mendix Marketplace - Best Practices
+## 5 Publishing to the Mendix Marketplace - Best Practices
 
 If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/general/share-app-store-content/).

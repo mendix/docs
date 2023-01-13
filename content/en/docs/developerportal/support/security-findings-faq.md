@@ -1,5 +1,5 @@
 ---
-title: "Frequently asked questions - Security"
+title: "Frequently Asked Questions - Security"
 linktitle: "Security Findings FAQ"
 url: /developerportal/support/security-findings-faq
 category: "Mendix Support"

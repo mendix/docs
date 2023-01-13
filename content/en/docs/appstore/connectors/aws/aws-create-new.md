@@ -1,6 +1,6 @@
 ---
 title: "Build an AWS Connector"
-url: /appstore/connectors/aws/amazon-dynamodb/
+url: /appstore/connectors/aws/build-aws-connector/
 description: "Describes the basic steps for building new connectors for AWS services."
 weight: 25
 tags: ["connectors", "amazon", "aws", "build", "connector guide", "how to"]

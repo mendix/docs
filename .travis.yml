@@ -8,6 +8,7 @@ dist: xenial          # or bionic | xenial | trusty | precise with xenial as def
 
 git:
   depth: 20000 # We're cloning a max of xxx commits, so the author date is correct
+  quiet: true # prevent commit numbers appearing in the log and being flagged as potential security leaks.
 
 env:
   global:

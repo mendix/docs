@@ -24,10 +24,10 @@ Mendix modules are portions of your app which can include a data model, logic, a
 React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
 {{% /alert %}}
 
-## 2 Module Types {#module-types}
+## 2 Module Types {#module-types} [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
 
 {{% alert color="info" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
 {{% /alert %}}
 
 When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide/module-settings/). 

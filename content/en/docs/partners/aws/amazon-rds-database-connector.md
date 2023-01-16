@@ -20,9 +20,9 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     3. Enter a database instance identifier. 
     4. Create the **Master Username** and **Master Password**. 
     
-        {{% alert color="info" %}}
-        Store the username and password in a safe location.
-        {{% /alert %}}
+{{% alert color="info" %}}
+Store the username and password in a safe location.
+{{% /alert %}}
    
     5. In the **Connectivity** section, set **Public access** to **yes**.
     6. Make sure that **Database Authentication** is set to **Password authentication**.
@@ -44,13 +44,13 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     5. In the **Sql** parameter, enter your SQL statement.
         For example, to create a table, you can use the following statement:
 
-            ```text {linenos=false}
-            CREATE TABLE employee (
-                emp_id INT PRIMARY KEY,
-                first_name VARCHAR(50) NOT NULL,
-                last_name VARCHAR(50) NOT NULL)
-            ```
+        ```sql {linenos=false}
+        CREATE TABLE employee (
+            emp_id INT PRIMARY KEY,
+            first_name VARCHAR(50) NOT NULL,
+            last_name VARCHAR(50) NOT NULL)
+        ```
 
-        {{% alert color="info" %}}
-        For the PostgresSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.
-        {{% /alert %}}
+{{% alert color="info" %}}
+For the PostgresSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.
+{{% /alert %}}

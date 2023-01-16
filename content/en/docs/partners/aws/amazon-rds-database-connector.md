@@ -20,9 +20,9 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     3. Enter a database instance identifier. 
     4. Create the **Master Username** and **Master Password**. 
     
-        {{% alert color="info" %}}
-        Store the username and password in a safe location.
-        {{% /alert %}}
+    {{% alert color="info" %}}
+    Store the username and password in a safe location.
+    {{% /alert %}}
    
     5. In the **Connectivity** section, set **Public access** to **yes**.
     6. Make sure that **Database Authentication** is set to **Password authentication**.

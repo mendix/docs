@@ -23,6 +23,8 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     5. In the **Connectivity** section, set **Public access** to **yes**.
     6. Make sure that **Database Authentication** is set to **Password authentication**.
 
+        {{< figure src="/attachments/appstore/connectors/aws-rds/rds.jpg" >}}
+
 2. Optional: If you want to limit access to the database to specific apps, do the following steps:
     1. After the database is created, access the [security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#SecurityGroupRules).
     2. Select the first security group.

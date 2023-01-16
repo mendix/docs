@@ -25,7 +25,7 @@ To install the Mendix Portable Portal app, follow these steps:
 
 After you install the Portable Portal app, open it and sign in with your Mendix account. Then the [App Selection](#app-selection) page opens.
 
-## 3 App Selection Page {#app-selection}
+## 3 App Selection {#app-selection}
 
 The **App Selection** page shows all the apps that you can access in the Developer Portal:
 
@@ -37,22 +37,24 @@ After you select the app(s), tap **Continue** to open the [My Apps](#my-apps) op
 
 {{% alert color="info" %}}If this is the first time you are selecting apps on the **App Selection** page, you are asked if you will allow the Portable Portal app to send you notifications. Mendix recommends selecting **Allow**, as sending notifications is one of the main features of the app.{{% /alert %}}
 
-## 4 My Apps Page {#my-apps}
+## 4 My Apps {#my-apps}
 
-The **My Apps** page by default shows the last app that you selected from the [App Selection](#app-selection) page. The name of this app is shown on top of the screen. If you tap the app name, then you get the option to open a different app that you selected, or go back to the **App Selection** page where you can change the selection of the apps.
+The **My Apps** page by default shows the last app that you selected from the [App Selection](#app-selection) page:
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/my-apps.png" >}}
 
-The **My Apps** page contains two tabs: the **Cloud** tab and the **Stories** tab. The descriptions of these two tabs are in the following sections.
+The name of this app is shown on top of the screen. If you tap the app name, then you see the option to open a different app you previously selected or to go back to the **App Selection** page where you can change what apps you selected.
+
+This page page contains the **Cloud** and **Stories** tabs, which are described below.
 
 ### 4.1 Cloud Tab {#cloud}
 
+The **Cloud** tab shows information about the packages and environments, and allows you to manage them:
+
 {{< figure src="/attachments/developerportal/mendix-portable-portal/cloud-tab.png" width="50%">}}
 
-The **Cloud** tab shows information about the packages and environments, and allows you to manage them.
-
 {{% alert color="warning" %}}
-You can only manage licensed apps running on the Mendix Cloud. To do this, you will need to have the **Transport Rights** permission granted by the app's technical contact. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+You can only manage licensed apps running on [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/). To manage such apps, you need to have the **Transport Rights** permission granted by the app's technical contact. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 Free apps will be shown with a red cross and a **Sandbox** environment indicator. Choosing a management option will return an error.
 
@@ -76,7 +78,6 @@ You can also create a new package from the Team Server. Do the following:
 5. Tap **Create Package**.
 
     You will get an indication that your package is being built.
-    
 
 You will get a notification from the app when the build is complete, and will then be able to see the package details. 
 
@@ -132,7 +133,7 @@ Tapping **Edit** on the upper-right corner of the **Story Details** page opens t
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/edit-story.png" >}}
 
-## 5 Community Page
+## 5 Community
 
 The **Community** page shows community content. The page has the following sections:
 
@@ -143,13 +144,13 @@ The **Community** page shows community content. The page has the following secti
 
 In each section, you can swipe right or left to check out the next or previous item. Tapping **Show all** displays all the items in the section. If you tap an item, you will view its details in the web browser.
 
-## 6 Notifications Page
+## 6 Notifications
 
 The **Notifications** page shows all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the results of the actions you performed on the [Cloud](#cloud) tab of the Portable Portal app.
 
 {{% alert color="info" %}}If you allow the Portable Portal app to send you push notifications, you will also get all the notifications on your phone.{{% /alert %}}
 
-## 7 Settings Page
+## 7 Settings
 
 The **Settings** page displays your profile picture, your company information, and your email address.
 

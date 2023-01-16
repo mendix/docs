@@ -35,6 +35,9 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
 4. Configure the Database module to [connect to AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html#USER_ConnectToPostgreSQLInstance.JDBCDriverPostgreSQL) by doing the following steps:
     1. Use one of the microflow actions provided in the Database connector in a microflow, as described in [Database](/appstore/connectors/database-connector/).
         For example, add the *ExecuteStatement* action.
+
+        {{< figure src="/attachments/appstore/connectors/aws-rds/microflow.jpg" >}}
+
     2. In the AWS console, in the RDS Database dashboard, find and copy the **Connectivity & Security** endpoint.
     3. In the microflow that you created, in the *ExecuteStatement* microflow action, configure the **jdvcUrl** parameter in the following way: `jdbc:postgresql://{endpoint copied from the AWS console}:5432/`
     4. In the **User name** and **Password** parameters, enter the Master Username and Master Password that you configured in AWS RDS in step 1d above, or other credentials with equivalent access rights for AWS RDS. 

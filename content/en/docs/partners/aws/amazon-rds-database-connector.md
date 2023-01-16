@@ -23,7 +23,7 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     5. In the **Connectivity** section, set **Public access** to **yes**.
     6. Make sure that **Database Authentication** is set to **Password authentication**.
 
-        {{< figure src="/attachments/appstore/connectors/aws-rds/rds.jpg" >}}
+        {{< figure src="/attachments/appstore/connectors/aws-rds/rds.jpg" alt="Amazon RDS database configuration" >}}
 
 2. Optional: If you want to limit access to the database to specific apps, do the following steps:
     1. After the database is created, access the [security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#SecurityGroupRules).
@@ -38,10 +38,10 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     1. Use one of the microflow actions provided in the Database connector in a microflow, as described in [Database](/appstore/connectors/database-connector/).
         For example, add the *ExecuteStatement* action.
 
-        {{< figure src="/attachments/appstore/connectors/aws-rds/microflow.jpg" >}}
+        {{< figure src="/attachments/appstore/connectors/aws-rds/microflow.jpg" alt="The ExecuteStatement action in a microflow" >}}
 
     2. In the AWS console, in the RDS Database dashboard, find and copy the **Connectivity & Security** endpoint.
-    3. In the microflow that you created, in the *ExecuteStatement* microflow action, configure the **jdvcUrl** parameter in the following way: `jdbc:postgresql://{endpoint copied from the AWS console}:5432/`
+    3. In the microflow that you created, in the *ExecuteStatement* microflow action, configure the **jdbcUrl** parameter in the following way: `jdbc:postgresql://{endpoint copied from the AWS console}:5432/`
     4. In the **User name** and **Password** parameters, enter the Master Username and Master Password that you configured in AWS RDS in step 1d above, or other credentials with equivalent access rights for AWS RDS. 
     5. In the **Sql** parameter, enter your SQL statement.
         For example, to create a table, you can use the following statement:
@@ -52,6 +52,8 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
             first_name VARCHAR(50) NOT NULL,
             last_name VARCHAR(50) NOT NULL)
         ```
+
+{{< figure src="/attachments/appstore/connectors/aws-rds/setup.jpg" alt="The Execute Statement configuration dialog" >}}
 
 {{% alert color="info" %}}
 For the PostgresSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.

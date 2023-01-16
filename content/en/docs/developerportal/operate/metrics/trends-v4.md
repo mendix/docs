@@ -97,17 +97,7 @@ Request Type | Explanation
 
 Additional information about request handlers is available in the *Requests* section of [Monitoring Mendix Runtime](/refguide/monitoring-mendix-runtime/#request-handlers) and the *Applying Access Restrictions to Unnecessary Request Handlers* section of [How To Implement Best Practices for App Security](/howto/security/best-practices-security/#request-handlers).
 
-### 4.2 Object Cache{#Trends-appmxruntimecache}
-
-In the **Object cache** graph you can monitor the number of Mendix Objects that live in memory.
-
-{{% alert color="info" %}}
-This metric is only available for apps built with Mendix versions 6 and below. Mendix versions 7 and above use a stateless runtime and so have no object cache. See the [Mendix 7.0 Release Notes](/releasenotes/studio-pro/7.0/) for more information.
-{{% /alert %}}
-
-Non-persistable entities live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem.
-
-### 4.3 User Accounts and Login Sessions{#Trends-appmxruntimesessions}
+### 4.2 User Accounts and Login Sessions{#Trends-appmxruntimesessions}
 
 The **User Accounts and Login Sessions** graph shows the number of logged-in named and anonymous user sessions for your application.
 
@@ -121,7 +111,7 @@ User Type | Explanation
 **concurrent named user sessions** | Total number of sessions for users using a named login. 
 **concurrent anonymous user sessions** | Total number of sessions for users who are signing in anonymously. 
 
-### 4.4 JVM Object Heap{#Trends-appmxruntimejvmheap}
+### 4.3 JVM Object Heap{#Trends-appmxruntimejvmheap}
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for *Java* objects. Java objects are created in Java actions, but also include all objects that are used by microflows running in your app at runtime.
 
@@ -140,7 +130,7 @@ Object Type | Explanation
 
 For example, if the **tenured generation** is shown as 65% of the complete heap size, this may change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
 
-### 4.5 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
+### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 
 This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM Object Heap*. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
@@ -165,7 +155,7 @@ Type | Explanation
 **other** | Virtual or reserved memory space.
 **thread stacks** | Stacks that are reserved for unique threads.
 
-### 4.6 Application Node Operating System Memory{#Trends-appmemory}
+### 4.5 Application Node Operating System Memory{#Trends-appmemory}
 
 The **Application node operating system memory** graph shows the distribution of operating system memory that is available for this server.
 
@@ -173,7 +163,7 @@ The **Application node operating system memory** graph shows the distribution of
 
 Performance issues can arise if the apps memory takes up too large a proportion of the operating system memory.
 
-### 4.7 Threadpool for Handling External Requests{#Trends-appm2eeserverthreadpool}
+### 4.6 Threadpool for Handling External Requests{#Trends-appm2eeserverthreadpool}
 
 The **Threadpool for handling external requests** graph shows the number of concurrent requests that are being handled by the Mendix Runtime. The requests are counted in two circumstances:
 
@@ -193,7 +183,7 @@ Value | Explanation
 **active threads** | Active threads that are being used within the Jetty threadpool.
 **threadpool size** | The current total size of the Jetty threadpool.
 
-### 4.8 Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
+### 4.7 Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
 
 The **Total Number of Threads in the JVM Process** graph shows the total number of threads that exist inside the running JVM process.
 
@@ -201,7 +191,7 @@ The **Total Number of Threads in the JVM Process** graph shows the total number 
 
 Besides the threadpool that is used for *external* HTTP requests, described above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
 
-### 4.9 Application Node CPU Usage{#Trends-appcpu}
+### 4.8 Application Node CPU Usage{#Trends-appcpu}
 
 The **Application node CPU usage** graph shows the CPU utilization in percentage.
 
@@ -219,7 +209,7 @@ If your app consistently uses more CPU than specified for your container your ap
 
 Your app will always have access to at least the amount of CPU specified for your container when it needs it.
 
-### 4.10 Application Node Disk Usage in Percentage (%){#Trends-appdf}
+### 4.9 Application Node Disk Usage in Percentage (%){#Trends-appdf}
 
 The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
 
@@ -229,13 +219,13 @@ This graph should be interpreted in combination with other graphs. See [Combinin
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
 
-### 4.11 Application Number of Files{#Trends-appnumberoffiles}
+### 4.10 Application Number of Files{#Trends-appnumberoffiles}
 
 The **Application Number of Files** graph shows the number of files created by entities which are based on `FileDocument` generalizations, that are stored in S3 file storage.
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/app-number-of-files.png" >}}
 
-### 4.12 Application Size of Files (in bytes){#Trends-appsizeoffiles}
+### 4.11 Application Size of Files (in bytes){#Trends-appsizeoffiles}
 
 {{% alert type="info" %}}
 This metric was added on 21 January 2022 in release [4.25.0](https://github.com/mendix/cf-mendix-buildpack/releases/tag/v4.25.0) of the Cloud Foundry Mendix Buildpack. The data will only be visible once you deploy your Mendix app after that date. Before you redeploy, the graph will show **No Data Available**. After the deployment, data will only be shown on the graph from that date onward.

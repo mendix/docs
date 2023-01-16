@@ -53,20 +53,6 @@ You can click the following buttons to execute actions:
     * Type
     * Details
 
-## 4 Cache
-
-Mendix Runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
-
-{{< figure src="/attachments/developerportal/operate/metrics/cache-summary.png" alt="User session cache details" >}}
-
-If you select a user session you can click **Details** to see which entities are being used by that user session.
-
-{{< figure src="/attachments/developerportal/operate/metrics/user-cache.png" alt="User session cache details" >}}
-
-{{% alert color="info" %}}
-Runtime versions 7 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/studio-pro/7.0/) for more information.
-{{% /alert %}}
-
-## 5 Read More
+## 4 Read More
 
 * [Environment Details](/developerportal/deploy/environments-details/)

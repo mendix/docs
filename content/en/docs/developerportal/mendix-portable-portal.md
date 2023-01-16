@@ -9,21 +9,19 @@ weight: 35
 
 ## 1 Introduction
 
-The Mendix Portable Portal app provides you with mobile capabilities for Developer Portal features.
+The Mendix Portable Portal app provides you with mobile capabilities for different Developer Portal features.
 
 ## 2 Installation
 
-1. Go to the following website: https://mxmobilecc.mendixcloud.com/. The website provides the instructions on how to download the Mendix Portable Portal app.
+To install the Mendix Portable Portal app, follow these steps:
 
+1. Go to the [Mendix Portal](https://mxmobilecc.mendixcloud.com/), which provides instructions on how to download app..
 2. Sign in with your Mendix account.
-
 3. Follow the instructions on the website, and then click **Download App**.
-
 4. Select which device you use: iOS or Android. The website generates the corresponding QR code for downloading the app to your device.
-
 5. Scan the QR code to download and install the app.
 
-   {{% alert color="info" %}}If you are an iOS device user,  you are first directed to install TestFlight in App Store. After you install TestFlight, open it. Then you are prompted to install the Mendix Portable Portal app from TestFlight.{{% /alert %}}
+   {{% alert color="info" %}}If you are an iOS device user,  you are first directed to install the TestFlight app in the Apple App Store. After you install TestFlight, open it. Then you are prompted to install the Mendix Portable Portal app from TestFlight.{{% /alert %}}
 
 ## 3 Starting the App
 

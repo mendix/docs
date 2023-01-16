@@ -11,7 +11,7 @@ weight: 35
 
 The Mendix Portable Portal app provides you with mobile capabilities for different Developer Portal features.
 
-## 2 Installation
+## 2 Installing and Starting the App
 
 To install the Mendix Portable Portal app, follow these steps:
 
@@ -23,11 +23,9 @@ To install the Mendix Portable Portal app, follow these steps:
 
    {{% alert color="info" %}}If you are an iOS device user,  you are first directed to install the TestFlight app in the Apple App Store. After you install TestFlight, open it. Then you are prompted to install the Mendix Portable Portal app from TestFlight.{{% /alert %}}
 
-## 3 Starting the App
+After you install the Portable Portal app, open it and sign in with your Mendix account. Then the [App Selection](#app-selection) page opens.
 
-After you install the Portable Portal app, open the app and sign in with your Mendix account. Then the [App Selection](#app-selection) page opens.
-
-## 4 App Selection Page {#app-selection}
+## 3 App Selection Page {#app-selection}
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/app-selection.png" >}}
 
@@ -39,7 +37,7 @@ After you select the apps, tap **Continue**. Then the [My Apps](#my-apps) page o
 
 {{% alert color="info" %}}If this is the first time that you select apps on the **App Selection** page, you are prompted to select if you allow the Portable Portal app to send you notifications. We do recommend you select **Allow** since sending notifications is one of the main features of the app.{{% /alert %}}
 
-## 5 My Apps Page {#my-apps}
+## 4 My Apps Page {#my-apps}
 
 The **My Apps** page by default shows the last app that you selected from the [App Selection](#app-selection) page. The name of this app is shown on top of the screen. If you tap the app name, then you get the option to open a different app that you selected, or go back to the **App Selection** page where you can change the selection of the apps.
 
@@ -47,7 +45,7 @@ The **My Apps** page by default shows the last app that you selected from the [A
 
 The **My Apps** page contains two tabs: the **Cloud** tab and the **Stories** tab. The descriptions of these two tabs are in the following sections.
 
-### 5.1 Cloud Tab {#cloud}
+### 4.1 Cloud Tab {#cloud}
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/cloud-tab.png" width="50%">}}
 
@@ -61,7 +59,7 @@ Free apps will be shown with a red cross and a **Sandbox** environment indicator
 Apps running in other clouds (for example, Mendix for Private Cloud) will display **No environments found**.
 {{% /alert %}}
 
-#### 5.1.1 Packages
+#### 4.1.1 Packages
 
 The **Packages** section will show you the latest package that has been created for your app.
 
@@ -82,7 +80,7 @@ You can also create a new package from the Team Server. Do the following:
 
 You will get a notification from the app when the build is complete, and will then be able to see the package details. 
 
-#### 5.1.2 Environments
+#### 4.1.2 Environments
 
 The **Environments** section will show you 
 
@@ -108,7 +106,7 @@ Tapping the environment allows you to perform the following actions, if you have
 * **View Constants** – Here you can view the deployed value of app constants. You can also change constant values, and these will be applied to the environment the next time it is restarted.
 * **View Scheduled Events** – Here you can view and enable/disable the app's scheduled events. Changes will be applied to the environment the next time it is restarted.
 
-### 5.2 Stories Tab
+### 4.2 Stories Tab
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/stories.png" >}}
 
@@ -134,7 +132,7 @@ Tapping **Edit** on the upper-right corner of the **Story Details** page opens t
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/edit-story.png" >}}
 
-## 6 Community Page
+## 5 Community Page
 
 The **Community** page shows community content. The page has the following sections:
 
@@ -145,13 +143,13 @@ The **Community** page shows community content. The page has the following secti
 
 In each section, you can swipe right or left to check out the next or previous item. Tapping **Show all** displays all the items in the section. If you tap an item, you will view its details in the web browser.
 
-## 7 Notifications Page
+## 6 Notifications Page
 
 The **Notifications** page shows all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the results of the actions you performed on the [Cloud](#cloud) tab of the Portable Portal app.
 
 {{% alert color="info" %}}If you allow the Portable Portal app to send you push notifications, you will also get all the notifications on your phone.{{% /alert %}}
 
-## 8 Settings Page
+## 7 Settings Page
 
 The **Settings** page displays your profile picture, your company information, and your email address.
 

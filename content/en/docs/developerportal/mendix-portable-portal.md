@@ -27,15 +27,15 @@ After you install the Portable Portal app, open it and sign in with your Mendix 
 
 ## 3 App Selection Page {#app-selection}
 
+The **App Selection** page shows all the apps that you can access in the Developer Portal:
+
 {{< figure src="/attachments/developerportal/mendix-portable-portal/app-selection.png" >}}
 
-The **App Selection** page shows all the apps that you can access in the Developer Portal. 
+Select at least one app that you want to manage in the Portable Portal app (you can also select multiple apps). To select an app, tap the app's name. You can also search for an app using the search bar on the top. 
 
-Select at least one app that you want to manage in the Portal Portal app. You can select multiple apps. To select an app, tap the app. You can also search for an app using the search bar on the top. 
+After you select the app(s), tap **Continue** to open the [My Apps](#my-apps) opens.
 
-After you select the apps, tap **Continue**. Then the [My Apps](#my-apps) page opens.
-
-{{% alert color="info" %}}If this is the first time that you select apps on the **App Selection** page, you are prompted to select if you allow the Portable Portal app to send you notifications. We do recommend you select **Allow** since sending notifications is one of the main features of the app.{{% /alert %}}
+{{% alert color="info" %}}If this is the first time you are selecting apps on the **App Selection** page, you are asked if you will allow the Portable Portal app to send you notifications. Mendix recommends selecting **Allow**, as sending notifications is one of the main features of the app.{{% /alert %}}
 
 ## 4 My Apps Page {#my-apps}
 

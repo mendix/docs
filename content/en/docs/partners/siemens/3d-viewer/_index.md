@@ -1,10 +1,12 @@
 ---
 title: "3D Viewer"
-url: /appstore/app-services/3d-viewer/
+url: /partners/siemens/3d-viewer/
 category: "App Services"
-weight: 1
+weight: 20
 description: "Describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
+aliases:
+  - /appstore/app-services/3d-viewer/index.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

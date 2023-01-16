@@ -3,7 +3,7 @@ title: "Create a Database with Amazon RDS and the Mendix Database Connector"
 linktitle: "Amazon RDS"
 url: /appstore/connectors/aws/amazon-rds-database-connector/
 description: "Describes the steps required to use the Amazon Relational Database Service (RDS) with the Mendix Database Connector."
-weight: 20
+weight: 30
 tags: ["AWS", "Amazon Relational Database Service", "RDS", "database", "Mendix Database Connector"]
 ---
 

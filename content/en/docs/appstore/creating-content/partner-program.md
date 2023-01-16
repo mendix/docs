@@ -3,7 +3,7 @@ title: "Mendix Component Partner Program"
 url: /appstore/creating-content/partner-program/
 category: "Creating Content"
 weight: 1
-description: "Describes how to join the Mendix Partner Program to promote your content in the Mendix Marketplace."
+description: "Describes how to join the Mendix Component Partner Program to promote your content in the Mendix Marketplace."
 tags: ["marketplace", "partner", "partner program", "component partner program", "component"]
 ---
 

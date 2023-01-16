@@ -6,8 +6,10 @@ tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+[**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
+
 {{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
 {{% /alert %}}
 
 ## 1 Introduction

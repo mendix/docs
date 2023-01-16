@@ -347,4 +347,4 @@ To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
 * [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * [Marketplace Content Support](/appstore/general/app-store-content-support/)
-* [Mendix Component Partner Program](/appstore/creating-content/partner-program)
+* [Mendix Component Partner Program](/appstore/creating-content/partner-program/)

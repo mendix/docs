@@ -21,9 +21,11 @@ Customers often require more from a solution than it supports out of the box. Wh
 
 For more details on building solutions, see [Architect Adaptive Solutions](/appstore/creating-content/sol-architecting/).
 
-## 3 Read More
+## 3 Read More - [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
 
-After you have discovered how the [Mendix Vendor Program](/appstore/creating-content/vendor-program/) will support you in building solutions, you can check out details on the [Mendix Solution Vendor and Startup Programs](/appstore/creating-content/sol-vendor-programs/). 
+After you have discovered how the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) will support you in building solutions, you can check out details on the [Mendix Solution Vendor and Startup Programs](/appstore/creating-content/sol-vendor-programs/).
+
+[**Mendix Solution Vendor and Startup Programs - STILL RELEVANT/RUNNING?**]
 
 Then, proceed to [Develop Solutions](/appstore/creating-content/sol-development/), which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
 

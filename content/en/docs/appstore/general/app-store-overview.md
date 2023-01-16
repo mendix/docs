@@ -73,7 +73,7 @@ The header for a component presents the following details:
     * If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
     * These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
-<a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+  <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
     * The latest **Version** number of the component
     * The Studio Pro version that the component **Requires** to work
     * The type of [license](/appstore/general/share-app-store-content/#license) for the component
@@ -345,6 +345,6 @@ To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**
 ## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)
-* [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/) 
 * [How to Share Marketplace Content](/appstore/general/share-app-store-content/)
 * [Marketplace Content Support](/appstore/general/app-store-content-support/)
+* [Mendix Component Partner Program](/appstore/creating-content/partner-program)

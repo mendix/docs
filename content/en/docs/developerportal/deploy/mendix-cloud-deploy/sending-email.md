@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-You may want to send email from your apps running in the Mendix Cloud via, for instance, the [Email Module with Templates](/appstore/modules/email-with-templates/). After you have installed this you will need to configure an SMTP server in your application. There are several options:
+You may want to send email from your apps running in the Mendix Cloud via, for instance, the [Email](/appstore/connectors/email-connector/) connector. After you have installed this you will need to configure an SMTP server in your application. There are several options:
 
 | Service | Mendix Cloud v4 | Free App environment |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ For apps deployed to Mendix Cloud v4 you must setup a third-party mail provider 
 
 In general we recommend external services as these offer specialized tools for sending e-mail, working with spam filters, keeping track of sent e-mail and giving insights into your target reach via analytics tools.
 
-The [Email Module with Templates](/appstore/modules/email-with-templates/) from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
+The [Email](/appstore/connectors/email-connector/) connector from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
 
 To use an external provider, you will need to sign up for an account with them and use their SMTP settings which include:
 

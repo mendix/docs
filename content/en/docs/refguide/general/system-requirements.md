@@ -14,7 +14,7 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Mendix Studio Pro {#sp}
 
-Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
@@ -67,7 +67,7 @@ If you want to use TortoiseSVN in combination with Studio Pro, download the late
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.<br />
 <br />
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ### 2.3 File Locations

@@ -50,7 +50,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* There are now user trials avaiable for **Premium** app services, such as [Email Service](/appstore/app-services/email-service/) and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
+* There are now user trials avaiable for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
 * User trial subscriptions are now listed under [My Subscriptions](/appstore/general/app-store-overview/#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/general/app-store-overview/#company-subscriptions).
 * For new uploads of public components, you can now optionally share a [virus scan report](/appstore/general/share-app-store-content/#package) to speed up the governance process.
 * For solutions and solution templates, you can now add a [use case](/appstore/general/share-app-store-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
@@ -348,10 +348,9 @@ We added a component in the App Store which, when configured in your app, allows
 
 #### Improvements
 
-* We released an upgraded version of the [IBM Watson Connector Suite](https://marketplace.mendix.com/link/component/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
-* We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://marketplace.mendix.com/link/component/2880/), which includes the new IBM Watson Connector Suite.
+* We released an upgraded version of the IBM Watson Connector Suite, which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
+* We released an upgraded version of the IBM Watson Connector Suite Example Project, which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App app template, which includes the new IBM Watson Connector Suite.
-* For more information see [IBM Watson Connector](/appstore/connectors/ibm-watson-connector/).
 
 ### January 21st, 2019
 

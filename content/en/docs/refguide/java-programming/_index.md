@@ -74,7 +74,7 @@ You can find the Javadoc at [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) o
 
 This library is automatically added to your libraries when you import your app into Eclipse, it is called *mxruntime.jar*.
 
-For details on usage and examples, see [How to Use the Java API](/howto/logic-business-rules/java-api-tutorial/).
+For details on usage and examples, see [Using the Java API](/refguide/java-api-tutorial/).
 
 ## 4 Opening HTTP Connections
 

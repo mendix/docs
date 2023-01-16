@@ -56,10 +56,10 @@ The **Old / Tenured Generation** will be cleaned less frequently by the garbage 
 
 {{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844068.png" >}}
 
-A healthy Mendix application that consumes a small amount of memory will show a graph similar to the first graph on the right.
+A healthy Mendix application that consumes a small amount of memory will show a graph similar to the graph above.
 
 {{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844067.png" >}}
 
-The graph on the right shows an unhealthy application. As can be seen here, the memory usage steadily increases throughout the span of one week. This can only be caused by a process that keeps consuming memory.
+This second graph, above, shows an application which becomes unhealthy. As can be seen here, the memory usage steadily increases throughout the span of one week. This can only be caused by a process that keeps consuming memory.
 
-It is acceptable for an application to consume a lot of memory in the tenured generation space, the JVM should run the major garbage collection and reduce the tenured generation to zero. 
+It is acceptable for an application to consume a lot of memory in the tenured generation space. However, the JVM should then run the major garbage collection and reduce the tenured generation to zero. 

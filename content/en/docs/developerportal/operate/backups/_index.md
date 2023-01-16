@@ -75,7 +75,7 @@ Anything you can download you can also upload again, which means you can upload 
 Uploading a **Files Only** archive resulta in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
-### 3.3 Download Backup
+### 3.3 Download Backup {#download-backup}
 
 You can download a backup archive containing one of the following: 
 

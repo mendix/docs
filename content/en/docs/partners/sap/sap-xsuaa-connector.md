@@ -10,15 +10,13 @@ tags: ["SAP", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
 
 ## 1 Introduction
 
-{{% alert color="warning" %}}
-This module is not currently compatible with Mendix versions 9.20 and above. We are working on a new version to resolve this issue.
-{{% /alert %}}
-
 XSUAA is a service provided by the SAP Business Technology Platform (SAP BTP) that will bind to the Mendix application as soon as the application is deployed within the SAP Business Technology Platform (SAP BTP) using the deployment features in the Mendix Developer Portal.
 
 Out of the box, SAP BTP has the SAP external identify provider (IDP) configured as the default IDP. It is possible to use your own (corporate) IDP as an alternative so that you can automatically give access to all the employees of your organization.
 
 {{% alert color="info" %}}
+If you are using the XSUAA Connector for SAP BTP with Mendix versions 9.20 and above you will need to make a simple change to a Java action. See [Using XSUAA with Mendix Versions 9.20 and Above](#v920), below.
+
 Version 2.1.1 of the XSUAA Connector for SAP Business Technology Platform uses a new user administration module called **SapAuthentication**. If you are upgrading from version 2.0.0 or below, you will need to migrate your existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.
 {{% /alert %}}
 
@@ -79,6 +77,26 @@ When XSUAA is enabled on SAP BTP and the *XSUAA Connector for SAP Business Techn
 
 When the IDP user is added to the Mendix application, they are given a randomly generated password to prevent the user being logged in using the local credentials. You can control the length of this randomly-generated password using the `SapAuthentication.PasswordLength` constant. This can also be set via an environment variable. `SapAuthentication.PasswordLength` should be at least 8, with a maximum value of 12.
 
-## 5 Read More
+## 5 Using XSUAA with Mendix Versions 9.20 and Above{#v920}
+
+Owing to a change in the way Mendix handles cookies in version 9.20 and above, you will need to make a small change to the Java code to ensure that it works properly. Perform the following steps:
+
+1. Upgrade to the latest version of the XSUAA Connector for SAP BTP
+1. Open the java source code file `StartXsuaaIntegration.java` in a code editor. You can find this file in the **\javasource\sapauthentication\actions** folder of your app.
+1. Find the following line in the `login` method of the source code. It will be near the end of the file.
+
+    ```java {linenos=false}
+    response.addCookie(SESSION_ID_COOKIE_NAME, session.getId().toString(), "/", "", -1, true);
+    ```
+
+1. Add a second `true` parameter to the `response.addCookie(SESSION_ID_COOKIE_NAME,…)` call. It will then read as shown below:
+
+    ```java {linenos=false}
+    response.addCookie(SESSION_ID_COOKIE_NAME, session.getId().toString(), "/", "", -1, true, true);
+    ```
+
+1. Redeploy your app. The updated Java method will be compiled automatically.
+
+## 6 Read More
 
 * [How to Use the XSUAA Connector for SAP Business Technology Platform](/partners/sap/use-sap-xsuaa-connector/)

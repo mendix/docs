@@ -136,6 +136,8 @@ You can select which attributes and associations to return by specifying the `$s
 
 ## 7 Paging {#paging}
 
+Paging allows you to load data incrementally to better handle large amounts of data. Paging occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
+
 ### 7.1 Top (Limit)
 
 You can limit the number of returned objects using the `$top` query option, where the limit is a positive integer. For example: `?$top=100`.

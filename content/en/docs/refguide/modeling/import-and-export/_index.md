@@ -1,5 +1,5 @@
 ---
-title: "Importing and Exporting Apps, Modules, Widgets, and Documents"
+title: "Import and Export Apps, Modules, Widgets, and Documents"
 linktitle: "Importing and Exporting Elements"
 url: /refguide/import-and-export/
 category: "App Modeling"
@@ -20,10 +20,10 @@ When you have an app package, you cannot import individual modules or widgets fr
 
 You can import and export the following:
 
-* apps
-* modules
-* widgets
-* documents such as pages or microflows
+* Apps
+* Modules
+* Widgets
+* Documents such as pages or microflows
 
 ## 2 Importing Various Elements
 
@@ -35,7 +35,7 @@ Be careful when importing elements, as you can overwrite your existing work. Pay
 
 A Mendix package (*.mpk*) file can store a complete Mendix app. 
 
-You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as out-of-the-box solution.  
+You can also import a solution package (*.mxsolution*), which is a complete Mendix app that was developed as an out-of-the-box solution. In this case, the solution is [set up](/appstore/creating-content/sol-set-up/) for you. These solutions are compatible with future [upgrades](/appstore/creating-content/sol-upgrade/).
 
 To import a complete app or solution package, follow these steps:
 
@@ -49,7 +49,10 @@ To import a complete app or solution package, follow these steps:
 
     You have the following options in this dialog box:
 
-    * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server** or **Locally on disk**
+    * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server**, or **Locally on disk**
+	
+	{{% alert color="info" %}} For a solution to be compatible with future upgrades, it must be set up using **New Mendix Team Server** (recommended) or **Private server** only. Solutions stored **Locally on disk** cannot be upgraded.{{% /alert %}}
+	
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
 

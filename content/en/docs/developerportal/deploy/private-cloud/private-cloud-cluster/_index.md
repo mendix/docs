@@ -1825,6 +1825,12 @@ Enabling the **External Secrets Store** option will allow users to retrieve the 
 * database plan
 * storage plan
 * MxAdmin password
+* Custom Runtime Settings
+* MxApp Constants
+
+{{% alert color="info" %}}
+You need to have the Mendix Operator version 2.10.0 in order to use the secret store for Custom Runtime Settings and MxApp Constants. Database plan, storage plan and MxAdmin password are available from 2.9.0 onwards.
+{{% /alert %}}
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
 

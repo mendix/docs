@@ -33,6 +33,8 @@ The primary hosting locations are as follows:
 * Mendix Cloud Canada: AWS Canada
 * Mendix Cloud EU: AWS Dublin
 * Mendix Cloud EU: AWS Frankfurt
+* Mendix Cloud Middle East: AWS Bahrain
+* Mendix Cloud South Africa: AWS Cape Town
 * Mendix Cloud UK: AWS London
 * Mendix Cloud US: AWS North Virginia
 * Mendix Cloud US: AWS Oregon

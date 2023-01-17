@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We added the AWS Bahrain and AWS South Africa regions as a new deployment targets.
+* We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as a new deployment targets.
 
 ### January 5th, 2023
 

@@ -26,6 +26,7 @@ Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of im
 
 The primary hosting locations are as follows:
 
+* Mendix Cloud Africa: AWS Cape Town
 * Mendix Cloud Asia Pacific: AWS Mumbai
 * Mendix Cloud Asia Pacific: AWS Singapore
 * Mendix Cloud Asia Pacific: AWS Sydney
@@ -34,7 +35,6 @@ The primary hosting locations are as follows:
 * Mendix Cloud EU: AWS Dublin
 * Mendix Cloud EU: AWS Frankfurt
 * Mendix Cloud Middle East: AWS Bahrain
-* Mendix Cloud South Africa: AWS Cape Town
 * Mendix Cloud UK: AWS London
 * Mendix Cloud US: AWS North Virginia
 * Mendix Cloud US: AWS Oregon

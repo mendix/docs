@@ -15,6 +15,8 @@ This module allows the end-user to enter their email address, and an email will 
 
 {{% alert color="info" %}}
 Versions of the Forgot Password module below 4.xx (Mendix version 8) and 5.xx (Mendix version 9) have a dependency on the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. We recommend that you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
+
+There is no alternative version for use with Mendix version 7.
 {{% /alert %}}
 
 There are three versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro version 7, 8, or 9 — see the table, below. These all work in the same way, and require the same dependencies specified below.
@@ -36,7 +38,7 @@ The Forgot Password module has the following dependencies:
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 
-¹ Versions of the Forgot Password module below 4.xx (Mendix version 8) and 5.xx (Mendix version 9) have a dependency on the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. We recommend that you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
+¹ Versions of the Forgot Password module below 4.xx (Mendix version 8) and 5.xx (Mendix version 9), and those for Mendix version 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. We recommend that if you are using Mendix versions 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
 
 ## 2 Installing the Forgot Password Module{#installing}
 
@@ -61,7 +63,7 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
         * Guest – `DeepLink.User, ForgotPassword.Guest_ResetPassword, ForgotPassword.Guest_SignUp, System.User, MyFirstModule.Guest`
         * User – `Administration.User. DeepLink.User, EmailTemplate.Administrator², ForgotPassword.Guest_ResetPassword, MxModelReflection.Readonly, MxModelReflection.TokenUser. System.User. MyFirstModule.User`
 
-            ² EmailTemplate permissions are only needed if using a version which uses the deprecated *Email Module with Templates* module.
+            ² EmailTemplate permissions are only needed if using a version which uses the deprecated Email Module with Templates module.
 
     * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
 1. Open [Navigation](/refguide/navigation/) and do the following:
@@ -116,11 +118,11 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below 
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix version 9.
 
-## 5 Migrate from Email Module with Templates to Email Connector{#migrate-email}
+## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
-Versions 4.xx (Mendix version 8) and 5.xx (Mendix version 9) and above of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. Mendix provides a migration utility to help with your upgrade to these versions.
+Versions 4.xx (Mendix version 8) and 5.xx (Mendix version 9) and above of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. There is a community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) to help with your upgrade to these versions.
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 Use these instructions before you upgrade the Forgot Password module. The point at which you should get the new version is included in the steps below.
 {{% /alert %}}
 
@@ -128,7 +130,7 @@ Use these instructions before you upgrade the Forgot Password module. The point 
 
 * An app using Mendix version 8 or above.
 
-    The Forgot Password module versions compatible with Mendix version 7 (3.xx) continue to use the Email module with templates module as the Email Connector module is not compatible with Mendix version 7.
+    The Forgot Password module versions compatible with Mendix version 7 (3.xx) continue to use the Email Module with Templates module as the Email Connector module is not compatible with Mendix version 7.
 * The email templates must be set up as follows:
 
     * The reset password template must contain *_Reset* in the template name
@@ -136,18 +138,18 @@ Use these instructions before you upgrade the Forgot Password module. The point 
 
 ### 5.2 Migration Process
 
-#### 5.2.1 Import Additional Modules
+#### 5.2.1 Importing Additional Modules
 
-Import the modules which are needed for the migration process
+Import the modules which are needed for the migration process.
 
-1. Import [Email Connector](https://marketplace.mendix.com/link/component/120739)
-2. Import [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008)
+1. Import the [Email Connector](https://marketplace.mendix.com/link/component/120739) module.
+2. Import the [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module.
 
-Troubleshoot any Atlas UI issues that may arise related to Email connector and Email connector migration utility depending on your Studio Pro version
+Troubleshoot any Atlas UI issues that may arise related to the Email Connector and Email Connector Migration Utility modules, due to your Studio Pro version.
 
 See the documentation for the [Email Connector](/appstore/connectors/email-connector/) and the [Email Connector Migration Utility](https://github.com/mendixlabs/EmailConnectorMigrationUtility) (on GitHub) for more information.
 
-#### 5.2.2 Configure App Security
+#### 5.2.2 Configuring App Security
 
 You need to allow the administrator role to access these new modules.
 
@@ -157,9 +159,9 @@ You need to allow the administrator role to access these new modules.
     * Email_Connector.EmailConnectorAdmin
     * MigrationUtility.EmailConnectorMigrationUtilAdmin
 
-#### 5.2.3 Perform Migration
+#### 5.2.3 Performing Migration
 
-Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrationUtility#migration-steps) in the GitHub repo of the migration utility tool to configure the migration utility and migrate the data from the Email module with templates module to the Email connector module.
+Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrationUtility#migration-steps) in the GitHub repo of the community-supported Email Connector Migration Utility tool to configure the migration utility and migrate the data from the Email Module with Templates module to the Email connector module.
 
 #### 5.2.4 Actions After the Migration
 
@@ -169,14 +171,14 @@ Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrati
 1. Remove the following Administrator user roles, which were added above:
     * Email_Connector.EmailConnectorAdmin
     * MigrationUtility.EmailConnectorMigrationUtilAdmin
-1. Remove any module roles related to “Email module with templates”
+1. Remove any module roles related to Email Module with Templates.
 1. Check the userlib folder in your app directory and remove the Java jars related to the Email Module with Templates module (for example, javax.mail-1.6.2.jar and activation-1.1.jar).
-1. Use the [Clean Deployment Directory](/refguide/app-menu/#clean-deployment-directory) in Studio Pro
-1. Run the application and test the functionality
+1. Use the [Clean Deployment Directory](/refguide/app-menu/#clean-deployment-directory) in Studio Pro.
+1. Run the application and test the functionality'.
 
 ### 5.3 Migration FAQ’s
 
-#### 5.3.1 What Happens If the Template Names Don't Have the Right Names?
+#### 5.3.1 What Happens If the Email Templates Don't Have the Right Names?
 
 Associations between Email-connector.EmailTemplate and ForgotPassword.Configuration will not be migrated and you will not be able to see your existing templates. You will have to create the templates again.
 
@@ -190,4 +192,4 @@ Your data will be migrated multiple times and duplicate records will be created 
 
 #### 5.3.4 What Should I Do If My Email Templates Are Not Available after Migration?
 
-You have to create templates again using the ForgotPassword configuration page, as described in [Installing the Forgot Password Module](#installing), above.
+You will have to create templates again using the ForgotPassword configuration page, as described in [Installing the Forgot Password Module](#installing), above.

@@ -18,11 +18,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Portal Improvements
 
 * When using Mendix Operator version 2.10.0, it is now possible to load MxApp Constants and Custom Runtime Settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
-* We have added a new status field indiacating whether custom runtime setting and MxApp Constants were loaded from CSI Secrets Storage.
+* We have added a new status field indicating whether custom runtime setting and MxApp Constants were loaded from CSI Secrets Storage.
 * We have added a notification on top of model options and runtime settings page when CSI Secrets Storage is enabled for a namespace.
 * We have removed the limit of 8 characters for MxAdmin password. With this customer need to set the password based on the policy set in Studio Pro.
 * We have fixed the issue where customer was unable to update the datatype of constants in Private cloud portal. (Ticket 173999)
 * We have fixed the bug where sometimes the log levels were not editable.
+* We have fixed the network error issue with Try it out option in Private cloud Deploy API [documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
 
 ### January 5th, 2023
 

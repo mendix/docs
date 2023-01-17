@@ -27,7 +27,7 @@ Whenever you want to check if a string contains text, it is not sufficient to ex
 
 ## 2 Breaking Down into Separate Decisions
 
-An inefficient example is to check for text and create a combined messages based on the outcome. Building out all combinations is a lot of work, and if something needs to change, it will be a lot of work and is prone to errors. 
+An inefficient example is to check for text and create combined messages based on the outcome. Building out all combinations is a lot of work, and if something needs to change, it will be a lot of work and is prone to errors. 
 
 Reference this microflow:
 

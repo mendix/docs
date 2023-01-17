@@ -63,13 +63,11 @@ Apps running in other clouds (for example, Mendix for Private Cloud) will displa
 
 #### 4.1.1 Packages
 
-The **Packages** section will show you the latest package that has been created for your app.
+The **Packages** section shows you the latest package that has been created for your app.
 
-Tap the **Packages** title to see a list of all the packages which are currently available.
+Tap the **Packages** title to see a list of all the packages which are currently available. Tap the name of the latest package to see the details of the package. This also gives you options to deploy this package to any of your environments. If you do not have the **Transport Rights** permission, the deployment will fail.
 
-Tap the package name of the latest package to see details of the package. This also gives you options to deploy this package to any of your environments. If you do not have the **Transport Rights** permission the deployment will fail.
-
-You can also create a new package from the Team Server. Do the following:
+You can also create a new package from the Team Server by following these steps:
 
 1. Tap the **+** symbol.
 2. Select the **Branch** and **Revision** containing the version you want.
@@ -77,29 +75,23 @@ You can also create a new package from the Team Server. Do the following:
 4. Enter a **Tag Description**.
 5. Tap **Create Package**.
 
-    You will get an indication that your package is being built.
-
-You will get a notification from the app when the build is complete, and will then be able to see the package details. 
+You will get an indication that your package is being built. After you get a notification from the app that the build is complete, you can see the package details. 
 
 #### 4.1.2 Environments
 
-The **Environments** section will show you 
+The **Environments** section will show you the following details:
 
-* Environment name – for example, Acceptance
-* Environment status – indicated by the color of the check mark next to the environment name:
-    * Green checkmark – the environment is up and running
-    * Red cross – the environment is not running (stopped)
+{{% todo %}}Re: environment status, in Dev Portal Guide, we mention that the status can be cached. Is this relevant for the Portable Portal? "The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/)."{{% /todo %}} 
 
-{{% todo %}}In the Developer Portal documentation, we mention that the status can be cached. Is this relevant for the portable portal?  
-
-`The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).`
-{{% /todo %}} 
-    
+* Environment name – for example, **Acceptance**
+* Environment status – indicated by the check mark color next to the environment name:
+    * Green check mark – environment is up and running
+    * Red cross – environment is not running (stopped)
 * Deployment package **Version** – for example, 1.0.0.18
 * **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
 * The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
 
-Tapping the environment allows you to perform the following actions, if you have the **Transport Rights** permission for the environment:
+Tapping the environment allows you to perform the following actions (if you have the **Transport Rights** permission for the environment):
 
 * **Restart Application** – This stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment.
 * **Start/Stop Application**

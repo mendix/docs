@@ -25,7 +25,7 @@ Mendix will endeavor to maintain the current *outgoing* IP addresses. However, t
 
 This is the IP address of one of our front-facing web servers. This is the IP address your browser connects to when you visit your application in the Mendix Cloud, for example, yourapplication.mendixcloud.com. You can also retrieve this IP address easily by performing a DNS lookup for this domain with, for example, http://ping.eu/nslookup/ (not 127.0.0.1).
 
-### 2.2 Outgoing IP
+### 2.2 Outgoing IP {#outgoing}
 
 This is the IP address other servers see when the Mendix application initiates the connection. You normally need to add it to your firewall if you want your Mendix application to contact one of your firewalled servers.
 

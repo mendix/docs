@@ -17,7 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
-### January 5th, 2022
+### January 13th, 2023
+
+#### Improvements
+
+* We added the AWS Bahrain and AWS South Africa regions as a new deployment targets.
+
+### January 5th, 2023
 
 #### Improvements
 

@@ -111,8 +111,8 @@ After modeling the API response, you can create the corresponding action to use 
     
     Name the microflow according to the [best-practice naming conventions](#naming).
 
-2. Configure the microflow to return a SigV4Header object by using the **Get SigV4 Headers** Java action from the [AWS Authentication](/appstore/connectors/aws/aws-authentication) module.
-3. Configure both [static and session-based credentials](/appstore/connectors/aws/aws-authentication).
+2. Configure the microflow to return a SigV4Header object by using the **Get SigV4 Headers** Java action from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) module.
+3. Configure both [static and session-based credentials](/appstore/connectors/aws/aws-authentication/).
 4. Create a **Call REST** activity and configure the headers from the SigV4Header object.
 
     For more information, see [AWS Authentication: GetSigV4SignedHeaders Java Action](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/#java-action).

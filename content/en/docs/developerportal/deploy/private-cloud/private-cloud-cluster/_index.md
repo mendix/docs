@@ -1820,16 +1820,16 @@ This tab shows information on the versions of the various components installed i
 
 This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
 
-Enabling the **External Secrets Store** option will allow users to retrieve the following secrets from an external secrets store
+Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 
-* database plan
-* storage plan
+* Database plan
+* Storage plan
 * MxAdmin password
-* Custom Runtime Settings
-* MxApp Constants
+* Custom runtime settings
+* MxApp constants
 
 {{% alert color="info" %}}
-You need to have the Mendix Operator version 2.10.0 in order to use the secret store for Custom Runtime Settings and MxApp Constants. Database plan, storage plan and MxAdmin password are available from 2.9.0 onwards.
+If you want to use the secret store for custom runtime settings or MxApp constants, the Mendix Operator must be in version 2.10.0 or later. Database plan, storage plan, and MxAdmin password are available from version 2.9.0 onwards.
 {{% /alert %}}
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.

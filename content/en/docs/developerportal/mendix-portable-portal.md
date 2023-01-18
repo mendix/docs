@@ -81,10 +81,6 @@ You will get an indication that your package is being built. After you get a not
 
 The **Environments** section shows you the following details:
 
-{{% todo %}}
-Re: environment status, in Dev Portal Guide, we mention that the status can be cached. Is this relevant for the Portable Portal? "The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/)."
-{{% /todo %}} 
-
 * Environment name – for example, **Acceptance**
 * Environment status – indicated by the check mark color next to the environment name:
     * Green check mark – environment is up and running

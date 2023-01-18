@@ -48,11 +48,9 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 2. Click **Cloud Settings**.
 
-3. Click **Set up** for **Mendix for Private Cloud** option.
+3. In the **Mendix for Private Cloud** section, click **Set up**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/SetUpButton.png" >}}
-
-4. Your app is now configured for private cloud.
 
 ### 3.2 Creating a Deployment Package {#create-deployment-package}
 

@@ -18,7 +18,7 @@ year-from-dateTime ( attribute [, timezone ] )
 
 ### 2.1 attribute
 
-`attribute` specifies the attribute to extract the day from. It must have the **Date and time** type.
+`attribute` specifies the attribute to extract the day from. Attribute must be of the **Date and time** type.
 
 ### 2.2 timezone
 

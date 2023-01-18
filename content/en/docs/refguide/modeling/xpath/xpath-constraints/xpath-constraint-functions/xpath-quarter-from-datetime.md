@@ -18,7 +18,7 @@ quarter-from-dateTime ( attribute [, timezone ] )
 
 ### 2.1 attribute
 
-`attribute` specifies the attribute to extract the day from. It must have the **Date and time** type.
+`attribute` specifies the attribute to extract the day from. Attribute must be of the **Date and time** type.
 
 ### 2.2 timezone
 
@@ -26,13 +26,13 @@ quarter-from-dateTime ( attribute [, timezone ] )
 
 ## 3 Examples
 
-This query returns all the logs where `DateAttribute` is in quarter 4 in the local time zone (for example, "2011-12-30"):
+This query returns all the logs where `DateAttribute` is in the forth quarter in the local time zone (for example, "2011-12-30"):
 
 ```java {linenos=false}
 //Logging.Log[quarter-from-dateTime(DateAttribute) = 4]
 ```
 
-This query returns all the logs where `DateAttribute` is in quarter 4 in the New York time zone (for example, "2011-12-30"):
+This query returns all the logs where `DateAttribute` is in the forth quarter in the New York time zone (for example, "2011-12-30"):
 
 ```java {linenos=false}
 //Logging.Log[quarter-from-dateTime(DateAttribute, 'America/New_York') = 4]

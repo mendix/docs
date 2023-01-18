@@ -15,7 +15,7 @@ The Mendix Portable Portal app provides you with mobile capabilities for differe
 
 To install the Mendix Portable Portal app, follow these steps:
 
-1. Go to the [Mendix Portal](https://mxmobilecc.mendixcloud.com/), which provides instructions on how to download app..
+1. Go to the [Mendix Portal](https://mxmobilecc.mendixcloud.com/), which provides instructions on how to download app.
 2. Sign in with your Mendix account.
 3. Follow the instructions on the website, and then click **Download App**.
 4. Select which device you use: iOS or Android. The website generates the corresponding QR code for downloading the app to your device.
@@ -81,7 +81,9 @@ You will get an indication that your package is being built. After you get a not
 
 The **Environments** section shows you the following details:
 
-{{% todo %}}Re: environment status, in Dev Portal Guide, we mention that the status can be cached. Is this relevant for the Portable Portal? "The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/)."{{% /todo %}} 
+{{% todo %}}
+Re: environment status, in Dev Portal Guide, we mention that the status can be cached. Is this relevant for the Portable Portal? "The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/)."
+{{% /todo %}} 
 
 * Environment name – for example, **Acceptance**
 * Environment status – indicated by the check mark color next to the environment name:

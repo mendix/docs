@@ -193,3 +193,7 @@ For example, the old version of the [LDAP Synchronization module](https://market
 >     * spring-tx-4.3.9.RELEASE.jar 
 >     * org.slf4j.slf4j-api-1.7.25.jar 
 >     * commons-lang-2.5.jar
+
+### 8.6 Dojo library - deepCopy Vulnerability - CVE-2020-5258
+
+The Mendix Client is bundled with the full dojo library. However, not all functionality of the Dojo library is used. The vulnerability is in the `deepCopy` util method of dojo; this method is not used in the Mendix Client. This vulnerability cannot be exploited in the client.

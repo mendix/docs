@@ -20,13 +20,13 @@ Collaborative development is the process of sharing app model changes when a tea
 If you get a **Mendix Studio is not enabled for this app yet** message when opening your app in Studio, make sure you enable a development line for it. For more information, see [Enabling Studio for a Development Line](#active-branch).
 {{% /alert %}}
 
-## 2 Collaborative Development Overview
+## 2 Collaborative Development Process Overview
 
 Studio Pro users can collaborate with each other through [version control](/refguide/version-control/) via **Commit** and **Update** operations. 
 
 The collaborative development process between Studio Pro and Studio consists of the following steps:
 
-1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the app in Studio at the same time: One user can edit it and the others are in read-only mode. 
+1. Every change made in Studio is automatically saved to the Studio working copy. Multiple users can view the app in Studio at the same time: one Studio user can edit it and the other Studio users are in read-only mode. 
 2. When Studio Pro users open an app, they are notified if Studio is enabled for this development line. 
 
     {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/collaborative-development-enabled-notification.png" alt="Collaborative Development Enabled Notification" >}}
@@ -44,41 +44,73 @@ The collaborative development process between Studio Pro and Studio consists of 
 When the Studio Pro user wants to deploy the app to the cloud, they click the **Publish** button. The commit is done automatically during this process and step five is executed. 
 {{% /alert %}}
 
-## 3 Studio Perspective
-
 For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/collaborative-development/). 
 
-## 4 Studio Pro Perspective
-
-After opening an app in Studio Pro, you can see which development line (the main line or a branch line) Studio is enabled for by opening **Version Control** > **Manage Branch Lines**. The development line that Studio is enabled for (if any) is marked with a globe icon in the first column.
-
-If you are on another line than the Studio-enabled line, you can select the branch and click the **Switch Branch** button:
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/switch-branch.png" alt="Open App Dialog Window" >}}
-
-### 4.1 Merging Latest Changes
-
-To merge the latest changes stored in the Team Server (from both Studio users and other Studio Pro users), open **Changes** and click **Update**.
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/update-button.png" alt="Update Option" >}}
-
-### 4.2 Committing Latest Changes
-
-To commit your latest app changes and make them available to other users, open **Changes** and click **Commit**. The process of deploying your app (when you click the **Publish** button) will also trigger a commit. 
+## 3 Version Control Processes in Studio and Studio Pro for a Single Branch {#vc-single}
 
 {{% alert color="info" %}}
-We recommend you update your app and commit changes often to avoid multiple conflicts in your app.  
+From Mendix 9.21, we only support [collaborative development](/refguide/collaborative-development/) between Studio Pro users. Mendix Studio is no longer supported for apps with Mendix version 9.21 or above. For more information, see the blog post [Coming in 2023: The Merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/).
 {{% /alert %}}
 
-If your app has conflicts, Studio will be unlocked without receiving your changes. You need to resolve the conflicts in Studio Pro first to be able to complete the merge and commit again. 
+### 3.1 Work in Studio and Studio Pro
 
-Your changes will be sent to Studio automatically if there are no conflicts. For more information on the collaborative development process in Studio, see [Collaborative Development in Studio](/studio/collaborative-development/).
+The figure below shows how two developers might collaborate on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). 
 
-### 4.3 Viewing History of Commits
+{{< figure src="/attachments/refguide/version-control/image1.png" >}}
 
-You can see all the changes committed to the current development line via **Version Control** > **History**:
+Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/history-dialog.png" alt="History Dialog Box" >}}
+{{< figure src="/attachments/refguide/version-control/image4.png" >}}
+
+### 3.2 Work in Studio Pro 
+
+Another (or the same) developer opens the app for the first time in Studio Pro. A new revision (state 2) is created on the Team Server from the current state of the Studio working copy. It is downloaded to the local machine as the working copy for Studio Pro. Studio is locked temporarily so that the Studio working copy is stable while it is copied.
+
+The developer works in Studio Pro on the local working copy of the app. There is no work done in Studio in this scenario.
+
+The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Studio working copy and the developer using Studio will get the changes automatically.
+
+{{< figure src="/attachments/refguide/version-control/image3.png" >}}
+
+### 3.3 Work in Studio 
+
+The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
+
+{{< figure src="/attachments/refguide/version-control/image2.png" >}}
+
+### 3.4 Update/Pull Studio Pro Working Copy
+
+The developer using Studio Pro wants to include the changes made by the developer using Studio. They choose to update (for SVN) or pull (for Git) their working copy.
+
+All the changes from the Studio working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Studio Pro working copy. While the Studio Pro working copy is being updated, Studio is locked temporarily so that the Studio working copy is stable while it is copied.
+
+{{% alert color="info" %}} This will also pick up changes from other developers using Studio Pro, if they have committed changes to this branch. {{% /alert %}}
+
+If there are conflicts, the developer using Studio Pro will have to resolve them before they can commit the changes to the Team Server repository.
+
+{{< figure src="/attachments/refguide/version-control/image5.png" >}}
+
+### 3.5 Commit Changes to Team Server Repository
+
+The developer using Studio Pro wants to commit a new revision to the Team Server. This will enable the developer using Studio, or a different developer using Studio Pro, to see and work with the changes the developer has made. It also means that the revision can be deployed to the cloud.
+
+The developer selects to commit, and the following things happen:
+
+* Studio is locked temporarily
+* The Studio working copy is committed as a revision (restore point – state 5)
+* The revision just created (state 5) is merged with the Studio Pro working copy
+
+If there are no merge [conflicts](#conflict), the updated Studio Pro working copy is committed as a new revision (state 6) and the Studio working copy is updated to the new revision and unlocked.
+
+If there are conflicts, the developer using Studio Pro will need to resolve these. Studio will be unlocked, without receiving any of the changes from Studio Pro, while they do this. The developer using Studio Pro then needs to commit again, and the process starts from the beginning (Studio is locked ready for a new revision to be committed from the Studio Working Copy).
+
+{{< figure src="/attachments/refguide/version-control/image6.png" >}}
+
+## 4 Working Locally in Studio Pro
+
+Another use case is when the developer is working locally in Studio Pro only. The image below illustrates how a single developer might work on changes and share them through the Team Server. The developer creates an app first. The initial local model is than sent to the Team Server. After creating an app the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to the Team Server in a later stage. For example, it can be the case if the developer is working without access to a network.
+
+{{< figure src="/attachments/refguide/version-control/image10.png" >}}
 
 ## 5 Managing Studio on Development Lines {#managing-studio}
 
@@ -126,53 +158,13 @@ To disable Studio, do the following:
 
 Studio is disabled for your app.
 
-## 6 Managing Development Lines {#managing-branches}
-
-You can create and delete branch lines. 
-
-### 6.1 Creating a New Branch Line
-
-To create a new branch line, do the following: 
-
-1. Click **Version Control** > **Manage Branch Lines**. 
-2. In the **Branch Line Manager** dialog box, you see the list of existing development lines. Click **New** to create a branch line. <br/>
-
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/creating-new-branch.png" alt="Creating New Branch" >}}<br/>
-
-3. In the **Create Branch Line** dialog box, set the following: 
-
-    1. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](/refguide/version-control/#concepts) section in *Version Control*. 
-    2. Select the **Revision**, if needed. 
-    3. Type the name of the new line.
-
-        {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/create-branch-dialog.png" alt="Create Branch Line Dialog" >}} 
-
-4. After you have configured all the settings, click **OK**.
-
-You have created a new branch line.
-
-### 6.2 Deleting a Branch Line {#deleting}
-
-To delete a branch line, do the following:
-
-1. Click **Version Control** > **Manage Branch Lines**. 
-2. In the **Branch Line Manager** dialog box, select the branch you would like to delete, click **Delete** and confirm deletion. 
-
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/deleting-branch.png" alt="Deleting a Branch" >}}
-
-You have deleted the branch.
-
-{{% alert color="info" %}}
-You cannot delete a Studio enabled branch. If you need to delete this branch, enable Studio for another line, and only then delete the branch. 
-{{% /alert %}}
-
-## 7 Collaborative Development with Studio from Mendix 9.21 {#studio-9.21}
+## 6 Collaborative Development with Studio from Mendix 9.21 {#studio-9.21}
 
 From Mendix 9.21, collaborative development with Mendix Studio is not available as Studio only supports apps with Mendix version 9.20 or below. If you have a branch line enabled for Studio in your app, you need to disable Studio for this branch line first to be able to upgrade your app. For more information on how to disable Studio for a branch line, see [Disabling Studio for a Development Line](#disable-studio) section above.
 
 If you do not have any branch line enabled for Studio, collaborative development between Studio Pro users has no changes. 
 
-## 8 Read More
+## 7 Read More
 
 * [Version Control](/refguide/version-control/)
 * [Troubleshooting Collaborative Development](/refguide/collaborative-development-troubleshooting/)

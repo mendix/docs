@@ -23,8 +23,11 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have removed the limit of eight characters for the MxAdmin password. You should set the password based on the policy set in Studio Pro.
 * We have fixed an issue where users were unable to update the datatype of constants in the Private Cloud portal. (Ticket 173999)
 * We have fixed a bug where sometimes the log levels were not editable.
-* We have fixed a network error issue with the **Try it out** option in the [Private Cloud Deploy API documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 * Unused deployment packages from your repository are now removed if they are older than two weeks.
+
+#### Deploy API Improvements
+
+* We have fixed a network error issue with the **Try it out** option in the [Private Cloud Deploy API documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 
 ### January 5th, 2023
 

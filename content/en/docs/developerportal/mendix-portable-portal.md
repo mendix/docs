@@ -47,7 +47,7 @@ The name of this app is shown on top of the screen. If you tap the app name, the
 
 This page page contains the **Cloud** and **Stories** tabs, which are described below.
 
-### 4.1 Cloud Tab {#cloud}
+### 4.1 Cloud {#cloud}
 
 The **Cloud** tab shows information about the packages and environments, and allows you to manage them:
 
@@ -79,7 +79,7 @@ You will get an indication that your package is being built. After you get a not
 
 #### 4.1.2 Environments
 
-The **Environments** section will show you the following details:
+The **Environments** section shows you the following details:
 
 {{% todo %}}Re: environment status, in Dev Portal Guide, we mention that the status can be cached. Is this relevant for the Portable Portal? "The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/)."{{% /todo %}} 
 
@@ -91,59 +91,59 @@ The **Environments** section will show you the following details:
 * **Runtime** – the Mendix Studio Pro version with which the app is built, for example, 9.5.0
 * The **URL** of the app – for example, `https://mytestapp.mendixcloud.com`
 
-Tapping the environment allows you to perform the following actions (if you have the **Transport Rights** permission for the environment):
+Tap the environment to perform the following actions (if you have the **Transport Rights** permission for the environment):
 
-* **Restart Application** – This stops the running application and starts it again — this is necessary to apply new constant values or scheduled events to the environment.
+* **Restart Application** – stops the running application and starts it again, which is necessary to apply new constant values or scheduled events to the environment
 * **Start/Stop Application**
-* **Transport to** – This stages an environment to another environment, for example acceptance or production.
-* **View Constants** – Here you can view the deployed value of app constants. You can also change constant values, and these will be applied to the environment the next time it is restarted.
-* **View Scheduled Events** – Here you can view and enable/disable the app's scheduled events. Changes will be applied to the environment the next time it is restarted.
+* **Transport to** – stages an environment to another environment (for example, acceptance or production)
+* **View Constants** – view the deployed value of app constants; you can also change the constant values, and these will be applied to the environment the next time it is restarted
+* **View Scheduled Events** – view and enable/disable the app's scheduled events; changes will be applied to the environment the next time it is restarted
 
-### 4.2 Stories Tab
+### 4.2 Stories
+
+The **Stories** tab shows the name of the currently active Sprint and the backlog:
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/stories.png" >}}
 
-The **Stories** tab shows the name of the currently active Sprint and the backlog.
-
-When you tap the currently active Sprint on the **Stories** tab, you can see the stories in the **To-do**, **Running**, and **Done** lists for your active Sprint. You can swipe right or left to check out the next or previous list. 
+Tap the currently active Sprint to see the stories in the **To-do**, **Running**, and **Done** lists for your active Sprint. Swipe right or left to check out the next or previous list. 
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/active-sprint.png" >}}
 
-To move a story from one list to another list, tap and hold the story until it becomes moveable, as shown in the image below, and then drag the story into the new list.
+To move a story from one list to another list, tap and hold the story until it becomes moveable and then drag the story into the new list:
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/move-story.png" >}}
 
-When you tap **Backlog** on the **Stories** tab, you can see all the stories in the backlog. Tapping **Add Story** on the upper-right corner allows you to add a story to the backlog.
+Tap **Backlog** to see all the stories in the backlog. Tap **Add Story** on the upper-right corner to add a story to the backlog:
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/backlog-stories.png" >}}
 
-Tapping a story in either the active Sprint or the backlog opens the **Story Details** page. The **Story Details** page displays the name of this story, the story ID, the number of points, the description of the story, the labels, the assignee, the status of the story, the list of sub-tasks, and the comments made on this story. On the **Story Details** page, you can also change the assignee and the story status, manage (add, edit, delete, and check off) sub-tasks, and leave comments.
+Tap a story in either the active Sprint or the backlog to open the **Story Details** page. This page displays the story name, story ID, number of points, description of the story, labels, assignee, status of the story, list of sub-tasks, and comments. On this page, you can also change the assignee and the story status, manage (add, edit, delete, and check off) sub-tasks, and leave comments.
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/story-details.png" >}}
 
-Tapping **Edit** on the upper-right corner of the **Story Details** page opens the **Edit Story** page where you can change the story name and description, select whether the story is for a feature or a bug, change the assignee and the number of points, and add labels.
+Tap **Edit** on the upper-right corner of the **Story Details** page to open the **Edit Story** page. Here you can change the story name and description, select whether the story is for a feature or a bug, change the assignee and the number of points, and add labels.
 
 {{< figure src="/attachments/developerportal/mendix-portable-portal/edit-story.png" >}}
 
 ## 5 Community
 
-The **Community** page shows community content. The page has the following sections:
+The **Community** page shows community content in the following sections:
 
-* **Forum Questions** – shows the latest questions from the [Mendix Forum](/developerportal/community-tools/mendix-forum/)
-* **Events** – shows the upcoming Mendix events
-* **Blogs** – shows the latest community blog articles
-* **Mendix Youtube** – shows the Mendix Youtube videos
+* **Forum Questions** – the latest questions from the [Mendix Forum](/developerportal/community-tools/mendix-forum/)
+* **Events** – upcoming Mendix events
+* **Blogs** – the latest community blog articles
+* **Mendix Youtube** – Mendix Youtube videos
 
-In each section, you can swipe right or left to check out the next or previous item. Tapping **Show all** displays all the items in the section. If you tap an item, you will view its details in the web browser.
+In each section, you can swipe right or left to check out the next or previous item. Tap **Show all** to display all the items in the section. Tap an item to view its details in a web browser.
 
 ## 6 Notifications
 
-The **Notifications** page shows all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the results of the actions you performed on the [Cloud](#cloud) tab of the Portable Portal app.
+The **Notifications** page shows all the [notifications](/developerportal/#notifications) that you receive on the Developer Portal as well as the results of the actions you perform on the [Cloud](#cloud) tab of the Portable Portal app.
 
 {{% alert color="info" %}}If you allow the Portable Portal app to send you push notifications, you will also get all the notifications on your phone.{{% /alert %}}
 
 ## 7 Settings
 
-The **Settings** page displays your profile picture, your company information, and your email address.
+The **Settings** page displays your profile picture, company information, and email address.
 
 You can also log out from the Portable Portal app on this page.

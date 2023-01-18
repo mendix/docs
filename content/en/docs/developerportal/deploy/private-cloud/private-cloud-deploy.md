@@ -468,7 +468,7 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 To change any constants, select the constant you want to edit and then click **Edit**.
 
 {{% alert color="info" %}}
-If the MxApp Constants are configured in both the Developer Portal (or MendixApp CR) and CSI Secrets Storage, then the secret storage will have a higher priority and will override the value specified elsewhere.
+If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
 

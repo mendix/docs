@@ -489,7 +489,7 @@ When you use some settings on the Runtime tab for Mendix for Private Cloud they 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If the Custom Runtime Settings are configured in both the Developer Portal (or MendixApp CR) and CSI Secrets Storage, then the secret storage will have a higher priority and will override the value specified elsewhere.
+If the custom runtime settings are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
 ### 5.5 Log Levels Tab

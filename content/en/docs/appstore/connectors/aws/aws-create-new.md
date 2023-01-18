@@ -29,10 +29,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 2 Advantages of REST API-based Development
 
-When developing AWS connectors, you can choose between integration by means of REST API or the SDK. Although an SDK-based integration means that the implementation is alike across all AWS services, using REST API is more suitable when the focus is on using standard platform capabilities. In addition, using REST API does not require any Java-based development. Because of that, this how-to focuses on developing AWS connectors with REST API.
+When developing AWS connectors, you can choose between integration by means of a REST API or an SDK. Although an SDK-based integration means that the implementation is alike across all AWS services, using a REST API is more suitable when the focus is on using standard platform capabilities. In addition, using a REST API does not require any Java-based development. Because of that, this how-to focuses on developing AWS connectors with the REST API.
 
 {{% alert color="info" %}}
-The platform-supported [Amazon Rekognition connector](/appstore/connectors/aws/amazon-rekognition/) was built using REST API. If required, you can use it as reference when building your own connector.
+The platform-supported [Amazon Rekognition connector](/appstore/connectors/aws/amazon-rekognition/) was built using the REST API. If required, you can use it as reference when building your own connector.
 {{% /alert %}}
 
 ## 3 Building a REST API-based AWS Connector
@@ -45,10 +45,10 @@ To start creating your connector, do the following steps:
 
 1. In Mendix Studio Pro, create a new module.
     
-    For more information about the recommended naming convention for the module, see [Naming Conventions for Elements within the Connector](#naming)
+    For more information about the recommended naming convention for the module, see [Naming Conventions for Elements within the Connector](#naming).
 2. Install and configure the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333).
 
-    This connector is required to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/)
+    This connector is required to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In your connector module, create a folder structure similar to the following figure:
 
     {{< figure src="/attachments/appstore/connectors/aws-create-new/samplefolders.png" alt="The folder structure for the platform-supported Amazon Polly connector">}}
@@ -97,7 +97,7 @@ After you have obtained an API response, you can use it to model the service in 
     4. Click **OK**
 10. Click **Map automatically**
 
-    Mendix Studio Pro now creates the entities towards which the AWS service response will be mapped, as in the following example:
+    Mendix Studio Pro now creates the entities into which the AWS service response will be mapped, as in the following example:
 
     {{< figure src="/attachments/appstore/connectors/aws-create-new/sampleentities.png" alt="The domain model for the platform-supported Amazon Polly connector">}}
 
@@ -115,7 +115,7 @@ After modeling the API response, you can create the corresponding action to use 
 3. Configure both [static and session-based credentials](/appstore/connectors/aws/aws-authentication/).
 4. Create a **Call REST** activity and configure the headers from the SigV4Header object.
 
-    For more information, see [AWS Authentication: GetSigV4SignedHeaders Java Action](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/#java-action).
+    For more information, see [AWS Authentication: GetSigV4SignedHeaders Java Action](/appstore/connectors/aws/aws-authentication/#java-action).
 
 The signing of headers may differ across AWS services, for example:
 
@@ -124,7 +124,7 @@ The signing of headers may differ across AWS services, for example:
 
 ### 3.5 Exposing the API Microflow
 
-After you create a microflow that connects to an AWS service, expose it as a microflow activity. In this way, you can then use it as a building block for other, more complex microflows.
+After you create a microflow that connects to an AWS service, expose it as a microflow action. In this way, you can then use it as a building block for other, more complex microflows.
 
 1. Right-click on the work area of the microflow, and then select **Properties**.
 2. In the **Expose as microflow action** tab, select the **Expose as microflow action** check box.
@@ -157,14 +157,14 @@ To ensure that the naming conventions for your connector are easy to parse for t
 | --- | --- |
 | Connector module | Match the name of the connector to how the service is named by Amazon, for example, AWS Lambda Connector for the AWS Lambda service |
 | Microflow | Use the `METHOD_APIVERSION_ACTIONNAME` format, for example, `Get_v1_DescribeVoices`. Following this format allows end-users to recognize the HTTP method, API version, and the action in question |
-| Microflow action | Match the name of the microflow action to how the action is named in AWS, for example, `ListFunctions` for the List Functions action. For a full list of actions within a sevice, refer to the API reference for the AWS service to which you want to connect |
+| Microflow action | Match the name of the microflow action to how the action is named in AWS, for example, `ListFunctions` for the List Functions action. For a full list of actions within a service, refer to the API reference for the AWS service to which you want to connect |
 | Request entity | Use the `{Action name}Request` format, for example, `ListFunctionsRequest` |
 | Response entity | Use the `{Action name}Response` format, for example, `ListFunctionsResponse` |
 | Attribute | Match the AWS attribute naming, except where it is not possible due to the reserved keywords in Mendix, or where the name would not be easily understood by the end-user |
 
 ### 4.3 Documentation Structure
 
-To help your end-users implement and use your connector, you should provide documentation on Mendix Marketplace, as well as clearly describe your entities and activities within the connector itself.
+To help users implement and use your connector, you should provide documentation on Mendix Marketplace, as well as clearly describe your entities and activities within the connector itself.
 
 #### 4.3.1 Marketplace Documentation
 
@@ -186,12 +186,12 @@ In the Mendix project, document the exposed microflow actions, as well as the en
         * Does it refer to a single object or a list of objects?
 * Example:
     
-    *This entity is the response for the Amazon Textract AnalyzeExpense action. The attribute it contains is PageCount which describes the number of pages that are detected in the document. Additionally, it contains a list of ExpenseDocument.*
+    *This entity is the response for the Amazon Textract AnalyzeExpense action. The attribute it contains is PageCount which describes the number of pages that are detected in the document. Additionally, it is associated with multiple ExpenseDocuments.*
 
 ##### 4.3.2.1 Exposed Microflow Action
 
 * What operation does the microflow action perform?
-* What the are required and optional input parameters for the microflow action?
+* What are the required and optional input parameters for the microflow action?
 * Example:
 
     *The DeleteItem Amazon DynamoDB action allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, DeleteItemRequest object with an Item object associated to it. If the given table has only a partition key, the Item object should have a KeyValue object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the Item object must have two KeyValue objects.*

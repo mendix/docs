@@ -17,14 +17,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* When using Mendix Operator version 2.10.0, it is now possible to load MxApp Constants and Custom Runtime Settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
-* We have added a new status field indicating whether custom runtime setting and MxApp Constants were loaded from CSI Secrets Storage.
-* We have added a notification on top of model options and runtime settings page when CSI Secrets Storage is enabled for a namespace.
-* We have removed the limit of 8 characters for MxAdmin password. With this customer need to set the password based on the policy set in Studio Pro.
-* We have fixed the issue where customer was unable to update the datatype of constants in Private cloud portal. (Ticket 173999)
-* We have fixed the bug where sometimes the log levels were not editable.
-* We have fixed the network error issue with Try it out option in Private cloud Deploy API [documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
-* We now remove unused deployment packages from your repository if they are more than two weeks old.
+* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
+* We have added a new status field indicating whether custom runtime setting and MxApp constants were loaded from CSI Secrets Storage.
+* We have added a notification on top of the Model Options and Runtime Settings page to indicate whether CSI Secrets Storage is enabled for a namespace.
+* We have removed the limit of eight characters for the MxAdmin password. You should set the password based on the policy set in Studio Pro.
+* We have fixed an issue where users were unable to update the datatype of constants in the Private Cloud portal. (Ticket 173999)
+* We have fixed a bug where sometimes the log levels were not editable.
+* We have fixed a network error issue with the **Try it out** option in the [Private Cloud Deploy API documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+* Unused deployment packages from your repository are now removed if they are older than two weeks.
 
 ### January 5th, 2023
 

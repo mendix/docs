@@ -24,6 +24,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have fixed the issue where customer was unable to update the datatype of constants in Private cloud portal. (Ticket 173999)
 * We have fixed the bug where sometimes the log levels were not editable.
 * We have fixed the network error issue with Try it out option in Private cloud Deploy API [documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
+* We now remove unused deployment packages from your repository if they are more than two weeks old.
 
 ### January 5th, 2023
 

@@ -3,7 +3,7 @@ title: "Mendix Portable Portal App"
 url: /developerportal/mendix-portable-portal
 description: "Describes the features of the Mendix Portable Portal app."
 tags: ["mendix", "developer portal", "Portable Portal", "mobile"]
-weight: 35
+weight: 12
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

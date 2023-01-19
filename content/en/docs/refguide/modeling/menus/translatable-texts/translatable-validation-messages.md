@@ -14,19 +14,19 @@ Setting up validation rules should be relatively straightforward. For each objec
 
 These types of validation actions should be used throughout your app. 
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/18581628.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/classic-validation.png" >}}
 
 However, you will often run into situations where you need to be able to show or process your validation rules in a different way than just giving validation feedback. One option that gives you more control is building one large string message variable. The validation microflow should return that message. If anything has been returned, the object is invalid.
 
 Or if you need to differentiate between the different validation messages, you can also build a list of (non-)persistable objects. Instead of appending a message, you should create an object and add the object to a list. Also take a look at the validation best practices.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/18581627.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/validation-second-option.png" >}}
 
 ## 2 Simple Alternative for Translating Messages
 
 There is one big problem with this second solution: you loose the ability to translate your validation message. String variables or attributes cannot be translated by the platform. If you only have a handful of these types of validation rules, you might want to consider modeling out all language combinations. For each validation message, you have to add decisions and activities per language. This could become a lot of work, but as long as you only have to do this at a couple of places, it might not worth the time to use the more complicated solution described in the next section. 
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/18581626.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/alternative-validation.png" >}}
 
 ## 3 Translating Validation Rules
 
@@ -34,11 +34,11 @@ If you have to translate multiple validation rules, it it worth it to develop a 
 
 Prepare a validation entity in the domain model:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/18581625.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/validation-entity.png" >}}
 
 Create an enumeration containing all validation messages:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/18581624.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/validation-enumeration.png" >}}
 
 Reference the model below for messages you should store in the entity:
 

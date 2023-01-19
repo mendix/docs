@@ -23,9 +23,11 @@ There are three versions of the Forgot Password module, depending on whether you
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |
-| 9.12.7 and above | 5.x.x |
+| 9.12.7 and above | 5.x.x¹ |
 | 8.18.x | 4.x.x |
 | 7.23.x | 3.6.x and above |
+
+¹ If you are using Mendix version 9.20.0 or above, you must use version 5.1.0 or above of the Forgot Password module.
 
 If you already use the Forgot Password module in your Mendix version 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix Version 8 to Mendix Version 9](#upgrade8-9), at the end of this page.
 
@@ -33,12 +35,12 @@ If you already use the Forgot Password module in your Mendix version 8 app, you 
 
 The Forgot Password module has the following dependencies:
 
-* [Email Connector](/appstore/connectors/email-connector/)¹
+* [Email Connector](/appstore/connectors/email-connector/)²
 * [Deep Link](/appstore/modules/deep-link/)
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 
-¹ Versions of the Forgot Password module below 4.1.0 (Mendix version 8) and 5.1.0 (Mendix version 9), and those for Mendix version 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. We recommend that if you are using Mendix versions 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
+² Versions of the Forgot Password module below 4.1.0 (Mendix version 8) and 5.1.0 (Mendix version 9), and those for Mendix version 7 (3.xx) have a dependency on the deprecated [Email Module with Templates](/appstore/modules/email-with-templates/) module. We recommend that if you are using Mendix versions 8 and above, you upgrade to a later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email), below.
 
 ## 2 Installing the Forgot Password Module{#installing}
 
@@ -62,7 +64,7 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
         * Administrator
             * `Administration.Administrator`
             * `DeepLink.Admin`
-            * `Email_Connector.EmailConnectorAdmin or EmailTemplate.Administrator²`
+            * `Email_Connector.EmailConnectorAdmin or EmailTemplate.Administrator³`
             * `Encryption.user`
             * `ForgotPassword.Administrator`
             * `MxModeIReflection.ModeAdministrator`
@@ -77,14 +79,14 @@ In these instructions, it is assumed that your main module is `MyFirstModule`. I
         * User
             * `Administration.User`
             * `DeepLink.User`
-            * `Email_Connector.EmailConnectorAdmin or EmailTemplate.Administrator²`
+            * `Email_Connector.EmailConnectorAdmin or EmailTemplate.Administrator³`
             * `ForgotPassword.Guest_ResetPassword`
             * `MxModelReflection.Readonly`
             * `MxModelReflection.TokenUser`
             * `System.User`
             * `MyFirstModule.User`
 
-            ² `Email_Connector` permissions are needed if you are using version 4.1.0 or above (Mendix version 8) or version 5.1.0 or above (Mendix version 9). `EmailTemplate` permissions are only needed if using a version which uses the deprecated Email Module with Templates module.
+            ³ `Email_Connector` permissions are needed if you are using version 4.1.0 or above (Mendix version 8) or version 5.1.0 or above (Mendix version 9). `EmailTemplate` permissions are only needed if using a version which uses the deprecated Email Module with Templates module.
 
     * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
 1. Open [Navigation](/refguide/navigation/) and do the following:

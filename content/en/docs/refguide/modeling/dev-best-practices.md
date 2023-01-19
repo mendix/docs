@@ -215,6 +215,7 @@ For integrations, you have the following types of microflow:
 | Consumed web service operation microflow  | CWS\_  |
 | Published web service operation microflow | PWS\_  |
 | Published REST service operation microflow | PRS\_  |
+| Published OData service operation microflow | POS\_  |
 
 ### 3.5 Other Document Types
 

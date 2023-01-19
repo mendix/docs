@@ -138,10 +138,6 @@ All apps are developed along the main line. Here you have all development happen
 
 {{< figure src="/attachments/refguide/version-control/image7.png" >}}
 
-This is the case for the version control processes described in the section [Version Control Processes for a Single Branch](#vc-single), above.
-
-Initially, developers using Studio only have access to the development line for which Studio is enabled. They can be switched to another development line, however, by a developer using Studio Pro.
-
 ### 3.2 Branch Line
 
 When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
@@ -167,7 +163,7 @@ You can merge a specific revision of a branch line into your current [working co
 
 {{< figure src="/attachments/refguide/version-control/image9.png" >}}
 
-As with the examples in the [Version Control Processes for a Single Branch](#vc-single) section, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
+There may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 
 Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 

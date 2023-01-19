@@ -24,7 +24,7 @@ If you get a **Mendix Studio is not enabled for this app yet** message when open
 
 ### 2.1 Work in Studio and Studio Pro
 
-The figure below shows how two developers might collaborate on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/collaborative-development/). 
+The figure below shows how two developers might collaborate on a [Studio-enabled](/refguide/version-control/#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/collaborative-development/). 
 
 {{< figure src="/attachments/refguide/version-control/image1.png" >}}
 
@@ -76,7 +76,7 @@ The developer selects to commit, and the following things happen:
 * The Studio working copy is committed as a revision (restore point – state 5)
 * The revision just created (state 5) is merged with the Studio Pro working copy
 
-If there are no merge [conflicts](#conflict), the updated Studio Pro working copy is committed as a new revision (state 6) and the Studio working copy is updated to the new revision and unlocked.
+If there are no merge conflicts, the updated Studio Pro working copy is committed as a new revision (state 6) and the Studio working copy is updated to the new revision and unlocked.
 
 If there are conflicts, the developer using Studio Pro will need to resolve these. Studio will be unlocked, without receiving any of the changes from Studio Pro, while they do this. The developer using Studio Pro then needs to commit again, and the process starts from the beginning (Studio is locked ready for a new revision to be committed from the Studio Working Copy).
 

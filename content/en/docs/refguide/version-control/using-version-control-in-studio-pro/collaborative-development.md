@@ -26,11 +26,11 @@ If you get a **Mendix Studio is not enabled for this app yet** message when open
 
 The figure below shows how two developers might collaborate on a [Studio-enabled](/refguide/version-control/#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line). For information on collaborative development from the Studio perspective, see [Collaborative Development in Studio](/studio/collaborative-development/). 
 
-{{< figure src="/attachments/refguide/version-control/image1.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image1.png" >}}
 
 Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
-{{< figure src="/attachments/refguide/version-control/image4.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image4.png" >}}
 
 ### 2.2 Work in Studio Pro 
 
@@ -44,13 +44,13 @@ The developer works in Studio Pro on the local working copy of the app. There is
 
 The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Studio working copy and the developer using Studio will get the changes automatically.
 
-{{< figure src="/attachmentsrefguide/version-control/using-version-control-in-studio-pro/collaborative-development/image3.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image3.png" >}}
 
 ### 2.3 Work in Studio 
 
 The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
 
-{{< figure src="/attachmentsrefguide/version-control/using-version-control-in-studio-pro/collaborative-development/image2.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image2.png" >}}
 
 Multiple users can view the app in Studio at the same time, but only one Studio user can edit it and other Studio users are in read-only mode. 
 
@@ -64,7 +64,7 @@ All the changes from the Studio working copy are put into a new revision on the 
 
 If there are conflicts, the developer using Studio Pro will have to resolve them before they can commit the changes to the Team Server repository.
 
-{{< figure src="/attachmentsrefguide/version-control/using-version-control-in-studio-pro/collaborative-development/image5.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/image5.png" >}}
 
 ### 2.5 Commit Changes to Team Server Repository
 

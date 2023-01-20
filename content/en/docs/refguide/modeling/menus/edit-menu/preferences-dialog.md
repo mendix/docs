@@ -143,12 +143,12 @@ Select this option when you want to work on an app that is not stored in [Mendix
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
 
-### 6.2 Usage data
+### 6.2 Usage Data
 
-Studio Pro by default sends usage data that allow us to identify issues and improve the user experience, the usage data does not contain sensitive information. It's possible to disable this feature, but it can affect the behavior of features like MxAssist and might prevent us from further supporting users reporting issues, or detecting issues not yet reported. This setting is machine specific and changing this feature will not affect any existing installed version. This setting affects Studio Pro only.
+When **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of features like MxAssist and might prevent Mendix from further supporting users reporting issues or detecting issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
 {{% alert color="info" %}}
-This functionality is currently available using Studio Pro 9.22 or above.
+This functionality is currently available in Studio Pro 9.22 or above.
 {{% /alert %}}
 
 ## 7 Work Environment Tab

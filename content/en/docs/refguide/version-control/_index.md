@@ -44,7 +44,7 @@ A revision is the version of your app at a moment in time, stored on the [Team S
 Each revision of your app is given a unique alphanumeric identifier which enables you to find it in future. A new revision is created from Studio Pro in two circumstances:
 
 * The app is committed to the repository
-* A Studio Pro working copy is updated from a Studio working copy
+* A Studio Pro working copy is updated from a Studio working copy (if [Studio is enabled](#studio-enabled))
 
 ### 2.4 Working Copy {#working-copy}
 

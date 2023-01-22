@@ -152,6 +152,7 @@ The list of expressions that are used in Studio the most is represented below. F
 ### 3.8 Date Creation
 
 * [`dateTime`](/refguide/date-creation/) – creating a date value using the server's calendar
+* [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) - convert a string to a date value
 
 ### 3.9 Begin-of Date Function Calls
 

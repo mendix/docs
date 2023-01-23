@@ -1,10 +1,12 @@
 ---
 title: "3D Viewer"
-url: /appstore/app-services/3d-viewer/
-category: "App Services"
-weight: 1
+url: /partners/siemens/3d-viewer/
+category: "Siemens"
+weight: 20
 description: "Describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
+aliases:
+  - /appstore/app-services/3d-viewer/index.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -58,14 +60,14 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 * The **Container3D** widget acts as a context-sharing container for other 3D widgets, so 3D widgets can talk to each other and perform corresponding actions via this context. Therefore, every other 3D widget (except the **Uploader** widget) needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets will not work as expected. In that case, you will be notified and see errors when you switch to Design mode. 
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg" alt="widgetoutsidecontainer3d-structuremode" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg" alt="widgetoutsidecontainer3d-structuremode" >}}
 
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
 * The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
 * Currently, only JT models with version 9 and above are supported.
 * Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" >}}
 
 ### 1.4 Prerequisites
 
@@ -108,7 +110,7 @@ If your app already has a microflow set to execute after startup, you need to ex
 
 The **ModelDocument** entity is a conceptual entity that incorporates all the information of a model. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/modeldocument.jpg" alt="modeldocument" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/modeldocument.jpg" alt="modeldocument" >}}
 
 | Attribute | Description |
 | --- | --- |
@@ -124,7 +126,7 @@ The **ModelDocument** entity is a conceptual entity that incorporates all the in
 
 The **Pagination** entity serves as an input parameter of the **GetModelListFromMendix** nanoflow. This allows you to paginate the model list returned by the nanoflow. If the values of the **Pagination** attributes are not specifically set, **GetModelListFromMendix** will return a full list of the models.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/pagination.jpg" alt="pagination" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/pagination.jpg" alt="pagination" >}}
 
 | Attribute | Intended Use |
 | --- | --- |
@@ -150,25 +152,25 @@ The **LicenseToken** constant provides a valid license token for an app that use
 
 The **DeleteModelFromMendix** microflow takes a **ModelDocument** object as an input parameter and deletes the corresponding model stored in the Mendix file storage.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/deletemodelfrommendix.jpg" alt="deletemodelfrommendix" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/deletemodelfrommendix.jpg" alt="deletemodelfrommendix" >}}
 
 The **DownloadMarkup** microflow takes a **Markup** object as input parameter and downloads the image to a local directory.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/downloadmarkup.jpg" alt="downloadmarkup" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/downloadmarkup.jpg" alt="downloadmarkup" >}}
 
 ### 4.4 Nanoflow {#nanoflow}
 
 The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** object as an input parameter to create a **ModelDocument** object to represent a user JT model file stored as the entity of **System.FileDocument** or its specialization. As the Viewer widget is prebuilt to take a **ModelDocument** object as the data source, this nanoflow allows you to get and visualize a JT model from your existing file storage.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/CreateModelDocumentFromFileDocument.jpg" alt="CreateModelDocumentFromFileDocument" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/CreateModelDocumentFromFileDocument.jpg" alt="CreateModelDocumentFromFileDocument" >}}
 
 The **GetModelListFromMendix** nanoflow takes a **Pagination** object as an input parameter to fetch the model list from Mendix file storage and returns a list of **ModelDocuments** as a result. Each ModelDocument represents a model that is stored in the Mendix file storage.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/getmodellistfrommendix.jpg" alt="getmodellistfrommendix" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/getmodellistfrommendix.jpg" alt="getmodellistfrommendix" >}}
 
 The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an input parameter to fetch the markup images associated with this model and returns a list of **Markup** object as a result. Each markup represents an image that is stored in the Mendix file storage.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/getmarkupsfrommendix.jpg" alt="getmarkupsfrommendix" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/getmarkupsfrommendix.jpg" alt="getmarkupsfrommendix" >}}
 
 ### 4.5 Java Action {#java-action}
 
@@ -220,7 +222,7 @@ For this widget to visualize a model correctly, set the following properties:
     * **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
     * **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain information about if the product structure is loaded; you can also add custom actions triggered by this change
 
-3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. For information on how to use the 3D Viewer APIs and other details, see [Use the 3D Viewer API](/appstore/app-services/3d-viewer-api/).
+3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. For information on how to use the 3D Viewer APIs and other details, see [Use the 3D Viewer API](/partners/siemens/3d-viewer-api/).
 
 #### 4.6.2 Panel Widgets {#panel-widgets}
 
@@ -244,7 +246,7 @@ This widget presents a configurable tree table to display the product structure 
 
 Compared to the [PS Tree](#ps-tree) widget, this widget adds an additional configurable property called **Column**. You can expand the table by adding columns and specifying the property to be displayed in this column. Examples of predefined properties are **Volume**, **Mass**, **Units**, **HasPMI**, and **Density**. If you want to display other properties other than the predefined properties in the list, you can also add them by specifying valid properties defined in the model.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/pstreetable-general.jpg" alt="pstreetable-general" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/pstreetable-general.jpg" alt="pstreetable-general" >}}
 
 ##### 4.6.2.3 PMI Tree {#pmi-tree}
 
@@ -324,11 +326,11 @@ If you deploy your app in the Mendix Cloud, configure the license token in the [
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/licensetoken-cloudportal.jpg" alt="licensetoken-cloudportal" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/licensetoken-cloudportal.jpg" alt="licensetoken-cloudportal" >}}
 
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/licensetoken-envdetails.jpg" alt="licensetoken-envdetails" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/licensetoken-envdetails.jpg" alt="licensetoken-envdetails" >}}
 
 #### 4.7.2 For an App Deployed in Your Own Environment
 
@@ -354,22 +356,22 @@ Follow these steps to configure this visualization:
 6. Create a nanoflow, call it *CreatedUploadedModel*, and set this as the data source of the data view.
 7. Create two attributes for the UploadedModel entity. Set them to receive the value returned from the Uploader's **Data source** and **UploadModelId**:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/uploader-uploadedmodelinfo.jpg" alt="uploader-uploadedmodelinfo" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/uploader-uploadedmodelinfo.jpg" alt="uploader-uploadedmodelinfo" >}}
 
 8. On the **Data Source** tab, set the data source attributes of the Viewer widget by setting **Model ID** to **UploadedModelID** and **Model source type** to **Mendix**:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-datasourceuploaded.jpg" alt="viewer-datasourceuploaded" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-datasourceuploaded.jpg" alt="viewer-datasourceuploaded" >}}
 
 9. On the **General** tab, set **Automatically load parts** to **Yes**, which enables loading the model automatically upon successful upload.
 10. Run your app locally. You can now upload a JT file and view it directly in the browser:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/runlocally-uploadandview.jpg" alt="runlocally-uploadandview" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/runlocally-uploadandview.jpg" alt="runlocally-uploadandview" >}}
 
 ### 5.2 Displaying Model Loading Progress with Progress Bar Widget {#displaying-model-loading}
 
 When the end-user is uploading or loading a model, they may want to know the uploading and loading progress. The uploading progress in the Uploader widget can seen in the uploader panel :
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/uploader-uploadedstatus.jpg" alt="uploader-uploadedstatus" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/uploader-uploadedstatus.jpg" alt="uploader-uploadedstatus" >}}
 
 Loading progress in the Viewer widget can be obtained via the **Progress status** and **Progress percentage** attributes in the **Events** tab.
 
@@ -380,18 +382,18 @@ Follow these steps to display the model loading progress:
 3. Wrap the [Container3D](#container3d) widget with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
 4. Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-progresspercentage.jpg" alt="viewer-progresspercentage" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-progresspercentage.jpg" alt="viewer-progresspercentage" >}}
 
 5. Add the Progress Bar widget to the page and set **PageObject.LoadingProgress** as the **Progress Attribute** on the **Values** tab.
 6. Run your app locally. You can see the real-time model loading progress:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/runlocally-loadingprogress.jpg" alt="runlocally-loadingprogress" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/runlocally-loadingprogress.jpg" alt="runlocally-loadingprogress" >}}
 
 ### 5.3 Utilizing More 3D Functionality
 
 You can add more 3D widgets to the page to enable more 3D functionalities and arrange the layout of them as needed. For example:
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/structuremode-more3dwidgets.jpg" alt="structuremode-more3dwidgets" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/structuremode-more3dwidgets.jpg" alt="structuremode-more3dwidgets" >}}
 
 ### 5.4 Managing Uploaded Models
 
@@ -409,7 +411,7 @@ The Mendix native [list view](/refguide/list-view/) can be used to display the m
 4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data source**.
 5. Fill in the list item with the information you are interested in:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/openmodelpopup-listview.jpg" alt="openmodelpopUp-listview" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/openmodelpopup-listview.jpg" alt="openmodelpopUp-listview" >}}
 
 #### 5.4.2 Opening a Model from the Model List
 
@@ -419,19 +421,19 @@ Follow these steps for configuration:
 
 1. Define the **On click** action for the list view to pass the selected model to the Viewer widget that is present in another page (so the selected model can be loaded into the viewer). An example approach is to create an entity that is associated with the **ModelDocument** entity defined in the **Viewer3D** module's domain model. Make the object a shared object between the page the Viewer is in and the model list page. In this example, you are creating a **PageObject** with this home page: 
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/homepage-pageobject.jpg" alt="homepage-pageobject" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/homepage-pageobject.jpg" alt="homepage-pageobject" >}}
 
     This is the model pop-up page:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/openmodelpopup-pageobject.jpg" alt="openmodelpopUp-pageobject" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/openmodelpopup-pageobject.jpg" alt="openmodelpopUp-pageobject" >}}
 
 2. Set the **On click** action of the model list item, then change the **ModelDocument** object with which the **PageObject** is associated to return the value so that home page can be refreshed on a PageObject change:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/openselectedmodel-nanoflow.jpg" alt="openselectedmodel-nanoflow" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/openselectedmodel-nanoflow.jpg" alt="openselectedmodel-nanoflow" >}}
 
 3. Run your app locally. You will get a simple model list where you can select which model to open and visualize it with the home-page viewer:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/openmodellistpopup-demo.jpg" alt="openmodellistpopup-demo" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/openmodellistpopup-demo.jpg" alt="openmodellistpopup-demo" >}}
 
 #### 5.4.3 Deleting a Model
 
@@ -443,7 +445,7 @@ Follow these steps to delete a model from the database:
 2. DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](/refguide/button-widgets/).
 3. Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **DeleteModelFromMendix** microflow and commit the **ModelDocument**:
 
-    {{< figure src="/attachments/appstore/app-services/3d-viewer/deletemodel-nanoflow.jpg" alt="deletemodel-nanoflow" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/deletemodel-nanoflow.jpg" alt="deletemodel-nanoflow" >}}
 
 4. Set the **On click** event of the **Delete** button to the **DeleteModel** nanoflow.
 5. Run your app locally. You should be able to delete a model by clicking **Delete**.
@@ -462,11 +464,11 @@ By selecting one attribute to set **Selection**, you can get information on the 
 
 **Selection** takes a String attribute. You can define an attribute and bind that attribute to Selection property. In a running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onselectionchange-result.jpg" alt="viewer-onselectionchange-result" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onselectionchange-result.jpg" alt="viewer-onselectionchange-result" >}}
 
 Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilizing `GET`APIs exposed by the Viewer (for example, get `Boundingbox` by `PSID`, set the material by `PSID`in a JavaScript action, include this in a nanoflow, and set the **Action** to call this nanoflow).
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onselect-sample.jpg" alt="viewer-onselect-sample" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onselect-sample.jpg" alt="viewer-onselect-sample" >}}
 
 #### 5.5.2 On Error {#on-error}
 
@@ -474,11 +476,11 @@ By selecting one attribute to set the **Error** event, you can pick up an error 
 
 **Error** takes a String attribute. You can define an attribute and bind that attribute to this property. In a running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewerevent-onerror.jpg" alt="viewerevent-onerror" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewerevent-onerror.jpg" alt="viewerevent-onerror" >}}
 
 Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop-up page to let user know the error details.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onerror-sample.jpg" alt="viewer-onerror-sample" >}} 
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onerror-sample.jpg" alt="viewer-onerror-sample" >}} 
 
 #### 5.5.3 On Progress Change {#on-progress-change}
 
@@ -488,11 +490,11 @@ By selecting one attribute for the **Progress status** value, you can get the cu
 
 **Progress percentage** takes a Decimal attribute. You can define an attribute and bind that attribute to this property. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onprogress.jpg" alt="viewer-onprogress" >}} 
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onprogress.jpg" alt="viewer-onprogress" >}} 
 
 Like other Mendix events, you can select from a list of actions upon progress change for **Action**. One possible use case is use a progress bar widget to display captured model loading percentage to user. 
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onprogress-sample.jpg" alt="viewer-onprogress-sample" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onprogress-sample.jpg" alt="viewer-onprogress-sample" >}}
 
 For more information, see [Displaying Model Loading Progress with Progress Bar Widget](#displaying-model-loading). 
 
@@ -502,11 +504,11 @@ By selecting one attribute for the **Loaded** value, you can get the current loa
 
 **OnLoad** takes a Boolean type attribute. You can define an attribute and bind that attribute to this property. In a running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onload-result.jpg" alt="viewer-onload-result" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onload-result.jpg" alt="viewer-onload-result" >}}
 
 Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. In order to call the **On Load** action, you must bind a valid **Loaded** value. One possible use case is show a pop-up page to let user know if product structure is successfully loaded.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/viewer-onload-sample.jpg" alt="viewer-onload-sample" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onload-sample.jpg" alt="viewer-onload-sample" >}}
 
 ### 5.6 Creating a 3D Section {#create-3d-section}
 
@@ -520,7 +522,7 @@ When a model is loaded in the viewer, the [Section View](#section-view) widget e
 
 The sections below present operations within the Section View widget.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode" >}}
 
 #### 5.6.1 Action
 
@@ -555,7 +557,7 @@ You can add multiple section planes to cut the model in different directions. Af
 
 When a model is loaded into the viewer, the [Measurement](#measurement) widget provides a set of tools to measure different geometrical entities:
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/measurement-panel.jpg" alt="measurement-panel" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/measurement-panel.jpg" alt="measurement-panel" >}}
 
 The sections below describe these tools.
 
@@ -586,7 +588,7 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
 
-{{< figure src="/attachments/appstore/app-services/3d-viewer/preferences-general.png" alt="preferences-general" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
 On the **PMI** tab, you can set filtering options for PMI and click **Ok** to save the changes.
 

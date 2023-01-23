@@ -308,9 +308,9 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/no-db-connections.png" >}}
 
-The number of connections will go up and down with the usage of the application.
+The number of connections will go up and down with the usage of the application. The database can reuse open connections and will not open more connections than it needs.
 
-The standard configuration sets a maximum of 50 connections per instance. The graph displays the total number of connections for all instances in a multi-instance scaled runtime.
+The standard configuration sets a maximum of 50 connections per instance. You can change this through [The Number of Database Connections](/refguide/tricky-custom-runtime-settings/#num-connections) described in *Advanced Custom Settings in Mendix Runtime*. The graph displays the total number of connections for all instances in a multi-instance scaled runtime. 
 
 ### 5.5 Database Node Operating System Memory{#Trends-dbmemory}
 

@@ -28,15 +28,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Consuming add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
 | Publishing add-on modules | Released for Mendix Vendor Program on [Mar 29th, 2022](/releasenotes/studio-pro/9.12/#add-on) |
 
-## 3 App Services Framework
-
-| Feature | Expected Release |
-| --- | --- |
-| Foundational APIs | Currently in Private Beta<br/>GA: TBD |
-| Usage-based metering and billing | Currently in Private Beta<br/>GA: TBD |
-| Supplier onboarding (including documentation) | Currently in Private Beta<br/>GA: TBD |
-
-## 4 End-User Services and Studio
+## 3 End-User Services and Studio
 
 | Feature | Expected Release |
 | --- | --- |
@@ -44,7 +36,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | End-user services – App Switcher | Released for GA on [Jan 14th, 2022](/appstore/modules/app-switcher/) |
 | Studio workflow templates | Released for GA |
 
-## 5 Control Center
+## 4 Control Center
 
 | Feature | Expected Release |
 | --- | --- |
@@ -52,7 +44,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Dashboards with insights on platform employees and app activity | Released for GA in Apr 2022 |
 | Overview of cloud environments | Released for GA on [Jun 9th, 2022](/releasenotes/developer-portal/#june-9th-2022) |
 
-## 6 Next-Level Front-End
+## 5 Next-Level Front-End
 
 | Feature | Expected Release |
 | --- | --- |
@@ -69,7 +61,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Data widgets – Tree Table | GA: TBD |
 | Data widgets – Spread Sheet Grid | GA: TBD |
 
-## 7 Page Bot and Machine Learning Toolkit
+## 6 Page Bot and Machine Learning Toolkit
 
 | Feature | Expected Release |
 | --- | --- |
@@ -78,7 +70,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Validation Assist | Currently in Public Beta<br/>GA: Jan 2023 |
 | Machine learning toolkit | Currently in Private Beta<br/>Public Beta: Jan 2023 |
 
-## 8 Studio Pro Experience
+## 7 Studio Pro Experience
 
 | Feature | Expected Release |
 | --- | --- |
@@ -87,7 +79,7 @@ If you want to watch the keynote speech in which these announcements were made, 
 | BYO Git (Bring Your Own) | Currently in Public Beta<br/>GA: Apr 2023 |
 | Studio Pro dark theme | Currently in Public Beta <br />GA: TBD |
 
-## 9 Data Hub 2.0
+## 8 Data Hub 2.0
 
 | Feature | Expected Release |
 | --- | --- |
@@ -95,14 +87,14 @@ If you want to watch the keynote speech in which these announcements were made, 
 | Connector Kit 2.0 (OData publish with microflows and Marketplace integration) | Released for GA on [Aug 31st, 2022](/releasenotes/studio-pro/9.17/#new-features) |
 | Business events and event broker | Released for GA on [September 30th, 2022](/releasenotes/studio-pro/9.18/#other-new-features) |
 
-## 10 Intelligent Automation
+## 9 Intelligent Automation
 
 | Feature | Component | Expected Release |
 | --- | --- | --- |
 | Smart app services | MS Teams Connector |Released for GA on [May 2nd, 2022](https://marketplace.mendix.com/link/component/118391)|
 | Workflow | | Released for GA on [Jan 25th, 2022](/releasenotes/studio-pro/9.10/#new-features) |
 
-## 11 Hybrid Cloud Automation
+## 10 Hybrid Cloud Automation
 
 | Feature | Expected Release |
 | --- | --- |

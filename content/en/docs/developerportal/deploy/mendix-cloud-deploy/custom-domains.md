@@ -114,7 +114,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/21168226.png" >}}
 
-    {{% alert color="info" %}}The SSL/TLS private key will be stored in our secure keystore. It is not available for download, nor can Mendix Support obtain if for you, in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be stored in our secure keystore. It is not available for download, nor can Mendix Support obtain it for you, in order to keep it secure.{{% /alert %}}
 
 You can now go to your certificate authority to get a signed SSL/TLS certificate.
 
@@ -166,7 +166,7 @@ To upload the custom domain certificate, follow these steps:
 
 7. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
 
-    {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download, nor can Mendix Support obtain if for you, in order to keep it secure.{{% /alert %}}
+    {{% alert color="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download, nor can Mendix Support obtain it for you, in order to keep it secure.{{% /alert %}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 

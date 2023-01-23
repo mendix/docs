@@ -1,7 +1,7 @@
 ---
 title: "Send Emails with Amazon SES and Mendix Email Connector"
 linktitle: "Amazon SES"
-url: /partners/aws/amazon-ses-email-connector/
+url: /appstore/connectors/aws/amazon-ses-email-connector/
 description: "Describes the steps required to use Amazon Simple Email Service (SES) with the Mendix Email Connector."
 weight: 20
 tags: ["AWS", "Amazon Simple Email Service", "SES", "email", "Mendix Email Connector"]

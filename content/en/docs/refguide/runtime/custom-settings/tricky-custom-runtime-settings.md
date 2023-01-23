@@ -65,7 +65,7 @@ The most important part of this setting is to regularly check the application lo
 
 You can find these log entries by looking for the following phrase in your application log: **Query executed in**. The phrase will appear in an example like this: `Jan 01 02:03:04.567 - WARNING - ConnectionBus_Queries: (1/4) Query executed in 642 seconds and 694 milliseconds: UPDATE "somemodule$someentity”`.
 
-## 4 The Number of Database Connections
+## 4 The Number of Database Connections{#num-connections}
 
 ### 4.1 Connection Pooling
 

@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### January 18th, 2023
+
+#### Fix
+
+* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being executed](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
+
 ### January 13th, 2023
 
 #### Improvements

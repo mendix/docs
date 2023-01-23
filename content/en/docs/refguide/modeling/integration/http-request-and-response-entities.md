@@ -36,6 +36,10 @@ The `HttpResponse` entity has the following attributes:
 
 For more information on HTTP status codes, see the [W3C Specification of Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
+{{% alert color="warning" %}}
+If you deploy to the Mendix Cloud you cannot set a custom `ReasonPhrase` as it will be replaced by a standard reason phrase by the web server. For example, for StatusCode `200`, any custom ReasonPhrase you set will be replaced by `OK`.
+{{% /alert %}}
+
 You can retrieve or create response headers via the `HttpHeaders` association.
 
 An important `HttpResponse` header is `Content-Type`, which indicates how the content should be interpreted. For more information on this header, see the [W3C specification of Content-Type](https://www.w3.org/Protocols/rfc1341/4_Content-Type.html).

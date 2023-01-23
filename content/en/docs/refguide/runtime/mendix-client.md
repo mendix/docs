@@ -206,7 +206,7 @@ When the app is deployed, the static resources are placed in a structure referre
 * widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
 
-#### 4.1.3 Cookies
+#### 4.1.3 Cookies{#cookies}
 
 When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
 | Name  | Source | Purpose | Path | Duration | HttpOnly | 

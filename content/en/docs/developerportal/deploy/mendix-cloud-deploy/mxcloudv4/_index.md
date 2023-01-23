@@ -26,6 +26,7 @@ Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of im
 
 The primary hosting locations are as follows:
 
+* Mendix Cloud Africa: AWS Cape Town
 * Mendix Cloud Asia Pacific: AWS Mumbai
 * Mendix Cloud Asia Pacific: AWS Singapore
 * Mendix Cloud Asia Pacific: AWS Sydney
@@ -33,6 +34,7 @@ The primary hosting locations are as follows:
 * Mendix Cloud Canada: AWS Canada
 * Mendix Cloud EU: AWS Dublin
 * Mendix Cloud EU: AWS Frankfurt
+* Mendix Cloud Middle East: AWS Bahrain
 * Mendix Cloud UK: AWS London
 * Mendix Cloud US: AWS North Virginia
 * Mendix Cloud US: AWS Oregon
@@ -90,3 +92,4 @@ There are certain limits and behaviors which apply to your app when running in M
     In the majority of cases, the platform will start a new instance of your application, before gracefully stopping the old one. This ensures that there is no downtime. You can verify this in the logs of your application.
     
     If you want a second layer of assurance that you will not have downtime in this situation, we advise you to use Mendix 7, or above, and to scale your application to multiple instances.
+* The Mendix Cloud web server will replace any custom `ReasonPhrase` on an HTTP response (returned by, for example, a published REST service) with a standard reason phrase. For example, for StatusCode `200`, any custom ReasonPhrase you set will be replaced by `OK`.

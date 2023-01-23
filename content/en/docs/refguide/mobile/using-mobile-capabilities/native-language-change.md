@@ -123,7 +123,7 @@ Congratulations, you just implemented internationalization in your native app! Y
 
 ## 5 Read More
 
-* [Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages/)
+* [Using Translatable Validation Messages](/refguide/translatable-validation-messages/)
 * [Language Menu](/refguide/translatable-texts/): gives more information on translating the languages of different Mendix UI elements
 * [Change Language by Clicking a Link](https://forum.mendixcloud.com/link/questions/91821): explanations and ideas on the Mendix forum for refreshing the page when the language is changed
 * [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676): a discussion on the Mendix forum about switching languages for anonymous end-users

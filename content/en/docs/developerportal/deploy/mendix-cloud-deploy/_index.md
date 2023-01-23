@@ -99,8 +99,8 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 
 | License type | Environment | URL format | Example URL |
 | --- | --- | --- | --- |
-| Licensed app | production | `{name of your app}.mendixcloud.com` | `myappname.mendixcloud.com` |
-| Licensed app | test, acceptance, flexible environments | `{name of your app}-{environment type}.mendixcloud.com` | `myappname-acceptance.mendixcloud.com` |
+| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | test, acceptance, flexible environments | `{name of your app}-{environment type}.mendixcloud.com` | `myappname-accp.mendixcloud.com` |
 | Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).

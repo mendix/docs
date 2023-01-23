@@ -48,7 +48,7 @@ To learn about building a Mendix native mobile app's UI, consult the sections be
 
 ### 3.1 Creating App Designs Using a UI Kit
 
-By designing a set of reusable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Sketch](https://www.sketch.com/) tool to complete these tasks with satisfying results.
+By designing a set of reusable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Figma](https://www.figma.com/) tool to complete these tasks with satisfying results.
 
 This UI kit will be the input for creating the Mendix theme and related components. Therefore it helps to have Mendix and front-end knowledge to align what is available already in Mendix and what is needed for the designs..
 

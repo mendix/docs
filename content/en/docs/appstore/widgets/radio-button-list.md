@@ -7,10 +7,6 @@ tags: ["marketplace", "marketplace component", "widget", "radio button list", "p
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This widget is deprecated. For more information, see the [Deprecated Support Category](/appstore/general/app-store-content-support/#deprecated) section of *Marketplace Content Support*. 
-{{% /alert %}}
-
 ## 1 Introduction
 
 The [Radio Button List](https://marketplace.mendix.com/link/component/20/) widget enables rendering an attribute or association as a radio button list. The widget is used with enumeration values, Boolean values, and references, and it is a useful replacement for the default drop-down menu or reference selector widget.

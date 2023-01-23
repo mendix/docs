@@ -1632,7 +1632,7 @@ Logs in to the Mendix application with the standard login page or on the cloud u
 | Name | Key | Datatype | Description |
 | ----- | ---- | ---------- | -------------- |
 | Username | Username | String | *Required* Account username. For Mendix SSO this it the email that is associated to the Mendix profile. |
-| Password | Password | String | *Required* Account password. For Mendix SSO this is the same password that is used to access the Mendix cloud portal. |
+| Password | Password | String | *Required* Account password. For Mendix SSO this is the same password that is used to access the Mendix Cloud facilities. |
 | Use MxID | UseMxID | Boolean | *Optional* If true will use the Mendix single sign on, otherwise the default login page is used. Deafaults to false. |
 
 #### Return Value

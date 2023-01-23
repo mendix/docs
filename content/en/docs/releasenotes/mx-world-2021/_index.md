@@ -99,16 +99,8 @@ If you want to watch the keynote speech in which these announcements were made, 
 
 | Feature | Component | Expected Release |
 | --- | --- | --- |
-| Smart app services | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
-| Smart app services | Intelligent Document Service | Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118388) |
-| Smart app services | Receipt Processing |Released for GA on [Feb 17th, 2022](https://marketplace.mendix.com/link/component/118390)|
-| Smart app services | Invoice Processing |Released for GA on [Mar 9th, 2022](https://marketplace.mendix.com/link/component/118389)|
 | Smart app services | MS Teams Connector |Released for GA on [May 2nd, 2022](https://marketplace.mendix.com/link/component/118391)|
 | Workflow | | Released for GA on [Jan 25th, 2022](/releasenotes/studio-pro/9.10/#new-features) |
-| Smart app services | Speech to Text | Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118408) (except in China) |
-| Smart app services | Text to Speech |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118409) (except in China)|
-| Smart app services | Text Analytics |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118412) (except in China)|
-| Smart app services | Translation |Released for GA on [Feb 16th, 2022](https://marketplace.mendix.com/link/component/118411)  (except in China)|
 
 ## 11 Hybrid Cloud Automation
 

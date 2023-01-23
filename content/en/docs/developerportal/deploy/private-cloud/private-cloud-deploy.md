@@ -48,15 +48,9 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 2. Click **Cloud Settings**.
 
-3. Click **Mendix for Private Cloud**.
+3. In the **Mendix for Private Cloud** section, click **Set up**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image3.png" >}}
-
-4. Click **Set up Mendix for Private Cloud**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image4.png" >}}
-
-5. Your app is now configured for private cloud.
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/SetupButton.png" >}}
 
 ### 3.2 Creating a Deployment Package {#create-deployment-package}
 
@@ -473,6 +467,11 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 
 To change any constants, select the constant you want to edit and then click **Edit**.
 
+{{% alert color="info" %}}
+If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+{{% /alert %}}
+
+
 ### 5.3 Network Tab
 
 On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to the Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
@@ -487,6 +486,10 @@ On the Runtime tab, you can change various runtime settings for your app environ
 
 {{% alert color="info" %}}
 When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If the custom runtime settings are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
 ### 5.5 Log Levels Tab

@@ -15,7 +15,7 @@ The app services available in the Mendix Marketplace are packages of preconfigur
 When you download an app service, it will go into the **App** > **Marketplace modules** folder.
 
 {{% alert color="warning" %}}
-App services like [3D Viewer](/appstore/app-services/3d-viewer/) start with a free trial for development and testing. After the trial ends, a subscription is required to continue using the app service.
+App services like [3D Viewer](/partners/siemens/3d-viewer/) start with a free trial for development and testing. After the trial ends, a subscription is required to continue using the app service.
 {{% /alert %}}
 
 For details on participating in the Mendix Vendor program, see [How to Prepare Your Commercial Content to Sell in the Marketplace](/appstore/creating-content/prepare/).

@@ -6,7 +6,7 @@ description: "Protect intellectual property in Solutions, App Services and Conne
 tags: ["adaptive solutions", "ip protection"]
 ---
 
-## 1 Introduction - [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
+## 1 Introduction
 
 Because subscriptions for solutions, app services, connectors, and modules are sold on the Mendix Marketplace, you will have intellectual property (IP) protection concerns as a publisher. You will want to protect the IP contained within the model that makes up the content you are selling. In addition, you will want to protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your Marketplace components.
 

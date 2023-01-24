@@ -1,21 +1,21 @@
 ---
-title: "Commercial Solution Partner Program"
+title: "Mendix Commercial Solution Partner Program"
 url: /appstore/creating-content/comm-sol-partner-program/
 linktitle: "Commercial Solution Partner Programs"
 weight: 10
-description: "Mendix supports solution developers through the Mendix Component Partner and Commercial Solution Partner Programs."
+description: "Mendix supports solution developers through the Mendix Component Partner Program and Mendix Commercial Solution Partner Program."
 tags: [ "solutions", "commercial solution partner", "startup", "adaptive solutions", "prescriptive solutions" ]
 ---
 
 ## 1 Introduction
 
-Mendix supports aspiring solutions vendors, startups, and large enterprises in their adoption of Mendix as a development platform for their solutions. Along with the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), Mendix can suport you via the [Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/). These program teams are the point of contact for any inquiries, including requesting access to early adopter-stage technologies like intellectual property protection.
+Mendix supports aspiring solutions vendors, startups, and large enterprises in their adoption of Mendix as a development platform for their solutions. Along with the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), Mendix can suport you via the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/). These program teams are the point of contact for any inquiries, including requesting access to early adopter-stage technologies like intellectual property protection.
 
-## 2 Commercial Solution Partner Program
+## 2 Mendix Commercial Solution Partner Program
 
-Mendix introduced the [Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/) to support the full range of organizations—from startups to large enterprises—looking to develop solutions. Under beneficial terms, Mendix provides independent software vendors (ISVs) and startups with a Mendix license for the development and operation of Mendix apps to implement solutions for their customers.
+Mendix introduced the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/) to support the full range of organizations—from startups to large enterprises—looking to develop solutions. Under beneficial terms, Mendix provides independent software vendors (ISVs) and startups with a Mendix license for the development and operation of Mendix apps to implement solutions for their customers.
 
-The Commercial Solution Partner Program enables established companies, existing Mendix partners, and startups to successfully develop, bring to market, sell, and deploy software solutions built on Mendix. The program is designed to provide simple terms, low initial investment, valuable enablement, and a win-win business model that benefits the partner as well as Mendix.
+The Mendix Commercial Solution Partner Program enables established companies, existing Mendix partners, and startups to successfully develop, bring to market, sell, and deploy software solutions built on Mendix. The program is designed to provide simple terms, low initial investment, valuable enablement, and a win-win business model that benefits the partner as well as Mendix.
 
 ## 3 Startup Program - [**REMOVE?**]
 

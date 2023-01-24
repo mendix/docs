@@ -90,7 +90,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 ### 3.5 Mendix Partner Program
 
-For more information on what this program offers, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/) or [Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+For more information on what this program offers, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 
 ## 4 Adding New Marketplace Content {#adding}
 

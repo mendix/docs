@@ -23,9 +23,9 @@ For more details on building solutions, see [Architect Adaptive Solutions](/apps
 
 ## 3 Read More
 
-If you are looking to publish premium components, take a look at the details of the [Component Partner Program](/appstore/creating-content/partner-program/).
+If you are looking to publish premium components, take a look at the details of the [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
 
-If you are looking to build and market commercial solutions, look into the [Commercial Solution Partner Program](/appstore/creating-content/comm-sol-partner-program/).
+If you are looking to build and market commercial solutions, look into the [Mendix Commercial Solution Partner Program](/appstore/creating-content/comm-sol-partner-program/).
 
 Then, proceed to [Develop Solutions](/appstore/creating-content/sol-development/), which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
 

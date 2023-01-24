@@ -7,7 +7,7 @@ tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 {{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 {{% /alert %}}
 
 ## 1 Introduction

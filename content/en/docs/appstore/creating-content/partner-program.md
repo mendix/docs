@@ -22,7 +22,7 @@ In return, you will gain the following benefits:
 * Develop brand awareness with target audiences
 * Drive demand for your services
 
-## 2 Applying to the Component Partner Program
+## 2 Applying to the Mendix Component Partner Program
 
 Whether you are an individual supplier with your own business or you are supplying a component on behalf of your company, you need to [apply](https://www.mendix.com/partners/become-a-partner/component-partner/) to the Mendix Component Partner Program. Since your Mendix Partner account is associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/) to start. 
 

@@ -43,7 +43,7 @@ When you are offering a paid component through the Marketplace, you need to acce
 
 ## 3 Joining Mendix Marketplace 
 
-As a partner in the Mendix Marketplace, you can offer your solutions to customers all over the world who are looking for innovative ways to address their business challenges. You will be part of a powerful ecosystem that provides a wealth of resources and support to help you succeed. 
+As a partner in the Mendix Marketplace, you can offer your components to customers all over the world who are looking for innovative ways to address their business challenges. You will be part of a powerful ecosystem that provides a wealth of resources and support to help you succeed. 
 
 There are a few steps to publishing an offering. A partner interested in publishing its product(s) on the Mendix Marketplace must meet certain criteria and must comply with some legal, compliance, technical, operational, and marketing requirements.  
 

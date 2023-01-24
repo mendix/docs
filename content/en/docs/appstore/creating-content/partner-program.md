@@ -39,7 +39,7 @@ When applying to the program, you are asked for basic information, including you
 
 As the owner of the Mendix Partner account, you must have permission to legally bind your company to Mendix.
 
-Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Component Partner Agreement, which is an agreement between Mendix and you as a Mendix Component Partner within the Mendix Component Partner Program.
+When you are offering a paid component through the Marketplace, you need to accept our Mendix Component Partner Agreement or Commercial Solution Partner Agreement, which is an agreement between Mendix and you as a Mendix Partner within the Mendix Partner Program.
 
 ## 3 Joining Mendix Marketplace 
 

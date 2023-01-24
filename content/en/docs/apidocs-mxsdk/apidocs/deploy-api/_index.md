@@ -339,12 +339,6 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start
 
 #### 3.6.2 Request
 
-**Request Parameters**
-
-An object with the following key-value pair:
-
-* *AutoSyncDb* (Boolean) : Define whether the database should be synchronized automatically with the model during the start phase of the app. This is only applicable if your Mendix Cloud version is older than v4.
-
 **Example Request**
 
 ```bash
@@ -354,10 +348,6 @@ Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
-
-{
-     "AutoSyncDb" :  true
-}
 ```
 
 #### 3.6.3 Output
@@ -860,11 +850,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.15 Scaling Environments (Mendix Cloud v4 Only)
+### 3.15 Scaling Environments 
 
 #### 3.15.1 Description
 
-Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or above will make it possible to spread the total memory over multiple instances.
+Scale memory and instances of an environment. Only those environments that run a package that uses a supported version of the Mendix Runtime can spread the total memory over multiple instances.
 
 ```bash
 HTTP Method: POST
@@ -902,8 +892,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | --- | --- | --- |
 | 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact Support to upgrade your plan. |
 | 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024 MB.|
-| 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
-| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud v4. Please contact Support to upgrade to the v4 Cloud to access this functionality. |
+| 400 | NOT_ALLOWED | Scaling is only available for licensed apps using a supported version of Mendix. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**
@@ -922,7 +911,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.16 Create Environment Tags (Mendix Cloud v4 Only)
+### 3.16 Create Environment Tags 
 
 #### 3.16.1 Description
 
@@ -974,7 +963,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.17 Retrieve Environment Tags (Mendix Cloud v4 Only)
+### 3.17 Retrieve Environment Tags 
 
 #### 3.17.1 Description
 
@@ -1020,7 +1009,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.18 Delete Environment Tags (Mendix Cloud v4 Only)
+### 3.18 Delete Environment Tags 
 
 #### 3.18.1 Description
 
@@ -1072,7 +1061,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 []
 ```
 
-### 3.19 Download Archived Logs for a Specific Date (Mendix Cloud v4 Only)
+### 3.19 Download Archived Logs for a Specific Date 
 
 #### 3.19.1 Description
 
@@ -1118,6 +1107,55 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
     "Environment": "38471410-861f-47e5-8efc-2f4b16f04005",
     "Date": 1536451200000,
     "DownloadUrl": "https://logsapi-prod-2-eu-central-1.mendix.com/v1/logs/38471410-861f-47e5-8efc-2f4b16f04005?endDate=2021-06-12&expire=20210616105139&startDate=2021-06-12&signature=0D5D1D81153BD12634AB03DD388259A416AE55479E8A8983CB9E3BD524183A041767262B9A9355BB48407ABFC98FD42094DDAB61005E558F0DA0441F4C0DFA3DAB38D03A9CF8F713C2187040669709848795BD5B32715F6917523BF08CA1DFD79479D5B2ADD8EDC116BAFB7AE952BB6FF0F68276AF349B9FA9B7D2CE9AE7BB6BA220BF50FD6ED93BFC1073BCF641FF0FCE48B75DFD74E2FC6C856495B1285348C1EA38EF9BB04E0BFEF60DFA32C1C856446B8ED2E9BF87C4EC1C7950CC97FDB38659603431E90FCCF6F1F977C3E668784AC03395E02088FFF15ABA056C03F0262D84D1ECC9D287B3B7020F7DA68AEC74D1360BF906101F2D727C19AD0D9C77EC"
+}
+```
+
+### 3.20 Download Access Logs 
+
+#### 3.20.1 Description
+
+Downloads a log of all the end-users which have started a session in the app on the selected date.
+
+```bash
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/access-logs/<Date>
+```
+
+#### 3.20.2 Request
+
+**Request Parameters**
+
+* *AppId* (String): Subdomain name of an app.
+* *Mode* (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments).
+* *Date* (String): Date of the desired log in the format `YYYY-MM-DD`.
+
+**Example Request**
+
+```bash
+GET /api/1/apps/calc/environments/acceptance/access-logs/2021-06-12
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+```
+
+#### 3.20.3 Output
+
+**Error Codes**
+
+| HTTP Status | Error code | Description                         |
+| ----------- | ---------- | ----------------------------------- |
+| 404         | NOT FOUND  | An App or Environment is not found. |
+| 403 | FORBIDDEN | You do not have access |
+
+**Example Output**
+
+```text
+{
+    "Environment": "38471410-861f-47e5-8efc-2f4b16f04005",
+    "Date": 1536451200000,
+    "DownloadUrl": "https://logsapi-prod-2-eu-central-1.mendix.com/v1/rtr-logs/38471410-861f-47e5-8efc-2f4b16f04005/2021-06-12?expire=20210616105139&signature=0D5D1D81153BD12634AB03DD388259A416AE55479E8A8983CB9E3BD524183A041767262B9A9355BB48407ABFC98FD42094DDAB61005E558F0DA0441F4C0DFA3DAB38D03A9CF8F713C2187040669709848795BD5B32715F6917523BF08CA1DFD79479D5B2ADD8EDC116BAFB7AE952BB6FF0F68276AF349B9FA9B7D2CE9AE7BB6BA220BF50FD6ED93BFC1073BCF641FF0FCE48B75DFD74E2FC6C856495B1285348C1EA38EF9BB04E0BFEF60DFA32C1C856446B8ED2E9BF87C4EC1C7950CC97FDB38659603431E90FCCF6F1F977C3E668784AC03395E02088FFF15ABA056C03F0262D84D1ECC9D287B3B7020F7DA68AEC74D1360BF906101F2D727C19AD0D9C77EC"
 }
 ```
 

@@ -7,9 +7,9 @@ description: "Mendix supports solution developers through the Solution Vendor an
 tags: [ "solutions", "vendors", "solution vendor", "startup", "adaptive solutions", "prescriptive solutions" ]
 ---
 
-## 1 Introduction - [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
+## 1 Introduction
 
-Mendix supports aspiring solutions vendors, startups, and large enterprises in their adoption of Mendix as a development platform for their solutions. Along with the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), Mendix can suport you via the Solution Vendor Program and the Startup Program. These program teams are the point of contact for any inquiries, including requesting access to early adopter-stage technologies like intellectual property protection.
+Mendix supports aspiring solutions vendors, startups, and large enterprises in their adoption of Mendix as a development platform for their solutions. Along with the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), Mendix can suport you via the [Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/). These program teams are the point of contact for any inquiries, including requesting access to early adopter-stage technologies like intellectual property protection.
 
 ## 2 Solution Vendor Program
 

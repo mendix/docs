@@ -152,7 +152,10 @@ You can confirm that you can connect to the PCLM server using the following URLs
 
 
 When using the CLI, use kubectl port-forward instead of an ingress, Example:
+```bash {linenos=false}
 kubectl port-forward -n <namespace> svc/<service name> 8080:8080
+```
+
 and use http://localhost:8080 as the PCLM address
 
 ## 5 Setting Up Users
@@ -277,7 +280,7 @@ mx-pclm-cli config-namespace -n <operator-ns> \
    -u <admin-user> \
    -p <admin-password>
 ```   
-A secret with name `pclmsecret` will be created in the cluster with below format:
+The default secret name is `mendix-operator-pclm` OR it will use the existing secret name in case PCLM was already previously configured manually. Below is the yaml file format for the secret.
    
 ```yaml
 apiVersion: v1
@@ -307,7 +310,7 @@ spec:
 
 Where:
 
-* `<secret-name>` – the name is `pclmsecret`
+* `<secret-name>` – the default secret name is `mendix-operator-pclm`
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
    
 

@@ -1,6 +1,6 @@
 ---
 title: "Commercial Solution Partner Program"
-url: /appstore/creating-content/sol-vendor-programs/
+url: /appstore/creating-content/comm-sol-partner-program/
 linktitle: "Solution Vendor and Startup Programs"
 weight: 10
 description: "Mendix supports solution developers through the Solution Vendor and Startup Programs"

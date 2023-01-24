@@ -88,9 +88,9 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
-### 3.5 Mendix Component Partner Program - [**VERIFY FOR INCLUSION/CONTEXT**]
+### 3.5 Mendix Partner Program
 
-For more information on what this program offers, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
+For more information on what this program offers, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/) or [Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 
 ## 4 Adding New Marketplace Content {#adding}
 

@@ -321,5 +321,5 @@ For a component that is outdated based on the above points, this is the review a
 ## 7 Read More
 
 * [Marketplace Overview](/appstore/general/app-store-overview/)
-* [Mendix Component Partner Program](/appstore/creating-content/partner-program/)
+* [Mendix Partner Program](/appstore/creating-content/partner-program/)
 * [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/)

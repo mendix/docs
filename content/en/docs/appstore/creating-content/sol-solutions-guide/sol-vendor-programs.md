@@ -1,5 +1,5 @@
 ---
-title: "Mendix Solution Vendor and Startup Programs"
+title: "Commercial Solution Partner Program"
 url: /appstore/creating-content/sol-vendor-programs/
 linktitle: "Solution Vendor and Startup Programs"
 weight: 10

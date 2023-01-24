@@ -24,7 +24,7 @@ Offline-first progressive web apps (PWAs) use the underlying browser APIs to sto
 
 It is a best practice to synchronize as little data as possible to the device and avoid synchronizing any confidential or privacy-related data that does not pertain to the current user.
 
-### 3.1 Configuring Domain-Model Access Rules 
+### 3.1 Configuring Domain Model Access Rules 
 
 The Mendix Client only stores objects and attributes that the current user has read access to. Incomplete or misconfigured access rules on the domain model may cause too much data to be synchronized to the device databases.
 
@@ -48,12 +48,11 @@ Suppose you have to store sensitive data on a device and cannot control the oper
 
 To learn more, see [Encrypting Local Databases](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-local-databases)
 
-### 3.5 Encrypting User Files and Images
+### 3.5 Encrypting User Files and Images {#encrypting-files-images}
 
 Similar to encrypting the local database, you should enable local file encryption if the files or images your app stores are sensitive for extra protection. This option ensures that file contents for all entities that specializes from `System.FileDocument` or `System.Image` are encrypted. It also includes files added to the app by the end-user, for example, when a user takes a photo using the camera of the device and store it in an entity that specialized from `System.Image`.
 
-To learn more, see [Encrypting User Files](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-user-files)
-
+To learn more, see [Encrypting User Files](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-user-files).
 
 ## 4 Encrypting Local Databases {#encrypting-local-databases}
 

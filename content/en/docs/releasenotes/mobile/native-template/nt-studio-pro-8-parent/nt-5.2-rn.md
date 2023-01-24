@@ -10,7 +10,7 @@ description: "Native Template 5.2 release notes."
 
 ### Fixes
 
-* Pinned AndroidX library versions to prevent compilation errors for Android builds.
+* We fixed a compilation error issue affecting Android builds by pinning AndroidX library versions.
 
 ## 5.2.15
 

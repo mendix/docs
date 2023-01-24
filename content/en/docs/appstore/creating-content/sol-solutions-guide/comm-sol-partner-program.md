@@ -1,10 +1,10 @@
 ---
 title: "Commercial Solution Partner Program"
 url: /appstore/creating-content/comm-sol-partner-program/
-linktitle: "Solution Vendor and Startup Programs"
+linktitle: "Commercial Solution Partner Programs"
 weight: 10
-description: "Mendix supports solution developers through the Solution Vendor and Startup Programs"
-tags: [ "solutions", "vendors", "solution vendor", "startup", "adaptive solutions", "prescriptive solutions" ]
+description: "Mendix supports solution developers through the Mendix Component Partner and Commercial Solution Partner Programs."
+tags: [ "solutions", "commercial solution partner", "startup", "adaptive solutions", "prescriptive solutions" ]
 ---
 
 ## 1 Introduction

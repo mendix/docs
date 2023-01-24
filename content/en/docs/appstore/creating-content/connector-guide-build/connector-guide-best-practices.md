@@ -202,9 +202,9 @@ Given that there is no dependency management between Mendix modules, try to mini
 
 Any dependencies your module has should be well documented including the minimum required version to be used. It is also recommended to use the *.RequiredLib* files that Mendix uses for platform-supported modules, best handled with a build script like Gradle. To learn more about working with Gradle, see [Extending App Setup for Building Connectors with Java](#extend-app-java).
 
-### 3.11 IP Protection - [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
+### 3.11 IP Protection
 
-Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
+Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/) and the [Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 

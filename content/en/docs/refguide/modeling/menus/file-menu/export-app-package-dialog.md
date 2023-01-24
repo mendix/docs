@@ -20,26 +20,26 @@ To export the package, open the **File** menu > **Export App Package** and selec
 
 For more information on what options you can select, see the sections below. 
 
-## 2 Package Type - [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
+## 2 Package Type
 
 When you have access to publishing add-on modules and solutions, you can select to export you app as the **Solution** or **Source Package**. 
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
 
-The access can be gained through Mendix Vendor Program. For more information, see [Mendix Component Partner Program](/appstore/creating-content/partner-program/) in the *Marketplace Guide*.
+The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
 
-### 2.1 Solution Package - [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
+### 2.1 Solution Package
 
 {{% alert color="info" %}}
-You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
 {{% /alert %}}
 
 Choose this type of package if you develop your app as a solution and it has certain documents/elements hidden from consumers. Your app will be exported as a *.mxsolution* file; add-on and solution modules will be converted to the *.mxmodule* format during export. For more information on add-on and solution modules, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/).
 
-### 2.2 Source Package - [**VERIFY FOR VENDOR SWITCH TO PARTNER PROGRAM**]
+### 2.2 Source Package
 
 {{% alert color="info" %}}
-You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
 {{% /alert %}}
 
 A source package is used to distribute your app in the source format (i.e. all content is distributed with source code, which allows documents/elements to be changed on the consumer side). Your app is exported in the *.mpk* format. 

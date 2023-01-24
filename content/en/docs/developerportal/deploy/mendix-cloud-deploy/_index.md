@@ -242,6 +242,7 @@ The Standard resource packs listed below can be used with both Standard and Prem
 | XL21 | 16 GB | 4 | 16 GB | 4 | 80 GB | 160 GB |
 | XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
 | XXXL21 | 64 GB | 16 | 64 GB | 8 | 320 GB | 640 GB |
+| XXXXL21 | 128 GB | 32 | 128 GB | 16 | 640 GB | 1280 GB |
 
 The Premium resource packs listed below can only be purchased with a Premium plan.
 
@@ -253,6 +254,7 @@ The Premium resource packs listed below can only be purchased with a Premium pla
 | XL21 | 16 GB | 4 | 16 GB | 4 | 80 GB | 160 GB |
 | XXL21 | 32 GB | 8 | 32 GB | 4 | 160 GB | 320 GB |
 | XXXL21 | 64 GB | 16 | 64 GB | 8 | 320 GB | 640 GB |
+| XXXXL21 | 128 GB | 32 | 128 GB | 16 | 640 GB | 1280 GB |
 
 The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 

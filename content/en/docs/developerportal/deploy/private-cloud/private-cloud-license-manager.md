@@ -127,6 +127,8 @@ spec:
 
 Given the many possible ingress controllers which depend on the cloud provider, you will need to follow the instructions for your ingress controller and cloud.
 
+In order to make the solution more production-grade, we advise use an ingress with HTTPS/TLS enabled. (otherwise all traffic might go unencrypted over the public internet.
+
 To apply the manifest to configure the ingress in the Kubernetes namespace, use the following command:
 
 `$ kubectl -n <namespace> apply -f <ingress-file>`
@@ -146,7 +148,12 @@ If PCLM is installed in the same Kubernetes cluster as the Private Cloud environ
 You can confirm that you can connect to the PCLM server using the following URLs:
 
 * `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/health` should return `HTTP 200 OK`
-* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics
+* `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics.
+
+
+When using the CLI, use kubectl port-forward instead of an ingress, Example:
+kubectl port-forward -n <namespace> svc/<service name> 8080:8080
+and use http://localhost:8080 as the PCLM address
 
 ## 5 Setting Up Users
 
@@ -219,7 +226,7 @@ To purchase a license bundle, please contact [Mendix Support](https://support.me
 The following command will import a license bundle into the PCLM server:
 
 ```bash {linenos=false}
-mx-pclm-cli license import  
+mx-pclm-cli license import \
     -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password> \
@@ -260,10 +267,18 @@ If a license has previously been imported, you will be told that it is `[Duplica
 To use the licenses, you have to add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation.
 Assume that the operator is running in the namespace `<operator-ns>`.
 
-### 7.1 Storing Operator User Credentials
+### 7.1 Storing Operator User Credentials and Configuring the Mendix Operator
 
-The credentials you have created for an operator type user need to be stored in the repository. To do this, create the following .yaml file:
-
+The credentials you have created for an operator or admin type user need to be stored in the repository. You also need to patch the Mendix Operator with the location of pclm server and credentials for accessing the PCLM server. To do this, you can use the below mx-pclm-cli command:
+   
+```bash {linenos=false}
+mx-pclm-cli config-namespace -n <operator-ns> \
+   -s <pclm-http-url> \
+   -u <admin-user> \
+   -p <admin-password>
+```   
+A secret with name `pclmsecret` will be created in the cluster with below format:
+   
 ```yaml
 apiVersion: v1
 kind: Secret
@@ -271,30 +286,17 @@ type: Opaque
 metadata:
   name: <secret-name>
 stringData:
-  username: <operator-user>
-  password: <operator-password>
+  username: <username>
+  password: <password>
 ```
 
 Where:
 
 * `<secret-name>` – is the name of the secret where you want to store the credentials
-* `<operator-user>` – is a user of type *operator*
-* `<operator-password>` – is the password for the chosen *operator* user
+* `<username>` – is a user of *operator* or *admin* type
+* `<password>` – is the password for the chosen username
 
-You store this secret using the following command:
-
-```bash {linenos=false}
-kubectl apply -n <operator-ns> <yaml-file>
-```
-
-Where:
-
-* `<operator-ns>` – is the namespace where the Mendix Operator is running
-* `<yaml-file>` – is the location of the file where you stored the instructions for creating the credentials secret
-
-### 7.2 Configuring the Mendix Operator
-
-You need to patch the Mendix Operator with the location and credentials for accessing the PCLM server. To do this, create the following .yaml file:
+With the above command, the Mendix Operator Configuration will also be patched with below information. To do this, create the following .yaml file:
 
 ```yaml
 spec:
@@ -305,19 +307,9 @@ spec:
 
 Where:
 
-* `<secret-name>` – is the name of the secret where you stored the credentials
+* `<secret-name>` – the name is `pclmsecret`
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
-
-Patch the Mendix Operator using the following command:
-
-```bash {linenos=false}
-kubectl -n <operator-ns> patch OperatorConfiguration mendix-operator-configuration  --type=merge --patch="$(cat <yaml-file>)"
-```
-
-Where:
-
-* `<operator-ns>` – is the namespace where the Mendix Operator is running
-* `<yaml-file>` – is the location of the file where you stored the instructions for patching the Mendix Operator
+   
 
 ### 7.3 Applying Licenses
 
@@ -417,7 +409,7 @@ Where:
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 
-The report is presented as a CSV file containing a summary of the licenses at various times over the specified period.
+The report is presented as a CSV file containing a summary of the licenses at various times over the specified period. The data in the report will only be available after 12 hours.
 
 ## 8. Migration
 

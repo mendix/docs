@@ -29,7 +29,7 @@ Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions
 
 ¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
-² End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](https://docs.mendix.com/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app.
+² End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](https://docs.mendix.com/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as `Active` will be counted towards the number of end-users of the app.
 
 ³ Depending on the configuration of your chosen cloud, a container and runtime may be restarted if it appears unhealthy because the runtime has stopped.
 

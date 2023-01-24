@@ -56,7 +56,7 @@ If you are not currently a customer but would prefer to use a licensed cloud nod
 If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
 
-¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](https://docs.mendix.com/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app.
+¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](https://docs.mendix.com/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as `Active` will be counted towards the number of end-users of the app.
 
 #### 1.1.1 Sleep Mode
 

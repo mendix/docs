@@ -4,7 +4,7 @@ linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
 weight: 30
 description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud app."
-tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk", "Dynatrace"]
+tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk", "Dynatrace"]
 ---
 
 ## 1 Introduction

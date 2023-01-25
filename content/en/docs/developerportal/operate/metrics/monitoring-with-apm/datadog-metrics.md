@@ -3,7 +3,7 @@ title: "Datadog for the Mendix Cloud"
 url: /developerportal/operate/datadog-metrics/
 weight: 20
 description: "How to configure Mendix Cloud to enable monitoring and analysis with Datadog."
-tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
+tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

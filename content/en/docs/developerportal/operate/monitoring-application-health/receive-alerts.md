@@ -63,7 +63,7 @@ You can manage the alerts by yourself, follow these steps:
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Application Trends in Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/collaborate/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/) 
 * [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact)

@@ -22,7 +22,7 @@ Click **New** to create a new access restriction profile. Select an existing pro
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/access-restriction-profiles.png" >}}
 
-See below for information on setting up access restriction profiles for Mendix Cloud [v4](#v4).
+See below for information on setting up [access restriction profiles for Mendix Cloud](#access-restriction).
 
 When configuring an access restriction profile, you need to bear the following things in mind:
 
@@ -30,7 +30,7 @@ When configuring an access restriction profile, you need to bear the following t
 * Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both
 * If an access restriction profile contains *both IP address ranges and client CAs*, then any match on *either* the IP range *or* the client certificate will grant access
 
-### 2.1 Access Restriction Profiles for Mendix Cloud{#v4}
+### 2.1 Access Restriction Profiles for Mendix Cloud{#access-restriction}
 
 When you create a new access restriction profile, you will first be asked to enter the name of your profile.
 

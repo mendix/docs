@@ -1,6 +1,6 @@
 ---
 title: "Scaling Your Environment in Mendix Cloud"
-linktitle: "Scaling in Cloud v4"
+linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
 weight: 20
 description: "Describes how to scale your environments in Mendix Cloud."
@@ -35,9 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a plan which provides more than 1GiB of memory
 
 {{% alert color="info" %}}
-You can find the cloud version on which your app is hosted in the environment details: see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
-
-Details of your plan are also displayed on the environment details page.
+Details of your plan are displayed on the environment details page.
 {{% /alert %}}
 
 ## 3 Scaling Your Environment
@@ -84,6 +82,6 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 * [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/collaborate/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/)

@@ -1,17 +1,17 @@
 ---
-title: "Mendix Cloud"
+title: "About Mendix Cloud"
 url: /developerportal/deploy/mxcloudv4/
 weight: 50
 description: "Frequently asked questions about Mendix Cloud"
-tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services", "Max file size"]
+tags: ["Cloud", "Mendix Cloud", "FAQ", "AWS", "Amazon Web Services", "Max file size"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 What Is Mendix Cloud?
 
-Mendix Cloud is the current version of the Mendix Cloud: where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
+Mendix Cloud is where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
 
-Apps deployed to v4 run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via our [APIs](/apidocs-mxsdk/apidocs/deploy-api/). Apps can run in the EU, US, Japan, or the UK.
+Apps deployed to the Mendix Cloud run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via our [APIs](/apidocs-mxsdk/apidocs/deploy-api/). Apps can run in the EU, US, Japan, or the UK.
 
 Mendix Cloud is a mature product, launched in Q1 2017, and has a number of improvements over previous versions of Mendix Cloud:
 

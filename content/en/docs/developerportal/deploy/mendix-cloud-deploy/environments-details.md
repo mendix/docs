@@ -56,7 +56,7 @@ On the right side of the screen, you can find the following action buttons:
 * **View Live Log**
 * **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For Mendix Cloud, the debugger is always enabled. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions with v4-specific actions on the bottom">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions">}}
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.

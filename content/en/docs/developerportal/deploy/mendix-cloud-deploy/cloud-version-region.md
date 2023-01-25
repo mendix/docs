@@ -1,6 +1,6 @@
 ---
-title: "Cloud Version and Region in the Mendix Cloud"
-linktitle: "Mendix Cloud Version and Region"
+title: "Cloud Region in the Mendix Cloud"
+linktitle: "Mendix Cloud Region"
 url: /developerportal/deploy/cloud-version-region/
 weight: 24
 description: "How to view the Mendix Cloud Version and Region for your app."
@@ -30,10 +30,8 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 
 4. Next to **Region**, you will see the region of the data center where your app is hosted.
 
-5. Next to **Mendix Cloud Version**, you will see which version of Mendix Cloud the app is deployed to.
-
 ## 3 Read More
 
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)

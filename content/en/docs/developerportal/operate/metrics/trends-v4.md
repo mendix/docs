@@ -3,7 +3,7 @@ title: "Trends in Mendix Cloud"
 url: /developerportal/operate/trends-v4/
 weight: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud."
-tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
+tags: ["Trends","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal.
@@ -12,10 +12,6 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 ## 1 Introduction
 
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
-
-{{% alert color="info" %}}
-If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
-{{% /alert %}}
 
 ## 2 Access to Monitoring Trends
 
@@ -438,5 +434,5 @@ For more information, see the *AWS Database blog* [Understanding Burst vs. Basel
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/)
+* [Cloud Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/)
 * [Mendix Cloud - FAQ](/developerportal/deploy/mxcloudv4/)

@@ -127,7 +127,7 @@ spec:
 
 Given the many possible ingress controllers which depend on the cloud provider, you will need to follow the instructions for your ingress controller and cloud.
 
-In order to make the solution more production-grade, we advise use an ingress with HTTPS/TLS enabled. (otherwise all traffic might go unencrypted over the public internet.
+For production environments, in order to increase the security of your app, consider using an ingress with HTTPS/TLS enabled. Without HTTPS/TLS, all traffic may go unencrypted over the public internet.
 
 To apply the manifest to configure the ingress in the Kubernetes namespace, use the following command:
 

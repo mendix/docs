@@ -205,7 +205,11 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 }
 ```
 
-#### 4.1.4 Preparing Your Service Details Using the Transform Endpoint of the Registration API {#transform-api}
+##### 4.1.3.1 Behavior When Renaming an Environment
+
+Though uncommon, you update the URL of a hosted environment. When redeploying, the root URL is then updated, and endpoints that are registered under that environment get updated endpoint locations.
+
+#### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
 The Transform API, an endpoint in the Registration API, converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
 

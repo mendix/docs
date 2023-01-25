@@ -199,7 +199,7 @@ On this tab, you can manage the elements described below.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/network1.png"   width="50%"  >}}
 
-### 4.1 Custom Domains
+### 4.1 Custom Domains {#custom-domains}
 
 * **Domain name**
 * **Certificate**
@@ -491,7 +491,7 @@ When a maintenance operation is planned, it appears under **Planned Maintenance*
 
 You automatically receive email notifications about planned maintenance.
 
-## 8 Tags Tab
+## 8 Tags Tab{#tags}
 
 You can set tags on your environment. These are arbitrary strings that are not interpreted by the Developer Portal.
 

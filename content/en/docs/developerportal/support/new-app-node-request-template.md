@@ -3,7 +3,7 @@ title: "App Node Requests"
 url: /developerportal/support/new-app-node-request-template/
 description: "Describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud."
 category: "Mendix Support"
-weight: 3
+weight: 30
 tags: ["Support", "app node", "node", "license", "subscription secret"]
 aliases:
     - /developerportal/support/new-app-request-template.html
@@ -30,10 +30,6 @@ Fill in all the required details for this new licensed app node in the [Request 
 Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
 
 If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP BTP*.  
-
-{{% alert color="info" %}}
-Apps in the IBM Cloud Portal are licensed in a different way – see [IBM Cloud](/developerportal/deploy/ibm-cloud/) for more information.
-{{% /alert %}}
 
 ## 3 Resizing an Existing Environment{#resize}
 

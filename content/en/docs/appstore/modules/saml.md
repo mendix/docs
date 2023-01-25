@@ -99,6 +99,8 @@ There are different versions of the module, depending on which version of Mendix
 * Mendix version 9 (upgraded from version 8) – SAML module version 3.3.8
 * Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.9
 
+For Mendix 9, the versions for new apps (odd-numbered patch versions) differ from those for upgrading from Mendix version 8 (even numbered patch versions) as they have the newer version of Atlas UI (version 3). This is because using Atlas 3 with an app upgraded from Mendix version 8.x (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist.
+
 ## 2 Installation
 
 1. Configure the **Startup** microflow to run as the startup microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.

@@ -4,6 +4,8 @@ url: /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchroni
 weight: 20
 description: "Describes how and when synchronization occurs, and how to resolve sync errors."
 tags: ["offline", "offline-first"]
+aliases:
+    - /refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/
 ---
 
 ## 1 Introduction

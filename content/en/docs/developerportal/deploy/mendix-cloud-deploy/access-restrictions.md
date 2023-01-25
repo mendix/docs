@@ -14,7 +14,7 @@ Your app is accessible over the internet - but you may not want everyone to be a
 
 You can apply restrictions to the top level of the application URL (`/`), and also to more specific paths (for example, `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and client certificate authorities (CAs).
 
-## 2 Access Restriction Profiles
+## 2 Access Restriction Profiles {#access-restriction-profiles}
 
 You can specify a number of different access restriction profiles for your application. You can give each of these a name so that you can describe its purpose.
 

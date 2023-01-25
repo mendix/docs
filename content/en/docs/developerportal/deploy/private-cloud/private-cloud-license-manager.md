@@ -280,7 +280,7 @@ mx-pclm-cli config-namespace -n <operator-ns> \
    -u <admin-user> \
    -p <admin-password>
 ```   
-The default secret name is `mendix-operator-pclm` OR it will use the existing secret name in case PCLM was already previously configured manually. Below is the yaml file format for the secret.
+The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. Below is the yaml file format for the secret.
    
 ```yaml
 apiVersion: v1

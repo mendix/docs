@@ -217,6 +217,8 @@ For integrations, you have the following types of microflow:
 | Published REST service operation microflow | PRS\_  |
 | Published OData service operation microflow | POS\_  |
 
+You can also use the [Find Advanced](refguide/find-and-find-advanced/#find-advanced) command in Studio Pro to search microflows by service type.
+
 ### 3.5 Other Document Types
 
 #### 3.5.1 Layouts and Snippets

@@ -151,7 +151,7 @@ You can confirm that you can connect to the PCLM server using the following URLs
 * `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local/metrics` should return `HTTP 200 OK` together with the collected server metrics.
 
 
-When using the CLI, use kubectl port-forward instead of an ingress, Example:
+When using the CLI, use `kubectl port-forward` instead of an ingress, as in the following example:
 ```bash {linenos=false}
 kubectl port-forward -n <namespace> svc/<service name> 8080:8080
 ```

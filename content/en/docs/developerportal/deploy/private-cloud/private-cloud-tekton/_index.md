@@ -301,9 +301,9 @@ spec:
 
 Make sure that an ingress controller already installed. You can use an [NGINX Controller](https://kubernetes.github.io/ingress-nginx/) for this purpose.
 
-This service expects some parameters in JSON/HTTP Header format. Examples of HTTP requests provided in the [Triggering Pipelines](#triggering-pipelines) section.
+This service expects parameters in JSON/HTTP Header format. Examples of HTTP requests are provided in the [Triggering Pipelines](#triggering-pipelines) section.
 
-By exposing service with HTTP protocol all traffic might go unencrypted over the public internet. It's recommend to enable HTTPS/TLS protocols.
+By exposing the service with the HTTP protocol all traffic might go unencrypted over the public internet. We recommend that you enable HTTPS/TLS protocols.
 
 In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
 

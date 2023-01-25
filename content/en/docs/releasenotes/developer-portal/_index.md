@@ -15,6 +15,18 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2023
+
+### January 26th, 2023
+
+#### Improvements
+
+* We have fixed an issue where story description did not show up in Studio Pro
+* Epics now have different colors, to be able to distinguish between them more easily. Currently, just like with labels, the color is assigned randomly, but we may add management functionality at a later point.
+* If you do scrum, you can now see status of the stories in your active sprint on the Planning page
+* Sprint details are now editable, so you can change date, name and goal of your sprint after you start it. Use this power wisely, committing to a sprint goal is important, so only change that if there really is no other option :slightly_smiling_face:
+* We have implemented the new feedback module, so now you have much better screenshot functionality. Do send us feedback, we love hearing what you think. And also try out the new feedback module in your own apps, it's awesome!
+
 ## 2022
 
 ### December 21st, 2022

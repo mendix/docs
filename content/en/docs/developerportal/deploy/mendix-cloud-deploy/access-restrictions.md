@@ -30,7 +30,7 @@ When configuring an access restriction profile, you need to bear the following t
 * Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both
 * If an access restriction profile contains *both IP address ranges and client CAs*, then any match on *either* the IP range *or* the client certificate will grant access
 
-### 2.1 Access Restriction Profiles for Mendix Cloud V4{#v4}
+### 2.1 Access Restriction Profiles for Mendix Cloud{#v4}
 
 When you create a new access restriction profile, you will first be asked to enter the name of your profile.
 
@@ -72,7 +72,7 @@ Click **Save** to save the current certificate profile.
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 
-For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports both IPv4 and IPv6 format addresses.
+For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud supports both IPv4 and IPv6 format addresses.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png" >}}
 

@@ -1,9 +1,9 @@
 ---
-title: "Scaling Your Environment in Mendix Cloud v4"
+title: "Scaling Your Environment in Mendix Cloud"
 linktitle: "Scaling in Cloud v4"
 url: /developerportal/deploy/scale-environment/
 weight: 20
-description: "Describes how to scale your environments in Mendix Cloud v4."
+description: "Describes how to scale your environments in Mendix Cloud."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -20,17 +20,17 @@ The scaling options on possible cloud versions are the following:
 
 | Cloud Version | Scaling Options | Limitations |
 | ------------- | --------------- | ----------- |
-| Mendix Cloud v4 | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
+| Mendix Cloud | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
 
 This how-to will teach you how to do the following:
 
-* Scale your environment in Mendix Cloud v4
+* Scale your environment in Mendix Cloud
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a licensed app hosted in Mendix Cloud v4
+* Have a licensed app hosted in Mendix Cloud
 * The Mendix version of the app is Mendix 7.0 or above
 * Have a plan which provides more than 1GiB of memory
 
@@ -42,7 +42,7 @@ Details of your plan are also displayed on the environment details page.
 
 ## 3 Scaling Your Environment
 
-If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
+If you want to scale your licensed app in Mendix Cloud, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 
@@ -80,10 +80,10 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 
 ## 5 Read More
 
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
+* [Trends in Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [Mendix Cloud v4](/developerportal/deploy/mxcloudv4/)
+* [Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/collaborate/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/)

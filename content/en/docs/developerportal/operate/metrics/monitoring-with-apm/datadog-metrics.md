@@ -2,14 +2,14 @@
 title: "Datadog for the Mendix Cloud"
 url: /developerportal/operate/datadog-metrics/
 weight: 20
-description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with Datadog."
+description: "How to configure Mendix Cloud to enable monitoring and analysis with Datadog."
 tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-[Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to Datadog to provide additional monitoring.
+[Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud app to send data to Datadog to provide additional monitoring.
 
 {{% alert color="info" %}}
 Datadog logging and application metrics are supported in Mendix version 7.15 and above.

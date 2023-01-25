@@ -29,7 +29,7 @@ This how-to will teach you how to do the following:
 
     {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data.{{% /alert %}}
 
-* When restoring a database hosted in Mendix Cloud v4, or downloading a full backup, you will need a utility such as [7zip](http://www.7-zip.org/) on your local machine which can extract files from *.gz* and *.tar* archives.
+* When restoring a database hosted in Mendix Cloud, or downloading a full backup, you will need a utility such as [7zip](http://www.7-zip.org/) on your local machine which can extract files from *.gz* and *.tar* archives.
 
 NOTE: This how-to has been made with PostgreSQL version Version 9.6.5.
 
@@ -38,7 +38,7 @@ NOTE: This how-to has been made with PostgreSQL version Version 9.6.5.
 Once PostgreSQL is installed and you have downloaded a backup file, you need to create a local database in PostgreSQL. The backup database will be restored into this local PostgreSQL database.
 
 {{% alert color="info" %}}
-If your backup came from Mendix Cloud v4, it will have been compressed as a *.gz* file. You will first have to extract the file(s) from this archive using a tool such as 7zip.
+If your backup came from Mendix Cloud, it will have been compressed as a *.gz* file. You will first have to extract the file(s) from this archive using a tool such as 7zip.
 
 If you have downloaded a full backup, this will also have been archived as a *.tar* file which you need to extract to get your .backup file containing the database backup. The .backup file is in the **db** folder of the archive.
 {{% /alert %}}

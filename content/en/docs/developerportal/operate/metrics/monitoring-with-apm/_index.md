@@ -3,7 +3,7 @@ title: "Monitoring Your Mendix Apps with an APM Tool"
 linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
 weight: 30
-description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud v4 app."
+description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud app."
 tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk", "Dynatrace"]
 ---
 
@@ -89,7 +89,7 @@ The following metrics are useful when monitoring the performance of your Mendix 
 * postgresql.max_connections
 * postgresql.percent_usage_connections
 
-Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
+Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action which might be required. Some of these trends are similar to those described in [Trends in Mendix Cloud](/developerportal/operate/trends-v4/).
 
 ## 4 App Metrics {#app-metrics}
 
@@ -202,7 +202,7 @@ The following Mendix *request handler* calls will be passed:
 | `FileRequestHandler` | File upload/download requests | `mx.client.time` |
 | `PageUrlRequestHandler` | `/p` requests | `mx.client.time` |
 
-You can find help in analyzing some of these values in [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/).
+You can find help in analyzing some of these values in [Trends in Mendix Cloud](/developerportal/operate/trends-v4/).
 </details>
 
 **<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**

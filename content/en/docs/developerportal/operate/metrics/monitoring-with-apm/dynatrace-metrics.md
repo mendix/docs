@@ -2,14 +2,14 @@
 title: "Dynatrace for the Mendix Cloud"
 url: /developerportal/operate/dynatrace-metrics/
 weight: 25
-description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with Dynatrace."
+description: "How to configure Mendix Cloud to enable monitoring and analysis with Dynatrace."
 tags: ["Dynatrace", "Mendix Cloud", "v4", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-[Dynatrace](https://www.dynatrace.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to Dynatrace to provide additional monitoring.
+[Dynatrace](https://www.dynatrace.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud app to send data to Dynatrace to provide additional monitoring.
 
 {{% alert color="info" %}}
 Dynatrace is fully supported in Mendix version 9.7 and above.

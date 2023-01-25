@@ -20,9 +20,9 @@ The status of all these services is reported on a single page: [https://status.m
 
 By going to the [Mendix status page](https://status.mendix.com/), you can check the status of Mendix Cloud. This will tell you if there are any issues with the cloud which may impact your apps.
 
-You can expand the status of the clouds to see the status of a particular region: for example *Mendix Cloud v4 EU*.
+You can expand the status of the clouds to see the status of a particular region: for example *Mendix Cloud EU*.
 
-Free Apps are deployed to *Mendix Cloud v4 Free Tier*.
+Free Apps are deployed to *Mendix Cloud Free Tier*.
 
 ## 3 Current Issues
 

@@ -1,12 +1,13 @@
 ---
 title: "Migrate to a Different Cloud"
-url: /developerportal/deploy/migrating-to-v4/
+url: /developerportal/deploy/migrating-to-different-cloud/
 weight: 10
-description: "How to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
-tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
+description: "How to migrate your app from one type of cloud to another, for example, from public to private cloud."
+tags: ["App","Migrate","Developer Portal","public cloud","private cloud",""Node"]
 aliases:
     - /developerportal/howto/migrating-to-v4.html
     - /developerportal/howto/migrating-to-v4
+    - /developerportal/deploy/migrating-to-v4
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

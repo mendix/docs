@@ -22,26 +22,7 @@ In return, you will gain the following benefits:
 * Develop brand awareness with target audiences
 * Drive demand for your services
 
-## 2 Applying to the Mendix Component Partner Program
-
-Whether you are an individual supplier with your own business or you are supplying a component on behalf of your company, you need to [apply](https://www.mendix.com/partners/become-a-partner/component-partner/) to the Mendix Component Partner Program. Since your Mendix Partner account is associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/) to start. 
-
-When applying to the program, you are asked for basic information, including your legal name and address. This information is used to check whether you want to promote your content or offer it for free.
-
-| Account Detail | Description |
-| --- | --- |
-| Account Owner | The account creator’s email address. |
-| Logo | Your supplier logo. |
-| Name | Supplier name (could be a company, brand, or individual). |
-| Description | Describe your purpose, products, and services. |
-| Company Name | The legal name of the entity that will sell or offer your content. |
-| Company Address | The legal address of the entity that will sell or offer your content. |
-
-As the owner of the Mendix Partner account, you must have permission to legally bind your company to Mendix.
-
-When you are offering a paid component through the Marketplace, you need to accept our Mendix Component Partner Agreement or Commercial Solution Partner Agreement, which is an agreement between Mendix and you as a Mendix Partner within the Mendix Partner Program.
-
-## 3 Joining Mendix Marketplace 
+## 2 Joining Mendix Marketplace 
 
 As a partner in the Mendix Marketplace, you can offer your components to customers all over the world who are looking for innovative ways to address their business challenges. You will be part of a powerful ecosystem that provides a wealth of resources and support to help you succeed. 
 
@@ -49,6 +30,6 @@ There are a few steps to publishing an offering. A partner interested in publish
 
 Currently, we are offering product listings with contact referrals for commercial content. There is currently no fee to publish an offering on the Mendix Marketplace. 
 
-## 4 Read More
+## 3 Read More
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)

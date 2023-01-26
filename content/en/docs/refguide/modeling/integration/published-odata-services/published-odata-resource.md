@@ -56,17 +56,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
-### 3.1 Selecting Attributes as the Key {#select-attributes}
-
-You can select which attributes you would like to use as a key. Choose a combination of attributes that are never empty, do not change, and together uniquely identify the object. An autonumber attribute is a good choice for a key.
-
-{{% alert color="info" %}}
-Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/). Selecting multiple attributes as a key was introduced in Studio Pro [9.19.0](/releasenotes/studio-pro/9.19/).
-{{% /alert %}}
-
-To learn more about selecting attributes as keys, see the [Selecting an Attribute as a Key](/refguide/wrap-services-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
-
-### 3.2 Required Validation Rules for Published Attributes
+### 3.1 Required Validation Rules for Published Attributes
 
 For published OData services, the **Can be empty** check box appears when you edit a published attribute. 
 
@@ -118,14 +108,23 @@ Default: *10000*
 
 ## 8 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a unique [key](/refguide/published-odata-resource/#key) when exposing an entity as a Published OData Resource. The attribute type can be one of the following: 
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attribute(s) that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
-* **Integer**
-* **Long**
-* **String**
-* **AutoNumber** 
+Select a combination of attributes with the following constraints:
 
-To learn more about selecting a key, unique see the [Key Selection](/refguide/wrap-services-odata/#select-key) section of *Wrap Services, APIs, or Databases with OData*.
+* Unique – The combination of key attributes should be unique, so each key points to exactly one object.
+* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
+* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
+
+You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
+
+{{% alert color="info" %}}
+Selecting a single attribute as a key was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.17/). Selecting multiple attributes as a key was introduced in Studio Pro [9.19.0](/releasenotes/studio-pro/9.19/).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
+{{% /alert %}}
 
 ## 9 Capabilities {#capabilities}
 

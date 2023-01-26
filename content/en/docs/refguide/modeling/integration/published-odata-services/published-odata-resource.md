@@ -112,9 +112,9 @@ Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representa
 
 Select a combination of attributes with the following constraints:
 
-* Unique – each key points to exactly one object
-* Required – ensures that no key attribute value is empty, which would mean you cannot find an object with it
-* Stable over time – the attribute values used for the key should not change so that you can find it again later
+* Unique – The combination of key attributes should be unique, so each key points to exactly one object.
+* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
+* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
 
 You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
 

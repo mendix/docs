@@ -48,15 +48,9 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 2. Click **Cloud Settings**.
 
-3. Click **Mendix for Private Cloud**.
+3. In the **Mendix for Private Cloud** section, click **Set up**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image3.png" >}}
-
-4. Click **Set up Mendix for Private Cloud**.
-
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image4.png" >}}
-
-5. Your app is now configured for private cloud.
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/SetupButton.png" >}}
 
 ### 3.2 Creating a Deployment Package {#create-deployment-package}
 
@@ -473,6 +467,11 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 
 To change any constants, select the constant you want to edit and then click **Edit**.
 
+{{% alert color="info" %}}
+If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+{{% /alert %}}
+
+
 ### 5.3 Network Tab
 
 On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to the Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
@@ -487,6 +486,10 @@ On the Runtime tab, you can change various runtime settings for your app environ
 
 {{% alert color="info" %}}
 When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If the custom runtime settings are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
 ### 5.5 Log Levels Tab
@@ -621,7 +624,9 @@ After manually removing the StorageInstance, you'll need to manually clean up an
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-### 7.4 ApplicationRootUrl Needs to be Set Manually
+In Mendix Operator version 2.4.0 and above, you can click **More Info** to view any errors that could explain why the app is failing to start.
+
+### 7.4 ApplicationRootUrl Needs to Be Set Manually
 
 {{% alert color="info" %}}
 This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
@@ -639,6 +644,29 @@ To add this setting:
 
 {{% alert color="info" %}}
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
+{{% /alert %}}
+
+### 7.5 Collecting Diagnostic Data for a Support Ticket
+
+{{% alert color="info" %}}
+For security reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Developer Portal.
+Only generic status or error messages are sent back to the Developer Portal and these messages don't contain enough details about the environment to understand the root cause of any problems.
+{{% /alert %}}
+
+In version 2.10.0 and above of the `mxpc-cli` administration and configuration tool there is a command to collect and save diagnostic logs and a few configuration details to a file.
+
+To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where the information should be saved:
+
+```bash {linenos=false}
+mxpc-cli log-extract -n {namespace} -f {filename}
+```
+
+This file can be shared with Mendix Support or the team responsible for maintaining infrastructure.
+
+{{% alert color="warning" %}}
+Before sending logs to support, please make sure that there they don't contain any sensitive or restricted information.
+
+To provide enough detail to work on an issue without disclosing sensitive information, you may want to redact some of the information in the log, or only keep messages from a specific time period.
 {{% /alert %}}
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}

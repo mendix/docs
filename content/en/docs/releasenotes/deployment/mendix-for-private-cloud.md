@@ -11,6 +11,37 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2023
+
+### January 19th, 2023
+
+#### Portal Improvements
+
+* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
+* We have added a new status field indicating whether custom runtime setting and MxApp constants were loaded from CSI Secrets Storage.
+* We have added a notification on top of the Model Options and Runtime Settings page to indicate whether CSI Secrets Storage is enabled for a namespace.
+* We have removed the limit of eight characters for the MxAdmin password. You should set the password based on the policy set in Studio Pro.
+* We have fixed an issue where users were unable to update the datatype of constants in the Private Cloud portal. (Ticket 173999)
+* We have fixed a bug where sometimes the log levels were not editable.
+* Unused deployment packages from your repository are now removed if they are older than two weeks.
+
+#### Deploy API Improvements
+
+* We have fixed a network error issue with the **Try it out** option in the [Private Cloud Deploy API documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+
+### January 5th, 2023
+
+#### Mendix Operator v2.10.0{#2.10.0}
+
+* We have added an option to set app constants and custom Mendix Runtime settings when using CSI Secrets Store.
+* It is now possible to use Azure Blob Storage instead of S3 when using CSI Secrets Store.
+* We have improved status messages to indicate what data is used by CSI Secrets Store and if any additional configuration steps are required.
+* If the CSI Secrets Store driver rotates credentials, Mendix Operator will detect this and apply changes.
+* We upgraded all Go-based components to Go 1.18. (Ticket 163987)
+* We fixed a bug where deleting an environment would not clean up its database and file storage users and data.
+* We fixed a regression where collecting Prometheus metrics would return an error. This regression only affects Mendix Operator version 2.9.0.
+* The `mxpc-cli` installation and configuration tool now has an option to collect and save logs and additional diagnostic data in a file. By using this option, collecting and sending diagnostic data to support becomes a lot easier.
+
 ## 2022
 
 ### December 1st, 2022

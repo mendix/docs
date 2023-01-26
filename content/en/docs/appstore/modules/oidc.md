@@ -47,13 +47,15 @@ Alternatives to using OIDC SSO for managing single sign on are:
 * Helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
 * Support for multiple OIDC IdPs, by allowing configuration of user provisioning and access token parsing microflows per IdP.
 * Supports responsive web applications, a.k.a. browser based applications.
-* Works with the Mendix DeepLink module
+* Works with the Mendix DeepLink module.
+* Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
-For more complex use cases, which require more knowledge of how OAuth and OIDC work.
+For readers with more knowledge of the OAuth and OIDC protocol.
 
 * Uses the Authorization Code Grant flow to sign the end-user in via the browser.
 * Uses the 'nonce' parameter to defend against replay attacks.
 * Validates ID-token signatures.
+* Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
     * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
@@ -63,7 +65,6 @@ For more complex use cases, which require more knowledge of how OAuth and OIDC w
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
-* Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
 #### 1.2.2 Limitations
 

@@ -15,6 +15,26 @@ There are separate release notes for other deployment targets, see [Deployment](
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2023
+
+### January 18th, 2023
+
+#### Fix
+
+* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being executed](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
+
+### January 13th, 2023
+
+#### Improvements
+
+* We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as a new deployment targets.
+
+### January 5th, 2023
+
+#### Improvements
+
+* We have introduced support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in Mendix Cloud V4.
+
 ## 2022
 
 ### November 14th, 2022

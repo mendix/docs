@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### January 26th, 2023
+
+#### Improvements
+
+* We added a new version of the Deploy API which allows you to change the technical contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
+
 ### January 18th, 2023
 
 #### Fix

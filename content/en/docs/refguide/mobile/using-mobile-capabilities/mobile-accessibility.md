@@ -1,0 +1,61 @@
+---
+title: "Mobile Accessibility"
+url: /refguide/mobile/using-mobile-capabilities/mobile-accessibility/
+weight: 85
+description: "This guide allows you to customize accessibility for mobile applications."
+tags: ["accessibility", "JavaScript", "native", "mobile"]
+---
+
+# 1 Introduction
+
+The goal of this guide is to provide an accessible mobile application. An accessible application makes sure that every user gets a great experience no matter their capabilities or how they use their devices. In this guide we will walk through the interaction between Mendix applications and mobile screen readers VoiceOver (iOS) and TalkBack (Android). 
+
+# 2 Prerequisites
+Before starting this guide, make sure you have completed the following prerequisites:
+* Install Mendix Studio Pro version **9.22.0** or above
+* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
+* Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/).
+
+# 3 Setting up accessibility for Mendix native widgets
+Mendix tries to provide accessible widgets by default when it is possible and also allows provides configurable properties to customize the accessibility experience.
+
+###3.1  Accessibility properties
+### 3.1.1 accessible
+When `true`, indicates that the view is an accessibility element and if it is set to `false`, the screen reader will avoid it. Most of the widgets have accessible property `true` by default.
+
+### 3.1.2 screen reader caption
+This captions doesn't appear on the screen but they let the screen readers audibly describe onscreen elements, making navigation easier for people with visual disabilities. 
+
+### 3.1.3 screen reader hint
+A screen reader hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label.
+
+## 3.2 Example: setting up accessibility for Button
+Button is accessible by default and the screen reader caption will match button caption by default. We can override that through buttons properties.
+{{< figure src="/attachments/howto/mobile/native-mobile/implementation/mobile-accessibility/buttonAccessibility.png" alt="accessible button"   width="400"  >}}
+
+## 3.3 Testing screen reader accessibility
+### 3.3.1 Android
+To enable TalkBack (Android screen reader), go to the Settings app on your Android device or emulator. Tap Accessibility, then TalkBack. Toggle the "Use service" switch to enable or disable it.
+
+### 3.3.2 iOS
+To enable VoiceOver (iOS screen reader), go to the Settings app on your iOS device (it's not available for simulator). Tap Accessibility. There you will find many tools that people use to make their devices more usable, such as bolder text, increased contrast, and VoiceOver.
+
+## 3.4 Special widgets use cases
+### 3.4.1 Container
+
+If a container is accessible, it groups its children into a single selectable element. By default containers are not accessible to allow accessibility for children but this can be configured if needed.
+
+### 3.4.2 Image
+Accessible image requires a screen reader caption as a mandatory property, as there is no way to set a default descriptive caption for images.
+
+# 4 Configuring accessibility in custom widgets
+React native documentation has a helpful [accessibility document](https://reactnative.dev/docs/accessibility) that can be used as a reference while building custom widgets and here are the properties that might be of a great interest:
+
+| Property | Usage                                                                                                                                                                              | Platform         |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| accessible| When true, indicates that the view is an accessibility element. When a view is an accessibility element, it groups its children into a single selectable component.                | Android and iOS  |
+|accessibilityLabel| string that lets the screen readers audibly describe onscreen elements, making navigation easier for people with visual disabilities.                                              | Android and iOS  |
+|accessibilityHint| An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. | Android and iOS  |
+|accessibilityRole| communicates the purpose of a component to the user of an assistive technology.                                                                                                    | Android and iOS  |
+|accessibilityState| Describes the current state of a component to the user of an assistive technology.                                                                                                 | Android and iOS  |
+|importantForAccessibility| Can be used to control components overlapping in Android and decide which component will fire accessibility events                                                                 | Android|

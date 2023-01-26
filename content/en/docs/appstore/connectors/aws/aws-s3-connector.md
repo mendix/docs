@@ -27,9 +27,47 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to one or more Amazon S3 buckets. Each activity can be implemented by using it in a microflow, and the Amazon S3 connector comes with example microflows which you can use to quickly configure the S3 connector for your use case.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSS3Connector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to one or more Amazon S3 buckets. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-To quickly configure the connection to Amazon S3 by using an example microflow, perform the following steps:
+### 3.1 Configuring AWS Authentication
+
+In order to use the Amazon S3 service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+
+1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
+2. Decide whether you want to use session or static credentials to authenticate.
+    The Amazon DynamoDB connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+3. In the **App Explorer**, double-click the **Settings** for your app.
+
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
+
+4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
+    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
+6. In the **Select Constants** dialog, find and expand the **AmazonDynamoDBConnector** > **ConnectionDetails** section.
+
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+
+7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
+
+    | Credentials type | Parameter | Value |
+    | --- | --- | --- |
+    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+    | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
+    | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+    | **SessionCredentials** | **Session Name** | An identifier for the session |
+
+### 3.2 Whitelisting Mendix Public Cloud IPs for Amazon S3 Access Points
+
+If your application is hosted on Mendix Public Cloud, and your S3 buckets are secured with [Amazon access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html), you must whitelist the [Mendix IP Addresses](/developerportal/deploy/mendix-ip-addresses/) to allow access.
+
+### 3.3 Configuring a Microflow for an AWS Service
+
+After you configure the authentication profile for Amazon S3, you can implement the functions of the connector by using the provided activities in microflows. To quickly configure the connection to Amazon S3 by using an example microflow, perform the following steps:
 
 1. Optional: If you have not configured your default AWS region before, click **App** > **Marketplace modules** > **AWSS3Connector** > **_USE_ME** > **AWS_Default_Region**, and then select the region of your choice.
 
@@ -58,7 +96,11 @@ To quickly configure the connection to Amazon S3 by using an example microflow, 
 
 To help you work with the Amazon S3 connector, the following sections of this document list the available entities and activities that you can use in your application.
 
-### 3.1 Domain Model {#domain-model}
+## 4 Technical Reference
+
+To help you work with the Amazon S3 connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+
+### 4.1 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
@@ -77,11 +119,11 @@ When using the [Java activities](#activities), results are stored as objects of 
 
 The entities are either not persistable, or have the `DeleteAfterDownload` flag set so that they are automatically deleted from the database. Because of that, you do not need remove the resulting objects yourself.
 
-### 3.2 Activities {#activities}
+### 4.2 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon S3 connector, they represent the actions that can be performed on S3 buckets.
 
-#### 3.2.1 List Bucket
+#### 4.2.1 List Bucket
 
 This activity lists all the S3 buckets which are available for the supplied AWS credentials.
 
@@ -93,7 +135,7 @@ This activity lists all the S3 buckets which are available for the supplied AWS 
 
 * List of objects of entity type `Bucket`
 
-#### 3.2.2 List Prefix
+#### 4.2.2 List Prefix
 
 This activity lists all the [prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) used to organize objects in an S3 bucket.
 
@@ -106,7 +148,7 @@ This activity lists all the [prefixes](https://docs.aws.amazon.com/AmazonS3/late
 
 * List of objects of entity type `Prefix` which are in the bucket you supplied as a parameter
 
-#### 3.2.3 List Object
+#### 4.2.3 List Object
 
 This activity lists all the objects in an S3 bucket.
 
@@ -119,7 +161,7 @@ This activity lists all the objects in an S3 bucket.
 
 * List of objects of entity type `S3Object` which are in the bucket that you supplied as a parameter
 
-#### 3.2.4 Get Object
+#### 4.2.4 Get Object
 
 This activity returns the contents of a single object defined by an object of entity type `S3Object`.
 
@@ -132,7 +174,7 @@ This activity returns the contents of a single object defined by an object of en
 
 * Object of type `Document` – contains the content of the S3 object requested
 
-#### 3.2.5 Put Object
+#### 4.2.5 Put Object
 
 This activity puts the contents of a `Document` object into a single object defined by an object of entity type `S3Object`. The name of the object is the `Name` attribute of the `Document`. This activity can update an existing object, or it can create a new object.
 
@@ -146,7 +188,7 @@ This activity puts the contents of a `Document` object into a single object defi
 
 * Boolean – `true` if object was successfully put, otherwise `false`
 
-#### 3.2.6 Delete Object
+#### 4.2.6 Delete Object
 
 This activity deletes a single object defined by an object of entity type `S3Object`.
 
@@ -159,7 +201,7 @@ This activity deletes a single object defined by an object of entity type `S3Obj
 
 * Boolean – `true` if object was successfully deleted, otherwise `false`
 
-#### 3.2.7 Move Object
+#### 4.2.7 Move Object
 
 This activity moves an object from one bucket to another bucket. The new object has the same key as the original object, and the original object is deleted.
 
@@ -182,7 +224,7 @@ You cannot change the key of an existing object. To do this, you should:
 
 * Boolean – `true` if object was successfully moved, otherwise `false`
 
-#### 3.2.8 Copy Object
+#### 4.2.8 Copy Object
 
 This activity copies an object from one bucket to another bucket.  The new object has the same key as the original object and the original object remains in its original bucket.
 

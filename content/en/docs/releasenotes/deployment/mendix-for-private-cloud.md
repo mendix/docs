@@ -17,9 +17,9 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.10.1{#2.10.1}
 
-* We’ve updated components to use the latest dependency versions. This update addresses CVE-2021-31525, CVE-2021-33194, CVE-2021-41092, CVE-2021-44716,   CVE-2022-32149, CVE-2022-41717 and CVE-2022-41721. These CVEs are unlikely to put Mendix for Private Cloud environments at risk and are mitigated by design.
-* We switched from UBI 8 Minimal base images to [UBI 8 Micro](https://www.redhat.com/en/blog/introduction-ubi-micro) to reduce the image size and the number of CVEs.
-* We’ve implemented a feature to use [IAM role authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) when connecting to RDS Postgres databases. This feature depends on an upcoming release of Mendix, and additional documentation will be provided later.
+* We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
+* We have switched from UBI 8 Minimal base images to [UBI 8 Micro](https://www.redhat.com/en/blog/introduction-ubi-micro).
+* We have implemented a feature to use [IAM role authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) when connecting to RDS Postgres databases. This feature depends on an upcoming release of Mendix, and additional documentation will be provided later.
 
 ### January 19th, 2023
 

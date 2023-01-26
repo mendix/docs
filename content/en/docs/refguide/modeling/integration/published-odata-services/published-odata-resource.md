@@ -108,13 +108,13 @@ Default: *10000*
 
 ## 8 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attribute(s) that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
 Select a combination of attributes with the following constraints:
 
-* Unique – The combination of key attributes should be unique, so each key points to exactly one object.
-* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
-* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
+* Unique – each key points to exactly one object
+* Required – ensures that no key attribute value is empty, which would mean you cannot find an object with it
+* Stable over time – the attribute values used for the key should not change so that you can find it again later
 
 You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
 

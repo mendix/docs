@@ -124,7 +124,7 @@ In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count
 
 Select which attribute(s) to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource so that clients will be able to identify objects returned by the service.
 
-To learn more about selecting a key, unique see the [Key](/refguide/published-odata-resource/#key) section of *Published OData Resource*.
+To learn more about selecting a key, see the [Key](/refguide/published-odata-resource/#key) section of *Published OData Resource*.
 
 ### 5.1 Selecting Attributes as a Key {#select-key}
 

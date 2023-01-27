@@ -71,7 +71,7 @@ To consume web services, see:
 
 With [Mendix Business Events](/appstore/modules/business-events/), applications can signal when something important happens, and can independently subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
-The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. This results in much better availability for your applications, as applications are not impacted by downtime of other applications. It also simplifies your applications, as you reduce the fact that applications need to be aware of other applications, this simplifying dependency management and impact analysis when changing your software.
+The key difference between business events and traditional communication between apps, like REST or Web Services, is that there is no direct communication between the different apps. Applications publish events to, or subscribe to events with, an event broker. This results in much better availability for your applications, as applications are not impacted by downtime of other applications. It also simplifies your applications, as you reduce the fact that applications need to be aware of other applications, thus simplifying dependency management and impact analysis when changing your software.
 
 To publish and consume business event services, see:
 

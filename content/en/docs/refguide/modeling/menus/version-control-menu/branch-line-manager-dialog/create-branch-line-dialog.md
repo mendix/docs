@@ -21,7 +21,7 @@ To view the **Create Branch Line** dialog box,  do the following:
 
 The **Create Branch Line** dialog box is displayed.
 
-For more information on how to manage branch lines, see the [Managing Development Lines](/refguide/collaborative-development/#managing-branches) section in *Collaborative Development* and [Branch Line Manager](/refguide/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide/version-control/). 
+For more information on how to manage branch lines, see [Branch Line Manager](/refguide/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide/version-control/). 
 
 ## 2 Create Branch From
 

@@ -7,6 +7,7 @@ tags: ["microflow", "logic", "save button"]
 aliases:
     - /howto/logic-business-rules/create-a-custom-save-button/
 ---
+
 ## 1 Introduction
 
 Mendix uses visual models called microflows to define the logic of your application. A [microflow](/refguide/microflows/) is a visual way of expressing what traditionally would be written in code. 

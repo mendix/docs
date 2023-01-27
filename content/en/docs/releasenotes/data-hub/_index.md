@@ -9,9 +9,17 @@ weight: 30
 
 These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hub/data-hub-catalog/).
 
+## 2023
+
+### January 12th, 2023
+
+#### Improvements
+
+* You can now add [authentication](/data-hub/data-hub-catalog/register-data/#authentication) details to a data source. Click **Edit** on the data source and then click the **Authentication** tab. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+
 ## 2022
 
-### December 22th, 2022
+### December 22nd, 2022
 
 #### Improvements
 
@@ -35,7 +43,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Fixes
 
-* We fixed an issue with the display of services with anonymous access in the [data source details](/data-hub/data-hub-catalog/search/#service-details) page.
+* We fixed an issue with the display of services with anonymous access in the [asset details](/data-hub/data-hub-catalog/search/#service-details) page.
 
 ### November 17th, 2022
 

@@ -301,6 +301,10 @@ spec:
 
 Make sure that an ingress controller already installed. You can use an [NGINX Controller](https://kubernetes.github.io/ingress-nginx/) for this purpose.
 
+This service expects parameters in JSON/HTTP Header format. Examples of HTTP requests are provided in the [Triggering Pipelines](#triggering-pipelines) section.
+
+By exposing the service with the HTTP protocol all traffic might go unencrypted over the public internet. We recommend that you enable HTTPS/TLS protocols.
+
 In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
 
 ## 8 Authentication to External Services
@@ -509,9 +513,9 @@ spec:
                   kubectl patch serviceaccount tekton-triggers-mx-sa -p '{"secrets":[{"name":"aws-registry"}]}'
 ```
 
-## 9 Triggering Pipelines
+## 9 Triggering Pipelines  {#triggering-pipelines}
 
-This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters.
+This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters. 
 
 ### 9.1 Create App Pipeline
 

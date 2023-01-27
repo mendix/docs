@@ -20,7 +20,7 @@ This documentation is only relevant to customers deploying their Mendix app on t
 
 Mendix gives you various ways to manage your App's users.
 
-With Mendix Studio Pro, you can configure an Administrator account directly in your security settings. See [Administrator](/refguide8/administrator/) for more information.
+With Mendix Studio Pro, you can configure an Administrator account directly in your security settings. See [Administrator](/refguide/administrator/) for more information.
 
 With Mendix Studio on Tencent Cloud, it’s also possible to directly publish your app to your deployment environment and manage your app’s users locally from there. For your convenience, we’ve included the “Administration” module in the starter app template to make that happen. This article guides you through accessing this and managing users.
 
@@ -118,7 +118,7 @@ This section describes how to access the user management screen(s) from the Admi
 
 1. Open your newly deployed app using its *App URL*
 
-2. Log in with the [default Admin username](/refguide8/administrator/#user-name) and your [newly changed Admin Password](/refguide8/administrator/#password).
+2. Log in with the [default Admin username](/refguide/administrator/#user-name) and your [newly changed Admin Password](/refguide/administrator/#password).
 
     {{< figure src="/attachments/developerportal/deploy/tencent-deploy/managing-local-users-after-deployment/sign-in.png" >}}
 

@@ -3,7 +3,7 @@ title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
-tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
+tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "Siemens MindSphere"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
@@ -22,14 +22,16 @@ Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions
 
 | Feature | Unlicensed App | Licensed App |
 | --- | --- | --- |
-| **Number of Concurrent Users** | 6 | Depends on your pricing plan.¹ |
-| **Time limitation** | Runtime stops after 2-4 hours (randomly chosen) regardless of user activity². | Does not have a time limitation. |
+| **Number of Concurrent Users** | 6 | Depends on your pricing plan.¹ ² |
+| **Time limitation** | Runtime stops after 2-4 hours (randomly chosen) regardless of user activity.³ | Does not have a time limitation. |
 | **Number of Named Users** | No Limit | Depends on your pricing plan.¹ |
 | **Data Hub** | 1000 objects per day | Depends on your pricing plan.¹ |
 
 ¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
-² Depending on the configuration of your chosen cloud, a container and runtime may be restarted if it appears unhealthy because the runtime has stopped.
+² End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](https://docs.mendix.com/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as `Active` will be counted towards the number of end-users of the app.
+
+³ Depending on the configuration of your chosen cloud, a container and runtime may be restarted if it appears unhealthy because the runtime has stopped.
 
 For each environment for which you want to remove the restrictions placed on an unlicensed app, you need a license. The method for applying a license differs depending on where you are deploying your app.
 
@@ -38,8 +40,6 @@ The app will check for a license each time it is started. If the license expires
 ## 2 Obtaining a Mendix License
 
 You can obtain a Mendix license from Mendix support. 
-
-If you need a *Subscription Secret* to deploy to IBM Cloud, you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
 If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
 
@@ -68,13 +68,13 @@ An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a ve
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-### 3.2 SAP BTP and IBM Cloud
+### 3.2 SAP BTP
 
-To license a Mendix app on SAP BTP or IBM Cloud, you need to supply a *Subscription Secret* which is linked to your app.
+To license a Mendix app on SAP BTP, you need to supply a *Subscription Secret* which is linked to your app.
 
 You can add this subscription secret as part of creating an environment on SAP BTP. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license.
 
-For more information, see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform/) or [IBM Cloud](/developerportal/deploy/ibm-cloud/).
+For more information, see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform/).
 
 ### 3.3 Siemens MindSphere
 

@@ -55,7 +55,7 @@ Default value: *300 seconds*
 In most cases, this setting can be ignored, and the default **Use app settings** can be used.
 {{% /alert %}}
 
-### 2.4 Authentication
+### 2.4 Authentication {#authentication}
 
 The **Use HTTP authentication** check box specifies if basic authentication should be used. If checked, you have to specify the following details:
 

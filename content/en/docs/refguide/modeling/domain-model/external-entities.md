@@ -155,7 +155,17 @@ You can add any local information about the external entity in this tab.
 
 ## 3 Authentication {#authentication}
 
-Publishers of an OData service can set the type of authentication needed to access it. See the [Security](/refguide/published-odata-services/#security) section of *Published OData Services*.
+Using external entities in production environments requires both publishers and consumers of OData services to set the correct authentication method.
+
+### 3.1 Publishers: Setting Authentication Method
+
+Publishers of an OData service can set the type of authentication needed to access it. 
+
+For details on the types of authentication methods available, see the [Security](/refguide/published-odata-services/#security) section of *Published OData Services*.
+
+#### 3.1.1 
+
+### 3.2 Consuming External Entities with Authentication
 
 Consumers of a service in an external entity need to ensure that they have the correct credentials by contacting the owner of the data source.
 

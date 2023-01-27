@@ -3,7 +3,7 @@ title: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
 category: "Deployment"
 weight: 10
-description: "Release notes for deployment to Mendix Clouds v3 and v4"
+description: "Release notes for deployment to Mendix Clouds"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
@@ -16,6 +16,12 @@ There are separate release notes for other deployment targets, see [Deployment](
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2023
+
+### January 26th, 2023
+
+#### Improvements
+
+* We added a new version of the Deploy API which allows you to change the technical contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
 
 ### January 18th, 2023
 

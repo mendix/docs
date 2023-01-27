@@ -84,8 +84,9 @@ The actions available depend on the app selected:
 
 * **Edit in Mendix Studio**
 * **Edit in Mendix Studio Pro**
-* **Stop Watching** – disables notifications for the app
 * **Leave App** – allows you to leave the app
+
+To stop watching an app and disable notifications for that app, click the eye symbol so that you see the message **You are not watching this app**.
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 

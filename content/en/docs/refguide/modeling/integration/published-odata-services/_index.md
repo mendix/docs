@@ -149,6 +149,15 @@ There are three possible outcomes of the authentication microflow:
 * When the resulting User is not empty, the operation is executed in the context of that user
 * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
 
+###### 3.3.2.3.1 Mendix SSO {#authentication-mendix-sso}
+
+You can configure a published OData service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
+
+To set up authentication with Mendix SSO, do the following:
+
+1. Ensure that the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
+2. In the published OData service, choose **Custom** authentication and select the `AuthorizeRequestWithAccessTokenFrom Request** microflow.
+
 #### 3.3.3 Allowed Roles
 
 The allowed roles define which [module role](/refguide/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.

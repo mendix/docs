@@ -159,15 +159,26 @@ Using external entities in production environments requires both publishers and 
 
 ### 3.1 Publishers: Setting Authentication Method
 
-Publishers of an OData service can set the type of authentication needed to access it. 
+Publishers of an OData service set the type of authentication needed for it to be consumed. The following authentication methods are available:
 
-For details on the types of authentication methods available, see the [Security](/refguide/published-odata-services/#security) section of *Published OData Services*.
+* [Username and password](/refguide/published-odata-services/#username-password) (basic authentication)
+* [Active session](/refguide/published-odata-services/#authentication-active-session)
+* [Custom](/refguide/published-odata-services/#authentication-microflow) (calling an authentication microflow)
+     * [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso)
 
-#### 3.1.1 
+For details on the types of authentication methods and how to set them up, see the [Security](/refguide/published-odata-services/#security) section of *Published OData Services*. 
 
 ### 3.2 Consuming External Entities with Authentication
 
-Consumers of a service in an external entity need to ensure that they have the correct credentials by contacting the owner of the data source.
+When an external entity is used in an app module through the Data Hub pane, a [consumed OData service](/refguide/consumed-odata-service/) document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+
+If [app security](/refguide/app-security/) has been enabled, and publishers of an OData service have set an authentication method, you will need to add authentication credentials. Consumers of an OData service in an external entity can contact the owner of the data source to check the required authentication method and credentials. 
+
+Learn more about adding authentication information to a consumed OData service:
+
+* Configuring [username and password](/refguide/consumed-odata-service/#authentication) consuming apps
+* Using [HTTP headers](/refguide/consumed-odata-service/#http-headers) for consuming custom authentication methods
+* Consuming a service that uses [Mendix SSO][/refguide/consumed-odata-service/#authenticate-mendix-sso]
 
 ## 4 External Entity Limitations {#limitations}
 
@@ -178,4 +189,4 @@ External entities cannot be committed. Use the [Send External Object activity](/
 * The **Commit** activity does not work. Use **Send External Object** instead.
 * On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
 
-For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume/) in the *Data Hub Guide*.
+For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Registered Assets](/data-hub/data-hub-catalog/consume/) in the *Data Hub Guide*.

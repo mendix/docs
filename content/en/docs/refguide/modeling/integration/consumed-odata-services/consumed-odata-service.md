@@ -62,7 +62,7 @@ The **Use HTTP authentication** check box specifies if basic authentication shou
 * **User name** – defines the user name that will be used for authentication
 * **Password** – defines the password that will be used for authentication
 
-Input these as a string, so with single quotes.
+Input these as a string with single quotes.
 
 Besides basic authentication, you can use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
@@ -80,11 +80,23 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security/#http-header-validation) in the *Data Hub Guide*.
 {{% /alert %}}
 
+#### 2.5.1 Authenticating with Mendix SSO {#authenticate-mendix-sso}
+
+Publishers can set up [Custom](/refguide/published-odata-services/#authentication-microflow) authentication using [Mendix SSO](/appstore/modules/mendix-sso/) module. (This is explained in more detail in the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*). 
+
+Consumers of an OData service that is set up with [Mendix SSO](/appstore/modules/mendix-sso/) authentication can do the following:
+
+* Use the **CreateAccessTokenAuthorizationHeaderList** from the module as the [headers from a microflow](#http-headers) (see above).
+
+To learn more about how to publish an OData service with authentication (Mendix SSO, or other methods), see the [Authentication Methods](/refguide/published-odata-services/#authentication-methods) section of *Published OData Services*. 
+
+To learn more about using external entities with security enabled (in production environments), see the [Authentication](/refguide/external-entities/#authentication) section of *External Entities*.
+
 ### 2.6 Error Handling Microflow
 
 When a call to the OData service fails, users will see a generic error message. Create an error handling microflow to change this message.
 
-When the service responds with an unsuccesful status code (not in the 2XX range), or does not return a response at all, then this microflow decides which message to show to the user.
+When the service responds with an unsuccessful status code (not in the 2XX range), or does not return a response at all, then this microflow decides which message to show to the user.
 
 The microflow should have an argument of type `System.HttpResponse`. If the OData service returns a response, the argument has a value, otherwise it is `empty`.
 

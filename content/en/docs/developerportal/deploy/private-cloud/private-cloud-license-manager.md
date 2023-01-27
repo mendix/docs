@@ -299,7 +299,7 @@ Where:
 * `<username>` – is a user of *operator* or *admin* type
 * `<password>` – is the password for the chosen username
 
-With the above command, the Mendix Operator Configuration will also be patched with below information. To do this, create the following .yaml file:
+With the above command, the Mendix Operator Configuration will also be patched with below information.
 
 ```yaml
 spec:
@@ -314,7 +314,7 @@ Where:
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
    
 
-### 7.3 Applying Licenses
+### 7.2 Applying Licenses
 
 Once you have patched the Mendix Operator, all app environments which are controlled through the operator will have licenses applied automatically.
 
@@ -328,11 +328,11 @@ If you do not have any unused licenses, new app environments will not be license
 
 The Mendix Operator will also pick up a Mendix Operator license if one has been imported into the PCLM server.
 
-### 7.4 Verifying That the Licenses Are Applied{#verify}
+### 7.3 Verifying That the Licenses Are Applied{#verify}
 
 There are multiple ways to verify whether the licenses (both Operator and MendixApp) are applied and where.
 
-#### 7.4.1 Using the PCLM CLI
+#### 7.3.1 Using the PCLM CLI
 
 You can see which licenses are currently used by which environments and operators, as well as unused licenses, using the following command.
 
@@ -355,11 +355,11 @@ Which would reply with something similar to this:
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator | yyyy-mm-dd hh:mm:ss |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  | yyyy-mm-dd hh:mm:ss |
 
-#### 7.4.2 From Mendix Application Custom Resources Installed in the Namespace
+#### 7.3.2 From Mendix Application Custom Resources Installed in the Namespace
 
 This way of checking is more advanced, and should be used only for debugging.
 
-##### 7.4.2.1 Checking the Operator License
+##### 7.3.2.1 Checking the Operator License
 
 Use the following command to verify whether the Operator license was applied correctly:
 
@@ -374,7 +374,7 @@ status:
     mode: Licensed
 ```
 
-##### 7.4.2.2 Checking the Runtime License
+##### 7.3.2.2 Checking the Runtime License
 
 Use the following command to verify whether the Runtime license was applied correctly:
 
@@ -391,7 +391,7 @@ spec:
       type: offline
 ```
 
-### 7.5 Auditing Licenses
+### 7.4 Auditing Licenses
 
 You can retrieve an audit report showing a history of which apps had which licenses, and which license(s) were applied to which operator(s) using the following command:
 

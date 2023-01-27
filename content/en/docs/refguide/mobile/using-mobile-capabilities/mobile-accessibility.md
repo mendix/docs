@@ -29,8 +29,8 @@ This caption doesn't appear on the screen but it lets the screen readers audibly
 ### 3.1.3 screen reader hint
 A screen reader hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. Hints are being announced by screen readers after the captions.
 {{% alert color="info" %}}
-For iOS, user can disabled/enable hints through device's VoiceOver settings while in Android, hints cannot be turned off.
-  {{% /alert %}}
+For iOS, users can disable/enable hints through the device's VoiceOver settings. For Android, hints cannot be turned off.
+{{% /alert %}}
 
 
 ## 3.2 Example: setting up accessibility for Button

@@ -25,79 +25,110 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonTextractConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Textract. Each activity can be implemented by using it in a microflow.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonTextractConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Textract. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-For example, to analyze a document, implement the [AnalyzeDocument](#analyzedocument) activity by doing the following steps:
+### 3.1 Configuring AWS Authentication
 
-1. Configure AWS Authentication with static credentials. For more information, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
-2. In the **Domain Model**, right-click on the work area, and then click **Add entity**.
-3. Enter a name for your entity, for example, *Document*, and then click **OK**.
-4. Double-click the **Document** entity, select the generalization **FileDocument**, and then click **OK**.
-5. In the **Document** entity, find the **Acces rules** tab.
-6. Create new access rules by doing the following steps:
+In order to use the Amazon Textract service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
+
+1. Ensure that you have installed and configured the AWS Authentication connector, as mentioned in [Prerequisites](#prerequisites).
+2. Decide whether you want to use session or static credentials to authenticate.
+    The Amazon Textract connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+3. In the **App Explorer**, double-click the **Settings** for your app.
+
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
+
+4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
+    If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
+5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
+6. In the **Select Constants** dialog, find and expand the **AmazonTextractConnector** > **ConnectionDetails** section.
+
+    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+
+7. Depending on your selected authentication type, configure the required parameters for authentication.
+
+    | Credentials type | Parameter | Value |
+    | --- | --- | --- |
+    | Any | **UseStaticCredentials** | **true** if you want to use static credentials, or **false** for session credentials |
+    | **StaticCredentials** | **AccessKey** | Access key ID [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites)  |
+    | **StaticCredentials** | **SecretKey** | Secret key [created in IAM](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Role ARN** | [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the AWS role that the connector should assume |
+    | **SessionCredentials** | **Profile ARN** | ARN of the profile [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Trust Anchor ARN** | ARN of the trust anchor [created in IAM Roles Anywhere](/appstore/connectors/aws/aws-authentication/#prerequisites) |
+    | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
+    | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
+    | **SessionCredentials** | **Session Name** | An identifier for the session |
+
+After setting up the authentication, to analyze a document, implement the [AnalyzeDocument](#analyzedocument) activity by doing the following steps:
+
+1. In the **Domain Model**, right-click on the work area, and then click **Add entity**.
+2. Enter a name for your entity, for example, *Document*, and then click **OK**.
+3. Double-click the **Document** entity, select the generalization **FileDocument**, and then click **OK**.
+4. In the **Document** entity, find the **Acces rules** tab.
+5. Create new access rules by doing the following steps:
     1. Click **New**.
     2. Select a user role, and then select the check boxes **Allow creating new objects** and **Allow deleting existing objects**. 
     3. Set the access rights for **Name**, **DeleteAfterDownload** and **Contents** to **Read/write**
     4. Set the remaining access rights to **Read**.
     The configured access rules look like this:
     {{< figure src="/attachments/appstore/connectors/aws-textract/6-completed-access-rules.png" >}}
-7. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
-8. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
-9. In the **Properties** pane of **Document_Overview**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
-10. Configure your page by doing the following steps:
+6. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
+7. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
+8. In the **Properties** pane of **Document_Overview**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
+9. Configure your page by doing the following steps:
     1. Open the page. 
     2. Double-click on the data grid.
     3. In the **Data source** tab, select the **Document** entity.
     4. Click **OK**.
     5. Confirm that you want to automatically fill the contents of the data grid.
-11. Create a page where your users can enter data for the app by doing the following steps:
+10. Create a page where your users can enter data for the app by doing the following steps:
     1. Right-click the **New** button in the data grid.
     2. Click **Generate page**.
     3. Enter a name for your page, for example, *Document_NewEdit*.
     4. Click **OK**.
-12. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
-13. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
-14. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
-15. Add an input [parameter](/refguide/parameter/) of the Document entity to the ACT_AnalyzeDocument microflow.
-16. In the properties pane of ACT_AnalyzeDocument, under Security, assign a user role to Allow roles.
-17. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
-18. Configure the  **Create object** activity by doing the following steps:
+11. In the **Properties** pane of **Document_NewEdit**, in the **Navigation** section, select **Visible for** for a user role (see the [Properties](/refguide/page-properties/#properties) section of *Page Properties*).
+12. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
+13. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
+14. Add an input [parameter](/refguide/parameter/) of the Document entity to the ACT_AnalyzeDocument microflow.
+15. In the properties pane of ACT_AnalyzeDocument, under Security, assign a user role to Allow roles.
+16. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
+17. Configure the  **Create object** activity by doing the following steps:
     1. Double-click the activity. 
     2. Select the **AnalyzeDocumentRequest** entity. 
     3. Add the members **GetForms** and **GetTables**, set the value to **true**, and then click **OK**.
     The configured activity properties look like this: 
     {{< figure src="/attachments/appstore/connectors/aws-textract/create-object-properties.png" >}}
-19. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
-20. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
-21. Configure the **AnalyzeDocument** activity by doing the following steps:
+18. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
+19. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activity and the microflow end event.
+20. Configure the **AnalyzeDocument** activity by doing the following steps:
     1. Double-click the activity.
     2. Set the values for [AWS_Region](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region), **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
     The configured properties look like this:
     {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-properties.png" >}} 
-22. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
-23. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
-24. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
+21. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
+22. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
+23. Configure the **AnalyzeDocumentResponse_ProcessResults** microflow by doing the following steps:
     1. Double-click the **AnalyzeDocumentResponse_ProcessResults** microflow.
     2. Set the **AnalyzeDocumentResponse** parameter.
     3. Click **OK**.
-25. In the **Toolbox** pane, find the **List operation** activity.
-26. Drag the activity onto the microflow area between the **AnalyzeDocumentResponse_ProcessResults** microflow and the end event.
-27. Configure the **List operation** activity by doing the following steps:
+24. In the **Toolbox** pane, find the **List operation** activity.
+25. Drag the activity onto the microflow area between the **AnalyzeDocumentResponse_ProcessResults** microflow and the end event.
+26. Configure the **List operation** activity by doing the following steps:
     1. Double-click the activity.
     2. Select **Head** as the operation.
     3. Select the list that the **AnalyzeDocumentResponse_ProcessResults** microflow returns.
-28. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model. The page model will look like this:
+27. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model. The page model will look like this:
 {{< figure src="/attachments/appstore/connectors/aws-textract/block-item-page.png" >}}
-29. In the **Toolbox** pane, find the **Show page** activity.
-30. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
-31. Configure the **Show page** activity by doing the following steps:
+28. In the **Toolbox** pane, find the **Show page** activity.
+29. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
+30. Configure the **Show page** activity by doing the following steps:
     1. Double-click the activity
     2. Select the page with a data view of the Page entity.
     3. Set the **Page** parameter
     4. Click **OK**.
-32. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
-33. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
+31. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
+32. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
     The configured microflow looks like this:
     {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-configure-microflow.png" >}}
 

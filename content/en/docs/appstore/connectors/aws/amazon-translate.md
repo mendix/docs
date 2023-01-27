@@ -34,29 +34,30 @@ After you install the connector, you can find it in the **App Explorer**, in the
 The artifacts that you need are contained in the **AmazonTranslateConnector** > **Operations** folder. The content in the **Translation** > **Internal** folder is for internal use only. In most cases, you will not need to use it directly.
 {{% /alert %}}
 
-To help you work with the Amazon Translate connector, the following sections of this document list the available entities, constants, microflows, and nanoflows that you can use in your application.
+To help you work with the Amazon Translate connector, the following sections of this document list the available entities, enumerations, and actions that you can use in your application.
 
 ### 3.1 Domain model {#domain-model}
 
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Amazon Translate connector, the domain model contains the `Translator` and `Language` entities.
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Amazon Translate connector, the domain model contains the `ListLanguageResponse`, `LanguageResponse`, and `TranslateRequest` entities.
 
-#### 3.1.1 TranslateRequest
+#### 3.1.1 ListLanguageResponse
 
-The `TranslateRequest` entity is an entity that returns the output of the translation as a string from the microflow action. The entity  contains `InputLanguageCode`, `OutputLanguageCode` and `InputText` as attributes.
-
-| Attribute | Description |
-| --- | --- |
-| `InputText` | The input text string (minimum length: 1, maximum length: 5000). |
-| `OutputText` | The output text string. |
-
-#### 3.1.2 ListLanguageResponse
-
-The `ListLanguageResponse` entity is used when calling the ListLanguages action. It is associated with a `LanguageResponse` entity.
+The `ListLanguageResponse` entity is used when calling the [ListLanguages](#list-languages) action. It is associated with a `LanguageResponse` entity.
 
 | Attribute | Description |
 | --- | --- |
-| `Name` | The language name, equivalent to the locale name. |
-| `Code` | The [language code](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) that assigns letters or numbers as identifiers or classifiers for languages (minimum length: 2, maximum length: 5). |
+| `Name` | The language name, equivalent to the locale name (string)|
+| `Code` | The [language code](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) that assigns letters or numbers as identifiers or classifiers for languages / minimum length: 2, maximum length: 5 (string) |
+
+#### 3.1.2 TranslateRequest
+
+The `TranslateRequest` entity contains `InputLanguageCode`, `OutputLanguageCode` and `InputText` as attributes.
+
+| Attribute | Description |
+| --- | --- |
+| `InputLanguageCode` | The language code of the input text (string) |
+| `OutputLanguageCode` | The language code of the desired output text (string) |
+| `InputText` | The input text (string) |
 
 ### 3.2 Enumerations {#enumerations}
 
@@ -89,18 +90,18 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `me_south_1` |    **Middle East (Bahrain)** |
 | `sa_east_1` |    **South America (São Paulo)** |
 
-### 3.3 Microflows {#microflows}
+### 3.3 Activities {#activities}
 
-Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. Microflows run in the runtime server and can therefore not be used in offline apps. For more information, see [Microflows](/refguide/microflows/).
+Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 3.3.1 CreateTranslator {#create-translator}
+#### 3.3.1 ListLanguages {#list-languages}
 
-The `CreateTranslator` microflow takes `inputText`, `inputLanguageCode`, and `outputLanguageCode` as input parameters and creates translator actions in the back-end service. For instance, `inputLanguageCode` and `outputLanguageCode` can be set to `en-US`.
+The `ListLanguages` action takes `AWS_Region` as the input parameter and returns a `ListLanguageResponse` object containing a list of `LanguageResponse` objects, which are the supported languages for the Amazon Translate Connector.
 
 {{% alert color="info" %}}
-For more information about the language codes, see the [list of supported languages](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) in AWS documentation.
+For more information about the language codes, see the [list of supported languages](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) in the AWS documentation.
 {{% /alert %}}
 
-#### 3.3.2 TranslateText
+#### 3.3.2 TranslateText {#translate-text}
 
-The `TranslateText` microflow takes the `TranslateRequest` object as an input parameter and performs text translation actions.
+The `TranslateText` action takes `inputText`, `inputLanguageCode`, `outputLanguageCode`, and `AWS_Region` as input parameters and gives back the translation of the input text as a string.

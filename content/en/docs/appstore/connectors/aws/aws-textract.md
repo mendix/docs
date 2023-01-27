@@ -45,7 +45,7 @@ In order to use the Amazon Textract service, you must authenticate with AWS. To 
 
     {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
-7. Depending on your selected authentication type, configure the required parameters for authentication.
+7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
 
     | Credentials type | Parameter | Value |
     | --- | --- | --- |

@@ -290,11 +290,12 @@ To fix the consistency errors, finish configuring the on click event (for exampl
 
 ## 10 Icon Collection Consistency Errors
 
-The icon collections have configurable class names, icon prefixes, and icon names. These properties are used to generate the CSS code for our pages, so to prevent generating invalid CSS we have the following 2 consistency errors:
+Icon collections have configurable class names, icon prefixes, and icon names. These properties are used to generate the CSS code for our pages, so to prevent generating invalid CSS, you can come accross the following consistency errors:
+
 | Error code | Message in the Error Pane | Cause of the Error | Way to Fix |
 | ---------- | ------------------------- | ------------------ | ---------- |
-|   CE1616   | You cannot duplicate the icon collection class name {icon collection class name}. | There is more than one icon collection configured with the same class name | Change the class name of one of the indicated icon collections |
-|   CE5696   | Duplicate CSS class name {icon class name} for icons, resulting from the combination of icon collection prefix and icon name. | There is more than one icon where the combination of the configured icon collection prefix and its icon name has generated the same class name | Do one of the following: <ul><li>Ensure that the icons listed have unique names that aren't used in any of the icon collection prefixes.</li><li>Ensure that all the icon collections related to the icons have unique prefixes with text that won't be used within icon names.</li></ul> |
+|   CE1616   | You cannot duplicate the icon collection class name {icon collection class name}. | There is more than one icon collection configured with the same class name. | Change the class name for one of the icon collections. |
+|   CE5696   | Duplicate CSS class name {icon class name} for icons, resulting from the combination of the icon collection prefix and the icon name. | The combination of the icon collection prefix and the icon name has automatically generated the same class name. | Do one of the following: <ul><li>Ensure that the icons have unique names that are not used in any of the icon collection prefixes.</li><li>Ensure that all the icon collections related to the icons have unique prefixes that will not be used for icon names.</li></ul> |
 
 ## 11 Read More
 

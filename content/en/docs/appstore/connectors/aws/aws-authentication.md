@@ -97,7 +97,13 @@ The client certificate that you added now shows as **Currently enabled**.
 After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetSessionCredentials** activity to a microflow.
 
 {{% alert color="info" %}}
-The following steps are required if you are building your own connector, or if you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/), skip this procedure and refer to the documentation of the connector that you want to use.
+The steps described below are required for the following use cases:
+
+* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
+* If you are building your own connector 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. 
+
+If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
 
 1. Open your app in Studio Pro.
@@ -127,7 +133,13 @@ The following steps are required if you are building your own connector, or if y
 To run the AWS Authentication connector locally using Studio Pro, you must add the client certificate as a runtime configuration in Studio Pro.
 
 {{% alert color="info" %}}
-The following steps are required if you are building your own connector, or if you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/), skip this procedure and refer to the documentation of the connector that you want to use.
+The steps described below are required for the following use cases:
+
+* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
+* If you are building your own connector 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. 
+
+If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
 
 1. In Studio Pro, open the **App Settings** dialog box, and then go to the **Configurations** tab.
@@ -149,7 +161,13 @@ The following steps are required if you are building your own connector, or if y
 Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure session credentials.
 
 {{% alert color="info" %}}
-The following steps are required if you are building your own connector, or if you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/), skip this procedure and refer to the documentation of the connector that you want to use.
+The steps described below are required for the following use cases:
+
+* If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
+* If you are building your own connector 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. 
+
+If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
 
 To create static credentials with the **GetStaticCredentials** activity in your app, perform the following steps:

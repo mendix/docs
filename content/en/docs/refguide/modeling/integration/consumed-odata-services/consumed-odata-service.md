@@ -62,6 +62,8 @@ The **Use HTTP authentication** check box specifies if basic authentication shou
 * **User name** – defines the user name that will be used for authentication
 * **Password** – defines the password that will be used for authentication
 
+Input these as a string, so with single quotes.
+
 Besides basic authentication, you can use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
 ### 2.5 HTTP Headers {#http-headers}

@@ -8,7 +8,7 @@ tags: ["accessibility", "JavaScript", "native", "mobile"]
 
 # 1 Introduction
 
-The goal of this guide is to provide an accessible mobile application. An accessible application makes sure that every user gets a great experience no matter their capabilities or how they use their devices. In this guide we will walk through the interaction between Mendix applications and mobile screen readers VoiceOver (iOS) and TalkBack (Android). 
+The goal of this guide is to provide an accessible mobile application. An accessible application makes sure that every user gets a great experience no matter their capabilities or how they use their devices. In this guide we will walk through the interaction between Mendix applications and mobile screen readers VoiceOver (iOS) and TalkBack (Android). This guide only applies to native mobile apps.
 
 # 2 Prerequisites
 Before starting this guide, make sure you have completed the following prerequisites:
@@ -24,10 +24,14 @@ Mendix tries to provide accessible widgets by default when it is possible and al
 When `true`, indicates that the view is an accessibility element and if it is set to `false`, the screen reader will avoid it. Most of the widgets have accessible property `true` by default.
 
 ### 3.1.2 screen reader caption
-This captions doesn't appear on the screen but they let the screen readers audibly describe onscreen elements, making navigation easier for people with visual disabilities. 
+This caption doesn't appear on the screen but it lets the screen readers audibly describe onscreen elements, making navigation easier for people with visual disabilities. 
 
 ### 3.1.3 screen reader hint
-A screen reader hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label.
+A screen reader hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. Hints are being announced by screen readers after the captions.
+{{% alert color="info" %}}
+For iOS, user can disabled/enable hints through device's VoiceOver settings while in Android, hints cannot be turned off.
+  {{% /alert %}}
+
 
 ## 3.2 Example: setting up accessibility for Button
 Button is accessible by default and the screen reader caption will match button caption by default. We can override that through buttons properties.
@@ -43,7 +47,9 @@ To enable VoiceOver (iOS screen reader), go to the Settings app on your iOS devi
 ## 3.4 Special widgets use cases
 ### 3.4.1 Container
 
-If a container is accessible, it groups its children into a single selectable element. By default containers are not accessible to allow accessibility for children but this can be configured if needed.
+If a container is accessible, it groups its children into a single selectable element. By default containers are not accessible to allow accessibility for children but this can be configured if needed. 
+#### Example:
+Consider a list item that is composed of an image and two text labels that you want to be treated as a single item by screen readers. To achieve this, embed the image and text labels in a container and enable accessibility for the container. Make sure to update the caption and hint to properly reflect all content.
 
 ### 3.4.2 Image
 Accessible image requires a screen reader caption as a mandatory property, as there is no way to set a default descriptive caption for images.
@@ -59,3 +65,21 @@ React native documentation has a helpful [accessibility document](https://reactn
 |accessibilityRole| communicates the purpose of a component to the user of an assistive technology.                                                                                                    | Android and iOS  |
 |accessibilityState| Describes the current state of a component to the user of an assistive technology.                                                                                                 | Android and iOS  |
 |importantForAccessibility| Can be used to control components overlapping in Android and decide which component will fire accessibility events                                                                 | Android|
+
+The widget `xml` can be updated to contain configurations similar to these:
+```xml
+<propertyGroup caption="Accessibilty">
+    <property key="accessible" type="boolean" defaultValue="true">
+        <caption>Accessible</caption>
+        <description />
+    </property>
+    <property key="screenReaderCaption" type="textTemplate" required="false">
+        <caption>Screen reader caption</caption>
+        <description />
+    </property>
+    <property key="screenReaderHint" type="textTemplate" required="false">
+        <caption>Screen reader hint</caption>
+        <description />
+    </property>
+</propertyGroup>
+```

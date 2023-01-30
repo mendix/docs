@@ -419,7 +419,7 @@ The output is:
 true
 ```
 
-## 11 trim
+## 11 trim {#trim}
 
 Removes all the whitespace at the beginning and end of a string.
 

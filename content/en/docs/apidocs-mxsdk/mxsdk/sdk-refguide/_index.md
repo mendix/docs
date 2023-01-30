@@ -8,6 +8,4 @@ no_list: false
 
 ## 1 Introduction
 
-
-
 ## 2 Documents in This Category

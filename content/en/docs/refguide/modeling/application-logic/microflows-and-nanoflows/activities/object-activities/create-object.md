@@ -68,7 +68,7 @@ If **Commit** and **Refresh in client** are both set to **Yes**, [data sources](
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
-For more information, see the [Microflows](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
+For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
 #### 3.3.3  Action Is in a Nanoflow
 

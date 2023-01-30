@@ -667,4 +667,3 @@ The **datasource** preview type can be used when developing a widget with a data
 Here is a preview of a **datasource** component containing a drop-zone with two text boxes:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
-

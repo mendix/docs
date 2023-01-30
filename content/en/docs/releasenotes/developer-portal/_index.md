@@ -15,7 +15,25 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2023
+
+### January 26th, 2023
+
+#### Improvements
+
+* We fixed an issue where the story description did not appear in Studio Pro.
+* [Epics](/developerportal/collaborate/epics/) now have different colors so that you can distinguish between them more easily. The color is currently assigned randomly (as is done with story labels), but we may add management functionality at a later point.
+* If you practice Scrum, you can now see the status of the stories in your active Sprint on the [Planning](/developerportal/collaborate/epics/#planning) page.
+* Sprint details are now editable, so you can change the date, name, and goal of your Sprint after you start it. Use this power wisely, as committing to a Sprint goal is important, so only change the goal if there really is no other option.
+* We have implemented the new [Mendix Feedback](/appstore/modules/mendix-feedback/) module, so now you have much better screenshot functionality. Do send us feedback, we love hearing what you think. And also try out the new Mendix Feedback module in your own apps, it's awesome!
+
 ## 2022
+
+### December 21st, 2022
+
+#### Fixes
+
+* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/#sprint-status) page.
 
 ### December 13th, 2022
 
@@ -31,15 +49,15 @@ This feature is in Beta, so we would very much appreciate your feedback. If you 
 
 #### Improvements
 
-We released a new version of Epics, our brand new Agile planning tool, for General Availability!
+We released a new version of [Epics](/developerportal/collaborate/epics/), our brand new Agile planning tool, for General Availability!
 
 We made the following improvements:
 
 * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
+* If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
 * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
 * We have added emoji reactions to comments, for those times when there is no need to bother typing a message because a simple thumbs-up says it all.
-* If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
 
 From this point on, Epics is the default project management tool for all new apps.
 
@@ -53,8 +71,8 @@ In Portfolio Management, you can do the following
 
 * Control and manage digital project initiatives in one overview (via Kanban and list views)
 * Prioritize project initiatives by industry standard prioritization methods:
-	* Weighted shortest jobs first (WSJF)
-	* Reach, impact, confidence, and effort (RICE)
+    * Weighted shortest jobs first (WSJF)
+    * Reach, impact, confidence, and effort (RICE)
 * Sort, filter, and search project initiatives on fields such as **Tags**, **Owners**, **Departments**, and **Dates**
 * Add attachments, link Mendix apps, and assign owners to a project initiative
 * Archive and restore project initiatives
@@ -101,10 +119,10 @@ In Portfolio Management, you can do the following
 #### New Features
 
 * We replaced the widget used in story description in [Epics](/developerportal/collaborate/epics/) with a new one, which fixes the bug you might have been experiencing. This replacement also comes with the following changes:
-   * You can use @ to mention someone in the text of story description or epic objective. The mentioned person will get a notification once the text is saved.
-   * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/collaborate/epics/#story-details) dialog box or the [epic details](/developerportal/collaborate/epics/#epic-details) dialog box.
-   * Story and epic details now appear in a dialog box instead of a side pane.
-   * The widget styling is now slightly different.
+    * You can use @ to mention someone in the text of story description or epic objective. The mentioned person will get a notification once the text is saved.
+    * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/collaborate/epics/#story-details) dialog box or the [epic details](/developerportal/collaborate/epics/#epic-details) dialog box.
+    * Story and epic details now appear in a dialog box instead of a side pane.
+    * The widget styling is now slightly different.
 * We added a **Project Buzz** button on the [Board](/developerportal/collaborate/epics/#board) page. Clicking the button brings you to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the specific app in the Developer Portal.
 * We added an error page in case you access Epics with no apps enabled.
 * We made it possible for you to link commits from Studio Pro to stories in Epics.
@@ -116,6 +134,7 @@ In Portfolio Management, you can do the following
 ### September 15th, 2022
 
 #### New Features
+
 * We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click the ellipsis (**...**) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
 * We introduced the [Billing Accounts](/developerportal/control-center/#billing-accounts) page in Control Center where Mendix Admin can update the payment card information for their company at any time.
 
@@ -123,8 +142,6 @@ In Portfolio Management, you can do the following
 
 * We fixed an issue where users were not able to delete an app, if other users were still members of this app.
 * We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
-
-## 2022
 
 ### August 25th, 2022
 

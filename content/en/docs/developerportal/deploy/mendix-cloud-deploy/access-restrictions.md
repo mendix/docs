@@ -14,7 +14,7 @@ Your app is accessible over the internet - but you may not want everyone to be a
 
 You can apply restrictions to the top level of the application URL (`/`), and also to more specific paths (for example, `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and client certificate authorities (CAs).
 
-## 2 Access Restriction Profiles
+## 2 Access Restriction Profiles {#access-restriction-profiles}
 
 You can specify a number of different access restriction profiles for your application. You can give each of these a name so that you can describe its purpose.
 
@@ -22,7 +22,7 @@ Click **New** to create a new access restriction profile. Select an existing pro
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/access-restriction-profiles.png" >}}
 
-See below for information on setting up access restriction profiles for Mendix Cloud [v4](#v4) and [v3](#v3).
+See below for information on setting up access restriction profiles for Mendix Cloud [v4](#v4).
 
 When configuring an access restriction profile, you need to bear the following things in mind:
 
@@ -75,46 +75,6 @@ You can specify a number of different IP ranges. Click **New** to add a new one,
 For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports both IPv4 and IPv6 format addresses.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png" >}}
-
-### 2.2 Access Restriction Profiles for Mendix Cloud V3{#v3}
-
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
-For Mendix Cloud v3, you have fewer options for setting up an access restriction profile.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/v3-access-restriction-profile.png" >}}
-
-#### 2.2.1 Changing the Profile Name
-
-You can change the profile name by typing a new name into the **Description** field.
-
-#### 2.2.2 Specifying IP Ranges
-
-You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
-
-{{% alert color="warning" %}}
-The IP range filter option is not available in Mendix Cloud v3 environments hosted outside the Netherlands
-{{% /alert %}}
-
-For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v3 supports both IPv4 or IPv6 format addresses.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png" >}}
-
-#### 2.2.3 Specifying TLS Client Certificate Verification
-
-{{% alert color="warning" %}}
-For Mendix Cloud v3, you can only specify one CA for your access restriction profile.
-
-The client certificate CA in all *active* profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment).
-
-Only Root CA verification is supported. Any client certificate with a valid path to the Root CA will be allowed access. Certificate mapping is not supported.
-{{% /alert %}}
-
-Click **Upload** to upload a new client CA , or click **Edit** or **Delete** to modify the existing one.
-
-Copy and paste your CA into the editor. It is not possible to create the CA by uploading a file.
 
 ## 3 Applying a Restriction to an Application Environment
 

@@ -3,7 +3,7 @@ title: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
 category: "Deployment"
 weight: 10
-description: "Release notes for deployment to Mendix Clouds v3 and v4"
+description: "Release notes for deployment to Mendix Clouds"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
@@ -14,6 +14,32 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
+
+## 2023
+
+### January 26th, 2023
+
+#### Improvements
+
+* We added a new version of the Deploy API which allows you to change the technical contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
+
+### January 18th, 2023
+
+#### Fix
+
+* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being executed](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
+
+### January 13th, 2023
+
+#### Improvements
+
+* We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as a new deployment targets.
+
+### January 5th, 2023
+
+#### Improvements
+
+* We have introduced support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in Mendix Cloud V4.
 
 ## 2022
 
@@ -649,7 +675,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, and 98313)
 * We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
-* We made some changes to the Mendix Cloud v3 [Trends](/developerportal/operate/trends/) graphs.
+* We made some changes to the Mendix Cloud v3 Trends graphs.
 
 ### June 16th, 2020
 

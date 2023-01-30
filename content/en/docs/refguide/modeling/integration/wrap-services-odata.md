@@ -90,51 +90,41 @@ When you use a microflow to provide data, any security constraints are applied t
 
 ### 4.1.1 Microflow Parameters
 
-*. **HttpRequest** – The first accepted parameter is an HTTP request of the entity type **System.HttpRequest**.  This parameter is optional.</br>
-     When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* **will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+* **HttpRequest** – The first accepted parameter is an HTTP request of the entity type **System.HttpRequest**. This parameter is optional.
 
-* **ODataResponse** – The second accepted parameter is an OData response of the entity type **System.ODataResponse**. This parameter is optional.</br>
-     The **ODataResponse** has a **Count** attribute where the count value can be stored. 
-     In OData, there are two different count types:
-           1. **Count as a request** – Use this when the consumer is only interested in the number of objects and not the object themselves.</br>
-           For example, consider the following request: `persons/$count?$filter=name eq 'John'`.</br>
-         
-           This returns the number of people named John. </br>
+    When a consumer sends a request to the the published OData service, the  `HttpRequest` string attribute *Uri* will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData Version 4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
-           If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.</br>
-           1. **Inline count in the request** – Use this when the consumer is interested in the total number of objects while retrieving some of the objects.</br>
+* **ODataResponse** – The second accepted parameter is an OData response of the entity type **System.ODataResponse**. This parameter is optional.
 
-           For example, consider the following request: `persons?$count=true&$skip=5&top=5` </br>
+    The **ODataResponse** has a **Count** attribute where the count value can be stored.
 
-           This returns an OData payload with maximum give objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects. </br>
+    In OData, there are two different count types:
 
-           If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
+    1. **Count as a request** – Use this when the consumer is only interested in the number of objects and not the object themselves.
+
+        For example, consider the following request: `persons/$count?$filter=name eq 'John'`.
+
+        This returns the number of people named John.
+
+        If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will count the result list of objects.
+
+    1. **Inline count in the request** – Use this when the consumer is interested in the total number of objects while retrieving some of the objects.
+
+        For example, consider the following request: `persons?$count=true&$skip=5&top=5`
+
+        This returns an OData payload with maximum give objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects.
+
+        If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
 
 {{% alert color="info" %}}
-In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, the count value can be stored in the `ODataResponse` object.{{% /alert %}}
+In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
+{{% /alert %}}
 
 ## 5 Key Selection When Exposing Entities as OData Resources {#select-key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration).
+Select which attribute(s) to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource so that clients will be able to identify objects returned by the service.
 
-Starting in Studio Pro [9.17](/releasenotes/studio-pro/9.17/), you can select which attribute to use as a [key](/refguide/published-odata-resource/#key) when exposing an entity as Published OData Resource. The attribute type can be one of the following: 
-
-* **Integer**
-* **Long**
-* **String**
-* **AutoNumber** 
-
-Select a combination of attributes with the following constraints: 
-
-* Unique – The combination of key attributes should be unique, so each key points to exactly one entity.
-* Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
-* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
-
-When exposing an entity as a published OData resource for the first time, Studio Pro chooses a unique and required attribute as the key. If there is no attribute that has a unique constraint or a required constraint, then it will select the first attribute with a supported type. You can set these constraints using [validation rules](/refguide/validation-rules/).
-
-{{% alert color="info" %}}
-Selecting more than one attribute as the key is only available for published OData services that use OData version 4.
-{{% /alert %}}
+To learn more about selecting a key, see the [Key](/refguide/published-odata-resource/#key) section of *Published OData Resource*.
 
 ### 5.1 Selecting Attributes as a Key {#select-key}
 
@@ -176,14 +166,14 @@ To build your app, you first need to do the following:
 
 Set up a connector module that communicates to the Twitter API with OData by following the steps outlined below. To ensure that your app will run, fill in your valid bearer token as the **Default value** in a **BearerToken** [constant](/refguide/constants/). You can get one by [registering as a Twitter Developer](https://developer.twitter.com/en/portal).
 
-1.  Use the Twitter API to find the JSON structures for the calls for users, tweets, and followers, and add the [JSON structure](/refguide/json-structures/) for each.
-2.  Create [import mappings](/refguide/mapping-documents/#import-mappings) for each, which generates entities in your domain model.
+1. Use the Twitter API to find the JSON structures for the calls for users, tweets, and followers, and add the [JSON structure](/refguide/json-structures/) for each.
+2. Create [import mappings](/refguide/mapping-documents/#import-mappings) for each, which generates entities in your domain model.
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-connector-domain-model.png" alt="Domain model for Twitter connector module." >}}
-3.  Publish all three non-persistable entities as a published OData service (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
-4.  Select a new [key](#select-key) to be used for each entity. For example, you can set the **UserId**, a **String** value, as a key for the **User** entity.
-5.  For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
+3. Publish all three non-persistable entities as a published OData service (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
+4. Select a new [key](#select-key) to be used for each entity. For example, you can set the **UserId**, a **String** value, as a key for the **User** entity.
+5. For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/query-followers-microflow.png" alt="Microflow for querying followers." >}}
-6.  Export the metadata file of the published OData service to be used in the client module. To do so, open the service and go to **Settings**, and click **Export** next to the **Metadata** field.
+6. Export the metadata file of the published OData service to be used in the client module. To do so, open the service and go to **Settings**, and click **Export** next to the **Metadata** field.
 
     Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Data Hub Catalog or the Data Hub pane. See [Data Hub without the Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with Data Hub (external entities and the Catalog) for local deployments.
 
@@ -191,25 +181,31 @@ Set up a connector module that communicates to the Twitter API with OData by fol
 
 Set up a Twitter client module that allows users to input a Twitter ID and communicates to the Twitter API via your [Twitter connector](#twitter-connector).
 
-1.  Create a consumed OData service in the client module, and import the XML file you exported in the [building the connector](#twitter-connector) section.
-2.  Drag the external **Users**, **Tweets**, and **Followers** entities into your client domain model.
-3.  Add a non-persistable entity for the TwitterClientInput to be able to fill in the data, handled by a **NewTwitterInput** microflow.</br> 
-    Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this: 
+1. Create a consumed OData service in the client module, and import the XML file you exported in the [building the connector](#twitter-connector) section.
+2. Drag the external **Users**, **Tweets**, and **Followers** entities into your client domain model.
+3. Add a non-persistable entity for the TwitterClientInput to be able to fill in the data, handled by a **NewTwitterInput** microflow.
+
+    Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this:
+
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." >}}
+
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/newtwitterinput-microflow.png" alt="Microflow that handles inputted usernames." >}}
-4.  Add a new page to display the data, and create a ShowUserPage microflow. </br> 
+
+4. Add a new page to display the data, and create a ShowUserPage microflow.
+
     The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
+
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." >}}
 
-5.  On the **TwitterPage**, use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.
+5. On the **TwitterPage**, use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.
 
 #### 7.1.4 Parsing the URI
 
 Run the Twitter client to receive decoded OData requests. 
 
-1.  Manually parse the URI, and create a microflow to read data from the URI. 
+1. Manually parse the URI, and create a microflow to read data from the URI. 
     {{< figure src="/attachments/refguide/modeling/integration/wrap-services-odata/read-uri-data.png" alt="Microflow that finds query parameter values." >}}
-2.  Extract the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers (or other data). The API response goes into the import mapping.
+2. Extract the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers (or other data). The API response goes into the import mapping.
 
 Ensure that you have created microflows for all entities used in your connector. When you run your app, you can enter the ID of a Twitter user and view their latest tweets and followers.
 

@@ -39,3 +39,4 @@ A menu item or a sub-item has the following general properties:
 
 * [Pages](/refguide/pages/)
 * [Menus and Navigation](/refguide/menu-widgets/)
+* [Triggering a Microflow from a Menu Item](/refguide/triggering-microflow-from-menu-item/)

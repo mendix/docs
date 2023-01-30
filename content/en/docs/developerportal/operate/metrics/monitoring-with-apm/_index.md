@@ -4,19 +4,19 @@ linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
 weight: 30
 description: "How to use an APM (Application Performance Monitoring) tool to monitor your Mendix Cloud v4 app."
-tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk"]
+tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis", "Saas", "AppDynamics", "APM", "Splunk", "Dynatrace"]
 ---
 
 ## 1 Introduction
 
 There are a number of application performance monitoring (APM) tools for cloud applications which are available through a Software-as-a-service-based (Saas-based) data analytics platform. They provide comprehensive monitoring of servers, databases, tools, and services.
 
-Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, and Splunk Cloud Platform to provide additional monitoring for your Mendix Apps running on the Mendix Cloud.
+Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, and Splunk Cloud Platform to provide additional monitoring for your Mendix Apps running on the Mendix Cloud.
 
 {{% alert color="info" %}}
-Monitoring using an APM tool is only available to apps running on Mendix Cloud v4.
+[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
 
-[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix version 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces. 
+[Dynatrace](https://www.dynatrace.com/) application runtime and database metrics are supported in Mendix version 9.7 and above.
 
 [Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix version 7.15 and above.
 
@@ -29,12 +29,13 @@ For details on how to add a specific APM tool to your app, see one of the follow
 
 * [AppDynamics for the Mendix Cloud](/developerportal/operate/appdynamics-metrics/)
 * [Datadog for the Mendix Cloud](/developerportal/operate/datadog-metrics/)
+* [Dynatrace for Mendix Cloud](/developerportal/operate/dynatrace-metrics/)
 * [Splunk for the Mendix Cloud](/developerportal/operate/splunk-metrics/)
 
 A summary of the useful metrics provided by Mendix is in the section [Summary of Mendix Metrics](#summary), below.
 
-{{% alert color="warning" %}}
-Monitoring using an APM tool is not supported in the deprecated Mendix Cloud v3. For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
+{{% alert color="info" %}}
+For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## 2 What Information Can Mendix Supply to a Saas-based Data Analytics Platform?
@@ -63,9 +64,7 @@ Once you have configured your data analytics platform for your app, it will auto
 The metrics from your app's environment are supplied in the following namespaces:
 
 * commons.pool2 – database connection pool metrics
-* database – metrics on the database performance
 * jetty – metrics from the ingress controller of the app
-* jmx – metrics from the Mendix runtime
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs
 * postgresql – database metrics specific to PostgreSQL databases
 * system – metrics from the base system running on the platform or PaaS — in Datadog these are disabled by default, but can be enabled using the [`DD_ENABLE_CHECKS`](/developerportal/operate/datadog-metrics/#system-metrics) environment variable.

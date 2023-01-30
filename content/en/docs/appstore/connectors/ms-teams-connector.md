@@ -52,11 +52,11 @@ Follow the instructions in the [Importing Content from the App Explorer](/appsto
 
 1. In Microsoft Teams, go to your Teams channel.
 2. Click the ellipsis (**...**) icon of your Teams channel to open the pop-up menu.
-3.  Click **Connectors** to open the **Incoming Webhook** page.
+3. Click **Connectors** to open the **Incoming Webhook** page.
 
     {{< figure src="/attachments/appstore/connectors/ms-teams-connector/connectors.png" >}}
 
-4.  Enter the details for your Webhook and copy the connector URL as shown in the image below.
+4. Enter the details for your Webhook and copy the connector URL as shown in the image below.
 
     {{< figure src="/attachments/appstore/connectors/ms-teams-connector/configure-connectors.png" >}}
 
@@ -76,7 +76,6 @@ You can use the **Send Message to Webhook** activity in a microflow to send mess
     {{< figure src="/attachments/appstore/connectors/ms-teams-connector/connector-in-microflow.png" >}}
 
 2. Double-click the **Send Message to Webhook** activity to open the **Send Message to Webhook** dialog box.
-
 3. Specify the following settings with expression syntax:
 
     {{% alert color="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}

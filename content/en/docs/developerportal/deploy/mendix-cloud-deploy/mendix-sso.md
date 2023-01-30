@@ -35,6 +35,10 @@ If your app does not have the Mendix SSO module, it is available from the Mendix
 
 If you need a newer version of the Mendix SSO module (for example, to use a new feature), then it is also available from the Marketplace via the same link.
 
+{{% alert color="info" %}}
+For Mendix versions 9.20 and above, you will need to use version 4.0.1 or above of the Mendix SSO module.
+{{% /alert %}}
+
 ## 2 Using Mendix SSO
 
 {{% alert color="warning" %}}

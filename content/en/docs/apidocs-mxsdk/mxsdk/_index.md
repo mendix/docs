@@ -10,6 +10,7 @@ tags: ["sdk", "platform sdk", "model sdk"]
 The Mendix SDK documentation is divided into the sections described below.
 
 {{% alert color="info" %}}
+
 * For how-to details on Mendix Platform SDK versions below 5.0, see [Old SDK Versions (Below 5.0)](/apidocs-mxsdk/mxsdk/sdk-howtos/).
 * For details on the releases of the Mendix SDKs, check the [Mendix Platform SDK Release Notes](/releasenotes/sdk/platform-sdk/) and the [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk/).
 {{% /alert %}}

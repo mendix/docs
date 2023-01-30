@@ -10,7 +10,7 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 ## 1 Introduction
 
-Backup snapshots are created every night or on demand, as described in the [Backups](#backups) section, below.
+Backup snapshots for apps running in the Mendix Cloud are created every night or on demand, as described in the [Backups](#backups) section, below.
 
 Backup snapshots contain both the database and file documents referred to in the database.
 
@@ -31,15 +31,17 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 
 | Region | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
 | --- | --- | --- | --- |  --- |
+| Bahrain | Mumbai | 03:00 | 06:00 | 1 hour |
+| Canada | Oregon | 05:00 | 00:00 | 1 hour |
 | Dublin | Frankfurt | 23:00 | 00:00 |  3 hours |
 | Frankfurt | Dublin | 00:00 | 01:00 | 3 hours |
 | London | Frankfurt | 23:00 | 23:00 | 2 hours |
+| Mumbai | Singapore | 19:30 | 01:00 | 1 hour |
 | Oregon | Ohio | 07:00 | 00:00 | 1 hour |
 | Singapore | Sydney | 17:00 | 01:00 | 1 hour |
+| Cape Town | Frankfurt | 02:00 | 04:00 | 1 hour |
 | Tokyo | Osaka | 16:00 | 01:00 | 1 hour |
 | N. Virginia | N. California | 05:00 | 00:00 | 4 hours |
-| Canada | Oregon | 05:00 | 00:00 | 1 hour |
-| Mumbai | Singapore | 19:30 | 01:00 | 1 hour |
 
 Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
 
@@ -75,26 +77,7 @@ Anything you can download you can also upload again, which means you can upload 
 Uploading a **Files Only** archive resulta in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
-#### 3.2.2 Uploading Data in Mendix Cloud v3
-
-{{% alert color="warning" %}}
-Mendix Cloud v3 is deprecated and will be retired in the future. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4/). 
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-In **Mendix Cloud v3**, this does not add a backup to the backup list but directly update the application with the newly uploaded data.
-
-Your environment is cleared completely. The existing deployment package, uploaded files, and database are removed. If you are uploading data to the production environment, any published app services will be unpublished.
-{{% /alert %}}
-
-You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment.
-
-You can upload two types of data:
-
-* **Database**
-* **Uploaded files** (*zip* or *tar.gz*)
-
-### 3.3 Download Backup
+### 3.3 Download Backup {#download-backup}
 
 You can download a backup archive containing one of the following: 
 

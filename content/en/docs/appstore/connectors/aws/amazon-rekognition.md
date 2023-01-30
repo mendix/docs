@@ -45,11 +45,11 @@ For example, to detect labels for a given image, implement the **DetectLabels** 
 6. In the **Edit** parameters section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws_region).
 7. Click **OK**.
 8. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-9. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
+9. Position the **Retrieve** activity between the **DetectLabels** activity and the microflow end event.
 10. Double-click the **Retrieve** activity.
 11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
 12. Click **OK**.
-13. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
+13. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
 ### 3.1 Constants {#constants}
 

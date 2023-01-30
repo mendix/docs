@@ -54,4 +54,3 @@ The elements of this category are described in the table below:
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow.png" alt="Call Microflow" >}} | [Call microflow](/refguide/call-microflow/) | Calls a selected microflow. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow.png" alt="Call Workflow" >}} | [Call workflow](/refguide/call-workflow/) | Calls a selected workflow. |
-

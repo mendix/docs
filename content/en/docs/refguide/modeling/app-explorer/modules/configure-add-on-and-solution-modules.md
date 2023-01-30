@@ -106,7 +106,7 @@ When you update an individual add-on or a solution module to another version, yo
 If, for some reason, you switch the add-on and solution module to an app module, for example, to provide source code to customers, their module data is lost once they upload a new version of this module to their app.
 {{% /alert %}}
 
-## Read More
+## 5 Read More
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)

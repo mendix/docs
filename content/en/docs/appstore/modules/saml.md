@@ -96,8 +96,10 @@ There are different versions of the module, depending on which version of Mendix
 
 * Mendix version 7 – SAML module version 1.17.1
 * Mendix version 8 – SAML module version 2.3.1
-* Mendix version 9 (upgraded from version 8) – SAML module version 3.3.2
-* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.3
+* Mendix version 9 (upgraded from version 8) – SAML module version 3.3.8
+* Mendix version 9 (new app using Atlas version 3.0) – SAML module version 3.3.9
+
+For Mendix 9, the versions for new apps (odd-numbered patch versions) differ from those for upgrading from Mendix version 8 (even numbered patch versions) as they have the newer version of Atlas UI (version 3). This is because using Atlas 3 with an app upgraded from Mendix version 8.x (which uses Atlas version 2) would result in issues because the templates for the SAML module pages would not exist.
 
 ## 2 Installation
 
@@ -244,9 +246,7 @@ The following settings control user provisioning:
 These settings are only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.1.8/v3.1.9 and above for Mendix version 9
-
 * v2.2.0 and above for Mendix version 8
-
 * v1.16.4 and above for Mendix version 7
 {{% /alert %}}
 
@@ -262,6 +262,7 @@ These settings are only available in the following versions of the module (depen
 * **Enable delegated authentication** *(deprecated)* - See [Multi-tier Delegated Authentication](#delegated-auth), below, for information on when you might set this.
 
 * **Enable mobile authentication Token** - If you are using a [hybrid mobile](/refguide/hybrid-mobile/) app and you enable this, you can log in to your Mendix hybrid mobile app after the app is closed, using an auth token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+
 #### 3.2.5 Authentication Context
 
 The following settings set the authentication context:

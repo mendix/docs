@@ -66,7 +66,7 @@ Shortcut key:  <kbd>F7</kbd>
 
 For more information on settings displayed on the Create Deployment Package dialog box, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 
-## 7 Clean Deployment Directory
+## 7 Clean Deployment Directory {#clean-deployment-directory}
 
 The **Clean Deployment Directory** option cleans the deployment directory.
 

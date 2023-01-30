@@ -165,6 +165,7 @@ Publishers of an OData service set the type of authentication needed for it to b
 * [Active session](/refguide/published-odata-services/#authentication-active-session)
 * [Custom](/refguide/published-odata-services/#authentication-microflow) (calling an authentication microflow)
      * [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso)
+     * Other (add your own, using a custom module for example)
 
 For details on the types of authentication methods and how to set them up, see the [Security](/refguide/published-odata-services/#security) section of *Published OData Services*. 
 

@@ -52,7 +52,7 @@ To learn more, see [Encrypting Local Databases](/refguide/mobile/building-effici
 
 Similar to encrypting the local database, you should enable local file encryption for extra protection if the files or images your app stores are sensitive. This option ensures that file contents for entities that specialize from either `System.FileDocument` or `System.Image` are encrypted. This option also includes files added to the app by the end-user, for example, when a user takes a photo using the camera of the device and store it in an entity that specialized from `System.Image`.
 
-To learn more, see [Encrypting User Files](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/local-data-security/#encrypting-user-files).
+To learn more, see the [Encrypting User Files](#encrypting-user-files) section below.
 
 ## 4 Encrypting Local Databases {#encrypting-local-databases}
 

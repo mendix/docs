@@ -173,7 +173,7 @@ For details on the types of authentication methods and how to set them up, see t
 
 When an external entity is used in an app module through the Data Hub pane, a [consumed OData service](/refguide/consumed-odata-service/) document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
 
-If [app security](/refguide/app-security/) has been enabled, and publishers of an OData service have set an authentication method, you will need to add authentication credentials. Consumers of an OData service in an external entity can contact the owner of the data source to check the required authentication method and credentials. 
+If the service you are consuming requires authentication, you will need to add authentication credentials. Consumers of an OData service in an external entity can contact the owner of the data source to check the required authentication method and credentials. 
 
 Learn more about adding authentication information to a consumed OData service:
 

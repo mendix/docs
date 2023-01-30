@@ -184,11 +184,7 @@ Changing the status of a story or updating story points automatically synchroniz
 
 ## 3 Sprint Status {#sprint-status}
 
-On the **Sprint Status** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. 
-
-There is also a percentage bar of the stories that are done and the deadline date of the current Sprint:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/sprint-status.jpg" >}}
+On the **Sprint Status** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. There is also a percentage bar of the stories that are done and the deadline date of the current Sprint.
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 
@@ -205,8 +201,6 @@ On the **Story Archive** tab, you can see a list of all stories that belong in c
 You can search for a specific archived story through its **ID**, **Title**, **Description**, or the **Sprint's Name**. The search can be performed with both partial and exact matches.  
 
 By clicking a story's ID, you can see the [story details](#story-details).
-
-{{< figure src="/attachments/developerportal/collaborate/stories/story-archive.png" >}}
 
 ## 5 Read More
 

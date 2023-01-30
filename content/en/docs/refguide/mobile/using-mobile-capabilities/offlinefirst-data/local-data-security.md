@@ -130,9 +130,9 @@ To locate the database file on iOS, do the following:
 1. You will see a file named *default* (without an extension). This file is the database file used by the Mendix Client.
 1. Save the *default* file in a folder on your computer.
 
-## 5 Encrypting User Files {##encrypting-user-files}
+## 5 Encrypting User Files {#encrypting-user-files}
 
-Studio Pro 9.22 and above allows you to encrypt the files and images stored in native apps. Enable file encryption by selecting the checkbox in the native mobile navigation profile screen:
+Studio Pro 9.22 and above allows you to encrypt the files and images stored in native apps. Enable file encryption by selecting the check box in the **Native mobile** navigation profile tab:
 
 {{< figure src="/attachments/refguide/mobile/offline-first/enable-native-file-encryption.png" alt="Encrypt native file encryption checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
 
@@ -150,7 +150,6 @@ Local database encryption works in Native Template v6.3.0 and higher. If this se
 > Encrypting user files and images is enabled; however, the current native template does not support this functionality. Please update your app's native template to support encryption. User files and images will not be encrypted.
 
 If you are using Native Template 6.3.0 or higher and building the app locally on your computer, you may need to reinstall the dependencies of your app using the `npm i` command.
-
 {{% /alert %}}
 
 ### 5.2 Enabling Local File Encryption

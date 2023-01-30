@@ -28,7 +28,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a licensed app hosted in Mendix Cloud
+* Have a licensed app hosted in the Mendix Cloud
 * Have a plan which provides more than 1GiB of memory
 
 {{% alert color="info" %}}
@@ -37,7 +37,7 @@ Details of your plan are displayed on the environment details page.
 
 ## 3 Scaling Your Environment
 
-If you want to scale your licensed app in Mendix Cloud, follow these steps:
+If you want to scale your licensed app in the Mendix Cloud, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 

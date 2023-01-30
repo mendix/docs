@@ -24,7 +24,7 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 | **Other SMTP-compatible services** | &#x2713; | &#x2713; |
 | **Mendix Mail Servers** | &#x2717; | &#x2717; |
 
-For apps deployed to Mendix Cloud you must setup a third-party mail provider to send emails from your app.
+For apps deployed to the Mendix Cloud you must setup a third-party mail provider to send emails from your app.
 
 ## 2 External Email Providers
 

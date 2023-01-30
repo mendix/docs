@@ -47,7 +47,7 @@ In Git, committing is done locally at first. Then commits are sent to other repo
 
 ## 5 Proxy Support
 
-It is currently not possible to use Git from behind an authenticated proxy. For more information, see the [Known Issues](/howto/collaboration-requirements-management/troubleshoot-git-issues/#ki) section of *Solving Known Git Issues*. If you depend on this functionality, it is sensible to postpone migration until support is realized. 
+It is currently not possible to use Git from behind an authenticated proxy. For more information, see the [Known Issues](/refguide/troubleshoot-git-issues/#ki) section of *Solving Known Git Issues*. If you depend on this functionality, it is sensible to postpone migration until support is realized. 
 
 ## 6 Interacting with Version Control Outside Studio Pro
 

@@ -7,6 +7,10 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data between Mendix apps. Although OData [external entities](/refguide/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide/consumed-rest-services/) functionality.
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold. If these requirements are not met, errors may result.

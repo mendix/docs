@@ -14,13 +14,11 @@ Licensed apps in the Mendix Cloud can be scaled in various ways.
 
 Memory can be added to the application container. This is called *vertical scaling*.
 
-Apps can be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances. [Scheduled events](/refguide/scheduled-events/) will always be run on the first instance. This is called *horizontal scaling*.
+Apps built using supported versions of Mendix can be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances. This is called *horizontal scaling*.
 
-The scaling options on possible cloud versions are the following:
-
-| Cloud Version | Scaling Options | Limitations |
-| ------------- | --------------- | ----------- |
-| Mendix Cloud | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
+{{% alert color="info" %}}
+Before Mendix version 9.12.0, [Scheduled events](/refguide/scheduled-events/) are always run on the first instance if there are multiple instances.
+{{% /alert %}}
 
 This how-to will teach you how to do the following:
 
@@ -31,7 +29,6 @@ This how-to will teach you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a licensed app hosted in Mendix Cloud
-* The Mendix version of the app is Mendix 7.0 or above
 * Have a plan which provides more than 1GiB of memory
 
 {{% alert color="info" %}}

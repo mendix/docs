@@ -94,8 +94,9 @@ Disabling database encryption will apply only to newly-installed apps. Existing 
 
 Local database encryption also works with the Make It Native App and a custom developer app. Ensure that you upgrade the Make It Native app and your application template to v6.3.0 or higher, otherwise the app may not start.
 
-### 4.6 How Does Local Database Encryption Work?
-Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the secure storage system of the OS (iOS/Keychain and Android/Keystore). The Mendix Client reads and decrypts the database key stored in the local storage and uses it to unlock the database.
+### 4.6 How Local Database Encryption Works
+
+Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the mobile operating system's secure storage system (iOS uses Keychain, while Android uses Keystore). The Mendix Client reads and decrypts the database key stored in the local storage, and then uses it to unlock the database.
 
 ### 4.7 Verifying a Database is Encrypted
 

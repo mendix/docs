@@ -1,67 +1,51 @@
 ---
 title: "9.22"
-parent: "metamodel-9"
+url: /releasenotes/sdk/metamodel-9.22/
+weight: 78
 ---
 
 ## 9.22.0
 
+**Release date: January 25th, 2023**
+
 ### DomainModels
 
 #### MultiLanguageAttributeType (Element)
+
 * We introduced this element. 
 
 ### CustomIcons
 
 #### CustomIconCollection (ModelUnit)
-* We introduced the `collectionClass` property. 
-* We introduced the `prefix` property. 
+
+* We introduced the `collectionClass` and `prefix` properties. 
 
 ### Navigation
 
 #### NativeNavigationProfile (Element)
+
 * We introduced the `localFileEncryptionEnabled` property. 
 
 ### Pages
 
-#### ConditionallyVisibleWidget (Element)
-* We introduced the `accessibilitySettings` property. 
-
 #### AccessibilitySettings (Element)
+
 * We introduced this element. 
+
+#### ConditionallyVisibleWidget (Element)
+
+* We introduced the `accessibilitySettings` property. 
 
 ### Workflows
 
+#### UserTaskCompletion (Element)
+
+* We introduced this element.
+
 #### UserTask (Element)
+
 * We introduced the `userTaskCompletion` property. 
 
-#### UserTaskCompletion (Element)
-* We introduced this element. 
+#### Various New Elements
 
-#### SingleInputCompletion (Element)
-* We introduced this element. 
-
-#### MultiInputCompletion (Element)
-* We introduced this element. 
-
-#### UserTaskCompletionCriteria (Element)
-* We introduced this element. 
-
-#### ConsensusCompletionCriteria (Element)
-* We introduced this element. 
-
-#### VetoCompletionCriteria (Element)
-* We introduced this element. 
-
-#### TargetUserInput (Element)
-* We introduced this element. 
-
-#### AllUserInput (Element)
-* We introduced this element. 
-
-#### AbsoluteAmountUserInput (Element)
-* We introduced this element. 
-
-#### PercentageAmountUserInput (Element)
-* We introduced this element. 
-
-This page has been generated automatically.
+* We introduced the `SingleInputCompletion`, `MultiInputCompletion`, `UserTaskCompletionCriteria`, `ConsensusCompletionCriteria`, `VetoCompletionCriteria`, `TargetUserInput`, `AllUserInput`, `AbsoluteAmountUserInput`, and `PercentageAmountUserInput` elements.

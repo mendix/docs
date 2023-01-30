@@ -1,5 +1,5 @@
 ---
-title: "Cloud Region in the Mendix Cloud"
+title: "Mendix Cloud Region"
 linktitle: "Mendix Cloud Region"
 url: /developerportal/deploy/cloud-version-region/
 weight: 24
@@ -10,15 +10,15 @@ tags: ["Mendix Cloud Version","Mendix Cloud Region","Developer Portal"]
 
 ## 1 Introduction
 
-Sometimes you need to know which Mendix Cloud region your environment is running in. This document shows you how to find the Mendix Cloud version and region of your app.
+Sometimes you need to know which Mendix Cloud region your environment is running in. This document shows you how to find the Mendix Cloud region of your app.
 
 {{% alert color="info" %}}
 This information is only available if you have a licensed app running in the Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 {{% /alert %}}
 
-## 2 Mendix Cloud Region and Version
+## 2 Mendix Cloud Region
 
-To view the Mendix Cloud region and version in which your app is hosted, follow these steps:
+To view the Mendix Cloud region in which your app is hosted, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
@@ -34,4 +34,4 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)

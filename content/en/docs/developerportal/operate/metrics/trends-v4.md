@@ -1,5 +1,5 @@
 ---
-title: "Trends in Mendix Cloud"
+title: "Trends in the Mendix Cloud"
 url: /developerportal/operate/trends-v4/
 weight: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud."
@@ -419,7 +419,7 @@ The **Database IOPS burst balance** graph shows the number of IOPS credits accru
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-burst-balance.png" >}}
 
-Apps running on Mendix Cloud use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
+Apps running on the Mendix Cloud use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
 
 Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when it is idle), the unspent IOPS credits are accrued until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
 
@@ -434,5 +434,5 @@ For more information, see the *AWS Database blog* [Understanding Burst vs. Basel
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Cloud Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/)
+* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
 * [Mendix Cloud - FAQ](/developerportal/deploy/mxcloudv4/)

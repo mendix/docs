@@ -1,9 +1,9 @@
 ---
 title: "Scaling Your Environment in Mendix Cloud"
-linktitle: "Scaling in Mendix Cloud"
+linktitle: "Scaling in the Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
-weight: 20
-description: "Describes how to scale your environments in Mendix Cloud."
+weight: 25
+description: "Describes how to scale your environments in the Mendix Cloud."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -75,10 +75,10 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 
 ## 5 Read More
 
-* [Trends in Mendix Cloud](/developerportal/operate/trends-v4/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/collaborate/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/)

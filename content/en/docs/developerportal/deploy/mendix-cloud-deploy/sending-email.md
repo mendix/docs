@@ -53,7 +53,7 @@ Many users of *Free Apps* use the settings of their own GMail account for conven
 
 {{% alert color="info" %}}
 
-Please note that you cannot send email from Mendix Cloud over port 25. Although this port is open, it is heavily rate-limited by the infrastructure provider, so you will experience issues. This configuration cannot be changed.
+Please note that you cannot send email from the Mendix Cloud over port 25. Although this port is open, it is heavily rate-limited by the infrastructure provider, so you will experience issues. This configuration cannot be changed.
 
 Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
 

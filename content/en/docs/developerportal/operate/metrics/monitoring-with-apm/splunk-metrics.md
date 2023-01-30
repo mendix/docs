@@ -3,7 +3,7 @@ title: "Splunk for the Mendix Cloud"
 url: /developerportal/operate/splunk-metrics/
 parent: "metrics"
 weight: 30
-description: "How to configure Mendix Cloud to send your runtime application logs Splunk Cloud Platform."
+description: "How to configure the Mendix Cloud to send your runtime application logs Splunk Cloud Platform."
 tags: ["Splunk Cloud Platform", "Mendix Cloud", "monitoring", "analysis", "logs"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

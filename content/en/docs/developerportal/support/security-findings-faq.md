@@ -151,7 +151,7 @@ Scanning your app, or the Mendix platform, with a security scanner will occasion
 
 ### 8.1 Weak Ciphers Supported in Mendix Cloud
 
-In Mendix Cloud, security is of the highest priority, and we try to improve this constantly. The Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
+In the Mendix Cloud, security is of the highest priority, and we try to improve this constantly. The Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
 
 ### 8.2 No/Long Session Timeout
 

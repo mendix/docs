@@ -35,8 +35,8 @@ In this tab, you can find the following information about your environment:
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Mendix Studios Target** – if **Yes**, it means that Mendix Studio and Studio Pro deploy apps to this environment; for more information, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
-* **Plan** – for Mendix Cloud, this indicates the type of plan covered by this license
-* **Instances** – for Mendix Cloud, this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud](#scaling) section below
+* **Plan** – this indicates the type of plan covered by this license
+* **Instances** – this shows a summary of the number and memory allocation of instances of this environment – for more information, see the [Scaling - Mendix Cloud](#scaling) section below
 * **Database Version** – the PostgreSQL version supporting the database
 * **Region** – the region where the app is hosted
 * **Secondary Backup Location** – the region where the backup is stored
@@ -54,7 +54,7 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users** 
 * **Change Admin Password** – this changes the password for the built-in [administrator](/refguide/administrator/) account; the new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package
 * **View Live Log**
-* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For Mendix Cloud, the debugger is always enabled. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
+* **Show debugger information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v4.png" alt="A screenshot of the available actions">}}
 
@@ -81,7 +81,7 @@ To clear the environment, follow these steps:
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
 
-### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
+### 2.2 Naming of Environments – Flexible Environments in the Mendix Cloud {#naming}
 
 If you are the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app, you can rename the environments.
 
@@ -221,7 +221,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-Mendix Cloud supports the following HTTP headers in the Developer Portal:
+The Mendix Cloud supports the following HTTP headers in the Developer Portal:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |

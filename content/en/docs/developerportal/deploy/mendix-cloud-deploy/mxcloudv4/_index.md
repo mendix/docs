@@ -1,26 +1,17 @@
 ---
-title: "About Mendix Cloud"
+title: "About the Mendix Cloud"
 url: /developerportal/deploy/mxcloudv4/
-weight: 50
+weight: 3
 description: "Frequently asked questions about Mendix Cloud"
 tags: ["Cloud", "Mendix Cloud", "FAQ", "AWS", "Amazon Web Services", "Max file size"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 What Is Mendix Cloud?
+## 1 What Is the Mendix Cloud?
 
-Mendix Cloud is where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
+The Mendix Cloud is where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
 
-Apps deployed to the Mendix Cloud run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via our [APIs](/apidocs-mxsdk/apidocs/deploy-api/). Apps can run in the EU, US, Japan, or the UK.
-
-Mendix Cloud is a mature product, launched in Q1 2017, and has a number of improvements over previous versions of Mendix Cloud:
-
-* It is more secure as you can use [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) and [client certificates](/developerportal/deploy/certificates/), and have [TLS v1.2 or higher enforced](/releasenotes/developer-portal/mendix-cloud/#tls)
-* It runs on faster hardware
-* It is still being actively developed and improved, with new features regularly being introduced (for example [flexible environments](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments))
-* It uses industry-standard techniques for scalability and maintainability
-* It supports all current versions of Mendix, including Mendix version 8
-* It has improved monitoring features, including using external monitoring tools
+Apps deployed to the Mendix Cloud run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via our [APIs](/apidocs-mxsdk/apidocs/deploy-api/). Apps can run in many regions of the world.
 
 ## 2 Where Will My Data Be Hosted?
 
@@ -47,8 +38,7 @@ Data will always be stored in the same political region for the following region
     * Data in the EU is not currently backed up in the UK
     * Data in the UK is backed up in the EU
 * Data in the US, including backups, will stay within the US
-
-Data in Japan is currently backed up in Japan.
+* Data in Japan is backed up in Japan.
 
 ## 3 Does Mendix Expose the Underlying Cloud Foundry API?
 

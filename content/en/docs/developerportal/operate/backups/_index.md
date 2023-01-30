@@ -65,7 +65,7 @@ The sections below present details on uploading data in recent Mendix Cloud vers
 
 #### 3.2.1 Uploading Data in Mendix Cloud
 
-In **Mendix Cloud**, the upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application. 
+In the **Mendix Cloud**, the upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application. 
 
 Anything you can download you can also upload again, which means you can upload archives containing the following:
 
@@ -98,7 +98,7 @@ You can choose the **destination** environment to which you want to restore the 
 If you restore a backup snapshot that was originally deployed with an older Mendix version, you get a warning. You can still restore the data, but you will have to deploy the older model later on. 
 
 {{% alert color="info" %}}
-In Mendix Cloud, if the restore takes too long, the system shows a timeout message. The restore continues behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore process is still in progress. If the database free disk space is constant, the restore process is finished and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore process can be executed faster.
+If the restore takes too long, the system shows a timeout message. The restore continues behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore process is still in progress. If the database free disk space is constant, the restore process is finished and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore process can be executed faster.
 {{% /alert %}}
 
 See [Restore a Backup](/developerportal/operate/restore-backup/) for more information.
@@ -111,7 +111,7 @@ When you click **Details**, you can view the following details:
 | :--- | :--- |
 | **Status** | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed** |
 | **Created by**/ <br /> **Type** | The name of the person who created the backup. Automated system backups are named **Nightly** |
-| **ID**/ <br /> **Snapshot id** | Unique identifier for the backup *snapshot* |
+| **ID**/ <br /> **Snapshot id** | A unique identifier for the backup *snapshot* |
 | **Date**/ <br /> **Created on** | The creation date of the backup |
 | **Expires on** | The date on which the backup will be removed from the system |
 | **Model version** | The version of the deployment package used during backup creation |

@@ -72,7 +72,7 @@ Click **Save** to save the current certificate profile.
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 
-For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud supports both IPv4 and IPv6 format addresses.
+For each IP range, you can specify a **Name** for the range, and a range of addresses. The Mendix Cloud supports both IPv4 and IPv6 format addresses.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png" >}}
 

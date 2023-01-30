@@ -24,7 +24,7 @@ In this tab you can view graphs which display the following information about th
 
 The following document describes the different trends information available:
 
-* [Trends in Mendix Cloud](/developerportal/operate/trends-v4/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 
 ## 3 Running Now
 

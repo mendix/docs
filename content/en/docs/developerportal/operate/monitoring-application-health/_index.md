@@ -174,7 +174,7 @@ To access the history of the alerts from your app, follow these steps:
 
 ## 6 Read More
 
-* [Application Trends in Mendix Cloud](/developerportal/operate/trends-v4/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
-* [Cloud Status: Mendix Cloud](/developerportal/deploy/mendix-cloud-status/)
+* [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/)
 * [How to Submit Support Requests](/developerportal/support/submit-support-request/)

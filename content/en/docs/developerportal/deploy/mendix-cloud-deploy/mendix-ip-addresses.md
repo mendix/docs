@@ -51,7 +51,7 @@ Mendix uses the following static IP addresses. If you need further information, 
 
 ##### 2.2.1.1 Accessing AWS Services in Mendix Cloud
 
-Mendix Cloud uses [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html) to privately access AWS services.
+The Mendix Cloud uses [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html) to privately access AWS services.
 
 AWS API requests can, therefore, originate from the following IP ranges:
 
@@ -80,4 +80,4 @@ Usually you configure your firewall with rules for *incoming* traffic to your ne
 
 ## 4 Read More
 
-* [Cloud Status: Mendix Cloud](/developerportal/deploy/mendix-cloud-status/)
+* [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/)

@@ -1,5 +1,5 @@
 ---
-title: "Cloud Status: Mendix Cloud"
+title: "Mendix Cloud Status"
 url: /developerportal/deploy/mendix-cloud-status/
 weight: 21
 description: "Describes where to find the current status of the Mendix Cloud."
@@ -20,9 +20,9 @@ The status of all these services is reported on a single page: [https://status.m
 
 By going to the [Mendix status page](https://status.mendix.com/), you can check the status of Mendix Cloud. This will tell you if there are any issues with the cloud which may impact your apps.
 
-You can expand the status of the clouds to see the status of a particular region: for example *Mendix Cloud EU*.
+You can expand the status of the cloud to see the status of a particular region: for example *Mendix Cloud EU*.
 
-Free Apps are deployed to *Mendix Cloud Free Tier*.
+Free Apps are deployed to *Mendix Cloud Free Tier EU*.
 
 ## 3 Current Issues
 
@@ -45,4 +45,4 @@ You can elect to receive emails, or subscribe to the RSS or Atom feeds.
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
 * [Operate](/developerportal/operate/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Cloud Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/)
+* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)

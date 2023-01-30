@@ -45,7 +45,7 @@ For example, to detect labels for a given image, implement the **DetectLabels** 
 6. In the **Edit** parameters section, edit the **AWS_Region** parameter, and provide a value by using a variable or an expression. For a list of available AWS regions, see [AWS_Region](#aws_region).
 7. Click **OK**.
 8. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-9. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
+9. Position the **Retrieve** activity between the **DetectLabels** activity and the microflow end event.
 10. Double-click the **Retrieve** activity.
 11. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
 12. Click **OK**.

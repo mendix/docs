@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### January 26th, 2023
+
+#### Mendix Operator v2.10.1{#2.10.1}
+
+* We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
+* We have switched from UBI 8 Minimal base images to [UBI 8 Micro](https://www.redhat.com/en/blog/introduction-ubi-micro).
+* We have implemented a feature to use [IAM role authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) when connecting to RDS Postgres databases. This feature depends on an upcoming release of Mendix, and additional documentation will be provided later.
+
 ### January 19th, 2023
 
 #### Portal Improvements

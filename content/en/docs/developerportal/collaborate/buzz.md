@@ -26,7 +26,7 @@ Clicking an app name in **Recent Apps** will take you to the [App Buzz](#app-buz
 
 App **Buzz** is for a specific app:
 
-{{< figure src="/attachments/developerportal/collaborate/buzz/app-buzz.jpg" >}}
+{{< figure src="/attachments/developerportal/collaborate/buzz/app-buzz.png" >}}
 
 You can see the size of your **Team** and your fellow team members on the right side of the page. Click the **+** icon to invite new members to your team directly. Click **Show all** to go to the [Team](/developerportal/collaborate/team/) page for the app.
 

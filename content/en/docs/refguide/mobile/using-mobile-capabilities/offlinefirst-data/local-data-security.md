@@ -147,7 +147,7 @@ Before enabling local file encryption, ensure that these prerequisites are met:
 {{% alert color="info" %}}
 Local database encryption works in Native Template v6.3.0 and higher. If this setting is enabled using an older version of the native template, the app will not encrypt the files, and the client will log the following warning message:
 
-> Encrypting user files and images is enabled; however, the current native template does not support this functionality. Please update your app's native template to support encryption. User files and images will not be encrypted.
+"Encrypting user files and images is enabled; however, the current native template does not support this functionality. Please update your app's native template to support encryption. User files and images will not be encrypted."
 
 If you are using Native Template 6.3.0 or higher and building the app locally on your computer, you may need to reinstall the dependencies of your app using the `npm i` command.
 {{% /alert %}}

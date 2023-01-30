@@ -156,7 +156,7 @@ You can configure a published OData service to authenticate with the [Mendix SSO
 To set up authentication with Mendix SSO, do the following:
 
 1. Ensure that the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
-2. In the published OData service, choose **Custom** authentication and select the `AuthorizeRequestWithAccessTokenFrom Request** microflow.
+2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
 #### 3.3.3 Allowed Roles
 

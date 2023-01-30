@@ -71,27 +71,27 @@ Good job! You have created the image entity and an association from it to the **
 
 ## 4 Adding an Image Uploader
 
-An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an entity that is a specialization of System.Image or is connected to it as its data source. If you just drag the image uploader into your report form, it will not work correctly, because your current data view has the **Report** entity as its data source:
+An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an entity that is a specialization of System.Image or that is connected to it as its data source. If you just drag the image uploader into your report form, it will not work correctly, because your current data view has the **Report** entity as its data source:
 
 {{< figure src="/attachments/howto/pages/attach-images/form-example.png"   >}}
 
-To solve this, you can add a button which will open a pop-up page where your end-users can attach images. This page will be connected to your current report form over the *Receipt_Report* association and will upload images associated to this specific report. 
+To solve this, you can add a button which will open a new pop-up page where your end-users can attach images. This page will be connected to your current report form over the *Receipt_Report* association and will upload images associated to this specific report. 
 
 Follow the steps below:
 
 1. Open the **New Report** page where employees submit a new report. 
 
-2. Open the **Toolbox** and search for the **Create object** button.
+2. Open the **Toolbox** and search for the **Create** button.
 
 3. Drag the button above **Save** and **Cancel** buttons:
 
     {{< figure src="/attachments/howto/pages/attach-images/create-object-button.png"   width="450"  >}}
 
-4. In the Select Entity dialog box, choose the **Receipt** entity:
+4. In the **Select Entity** dialog box, choose the **Receipt** entity:
 
-{{< figure src="/attachments/how-to/pages/attach-images/select-entity.png"  >}}
+    {{< figure src="/attachments/howto/pages/attach-images/select-entity.png"  >}}
 
-4. Open the Properties pane for the button and do the following:
+5. Open the **Properties** pane for the button and do the following:
 
     1. Select the **Caption** property and rename it to *Attach Images*.
 
@@ -99,37 +99,34 @@ Follow the steps below:
 
     3. In the **Select icon** dialog box, search for the *picture* glyph icon, and click **Select**.
 
-    4. Click the **Style** property and change it from **Default** to **Success**:
+    4. Click the **Button style** property and change it from **Default** to **Success**.
 
-        {{< figure src="/attachments/howto/pages/attach-images/button-properties-general.png"   width="150"  >}}
+    5. Click the **On click page** property and in the **Select web page** dialog box, click **New**. 
 
-    5. In the button properties, click the **On click page** property.
-
-    6. In the **Select web page** dialog box, click **New**. 
-
-    12. In the **Create Page** dialog box, do the following:
+    6. In the **Create Page** dialog box, do the following:
 
         1. Set the **Title** to *Receipt_NewEdit*.
         2. Set the **Layout** to *PopupLayout*.
         3. Since this button creates the Receipt object, the contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.
 
-        {{< figure src="/attachments/howto/pages/attach-images/create-new-page-images.png"   width="500"  >}}
+            {{< figure src="/attachments/howto/pages/attach-images/create-new-page-images.png" width="650"  >}}
+    
+6. A new pop-up page with a preconfigured form (a data view) is created:
 
-13. A new pop-up page with a preconfigured form (a data view) is created:
+    {{< figure src="/attachments/howto/pages/attach-images/attach-images-page.png"  width="650"  >}}
 
-    {{< figure src="/attachments/howto/pages/attach-images/attach-images-page.png"   width="500"  >}}
-
-14. As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes and **Report**  reference selector from the data view. 
+7. As you only need your end-users to attach images on this page, delete the **Dynamic image** widget, **Name** and **Size** text boxes and **Report**  reference selector from the data view. 
 
 You have created a pop-up page that will allow employees to attach images to their reimbursement reports:
 
-{{< figure src="/attachments/howto/pages/attach-images/attach-images-pop-up-page.png"   width="450"  >}}
+{{< figure src="/attachments/howto/pages/attach-images/attach-images-pop-up-page.png"   >}}
 
 ## 5 Displaying Attached Images
 
 After users attach the images, it would be nice to display their attachments and give them an opportunity to delete the ones they do not need. To do so, you need to add a list with dynamic images:
 
 1. Open the **New Report** page.
+
 2. Open **Toolbox**, search for *list view* and drag it under the **Attach Images** button (*inside* the data view). 
 
 3. Open the **Properties** pane of the list view and do the following:
@@ -137,20 +134,25 @@ After users attach the images, it would be nice to display their attachments and
     1. Click the **Entity (path)** property.
     2. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association, and click **Select**:
 
-        {{< figure src="/attachments/howto/pages/attach-images/select-entity.png"   width="400"  >}}
+        {{< figure src="/attachments/howto/pages/attach-images/select-entity.png"   >}}
 
 4. Choose **Yes** for the question to fill in the contents of the widget.
+
 5. Open Toolbox, search for Layout grid and drag it to the list view.
+
 6. Choose 4,4,4 for the layout grid:
     {{< figure src="/attachments/howto/pages/attach-images/layout-grid.png"   width="400"  >}}
 
-7. In the list view, drag the dynamic image into first column, Name into second.
-8. Delete otehr widgets that were added automatically. 
+7. In the list view, drag the dynamic image into the first column and **Name** into the second.
 
-7. Open **Toolbox**, search for *Delete button* and drag it the list view.
-8. Open **Properties** pane of the button and in the **Style** property, change **Default** to **Danger**. 
+8. Delete other widgets that were added automatically. 
 
-    {{< figure src="/attachments/howto/pages/attach-images/button-properties.png" >}}
+9. Open **Toolbox**, search for **Delete button** and drag it into the third column:
+
+    {{< figure src="/attachments/howto/pages/attach-images/layout-in-list-view.png"  >}}
+
+8. Open **Properties** pane of the button and in the **Button style** property, change **Default** to **Danger**. 
+
 
 Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
 
@@ -158,4 +160,4 @@ Great job! Now you have the image list that shows attached images and your users
 
 Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
 
-[Preview your app](/studio/publishing-app/) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images and Files](/studio/page-editor-widgets-images-and-files/).
+Preview your app to test how the image uploading works. 

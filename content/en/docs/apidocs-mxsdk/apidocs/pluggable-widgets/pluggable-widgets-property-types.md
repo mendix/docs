@@ -403,6 +403,7 @@ For example, when properties are defined as follows:
     </attributeTypes>
 </property>
 ```
+
 ```xml
 <property key="myExpression" type="expression">
 	<caption>My string</caption>
@@ -591,7 +592,6 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `selectableObjects` | Yes      | Property Path  | Specifies the path to a [`datasource`](#datasource) property that will provide selectable objects for the association            |
 | `dataSource`        | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this association property                                 |
-
 
 #### 4.5.2 XML Elements
 

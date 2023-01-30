@@ -1,6 +1,7 @@
 ---
 title: "Troubleshooting"
 url: /refguide/troubleshooting/
+weight: 1
 category: "Java Programming"
 description: "Lists the problematic JAR files and the known workarounds."
 tags: ["studio pro"]

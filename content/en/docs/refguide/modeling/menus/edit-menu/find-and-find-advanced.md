@@ -26,7 +26,7 @@ You can see search results in the **Find Results** pane:
 
 {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-results.jpg" alt="Search Results" >}}
 
-## 3 Find Advanced Option
+## 3 Find Advanced Option {#find-advanced}
 
 With the **Find Advanced** option you can set advanced criteria and find specific elements in your app, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
 

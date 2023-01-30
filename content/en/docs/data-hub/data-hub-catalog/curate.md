@@ -38,17 +38,13 @@ Click **View** to display the asset details. You can then perform curate actions
 
 ## 3 Curation Bar {#curation-bar}
 
-Curation is performed from the [asset details screen](/data-hub/data-hub-catalog/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item. The following shows the curation bar for a selected service:
-
-{{< figure src="/attachments/data-hub/data-hub-catalog/curate/curate-bar.png" alt="curate bar" >}}
+Curation is performed from the [asset details screen](/data-hub/data-hub-catalog/search/#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item.
 
 {{% alert color="info" %}}
 Owners of registered assets and can only curate their services.
 {{% /alert %}}
 
-On the **Curation bar**, information about the role of the current user is displayed: **Owner** or **Curator**.
-
-When a data source is selected in the **Search Results**, the following options are displayed via **Edit**:
+When a data source is selected in the **Search Results**, you can do the following after clicking **Edit**:
 
 * **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
@@ -231,7 +227,7 @@ A message is displayed to indicate the discoverability of the asset and the disc
 
 The **Validated** property can be assigned to a data source or a dataset to indicate, for example, that it has been qualified and is a reliable asset. You can turn it on and off by clicking the **Validate** toggle. A validated data source or dataset is indicated by the validation shield on the data source details screen and also in the search results pane.
 
-Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before not-validated assets in the results. The weigting of the validation property is also cumulative for a data souce and the consituent datasets. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, the search results will list this higher than a dataset of the same name that is not **Validated** in a **Validated** data source.
+Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before unvalidated assets in the results. 
 
 ## 7 Deleting a Data Source {#delete-data-source}
 

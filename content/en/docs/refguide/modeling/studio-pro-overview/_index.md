@@ -113,7 +113,7 @@ There are alternative ways to navigate between tabs within panes:
 
 Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
-##### 7.1.1.2 Editors Only
+##### 7.1.1.2 Editors Only {#editors-only}
 
 The following key combinations work in the editors, such as the Domain Model, Pages, Workflows, Microflow, or Navigation editor.
 
@@ -128,6 +128,8 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
 | <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>-</kbd> | Zooms in or out. |
 | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Copy the inline styles, classes, and design properties of a widget. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> | Paste the widget styling onto another selected widget. |
 
 ##### 7.1.1.3 Panes Only
 

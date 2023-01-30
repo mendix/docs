@@ -48,7 +48,7 @@ Back to the Heap. We can divide it into three parts:
 2. Survivor Space (young generation)
 3. Tenured Generation (old generation)
 
-When the GC executes a minor garbage collection it will try to clean up all the objects in the young generation only. If it fails to clean up an Eden Space object it will move it to the Survivor Space. If it fails to clean up a Survivor Space object enough times, it will move it to the Tenured Generation. If the Tenured Generation grows large enough (around 60% of the total space available to the Heap) it will execute a major garbage collection and try to clean up all the objects in both the young and the old generation. So a healthy JVM would have a Heap that goes up and down in relation to its memory usage in the various parts.
+When the GC executes a minor garbage collection it will try to clean up all the objects in the young generation only. If it fails to clean up an Eden Space object it will move it to the Survivor Space. If it fails to clean up a Survivor Space object enough times, it will move it to the Tenured Generation. At some time, the GC will decide to clean the Tenured Generation and will execute a major garbage collection to try to clean up all the objects in both the young and the old generation. So a healthy JVM would have a Heap that goes up and down in relation to its memory usage in the various parts.
 
 You can see this quite well in the following JVM Object Heap graph taken from the Mendix Cloud:
 

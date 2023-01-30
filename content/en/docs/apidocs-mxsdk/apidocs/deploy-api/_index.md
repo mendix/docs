@@ -646,13 +646,15 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). |
-| 400 | INVALID_RUNTIME_VERSION | This Runtime version is not supported on this environment. (For Mendix Cloud v4, using a Mendix version of 6 or newer is required.) |
+| 400 | INVALID_RUNTIME_VERSION | This Runtime version is not supported on this environment. |
 | 403 | NO_ACCESS | You do not have access |
 | 403 | TRANSPORT_NOT_ALLOWED | No access to transport to environment 'mode'. |
 | 403 | APP_IS_RUNNING | The 'mode' environment of 'app id' must be stopped to do transport. |
+| 403 | NOT ALLOWED | Cannot transport - MDA processing failed, try uploading again with a valid MDA. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | PACKAGE_NOT_FOUND | Package not found. |
 | 500 | PACKAGE_PARSE_FAILED | Failed to parse deployment package file. |
+| 503 | SERVICE UNAVAILABLE | Cannot transport - MDA is still being processed, retry later |
 
 ### 3.12 Clean environment
 

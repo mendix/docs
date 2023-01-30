@@ -11,8 +11,8 @@ tags: ["AppDynamics", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 [AppDynamics](https://www.appdynamics.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to AppDynamics to provide additional monitoring.
 
-{{% alert color="warning" %}}
-AppDynamics is not supported in the deprecated Mendix Cloud v3. For support on other cloud deployment options such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
+{{% alert color="info" %}}
+For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -100,9 +100,16 @@ To send your runtime information to AppDynamics, you need to set it up using env
 
     {{% alert color="warning" %}}Your app must be **redeployed** before it is started as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to AppDynamics.{{% /alert %}}
 
-## 4 Additional Information{#additional-info}
+## 4 Multi-instance metrics{#multi-instance-metrics}
 
-### 4.1 AppDynamics Default Values
+You can view metrics for multiple instances of an application on the AppDynamics Controller.
+
+* To see combined metrics values for all the instances together, you should use the [Metric Browser](https://docs.appdynamics.com/appd/22.x/latest/en/appdynamics-essentials/metrics-and-graphs/metric-browser) (by default `tier name = environment ID`) and navigate to `Application Infrastructure Performance/<tier name>/Custom Metrics/Mx Runtime Statistics`.
+* AppDynamics Nodes are associated with Mendix application instances. To observe metrics for specific instance (node) you should navigate in Metric Browser to `Application Infrastructure Performance/<tier name>/Individual Nodes/<node name>/Custom Metrics/Mx Runtime Statistics`.
+
+## 5 Additional Information{#additional-info}
+
+### 5.1 AppDynamics Default Values
 
 Mendix provides default values for most of the AppDynamics environment variables. However, the following variables cannot be defaulted and if any of the following environment variables are set for your app, you will need to provide all of them:
 
@@ -110,14 +117,14 @@ Mendix provides default values for most of the AppDynamics environment variables
 * APPDYNAMICS_AGENT_ACCOUNT_NAME
 * APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
 
-### 4.2 Tagging AppDynamics Metrics
+### 5.2 Tagging AppDynamics Metrics
 
 Mendix does not send additional tags to AppDynamics to indicate Resource, Microflow, or Activity names. It is also not possible to add custom tags to the metrics you send to AppDynamics.
 
-### 4.3 AppDynamics Issues
+### 5.3 AppDynamics Issues
 
 If you have any issues related to accessing AppDynamics, please contact their support here: [Support | AppDynamics](https://help.appdynamics.com/hc/en-us/requests/). You will need an AppDynamics account to request support.
 
-## 5 Read More
+## 6 Read More
 
 * [Metrics](/developerportal/operate/metrics/)

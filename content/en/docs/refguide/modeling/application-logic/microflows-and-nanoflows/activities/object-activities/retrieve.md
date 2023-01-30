@@ -139,4 +139,4 @@ However, there is the risk of creating an infinite loop if the retrieve activity
 
 ## 6 Read More
 
-* [Extract and Use Sub-Microflows](/howto/logic-business-rules/extract-and-use-sub-microflows/)
+* [Extracting and Using Sub-Microflows](/refguide/extracting-and-using-sub-microflows/)

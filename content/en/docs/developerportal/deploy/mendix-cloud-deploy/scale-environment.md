@@ -22,7 +22,7 @@ Before Mendix version 9.12.0, [Scheduled events](/refguide/scheduled-events/) ar
 
 This how-to will teach you how to do the following:
 
-* Scale your environment in Mendix Cloud
+* Scale your environment in the Mendix Cloud
 
 ## 2 Prerequisites
 

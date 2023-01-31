@@ -101,7 +101,7 @@ The steps described below are required for the following use cases:
 
 * If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
 * If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
 
 If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
@@ -137,7 +137,7 @@ The steps described below are required for the following use cases:
 
 * If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
 * If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
 
 If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}
@@ -165,7 +165,7 @@ The steps described below are required for the following use cases:
 
 * If you are implementing the [AWS S3 connector](/appstore/connectors/aws/aws-s3-connector/)
 * If you are building your own connector 
-* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own authentication microflows. 
+* If you want to implement a [community-supported connector](/appstore/general/app-store-content-support/#category) that does not come with its own exposed microflow action that includes handling authentication. 
 
 If you want to use the AWS Authentication connector with an existing [platform-supported AWS connector](/appstore/aws-connectors/) other than the AWS S3 connector, skip this procedure and refer to the documentation of the connector that you want to use.
 {{% /alert %}}

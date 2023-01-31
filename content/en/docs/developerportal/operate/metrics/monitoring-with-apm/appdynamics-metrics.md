@@ -2,14 +2,14 @@
 title: "AppDynamics for the Mendix Cloud"
 url: /developerportal/operate/appdynamics-metrics/
 weight: 10
-description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with AppDynamics."
-tags: ["AppDynamics", "Mendix Cloud", "v4", "monitoring", "analysis"]
+description: "How to configure the Mendix Cloud to enable monitoring and analysis with AppDynamics."
+tags: ["AppDynamics", "Mendix Cloud", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-[AppDynamics](https://www.appdynamics.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to AppDynamics to provide additional monitoring.
+[AppDynamics](https://www.appdynamics.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud app to send data to AppDynamics to provide additional monitoring.
 
 {{% alert color="info" %}}
 For support on other cloud deployment options, such as Private Cloud, refer to their dedicated [documentation pages](/developerportal/deploy/private-cloud-monitor/).

@@ -105,7 +105,7 @@ For each Sprint, the following options are provided via the menu button on the r
 
 ### 2.6  Story Actions {#story-actions}
 
-When you select a story, you can perform the following actions:
+When you select a story via the check box, you can perform the following actions:
 
 {{< figure src="/attachments/developerportal/collaborate/stories/story-context-menu.png" >}}
 

@@ -241,9 +241,9 @@ The information shows here is labeled to help you. The indicators in the environ
 
 There are three additional actions you can take while looking at the deployment package details:
 
-* **Expand to view build output** – shows the output from the Mendix build
-* **Download Package** – allows you to download the deployment package and save it locally
-* **Delete Package** – deletes the deployment package – you will be asked to confirm this action. If the deployment package is in locked state, it can't be deleted.
+* **Expand to view build output** – shows the output from the Mendix build.
+* **Download Package** – allows you to download the deployment package and save it locally.
+* **Delete Package** – deletes the deployment package. You will be asked to confirm this action. If the deployment package is in a locked state, it cannot be deleted.
 
 #### 4.1.5 Deploy
 

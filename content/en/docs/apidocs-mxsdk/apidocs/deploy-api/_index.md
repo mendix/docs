@@ -1062,11 +1062,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 []
 ```
 
-### 3.19 Download Archived Logs for a Specific Date
+### 3.19 Download App Logs for a Specific Date
 
 #### 3.19.1 Description
 
-Downloads archived logs for a specific date.
+Downloads app logs for a specific date.
 
 ```bash
 HTTP Method: GET

@@ -76,6 +76,10 @@ Before you can create an environment, you will need to create a deployment packa
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
+8. Once the deployment package is created, you will initially see an **unlock** image before the **Details** button. This tells that the created deployment package is not deployed in any environment yet. If you want to use a deployment package for future use, you can lock the deployment package by pressing on lock button. This will ensure that the locked deployment packages cant be deleted until unlocked again. All existing deployment packages, currently deployed in existing environments will be locked by default.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/lock.png" >}}
+
 {{% alert color="info" %}}
 Alternatively, you can upload an existing MDA by clicking **Upload**.
 {{% /alert %}}
@@ -239,7 +243,7 @@ There are three additional actions you can take while looking at the deployment 
 
 * **Expand to view build output** – shows the output from the Mendix build
 * **Download Package** – allows you to download the deployment package and save it locally
-* **Delete Package** – deletes the deployment package – you will be asked to confirm this action
+* **Delete Package** – deletes the deployment package – you will be asked to confirm this action. If the deployment package is in locked state, it cant be deleted.
 
 #### 4.1.5 Deploy
 

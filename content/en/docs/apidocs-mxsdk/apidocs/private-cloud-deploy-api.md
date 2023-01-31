@@ -94,7 +94,7 @@ The following steps will create a cluster, create a namespace, and create an env
 1. Create a `DeploymentPackage` in the Private Cloud Portal.
 
     {{% alert color="info" %}}This step must currently be performed manually. We will release a Build API later, to address this limitation.{{% /alert %}}
-1. Prepare a manifest for your new environment. Either use the model in the OpenAPI spec file or get the manifest of an existing environment (by calling `GET /apps/{appId}/environments/{environmentId}`, for example) and change where required. Remember to use the `{clusterID}` and `{namespace}` values for the `provider` using the cluster and namespace you have just created, and use the deployment package you have just created as the `packageId`.
+1. Prepare a manifest for your new environment. Either use the model in the OpenAPI spec file or get the manifest of an existing environment (by calling `GET /apps/{appId}/environments/{environmentId}`, for example) and change where required. Remember to use the `{clusterID}` and `{namespace}` values for the `provider` using the cluster and namespace you have just created, and use the id of the deployment package you have just created as the `packageId`.
 1. Make the API call `POST /apps/{appId}/environments` using the environment manifest to create a new environment. 
 1. Verify that the job is successful, as before.
 1. Now you can access the `appURL` which is returned from `GET /apps/{appId}/environments/{environmentId}` of the environment and, assuming everything was configure properly, you should see the application.

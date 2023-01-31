@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### February 1st, 2023
+
+#### Portal Improvements
+
+* We have replaced with deployment package name with the package id.
+* We now provide the feature to lock/unlock the deployment package in the environment overview page.
+
+
 ### January 26th, 2023
 
 #### Mendix Operator v2.10.1{#2.10.1}

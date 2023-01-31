@@ -13,67 +13,48 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Cloud version 3 has been deprecated and will be turned off shortly. This document explains how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node.
+This document explains how to migrate your app from one type of cloud to another. For example, you may decide to migrate your app from a private cloud environment to Mendix public cloud.
 
-**It will teach you how to do the following:**
+It will teach you how to do the following:
 
-* Migrate your licensed app from Mendix Cloud v3 to v4
+* Migrate your licensed app between different cloud environments
 
 ## 2 Migration considerations
 
 {{% alert color="warning" %}}
-Do not upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you do choose to upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4, Mendix Support will not be able to assist you.
+Do not upgrade your runtime version at the same time as migrating your app. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you do choose to upgrade your runtime version at the same time as migrating your app, Mendix Support will not be able to assist you.
 
-If you need to upgrade your runtime version, ensure that it is fully tested in Cloud V3 before attempting to migrate to Cloud v4.
+If you need to upgrade your runtime version, ensure that it is fully tested and ready before attempting to migrate.
 {{% /alert %}}
 
-You will need to take the following into account when migrating to Mendix Cloud v4:
+You will need to take the following into account when migrating to a different cloud:
 
 * If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](/developerportal/deploy/sending-email/)
 * If you use an FTP server in your app, you will need to use a third-party FTP provider
 * If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/) instead
 
-To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
-
-### 2.1 Other Differences Between Mendix Cloud v3 and v4
-
-There are a few other differences between the way you develop and deploy apps in Mendix Cloud v4 and Mendix Cloud v3:
-
-* In Mendix Cloud v4, the debugger is always active, and does not have to be activated – the **Show Debugger Information** button shows the credentials to connect Mendix Studio Pro to the debugger
-    {{% alert color="info" %}}You can only use the debugger if your app is scaled to a single instance.{{% /alert %}}
-* In Mendix Cloud v4, the number of permitted database connections is tied to the RAM of the database environment, rather than being static.
-    * The limit is roughly 100 connections per GB of database RAM – the defaults are perfectly fine for most situations, but you can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up for each runtime instance.
-* In Mendix Cloud v4, there are some circumstances in which your app can run out of file connections
-    * The default number of file connections is 50, but this can be increased and you may need to ensure that file connections are not being held open unnecessarily – see the [Other Considerations](/developerportal/deploy/mxcloudv4/#other-considerations) section of *Mendix Cloud v4* for further advice
-* In Mendix Cloud v4, there are some monitoring features which are available in v3 which are not currently available – in particular:
-    * Archived logs can only be downloaded, not viewed in the browser
-    * The database status is not visible on the node details screen
-* Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
-    * If you have external clients connecting *to* your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
-* In Mendix Cloud v4, the disk space available to your app in the runtime container is separate from the file storage and generally less than 3 GB. This has an impact on the possibilities for custom Java code, which is run on the runtime containers. When manipulating large files with custom Java code which creates temporary files, you can run into this disk size limitation. This means you might have to change your application logic to process multiple smaller files with Java code instead of using one large file, so that temporary files are garbage collected as you go along.
-
 ## 3 Prerequisites
 
-There are two methods of doing the migration. For both of them you first need to ensure that your app is on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts/) version of Mendix version 7.
+There are two methods of doing the migration. For both of them you first need to ensure that your app is on a supported version of Mendix, Mendix version 7.0 and above. For the best level of support, we recommend that you use version 7.23 which is the [long term support](/releasenotes/studio-pro/lts-mts/) version of Mendix version 7.
 
 For further prerequisites see the sections below.
 
 ## 4 Using the Migration Tool
 
-Mendix has written a migration tool to help you transfer your data from your v3 app to a new v4 environment. It also switches to your new environment for you when it is ready to go.
+Mendix has written a migration tool to help you transfer your data from your app to a new environment. It also switches to your new environment for you when it is ready to go.
 
-We strongly advise you to use this method to migrate your app to Mendix Cloud v4 as it makes the migration much easier to initiate and monitor. We also suggest that you perform a [final migration](#final-migration) of your `production` environment only after you have successfully migrated the lower environments, for example `test` and `acceptance`. This will help to find out any potential issues beforehand.
+We strongly advise you to use this method to migrate your app as it makes the migration much easier to initiate and monitor. We also suggest that you perform a [final migration](#final-migration) of your `production` environment only after you have successfully migrated the lower environments, for example `test` and `acceptance`. This will help to find out any potential issues beforehand.
 
-The flow below shows the stages of using the migration tool, and an indication of the status of the app in both the original, Mendix Cloud v3, environment and the new Mendix Cloud v4 environment at each stage.
+The flow below shows the stages of using the migration tool, and an indication of the status of the app in both the original environment and the new environment at each stage.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migration-process-overview.png" alt="Overview of Migration Process"   width="66%"  >}}
 
 ### 4.1 Prerequisites
 
-To migrate your app from Mendix Cloud v3 to Mendix Cloud v4, you need the following prerequisites:
+To migrate your app, you need the following prerequisites:
 
-* Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) v4 node available. This **must have the subdomain name `<current-app-name>-v4`**. To request a licensed v4 Cloud Node, use the [Request New App Node](https://newnode.mendix.com/) app. In most cases, the node will have the same environments as the v3 app you are migrating
+* Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available. This must have the subdomain name `<current-app-name>-v4`. To request a licensed Cloud Node, use the [Request New App Node](https://newnode.mendix.com/) app.
 * You should have the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 
 ### 4.2 Preparing the New Environment

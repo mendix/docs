@@ -87,7 +87,7 @@ Each environment can only run a single version of an app. Additionally, all the 
 
 ### 1.3 Flexible Environments {#flexible-environments}
 
-If the standard environments that you get with a licensed app are not sufficient for your requirements, you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
+If the standard environments that you get with a licensed app are not sufficient for your requirements, you can request a Mendix Cloud node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
 ### 1.4 Database
 

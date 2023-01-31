@@ -1,9 +1,9 @@
 ---
-title: "Trends in Mendix Cloud v4"
+title: "Trends in the Mendix Cloud"
 url: /developerportal/operate/trends-v4/
 weight: 10
-description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
-tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
+description: "Describes how to interpret various graphs and trends in the Mendix Cloud."
+tags: ["Trends","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal.
@@ -12,10 +12,6 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 ## 1 Introduction
 
 To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
-
-{{% alert color="info" %}}
-If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
-{{% /alert %}}
 
 ## 2 Access to Monitoring Trends
 
@@ -423,7 +419,7 @@ The **Database IOPS burst balance** graph shows the number of IOPS credits accru
 
 {{< figure src="/attachments/developerportal/operate/metrics/trends-v4/db-burst-balance.png" >}}
 
-Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
+Apps running on the Mendix Cloud use AWS databases to store their data. These databases are **burstable**, which means that it has a specified performance baseline. See the AWS document [Overview of Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html) for more information.
 
 Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when it is idle), the unspent IOPS credits are accrued until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
 
@@ -438,5 +434,5 @@ For more information, see the *AWS Database blog* [Understanding Burst vs. Basel
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4/)
+* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
+* [Mendix Cloud - FAQ](/developerportal/deploy/mxcloudv4/)

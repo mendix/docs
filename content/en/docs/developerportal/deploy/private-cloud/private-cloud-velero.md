@@ -3,7 +3,7 @@ title: "Use Velero to Back Up Private Cloud Namespaces"
 linktitle: "Use Velero to Back Up Namespaces"
 url: /developerportal/deploy/private-cloud-velero/
 description: "Describes the process for using Velero to create and restore backups of your Mendix app namespaces in private cloud"
-weight: 20
+weight: 25
 tags: ["Deploy", "Private Cloud", "Backup", "Velero", "Kubernetes"]
 ---
 
@@ -45,6 +45,7 @@ To create a backup with Velero, follow these steps:
     ``` 
 
     {{% alert color="info" %}}The above command creates a backup of all your namespaces with the name *mendix-velero-bkp*. If you only want to back up a specific namespace, use the `include-namespace` flag.{{% /alert %}}
+
 3. Verify that the backup is complete by entering the following command:
 
     ```text {linenos=false}
@@ -56,6 +57,7 @@ To create a backup with Velero, follow these steps:
     ```text {linenos=table}
     kubectl scale deployment mendix-agent --replicas=1
     kubectl scale deployment mendix-operator --replicas=1
+    ```
 
 ## 4 Restoring a Velero Backup
 
@@ -68,6 +70,7 @@ To restore a backup that you created with Velero, follow these steps:
     ```
 
     {{% alert color="warning" %}}As a best practice, it is recommended to restore all resources, as in the above example. Restoring only specific resources can result in unpredictable behavior. However, if you only want to restore a specific Kubernetes resource, use the `--status-include-resources flag`, for example, `--status-include-resources=storageinstances.privatecloud.mendix.com`.{{% /alert %}}
+
 2. After the app has started and created the database, [restore a backup](/developerportal/deploy/private-cloud-data-transfer/) of your database and S3 files.
 3. Optional: After restoring the backup, add finalizers to `StorageInstances` by entering the following command:
 

@@ -850,7 +850,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.15 Scaling Environments 
+### 3.15 Scaling Environments
 
 #### 3.15.1 Description
 
@@ -892,7 +892,8 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | --- | --- | --- |
 | 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact Support to upgrade your plan. |
 | 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024 MB.|
-| 400 | NOT_ALLOWED | Scaling is only available for licensed apps using a supported version of Mendix. |
+| 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
+| 400 | NOT_ALLOWED| Scaling is only available for licensed apps using a supported version of Mendix. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**
@@ -911,7 +912,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.16 Create Environment Tags 
+### 3.16 Create Environment Tags
 
 #### 3.16.1 Description
 
@@ -963,7 +964,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.17 Retrieve Environment Tags 
+### 3.17 Retrieve Environment Tags
 
 #### 3.17.1 Description
 
@@ -1009,7 +1010,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.18 Delete Environment Tags 
+### 3.18 Delete Environment Tags
 
 #### 3.18.1 Description
 
@@ -1061,7 +1062,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 []
 ```
 
-### 3.19 Download Archived Logs for a Specific Date 
+### 3.19 Download Archived Logs for a Specific Date
 
 #### 3.19.1 Description
 

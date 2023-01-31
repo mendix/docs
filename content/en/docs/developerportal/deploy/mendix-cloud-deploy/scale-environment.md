@@ -1,9 +1,9 @@
 ---
-title: "Scaling Your Environment in Mendix Cloud v4"
-linktitle: "Scaling in Cloud v4"
+title: "Scaling Your Environment in Mendix Cloud"
+linktitle: "Scaling in the Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
-weight: 20
-description: "Describes how to scale your environments in Mendix Cloud v4."
+weight: 25
+description: "Describes how to scale your environments in the Mendix Cloud."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -14,35 +14,30 @@ Licensed apps in the Mendix Cloud can be scaled in various ways.
 
 Memory can be added to the application container. This is called *vertical scaling*.
 
-Apps can be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances. [Scheduled events](/refguide/scheduled-events/) will always be run on the first instance. This is called *horizontal scaling*.
+Apps built using supported versions of Mendix can be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances. This is called *horizontal scaling*.
 
-The scaling options on possible cloud versions are the following:
-
-| Cloud Version | Scaling Options | Limitations |
-| ------------- | --------------- | ----------- |
-| Mendix Cloud v4 | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
+{{% alert color="info" %}}
+Before Mendix version 9.12.0, [Scheduled events](/refguide/scheduled-events/) are always run on the first instance if there are multiple instances.
+{{% /alert %}}
 
 This how-to will teach you how to do the following:
 
-* Scale your environment in Mendix Cloud v4
+* Scale your environment in the Mendix Cloud
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a licensed app hosted in Mendix Cloud v4
-* The Mendix version of the app is Mendix 7.0 or above
+* Have a licensed app hosted in the Mendix Cloud
 * Have a plan which provides more than 1GiB of memory
 
 {{% alert color="info" %}}
-You can find the cloud version on which your app is hosted in the environment details: see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region/).
-
-Details of your plan are also displayed on the environment details page.
+Details of your plan are displayed on the environment details page.
 {{% /alert %}}
 
 ## 3 Scaling Your Environment
 
-If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
+If you want to scale your licensed app in the Mendix Cloud, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
 
@@ -60,7 +55,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
 7. Click **Apply**. This will restart your environment to apply the changes.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/scale-environment/scale.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" >}}
 
 ## 4 Examples
 
@@ -76,14 +71,14 @@ You don't need to allocate all the plan memory at once. You can just allocate pa
 
 For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your plan will be unused.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/scale-environment/scaling.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scaling.png" >}}
 
 ## 5 Read More
 
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
+* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [Mendix Cloud v4](/developerportal/deploy/mxcloudv4/)
+* [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
 * [App Roles](/developerportal/collaborate/app-roles/)
 * [Node Permissions](/developerportal/deploy/node-permissions/)

@@ -66,15 +66,11 @@ Here you can review the feedback and start any necessary investigation.
 
 {{< figure src="/attachments/developerportal/collaborate/feedback/feedback-no-details.png" >}}
 
-You can also click **Details** for technical details of the feedback item:
-
-{{< figure src="/attachments/developerportal/collaborate/feedback/feedback-details.png" >}}
+You can also click **Details** for technical details of the feedback item.
 
 On the item's details page, you can also **Turn email updates on/off**. This is useful for when you comment on a feedback item and perform further [processing](#processing) actions on it.
 
 In the **Leave a comment** box, you can post a comment and start an exchange with the App User or team member who submitted the feedback. This is a good place to ask for clarification. You can also use the **Add:** icons to attach files to your comment.
-
-{{< figure src="/attachments/developerportal/collaborate/feedback/comment.png" >}}
 
 ### 4.2 Processing a Feedback Item {#processing}
 
@@ -94,8 +90,6 @@ If the feedback applies to a different app, you can select an app where you are 
 {{< figure src="/attachments/developerportal/collaborate/feedback/move-feedback.png" >}}
 
 Finally, you can click **Delete feedback** to delete the item. This action will remove all the associated messages as well. Note that this action cannot be performed if the item has been accepted, and cannot be undone.
-
-{{< figure src="/attachments/developerportal/collaborate/feedback/delete-feedback.png" >}}
 
 ### 4.3 Adding a Feedback Item to Your Backlog {#adding}
 

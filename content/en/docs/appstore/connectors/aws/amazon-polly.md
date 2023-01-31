@@ -121,9 +121,36 @@ Constants are used to define configuration values. All activities are exported a
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-| Name | Description |
+#### 3.4.1 Voice {#voice}
+
+The `Voice` entity is a representation of an Amazon Polly voice. It contains the unique identifier for a voice (`VoiceID`) that is required for `SynthesizeSpeech` activities. It also contains additional information on a voice like the name, language and gender.
+
+| Attribute | Description |
 | --- | --- |
-| `Voice` | The Voice entity is a representation of an Amazon Polly voice. It contains the unique identifier for a voice (`VoiceID`) that is required for `SynthesizeSpeech` activities. It also contains additional information on a voice like the name, language and gender. |
+| `VoiceID` | ID assigned by Amazon Polly that is specified when calling the [SynthesizeSpeech](#synthesize-speech) action (string)|
+| `Name` | Name of the voice (string)|
+| `LanguageName` | Name of the language in English (string)|
+| `LanguageCode` | The language code of the voice (string)|
+| `Gender` | Gender of the voice. (string)|
+
+
+#### 3.4.2 DescribeVoicesResponse
+
+The `DescribeVoicesResponse` entity is the response for the [DescribeVoices](#describe-voices) action. The action also returns a list of `DescribeVoice` objects associated with the `DescribeVoicesResponse` object. The `DescribeVoice` entity inherits from the voice entity and contains all its attributes. For more information on the attributes, see [Voice](#voice).
+
+#### 3.4.3 SynthesizeSpeechRequest
+
+The `SynthesizeSpeechRequest` entity is used when calling the [SynthesizeSpeech](#synthesize-speech) action. 
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Text to synthesize (string)|
+| `TextType` | It is used to specify whether the input text is plain text or SSML. If left empty, the default value is 'plain text' (enum)|
+| `OutputFormat` | The format that the output should be encoded (enum)|
+| `SampleRate` | The sample rate for speech syhthesis (string)|
+| `Engine` | The engine that will be used during speech synthesis (enum)|
+| `VoiceID` | The ID of the voice (string)|
+| `LanguageCode` | The language code of the voice (string)|
 
 ### 3.5 Enumerations
 

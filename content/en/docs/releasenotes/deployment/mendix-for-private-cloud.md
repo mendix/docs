@@ -17,8 +17,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We have added an additional field *package id* in the deployment package details which represents the id for deployment package.
-* We now provide the feature to lock/unlock the deployment package in the environment overview page.
+* We have added the **Package ID** field to display the ID of a deployment package in the deployment package details.
+* We now provide the feature to lock or unlock the deployment package in the environment **Overview** page.
 
 
 ### January 26th, 2023

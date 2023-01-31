@@ -126,22 +126,20 @@ When you click a story title, the story details page opens:
 
 On this page, you can perform a number of actions:
 
-* Change the **Title** or **Description** by clicking it
+* Change the title by clicking the pencil icon
 * Add or remove **Labels**
-* See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
-* Assign a team member to work on the story
-* Change the **Story points**
+* Update the **Description** via **Edit Description**
 * View, add, and manage the **Tasks** of the story (you can mark them as **Done** by selecting the check box in front of the task)
 * Leave **Comments** on the story to collaborate with your team
-
-You can also do this following on this page:
-
-* **Move** a story to a different app or Sprint (for details, see the [Moving Stories](#move-stories) section below)
-* **Duplicate** a story and its tasks, story points, status, and labels into a new user story
+* VIew the **History** of changes to the story in the form of **Activities**
+* See the story's status and update it via the drop-down menu (available statuses are **To-do**, **Running**, and **Done**)
+* Update the assignee of the story via the drop-down menu
+* Update the story points via the drop-down menu
+* **Move Story** to a different app or Sprint (for details, see the [Moving Stories](#move-stories) section below)
+* **Duplicate** the story and its tasks, story points, status, and labels into a new user story
 * View the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](/developerportal/collaborate/feedback/#adding) section of *Feedback Management*)
 * View the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog/#stories) tab of the **Commit** dialog box in Studio Pro)
 * **Change to Bug** to toggle the story type between **Bug** and **Feature** (by default, a story is created as a **Feature**)
-* Click **History** to view the history of changes to the story
 * **Delete** the story
 
 #### 2.6.2 Moving a Story {#move-stories}
@@ -181,7 +179,7 @@ Changing the status of a story or updating story points automatically synchroniz
 
 ## 3 Board
 
-On the **Board** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. There is also a percentage bar of the stories that are done and the deadline date of the current Sprint:
+On the **Board** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. The stories are categorized in the **To-Do**, **Running**, and **Done** sections according to their status.
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 

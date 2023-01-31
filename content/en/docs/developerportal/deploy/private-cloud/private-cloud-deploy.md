@@ -76,7 +76,7 @@ Before you can create an environment, you will need to create a deployment packa
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
-8. Once the deployment package is created, you will initially see an **unlock** image before the **Details** button. This tells that the created deployment package is not deployed in any environment yet. If you want to use a deployment package for future use, you can lock the deployment package by pressing on lock button. This will ensure that the locked deployment packages can't be deleted until unlocked again. All existing deployment packages, currently deployed in existing environments will be locked by default.
+8. Once the deployment package is created, an **Unlock** icon is displayed by the **Details** button. This indicates that the created deployment package is not deployed in any environment yet. If you want to save a deployment package for future use, you can lock the deployment package by clicking the **Lock** button. This ensures that the locked deployment packages cannot be deleted until unlocked again. All deployment packages that are currently deployed in existing environments are locked by default.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/lock.png" >}}
 

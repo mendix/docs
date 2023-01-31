@@ -33,7 +33,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/#sprint-status) page.
+* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/) page.
 
 ### December 13th, 2022
 

@@ -224,4 +224,8 @@ The `SynthesizeSpeech` activity has no return value, instead the input parameter
 The `DescribeVoices` activity returns the list of voices from the Amazon Polly service. It requires an `AWS_Region` parameter to get the list of supported voices from the given AWS region.
 The voices can be used in the `Synthesize Speech` activity to synthesize a piece of text to speech with the right voice. 
 
-The `DescribeVoices` activity returns a `DescribeVoicesResponse` entity containing a list of `DescribeVoice` entities.
+The `DescribeVoices` activity returns a `DescribeVoicesResponse` entity containing a list of `DescribeVoice` entities. Examples of the returned `DescribeVoice` objects can be seen below. 
+
+ {{< figure src="/attachments/appstore/connectors/aws-polly/polly-example-voices.png" alt="Examples of available voices for Amazon Polly">}}
+
+For more Amazon Polly voices and their information, see [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html).

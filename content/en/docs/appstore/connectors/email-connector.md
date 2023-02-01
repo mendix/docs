@@ -216,14 +216,16 @@ When duplicating this microflow, do not change the input parameter name and data
     Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
 
     {{% alert color="warning" %}}When duplicating this microflow, do not change input parameters’ name and data type.{{% /alert %}}
+    
+#### 4.5.1 Enabling Subscription in Email Settings
 
-{{% alert color="info" %}}
-Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
-{{% /alert %}}
 
-{{% alert color="info" %}}
-The subscription to new emails will only work if email account is configured with IMAP/S protocol and if the email server supports notifications. The subscription will end if the app is stopped. To subscribe again in between app restarts, register the **Sample_ASU_SubscribeForEmailNotification** microflow in the **After Startup** option. 
-{{% /alert %}}
+
+#### 4.5.2 Additional Considerations 
+
+* Before subscribing to incoming email, it is recommended to attempt to unsubscribe from incoming email so that application will not end up having duplicate subscription for a single email account. The complete flow of subscription is shown in the microflow **SUB_EmailAccount_SubscribeForEmailNotification**.
+
+* The subscription to new emails will only work if email account is configured with IMAP/S protocol and if the email server supports notifications. The subscription will end if the app is stopped. To subscribe again in between app restarts, register the **Sample_ASU_SubscribeForEmailNotification** microflow in the **After Startup** option. 
 
 ### 4.6 Unsubscribing from Incoming Email
 

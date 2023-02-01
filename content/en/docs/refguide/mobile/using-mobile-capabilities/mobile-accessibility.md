@@ -22,29 +22,29 @@ Before starting this guide, make sure you have completed the following prerequis
 
 # 3 Setting up Accessibility for Mendix Native Widgets
 
-Mendix tries to provide accessible widgets by default when it is possible and also allows provides configurable properties to customize the accessibility experience.
+Mendix provides accessible widgets by default when possible, and also provides configurable properties to customize the accessibility experience.
 
 ### 3.1  Accessibility Properties
 
 ### 3.1.1 Accessible
 
-When `true`, indicates that the view is an accessibility element and if it is set to `false`, the screen reader will avoid it. Most of the widgets have accessible property `true` by default.
+When `true`, indicates that the view is an accessibility element. If is set to `false`, the screen reader will avoid it. Most widgets have the accessible property set to `true` by default.
 
 ### 3.1.2 Screen Reader Caption
 
-This caption doesn't appear on the screen but it lets the screen readers audibly describe onscreen elements, making navigation easier for people with visual disabilities. 
+This caption does not appear on the screen, but it lets screen readers audibly describe on-screen elements making navigation easier for people with visual disabilities. 
 
 ### 3.1.3 Screen Reader Hint
 
-A screen reader hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. Hints are being announced by screen readers after the captions.
+A screen reader hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. Hints are announced by screen readers after the captions.
 
 {{% alert color="info" %}}
-For iOS, users can disable/enable hints through the device's VoiceOver settings. For Android, hints cannot be turned off.
+For iOS, users can enable or disable hints through the device's VoiceOver settings. For Android, hints cannot be turned off.
 {{% /alert %}}
 
-## 3.2 Example: setting up accessibility for Button
+## 3.2 Example: Setting up Accessibility for the Button Widget
 
-Button is accessible by default and the screen reader caption will match button caption by default. We can override that through buttons properties:
+The native Button widget is accessible by default and the screen reader caption will match the button's caption by default. You can override that through the button's properties:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/mobile-accessibility/buttonAccessibility.png" alt="accessible button"   width="400"  >}}
 
@@ -79,7 +79,7 @@ React native documentation has a helpful [accessibility document](https://reactn
 | Property | Usage                                                                                                                                                                              | Platform         |
 |----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
 | accessible| When true, indicates that the view is an accessibility element. When a view is an accessibility element, it groups its children into a single selectable component.                | Android and iOS  |
-|accessibilityLabel| string that lets the screen readers audibly describe onscreen elements, making navigation easier for people with visual disabilities.                                              | Android and iOS  |
+|accessibilityLabel| string that lets the screen readers audibly describe on-screen elements, making navigation easier for people with visual disabilities.                                              | Android and iOS  |
 |accessibilityHint| An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. | Android and iOS  |
 |accessibilityRole| communicates the purpose of a component to the user of an assistive technology.                                                                                                    | Android and iOS  |
 |accessibilityState| Describes the current state of a component to the user of an assistive technology.                                                                                                 | Android and iOS  |

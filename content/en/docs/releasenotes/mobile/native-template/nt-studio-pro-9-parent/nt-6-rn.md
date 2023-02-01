@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* Added multiple maven repos to fall back to in case main repositories are down.
+* We added multiple maven repositories to fall back to in case main repositories are down.
 
 ## 6.3.4
 

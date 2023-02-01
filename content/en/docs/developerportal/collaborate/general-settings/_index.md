@@ -34,7 +34,7 @@ These tabs are only available for users with the **App Settings** permission:
 
 * **Cloud Settings**
 * **API Keys**
-* **Stories**
+* **Project Management**
 * **Webhooks**
 * **History**
 
@@ -44,7 +44,6 @@ In this tab, you can find the following items:
 
 * **Description** of the app
 * **App ID**
-
 * [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) of the app
 * **Danger Zone**
     * **Leave this app**
@@ -101,11 +100,11 @@ After they provide authorization, they will be brought to your deployed app.
 
 ## 4 Cloud Settings {#cloud-settings}
 
-On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
-
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can change cloud platforms.
 {{% /alert %}}
+
+On the **Cloud Settings** tab, you can select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
@@ -116,6 +115,10 @@ Specific steps for configuring different cloud platforms are provided here:
 * [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
 
 ## 5 API Keys {#api-keys}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can manage API keys.
+{{% /alert %}}
 
 In **API Keys**, there is an overview of the API keys created for your app with the following information:
 
@@ -138,17 +141,23 @@ Click **Revoke** to delete an app API key.
 
 ## 6 Project Management {#project-management}
 
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can manage these settings.
+{{% /alert %}}
+
 On the **Project Management** tab, you can select a planning tool for the app. By default [Stories](/developerportal/collaborate/stories/) is the selected tool. If you like, you can switch to [Epics](/developerportal/collaborate/epics/). Once you select a tool, everyone in your team can use the same tool for this app.
 
 {{% alert color="info" %}}It is not yet possible to migrate the data from Stories into Epics, so we recommend you to use Epics for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.{{% /alert %}}
 
 ## 7 Webhooks {#webhooks}
 
-Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
-
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
+
+{{% alert color="info" %}}You will only see the **Webhooks** tab if you have **Mendix Stories** turned on in the [Project Management](#project-management) tab (click **Switch to Mendix Stories** if necessary).{{% /alert %}}
+
+Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png"   width="800"  >}}
 
@@ -171,6 +180,10 @@ For details on the technical configuration of webhooks, see [Webhooks](/apidocs-
 {{% /alert %}}
 
 ## 8 History {#history}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can view the history.
+{{% /alert %}}
 
 The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 

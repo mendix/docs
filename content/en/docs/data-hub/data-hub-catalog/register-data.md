@@ -336,4 +336,4 @@ The following methods are supported by the Data Hub Catalog:
 * **OpenID Connect** – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
 * **Other** – Specify other ways to authenticate, including custom modules
 
-Fill in as many details as you can to ensure that consuming developers can easily authentication themselves to consume your service.
+Fill in as many details as you can to ensure that consuming developers can easily authenticate themselves to consume your service. If you are using a module from the Mendix Marketplace, select it in the **Marketplace Module** field so they know exactly which one to use.

@@ -1079,4 +1079,4 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### Improvement
 
-* It is now possible for you to change the technical contact of your applications by yourself.
+* It is now possible for you to change the Technical Contact of your applications by yourself.

@@ -58,7 +58,7 @@ The Advanced Audit Trail app service is different from the [Audit Trail](/appsto
 
 ### 2.1 Starting a Subscription {#obtain-license-key}
 
-Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trial on the cloud, you need to start a subscription to get a license token and [configure](#configure-license-key) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
+Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail on the cloud, you need to start a subscription to get a license token and [configure](#configure-license-key) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
 
 ### 2.2 Installing the Components in Your app
 

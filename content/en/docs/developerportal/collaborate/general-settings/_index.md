@@ -130,7 +130,7 @@ To create a new app API key, click **Create New API Key**  and follow these step
 1. Fill in the **API key name**.
 2. Click **Generate API Key** to be able to use the app API key.
 
-    {{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.{{% /alert %}}
+{{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.{{% /alert %}}
 
 You use these API keys to authenticate requests to the [Stories API](/apidocs-mxsdk/apidocs/stories-api/).
 

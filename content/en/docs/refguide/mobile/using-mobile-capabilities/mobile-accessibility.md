@@ -86,6 +86,7 @@ Here are some selected properties which you might be particularly interested in:
 |importantForAccessibility| Can be used to control components overlapping in Android and decide which component will fire accessibility events.                                                                 | Android|
 
 The widget's *XML* file can be updated to contain configurations similar to these:
+
 ```xml
 <propertyGroup caption="Accessibilty">
     <property key="accessible" type="boolean" defaultValue="true">

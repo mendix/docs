@@ -28,7 +28,7 @@ The sections below describe the main actions to be performed on the **Overview**
 
 ### 2.1 Creating a New Sprint {#new-sprint}
 
-Click **New Sprint** to open the **Edit Sprint** dialog box and fill in the following details:
+Click **New Sprint** to open the **Edit Sprint** dialog box and filll in the following details:
 
 * **Name** – the name of the Sprint
 * **Sprint comes after** –  where the Sprint should be located in the structure of your **Stories** page
@@ -51,7 +51,7 @@ Each Sprint contains a number of stories that describe the specific functionalit
 * Sprint – select the Sprint for the story from the drop-down menu (**Backlog** is the default; the Sprint you select will be identified under the title of the story as well)
 * **Change to Bug** – by default, the story is created as a  **Feature**; click here to toggle the story type
 
-You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**.
+You can also create a story via the [New Story](#new-story) button for a Sprint or from within a new Sprint by clicking **Add a new story**.
 
 For more information on stories, see the [Story Actions](#story-actions) section below.
 

@@ -596,7 +596,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 #### Improvements
 
-* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
+* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in the Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
 
 ### August 28th, 2020
 
@@ -689,7 +689,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Improvements
 
-* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance) in the *Trends in Mendix Cloud v4* document for more information.
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance) in the *Trends in the Mendix Cloud v4* document for more information.
 * In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
     * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
     * Use different root certificates for each path

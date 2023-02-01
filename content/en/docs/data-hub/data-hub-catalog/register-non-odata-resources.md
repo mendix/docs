@@ -15,7 +15,7 @@ The Data Hub Catalog collects metadata from exposed services and currently suppo
 * [Expose OData via a Mendix app](#use-mendix-app)
 * [Expose OData via a service wrapper (a custom solution)](#use-service-wrapper)
 
-For more detailed explanations applicable to Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, see [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/).
+For further details applicable to Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, see [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/).
 
 ## 2 Expose OData via a Mendix App {#use-mendix-app}
 

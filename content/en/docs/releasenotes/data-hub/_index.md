@@ -11,6 +11,19 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### February 2nd, 2023
+
+#### Improvements
+
+* You can now select relevant App Store/Marketplace module for relevant [authentication](/data-hub/data-hub-catalog/register-data/#authentication) type. 
+
+* See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of 
+*Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+
+#### Fixes
+
+* A permissions check bug causing the failure of the create of an Application via the Registration API PUT Application was fixed.
+
 ### January 12th, 2023
 
 #### Improvements

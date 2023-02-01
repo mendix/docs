@@ -6,7 +6,7 @@ weight: 72
 
 ## 2.28.7
 
-**Release date: January 31rd, 2023**
+**Release date: January 31st, 2023**
 
 ### Fixes
 
@@ -14,11 +14,11 @@ weight: 72
 
 ## 2.28.6
 
-**Release date: January 17rd, 2023**
+**Release date: January 17th, 2023**
 
 ### Fixes
 
-* We fixed a issue when copying a Testcase that has a Data set. Even though the copy has the data set associated, it did not use the data set values.
+* We fixed an issue that occurred when copying a test case that had a data set and even though the copy had the data set associated, it did not use the data set values.
 
 ## 2.28.5
 

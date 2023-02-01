@@ -64,6 +64,8 @@ Take a look at Studio Pro all at once. There is a lot of power here, but it can 
 
 Luckily, it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
+Furthermore, the configuration you see above is completely editable. You can add or remove panes as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+
 ### 3.1 App Structure on the Left
 
 You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
@@ -76,7 +78,7 @@ Look at the bottom dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
 
-Here you will find several panels:
+Here you will find several panes:
 
 * **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal
 * **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
@@ -90,14 +92,12 @@ Look at the right dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" alt="Right Dockable Pane">}}
 
-Here you will find more panels:
+Here you will find more panes:
 
-* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app (you will not use this panel in this guide)
+* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app (you will not use this pane in this guide)
 * **Properties**: displays all the properties of the currently selected context element
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
 * **Connector**: quickly links data to pages⁠—using the connector you could drag an entity into a data view or data grid to quickly display your app’s data on a page
-
-The view you see above is completely editable. You can add or remove panels as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panels by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
 ## 4 Creating Your App's Domain Model
 

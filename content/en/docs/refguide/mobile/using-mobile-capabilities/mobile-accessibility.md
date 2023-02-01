@@ -42,9 +42,9 @@ A screen reader hint helps users understand what will happen when they perform a
 For iOS, users can enable or disable hints through the device's VoiceOver settings. For Android, hints cannot be turned off.
 {{% /alert %}}
 
-## 3.2 Example: Setting up Accessibility for the Button Widget
+## 3.2 Example: Button Widget Accessibility
 
-The native Button widget is accessible by default and the screen reader caption will match the button's caption by default. You can override that through the button's properties:
+The native button widget is accessible by default and the screen reader caption will match the button's caption by default. You can override that through the button's properties:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/mobile-accessibility/buttonAccessibility.png" alt="accessible button"   width="400"  >}}
 
@@ -52,40 +52,40 @@ The native Button widget is accessible by default and the screen reader caption 
 
 ### 3.3.1 Android
 
-To enable TalkBack (Android screen reader), go to the Settings app on your Android device or emulator. Tap Accessibility, then TalkBack. Toggle the "Use service" switch to enable or disable it.
+To enable TalkBack (the Android screen reader), go to the **Settings** app on your Android device or emulator. Tap **Accessibility**, then **TalkBack**. Toggle the **Use service** switch to enable or disable it.
 
 ### 3.3.2 iOS
 
-To enable VoiceOver (iOS screen reader), go to the Settings app on your iOS device (it's not available for simulator). Tap Accessibility. There you will find many tools that people use to make their devices more usable, such as bolder text, increased contrast, and VoiceOver.
+To enable VoiceOver (the iOS screen reader), go to the **Settings** app on your iOS device (it is not available for simulator). Tap **Accessibility**. There you will find many accessibility tools, such as bolder text, increased contrast, and VoiceOver.
 
 ## 3.4 Special Widgets Use Cases
 
 ### 3.4.1 Container
 
-If a container is accessible, it groups its children into a single selectable element. By default containers are not accessible to allow accessibility for children but this can be configured if needed.
+If a container is accessible, it groups its children into a single selectable element. By default containers are not accessible in order to allow accessibility for children. This can be configured differently if your app demands it.
 
-#### Example
-
-Consider a list item that is composed of an image and two text labels that you want to be treated as a single item by screen readers. To achieve this, embed the image and text labels in a container and enable accessibility for the container. Make sure to update the caption and hint to properly reflect all content.
+As an example, imagine a list item composed of an image and two text labels which you want to be treated as a single item by screen readers. To achieve this, embed the image and text labels in a container and enable accessibility for the container. Make sure to update the caption and hint to properly reflect all content.
 
 ### 3.4.2 Image
 
-Accessible image requires a screen reader caption as a mandatory property, as there is no way to set a default descriptive caption for images.
+An accessible image requires a screen reader caption as a property because there is no way to set a default descriptive caption for images.
 
 # 4 Configuring Accessibility in Custom Widgets
 
-React native documentation has a helpful [accessibility document](https://reactnative.dev/docs/accessibility) that can be used as a reference while building custom widgets and here are the properties that might be of a great interest:
+React native documentation has a helpful [accessibility document](https://reactnative.dev/docs/accessibility) you can use as a reference while building custom widgets. 
 
-| Property | Usage                                                                                                                                                                              | Platform         |
-|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+Here are some selected properties which you might be particularly interested in:
+
+| Property | Usage | Platform         |
+|----------|-----------|---------------|
 | accessible| When true, indicates that the view is an accessibility element. When a view is an accessibility element, it groups its children into a single selectable component.                | Android and iOS  |
-|accessibilityLabel| string that lets the screen readers audibly describe on-screen elements, making navigation easier for people with visual disabilities.                                              | Android and iOS  |
-|accessibilityHint| An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. | Android and iOS  |
-|accessibilityRole| communicates the purpose of a component to the user of an assistive technology.                                                                                                    | Android and iOS  |
+|accessibilityLabel| A string that lets screen readers audibly describe on-screen elements, making navigation easier for people with visual disabilities.                                              | Android and iOS  |
+|accessibilityHint| An accessibility hint which helps users understand what will happen when they perform an action on the accessibility element when that result is not clear from the accessibility label. | Android and iOS  |
+|accessibilityRole| Communicates the purpose of a component to the user of an assistive technology.                                                                                                    | Android and iOS  |
 |accessibilityState| Describes the current state of a component to the user of an assistive technology.                                                                                                 | Android and iOS  |
-|importantForAccessibility| Can be used to control components overlapping in Android and decide which component will fire accessibility events                                                                 | Android|
+|importantForAccessibility| Can be used to control components overlapping in Android and decide which component will fire accessibility events.                                                                 | Android|
 
-The widget `xml` can be updated to contain configurations similar to these:
+The widget's *XML* file can be updated to contain configurations similar to these:
 ```xml
 <propertyGroup caption="Accessibilty">
     <property key="accessible" type="boolean" defaultValue="true">

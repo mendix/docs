@@ -34,7 +34,7 @@ Inspectors also have a safety inspection *checklist*. Based on this checklist th
 
 If any of the above requirements are not met, during the next inspection the inspector indicates the date when the safety violation was fixed. 
 
-Your app already contains a list of all inspection reports:
+For example, your app already contains a list of all inspection reports:
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/inspection-report-list.jpg"   >}}
 

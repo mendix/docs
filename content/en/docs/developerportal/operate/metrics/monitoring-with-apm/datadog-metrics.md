@@ -2,14 +2,14 @@
 title: "Datadog for the Mendix Cloud"
 url: /developerportal/operate/datadog-metrics/
 weight: 20
-description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with Datadog."
-tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
+description: "How to configure the Mendix Cloud to enable monitoring and analysis with Datadog."
+tags: ["Datadog", "Mendix Cloud", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-[Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud v4 app to send data to Datadog to provide additional monitoring.
+[Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform. This document explains how to configure your Mendix Cloud app to send data to Datadog to provide additional monitoring.
 
 {{% alert color="info" %}}
 Datadog logging and application metrics are supported in Mendix version 7.15 and above.
@@ -74,6 +74,9 @@ To send your runtime information to Datadog, you need to provide the Datadog API
     * **Value**: *INFO*
 
     This will ensure that some messages are sent from the Mendix Datadog agent to Datadog – for example, that the agent has started. You can change the log level later once you have confirmed that Datadog is receiving them. See [Log Levels](#log-levels), below for more information on valid values for this custom environment variable.
+    
+    {{% alert color="warning" %}}The variable *DD_LOG_LEVEL* defines the log level of the log messages sent to Datadog via the Datadog Agent. The variable does **not** define what is logged by the Mendix application itself. See [Set Log Levels](/howto/monitoring-troubleshooting/log-levels/) for information on how to set the log levels in the application.
+    {{% /alert %}}
 
 8. By default, the Datadog integration defaults to the US region (datadoghq.com). If you want to use a Datadog site which is another region, set the `DD_SITE` environment variable to the required site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
 
@@ -146,9 +149,20 @@ Setting these values for your app means that all metrics from this environment o
 You can add more tags if you want, but note that Datadog's charges include an element for [custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) as described on the Datadog site.
 {{% /alert %}}
 
-## 4 Additional Information{#additional-info}
+## 4 Multi-instance metrics{#multi-instance-metrics}
 
-### 4.1 Log Levels (DD_LOG_LEVEL){#log-levels}
+You can view metrics for multiple instances of an application on the Datadog dashboard:
+
+* Navigate to the [Metrics Explorer](https://docs.datadoghq.com/metrics/explorer/#overview) on the Datadog Dashboard.
+* On the top part of the page, in the filter form, search a metric. 
+* In the field `from` specify environment id of an application in the format: `application_name:<environment id>`.
+* In the field `avg by` search `instance_index`.
+
+If the app has more then one instance you will see lines on the graph for each instance.  
+
+## 5 Additional Information{#additional-info}
+
+### 5.1 Log Levels (DD_LOG_LEVEL){#log-levels}
 
 The **DD_LOG_LEVEL** sets the level for which log messages *from the Mendix Datadog agent* will be sent to the Mendix application logs. It does not affect the [log level set in your app](/howto/monitoring-troubleshooting/log-levels/). Valid values are:
 
@@ -158,26 +172,30 @@ The **DD_LOG_LEVEL** sets the level for which log messages *from the Mendix Data
 * INFO
 * DEBUG
 
-### 4.2 Datadog Regions (DD_SITE)
+### 5.2 Datadog Regions (DD_SITE)
 
 The valid values for **DD_SITE** are:
 
 * datadoghq.com
 * datadoghq.eu
 
-### 4.3 Database Disk Storage Availability
+### 5.3 Java Metrics
+
+In addition to the standard metrics available to all monitoring tools, Datadog also provides metrics from the runtime, using the prefix `jmx`. These are provided via the [JMX integration](https://docs.datadoghq.com/integrations/java/?tab=host) of Datadog.
+
+### 5.4 Database Disk Storage Availability
 
 You can decide whether a metric for the disk storage size available to the database is sent to Datadog. To disable this metric, set **DATADOG_DATABASE_DISKSTORAGE_METRIC** to *false*.
 
 *Default value: true*
 
-### 4.4 Email Address Redaction{#redact-emails}
+### 5.5 Email Address Redaction{#redact-emails}
 
 Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_REDACTION** to *false*.
 
 *Default value: true*
 
-### 4.5. Rate and Count Database Metrics{#database-metrics}
+### 5.6. Rate and Count Database Metrics{#database-metrics}
 
 Datadog sends gauge database metrics to Datadog as a default. Rate and Count metrics are not compatible with the Datadog PostgreSQL integration. You can enable these additional metrics by setting **DATADOG_DATABASE_RATE_COUNT_METRICS** to *true*.
 
@@ -185,13 +203,13 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 *Default value: false*
 
-### 4.6 System Metrics{#system-metrics}
+### 5.7 System Metrics{#system-metrics}
 
 System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by setting **DD_ENABLE_CHECKS** to *true*.
 
 *Default value: false*
 
-### 4.7 Datadog Events Log
+### 5.8 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
@@ -199,19 +217,19 @@ The Datadog Events log contains events which come from your app: those are the s
 
 By default all email addresses contained in log events will be redacted. You can change this – see [Email Address Redaction](#redact-emails), above.
 
-### 4.8 Datadog Agent not Started
+### 5.9 Datadog Agent not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events will be sent to the app log files.
 
-### 4.9 Datadog Issues
+### 5.10 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-### 4.10 Metrics on Datadog Usage
+### 5.11 Metrics on Datadog Usage
 
 Metrics on Datadog can include an additional namespace, **datadog** which contains metrics on Datadog usage.
 
-## 5 Read More
+## 6 Read More
 
 * [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/) – a Mendix blog about the capabilities of Datadog and, in particular, using Datadog with Mendix
 * [Metrics](/developerportal/operate/metrics/)

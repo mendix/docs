@@ -14,7 +14,7 @@ Your app is accessible over the internet - but you may not want everyone to be a
 
 You can apply restrictions to the top level of the application URL (`/`), and also to more specific paths (for example, `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and client certificate authorities (CAs).
 
-## 2 Access Restriction Profiles
+## 2 Access Restriction Profiles {#access-restriction-profiles}
 
 You can specify a number of different access restriction profiles for your application. You can give each of these a name so that you can describe its purpose.
 
@@ -22,7 +22,7 @@ Click **New** to create a new access restriction profile. Select an existing pro
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/access-restriction-profiles.png" >}}
 
-See below for information on setting up access restriction profiles for Mendix Cloud [v4](#v4).
+See below for information on setting up [access restriction profiles for Mendix Cloud](#access-restriction).
 
 When configuring an access restriction profile, you need to bear the following things in mind:
 
@@ -30,7 +30,7 @@ When configuring an access restriction profile, you need to bear the following t
 * Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both
 * If an access restriction profile contains *both IP address ranges and client CAs*, then any match on *either* the IP range *or* the client certificate will grant access
 
-### 2.1 Access Restriction Profiles for Mendix Cloud V4{#v4}
+### 2.1 Access Restriction Profiles for Mendix Cloud{#access-restriction}
 
 When you create a new access restriction profile, you will first be asked to enter the name of your profile.
 
@@ -72,7 +72,7 @@ Click **Save** to save the current certificate profile.
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 
-For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports both IPv4 and IPv6 format addresses.
+For each IP range, you can specify a **Name** for the range, and a range of addresses. The Mendix Cloud supports both IPv4 and IPv6 format addresses.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/ip-range.png" >}}
 

@@ -13,9 +13,9 @@ aliases:
 
 ## 1 Introduction
 
-You may want to send email from your apps running in the Mendix Cloud via, for instance, the [Email Module with Templates](/appstore/modules/email-with-templates/). After you have installed this you will need to configure an SMTP server in your application. There are several options:
+You may want to send email from your apps running in the Mendix Cloud via, for instance, the [Email](/appstore/connectors/email-connector/) connector. After you have installed this you will need to configure an SMTP server in your application. There are several options:
 
-| Service | Mendix Cloud v4 | Free App environment |
+| Service | Mendix Cloud | Free App environment |
 | --- | --- | --- |
 | **Amazon Simple Email Service** | &#x2713;    | &#x2713; |
 | **Gmail** | &#x2713; | &#x2713; |
@@ -24,13 +24,13 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 | **Other SMTP-compatible services** | &#x2713; | &#x2713; |
 | **Mendix Mail Servers** | &#x2717; | &#x2717; |
 
-For apps deployed to Mendix Cloud v4 you must setup a third-party mail provider to send emails from your app.
+For apps deployed to the Mendix Cloud you must setup a third-party mail provider to send emails from your app.
 
 ## 2 External Email Providers
 
 In general we recommend external services as these offer specialized tools for sending e-mail, working with spam filters, keeping track of sent e-mail and giving insights into your target reach via analytics tools.
 
-The [Email Module with Templates](/appstore/modules/email-with-templates/) from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
+The [Email](/appstore/connectors/email-connector/) connector from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
 
 To use an external provider, you will need to sign up for an account with them and use their SMTP settings which include:
 
@@ -53,7 +53,7 @@ Many users of *Free Apps* use the settings of their own GMail account for conven
 
 {{% alert color="info" %}}
 
-Please note that you cannot send email from Mendix Cloud v4 over port 25. Although this port is open, it is heavily rate-limited by the infrastructure provider, so you will experience issues. This configuration cannot be changed.
+Please note that you cannot send email from the Mendix Cloud over port 25. Although this port is open, it is heavily rate-limited by the infrastructure provider, so you will experience issues. This configuration cannot be changed.
 
 Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
 

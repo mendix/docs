@@ -44,7 +44,7 @@ Before you use the Email connector in your app, do the following:
 
 If you are migrating to the Email connector from another email module, we recommend that you test your settings in a new app first.
 
-We recommend using the community-supported [Email Connector migration utility] to migrate data from the [Email Module with Templates](/appstore/modules/email-with-templates/).
+We recommend using the community-supported [Email Connector migration utility](https://marketplace.mendix.com/link/component/205008) to migrate data from the [Email Module with Templates](/appstore/modules/email-with-templates/).
 
 ### 1.3 Included Widgets {#included-widgets}
 
@@ -270,7 +270,7 @@ If you encounter any problems with sending or receiving emails, check the **Show
 
 ### 5.1.1 Gmail Accounts
 
-Gmail no longer supporting basic authentication (usernames and passwords), but you can still set up an account in the Email connector by doing the following:
+Gmail no longer supports basic authentication (usernames and passwords), but you can still set up an account in the Email connector by doing the following:
 
 1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and change the setting in your Google account.
 2. Set up an App Password to sign into the Email connector. See [Sign in with App Passwords](https://support.google.com/accounts/answer/185833).

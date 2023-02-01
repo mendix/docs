@@ -29,7 +29,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
-| Number of users | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example, SAP BTP. | Depends on your [pricing plan](#plans). |
+| Number of users | Unlimited users for regular Free Apps; six concurrent users for unlicensed app running on another cloud platform, for example, SAP BTP. | Depends on your [pricing plan](#plans)¹. |
 | Sleep mode | Goes into sleep mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in sleep mode. | Does not have a sleep mode. |
 | Disk storage | 0.5 GiB Database and 1 GiB Files. | Depends on your [pricing plan](#plans). |
 | App vCPUs | 0.5 | Depends on your [pricing plan](#plans). |
@@ -55,6 +55,8 @@ If you are not currently a customer but would prefer to use a licensed cloud nod
 
 If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
+
+¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](https://docs.mendix.com/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as `Active` will be counted towards the number of end-users of the app.
 
 #### 1.1.1 Sleep Mode
 
@@ -85,7 +87,7 @@ Each environment can only run a single version of an app. Additionally, all the 
 
 ### 1.3 Flexible Environments {#flexible-environments}
 
-If the standard environments that you get with a licensed app are not sufficient for your requirements, you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
+If the standard environments that you get with a licensed app are not sufficient for your requirements, you can request a Mendix Cloud node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
 ### 1.4 Database
 
@@ -99,8 +101,8 @@ Apps that run on the Mendix Cloud are automatically given their own URLs. The fo
 
 | License type | Environment | URL format | Example URL |
 | --- | --- | --- | --- |
-| Licensed app | production | `{name of your app}.mendixcloud.com` | `myappname.mendixcloud.com` |
-| Licensed app | test, acceptance, flexible environments | `{name of your app}-{environment type}.mendixcloud.com` | `myappname-acceptance.mendixcloud.com` |
+| Licensed app | production | Depends on the region:<br /> `{name of your app}.mendixcloud.com`<br />or<br />`{name of your app}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | test, acceptance, flexible environments | `{name of your app}-{environment type}.mendixcloud.com` | `myappname-accp.mendixcloud.com` |
 | Free App | N/A | `{name of your app}.mxapps.io` | `myfreeappname.mxapps.io` |
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
@@ -242,6 +244,7 @@ The Standard resource packs listed below can be used with both Standard and Prem
 | XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
 | XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
 | XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
 
 The Premium resource packs listed below can only be purchased with a Premium plan.
 
@@ -253,6 +256,7 @@ The Premium resource packs listed below can only be purchased with a Premium pla
 | XL21 | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
 | XXL21 | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
 | XXXL21 | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
 
 The legacy cloud resource packs listed below are still being used but are not available to new customers. 
 

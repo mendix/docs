@@ -36,7 +36,13 @@ The following pattern letters can be used to parse and format Date and time valu
 | S      | Millisecond                               | 201                    |
 
 {{% alert color="info" %}}
-In nanoflows, neither the pattern letter M nor L works consistently in distinguishing between context and standalone currently when the pattern has three or more characters (for instance, MMM or MMMM).
+In microflows, both pattern letters `M` and `L` are supported and work completely as expected.
+
+However, in nanoflows, the pattern letter `M` usually should NOT be used, given that it is not properly supported in nanoflows currently. One exception is that you can use `MM` since it gives a numerical representation of a month name.
+
+In nanoflows, the pattern letter `L` works properly except when it is used for some languages where the month name changes depending on the context (languages with the genitive case). For those languages, we recommend that the character limit is `LL`, given that with more characters (for instance, `LLL` or `LLLL`), the pattern letter `L` might not work properly. For example, `LLL` does work for Russian but not for Catalan. `LLLL` is not recommended for any of those languages. 
+
+Here is a full collection of such languages that are available in Studio Pro: Armenian, Belarusian, Catalan, Croatian, Czech, Finnish, Greek, Lithuanian, Polish, Russian, Slovak, and Ukrainian.
 {{% /alert %}}
 
 The following pattern letters are only available for microflows:
@@ -126,7 +132,7 @@ The output is described in the table below:
 | ------------------------------------------- | ------ |
 | A formatted representation of the Date and time value. | String |
 
-### 3.4 Example
+### 3.3 Example
 
 If you use the following input:
 

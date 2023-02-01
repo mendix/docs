@@ -28,11 +28,7 @@ The sections below describe the main actions to be performed on the **Overview**
 
 ### 2.1 Creating a New Sprint {#new-sprint}
 
-Click **New Sprint** to open the **Edit Sprint** dialog box:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/new-sprint.jpg"   width="400"  >}}
-
-Fill in the following details:
+Click **New Sprint** to open the **Edit Sprint** dialog box and filll in the following details:
 
 * **Name** – the name of the Sprint
 * **Sprint comes after** –  where the Sprint should be located in the structure of your **Stories** page
@@ -43,11 +39,7 @@ For more information on Sprints, see the [Sprint Actions](#sprint-actions) secti
 
 ### 2.2 Creating a New Story {#new-story}
 
-Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **New Story** dialog box:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/new-story.png"   width="400"  >}}
-
-Fill in the following details:
+Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **New Story** dialog box and fill in the following details:
 
 * **Title** – the title of the story
 * **Labels** – enter one or more labels to organize your work
@@ -58,17 +50,13 @@ Fill in the following details:
 * **Story points** – the size of the story
 * **Change to Bug** – by default, the story is created as a  **Feature**; click here to toggle the story type
 
-You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/new-story-from-sprint.jpg"   width="550"  >}}
+You can also create a story via the [New Story](#new-story) button for a Sprint or from within a new Sprint by clicking **Add a new story**.
 
 For more information on stories, see the [Story Actions](#story-actions) section below.
 
 ### 2.3 Creating a New Label {#new-label}
 
-Click **New Label** to create a new label for your app:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/new-label.png"   width="400"  >}}
+Click **New Label** to create a new label for your app and fill in the following details:
 
 * **Label caption** – the caption of the label
 * **Label color** – select a color from the drop-down list for easy visibility (the small square below the drop-down list shows how the color looks)
@@ -82,9 +70,7 @@ Click **More** to access the following options:
 
 #### 2.4.1 Importing and Exporting to Excel {#import-export}
 
-After you click **Import / Export**, you will be asked what you want to do:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/import-export.png"   width="350"  >}}
+After you click **Import / Export**, you are presented with several options.
 
 In Mendix, you can export stories from your app at any time. If you select **Export single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
 
@@ -114,8 +100,6 @@ The following buttons are available:
 ### 2.5 Sprint Actions {#sprint-actions}
 
 For each Sprint, the following options are provided via the menu button on the right:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/sprint-options.jpg"   width="350"  >}}
 
 * **Complete Sprint** (only available for the Sprint identified as an **Active Sprint**) – enables completing the Sprint
 * **Add Story** – enables [creating a new story](#new-story) 
@@ -168,16 +152,8 @@ You can also do this following on this page:
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
 * Select the story, click **Move**, and then select the new Sprint from the **Move Stories** dialog box
-
-    {{< figure src="/attachments/developerportal/collaborate/stories/move-story-move-button.jpg"   width="500"  >}}
-
 * Select the story and drag it to the desired Sprint location:
-
-    {{< figure src="/attachments/developerportal/collaborate/stories/move-story-drag-new.png" >}}
-
 * Click the story title to open the story details page, then click **Move Story**:
-
-    {{< figure src="/attachments/developerportal/collaborate/stories/move-story-details.png" >}}
 
 {{% alert color="info" %}}
 Moving a story will move the tasks as well.
@@ -208,11 +184,7 @@ Changing the status of a story or updating story points automatically synchroniz
 
 ## 3 Sprint Status {#sprint-status}
 
-On the **Sprint Status** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. 
-
-There is also a percentage bar of the stories that are done and the deadline date of the current Sprint:
-
-{{< figure src="/attachments/developerportal/collaborate/stories/sprint-status.jpg" >}}
+On the **Sprint Status** tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories/) in the current Sprint. There is also a percentage bar of the stories that are done and the deadline date of the current Sprint.
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 
@@ -229,8 +201,6 @@ On the **Story Archive** tab, you can see a list of all stories that belong in c
 You can search for a specific archived story through its **ID**, **Title**, **Description**, or the **Sprint's Name**. The search can be performed with both partial and exact matches.  
 
 By clicking a story's ID, you can see the [story details](#story-details).
-
-{{< figure src="/attachments/developerportal/collaborate/stories/story-archive.png" >}}
 
 ## 5 Read More
 

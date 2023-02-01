@@ -149,9 +149,9 @@ You can limit access to the static content of your app by [implementing an acces
 
 Scanning your app, or the Mendix platform, with a security scanner will occasionally produce reports on security findings which the scanner has found. The sections below explain what these reports mean in relation to Mendix apps and the Mendix platform.
 
-### 8.1 Weak Ciphers Supported in Mendix Cloud V4
+### 8.1 Weak Ciphers Supported in Mendix Cloud
 
-In Mendix Cloud v4, security is of the highest priority, and we try to improve this constantly. The Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
+In the Mendix Cloud, security is of the highest priority, and we try to improve this constantly. The Mendix Cloud supports TLS 1.3 and enforces ciphers preferring ‘good’ ciphers over ‘sufficient’ ciphers. You can test your site using a tool such as [Internet.nl](https://www.internet.nl/) to report TLS version and cipher information for your site.
 
 ### 8.2 No/Long Session Timeout
 
@@ -193,3 +193,7 @@ For example, the old version of the [LDAP Synchronization module](https://market
 >     * spring-tx-4.3.9.RELEASE.jar 
 >     * org.slf4j.slf4j-api-1.7.25.jar 
 >     * commons-lang-2.5.jar
+
+### 8.6 Dojo library - deepCopy Vulnerability - CVE-2020-5258
+
+The Mendix Client is bundled with the full dojo library. However, not all functionality of the Dojo library is used. The vulnerability is in the `deepCopy` util method of dojo; this method is not used in the Mendix Client. This vulnerability cannot be exploited in the client.

@@ -13,6 +13,30 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### January 26th, 2023
+
+#### Mendix Operator v2.10.1{#2.10.1}
+
+* We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
+* We have switched from UBI 8 Minimal base images to [UBI 8 Micro](https://www.redhat.com/en/blog/introduction-ubi-micro).
+* We have implemented a feature to use [IAM role authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) when connecting to RDS Postgres databases. This feature depends on an upcoming release of Mendix, and additional documentation will be provided later.
+
+### January 19th, 2023
+
+#### Portal Improvements
+
+* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
+* We have added a new status field indicating whether custom runtime setting and MxApp constants were loaded from CSI Secrets Storage.
+* We have added a notification on top of the Model Options and Runtime Settings page to indicate whether CSI Secrets Storage is enabled for a namespace.
+* We have removed the limit of eight characters for the MxAdmin password. You should set the password based on the policy set in Studio Pro.
+* We have fixed an issue where users were unable to update the datatype of constants in the Private Cloud portal. (Ticket 173999)
+* We have fixed a bug where sometimes the log levels were not editable.
+* Unused deployment packages from your repository are now removed if they are older than two weeks.
+
+#### Deploy API Improvements
+
+* We have fixed a network error issue with the **Try it out** option in the [Private Cloud Deploy API documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+
 ### January 5th, 2023
 
 #### Mendix Operator v2.10.0{#2.10.0}

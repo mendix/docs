@@ -4,6 +4,13 @@ url: /releasenotes/mobile/nt-5.2-rn/
 weight: 10
 description: "Native Template 5.2 release notes."
 ---
+## 5.2.16
+
+**Release date: January 20th, 2023**
+
+### Fixes
+
+* We fixed a compilation error issue affecting Android builds by pinning AndroidX library versions.
 
 ## 5.2.15
 

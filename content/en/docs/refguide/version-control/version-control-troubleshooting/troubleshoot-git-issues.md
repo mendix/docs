@@ -1,6 +1,6 @@
 ---
 title: "Solving Known Git Issues"
-url: /howto/collaboration-requirements-management/troubleshoot-git-issues/
+url: /refguide/troubleshoot-git-issues/
 linktitle: "Known Git Issues"
 weight: 20
 description: "Describes a list of problems and fixes for Git version control issues."

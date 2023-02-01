@@ -260,7 +260,7 @@ You have finished your responsive app! You can run your photo album app and test
 {{< figure src="/attachments/refguide/quickstart-guide/part1/complete.png" width="450px" alt="Run your app">}}
 
 {{% alert type="info" %}}
-Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud v4 Free Tier.
+Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
 Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 

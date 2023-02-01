@@ -138,7 +138,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.3 Create a Backup of an Environment (Mendix Cloud v4 Only)
+### 3.3 Create a Backup of an Environment
 
 {{% alert color="warning" %}}
 This call will trigger the creation of a snapshot and will return the **SnapshotID** immediately. However, the creation of the snapshot takes some time and if the creation hasn't completed you will get a **500 INTERNAL_SERVER_ERROR** response from a request to download the backup (see above). In this case, it is recommended that you periodically retry downloading the backup until the call is successful.
@@ -146,7 +146,7 @@ This call will trigger the creation of a snapshot and will return the **Snapshot
 
 #### 3.3.1 Description
 
-Create a backup of an environment. The response contains the details of the created backup. This call is only available for Mendix Cloud v4 applications.
+Create a backup of an environment. The response contains the details of the created backup.
 
 ```bash
 HTTP Method: POST
@@ -199,11 +199,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.4 Restore a Backup to an Environment (Mendix Cloud v4 Only)
+### 3.4 Restore a Backup to an Environment
 
 #### 3.4.1 Description
 
-Restore a previously created backup to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications. Please note that the Snapshot ID can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
+Restore a previously created backup to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the restored backup. Please note that the Snapshot ID can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
 
 ```bash
 HTTP Method: POST

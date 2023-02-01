@@ -8,7 +8,9 @@ tags: ["accessibility", "JavaScript", "native", "mobile"]
 
 # 1 Introduction
 
-The goal of this guide is to provide an accessible mobile application. An accessible application makes sure that every user gets a great experience no matter their capabilities or how they use their devices. In this guide we will walk through the interaction between Mendix applications and mobile screen readers VoiceOver (iOS) and TalkBack (Android). This guide only applies to native mobile apps.
+This guide will teach you how to make your mobile application accessible. An accessible application ensures every user has a satisfactory experience regardless of their physical capabilities or how they use their devices. Specifically, this guide will explain the interactions between Mendix apps and mobile screen readers (VoiceOver for iOS and TalkBack for Android). 
+
+This guide only applies to native mobile apps.
 
 # 2 Prerequisites
 
@@ -16,7 +18,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Install Mendix Studio Pro version **9.22.0** or above
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
-* Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/).
+* Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/)
 
 # 3 Setting up Accessibility for Mendix Native Widgets
 

@@ -53,7 +53,7 @@ For all other license requests and *Subscription Secrets* to deploy to SAP BTP a
 
 4. Save the app details.
 
-Mendix Support will contact the technical contact via a ticket in the Support Portal.
+Mendix Support will contact the Technical Contact via a ticket in the Support Portal.
 
 If you are hosting your app somewhere else, for example on Cloud Foundry, Mendix support will provide you with two parts to your key:
 

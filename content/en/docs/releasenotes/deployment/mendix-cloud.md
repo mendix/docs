@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We added a new version of the Deploy API which allows you to change the technical contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
+* We added a new version of the Deploy API which allows you to change the Technical Contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
 
 ### January 18th, 2023
 
@@ -511,7 +511,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We are in the process of migrating the alerting service to our internal infrastructure to improve maintainability. Your alerts will continue to operate in the same way after the migration.
 * As part of the migration the existing alert history will be deleted. The alerts history tab will only contain those alerts which have been triggered since the migration.
 
-* We added the ability for the technical contact to download a list of [node permissions](/developerportal/deploy/node-permissions/) as a CSV to assist with audits
+* We added the ability for the Technical Contact to download a list of [node permissions](/developerportal/deploy/node-permissions/) as a CSV to assist with audits
 * We added information about the size of backup files.
 
 ### October 5th, 2020

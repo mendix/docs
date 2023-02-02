@@ -37,7 +37,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | --- | --- |
 | **Solutions** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions can be adapted using the core Mendix Platform to fully meet your requirements. |
 | **Templates** | Templates and starter apps serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
-| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
+| **App Services** | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu/#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
@@ -260,7 +260,7 @@ Click **Return to the overview** to go to the main page of the dashboard.
 
 When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
 
-Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *MindSphere IIoT for Makers*).
+Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *MindSphere IIoT for Makers*).
 
 #### 4.7.2 Usage Dashboard {#usage-dashboard}
 

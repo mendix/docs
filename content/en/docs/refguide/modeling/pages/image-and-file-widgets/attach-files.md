@@ -84,6 +84,10 @@ Follow the steps below:
 
     {{< figure src="/attachments/refguide/modeling/pages/attach-files/open-page-button.png" alt="Open Page Button"   width="350"  >}}
 
+4. In the **Select Entity** dialog box, select the **Document** entity through the **Document_Employee** association.
+
+    {{< figure src="/attachments/refguide/modeling/pages/attach-files/select-entity-for-button.png" alt="Select Entity"   width="350"  >}}
+    
 4. Open button properties and do the following:
 
     1. Select the **Caption** property and rename it to *Attach File*.
@@ -107,15 +111,9 @@ Follow the steps below:
 5. A new pop-up page with a preconfigured form (a data view) is created:
             {{< figure src="/attachments/refguide/modeling/pages/attach-files/attach-file-page.png" alt="Attach Files Page"   width="500"  >}}
         
-6. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
-    
-6. 
-    
-6.    Open the **Toolbox**, search for a **File Uploader**, drag it inside the data view on the **Attach File** page. 
-            8. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
-                    9. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**:
-    
-        {{< figure src="/attachments/refguide/modeling/pages/attach-files/create-object-property.png" alt="Create Object Property"   width="300"  >}}
+9. As you only need your end-users to attach files on this page, delete **Name**, **Size**, and **Employee** widgets from the data view. 
+
+10. As you would like users to only upload files on this pop-up page, open the **File Manager** properties and set **Type** to **Upload**.
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 
@@ -135,9 +133,10 @@ After your end-users attach the files, it would be nice to display files in a li
         {{< figure src="/attachments/refguide/modeling/pages/attach-files/select-file-entity.png" alt="Select Entity"   width="400"  >}}
 
 4. Delete the **Size** text widget from the list view. 
-5. Open the **Toolbox** and search for a **File Downloader**, drag it to the column where the **Details** button was placed. 
-6. Open the **File Downloader** (**File Manager**) properties  and do the following: 
+5. Open the **Toolbox** and search for a **File Manager**, drag it to the list view. 
+6. Open the **File Manager** properties  and do the following: 
 
+    1. Set the **Type** to **Download**.
     1. Open the **Label** property and delete the *File* text from it.
     2. In the **Design** section, set **Align Self** to *Right*.
 

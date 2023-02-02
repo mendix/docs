@@ -71,7 +71,7 @@ Click **More** to access the following options:
 
 #### 2.4.1 Importing and Exporting to Excel {#import-export}
 
-After you click **Import / Export**,  you are presented with several options.
+After you click **Import / Export**, you are presented with several options.
 
 In Mendix, you can export stories from your app at any time. If you select **Export single Sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
 

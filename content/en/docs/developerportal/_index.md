@@ -65,7 +65,7 @@ If you want to turn on the old navigation/header, click your avatar and toggle *
 
 The **My Apps** page shows you a summary of your apps:
 
-{{< figure src="/attachments/developerportal/apps-tiles.jpg" alt="Apps tiles" >}}
+{{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" >}}
 
 **All** displays all the apps for which you are a [Team](/developerportal/collaborate/team/) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 

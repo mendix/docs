@@ -52,9 +52,7 @@ You can also access the revision history in Studio Pro. For more information, se
 
 ## 4 Revision Details
 
-When you click **Details** for a revision, you can see the stories related to that revision:
-
-{{< figure src="/attachments/developerportal/collaborate/team-server/revision-details.png" >}}
+When you click **Details** for a revision, you can see the stories related to that revision.
 
 Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 

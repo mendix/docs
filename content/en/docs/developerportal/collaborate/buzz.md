@@ -42,7 +42,7 @@ The easiest way to communicate with others in your company and on your team is b
 
 Once you have posted a comment, you can click **Edit** to **Update Message** or **Delete**. You can also **Reply in Thread** to comments left by colleagues.
 
-By default, communication via Company Buzz and App Buzz can be seen by all users in your company via **All Channels** or the company filter. [**VERIFY?**]
+By default, communication via Company Buzz and App Buzz can be seen by all users in your company via **All Channels** or the company filter.
 
 ## 5 Read More
 

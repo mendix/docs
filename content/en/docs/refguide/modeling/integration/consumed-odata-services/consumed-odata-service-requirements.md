@@ -114,6 +114,10 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume the resource as an external entity.
 
+### 3.6 Enumerations
+
+Enum types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#312-name) are not supported.
+
 ## 4 Data Hub License Limitations {#license-limitations}
 
 There are two types of licenses for Mendix Data Hub: Data Hub Free and Data Hub Premium. 

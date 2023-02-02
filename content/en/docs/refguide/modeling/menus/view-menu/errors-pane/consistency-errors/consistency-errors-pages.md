@@ -295,7 +295,7 @@ Icon collections have configurable class names, icon prefixes, and icon names. T
 | Error code | Message in the Error Pane | Cause of the Error | Way to Fix |
 | ---------- | ------------------------- | ------------------ | ---------- |
 |   CE1616   | You cannot duplicate the icon collection class name {icon collection class name}. | There is more than one icon collection configured with the same class name. | Change the class name for one of the icon collections. |
-|   CE5696   | Duplicate CSS class name {icon class name} for icons, resulting from the combination of the icon collection prefix and the icon name. | The combination of the icon collection prefix and the icon name has automatically generated the same class name. | Do one of the following: <ul><li>Ensure that the icons have unique names that are not used in any of the icon collection prefixes.</li><li>Ensure that all the icon collections related to the icons have unique prefixes that will not be used for icon names.</li></ul> |
+|   CE5696   | Duplicated CSS class name {icon class name} for icons, resulting from a combination of the icon collection prefix and the icon name. | The combination of the icon collection prefix and the icon name has automatically generated the same class name. | Do one of the following: <ul><li>Ensure that the icons have unique names that are not used in any of the icon collection prefixes.</li><li>Ensure that all the icon collections related to the icons have unique prefixes that will not be used for icon names.</li></ul> |
 
 ## 11 Read More
 

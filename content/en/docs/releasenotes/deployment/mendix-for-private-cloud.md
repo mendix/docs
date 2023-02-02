@@ -18,8 +18,11 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Portal Improvements
 
 * We have added the **Package ID** field to display the ID of a deployment package in the deployment package details.
-* We now provide the feature to lock or unlock the deployment package in the environment **Overview** page.
+* We now provide the feature to lock or unlock the deployment package in the environment **Overview** page. Any existing deployment packages will remain in an unlocked state. New deployment packages deployed in the environment will be locked by default.
 
+#### Known Issues
+
+Your build may fail if you try to deploy the same deployment package more than once in the same environment. To fix this issue, recreate the deployment package, and then deploy it again. The same workaround is sometimes required when rescaling an application. A fix for this issue will be available in an upcoming release.
 
 ### January 26th, 2023
 

@@ -2,7 +2,7 @@
 title: "Advanced Audit Trail"
 url: /appstore/modules/advanced-audit-trail/
 description: "Describes the configuration and usage of the Advanced Audit Trail solution, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "app service", "audit trail"]
+tags: ["marketplace", "marketplace component", "audit trail"]
 aliases:
     - /appstore/app-services/advanced-audit-trail/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -17,7 +17,7 @@ Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, an
 {{< figure src="/attachments/appstore/modules/advanced-audit-trail/integration-diagram.png" >}}
 
 {{% alert color="info" %}}
-The Advanced Audit Trail app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers a better search experience and better performance.
+The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers a better search experience and better performance.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
@@ -47,7 +47,7 @@ The Advanced Audit Trail app service is different from the [Audit Trail](/appsto
 ### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
-* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail app service to store your data in an external data storage that runs in the Mendix Cloud
+* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud
 
 ### 1.5 Dependencies
 

@@ -2,7 +2,7 @@
 title: "Configuring File Upload and Download"
 url: /refguide/attach-files/
 linktitle: "Configure File Upload and Download"
-category: "Pages"
+weight: 70
 description: "Describes how to configure file manager in Mendix Studio Pro."
 tags: ["studio pro", "pages", "file", "upload files", "attach", "file manager"]
 ---
@@ -36,30 +36,33 @@ You also would like to enable IT administrators to download the attached file fr
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Pages](/studio/page-editor/). 
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/studio/domain-models/).
+* Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Page](/refguide/page/). 
 
-## 3 Creating a File Entity
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/refguide/domain-model/).
 
-First of all, to be able to attach and/or download files you need to add a special type of entity to your domain model: a [file entity](/studio/domain-models/#entity-types). Do the following:
+* Make sure your domain model is configured the following way:
 
-1. Open your domain model and open the **Toolbox** tab.
-2. Select the **File Entity** and drag it into your domain model.
-3. In the **Create New File Entity** dialog box, set **Name** to *Document* and click **Create**.
+  {{< figure src="/attachments/refguide/modeling/pages/attach-files/domain-model.png" alt="Domain Model"   width="200"  >}}
 
-    {{< figure src="/attachments/refguide/modeling/pages/attach-files/create-file-entity.png" alt="Create File Entity"   width="450"  >}}
+* You have the **Employee Profile** page with a form (a data view) that has such details as employee's name, department, their email, phone, title, and assets assigned to them:
 
-4. Now you need to create an association from the **File** entity to the **Employee** entity. Do one of the following:
+  {{< figure src="/attachments/refguide/modeling/pages/attach-files/employee-profile-form.png" alt="Employee Profile Page"   width="600"  >}}
 
-    1. Hover over the **File** entity, click the dot icon, and drag the dot to the **Employee** entity:
+## 3 Creating a Specialization of System.File
 
-        {{< figure src="/attachments/refguide/modeling/pages/attach-files/create-association-method-one.png" alt="Create Association"   width="500"  >}}
+First of all, to be able to attach and/or download files you need to add an entity that is a specialization of the System.File entity. For more information, see the [Generalization](/refguide/entities/#generalization) section in *Entities*. 
 
-    2. Select the **File** entity, click the arrow icon, and select **Employee** as a second entity for the association:
+Do the following:
 
-        {{< figure src="/attachments/refguide/modeling/pages/attach-files/create-association-method-two.png" alt="Create Association"   width="250"  >}}
+1. Open your domain model > **Toolbox** and drag a new entity in a working area.
+2. Double-click the new entity to open its properties.
+3. Set the **Name** property to *Document*. 
+4. In the **Generalization** property, click **Select**, choose the **Image** entity under **System**, and confirm your choice:
+5. Now you need to create an association from the **Receipt** entity to the **Report** entity. In the **Properties** dialog box, open the **Associations** tab and click **New**. 
+6. In the **Select Entity** dialog box, select **Report** and confirm your choice.
+7. Click **OK** to close the **Properties** dialog box.
 
-Good job! You have created the file entity and an association from it to the **Employee** entity:
+Good job! You have created the Document entity, which is a specialization of the System.File entity, and an association from it to the **Employee** entity:
 
 {{< figure src="/attachments/refguide/modeling/pages/attach-files/domain-model-configured.png" alt="Domain Model Configured"   width="600"  >}}
 
@@ -74,7 +77,9 @@ To solve this, you can add a button which will open a pop-up page where your end
 Follow the steps below:
 
 1. Open the **Employee Profile** page where IT administrators create and edit information on employees and assets assigned to them. 
-2. Open the **Toolbox** and search for the **Open Page** button.
+
+2. Open the **Toolbox** and search for the **Create** button.
+
 3. Drag the button above **Save** and **Cancel** buttons:
 
     {{< figure src="/attachments/refguide/modeling/pages/attach-files/open-page-button.png" alt="Open Page Button"   width="350"  >}}
@@ -82,32 +87,35 @@ Follow the steps below:
 4. Open button properties and do the following:
 
     1. Select the **Caption** property and rename it to *Attach File*.
+    
     2. Click the **Icon** property. 
-    3. In the **Select icon** dialog box, search for the *file* icon, and click **Select**.
-    4. Click the **Style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
+    
+3. In the **Select icon** dialog box, search for the *file* glyph icon, and click **Select**.
+   
+4. Click the **Button style** property and change it from **Default** to **Success**. After your changes, the button will look the following way:
+   
+    {{< figure src="/attachments/refguide/modeling/pages/attach-files/attach-file-button.png" alt="Attach Files"   width="150"  >}}
 
-        {{< figure src="/attachments/refguide/modeling/pages/attach-files/attach-file-button.png" alt="Attach Files"   width="150"  >}}
+    5. Click the **On click page** property and in the **Select web page** dialog box, click **New**. 
 
-    5. Click the **Page** property.
-    6. In the **Select Page** dialog box that opens, click the plus icon in the top right corner to add a new page.
-
-    7. In the **Create Page** dialog box, do the following:
-
-        1. Set the **Title** to *Attach File*.
+    6. In the **Create Page** dialog box, do the following:
+    
+        1. Set the **Title** to *Document_NewEdit*.
         2. Set the **Layout** to *PopupLayout*.
-        3. Set **Entity** to **Document**.
-        4. The **Autofill Contents** option is on, so contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.    
-
-            {{< figure src="/attachments/refguide/modeling/pages/attach-files/create-attach-file-page.png"  width="500"  >}}
-
-        5. A new pop-up page with a preconfigured form (a data view) is created:
+    3. Since this button creates the Document object, the contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **Create**.
+    
+5. A new pop-up page with a preconfigured form (a data view) is created:
             {{< figure src="/attachments/refguide/modeling/pages/attach-files/attach-file-page.png" alt="Attach Files Page"   width="500"  >}}
-        6. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
-        7. Open the **Toolbox**, search for a **File Uploader**, drag it inside the data view on the **Attach File** page. 
-        8. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
-        9. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**:
-
-            {{< figure src="/attachments/refguide/modeling/pages/attach-files/create-object-property.png" alt="Create Object Property"   width="300"  >}}
+        
+6. As you only need your end-users to attach files on this page, delete **Name** and **Size** text boxes from the data view. 
+    
+6. 
+    
+6.    Open the **Toolbox**, search for a **File Uploader**, drag it inside the data view on the **Attach File** page. 
+            8. You have the CE1569 consistency error on the **Employee Profile** page. To resolve it, open the **Employee Profile** page and open the **Attach File** button properties.
+                    9. Change the **Parameters** > **Data Type** properties from **Existing Object** to **Create Object**:
+    
+        {{< figure src="/attachments/refguide/modeling/pages/attach-files/create-object-property.png" alt="Create Object Property"   width="300"  >}}
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 

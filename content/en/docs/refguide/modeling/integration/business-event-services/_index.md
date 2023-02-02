@@ -24,4 +24,4 @@ See the [Publishing Business Events](/appstore/modules/business-events/#publish-
 
 In order to start consuming a business event contract, you first need to create a **Consumed Business Event Service**. Right-click on a module in your app and go to **Add other** > **Consumed Business Event Service**.
 
-See the [Consuming Business Events](/appstore/modules/business-events/#consume-be) section of the *Mendix Business Events* module for more extensive documentation.
+See the [Consuming Business Events](/appstore/modules/business-events/#consume-be) section of *Mendix Business Events* for more extensive documentation.

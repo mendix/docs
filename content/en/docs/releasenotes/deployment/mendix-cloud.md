@@ -3,7 +3,7 @@ title: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
 category: "Deployment"
 weight: 10
-description: "Release notes for deployment to Mendix Clouds v3 and v4"
+description: "Release notes for deployment to Mendix Clouds"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
@@ -15,7 +15,52 @@ There are separate release notes for other deployment targets, see [Deployment](
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2023
+
+### January 26th, 2023
+
+#### Improvements
+
+* We added a new version of the Deploy API which allows you to change the Technical Contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
+
+### January 18th, 2023
+
+#### Fix
+
+* For customers running Mendix apps with runtime version 9.7.0 and above, we have fixed some minor issues with the [Number of handled external requests](/developerportal/operate/trends-v4/#Trends-appmxruntimerequests) and [Number of database queries being executed](/developerportal/operate/trends-v4/#Trends-dbmxruntimeconnectionbus) graphs. These changes are available after you redeploy your app.
+
+### January 13th, 2023
+
+#### Improvements
+
+* We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as a new deployment targets.
+
+### January 5th, 2023
+
+#### Improvements
+
+* We have introduced support for [Dynatrace](/developerportal/operate/dynatrace-metrics/) monitoring in Mendix Cloud V4.
+
 ## 2022
+
+### November 14th, 2022
+
+#### Improvements
+
+* We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spams.
+
+### November 10th, 2022
+
+#### Improvements
+
+* We updated the **Virtual Machine Out of Memory** and **Virtual Machine Error** alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
+* We now warn you if you try to set unsupported custom runtime settings. These are settings, mainly related to storage options, which are controlled by the Mendix Cloud deployment and cannot be customized for apps which are deployed to the Mendix Cloud.
+
+### November 1st, 2022
+
+#### Improvements
+
+* We have enabled DNSSEC for all `*.mendixcloud.com` domains.
 
 ### October 20th, 2022
 
@@ -27,8 +72,8 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We updated our alert template to remove the *Application Server Memory* alert.
-* We added the *Database Freeable Memory* alert with the critical threshold set to 10%.
+* We updated our alert template to remove the **Application Server Memory** alert.
+* We added the **Database Freeable Memory** alert with the critical threshold set to 10%.
 
 ### September 15th, 2022
 
@@ -466,7 +511,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 * We are in the process of migrating the alerting service to our internal infrastructure to improve maintainability. Your alerts will continue to operate in the same way after the migration.
 * As part of the migration the existing alert history will be deleted. The alerts history tab will only contain those alerts which have been triggered since the migration.
 
-* We added the ability for the technical contact to download a list of [node permissions](/developerportal/deploy/node-permissions/) as a CSV to assist with audits
+* We added the ability for the Technical Contact to download a list of [node permissions](/developerportal/deploy/node-permissions/) as a CSV to assist with audits
 * We added information about the size of backup files.
 
 ### October 5th, 2020
@@ -551,7 +596,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 #### Improvements
 
-* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
+* We have added *used storage space* to the Database Node Disk Usage graph in Mendix Cloud v4. See [Trends in the Mendix Cloud v4](/developerportal/operate/trends-v4/#Trends-dbdfabs) for more information.
 
 ### August 28th, 2020
 
@@ -630,7 +675,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, and 98313)
 * We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
-* We made some changes to the Mendix Cloud v3 [Trends](/developerportal/operate/trends/) graphs.
+* We made some changes to the Mendix Cloud v3 Trends graphs.
 
 ### June 16th, 2020
 
@@ -644,7 +689,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Improvements
 
-* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance) in the *Trends in Mendix Cloud v4* document for more information.
+* We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/trends-v4/#Trends-dbmxdatabaseburstbalance) in the *Trends in the Mendix Cloud v4* document for more information.
 * In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
     * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
     * Use different root certificates for each path

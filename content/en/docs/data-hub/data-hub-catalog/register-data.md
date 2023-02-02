@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/).
 * You have a Mendix account.
-* You have an exposed OData service that you are ready to register, or follow sections 3 and 4 in [this how-to](https://docs.mendix.com/data-hub/share-data/) to create one.
+* You have an exposed OData service that you are ready to register, or follow sections 3 and 4 in [Share Data Between Apps](/data-hub/share-data/) to create one.
 
 ## 3 Registering a Service Through the Mendix Cloud {#mendix-cloud}
 
@@ -43,6 +43,8 @@ If you are not using the Mendix Cloud to deploy your Mendix application, there a
 * [Through the Data Hub Catalog UI form](#registration-form)
 
 The Data Hub Catalog collects metadata about the application and environment where your application is deployed, so you can distinguish services from one another. You need to provide details about both the application and environment where the service is deployed in order to register your service.
+
+For detailed information on working with external entities and the Catalog without the Mendix Cloud (for on-prem or local deployment), see [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/).
 
 ### 4.1 Registering a Service Through the Data Hub Catalog Registration API {#registration-api}
 
@@ -60,7 +62,7 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 2. Use the application UUID to [register the environment, and retrieve the environment UUID](#register-environment).
 3. Use the application UUID and the environment UUID to [register one or more services](#register-services).
 
-    If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
+    If your service contract is not in the right format, use the [Transform API](#transform-api) (an endpoint of the Registration API) to get your service contract in the right format before registering them.
 
 The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
@@ -76,7 +78,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v3/applications' \
+curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Application"}'
@@ -110,7 +112,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/registration/v3/applications/{application_UUID}/environments' \
+curl --location --request POST 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Name": "My-Environment", "Location": "https://my-deployed-application-url.com", "Type": "Production"}'
@@ -151,7 +153,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request PUT 'https://hub.mendix.com/rest/registration/v3/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
+curl --location --request PUT 'https://hub.mendix.com/rest/registration/v4/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{"Endpoints":[{"Path": "/path/to/my/service/endpoint","ServiceVersion":{"Version": "1.0","Service":{"Name": "My-Service-Name","ContractType": "OData_3_0"},"SecurityScheme": { "SecurityTypes": [{"Name": "Basic"}] },"Contracts":[{"Type": "Metadata",  "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"}]}}]}'
@@ -168,7 +170,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 		"SecurityClassification": "Internal",
 		"UUID": "f6cde195-a45e-4077-b055-bca10e83c202",
 		"Links": [{
-				"Href": "https://hub.mendix.com/rest/registration/v3/endpoints/f6cde195-a45e-4077-b055-bca10e83c202",
+				"Href": "https://hub.mendix.com/rest/registration/v4/endpoints/f6cde195-a45e-4077-b055-bca10e83c202",
 				"Rel": "Self"
 			},
 			{
@@ -187,7 +189,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 				"ContractType": "OData_3_0",
 				"UUID": "0fe4ce93-a421-4ffe-8022-3715a5a60d15",
 				"Links": [{
-					"Href": "https://hub.mendix.com/rest/registration/v3/applications/0301800d-b104-417f-8a64-a8f3ba3450c3/services/My-Service-Name",
+					"Href": "https://hub.mendix.com/rest/registration/v4/applications/0301800d-b104-417f-8a64-a8f3ba3450c3/services/My-Service-Name",
 					"Rel": "Self"
 				}]
 			},
@@ -203,13 +205,17 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 }
 ```
 
+##### 4.1.3.1 Behavior When Renaming an Environment
+
+Though uncommon, you update the URL of a hosted environment. When redeploying, the root URL is then updated, and endpoints that are registered under that environment get updated endpoint locations.
+
 #### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
-The Transform API converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
+The Transform API, an endpoint in the Registration API, converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
 
 {{% alert color="info" %}}These optional fields are not currently converted by the Transform API: `SecurityClassification`, `Discoverable`, `Validated`, `ServiceVersion`, `Tags`.{{% /alert %}}
 
-To call the Transform API, you need the following:
+To call the Transform endpoint of the Registration API, you need the following:
 
 * Your app's `dependencies.json` file converted to an escaped JSON string
 
@@ -220,12 +226,12 @@ To call the Transform API, you need the following:
 
     {{% alert color="info" %}}These two values can be found in the `metadata.json` file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
-For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html#/Dependencies.json/post_dependenciesjson). 
+For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson). 
 
 You can see an example of a request that converts a `dependencies.json` file below: 
 
 ```curl
-curl --location --request POST 'https://hub.mendix.com/rest/transform/v1/dependenciesjson' \
+curl --location --request POST 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Endpoints/post_transform_dependenciesjson' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{
@@ -295,34 +301,43 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 
 Follow the steps below:
 
-1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service:
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/register-data/register-data-source-odata-connector.png" alt="upload contract" >}}
-
+1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
 2. On the **Contract** screen, upload your XML or ZIP file.
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/register-data/register-data-source-contract.png" alt="upload contract"   width="400"  >}}
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
 3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, **Data Source Relative Path**.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
-
-    {{< figure src="/attachments/data-hub/data-hub-catalog/register-data/register-data-source-details.png" alt="upload contract"   width="400"  >}}
-
 4. Select the **Go to next step** option that appears once you have filled out all the required fields.
-
 5. On the **Application** screen, select an existing application by name, or register a new one. **Technical Owner** and **Business Owner** can be edited through the **Curation** feature later.
-
 6. Select the **Go to next step** option that appears once you have filled out all the required fields.
-
 7. On the **Environment** screen, select an existing environment by name, or provide the `Name`, `Location` (URL), and `Type` to register a new one. The types options give users an indication of what type of data they might find there:
 
     1. **Production**: data is of production quality.
     2. **Sandbox**: the Mendix Free App environment, data is not of production quality.
     3. **Non-production**: hosting is paid for, but data is not of production quality.
 
-8. Select the **Done!** option that appears once you have filled out all the required fields.
+8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/data-hub/data-hub-catalog/curate/#authentication) later. 
+9. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
 
 The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin/#settings) section of *Data Hub Administration*.
+
+#### 4.2.1 Selecting an Authentication Method {#authentication}
+
+Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. 
+
+The following methods are supported by the Data Hub Catalog:
+
+* **Basic authentication** – Authenticates from a username and password
+* **Active session** – For Mendix data sources, authenticates from the open and active browser session
+* **Mendix SSO** – For Mendix data sources, authenticates from single sign-on using the [Mendix SSO](/appstore/modules/mendix-sso/) module
+* **OAuth** – Authenticates with [OAuth](https://oauth.net/)
+* **OpenID Connect** – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
+* **Other** – Specify other ways to authenticate, including custom modules
+
+Fill in as many details as you can to ensure that consuming developers can easily authenticate themselves to consume your service. 
+
+##### 4.2.1.1 Selecting a Marketplace Module (Optional)
+
+If you are using a module from the Mendix Marketplace, you select it in the **Marketplace Module** field.

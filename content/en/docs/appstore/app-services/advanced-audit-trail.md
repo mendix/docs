@@ -29,20 +29,21 @@ The Advanced Audit Trail app service is different from the [Audit Trail](/appsto
 
 ### 1.2 Features
 
-*  Records the timestamp, the old value and the changed value, the microflow that triggered the change, and whether the object was created, modified, or deleted, and the user who made the change and their user role
-*  Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
-*  Captures the checksum, file size, and name of files which can be used for validation
-*  Supports scheduled events that regularly sends the stored snapshots to an external system
-*  Allows the developer to configure an input field where additional information can be supplied about the snapshot to be created—once added, this category will be automatically added to all snapshots
-*  Offers microflows and pages that open a generalized view to show users the trail of a specific object
-*  Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
-*  Offers auditor interface to search through the external database (across entities)
-*  Supports full-text search on data and search on changed data, and export of data to the CSV format using Kibana
-*  Support configuring different permissions for audit data for different users
+* Records the timestamp, the old value and the changed value, the microflow that triggered the change, and whether the object was created, modified, or deleted, and the user who made the change and their user role
+* Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
+* Captures the checksum, file size, and name of files which can be used for validation
+* Supports scheduled events that regularly sends the stored snapshots to an external system
+* Allows the developer to configure an input field where additional information can be supplied about the snapshot to be created—once added, this category will be automatically added to all snapshots
+* Offers microflows and pages that open a generalized view to show users the trail of a specific object
+* Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
+* Offers auditor interface to search through the external database (across entities)
+* Supports full-text search on data and search on changed data, and export of data to the CSV format using Kibana
+* Support configuring different permissions for audit data for different users
 
 ### 1.3 Limitations 
 
 * Advanced Audit Trail contains an [add-on module](/refguide/consume-add-on-modules-and-solutions/). Mendix Studio does not support add-on modules. It should be disabled for your app.
+* On Mendix Cloud XS [resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), your app may run out of memory due to too many objects of the `ScheduledEventInformation` type being created.
 
 ### 1.4 Prerequisites
 
@@ -57,7 +58,7 @@ The Advanced Audit Trail app service is different from the [Audit Trail](/appsto
 
 ### 2.1 Starting a Subscription {#obtain-license-key}
 
-Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trial on the cloud, you need to start a subscription to get a license token and [configure](#configure-license-key) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
+Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail on the cloud, you need to start a subscription to get a license token and [configure](#configure-license-key) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
 
 ### 2.2 Installing the Components in Your app
 
@@ -69,7 +70,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
 1. Set up your application roles to include the right [module roles](#module-roles).
 2. Configure the right [constant values](#constants) for the right snapshots.
-3.  Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
+3. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
 
     {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/example.png" >}}
 
@@ -80,48 +81,47 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
     {{% alert color="info" %}}When your Mendix application includes entities with inheritance, we recommend you to only apply the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
 
 4. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
-5.  Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
+5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
 
     {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
 
 ### 3.1 Configuring Module Roles {#module-roles}
 
-*  **Admin**: The admin can query the entire database for the current application and can access the debug pages.
-*  **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications.
-*  **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
+* **Admin**: The admin can query the entire database for the current application and can access the debug pages.
+* **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries, so that they can also search in other applications.
+* **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross site scripting (XSS).
 
     {{% alert color="info" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
 
 ### 3.2 Configuring Constants {#constants}
 
 * Retention settings for the local cached data
-    *  **SnapshotRetentionDays**: This is the days that the records be kept in the local snapshot cache.
-    *  **OnlyDeleteProcessedItems**: This indicates whether items should be deleted only if they are sent to the external data storage.
+    * **SnapshotRetentionDays**: This is the days that the records be kept in the local snapshot cache.
+    * **OnlyDeleteProcessedItems**: This indicates whether items should be deleted only if they are sent to the external data storage.
         * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
-    
-*  Snapshots
-    *  **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g., password fields) in the snapshots.
-       
+
+* Snapshots
+    * **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (e.g., password fields) in the snapshots.
+
         * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value).
         * **False**: Hashed Strings will be excluded and therefore not audited.
-        
+
         {{% alert color="info" %}}Manually-encrypted (e.g., using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
-  
+
 * Integration
-    *  **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
+    * **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
-        
+
     * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
-    
     * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
-    
     * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
+
 ### 3.3 Configuring Scheduled Events {#scheduled-events}
 
 * **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
 * **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
-*  **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
+* **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 
     {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
 

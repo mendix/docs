@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /developerportal/support/
 description: "Provides information on how to obtain support for your Mendix apps."
-weight: 30
+weight: 35
 no_list: false 
 description_list: true
 tags: ["support", "sla", "standard", "premier", "platform"]
@@ -42,6 +42,14 @@ The Premier Support package contains the following for customers on the Mendix P
 
 Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to know more.
 
+### 1.3 Extended Support {#extended-support}
+
+Extended Support is available as a product for the oldest major Mendix version where support is scheduled to end upon release of a new major version. With this product, support according to the SLA for the oldest version is available from the GA release date of the newest major version in a six-month package that you can purchase once or twice (for a maximum duration of one year). 
+
+For example, support for Mx7 is scheduled to end upon the release of Mx10 GA. However, if you have purchased Extended Support, Mx7 remains supported for either six months or one year from the release date of Mx10 GA.
+
+Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
+
 ## 2 Finding Your Answers
 
 We expect that many questions and issues can be solved by reading the [Mendix Documentation](https://docs.mendix.com/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio and Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
@@ -77,7 +85,7 @@ Please read more about this in [Control Center](/developerportal/control-center/
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [technical contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The technical contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud and Cloud Dedicated. The Technical Contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 ### 5.3 Training
@@ -185,7 +193,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 The container runtime platform refers to the platform for managing, creating, destroying and scaling of runtime containers. In the Mendix Public Cloud and Cloud Dedicated Cloud Foundry is used.
 
-Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP or IBM Cloud, the selected third party can diagnose this component.
+Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Support diagnose this component. When running on SAP BTP, the selected third party can diagnose this component.
 
 ### 10.4 Buildpack, m2ee, and Service Console
 

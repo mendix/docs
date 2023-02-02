@@ -15,7 +15,7 @@ The [Community Commons](https://marketplace.mendix.com/link/component/170/) modu
 
 All the functions in this package can be invoked using a [Java action call](/refguide/java-action-call/) in a microflow or from your own Java code by calling `communitycommons.<Action Folder>.<Action name>;` (for example, `communitycommons.StringUtils.hash("Mendix", 20);`).
 
-The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`. This is used in the `MergeMultiplePdfs` Java action to restrict the number of PDFs processed at the same time. The default restriction is 10 files at once for Mendix Cloud v4-compatibility. If you need to merge more than 10 files, increase the number here. Setting the value to `<= 0` means unlimited.
+The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`. This is used in the `MergeMultiplePdfs` Java action to restrict the number of PDFs processed at the same time. The default restriction is 10 files at once for Mendix Cloud compatibility. If you need to merge more than 10 files, increase the number here. Setting the value to `<= 0` means unlimited.
 
 ## 3 Function List
 
@@ -164,5 +164,5 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 
 ## 6 Read More
 
-* [How to Implement Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance/)
+* [Community Best Practices for App Performance](/refguide/community-best-practices-for-app-performance/)
 * [How to Implement Best Practices for App Security](/howto/security/best-practices-security/)

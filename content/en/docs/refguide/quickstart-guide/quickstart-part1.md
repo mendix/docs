@@ -30,8 +30,8 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Create your [free account](https://signup.mendix.com/link/signup/?source=quickstart-part1&medium=mxdocs
 )⁠—which takes only two minutes to finish
-* [Download](https://marketplace.mendix.com/index3.html) and [install](/howto/general/install/) Mendix Studio Pro
-* If you are working on a Mac, please complete [How To Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
+* [Download](https://marketplace.mendix.com/index3.html) and [install](/refguide/install/) Mendix Studio Pro
+* If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
 ## 2 Choosing an App Template with a Responsive Navigation Profile
 
@@ -227,11 +227,9 @@ Implement custom logic with a microflow by doing the following:
     {{< figure src="/attachments/refguide/quickstart-guide/part1/microflow.png" width="450px" alt="Microflow">}}
 
 1. Add a decision to the flow (The orange diamond shape) from the toolbox. 
-1. Give it the caption `Has title?` and provide the following expression:
+1. Give it the caption `Has title?` and provide the following expression (function 'trim' will [always return a string](/refguide/string-function-calls/#trim)):
 
     ```text
-    trim($Picture/Title) != empty
-        and
     trim($Picture/Title) != ''
     ```
 
@@ -262,7 +260,7 @@ You have finished your responsive app! You can run your photo album app and test
 {{< figure src="/attachments/refguide/quickstart-guide/part1/complete.png" width="450px" alt="Run your app">}}
 
 {{% alert type="info" %}}
-Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud v4 Free Tier.
+Launching your app compiles your app locally on your development machine, your local host. Publishing your app will push your app to a cloud environment or web container connected to your app. If none exists, an environment will be initialized for your app on the Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
 Congratulations! You successfully completed Part 1 of the quickstart guide. You have your first Mendix app to prove it, and it works on almost any device. Well done! 

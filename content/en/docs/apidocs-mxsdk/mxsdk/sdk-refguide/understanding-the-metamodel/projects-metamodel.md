@@ -1,6 +1,8 @@
 ---
 title: "Projects in the Mendix Metamodel"
+linktitle: "Projects in the Metamodel"
 url: /apidocs-mxsdk/mxsdk/projects-metamodel/
+description: "This document describes how the Mendix Metamodel handles projects in relation to modules and documents."
 weight: 1
 ---
 

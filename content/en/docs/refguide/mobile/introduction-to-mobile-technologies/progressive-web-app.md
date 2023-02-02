@@ -34,7 +34,7 @@ PWAs have the following limitations on iOS:
 To create a full offline-first PWA, choose and add one of the following profiles (depending on which form factor you need): Responsive Web Offline, Phone Web Offline, or Tablet Web Offline. For more information about offline-first apps, see the [Offline-First Guide](/refguide/offline-first/).
 
 {{% alert color="info" %}}
-Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see [Offline Best Practices](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/best-practices/).
+Offline-first progressive web apps have some restrictions to make sure they can fully work offline. For more information, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
 {{% /alert %}}
 
 Within the navigation profiles the following PWA features can be configured:
@@ -69,7 +69,7 @@ You can also open PWA profiles on your device via the **View on your device** op
 
 {{< figure src="/attachments/refguide/mobile/progressive-web-app/view-dialog.png" alt="View menu"   width="350"  >}}
 
-Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac/).
+Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
 
 {{% alert color="info" %}}
 When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.

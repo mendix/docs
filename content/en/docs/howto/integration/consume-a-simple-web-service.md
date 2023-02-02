@@ -92,7 +92,7 @@ To create logic to call the web service, follow these steps:
 
     {{< figure src="/attachments/howto/integration/consume-a-simple-web-service/18582070.png" >}}
 
-20. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure/).
+20. Create a menu item that triggers this microflow. For details on how to create a menu item, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
 
 21. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 

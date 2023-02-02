@@ -5,6 +5,29 @@ weight: 20
 description: "Native Template 5.1 release notes."
 ---
 
+{{% alert color="warning" %}}
+Native Template versions [5.0](/releasenotes/mobile/nt-5.0-rn/) and [5.1](/releasenotes/mobile/nt-5.1-rn/) are no longer receiving updates. Also, Native Template does not work for versions below 8.18.9. 
+
+Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio-pro-8-parent/) with the latest Studio Pro [8.18.x](/releasenotes/studio-pro/8.18/) patch release.
+{{% /alert %}}
+
+## 5.1.21
+
+**Release date: December 27th, 2022**
+
+### Fixes
+
+* We changed the order of repositories in Android builds to fix an issue with jitpack.io.
+
+## 5.1.20
+
+**Release date: November 9th, 2022**
+
+### Fixes
+
+* We fixed an issue related to a recent React Native release that caused Android build failures. (Tickets 170385, 170396, 170398, and 170469)
+* We fixed an issue which affected Android apps built locally using Apple M1 machines.
+
 ## 5.1.19
 
 **Release date: May 11th, 2022**

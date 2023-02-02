@@ -2,7 +2,7 @@
 title: "Community Tools"
 url: /developerportal/community-tools/
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
-weight: 25
+weight: 30
 no_list: false 
 description_list: true
 tags: ["community", "documentation", "profile", "partner", "forum", "mvp"]

@@ -4,7 +4,7 @@ url: /developerportal/operate/logs/
 category: "Operations"
 weight: 30
 description: "Describes how to see the logs from your app."
-tags: ["Operate", "App", "Developer Portal", "SAP", "v3", "v4"]
+tags: ["Operate", "App", "Developer Portal", "SAP", "Mendix Cloud"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -14,13 +14,17 @@ From this page of the Developer Portal, you can access the logs produced by your
 
 The page is accessed through the **Logs** menu item in the left-hand menu.
 
-## 2 Apps Deployed to Mendix Cloud Version 4
+{{% alert color="warning" %}}
+You must have the **Access to Monitoring** permission to view logs. This needs to be set by the Technical Contact of the app. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how to do this.
+{{% /alert %}}
+
+## 2 Apps Deployed to the Mendix Cloud
 
 {{% alert color="info" %}}
 This is the default Mendix deployment for a licensed app.
 {{% /alert %}}
 
-For apps deployed to Mendix Cloud Version 4 (v4), you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+For apps deployed to the Mendix Cloud, you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 
 You can view the live (current) log, download it, or view and download an archived log.
 
@@ -28,9 +32,9 @@ You can view the live (current) log, download it, or view and download an archiv
 The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
  
-Logs on Mendix Cloud v4 are rotated and archived every day. The logs are kept for at least 6 months.
+Logs on the Mendix Cloud are rotated and archived every day. The logs are kept for at least 6 months.
 
-{{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page v4" >}}
+{{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page" >}}
 
 Action Button | Performs the Action
 :---|:---
@@ -38,20 +42,7 @@ Download Archived Log | download a log selected from the list underneath
 Download Current Log | download the log which is currently being written to
 View Live Log | view today's log on the screen
 
-## 3 Apps Deployed to Mendix Cloud Version 3
-
-For apps deployed to the deprecated Mendix Cloud version 3 (v3), you can select which environment you want logs for. Production logs will require two-step authentication.
-
-You can view the current log in your browser, or you can view and download an archived log. All timestamps are shown in UTC.
- 
-Logs on Mendix Cloud v3 are rotated and archived every 5 MB. The logs are kept for at least 3 months.
-
-Action Button | Performs the Action
-:---|:---
-Download Archived Log | download a log selected from the list underneath
-View Current Log | view the current log in a new browser tab
-
-## 4 Apps on SAP Business Technology Platform
+## 3 Apps on SAP Business Technology Platform
 
 For apps deployed to SAP Business Technology Platform (SAP BTP) you can see the logs using Kibana.
 
@@ -81,10 +72,10 @@ The Kibana user guide is available here: [Kibana User Guide](https://www.elastic
     * Stopping and starting the app
 {{% /alert %}}
 
-## 5 Free App
+## 4 Free App
 
 Logs are not available for Free Apps. You will see a sample screen.
 
-## 6 App Deployed to Other Clouds
+## 5 App Deployed to Other Clouds
 
 Logs are not available in the Development Portal for apps running on clouds not mentioned above. You will need to go to the cloud management portal for the cloud to which your app is deployed.

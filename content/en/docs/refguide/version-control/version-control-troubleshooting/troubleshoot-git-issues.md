@@ -1,6 +1,6 @@
 ---
 title: "Solving Known Git Issues"
-url: /howto/collaboration-requirements-management/troubleshoot-git-issues/
+url: /refguide/troubleshoot-git-issues/
 linktitle: "Known Git Issues"
 weight: 20
 description: "Describes a list of problems and fixes for Git version control issues."
@@ -11,7 +11,7 @@ tags: ["version control", "troubleshoot", "Studio Pro", "Git"]
 
 This document describes known issues with Git version control and the ways to fix them.
 
-## 2 Known Issues
+## 2 Known Issues {#ki}
 
 You may encounter the following issues:
 

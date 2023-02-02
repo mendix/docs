@@ -1,5 +1,5 @@
 ---
-title: "Applying IP Protection"
+title: "Apply IP Protection"
 url: /appstore/creating-content/sol-ip-protection/
 weight: 2
 description: "Protect intellectual property in Solutions, App Services and Connectors"

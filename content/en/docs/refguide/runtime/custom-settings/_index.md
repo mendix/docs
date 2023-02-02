@@ -43,7 +43,7 @@ The following custom settings can be configured:
 | Name | Description | Default Value |
 | --- | --- | --- |
 | **ApplicationRootUrl** | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].<wbr>mendixcloud.<wbr>com |
-| **<a name="ca-certificates">CACertificates</a>** | A comma-separated list of paths to CA certificates. |   |
+| **<a id="ca-certificates">CACertificates</a>** | A comma-separated list of paths to CA certificates. |   |
 | **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
 | **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |   |
 | **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. See **NoClientCertificateUsages** if you want to make sure that no client certificate is used for a certain host or web service. The value of **ClientCertificateUsages** must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" >}} |   |
@@ -98,6 +98,7 @@ The settings below influence the behavior of the log files. These settings can o
 | **DatabaseName** | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
 | **DatabaseJdbcUrl** | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | **DatabaseUseSsl** | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
+| <a id="integrated-security">**DatabaseUseIntegratedSecurity**</a> | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used.<br />If the runtime is not running on Windows, it must be instructed to use JavaKerberos authentication: for versions of Mendix below 9.23.0, add `;integratedSecurity=true;authenticationScheme=JavaKerberos` to **DatabaseJdbcUrl**. In addition, ensure that the proper domain user for accessing the SQL Server is authenticated on the runtime server using the `kinit` command. | false |
 | **LogMinDurationQuery** | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. |   |
 | **OracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
 | **DataStorage.EnableDiagnostics** | This setting can be used to generate a uniqueness constraint violation report. | false |
@@ -124,7 +125,7 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not needed anymore.
 
-Before the data copy process starts, the source database will also be brought in line with the model, like the main database. This is necessary to make it possible to copy all the data without problems.
+Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than the current domain model specifies.
 
 | Name | Value | Default Value |
 | --- | --- | --- |
@@ -134,7 +135,7 @@ Before the data copy process starts, the source database will also be brought in
 | **SourceDatabaseName** | The name of the source database. |   |
 | **SourceDatabasePassword** | The password for the connection to the source database. |   |
 | **SourceDatabaseType** | The type of the source database. Possible values: `DB2`, `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, or `SQLSERVER`. |   |
-| **SourceDatabaseUseIntegratedSecurity** | This setting defines whether integrated security should be used for SQL Server. If true, user name and password will not be used. | false |
+| **SourceDatabaseUseIntegratedSecurity** | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. See [DatabaseUseIntegratedSecurity](#integrated-security) for more information. | false |
 | **SourceDatabaseUseSsl** | For PostgreSQL databases, defines whether the connection to the source database will be made using SSL. | false |
 | **SourceDatabaseUserName** | The user name for the connection to the source database. |   |
 | **SourceOracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
@@ -153,7 +154,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>SecretAccessKey** | Acts as the password to authenticate with the S3 service. |   |
 | **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>BucketName** | Name of the bucket where the files are stored on S3. |   |
 | **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>ResourceNameSuffix** | Suffix for the keys under which objects are stored. This can be used when S3 buckets are divided into different segments for different users with different credentials (for example, store objects as `"[key].customer1"` for customer1 and as `"[key].customer2"` for customer2). |   |
-| **<a name="s3-region">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>Region</a>** | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EndPoint**. This setting will also be used as the signing region for requests. ||
+| **<a id="s3-region">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>Region</a>** | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EndPoint**. This setting will also be used as the signing region for requests. ||
 | **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EndPoint** | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (for example, IBM Cloud Object Storage). Both the endpoint (for example, `s3.example.com`) or the full URL (including the protocol) are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint, path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseV2Auth** | Lets the authentication policy use `Signature Version 2` instead of the default `Signature Version 4`. Set this setting to `true` when the endpoint does not support `Signature Version 4`. | false |
 | **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EncryptionKeys** | List of keys which can be used to encrypt and decrypt data at rest in S3. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet_2.png" >}} |   |

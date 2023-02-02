@@ -90,12 +90,13 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Author: *{Your author name}*
 * Mendix App path: *../../*
 * Programming language: **TypeScript**
+* Which type of components do you want to use? **Class Components** 
 * Widget type: **For web and hybrid mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
 * Unit tests: **No**
 * End-to-end tests: **No**
 
-{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack.png" alt="mx generator" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="mx generator" >}}
 
 Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 

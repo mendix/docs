@@ -150,6 +150,6 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Stories](/developerportal/collaborate/stories/)
-* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath/)
+* [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)
 * [Attributes](/refguide/attributes/)
 * [Event Handlers](/refguide/event-handlers/)

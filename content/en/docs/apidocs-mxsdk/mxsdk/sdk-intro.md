@@ -9,20 +9,54 @@ tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 
 ## 1 Introduction
 
-The Mendix Platform SDK is a TypeScript- and JavaScript-based  SDK that, through the Model SDK, provides access to the inner-workings of every Mendix app. 
+The Mendix Platform and Model SDKs are TypeScript- and JavaScript-based SDKs, which give you access to the inner-workings of every Mendix app. These SDKs enable you to work with your app efficiently via code, and automate any tedious or error-prone task.
 
-With the Platform SDK and Model SDK, you can do the following:
+With the Mendix Platform SDK and Mendix Model SDK, you can do the following:
 
 * "Read" from your app model (for example, analyze the quality of your app model, or generate a high-level diagram to document your app)
-* "Write" to your app model (for example, create a new entity in your domain model, add an activity to an existing microflow, even generate  a whole new Mendix app based on a legacy code base)
+* "Write" to your app model (for example, create a new entity in your domain model, add an activity to an existing microflow, or even generate a whole new Mendix app based on a legacy code base)
+
+{{% alert color="info" %}}
+For more information, see [Importing Legacy Code](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing) in *SDK Use Cases*.
+{{% /alert %}}
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" >}} 
 
-Basically, the Platform SDK and Model SDK allow you to automate any tedious or error-prone task. If you imagine it, there's probably a way to do it via these SDKs.
+### 1.1 Mendix Platform SDK
+
+The Mendix Platform SDK allows you to work at the app level. Currently, the Mendix Platform SDK implements the following functionality: 
+
+* Create a new app
+* Delete an app
+* Create a temporary working copy for editing an app model using the Mendix Model SDK
+* Commit the changes in a temporary working copy back to the Mendix Team Server
+* Get information about a repository, its branches and commits
+
+### 1.2 Mendix Model SDK
+
+With the Mendix Model SDK, you can read, modify, and analyze every metamodel element of your app model. This includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints, and so on. Anything you can access with Studio Pro, and all the technical details we abstract away in the UI, are part of the app model.
+
+When analyzing app models you get a lot of power: you can access every tiny detail in the model so that you can reason about the entire model, analyze it for quality, or export it completely.
+
+{{% alert color="info" %}}
+
+Because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and it is safe to use on most of the metamodel. However, we recommend only doing read access actions on the following metamodel components, because it is easy to create an invalid model:
+
+* Consumed and published web services
+* XML schemas
+* Import and export mappings
+* Custom widgets
+* Rest services: PublishedRestService is an unsupported, experimental feature.
+
+When changing these components, make sure to use the [reverse engineering tool](/apidocs-mxsdk/mxsdk/generating-code-from-the-model/) to increase your chances of successfully building a script that creates valid models.
+
+{{% /alert %}}
 
 ## 2 Getting Started
 
 ### 2.1 Quick Setup
+
+To set up the Mendix Platform and Model SDKs, perform the following steps using a command line console.
 
 1. `npm init --yes`
 2. `npm install -g typescript`
@@ -31,44 +65,4 @@ Basically, the Platform SDK and Model SDK allow you to automate any tedious or e
 
 ### 2.2 Detailed Resources
 
-For detailed information on getting started with the Platform SDK and Model SDK, see [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).
-
-## 3 Use Cases
-
-### 3.1 Importing Legacy Code
-
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844116.png" >}}
-
-Move your legacy applications into a cloud-based, modern technology.  The Platform SDK empowers you to build legacy software transformation tools that target the Mendix Platform. 
-
-For more information, see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing).
-
-### 3.2 Analyzing Your Apps
-
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844117.png" >}}
-
-If you are looking to improve your existing app models, it can be hard  to figure out where the complexity is. Mendix models are completely open and accessible, making it possible to automate model quality analysis.
-
-For more information, see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/#analyzing).
-
-### 3.3 Exporting Your Apps
-
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844114.png" >}} 
-
-The SDK allows you to export your app model and take it anywhere. So  take any page, microflow, or other model element and transform it into code, documentation, or scaffolding for a testing tool. 
-
-For more information, see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/#exporting).
-
-### 3.4 Modifying Your Apps
-
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844115.png" >}} 
-
-Updating your existing Mendix app models can sometimes be tedious to do by hand. Write a script to execute all the boring changes automatically. Focus on the creative and fun parts of your app! 
-
-For more information, see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/#modifying).
-
-## 4 Openness
-
-The Mendix Model SDK provides you with a whole new way of interacting with your app. Through this API, you get full access to all the aspects of your app model, enabling you to both read from and write to it. We have opened up our Mendix Metamodel, which is a detailed description of how all Mendix app models are structured.
-
-To explore the inner-workings of Mendix apps, see the [Mendix Platform SDK Reference Documentation](/apidocs-mxsdk/mxsdk/sdk-refguide/). 
+For detailed information on getting started with the Mendix Platform SDK and Mendix Model SDK, see [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).

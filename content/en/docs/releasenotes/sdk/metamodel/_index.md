@@ -5,7 +5,7 @@ category: "SDKs"
 weight: 3
 ---
 
-These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel/):
+These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/mendix-metamodel/):
 
 * [9](/releasenotes/sdk/metamodel-9/)
 * [8](/releasenotes/sdk/metamodel-8/)

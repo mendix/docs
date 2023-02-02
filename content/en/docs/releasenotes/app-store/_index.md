@@ -141,7 +141,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes
 
-* <a name="windows-service"></a>We fixed the issue with downloading the Windows Service. 
+* <a id="windows-service"></a>We fixed the issue with downloading the Windows Service. 
 * We fixed a minor bug for anonymous users.
 
 ### April 7th, 2021

@@ -77,7 +77,7 @@ Assuming $object1 is a domain entity that has a member called 'member1', the tab
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |
 
-## 4 Checking Whether an Object Is New<a name="new"></a>
+## 4 Checking Whether an Object Is New {#new}
 
 Checks whether an object is new. 
 

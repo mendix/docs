@@ -186,7 +186,7 @@ If `true`, the text area will be rendered focused with the device keyboard opene
 This option is only available in native pages.
 {{% /alert %}}
 
-<a name="label-properties"></a>
+<a id="label-properties"></a>
 
 ### 2.9 Label Section{#label}
 

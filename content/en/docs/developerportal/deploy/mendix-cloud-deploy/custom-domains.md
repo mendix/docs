@@ -202,7 +202,7 @@ You can also edit an existing custom domain certificate.
 For this you will need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
-## 7 Configuring a Custom Domain<a name="Configuring"></a>
+## 7 Configuring a Custom Domain {#Configuring}
 
 Once a custom domain certificate has been uploaded, you can configure a custom domain for one of your application environments.
 

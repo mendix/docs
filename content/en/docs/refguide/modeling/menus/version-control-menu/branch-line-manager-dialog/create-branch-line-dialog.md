@@ -27,9 +27,9 @@ For more information on how to manage branch lines, see the [Managing Developmen
 
 **Create branch from** allows you to choose the development line you want to create the branch line from. You can choose one of the following options:
 
-* <a name="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
-* <a name="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
-* <a name="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
+* <a id="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
+* <a id="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
+* <a id="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
 
 ## 3 Revision
 

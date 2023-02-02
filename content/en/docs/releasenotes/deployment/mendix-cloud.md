@@ -774,7 +774,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
 * We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
 
-<a name="ki20201030"></a>**Known Issue**
+<a id="ki20201030"></a>**Known Issue**
 
 * In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
 

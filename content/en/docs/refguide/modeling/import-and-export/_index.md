@@ -50,9 +50,9 @@ To import a complete app or solution package, follow these steps:
     You have the following options in this dialog box:
 
     * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server**, or **Locally on disk**
-	
-	{{% alert color="info" %}} For a solution to be compatible with future upgrades, it must be set up using **New Mendix Team Server** (recommended) or **Private server** only. Solutions stored **Locally on disk** cannot be upgraded.{{% /alert %}}
-	
+    
+    {{% alert color="info" %}} For a solution to be compatible with future upgrades, it must be set up using **New Mendix Team Server** (recommended) or **Private server** only. Solutions stored **Locally on disk** cannot be upgraded.{{% /alert %}}
+    
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
 

@@ -239,6 +239,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `Binary` | **Binary** | The enumeration element that reflects native data type of a binary file expressed as a string |
 
 #### 4.2.5 `ENUM_ComparisonOperator`
+
 For more information on using comparison operators, please visit [Amazon DynamoDB docs](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Condition.html).
 | Name | Caption | Description |
 | --- | --- | --- |

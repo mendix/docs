@@ -1,6 +1,6 @@
 ---
 title: "Enabling End-Users to Attach Images"
-url: /refguide/modeling/pages/image-and-file-widgets/attach-images/
+url: /refguide/attach-images/
 linktitle: "Enable End-Users to Attach Images"
 description: "Describes how to configure image uploader in Mendix Studio Pro."
 weight: 60
@@ -13,7 +13,7 @@ This how-to explains how you can enable your end-users to attach images. They wi
 
 This how-to will teach you how to do the following:
 
-* Define entities as image entities
+* Create a specialization of the System.Image entity
 * Create a page with a form that allows your end-users to attach images
 * Display attached images in a list
 
@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-images/domain-model.png"   >}}
 
-* You have the **New Report** page with a form (a data view) where employees submit a trip report for reimbursement. :
+* You have the **New Report** page with a form (a data view) where employees submit a trip report for reimbursement:
 
     {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-images/form-example.png"   >}}
 
@@ -65,7 +65,7 @@ Do the following:
 
 7. Click **OK** to close the **Properties** dialog box.
 
-Good job! You have created the image entity and an association from it to the **Report** entity:
+Good job! You have created the **Receipt** entity, which is a specialization of System.Image entity, and an association from it to the **Report** entity:
 
 {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-images/domain-model-configured.png"  >}}
 

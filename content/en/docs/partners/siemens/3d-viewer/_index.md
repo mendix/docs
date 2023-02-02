@@ -77,16 +77,9 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### 2.1 Starting a Subscription {#obtain-license-token}
 
-3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to get a license token and configure it later:
+3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy the 3D Viewer on the cloud, you need to start a subscription to get a license token which you will need when you configure it as described in [Configuring the License Token](#configure-license-token), below.
 
-1. Go to the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page in the Marketplace.
-2. Click **Subscribe** to start a subscription.
-3. Select your subscription plan.
-4. Fill in **Technical Owner** information (**First Name**, **Last Name**, **Email Address**), billing account information, payments and other required information and then place the order. A page opens and confirms that the your request has been received.
-5. Wait until your request is processed. It can take more than 15 minutes for the system to process your request. After your request is processed, the Technical Owner will receive an email that says the app service is ready to be used.
-6. Click the link in the email to go to the [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions) page and log in there. This page gives an overview of all the subscriptions of your organization.
-7. Click **3D Viewer** to open the service management dashboard.
-8. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview/#creating-binding-keys) section in the *Marketplace Overview* to create a license token. Save the license token somewhere safe. Later you will need to [configure the license token](#configure-license-token) in your app.
+You can request a license token by clicking the **Contact Us** button on the [3D Viewer](https://marketplace.mendix.com/link/component/118345) Marketplace page.
 
 ### 2.2 Installing the Component in Your App
 
@@ -146,7 +139,7 @@ For Studio Pro 9.4 and above, **HTTPEndpoint** is renamed **Endpoint**, and you 
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.
 
-The **LicenseToken** constant provides a valid license token for an app that uses this app service. As 3D Viewer is a commercial product, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Obtaining a License Token](#obtain-license-token) section and [Configuring the License Token](#configure-license-token) section.
+The **LicenseToken** constant provides a valid license token for an app that uses this app service. As 3D Viewer is a commercial product, you need to have a valid license token and configure it correctly. For details on how to get and configure a license token, see the [Starting a Subscription](#obtain-license-token) and [Configuring the License Token](#configure-license-token) sections.
 
 ### 4.3 Microflow {#microflow}
 
@@ -318,7 +311,7 @@ These widgets do not require additional configuration. Simply place them within 
 
 ### 4.7 Configuring the License Token {#configure-license-token}
 
-You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription to [obtain a license token](#obtain-license-token), and then configure it.
+You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, you need to start a subscription as described in [Starting a Subscription](#obtain-license-token), above, and then configure it as follows:
 
 #### 4.7.1 For an App Deployed in the Mendix Cloud
 

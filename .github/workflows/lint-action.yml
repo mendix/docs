@@ -13,7 +13,7 @@ jobs:
   # This workflow contains a single job called "lint-pr"
   lint-pr:
     # Check if the event is not triggered by a fork
-    if: github.event.schedule.head.repo.full_name == github.repository || github.event.workflow_dispatch.head.repo.full_name == github.repository 
+    if: github.event.workflow_dispatch.head.repo.full_name == github.repository 
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job

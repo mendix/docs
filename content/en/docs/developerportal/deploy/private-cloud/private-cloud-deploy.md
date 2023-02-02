@@ -253,8 +253,6 @@ This deploys the package to an existing environment as described in [Deploying t
 
 This section shows all the environments created for this app.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image19.png" >}}
-
 For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment.
 
 You can perform the following actions:

@@ -1,7 +1,6 @@
 ---
 title: "Advanced Audit Trail"
-url: /appstore/app-services/advanced-audit-trail/
-category: "App Services"
+url: /appstore/modules/advanced-audit-trail/
 description: "Describes the configuration and usage of the Advanced Audit Trail app service, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app service", "audit trail"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 

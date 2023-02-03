@@ -107,7 +107,7 @@ Conversions work in the following way:
 
 * An attempt to convert a Boolean to a Date and time will result in an error.
 * A Decimal or Integer/Long is converted to a Date and time by interpreting it as the number of seconds since the Unix Epoch, January 1, 1970, 00:00 UTC.
-* A String is converted to a Date and time by parsing it using the ISO 8601 format. If no timezone is specified, like in `2011-12-03T10:15:30`, the timezone of the session is used.
+* A String is converted to a Date and time by parsing it using the ISO 8601 format. If no time zone is specified, like in `2011-12-03T10:15:30`, the time zone of the session is used.
 * A Decimal or Integer/Long is converted to a Boolean by converting any positive number as `true`, and any zero or negative number as `false`.
 * A String is converted to a Boolean by comparing it to the string `'true'` in a case insensitive way.
 * A String is converted to a Decimal or Integer/Long by parsing it as a number.

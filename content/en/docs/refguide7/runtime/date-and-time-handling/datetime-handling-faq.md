@@ -11,7 +11,7 @@ In this FAQ we'll answer some Frequently Asked Questions about DateTime.
 
 A DateTime is nothing more than a number to a computer. This number represents the amount of seconds (or milliseconds) since 1970-01-01 00:00:00 UTC. It's beyond the scope of this FAQ to explain why this date was universally chosen but you can find this by searching for Unix Epoch or reading [http://en.wikipedia.org/wiki/Unix_time](http://en.wikipedia.org/wiki/Unix_time).
 
-This also means there is NO timezone information stored in a DateTime itself. It is important to keep this in mind when reasoning about dates and times. For things such as comparing DateTime objects, nothing concerning localization or timezones is done. Only when formatting time, which means as much as making it readable to humans, or for operations such as getting the beginning of the day, timezones come into play.
+This also means there is NO time zone information stored in a DateTime itself. It is important to keep this in mind when reasoning about dates and times. For things such as comparing DateTime objects, nothing concerning localization or time zones is done. Only when formatting time, which means as much as making it readable to humans, or for operations such as getting the beginning of the day, time zones come into play.
 
 ## What is the purpose of the Default time zone setting in project settings?
 
@@ -19,19 +19,19 @@ The default time zone determines the time zone for newly created users and also 
 
 ## What is the purpose of setting a time zone for a user?
 
-The time zone setting for a user defines under what time zone operations are performed for this user on the **server**, for example when a Microflow formats a DateTime value as a String to get the current hour of the day. Note that this is different from operations in the users browser. Unfortunately it is not possible for browsers to operate under a different time zone than **either** the one of the browsers computer **or** the UTC time zone. This means that users should set their time zone to the one their browser runs on, or they might notice discrepancies in what is displayed in their browser and (for example) generated documents or formatted strings. Note that if you do **not** set a timezone to a user, the server sometimes only knows the offset from UTC that the browser reports of the **current** moment, which can lead to unexpected results when dealing with dates in a different period of the year after a Daylight Savings Time adjustment.
+The time zone setting for a user defines under what time zone operations are performed for this user on the **server**, for example when a Microflow formats a DateTime value as a String to get the current hour of the day. Note that this is different from operations in the users browser. Unfortunately it is not possible for browsers to operate under a different time zone than **either** the one of the browsers computer **or** the UTC time zone. This means that users should set their time zone to the one their browser runs on, or they might notice discrepancies in what is displayed in their browser and (for example) generated documents or formatted strings. Note that if you do **not** set a time zone to a user, the server sometimes only knows the offset from UTC that the browser reports of the **current** moment, which can lead to unexpected results when dealing with dates in a different period of the year after a Daylight Savings Time adjustment.
 
 ## How is Daylight Savings Time (DST) handled?
 
-Just like a regular timezone. If you are in Eastern Standard Time (EST, which is UTC -5) normally then you are in Eastern Daylight Time (EDT, which is UTC -4) during the summer. This is of course all handled automatically, but note that you really ARE in a different timezone in summer.
+Just like a regular time zone. If you are in Eastern Standard Time (EST, which is UTC -5) normally then you are in Eastern Daylight Time (EDT, which is UTC -4) during the summer. This is of course all handled automatically, but note that you really ARE in a different time zone in summer.
 
 ## I planned a scheduled event at 02:00 using server time and set it to repeat every day. Now my local DST changed and scheduled events are starting to run an hour off. Why?
 
-This can be confusing but is expected. The scheduling of scheduled events is interval-based and not time-based. Notice that the original date of the scheduled event is still at your previous timezone (before the DST period changed), the scheduled event is simply repeating itself every 24 hour, which might mean that you will see a change in the local time it runs at, because during DST shifts a day may take 25 hours or 23 hours. This will cause a temporary shift for as long as the DST change lasts.
+This can be confusing but is expected. The scheduling of scheduled events is interval-based and not time-based. Notice that the original date of the scheduled event is still at your previous time zone (before the DST period changed), the scheduled event is simply repeating itself every 24 hour, which might mean that you will see a change in the local time it runs at, because during DST shifts a day may take 25 hours or 23 hours. This will cause a temporary shift for as long as the DST change lasts.
 
 ## What if I plan it in UTC?
 
-This will be less ambiguous because it will always run at the same time in UTC, but you will still see these changes because your timezone changes its relative position to UTC.
+This will be less ambiguous because it will always run at the same time in UTC, but you will still see these changes because your time zone changes its relative position to UTC.
 
 ### But I really need to run scheduled events at 02:00 local time, always! How do I do this?
 
@@ -55,7 +55,7 @@ If you want to compare times of the day between different time zones, so you wou
 
 ## What should be the outcome (and why) if I run the following expression in EST: `[%BeginOfCurrentDay%] > [%BeginOfCurrentDayUTC%]` ?
 
-It depends on when you run this statement. Usually it will return true because the beginning of the current day in UTC is sooner (so smaller) than the begin of the current day in EST. However, if you run this when the day already changed in UTC time but not in EST time (so between midnight and 05:00 UTC, or 19:00 and midnight EST) then it will return false, because the begin of the current day will be a day later in the UTC timezone.
+It depends on when you run this statement. Usually it will return true because the beginning of the current day in UTC is sooner (so smaller) than the begin of the current day in EST. However, if you run this when the day already changed in UTC time but not in EST time (so between midnight and 05:00 UTC, or 19:00 and midnight EST) then it will return false, because the begin of the current day will be a day later in the UTC time zone.
 
 ## If I am comparing something with a `[%CurrentDateTime%]` token in a DataGrid, which time should it use as a constraint for a localized and for a non-localized date? So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
 
@@ -69,6 +69,6 @@ You can do this by parsing your time string (for example: 2013-01-01 09:00:00) w
 
 A scheduled event also needs a time zone to operate in, just like when a user would run a Microflow you might encounter operations that require a time zone. The setting for Scheduled event time zone defines which time zone this is. Note that this is independent of when a scheduled event is scheduled to RUN, which can be planned at the server's time or UTC.
 
-## How are DateTimes in XML that have no timezone information treated?
+## How are DateTimes in XML that have no time zone information treated?
 
-If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no timezone, before Mendix 5.13 the DateTime would be interpreted as if it was in the server's timezone. After Mendix 5.13 this DateTime is interpreted as if it was in UTC, making it more inline with all the other DateTime operations and less error prone. The location of the machine running the server won't affect any operations anymore. This may however change behavior.
+If a DateTime is encountered in XML that is processed using an XML-To-Domain mapping and specifies no time zone, before Mendix 5.13 the DateTime would be interpreted as if it was in the server's time zone. After Mendix 5.13 this DateTime is interpreted as if it was in UTC, making it more inline with all the other DateTime operations and less error prone. The location of the machine running the server won't affect any operations anymore. This may however change behavior.

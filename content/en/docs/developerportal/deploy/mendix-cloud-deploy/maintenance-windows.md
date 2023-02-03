@@ -16,7 +16,7 @@ In the Mendix Cloud Professional and Enterprise plans you can configure a weekly
 
 ### 1.1 Preferred Maintenance Window
 
-The **Preferred Maintenance Window** is a standard time range in a week where you would prefer system maintenance to occur. This is always shown as **UTC** so don't forget to convert it to your local timezone.
+The **Preferred Maintenance Window** is a standard time range in a week where you would prefer system maintenance to occur. This is always shown as **UTC** so don't forget to convert it to your local time zone.
 
 This window will only be used when planned maintenance is being scheduled.
 

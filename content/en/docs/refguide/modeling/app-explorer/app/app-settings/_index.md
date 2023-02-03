@@ -88,7 +88,7 @@ The **Default time zone** determines the time zone for newly created users. If y
 
 ### 3.8 Scheduled Event Time Zone {#scheduled}
 
-The **Scheduled event time zone** defines under which timezone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
+The **Scheduled event time zone** defines under which time zone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default time zone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 

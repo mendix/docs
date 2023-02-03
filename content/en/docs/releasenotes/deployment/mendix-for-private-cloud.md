@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### February ???, 2023
+
+#### Documentation updates
+
+* We have updated [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to clarify how database password rotation works, and how to use AWS RDS IAM authentication instead of passwords.
+
 ### February 2nd, 2023
 
 #### Portal Improvements

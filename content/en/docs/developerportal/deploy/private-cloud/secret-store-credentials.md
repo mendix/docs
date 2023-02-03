@@ -53,7 +53,7 @@ The following table lists the properties used as keys for database and storage-r
 | Database Host | `database-host` | `pg.example.com:5432` | ✓ |
 | Database Name | `database-name` | `my-app-1` | ✓ |
 | Database Username | `database-username` | `my-app-user-1` | ✓ |
-| Database Password | `database-password` | `Welc0me!` | ✓ |
+| Database Password | `database-password` | `Welc0me!` |  |
 | Storage service name | `storage-service-name` | `com.mendix.storage.s3` | ✓ |
 | S3 Storage endpoint | `storage-endpoint` | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` | ✓ (only for S3) |
 | S3 Storage access key id | `storage-access-key-id` | `AKIA################` |  |
@@ -78,6 +78,12 @@ The following table lists the properties used as keys for database and storage-r
 If your app is created in Mendix version 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you don't need to specify `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket.
 Instead, the same AWS IAM role can be used for S3 authentication.
 For more information and a complete walkthrough example, see the [AWS Secrets Manager example](#configure-using-aws-secrets-manager).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If your app is created in Mendix version 9.22 or above, and its Kubernetes service account is linked to an AWS IAM Role, you don't need to specify `database-password` to access a Postgres RDS database.
+Instead, the same AWS IAM role can be used for RDS authentication.
+For more information and a complete walkthrough example, see the [AWS RDS IAM authentication example](#configure-using-rds-iam).
 {{% /alert %}}
 
 To set a Mendix app constant, use the `mx-const-{name}` format (replace `{name}` with the name of the app constant).
@@ -457,6 +463,53 @@ If your app is created in Mendix version 9.20 or above, you can remove `storage-
 
 This means that the app authenticates with the AWS S3 API using AWS IRSA instead of static credentials.
 
+### 3.3 Using IAM authentication for AWS RDS databases {#configure-using-rds-iam}
+
+AWS RDS Postgres databases can use [IAM database authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) instead of regular passwords.
+
+To use this feature, you need to:
+
+* Use an AWS RDS Postgres database with [IAM authentication enabled](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html)
+* Use Mendix Operator version 2.10.1 and above
+* Use Mendix 9.22 and above
+* Complete the steps in using [AWS Secrets Manager](#configure-using-aws-secrets-manager) for an environment
+
+After completing the prerequisites, follow these steps to switch from password-based authentication to IAM authentication:
+
+1. Remove or comment out `database-password` from the SecretProviderClass and the associated AWS Secret.
+2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) for the `database-user` role.
+   You will need to use the `psql` commandline and run the following commands (replacing `<role>` with the username specified in `database-user`):
+   ```sql {linenos=false}
+   GRANT rds_iam TO <role>;
+   ALTER ROLE <role> WITH PASSWORD NULL;
+   ```
+   {{% alert color="info" %}}This step is not necessary if the RDS instance was created with only IAM authentication enabled, and if `database-user` is the default (master) user.{{% /alert %}}
+3. Attach the following inline IAM policy to the environment's IAM role (created when configuring [AWS Secrets Manager](#configure-using-aws-secrets-manager)):
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": [
+           "rds-db:connect"
+         ],
+         "Resource": [
+           "arn:aws:rds-db:<db-region>:<account-id>:dbuser:<db-resource-id>/<database-user>"
+         ]
+       }
+     ]
+   }
+   ```
+   replacing `<db-region>` with the RDS database region, `<account-id>` with the AWS account ID, `<db-resource-id>` with the database Resource ID and `<database-user>` with the username specified in `database-user`.
+   
+   For more information how to get the Resource ID and create an RDS IAM policy, see the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html).
+4. Restart the Mendix app environment.
+
+When using IAM authentication, the Mendix app's environment (`m2ee-sidecar` container) will use that app's attached IAM role to request a new Postgres password every 10 minutes from the [RDS API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Go.html).
+These passwords expire after 15 minute.
+Passwords are only checked when opening a new connection, so an expired password doesn't cancel any existing connections and doesn't interrupt any running database transactions and queries.
+
 ## 4 Additional considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:
@@ -465,7 +518,7 @@ When implementing a secret store, keep in mind the following considerations:
 * If a secret is rotated or updated, Mendix Operator version 2.10.0 and above will detect the changes and apply them. However (depending on the Mendix Runtime version in use), the changes might not be applied — if the changes are not applied, you should restart the environment. Bear in mind the following features of detecting a changed secret:
     * There is a delay of a few minutes before the CSI Secrets Storage driver detects the changes.
     * Only file storage credentials and `MxAdmin` password changes are correctly processed at the moment.
-    * In Mendix version 9.21 or below, rotation of database credentials requires the environment to be manually restarted. Rotation of database credentials will be added soon to the Mendix Runtime, and this document will be updated accordingly.
+    * In Mendix version 9.22 or above, database password rotation is processed without restarting the app.
 * Dynamic secrets in HashiCorp Vault are supported - from the app environment, they are identical to regular secrets.
 * The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass`.
 * CSI Secrets Storage can override app settings — if a parameter is configured in the Developer Portal or `MendixApp` CR, the value from CSI Secrets Storage will have a higher priority and will override the value specified elsewhere. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants, and runtime custom settings.

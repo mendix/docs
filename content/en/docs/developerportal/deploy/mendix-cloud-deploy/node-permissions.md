@@ -129,6 +129,6 @@ In addition, all changes to node permissions will be logged on the activity log.
 
 A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.
 
-The Technical Contact can give the technical contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
+The Technical Contact can give the Technical Contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
 
 For full details on this role, see the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) section of *App Roles*.

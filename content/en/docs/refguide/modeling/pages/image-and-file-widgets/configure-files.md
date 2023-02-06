@@ -1,6 +1,6 @@
 ---
 title: "Configuring File Upload and Download"
-url: /refguide/attach-files/
+url: /refguide/configure-files/
 linktitle: "Configure File Upload and Download"
 weight: 70
 description: "Describes how to configure file manager in Mendix Studio Pro."
@@ -9,7 +9,7 @@ tags: ["studio pro", "pages", "file", "upload files", "attach", "file manager"]
 
 ## 1 Introduction 
 
-This how-to explains how you can enable your end-users to attach and download files, such as PDF files or Microsoft Word documents. They will be able to attach files from different devices: phone, tablet, or desktop; as well as download attached files from a list.
+This how-to explains how you can enable your end-users to attach and download files, such as PDF files or Microsoft Word documents, by configuring a [file manager](/refguide/file-manager/) widget. Your users will be able to attach files from different devices: phone, tablet, or desktop; as well as download attached files from a list.
 
 This how-to will teach you how to do the following:
 
@@ -36,11 +36,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure your domain model is configured the following way:
 
-  {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/domain-model.png" alt="Domain Model"    >}}
+  {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/domain-model.png" alt="Domain Model"    >}}
 
 * You have the **Employee Profile** page with a form (a data view) that has such details as employee's name, department, their email, phone, title, and assets assigned to them:
 
-  {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/employee-profile-form.png" alt="Employee Profile Page"   width="500"  >}}
+  {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/employee-profile-form.png" alt="Employee Profile Page"   width="500"  >}}
 
 ## 3 Creating a Specialization of System.File
 
@@ -58,13 +58,13 @@ Do the following:
 
 Good job! You have created the Document entity, which is a specialization of the System.File entity, and an association from it to the **Employee** entity:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/domain-model-configured.png" alt="Domain Model Configured"   width="450"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/domain-model-configured.png" alt="Domain Model Configured"   width="450"  >}}
 
 ## 4 Adding a File Manager
 
 A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag the file manager into your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/employee-profile-form.png" alt="Employee Profile Page"   width="500"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/employee-profile-form.png" alt="Employee Profile Page"   width="500"  >}}
 
 To solve this, you can add a button which will open a pop-up page where your end-users (IT administrators) can upload images. This page will be connected to your current report form over the *Document_Employee* association and will upload files that are associated to this specific report. 
 
@@ -78,7 +78,7 @@ Follow the steps below:
 
 4. In the **Select Entity** dialog box, select the **Document** entity through the **Document_Employee** association.
 
-    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/select-entity.png" alt="Select Entity"   width="400"  >}}
+    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/select-entity.png" alt="Select Entity"   width="400"  >}}
     
 4. Open button properties and do the following:
 
@@ -97,10 +97,10 @@ Follow the steps below:
         1. Set the **Title** to *Document_NewEdit*.
         2. Set the **Layout** to *PopupLayout*.
         3. Since this button creates the Document object, the contents of the page will be configured automatically for you and the suggested page template is narrowed down to **Forms**. Choose **Form Vertical** and click **OK**:
-            {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/create-page-dialog.png" alt="Create Page Dialog Box"   width="550"  >}}
+            {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/create-page-dialog.png" alt="Create Page Dialog Box"   width="550"  >}}
     
 5. A new pop-up page with a preconfigured form (a data view) is created:
-    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/attach-file-page.png" alt="Attach Files Page"     >}}
+    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/attach-file-page.png" alt="Attach Files Page"     >}}
     
 9. As you only need your end-users to attach files on this page, delete **Name**, **Size**, and **Employee** widgets from the data view. 
 
@@ -108,7 +108,7 @@ Follow the steps below:
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/attach-file-page-configured.png" alt="Attach Files Page Configured"    >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/attach-file-page-configured.png" alt="Attach Files Page Configured"    >}}
 
 ## 5 Downloading Files
 
@@ -123,7 +123,7 @@ After your end-users attach the files, it would be nice to display files in a li
     1. Click the **Entity (path)** property.
     2. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association, make sure that **Generate contents of list view** is selected, and click **Select**:
 
-        {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/select-entity.png" alt="Select Entity"   width="400"  >}}
+        {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/select-entity.png" alt="Select Entity"   width="400"  >}}
 
 4. Say **Yes** to the question on filling the contents of the list view automatically.
 
@@ -140,11 +140,11 @@ After your end-users attach the files, it would be nice to display files in a li
 
 9. Drag four widgets to the columns of the layout grid, one widget per one column:
 
-    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/layout-grid.png" alt="Layout Grid inside List View"   width="500"  >}}
+    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/layout-grid.png" alt="Layout Grid inside List View"   width="500"  >}}
 
 Great job! Now you have the list that shows attached files and your users can download files from this list:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/attach-files/page-configured.png" alt="Configured Page"   width="550"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/configure-files/page-configured.png" alt="Configured Page"   width="550"  >}}
 
 Congratulations! You have configured the form that allows IT administrators to attach files and displays these files in the list.
 

@@ -205,6 +205,10 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 }
 ```
 
+##### 4.1.3.1 Behavior When Renaming an Environment
+
+Though uncommon, you update the URL of a hosted environment. When redeploying, the root URL is then updated, and endpoints that are registered under that environment get updated endpoint locations.
+
 #### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
 
 The Transform API, an endpoint in the Registration API, converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
@@ -298,19 +302,14 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 Follow the steps below:
 
 1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service.
-
 2. On the **Contract** screen, upload your XML or ZIP file.
 
     If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
 3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, **Data Source Relative Path**.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
-
 4. Select the **Go to next step** option that appears once you have filled out all the required fields.
-
 5. On the **Application** screen, select an existing application by name, or register a new one. **Technical Owner** and **Business Owner** can be edited through the **Curation** feature later.
-
 6. Select the **Go to next step** option that appears once you have filled out all the required fields.
-
 7. On the **Environment** screen, select an existing environment by name, or provide the `Name`, `Location` (URL), and `Type` to register a new one. The types options give users an indication of what type of data they might find there:
 
     1. **Production**: data is of production quality.
@@ -318,8 +317,7 @@ Follow the steps below:
     3. **Non-production**: hosting is paid for, but data is not of production quality.
 
 8. Select your **Authentication** method. See the [Authentication](#authentication) section below for supported types. Curators can also [add or change authentication methods](/data-hub/data-hub-catalog/curate/#authentication) later. 
-   
-9.  Select the **Done!** option that appears once you have filled out all the required fields.
+9. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
 
@@ -338,4 +336,8 @@ The following methods are supported by the Data Hub Catalog:
 * **OpenID Connect** – Authenticates with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
 * **Other** – Specify other ways to authenticate, including custom modules
 
-Fill in as many details as you can to ensure that consuming developers can easily authentication themselves to consume your service.
+Fill in as many details as you can to ensure that consuming developers can easily authenticate themselves to consume your service. 
+
+##### 4.2.1.1 Selecting a Marketplace Module (Optional)
+
+If you are using a module from the Mendix Marketplace, you select it in the **Marketplace Module** field.

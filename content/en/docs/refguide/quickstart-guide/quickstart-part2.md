@@ -20,8 +20,8 @@ Mendix native mobile apps are native mobile apps based on React Native. These ap
 
 Native mobile apps are offline first and only fetch data from the server when programmed to do so. By completing this guide, you will become acquainted with the following Mendix native mobile concepts:
 
-* [Offline-first design](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/)
-* [Data synchronization](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/) between mobile devices and web apps
+* [Offline-first design](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/)
+* [Data synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) between mobile devices and web apps
 * [Nanoflows](/refguide/nanoflows/): the native mobile JavaScript equivalent to microflows)
 * Using custom [JavaScript actions](/refguide/javascript-actions/) in your nanoflows
 

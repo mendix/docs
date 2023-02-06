@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Eclipse](https://eclipse.org/)
 * Add a Java action and open the app in Eclipse
-* Read [How to Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java/)
+* Read [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)
 * Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the app menu in Studio Pro (you should redo this every time you make changes in Studio Pro):
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18581045.png" >}}
 

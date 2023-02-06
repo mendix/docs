@@ -78,9 +78,9 @@ Beyond using simple 3D objects, there are also ways to add more complex and cust
 All AR widgets share these settings:
 
 * **General** tab
-  * **Position**
-  * **Rotation**
-  * **Scale**
+    * **Position**
+    * **Rotation**
+    * **Scale**
 
 * **Material** tab
 * **Interaction** tab

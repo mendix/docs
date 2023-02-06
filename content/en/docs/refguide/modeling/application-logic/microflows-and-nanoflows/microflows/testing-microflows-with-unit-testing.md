@@ -26,9 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     | Component | Version Used in This How-to |
     | --- | --- |
-    | [Unit Testing](/appstore/modules/unit-testing/) | 8.0.0 |
-    | [Community Commons Function Library](/appstore/modules/community-commons-function-library/) | 8.1.0 |
-    | [Object Handling](/appstore/modules/object-handling/) | 3.0.0 |
+    | [Unit Testing](/appstore/modules/unit-testing/) | 9.2.0 |
 
     {{% alert color="info" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images or names on your screen may be different than shown in this how-to.{{% /alert %}}
 
@@ -37,10 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To set up the unit testing module and run the example tests, follow these steps:
 
 1. Create a [new app](/refguide/new-app/).
-2. Download and install the following modules:
-    * [Unit Testing](/appstore/modules/unit-testing/)
-    * [Community Commons Function Library](/appstore/modules/community-commons-function-library/)
-    * [Object Handling](/appstore/modules/object-handling/)
+2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module. 
 
     For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 

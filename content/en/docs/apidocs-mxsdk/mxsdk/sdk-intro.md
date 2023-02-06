@@ -9,50 +9,54 @@ tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 
 ## 1 Introduction
 
-The Mendix Platform SDK and Model SDK are TypeScript- & JavaScript-based SDKs, which gives you access to the inner-workings of every Mendix app. These SDKs enable you to work with your app efficiently via code, and automate any tedious or error-prone task. If you image it, there is probably a way to do it via these SDKs. 
+The Mendix Platform and Model SDKs are TypeScript- and JavaScript-based SDKs, which give you access to the inner-workings of every Mendix app. These SDKs enable you to work with your app efficiently via code, and automate any tedious or error-prone task.
 
-With the Platform SDK and Model SDK, you can do the following:
+With the Mendix Platform SDK and Mendix Model SDK, you can do the following:
 
 * "Read" from your app model (for example, analyze the quality of your app model, or generate a high-level diagram to document your app)
-* "Write" to your app model (for example, create a new entity in your domain model, add an activity to an existing microflow, even generate  a whole new Mendix app based on a legacy code base)
+* "Write" to your app model (for example, create a new entity in your domain model, add an activity to an existing microflow, or even generate a whole new Mendix app based on a legacy code base)
+
+{{% alert color="info" %}}
+For more information, see [Importing Legacy Code](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing) in *SDK Use Cases*.
+{{% /alert %}}
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" >}} 
 
-{{% alert color="info" %}}For more information, see [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing).{{% /alert %}}
-
 ### 1.1 Mendix Platform SDK
 
-The Platform SDK allows you to work at the app level. Currently, the Platform SDK implements the following functionality: 
+The Mendix Platform SDK allows you to work at the app level. Currently, the Mendix Platform SDK implements the following functionality: 
 
-* Creating a new app
-* Deleting an app
-* Creating a temporary working copy for editing an app model using the Mendix Model SDK
-* Committing the changes to a temporary working copy back to the Mendix Team Server
-* Getting info about a repository, its branches and commits
+* Create a new app
+* Delete an app
+* Create a temporary working copy for editing an app model using the Mendix Model SDK
+* Commit the changes in a temporary working copy back to the Mendix Team Server
+* Get information about a repository, its branches and commits
 
 ### 1.2 Mendix Model SDK
 
-With Model SDK, you can read, modify, analyze every meta model elements of your app model. That includes domain models, microflows, pages, integrations (consumed  and published web services), Java actions, custom widgets, security constraints and so on. Anything you can access with Studio Pro - and all the technical details we abstract away from in the UI, are part of the app model.
+With the Mendix Model SDK, you can read, modify, and analyze every metamodel element of your app model. This includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints, and so on. Anything you can access with Studio Pro, and all the technical details we abstract away in the UI, are part of the app model.
 
-When analyzing app models this gives you a lot of power: you can access every tiny detail in the model, so that you can reason about the entire model, analyze it for quality, or export it completely.
+When analyzing app models you get a lot of power: you can access every tiny detail in the model so that you can reason about the entire model, analyze it for quality, or export it completely.
 
 {{% alert color="info" %}}
 
-However, because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and most of the meta model is safe to use. However, we recommend only  doing read access actions on the following specific meta model  components, because it is easy to create an invalid model:
+Because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and it is safe to use on most of the metamodel. However, we recommend only doing read access actions on the following metamodel components, because it is easy to create an invalid model:
 
-- Consumed and published web services
-- XML schemas
-- Import and export mappings
-- Custom widgets
-- Rest services: PublishedRestService is an unsupported, experimental feature.
+* Consumed and published web services
+* XML schemas
+* Import and export mappings
+* Custom widgets
+* Rest services: PublishedRestService is an unsupported, experimental feature.
 
-When changing these components, make sure to use the [reverse engineering tool](https://docs.mendix.com/apidocs-mxsdk/mxsdk/generating-code-from-the-model/) to increase your chances of successfully building a script that creates valid models.
+When changing these components, make sure to use the [reverse engineering tool](/apidocs-mxsdk/mxsdk/generating-code-from-the-model/) to increase your chances of successfully building a script that creates valid models.
 
 {{% /alert %}}
 
 ## 2 Getting Started
 
 ### 2.1 Quick Setup
+
+To set up the Mendix Platform and Model SDKs, perform the following steps using a command line console.
 
 1. `npm init --yes`
 2. `npm install -g typescript`
@@ -61,4 +65,4 @@ When changing these components, make sure to use the [reverse engineering tool](
 
 ### 2.2 Detailed Resources
 
-For detailed information on getting started with the Platform SDK and Model SDK, see [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).
+For detailed information on getting started with the Mendix Platform SDK and Mendix Model SDK, see [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).

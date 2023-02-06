@@ -11,7 +11,66 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2023
+
+### February 2nd, 2023
+
+#### Portal Improvements
+
+* We have updated the registry for downloading MDA artifacts from `https://privatecloud.mendixcloud.com/` to `https://package-store-prod-2.s3-accelerate.amazonaws.com/`.
+* We have removed the registry for downloading placeholder MDA artifacts (`https://cdn.mendix.com/`).
+* We have added the **Package ID** field to display the ID of a deployment package in the deployment package details.
+* We now provide the feature to lock or unlock the deployment package in the environment **Overview** page. Any existing deployment packages will remain in an unlocked state. New deployment packages deployed in the environment will be locked by default.
+
+#### Known Issues
+
+Your build may fail if you try to deploy the same deployment package more than once in the same environment. To fix this issue, recreate the deployment package, and then deploy it again. The same workaround is sometimes required when rescaling an application. A fix for this issue will be available in an upcoming release.
+
+### January 26th, 2023
+
+#### Mendix Operator v2.10.1{#2.10.1}
+
+* We have updated components to use the latest dependency versions, in order to improve security score ratings for all container images.
+* We have switched from UBI 8 Minimal base images to [UBI 8 Micro](https://www.redhat.com/en/blog/introduction-ubi-micro).
+* We have implemented a feature to use [IAM role authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) when connecting to RDS Postgres databases. This feature depends on an upcoming release of Mendix, and additional documentation will be provided later.
+
+### January 19th, 2023
+
+#### Portal Improvements
+
+* When using Mendix Operator version 2.10.0, it is now possible to load MxApp constants and custom runtime settings from the Kubernetes CSI Secrets Store. This allows you to store configuration in a secure credential storage system (such as Hashcorp Vault or AWS Secrets Manager) instead of the Cloud Portal and Kubernetes secrets. 
+* We have added a new status field indicating whether custom runtime setting and MxApp constants were loaded from CSI Secrets Storage.
+* We have added a notification on top of the Model Options and Runtime Settings page to indicate whether CSI Secrets Storage is enabled for a namespace.
+* We have removed the limit of eight characters for the MxAdmin password. You should set the password based on the policy set in Studio Pro.
+* We have fixed an issue where users were unable to update the datatype of constants in the Private Cloud portal. (Ticket 173999)
+* We have fixed a bug where sometimes the log levels were not editable.
+* Unused deployment packages from your repository are now removed if they are older than two weeks.
+
+#### Deploy API Improvements
+
+* We have fixed a network error issue with the **Try it out** option in the [Private Cloud Deploy API documentation](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+
+### January 5th, 2023
+
+#### Mendix Operator v2.10.0{#2.10.0}
+
+* We have added an option to set app constants and custom Mendix Runtime settings when using CSI Secrets Store.
+* It is now possible to use Azure Blob Storage instead of S3 when using CSI Secrets Store.
+* We have improved status messages to indicate what data is used by CSI Secrets Store and if any additional configuration steps are required.
+* If the CSI Secrets Store driver rotates credentials, Mendix Operator will detect this and apply changes.
+* We upgraded all Go-based components to Go 1.18. (Ticket 163987)
+* We fixed a bug where deleting an environment would not clean up its database and file storage users and data.
+* We fixed a regression where collecting Prometheus metrics would return an error. This regression only affects Mendix Operator version 2.9.0.
+* The `mxpc-cli` installation and configuration tool now has an option to collect and save logs and additional diagnostic data in a file. By using this option, collecting and sending diagnostic data to support becomes a lot easier.
+
 ## 2022
+
+### December 1st, 2022
+
+#### Portal Improvements
+
+* We have introduced an API which supports the creation, modification, and deletion, of clusters, namespaces, and environments. You can find more information in [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+* We now add the creator name in the activity logs when an app is autodeployed.
 
 ### November 17th, 2022
 
@@ -42,7 +101,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 * We now allow sorting of namespaces in the namespace selection list of the Create environment flow.
 * Newly-created environments will always run in Production mode (the DTAP mode is set to `P`) – you can no longer choose the purpose of your environment.
-   * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
+    * This means that all apps must have [app security](/refguide/app-security/) set to `Production`.
 * We have made the **Subscription Secret** field optional – if no subscription secret is provided the app will be considered a trial app.
 * We now allow you to retrieve up to 100 branches for a project when creating a deployment package in the portal.
 

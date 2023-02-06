@@ -16,6 +16,10 @@ This document explains how to set up the cluster in Mendix.
 
 Once you have created your namespace, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments, Kubernetes namespaces, and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
+{{% alert color="info" %}}
+You can also create clusters and namespaces using the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+{{% /alert %}}
+
 ## 2 Prerequisites for Creating a Cluster{#prerequisites}
 
 To create a cluster in your OpenShift context, you need the following:
@@ -33,9 +37,8 @@ Should you consider using a connected environment, the following URLs should be 
 | URL | Description |
 |-----|-------------|
 | `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
-| `https://privatecloud.mendixcloud.com` | Registry for downloading MDA artifacts |
+| `https://package-store-prod-2.s3-accelerate.amazonaws.com/` | Registry for downloading MDA artifacts |
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
-| `https://cdn.mendix.com` | Registry for downloading placeholder MDA artifacts |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
 
 ## 3 Creating a Cluster and Namespace
@@ -264,6 +267,10 @@ The options do the following:
 
 A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
 
+{{% alert color="warning" %}}
+The database plan does not include any functionality for backing up or restoring data on your database. It is your responsibility to ensure that appropriate provision is made for backing up and restoring your database using the tools provided by your database management system and/or cloud provider.
+{{% /alert %}}
+
 Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 
 Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
@@ -350,6 +357,10 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/
 
 {{% alert color="info" %}}
 Storage plans are “blueprints” that specify how to request/decommission a new database or blob storage and pass its credentials to an environment.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+The storage plan does not include any functionality for backing up or restoring files used by your app. It is your responsibility to ensure that appropriate provision is made for backing up and restoring these files using the tools provided by your storage and/or cloud provider.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -1474,7 +1485,7 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 5.6 Customize Service Account
+### 5.6 Customize Service Account {#customize-service-account}
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
@@ -1483,6 +1494,8 @@ To achieve this, you need to add the annotation `privatecloud.mendix.com/environ
 {{% alert color="info" %}}
 The service account can be customized for Private Cloud Operator version 2.7.0 and above.
 {{% /alert %}}
+
+If required, you can use additional annotations. For example, in order to authenticate with AWS services instead of with static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
 ### 5.7 Autoscaling
 
@@ -1806,11 +1819,17 @@ This tab shows information on the versions of the various components installed i
 
 This tab allows the cluster manager to customize the enablement of the secret store and developer mode for the developers. 
 
-Enabling the **External Secrets Store** option will allow users to retrieve the following secrets from an external secrets store
+Enabling the **External Secrets Store** option allows users to retrieve the following secrets from an external secrets store:
 
-* database plan
-* storage plan
+* Database plan
+* Storage plan
 * MxAdmin password
+* Custom runtime settings
+* MxApp constants
+
+{{% alert color="info" %}}
+If you want to use the secret store for custom runtime settings or MxApp constants, the Mendix Operator must be in version 2.10.0 or later. Database plan, storage plan, and MxAdmin password are available from version 2.9.0 onwards.
+{{% /alert %}}
 
 Enabling the Development Mode option will allow users to change the type of an environment to Development.
 

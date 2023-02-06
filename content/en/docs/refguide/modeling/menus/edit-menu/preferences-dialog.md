@@ -53,6 +53,12 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
+### 2.4 Disk Location
+
+#### 2.4.1 Default App Directory
+
+This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
+
 ### 3 Mendix Assist Tab
 
 #### 3.1 Logic Bot
@@ -64,7 +70,11 @@ The **Logic Bot** tab contains the following settings:
 
 #### 3.2 Performance Bot
 
-The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
+The **Performance Bot** tab contains the following settings:
+
+* **Show recommendation in editors** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors.
+
+* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
 
 ## 4 Model Tab
 
@@ -80,6 +90,12 @@ This setting defines the default response to the question whether to automatical
 
 This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](/refguide/commit-dialog/).
 
+For example, you can see how to set up file comparison for Visual Studio Code below: 
+
+```text {linenos=false}
+{path to VS Code}/Code.exe --wait --diff "{0}" "{1}"
+```
+
 #### 5.1.2 Argument Pattern
 
 This is the pattern from which the arguments are derived that are passed to the file comparison program. The following two placeholders can be used in this pattern:
@@ -88,12 +104,15 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
 ### 5.2 Subversion 
+
 #### 5.2.1 Enable Private Version Control with Subversion {#enable}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
 ### 5.3 Git 
+
 #### 5.3.1 Name
+
 Specify your name for Git to use it in commit messages and make them more informative.
 
 #### 5.3.2 Email
@@ -101,6 +120,7 @@ Specify your name for Git to use it in commit messages and make them more inform
 Specify your email for Git to use it in commit messages and make them more informative.
 
 #### 5.3.3 Enable Automatic Repository Optimization {#optimization}
+
 Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
 
 #### 5.3.4 Number of Commits
@@ -111,7 +131,7 @@ This option is available when [Enable automatic repository optimization](#optimi
 
 {{% alert color="info" %}}
 
-This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+This functionality is currently in [Beta](/releasenotes/beta-features/).
 
 {{% /alert %}}
 
@@ -122,6 +142,14 @@ Select this option when you want to work on an app that is not stored in [Mendix
 ### 6.1 Proxy Server
 
 Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
+
+### 6.2 Usage Data {#usage-data}
+
+When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
+
+{{% alert color="info" %}}
+This functionality is currently available in Studio Pro 9.22 or above.
+{{% /alert %}}
 
 ## 7 Work Environment Tab
 
@@ -144,6 +172,12 @@ The **Use your default browser to sign in** option allows you to use your defaul
 Default: *enabled*
 
 ### 8.2 Dark Mode Preview {#dark-mode}
+
+{{% alert color="info" %}}
+
+This functionality is currently in [Beta](/releasenotes/beta-features/).
+
+{{% /alert %}}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
 

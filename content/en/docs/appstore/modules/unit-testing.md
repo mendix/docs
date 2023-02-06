@@ -13,30 +13,32 @@ Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) modul
 
 ### 1.1 Dependencies
 
-* The [Community Commons](/appstore/modules/community-commons-function-library/) module
 * *junit-4.13.1.jar*
 * *commons-io-2.11.0.jar*
-* *commons-lang3-3.11.jar*
+* *commons-lang3-3.12.0.jar*
 * *httpclient5-5.0.3.jar*
 * *httpcore5-5.0.3.jar*
 * *hamcrest-2.2.jar*
 
 {{% alert color="info" %}}
-For module versions below 9.1.0, use the [Object Handling](/appstore/modules/object-handling/) module instead of the Community Commons module.
+For module version 9.1.0, the [Community Commons](/appstore/modules/community-commons-function-library/) module is required as a dependency. This dependency has been removed in module version 9.2.0.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+For module versions below 9.1.0, the [Object Handling](/appstore/modules/object-handling/) module is required as a dependency.
 {{% /alert %}}
 
 ## 2 Installation
 
-1.  Import the Unit Testing module into your app.
+1. Import the Unit Testing module into your app.
 
     For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
-2. Download the latest Object Handling module into your app.
-3. Map the module role **TestRunner** to the applicable user roles in your app.
-4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
-5.  The following steps are optional:
+1. Map the module role **TestRunner** to the applicable user roles in your app.
+1. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
+1. The following steps are optional:
     * For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
-    *  For running remote unit tests via API:
+    * For running remote unit tests via API:
         * Add the **Startup** flow to your app model's startup sequence
         * Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
         * When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path

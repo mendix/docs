@@ -16,7 +16,7 @@ Pages define the end-user interface of a Mendix application. Every page is based
 
 ## 2 Performing Basic Functions
 
-You can perform the following basic function when working in the page editor:
+You can perform the following basic functions when working in the page editor:
 
 * Open a page
 * Create a page
@@ -24,6 +24,7 @@ You can perform the following basic function when working in the page editor:
 * Add elements on a page
 * View element properties
 * Arrange elements on a page
+* Changing the parameters of a page
 
 ### 2.1 Opening a Page
 
@@ -121,6 +122,10 @@ You cannot cut/copy/paste from Studio Pro to Studio.
 {{% /alert %}}
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
+
+### 2.7 Changing the Parameters of a Page {#change-parameters}
+
+To change the parameters of the page, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about page parameters, see the [Parameters](/refguide/page-properties/#parameters) section in *Page Properties*.
 
 ## 3 Page Editor Modes {#page-editor-modes}
 

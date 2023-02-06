@@ -57,4 +57,4 @@ An object of the **System.WorkflowJumpToDetails** entity available from the micr
 
 ## 5 Read More
 
-*  [Jumping to Different Activities in a Workflow](/refguide/jump-to/)
+* [Jumping to Different Activities in a Workflow](/refguide/jump-to/)

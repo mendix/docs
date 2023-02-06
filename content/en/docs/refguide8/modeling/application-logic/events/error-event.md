@@ -77,7 +77,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 | --- | --- | --- | --- |
 | System.Error | ErrorType | String | The Java exception type of the error that occurred. |
 | System.Error | Message | String | The message of the Java exception. |
-| System.Error | Stacktrace | String | The stacktrace of the Java exception. |
+| System.Error | Stacktrace | String | The stack trace of the Java exception. |
 | System.SoapFault | Code | String | The Code element of the SOAP fault. |
 | System.SoapFault | Reason | String | The Reason element of the SOAP fault. |
 | System.SoapFault | Node | String | The Node element of the SOAP fault. |

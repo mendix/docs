@@ -88,7 +88,7 @@ The **Default time zone** determines the time zone for newly created users. If y
 
 ### 3.8 Scheduled Event Time Zone {#scheduled}
 
-The **Scheduled event time zone** defines under which timezone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
+The **Scheduled event time zone** defines under which time zone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default time zone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
@@ -277,17 +277,29 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 **User entity** defines the entity which is used in [assigning a user task](/refguide/user-task/#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](/refguide/user-task/#user-assignment) section in *User Task*.
 
-### 7.2 Execution
+### 7.2 Optimization
 
-Allows you to set a maximum number of workflow and user task transactions that can be executed simultaneously by the runtime. This is an advanced setting that gives developers control over app performance.
+Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows, for more information see [Workflow Imstance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
+App performance can be tracked (from Mendix 9.19 and above) using the following Task Queue metrics:
 
-#### 7.2.1 Parallel Workflow Executions
+* `mx.runtime.stats.taskqueue.queue-wait-time` – the amount of time a task has to wait for execution
+* `mx.runtime.stats.taskqueue.queue-active-threads` – the actual amount of threads executing tasks from the queue
+* `mx.runtime.stats.taskqueue.task-execution-time` – time needed to execute a task from the queue
 
-Defines the maximum number of workflow transactions that the runtime will execute simultaneously. The limit is 10. 
+These metrics have a tag-named queue which has the following values relevant to workflow execution:
 
-#### 7.2.2 Parallel Task Executions
+* `System.MendixWorkflows-WorkflowExecution` – a queue for workflow instance execution
+* `System.MendixWorkflows-DefaultTaskExecution` – a queue for workflow-initiated microflows execution
 
-Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
+If the waiting time of the queue increases and active threads in the queue reach the current maximum, it is advised to increase the maximum in settings.
+
+#### 7.2.1 Workflow Instance Threads {#workflow-instance-threads}
+
+Defines the maximum number of threads that can process active workflow instances simultaneously. This setting does not relate to the amount of workflow instances that are active in the system.
+
+#### 7.2.2 Microflow Threads {#microflow-threads}
+
+Defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
 
 ### 7.3 Events {#events}
 

@@ -30,4 +30,5 @@ You can use the Mendix Model SDK to work with the model of an app, for example, 
 * [Mendix Platform SDK (latest version)](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html)
 
 ## 3 Read More
+
 * [SDK Documentation](/apidocs-mxsdk/mxsdk/)

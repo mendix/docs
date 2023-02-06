@@ -9,7 +9,7 @@ tags: ["studio pro", "page", "properties"]
 
 This document describes page properties. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](/refguide/pages/).
 
-## 2 Properties
+## 2 Properties {#properties}
 
 An example of page properties is represented in the image below:
 

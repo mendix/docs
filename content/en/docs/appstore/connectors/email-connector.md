@@ -213,9 +213,9 @@ When duplicating this microflow, do not change the input parameter name and data
     * `CONNECTIONTOSERVERLOST`
     * `CONNECTIONRETRYEXHAUSTED`
 
-    Make sure that microflow is accepting the string parameters `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
+    Make sure that microflow is accepting the string parameter `State` and `Comment`. Refer to the sample microflow **OCH_Background_SubscriptionStateChanged**.
 
-    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameters’ name and data type.{{% /alert %}}
+    {{% alert color="warning" %}}When duplicating this microflow, do not change input parameter name and data type.{{% /alert %}}
     
 #### 4.5.1 Enabling Subscription in Email Settings
 

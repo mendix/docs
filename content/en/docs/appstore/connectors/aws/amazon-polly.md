@@ -221,7 +221,7 @@ The `SynthesizeSpeech` activity allows you to synthesize a string of text into a
 
 The `SynthesizeSpeech` activity has no return value, instead the input parameter TargetFileDocument contains the synthesized speech.
 
-#### 4.4.2 DescribeVoices
+#### 4.4.2 DescribeVoices {#describe-voices}
 
 The `DescribeVoices` activity returns the list of voices from the Amazon Polly service. It requires an `AWS_Region` parameter to get the list of supported voices from the given AWS region.
 The voices can be used in the `Synthesize Speech` activity to synthesize a piece of text to speech with the right voice. 

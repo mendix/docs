@@ -99,10 +99,12 @@ After you configure the authentication profile for Amazon Polly, you can impleme
 9. Configure the widget to use the `FileDocument` configured in the **SynthesizeSpeech** activity.
 10. Configure a method to trigger the `ACT_SynthesizeSpeech` activity. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+    
+## 4 Technical Reference
 
 To help you work with the Amazon Translate connector, the following sections of this document list the available entities, constants, activities, and enumerations that you can use in your application.
 
-### 3.3 Constants
+### 4.1 Constants
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS. For more information, see [Configuring AWS Authentication](#authentication).
 
@@ -117,11 +119,11 @@ Constants are used to define configuration values. All activities are exported a
 | `AmazonPollyConnector.AccessKey` | The `AccessKey` from an AWS account able to use this service |
 | `AmazonPollyConnector.SecretKey` | The `SecretKey` from an AWS Account able to use this service |
 
-### 3.4 Domain Model
+### 4.2 Domain Model
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 3.4.1 Voice {#voice}
+#### 4.2.1 Voice {#voice}
 
 The `Voice` entity is a representation of an Amazon Polly voice. It contains the unique identifier for a voice (`VoiceID`) that is required for `SynthesizeSpeech` activities. It also contains additional information on a voice like the name, language and gender.
 
@@ -134,11 +136,11 @@ The `Voice` entity is a representation of an Amazon Polly voice. It contains the
 | `Gender` | Gender of the voice. (string)|
 
 
-#### 3.4.2 DescribeVoicesResponse
+#### 4.2.2 DescribeVoicesResponse
 
 The `DescribeVoicesResponse` entity is the response for the [DescribeVoices](#describe-voices) action. The action also returns a list of `DescribeVoice` objects associated with the `DescribeVoicesResponse` object. The `DescribeVoice` entity inherits from the voice entity and contains all its attributes. For more information on the attributes, see [Voice](#voice).
 
-#### 3.4.3 SynthesizeSpeechRequest
+#### 4.2.3 SynthesizeSpeechRequest
 
 The `SynthesizeSpeechRequest` entity is used when calling the [SynthesizeSpeech](#synthesize-speech) action. 
 
@@ -152,11 +154,11 @@ The `SynthesizeSpeechRequest` entity is used when calling the [SynthesizeSpeech]
 | `VoiceID` | The ID of the voice (string)|
 | `LanguageCode` | The language code of the voice (string)|
 
-### 3.5 Enumerations
+### 4.3 Enumerations
 
 An enumeration is a predefined list of values that an be used as an attribute type.
 
-#### 3.5.1 `OutputFormat`
+#### 4.3.1 `OutputFormat`
 
 The format in which the returned output will be encoded. For audio streams, this must be MP3, OGG_VORBIS, or PCM. JSON is currently not supported.
 
@@ -166,7 +168,7 @@ The format in which the returned output will be encoded. For audio streams, this
 | OGG_VORBIS | OGG_VORBIS |
 | PCM        | PCM        |
 
-#### 3.5.2 `Engine`
+#### 4.3.2 `Engine`
 
 Specifies the engines (standard or neural) that are supported by a given voice.
 
@@ -175,14 +177,14 @@ Specifies the engines (standard or neural) that are supported by a given voice.
 | Standard | standard |
 | Neural | neural |
 
-#### 3.5.3 `TextType`
+#### 4.3.3 `TextType`
 
 | Name | Caption |
 | --- | --- |
 | PlainText | PlainText |
 | SSML | SSML |
 
-#### 3.5.4 `AWS_Region` {#aws-region}
+#### 4.3.4 `AWS_Region` {#aws-region}
 
 | Name | Caption |
 | --- | --- |
@@ -209,17 +211,17 @@ Specifies the engines (standard or neural) that are supported by a given voice.
 | me_south_1 | Middle East (Bahrain) |
 | sa_east_1 | South America (São Paulo) |
 
-### 3.6 Activities
+### 4.4 Activities
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 3.6.1 Synthesize Speech {#synthesize-speech}
+#### 4.4.1 Synthesize Speech {#synthesize-speech}
 
 The `SynthesizeSpeech` activity allows you to synthesize a string of text into an audio file. It requires a `SynthesizeSpeechRequest` entity containing the required information, and a `TargetFileDocument` (`System.FileDocument` or its specialization) to contain the response of the `SynthesizeSpeech` activity. It also requires the `AWS_Region` in which the Polly service should be called.
 
 The `SynthesizeSpeech` activity has no return value, instead the input parameter TargetFileDocument contains the synthesized speech.
 
-#### 3.6.2 DescribeVoices
+#### 4.4.2 DescribeVoices
 
 The `DescribeVoices` activity returns the list of voices from the Amazon Polly service. It requires an `AWS_Region` parameter to get the list of supported voices from the given AWS region.
 The voices can be used in the `Synthesize Speech` activity to synthesize a piece of text to speech with the right voice. 

@@ -204,7 +204,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.11 IP Protection
 
-For members of the [Mendix Partner Program](/appstore/creating-content/partner-program/) or the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), it is possible to leverage IP protection capabilities as described in [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
+For members of the [Mendix Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 

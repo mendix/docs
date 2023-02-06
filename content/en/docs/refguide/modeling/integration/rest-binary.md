@@ -88,10 +88,10 @@ In the **GET_ByKey** microflow, do the following:
 3.  Under the **Refresh in client** field, click **New**.
 4.  Set the three drop-down options to the following:
      * **Key (String (Unlimited))** – set the **Value** to `'Content-Type'`
-     * **Value (String (Unlimited))** – set the **Value** to `'image/png'` (or another image type)
+     * **Value (String (Unlimited))** – set the **Value** to `'image/png'` 
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
-[Add image here]
+
 
 #### 2.3.2 MIME Type for PDFs
 
@@ -158,3 +158,8 @@ Use Image widget example - Image widget to directly view the image without a MF 
 You can upload an example PDF, different location, so no need to update the URL
 Image viewer doesn't work for PDFs -> needs to be replaced by a different widget to view PDF resources. But opens fine in a browser
 Easiest way to display a PDF: use an HTML snippet widget to add an embed tag to your page
+
+
+ With developer you mean the developer of the API? This developer can check the content-type header to check if the mime-type of the payload is supported. So the client will tell the service: i'm sending you an image/jpg, and the API can process this or reject it. If the API doesn't support jpg it can return a 415 status code (https://stackoverflow.com/questions/11461037/appropriate-http-status-code-for-request-specifying-invalid-content-encoding-hea)
+
+ What confused me in the docs is that it seemed to suggest that the binary would automatically be converted into the requested mime-type. If the mendix file document contains a jpg, but the client requests a png, simply specifying png as the content type in the api microflow will not result in a png. The microflow will need to explicitly convert the jpg to a png.

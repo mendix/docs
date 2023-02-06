@@ -68,9 +68,7 @@ Furthermore, the configuration you see above is completely editable. You can add
 
 ### 3.1 App Structure on the Left
 
-You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
-
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" alt="App Structure">}}
+You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
 
 ### 3.2 Bottom Dockable Pane 
 
@@ -80,11 +78,11 @@ Look at the bottom dockable pane of Studio Pro:
 
 Here you will find several panes:
 
-* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal
-* **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
-* **Errors**: displays any errors found within your project (can also display deprecations and warnings)
-* **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
-* **Console**: a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list)
+* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal (for more information see [Stories Pane](/refguide/stories-pane/))
+* **Changes**: displays a list of all changes in the project since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
+* **Errors**: displays any errors found within your project (for more information see [Errors Pane](/refguide/errors-pane/))
+* **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance (for more information see [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/))
+* **Console**: a live feed of your app’s console as the app runs (for more information see [Console](/refguide/view-menu/#console))
 
 ### 3.3 Right Dockable Pane 
 

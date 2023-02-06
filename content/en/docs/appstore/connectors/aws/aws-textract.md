@@ -15,7 +15,7 @@ The [Amazon Textract connector](https://marketplace.mendix.com/link/component/20
 
 Amazon Textract helps improve your app by giving you the tools to extract data from documents in a structured manner. For example, you can use it to extract business data from handwritten documents, or patient data from intake forms.
 
-### 1.2 Prerequisites
+### 1.2 Prerequisites {#prerequisites}
 
 The Amazon Textract connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 

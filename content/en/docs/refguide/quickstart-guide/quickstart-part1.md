@@ -76,7 +76,7 @@ Look at the bottom dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
 
-Here you will find several panes:
+Here you will find several default panes:
 
 * **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal (for more information see [Stories Pane](/refguide/stories-pane/))
 * **Changes**: displays a list of all changes in the project since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
@@ -90,7 +90,7 @@ Look at the right dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" alt="Right Dockable Pane">}}
 
-Here you will find more panes:
+Here you will find more default panes:
 
 * **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app [Data Hub Pane](/refguide/data-hub-pane/)
 * **Properties**: displays all the properties of the currently selected context element

@@ -64,7 +64,11 @@ The Studio Pro configuration you see is completely editable. You can add or remo
 
 ### 3.1 App Structure on the Left
 
-You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
+You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app:
+
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" alt="App Structure">}}
+
+Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
 
 ### 3.2 Bottom Dockable Pane 
 

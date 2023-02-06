@@ -155,6 +155,10 @@ For example, say you want to build an app that works with the [Twitter v2 REST A
 {{% alert color="info" %}}
 This guide is meant to serve as an example to show how to use *Connector Kit 2* features, and is not an official guide to building a Twitter connector. It is intended for local deployments and has not been tested.{{% /alert %}}
 
+{{% alert color="warning" %}}
+On February 9, 2023, Twitter will drop support for free API access and will offer a paid basic version instead. Please use the guide below as a reference only.
+{{% /alert %}}
+
 #### 7.1.1 Prerequisites
 
 To build your app, you first need to do the following:

@@ -15,7 +15,9 @@ You will learn about the following:
 * [Creating a REST service](#create-service) with a **System.Image** or **System.FileDocument** entity
      * [Trying out, or testing,](#test-service) the service
      * [Setting the MIME type](#set-mime-type) for a specific file
-* [Consuming files](#retrieve-files) with REST
+* [Retrieving files](#retrieve-files) with REST
+
+If you are only interesting in consuming files, you can skip down to the [Retrieving Images and Files with REST](#retrieve-files) section.
 
 ### 1.1 Prerequisites 
 
@@ -96,8 +98,6 @@ Follow the steps in the [MIME Type for Images](#mime-images) section, then set t
      * **Value (String (Unlimited))** – set the **Value** to `'application/pdf'` 
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
-[Add image here]
-
 ### 2.4 Testing the Service {#test-service}
 
 Test the service to ensure that it works!
@@ -117,7 +117,7 @@ Test the service to ensure that it works!
 
 4. Click **Get/myfile/{myfileid}** to return the content, and you should see the PNG displayed. If you only see the binary, make sure that you have [set the MIME Type](#set-mime-type).
 
-## 3 Retrieve Files with REST {#retrieve-files}
+## 3 Retrieve Images or Files with REST {#retrieve-files}
 
 You can implement a client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity.
 
@@ -125,21 +125,43 @@ You can implement a client in your app that will retrieve binary files from any 
 
 2. Add an entity to handle the retrieved files.
     * In the **Domain Model**, right click to add an entity called **RetrievedFile**.
-    * Double-click on the entity to open the **Properties** and select the **Generalization**. To test with the PNG file, we can use **System.Image**.
+    * Double-click on the entity to open the **Properties** and select the **Generalization**. To test with the PNG file, we can use **System.Image**, or **System.FileDocument** if you want to work with a PDF file.
 
-Then, you can use the image or PDF with the [Image] widget, an [HTML snippet] widget for PDFs, or a microflow.
+Then, you can retrieve the image with the [Image widget](#image-widget), retrieve a PDF with the [HTML/Javascript snippet widget](#html-snippet) for PDFs, or [retrieve images or PDFs with a microflow](#retrieve-microflow).
 
-### 3.1 Retrieving Images with the Image Widget
+### 3.1 Retrieving Images with the Image Widget {#image-widget}
 
 Retrieve images with the URL of the published REST service by using the [Image](/appstore/widgets/image/) widget available on the Mendix Marketplace.
 
+Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the following:
 
+1. Download the [Image](/appstore/widgets/image/) widget from the Mendix Marketplace and import it into your app.
+2. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "Image".
+3. Drag the **Image** widget onto a page.
+4. Double-click the widget you dragged onto your page to open the **Properties**.
+5. In the **Data source** field, select the **Image URL** for **Image type**.
+6. Paste the location of the file in the REST service (for example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`).
 
-### 3.2 Retrieving PDFs with the HTML/Javascript Snippet Widget
+### 3.2 Retrieving PDFs with the HTML/Javascript Snippet Widget {#html-snippet}
 
 Retrieve PDFs with the URL of the published REST service by using the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) widget available on the Mendix Marketplace.
 
-### 3.3 Retrieving Files in a Microflow
+Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the following:
+
+1. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet) widget from the Mendix Marketplace and import it into your app.
+2. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "HTMLSnippet".
+3. Drag the **HTMLSnippet** widget onto a page.
+4. Double-click the widget you dragged onto your page to open the **Properties**.
+5. In the **Content Type** field, ensure that **HTML** is selected.
+6. In the **Contents** field, paste the HTML that includes the REST endpoint. For example:
+
+```html
+<embed src="http://localhost:8080/rest/cmsapi/v1/myfile/1" width="400px" height="400px">
+```
+
+### 3.3 Retrieving Files in a Microflow {#microflow-retrieve}
+
+Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the following:
 
 1. Create a **GetImage** (or **GetFile**) microflow.
     * Right click in the **CMSClient** module and select **Add microflow**.
@@ -156,20 +178,4 @@ Retrieve PDFs with the URL of the published REST service by using the [HTML/Java
 5. Drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image.
     * Double click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
-  
-
-
-
-Other points to address:
-Call rest service: GetImage MF; Call REST (GET)[GetResponseFile] Retrieved File -> Change 'GetResponseFile'. REST Call activity also uses the same API endpoint
-Use Image widget example - Image widget to directly view the image without a MF REST call; Image widget links to resource endpoint provided by the REST service
-You can upload an example PDF, different location, so no need to update the URL
-Image viewer doesn't work for PDFs -> needs to be replaced by a different widget to view PDF resources. But opens fine in a browser
-Easiest way to display a PDF: use an HTML snippet widget to add an embed tag to your page
-
-
- With developer you mean the developer of the API? This developer can check the content-type header to check if the mime-type of the payload is supported. So the client will tell the service: i'm sending you an image/jpg, and the API can process this or reject it. If the API doesn't support jpg it can return a 415 status code (https://stackoverflow.com/questions/11461037/appropriate-http-status-code-for-request-specifying-invalid-content-encoding-hea)
-
- What confused me in the docs is that it seemed to suggest that the binary would automatically be converted into the requested mime-type. If the mendix file document contains a jpg, but the client requests a png, simply specifying png as the content type in the api microflow will not result in a png. The microflow will need to explicitly convert the jpg to a png.
-
- 
+    * In the **Refresh in client** field, select **Yes**.

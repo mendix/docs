@@ -58,6 +58,8 @@ In order to use the Amazon Textract service, you must authenticate with AWS. To 
     | **SessionCredentials** | **Client Certificate Identifier** | The **Client Certificate Pin** visible in the **Outgoing Certificates** section on the **Network** tab in the Mendix Cloud environment |
     | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
     | **SessionCredentials** | **Session Name** | An identifier for the session |
+    
+### 3.2 Configuring a Microflow for an AWS Service
 
 After setting up the authentication, to analyze a document, implement the [AnalyzeDocument](#analyzedocument) activity by doing the following steps:
 
@@ -132,9 +134,11 @@ After setting up the authentication, to analyze a document, implement the [Analy
     The configured microflow looks like this:
     {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-configure-microflow.png" >}}
 
+## 4 Technical Reference
+
 To help you work with the Amazon Textract connector, the following sections of this document list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application.
 
-### 3.1 Domain Model {#domain-model}
+### 4.1 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
@@ -155,9 +159,9 @@ The domain model is a data model that describes the information in your applicat
 | `ExpenseGroupPropertyType` | This entity holds information for distinguishing whether the expense group is a name or an address. The attribute it contains is `_Type`. |
 | `ExpenseDetection` | This generalization entity holds information for describing the detected expenses. The attribute it contains are `Text` and `Confidence`. The `Text` describes the word or line of text that is detected and the `Confidence` describes the percentual confidence in the text's detection. Additionally, it contains a specialized `Geometry` object (`AnalyzeExpenseGeometry`). |
 
-### 3.2 Enumerations {#enumerations}
+### 4.2 Enumerations {#enumerations}
 
-#### 3.2.1 RelationshipType
+#### 4.2.1 RelationshipType
 
 | Name | Caption |
 | --- | --- |
@@ -168,14 +172,14 @@ The domain model is a data model that describes the information in your applicat
 | `TITLE` | TITLE |
 | `ANSWER` | ANSWER |
 
-3.2.2 TextType
+4.2.2 TextType
 
 | Name | Caption |
 | --- | --- |
 | `PRINTED` | PRINTED |
 | `HANDWRITING` | HANDWRITING |
 
-3.2.3 EntityTypes
+4.2.3 EntityTypes
 
 | Name | Caption |
 | --- | --- |
@@ -183,7 +187,7 @@ The domain model is a data model that describes the information in your applicat
 | `VALUE` | VALUE |
 | `COLUMN_HEADER` | COLUMN_HEADER |
 
-3.2.4 AWS_Region
+4.2.4 AWS_Region
 
 For a list of supported regions, see [Service endpoints](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region).
 
@@ -212,7 +216,7 @@ For a list of supported regions, see [Service endpoints](https://docs.aws.amazon
 | `me_south_1` | Middle East (Bahrain) |
 | `sa_east_1` | South America (São Paulo) |
 
-#### 3.2.5 BlockType
+#### 4.2.5 BlockType
 
 | Name | Caption |
 | --- | --- |
@@ -228,18 +232,18 @@ For a list of supported regions, see [Service endpoints](https://docs.aws.amazon
 | `TITLE` | TITLE |
 | `WORD` | WORD |
 
-#### 3.2.6 SelectionStatus
+#### 4.2.6 SelectionStatus
 
 | Name | Caption |
 | --- | --- |
 | `SELECTED` | SELECTED |
 | `NOT_SELECTED` | NOT_SELECTED |
 
-### 3.3 Activities {#activities}
+### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense.
 
-#### 3.3.1 AnalyzeDocument {#analyzedocument}
+#### 4.3.1 AnalyzeDocument {#analyzedocument}
 
 The `AnalyzeDocument` Amazon Textract action allows you to analyze documents and extract information from them. It requires a valid AWS region and `AnalyzeDocumentRequest` object. It additionally requires at least a `RequestQuery` object when the `GetQueries` attribute in `AnalyzeDocumentRequest` is set to true.
 
@@ -260,7 +264,7 @@ This activity returns a `AnalyzeDocumentResponse` object with objects from the f
 | `AnalyzeDocumentResponse` | | This entity is the response for the Amazon Textract `AnalyzeDocument` action. It contains a list of specialized Block objects (`AnalyzeDocumentBlock`). |
 | `AnalyzeDocumentBlock` | `AmazonTextractConnector.Block` | This entity holds information for items that are recognized in a document within a group of pixels close to each other.<br><br>The attribute it contains are `BlockType`, `ColumnIndex`, `ColumnSpan`, `Confidence`, `EntityTypes`, `_Id`, `Page`, `RowIndex`, `RowSpan`, `SelectionStatus`, `Text` and `TextType`. The `BlockType` describes the type of text item that's recognized, the `ColumnIndex` describes the column in which a table appears the first column position is 1, the second column position is 2 and so on), the `ColumnSpan` describes the number of columns that a table cell spans, the `Confidence` describes he score that Amazon Textract has in the accuracy of the recognized text, the `EntityTypes` describes the type of entity, the `Page` describes the page on which a block was detected, the `RowIndex` describes the row in which a table cell is located (the first row position is 1, the second row position is 2, and so on), the `RowSpan` describes the number of rows that a table cell spans, the `SelectionStatus` describes the selection status of a selection element (such as an option, radio or check box), the Text describes the word or line of text that's recognized by Amazon Textract and `TextType` describes the kind of text that Amazon Textract has detected (handwritten/printed).<br><br>Additionally, this entity contains a list of `Relationship` objects, a `QueryBlock` object and a specialized `Geometry` object (`BlockGeometry`). |
 
-#### 3.3.2 AnalyzeExpense
+#### 4.3.2 AnalyzeExpense
 
 The AnalyzeExpense Amazon Textract action allows you to analyze expense documents and extract information from them. It requires a valid AWS region and a specialized `System.FileDocument` object in PNG, JPEG, PDF, or TIFF format.
 

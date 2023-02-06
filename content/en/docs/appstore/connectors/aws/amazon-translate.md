@@ -66,13 +66,15 @@ In order to use the Amazon Translate service, you must authenticate with AWS. To
     | **SessionCredentials** | **Duration** | Duration for which the session token should be valid; after the duration passes, the validity of the session credentials expires |
     | **SessionCredentials** | **Session Name** | An identifier for the session |
 
+## 4 Technical Reference
+
 To help you work with the Amazon Translate connector, the following sections of this document list the available entities, enumerations, and actions that you can use in your application.
 
-### 3.1 Domain model {#domain-model}
+### 4.1 Domain model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Amazon Translate connector, the domain model contains the `ListLanguageResponse`, `LanguageResponse`, and `TranslateRequest` entities.
 
-#### 3.1.1 ListLanguageResponse
+#### 4.1.1 ListLanguageResponse
 
 The `ListLanguageResponse` entity is used when calling the [ListLanguages](#list-languages) action. It is associated with a `LanguageResponse` entity.
 
@@ -81,7 +83,7 @@ The `ListLanguageResponse` entity is used when calling the [ListLanguages](#list
 | `Name` | The language name, equivalent to the locale name (string)|
 | `Code` | The [language code](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) that assigns letters or numbers as identifiers or classifiers for languages / minimum length: 2, maximum length: 5 (string) |
 
-#### 3.1.2 TranslateRequest
+#### 4.1.2 TranslateRequest
 
 The `TranslateRequest` entity contains `InputLanguageCode`, `OutputLanguageCode` and `InputText` as attributes.
 
@@ -91,11 +93,11 @@ The `TranslateRequest` entity contains `InputLanguageCode`, `OutputLanguageCode`
 | `OutputLanguageCode` | The language code of the desired output text (string) |
 | `InputText` | The input text (string) |
 
-### 3.2 Enumerations {#enumerations}
+### 4.2 Enumerations {#enumerations}
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon Translate connector, an enumeration is used to list available AWS regions.
 
-#### 3.2.1 `AWS_Region` {#aws-region}
+#### 4.2.1 `AWS_Region` {#aws-region}
 
 | Name | Caption |
 | --- | --- |
@@ -122,11 +124,11 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `me_south_1` |    **Middle East (Bahrain)** |
 | `sa_east_1` |    **South America (São Paulo)** |
 
-### 3.3 Activities {#activities}
+### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 3.3.1 ListLanguages {#list-languages}
+#### 4.3.1 ListLanguages {#list-languages}
 
 The `ListLanguages` action takes `AWS_Region` as the input parameter and returns a `ListLanguageResponse` object containing a list of `LanguageResponse` objects, which are the supported languages for the Amazon Translate Connector.
 
@@ -134,6 +136,6 @@ The `ListLanguages` action takes `AWS_Region` as the input parameter and returns
 For more information about the language codes, see the [list of supported languages](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) in the AWS documentation.
 {{% /alert %}}
 
-#### 3.3.2 TranslateText {#translate-text}
+#### 4.3.2 TranslateText {#translate-text}
 
 The `TranslateText` action takes `inputText`, `inputLanguageCode`, `outputLanguageCode`, and `AWS_Region` as input parameters and gives back the translation of the input text as a string.

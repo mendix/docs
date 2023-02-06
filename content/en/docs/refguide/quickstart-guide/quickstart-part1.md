@@ -58,13 +58,9 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
-Take a look at Studio Pro all at once. There is a lot of power here, but it can be confusing at first glance: 
+Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour.png" width="450px" alt="Marketplace Modules">}}
-
-Luckily, it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
-
-Furthermore, the configuration you see above is completely editable. You can add or remove panes as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+The Studio Pro configuration you see is completely editable. You can add or remove panes as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
 ### 3.1 App Structure on the Left
 
@@ -84,7 +80,7 @@ Here you will find several default panes:
 * **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance (for more information see [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/))
 * **Console**: a live feed of your app’s console as the app runs (for more information see [Console](/refguide/view-menu/#console))
 
-### 3.3 Right Dockable Pane 
+### 3.3 Right Dockable Pane
 
 Look at the right dockable pane of Studio Pro:
 

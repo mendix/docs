@@ -17,6 +17,4 @@ Mendix introduced the [Mendix Commercial Solution Partner Program](https://www.m
 
 The Mendix Commercial Solution Partner Program enables established companies, existing Mendix partners, and startups to successfully develop, bring to market, sell, and deploy software solutions built on Mendix. The program is designed to provide simple terms, low initial investment, valuable enablement, and a win-win business model that benefits the partner as well as Mendix.
 
-## 3 Startup Program - [**REMOVE?**]
-
 The [Mendix Startup Program](https://www.mendix.com/startup-program/) enables early-stage companies looking to build a software business and monetize their domain expertise by selling solutions. This program provides startups with tools and resources to develop, deploy, bring to market, and sell software solutions built on Mendix’s low-code development platform. The economic model of the Startup Program is based on a revenue-sharing agreement that enables startups to establish a profitable and predictable business model.

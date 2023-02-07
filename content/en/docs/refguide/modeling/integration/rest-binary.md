@@ -179,7 +179,7 @@ Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do t
          * **Type** – select the **RetrievedFile** entity
          * **Variable Name** – enter `GetResponseFile`
   
-3. Drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image.
+3. Drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image. 
     * Double click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
     * In the **Refresh in client** field, select **Yes**.

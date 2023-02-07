@@ -8,22 +8,22 @@ tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "publ
 
 ## 1 Introduction
 
-This guide will cover how to publish and consume (or send and retrieve) files, including images, in REST services in Studio Pro. The REST service exposes the binary data of the files, and you can use it to display images and files like PDFs directly in your app or browser.
+This guide will cover how to use REST to send and retrieve files, including images, in Studio Pro.
 
 You will learn about the following:
 
-* [Creating a REST service](#create-service) with a **System.Image** or **System.FileDocument** entity
+* [Creating a REST service](#create-service) from a **System.Image** or **System.FileDocument** entity
      * [Trying out, or testing,](#test-service) the service
-     * [Setting the MIME type](#set-mime-type) for a specific file
+     * [Setting the MIME type](#set-mime-type) for supported files
 * [Retrieving files](#retrieve-files) with REST
 
 If you are only interesting in consuming files, you can skip down to the [Retrieving Images and Files with REST](#retrieve-files) section.
 
-### 1.1 Prerequisites 
+### 1.1 Prerequisites
 
-To publish or consume files with REST, do the following:
+To publish or retrieve files with REST, do the following:
 
-* Install Studio Pro 
+* Install Studio Pro
 
 We recommend reading the following for some more background:
 
@@ -32,25 +32,29 @@ We recommend reading the following for some more background:
 
 ## 2 Publish Files with REST {#create-service}
 
-Imagine that your app is functioning as a content management system (CMS), and you want to be able to send and receive images and files. You have an entity that stores the files, which we will use as a starting point:
-
-{{< figure src="/attachments/refguide/modeling/integration/rest-binary/starting-entity.png" >}}
+Imagine that your app is functioning as a content management system (CMS), and you want to be able to send and receive images and files. You can publish the generalized entities as a REST service, which exposes the binary data of files stored in the entity.
 
 ### 2.1 Publishing the Service {#publish-service}
 
 To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide/published-rest-service/), do the following:
 
-1. Add a new module (or use **MyFirstModule**) and name it **CMS**.
+1.  Add a new module (or use **MyFirstModule**) and name it **CMS**.
 
-2. Go to the domain model, generate the overview pages for the file or image entity if you have not yet done so, then link them to the home page and navigation.
+2.  Go to the domain model and create a new entity called *MyFile*.
+
+3.  Add a **System.Image** or **System.FileDocument** [generalization](/refguide/entities/#generalization) to the *MyFile* entity
+
+     {{< figure src="/attachments/refguide/modeling/integration/rest-binary/starting-entity.png" >}}
+
+4.  Generate the overview pages for the file or image entity, then link them to the home page and navigation.
      * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
      * Add a button to the home page that links to the **Overview** page you created.
 
-3. Expose the entity as a REST resource.
+5.  Expose the entity as a REST resource.
      * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file(s) that you want to publish, and click **Expose as a REST resource**.
      * Click **Select** next to the **Service** field, then click on the folder where you want to create the service and click **New**. Enter a name for the REST service and click **OK**.
 
-4. Back in the **Generate resource and operations** window, select **MyFileID** as the **Key attribute** and check the boxes for the following **Operations***:
+6.  Back in the **Generate resource and operations** window, select **MyFileID** as the **Key attribute** and check the boxes for the following **Operations***:
      * **Get all**
      * **Get by key**
      * **Post (Create)**
@@ -58,7 +62,7 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
      See the [Operations](/refguide/generate-rest-resource/#operations) section of *Generating a Published REST Resource* for a description of each operation.
 
-5. Click **OK**. 
+7.  Click **OK**. 
 
 The **Published REST service** document for the exposed image or file entity has been created and is now open on your screen. After you run your app, click the URL in the **Location** field to open the OpenAPI specs.
 
@@ -70,7 +74,7 @@ Open your published REST service, then double-click the **Get by** key, or singl
 
 Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFile_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 
-### 2.2 Setting the MIME Type in a GET Microflow {#set-mime-type}
+### 2.2 Adding the MIME Type to a GET Microflow {#set-mime-type}
 
 A `GET` request to the REST endpoint you created (in this example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`) will return the binary for the first uploaded file. We need to specify the expected media type so that it returns the file in the expected way (for example, displaying an image).
 
@@ -119,7 +123,7 @@ Test the service to ensure that it works!
 
 ## 3 Retrieve Images or Files with REST {#retrieve-files}
 
-You can implement a client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity.
+You can implement a client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity. 
 
 1. Right-click on the **File Explorer** and select **Add module**, then rename it as **CMSClient**.
 
@@ -133,7 +137,7 @@ Then, you can retrieve the image with the [Image widget](#image-widget), retriev
 
 Retrieve images with the URL of the published REST service by using the [Image](/appstore/widgets/image/) widget available on the Mendix Marketplace.
 
-Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the following:
+Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do the following:
 
 1. Download the [Image](/appstore/widgets/image/) widget from the Mendix Marketplace and import it into your app.
 2. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "Image".
@@ -146,7 +150,7 @@ Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the f
 
 Retrieve PDFs with the URL of the published REST service by using the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) widget available on the Mendix Marketplace.
 
-Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the following:
+Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do the following:
 
 1. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet) widget from the Mendix Marketplace and import it into your app.
 2. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "HTMLSnippet".
@@ -161,7 +165,7 @@ Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the f
 
 ### 3.3 Retrieving Files in a Microflow {#microflow-retrieve}
 
-Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the following:
+Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do the following:
 
 1. Create a **GetImage** (or **GetFile**) microflow.
     * Right click in the **CMSClient** module and select **Add microflow**.
@@ -175,7 +179,7 @@ Complete the steps in [Retrieve Files with REST](#retrieve-files), then do the f
          * **Type** – select the **RetrievedFile** entity
          * **Variable Name** – enter `GetResponseFile`
   
-5. Drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image.
+3. Drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image.
     * Double click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
     * In the **Refresh in client** field, select **Yes**.

@@ -18,7 +18,7 @@ On the right side of the top bar, you can access and edit your profile by clicki
 
 On the left side of the top bar, you open an access menu by clicking the **切换到** menu:
 
-{{< figure src="/attachments/developerportal/atm-switch-to.png"   width="300"  >}}
+{{< figure src="/attachments/developerportal/deploy/tencent-deploy/app-team-management/atm-switch-to.png"   width="300"  >}}
 
 You can then access the following parts of the Mendix Platform:
 

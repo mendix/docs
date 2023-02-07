@@ -75,14 +75,12 @@ The following table lists the properties used as keys for database and storage-r
 * `com.mendix.storage.azure` for Azure Blob Storage
 
 {{% alert color="info" %}}
-If your app is created in Mendix version 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you don't need to specify `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket.
-Instead, the same AWS IAM role can be used for S3 authentication.
+If your app is created in Mendix version 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify an `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket. Instead, you can use the same AWS IAM role for RDS authentication.
 For more information and a complete walkthrough example, see the [AWS Secrets Manager example](#configure-using-aws-secrets-manager).
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If your app is created in Mendix version 9.22 or above, and its Kubernetes service account is linked to an AWS IAM Role, you don't need to specify `database-password` to access a Postgres RDS database.
-Instead, the same AWS IAM role can be used for RDS authentication.
+If your app is created in Mendix version 9.22 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify a `database-password` to access a Postgres RDS database. Instead, you can use the same AWS IAM role for RDS authentication.
 For more information and a complete walkthrough example, see the [AWS RDS IAM authentication example](#configure-using-rds-iam).
 {{% /alert %}}
 

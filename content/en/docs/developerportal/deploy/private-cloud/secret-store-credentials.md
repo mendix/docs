@@ -76,7 +76,7 @@ The following table lists the properties used as keys for database and storage-r
 
 {{% alert color="info" %}}
 If your app is created in Mendix version 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify an `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket. Instead, you can use the same AWS IAM role for RDS authentication.
-For more information and a complete walkthrough example, see the [AWS Secrets Manager example](#configure-using-aws-secrets-manager).
+For more information and a complete walkthrough example, see [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -90,7 +90,7 @@ For example, if you need to set the `MyFirstModule.WelcomePageTitle` constant, s
 To set a [Mendix Runtime custom setting](/refguide/custom-settings/), use the `mx-runtime-{name}` format (replace `{name}` with the name of the custom setting).
 For example, if you need to set the `com.mendix.storage.s3.EncryptionKeys` constant, specify its value via the `mx-runtime-com.mendix.storage.s3.EncryptionKeys` key.
 
-For a full configuration example, see the AWS Secrets Manager [guide](#configure-using-aws-secrets-manager).
+For a full configuration example, see [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
 
 {{% alert color="info" %}}
 Most of the Mendix Runtime settings don't contain private data or are managed by the Mendix Operator, and overriding some values could lead to unexpected behavior.
@@ -467,22 +467,21 @@ AWS RDS Postgres databases can use [IAM database authentication](https://docs.aw
 
 To use this feature, you need to:
 
-* Use an AWS RDS Postgres database with [IAM authentication enabled](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html)
-* Use Mendix Operator version 2.10.1 and above
-* Use Mendix 9.22 and above
-* Complete the steps in using [AWS Secrets Manager](#configure-using-aws-secrets-manager) for an environment
+* Use an AWS RDS Postgres database with [IAM authentication enabled](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html).
+* Use Mendix Operator version 2.10.1 and above.
+* Use Mendix 9.22 and above.
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to IAM authentication:
 
-1. Remove or comment out `database-password` from the SecretProviderClass and the associated AWS Secret.
-2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) for the `database-username` role.
-   You will need to use the `psql` commandline and run the following commands (replacing `<database-username>` with the username specified in `database-username`):
+1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated AWS Secret.
+2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) for the `database-username` role by using the `psql` commandline to run the following commands (replacing `<database-username>` with the username specified in `database-username`):
    ```sql {linenos=false}
    GRANT rds_iam TO <database-username>;
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
    {{% alert color="info" %}}This step is not necessary if the RDS instance was created with only IAM authentication enabled, and if `database-username` is the default (master) user.{{% /alert %}}
-3. Attach the following inline IAM policy to the environment's IAM role (created when configuring [AWS Secrets Manager](#configure-using-aws-secrets-manager)):
+3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager)):
    ```json
    {
      "Version": "2012-10-17",
@@ -501,19 +500,18 @@ After completing the prerequisites, follow these steps to switch from password-b
    ```
    replacing `<db-region>` with the RDS database region, `<account-id>` with the AWS account ID, `<db-resource-id>` with the database Resource ID and `<database-username>` with the username specified in `database-username`.
    
-   For more information how to get the Resource ID and create an RDS IAM policy, see the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html).
+   For more information on how to get the Resource ID and create an RDS IAM policy, see the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html).
 4. Restart the Mendix app environment.
 
-When using IAM authentication, the Mendix app's environment (`m2ee-sidecar` container) will use that app's attached IAM role to request a new Postgres password every 10 minutes from the [RDS API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Go.html).
-These passwords expire after 15 minute.
-Passwords are only checked when opening a new connection, so an expired password doesn't cancel any existing connections and doesn't interrupt any running database transactions and queries.
+When using IAM authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached IAM role to request a new Postgres password every 10 minutes from the [RDS API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Go.html). These passwords expire after 15 minutes.
+Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
 
 ## 4 Additional considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:
 
 * It is not currently possible to use Storage Plans with CSI Secrets Storage. Instead, your infrastructure admin must attach a Kubernetes `ServiceAccount` and `SecretProviderClass` would be attached to the app before or after the environment is created.
-* If a secret is rotated or updated, Mendix Operator version 2.10.0 and above will detect the changes and apply them. However (depending on the Mendix Runtime version in use), the changes might not be applied — if the changes are not applied, you should restart the environment. Bear in mind the following features of detecting a changed secret:
+* If a secret is rotated or updated, Mendix Operator version 2.10.0 and above will detect the changes and apply them. However (depending on the Mendix Runtime version in use), the changes might not be applied. If the changes are not applied, you should restart the environment. Bear in mind the following features of detecting a changed secret:
     * There is a delay of a few minutes before the CSI Secrets Storage driver detects the changes.
     * Only file storage credentials and `MxAdmin` password changes are correctly processed at the moment.
     * In Mendix version 9.22 or above, database password rotation is processed without restarting the app.

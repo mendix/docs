@@ -69,9 +69,9 @@ These are the native widgets included in these resources along with links to the
 
 ## 3 Nanoflow Actions
 
-| Category | Action | Description |
+SOME EXPLANATION AND OR CROSSLINKS HERE. 
 
-SOME EXPLANATION AND OR CROSSLINKS HERE. For more information, see the JavaScript nanoflow actions [source code](https://github.com/mendix/native-widgets/tree/main/packages/jsActions/nanoflow-actions-native/src) in GitHub.
+For more information, see the JavaScript nanoflow actions [source code](https://github.com/mendix/native-widgets/tree/main/packages/jsActions/nanoflow-actions-native/src) in GitHub.
 
 ### 3.1 Client Activities Category
 

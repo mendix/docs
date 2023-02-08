@@ -27,24 +27,24 @@ These are the native widgets included in these resources along with links to the
 
 | Widget | Description |
 | --- | --- |
-| [Accordion](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/accordion-native) | The accordion allows users to toggle the display of groups of content. |
+| [Accordion](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/accordion-native) | Allows users to toggle the display of groups of content. |
 | [Activity Indicator](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/activity-indicator-native) | Displays a circular loading indicator. |
 | [Animation](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/animation-native) | Provides default animations for contents and widgets. |
 | [App Events](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/app-events-native) | Triggers actions based on load, network status, and timer events. |
 | [Background Gradient](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/background-gradient-native) | Allows you to apply a background that transitions between multiple colors in a linear direction. |
-| [Background Image](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/background-image-native) | Allows to layer other widgets on top of an image. |
+| [Background Image](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/background-image-native) | Allows you to layer other widgets on top of an image. |
 | [Badge](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/badge-native) | Displays text or a value as a badge. |
 | [Bar Chart](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/bar-chart-native) | The bar chart widget renders a horizontal bar graph based on static and dynamic data sets. |
 | [Barcode Scanner](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/barcode-scanner-native) | Scans barcode and QR code values. |
 | [Bottom Sheet](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/bottom-sheet-native) | Creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. |
 | <a name="carousel"></a>[Carousel](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/carousel-native) | Creates a carousel that can be swiped with free modeling. |
 | [Color Picker](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/color-picker-native) | Allows the app end-user to select colors. |
-| [ColumnChart](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/column-chart-native) | The column chart widget renders a vertical bar graph based on static and dynamic data sets. |
+| [ColumnChart](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/column-chart-native) | Renders a vertical bar graph based on static and dynamic data sets. |
 | [Feedback](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/feedback-native) | Allows the app end-user to submit feedback directly into the app. |
 | [Floating Action Button](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/floating-action-button-native) | Displays a circular floating icon button. |
 | [Gallery](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/gallery-native) | A replacement for both the template grid and list view. |
 | [GalleryTextFilter](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/gallery-text-filter-native) | A text filter for the gallery. |
-| [Image](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/image-native) | Display static or dynamic images. |
+| [Image](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/image-native) | Displays static or dynamic images. |
 | [Intro Screen](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/intro-screen-native) | Shows swipeable containers to show contents as introductions. |
 | [Line Chart](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/line-chart-native) | Renders a scalable line graph based on static and dynamic data sets. |
 | [List View Swipe](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/listview-swipe-native) | Shows controls on swipe for an interactive list view. |
@@ -60,9 +60,9 @@ These are the native widgets included in these resources along with links to the
 | [Rating](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/rating-native) | Gives a rating by selecting stars. |
 | [Repeater](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/repeater-native) | Iterates over a data source or nanoflow and repeats the content while changing the values assigned to it. |
 | [Safe Area View](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/safe-area-view-native) | Prevents content from being rendered in unsafe areas (iOS only). |
-| [Signature](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/signature-native) | Creates a canvas on which a user can draw. The drawing will be saved as a base64 string. |
+| [Signature](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/signature-native) | Creates a canvas on which a user can draw. The drawing will be saved as a *base64* string. |
 | [Slider](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/slider-native) | Changes a numeric value using a slider. |
-| [Switch](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/switch-native) | Changes a boolean value using a switch. |
+| [Switch](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/switch-native) | Changes a Boolean value using a switch. |
 | [Toggle Buttons](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/toggle-buttons-native) | Changes an enumeration value using a group of buttons. |
 | [Video Player](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/video-player-native) | Plays a video loaded from a URL. |
 | [Web View](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/web-view-native) | Displays an external web page or loads custom HTML. |

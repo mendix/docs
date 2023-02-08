@@ -4,114 +4,153 @@ url: /appstore/modules/oidc-provider/
 category: "Modules"
 description: "Describes the configuration and usage of the OIDC Provider module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "Provider"]
+banner: "The OIDC Provider is currently a beta release."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/+++++++
 ---
 
 ## 1 Introduction
 
-This module can be used to build a Mendix app that acts as an IDP towards other applications, hence contributing to a Single Sign-On experience for the end-users of those applications. Other apps can delegate user authentication (login) to the app you would be building using the OpenID Connect (OIDC) protocol.
+{{% todo %}}Add link to module in Marketplace{{% /todo %}}
 
-It supports responsive browser based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix 9( 9.12.5) or higher.
+The [OIDC Provider](https://example.com) can be used to build a Mendix app that acts as an Identity provider(IdP) for other apps, hence providing a Single Sign-On (SSO) experience for the end-users of those applications.
 
-### 1.1 Description
+The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.12.5 and above.
 
-OpenID Connect(OIDC) Provider works as an Identity provider(IDP) which uses OIDC protocol to login into Mendix app with the help of OIDC Client. It works with web/responsive applications.
+The idea is that you set up a single Mendix app which uses the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module to authenticate end-users with your central IdP. The same app also acts as an OIDC client for your other apps to use as the IdP for OIDC SSO. THis means it is working as an IAM (Identity and Access Management) broker. You can easily add or remove apps from the IAM Broker app within the Mendix ecosystem using an API without each app and relevant user roles having to be added to your central IdP. However, you retain all the benefits of your central IdP in controlling on- and offboarding of users.
 
-What this means is that you can set up a single Mendix app which uses the [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) to allow end-users to be authenticated by your central IdP. This app also acts as an OIDC client for your other apps to use through OIDC SSO. Using an API, apps can easily be added or removed from the provider within the Mendix ecosystem without the app and relevant user roles having to be added to your central IdP. However, you retain all the benefits of your central IdP in controlling on- and offboarding of users.
+{{< figure src="/attachments/appstore/modules/oidc-provider/typical-usage.png" >}}
 
-### 1.2 Typical Usage Scenarios
+### 1.1 Typical Usage Scenarios
 
-![User-uploaded image: image.png](https://paper-attachments.dropboxusercontent.com/s_7FA3DFDDF1768422344AC9AA4AEF60E5D60D38EEA777418E652E6EA98AFA6080_1626373468474_image.png)
+The following are usage scenarios that would be achievable with the OIDC Broker.
 
-* Mendix customers that want to build an IAM Broker solution that would ‘hide’ a multitude of Mendix apps from their corporate IDP.  By having those apps delegate authentication to the broker and have the broker delegate authentication to their IDP, only one OAuth client needs to be configured at their IDP.  A deployment pipeline can register additional Mendix apps at the IAM Broker in an automated fashion via API. 
-* In a similar fashion, Mendix Solution Vendors (MSVs) may want to hide the microservice architecture of their solution from the customer by using the IAM Broker as a single IAM integration point for their customers.
+* Mendix customers that want to build an IAM Broker solution that would hide the complexity of a multitude of Mendix apps from their corporate IdP.  By having those apps delegate authentication to the broker and have the broker delegate authentication to their IdP, only one OAuth client needs to be configured at their IdP.  A deployment pipeline can register additional Mendix apps with the IAM Broker in an automated fashion via an API. 
+* Mendix Solution Vendors (MSVs) who want to simplify the microservice architecture of their solution from the customer by using the IAM Broker as a single IAM integration point for their customers.
 
-### 1.3 Features and Limitations
+### 1.2 Features and Limitations
+
+The OIDC Provider has the following features and limitations:
 
 **Features**
 
-* Supports responsive web applications, using the common OAuth Authorization Code grant.
-* Your apps can be registered as OAuth client at the OIDC Provider via client registration API or client configuration screen.
-* It publishes a well-known endpoint to communicate endpoints and other IDP characteristics to client applications.
-* Clients need to validate ID-tokens that they receive and can retrieve the necessary keys from the well known endpoint exposed by the OIDC Provider module.
-* Various security features are supported: OIDC ‘nonce’ parameter, PKCE support and multiple client authentication methods ( client_secret_post, client_secret_basic)
-* Supports front channel and back-channel logout as public beta features.
+* It supports responsive web applications, using the common OAuth Authorization Code grant.
+* Your apps can be registered as an OIDC client with the OIDC Provider using the client registration API or client configuration screen.
+* It publishes a well-known endpoint to communicate endpoints and other IdP characteristics to client applications. This can be used by clients to retrieve the keys needed to validate ID-tokens that they receive.
+* It supports the OIDC ‘nonce’ parameter, PKCE, and multiple client authentication methods ( client_secret_post, client_secret_basic) as security features.
+* It supports front channel and back-channel logout as public beta features.
     
 **Limitations**
 
 * The hybrid and client credential grants are not supported, although the OIDC Provider may contain some (rudimentary) implementation to support them.
-* The current implementation is an early beta release.
+* The current implementation is an early [beta release](/releasenotes/beta-features/).
 
-### 1.4 Known Issues
-
-Bug: -
-
-* Custom claims not working properly.
-    When we add a custom claim in OIDC Provider, it will be included in IDToken which will be generated by OIDC Provider. 
-    The value we are currently getting is `"preferred_username2": "scala.concurrent.impl.FutureConvertersImpl$CF@6c163285[Completed normally]"`   instead of
-    "preferred_username2": sharishma
-
-### 1.5 Dependencies
+### 1.3 Dependencies
 
 This module requires your app to be using Mendix 9.12.5+ or higher
 The following modules need to be imported into your app
 
-* MxModelReflection
-* CommunityCommons
-* Administration module
+* [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
+* [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
+* [Administration](https://marketplace.mendix.com/link/component/23513) – see [Administration](/appstore/modules/administration/) documentation
 
 ## 2 Installation
 
-* Import “OIDC Provider” into your app
-* Add dependencies as listed in previous section from the Marketplace
+To install the OIDC Provider module you need to import the following into your app:
+
+* [OIDC Provider](https://example.com)
+* [Community Commons](https://marketplace.mendix.com/link/component/170)
+* [Mx Model reflection](https://marketplace.mendix.com/link/component/69)
+* [Administration](https://marketplace.mendix.com/link/component/23513)
+
+The module then needs to be configured as described below.
 
 ## 3 Configuration
 
 ### 3.1 Configure Security
 
-* Assign MxModelReflection (ModelAdministrator, Readonly, TokenUser) and   OpenIDConnectProvider( Admin) roles to Administrator user role in security.
-![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660280466114_image.png)
+To configure the app security, do the following:
 
-### 3.2 Configure Administration Module
+1. Open the [User Roles](/refguide/user-roles/) in the app and **Edit** the **Administrator** user role.
+1. **Edit** the **Module roles**
+1. Assign the following module roles to the Administrator:
+    1.  MxModelReflection
+        * ModelAdministrator
+        * Readonly
+        * TokenUser
+    1. OpenIDConnectProvider
+        * Admin
 
-* Open the Domain model of ‘Administration’ module and add a new attribute named         ‘MendixUserID’ which is of ‘AutoNumber’ data type in the ‘Account’ entity 
-    ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660911500664_file.png)
+### 3.2 Configure App
 
-* Switch to the ‘Access Rules’ tab of  Administration.Account entity, edit Administrator         module role to give read access to ‘MendixUserID’ .Click OK after providing the access. 
-    ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660911500685_file.png)
+You now need to configure the app.
 
-* Add ‘ASU_Start_All’ microflow from OpenIDConnectProvider module as an AfterStartUP which is used for REST calls in ‘**Runtime**’ tab of ‘settings’
-    ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660280551179_image.png)
+1. Open the **Domain model** of the **Administration** module.
+1. Edit the **Account** entity.
+    1. Add a new attribute as follows:
+        * **Name** – MendixUserID
+        * **Type** – **AutoNumber**
+    1. Switch to the **Access Rules** tab.
+    1. **Edit** the **Administrator** module role.
+    1. Give **Read** **Access rights** to the **MendixUserID** attribute.
+1. Open the **Runtime** tab of the app **Settings**.
+1. Add the **OpenIDConnectProvider.ASU_Start_All** microflow as an [After Startup](/refguide/app-settings/#after-startup) microflow.
+1. Finally, ensure that your app has the following Administration navigation items:
 
-* Next, Create the items in the ‘Navigation’ by referring to the following image 
-    ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660280568016_image.png)
+    | Caption | Action | User Roles |
+    | --- | --- | --- |
+    | Accounts | Open page 'Administration.Account_Overview' | Administrator, UserManager |
+    | Active Sessions | Open page 'Administration.ActiveSessions' | Administrator, UserManager |
+    | Scheduled Events | Open page 'Administration.ScheduledEvents' | Administrator, UserManager |
+    | Runtime Instances | Open page 'Administration.RunteimInstances' | Administrator, UserManager |
+    | My Account | Call microflow 'Administration.ManageMyAccount' | User |
+    | OpenID Connect | Open page 'OpenIDConnectProvider.OpenIDConnect_Dashboard' | Administrator |
 
 ### 3.3 Configure OIDC Provider (This App)
 
-* Run the application and login as administrator
-* Create test users in Administration-> Accounts
-![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660493573415_file.png)
+The rest of the configuration can be performed through the app.
 
-* Now move to OpenIDConnect configuration page. Create a new key on the ‘Server Keys’ tab 
-![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660493638675_file.png)
+1. Deploy and run the app.
+1. Login as an administrator.
+1. Use the **Accounts** navigation item.
+1. Click **New local user** and create a new active account with the **User role** set to **User**.
+1. Use the **OpenID Connect** navigation item.
+1. Open the **Server Keys** tab.
+1. Click **New Key**.
+1. Open the **Scopes** tab.
+1. Create a **New** scope with the **Scope type** set to **Standard**.
+1. Open the **Clients** tab.
+1. Click **New Client Registration**.
 
-* Create a scope under scopes section: new ->openid (standard) 
-![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660493638683_file.png)
+    You can register a new client in one of two ways. Follow one of the sets of instructions below:
 
-* There are two ways to create client in OIDC provider: Clients -> New Client Registration 
-    * **automated client registration via API** 
-        You can do this from a deployment pipeline. You can test this possibility by using postman. The OIDC Server module generates a client registration access token that you need to use the API.
-        ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660493638690_file.png)
+#### 3.3.1 Automatic Registration
 
-    * You can copy the ‘Registration Access token’ and paste it in the value of Authorization key of ‘**Headers**’ section of register endpoint. 
-        ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660494559747_file.png)
+To check that this works, you will need a tool for testing APIs (such as [Postman](https://www.postman.com/)) which allows you to execute HTTP commands to the Registration URI of you IdP.
 
-        ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660907049679_image.png)
+1. Select **Automatic Registration**.
+1. Store the **Registration Access token** and the **Registration URI**.
+1. In your API testing tool, set up the following:
+    * a **POST** command to the **Registration URI**
+    * an HTTP header with **Key** = "AUthorization" and **Value** = **Registration Access token**
+1. Send the command. If it is working, you should get a response which resembles the example below:
 
-        ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660907078029_image.png)
+    ```json {linenos=false}
+    {
+        "client_id" : "DemoClient1",
+        "client_name" : "DemoClient1",
+        "client_secret" : "DemoCLient1",
+        "redirect_uris" : [ http://localhost:8081/oath/v2/callback ],
+        "backchannel_logout_uri" : http://localhost:8081/logout,
+        "post_logout_redirect_uris" : [ http://localhost:8081/logout],
+        "grant_types" : [ "hybrid", "client_credentials", "password" ],
+        "scope" : "openid"
+    }
+    ```
 
-    * **manual registration** **via Configuration screen**  
+#### 3.3.2 Manual Registration
+    
+* **manual registration** **via Configuration screen**  
         It is used when you want to test the app with OIDC client 
         Clients -> New Client Registration 
         ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660493638697_file.png)
@@ -129,7 +168,7 @@ The following modules need to be imported into your app
 
 ### 3.4 Configure OIDC Client
 
-This section describes configuration steps a low-code developer needs to do to run and test the interaction between his ‘IDP-app’ and his ‘client app’ using OIDC SSO module.
+This section describes configuration steps a low-code developer needs to do to run and test the interaction between his ‘IdP-app’ and his ‘client app’ using OIDC SSO module.
 
 * Open OIDC Client in Mendix Studio pro. Change the local host port number as OpenIDConnectProvider runs on 8080. 
 ![](https://paper-attachments.dropbox.com/s_A27DA9F06997C3D919A20D2E1F62DBDD4D4A86848C0F5AA1A9B4E4528436EC3B_1660494287240_file.png)
@@ -215,5 +254,9 @@ Stop the OIDC Client project if it is running in studio pro
 
 ### 5.1 Infinite Loop of Redirects
 
-The OIDC provider module sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider module is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IDP, which results in an ‘infinite loop’ of redirects via the user’s browser.
+The OIDC provider module sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider module is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user’s browser.
 To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](https://docs.mendix.com/developerportal/deploy/environments-details/#4222-applying-a-different-samesite-setting) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting has changed, see [Release Notes](https://docs.mendix.com/releasenotes/studio-pro/8.11/).
+
+### 5.2 Custom Claims Are Not Returned Properly
+
+This is a known issue and will be corrected in a future release.

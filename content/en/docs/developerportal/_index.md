@@ -90,6 +90,8 @@ To stop watching an app and disable notifications for that app, click the eye sy
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click the cloud icon in the lower-right corner of the app tile.
 
+The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
+
 ## 4 My Company's Apps and Buzz {#my-company-apps}
 
 In the header, you can click links to see your **Company Apps** and **Company Buzz**:

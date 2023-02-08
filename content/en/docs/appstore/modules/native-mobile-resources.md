@@ -87,44 +87,53 @@ These are the nanoflow actions in the native authentication category:
 * **Is biometric authentication supported** – checks if biometric authentication is supported
 
 ### 3.3 Native Camera Category
+
+These are the nanoflow actions in the native camera category:
+
+* **Save to picture library** – offers the user to store a picture from the offline database in the device library
+* **Take picture** – opens the camera and let the user take a picture
+* **Take picture (advanced)** – opens the camera and let the user take a picture with advanced options
+
 ### 3.4 Native Clipboard Category
+
+These are the nanoflow actions in the native clipboard category:
+
+* **Get clipboard content** – fetches the latest string from the copy&paste clipboard of the device
+* **Set clipboard content** – sets a string to the copy&past clipboard of the device
+
 ### 3.5 Native Deep Link Category
+
+These are the nanoflow actions in the native clipboard category:
+
+* **Parse Url to object** – parses a URL string into a Mendix object with the following attributes:
+    * protocol: "https:"
+    * hash: "top"
+    * query: "?tag=networking&order=newest"
+    * pathname: "/forum/questions/"
+    * auth: "john.doe"
+    * host: "www.example.com:123"
+    * port: "123"
+    * hostname: "www.example.com"
+    * password: "secret"
+    * username: "john.doe"
+    * origin: "https://www.example.com:123"
+    * href: "https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top"
+
+    Dynamically based on the number of slashes in the paths:
+    * path0: "forum"
+    * path1: "questions"
+
+    Dynamically based on the number of query keys:
+    * tag: "networking"
+    * order: "newest" 
+* **Register deep link** – registers a nanoflow to handle all deep link requests
+
 ### 3.6 Native Network Category
 ### 3.7 Native Mobile Category
 ### 3.8 Native Notifications Category
 
 
 
-| Client activities | Download file | Lets the user save a file to the device or cloud storage, or let the user open it in another app. |
-| Native authentication | Biometric authentication | Uses FaceId or the fingerprint scanner to verify that the device owner is using the app. |
-| Native authentication | Is biometric authentication supported | Checks if biometric authentication is supported. |
-| Native camera | Save to picture library | Offers the user to store a picture from the offline database in the device library. |
-| Native camera | Take picture | Opens the camera and let the user take a picture. |
-| Native camera | Take picture (advanced) | Opens the camera and let the user take a picture with advanced options. |
-| Native clipboard | Get clipboard content | Fetches the latest string from the copy&paste clipboard of the device. |
-| Native clipboard | Set clipboard content | Sets a string to the copy&past clipboard of the device. |
-| Native deep link | Parse Url to object | Parses a URL string into a Mendix object with the following attributes:
-* protocol: "https:"
-* hash: "top"
-* query: "?tag=networking&order=newest"
-* pathname: "/forum/questions/"
-* auth: "john.doe"
-* host: "www.example.com:123"
-* port: "123"
-* hostname: "www.example.com"
-* password: "secret"
-* username: "john.doe"
-* origin: "https://www.example.com:123"
-* href: "https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top"
-
-Dynamically based on the number of slashes in the paths:
-* path0: "forum"
-* path1: "questions"
-
-Dynamically based on the number of query keys:
-* tag: "networking"
-* order: "newest" |
-| Native deep link | Register deep link | Registers a nanoflow to handle all deep link requests. |
 | Native network | Is cellular connection | Checks if the device is connected to the cellular network. |
 | Native network | Is connected | Checks if the device is connected. |
 | Native network | Is wifi connection | Checks if the device is connected to Wifi. |

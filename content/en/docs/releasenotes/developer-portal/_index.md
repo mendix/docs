@@ -17,6 +17,19 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### February 13th, 2023
+
+#### Improvements
+
+* We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready
+* We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
+* We moved the notification settings you set for **Project Management** to **Account Settings** > **Notifications** (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
+* In addition, **Personal Access Tokens** and personal **API Keys** are available via **Account Settings** > **Developer Settings**.
+
+#### Fixes
+
+* We fixed a performance issue on the [Team](/developerportal/collaborate/team/) page.
+
 ### January 26th, 2023
 
 #### Improvements

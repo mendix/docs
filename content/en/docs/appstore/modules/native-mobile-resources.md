@@ -137,49 +137,55 @@ These are the nanoflow actions in the native network category:
 * **Is wifi connection** – checks if the device is connected to Wifi
 
 ### 3.7 Native Mobile Category
+
+These are the nanoflow actions in the native mobile category:
+
+* **Change status bar** – changes the styling of the device's status bar
+* **Get device info** – gets information about the device as an object with the following attributes:
+    * ApplicationName: the name of the app
+    * BatteryLevel: the battery percentage (between 0 and 1)
+    * Brand: the brand of the device (for example: Apple)
+    * BuildNumber: the build number as set in Build Native App
+    * BundleId: the application bundle identifier as set in Build Native App
+    * Carrier: name of the network operator
+    * DeviceCountry: the country of the device
+    * DeviceId: an identifier for the device model (iPhone7,2, goldfish, etc.)
+    * DeviceLocale: the locale of the device
+    * FontScale: the device font scale (1 is normal)
+    * FreeDiskStorage: the available storage size in bytes
+    * Manufacturer: the device manufacturer (Apple, Google, etc.)
+    * Model: the device model (incomplete, use DeviceId instead)
+    * ReadableVersion: the application version and build number
+    * SystemName: the operating system name (iOS or Android)
+    * SystemVersion: the operating system version
+    * Timezone: the time zone of the device
+    * TotalDiskCapacity: the total storage capacity of the device in bytes
+    * TotalMemory: the total memory capacity of the device in bytes
+    * UniqueId: a unique identifier for the device
+    * UserAgent: the user agent of the device's web browser
+    * Version: the application version as set in Build Native App
+    * Is24Hour: is the device using a 24h clock?
+    * IsEmulator: is the app running on an emulator?
+    * IsTablet: is the app running on a tablet?
+    * IsLandscape: is the device currently in landscape mode?
+    * HasNotch: does the device have a notch?
+
+* **Hide keyboard** – hides the onscreen keyboard
+* **Open in app browser** – opens a specific URL in an in app web browser
+* **Play sound** – plays a sound from a file stored in the offline database
+* **Request generic permission** – requests a specific permission
+* **Vibrate** – vibrates the device for a specific duration
+
 ### 3.8 Native Notifications Category
 
+These are the nanoflow actions in the native notifications category:
 
-| Native mobile | Change status bar | Changes the styling of the device's status bar. |
-| Native mobile | Get device info | Gets information about the device as an object with the following attributes:
-* ApplicationName: the name of the app.
-* BatteryLevel: the battery percentage (between 0 and 1).
-* Brand: the brand of the device (Apple, xiaomi, etc.).
-* BuildNumber: the build number as set in Build Native App.
-* BundleId: the application bundle identifier as set in Build Native App.
-* Carrier: name of the network operator.
-* DeviceCountry: the country of the device.
-* DeviceId: an identifier for the device model (iPhone7,2, goldfish, etc.).
-* DeviceLocale: the locale of the device.
-* FontScale: the device font scale (1 is normal).
-* FreeDiskStorage: the available storage size in bytes.
-* Manufacturer: the device manufacturer (Apple, Google, etc.).
-* Model: the device model (incomplete, use DeviceId instead).
-* ReadableVersion: the application version and build number.
-* SystemName: the operating system name (iOS or Android)
-* SystemVersion: the operating system version
-* Timezone: the timezone of the device
-* TotalDiskCapacity: the total storage capacity of the device in bytes.
-* TotalMemory: the total memory capacity of the device in bytes.
-* UniqueId: a unique identifier for the device.
-* UserAgent: the user agent of the device's web browser.
-* Version: the application version as set in Build Native App..
-* Is24Hour: is the device using a 24h clock?
-* IsEmulator: is the app running on an emulator?
-* IsTablet: is the app running on a tablet?
-* IsLandscape: is the device currently in landscape mode?
-* HasNotch: does the device have a notch? |
-| Native mobile | Hide keyboard | Hides the onscreen keyboard. |
-| Native mobile | Open in app browser | Opens a specific URL in an in app web browser. |
-| Native mobile | Play sound | Plays a sound from a file stored in the offline database. |
-| Native mobile | Request generic permission | Requests a specific permission. |
-| Native mobile | Vibrate | Vibrates the device for a specific duration. |
-| Native notifications | Cancel all scheduled notifications | Cancels all local notifications. |
-| Native notifications | Cancel scheduled notification | Cancels a local notification by id. |
-| Native notifications | Clear all delivered notifications | Clears all delivered push notifications. |
-| Native notifications | Display notification | Creates and display a local notification immediately. |
-| Native notifications | Get push notification token | Gets the token required for sending push notifications. |
-| Native notifications | Has notification permission | Checks if the user has given permission to send notifications. |
-| Native notifications | Request notification permission | Requests permission to send notifications. |
-| Native notifications | Schedule notification | Creates and schedule a new local notification. |
-| Native notifications | Set badge number | Sets the number displayed in the application badge. |
+* **Cancel all scheduled notifications** – cancels all local notifications
+* **Cancel scheduled notification** – cancels a local notification by id
+* **Clear all delivered notifications** – clears all delivered push notifications
+* **Display notification** – creates and displays a local notification immediately
+* **Get push notification token** – creates and displays a local notification immediately
+* **Has notification permission** – checks if the user has given permission to send notifications
+* **Request notification permission** – requests permission to send notifications
+* **Schedule notification** – creates and schedules a new local notification
+* **Set badge number** – sets the number displayed in the application badge

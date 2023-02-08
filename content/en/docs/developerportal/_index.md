@@ -104,9 +104,7 @@ You can also sort the order of the apps here.
 
 If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz/).
 
-If you click an app for which you are not an team member, you will see the app details:
-
-{{< figure src="/attachments/developerportal/app-details.png" alt="Example of app details"   width="400"  >}}
+If you click an app for which you are not an team member, you will see the app details.
 
 For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz/#company-buzz) section of *Buzz*.
 

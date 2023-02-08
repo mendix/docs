@@ -67,7 +67,7 @@ These are the native widgets included in these resources along with links to the
 | [Video Player](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/video-player-native) | Plays a video loaded from a URL. |
 | [Web View](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/web-view-native) | Displays an external web page or loads custom HTML. |
 
-# Nanoflow Actions
+## 3 Nanoflow Actions
 
 | Category | Action | Description |
 | Client activities | Download file | Let the user save a file to the device or cloud storage, or let the user open it in another app. |

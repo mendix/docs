@@ -109,13 +109,13 @@ These are the nanoflow actions in the native clipboard category:
     * query: "?tag=networking&order=newest"
     * pathname: "/forum/questions/"
     * auth: "john.doe"
-    * host: "www.example.com:123"
+    * host: "`www.example.com:123`"
     * port: "123"
-    * hostname: "www.example.com"
+    * hostname: "`www.example.com`"
     * password: "secret"
     * username: "john.doe"
-    * origin: "https://www.example.com:123"
-    * href: "https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top"
+    * origin: "`https://www.example.com:123`"
+    * href: "`https://john.doe:secret@www.example.com:123/forum/questions/?tag=networking&order=newest#top`"
 
     Dynamically based on the number of slashes in the paths:
     * path0: "forum"

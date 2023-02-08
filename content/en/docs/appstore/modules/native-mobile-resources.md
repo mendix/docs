@@ -70,15 +70,15 @@ These are the native widgets included in these resources along with links to the
 ## 3 Nanoflow Actions
 
 | Category | Action | Description |
-| Client activities | Download file | Let the user save a file to the device or cloud storage, or let the user open it in another app. |
-| Native authentication | Biometric authentication | Use FaceId or the fingerprint scanner to verify that the device owner is using the app. |
-| Native authentication | Is biometric authentication supported | Check if biometric authentication is supported. |
-| Native camera | Save to picture library | Offer the user to store a picture from the offline database in the device library. |
-| Native camera | Take picture | Open the camera and let the user take a picture. |
-| Native camera | Take picture (advanced) | Open the camera and let the user take a picture with advanced options. |
-| Native clipboard | Get clipboard content | Fetch the latest string from the copy&paste clipboard of the device. |
-| Native clipboard | Set clipboard content | Set a string to the copy&past clipboard of the device. |
-| Native deep link | Parse Url to object | Parse a URL string into a Mendix object with the following attributes:
+| Client activities | Download file | Lets the user save a file to the device or cloud storage, or let the user open it in another app. |
+| Native authentication | Biometric authentication | Uses FaceId or the fingerprint scanner to verify that the device owner is using the app. |
+| Native authentication | Is biometric authentication supported | Checks if biometric authentication is supported. |
+| Native camera | Save to picture library | Offers the user to store a picture from the offline database in the device library. |
+| Native camera | Take picture | Opens the camera and let the user take a picture. |
+| Native camera | Take picture (advanced) | Opens the camera and let the user take a picture with advanced options. |
+| Native clipboard | Get clipboard content | Fetches the latest string from the copy&paste clipboard of the device. |
+| Native clipboard | Set clipboard content | Sets a string to the copy&past clipboard of the device. |
+| Native deep link | Parse Url to object | Parses a URL string into a Mendix object with the following attributes:
 * protocol: "https:"
 * hash: "top"
 * query: "?tag=networking&order=newest"
@@ -99,12 +99,12 @@ Dynamically based on the number of slashes in the paths:
 Dynamically based on the number of query keys:
 * tag: "networking"
 * order: "newest" |
-| Native deep link | Register deep link | Register a Nanoflow to handle all deep link requests. |
-| Native network | Is cellular connection | Check if the device is connected to the cellular network. |
-| Native network | Is connected | Check if the device is connected. |
-| Native network | Is wifi connection | Check if the device is connected to Wifi. |
-| Native mobile | Change status bar | Change the styling of the device's status bar. |
-| Native mobile | Get device info | Get information about the device as an object with the following attributes:
+| Native deep link | Register deep link | Registers a nanoflow to handle all deep link requests. |
+| Native network | Is cellular connection | Checks if the device is connected to the cellular network. |
+| Native network | Is connected | Checks if the device is connected. |
+| Native network | Is wifi connection | Checks if the device is connected to Wifi. |
+| Native mobile | Change status bar | Changes the styling of the device's status bar. |
+| Native mobile | Get device info | Gets information about the device as an object with the following attributes:
 * ApplicationName: the name of the app.
 * BatteryLevel: the battery percentage (between 0 and 1).
 * Brand: the brand of the device (Apple, xiaomi, etc.).
@@ -132,17 +132,17 @@ Dynamically based on the number of query keys:
 * IsTablet: is the app running on a tablet?
 * IsLandscape: is the device currently in landscape mode?
 * HasNotch: does the device have a notch? |
-| Native mobile | Hide keyboard | Hide the onscreen keyboard. |
-| Native mobile | Open in app browser | Open a specific URL in an in app web browser. |
-| Native mobile | Play sound | Play a sound from a file stored in the offline database. |
-| Native mobile | Request generic permission | Request a specific permission. |
-| Native mobile | Vibrate | Vibrate the device for a specific duration. |
-| Native notifications | Cancel all scheduled notifications | Cancel all local notifications. |
-| Native notifications | Cancel scheduled notification | Cancel a local notification by id. |
-| Native notifications | Clear all delivered notifications | Clear all delivered push notifications. |
-| Native notifications | Display notification | Create and display a local notification immediately. |
-| Native notifications | Get push notification token | Get the token required for sending push notifications. |
-| Native notifications | Has notification permission | Check if the user has given permission to send notifications. |
-| Native notifications | Request notification permission | Request permission to send notifications. |
-| Native notifications | Schedule notification | Create and schedule a new local notification. |
-| Native notifications | Set badge number | Set the number displayed in the application badge. |
+| Native mobile | Hide keyboard | Hides the onscreen keyboard. |
+| Native mobile | Open in app browser | Opens a specific URL in an in app web browser. |
+| Native mobile | Play sound | Plays a sound from a file stored in the offline database. |
+| Native mobile | Request generic permission | Requests a specific permission. |
+| Native mobile | Vibrate | Vibrates the device for a specific duration. |
+| Native notifications | Cancel all scheduled notifications | Cancels all local notifications. |
+| Native notifications | Cancel scheduled notification | Cancels a local notification by id. |
+| Native notifications | Clear all delivered notifications | Clears all delivered push notifications. |
+| Native notifications | Display notification | Creates and display a local notification immediately. |
+| Native notifications | Get push notification token | Gets the token required for sending push notifications. |
+| Native notifications | Has notification permission | Checks if the user has given permission to send notifications. |
+| Native notifications | Request notification permission | Requests permission to send notifications. |
+| Native notifications | Schedule notification | Creates and schedule a new local notification. |
+| Native notifications | Set badge number | Sets the number displayed in the application badge. |

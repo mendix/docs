@@ -69,9 +69,7 @@ These are the native widgets included in these resources along with links to the
 
 ## 3 Nanoflow Actions
 
-SOME EXPLANATION AND OR CROSSLINKS HERE. 
-
-For more information, see the JavaScript nanoflow actions [source code](https://github.com/mendix/native-widgets/tree/main/packages/jsActions/nanoflow-actions-native/src) in GitHub.
+This section contains information about the nanoflow actions included in the Native Mobile Resources module. For more information, see the JavaScript nanoflow actions [source code](https://github.com/mendix/native-widgets/tree/main/packages/jsActions/nanoflow-actions-native/src) in GitHub.
 
 ### 3.1 Client Activities Category
 
@@ -133,7 +131,7 @@ These are the nanoflow actions in the native clipboard category:
 These are the nanoflow actions in the native network category:
 
 * **Is cellular connection** – checks if the device is connected to the cellular network
-* **Is connected** – checks if the device is connected
+* **Is connected** – checks if the device is connected to the internet
 * **Is wifi connection** – checks if the device is connected to Wifi
 
 ### 3.7 Native Mobile Category
@@ -145,8 +143,8 @@ These are the nanoflow actions in the native mobile category:
     * ApplicationName: the name of the app
     * BatteryLevel: the battery percentage (between 0 and 1)
     * Brand: the brand of the device (for example: Apple)
-    * BuildNumber: the build number as set in Build Native App
-    * BundleId: the application bundle identifier as set in Build Native App
+    * BuildNumber: the build number as set in Native Mobile Builder UI tool
+    * BundleId: the application bundle identifier as set in Native Mobile Builder UI tool
     * Carrier: name of the network operator
     * DeviceCountry: the country of the device
     * DeviceId: an identifier for the device model (for example: iPhone7)
@@ -154,7 +152,7 @@ These are the nanoflow actions in the native mobile category:
     * FontScale: the device font scale (1 is normal)
     * FreeDiskStorage: the available storage size in bytes
     * Manufacturer: the device manufacturer (for example: Apple)
-    * Model: the device model (incomplete, use DeviceId instead)
+    * Model: the device model (due to reliability, we recommend using DeviceId instead) 
     * ReadableVersion: the application version and build number
     * SystemName: the operating system name (iOS or Android)
     * SystemVersion: the operating system version
@@ -163,7 +161,7 @@ These are the nanoflow actions in the native mobile category:
     * TotalMemory: the total memory capacity of the device in bytes
     * UniqueId: a unique identifier for the device
     * UserAgent: the user agent of the device's web browser
-    * Version: the application version as set in Build Native App
+    * Version: the application version as set in Native Mobile Builder UI tool
     * Is24Hour: checks if the device is using a 24h clock
     * IsEmulator: checks if the app is running on an emulator
     * IsTablet: checks if the app is running on a tablet

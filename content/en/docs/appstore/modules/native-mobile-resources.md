@@ -70,6 +70,31 @@ These are the native widgets included in these resources along with links to the
 ## 3 Nanoflow Actions
 
 | Category | Action | Description |
+
+SOME EXPLANATION AND OR CROSSLINKS HERE. For more information, see the JavaScript nanoflow actions [source code](https://github.com/mendix/native-widgets/tree/main/packages/jsActions/nanoflow-actions-native/src) in GitHub.
+
+### 3.1 Client Activities Category
+
+These are the nanoflow actions in the client activities category:
+
+* **Download file** – lets the user save a file to the device or cloud storage, or let the user open it in another app
+
+### 3.2 Native Authentication Category
+
+These are the nanoflow actions in the native authentication category:
+
+* **Biometric authentication** – uses FaceId or the fingerprint scanner to verify that the device owner is using the app
+* **Is biometric authentication supported** – checks if biometric authentication is supported
+
+### 3.3 Native Camera Category
+### 3.4 Native Clipboard Category
+### 3.5 Native Deep Link Category
+### 3.6 Native Network Category
+### 3.7 Native Mobile Category
+### 3.8 Native Notifications Category
+
+
+
 | Client activities | Download file | Lets the user save a file to the device or cloud storage, or let the user open it in another app. |
 | Native authentication | Biometric authentication | Uses FaceId or the fingerprint scanner to verify that the device owner is using the app. |
 | Native authentication | Is biometric authentication supported | Checks if biometric authentication is supported. |

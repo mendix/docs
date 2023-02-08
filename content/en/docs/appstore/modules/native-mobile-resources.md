@@ -149,11 +149,11 @@ These are the nanoflow actions in the native mobile category:
     * BundleId: the application bundle identifier as set in Build Native App
     * Carrier: name of the network operator
     * DeviceCountry: the country of the device
-    * DeviceId: an identifier for the device model (iPhone7,2, goldfish, etc.)
+    * DeviceId: an identifier for the device model (for example: iPhone7)
     * DeviceLocale: the locale of the device
     * FontScale: the device font scale (1 is normal)
     * FreeDiskStorage: the available storage size in bytes
-    * Manufacturer: the device manufacturer (Apple, Google, etc.)
+    * Manufacturer: the device manufacturer (for example: Apple)
     * Model: the device model (incomplete, use DeviceId instead)
     * ReadableVersion: the application version and build number
     * SystemName: the operating system name (iOS or Android)
@@ -164,11 +164,11 @@ These are the nanoflow actions in the native mobile category:
     * UniqueId: a unique identifier for the device
     * UserAgent: the user agent of the device's web browser
     * Version: the application version as set in Build Native App
-    * Is24Hour: is the device using a 24h clock?
-    * IsEmulator: is the app running on an emulator?
-    * IsTablet: is the app running on a tablet?
-    * IsLandscape: is the device currently in landscape mode?
-    * HasNotch: does the device have a notch?
+    * Is24Hour: checks if the device is using a 24h clock
+    * IsEmulator: checks if the app is running on an emulator
+    * IsTablet: checks if the app is running on a tablet
+    * IsLandscape: checks if the device is currently in landscape mode
+    * HasNotch: checks if the the device has a notch
 
 * **Hide keyboard** – hides the onscreen keyboard
 * **Open in app browser** – opens a specific URL in an in app web browser

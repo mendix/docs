@@ -13,9 +13,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### February 8th, 2023
+
+#### Mendix for Amazon EKS
+
+As part of our [strategic partnership with AWS](/partners/aws/), we have added a way for you to streamline the deployment of your apps in your AWS account by automatically provisioning a private cloud environment, based on Amazon Elastic Kubernetes Service (EKS). By using the Mendix for Amazon EKS solution, you can deploy your apps in the AWS cloud in a simplified, automated way. For more information, see Mendix for [Amazon EKS—Terraform module](https://aws.amazon.com/solutions/partners/terraform-modules/mendix-eks/).
+
 ### February 7th, 2023
 
-#### Documentation updates
+#### Documentation Updates
 
 * We have updated the [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to clarify how database password rotation works, and how to use AWS RDS IAM authentication instead of passwords.
 

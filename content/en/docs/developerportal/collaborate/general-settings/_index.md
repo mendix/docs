@@ -145,9 +145,11 @@ Click **Revoke** to delete an app API key.
 Only users with the **App Settings** permission can manage these settings.
 {{% /alert %}}
 
-On the **Project Management** tab, you can select a planning tool for the app. By default [Stories](/developerportal/collaborate/stories/) is the selected tool. If you like, you can switch to [Epics](/developerportal/collaborate/epics/). Once you select a tool, everyone in your team can use the same tool for this app.
+On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/collaborate/epics/) is the selected tool.
 
-{{% alert color="info" %}}It is not yet possible to migrate the data from Stories into Epics, so we recommend you to use Epics for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.{{% /alert %}}
+{{% alert color="warning" %}}To sync the Stories tab back in Studio Pro, you need to switch back to Stories as the planning tool. For more information, see the [Managing Stories in Studio Pro](/developerportal/collaborate/stories/#managing-sp) section of *Stories*.{{% /alert %}}
+
+It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 
 ## 7 Webhooks {#webhooks}
 

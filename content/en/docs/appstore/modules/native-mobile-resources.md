@@ -96,8 +96,8 @@ These are the nanoflow actions in the native camera category:
 
 These are the nanoflow actions in the native clipboard category:
 
-* **Get clipboard content** – fetches the latest string from the copy&paste clipboard of the device
-* **Set clipboard content** – sets a string to the copy&past clipboard of the device
+* **Get clipboard content** – fetches the latest string from the device's copy and paste clipboard 
+* **Set clipboard content** – sets a string to the device's copy and paste clipboard 
 
 ### 3.5 Native Deep Link Category
 

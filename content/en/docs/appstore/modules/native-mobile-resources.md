@@ -129,14 +129,17 @@ These are the nanoflow actions in the native clipboard category:
 * **Register deep link** – registers a nanoflow to handle all deep link requests
 
 ### 3.6 Native Network Category
+
+These are the nanoflow actions in the native network category:
+
+* **Is cellular connection** – checks if the device is connected to the cellular network
+* **Is connected** – checks if the device is connected
+* **Is wifi connection** – checks if the device is connected to Wifi
+
 ### 3.7 Native Mobile Category
 ### 3.8 Native Notifications Category
 
 
-
-| Native network | Is cellular connection | Checks if the device is connected to the cellular network. |
-| Native network | Is connected | Checks if the device is connected. |
-| Native network | Is wifi connection | Checks if the device is connected to Wifi. |
 | Native mobile | Change status bar | Changes the styling of the device's status bar. |
 | Native mobile | Get device info | Gets information about the device as an object with the following attributes:
 * ApplicationName: the name of the app.

@@ -205,32 +205,35 @@ On the **Activity** tab, you can see a list of the last 20 public events for you
 
 You can edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 
-### 10.1 General Information
+### 10.1 Profile
 
-In this section, you can upload your profile image and fill in your personal details
+In this section, you can upload your profile image and fill in your personal and work details
 
-Under **Contact**, you can select how much information you want to receive from Mendix:
+You can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry** and **Skills**.  
 
-* **Receive daily digest** – disabled by default
-* **Receive updates for threads in which I am active** – enabled by default
+You can also connect your social accounts via **Twitter URL** and **LinkedIn URL**.
 
-There is also a link to [Mendix Support](https://support.mendix.com/) if you need to perform certain account actions that require their assistance.
+You can also choose to make your profile public or private by clicking **Make Profile Public** (which will allow the Mendix community to view your profile) or **Make Profile Private**.
 
-### 10.2 Work Experience
+### 10.2 Account
 
-Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry Experience** and **Skills**. You can also let the community know if you are looking for a job or an app to contribute to. 
+### 10.3 Notifications
 
-### 10.3 Social {#social}
+### 10.4 Developer Settings
 
-Here you can connect your social accounts for **Twitter** and **LinkedIn**.
+### 10.5 Personal Data
 
-### 10.4 Security {#security}
+
+
+
+
+### OLD - Security {#security}
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
 
 You can update your password via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen.
 
-### 10.5 API Keys {#api-key}
+### OLD - API Keys {#api-key}
 
 In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
 
@@ -259,18 +262,11 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-### 10.6 Pending App Invites {#pending-app-invites}
-
-In this section, you can view the app invitations you have sent and received. There are two types of invitations:
-
-* Project invitation – an invitation to join a [team](/developerportal/collaborate/team/) to work on an app
-* App invitation – an invitation to join an app as an [App User](/developerportal/collaborate/general-settings/#managing-app-users)
-
-### 10.7 Advanced
+### OLD - Advanced
 
 In this section, you can merge your accounts and select your profile visibility.
 
-#### 10.7.1 Merging Your Accounts {#merging}
+#### OLD - Merging Your Accounts {#merging}
 
 Do you want to transfer information from your old Mendix account to a new one? You can do this directly from your **Advanced Settings**. After sharing some information with us, your earned points, achievements, credits, certifications, and Academy progress is automatically transferred.
 
@@ -290,7 +286,7 @@ It is not possible to separate accounts after they have been merged. Double-chec
 With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
 {{% /alert %}}
 
-#### 10.7.2 Selecting Your Profile Visibility {#public}
+#### OLD - Selecting Your Profile Visibility {#public}
 
 A banner will be present if you have not made your profile public to the Mendix community. You can make it public by clicking **Make this profile public**.
 
@@ -307,7 +303,7 @@ Be sure to do the following to make your profile public:
 To make your public profile private again, click **Make this profile private**. 
 {{% /alert %}}
 
-#### 10.7.3 Viewing Your Audit Trail
+#### OLD - Viewing Your Audit Trail
 
 The Mendix Platform stores certain personal information about you. You can view this information by clicking  **View Audit Trail** in the **Personal Information Stored by Mendix**.
 
@@ -315,7 +311,7 @@ The Mendix Platform stores certain personal information about you. You can view 
 Mendix has been tracking these data changes since November 2018.
 {{% /alert %}}
 
-#### 10.7.4 Removing Your Account
+#### OLD - Removing Your Account
 
 If you do not want to use Mendix anymore, you can remove your account from here. All of your personal and identifiable information is then removed and deleted from our servers.
 

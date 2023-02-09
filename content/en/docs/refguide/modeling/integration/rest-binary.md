@@ -123,7 +123,7 @@ Test the service to ensure that it works!
 
 ## 3 Retrieve Images or Files with REST {#retrieve-files}
 
-You can implement a client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity. 
+You can implement a client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity.
 
 1. Right-click on the **File Explorer** and select **Add module**, then rename it as **CMSClient**.
 
@@ -164,6 +164,10 @@ Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do t
 ```
 
 ### 3.3 Retrieving Files in a Microflow {#microflow-retrieve}
+
+You can call a REST service in a microflow, then store the response in an entity.
+
+Retriving files in a microflow uses the [Call REST service](/refguide/integration/call-rest-service/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
 
 Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do the following:
 

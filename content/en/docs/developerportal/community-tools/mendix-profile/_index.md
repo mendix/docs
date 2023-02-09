@@ -201,7 +201,7 @@ If you cannot finish your portfolio entry or do not want to publish yet, click *
 
 On the **Activity** tab, you can see a list of the last 20 public events for your badges, Marketplace, and Forum activity.
 
-## 10 Settings {#settings}
+## 10 Account Settings {#settings}
 
 You can edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 
@@ -250,7 +250,7 @@ It is not possible to separate accounts after they have been merged. Double-chec
 
 If you do not want to use Mendix anymore, you can remove your account from this page. Click the menu button next to **Request Password Change** and select **Delete Account**. All of your personal and identifiable information is then removed and deleted from our servers.
 
-### 10.3 Notifications
+### 10.3 Notifications {#notifications}
 
 On this page, you can configure how you want to be notified of Mendix Platform activity.
 
@@ -261,7 +261,7 @@ You can also configure your **Buzz Notifications**:
 * **Receive daily digest** – disabled by default
 * **Receive updates for Buzz threads in which I am active** – enabled by default
 
-### 10.4 Developer Settings - START
+### 10.4 Developer Settings {#dev-settings} - START
 
 In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
 

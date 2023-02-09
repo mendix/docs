@@ -316,9 +316,9 @@ This action refreshes local data which is cached in objects within the Mendix do
     * Return type - Boolean
     * Variable - the name which you would like to give to the Boolean variable which indicates the success or failure of the refresh action.
 
-#### 3.1.8 Update
+#### 3.1.8 Update {#update-put}
 
-The Update operation changes the attributes of an existing entity instance in the SAP back-end system using the OData service.
+The Update operation uses the HTTP PUT method to change the attributes of an existing entity instance in the SAP back-end system using the OData service. If your use case requires that you use the HTTP PATCH method instead, see [Update_PATCH](#update-patch).
 
 {{< figure src="/attachments/partners/sap/sap-odata-connector/update-params.png" >}}
 
@@ -331,6 +331,18 @@ The Update operation changes the attributes of an existing entity instance in th
     * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the update action
 
 For example, this connector can update details of a product using the **GWSAMPLE_BASIC** service.
+
+#### 3.1.9 Update_PATCH {#update-patch}
+
+The Update_PATCH operation uses the HTTP PATCH method to change the attributes of an existing entity instance in the SAP back-end system using the OData service. If your use case requires that you use the HTTP PUT method instead, see [Update](#update-put).
+
+* Input
+    * Odata object (required) - The Mendix representation of the object containing the updated data which you wish to update.
+    * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP BTP cockpit. If you are not using an SAP Destination Service, set it to *empty*
+    * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
+* Output
+    * Return type - Boolean
+    * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the update action
 
 ### 3.2 Helper Actions {#HelperActions}
 

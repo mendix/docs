@@ -220,8 +220,6 @@ There is also a link to [Mendix Support](https://support.mendix.com/) if you nee
 
 Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry Experience** and **Skills**. You can also let the community know if you are looking for a job or an app to contribute to. 
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/work-experience.png"   width="500"  >}}
-
 ### 10.3 Social {#social}
 
 Here you can connect your social accounts for **Twitter** and **LinkedIn**.
@@ -262,8 +260,6 @@ For more information, see the following:
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
 ### 10.6 Pending App Invites {#pending-app-invites}
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/pending-app-invites.png" >}}
 
 In this section, you can view the app invitations you have sent and received. There are two types of invitations:
 

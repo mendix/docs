@@ -46,9 +46,10 @@
       return {navElement: element, targetElement};
     });
 
-// We have removed this, so it isn't found. Remove altogether - see commented lines below
+// NK - navbarHeight is changed so highlighting in ToC while scrolling isn't impacted by MxDock height - see commented line below
 // const navbarHeight = window.document.querySelector("header > nav").offsetHeight;
-  
+    const navbarHeight = 96; // 2 x MxDock offset height (in px)
+
     const handleActiveSection = () => {
       // The array should be sorted according to the position of the elements on the page
       navItems.sort((a, b) => a.targetElement.offsetTop - b.targetElement.offsetTop);
@@ -56,17 +57,14 @@
       let currentActiveIndex;
   
       // If the top of the window is above the first element, select the first element
-      //if (navItems[0].targetElement.offsetTop + navbarHeight > window.scrollY) {
-      if (navItems[0].targetElement.offsetTop > window.scrollY) {
+      if (navItems[0].targetElement.offsetTop - navbarHeight > window.scrollY) {
             currentActiveIndex = 0;
       // If the top of the window is under the last element, select the last element
-//      } else if (navItems[navItems.length - 1].targetElement.offsetTop + navbarHeight < window.scrollY) {
-      } else if (navItems[navItems.length - 1].targetElement.offsetTop < window.scrollY) {
+      } else if (navItems[navItems.length - 1].targetElement.offsetTop - navbarHeight < window.scrollY) {
                 currentActiveIndex = navItems.length - 1;
       } else {
         // Try to determine the best element
-//        currentActiveIndex = navItems.findIndex((item) => item.targetElement.offsetTop + navbarHeight > window.scrollY) - 1;
-        currentActiveIndex = navItems.findIndex((item) => item.targetElement.offsetTop > window.scrollY) - 1;
+        currentActiveIndex = navItems.findIndex((item) => item.targetElement.offsetTop - navbarHeight > window.scrollY) - 1;
       }
 // MvM: Change classlist to use our activeToc rather than 'current' specified in Docsy PR
       navItems.forEach((item) => item.navElement.classList.remove('activeToc'));

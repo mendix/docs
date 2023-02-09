@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### February 9th, 2023
+
+#### Portal Improvements
+
+* We have added a new info section on top of the **Environments Overview** page which will be used to improve the communication about upcoming features and deprecations in the Portal. If nothing needs to be communicated, the section will be hidden.
+* We have fixed the known issue from previous release where the builds were failing when customer tried to deploy the same deployment package or scale the app.
+
 ### February 8th, 2023
 
 #### Mendix for Amazon EKS

@@ -16,10 +16,10 @@ If you have an app which you want to license, you can do this simply and cost-ef
 {{% alert color="info" %}}
 Your order is made immediately but the provisioning of your licensed node will take 48 hours.
 {{% /alert %}}
+
 ## 2 Features of the Basic Package
 
 The basic package has the following features.
-
 
 * Runs in the Mendix Cloud
 * Supports between five and a hundred (5-100) users

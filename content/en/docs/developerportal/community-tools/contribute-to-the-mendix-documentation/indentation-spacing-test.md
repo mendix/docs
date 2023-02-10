@@ -275,6 +275,12 @@ A table with list items:
 | --- | --- |
 | <ol><li>numbered item</li><li>numbered item</li><li>numbered item</li></ol> | <ul><li>bullet point</li><li>bullet point</li><li>bullet point</li></ul> |
 
+### 2.7 Anchors in Tables
+
+| Table Heading 1 | Table Heading 2 <a id="myanchor" href="#myanchor">My anchor here!</a> |
+| --- | --- |
+| table cell 1 | table cell 2 <a id="myanchor2" href="#myanchor2">My anchor 2 here!</a>  |
+
 ## 3 Section Spacing Tests<br />==================={#spacing}
 
 ## Level 2 Section – Paragraph after
@@ -398,3 +404,4 @@ A new list
 {{% button color="outline-light" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Light" title="What do you think of this button?" %}}
 
 {{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
+

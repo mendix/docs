@@ -180,6 +180,10 @@ For example, *Do not empty*.
 
 For buttons which call a microflow from inside a grid, **Maintain selection after microflow** specifies whether the current selection of rows in the grid should be maintained after executing the microflow.
 
+{{% alert color="warning" %}}
+If the data in the grid is updated, selection on the *not* visible pages is lost if the items are selected via an approach other than a **Select all** button. Therefore, consider this feature carefully when implementing it in an app with multiple pages.
+{{%/alert %}}
+
 ##### 3.3.2.11 Abort on Validation Errors
 
 For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed *before* executing the microflow. If the validations fail, the microflow will not be executed.

@@ -126,7 +126,7 @@ You can pass the following options to `commitToRepository`:
 
 ## 10 Changing the Platfrom SDK Configurations {#changing}
 
-By default, the Platform SDK reads your personal access token from the environment variable (for more details, see [How to Set Up your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/)). However, you can change this configuration. For example, you can load it from a file, as in this example:
+By default, the Platform SDK reads your personal access token from the environment variable (for more details, see [How to Set Up your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/)). However, you can change this configuration. For example, you can load it from a file, as in this example:
 
 ```ts
 setPlatformConfig({

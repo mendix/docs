@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/data-hub-apis/
 category: "API Documentation"
 description: "This document describes the Data Hub APIs and generating the Personal Access Token."
 weight: 20
-tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access token"]
+tags: ["data hub", "Data Hub API", "authentication", "personal access token"]
 ---
 
 ## 1 Introduction
@@ -21,7 +21,7 @@ At this time, the **Try it out** feature on the OpenAPI specs does not work.
 
 ### 1.1 Authentication and Access Rights
 
-The Data Hub APIs support OAuth2.0 and personal access tokens. See [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).
+The Data Hub APIs support OAuth2.0 and personal access tokens. For more inforamtion, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 To view authentication instructions for each API, open the OpenAPI spec and click **Authorize** on the upper right of the screen. Supported authentication methods are documented there. As mentioned above, the **Try it out** feature does not work.
 

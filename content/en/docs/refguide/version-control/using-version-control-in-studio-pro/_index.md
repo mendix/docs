@@ -389,7 +389,8 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done via a Personal Access Token (PAT). For more information on how to create a PAT, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/) in the *Developer Portal Guide*. 
+Connecting to Git is done via a Personal Access Token (PAT). For information on how to create a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
 You need to use the following credentials:
 
 * URL: `https://git.api.mendix.com/<your AppID>.git`

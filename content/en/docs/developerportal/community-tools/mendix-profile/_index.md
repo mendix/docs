@@ -286,7 +286,7 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-#### 10.4.1 Personal Access Tokens
+#### 10.4.1 Personal Access Tokens {#pat}
 
 Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
@@ -313,13 +313,13 @@ When you click **New Token**, you need to set the following characteristics of t
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/create-pat.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/create-pat.png" >}}
 
 Details about the scopes can be found in the documentation for specific services.
 
 After you click **Create**, a pop-up window shows your secret token, which is the PAT. You must copy the secret token via **Copy Token**.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/token-secret.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" >}}
 
 {{% alert color="warning" %}}
 Store the secret token in a safe location, as it will not be displayed again!
@@ -329,7 +329,7 @@ Store the secret token in a safe location, as it will not be displayed again!
 
 To see the scopes of a PAT you have created, click **View Details**.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/manage-pat.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/manage-pat.png" >}}
 
 {{% alert color="info" %}}
 You cannot see the secret token of a PAT here. You can only see that the PAT exists long with its scopes. 

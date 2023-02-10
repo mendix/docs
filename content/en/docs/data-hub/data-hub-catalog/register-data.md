@@ -54,7 +54,7 @@ First, you need to create an authentication token to get access to the Data Hub 
 
 `Authorization: MxToken <your_Personal_Access_Token>`
 
-**You can [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).**
+For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
 Once you have a Personal Access Token, follow this series of REST calls to register the details of our exposed OData service:
 

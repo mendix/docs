@@ -1,24 +1,23 @@
 ---
 title: "Advanced Audit Trail"
-url: /appstore/app-services/advanced-audit-trail/
-category: "App Services"
-description: "Describes the configuration and usage of the Advanced Audit Trail app service, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "app service", "audit trail"]
+url: /appstore/modules/advanced-audit-trail/
+description: "Describes the configuration and usage of the Advanced Audit Trail solution, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "audit trail"]
+aliases:
+    - /appstore/app-services/advanced-audit-trail/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## I Introduction
 
-{{% alert color="info" %}}Advanced Audit Trail is an app service (although it is categorized as a solution in the Marketplace). This doc describes how to use the app service together with its core module. {{% /alert %}}
-
 [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to a long-term data storage, and therefore supports complex search queries and keeps the operational database small and performant.
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data, and Elasticserach and Kibana are used to index audit data. You can find an integration diagram below:
 
-{{< figure src="/attachments/appstore/app-services/advanced-audit-trail/integration-diagram.png" >}}
+{{< figure src="/attachments/appstore/modules/advanced-audit-trail/integration-diagram.png" >}}
 
 {{% alert color="info" %}}
-The Advanced Audit Trail app service is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers a better search experience and better performance.
+The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because it needs less work to implement, and delivers a better search experience and better performance.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
@@ -48,7 +47,7 @@ The Advanced Audit Trail app service is different from the [Audit Trail](/appsto
 ### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro 9 versions starting with [9.12](https://docs.mendix.com/releasenotes/studio-pro/9.12/).
-* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail app service to store your data in an external data storage that runs in the Mendix Cloud
+* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud
 
 ### 1.5 Dependencies
 
@@ -72,7 +71,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 2. Configure the right [constant values](#constants) for the right snapshots.
 3. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
 
-    {{< figure src="/attachments/appstore/app-services/advanced-audit-trail/example.png" >}}
+    {{< figure src="/attachments/appstore/modules/advanced-audit-trail/example.png" >}}
 
     In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module. 
 

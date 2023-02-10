@@ -71,7 +71,7 @@ Name | The name the user logs in with.
 Email | The e-mail address of the user.
 Blocked | Mark the account as unblocked/blocked.
 Active | Set the account to active/inactive.
-Time Zone | Set the timezone the user works in.
+Time Zone | Set the time zone the user works in.
 Tester | Adds the tester user role.
 Tenant Administrator | Adds the tenant administrator role.
 Password | The initial password of the user (which should be changed by the user when logging in).

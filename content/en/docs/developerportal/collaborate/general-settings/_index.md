@@ -139,9 +139,11 @@ Click **Revoke** to delete an app API key.
 
 ## 6 Project Management {#project-management}
 
-On the **Project Management** tab, you can select a planning tool for the app. By default [Stories](/developerportal/collaborate/stories/) is the selected tool. If you like, you can switch to [Epics](/developerportal/collaborate/epics/). Once you select a tool, everyone in your team can use the same tool for this app.
+On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/collaborate/epics/) is the selected tool.
 
-{{% alert color="info" %}}It is not yet possible to migrate the data from Stories into Epics, so we recommend you to use Epics for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.{{% /alert %}}
+{{% alert color="warning" %}}To sync the Stories tab back in Studio Pro, you need to switch back to Stories as the planning tool. For more information, see the [Managing Stories in Studio Pro](/developerportal/collaborate/stories/#managing-sp) section of *Stories*.{{% /alert %}}
+
+It is possible to migrate all or part of your content from [Stories](/developerportal/collaborate/stories/) to Epics. For details, see the [Data Migration](/developerportal/collaborate/epics/#data-migration) section of *Epics*.
 
 ## 7 Webhooks {#webhooks}
 
@@ -156,7 +158,7 @@ Only users with the **App Settings** permission can manage webhooks.
 After clicking **New Webhook** to create a new webhook, fill in the following details:
 
 * **Name** – the name of the webhook
-* <a name="url"></a>**URL** – the URL to which the webhook will connect 
+* <a id="url"></a>**URL** – the URL to which the webhook will connect 
 * **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
 * **Version** – the version of the webhooks feature to be used
 * **Events** – what types of data will be sent via the webhook (you must select at least one; this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)

@@ -76,6 +76,10 @@ Before you can create an environment, you will need to create a deployment packa
 
 7. Confirm the information message and you will be returned to the **Environments** page.
 
+8. Once the deployment package is created, an **Unlock** icon is displayed by the **Details** button. This indicates that the created deployment package is not deployed in any environment yet. If you want to save a deployment package for future use, you can lock the deployment package by clicking the **Lock** button. This ensures that the locked deployment packages cannot be deleted until unlocked again.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/lock.png" >}}
+
 {{% alert color="info" %}}
 Alternatively, you can upload an existing MDA by clicking **Upload**.
 {{% /alert %}}
@@ -237,9 +241,9 @@ The information shows here is labeled to help you. The indicators in the environ
 
 There are three additional actions you can take while looking at the deployment package details:
 
-* **Expand to view build output** – shows the output from the Mendix build
-* **Download Package** – allows you to download the deployment package and save it locally
-* **Delete Package** – deletes the deployment package – you will be asked to confirm this action
+* **Expand to view build output** – shows the output from the Mendix build.
+* **Download Package** – allows you to download the deployment package and save it locally.
+* **Delete Package** – deletes the deployment package. You will be asked to confirm this action. If the deployment package is in a locked state, it cannot be deleted.
 
 #### 4.1.5 Deploy
 
@@ -248,8 +252,6 @@ This deploys the package to an existing environment as described in [Deploying t
 ### 4.2 Environments {#environments}
 
 This section shows all the environments created for this app.
-
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image19.png" >}}
 
 For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment.
 

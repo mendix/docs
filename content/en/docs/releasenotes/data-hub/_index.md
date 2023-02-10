@@ -11,6 +11,17 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### February 9th, 2023
+
+#### Improvements
+
+* We added a user-friendly interface for `404 not found` errors in a REST deeplink API.
+
+#### Fixes
+
+* We fixed an issue with cropping images when uploading an application icon.
+* We fixed an issue where authentication details of a data source were not visible to users without curation rights.
+
 ### February 2nd, 2023
 
 #### Improvements

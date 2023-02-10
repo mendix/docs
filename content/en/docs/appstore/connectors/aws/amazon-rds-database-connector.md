@@ -56,11 +56,9 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
             last_name VARCHAR(50) NOT NULL)
         ```
 
-{{< figure src="/attachments/appstore/connectors/aws-rds/setup.jpg" alt="The Execute Statement configuration dialog" >}}
+    {{< figure src="/attachments/appstore/connectors/aws-rds/setup.jpg" alt="The Execute Statement configuration dialog" >}}
 
-{{% alert color="info" %}}
-For the PostgresSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.
-{{% /alert %}}
+    {{% alert color="info" %}}For the PostgresSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.{{% /alert %}}
 
 5. Run your Mendix application and trigger the microflow that you configured.
 6. Verify that your Amazon RDS PostgreSQL database contains a new employee table.

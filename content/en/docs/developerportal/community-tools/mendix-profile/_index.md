@@ -306,33 +306,28 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
+##### 10.4.1.1 Defining a New Personal Access Token
 
-###### Define a new Personal Access Token
+When you click **New Token**, you need to set the following characteristics of the PAT:
 
-Click **Add**
+* **Name** – give the PAT a name that reflects where or why you intend to use it
+* **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
 
-You now need to set the following characteristics of the PAT:
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/create-pat.png" >}}
 
-* a name for the PAT — You may want to give it a name that reflects where/why you intend to use the PAT
-* the scopes (authorizations) that you want to delegate to your PAT
+Details about the scopes can be found in the documentation for specific services.
 
-    {{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/create-pat.png" >}}
+##### 10.4.1.2 Creating the Personal Access Token
 
-More details about the various scopes can be found in the documentation for the specific services.
-
-###### Obtain the Personal Access Token
-
-Click **Create**
-
-A dialog is shown with your **Token secret**, which is the PAT. You can copy the secret by clicking the ‘copy’ button on the right.
-
-{{% alert color="warning" %}}
-You need to store this in a safe location as it will not be displayed again.
-{{% /alert %}}
+After you click **Create**, a pop-up window shows your secret token, which is the PAT. You can copy the secret via **Copy Token**.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/token-secret.png" >}}
 
-##### Manage your Personal Access Tokens
+{{% alert color="warning" %}}
+You need to store the token in a safe location, as it will not be displayed again.
+{{% /alert %}}
+
+##### 10.4.1.3 Managing Your Personal Access Tokens
 
 If you have previously created PATs, the Warden application shows you a list of them.
 

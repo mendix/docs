@@ -25,7 +25,7 @@ This API is for connected private cloud clusters only.
 
 ### 2.1 Authentication
 
-Authentication for the API uses a Personal Access Token (PAT).
+Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 

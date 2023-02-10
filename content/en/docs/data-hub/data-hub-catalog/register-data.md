@@ -50,13 +50,13 @@ For detailed information on working with external entities and the Catalog witho
 
 Calling the Data Hub Catalog [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) allows you to register one or more exposed OData service(s). 
 
-First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a Personal Access Token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
+First, you need to create an authentication token to get access to the Data Hub Catalog APIs. The Data Hub Catalog Registration API requires authentication through a personal access token. For every API request you make to a Data Hub Catalog API, include the following key-value pair with your headers:
 
 `Authorization: MxToken <your_Personal_Access_Token>`
 
 For details on creating a personal access token (PAT), see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
 
-Once you have a Personal Access Token, follow this series of REST calls to register the details of our exposed OData service:
+Once you have a personal access token, follow this series of REST calls to register the details of our exposed OData service:
 
 1. [Register the application and retrieve an application UUID](#register-application).
 2. Use the application UUID to [register the environment, and retrieve the environment UUID](#register-environment).
@@ -70,7 +70,7 @@ The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central
 
 To register an application, you need:
 
-* Personal Access Token
+* Personal access token
 * Application `Name`
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html#/Register/post_applications).
@@ -101,7 +101,7 @@ Use the application UUID to register your environment.
 
 To register an environment, you need the following:
 
-* Personal Access Token
+* Personal access token
 * `application_UUID`
 * Environment `Name`
 * Environment `Location`
@@ -141,7 +141,7 @@ Use the application UUID and the environment UUID to register one or more servic
 
 To register services, you need the following:
 
-* Personal Access Token
+* Personal access token
 * `application_UUID`
 * `environment_UUID`
 * Service `Path`, `Name`, and `ContractType`

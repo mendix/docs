@@ -45,7 +45,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     main().catch(console.error);
     ```
 
-Don't forget to [Setup your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
+Don't forget to [set up your personal access token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
 
 ### 2.1 Code Explanation
 

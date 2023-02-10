@@ -22,7 +22,7 @@ The V3 Deploy API only supports the endpoints listed here. For all other API cal
 
 ## 2 Authentication{#authentication}
 
-Authentication for the Deploy API v3 uses a Personal Access Token (PAT).
+Authentication for the Deploy API v3 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 

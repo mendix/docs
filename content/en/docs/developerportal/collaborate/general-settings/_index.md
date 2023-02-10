@@ -117,7 +117,7 @@ Specific steps for configuring different cloud platforms are provided here:
 ## 5 API Keys {#api-keys}
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can manage API keys.
+Only users with the **App Settings** permission can manage app-specific API keys.
 {{% /alert %}}
 
 In **API Keys**, there is an overview of the API keys created for your app with the following information:
@@ -128,7 +128,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/keys.png"   width="800"  >}}
 
-To create a new app API key, click **Create New API Key**  and follow these steps:
+To create a new app-specific API key, click **Create New API Key**  and follow these steps:
 
 1. Fill in the **API key name**.
 2. Click **Generate API Key** to be able to use the app API key.
@@ -137,7 +137,7 @@ To create a new app API key, click **Create New API Key**  and follow these step
 
 You use these API keys to authenticate requests to the [Stories API](/apidocs-mxsdk/apidocs/stories-api/).
 
-Click **Revoke** to delete an app API key.
+To delete an app API key, click **Revoke**.
 
 ## 6 Project Management {#project-management}
 

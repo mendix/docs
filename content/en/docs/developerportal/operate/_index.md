@@ -5,7 +5,7 @@ description: "Describes the day-to-day operation of an app from the Developer Po
 weight: 15
 no_list: false 
 description_list: true
-tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud", "v3", "v4"]
+tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud"]
 ---
 
 ## 1 Introduction
@@ -30,7 +30,7 @@ For details of the information available for licensed apps running in the Mendix
 
 If your app is deployed to SAP Business Technology Platform (SAP BTP), this page will give you the option to go to the platform where your app is deployed. Here you will be able to find similar information about the performance and health of your app.
 
-You can also use a third-party service, such as Datadog, to assist you in monitoring your app. For more information, see [Datadog for v4 Mendix Cloud](/developerportal/operate/datadog-metrics/).
+You can also use a third-party service, such as Datadog, to assist you in monitoring your app. For more information, see [Datadog for the Mendix Cloud](/developerportal/operate/datadog-metrics/).
 
 ### 2.2 Alerts
 

@@ -4,6 +4,22 @@ url: /releasenotes/add-ons/ats-2.28/
 weight: 72
 ---
 
+## 2.28.7
+
+**Release date: January 31st, 2023**
+
+### Fixes
+
+* We fixed an issue with the Desktop Recorder, which caused it to stop recording any actions when clicking in the recorder browser.
+
+## 2.28.6
+
+**Release date: January 17th, 2023**
+
+### Fixes
+
+* We fixed an issue that occurred when copying a test case that had a data set and even though the copy had the data set associated, it did not use the data set values.
+
 ## 2.28.5
 
 **Release date: January 3rd, 2023**

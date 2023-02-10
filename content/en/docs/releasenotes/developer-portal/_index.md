@@ -15,6 +15,18 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2023
+
+### January 26th, 2023
+
+#### Improvements
+
+* We fixed an issue where the story description did not appear in Studio Pro.
+* [Epics](/developerportal/collaborate/epics/) now have different colors so that you can distinguish between them more easily. The color is currently assigned randomly (as is done with story labels), but we may add management functionality at a later point.
+* If you practice Scrum, you can now see the status of the stories in your active Sprint on the [Planning](/developerportal/collaborate/epics/#planning) page.
+* Sprint details are now editable, so you can change the date, name, and goal of your Sprint after you start it. Use this power wisely, as committing to a Sprint goal is important, so only change the goal if there really is no other option.
+* We have implemented the new [Mendix Feedback](/appstore/modules/mendix-feedback/) module, so now you have much better screenshot functionality. Do send us feedback, we love hearing what you think. And also try out the new Mendix Feedback module in your own apps, it's awesome!
+
 ## 2022
 
 ### December 21st, 2022
@@ -1067,4 +1079,4 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### Improvement
 
-* It is now possible for you to change the technical contact of your applications by yourself.
+* It is now possible for you to change the Technical Contact of your applications by yourself.

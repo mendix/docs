@@ -1,5 +1,5 @@
 ---
-title: "XPath Ends-With"
+title: "XPath ends-with"
 url: /refguide/xpath-ends-with/
 tags: ["studio pro"]
 ---

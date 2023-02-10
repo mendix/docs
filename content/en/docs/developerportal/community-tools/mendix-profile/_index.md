@@ -306,7 +306,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.1.1 Defining a New Personal Access Token
+##### 10.4.1.1 Defining a New PAT
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 
@@ -317,39 +317,37 @@ When you click **New Token**, you need to set the following characteristics of t
 
 Details about the scopes can be found in the documentation for specific services.
 
-##### 10.4.1.2 Creating the Personal Access Token
+##### 10.4.1.2 Creating the PAT
 
 After you click **Create**, a pop-up window shows your secret token, which is the PAT. You can copy the secret via **Copy Token**.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/token-secret.png" >}}
 
 {{% alert color="warning" %}}
-You need to store the token in a safe location, as it will not be displayed again.
+You need to store the secret token in a safe location, as it will not be displayed again.
 {{% /alert %}}
 
-##### 10.4.1.3 Managing Your Personal Access Tokens
+##### 10.4.1.3 Managing Your PATs
 
-If you have previously created PATs, the Warden application shows you a list of them.
-
-You can delete a PAT. This will prevent anyone who may have obtained the Token secret of the PAT from successfully using it.
+To see the scopes of a PAT you have created, click **View Details**.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/manage-pat.png" >}}
 
-{{% alert color="warning" %}}
-You cannot obtain the Token secrets of these PATs. You can only see that they exist. 
+{{% alert color="info" %}}
+You cannot see the secret token of a PAT here. You can only see that the PAT exists long with its scopes. 
 {{% /alert %}}
 
-##### How to Use a Personal Access Token
+You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
+
+##### 10.4.1.4 Using a PAT
 
 Use of a PAT depends on the API you are accessing.
 
 {{% alert color="warning" %}}
-For security, Personal Access Tokens should not be included into your source code!
+For security reasons, you should not include PATs into your source code!
 {{% /alert %}}
 
-###### Use a Personal Access Token for DataHub Access
-
-To use the Personal Access Token with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
+To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
 
 ```http
 GET /v1/register HTTP/1.1
@@ -357,7 +355,7 @@ Host: catalog.mendix.com
 Authorization: mxtoken <your token>
 ```
 
-If the Personal Access Token is not valid, the response will be an HTTP 403 Access Denied. 
+If the PAT is not valid, the response will be a `HTTP 403 Access Denied`:
 
 ```http
 403 Access Denied
@@ -368,20 +366,7 @@ Content-Type: application/json
 }
 ```
 
-######  Use a PAT for the App Repository API
-
-See [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
-
-###### Use a PAT for the Project API
-
-See [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
-
-
-
-
-
-
-
+For other PAT usages, see the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
 
 ### 10.5 Personal Data
 

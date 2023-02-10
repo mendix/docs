@@ -205,7 +205,7 @@ On the **Activity** tab, you can see a list of the last 20 public events for you
 
 You can edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 
-### 10.1 Profile
+### 10.1 Profile {#profile}
 
 In this section, you can upload your profile image and fill in your personal and work details
 
@@ -263,7 +263,7 @@ You can also configure your **Buzz Notifications**:
 
 ### 10.4 Developer Settings {#dev-settings}
 
-#### 10.4.1 API Keys
+#### 10.4.1 API Keys {#api-keys}
 
 In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 

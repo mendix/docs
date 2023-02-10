@@ -290,36 +290,24 @@ For more information, see the following:
 
 Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
+PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
+
+You can create a PAT and remain in control of what access is delegated via the PAT by selecting the scopes. The PAT itself is a "‘bearer" token, which means that anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
+
+PATs are security tokens that do not expire, but they cannot be used if the associated user has been deactivated on the Mendix Platform or when the user has deleted the PAT.
+
+{{% alert color="info" %}}
+From a governance aspect, it is important for Mendix Admins to deactivate ex-employees in the Mendix Platform. This will prevent those leavers from logging into the platform, and it also blocks the delegated access via PATs. This recommendation applies both when users use Mendix credentials, and when users use SSO with authentication provided by their corporate IDP (BYOIDP).
+{{% /alert %}}
+
 The following Mendix services support usage of PATs:
 
 * [Data Hub Catalog API](/apidocs-mxsdk/apidocs/data-hub-apis/)
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-## 2 What Is a Personal Access Token?
 
-Personal access tokens (PATs) are an alternative to using passwords. They are designed to be used in cases where the client application needs to get access on behalf of a specific platform user but the user is not ‘present’ at the time of access and so the user cannot login via a browser (Web SSO). The client application can be any application; i.e. an application not built with mendix technology.
-
-Platform users can create a PAT via the Mendix Warden app and are in control of what access is delegated via the PAT; the platform user selects the ‘scope’ while creating the PAT. The PAT itself is a ‘bearer’ token; anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
-PATs are security tokens that don’t expire but cannot be used if the associated user has been deactivated on the Mendix Platform or when the user has ‘deleted’ the PAT via the Warden app.
-
-{{% alert color="info" %}}
-From a governance aspect it is important for Mendix Administrators to deactivate ex-employees in the Mendix Platform; this will prevent those ‘leavers’ from logging into the platform but also blocks the delegated access via PATs. Note that this recommendation applies both when end-users use Mendix credentials and when end-users use SSO with authentication provided by their corporate IDP (BYOIDP).
-{{% /alert %}}
-
-## 3 How to Create a Personal Access Token
-
-The Personal Access Tokens are managed using a separate app called **Warden**.
-
-### 3.1 How to Open Warden
-
-First step to create a PAT is to navigate to the separate [Warden](https://warden.mendix.com) application at https://warden.mendix.com.
-
-For first-time users, the Warden application will look like this:
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/first-time-warden.png" >}}
-
-### 3.2 Define a new Personal Access Token
+###### Define a new Personal Access Token
 
 Click **Add**
 
@@ -332,7 +320,7 @@ You now need to set the following characteristics of the PAT:
 
 More details about the various scopes can be found in the documentation for the specific services.
 
-### 3.3 Obtain the Personal Access Token
+###### Obtain the Personal Access Token
 
 Click **Create**
 
@@ -344,7 +332,7 @@ You need to store this in a safe location as it will not be displayed again.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/token-secret.png" >}}
 
-## 4 Manage your Personal Access Tokens
+##### Manage your Personal Access Tokens
 
 If you have previously created PATs, the Warden application shows you a list of them.
 
@@ -356,7 +344,7 @@ You can delete a PAT. This will prevent anyone who may have obtained the Token s
 You cannot obtain the Token secrets of these PATs. You can only see that they exist. 
 {{% /alert %}}
 
-## 5 How to Use a Personal Access Token
+##### How to Use a Personal Access Token
 
 Use of a PAT depends on the API you are accessing.
 
@@ -364,7 +352,7 @@ Use of a PAT depends on the API you are accessing.
 For security, Personal Access Tokens should not be included into your source code!
 {{% /alert %}}
 
-### 5.1 Use a Personal Access Token for DataHub Access
+###### Use a Personal Access Token for DataHub Access
 
 To use the Personal Access Token with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/) it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
 
@@ -385,11 +373,11 @@ Content-Type: application/json
 }
 ```
 
-### 5.2 Use a PAT for the App Repository API
+######  Use a PAT for the App Repository API
 
 See [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 
-### 5.3 Use a PAT for the Project API
+###### Use a PAT for the Project API
 
 See [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 

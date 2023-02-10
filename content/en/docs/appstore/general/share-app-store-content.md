@@ -124,8 +124,8 @@ Follow these steps to describe your content:
 4. Depending on the category you selected, you may be asked to select a **Sub-category** for your component.
 5. Select the location where you want to publish your component:
 
-    * <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-    * <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a user group can also be made available to [user group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
+    * <a id="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+    * <a id="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](/appstore/general/app-store-overview/#company-content) page; selected private content of a user group can also be made available to [user group guests](/appstore/general/app-store-overview/#guests) for download; this content will not be reviewed by Mendix
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
 
@@ -175,7 +175,7 @@ To finish up configuring this page, follow these steps:
 
     {{< figure src="/attachments/appstore/general/share-app-store-content/general.jpg"   width="600"  >}}
 
-2. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
+2. <a id="draft"></a>On each page of the upload flow, click one of the following buttons:
 
     * **Save Draft** to save the details you have entered so far to the draft (which you can access via the [My Drafts](/appstore/general/app-store-overview/#my-drafts) link in the top bar)
     * **Save & Continue** to go to the next page of the upload flow
@@ -230,7 +230,7 @@ Follow the template for the recommended content:
 
 The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-<a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
+<a id="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
 {{< figure src="/attachments/appstore/general/share-app-store-content/enable.jpg"   width="600"  >}}
 

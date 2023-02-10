@@ -90,7 +90,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/RetrieveOrder.png" >}}
 
-11. <a name="eleven"></a>The next steps cover how you ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the RESTExample module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
+11. <a id="eleven"></a>The next steps cover how you ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Steps 11-19 take you through the steps of building this Export Mapping. To start, right-click the RESTExample module on the App Explorer and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**.
 
     {{% alert color="info" %}}Creating an Export Mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/): the ability for clients to select the media type they want returned to the server. Follow the next steps in this document to learn how to set up Export Mapping in this case, but note that you can also return the list of objects from the microflow. The platform will export it in the format desired by the client, as indicated by the **Accept** header. The client can then specify if it wants to receive XML or JSON.{{% /alert %}}
 
@@ -106,7 +106,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
 15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow.
-16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
+16. <a id="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/MFExportWithMapping.png" >}}
 

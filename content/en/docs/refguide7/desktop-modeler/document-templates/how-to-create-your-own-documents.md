@@ -137,7 +137,7 @@ This is the resulting document:
 
 In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
 
-## 5 Alternative Way of Creating Documents<a name="Alternative"></a>
+## 5 Alternative Way of Creating Documents {#Alternative}
 
 The other way to generate documents is via a Java API called IText. This Java library is free to use.
 

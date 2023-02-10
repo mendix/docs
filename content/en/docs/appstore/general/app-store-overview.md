@@ -29,9 +29,9 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 {{< figure src="/attachments/appstore/general/app-store-overview/home-page.jpg" >}}
 
-<a name="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
+<a id="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, financial services, and other industries.
 
-<a name="types"></a>The Marketplace offers the following **Content Types**:
+<a id="types"></a>The Marketplace offers the following **Content Types**:
 
 | Type | Description |
 | --- | --- |
@@ -62,7 +62,7 @@ The header for a component presents the following details:
 * The name and category of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded
-* <a name="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
+* <a id="saved"></a>The **Add to Saved** button which, when clicked, will add the component to the list on the [My Marketplace](#my-marketplace)
 * The **Share** button, which allows you to copy the URL of the component and share it to your networks
 * **Download** – click this to download the component
     * This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
@@ -73,7 +73,7 @@ The header for a component presents the following details:
     * If you have an active subscription or trial, click **View status** to go to the [Company Subscriptions](#company-subscriptions) page
     * These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
-  <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+  <a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
     * The latest **Version** number of the component
     * The Studio Pro version that the component **Requires** to work
     * The type of [license](/appstore/general/share-app-store-content/#license) for the component

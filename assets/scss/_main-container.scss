@@ -1,3 +1,8 @@
+// NK - Sets default offset for any inline anchor from height of dock
+html {
+    scroll-padding-top: 48px; /* height of sticky header */
+}
+
 // The outer page container i.e. common styles for any page.
 .td-outer {
     display: flex;

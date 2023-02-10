@@ -37,7 +37,7 @@ These are the native widgets included in these resources along with links to the
 | [Bar Chart](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/bar-chart-native) | The bar chart widget renders a horizontal bar graph based on static and dynamic data sets. |
 | [Barcode Scanner](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/barcode-scanner-native) | Scans barcode and QR code values. |
 | [Bottom Sheet](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/bottom-sheet-native) | Creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. |
-| <a name="carousel"></a>[Carousel](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/carousel-native) | Creates a carousel that can be swiped with free modeling. |
+| <a id="carousel"></a>[Carousel](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/carousel-native) | Creates a carousel that can be swiped with free modeling. |
 | [Color Picker](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/color-picker-native) | Allows the app end-user to select colors. |
 | [ColumnChart](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/column-chart-native) | Renders a vertical bar graph based on static and dynamic data sets. |
 | [Feedback](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/feedback-native) | Allows the app end-user to submit feedback directly into the app. |
@@ -51,7 +51,7 @@ These are the native widgets included in these resources along with links to the
 | [Maps](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/maps-native) | Shows locations on an interactive map. |
 | [Notifications](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/notifications-native) | Triggers actions based on incoming notifications. |
 | [Pie/Doughnut Chart](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/pie-doughnut-chart-native) | Renders a dataset as a pie or doughnut chart (depending on configuration) based on static data sets. |
-| <a name="popup-menu"></a>[Popup Menu](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/popup-menu-native) | Displays a context menu exactly where the user taps. |
+| <a id="popup-menu"></a>[Popup Menu](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/popup-menu-native) | Displays a context menu exactly where the user taps. |
 | [Progress Bar](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/progress-bar-native) | Displays progress in a horizontal bar. |
 | [Progress Circle](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/progress-circle-native) | Displays progress in a circle with enclosed text. |
 | [QR Code](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/qr-code-native) | Displays a QR code based on a value. |

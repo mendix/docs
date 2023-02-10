@@ -158,7 +158,7 @@ Only users with the **App Settings** permission can manage webhooks.
 After clicking **New Webhook** to create a new webhook, fill in the following details:
 
 * **Name** – the name of the webhook
-* <a name="url"></a>**URL** – the URL to which the webhook will connect 
+* <a id="url"></a>**URL** – the URL to which the webhook will connect 
 * **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
 * **Version** – the version of the webhooks feature to be used
 * **Events** – what types of data will be sent via the webhook (you must select at least one; this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)

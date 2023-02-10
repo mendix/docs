@@ -38,7 +38,7 @@ This how-to was written based on Studio Pro version 5.20. All the images, names,
 3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/).
 4. Run the application and add some data to expose in the web service.
 
-## <a name="4"></a>4 Creating a Published Web Service
+## 4 Creating a Published Web Service {#4}
 
 To create a published web service, follow these steps:
 
@@ -78,7 +78,7 @@ To create the functionality to expose, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/expose-a-web-service/model.jpg" >}}
 
-## <a name="6"></a>6 Publishing a Microflow
+## Publishing a Microflow {#6}
 
 To publish a microflow, follow these steps:
 

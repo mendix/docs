@@ -306,7 +306,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.1.1 Defining a New PAT
+##### 10.4.1.1 Creating a PAT
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 
@@ -317,17 +317,15 @@ When you click **New Token**, you need to set the following characteristics of t
 
 Details about the scopes can be found in the documentation for specific services.
 
-##### 10.4.1.2 Creating the PAT
-
-After you click **Create**, a pop-up window shows your secret token, which is the PAT. You can copy the secret via **Copy Token**.
+After you click **Create**, a pop-up window shows your secret token, which is the PAT. You must copy the secret token via **Copy Token**.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/warden/token-secret.png" >}}
 
 {{% alert color="warning" %}}
-You need to store the secret token in a safe location, as it will not be displayed again.
+Store the secret token in a safe location, as it will not be displayed again!
 {{% /alert %}}
 
-##### 10.4.1.3 Managing Your PATs
+##### 10.4.1.2 Managing a PAT
 
 To see the scopes of a PAT you have created, click **View Details**.
 
@@ -339,7 +337,7 @@ You cannot see the secret token of a PAT here. You can only see that the PAT exi
 
 You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
 
-##### 10.4.1.4 Using a PAT
+##### 10.4.1.3 Using a PAT
 
 Use of a PAT depends on the API you are accessing.
 
@@ -355,7 +353,7 @@ Host: catalog.mendix.com
 Authorization: mxtoken <your token>
 ```
 
-If the PAT is not valid, the response will be a `HTTP 403 Access Denied`:
+If the PAT is not valid, the response will be `HTTP 403 Access Denied`:
 
 ```http
 403 Access Denied
@@ -366,7 +364,7 @@ Content-Type: application/json
 }
 ```
 
-For other PAT usages, see the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
+For information on other PAT usages, see the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
 
 ### 10.5 Personal Data
 

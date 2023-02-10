@@ -48,7 +48,7 @@
 
 // NK - navbarHeight is changed so highlighting in ToC while scrolling isn't impacted by MxDock height - see commented line below
 // const navbarHeight = window.document.querySelector("header > nav").offsetHeight;
-    const navbarHeight = 96; // 2 x MxDock offset height (in px)
+    const navbarHeight = 49; // 1+MxDock offset height (in px) as set in scroll-padding-top in assets/scss/_main-container.scss
 
     const handleActiveSection = () => {
       // The array should be sorted according to the position of the elements on the page

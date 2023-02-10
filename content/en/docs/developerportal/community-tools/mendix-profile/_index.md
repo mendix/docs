@@ -261,17 +261,17 @@ You can also configure your **Buzz Notifications**:
 * **Receive daily digest** – disabled by default
 * **Receive updates for Buzz threads in which I am active** – enabled by default
 
-### 10.4 Developer Settings {#dev-settings} - START
+### 10.4 Developer Settings {#dev-settings}
 
-In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
+#### 10.4.1 API Keys
+
+In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
 {{% alert color="info" %}}
-Some platform APIs use *Personal Access Tokens (PATs)* rather than *API Keys*. For more information on PATs, and how to generate and manage them, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).
+Some platform APIs use personal access tokens (PATs) rather than API keys. For more information on PATs and how to generate and manage them, see [How to Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).
 {{% /alert %}}
 
-For example, you can use an API key to perform scripted operations on your application model with the SDK. 
-
-To get a Mendix API key, click **Create New API Key** and follow the instructions.
+To get a Mendix API key, click **Configure API Keys** > **Create New API Key** and follow the instructions.
 
 {{% alert color="warning" %}}
 Make a note of the API key, as it will only be shown once. 
@@ -289,6 +289,13 @@ For more information, see the following:
 * [APIs](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
+
+#### 10.4.1 Personal Access Tokens
+
+-move note down from above?
+
+
+
 
 ### 10.5 Personal Data
 

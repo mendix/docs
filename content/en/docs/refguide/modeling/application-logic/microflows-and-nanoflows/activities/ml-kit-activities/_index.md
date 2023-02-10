@@ -2,6 +2,7 @@
 title: "ML Kit Activities"
 url: /refguide/ml-kit-activities/
 weight: 45
+description_list: true
 tags: ["studio pro"]
 ---
 [Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
@@ -12,3 +13,8 @@ These activities can only be used in **Microflows**.
 
 ## 1 Introduction
 
+The **ML Kit** section of the **Toolbox** contains activities you can use with your machine learning model.
+
+To get started with machine learning models, check out [link to concept file].
+
+## 2 Documents in This Category

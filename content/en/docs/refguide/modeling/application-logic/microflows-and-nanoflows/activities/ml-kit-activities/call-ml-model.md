@@ -21,9 +21,11 @@ Use the Call ML Model activity in a microflow [link to concept file section abou
 
 ### 2.1 Action
 
-- ML model mapping –
-- Input object –
+* **ML model mapping** – the [ML model mapping](/refguide/ml-model-mapping/) model
+* **Input object** – the inputObject, defined in the microflow with a [Create Object](/refguide/create-object/) or [Java Action Call](/refguide/java-action-call/)
 
 ### 2.2 Output
 
-- Output object
+* **Output object** – name of the output object (for example, `outputObject`)
+
+More more detailed information on using the Call ML Model in a microflow, see [link to concept doc].

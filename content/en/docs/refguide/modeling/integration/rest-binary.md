@@ -121,7 +121,7 @@ Test the service to ensure that it works!
 
 4. Click **Get/myfile/{myfileid}** to return the content, and you should see the PNG displayed. If you only see the binary, make sure that you have [set the MIME Type](#set-mime-type).
 
-## 3 Retrieve Images or Files with REST {#retrieve-files}
+## 3 Retrieve Images or Files from a Published REST Service {#retrieve-files}
 
 You can implement a client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity.
 
@@ -133,48 +133,51 @@ You can implement a client in your app that will retrieve binary files from any 
 
 Then, you can retrieve the image with the [Image widget](#image-widget), retrieve a PDF with the [HTML/Javascript snippet widget](#html-snippet) for PDFs, or [retrieve images or PDFs with a microflow](#retrieve-microflow).
 
-### 3.1 Retrieving Images with the Image Widget {#image-widget}
+### 3.1 Retrieving Images Using the Image Widget {#image-widget}
 
 Retrieve images with the URL of the published REST service by using the [Image](/appstore/widgets/image/) widget available on the Mendix Marketplace.
 
-Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do the following:
+To do so, do the following:
 
-1. Download the [Image](/appstore/widgets/image/) widget from the Mendix Marketplace and import it into your app.
-2. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "Image".
-3. Drag the **Image** widget onto a page.
-4. Double-click the widget you dragged onto your page to open the **Properties**.
-5. In the **Data source** field, select the **Image URL** for **Image type**.
-6. Paste the location of the file in the REST service (for example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`).
+1. Complete the two steps in [Retrieve Files with REST](#retrieve-files).
+2. Download the [Image](/appstore/widgets/image/) widget from the Mendix Marketplace and import it into your app.
+3. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "Image".
+4. Drag the **Image** widget onto a page.
+5. Double-click the widget you dragged onto your page to open the **Properties**.
+6. In the **Data source** field, select the **Image URL** for **Image type**.
+7. Paste the location of the file in the REST service (for example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`).
 
-### 3.2 Retrieving PDFs with the HTML/Javascript Snippet Widget {#html-snippet}
+### 3.2 Retrieving PDFs Using the HTML/Javascript Snippet Widget {#html-snippet}
 
 Retrieve PDFs with the URL of the published REST service by using the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) widget available on the Mendix Marketplace.
 
-Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do the following:
+To do so, do the following:
 
-1. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet) widget from the Mendix Marketplace and import it into your app.
-2. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "HTMLSnippet".
-3. Drag the **HTMLSnippet** widget onto a page.
-4. Double-click the widget you dragged onto your page to open the **Properties**.
-5. In the **Content Type** field, ensure that **HTML** is selected.
-6. In the **Contents** field, paste the HTML that includes the REST endpoint. For example:
+1. Complete the two steps in [Retrieve Files with REST](#retrieve-files).
+2. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet) widget from the Mendix Marketplace and import it into your app.
+3. In the [Toolbox](/refguide/toolbox/), click **Widgets** and search for "HTMLSnippet".
+4. Drag the **HTMLSnippet** widget onto a page.
+5. Double-click the widget you dragged onto your page to open the **Properties**.
+6. In the **Content Type** field, ensure that **HTML** is selected.
+7. In the **Contents** field, paste the HTML that includes the REST endpoint. For example:
 
 ```html
 <embed src="http://localhost:8080/rest/cmsapi/v1/myfile/1" width="400px" height="400px">
 ```
 
-### 3.3 Retrieving Files in a Microflow {#microflow-retrieve}
+### 3.3 Retrieving Files Using a Microflow {#microflow-retrieve}
 
-You can call a REST service in a microflow, then store the response in an entity.
+You can call a REST service in a microflow, then store the binary response in an entity.
 
 Retriving files in a microflow uses the [Call REST service](/refguide/integration/call-rest-service/) action. For step-by-step instructions for calling a REST service in a microflow, see [Consume a REST Service](/howto/integration/consume-a-rest-service/).
 
-Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do the following:
+To retrieve files using a microflow, do the following:
 
-1. Create a **GetImage** (or **GetFile**) microflow.
+1. Complete the two steps in [Retrieve Files with REST](#retrieve-files).
+2. Create a **GetImage** (or **GetFile**) microflow.
     * Right click in the **CMSClient** module and select **Add microflow**.
 
-2. Drag a **Call REST service** action into the microflow, and set the following properties:
+3. Drag a **Call REST service** action into the microflow, and set the following properties:
     * In the **General** tab: 
          * **Location** – the URL to your rest service and the specific file (for example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`)
     * In the **Response** tab:
@@ -183,7 +186,8 @@ Complete the two steps in [Retrieve Files with REST](#retrieve-files), then do t
          * **Type** – select the **RetrievedFile** entity
          * **Variable Name** – enter `GetResponseFile`
   
-3. Drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image. 
+4. For images: drag a **Change object** action into the microflow after the **Call REST service** action, so that the list view will display the retrieved image. 
     * Double click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
     * In the **Refresh in client** field, select **Yes**.
+

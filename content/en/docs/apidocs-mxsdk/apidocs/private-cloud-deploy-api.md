@@ -25,11 +25,13 @@ This API is for connected private cloud clusters only.
 
 ### 2.1 Authentication
 
-Authentication for the API uses a Personal Access Token (PAT).
+Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 
-Go to https://warden.mendix.com/ and follow the instructions in [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/). Select the following as scopes:
+To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+
+Select the following as scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)

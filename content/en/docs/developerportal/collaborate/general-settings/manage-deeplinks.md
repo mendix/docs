@@ -31,6 +31,7 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
     {{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/story-id.png" >}}
 
 * For the feedback item number, select **Collaborate** > **Feedback** – the number is next to the feedback item title:
+then click the feedback item title to show the details, the number is below the title:
 
     {{< figure src="/attachments/developerportal/collaborate/general-settings/manage-deeplinks/feedback-nr.png" >}}
 

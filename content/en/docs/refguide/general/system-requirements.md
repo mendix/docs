@@ -14,6 +14,10 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Mendix Studio Pro {#sp}
 
+Mendix Studio Pro has the requirements listed in the following sections.
+
+### 2.1 Software Specifications
+
 Mendix [Studio Pro](/refguide/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 and Mendix Studio 9.9.1 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
@@ -42,6 +46,14 @@ You can choose which JDK is used for building and running locally via the **Edit
 {{% alert color="warning" %}}
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
+
+### 2.2 Hardware Specifications
+
+Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
+
+* **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB.
+* **RAM** – 4GB
+* **Display Resolution** –  1080p (1920x1080)
 
 ### 2.1 Firewall Settings {#firewall-settings}
 

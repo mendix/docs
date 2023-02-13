@@ -51,7 +51,7 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
 
-* **Disk Space** – Studio Pro requires around 1GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB.
+* **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB.
 * **Display Resolution** –  1080p (1920x1080)
 
 ### 2.1 Firewall Settings {#firewall-settings}

@@ -205,10 +205,12 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
+    * **Viewer ID**  – set the id for the widget and can be lated used to get the viewer instance 
     * **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
     * **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
     * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
     * **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
+    * **Advance configuration** – provide advanced configurations in JSON string format for viewer. Please reference [Advance configuration](#advance_configuration) for details.
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
     * **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
     * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
@@ -546,6 +548,17 @@ You can move the position sliders to adjust the position of the section plane al
 
 You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
 
+#### 5.6.5 SectionManipulator
+
+Advanced user can enable SectionManipulator to move / rotate the section plane through [configuration](#advance_configuration). There are two flavors and illustrated as below:
+
+| enable SectionManipulator | enable SectionHandle |
+| ---  | --- |
+| {{< figure src="/attachments/partners/siemens/3d-viewer/sectionManipulator.png" alt="sectionManipulator" >}} | {{< figure src="/attachments/partners/siemens/3d-viewer/sectionHandle.png" alt="sectionHandle" >}} |
+
+
+
+
 ### 5.7 Performing 3D Measurements {#perform-measurements}
 
 When a model is loaded into the viewer, the [Measurement](#measurement) widget provides a set of tools to measure different geometrical entities:
@@ -581,10 +594,41 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
 
-{{< figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
+{{<br figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
 On the **PMI** tab, you can set filtering options for PMI and click **Ok** to save the changes.
 
-## 6 Read More
+## 6 Advance configuration {#advance_configuration}
+
+The viewer has provided comprehensive configurations to custermize behaviors, advance users can use it to custermize their products by overwrite default options. Some of the options are bounded to **Advanced Version** ONLY, so please be aware this when using the configuration options.
+
+Here is an example configuration options:
+
+```json
+{
+    "enableCache": true,
+    "enableSectionManipulator": true,
+    "enableBboxSurfaceScanner": true,
+    "bboxSurfaceScanner": {
+        "showBBoxes": false,
+    }
+}
+```
+
+
+Here is the options table for quick lookup:
+
+| Categary | Options | Default value | Type | Description |
+| ---  | --- | --- | --- | --- |
+| Cache | enableCache | false | boolean | enable edge / segment / vertex cache when load JT files. When open the same JT files, it will load directly from browser cache to impropve performence |
+| SectionManipulator | enableSectionManipulator | false | boolean | enable enableSectionManipulator for [section view](#section-view), which will add a trihedron drag handler on the section plane  |
+|  | enableSectionHandle | false | boolean | enable enableSectionHandle for [section view](#section-view), which will add a drag handler on the section plane when `useSectionHandleOnly` is on |
+|  | useSectionHandleOnly | false | boolean | should be used together with `enableSectionHandle` |
+|  | sectionHandle | <pre>{<br>    "arrowColor": 16711680,<br>    "handleColor": 16711680,<br>    "arrowRadius": 8,<br>    "handleRadius": 1.5<br>}</pre> | object | Defines the style of sectionHandle, <br>`arrowColor`: color in integer, <br>`handleColor`: color in integer, <br>`arrowRadius`: px in integer, <br>`handleRadius`: px in integer.  |
+| Culling / bboxSurfaceScanner | enableBboxSurfaceScanner | false | boolean | enable bounding box SurfaceScanner for lazy loading and rendering, which will improve proformance for large models |
+|  | bboxSurfaceScanner | <pre>{<br>    "useDefault": true,<br>    "detailLevel": 35.8,<br>    "positions": {<br>        "enableAllScannerPositions": false,<br>        "positions": {<br>            "front": true<br>        },<br>        "fitAllPositions": {<br>            "left": false,<br>            "right": false,<br>            "top": false,<br>            "bottom": false,<br>            "front": false,<br>            "rear": false<br>        }<br>    },<br>    "bboxOpacity": 35,<br>    "showBBoxes": true,<br>    "useMovingFrameCulling": true,<br>    "movingFrameCullingBoundary": 2,<br>    "movingFrameSleepMS": 200,<br>    "autoScanning": true,<br>    "autoScanDelayMS": 2000,<br>    "cameraSensitivity": 0.1,<br>    "reevaluateAfterRotation": true,<br>    "drawWhileLoading": false,<br>    "renderBBoxesOnMovingFrames": false,<br>    "sleepBetweenAutoDrawsMS": 750<br>}</pre> | object | specify bboxSurfaceScanner options |
+| Measurement | measurementStyle | <pre>{    <br>    "dimension": {    <br>        "text": {    <br>            "color": 0,    <br>            "flatToScreen": true,    <br>            "font": 1,    <br>            "lineGapFactor": 0.25,    <br>            "lineFactor": 0.25,    <br>            "hasBorder": false,    <br>            "isHollow": false,    <br>            "backgroundColor": 39321,    <br>            "labelTextColor": 16777215,    <br>            "textSelectionColor": 16777215,    <br>            "textHighlightColor": 16777215,    <br>            "selectionBackgroundColor": 39321,    <br>            "highlightBackgroundColor": 6151645,    <br>            "height": 12,    <br>            "fontFamily": "Arial"    <br>        },    <br>        "associationMaterial": {    <br>            "diffuse": 18761,    <br>            "linewidth": 3    <br>        },    <br>        "associationHighlightMaterial": {    <br>            "diffuse": 6151645,    <br>            "specular": 0,    <br>            "shininess": 1,    <br>            "linewidth": 3    <br>        },    <br>        "pointOnTopColor": {    <br>            "diffuse": 14226709    <br>        },    <br>        "arrowLine": {    <br>            "color": 8886442    <br>        },    <br>        "extensionLine": {    <br>            "color": 8886442    <br>        },    <br>        "selectionColor": 39321,    <br>        "highlightColor": 6151645,    <br>        "widelineHighlightColor": {    <br>            "linewidth": 3,    <br>            "diffuse": 14226709    <br>        },    <br>        "meshHighlightColor": 14226709,    <br>        "overwrite": true    <br>    },    <br>    "measurement": {    <br>        "autoPosition": false,    <br>        "highlightColor": {    <br>            "diffuse": 14226709,    <br>            "specular": 1,    <br>            "shininess": 1    <br>        },    <br>        "pickingMaterial": {    <br>            "diffuse": 12156222,    <br>            "specular": 0,    <br>            "shininess": 0    <br>        }    <br>    }    <br>}</pre> | object | define measurement behaviors and dimension styles, <br>`measurement` section used to custermize measurement behaviors, <br>`dimension` section used to custermize text, material, lines, colors etc.  |
+
+## 7 Read More
 
 * [Build a 3D Model Inspection App](https://academy.mendix.com/link/paths/115/Build-a-3D-Model-Inspection-App)

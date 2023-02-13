@@ -9,7 +9,7 @@ tags: ["studio pro"]
 The `not()` function inverts the meaning (and as such; the result) of the argument.
 
 {{% alert color="info" %}}
-The `not()` function can have different results from an inverse comparison (for example `!=` as the negative of `=`). See the examples below for more explanation.
+The `not()` function can have different results from an inverse comparison (for example, `!=` as the negative of `=`). See the examples below for more explanation.
 {{% /alert %}}
 
 ## 2 Examples

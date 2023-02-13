@@ -38,7 +38,7 @@ You can see the size of your **Team** and your team members on the right side of
 
 The easiest way to communicate with others in your company and on your team is by leaving comments in Buzz. In the **Update status** box, add a comment and click **Share**. You can also attach an image or a document via **Add**. 
 
-{{< figure src="/attachments/developerportal/collaborate/buzz/update-status.png" >}}
+{{< figure src="/attachments/developerportal/collaborate/buzz/update-status.png" width="500px" alt="Update status on Buzz" >}}
 
 Once you have posted a comment, you can click **Edit** to **Update Message** or **Delete**. You can also **Reply in Thread** to comments left by colleagues.
 

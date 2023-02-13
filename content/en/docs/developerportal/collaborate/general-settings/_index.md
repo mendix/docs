@@ -189,7 +189,7 @@ Only users with the **App Settings** permission can view the history.
 
 The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
-{{< figure src="/attachments/developerportal/collaborate/general-settings/history.png"   width="550"  >}}
+{{< figure src="/attachments/developerportal/collaborate/general-settings/history.png"   width="700"  >}}
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/collaborate/feedback/) will be presented.
 

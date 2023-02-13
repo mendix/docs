@@ -96,7 +96,7 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 3. Decide whether the feedback item should be classified as a bug or feature in **Identify as**.
 4. Click **Submit** to submit the story.
 
-    {{< figure src="/attachments/developerportal/collaborate/feedback/accept-feedback.png"   width="350"  >}}
+    {{< figure src="/attachments/developerportal/collaborate/feedback/accept-feedback.png"   width="500"  >}}
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 

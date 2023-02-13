@@ -32,8 +32,6 @@ Once you have access to an app in Epics, open it in the [Developer Portal](https
 
 After you open the app in Epics, you can easily switch to other apps that you have access to. To do so, click the name of the current app on the upper-left corner, and then select a different app from the drop-down list.
 
-{{< figure src="/attachments/developerportal/collaborate/epics/switch-app.png" >}}
-
 ### 1.3 Pages in Epics
 
 Epics has the following pages: **Board**, **Planning**, **Epics**, and **Archive**. Some pages look different if you are working in the Scrum workflow or Kanban workflow. These pages are described in the sections below.

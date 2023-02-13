@@ -177,7 +177,7 @@ Specify new values for attributes in the body of the request. Here is an example
 }
 ```
 
-### 10.1.1 Updating enumerations
+### 10.1.1 Updating attributes with enumeration type
 
 Attributes of an enumeration type can be updated by specifying the exposed value of the enumeration, without the prefix of the enumeration type, in the body of the `PATCH` request.
 For an attribute of type `Country` with values `MyModule.Country.FR`, `MyModule.Country.BR` and `MyModule.Country.JP`, exposed as `France`, `Brazil`, and `Japan` respectively, you can update your object as follows:

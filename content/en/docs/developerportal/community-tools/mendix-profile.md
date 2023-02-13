@@ -89,7 +89,7 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 
 This card on your profile presents your points and ranking for the last 30 days:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/leaderboard.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/leaderboard.png" width="500px" alt="Leaderboard example" >}}
 
 Clicking **View All** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
@@ -189,11 +189,9 @@ When you earn enough points, you gain a level:
 
 The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking an app name presents details about the customer, business need, solution, and results. You can also view other developers and their apps to get inspired. You can also click **View All Projects** to go to the **Portfolio** tab, which presents all of your apps.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/portfolio.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/portfolio.png" width="500px" alt="Portfolio example" >}}
 
 To add an app to your portfolio, click **Add Project**, which will open the editor. There are tips in the editor for what you should put in each field. All the fields in the editor are required before submission.
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/add-project.png" >}}
 
 If you cannot finish your portfolio entry or do not want to publish yet, click **Save as Draft** to finish it later. The draft will be visible only to you in the **Portfolio** tab for further editing.
 
@@ -313,13 +311,13 @@ When you click **New Token**, you need to set the following characteristics of t
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/create-pat.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/create-pat.png" width="500px" alt="Dialog box for defining the PAT scopes" >}}
 
 Details about the scopes can be found in the documentation for specific services.
 
 After you click **Create**, a pop-up window shows your secret token, which is the PAT. You must copy the secret token via **Copy Token**.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
 
 {{% alert color="warning" %}}
 Store the secret token in a safe location, as it will not be displayed again!

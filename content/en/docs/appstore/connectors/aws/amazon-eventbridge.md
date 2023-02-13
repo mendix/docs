@@ -1,8 +1,10 @@
+---
 title: "Amazon EventBridge"
 url: /appstore/connectors/aws/amazon-eventbridge/
 description: "Describes the configuration and usage of the Amazon EventBridge connector from the Mendix Marketplace. {AWS SERVICE NAME} is {AWS SERVICE DESCRIBED IN 1 SENTENCE; PER CONFIRMATION FROM AWS, WE CAN USE THE SERVICE DESCRIPTION FROM THE AWS WEBSITE}."
 weight: 20
 tags: ["marketplace", "marketplace component", "aws", "amazon", "eventbridge", "connector"]
+---
 
 ## 1 Introduction
 
@@ -61,6 +63,7 @@ To help you work with the Amazon EventBridge connector, the following sections o
 ### 4.1 Constants {#constants}
 
 Constants are used to define configuration values. All activities are exported as microflow activities that can directly be added to a microflow. Make sure the constants are configured correctly as shown in the table below, so the connector can authenticate the request with AWS. For more information, see [Configuring AWS Authentication](#authentication).
+
 | Name | Description | 
 | --- | --- |
 | `AmazonEventBridgeConnector.AWS_ClientCertificateID` | The ID for the `ClientCertificate` used to sign the authentication requests. | 

@@ -134,7 +134,7 @@ When you select groups in the list or members or accessible apps in the group de
 
 ## 6 Company Settings {#company}
 
-### 6.1 Company Details
+### 6.1 Company Details {#company-details}
 
 On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
 

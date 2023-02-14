@@ -47,7 +47,7 @@ Go to the Cluster Manager page by clicking the **切换到** menu and selecting 
 If you have not got any clusters, you will first have to purchase one. Alternatively, you can use a free trial cluster to try out the Siemens Low-Code Platform experience, or register your own cluster (running Kubernetes versions 1.19 to 1.22).
 
 * Click **[前往腾讯云门户网站](https://cloud.tencent.com/solution/slp)** to go to Tencent and purchase the necessary Siemens Low-Code Platform on Tencent Cloud resources.
-* Click **请求访问免费的应用集群** to request access to a free cluster to try out Siemens Low-Code Platform. You will need to create an app first, see [App & Team Management](/not/a/good/url) for more information.
+* Click **请求访问免费的应用集群** to request access to a free cluster to try out Siemens Low-Code Platform. You will need to create an app first, see [App & Team Management](/developerportal/app-team-management/) for more information.
 * Click **注册集群** to register an existing cluster to use for deploying your app.
 
 When you have one or more clusters, you can see a summary of them with all their namespaces and an indication of the namespace status and how long it has been running (**上线时间**).

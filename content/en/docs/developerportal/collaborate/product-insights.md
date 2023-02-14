@@ -27,8 +27,6 @@ When you click **Product Insights** for an app that already has existing mini-su
 
 On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Product Insights.
 
-{{< figure src="/attachments/developerportal/collaborate/product-insights/app-drop-down-list.png" >}}
-
 The tabs of the **Survey Overview** page are described below.
 
 {{< figure src="/attachments/developerportal/collaborate/product-insights/survey-overview.png" >}}

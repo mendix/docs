@@ -341,7 +341,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start
 
 **Request Parameters**
 
-None
+* *AutoSyncDb* (Boolean) : Define whether the database should be synchronized automatically with the model during the start phase of the app.
 
 **Example Request**
 
@@ -352,6 +352,10 @@ Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+
+{
+     "AutoSyncDb" :  true
+}
 ```
 
 #### 3.6.3 Output

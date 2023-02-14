@@ -36,7 +36,7 @@ There are three ways to install a Marketplace component, which are described in 
 
 {{% alert color="info" %}}The details below cover the updated Marketplace in Studio Pro that is available from version [9.19](/releasenotes/studio-pro/9.19/#updated-marketplace). For details on downloading content in older versions of Studio Pro, see the [For Older Versions of Studio Pro](#older) section below.{{% /alert %}}
 
-{{% alert color="info" %}}This procedure works for all types of Marketplace components, except [app services](/appstore/app-services/).{{% /alert %}}
+{{% alert color="info" %}}This procedure works for all types of Marketplace components{{% /alert %}}
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
@@ -61,7 +61,7 @@ There are three ways to install a Marketplace component, which are described in 
 
     The details presented here correspond to what you see on the [component details page](/appstore/general/app-store-overview/#details) in the online Mendix Marketplace.
 
-6. <a name="step-six"></a>Click **Download** to download the latest version of the component (for widgets, version compatibility is not applicable). Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
+6. <a id="step-six"></a>Click **Download** to download the latest version of the component (for widgets, version compatibility is not applicable). Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
     * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
         1. Select one of these options:
@@ -88,7 +88,7 @@ These steps cover downloading content from the Marketplace available in Studio P
 
 ### 2.2 Importing Content from App Explorer {#import}
 
-{{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)), and [app services](/appstore/app-services/).{{% /alert %}}
+{{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), and [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)).{{% /alert %}}
 
 To import content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 

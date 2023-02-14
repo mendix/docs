@@ -11,6 +11,27 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 ## 2023
 
+### February 9th, 2023
+
+#### Improvements
+
+* We added a user-friendly interface for `404 not found` errors in a REST deeplink API.
+
+#### Fixes
+
+* We fixed an issue with cropping images when uploading an application icon.
+* We fixed an issue where authentication details of a data source were not visible to users without curation rights.
+
+### February 2nd, 2023
+
+#### Improvements
+
+* You can now select relevant Mendix Marketplace module for an [authentication](/data-hub/data-hub-catalog/register-data/#authentication) type. See the [Selecting an Authentication Method](/data-hub/data-hub-catalog/register-data/#authentication) section of *Register OData Resources in the Data Hub Catalog* for more information on the authentication types.
+
+#### Fixes
+
+* We fixed a bug that was causing the creation of an application using the [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis/#registration) to fail.
+
 ### January 12th, 2023
 
 #### Improvements

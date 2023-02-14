@@ -62,7 +62,7 @@ Four different hybrid profiles are available:
 * Hybrid phone app online
 * Hybrid phone app offline
 
-## 3 Redirection to Profiles<a name="Redirection"></a>
+## 3 Redirection to Profiles {#Redirection}
 
 Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device. The default configuration for this redirection is as follows:
 

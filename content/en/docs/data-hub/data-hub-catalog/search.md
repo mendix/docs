@@ -15,7 +15,7 @@ Finding the right data to use in your app development is made easier using the s
 
 To use the Data Hub Catalog Search API, you need the following:
 
-* A [Personal Access Token](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#create-token)
+* A [personal access token](/developerportal/community-tools/mendix-profile/#pat)
 * A search term
 
 For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html#/Search/get_data).

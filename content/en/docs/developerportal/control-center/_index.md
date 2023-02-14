@@ -144,10 +144,10 @@ If you have [configured single sign on using BYOIDP](/developerportal/control-ce
 
 You can also provide a specific **Security Contact** who will be informed if there are security-related issues with the company's apps (for example, data breaches, new advisories, or critical vulnerabilities). Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
-After you click **Add security contact** and add the required details, a confirmation e-mail is sent to the contact's email address. The recipient has seven days to click the link in the email and validate the security contact request. After seven days, the pending request is automatically removed. 
+After you click **Add security contact** and add the required **Name** and **Email** address, a confirmation email is sent to the proposed contact. The recipient has seven days to click the link in the email and validate the Security Contact request. After seven days, the pending request is automatically removed. 
 
 {{% alert color="info" %}}
-You can adjust the security contact that has been defined at any time. If you need to change it, first delete the existing security contact, and then add the new one.
+You can adjust the Security Contact that has been defined at any time. If you need to change it, first delete the existing Security Contact, and then add the new one.
 {{% /alert %}}
 
 ### 6.2 Mendix Admins

@@ -146,7 +146,9 @@ You can also provide a specific **Security Contact** who will be informed if the
 
 After you click **Add security contact** and add the required **Name** and **Email** address, a confirmation email is sent to the proposed contact. The recipient has seven days to click the link in the email and validate the Security Contact request. After seven days, the pending request is automatically removed. 
 
-For an existing **Security Contact**, there are two menu options:
+For an existing **Security Contact**, there are two menu options available:
+
+{{< figure src="/attachments/developerportal/control-center/security-contact.png" >}}
 
 Select **Edit** to edit the Security Contact's **Name**.
 

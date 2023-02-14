@@ -99,7 +99,7 @@ For details on this intelligent virtual co-developer bot, see [MxAssist Performa
 
 [Page Explorer](/refguide/page-explorer/) gives a quick overview of the page layout and allows you to view and edit nested containers in the [Design mode](/refguide/page/#design-mode).
 
-### 3.12 Properties
+### 3.12 Properties {#properties}
 
 The **Properties** pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
 

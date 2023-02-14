@@ -146,9 +146,11 @@ You can also provide a specific **Security Contact** who will be informed if the
 
 After you click **Add security contact** and add the required **Name** and **Email** address, a confirmation email is sent to the proposed contact. The recipient has seven days to click the link in the email and validate the Security Contact request. After seven days, the pending request is automatically removed. 
 
-{{% alert color="info" %}}
-You can adjust the Security Contact that has been defined at any time. If you need to change it, first delete the existing Security Contact, and then add the new one.
-{{% /alert %}}
+For an existing **Security Contact**, there are two menu options:
+
+Select **Edit** to edit the Security Contact's **Name**.
+
+Select **Delete contact** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
 
 ### 6.2 Mendix Admins
 

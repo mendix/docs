@@ -138,9 +138,17 @@ When you select groups in the list or members or accessible apps in the group de
 
 On the **Company Details** tab of this page, you can edit your **Company Name** and **Description**.
 
-You can also request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
+You can request new **Company Email Domains** by clicking **Add Domain**, upon which a request is sent to [Mendix Support](/developerportal/support/). Once a domain is added, every user who signs up to Mendix with that email domain will be assigned to your company.
 
 If you have [configured single sign on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
+
+You can also provide a specific **Security Contact** who will be informed if there are security-related issues with the company's apps (for example, data breaches, new advisories, or critical vulnerabilities). Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
+
+After you click **Add security contact** and add the required details, a confirmation e-mail is sent to the contact's email address. The recipient has seven days to click the link in the email and validate the security contact request. After seven days, the pending request is automatically removed. 
+
+{{% alert color="info" %}}
+You can adjust the security contact that has been defined at any time. If you need to change it, first delete the existing security contact, and then add the new one.
+{{% /alert %}}
 
 ### 6.2 Mendix Admins
 

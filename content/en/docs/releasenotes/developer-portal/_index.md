@@ -17,6 +17,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### February 15th, 2023
+
+#### New Features
+
+[**ADD FOR SECURITY CONTACT**]
+
+
+
+
+
 ### February 13th, 2023
 
 #### Improvements
@@ -50,7 +60,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### December 13th, 2022
 
-#### New Feature
+#### New Features
 
 We have released the Beta version of [Product Insights](/developerportal/collaborate/product-insights/), which is a new way for you to proactively get feedback from your users. The functionality consists of a tool for setting up mini surveys in addition to the [Product Insights - Mini Surveys](/appstore/modules/product-insights/) Marketplace module, which you can add to your app to set up the exact targeting criteria for a survey.
 

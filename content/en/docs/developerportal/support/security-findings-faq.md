@@ -31,6 +31,10 @@ You can find our best practices on how to make your app secure in [How To Implem
 
 Mendix Support will only assist when using platform-supported components. See the table  in the [Support for Different Deployment Strategies](/developerportal/support/#support-by-strategy) section of the *Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
 
+### 1.5 Security Contact
+
+In Control Center, you can add and manage a [Security Contact](/developerportal/control-center/#company-details) for your company. A Security Contact is informed if there are security-related issues with the company's apps (for example, data breaches, new advisories, or critical vulnerabilities).
+
 ## 2 Can Data Be Manipulated in the Client?
 
 One common concern is that end-users can use tools in their browsers or on their devices to change the data which is held locally and use this to get access to information which should not be available to them. This section addresses several of these concerns and explains how the Mendix Runtime Server protects your data.

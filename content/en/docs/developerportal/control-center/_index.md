@@ -152,9 +152,9 @@ For an existing **Security Contact**, there are two menu options available:
 
 {{< figure src="/attachments/developerportal/control-center/security-contact.png" >}}
 
-Select **Edit** to edit the Security Contact's **Name**.
+Click **Edit** to edit the Security Contact's **Name**.
 
-Select **Delete contact** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
+Click **Delete** to delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
 
 ### 6.2 Mendix Admins
 

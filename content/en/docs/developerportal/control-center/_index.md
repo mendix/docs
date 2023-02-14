@@ -142,6 +142,8 @@ You can request new **Company Email Domains** by clicking **Add Domain**, upon w
 
 If you have [configured single sign on using BYOIDP](/developerportal/control-center/set-up-sso-byoidp/), you will have to wait until the domain has been added, then deactivate and reactivate BYOIDP to pick up the new email domain. It is not possible to add email domains which do not use single sign-on if it is activated for your company.
 
+{{< figure src="/attachments/developerportal/control-center/company-email-domains.png" width="500px" >}}
+
 You can also provide a specific **Security Contact** who will be informed if there are security-related issues with the company's apps (for example, data breaches, new advisories, or critical vulnerabilities). Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
 After you click **Add security contact** and add the required **Name** and **Email** address, a confirmation email is sent to the proposed contact. The recipient has seven days to click the link in the email and validate the Security Contact request. After seven days, the pending request is automatically removed. 

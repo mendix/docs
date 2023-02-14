@@ -1,5 +1,5 @@
 ---
-title: "Frequently Asked Questions - Security"
+title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
 url: /developerportal/support/security-findings-faq
 category: "Mendix Support"
@@ -13,7 +13,7 @@ tags: ["support", "FAQ", "security", "vulnerability", "malicious files", "file s
 This document lists a number of frequently asked questions (FAQs) we often receive about security findings and other issues around the security of the Mendix product and platform.
 See the [Requirements for Security Support Tickets](/developerportal/support/submit-support-request/#security-tickets) section of *Submit a Support Request* if you want to create a security tickets.
 
-There is additional information about security and reported vulnerabilities available elsewhere on the Mendix platform. See the links in the sections below.
+There is additional information about security and reported vulnerabilities available elsewhere on the Mendix Platform. See the links in the sections below.
 
 ### 1.1 Current Security Issues
 
@@ -52,7 +52,7 @@ Although you can trick the browser into believing you have a user role you don't
 ### 2.3 Visibility vs Security
 
 For pages, you don't set security, but visibility. Security and visibility are two different things. The Mendix client hides a page that is not visible to the current end-user, together with action buttons which open the page and navigation items which open the page directly. However, the Mendix runtime client does not block access to the page completely; if an end-user runs a microflow that opens a page that is not visible to them, uses a deeplink, or calls the client API, the page will still be shown.
- 
+
 While the Mendix runtime controls the visibility of pages, it always uses security to control access to data. So, although an end-user might be able to open a page that is not visible to them, they will only see data on that page that they have access to. End-users can always use the Client API to retrieve data, if they have access to it, so hiding (parts of) a page that shows data they have access to, won't prevent them from accessing the data via the Client API.
 
 Hiding pages for end-users is not the way to restrict access to data, you should always set security on the data itself. Visibility does not equal security. 
@@ -88,7 +88,7 @@ Security scanning tools can report vulnerabilities in Java libraries. These can 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 
 A new release of a library doesn't necessarily mean that the old versions of that library have to be replaced.
- 
+
 We will only update a third-party library if:
 
 1. A new version of the library contains new functionality that is not available in the old library - when a developer is updating or improving functionality that requires an updated library, we will update the library to make use of the newly provided functionality.
@@ -114,7 +114,7 @@ In the Mendix cloud, [almost all] cookies will have the ‘HttpOnly’ attribute
 We have the cookies set by default in Mendix applications described in the [Cookies](/refguide/mendix-client/#cookies) section of *Mendix Client*. 
 
 For Mendix applications, the Cookies have the ‘HTTPOnly’ attribute set to true when they are set by the Mendix Runtime. Cookies which are set by the Mendix Client can't have the 'HttpOnly’ attribute set to true, as those cookies are not available to JavaScript, which is the language used by the Mendix Client.
- 
+
 Cookies set by the Mendix Runtime, which may contain sensitive information such as the session id, always have the ‘HttpOnly’ flag set to true. Cookies set by the Mendix Client with ‘HTTPOnly’ set to false will never contain any sensitive information.
 
 ## 6 Why Are Some Security-Related HTTP Headers Not Set for My App?
@@ -142,7 +142,7 @@ A good example of this is leaking the web server information (e.g. "Server: ngin
 Mendix apps use two types of content: static content and dynamic content. Static content consists mainly of page templates (e.g., `*.xml` and `*.xml.gz`), images (e.g., `*.png`), icons (e.g., `*.svg`), JavaScript files (e.g., `*.js`), and styling (e.g., `*.css`). The dynamic content is the data that is shown on the page. This dynamic data is retrieved from the database. 
 
 By default, the static content of your app is publicly available. This means you can make a directory listing and access files on the web server. The Mendix Client expects this and will not work properly if it is not. You can request the static content without signing in. This is not an issue, as the static content doesn't usually contain any sensitive data. It provides the framework within which data is displayed and logic applied. You should not add sensitive data to your static files (for example in a text widget on a page); Mendix apps provide more secure ways to store sensitive data.
- 
+
 You can limit access to the static content of your app by [implementing an access restriction profile](/developerportal/deploy/access-restrictions/) that limits access to the whole app. It is not possible to restrict access only for the static files.
 
 ## 8 Does This Reported Security Finding Affect My App?
@@ -172,10 +172,10 @@ Support for Mendix 7 will be ending with the release of Mendix 10 in the summer 
 #### 8.4.1 Bootstrap Vulnerabilities in Mendix Version 8 and Above
 
 In Mendix version 8 and above the Bootstrap JavaScript files have been removed. All Bootstrap styling has been moved to the Mendix AtlasUI themes.
- 
+
 If there still is a security finding in the your project, you may be using the Bootstrap library in your custom theme.
 We would therefore suggest that you do one of the following:
- 
+
 * Update the libraries yourself
 * Change the custom theme so it does not need Bootstrap
 

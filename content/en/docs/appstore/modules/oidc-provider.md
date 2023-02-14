@@ -50,7 +50,6 @@ The following modules need to be imported into your app
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
 * [Administration](https://marketplace.mendix.com/link/component/23513) – see [Administration](/appstore/modules/administration/) documentation
-* [Copy to Clipboard](https://marketplace.mendix.com/link/component/119337)
 
 ## 2 Installation
 
@@ -60,7 +59,6 @@ To install the OIDC Provider module in your IAM broker app, you need to import t
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69)
 * [Administration](https://marketplace.mendix.com/link/component/23513)
-* [Copy to Clipboard](https://marketplace.mendix.com/link/component/119337)
 
 The module then needs to be configured as described below.
 
@@ -97,10 +95,10 @@ You now need to configure the OIDC Provider and Administration modules in the IA
 
     | Caption | Action | User Roles |
     | --- | --- | --- |
-    | Accounts | Open page 'Administration.AccountDetail_Overview' | Administrator, UserManager |
-    | Active Sessions | Open page 'Administration.ActiveSessions' | Administrator, UserManager |
-    | Scheduled Events | Open page 'Administration.ScheduledEvents' | Administrator, UserManager |
-    | Runtime Instances | Open page 'Administration.RunteimInstances' | Administrator, UserManager |
+    | Accounts | Open page 'OpenIDConnectProvider.AccountDetail_Overview' | Administrator |
+    | Active Sessions | Open page 'Administration.ActiveSessions' | Administrator |
+    | Scheduled Events | Open page 'Administration.ScheduledEvents' | Administrator |
+    | Runtime Instances | Open page 'Administration.RunteimInstances' | Administrator |
     | My Account | Call microflow 'Administration.ManageMyAccount' | User |
     | OpenID Connect | Open page 'OpenIDConnectProvider.OpenIDConnect_Dashboard' | Administrator |
 
@@ -131,6 +129,21 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 1. In your API testing tool, set up the following:
     * a **POST** command to the **Registration URI** with the endpoint `/oidc/register`, for example, for a locally-deployed app, `http://localhost:8080/oidc/register`
     * an HTTP header with **Key** = "Authorization" and **Value** = **Bearer Registration Access token**
+    * an HTTP request body with the following format (for a Client `ClientID` which is running on host and port `localhost:8081`):
+
+        ```json {linenos=false}
+        {
+            "client_id" : "ClientID",
+            "client_name" : "ClientName",
+            "client_secret" : "ClientSecret",
+            "redirect_uris" : [ http://localhost:8081/oauth/v2/callback ],
+            "backchannel_logout_uri" : http://localhost:8081/logout,
+            "post_logout_redirect_uris" : [http://localhost:8081/logout],
+            "grant_types": [ "authorization_code","password" ],
+            "scope": "openid"
+        }
+        ```
+
 1. Send the command. If it is working, you should get a response which has a body which resembles the example below:
 
     ```json {linenos=false}
@@ -144,14 +157,14 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     ],
     "client_secret_expires_at": 0,
     "scope": "openid",
-    "client_secret": "c46591bd-8fae-4f90-9efb-b5973bea04df",
+    "client_secret": "ClientSecret",
     "redirect_uris": [
     "http://localhost:8081/oauth/v2/callback"
     ],
     "client_id_issued_at": 1675940602,
     "backchannel_logout_uri": "http://localhost:8081/logout",
-    "client_name": "DemoClient1",
-    "client_id": "DemoClient1"
+    "client_name": "ClientName",
+    "client_id": "ClientID"
     }
     ```
 

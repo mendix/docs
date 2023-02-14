@@ -58,11 +58,17 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
-Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
+Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
 The Studio Pro configuration you see is completely editable. You can add or remove panes as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
-### 3.1 App Structure on the Left
+### 3.1 Top Bar
+
+The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the play (**Run App**) button. 
+
+For more information on the top bar's menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
+
+### 3.2 App Structure on the Left
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app:
 
@@ -70,21 +76,21 @@ You can navigate through your app using the [App Explorer](/refguide/app-explore
 
 Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
 
-### 3.2 Bottom Dockable Pane 
+### 3.3 Bottom Dockable Pane 
 
 Look at the bottom dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
 
-Here you will find several default panes:
+Here you will find several default panes such as:
 
 * **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal (for more information see [Stories Pane](/refguide/stories-pane/))
 * **Changes**: displays a list of all changes in the project since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
 * **Errors**: displays any errors found within your project (for more information see [Errors Pane](/refguide/errors-pane/))
-* **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance (for more information see [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/))
-* **Console**: a live feed of your app’s console as the app runs (for more information see [Console](/refguide/view-menu/#console))
 
-### 3.3 Right Dockable Pane
+For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) and [Console](/refguide/view-menu/#console) documents.
+
+### 3.4 Right Dockable Pane
 
 Look at the right dockable pane of Studio Pro:
 
@@ -92,10 +98,10 @@ Look at the right dockable pane of Studio Pro:
 
 Here you will find more default panes:
 
-* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app [Data Hub Pane](/refguide/data-hub-pane/)
-* **Properties**: displays all the properties of the currently selected context element
-* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
-* **Connector**: quickly links data to pages⁠—using the connector you could drag an entity into a data view or data grid to quickly display your app’s data on a page
+* **Properties**: displays all the properties of the currently selected context element (for more information see [Properties](/refguide/view-menu/#properties))
+* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (for more information see [Toolbox](/refguide/view-menu/#toolbox))
+
+For additional information on right default panes, see the [Data Hub](/refguide/data-hub-pane/) and [Connector](/refguide/view-menu/#connector) documentation.
 
 ## 4 Creating Your App's Domain Model
 

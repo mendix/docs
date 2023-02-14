@@ -26,7 +26,7 @@ This document describes the user interface of Mendix Studio Pro:
 
 {{< figure src="/attachments/refguide/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
 
-## 2 Top Bar
+## 2 Top Bar {#top-bar}
 
 The Studio Pro top bar contains the following items:
 

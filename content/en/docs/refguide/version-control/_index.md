@@ -165,7 +165,8 @@ You can merge a specific revision of a branch line into your current [working co
 
 {{% alert color="info" %}}
 
-You are expected to merge branch lines into the main line before upgrading to a version that is one or more **major** versions newer than the current one.
+You are expected to merge branch lines into the main line before upgrading to a version that is one or more **major** versions newer than the current one. 
+It is also highly recommended to either commit or revert all changes before such an upgrade so there are no uncommitted changes during the upgrade.
 
 {{% /alert %}}
 

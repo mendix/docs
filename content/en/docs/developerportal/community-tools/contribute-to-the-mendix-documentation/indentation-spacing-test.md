@@ -153,7 +153,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 2. Second list item
     {{< highlight go >}}
     Code blocks with shortcode HIGHLIGHT do NOT need trailing spaces to be indented. They don't need to be indented either, as long as there is no blank line between.
-    Highight does NEED a language specified, otherwise the shortcode errors.
+    Highlight does NEED a language specified, otherwise the shortcode errors.
     Using Hugo version 0.91.2 produces an extra blank line in the code block. 0.93.1 removes the blank line.
     {{< / highlight >}}
 

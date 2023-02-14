@@ -594,7 +594,7 @@ The **Usage Dashboard** shows the real-time statistics about the usage of an app
 
 You can change the setting of the Preference widget to customize the behavior of the model and setup to your requirements.
 
-{{<br figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
+{{<figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" >}}
 
 On the **PMI** tab, you can set filtering options for PMI and click **Ok** to save the changes.
 

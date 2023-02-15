@@ -284,7 +284,7 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-#### 10.4.1 Personal Access Tokens {#pat}
+#### 10.4.2 Personal Access Tokens {#pat}
 
 Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
@@ -304,7 +304,7 @@ The following Mendix services support usage of PATs:
 * [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
 * [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
 
-##### 10.4.1.1 Creating a PAT
+##### 10.4.2.1 Creating a PAT
 
 When you click **New Token**, you need to set the following characteristics of the PAT:
 
@@ -323,7 +323,7 @@ After you click **Create**, a pop-up window shows your secret token, which is th
 Store the secret token in a safe location, as it will not be displayed again!
 {{% /alert %}}
 
-##### 10.4.1.2 Managing a PAT
+##### 10.4.2.2 Managing a PAT
 
 To see the scopes of a PAT you have created, click **View Details**.
 
@@ -335,7 +335,7 @@ You cannot see the secret token of a PAT here. You can only see that the PAT exi
 
 You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
 
-##### 10.4.1.3 Using a PAT
+##### 10.4.2.3 Using a PAT
 
 Use of a PAT depends on the API you are accessing.
 

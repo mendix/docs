@@ -72,6 +72,10 @@ All other state changes of the calling workflow do not affect the called workflo
 
 You can use the [Workflow state change](/refguide/workflow-properties/#workflow-state-change) property to extend the behavior described above and, for example, configure a behavior that when the calling workflow is paused, the called workflow is paused as well.
 
+### 3.2 State of Calling Workflow When Called Workflow Is Locked
+
+When the called workflow is locked, the calling workflow fails because calling workflow tries to call the locked workflow.
+
 ## 4 Read More
 
 * [Workflow Properties](/refguide/workflow-properties/)

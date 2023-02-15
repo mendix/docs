@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Data Hub Catalog](/data-hu
 
 #### Improvements
 
-* We added a link under authentication details to the Marketplace module that implements the specified authentication method
+* We added a link to the Marketplace module under authentication details that implements the specified authentication method.
 
 ### February 9th, 2023
 

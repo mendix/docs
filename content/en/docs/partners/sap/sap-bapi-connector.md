@@ -41,7 +41,6 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 
     {{% alert color="info" %}}Searching for BAPIs is provided as a microflow rather than a separate app so that you can set up the JCo destination securely. You should not give access to this microflow to any end-users of an app you build using the Mendix BAPI Connector.{{% /alert %}}
 
-4. In the **App Explorer**, 
 4. Search for the BAPI(s) you need, download the schema(s), and [generate Mendix BAPI module(s)](#create-bapi-module) using the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/bapi).
 5. Import the generated Mendix BAPI module .mpk to your Mendix application using the instructions in [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/). A module with the same name as the BAPI is added to the app.
 
@@ -73,15 +72,18 @@ To use the BAPI Connector, you have to first set up your environment and configu
 
     {{< figure src="/attachments/partners/sap/sap-bapi-connector/sap-bapi-connector-module.png" >}}
 
-3. Download following files from [SAP Support](https://support.sap.com/en/product/connectors/jco.html):
-    1. sapjco3.dll
-    2. sapjco3.jar
+3. Download the following files from [SAP Support](https://support.sap.com/en/product/connectors/jco.html):
+    * sapjco3.dll
+    * sapjco3.jar
 
     You need the latest stable versions for *Microsoft Windows and Windows Server*. For more details on SAP JCo releases, please refer to official [SAP JCo release and support strategy](https://launchpad.support.sap.com/#/notes/2786882).
 
     Put both of these files in the `/userlib` folder where your Mendix application is stored on your local machine (that is `<app location>/userlib`). You can open this from within Studio Pro using the menu item **App > Show App Directory in Explorer**.
 
-4. Configure the connection details by going to JCO_Constants folder and set the SAP system connection details as described in the section below.
+4. In the **App Explorer**, in the **SAPBAPIConnector** > **USE_ME** > **Config** section, edit the following values:
+    * **BAPIServiceTimeout** - Specify a timeout value for the HTTP client to receive a response from the *bapi-service* deployed on SAP BTP. By default, this value is set to *20 seconds*.
+    * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
+    * **UseRFCDestination** - Set to **true**.
 
 ### 4.1 SAP System Connection Details{#sap-connection-details}
 

@@ -20,13 +20,14 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 ### February 16th, 2023
 
 #### Improvements
-* [Epics](/developerportal/collaborate/epics/) now has enabled more options for search. On the Board you can search on: Tags, Epic Name, Assignee & Unassigned stories, Story Title & Story ID and on the [Planning](/developerportal/collaborate/epics/#planning) page you can search on Tags, Epic Name, Assignee & Unassigned stories,
-Status Name (Only in Scrum) and Story Title & Story ID
-* [Epics](/developerportal/collaborate/epics/) now has visible epic tags on the epics overview page.
+
+* We enabled more options for search in [Epics](/developerportal/collaborate/epics/). On the **Board** page you can search on **Tags**, **Epic Name**, **Assignee & Unassigned stories**, **Story Title & Story ID**, and on the [Planning](/developerportal/collaborate/epics/#planning) page you can search on **Tags**, **Epic Name**, **Assignee & Unassigned stories**, **Status Name** (only in the Scrum workflow), and **Story Title & Story ID**.
+* [Epics](/developerportal/collaborate/epics/) has visible epic tags now on the **Epics Overview** page.
 
 #### Fixes
-* Fixed an issue in [Epics](/developerportal/collaborate/epics/) where the unsaved changes popup would not take you to the correct story after clicking the leave button.
-* Updated the text in [Notifications](/developerportal/#notifications) when a story is assigned to you in [Epics](/developerportal/collaborate/epics/)
+
+* We fixed an issue in [Epics](/developerportal/collaborate/epics/) where the unsaved changes pop-up window did not take you to the correct story after clicking the **Leave** button.
+* We updated the text in [Notifications](/developerportal/#notifications) when a story is assigned to you in [Epics](/developerportal/collaborate/epics/).
 
 ### February 13th, 2023
 

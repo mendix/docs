@@ -632,21 +632,14 @@ If you set enableSectionManipulator to true for a [section view](#section-view),
 * Type – Boolean
 * Default value – *false*
 
-#### 6.2.2 useSectionHandleOnly
+#### 6.2.2 enableSectionHandle
 
-This is used in combination with `enableSectionHandle` to allow a section plane to be dragged.
-
-* Type – Boolean
-* Default value – *false*
-
-#### 6.2.3 enableSectionHandle
-
-If you set enableSectionHandle to true for a [section view](#section-view), it will add a drag handle to the section plane when `useSectionHandleOnly` is true.
+If you set enableSectionHandle to true for a [section view](#section-view), it will add a drag handle to the section plane.
 
 * Type – Boolean
 * Default value – *false*
 
-#### 6.2.4 sectionHandle
+#### 6.2.3 sectionHandle
 
 Defines the style of sectionHandle. `arrowRadius`and `handleRadius` are measured in pixels.
 

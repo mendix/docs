@@ -261,7 +261,7 @@ You can also configure your **Buzz Notifications**:
 
 ### 10.4 Developer Settings {#dev-settings}
 
-#### 10.4.1 API Keys {#api-keys}
+#### 10.4.1 API Keys {#api-key}
 
 In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
@@ -283,86 +283,6 @@ For more information, see the following:
 * [APIs](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
-
-#### 10.4.1 Personal Access Tokens {#pat}
-
-Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
-
-PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
-
-You can create a PAT and remain in control of what access is delegated via the PAT by selecting the scopes. The PAT itself is a "‘bearer" token, which means that anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
-
-PATs are security tokens that do not expire, but they cannot be used if the associated user has been deactivated on the Mendix Platform or when the user has deleted the PAT.
-
-{{% alert color="info" %}}
-From a governance aspect, it is important for Mendix Admins to deactivate ex-employees in the Mendix Platform. This will prevent those leavers from logging into the platform, and it also blocks the delegated access via PATs. This recommendation applies both when users use Mendix credentials, and when users use SSO with authentication provided by their corporate IDP (BYOIDP).
-{{% /alert %}}
-
-The following Mendix services support usage of PATs:
-
-* [Data Hub Catalog API](/apidocs-mxsdk/apidocs/data-hub-apis/)
-* [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
-* [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
-
-##### 10.4.1.1 Creating a PAT
-
-When you click **New Token**, you need to set the following characteristics of the PAT:
-
-* **Name** – give the PAT a name that reflects where or why you intend to use it
-* **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/create-pat.png" width="500px" alt="Dialog box for defining the PAT scopes" >}}
-
-Details about the scopes can be found in the documentation for specific services.
-
-After you click **Create**, a pop-up window shows your secret token, which is the PAT. You must copy the secret token via **Copy Token**.
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
-
-{{% alert color="warning" %}}
-Store the secret token in a safe location, as it will not be displayed again!
-{{% /alert %}}
-
-##### 10.4.1.2 Managing a PAT
-
-To see the scopes of a PAT you have created, click **View Details**.
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/manage-pat.png" >}}
-
-{{% alert color="info" %}}
-You cannot see the secret token of a PAT here. You can only see that the PAT exists long with its scopes. 
-{{% /alert %}}
-
-You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
-
-##### 10.4.1.3 Using a PAT
-
-Use of a PAT depends on the API you are accessing.
-
-{{% alert color="warning" %}}
-For security reasons, you should not include PATs into your source code!
-{{% /alert %}}
-
-To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
-
-```http
-GET /v1/register HTTP/1.1
-Host: catalog.mendix.com
-Authorization: mxtoken <your token>
-```
-
-If the PAT is not valid, the response will be `HTTP 403 Access Denied`:
-
-```http
-403 Access Denied
-Content-Type: application/json
-
-{
-    "error": ""
-}
-```
-
-For information on other PAT usages, see the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
 
 ### 10.5 Personal Data
 

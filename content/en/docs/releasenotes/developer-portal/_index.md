@@ -400,7 +400,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We noticed our [API Keys](/developerportal/community-tools/mendix-profile/#api-key) overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
+* We noticed our [API Keys](/developerportal/community-tools/mendix-profile/#api-keys) overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
 * We added a [Team Server revision history](/developerportal/collaborate/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/collaborate/stories/#story-details) page.
 
 #### Fixes

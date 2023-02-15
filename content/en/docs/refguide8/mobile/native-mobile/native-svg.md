@@ -33,16 +33,30 @@ We suggest manually removing these elements from your SVGs, or using the tools m
 
 ## 4 Styling SVGs
 
-You might want to change certain colors in your SVG, for example when adding an image. Mendix allows you to do this by setting the `fill` and `stroke` properties in image's styling. These properties will then be applied to *all* the elements inside the SVG that do not have these properties.
+You might want to change certain colors in your SVG, for example when adding an icon. Mendix allows you to do this by setting the `fill` and `stroke` properties in image's styling of the .js. These properties will then be applied to *all* the elements inside the SVG that do not have these properties.
 
 Take the following SVG as an example:
+
+```svg
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="10" width="80" height="80" stroke="blue" fill="black"/>
+</svg>
+```
+After removing the rules we dont need, it will look like this: 
+
+```svg
+<svg viewBox="0 0 100 100">
+    <rect x="10" y="10" width="80" height="80"/>
+</svg>
+```
+this will allow you to change the color or the icon.
+You are also able to keep the values of the properties you would not like to be changed, for example keeping the stroke value in the svg.
 
 ```svg
 <svg viewBox="0 0 100 100">
     <rect x="10" y="10" width="80" height="80" stroke="blue"/>
 </svg>
 ```
-
 Setting the `fill` property on this image's styling will turn the rectangle (`rect` element) to the color provided. Setting the `stroke` property will result in no changes, since the `stroke` has already been set.
 
 Here is how an SVG without the `fill` property looks:

@@ -17,19 +17,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
-### February 13th, 2023
-
-#### Improvements
-
-* We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready
-* We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
-* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
-* In addition, personal **API Keys** and **Personal Access Tokens** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
-
-#### Fixes
-
-* We fixed a performance issue on the [Team](/developerportal/collaborate/team/) page.
-
 ### January 26th, 2023
 
 #### Improvements
@@ -46,7 +33,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/) page.
+* We fixed an issue where some users were not able to open the [Sprint Status](/developerportal/collaborate/stories/#sprint-status) page.
 
 ### December 13th, 2022
 
@@ -191,7 +178,7 @@ In Portfolio Management, you can do the following
 #### Improvements
 
 * We removed **My Activity Overview** from the **Account Settings** page.
-* We redesigned the **Pending App Invites** section and added it as a new menu item to the **Account Settings** page.
+* We redesigned the [Pending App Invites](/developerportal/community-tools/mendix-profile/#pending-app-invites) section and added it as a new menu item to the **Account Settings** page.
 * We improved the warning messages when you leave or delete an app.
 
 #### Fixes
@@ -239,7 +226,7 @@ In Portfolio Management, you can do the following
 
 #### Fixes
 
-* We fixed an issue where users with an invalid Twitter URL in the **Social** section of their Mendix Profile Settings could not change their password.
+* We fixed an issue where users with an invalid Twitter URL in the [Social](/developerportal/community-tools/mendix-profile/#social) section of their Mendix Profile Settings could not change their password.
 * We fixed an issue where users could have a duplicated project membership, resulting in two identical projects in the Developer Portal.
 
 ### June 9th, 2022
@@ -400,7 +387,7 @@ In Portfolio Management, you can do the following
 
 #### Improvements
 
-* We noticed our [API Keys](/developerportal/community-tools/mendix-profile/#api-keys) overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
+* We noticed our [API Keys](/developerportal/community-tools/mendix-profile/#api-key) overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
 * We added a [Team Server revision history](/developerportal/collaborate/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/collaborate/stories/#story-details) page.
 
 #### Fixes

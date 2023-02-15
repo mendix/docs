@@ -199,73 +199,48 @@ If you cannot finish your portfolio entry or do not want to publish yet, click *
 
 On the **Activity** tab, you can see a list of the last 20 public events for your badges, Marketplace, and Forum activity.
 
-## 10 Account Settings {#settings}
+## 10 Settings {#settings}
 
 You can edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 
-### 10.1 Profile {#profile}
+### 10.1 General Information
 
-In this section, you can upload your profile image and fill in your personal and work details
+In this section, you can upload your profile image and fill in your personal details
 
-You can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry** and **Skills**.  
+Under **Contact**, you can select how much information you want to receive from Mendix:
 
-You can also connect your social accounts via **Twitter URL** and **LinkedIn URL**.
+* **Receive daily digest** – disabled by default
+* **Receive updates for threads in which I am active** – enabled by default
 
-You can also choose to make your profile public (which will allow the Mendix community to view your profile) by clicking **Make Profile Public**. Be sure to do the following to make your profile public:
+There is also a link to [Mendix Support](https://support.mendix.com/) if you need to perform certain account actions that require their assistance.
 
-* Add an avatar
-* Enter a **Function**
-* Confirm if you are looking for a **job**, a **project**, both, or neither
-* Enter a **Summary**
-* Add at least 1 **Skill**
-* Add at least 1 **Industry Experience** item
+### 10.2 Work Experience
 
-{{% alert color="info" %}}
-To make your public profile private again, click **Make Profile Private**. 
-{{% /alert %}}
+Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry Experience** and **Skills**. You can also let the community know if you are looking for a job or an app to contribute to. 
 
-### 10.2 Account
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/work-experience.png"   width="500"  >}}
+
+### 10.3 Social {#social}
+
+Here you can connect your social accounts for **Twitter** and **LinkedIn**.
+
+### 10.4 Security {#security}
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
 
-You can update your password via the [Request Password Change](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
+You can update your password via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen.
 
-Do you want to transfer information from your old Mendix account to a new one? You should prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this, because once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access.
+### 10.5 API Keys {#api-key}
 
-From your new account, then click **Transfer Account Data**. After sharing some information with us and entering the email address of your old account in the dialog box, click **Transfer Data** and the request will be sent. 
-
-If you still have access to your old account, you can approve the merge yourself after clicking the link in the confirmation email that is sent to your old account when the merge is requested. Be sure you are logged in with your old account to see the merge request. Otherwise, you can wait for merge approval from Mendix Support.
-
-Your account data, earned points, achievements, credits, certifications, and Academy progress is then transferred to your new account.
+In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
 
 {{% alert color="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
+Some platform APIs use *Personal Access Tokens (PATs)* rather than *API Keys*. For more information on PATs, and how to generate and manage them, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-It is not possible to separate accounts after they have been merged. Double-check that your old and new account information is valid and in the correct order.
-{{% /alert %}}
+For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
-If you do not want to use Mendix anymore, you can remove your account from this page. Click the menu button next to **Request Password Change** and select **Delete Account**. All of your personal and identifiable information is then removed and deleted from our servers.
-
-### 10.3 Notifications {#notifications}
-
-On this page, you can configure how you want to be notified of Mendix Platform activity.
-
-When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Apps](/developerportal/#my-apps).
-
-You can also configure your **Buzz Notifications**:
-
-* **Receive daily digest** – disabled by default
-* **Receive updates for Buzz threads in which I am active** – enabled by default
-
-### 10.4 Developer Settings {#dev-settings}
-
-#### 10.4.1 API Keys {#api-keys}
-
-In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
-
-To get a Mendix API key, click **Configure API Keys** > **Create New API Key** and follow the instructions.
+To get a Mendix API key, click **Create New API Key** and follow the instructions.
 
 {{% alert color="warning" %}}
 Make a note of the API key, as it will only be shown once. 
@@ -284,29 +259,28 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-#### 10.4.1 Personal Access Tokens {#pat}
+### 10.6 Pending App Invites {#pending-app-invites}
 
-Some platform APIs use personal access tokens (PATs) rather than API keys. This sections explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/pending-app-invites.png" >}}
 
-PATs are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not "present" at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
+In this section, you can view the app invitations you have sent and received. There are two types of invitations:
 
-You can create a PAT and remain in control of what access is delegated via the PAT by selecting the scopes. The PAT itself is a "‘bearer" token, which means that anyone or anything that has access to the PAT can use it as if they were the associated platform user subject to the restrictions set up in the scope of the PAT.
+* Project invitation – an invitation to join a [team](/developerportal/collaborate/team/) to work on an app
+* App invitation – an invitation to join an app as an [App User](/developerportal/collaborate/general-settings/#managing-app-users)
 
-PATs are security tokens that do not expire, but they cannot be used if the associated user has been deactivated on the Mendix Platform or when the user has deleted the PAT.
+### 10.7 Advanced
 
-{{% alert color="info" %}}
-From a governance aspect, it is important for Mendix Admins to deactivate ex-employees in the Mendix Platform. This will prevent those leavers from logging into the platform, and it also blocks the delegated access via PATs. This recommendation applies both when users use Mendix credentials, and when users use SSO with authentication provided by their corporate IDP (BYOIDP).
-{{% /alert %}}
+In this section, you can merge your accounts and select your profile visibility.
 
-The following Mendix services support usage of PATs:
+#### 10.7.1 Merging Your Accounts {#merging}
 
-* [Data Hub Catalog API](/apidocs-mxsdk/apidocs/data-hub-apis/)
-* [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/)
-* [Projects API](/apidocs-mxsdk/apidocs/projects-api/)
+Do you want to transfer information from your old Mendix account to a new one? You can do this directly from your **Advanced Settings**. After sharing some information with us, your earned points, achievements, credits, certifications, and Academy progress is automatically transferred.
 
-##### 10.4.1.1 Creating a PAT
+To merge your accounts, follow these steps:
 
-When you click **New Token**, you need to set the following characteristics of the PAT:
+1. Prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this, because once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access.
+2. From your new account, enter the email address of your old account to send us the request.
+3. If you still have access to your old account, you can approve the merge yourself after clicking the link in the confirmation email that is sent to your old account when the merge is requested. Be sure you are logged in with your old account to see the merge request. Otherwise, you can wait for merge approval from Mendix Support.
 
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
@@ -318,59 +292,44 @@ Details about the scopes can be found in the documentation for specific services
 After you click **Create**, a pop-up window shows your secret token, which is the PAT. You must copy the secret token via **Copy Token**.
 
 {{< figure src="/attachments/developerportal/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
+Your account data is then moved to your new account.
 
 {{% alert color="warning" %}}
-Store the secret token in a safe location, as it will not be displayed again!
+It is not possible to separate accounts after they have been merged. Double-check that your old and new account information is valid and in the correct order.
 {{% /alert %}}
-
-##### 10.4.1.2 Managing a PAT
-
-To see the scopes of a PAT you have created, click **View Details**.
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/manage-pat.png" >}}
 
 {{% alert color="info" %}}
-You cannot see the secret token of a PAT here. You can only see that the PAT exists long with its scopes. 
+With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
 {{% /alert %}}
 
-You can delete a PAT you have created via **Delete**. This will prevent anyone who has obtained the PAT's secret token from successfully using it.
+#### 10.7.2 Selecting Your Profile Visibility {#public}
 
-##### 10.4.1.3 Using a PAT
+A banner will be present if you have not made your profile public to the Mendix community. You can make it public by clicking **Make this profile public**.
 
-Use of a PAT depends on the API you are accessing.
+Be sure to do the following to make your profile public:
 
-{{% alert color="warning" %}}
-For security reasons, you should not include PATs into your source code!
+* Add an avatar
+* Enter a **Function**
+* Confirm if you are looking for a **job**, a **project**, both, or neither
+* Enter a **Summary**
+* Add at least 1 **Skill**
+* Add at least 1 **Industry Experience** item
+
+{{% alert color="info" %}}
+To make your public profile private again, click **Make this profile private**. 
 {{% /alert %}}
 
-To use a PAT with the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis/), it must be passed as the authorization header on every request made to the Data Hub Catalog. The request will look like this:
+#### 10.7.3 Viewing Your Audit Trail
 
-```http
-GET /v1/register HTTP/1.1
-Host: catalog.mendix.com
-Authorization: mxtoken <your token>
-```
-
-If the PAT is not valid, the response will be `HTTP 403 Access Denied`:
-
-```http
-403 Access Denied
-Content-Type: application/json
-
-{
-    "error": ""
-}
-```
-
-For information on other PAT usages, see the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
-
-### 10.5 Personal Data
-
-The Mendix Platform stores certain personal information about you. You can view this information by clicking  **Download Personal Data**.
+The Mendix Platform stores certain personal information about you. You can view this information by clicking  **View Audit Trail** in the **Personal Information Stored by Mendix**.
 
 {{% alert color="info" %}}
 Mendix has been tracking these data changes since November 2018.
 {{% /alert %}}
+
+#### 10.7.4 Removing Your Account
+
+If you do not want to use Mendix anymore, you can remove your account from here. All of your personal and identifiable information is then removed and deleted from our servers.
 
 ## 11 Point Penalties
 

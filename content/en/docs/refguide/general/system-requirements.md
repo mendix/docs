@@ -116,11 +116,11 @@ You need `write_repository` permission for the token.
 
 We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
 
-On BitBucket.org, the personal access token are called app passwords.
+On BitBucket.org, the Personal Access Tokens are called App Passwords.
 
 To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
 
-BitBucket Server and BitBucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
+BitBucket Server and BitBucket Data Center, on the other hand, still use the term Personal Access Tokens. To set up a personal access token, see [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
 
 In both cases you need `repository write` permission.
 

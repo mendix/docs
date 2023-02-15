@@ -143,7 +143,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 ## 7 Editing Team Members {#team}
 
-This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Profile](/developerportal/community-tools/mendix-profile/#profile) section of *Mendix Profile*.
+This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/community-tools/mendix-profile/#public) section of *Mendix Profile*.
 
 To add developers to the Partner Profile, follow these steps:
 

@@ -284,7 +284,7 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-### 10.4 Personal Data
+### 10.5 Personal Data
 
 The Mendix Platform stores certain personal information about you. You can view this information by clicking  **Download Personal Data**.
 

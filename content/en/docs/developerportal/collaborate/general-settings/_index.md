@@ -159,7 +159,7 @@ Only users with the **App Settings** permission can manage webhooks.
 
 {{% alert color="info" %}}You will only see the **Webhooks** tab if you have **Mendix Stories** turned on in the [Project Management](#project-management) tab (click **Switch to Mendix Stories** if necessary).{{% /alert %}}
 
-Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
+Click the **Webhooks** tab to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if you want to follow the changes in your app, you can create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data, and changes in the app in the Developer Portal are then sent to that URL.
 
 {{< figure src="/attachments/developerportal/collaborate/general-settings/webhooks-list.png"   width="800"  >}}
 

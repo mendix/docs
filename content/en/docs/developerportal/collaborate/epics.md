@@ -242,14 +242,15 @@ The **Not Finished** status means that you can use the **Continue Migration** bu
 If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
-## 4 Epics {#epics}
+## 4 Epics Overview {#epics}
 
-The **Epics** page shows all the epics for your current app. Each row shows the following details about the epic:
+The **Epics** overview page shows all the epics for your current app. Each row shows the following details about the epic:
 
 * Unique ID, which consists of a prefix and a number
 * Title
 * To whom the epic is assigned
 * How many stories are completed for the epic
+* Tags
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 

@@ -302,7 +302,7 @@ For more information, see the [Reverse Proxy Inbound Rules](/developerportal/dep
 
 ### 5.4 Configuring Local Email Clients
 
-Configuring local clients, like [PaperCut](https://www.papercut.com/), is supported. If using a tool like PaperCut, do the following:
+Configuring local clients, like [PaperCut](https://github.com/ChangemakerStudios/Papercut-SMTP), is supported. If using a tool like PaperCut, do the following:
 
 1. Follow the steps for [adding an email account](#adding-email-account). 
 2. Automatic configuration will not work for local clients, so continue with manual configuration in the wizard.

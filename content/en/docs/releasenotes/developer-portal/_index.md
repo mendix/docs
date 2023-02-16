@@ -37,6 +37,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
 * We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
 * In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
+* We simplified the [Project Invitation](/developerportal/collaborate/team/#inviting) flow from a multi-step wizard to a single page.
+* Have you lost track of where your apps live? We now display the cloud plan on the App tile in the [My Apps](/developerportal/#my-apps) page
 
 #### Fixes
 

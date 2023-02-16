@@ -172,14 +172,9 @@ This property not available if you enable "Custom content" for the column
 
 ### 4.9 Association filter
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/association-filter-props.png" alt="Example of association filter properties" >}}
-
-**Association filter** is a group of properties that you can use to enable association filtering for the column.
-
-* **Enable association filter** — enables or disables association filtering for the column.
-* **Reference** — this property define association that will be used for filtering.
+* **Reference** — this property define association that will be used for filtering. When set, it enable filtering over association with the Drop-down filter. Drop-down filter will prioritize this property over `Attribute` property.
 * **Data source** — defines data source for filter options. The data source should return list of all possible entities that could be associated with a parent.
-* **Caption** — the expression that will be used as caption for the option.
+* **Option caption** — the expression that will be used as caption for the option.
 
 {{% alert color="info" %}}
 This column configuration is intended to be used in conjunction with [Drop-down Filter](#72-drop-down-filter). Other filter types don't support association filtering.
@@ -409,9 +404,9 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.5 Header Filtering
+### 7.5 Grid wide filtering
 
-In order to enable filtering within the data grid header (outside the columns) you need to enable `Show header filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
+In order to enable filtering within the data grid header (outside the columns) you need to enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
 * Autonumber
 * Boolean
@@ -427,6 +422,10 @@ The attributes selected here will be used for the matching filter placed inside 
 
 {{% alert color="info" %}}
 If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.
+{{% /alert %}}
+
+{{% alert color="warn" %}}
+There cannot be more than one filter of the same type in the data grid header. For example, if data grid header already have `Number Filter` adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
 
 ## 8 Configuration

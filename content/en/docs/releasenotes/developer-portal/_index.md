@@ -21,8 +21,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We enabled more options for search in [Epics](/developerportal/collaborate/epics/). On the **Board** page you can search on **Tags**, **Epic Name**, **Assignee & Unassigned stories**, **Story Title & Story ID**, and on the [Planning](/developerportal/collaborate/epics/#planning) page you can search on **Tags**, **Epic Name**, **Assignee & Unassigned stories**, **Status Name** (only in the Scrum workflow), and **Story Title & Story ID**.
-* [Epics](/developerportal/collaborate/epics/) has visible epic tags now on the **Epics Overview** page.
+* We enabled more options for search in [Epics](/developerportal/collaborate/epics/). On the [Board](/developerportal/collaborate/epics/#board) page, you can now search  stories based on tags, epic name, assignee (and unassigned stories), story title, and story ID. On the [Planning](/developerportal/collaborate/epics/#planning) page, you can search stories based on tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
+* **Epics** now has visible epic tags now on the **Epics Overview** page.
 
 #### Fixes
 

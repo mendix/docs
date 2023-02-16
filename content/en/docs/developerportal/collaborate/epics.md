@@ -248,9 +248,9 @@ The **Epics** overview page shows all the epics for your current app. Each row s
 
 * Unique ID, which consists of a prefix and a number
 * Title
+* Tags
 * To whom the epic is assigned
 * How many stories are completed for the epic
-* Tags
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 

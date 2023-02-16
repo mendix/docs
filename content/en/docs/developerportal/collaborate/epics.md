@@ -48,7 +48,7 @@ If you work in the Kanban workflow, the **Board** page gives an overview of all 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
 
-Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on their titles.
+Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
@@ -138,7 +138,7 @@ If you select the **Scrum** workflow, the **Planning** page shows the **Active S
 
 If you use the **Kanban** workflow, the **Planning** page shows the **To Do**, **Refinement**, and **Backlog** categories.
 
-No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search for stories based on the story title.
+No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
 
 Each row in a category shows the following information about a story:
 

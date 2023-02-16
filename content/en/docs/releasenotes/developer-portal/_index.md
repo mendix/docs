@@ -26,8 +26,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue in [Epics](/developerportal/collaborate/epics/) where the unsaved changes pop-up window did not take you to the correct story after clicking the **Leave** button.
-* We updated the text in [Notifications](/developerportal/#notifications) when a story is assigned to you in [Epics](/developerportal/collaborate/epics/).
+* We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
+* We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
 
 ### February 13th, 2023
 

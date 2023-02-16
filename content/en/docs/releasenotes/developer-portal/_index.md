@@ -17,6 +17,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### February 16th, 2023
+
+#### Improvements
+
+* We enabled more options for search in [Epics](/developerportal/collaborate/epics/). On the [Board](/developerportal/collaborate/epics/#board) page, you can now search stories based on tags, epic name, assignee (and unassigned stories), story title, and story ID. On the [Planning](/developerportal/collaborate/epics/#planning) page, you can search stories based on tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
+* The Epics listed on the [Epics](/developerportal/collaborate/epics/#epics) overview page now have visible tags.
+
+#### Fixes
+
+* We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
+* We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
+
 ### February 13th, 2023
 
 #### Improvements

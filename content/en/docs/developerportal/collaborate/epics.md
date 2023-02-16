@@ -48,7 +48,7 @@ If you work in the Kanban workflow, the **Board** page gives an overview of all 
 
 {{< figure src="/attachments/developerportal/collaborate/epics/stories-story-points.png" >}}
 
-Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on their titles.
+Click **Project Buzz** on the upper-right corner of the page to go back to the [Buzz](/developerportal/collaborate/buzz/#app-buzz) page of the app. Click **Create Epic** or **Create Story** to create an item. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), story title, and story ID.
 
 {{< figure src="/attachments/developerportal/collaborate/epics/create-epic-story-search.png" >}}
 
@@ -138,7 +138,7 @@ If you select the **Scrum** workflow, the **Planning** page shows the **Active S
 
 If you use the **Kanban** workflow, the **Planning** page shows the **To Do**, **Refinement**, and **Backlog** categories.
 
-No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search for stories based on the story title.
+No matter which workflow you use, you can always create an epic or a story by clicking **Create Epic** or **Create Story** on the upper-right corner of the page. In the search box, you can search stories based on story title, tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
 
 Each row in a category shows the following information about a story:
 
@@ -242,14 +242,15 @@ The **Not Finished** status means that you can use the **Continue Migration** bu
 If you still have content with the **Error** status (for example, in the **Unmigrated Stories** section) after retrying the migration via the **Continue Migration** button, Mendix recommends manually migrating that data from [Stories](/developerportal/collaborate/stories/) to Epics. Furthermore, if a section has been successfully migrated but there is still data that has not been migrated, Mendix recommends manually migrating the data.
 {{% /alert %}}
 
-## 4 Epics {#epics}
+## 4 Epics Overview {#epics}
 
-The **Epics** page shows all the epics for your current app. Each row shows the following details about the epic:
+The **Epics** overview page shows all the epics for your current app. Each row shows the following details about the epic:
 
 * Unique ID, which consists of a prefix and a number
 * Title
 * To whom the epic is assigned
 * How many stories are completed for the epic
+* Tags
 
 {{< figure src="/attachments/developerportal/collaborate/epics/epic.png" >}}
 

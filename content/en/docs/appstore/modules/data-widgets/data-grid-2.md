@@ -286,7 +286,7 @@ In this section you can select an action to be executed **On change** by the fil
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" >}}
 
-When Drop-down filter used in conjunction with [Association filter](#49-association-filter) data grid configuration, only **Automatic options** supported. Any custom options will be ignored. Please check [Association filter](#49-association-filter) section to learn how to enable association filtering.
+When Drop-down filter is used in conjunction with [Association filter](#49-association-filter) data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. Please check [Association filter](#49-association-filter) section to learn how to enable association filtering.
 
 When adding a new option, the following properties are required:
 

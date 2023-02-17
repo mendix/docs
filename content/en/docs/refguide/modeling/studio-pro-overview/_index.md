@@ -60,7 +60,7 @@ Your profile picture is displayed next to them if you are signed in. When you cl
 
 An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
 
-## 4 Working Area
+## 4 Working Area {#working-area}
 
 A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and type of the document. 
 
@@ -84,7 +84,7 @@ Dockable panes can be positioned around the working area and contain various ele
 
 For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Performance bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
-## 6 Status Bar
+## 6 Status Bar {#status-bar}
 
 At the bottom of the Studio Pro main window pane is a status bar. On the left is the current status of Studio Pro:
 

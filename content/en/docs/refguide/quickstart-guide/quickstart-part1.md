@@ -60,8 +60,9 @@ Now that you have completed your first tasks in Studio Pro, this section will gi
 
 Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
-The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro-overview/#working-area) where you can work on an open document. Surrounding this work area are various panes which you will learn more about in the sections below. Finally, if you wish to change the language you work in (and that your end-user will use) see the [Status Bar](/refguide/studio-pro-overview/#status-bar) at the bottom.
 
+The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
 ### 3.1 Top Bar
 
@@ -89,7 +90,7 @@ Here you will find several default panes such as:
 * **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
 * **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
 
-For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) documents.
+For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
 ### 3.4 Right Dockable Pane
 
@@ -102,7 +103,7 @@ Here you will find more default panes:
 * **Properties**: displays all the properties of the currently selected context element (for more information see [Properties](/refguide/view-menu/#properties))
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (for more information see [Toolbox](/refguide/view-menu/#toolbox))
 
-For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) documentation.
+For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
 ## 4 Creating Your App's Domain Model
 

@@ -60,7 +60,8 @@ Now that you have completed your first tasks in Studio Pro, this section will gi
 
 Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
-The Studio Pro configuration you see is completely editable. You can add or remove panes as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+
 
 ### 3.1 Top Bar
 

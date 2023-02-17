@@ -91,7 +91,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
 
-### 3.10 MxAssist Performance Bot
+### 3.10 MxAssist Performance Bot {#mx-bot}
 
 For details on this intelligent virtual co-developer bot, see [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/).
 

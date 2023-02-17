@@ -89,7 +89,7 @@ Here you will find several default panes such as:
 * **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
 * **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
 
-For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) and [Console](/refguide/view-menu/#console) documents.
+For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) documents.
 
 ### 3.4 Right Dockable Pane
 
@@ -102,7 +102,7 @@ Here you will find more default panes:
 * **Properties**: displays all the properties of the currently selected context element (for more information see [Properties](/refguide/view-menu/#properties))
 * **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (for more information see [Toolbox](/refguide/view-menu/#toolbox))
 
-For additional information on right default panes, see the [Data Hub](/refguide/data-hub-pane/) and [Connector](/refguide/view-menu/#connector) documentation.
+For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) documentation.
 
 ## 4 Creating Your App's Domain Model
 

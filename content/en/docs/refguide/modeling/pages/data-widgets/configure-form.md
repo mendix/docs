@@ -4,7 +4,7 @@ linktitle: "Configure Form and Show Form Items"
 url: /refguide/configure-form/
 category: "Pages"
 description: "Describes how to configure a form in Mendix Studio Pro."
-weight: 10
+weight: 50
 tags: ["studio pro", "pages", "form", "how to"]
 ---
 
@@ -25,7 +25,7 @@ The HSE department of your company has the following inspection report:
 
 Your company has an application that is used by inspectors who travel to different companies and inspect whether these companies comply with safety regulations. They fill in their names, a company name, site location, date and time when the inspection was conducted, as well as full name of a superintendent who was present during the inspection. 
 
-Inspectors also have a safety inspection *checklist*. Based on this checklist the inspector evaluates whether the company passed the inspection. They should check if requirements on the following *questions* are met:
+Inspectors also have a safety inspection *checklist*. Based on this checklist the inspector evaluates whether the company passed the inspection. They should check if requirements on the following *checks* are met:
 
 * If emergency contact posters are displayed
 * If safety training are held regularly
@@ -38,7 +38,7 @@ For example, your app already contains a list of all inspection reports:
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/inspection-report-list.jpg"   >}}
 
-You would like the **Details** button in this list to open a page showing the details of the selected report and a table with checklist questions related to this report. You also would like to be able to add new checklists to the table or edit existing ones. 
+You would like the **Details** button in this list to open a page showing the details of the selected report and a table with checklist items related to this report. You also would like to be able to add new checklists to the table or edit existing ones. 
 
 ## 2 Prerequisites
 
@@ -50,7 +50,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/domain-model.jpg" alt="Domain Model"   >}}
 
-    * Make sure you have configured the **Question** attribute as the following enumeration:
+    * Make sure you have configured the **Type of check** attribute as the following enumeration:
 
         {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/enumeration.jpg"   width="550"  >}}
 
@@ -82,9 +82,9 @@ The page with a form (a data view) is created. The **InspectionReport** paramete
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/data-view-configured.jpg"   width="350"  >}}
 
-## 4 Showing Checklist Questions
+## 4 Showing Checklist Items
 
-An inspector has a list of *questions* and indicates with **Yes** or **No** whether the company meets the requirements: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist questions and their results below the inspection report: 
+An inspector has a list of *checks* and indicates with **Yes** or **No** whether the company meets the requirements: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist items and their results below the inspection report: 
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/configured-page.jpg" alt="Configured Page"   width="80%"  >}}
 
@@ -141,6 +141,8 @@ Now checklist items are displayed in the table. You can add new checklist by cli
 Congratulations! You have the page that displays details of the selected report and checklist items of this report:
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/configured-page.jpg" alt="Configured Page"   width="80%"  >}}
+
+There are many ways you can use this page in your app. For example, you can use it as a page for a user task in a [workflow](/refguide/workflows). 
 
 You can now preview your app and test your page.
 

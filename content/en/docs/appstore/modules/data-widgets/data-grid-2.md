@@ -172,7 +172,7 @@ This property not available if you enable "Custom content" for the column
 
 ### 4.9 Association filter
 
-* **Reference** — this property define association that will be used for filtering. When set, it enable filtering over association with the Drop-down filter. Drop-down filter will prioritize this property over `Attribute` property.
+* **Reference** — this property defines the association that will be used for filtering. When set, it enables filtering over association with the Drop-down filter. Drop-down filter will prioritize this property over `Attribute` property.
 * **Data source** — defines data source for filter options. The data source should return list of all possible entities that could be associated with a parent.
 * **Option caption** — the expression that will be used as caption for the option.
 

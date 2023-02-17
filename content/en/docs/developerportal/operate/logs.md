@@ -36,11 +36,11 @@ Logs on the Mendix Cloud are rotated and archived every day. The logs are kept f
 
 {{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page" >}}
 
-Action Button | Performs the Action
-:---|:---
-Download Archived Log | download a log selected from the list underneath 
-Download Current Log | download the log which is currently being written to
-View Live Log | view today's log on the screen
+| Action Button | Performs the Action |
+| :--- | :--- |
+| Download App Log | download an application log selected from the list underneath — the current log is the first one listed  |
+| Download Access Log | download a log of who has created a user session on the app on the date selected from the list underneath |
+| View Live Log | view today's log on the screen |
 
 ## 3 Apps on SAP Business Technology Platform
 

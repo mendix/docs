@@ -425,7 +425,7 @@ If a filter is being used and its type does not match with any selected attribut
 {{% /alert %}}
 
 {{% alert color="warn" %}}
-There cannot be more than one filter of the same type in the data grid header. For example, if data grid header already have `Number Filter` adding another `Number Filter` will cause incorrect data filtering.
+There cannot be more than one filter of the same type in the data grid header. For example, if data grid header already has a `Number Filter` adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
 
 ## 8 Configuration

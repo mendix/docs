@@ -100,7 +100,7 @@ This is how the widget’s code is structured:
 </container>
 ```
 
-The widget’s style properties are as follows:
+The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -119,7 +119,7 @@ Text widgets are used in almost all app pages. Because of their ubiquity, learni
 
 ### 4.1 Text
 
-The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). The widget’s style properties are as follows:
+The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -136,7 +136,7 @@ The default class to style all texts is named `Text`.
 
 ### 4.2 Page Title 
 
-The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](/refguide/page-title/). The widget’s style properties are as follows:
+The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](/refguide/page-title/). The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -199,7 +199,7 @@ The resulting DOM looks like this:
 
 ### 5.2 Container 
 
-A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. The widget’s style properties are as follows:
+A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -240,7 +240,7 @@ This is how the widget’s code is structured:
 </container>
 ```
 
-The widget’s style properties are as follows:
+The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -262,7 +262,7 @@ The default class to style all tab containers is named `TabContainer`.
 
 ### 5.4 Scroll Container
 
-A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing.  The widget’s style properties are as follows:
+A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing.  The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -482,7 +482,7 @@ A date picker is an input widget that can be used to display and edit date or ti
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/date-picker.png" alt="date picker"   width="300"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -531,7 +531,7 @@ Images, videos and files help your user app manage images and other files. For m
 
 ### 7.1 Static Image {#image}
 
-The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). The widget’s style properties are as follows:
+The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -566,7 +566,7 @@ An action button can perform various actions such as calling a nanoflow, opening
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/action-button.png" alt="action button"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -662,7 +662,7 @@ The activity indicator widget displays a circular loading indicator. This is how
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/activity-indicator.png" alt="activity indicator"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```javascript
 <container>
@@ -686,7 +686,7 @@ The app events widget allows you to set actions when your app’s network status
 
 The background image widget enables layering one or more widgets on top of an image.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```javascript
 <container>
@@ -708,7 +708,7 @@ The badge widget displays text or values as a badge. This is how a badge widget 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/badge.png" alt="badge"   width="350"  >}}
 
-The widget’s style properties are as follows: 
+The widget's internal structure is as follows: 
 
 ```xml
 <container>
@@ -751,8 +751,6 @@ The default class to style all barcode scanner widgets is named `com_mendix_widg
 The feedback widget allows users to give direct feedback. This is how a feedback widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/feedback-two.png" alt="feedback"   width="350"  >}}
-
-The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -803,7 +801,7 @@ The maps widget supports various digital map providers. This is how a maps widge
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/maps.png" alt="maps"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -825,7 +823,7 @@ The progress bar widget shows percentage of progress. This is how a progress bar
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-bar.png" alt="progress bar"   width="300"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -849,7 +847,7 @@ The progress circle widget displays progress in a circle using positive or negat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-circle.png" alt="progress circle"   width="300"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -878,7 +876,7 @@ The QR code widget generates a QR code based on a value, which a user can then s
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/qr-code.png" alt="qr code"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -901,7 +899,7 @@ The range slider widget allows you to change a range of values using a slider wi
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/range-slider.png" alt="range slider"   width="300"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -933,7 +931,7 @@ The default class to style all range slider inputs is named `com_mendix_widget_n
 
 The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is only supported on iOS apps. Note that `container` styling will only be applied to the safe area.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml {linenos=false}
 <container>content</container>
@@ -961,7 +959,7 @@ The ratings widget allows users to rate an object from 0 to 5. This is how a rat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/ratings.png" alt="ratings"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -990,7 +988,7 @@ The toggle buttons widget allows you to set an enumeration attribute. This is ho
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/toggle-buttons.png" alt="toggle buttons"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -1043,7 +1041,7 @@ The default class to style all video players is named `com_mendix_widget_native_
 
 ### 11.19 Web View
 
-The web view widget allows you to embed static or dynamic websites in your app. The widget’s style properties are as follows:
+The web view widget allows you to embed static or dynamic websites in your app. The widget's internal structure is as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -1057,7 +1055,7 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 
 The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -1077,7 +1075,7 @@ This introduction screen widget displays paginated contents you can swipe throug
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/intro-screen.gif" alt="intro screen"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <fullscreenContainer>
@@ -1145,7 +1143,7 @@ The list view swipe widget can make a list view interactive by adding swipe gest
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view-swipe-buttons.gif" alt="list view swipe"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container>
@@ -1183,7 +1181,7 @@ The bottom sheet widget creates a set of options while blocking interaction with
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container />
@@ -1213,7 +1211,7 @@ The default class to style all bottom sheet widgets is named `com_mendix_widget_
 
 The popup menu widget allows you to show a context menu exactly where the user taps.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container/>
@@ -1280,7 +1278,7 @@ The default class to style all popup menus is named `com_mendix_widget_native_po
 
 The carousel widget allows you to show swipeable items in a carousel.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 </container>
@@ -1658,7 +1656,7 @@ The default class to style all check box inputs is named `com_mendix_widget_nati
 
 The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <angle/>
@@ -1780,7 +1778,7 @@ The default class to style all column chart widgets is named `com_mendix_widget_
 
 The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <container/>
@@ -1814,7 +1812,7 @@ The widget’s style properties are as follows:
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
 
-The widget’s style properties are as follows:
+The widget's internal structure is as follows:
 
 ```xml
 <textInputContainer/>

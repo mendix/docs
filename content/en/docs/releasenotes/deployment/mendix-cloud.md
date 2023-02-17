@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2023
 
+### February 16th, 2023
+
+#### Improvements
+
+* Customers can now download access logs for their applications. The Deploy API has also been updated with this functionality — see [Download Access Logs](/apidocs-mxsdk/apidocs/deploy-api/#download-logs) in *Deploy API* for more information.
+
 ### January 26th, 2023
 
 #### Improvements

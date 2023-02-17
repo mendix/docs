@@ -45,7 +45,7 @@ Here you will choose an app starting point. It is key that you choose a starting
     * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
     * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
 1. Name your app *Quickstart App* and click the **Create app** button.
-1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. After that the project will open on your app’s home page called **Home_Web**:
+1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the app to be downloaded to your development machine. After that the app will open on your app’s home page called **Home_Web**:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/home-web.png" width="450px" alt="Home Web page">}}
 
@@ -85,8 +85,8 @@ Look at the bottom dockable pane of Studio Pro:
 Here you will find several default panes such as:
 
 * **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal (for more information see [Stories Pane](/refguide/stories-pane/))
-* **Changes**: displays a list of all changes in the project since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
-* **Errors**: displays any errors found within your project (for more information see [Errors Pane](/refguide/errors-pane/))
+* **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
+* **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
 
 For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) and [Console](/refguide/view-menu/#console) documents.
 

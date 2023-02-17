@@ -1111,7 +1111,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.20 Download Access Logs 
+### 3.20 Download Access Logs {#download-logs}
 
 #### 3.20.1 Description
 

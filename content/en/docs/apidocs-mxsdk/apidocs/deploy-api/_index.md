@@ -339,6 +339,10 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start
 
 #### 3.6.2 Request
 
+**Request Parameters**
+
+* *AutoSyncDb* (Boolean) : Define whether the database should be synchronized automatically with the model during the start phase of the app.
+
 **Example Request**
 
 ```bash
@@ -348,6 +352,10 @@ Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+
+{
+     "AutoSyncDb" :  true
+}
 ```
 
 #### 3.6.3 Output
@@ -685,6 +693,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). |
 | 403 | ENVIRONMENT_NOT_STOPPED | Environment needs to be stopped. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
+| 422 | ENVIRONMENT_NOT_DEPLOYED | No app deployed to the environment. |
 | 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact Support. |
 
 **Example Output**

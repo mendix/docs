@@ -43,7 +43,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
 
 As a Mendix Administrator, you will find the IdP setup on the **Single Sign-On** tab of your Control Center's [Security](/developerportal/control-center/#security) section.
 
-In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, the Control Center displays a pop-up screen to inform you of known limitations.
+In this overview, you will find your current IdP configurations, both draft versions and the active one. When you create a new configuration, a pop-up screen will inform you of known limitations.
 
 From here you can add a configuration, edit draft versions of a configuration, activate a draft version or de-activate the current IdP configuration.
 
@@ -93,17 +93,11 @@ If your test fails, see the [Troubleshooting](#troubleshooting) section for advi
 
 ## 5 Activating
 
-When you are ready, you can activate the IdP configuration from the overview page. Your users will immediately benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IdP authentication.
-
-As an option, you can inform your users of the change in the sign-in process via a standard email message. This email is a fixed template which cannot be configured. 
-
-Please be aware that there can be only one active IdP configuration at a time. When you activate an IdP configuration while another one is already active, the current active configuration will be de-activated automatically.
+When you are ready, you can activate the IdP configuration from the overview page. Although the changes start to come into effect immediately, updating your users will take some time depending on the number of users in your company. Your users will start to benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix Platform will be scrambled to prevent the users from bypassing your IdP authentication.
 
 ## 6 Deactivating
 
-You can deactivate the IdP configuration at any time. The changes become into effect immediately. Users will be forced to reset their Mendix passwords on first sign-in.
-
-Optionally you can inform your users of the change in the sign-in process via a a standard email message. This email is a fixed template which cannot be configured.
+You can deactivate the IdP configuration at any time. Although the changes start to come into effect immediately, updating your users will take some time depending on the number of users in your company. Users will have to reset their Mendix password to be able to sign-in since it was scrambled upon activation.
 
 ## 7 Microsoft Azure AD
 
@@ -199,9 +193,9 @@ From version 9.18.0, Mendix Studio Pro uses the system browser for signing in to
 
 ### 9.4 IdP Does Not Allow Untrusted Devices
 
-Studio Pro uses an embedded browser for login. Login via embedded browser may not work when customer’s IdP is allowing only for trusted devices and doesn’t recognize the embedded browser.
+Mendix Studio Pro version 9.18.0 and above uses your system browser to login.
 
-Mendix has created an enhancement of Studio Pro that uses system browser to overcome this limitation. This feature is in Private Beta and can be provided on request.
+Versions of Studio Pro lower than 9.18.0 use an embedded browser for login. This may not work when the customer’s IdP only allows trusted devices and doesn’t recognize the embedded browser as a trusted device.
 
 ### 9.5 IdP Does Not Have JWKS Endpoint
 

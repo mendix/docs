@@ -86,7 +86,7 @@ Sets the value of a check box.
 
 None
 
-### Set File Manager<a name="SetFileManager"></a>
+### Set File Manager {#SetFileManager}
 
 #### Function Key
 

@@ -49,7 +49,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     {{% alert color="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/).{{% /alert %}}
 
-1. Data source<a name="data-source"></a>
+1. Data source<a id="data-source"></a>
 
     The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
 
@@ -62,7 +62,7 @@ Add series and configure their properties, each series represents a dataset. For
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
     * **Microflow**: A microflow that returns a list object with data values
 
-2. Data points<a name="data-points"></a>
+2. Data points<a id="data-points"></a>
 
     The attribute(s) within the data source used for the values to be plotted.
 
@@ -130,7 +130,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Tooltip form**: The page to show when a user hovers over a chart plot point
 
-7. Advanced <a name="advanced"></a>
+7. Advanced <a id="advanced"></a>
 
     {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/series-item-advanced.png" alt="Edit series Advanced tab" >}}
 

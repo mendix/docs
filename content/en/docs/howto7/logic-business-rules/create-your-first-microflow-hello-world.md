@@ -16,7 +16,7 @@ This how-to will teach you how to do the following:
 * Create a menu item
 * Create and edit a microflow
 
-## <a name="CreatingaMenuItem"></a>2 Creating a Menu Item
+## 2 Creating a Menu Item {#CreatingaMenuItem}
 
 Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](/howto7/logic-business-rules/triggering-logic-using-microflows/)). For this how-to, you'll be using a menu item to trigger the new microflow.
 

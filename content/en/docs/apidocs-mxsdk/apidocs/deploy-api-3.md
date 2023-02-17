@@ -54,10 +54,10 @@ The {appId} in version 3 is retrieved as the {ProjectId} from the version 1 API.
 
 ### 3.1 Using the API to Change the Technical Contact
 
-The following steps will change the technical contact of the app identified by the UUID {appId}.
+The following steps will change the Technical Contact of the app identified by the UUID {appId}.
 
-1. Set up your authentication PAT. You must have permission to change the technical contact of the app.
-1. Create a request body containing the userId of the new technical contact. For example, to make jane.doe@domain.tld the new technical contact, provide a body as shown below:
+1. Set up your authentication PAT. You must have permission to change the Technical Contact of the app.
+1. Create a request body containing the userId of the new Technical Contact. For example, to make jane.doe@domain.tld the new Technical Contact, provide a body as shown below:
 
     ```json {linenos=false}
     {
@@ -67,7 +67,7 @@ The following steps will change the technical contact of the app identified by t
     }
     ```
 
-1. Call `PATCH /apps/{appId}` to update the technical contact for your app. For example:
+1. Call `PATCH /apps/{appId}` to update the Technical Contact for your app. For example:
 
     ```http {linenos=false}
     PATCH /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e

@@ -1,6 +1,5 @@
 ---
 title: "Differences between Git and SVN"
-linktitle: "Differences between Git and SVN"
 url: /refguide/svn-git-differences/
 category: "Version Control"
 weight: 45
@@ -10,13 +9,9 @@ tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 
 ## Introduction
 
-As of Mendix 9.21, Git is the default version control system in Studio Pro. Git offers [several advantages](version-control-faq/#git-advantages) over SVN, and we believe pathes a way to a stronger and more robust collabaration with your peers. Because of this, there are some difference in the way you commit changes and the way you collaborate. In this document we will walk you through the most prominent changes.
+As of Studio Pro version 9.21, Git is the default version control system in Studio Pro. Git offers [several advantages](version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate. This document describes the most prominent changes between Git and SVN.
 
-{{% alert type="info" %}}
-
-If you still have to migrate to Git, check out our [guide](/developerportal/collaborate/migrate-to-git/).
-
-{{% /alert %}}
+For more information on how to migrate to Git, see [Migrate to Git](/developerportal/collaborate/migrate-to-git/) in the *Developer Portal Guide*.
 
 
 ## 2 Differences in Collaboration: Committing, Pushing, and Updating (Pulling)
@@ -25,9 +20,9 @@ SVN is a centralized version control system, whereas Git is a distributed system
 
 {{< figure src="/attachments/refguide/version-control/image10.png" alt="Local Repository and Team Server" >}}
 
-This means you can fully integrate the changes from your fellow developers locally, without having to do the merge on the remote server. This means these operations will be relatively fast in comparison to SVN.
+This means you can fully integrate the changes from your other developers locally, without having to do the merge on the remote server. This means these operations are relatively fast in comparison to SVN.
 
-Take the following scenario. You are developing a feature together with someone else on the same branch. You both have the same starting point (3). When your colleague commits a change, you can choose to retrieve those changes and integrate them. To enable this, we ask developer to first commit existing changes locally (6), so they can be automatically merged when changes are retrieved from other developers. After this you commit the merged result, and optionally push the merged result (7) so they can be used by your colleague. Because changes are already explicitly committed, you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
+For example, you are developing a feature together with another developer on the same branch. You both have the same starting point (3). When your colleague commits a change, you can choose to retrieve these changes and integrate them. To enable this, we ask developers to first commit existing changes locally (6), so the changes can be automatically merged when they are retrieved by other developers. After this you commit the merged result, and optionally push the merged result (7) to be used by your colleague. Because changes are already explicitly committed, you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
 
 {{< figure src="/attachments/refguide/version-control/image11.png" alt="Incoming changes in Git" >}}
 

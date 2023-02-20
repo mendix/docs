@@ -45,7 +45,7 @@ Here you will choose an app starting point. It is key that you choose a starting
     * **Why choose this template?** — Choosing the **Blank Native Mobile App** template lets you start with an already-configured native mobile navigation profile setup for your app. 
     * **Does that mean this app is native mobile only?** — No. The blank native mobile app template also comes with a responsive web navigation profile configured. This means your app is accessible on both web browsers and natively on mobile devices.
 1. Name your app *Quickstart App* and click the **Create app** button.
-1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the project to be downloaded to your development machine. After that the project will open on your app’s home page called **Home_Web**:
+1. Wait a few minutes for your app to be created, its team server to be initialized, and a local copy of the app to be downloaded to your development machine. After that the app will open on your app’s home page called **Home_Web**:
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/home-web.png" width="450px" alt="Home Web page">}}
 
@@ -58,46 +58,52 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
-Take a look at Studio Pro all at once. There is a lot of power here, but it can be confusing at first glance: 
+Open up your version of Studio Pro and take a look at it all at once. There is a lot of power, but it can be confusing at first glance. Luckily it is easy to understand in sections. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
 
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour.png" width="450px" alt="Marketplace Modules">}}
+Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro-overview/#working-area) where you can work on an open document. Surrounding this work area are various panes which you will learn more about in the sections below. Finally, if you wish to change the language you work in (and that your end-user will use) see the [Status Bar](/refguide/studio-pro-overview/#status-bar) at the bottom.
 
-Luckily, it is easy to understand in sections. See the sections below for more information. For even more detail, see the [Studio Pro Overview](/refguide/studio-pro-overview/).
+The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
-### 3.1 App Structure on the Left
+### 3.1 Top Bar
 
-You can navigate through your app using the App Explorer, the window on the left side of your screen. This is where you can create and explore new documents and modules in your app. Any modules you download from the Marketplace will appear under **Marketplace Modules** > **App** section:
+The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the play (**Run App**) button. 
+
+For more information on the top bar's menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
+
+### 3.2 App Structure on the Left
+
+You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-left.png" alt="App Structure">}}
 
-### 3.2 Bottom Dockable Pane 
+Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
+
+### 3.3 Bottom Dockable Pane 
 
 Look at the bottom dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-bottom.png" width="450px" alt="Bottom Dockable Pane">}}
 
-Here you will find several panels:
+Here you will find several default panes such as:
 
-* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal
-* **Changes**: displays a list of all changes in the project since the last commit to the team server (also used to resolve conflicts with other team members when updating)
-* **Errors**: displays any errors found within your project (can also display deprecations and warnings)
-* **MxAssist Performance Bot**: an AI peer programmer bot which analyzes your app's model and identifies any issues which may negatively impact your app’s performance
-* **Console**: a live feed of your app’s console as the app runs (you can filter for additional log levels by clicking on the **Advanced** drop-down list)
+* **Stories**: displays your active user stories added on your app’s Stories page in the Developer Portal (for more information see [Stories Pane](/refguide/stories-pane/))
+* **Changes**: displays a list of all changes in the app since the last commit to the team server (for more information see [Changes Pane](/refguide/changes-pane/))
+* **Errors**: displays any errors found within your app (for more information see [Errors Pane](/refguide/errors-pane/))
 
-### 3.3 Right Dockable Pane 
+For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
+
+### 3.4 Right Dockable Pane
 
 Look at the right dockable pane of Studio Pro:
 
 {{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" alt="Right Dockable Pane">}}
 
-Here you will find more panels:
+Here you will find more default panes:
 
-* **Data Hub**: displays [External Entities](/refguide/external-entities/) (entities from other apps) which are available for use in your app (you will not use this panel in this guide)
-* **Properties**: displays all the properties of the currently selected context element
-* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (it displays page elements while in the page editor or displays actions when editing a microflow or nanoflow)
-* **Connector**: quickly links data to pages⁠—using the connector you could drag an entity into a data view or data grid to quickly display your app’s data on a page
+* **Properties**: displays all the properties of the currently selected context element (for more information see [Properties](/refguide/view-menu/#properties))
+* **Toolbox**: a list of things you can add to the current document⁠—the **Toolbox** changes depending on context (for more information see [Toolbox](/refguide/view-menu/#toolbox))
 
-The view you see above is completely editable. You can add or remove panels as desired (you can find more windows under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panels by enabling Distraction Free Mode with <kbd>Shift</kbd> + <kbd>F11</kbd>.
+For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
 ## 4 Creating Your App's Domain Model
 

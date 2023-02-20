@@ -12,7 +12,7 @@ Get up and running with the Mendix Platform and start developing your first app 
 
 When you complete Part 1, you will have a photo album app that will allow users to upload, edit, and display pictures so that their cherished memories will be preserved. This guide, Part 1, will show you how to build a responsive web app compatible with all desktop, tablet, and mobile browsers.
 
-### 1.2 Getting to Know Mendix
+### 1.1 Getting to Know Mendix
 
 This tutorial will teach you several key Mendix concepts, such how to add an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), create some basic pages which use building blocks and design properties, and model your first microflow. 
 
@@ -33,7 +33,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * [Download](https://marketplace.mendix.com/index3.html) and [install](/refguide/install/) Mendix Studio Pro
 * If you are working on a Mac, please complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 2 Choosing an App Template with a Responsive Navigation Profile
+## 3 Choosing an App Template with a Responsive Navigation Profile
 
 Here you will choose an app starting point. It is key that you choose a starting point with a configured responsive web navigation profile, as the app you will make in this guide needs to work for web browsers:
 
@@ -54,7 +54,7 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 * [Layouts](/refguide/layout/): define a page's structure (such as navigation element location, areas for content, and more)
 * [Templates](/refguide/page-templates/): are completely editable starting points for new pages, and you can also start with a blank template so you can build from scratch
 
-## 3 Exploring Studio Pro
+## 4 Exploring Studio Pro
 
 Now that you have completed your first tasks in Studio Pro, this section will give you a quick and optional tour. If you know Studio Pro well already, you can skip this section.
 
@@ -64,13 +64,13 @@ Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro
 
 The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under **View** as well as reset your view back to default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
-### 3.1 Top Bar
+### 4.1 Top Bar
 
 The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app with the play (**Run App**) button. 
 
 For more information on the top bar's menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
 
-### 3.2 App Structure on the Left
+### 4.2 App Structure on the Left
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), the window on the left side of your screen. This is where you can create and explore new documents and modules in your app:
 
@@ -78,7 +78,7 @@ You can navigate through your app using the [App Explorer](/refguide/app-explore
 
 Any [modules](/refguide/modules/) you download from the Marketplace will appear under **Marketplace Modules** > **App** section.
 
-### 3.3 Bottom Dockable Pane 
+### 4.3 Bottom Dockable Pane 
 
 Look at the bottom dockable pane of Studio Pro:
 
@@ -92,11 +92,11 @@ Here you will find several default panes such as:
 
 For additional information on bottom default panes, see the [MxAssist Performance Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
-### 3.4 Right Dockable Pane
+### 4.4 Right Dockable Pane
 
 Look at the right dockable pane of Studio Pro:
 
-{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" alt="Right Dockable Pane">}}
+{{< figure src="/attachments/refguide/quickstart-guide/part1/tour-right.png" width="350px" alt="Right Dockable Pane">}}
 
 Here you will find more default panes:
 
@@ -105,11 +105,11 @@ Here you will find more default panes:
 
 For additional information on right default panes, see the [Data Hub](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
-## 4 Creating Your App's Domain Model
+## 5 Creating Your App's Domain Model
 
 In Mendix you define your app's data structure in the Domain Model.
 
-### 4.1 Understanding the Domain Model
+### 5.1 Understanding the Domain Model
 
 The domain model is a visual representation of your app’s database. Each module in your app (modules created by you or your team, downloaded from the Marketplace, or System Modules) can all have their own individual models which are combined and translated into a database automatically at runtime. 
 
@@ -119,7 +119,7 @@ When you run your app locally or deploy it for the first time, the runtime compi
 
 Mendix by default uses its own built-in HSSQL database, but Mendix also supports several alternative database types such as IBM DB2, PostgreSQL, Microsoft SQL Server, and others. 
 
-### 4.2 Creating an Entity to Store the Images
+### 5.2 Creating an Entity to Store the Images
 
 1. To open the domain model for the native mobile module, double-click it in the **App Explorer** pane on the left side:
 
@@ -152,7 +152,7 @@ Next you must add some attributes. Remember, your entity now inherits many prope
 
     {{< figure src="/attachments/refguide/quickstart-guide/part1/description-attributes.png" width="450px" alt="Entity properties">}}
 
-## 5 Creating Your App's User Interface
+## 6 Creating Your App's User Interface
 
 Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
@@ -212,7 +212,7 @@ Your **Images** will now be displayed from the database, but the **Labels** on t
 
 1. Repeat this process for the label below with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
-## 6 Defining Logic Using Microflows
+## 7 Defining Logic Using Microflows
 
 There is only one step left before you can run and test your photo album app app. You have created a place to store images and a page to display them on. Most of the functionality for creating, editing, and deleting images has been handled automatically. But what if you want your app to do some custom logic? For example, what if you wanted to validate that the user has entered text for the **Title** and **Description** fields before they click **Save**? In Mendix, you can achieve this using a Microflow.
 
@@ -273,7 +273,7 @@ Congratulations! You successfully completed Part 1 of the quickstart guide. You 
 
 To continue learning, see Part 2: [Add a Native Mobile App](/refguide/quickstart-part2/).
 
-## 7 Read More
+## 8 Read More
 
 * [Mendix Academy](https://academy.mendix.com/) – complete learning paths to build general Mendix skills
     * [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the course we recommend for new users who are also experienced developers

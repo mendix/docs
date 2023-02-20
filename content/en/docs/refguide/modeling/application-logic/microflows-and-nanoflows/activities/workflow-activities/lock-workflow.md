@@ -1,7 +1,7 @@
 ---
 title: "Lock Workflow"
 url: /refguide/lock-workflow/
-weight: 10
+weight: 70
 tags: ["studio pro", "lock workflow", "workflow lock"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -16,25 +16,27 @@ This activity was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.2
 
 ## 1 Introduction
 
-The **Lock workflow** activity can be used to lock [workflow](/refguide/workflows/). 
-Please note that we put lock on workflow, not the workflow instance.
-The information if the workflow is locked is stored in **IsLocked** attribute of[WorkflowDefinition] entity(/refguide/workflows/).
-If the workflow is locked, new workflow instances from the selected workflow can not be created and it will result in a runtime error. To handle the error, see [error handling in microflows](/refguide/error-handling-in-microflows/).
-This microflow activity allows developers to build a workflow administration function that prevents further business or data damage in scenario's where continuation is not possible.
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/lock-workflow/lock-workflow.jpg" >}}
+The **Lock workflow** activity can be used to lock a [workflow](/refguide/workflows/). 
 
 {{% alert color="info" %}}
 
-To unlock the workflow, see the [unlock workflow activity](/refguide/unlock-workflow/).
+When the workflow is locked, it is the workflow definition that is locked, not the workflow instance.
 
 {{% /alert %}}
 
-{{% alert color="warning" %}} 
+This microflow activity allows developers to build a function for the workflow administration that prevents the process to go further or prevents a data damage in a scenario where continuation is not possible. 
 
-When you try the lock the workflow which has been already locked, it will result in a runtime error. To handle the error, see [error handling in microflows](/refguide/error-handling-in-microflows/).
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/lock-workflow/lock-workflow.jpg" >}}
+
+The information whether the workflow is locked is stored in the **IsLocked** attribute of the **WorkflowDefinition** entity. For more information, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+
+{{% alert color="warning" %}}
+
+If the workflow is locked, new workflow instances from the selected workflow cannot be created and it will result in a Runtime error. If you try the lock the workflow which has been already locked, it will also result in a Runtime error.  For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
 
 {{% /alert %}}
+
+For information on unlocking the workflow, see the [Unlock Workflow](/refguide/unlock-workflow/).
 
 ## 2 Properties
 
@@ -61,19 +63,22 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 The workflow that is locked by this activity. 
 
-### 3.2 Pause Instances {#workflow}
+### 3.2 Pause Instances 
 
-With this option, all existing instances of selected workflow which are in Incompatible or InProgress state are paused.
+With this option, all existing instances of the selected workflow which are in Incompatible or In-Progress state are paused.
 We do not pause the Aborted and Completed workflow instances because those are final states and there is no way to revert those instances.
-For Failed workflow instances, we don't pause because because even if you unpause upon unlock, they would not start to run automatically and you would lose the failure reason.
-Please see the table below for all workflow state transitions upon lock and unlock the workflow.
+It is not possible to pause Failed workflow instances, because even if you unpause them by unlocking the workflow, they would not start to run automatically and you would lose data on the reason of a failure.
+
 This option is enabled by default.
 
-#### 3.2.1 Workflow State Transitions Upon Lock And Unlock {#workflow-state-transitions}
+#### 3.2.1 Workflow State Transitions Upon Lock And Unlock
+
+In the table below you can see all workflow state transitions upon lock and unlock the workflow.
+
 | State | State After Pausing Instances Upon Lock | State After Reverting Instances Upon Unlock |
 | :----: | :----: | :----: |
-| InProgress | **Paused** | **InProgress** |
-| Incompatible | **Paused** | **Incompatible** |
+| InProgress | Paused | InProgress |
+| Incompatible | Paused | Incompatible |
 | Paused | Paused | Paused |
 | Failed | Failed | Failed |
 | Aborted | Aborted | Aborted |

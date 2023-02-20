@@ -1,7 +1,7 @@
 ---
 title: "Unlock Workflow"
 url: /refguide/unlock-workflow/
-weight: 10
+weight: 80
 tags: ["studio pro", "unlock workflow", "workflow unlock"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -15,16 +15,18 @@ This activity was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.2
 
 ## 1 Introduction
 
-The **Unlock workflow** activity can be used to unlock [workflow](/refguide/workflows/). 
+The **Unlock workflow** activity can be used to unlock a [workflow](/refguide/workflows/), i.e. a workflow definition. 
 If the workflow is unlocked, new instances of the workflow can be created.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow.jpg" >}}
 
 {{% alert color="warning" %}} 
 
-When you try the unlock the workflow which is not locked, it will result in a runtime error. To handle the error, see [error handling in microflows](/refguide/error-handling-in-microflows/).
+When you try the unlock the workflow which is not locked, it will result in a Runtime error. For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
 
 {{% /alert %}}
+
+For information on locking the workflow, see the [Lock Workflow](/refguide/lock-workflow/).
 
 ## 2 Properties
 
@@ -54,7 +56,8 @@ The workflow that is unlocked by this activity.
 ### 3.2 Unpause Instances {#workflow}
 
 With this option, all paused running workflow instances are reverted to their previous state.
-For more information about the state transitions, please see the [table](/refguide/unlock-workflow/#)
+For more information on workflow state transitions, see the [Workflow State Transitions Upon Locking and Unlocking](/refguide/lock-workflow/#workflow-state-transitions) section in *Lock Workflow*.
+
 This option is enabled by default.
 
 ## 4 Common Section {#common}

@@ -73,6 +73,8 @@ To quickly configure the connection to AWS Lambda by using an example microflow,
 4. Configure the required parameters.
     For example, for the **DeleteFunction** example microflow, you must specify the **Function name** that you want to delete.
 
+## 4 Technical Reference
+
 To help you work with the AWS Lambda connector, the following sections of this document list the available entities and activities that you can use in your application.
 
 ### 4.1 Domain Model {#domain-model}

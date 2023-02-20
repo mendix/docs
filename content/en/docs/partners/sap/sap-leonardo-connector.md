@@ -45,7 +45,7 @@ To use the Connector for SAP Leonardo Machine Learning Foundation, you need the 
 
     5. Use the API key in your app, as described in the next section.
 
-## 3 Setting up the API Key {#api-key}
+## 3 Setting up the API Key {#sap-leonardo-api-key}
 
 The Connector for SAP Leonardo Machine Learning Foundation actions are available in your microflows, once you have imported the Connector for SAP Leonardo Machine Learning Foundation module from the Mendix Marketplace.
 

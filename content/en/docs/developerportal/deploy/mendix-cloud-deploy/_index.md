@@ -44,7 +44,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | Runtime settings | Not available. | Configurable through runtime and settings in the Developer Portal. |
 | Scalability | Only one instance and a fixed amount (1 GiB) of memory. | Configurable in the Developer Portal. |
 | Metrics, alerts, and log levels | Not available. | Available. |
-| Historic archived logs | Not available, only live logs are available. | Available. |
+| Historic app logs | Not available, only live logs are available. | Available. |
 | Backups | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
 | Support | No support. | Depending on license option. |
 

@@ -24,7 +24,7 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 To create a new app click **Create App**, which will open a page where you can choose a starting pointing for your new app:
 
-{{< figure src="/attachments/developerportal/create-app.png" >}}
+{{< figure src="/attachments/developerportal/create-app.png" width="150" >}}
 
 On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile/). You can also click the **+** icon to create a new app.
 
@@ -34,7 +34,7 @@ A notification in the form of a red dot next to **Get Started with Mendix** will
 
 On the left side of the top bar, you open an access menu by clicking the **Switch to** menu:
 
-{{< figure src="/attachments/developerportal/switcher.png"   width="300"  >}}
+{{< figure src="/attachments/developerportal/switcher.png" width="300" >}}
 
 You can then access the following parts of the Mendix Platform:
 

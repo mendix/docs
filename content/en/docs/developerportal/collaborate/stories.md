@@ -42,7 +42,7 @@ For more information on Sprints, see the [Sprint Actions](#sprint-actions) secti
 Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **Create Story** dialog box and fill in the following details:
 
 * **Add a title** for the story
-* **Add a label ** to organize your work
+* **Add a label** to organize your work
 * **Description** – a description of the story
 * **Tasks** – break down your work into up to 20 tasks
 * Story status – select **To-do** (default), **Running**, or **Done** from the drop-down menu

@@ -119,7 +119,7 @@ The rest of the configuration can be performed through the app.
 1. Open the **Clients** tab.
 1. Click **New Client Registration**.
 
-    You can register a new client in one of two ways. Follow one of the sets of instructions below:
+    You can register a new client (an app using the OIDC SSO module for sign in which identifies this app as its IdP) in one of two ways. Follow one of the sets of instructions below:
 
 #### 3.3.1 Automatic Client Registration
 

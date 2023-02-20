@@ -44,14 +44,14 @@ In order to use the Amazon Rekognition service, you must authenticate with AWS. 
     The Amazon Rekognition connector supports both session and static credentials. By default, the connector is pre-configured to use static credentials, but you may want to switch to session credentials, for example, to increase the security of your app. For an overview of both authentication methods, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
 3. In the **App Explorer**, double-click the **Settings** for your app.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/appsettings.png" alt="The Settings option in the App Explorer">}}
+    {{< figure src="/attachments/appstore/connectors/aws-rekognition/appsettings.png" alt="The Settings option in the App Explorer">}}
 
 4. In the **App Settings** dialog, in the **Configurations** tab, edit or create an authentication profile.
     If you have multiple sets of AWS credentials, or if you want to use both static and session credentials for different use cases, create separate authentication profiles for each set of credentials.
 5. In the **Edit Configuration** dialog, in the **Constants** tab, click **New** to add the constants required for the configuration.
 6. In the **Select Constants** dialog, find and expand the **AmazonRekognitionConnector** > **ConnectionDetails** section.
 
-    {{< figure src="/attachments/appstore/connectors/aws-dynamodb/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
+    {{< figure src="/attachments/appstore/connectors/aws-rekognition/credentials.png" alt="The SessionCredentials and StaticCredentials items in the ConnectionDetails section">}}
 
 7. Depending on your selected authentication type, configure the required parameters for the **StaticCredentials** or **SessionCredentials**.
 

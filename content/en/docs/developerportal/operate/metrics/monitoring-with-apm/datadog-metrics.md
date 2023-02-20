@@ -23,7 +23,7 @@ For more information on the data you can send to Datadog, see [Monitoring Your M
 
 ## 2 Setting Up Datadog For Your Mendix App
 
-### 2.1 Datadog API Key{#api-key}
+### 2.1 Datadog API Key {#datadog-api-key}
 
 To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section to learn how to get one.
 
@@ -67,7 +67,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
     {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Dropdown containing custom environment variable names" >}}
 
-6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
+6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#datadog-api-key) section, above, as the *Value* of the Environment Variable.
 7. Add a second **Custom Environment Variable**:
 
     * **Name**: *DD_LOG_LEVEL*

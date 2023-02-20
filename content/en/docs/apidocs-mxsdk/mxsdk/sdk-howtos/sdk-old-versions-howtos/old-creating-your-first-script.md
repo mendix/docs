@@ -50,7 +50,7 @@ After setting up all the prerequisites, follow these steps to write your first s
     main();
     ```
 
-3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/developerportal/community-tools/mendix-profile/#api-keys), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
+3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/developerportal/community-tools/mendix-profile/#profile-api-key), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
 
 ## 3 Code Explanation
 

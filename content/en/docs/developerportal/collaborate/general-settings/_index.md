@@ -114,7 +114,7 @@ Specific steps for configuring different cloud platforms are provided here:
 * [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
 * [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
 
-## 5 API Keys {#api-keys}
+## 5 API Keys {#general-settings-api-keys}
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can manage app-specific API keys.

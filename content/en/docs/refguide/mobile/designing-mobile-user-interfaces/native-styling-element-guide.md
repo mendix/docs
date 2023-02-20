@@ -91,13 +91,8 @@ The list view shows a list of objects arranged vertically or horizontally. For m
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view.png" alt="list view"   width="350"  >}}
 
-This is how the widget’s code is structured:
-
-```xml
-<container>
-	<listItem>content</listItem>
-	<listItem>content</listItem>
-</container>
+```javascript
+// Jonathan, here is a basic JS code snippet for you to fill in. If it would be more useful for the snippet to have pre-filled info/formatting/brackets, please let me know and I will put that type of improved snippet in each widget category.
 ```
 
 The widget's style properties are as follows:
@@ -119,13 +114,7 @@ Text widgets are used in almost all app pages. Because of their ubiquity, learni
 
 ### 4.1 Text
 
-The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). The widget's internal structure is as follows:
-
-```xml
-<container>
-	<text>content</text>
-</container>
-```
+The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). 
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -136,13 +125,7 @@ The default class to style all texts is named `Text`.
 
 ### 4.2 Page Title 
 
-The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](/refguide/page-title/). The widget's internal structure is as follows:
-
-```xml
-<container>
-	<text>Page Title</text>
-</container>
-```
+The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](/refguide/page-title/). 
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -169,43 +152,9 @@ The widget’s style properties are divided over several objects: `LayoutGrid`, 
 
 `noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to *No*.
 
-The main `LayoutGrid`:
-
-```xml {linenos=false}
-<container></container>
-```
-
-The `row`, `noGuttersRow`:
-
-```xml {linenos=false}
-<container></container>
-```
-
-The `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, `noGutters`:
-
-```xml {linenos=false}
-<container></container>
-```
-
-The resulting DOM looks like this:
-
-```xml
-<container>
-	<row>
-		<col></col>
-	</row>
-</container>
-```
-
 ### 5.2 Container 
 
-A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. The widget's internal structure is as follows:
-
-```xml
-<container>
-	content
-</container>
-```
+A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. 
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -221,24 +170,6 @@ The default class to style all page titles is named `Container`.
 Tab containers are used to show information categorized into multiple tab pages. Tab containers can help display information which exceeds a device’s screen space. This is how a default tab container widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/tab-container.png" alt="tab container"   width="350"  >}}
-
-This is how the widget’s code is structured:
-
-```xml
-<container>
-	<tabBar>
-		<tab>
-			<activeLabel>PAGE 1</activeLabel>
-			<badgeContainer><badgeCaption /></badgeContainer>
-		</tab>
-		<tab>
-			<label>PAGE 2</label>
-		</tab>
-		<indicator>
-	<tabBar>
-	content
-</container>
-```
 
 The widget's style properties are as follows:
 
@@ -262,13 +193,7 @@ The default class to style all tab containers is named `TabContainer`.
 
 ### 5.4 Scroll Container
 
-A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing.  The widget's internal structure is as follows:
-
-```xml
-<container>
-	scrollable content
-</container>
-```
+A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing. 
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -285,20 +210,6 @@ Input elements are typically used to show data to the user and allow them to edi
 A text box can be used to display or edit a textual value. This is how a text box widget with validation feedback and a plain text box widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/text-box.png" alt="text box"   width="350"  >}}
-
-The widget’s style properties are structured as follows:
-
-```xml
-<container>
-	<label>Text box</label>
-	<inputError>Content invalid</inputError>
-	<validationMessage>Input validation feedback message</validationMessage>
-</container>
-<container>
-	<label>Text box</label>
-	<input>Valid text</input>
-</container>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -332,49 +243,6 @@ The default class to style all text areas is named `TextArea`.
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
 Since Studio Pro v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
-
-The widget’s render hierarchy is as follows for non-uniform:
-
-```xml
-<container>
-	<label>Drop down enumeration</label>
-	<value>Content invalid</value>
-	<validationMessage>Validation feedback enumeration</validationMessage>
-</container>
-<picker>
-	<pickerBackdropIOS/>
-	<pickerTopIOS><button>close</button></pickerTopIOS>
-	<pickerIOS>
-		<pickerItemIOS>First</pickerItemIOS>
-		<pickerItemIOS>Second</pickerItemIOS>
-		<pickerItemIOS>Third</pickerItemIOS>
-	</pickerIOS>
-</picker>
-```
-
-The widget’s render hierarchy is as follows for uniform:
-
-```xml
-<container>
-	<label>Drop down enumeration</label>
-    <valueContainer>
-        <value>First</value>
-	<icon/>
-    </valueContainer>
-	<validationMessage>Validation feedback enumeration</validationMessage>
-</container>
-<menuWrapper>
-	<selectedItemContainer>
-		<selectedItem>First</selectedItem>    <= Selected
-	</selectedItemContainer>
-    <itemContainer>
-        <item>Second</item>
-    </itemContainer>
-    <itemContainer>
-        <item>Third</item>
-    </itemContainer>
-</menuWrapper>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -411,48 +279,6 @@ This is how a check box widget in checkbox render mode looks by default:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box-checkbox.png" alt="check box in checkbox render mode"   width="350"  >}}
 
-The widget’s style properties structure is as follows:
-
-```xml
-<container/>
-<containerDisabled/>
-<label>
-    <numberOfLines/>
-</label>
-<labelDisabled/>
-<input>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</input>
-<inputDisabled>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputDisabled>
-<inputError>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputError>
-<checkboxInput>
-    <color/>
-    <size/>
-</checkboxInput>
-<checkboxInputDisabled>
-    <color/>
-    <size/>
-</checkboxInputDisabled>
-<checkboxInputDisabled>
-    <color/>
-    <size/>
-</checkboxInputDisabled>
-<validationMessage/>
-```
-
 | Element | Style Properties    | Description | Render mode |
 | --- | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   | Both |
@@ -481,21 +307,6 @@ The default class to style all check box inputs is named `Checkbox`.
 A date picker is an input widget that can be used to display and edit date or time attributes. This is how a date picker widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/date-picker.png" alt="date picker"   width="300"  >}}
-
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<label>Drop down enumeration</label>
-	<value>Content invalid</value>
-	<validationMessage>Validation feedback enumeration</validationMessage>
-	<pickerBackdropIOS>iOS picker modal shadow container
-		<pickerIOS>iOS picker
-			<pickerTopIOS>iOS picker modal header</pickerTopIOS>
-		</pickerIOS>
-	</pickerBackdropIOS>
-</container>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -531,13 +342,7 @@ Images, videos and files help your user app manage images and other files. For m
 
 ### 7.1 Static Image {#image}
 
-The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). The widget's internal structure is as follows:
-
-```xml
-<container>
-	<image/>
-</container>
-```
+The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](/refguide/image/). 
 
 | Element             | Style Properties                    | Description                                                  |
 | ------------------- | ----------------------------------- | ------------------------------------------------------------ |
@@ -566,14 +371,6 @@ An action button can perform various actions such as calling a nanoflow, opening
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/action-button.png" alt="action button"   width="350"  >}}
 
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<icon/><caption>primary</caption>
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |    |
@@ -593,16 +390,6 @@ The default class to style all actions buttons is named `ActionButton`. However,
 
 To style pages, you can add classes to a page or its layout. The status bar and header are part of a page and can also be styled this way.
 
-```xml
-<page>
-	<statusBar/>
-	<header/>
-	<container>
-		application content
-	</container>
-</page>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `statusBar` | `barStyle` | The style of the status bar, which can be either `dark-content` (black text) or `light-content` (white text). |
@@ -620,23 +407,6 @@ The default classes for layouts and pages are `Layout` and `Page`.
 The navigation consists of the bottom bar (which allows users to navigate within your app) and the progress overlay (which can be used to show a loading indicator while waiting for something to load). This is how navigation could look like in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/nav-widget.png" alt="navigation widget"   width="300"  >}}
-
-The navigation style properties are as follows:
-
-```xml
-<app>
-	<page/>
-	<bottomBar/>
-<app>
-<progressOverlay>
-	<background>
-		<container>
-			<activityIndicator/>
-			<text/>
-		</container>
-	</background>
-</progressOverlay>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -662,14 +432,6 @@ The activity indicator widget displays a circular loading indicator. This is how
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/activity-indicator.png" alt="activity indicator"   width="350"  >}}
 
-The widget's internal structure is as follows:
-
-```javascript
-<container>
-	<indicator/>
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
@@ -686,14 +448,6 @@ The app events widget allows you to set actions when your app’s network status
 
 The background image widget enables layering one or more widgets on top of an image.
 
-The widget's internal structure is as follows:
-
-```javascript
-<container>
-	<image />
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
@@ -708,14 +462,6 @@ The badge widget displays text or values as a badge. This is how a badge widget 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/badge.png" alt="badge"   width="350"  >}}
 
-The widget's internal structure is as follows: 
-
-```xml
-<container>
-	<text>New</text>
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
@@ -726,14 +472,6 @@ The default class to style all badges is named `com_mendix_widget_native_badge_B
 ### 11.5 Barcode Scanner
 
 The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
-
-The widget's style properties are as follows:
-
-```javascript
-<container>
-        <mask />
-<container />
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -823,15 +561,6 @@ The progress bar widget shows percentage of progress. This is how a progress bar
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-bar.png" alt="progress bar"   width="300"  >}}
 
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<bar><fill/></bar>
-	<validationMessage/>
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
@@ -846,15 +575,6 @@ The default class to style all progress bars is named `com_mendix_widget_native_
 The progress circle widget displays progress in a circle using positive or negative values. This is how a progress circle widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/progress-circle.png" alt="progress circle"   width="300"  >}}
-
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<circle><fill/></circle>
-	<validationMessage/>
-</container>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -876,14 +596,6 @@ The QR code widget generates a QR code based on a value, which a user can then s
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/qr-code.png" alt="qr code"   width="350"  >}}
 
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<qrcode/>
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |   |
@@ -898,20 +610,6 @@ The default class to style all QR codes is named `com_mendix_widget_native_qrcod
 The range slider widget allows you to change a range of values using a slider with maximum and minimum bound values. This is how a range slider widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/range-slider.png" alt="range slider"   width="300"  >}}
-
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<track><highlight/><marker/></track>
-	<validationMessage/>
-</container>
-
-<container>
-	<trackDisabled><highlightDisabled/><markerDisabled/></trackDisabled>
-	<validationMessage/>
-</container>
-```
 
 | Element | Style Properties    | Description |
 | ---| --- | --- |
@@ -932,10 +630,6 @@ The default class to style all range slider inputs is named `com_mendix_widget_n
 The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is only supported on iOS apps. Note that `container` styling will only be applied to the safe area.
 
 The widget's internal structure is as follows:
-
-```xml {linenos=false}
-<container>content</container>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -959,18 +653,6 @@ The ratings widget allows users to rate an object from 0 to 5. This is how a rat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/ratings.png" alt="ratings"   width="350"  >}}
 
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<icon/><icon/><icon/><icon/><icon/>
-</container>
-
-<containerDisabled>
-	<icon/><icon/><icon/><icon/><icon/>
-</containerDisabled>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
@@ -987,24 +669,6 @@ The default class to style all rating inputs is named `com_mendix_widget_native_
 The toggle buttons widget allows you to set an enumeration attribute. This is how a toggle buttons widget could look in an app:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/toggle-buttons.png" alt="toggle buttons"   width="350"  >}}
-
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<button><text>Standard</text></button>
-	<activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
-	<button><text>Hybrid</text></button>
-	<validationMessage/>
-</container>
-
-<containerDisabled>
-	<button><text>Standard</text></button>
-	<activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
-	<button><text>Hybrid</text></button>
-	<validationMessage/>
-</containerDisabled>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -1055,14 +719,6 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 
 The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more.
 
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	{content}
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
@@ -1074,52 +730,6 @@ The default class to style all animation widgets is named `com_mendix_widget_nat
 This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/intro-screen.gif" alt="intro screen"   width="350"  >}}
-
-The widget's internal structure is as follows:
-
-```xml
-<fullscreenContainer>
-	content
-	<paginationContainer>
-		<dotStyle/><activeDotStyle/><dotStyle/>
-	</paginationContainer>
-	<paginationAbove.buttonsContainer>
-		<buttonSkip.container>
-			<icon/><caption>Skip</caption>
-		</buttonSkip.container>
-		<buttonPrevious.container>
-			<icon/><caption>Back</caption>
-		</buttonPrevious.container>
-		<buttonNext.container>
-			<icon/><caption>Next</caption>
-		</buttonNext.container>
-		<buttonDone.container>
-			<icon/><caption>Done</caption>
-		</buttonDone.container>
-	</paginationAbove.buttonsContainer>
-</fullscreenContainer>
-
-<popupContainer>
-	content
-	<paginationBetween>
-		<buttonSkip.container>
-			<icon/><caption>Skip</caption>
-		</buttonSkip.container>
-		<buttonPrevious.container>
-			<icon/><caption>Back</caption>
-		</buttonPrevious.container>
-		<paginationContainer>
-			<paginationText>4 / 5</paginationText>
-		</paginationContainer>
-		<buttonNext.container>
-			<icon/><caption>Next</caption>
-		</buttonNext.container>
-		<buttonDone.container>
-			<icon/><caption>Done</caption>
-		</buttonDone.container>
-	</paginationBetween>
-</popupContainer>
-```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
@@ -1142,20 +752,6 @@ The default class to style all into screen widgets is named `com_mendix_widget_n
 The list view swipe widget can make a list view interactive by adding swipe gestures and extra buttons in the background behind a list item:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view-swipe-buttons.gif" alt="list view swipe"   width="350"  >}}
-
-The widget's internal structure is as follows:
-
-```xml
-<container>
-	<leftAction>
-		{Left background}
-	</leftAction>
-	{Foreground}
-	<rightAction>
-		{Right background}
-	</rightAction>
-</container>
-```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
@@ -1181,20 +777,6 @@ The bottom sheet widget creates a set of options while blocking interaction with
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  >}}
 
-The widget's internal structure is as follows:
-
-```xml
-<container />
-<containerWhenExpandedFullscreen />
-<modal />
-<modalItems>
-	<defaultStyle />
-	<primaryStyle />
-	<dangerStyle />
-	<customStyle />
-</modalItems>
-```
-
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. | |
@@ -1210,31 +792,6 @@ The default class to style all bottom sheet widgets is named `com_mendix_widget_
 ### 11.24 Popup Menu
 
 The popup menu widget allows you to show a context menu exactly where the user taps.
-
-The widget's internal structure is as follows:
-
-```xml
-<container/>
-<buttonContainer/>
-<custom>
-	<containerStyle/>
-	<itemStyle>
-		</rippleColor>
-	</itemStyle>
-</custom>
-<basic>
-    <containerStyle/>
-    <dividerColor/>
-    <itemStyle>
-        <ellipsizeMode/>
-	</rippleColor>
-        <defaultStyle/>
-        <primaryStyle/>
-        <dangerStyle/>
-        <customStyle/>
-    </itemStyle>
-<basic/>
-```
 
 A main object has four objects.
 
@@ -1277,36 +834,6 @@ The default class to style all popup menus is named `com_mendix_widget_native_po
 ### 11.25 Carousel
 
 The carousel widget allows you to show swipeable items in a carousel.
-
-The widget's internal structure is as follows:
-
-```xml
-</container>
-<cardLayout>
-    </slideItem>
-    </inactiveSlideItem>
-    </indicator>
-    <pagination>
-        </container>
-        </dotStyle>
-        </inactiveDotStyle>
-        </dotContainerStyle>
-        </text>
-    </pagination>
-</cardLayout>
-<fullWidthLayout>
-    </slideItem>
-    </inactiveSlideItem>
-    </indicator>
-    <pagination>
-        </container>
-        </dotStyle>
-        </inactiveDotStyle>
-        </dotContainerStyle>
-        </text>
-    </pagination>
-</fullWidthLayout>
-```
 
 Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
 
@@ -1351,22 +878,6 @@ The signature widget allows you to draw and save a signature. The signature widg
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/signature.png" alt="signature"   width="350"  >}}
 
-The widget’s style properties are structured as follows:
-
-```xml
-<container>
-    <signature/>
-    <buttonWrapper>
-        <Button>
-            <Caption>Clear</Caption>
-        </Button>
-        <Button>
-            <Caption>Save</Caption>
-        </Button>
-    </buttonWrapper>
-</container>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   |
@@ -1388,36 +899,6 @@ The default class to style all text boxes is named `com_mendix_widget_native_sig
 ### 11.27 Line Chart
 
 The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
-
-The widget consists of the following elements:
-
-```xml
-<container/>
-<errorMessage/>
-<chart/>
-<grid/>
-<xAxis>
-	<label/>
-</xAxis>
-<yAxis>
-	<label/>
-</yAxis>
-<legend>
-	<container/>
-	<item/>
-	<indicator/>
-	<label/>
-</legend>
-<lines>
-	<customLineStyles>
-		<any_custom_line_style_name>
-			<line/>
-			<markers/>
-		</any_custom_line_style_name>
-	</customLineStyles>
-</lines>
-<lineColorPalette/>
-```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
@@ -1470,40 +951,6 @@ The default class to style all line chart widgets is named `com_mendix_widget_na
 
 The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
 
-The widget consists of the following elements:
-
-```xml
-<container/>
-<errorMessage/>
-<chart/>
-<grid/>
-<xAxis>
-	<label/>
-</xAxis>
-<yAxis>
-	<label/>
-</yAxis>
-<legend>
-	<container/>
-	<item/>
-	<indicator/>
-	<label/>
-</legend>
-<domain>
-    <padding/>
-</domain>
-<bars>
-    <barsOffset/>
-    <barColorPalette/>
-	<customBarStyles>
-		<any_custom_bar_style_name>
-			<bar/>
-			<label/>
-		</any_custom_bar_style_name>
-	</customBarStyles>
-</bars>
-```
-
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -1555,29 +1002,6 @@ The default class to style all bar chart widgets is named `com_mendix_widget_nat
 
 The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
 
-The widget consists of the following elements:
-
-```xml
-<container/>
-<slices>
-    <customStyles>
-        <any_custom_key>
-            <slice/>
-            <label/>
-        </any_custom_key>
-    </customStyles>
-    <colorPalette/>
-    <innerRadius/>
-    <padding/>
-    <paddingBottom/>
-    <paddingHorizontal/>
-    <paddingLeft/>
-    <paddingRight/>
-    <paddingTop/>
-    <paddingVertical/>
-</slices>
-```
-
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -1604,36 +1028,6 @@ A switch input widget can be used to display and edit Boolean attributes and is 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
 
-The widget’s style properties structure is as follows:
-
-```xml
-<container/>
-<containerDisabled/>
-<label>
-    <numberOfLines/>
-</label>
-<labelDisabled/>
-<input>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</input>
-<inputDisabled>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputDisabled>
-<inputError>
-    <thumbColorOn/>,
-    <trackColorOn/>
-    <trackColorOff/>
-    <thumbColorOff/>
-</inputError>
-<validationMessage/>
-```
-
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties.   |   |
@@ -1655,19 +1049,6 @@ The default class to style all check box inputs is named `com_mendix_widget_nati
 ### 11.31 Background Gradient
 
 The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
-
-The widget's internal structure is as follows:
-
-```xml
-<angle/>
-<colorList>
-	[
-		<gradient_color_object/>
-	]
-</colorList>
-<container/>
-<opacity/>
-```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -1692,40 +1073,6 @@ An object `{ color: string, offset: number }` that represents the color and the 
 ### 11.32 Column Chart
 
 The [column chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/column-chart-native) widget renders a vertical column graph based on static and dynamic data sets.
-
-The widget consists of the following elements:
-
-```xml
-<container/>
-<errorMessage/>
-<chart/>
-<grid/>
-<xAxis>
-	<label/>
-</xAxis>
-<yAxis>
-	<label/>
-</yAxis>
-<legend>
-	<container/>
-	<item/>
-	<indicator/>
-	<label/>
-</legend>
-<domain>
-    </padding>
-</domain>
-<columns>
-    <columnsOffset/>
-    <columnColorPalette/>
-	<customColumnStyles>
-		<any_custom_column_style_name>
-			</column>
-			</label>
-		</any_custom_column_style_name>
-	</customColumnStyles>
-</columns>
-```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
@@ -1778,20 +1125,6 @@ The default class to style all column chart widgets is named `com_mendix_widget_
 
 The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
 
-The widget's internal structure is as follows:
-
-```xml
-<container/>
-<emptyPlaceholder/>
-<firstItem/>
-<lastItem/>
-<list/>
-<listItem/>
-<loadMoreButtonContainer/>
-<loadMoreButtonPressableContainer/>
-<loadMoreButtonCaption/>
-```
-
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -1811,15 +1144,6 @@ The widget's internal structure is as follows:
 ### 11.33.1 Gallery Filtering
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the Filtering tab.
-
-The widget's internal structure is as follows:
-
-```xml
-<textInputContainer/>
-<textInputContainerFocused/>
-<textInput/>
-<textInputClearIcon/>
-```
 
 | Element | Style Properties | Description |
 | --- | --- | --- |

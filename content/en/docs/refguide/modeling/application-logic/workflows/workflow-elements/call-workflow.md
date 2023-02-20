@@ -56,7 +56,8 @@ When a calling workflow or a called workflow changes a state, they may have impa
 
 ### 3.1 State of Calling Workflow When Called Workflow Changes Its State
 
-Usually state transition of a called workflow does not affect the calling workflow except for when the called workflow fails or is aborted. When the called workflow fails or is aborted, the calling workflow fails. 
+Usually state transition of a called workflow does not affect the calling workflow except for when the called workflow fails, is aborted or locked. When the called workflow fails or is aborted, the calling workflow fails. When the called workflow is [locked](/refguide/lock-workflow/), the calling workflow fails because calling workflow tries to call the locked workflow.
+
 All other state changes of a called workflow do not affect the workflow.
 
 ### 3.2 State of Called Workflow When Calling Workflow Changes Its State
@@ -71,10 +72,6 @@ The following cases when the state of the calling workflow changes affect the st
 All other state changes of the calling workflow do not affect the called workflow.
 
 You can use the [Workflow state change](/refguide/workflow-properties/#workflow-state-change) property to extend the behavior described above and, for example, configure a behavior that when the calling workflow is paused, the called workflow is paused as well.
-
-### 3.2 State of Calling Workflow When Called Workflow Is Locked
-
-When the called workflow is locked, the calling workflow fails because calling workflow tries to call the locked workflow.
 
 ## 4 Read More
 

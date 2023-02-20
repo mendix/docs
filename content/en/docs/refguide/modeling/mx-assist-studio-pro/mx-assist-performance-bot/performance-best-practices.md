@@ -112,6 +112,11 @@ You can identify convertible microflows using the following criteria:
 * Microflow expressions do not contain the following variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`. These variables are not supported by nanoflows.
 * As nanoflows are executed in the context of the current user, ensure that the microflow has only operations for which the current user is authorized. Otherwise the converted nanoflow will fail.
 
+{{% alert color="info" %}}
+Security: microflows execute on the server side which in general is simpler to fully secure. If security is a critical concern for your app, note this when deciding whether to convert a microflow to a nanoflow.
+{{% /alert %}}
+
+
 ### 5.1 Steps to Fix
 
 To fix the issue, do the following:

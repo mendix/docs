@@ -198,8 +198,6 @@ The **成员** tab displays a list of current members (if any).
 
 You can remove existing members.
 
-{{% todo %}}What is remove member?{{% /todo %}}
-
 1. On the **成员** tab of the namespace details, click **编辑** next to the member you want to remove.
 2. Search for the member in the **编辑成员** dialog box by entering their email address.
 3. To remove the member, click **移除成员**.
@@ -580,8 +578,6 @@ Your app can only be deployed to a production environment if security is set on.
 
 ##### 6.1.3.8 Change Subscription Secret
 
-{{% todo %}}What does "edit subscription secret" look like?{{% /todo %}}
-
 If you select production as the **目的** of the app environment, then you will need to use a Subscription Secret which ensures that your app runs as a licensed app. If you need to enter or change the subscription secret, then you can do that here.
 
 Subscription secrets are obtained from Tencent.
@@ -637,10 +633,6 @@ If you choose a custom TLS configuration, you will need to enter the following i
 * **TLS 私钥文件** and **TLS 证书文件** – if you choose to add a new key you will need to upload these two files
 
 Click **保存并应用** to confirm your new configuration.
-
-{{% todo %}}Is it still necessary to say:
-You will receive a warning that you have made some changes. Click **应用更改** to restart the app and apply the changes.
-{{% /todo %}}
 
 ### 6.7 Debugger
 

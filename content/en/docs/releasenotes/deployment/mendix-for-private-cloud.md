@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2023
 
+### February 16th, 2023
+
+#### Portal Improvements
+
+* We have improved the validation message for the internal name in the environment creation flow.
+* We have removed access to the old deployment packages repository. This means that active deployment packages which have not been deployed in the last 4 weeks might stop working. If that happens, simply recreate the deployment package with the same revision, and then redeploy it in your environment.
+
 ### February 9th, 2023
 
 #### Portal Improvements

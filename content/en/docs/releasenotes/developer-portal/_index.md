@@ -17,13 +17,27 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2023
 
+### February 16th, 2023
+
+#### Improvements
+
+* We enabled more options for search in [Epics](/developerportal/collaborate/epics/). On the [Board](/developerportal/collaborate/epics/#board) page, you can now search stories based on tags, epic name, assignee (and unassigned stories), story title, and story ID. On the [Planning](/developerportal/collaborate/epics/#planning) page, you can search stories based on tags, epic name, assignee (and unassigned stories), status name (only in the Scrum workflow), story title, and story ID.
+* The Epics listed on the [Epics](/developerportal/collaborate/epics/#epics) overview page now have visible tags.
+
+#### Fixes
+
+* We fixed an issue in **Epics** where the unsaved changes pop-up window did not take you to the correct story after clicking **Leave**.
+* We updated the text in the [notifications](/developerportal/#notifications) when a story is assigned to you in **Epics**.
+
 ### February 13th, 2023
 
 #### Improvements
 
-* We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready
-* We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
+* We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
+* Have you lost track of where your apps live? We now display the cloud plan on the app tile in [My Apps](/developerportal/#my-apps).
 * We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/developerportal/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
+* We simplified the [team member invitation](/developerportal/collaborate/team/#inviting) flow from a multi-step wizard to a single page.
+* We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent. 
 * In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/developerportal/community-tools/mendix-profile/#dev-settings).
 
 #### Fixes

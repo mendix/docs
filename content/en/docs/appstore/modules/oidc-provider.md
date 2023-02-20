@@ -16,15 +16,17 @@ The [OIDC Provider](https://example.com) can be used to build a Mendix app that 
 
 The module supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. This module can be used in Mendix version 9.12.5 and above.
 
-The idea is that you set up a single Mendix app which uses the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module to authenticate end-users with your central IdP. The same app also acts as an OIDC client for your other apps to use as the IdP for OIDC SSO. THis means it is working as an IAM (Identity and Access Management) broker. You can easily add or remove apps from the IAM Broker app within the Mendix ecosystem using an API without each app and relevant user roles having to be added to your central IdP. However, you retain all the benefits of your central IdP in controlling on- and offboarding of users.
+The idea is that you set up a single Mendix app which uses the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module to authenticate end-users with your central IdP. The same app also acts as an OIDC provider for your other apps to use as the IdP for OIDC SSO. This means it is working as an IAM (Identity and Access Management) broker. You can easily add or remove apps from the IAM Broker app within the Mendix ecosystem using an API without each app and relevant user roles having to be added to your central IdP. However, you retain all the benefits of your central IdP in controlling on- and offboarding of users.
 
 {{< figure src="/attachments/appstore/modules/oidc-provider/typical-usage.png" >}}
+
+You can also set up your users manually in your app, using the Mendix Administration module, rather than linking to your central IdP.
 
 ### 1.1 Typical Usage Scenarios
 
 The following are usage scenarios that would be achievable with the OIDC Broker.
 
-* Mendix customers that want to build an IAM Broker solution that would hide the complexity of a multitude of Mendix apps from their corporate IdP.  By having those apps delegate authentication to the broker and have the broker delegate authentication to their IdP, only one OAuth client needs to be configured at their IdP.  A deployment pipeline can register additional Mendix apps with the IAM Broker in an automated fashion via an API. 
+* Mendix customers that want to build an IAM Broker solution that would hide the complexity of a multitude of Mendix apps from their corporate IdP.  By having those apps delegate authentication to the broker and have the broker delegate authentication to their IdP, only one OAuth client needs to be configured at their IdP.  A deployment pipeline (deployment agent) can register additional Mendix apps with the IAM Broker in an automated fashion via an API. 
 * Mendix Solution Vendors (MSVs) who want to simplify the microservice architecture of their solution from the customer by using the IAM Broker as a single IAM integration point for their customers.
 
 ### 1.2 Features and Limitations
@@ -49,7 +51,6 @@ The following modules need to be imported into your app
 
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
-* [Administration](https://marketplace.mendix.com/link/component/23513) – see [Administration](/appstore/modules/administration/) documentation
 
 ## 2 Installation
 
@@ -109,7 +110,7 @@ The rest of the configuration can be performed through the app.
 1. Deploy and run the app.
 1. Login as an administrator.
 1. Use the **Accounts** navigation item.
-1. Click **New local user** and create the user account(s) you need in your IAM Broker — for example, a new active account with the **User role** set to **User**.
+1. Click **New** and create the user account(s) you need in your IAM Broker — for example, a new active account with the **User role** set to **User**.
 1. Use the **OpenID Connect** navigation item.
 1. Open the **Server Keys** tab.
 1. Click **New Key**.
@@ -174,10 +175,10 @@ If you cannot use automatic registration, you can register the client manually.
 
 1. Select **Manual Registration**.
 1. Add the following information:
-    * **Client Name**
-    * **Client ID**
+    * **Client Name** – a name for this client so that it is easy to identify
+    * **Client ID** – a unique string which identifies this client
     * **Alias**
-    * **Client Secret** 
+    * **Client Secret** – a secure string to allow the client to authenticate to the OIDC Provider module
     * **Post Logout redirect URI** – for example, for testing a local OIDC Provider app on port `8081`, `http://localhost:8081/logout` 
     * **Redirect URI** – for example, for testing a local OIDC Provider app on port `8081`, `http://localhost:8081/oauth/v2/callback`
     * **Back channel logout session support**
@@ -190,10 +191,7 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
 
 1. Create an app containing the OIDC SSO module as described in [OIDC SSO](/appstore/modules/oidc/).
 
-    {{% alert color="info" %}}
-If you are testing locally, you will need to run your OIDC client on a different port from the IAM broker.
-
-In the [Server](/refguide/configuration/#server) tab of your active configuration, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, then use `8081` and `8091` respectively.
+    {{% alert color="info" %}}If you are testing locally, you will need to run your OIDC client in a separate copy of Studio Pro and on a different port from the IAM broker.<p />In the [Server](/refguide/configuration/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
     {{% /alert %}}
     
     1. When you get to [Configuration of OIDC Provider](/appstore/modules/oidc/#oidc-configuration), you already have the values from the previous section.
@@ -204,7 +202,7 @@ In the [Server](/refguide/configuration/#server) tab of your active configuratio
         * **Client Authentication Method** – *Client ID and Secret*
         * **Client Secret** – the **Client Secret** of the IAM Broker
     
-    1. Enter the **Automatic Configuration URL** using the URL of your IAM Broker app with the well-known (`/oidc/configuration`) endpoint and click **Import Configuration**. For example, when running locally, `http://localhost:8080/oidc/configuration`
+    1. Enter the **Automatic Configuration URL** using the URL of your IAM Broker app with the well-known (`/oidc/.well-known/openid-configuration`) endpoint and click **Import Configuration**. For example, when running locally, `http://localhost:8080/oidc/.well-known/openid-configuration`
 
     1. Continue editing the configuration and add the following scopes:
 

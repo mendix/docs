@@ -1,6 +1,6 @@
 ---
 title: "Google Tag"
-url: /appstore/modules/mendix-sso/
+url: /appstore/modules/google-tag/
 category: "Modules"
 description: "Describes the configuration and usage of the Google Tag module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "google", "google tag", "google analytics", "google ads", "google tag manager", "platform support"]
@@ -9,17 +9,17 @@ tags: ["marketplace", "marketplace component", "google", "google tag", "google a
 
 ## 1 Introduction
 
-With the [Google Tag](https://marketplace.mendix.com/link/component/207519/) module, you can add tags from various Google products and services like Google Ads, Campaign Manager, Google Analytics (including version 4) in your Mendix application.
+With the [Google Tag](https://marketplace.mendix.com/link/component/207519/) module, you can add tags from various Google products and services like Google Ads, Campaign Manager, and Google Analytics (including version 4) in your Mendix application.
 
-This module uses [Google Tag (gtag.js)](https://developers.google.com/tag-platform/gtagjs) and provides easily configurable widget that could be placed on pages or in a layout of your Mendix application. The module also provides a JavaScript action that uses advanced features of gtag.js and could send custom tracking events from withing your nanoflows.
+This module uses [Google Tag (gtag.js)](https://developers.google.com/tag-platform/gtagjs) and provides an easily configurable widget that can be placed on the pages or in a layout of your Mendix app. The module also provides a JavaScript action that uses advanced features of *gtag.js* and can send custom tracking events from within your nanoflows.
 
 {{% alert color="info" %}}
-Google Tag (gtag.js) shouldn't be confused with Google Tag Manager as those are two separate products.
+Google Tag (gtag.js) should not be confused with Google Tag Manager, as those are two separate products.
 {{% /alert %}}
 
 ### 1.2 Features
 
-* Easy event tracking with Google using `gtag.js`.
+* Easy event tracking with Google using *gtag.js*
 * Versatile widget and JavaScript action for user activity tracking
 * Basic and advanced modes for users of all levels
 * Simple page visit tracking with single-parameter configuration in basic mode

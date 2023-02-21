@@ -36,213 +36,13 @@ There are two methods of doing the migration. For both of them you first need to
 
 For further prerequisites see the sections below.
 
-## 4 Using the Migration Tool
-
-Mendix has written a migration tool to help you transfer your data from your app to a new environment. It also switches to your new environment for you when it is ready to go.
-
-We strongly advise you to use this method to migrate your app as it makes the migration much easier to initiate and monitor. We also suggest that you perform a [final migration](#final-migration) of your `production` environment only after you have successfully migrated the lower environments, for example `test` and `acceptance`. This will help to find out any potential issues beforehand.
-
-The flow below shows the stages of using the migration tool, and an indication of the status of the app in both the original environment and the new environment at each stage.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migration-process-overview.png" alt="Overview of Migration Process"   width="66%"  >}}
-
-### 4.1 Prerequisites
-
-To migrate your app, you need the following prerequisites:
-
-* Have a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) node available. This must have the subdomain name `<current-app-name>-v4`. To request a licensed Cloud Node, use the [Request New App Node](https://newnode.mendix.com/) app.
-* You should have the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) role for both your cloud nodes.
-
-### 4.2 Preparing the New Environment
-
-Before doing anything else, if the Mendix Cloud environment has been used for another production app in the past, ensure that you have a backup of any data you want to keep. The following steps and sections will overwrite your existing data.
-
-We recommend that you first deploy a copy of the app you are migrating. This means that you are ready to test your data once it has been replicated.
-
-To deploy your app to your new Mendix Cloud environment, you need to do the following:
-
-1. Deploy your app to the environment or environments on the new cloud node. You may want to do this first for a test or acceptance environment before you do all of them.
-
-    You can [create an deployment package](/refguide/create-deployment-package-dialog/) of your app within Studio Pro, and upload it to the [Environments](/developerportal/deploy/environments/) page of the new Mendix Cloud app. Then use the **Deploy** option to deploy it to your chosen environment.
-
-2. Create the application settings manually. The data replication process will only replicate data, it does not copy across other application settings. Settings you will need to set are on the [Environment Details](/developerportal/deploy/environments-details/) page and include:
-
-    * Number of instances
-    * Scheduled Events
-    * Constants
-    * HTTP headers
-    * Path based access restrictions
-    * Outgoing connections certificates
-    * Custom runtime settings
-    * Custom environment variables
-    * Preferred maintenance window
-    * Tags
-    * Custom Domain Certificates – the new environment will need to have the same Custom Domain Certificates as the previous environment; see [Changing a Custom Domain](#custom-domain) for advice on copying Custom Domain Certificates
-
-    {{% alert color="info" %}}You do not need to point your **Custom Domains** to a new destination. When the app is migrated, it will be given the same name as your current app and so your Custom Domain will automatically pick up the migrated app.{{% /alert %}}
-
-### 4.3 Replicating the Data {#replicating-data}
-
-Now that you have your new Mendix Cloud environment, you can start replicating the data.
-
-The system transfers database data using PostgreSQL dump and restore. Files are replicated to the Mendix Cloud environment continuously while replication is active.
-
-Below are the steps to start with the migration.
-
-1. Open the [Migration Tool](https://v3-v4-migration.mendixcloud.com/), `https://v3-v4-migration.mendixcloud.com/`.
-
-2. Choose the app that you want to migrate from the list of apps for which you are the technical contact.
-
-3. The target node will be filled with the name `<current-app-name>-v4`.
-
-4. Select the source and target environments. In most cases, these will have the same name. For example, you want to replicate data from one `production` environment to another.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/select-v3-node-to-migrate.png" alt="Select v3 node and environment" >}}
-
-5. Ensure that the app in the target environment is stopped. You cannot replicate data into an app that is running.
-
-6. Click **Replicate data and files**.
-
-    The replication process copies all the data in the database, including files based on `FileDocument` entities, such as images, which are stored in the storage of the source app node.
-
-7. Once data transfer is complete, the progress is at 100%.
-
-{{% alert color="info" %}}
-Database dump-restore will run twice – once on replication activation, and again on the stop of replication (if the **Interrupt** option has not been set – for details, see the section below). This is to ensure that the latest data on the source database for your application is copied to the Cloud v4 app.
-{{% /alert %}}
-
-### 4.4 Checking the Migration Status
-
-1. Click the **Migration** icon to see the status of your replications.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migration-page.png" alt="Icon for migration page" >}}
-
-2. Once initial data transfer is complete, progress will be at 100%.
-
-The migration page lists all the ongoing migrations, including the following information:
-
-* The source and target environments
-* The UUID of the source production environment
-* Whether the tool is current **Replicating** files to the new environment or is **Stopped**
-* What proportion of the source files have been replicated – this will sometimes show zero
-    * If replication is not running
-    * During the replication process when the process checks whether files are synchronized
-* The UUID of the target production environment
-* The **Stop replication** button with an **Interrupt** option if the tool is currently replicating
-    * If you click **Stop replication** without checking the **Interrupt** option, the replication will stop when all the data is replicated.
-    * If you check the **Interrupt** option, replication will stop as soon as possible when you click **Stop replication** leaving the v4 database in an incomplete and probably inconsistent state. On the Migration Status page you will see the state as *failed* when you select this option.
-* The **Activate Replication** button when the replication status is in a **Stopped** state
-* The **Migrate** button that triggers the [final migration](#final-migration)
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migration-status.png" alt="Status of the Migration" >}}
-
-{{% alert color="info" %}}
-File and row counts may not be completely accurate if the source app is running during the replication. File sync is refreshed on every sync run. There is a five minute pause between the stop of the previous one and start of the new one.
-
-For the database dump-restore process, the counts are refreshed only twice – when the actual process is run on start and on stop, as mentioned above.
-{{% /alert %}}
-
-### 4.5 Testing the Replicated Data
-
-Once you have replicated your data, you should test it, to ensure that everything is working as expected.
-
-{{% alert color="info" %}}You should wait before testing to ensure the replication progress has reached 100%, otherwise you may find some data is missing.{{% /alert %}}
-
-1. Go to the migration page of the Migration Tool.
-
-2. Click **Stop replication** next to the migration you want to test. Please note that if replication is interrupted (meaning, the **Interrupt** check box is checked), the data on the target node could be incomplete, especially if this is done before progress has reached 100%.
-
-3. Wait until the status of the migration changes to **Stopped**.
-
-4. Go to the Environment Details page of your migrated app and start the app.
-
-5. Test the migrated app.
-
-6. Check that the app works as expected, and that the data which has been migrated is accessible.
-
-    {{% alert color="info" %}}Any data you add to the database during the test will be overwritten when the migration process is restarted.{{% /alert %}}
-
-7. Stop your migrated app at the end of the test and restart the replication so you can continue to copy data from your source app.
-
-### 4.6 Final Migration {#final-migration}
-
-Once you have tested the data migration you are ready to migrate your app to the target node.
-
-{{% alert color="warning" %}}
-The final migration will only check that *production* data has been completely transferred to the new app. If you want to keep all your test and acceptance data, you need to review the migration status yourself. We recommend that you do this before initiating the final migration, but you can migrate non-production data after the final migration if necessary.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-We recommend that you allow at least an hour between starting to replicate the data (see the [Replicating the Data](#replicating-data) section above) and starting the final migration. This is because we reduce the TTL for the DNS records at the beginning of the process, but this will take some time to propagate and allow us to switch quickly between both versions of your app.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The final migration can have considerable downtime since the data replication process uses Postgres dump restore feature. This takes a full dump of the data from the source database and restores it on the destination database. The displayed times on the **Migration Status** page depict how much time the last operation took (be it file sync or database dump-restore). These timings add to the downtime, but as file sync and dump-restore are run in parallel, only the bigger timing will contribute directly to the downtime.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-We also recommend that you stop replication at least once before the final migration because, when replication is stopped, there are more operations and these take additional time. If the replication is stopped, the last operation timing will include these additional operations, thus becoming more accurate.
-{{% /alert %}}
-
-There are two more requirements before you can start the final migration:
-
-* The replication process for the production environments must have transferred all the data at some point in time, even if more data has been added since — in other words, the replication process for production must have reached 100% at least once.
-* The replication process must be in a **Replicating** state.
-
-To do the final migration of your app, do the following:
-
-* Click **Migrate** on the migration page. This does the following:
-
-    1. Stops the app running on the source node.
-    2. Stops the app running on the target node.
-    3. Runs the replication process for the *Production* environments until it reaches 100%.
-    4. Renames the subdomain of the original app and all environments to be `<current-app-name>-v3`.
-    5. Removes the `-v4` suffix from the subdomain name of the new v4 app and **all** environments.
-    6. Restarts both the new app and the original app.
-
-### 4.6 Rollback
-
-If you encounter issues with your app when running on the new cloud node, then you can revert to the original version.
-
-* Click **Rollback** on the migration page. This does the following:
-
-    1. Stops the app running on the target node.
-    2. Stops the app running on the source node.
-    3. Renames the subdomain of the app running on Mendix Cloud v4 and **all** environments to be `<current-app-name>-v4`
-    4. Removes the `-v3` suffix from the subdomain name of the original v3 app and **all** environments
-    5. Restarts the original app.
-
-{{% alert color="warning" %}}
-This will not copy any data from the new environment back to the original environment. Any data added to the new database before the rollback is effectively lost.
-{{% /alert %}}
-
-### 4.7 Troubleshooting
-
-If you encounter any issues during the migration process, use the following troubleshooting tips to help you solve them.
-
-#### 4.7.1 Data Replication Fails or Times Out
-
-If the replication process fails during the final migration, or it times out (the timeout for dump restore is 20 minutes longer than the measured operation time, displayed on the Migration Status page), then the apps and environments will not be renamed and the apps in the original environments will be restarted.
-
-It is safe to restart replicating the data to bring the data replicated back up to 100%. This should ensure that the final migration does not time out.
-
-Please contact Mendix Support if you encounter this problem so that we can identify any common issues.
-
-#### 4.7.2 Rename and Restart Failures
-
-If the apps and environments cannot be successfully renamed, or the apps cannot be successfully restarted, the changes will be rolled back as described above.
-
-## 5 Migrating the App Manually
-
-{{% alert color="warning" %}}
-These instructions are provided in case you have problems using the migration tool above. We recommend that you use the migration tool whenever possible. Please contact [Mendix Support](https://support.mendix.com) if you are having difficulty with the migration tool and only use these instructions as a last resort.
-{{% /alert %}}
+## 4 Migrating the App
 
 To manually migrate your app to a different node in the Mendix Cloud, follow the steps in the sections below.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mxcloudv4/migrating-to-v4/migratev4.png" >}}
 
-### 5.1 Prerequisites
+### 4.1 Prerequisites
 
 Before starting a manual migration, make sure you have completed the following prerequisites:
 
@@ -250,7 +50,7 @@ Before starting a manual migration, make sure you have completed the following p
 * Have the [Technical Contact](/developerportal/collaborate/app-roles/#technical-contact) role for both your cloud nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink)
 
-### 5.2 Linking the New Free App to the Target Cloud Node
+### 4.2 Linking the New Free App to the Target Cloud Node
 
 First, link one of the new temporary apps to the target node.
 
@@ -266,13 +66,13 @@ First, link one of the new temporary apps to the target node.
 
 For more information on how to do this, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#licensed-node).
 
-### 5.3 Copying the Deployment Package and Data from the Source Node to the Target Node
+### 4.3 Copying the Deployment Package and Data from the Source Node to the Target Node
 
 Before migrating, you need to deploy a copy of your app to the target node. You can then copy the data from the source node to the target node. After copying the data, you should test the app, and correct errors if needed. Repeat this until all the errors are solved.
 
 The following steps explain how to do this.
 
-#### 5.3.1 Downloading and Uploading the Deployment Package
+#### 4.3.1 Downloading and Uploading the Deployment Package
 
 Download the deployment package of your app hosted in the source node and upload the deployment package to the app hosted in the target node.
 
@@ -300,7 +100,7 @@ To upload the deployment package, follow these steps:
 
 5. Stop the app so that you can upload the backup data.
 
-#### 5.3.2 Backing Up
+#### 4.3.2 Backing Up
 
 {{% alert color="warning" %}}
 Ensure you have performed the last two steps in the previous section to deploy your deployment package before continuing. Making a deployment prepares the environment and ensures your data is restored to the correct locations.
@@ -314,17 +114,17 @@ Transfer the backup data from the source app to the target app by following thes
 
 2. Upload the downloaded backup to your app hosted in the target node (for details, see [How to Restore a Backup](/developerportal/operate/restore-backup/)).
 
-#### 5.3.3 Configuring the New App
+#### 4.3.3 Configuring the New App
 
 Before starting your app in the target node, make sure it has the same configuration as the source node. You can find the node settings on the [Environment Details](/developerportal/deploy/environments-details/) page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
 
-#### 5.3.4 Testing and Repeating
+#### 4.3.4 Testing and Repeating
 
 Now that the target app contains your data and is configured, deploy the deployment package to an environment and start your app.
 
 To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-the-app-to-an-environment).
 
-### 5.4 Unlink the App from the Source Node
+### 4.4 Unlink the App from the Source Node
 
 It is not possible to explicitly unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically. To do this, perform the following steps.
 
@@ -338,7 +138,7 @@ It is not possible to explicitly unlink an app from a licensed node. The only wa
 
 A more detailed example of how this works given in the [Exchanging Linked Apps Between Nodes](/developerportal/deploy/licensing-apps/#exchange-apps) section of *Licensing Mendix Cloud Apps*.
 
-### 5.5 Linking the App to the Target Node
+### 4.5 Linking the App to the Target Node
 
 Follow these steps to link the app you detached from the source node, above, to the target node:
 
@@ -356,7 +156,7 @@ Make sure you have downloaded the latest backup and deployment package before li
 
 For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-### 5.6 Changing the App URL
+### 4.6 Changing the App URL
 
 To change the App URL (if you are not using a custom domain) you will need to contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
 
@@ -365,7 +165,7 @@ To change the App URL (if you are not using a custom domain) you will need to co
 * **App ID** for the new app, which is available from the *General* page for the new app
 * **App ID** for the old app, which is available from the *General* page for the old app
 
-### 5.7 Changing a Custom Domain{#custom-domain}
+### 4.7 Changing a Custom Domain{#custom-domain}
 
 If you have a custom domain which you want to transfer to your target deployment, you will need to bear the following information in mind.
 
@@ -383,7 +183,7 @@ If you have a custom domain which you want to transfer to your target deployment
 
 You can find further information about setting up custom domains in [Custom Domains](/developerportal/deploy/custom-domains/).
 
-### 5.8 Offboarding the Source Node
+### 4.8 Offboarding the Source Node
 
 If everything works correctly after the migration, submit a request to [Mendix Support](https://support.mendix.com) to offboard the old node. This means that your previous node will no longer be available.
 
@@ -391,7 +191,7 @@ If everything works correctly after the migration, submit a request to [Mendix S
 After your node is offboarded, it will no longer be accessible. Ensure that you have downloaded any backups or other information that you need from the node before asking for it to be offboarded.
 {{% /alert %}}
 
-## 6 Read More
+## 5 Read More
 
 * [Certificates](/developerportal/deploy/certificates/)
 * [Custom Domains](/developerportal/deploy/custom-domains/)

@@ -6,6 +6,7 @@ weight: 35
 tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
 
 ## 1 Introduction
 
@@ -274,8 +275,6 @@ There is an extensive list of ONNX Operators that can be embedded into the model
     
 
 There is nothing to be done inside Studio Pro, as the runtime supports it entirely without any extra steps required. Alternatively, a pre- / post-processor can also be constructed from scratch with native ONNX Operators without the need for a conversion library.
-
-![](/static/img/pixel.gif)
 
 
 ResNet Pre-processor and Model Inference in Separate MLKit Activities

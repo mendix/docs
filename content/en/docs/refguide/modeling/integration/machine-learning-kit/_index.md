@@ -9,9 +9,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models"]
 
 ## 1 Introduction
 
-[This feature is currently in Beta.]
-
-1 Introduction
+[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
 
 In Studio Pro [9.23] and above, you can build apps that support integration with machine learning models. Collectively called the Mendix Machine Learning (ML) Kit, these functionalities are built using common AI framework and language, and include deployment support for common AI frameworks.
 
@@ -188,8 +186,6 @@ Once you import your model, the Call ML Model action allows you to add your inpu
 
 3.2 Pre-processing and Post-processing using Java Actions
 
-![](/static/img/pixel.gif)
-
 
 Data transformations are usually complex tasks, and often require mathematical libraries or even more complex pieces of software (think OpenCV for computer vision). As a result, sometimes they are not integrated into the model. In this case, the best way to perform these transformations in Mendix using Java Actions (see https://docs.mendix.com/refguide/extending-your-application-with-custom-java/).
  
@@ -356,7 +352,7 @@ To integrate a pre-trained model with an unsupported type from model repositorie
 6.3 GPU Inference
 This is not supported by MLKit. 
 
-7 FAQs
+7 Frequently Asked Questions
 
 My model did not import properly
 

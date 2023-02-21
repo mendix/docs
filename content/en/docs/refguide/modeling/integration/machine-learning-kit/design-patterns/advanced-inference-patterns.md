@@ -9,6 +9,8 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 
 ## 1 Introduction
 
+[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
+
 1 Advanced Inference Design Patterns
 
 1.1 Ensembles
@@ -20,8 +22,6 @@ When dealing with a lot of variance on a dataset or many features versus a relat
 
 
 You can create ensemble models in Mendix building a separate microflow for each model, then combine the predictions in another microflow. The example shows an ensemble of two models.
-
-![](/static/img/pixel.gif)
 
 
 Domain Model of an ensemble model:

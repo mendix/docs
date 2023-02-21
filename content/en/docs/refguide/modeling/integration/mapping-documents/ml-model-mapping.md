@@ -4,7 +4,7 @@ url: /refguide/ml-model-mapping/
 tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 ---
 
-[This feature is currently in [Beta](/releasenotes/beta-features/).
+[Machine learning model support is currently in [Beta](/releasenotes/beta-features/).
 
 ## 1 Introduction
 

@@ -127,7 +127,7 @@ returns:
 
 Trim the date to months, rounding off all days to zero.
 
-`trimToMonths` uses the user's timezone and `trimToMonthsUTC` uses the UTC timezone.
+`trimToMonths` uses the user's time zone and `trimToMonthsUTC` uses the UTC time zone.
 
 ### 6.1 Input Parameters
 

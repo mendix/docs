@@ -61,7 +61,7 @@ Database migration is handled by Mendix as a normal database synchronization pha
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than what the current domain model specifies.
+Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than the current domain model specifies.
 
 The source database structure and data do not change as part of the migration.
 {{% /alert %}}
@@ -95,7 +95,7 @@ If you already have the database, for example a test database in the cloud, you 
 
 ## 4 Migrating a Non-PostgreSQL Database to a PostgreSQL Database
 
-The Mendix Cloud V4 environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
+The Mendix Cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
 
 The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix app the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
 
@@ -107,7 +107,7 @@ To export a PostgreSQL database, refer to either the [pg_dump](https://www.postg
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud V4. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
+Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
 
 1. Select your app.
 2. Click **Backups** in the left-hand menu

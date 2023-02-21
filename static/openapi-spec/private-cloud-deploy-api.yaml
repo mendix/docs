@@ -644,10 +644,10 @@ components:
       title: packageId
       x-stoplight:
         id: nslc1ped244bv
-      example: schedule_events.mda
-      description: 'Name of an MDA. When the Build API becomes available for Mendix for Private Cloud, this will be replaced with a Package UUID.'
+      example: 045b8cf4-c9cd-41b4-b241-414b87a7f219
+      description: PackageId of a Deployment Package. It can be found on the Deployment Package details page in the Portal.
       x-examples:
-        example-packageId: schedule_events.mda
+        example-packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
     constant:
       type: object
       x-examples:
@@ -1125,7 +1125,7 @@ components:
                     defaultStudioTarget: true
                   deployment:
                     appUrl: 'https://test.app.url'
-                    packageId: schedule_events.mda
+                    packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
                     constants:
                       - name: MyFirstModule.Constant_Name
                         value: '2022-03-10T13:15:00'
@@ -1201,7 +1201,7 @@ components:
                         defaultStudioTarget: true
                       deployment:
                         appUrl: 'http://test.app.url'
-                        packageId: schedule_events.mda
+                        packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
                         constants:
                           - name: MyFirstModule.bool
                             value: 'False'
@@ -1433,7 +1433,7 @@ components:
             defaultStudioTarget: true
           deployment:
             appUrl: 'http://test.app.url'
-            packageId: schedule_events.mda
+            packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
             constants:
               - name: MyFirstModule.bool
                 value: 'False'

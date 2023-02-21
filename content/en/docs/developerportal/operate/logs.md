@@ -4,7 +4,7 @@ url: /developerportal/operate/logs/
 category: "Operations"
 weight: 30
 description: "Describes how to see the logs from your app."
-tags: ["Operate", "App", "Developer Portal", "SAP", "v4"]
+tags: ["Operate", "App", "Developer Portal", "SAP", "Mendix Cloud"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -18,13 +18,13 @@ The page is accessed through the **Logs** menu item in the left-hand menu.
 You must have the **Access to Monitoring** permission to view logs. This needs to be set by the Technical Contact of the app. See [Node Permissions](/developerportal/deploy/node-permissions/) for information on how to do this.
 {{% /alert %}}
 
-## 2 Apps Deployed to Mendix Cloud Version 4
+## 2 Apps Deployed to the Mendix Cloud
 
 {{% alert color="info" %}}
 This is the default Mendix deployment for a licensed app.
 {{% /alert %}}
 
-For apps deployed to Mendix Cloud Version 4 (v4), you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
+For apps deployed to the Mendix Cloud, you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 
 You can view the live (current) log, download it, or view and download an archived log.
 
@@ -32,15 +32,15 @@ You can view the live (current) log, download it, or view and download an archiv
 The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
  
-Logs on Mendix Cloud v4 are rotated and archived every day. The logs are kept for at least 6 months.
+Logs on the Mendix Cloud are rotated and archived every day. The logs are kept for at least 6 months.
 
-{{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page v4" >}}
+{{< figure src="/attachments/developerportal/operate/logs/log-v4.png" alt="Logs Page" >}}
 
-Action Button | Performs the Action
-:---|:---
-Download Archived Log | download a log selected from the list underneath 
-Download Current Log | download the log which is currently being written to
-View Live Log | view today's log on the screen
+| Action Button | Performs the Action |
+| :--- | :--- |
+| Download App Log | download an application log selected from the list underneath — the current log is the first one listed  |
+| Download Access Log | download a log of who has created a user session on the app on the date selected from the list underneath |
+| View Live Log | view today's log on the screen |
 
 ## 3 Apps on SAP Business Technology Platform
 

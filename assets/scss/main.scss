@@ -17,7 +17,7 @@
     .td-offset-anchor:target {
         display: block;
         position: relative;
-        top: -4rem;
+        top: 0; // NK - overrides default Docsy value
         visibility: hidden;
     }
 
@@ -27,8 +27,8 @@
     h5[id]:before {
         display: block;
         content: " ";
-        margin-top: -48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
-        height: 48px; // NK - set to height of MxDock, to prevent dock from going on top of headings
+        margin-top: 0; // NK - overrides default Docsy value
+        height: 0; // NK - overrides default Docsy value
         visibility: hidden;
     }
 }

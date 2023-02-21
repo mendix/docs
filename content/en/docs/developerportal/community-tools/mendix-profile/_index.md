@@ -89,7 +89,7 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 
 This card on your profile presents your points and ranking for the last 30 days:
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/leaderboard.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/leaderboard.png" width="500px" alt="Leaderboard example" >}}
 
 Clicking **View All** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
@@ -189,11 +189,9 @@ When you earn enough points, you gain a level:
 
 The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking an app name presents details about the customer, business need, solution, and results. You can also view other developers and their apps to get inspired. You can also click **View All Projects** to go to the **Portfolio** tab, which presents all of your apps.
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/portfolio.png" >}}
+{{< figure src="/attachments/developerportal/community-tools/mendix-profile/portfolio.png" width="500px" alt="Portfolio example" >}}
 
 To add an app to your portfolio, click **Add Project**, which will open the editor. There are tips in the editor for what you should put in each field. All the fields in the editor are required before submission.
-
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/add-project.png" >}}
 
 If you cannot finish your portfolio entry or do not want to publish yet, click **Save as Draft** to finish it later. The draft will be visible only to you in the **Portfolio** tab for further editing.
 
@@ -201,48 +199,73 @@ If you cannot finish your portfolio entry or do not want to publish yet, click *
 
 On the **Activity** tab, you can see a list of the last 20 public events for your badges, Marketplace, and Forum activity.
 
-## 10 Settings {#settings}
+## 10 Account Settings {#settings}
 
 You can edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 
-### 10.1 General Information
+### 10.1 Profile {#profile}
 
-In this section, you can upload your profile image and fill in your personal details
+In this section, you can upload your profile image and fill in your personal and work details
 
-Under **Contact**, you can select how much information you want to receive from Mendix:
+You can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry** and **Skills**.  
 
-* **Receive daily digest** – disabled by default
-* **Receive updates for threads in which I am active** – enabled by default
+You can also connect your social accounts via **Twitter URL** and **LinkedIn URL**.
 
-There is also a link to [Mendix Support](https://support.mendix.com/) if you need to perform certain account actions that require their assistance.
+You can also choose to make your profile public (which will allow the Mendix community to view your profile) by clicking **Make Profile Public**. Be sure to do the following to make your profile public:
 
-### 10.2 Work Experience
+* Add an avatar
+* Enter a **Function**
+* Confirm if you are looking for a **job**, a **project**, both, or neither
+* Enter a **Summary**
+* Add at least 1 **Skill**
+* Add at least 1 **Industry Experience** item
 
-Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry Experience** and **Skills**. You can also let the community know if you are looking for a job or an app to contribute to. 
+{{% alert color="info" %}}
+To make your public profile private again, click **Make Profile Private**. 
+{{% /alert %}}
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/work-experience.png"   width="500"  >}}
-
-### 10.3 Social {#social}
-
-Here you can connect your social accounts for **Twitter** and **LinkedIn**.
-
-### 10.4 Security {#security}
+### 10.2 Account
 
 By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/developerportal/control-center/#security).
 
-You can update your password via the [New Password Request page](https://login.mendix.com/mxid3/request-password-reset), which you can reach using the **Forgot password?** link on the login screen.
+You can update your password via the [Request Password Change](https://login.mendix.com/mxid3/request-password-reset) button, which you can also reach using the **Forgot password?** link on the login screen.
 
-### 10.5 API Keys {#api-key}
+Do you want to transfer information from your old Mendix account to a new one? You should prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this, because once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access.
 
-In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password.
+From your new account, then click **Transfer Account Data**. After sharing some information with us and entering the email address of your old account in the dialog box, click **Transfer Data** and the request will be sent. 
+
+If you still have access to your old account, you can approve the merge yourself after clicking the link in the confirmation email that is sent to your old account when the merge is requested. Be sure you are logged in with your old account to see the merge request. Otherwise, you can wait for merge approval from Mendix Support.
+
+Your account data, earned points, achievements, credits, certifications, and Academy progress is then transferred to your new account.
 
 {{% alert color="info" %}}
-Some platform APIs use *Personal Access Tokens (PATs)* rather than *API Keys*. For more information on PATs, and how to generate and manage them, see [Create a Personal Access Token with Warden](/developerportal/community-tools/warden/).
+With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
 {{% /alert %}}
 
-For example, you can use an API key to perform scripted operations on your application model with the SDK. 
+{{% alert color="warning" %}}
+It is not possible to separate accounts after they have been merged. Double-check that your old and new account information is valid and in the correct order.
+{{% /alert %}}
 
-To get a Mendix API key, click **Create New API Key** and follow the instructions.
+If you do not want to use Mendix anymore, you can remove your account from this page. Click the menu button next to **Request Password Change** and select **Delete Account**. All of your personal and identifiable information is then removed and deleted from our servers.
+
+### 10.3 Notifications {#notifications}
+
+On this page, you can configure how you want to be notified of Mendix Platform activity.
+
+When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Apps](/developerportal/#my-apps).
+
+You can also configure your **Buzz Notifications**:
+
+* **Receive daily digest** – disabled by default
+* **Receive updates for Buzz threads in which I am active** – enabled by default
+
+### 10.4 Developer Settings {#dev-settings}
+
+#### 10.4.1 API Keys {#profile-api-key}
+
+In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
+
+To get a Mendix API key, click **Configure API Keys** > **Create New API Key** and follow the instructions.
 
 {{% alert color="warning" %}}
 Make a note of the API key, as it will only be shown once. 
@@ -261,67 +284,13 @@ For more information, see the following:
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/)
 * [How to Manage App API Keys](/developerportal/settings/api-key/)
 
-### 10.6 Pending App Invites {#pending-app-invites}
+### 10.5 Personal Data
 
-{{< figure src="/attachments/developerportal/community-tools/mendix-profile/pending-app-invites.png" >}}
-
-In this section, you can view the app invitations you have sent and received. There are two types of invitations:
-
-* Project invitation – an invitation to join a [team](/developerportal/collaborate/team/) to work on an app
-* App invitation – an invitation to join an app as an [App User](/developerportal/collaborate/general-settings/#managing-app-users)
-
-### 10.7 Advanced
-
-In this section, you can merge your accounts and select your profile visibility.
-
-#### 10.7.1 Merging Your Accounts {#merging}
-
-Do you want to transfer information from your old Mendix account to a new one? You can do this directly from your **Advanced Settings**. After sharing some information with us, your earned points, achievements, credits, certifications, and Academy progress is automatically transferred.
-
-To merge your accounts, follow these steps:
-
-1. Prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this, because once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access.
-2. From your new account, enter the email address of your old account to send us the request.
-3. If you still have access to your old account, you can approve the merge yourself after clicking the link in the confirmation email that is sent to your old account when the merge is requested. Be sure you are logged in with your old account to see the merge request. Otherwise, you can wait for merge approval from Mendix Support.
-
-Your account data is then moved to your new account.
-
-{{% alert color="warning" %}}
-It is not possible to separate accounts after they have been merged. Double-check that your old and new account information is valid and in the correct order.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
-{{% /alert %}}
-
-#### 10.7.2 Selecting Your Profile Visibility {#public}
-
-A banner will be present if you have not made your profile public to the Mendix community. You can make it public by clicking **Make this profile public**.
-
-Be sure to do the following to make your profile public:
-
-* Add an avatar
-* Enter a **Function**
-* Confirm if you are looking for a **job**, a **project**, both, or neither
-* Enter a **Summary**
-* Add at least 1 **Skill**
-* Add at least 1 **Industry Experience** item
-
-{{% alert color="info" %}}
-To make your public profile private again, click **Make this profile private**. 
-{{% /alert %}}
-
-#### 10.7.3 Viewing Your Audit Trail
-
-The Mendix Platform stores certain personal information about you. You can view this information by clicking  **View Audit Trail** in the **Personal Information Stored by Mendix**.
+The Mendix Platform stores certain personal information about you. You can view this information by clicking  **Download Personal Data**.
 
 {{% alert color="info" %}}
 Mendix has been tracking these data changes since November 2018.
 {{% /alert %}}
-
-#### 10.7.4 Removing Your Account
-
-If you do not want to use Mendix anymore, you can remove your account from here. All of your personal and identifiable information is then removed and deleted from our servers.
 
 ## 11 Point Penalties
 

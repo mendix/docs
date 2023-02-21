@@ -142,7 +142,7 @@ Congratulations! You have the page that displays details of the selected report 
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/configured-page.jpg" alt="Configured Page"   width="80%"  >}}
 
-There are many ways you can use this page in your app. For example, you can use it as a page for a user task in a [workflow](/refguide/workflows). 
+There are many ways you can use this page in your app. For example, you can use it as a page for a user task in a [workflow](/refguide/workflows/). 
 
 You can now preview your app and test your page.
 

@@ -92,7 +92,20 @@ The list view shows a list of objects arranged vertically or horizontally. For m
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view.png" alt="list view"   width="350"  >}}
 
 ```javascript
-// Jonathan, here is a basic JS code snippet for you to fill in. If it would be more useful for the snippet to have pre-filled info/formatting/brackets, please let me know and I will put that type of improved snippet in each widget category.
+export const ListView = {
+  container: {
+    // All ViewStyle properties
+    numColumns: 1 // This is the number of columns that the list should render.
+  },
+  listItem: {
+    // All ViewStyle properties
+    rippleColor: 'rgba(0, 0, 0, 0.2))', // This is the color of the ripple on Android, and will be applied only when the item has an on click action set, otherwise it will be ignored.
+    underlayColor: null, // This is the color while pressing the item on iOS, and will be applied only when the item has an on click action set, otherwise it will be ignored and defaulted to opacity only.
+  },
+  listItemDisabled: {
+    // Same properties as `listItem`. Overrides `listItem` styles if the item has an on click action and the action cannot be executed or is disabled during action.
+  }
+};
 ```
 
 The widget's style properties are as follows:

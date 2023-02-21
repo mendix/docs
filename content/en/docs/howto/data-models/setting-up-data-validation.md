@@ -121,7 +121,6 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 
 ## 7 Read More
 
-* [Work with Images and Files](/howto/data-models/working-with-images-and-files/)
 * [Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
 * [Set Up Data Validation](/howto/data-models/setting-up-data-validation/)

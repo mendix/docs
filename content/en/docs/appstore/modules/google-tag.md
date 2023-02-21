@@ -21,7 +21,7 @@ Google Tag (gtag.js) should not be confused with Google Tag Manager, as those ar
 
 * Easy event tracking with Google using *gtag.js*
 * Versatile widget and JavaScript action for user activity tracking
-* **Basic** and **Advanced** modes for users of all levels
+* Two **Widget modes** for users of all levels: **Basic** and **Advanced**
 * Simple page visit tracking with single-parameter configuration in **Basic** mode
 * Highly customizable tracking events in **Advanced** mode
 
@@ -34,14 +34,14 @@ In **Basic** mode, the Google Tag widget sends a pre-configured `page_view` even
 The module is compatible with Studio Pro 8 and above.
 
 {{% alert color="warning" %}}
-When using the Google Tag widget with Mendix Studio Pro 8, there is a limitation where non-relevant properties are not hidden in the configuration window (for example, advanced properties are not hidden when selecting **Basic** mode). This issue does not affect the functionality of the widget, but it makes harder to configure. See the sections below to determine which properties need to be configured depending on the mode of the widget.
+When using the Google Tag widget with Mendix Studio Pro 8, there is a limitation where non-relevant properties are not hidden in the configuration window (for example, **Advanced** properties are not hidden when selecting **Basic** mode). This issue does not affect the functionality of the widget, but it makes harder to configure. See the sections below to determine which properties need to be configured depending on the mode of the widget.
 {{% /alert %}}
 
 ## 2 Google Tag Widget
 
 ### 2.1 Basic Mode {#widget-basic-mode}
 
-"When the **Widget mode** is set to **Basic**, the widget only sends page tracking events, which covers the majority of use cases. In this mode, only the **Tag ID** property needs to be filled in. Additionally, you can fill in the **Parameters** if you want to include specific information along with the page view events. For information on how to configure Parameters, please refer to the [Parameters](#widget-advanced-parameters) section below."
+"When the **Widget mode** is set to **Basic**, the widget only sends page-tracking events, which covers the majority of use cases. In this mode, only the **Tag ID** property needs to be filled in. Additionally, you can fill in the **Parameters** if you want to include specific information along with the page view events. For more information, see the [Parameters](#widget-advanced-parameters) section below."
 
 Typically, the Google Tag widget in basic mode is expected to be placed in the layout of your application. The widget automatically tracks when the end user switches pages and sends page view events accordingly. Placing two widgets in basic mode on a page and/or its layout is not supported.
 

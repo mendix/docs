@@ -129,6 +129,17 @@ Text widgets are used in almost all app pages. Because of their ubiquity, learni
 
 The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). 
 
+```javascript
+export const Text = {
+  container: {
+    // All ViewStyle properties
+  },
+  text: {
+    // All TextStyle properties
+  },
+};
+```
+
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |                 |
@@ -139,6 +150,17 @@ The default class to style all texts is named `Text`.
 ### 4.2 Page Title 
 
 The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](/refguide/page-title/). 
+
+```javascript
+export const PageTitle = {
+  container: {
+    // All ViewStyle properties
+  },
+  text: {
+    // All TextStyle properties
+  },
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
@@ -168,6 +190,19 @@ The widget’s style properties are divided over several objects: `LayoutGrid`, 
 ### 5.2 Container 
 
 A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. 
+
+```javascript
+export const Container = {
+  container: {
+    // All ViewStyle properties
+    rippleColor: `rgba(0, 0, 0, 0.2)`, // This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored.
+    underlayColor: // This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only.      
+  },
+  containerDisabled: {
+    // Same properties as `container`. This overrides `container` styles if the there is an on click action set and the action cannot be executed or is disabled during action.
+  },
+};
+```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
